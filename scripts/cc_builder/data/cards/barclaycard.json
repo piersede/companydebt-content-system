@@ -1,0 +1,55 @@
+{
+  "id": "barclaycard_select_cashback_business_credit_card",
+  "bank": "Barclaycard",
+  "name": "Barclaycard Select Cashback Business Credit Card",
+  "short_name": "Barclaycard Select",
+  "annual_fee": "&pound;0",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "25.5% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png",
+  "img_alt": "Barclaycard logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "25.5% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Cashback",
+      "value": "1% on monthly spend over &pound;2k",
+      "modifier": null,
+      "qualifier": "Uncapped"
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0",
+      "modifier": null,
+      "qualifier": "No annual fee"
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.barclaycard.co.uk/business/cards/credit-cards/select-cashback",
+  "cta_label": "View Barclaycard Details",
+  "verify_source": "barclaycard.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr",
+    "cashback",
+    "sole-traders",
+    "startups"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

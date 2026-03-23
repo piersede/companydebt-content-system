@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Component Redesign — BusinessExpert</title>
+<style>
+  /* Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 40px 20px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  h2.section-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 32px;
+    font-weight: 600;
+  }
+
+  /* ============================================
+     CREDIT CARD COMPARISON COMPONENT v2
+     ============================================ */
+
+  .cc-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  /* --- Header zone: image + identity --- */
+  .cc-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 28px 0 28px;
+  }
+
+  .cc-card__image {
+    flex-shrink: 0;
+    width: 156px;
+    height: 110px;
+    background: #f8f2ff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 1px;
+  }
+
+  .cc-card__image img {
+    max-width: 100%;
+    max-height: 94px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .cc-card__identity {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0;
+  }
+
+  .cc-card__fit-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a4faa;
+    background: none;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+
+  .cc-card__identity h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+
+  .cc-card__verdict {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+    max-width: 440px;
+  }
+
+  /* --- Key facts grid --- */
+  .cc-card__facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 16px 28px 0 28px;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .cc-card__fact {
+    padding: 11px 16px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  /* Right column facts get a left border */
+  .cc-card__fact:nth-child(even) {
+    border-left: 1px solid #f3f3f3;
+  }
+
+  /* Remove bottom border on last row */
+  .cc-card__fact:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .cc-card__fact-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 2px;
+  }
+
+  .cc-card__fact-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.35;
+  }
+
+  .cc-card__fact-value--apr {
+    color: #1a1a1a;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .cc-card__fact-qualifier {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #777;
+    line-height: 1.35;
+    margin-top: 1px;
+  }
+
+  .cc-card__fact-value--required {
+    color: #9e7060;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .cc-card__fact-value--none-required {
+    color: #6b3fa0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* --- Decision blocks --- */
+  .cc-card__decision {
+    margin: 20px 28px 0 28px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Primary guidance rows */
+  .cc-card__decision-item {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    padding: 9px 14px;
+    border-radius: 4px;
+    background: #fff;
+    border-left: 3px solid transparent;
+  }
+
+  .cc-card__decision-item strong {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  .cc-card__decision-item--best {
+    border-left-color: #7a4faa;
+    background: #fff;
+  }
+
+  .cc-card__decision-item--watch {
+    border-left-color: #9e7060;
+    background: #fff;
+  }
+
+  /* Secondary guidance rows — subordinate but legible */
+  .cc-card__decision-item--not {
+    border-left-color: #b8aec6;
+    background: #fff;
+    color: #444;
+    padding: 6px 14px;
+    font-size: 13.5px;
+  }
+
+  .cc-card__decision-item--eligibility {
+    border-left-color: #b8aec6;
+    background: #fff;
+    color: #444;
+    padding: 6px 14px;
+    font-size: 13.5px;
+  }
+
+  /* --- Action zone --- */
+  .cc-card__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 20px 28px 20px 28px;
+  }
+
+  .cc-card__cta {
+    display: inline-block;
+    padding: 10px 26px;
+    background: #7a3f9d;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+
+  .cc-card__cta:hover {
+    background: #643280;
+  }
+
+  .cc-card__trust {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+    padding-left: 2px;
+  }
+
+  /* ============================================
+     MOBILE RESPONSIVE
+     ============================================ */
+
+  @media (max-width: 640px) {
+    .cc-card__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 20px 0 20px;
+    }
+
+    .cc-card__image {
+      width: 120px;
+      height: 86px;
+      padding: 8px;
+    }
+
+    .cc-card__image img {
+      max-height: 70px;
+    }
+
+    .cc-card__facts {
+      grid-template-columns: 1fr;
+      margin: 16px 20px 0 20px;
+    }
+
+    .cc-card__fact:nth-child(even) {
+      border-left: none;
+    }
+
+    .cc-card__fact {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .cc-card__fact:last-child {
+      border-bottom: none;
+    }
+
+    .cc-card__decision {
+      margin: 16px 20px 0 20px;
+    }
+
+    .cc-card__action {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 20px 20px 20px;
+    }
+
+    .cc-card__cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ============================================
+     COMPARISON NOTE (for prototype only)
+     ============================================ */
+  .proto-note {
+    background: #fffde7;
+    border: 1px solid #f0e68c;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+  .proto-note strong { color: #333; }
+
+  .comparison-divider {
+    border: none;
+    border-top: 2px dashed #ddd;
+    margin: 48px 0;
+  }
+
+  .old-card-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #c00;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="proto-note">
+  <strong>Prototype:</strong> Redesigned credit card comparison component for BusinessExpert.
+  Showing NatWest as the example card, followed by Lloyds (with new card image).
+  Compare against the current design at bottom of page.
+</div>
+
+<h2 class="section-label">Redesigned Card Component</h2>
+
+<!-- ========== NATWEST — REDESIGNED ========== -->
+<div class="cc-card">
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/NatWest-Large.png" alt="NatWest logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best for overseas card spend</span>
+      <h3>NatWest Business Credit Card</h3>
+      <div class="cc-card__verdict">Low purchase rate, but total cost rises quickly if you need multiple employee cards.</div>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Representative APR</span>
+      <span class="cc-card__fact-value cc-card__fact-value--apr">24.3% variable</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Purchase Rate</span>
+      <span class="cc-card__fact-value">16.9% p.a. variable</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Annual Fee</span>
+      <span class="cc-card__fact-value">&pound;30 per cardholder</span>
+      <span class="cc-card__fact-qualifier">Waived at &pound;6k+ annual spend per card</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Existing Account</span>
+      <span class="cc-card__fact-value cc-card__fact-value--required">NatWest BCA required</span>
+    </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <strong>Best for:</strong> Businesses already banking with NatWest that make overseas card purchases regularly
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <strong>Watch out:</strong> &pound;30 fee per cardholder unless you hit &pound;6k+ annual spend per card
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <strong>Not ideal if:</strong> You need multiple employee cards and won't hit the spend waiver on each
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <strong>Eligibility:</strong> Turnover under &pound;2m. NatWest BCA required. Credit limits from &pound;500.
+    </div>
+  </div>
+
+  <div class="cc-card__action">
+    <a href="https://www.natwest.com/business/cards/business-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View NatWest card details</a>
+    <span class="cc-card__trust">Rates verified against provider pricing page, March 2026</span>
+  </div>
+</div>
+
+<!-- ========== LLOYDS — REDESIGNED (with new card image) ========== -->
+<div class="cc-card">
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png" alt="Lloyds Business Credit Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Lowest APR on this list</span>
+      <h3>Lloyds Bank Business Credit Card</h3>
+      <div class="cc-card__verdict">The lowest representative APR available, but the annual fee means it only pays off with consistent spend above the waiver threshold.</div>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Representative APR</span>
+      <span class="cc-card__fact-value cc-card__fact-value--apr">15.95% variable</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Annual Fee</span>
+      <span class="cc-card__fact-value">&pound;32 per card</span>
+      <span class="cc-card__fact-qualifier">Waived at &pound;6k+ annual spend per card</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Cashback</span>
+      <span class="cc-card__fact-value">1% fuel/EV, 0.5% other (above &pound;2k/mo)</span>
+    </div>
+    <div class="cc-card__fact">
+      <span class="cc-card__fact-label">Existing Account</span>
+      <span class="cc-card__fact-value cc-card__fact-value--required">Lloyds BCA required</span>
+    </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <strong>Best for:</strong> Existing Lloyds customers who carry a balance and can hit &pound;6k annual spend to waive the fee
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <strong>Watch out:</strong> &pound;32 annual fee per card is not waived unless you spend enough — at low volumes, Metro Bank's 18.9% with no fee costs less overall
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <strong>Not ideal if:</strong> You bank elsewhere and would need to switch to Lloyds just for the card rate
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <strong>Eligibility:</strong> Sole traders, partnerships, and company directors. Lloyds BCA required.
+    </div>
+  </div>
+
+  <div class="cc-card__action">
+    <a href="https://www.lloydsbank.com/business/business-cards/business-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Lloyds card details</a>
+    <span class="cc-card__trust">Rates verified against provider pricing page, March 2026</span>
+  </div>
+</div>
+
+<hr class="comparison-divider">
+
+<!-- ========== OLD DESIGN (for comparison) ========== -->
+<p class="old-card-label">Current design (for comparison)</p>
+
+<div style="border:1px solid #e5e5e5;border-radius:6px;padding:22px 24px;background:#fafafa;margin-bottom:32px">
+  <div style="background:#f8f2ff;border-radius:6px;width:317px;height:200px;display:flex;align-items:center;justify-content:center;padding:20px;margin-bottom:16px;box-sizing:border-box">
+    <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/NatWest-Large.png" alt="NatWest logo" style="max-width:100%;max-height:160px;object-fit:contain;display:block"/>
+  </div>
+  <h3 style="font-size:22px;margin-bottom:12px">NatWest Business Credit Card</h3>
+  <div style="margin-bottom:16px">
+    <div><strong>Representative APR</strong> <span>24.3%</span> variable</div>
+    <div><strong>Purchase Rate</strong> 16.9% p.a. variable</div>
+    <div><strong>Annual Fee</strong> &pound;30/cardholder (waived yr 1; waived if &pound;6k+ annual spend)</div>
+    <div><strong>Existing Account</strong> NatWest BCA required</div>
+  </div>
+  <p style="margin-bottom:12px">The purchase rate is 16.9% p.a., competitive in isolation. But the per-cardholder fee structure means total cost rises with team size unless you hit the &pound;6,000 annual spend threshold per cardholder.</p>
+  <p style="margin-bottom:12px">One standout feature: no foreign transaction fees on overseas purchases. If your business regularly pays overseas suppliers by card, NatWest's effective cost may be lower than its APR suggests compared with cards that charge 2.99% on non-sterling transactions.</p>
+  <p style="margin-bottom:16px">Restricted to businesses with annual turnover under &pound;2 million and requires a NatWest business bank account. Credit limits from &pound;500.</p>
+  <a href="#" style="display:inline-block;padding:12px 24px;background:#7a3f9d;color:#fff;border-radius:10px;text-decoration:none;font-weight:600">View NatWest Card</a>
+</div>
+
+</body>
+</html>

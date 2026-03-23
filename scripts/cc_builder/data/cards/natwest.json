@@ -1,0 +1,52 @@
+{
+  "id": "natwest_business_credit_card",
+  "bank": "NatWest",
+  "name": "NatWest Business Credit Card",
+  "short_name": "NatWest Business Card",
+  "annual_fee": "&pound;30 per cardholder",
+  "card_type": "Credit card",
+  "reward_type": "None",
+  "representative_apr": "24.3% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/NatWest-Large.png",
+  "img_alt": "NatWest logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "24.3% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "16.9% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;30 per cardholder",
+      "modifier": null,
+      "qualifier": "Waived at &pound;6k+ annual spend per card"
+    },
+    {
+      "label": "Existing Account",
+      "value": "NatWest BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.natwest.com/business/cards/business-credit-card.html",
+  "cta_label": "View NatWest Card Details",
+  "verify_source": "natwest.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr",
+    "travel"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "partnership"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "NatWest"
+}

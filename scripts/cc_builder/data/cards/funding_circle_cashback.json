@@ -1,0 +1,51 @@
+{
+  "id": "funding_circle_cashback_business_credit_card",
+  "bank": "Funding Circle",
+  "name": "Funding Circle Cashback Business Credit Card",
+  "short_name": "Funding Circle Cashback",
+  "annual_fee": "&pound;0",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "34.9% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Funding-Circle-Business-Cashback-Credit-Card-Landscape.webp",
+  "img_alt": "Funding Circle Cashback Business Credit Card",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "34.9% variable",
+      "modifier": "apr",
+      "qualifier": "Interest from 14.9% p.a."
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0",
+      "modifier": null,
+      "qualifier": "No annual fee"
+    },
+    {
+      "label": "Cashback",
+      "value": "2% first 6 months, then 1% uncapped",
+      "modifier": null,
+      "qualifier": "2% capped at &pound;2,000 cashback"
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.fundingcircle.com/gb/business-credit-card/",
+  "cta_label": "View Funding Circle Cashback Details",
+  "verify_source": "fundingcircle.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "cashback",
+    "instant-approval"
+  ],
+  "accepted_entities": [
+    "limited-company"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

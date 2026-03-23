@@ -1,0 +1,61 @@
+{
+  "id": "rbs_business_plus_credit_card",
+  "bank": "Royal Bank of Scotland",
+  "name": "RBS Business Plus Credit Card",
+  "short_name": "RBS Business Plus",
+  "annual_fee": "&pound;70 per cardholder",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "29% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/rbs-logo.png",
+  "img_alt": "Royal Bank of Scotland logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "29% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;70 per cardholder",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Cashback",
+      "value": "0.5%&ndash;3% tiered (capped &pound;600/year)",
+      "modifier": null,
+      "qualifier": "0.5% all spend; 1% travel; 2% trade supplies; 3% fuel &amp; EV charging"
+    },
+    {
+      "label": "FX Fees",
+      "value": "No foreign transaction charges",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "RBS business account required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.rbs.co.uk/business/cards/business-plus-credit-card.html",
+  "cta_label": "View RBS Card Details",
+  "verify_source": "rbs.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "cashback",
+    "rewards",
+    "travel"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Royal Bank of Scotland"
+}

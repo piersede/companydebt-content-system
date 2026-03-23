@@ -1,0 +1,52 @@
+{
+  "id": "lloyds_business_charge_card",
+  "bank": "Lloyds Bank",
+  "name": "Lloyds Bank Business Charge Card",
+  "short_name": "Lloyds Charge Card",
+  "annual_fee": "&pound;32/card (free yr 1, waived at &pound;6k+ spend)",
+  "card_type": "Charge card",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png",
+  "img_alt": "Lloyds Bank logo",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;32/card (free yr 1, waived at &pound;6k+ spend)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card (full balance monthly by DD)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Interest-Free Period",
+      "value": "Up to 56 days on purchases",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "Lloyds BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.lloydsbank.com/business/business-cards/business-charge-card.html",
+  "cta_label": "View Lloyds Card Details",
+  "verify_source": "lloydsbank.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Lloyds Bank"
+}

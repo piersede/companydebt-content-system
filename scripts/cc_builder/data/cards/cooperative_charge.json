@@ -1,0 +1,51 @@
+{
+  "id": "cooperative_bank_business_charge_card",
+  "bank": "The Co-operative Bank",
+  "name": "Co-operative Bank Business Charge Card",
+  "short_name": "Co-op Bank Charge Card",
+  "annual_fee": "&pound;2 per card (&pound;24/year)",
+  "card_type": "Charge card",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "[NEEDS_IMAGE]",
+  "img_alt": "Co-operative Bank logo",
+  "facts": [
+    {
+      "label": "Monthly Fee",
+      "value": "&pound;2 per card (&pound;24/year)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card (pay in full monthly)",
+      "modifier": null,
+      "qualifier": "Up to 48 days interest-free"
+    },
+    {
+      "label": "Interest-Free Period",
+      "value": "Up to 48 days",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "Co-op BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.co-operativebank.co.uk/business/products/cards/",
+  "cta_label": "View Co-op Business Charge Card Details",
+  "verify_source": "co-operativebank.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "The Co-operative Bank"
+}

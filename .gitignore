@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+create_spreadsheet.py
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Sensitive — never commit these
+.env
+.env.local
+*.env
+credentials*
+secrets*

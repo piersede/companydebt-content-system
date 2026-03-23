@@ -1,0 +1,51 @@
+{
+  "id": "metro_bank_business_credit_card",
+  "bank": "Metro Bank",
+  "name": "Metro Bank Business Credit Card",
+  "short_name": "Metro Bank Business Card",
+  "annual_fee": "&pound;0",
+  "card_type": "Credit card",
+  "reward_type": "None",
+  "representative_apr": "18.9% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/metro-bank.png",
+  "img_alt": "Metro Bank logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "18.9% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "18.9% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0",
+      "modifier": null,
+      "qualifier": "No fee, no waiver threshold"
+    },
+    {
+      "label": "Existing Account",
+      "value": "Metro Bank BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.metrobankonline.co.uk/business/borrowing/products/credit-card/",
+  "cta_label": "View Metro Bank Card Details",
+  "verify_source": "metrobankonline.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "limited-company"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Metro Bank"
+}

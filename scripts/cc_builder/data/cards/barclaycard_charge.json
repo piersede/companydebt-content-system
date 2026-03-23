@@ -1,0 +1,53 @@
+{
+  "id": "barclaycard_select_charge_card",
+  "bank": "Barclaycard",
+  "name": "Barclaycard Select Charge Card",
+  "short_name": "Barclaycard Charge Card",
+  "annual_fee": "&pound;42 per account",
+  "card_type": "Charge card",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png",
+  "img_alt": "Barclaycard logo",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;42 per account",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card (pay in full monthly)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "FX Fee",
+      "value": "2.99% on non-sterling transactions",
+      "modifier": null,
+      "qualifier": "Cash fee 3% (min &pound;3)"
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.barclaycard.co.uk/business/cards/charge-cards/select",
+  "cta_label": "View Barclaycard Details",
+  "verify_source": "barclaycard.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

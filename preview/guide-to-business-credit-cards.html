@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide to Business Credit Cards (2026)</title>
+<meta name="description" content="What a business credit card actually does, who needs one, and how to choose. Plain-English guide covering types, terms, and the existing-account problem.">
+</head>
+<body data-slug="guide-to-business-credit-cards">
+<article class="entry-content container">
+<!-- wp:html -->
+<style>
+/* Table of Contents Sidebar — spacious, invisible-but-useful
+   Matches page type scale: 14.5px body tier. Max 6 items. */
+.cc-toc {
+  display: none;
+}
+
+@media (min-width: 1340px) {
+  .cc-toc {
+    display: block;
+    position: fixed;
+    top: 140px;
+    width: 220px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 0;
+    z-index: 50;
+  }
+  .cc-toc__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #E0DCE8;
+  }
+  .cc-toc__item {
+    margin: 0;
+    padding: 0;
+  }
+  .cc-toc__link {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: #6E6E78;
+    text-decoration: none;
+    margin-right: -1px;
+    border-right: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .cc-toc__link:hover {
+    color: #2A2A2E;
+  }
+  .cc-toc__link--active {
+    color: #6704A4;
+    border-right-color: #6704A4;
+    font-weight: 600;
+  }
+  .cc-toc::-webkit-scrollbar {
+    width: 3px;
+  }
+  .cc-toc::-webkit-scrollbar-thumb {
+    background: #DDD6E5;
+    border-radius: 3px;
+  }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<style>
+/* Comparison Table v4 */
+.cc-ct {
+  margin: 32px 0;
+  font-family: inherit;
+}
+
+/* ── Desktop: 6-column table ── */
+.cc-ct__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.cc-ct__table thead th {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+  background: #f8f8fa;
+  padding: 12px 14px;
+  border-bottom: 2px solid #e0e0e5;
+  text-align: left;
+  white-space: nowrap;
+}
+/* Column widths: Card 22%, Fee 12%, APR/Type 14%, Best for 22%, Features 18%, Action 12% */
+.cc-ct__table thead th:nth-child(1) { width: 22%; }
+.cc-ct__table thead th:nth-child(2) { width: 12%; }
+.cc-ct__table thead th:nth-child(3) { width: 14%; }
+.cc-ct__table thead th:nth-child(4) { width: 22%; }
+.cc-ct__table thead th:nth-child(5) { width: 18%; }
+.cc-ct__table thead th:nth-child(6) { width: 12%; }
+
+.cc-ct__table tbody tr {
+  border-bottom: 1px solid #ebebeb;
+  transition: background 0.1s;
+}
+.cc-ct__table tbody tr:hover {
+  background: #fafafa;
+}
+.cc-ct__table tbody td {
+  padding: 14px 14px;
+  vertical-align: top;
+  color: #1a1a1a;
+}
+.cc-ct__table tbody td:first-child {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+/* Card name cell */
+.cc-ct__card-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cc-ct__card-logo {
+  width: 40px;
+  height: 28px;
+  border-radius: 4px;
+  background: #f5f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.cc-ct__card-logo img {
+  max-width: 100%;
+  max-height: 24px;
+  object-fit: contain;
+}
+.cc-ct__card-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+/* Badge in card cell */
+.cc-ct__badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+.cc-ct__badge--top { background: #6b3fa0; color: #fff; }
+.cc-ct__badge--gold { background: #fef3cd; color: #856404; }
+.cc-ct__badge--teal { background: #d1ecf1; color: #0c5460; }
+.cc-ct__badge--pink { background: #f8d7da; color: #721c24; }
+
+/* APR/type cell */
+.cc-ct__apr {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+.cc-ct__type {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Features cell — compact list */
+.cc-ct__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cc-ct__features li {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+  padding: 2px 0 2px 14px;
+  position: relative;
+}
+.cc-ct__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Action cell */
+.cc-ct__action-link {
+  display: inline-block;
+  padding: 7px 12px;
+  min-width: 120px;
+  max-width: 160px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #6b3fa0;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: normal;
+  line-height: 1.3;
+  transition: background 0.15s;
+}
+.cc-ct__action-link:hover {
+  background: #5a3488;
+}
+
+/* Expandable detail row */
+.cc-ct__detail-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b3fa0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  font-weight: 600;
+}
+.cc-ct__detail-toggle:hover {
+  text-decoration: underline;
+}
+.cc-ct__detail-toggle:focus-visible {
+  outline: 2px solid #6704A4;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.cc-ct__detail-row {
+  display: none;
+}
+.cc-ct__detail-row.cc-ct--open {
+  display: table-row;
+}
+.cc-ct__detail-row td {
+  padding: 0 14px 16px 14px;
+  background: #fafafa;
+  border-bottom: 1px solid #ebebeb;
+}
+.cc-ct__detail-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: #333;
+  padding: 14px 0;
+}
+.cc-ct__detail-label {
+  font-size: 11px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #777;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+.cc-ct__detail-block p {
+  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+/* Verification footer */
+.cc-ct__footer {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.4;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ebebeb;
+}
+
+/* ── Mobile: stacked cards ── */
+@media (max-width: 768px) {
+  .cc-ct__table,
+  .cc-ct__table thead,
+  .cc-ct__table tbody,
+  .cc-ct__table tr,
+  .cc-ct__table td,
+  .cc-ct__table th {
+    display: block;
+    width: 100%;
+  }
+  .cc-ct__table thead {
+    display: none;
+  }
+  .cc-ct__table tbody tr {
+    background: #fff;
+    border: 1px solid #e0e0e5;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cc-ct__table tbody tr:hover {
+    background: #fff;
+  }
+  .cc-ct__table tbody td {
+    padding: 0;
+  }
+  /* Show labels on mobile */
+  .cc-ct__table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #777;
+    margin-bottom: 2px;
+  }
+  /* Card cell: no label needed (logo + name is self-describing) */
+  .cc-ct__table tbody td:first-child::before {
+    display: none;
+  }
+  .cc-ct__card-cell {
+    gap: 12px;
+  }
+  .cc-ct__card-logo {
+    width: 48px;
+    height: 34px;
+  }
+  /* Action: full width button */
+  .cc-ct__action-link {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* Detail panel: single column on mobile */
+  .cc-ct__detail-row {
+    display: none;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  .cc-ct__detail-row.cc-ct--open {
+    display: flex;
+    margin-top: 4px;
+  }
+  .cc-ct__detail-row td {
+    padding: 12px 0 0 0;
+    background: transparent;
+    border: none;
+  }
+  .cc-ct__detail-inner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<style>
+/* Hero Zone — v4 two-column grid layout, breaks out to full width */
+.cc-hero-zone {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 max(40px, calc((100vw - 1100px) / 2));
+  box-sizing: border-box;
+  margin: 0 0 32px 0;
+}
+
+/* ── Two-column hero grid ── */
+.cc-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 60px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+@media (max-width: 880px) {
+  .cc-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+.cc-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+.cc-hero-right {}
+
+/* ── Verdict text (left column) ── */
+.cc-hero-verdict {
+  font-size: 16.5px;
+  color: #4A4A5A;
+  line-height: 1.65;
+  margin: 48px 0 20px 0;
+}
+
+/* ── Verification notice (left column) ── */
+.cc-hero-verify {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #7B2D8E;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+/* ── Top Pick Card (right column) v4.5 ──
+   Hierarchy: eyebrow → product name → tagline → image → benefits → CTA.
+   Type scale: 11px metadata | 14.5px body | 18px name. */
+.cc-hero-tp {
+  background: #fff;
+  border: 1px solid #DDD6E5;
+  border-radius: 14px;
+  padding: 24px 28px 22px;
+  margin-top: 48px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* Eyebrow: small restrained label */
+.cc-hero-tp__label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6E6E78;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Product name: primary focal point */
+.cc-hero-tp__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #2A2A2E;
+  text-align: center;
+  margin: 0 0 4px 0;
+}
+
+/* Tagline: one-line positioning, secondary */
+.cc-hero-tp__tagline {
+  font-size: 13px;
+  color: #6E6E78;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Product image: recognition support */
+.cc-hero-tp__logo {
+  width: 140px;
+  height: 90px;
+  margin: 18px auto 0;
+  background: #FCFBFD;
+  border: 1px solid #EEEAF2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #6E6E78;
+  overflow: hidden;
+}
+.cc-hero-tp__logo img {
+  max-width: 100%;
+  max-height: 74px;
+  object-fit: contain;
+}
+
+/* Benefits list: tight parallel proof points */
+.cc-hero-tp__list {
+  list-style: none;
+  margin: 18px 0 20px 0;
+  padding: 14px 0 0 0;
+  border-top: 1px solid #EEEAF2;
+}
+.cc-hero-tp__list li {
+  font-size: 13px;
+  color: #2A2A2E;
+  padding: 5px 0 5px 22px;
+  position: relative;
+  line-height: 1.45;
+}
+.cc-hero-tp__list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: #6704A4;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* CTA: clear action conclusion */
+.cc-hero-tp__cta {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #6704A4;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.cc-hero-tp__cta:hover {
+  background: #4F0280;
+}
+.cc-hero-tp__cta:focus-visible {
+  outline: 2px solid #6704A4;
+  outline-offset: 2px;
+}
+
+/* ── Also Consider Strip v4.2 ──
+   Clean editorial alternatives. Reading order: image → text → CTA.
+   Palette: #6704A4 accent (button only), #DDD6E5 borders, dark neutrals. */
+.cc-hero-also {
+  padding: 0;
+}
+.cc-hero-also__label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #6E6E78;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cc-hero-also__label::before {
+  content: '';
+  width: 16px;
+  height: 1.5px;
+  background: #6704A4;
+}
+.cc-hero-also__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 780px) {
+  .cc-hero-also__list { grid-template-columns: 1fr; }
+}
+
+/* Card: single-row grid — image | text block | CTA */
+.cc-hero-also__row {
+  display: grid;
+  grid-template-columns: 44px 1fr max-content;
+  gap: 0 12px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #DDD6E5;
+  border-radius: 10px;
+  padding: 22px 20px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.cc-hero-also__row:hover {
+  border-color: #C5BCD2;
+  box-shadow: 0 2px 10px rgba(103,4,164,0.05);
+}
+
+/* Logo: small, functional, left-anchored */
+.cc-hero-also__thumb {
+  width: 44px;
+  height: 34px;
+  border-radius: 6px;
+  background: #FCFBFD;
+  border: 1px solid #E8E2EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: #6E6E78;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cc-hero-also__thumb img {
+  max-width: 100%;
+  max-height: 28px;
+  object-fit: contain;
+}
+
+/* Text block: badge (optional) → title → tagline */
+.cc-hero-also__body {
+  min-width: 0;
+}
+.cc-hero-also__tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #6704A4;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.cc-hero-also__name {
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #2A2A2E;
+}
+.cc-hero-also__desc {
+  font-size: 12.5px;
+  color: #4A4A52;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* CTA: right-aligned, compact, clearly secondary */
+.cc-hero-also__link {
+  padding: 7px 14px;
+  background: #6704A4;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.cc-hero-also__link:hover {
+  background: #4F0280;
+}
+
+/* ── Affiliate disclosure (tier 1, top of page) ── */
+.cc-hero-disclosure {
+  font-size: 12.5px;
+  color: #888;
+  line-height: 1.5;
+  margin: 8px 0 0 0;
+}
+.cc-hero-disclosure a {
+  color: #6704A4;
+  text-decoration: underline;
+}
+
+/* ── FAQ native details/summary ── */
+.cc-faq__details { border: none; }
+.cc-faq__details summary { cursor: pointer; list-style: none; }
+.cc-faq__details summary::-webkit-details-marker { display: none; }
+.cc-faq__details[open] .cc-faq__icon { transform: rotate(90deg); }
+.cc-faq__answer { padding: 0 0 12px 0; }
+
+/* ── Mobile: collapse also-consider behind toggle ── */
+@media (max-width: 640px) {
+  .cc-hero-also__list { display: none; }
+  .cc-hero-also__list.cc-hero-also--expanded { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .cc-hero-also__toggle {
+    display: block; width: 100%; padding: 10px; margin-top: 8px;
+    background: #f5f0fa; border: 1px solid #DDD6E5; border-radius: 8px;
+    font-size: 13px; font-weight: 600; color: #6704A4; cursor: pointer;
+    text-align: center;
+  }
+}
+@media (min-width: 641px) {
+  .cc-hero-also__toggle { display: none; }
+}
+
+/* ── Align also-consider breakpoint with hero grid (880px) ── */
+@media (max-width: 880px) and (min-width: 641px) {
+  .cc-hero-also__list { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Medium-screen TOC (horizontal sticky bar, 768-1340px) ── */
+@media (min-width: 768px) and (max-width: 1339px) {
+  .cc-toc {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .cc-toc__list {
+    display: flex;
+    gap: 18px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0; padding: 0; list-style: none;
+  }
+  .cc-toc__item { white-space: nowrap; }
+  .cc-toc__link { font-size: 13px; padding: 4px 0; }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<style>
+/* ══ Spacious Editorial Layout — auto-generated for page 44220 ══ */
+
+/* ── 0. PAGE HEADER ── */
+.page-id-44220 .section-breadcrumbs {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+.page-id-44220 .section-breadcrumbs::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  background: #F9F8FC;
+  z-index: -1;
+}
+.page-id-44220 #breadcrumbs,
+.page-id-44220 #breadcrumbs a,
+.page-id-44220 #breadcrumbs span {
+  font-size: 12px;
+  color: #7A7584;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.page-id-44220 #breadcrumbs a:hover {
+  color: #4A4654;
+}
+.page-id-44220 #breadcrumbs img {
+  opacity: 0.55;
+  width: 12px;
+  height: 12px;
+}
+.page-id-44220 .hero-section {
+  padding-top: 8px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.page-id-44220 .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  background: #F9F8FC;
+  z-index: -1;
+}
+.page-id-44220 .hero-section .container > .row > .col-12:first-child > .row:first-child {
+  display: none !important;
+}
+.page-id-44220 .cc-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  width: 100%;
+  padding: 10px 0 6px;
+}
+.page-id-44220 .cc-meta-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.page-id-44220 .cc-meta-author {
+  color: #4A4654;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.page-id-44220 .cc-meta-author .cc-meta-label {
+  color: #7A7584;
+  font-weight: 400;
+}
+.page-id-44220 .cc-meta-divider {
+  width: 1px;
+  height: 14px;
+  background: #D0CDD6;
+  margin: 0 8px;
+  flex-shrink: 0;
+}
+.page-id-44220 .cc-readtime-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6E6E78;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.page-id-44220 .cc-readtime-icon {
+  color: #9A95A3;
+  flex-shrink: 0;
+}
+.page-id-44220 .cc-meta-date {
+  color: #7A7584;
+  font-weight: 400;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.page-id-44220 .cc-disclosure-aligned {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+.page-id-44220 .hero-section h1 {
+  font-size: 38px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #1a1a1e;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  max-width: 620px;
+}
+.page-id-44220 .ad-disclaimer-tooltip {
+  font-size: 11px;
+  opacity: 0.9;
+}
+.page-id-44220 .ad-disclaimer-tooltip img {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  width: 13px;
+  height: 13px;
+}
+.page-id-44220 .ad-tooltip-title {
+  font-size: 11px;
+  color: #7A7584;
+  font-weight: 400;
+}
+.page-id-44220 .date-time-section {
+  display: none !important;
+}
+
+/* ── 1. GLOBAL RHYTHM ── */
+.page-id-44220 .entry-content p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #2A2A2E;
+  margin-bottom: 1.6em;
+}
+.page-id-44220 .entry-content h2.wp-block-heading {
+  margin-top: 64px;
+  margin-bottom: 22px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1a1a1e;
+}
+.page-id-44220 .entry-content h3.wp-block-heading {
+  margin-top: 44px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2A2A2E;
+}
+
+/* ── 2. HERO ZONE ── */
+.page-id-44220 .cc-hero-zone {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.page-id-44220 .cc-hero-zone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  background: #F9F8FC;
+  z-index: -1;
+}
+.page-id-44220 .cc-hero-grid {
+  gap: 48px;
+  margin-bottom: 24px;
+  align-items: start;
+}
+.page-id-44220 .cc-hero-verdict {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 20px;
+  color: #1E1E22;
+}
+.page-id-44220 .cc-hero-verify {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+  color: #2A2A2E !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 1.6em !important;
+}
+.page-id-44220 .cc-hero-tp {
+  border-color: #E8E2EF;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 24px;
+  margin-top: 20px;
+}
+.page-id-44220 .cc-hero-tp__label {
+  color: #8A8A94;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  text-align: left;
+}
+.page-id-44220 .cc-hero-tp__name {
+  font-size: 18px;
+  margin-bottom: 4px;
+  text-align: left;
+}
+.page-id-44220 .cc-hero-tp__tagline {
+  text-align: left;
+}
+.page-id-44220 .cc-hero-tp__logo {
+  margin: 16px 0 0 0;
+}
+.page-id-44220 .cc-hero-tp__list {
+  margin: 16px 0 20px 0;
+  padding-top: 16px;
+}
+.page-id-44220 .cc-hero-tp__list li {
+  padding: 5px 0 5px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page-id-44220 .cc-hero-tp__cta {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+}
+
+/* ── 4. BRIDGE PARAGRAPH ── */
+.page-id-44220 .cc-hero-zone + .wp-block-html + .wp-block-paragraph,
+.page-id-44220 .cc-hero-zone ~ .wp-block-paragraph:first-of-type {
+  margin-top: 8px;
+  margin-bottom: 2.2em;
+}
+
+
+/* ── 6. SECTION DIVIDERS ── */
+.page-id-44220 .cc-section-divider {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid #F0ECF4;
+}
+
+/* ── 7. CARD BLOCKS ── */
+.page-id-44220 .cc-card {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border-color: #E8E2EF;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.page-id-44220 .cc-card__summary-strip {
+  padding: 7px 32px;
+  background: #FDFCFE;
+  border-bottom-color: #F0ECF4;
+}
+.page-id-44220 .cc-card__header {
+  padding: 26px 32px;
+  gap: 0 28px;
+}
+.page-id-44220 .cc-card__identity h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+.page-id-44220 .cc-card__verdict {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.page-id-44220 .cc-card__facts {
+  margin: 0 32px;
+}
+.page-id-44220 .cc-card__fact {
+  padding: 16px 18px 16px 0;
+}
+.page-id-44220 .cc-card__fact:nth-child(even) {
+  padding-left: 20px;
+}
+.page-id-44220 .cc-card__notes {
+  padding: 16px 0 12px 0;
+}
+.page-id-44220 .cc-card__note {
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.page-id-44220 .cc-card__footer {
+  padding: 12px 0 20px 0;
+}
+
+/* ── 8. WP DECISION TABLE ── */
+.page-id-44220 .wp-block-table.is-style-stripes table {
+  border-collapse: collapse;
+}
+.page-id-44220 .wp-block-table.is-style-stripes table th {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 14px 18px;
+  background: #FAFAFA;
+  color: #6E6E78;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.page-id-44220 .wp-block-table.is-style-stripes table td {
+  font-size: 15px;
+  padding: 16px 18px;
+  line-height: 1.55;
+}
+.page-id-44220 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background: #FDFCFE;
+}
+.page-id-44220 .wp-block-table.is-style-stripes tbody tr:nth-child(even) {
+  background: #fff;
+}
+
+/* ── 9. METHODOLOGY ── */
+.page-id-44220 .wp-block-group.methodology {
+  border-color: #F0ECF4 !important;
+  background: #FDFCFE !important;
+  border-radius: 12px !important;
+  padding: 24px 28px 32px !important;
+  margin-top: 64px !important;
+}
+
+/* ── 10. METADATA ── */
+.page-id-44220 .cc-hero-meta {
+  font-size: 14px;
+  color: #8A8A94;
+  letter-spacing: 0;
+}
+.page-id-44220 .cc-hero-meta strong {
+  color: #6E6E78;
+  font-weight: 600;
+}
+
+/* ── 12. FAQ ACCORDION ── */
+.page-id-44220 .cc-faq {
+  margin-top: 56px;
+}
+.page-id-44220 .cc-faq__list {
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+.page-id-44220 .cc-faq__item {
+  border-bottom: 1px solid #EEEAF2;
+}
+.page-id-44220 .cc-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 8px 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #2A2A2E;
+  transition: color 0.15s;
+}
+.page-id-44220 .cc-faq__question:hover {
+  color: #6704A4;
+}
+.page-id-44220 .cc-faq__question:focus-visible {
+  outline: 2px solid #6704A4;
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+.page-id-44220 .cc-faq__item--open .cc-faq__question {
+  color: #6704A4;
+  padding-bottom: 4px;
+}
+.page-id-44220 .cc-faq__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6E6E78;
+  transition: transform 0.25s ease, color 0.15s;
+}
+.page-id-44220 .cc-faq__icon svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2;
+}
+.page-id-44220 .cc-faq__item--open .cc-faq__icon {
+  transform: rotate(90deg);
+  color: #6704A4;
+}
+.page-id-44220 .cc-faq__answer {
+  display: none;
+  padding: 8px 0 28px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4A4A52;
+  max-width: 780px;
+}
+.page-id-44220 .cc-faq__answer p {
+  margin: 0 0 14px 0;
+}
+.page-id-44220 .cc-faq__answer p:last-child {
+  margin-bottom: 0;
+}
+.page-id-44220 .cc-faq__item--open .cc-faq__answer {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .page-id-44220 .cc-faq__question {
+    font-size: 15px;
+    padding: 18px 0;
+  }
+  .page-id-44220 .cc-faq__item--open .cc-faq__question {
+    padding-bottom: 4px;
+  }
+  .page-id-44220 .cc-faq__answer {
+    padding: 0 0 18px;
+    font-size: 14.5px;
+  }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<nav class="cc-toc" id="cc-toc" aria-label="Table of contents">
+  <ul class="cc-toc__list" id="cc-toc-list"></ul>
+</nav>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script>(function(){var sub=document.querySelector("p.subheading");if(sub){sub.textContent="5 cards reviewed \u00b7 Independently assessed \u00b7 Rates verified 20 March 2026";sub.style.fontSize="16px";sub.style.color="rgb(0,0,0)";sub.style.lineHeight="18.4px";}var rt=document.querySelector(".time-section .read-time");var authorMeta=document.querySelector(".author-meta");var authorName=authorMeta?authorMeta.querySelector("a"):null;var dateEl=document.querySelector(".article-date");var avatar=document.querySelector(".author-box .avatar-image");var nameText=authorName?authorName.textContent.trim():"";var rtText=rt?rt.textContent.trim():"";var dateText=dateEl?dateEl.textContent.trim():"";var metaRow=document.querySelector(".hero-section .col-12.d-flex");if(metaRow&&nameText){var strip=document.createElement("div");strip.className="cc-meta-strip";if(avatar){var av=avatar.cloneNode(true);av.className="cc-meta-avatar";strip.appendChild(av);}var auth=document.createElement("span");auth.className="cc-meta-author";var authLabel=document.createElement("span");authLabel.className="cc-meta-label";authLabel.textContent="Author";auth.appendChild(authLabel);auth.appendChild(document.createTextNode(" "+nameText));strip.appendChild(auth);var d1=document.createElement("span");d1.className="cc-meta-divider";strip.appendChild(d1);var rtSpan=document.createElement("span");rtSpan.className="cc-readtime-inline";rtSpan.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" class="cc-readtime-icon"><path d="M10 4.5V10H14M10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';if(rtText){var rtTxt=document.createElement("span");rtTxt.textContent=rtText;rtSpan.appendChild(rtTxt);}strip.appendChild(rtSpan);if(dateText){var pub=document.createElement("span");pub.className="cc-meta-date";pub.textContent=dateText;strip.appendChild(pub);}while(metaRow.firstChild){metaRow.removeChild(metaRow.firstChild);}metaRow.appendChild(strip);var parentRow=metaRow.closest(".row");if(parentRow&&getComputedStyle(parentRow).display==="none"){parentRow.style.setProperty("display","flex","important");parentRow.style.setProperty("flex-wrap","wrap","important");}}var disc=document.querySelector(".ad-disclaimer-tooltip");var headingRow=document.querySelector(".hero-section .heading");if(disc&&headingRow){var headingParent=headingRow.closest(".row");if(headingParent){var wrapper=document.createElement("div");wrapper.className="cc-disclosure-aligned";wrapper.appendChild(disc);headingParent.appendChild(wrapper);}}var alsoBtn=document.querySelector(".cc-hero-also__toggle");if(alsoBtn){alsoBtn.addEventListener("click",function(){var l=alsoBtn.nextElementSibling;if(!l)return;l.classList.toggle("cc-hero-also--expanded");alsoBtn.textContent=l.classList.contains("cc-hero-also--expanded")?"Hide alternatives \u25B2":"Show alternatives \u25BC";});}})();</script>
+<div class="cc-hero-zone">
+<div class="cc-hero-grid">
+  <div class="cc-hero-left">
+    <p class="cc-hero-verdict">A business credit card separates business spending from personal finances, builds a credit profile in the business name, and &mdash; depending on the card &mdash; earns rewards or keeps interest costs low. Most businesses with any regular card spend benefit from having one. The wrong choice is applying for a card without checking the existing-account requirement first: we checked every major provider and most bank cards require a business current account with the same provider.</p>
+<p class="cc-hero-verify">Confirm current terms before applying.</p>
+<p class="cc-hero-disclosure">Some links on this page are affiliate links. See our <a href="/editorial-policy/">methodology</a> for details.</p>
+  </div>
+  <div class="cc-hero-right">
+    <div class="cc-hero-tp">
+  <div class="cc-hero-tp__label">Recommended Starting Point</div>
+  <h3 class="cc-hero-tp__name">Barclaycard Select Cashback Business Credit Card</h3>
+  <div class="cc-hero-tp__tagline">The most widely accessible business credit card</div>
+  <div class="cc-hero-tp__logo"><img src="https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png" alt="Barclaycard logo" width="140" height="74" loading="eager" /></div>
+  <ul class="cc-hero-tp__list">
+    <li>No annual fee</li>
+<li>No bank account required</li>
+<li>Cashback on eligible spend</li>
+<li>Widely accessible to most business types</li>
+<li>Visa network</li>
+
+  </ul>
+  <a href="https://www.barclaycard.co.uk/business/cards/credit-cards/select-cashback" class="cc-hero-tp__cta" target="_blank" rel="noopener noreferrer">View Barclaycard Details &rarr;</a>
+</div>
+  </div>
+</div>
+<div class="cc-hero-also">
+  <div class="cc-hero-also__label">Also Consider</div>
+  <button class="cc-hero-also__toggle">Show alternatives &#x25BC;</button>
+  <div class="cc-hero-also__list">
+    <div class="cc-hero-also__row">
+      <div class="cc-hero-also__thumb"><img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Capital-on-Tap-card.webp" alt="Capital on Tap logo" width="44" height="28" loading="lazy" /></div>
+      <div class="cc-hero-also__body">
+        <div class="cc-hero-also__name">Capital on Tap</div>
+        <div class="cc-hero-also__desc">Higher limits for limited companies</div>
+      </div>
+      <span class="cc-hero-also__tag">Fintech Alternative</span>
+      <a href="https://www.capitalontap.com/en/business-credit-cards/" class="cc-hero-also__link" target="_blank" rel="noopener noreferrer">View details &rarr;</a>
+    </div>
+<div class="cc-hero-also__row">
+      <div class="cc-hero-also__thumb"><img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png" alt="Lloyds Business Credit Card" width="44" height="28" loading="lazy" /></div>
+      <div class="cc-hero-also__body">
+        <div class="cc-hero-also__name">Lloyds Bank</div>
+        <div class="cc-hero-also__desc">Best rate if you bank with Lloyds</div>
+      </div>
+      <span class="cc-hero-also__tag">Lowest APR</span>
+      <a href="https://www.lloydsbank.com/business/business-cards/business-credit-card.html" class="cc-hero-also__link" target="_blank" rel="noopener noreferrer">View details &rarr;</a>
+    </div>
+
+  </div>
+</div>
+</div>
+<noscript><p class="cc-hero-author-fallback" style="font-size:14px;color:#666;margin:8px 0 0;">Reviewed by the BusinessExpert editorial team</p></noscript>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div id="cc-toc-start" aria-hidden="true"></div>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>The UK business credit card market has about a dozen mainstream options. Every major provider divides roughly by what they optimise for: low interest, rewards, or open access. The card that suits you depends on whether you carry a balance, which bank you use, and whether your suppliers accept Amex.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This guide covers the core concepts before you compare cards. If you already know the basics, the <a href="/business-credit-cards/best-business-credit-cards/">full comparison</a> is a faster starting point.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">What a Business Credit Card Actually Does</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A business credit card works like a personal credit card in most respects: the provider extends a credit limit, you spend against it, and you repay monthly. The key differences are that the account is in the business name, spending data feeds into a business credit file rather than a personal one, and Section 75 consumer protection under the Consumer Credit Act does not apply.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Practically, this means you get a named account for business expenses, a statement that separates business from personal spend, and in most cases a separate credit limit from your personal cards. It does not automatically mean better terms &mdash; many business cards carry higher APRs than personal cards. If you are choosing a business card purely for a better rate, check that assumption before you apply.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Additional cardholders are usually available, which is useful if you have employees making purchases on behalf of the business. Most providers charge a small fee per additional card or include a set number free.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here is how this works in practice: you run a four-person marketing agency. Your designer needs to buy stock photography (&pound;50/month), your account manager expenses client lunches (&pound;200/month), and you handle the software subscriptions (&pound;800/month). With a business credit card and additional cardholder cards, all of that appears on one statement, categorised by cardholder. Without it, you are chasing receipts from three people and reconciling personal card expenses against bank transfers. The operational simplicity is the underrated benefit.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Business vs Personal Credit Cards: The Real Differences</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are a sole trader or small limited company, you might wonder whether you actually need a business credit card at all. Your personal card works at the same shops, earns the same type of rewards, and you already have one. Here are the practical differences that matter.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>First, separation. If HMRC audits your business, they want to see clean records. A business card gives you a single statement with only business transactions on it. Mixing personal and business spend on one card creates an accounting burden that grows every month. If you use accounting software like Xero or FreeAgent, a dedicated business card feed saves you hours of manual categorisation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Second, credit building. Spending on a business card builds a credit profile in the business name. If you plan to apply for a business loan, lease equipment, or take on commercial premises in the next two years, a business credit history helps. Personal card spending does not contribute to this.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Third, liability. On a personal card, you are personally liable. On most small business cards, you are also personally liable &mdash; but the account is in the business name, which matters for record-keeping and can matter for liability structuring as your business grows.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fourth, consumer protection. Business credit cards do not benefit from Section 75 protection under the Consumer Credit Act 1974. This is a widely misunderstood point. Section 75 applies to personal credit card purchases between &pound;100 and &pound;30,000, but business cards fall outside its scope. If you need to dispute a purchase made on a business card, your recourse is through the card network&rsquo;s chargeback scheme (Visa or Mastercard), not the statutory protection that personal cards provide. Chargeback is a voluntary scheme with shorter time limits and no legal guarantee of outcome. Do not assume your business card carries the same buyer protection as your personal card.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The bottom line: if you spend more than &pound;500 a month on business expenses, a dedicated business card saves you time and builds a financial profile for the business. If your business spend is genuinely minimal &mdash; under &pound;200 a month &mdash; a personal card with clear record-keeping may be sufficient.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Credit Card vs Charge Card vs Corporate Card</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Type</th><th>Revolving credit?</th><th>Interest charged?</th><th>Who it suits</th></tr></thead><tbody><tr><td>Credit card</td><td>Yes</td><td>Yes, if you carry a balance</td><td>Businesses that occasionally need to spread payments</td></tr><tr><td>Charge card</td><td>No</td><td>No (but late payment fees apply)</td><td>Businesses that always clear monthly and want rewards</td></tr><tr><td>Corporate card</td><td>Varies</td><td>Varies</td><td>Larger organisations with centralised expense management</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Credit card</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">Extends a revolving credit limit. You can carry a balance from month to month, paying interest on the outstanding amount. Most UK business credit cards fall into this category. If you need the option to spread payments, this is what you want.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Charge card</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">Requires the full balance to be cleared every month. No revolving credit, no interest &mdash; but late payment fees apply if you miss the deadline. Charge cards typically have no pre-set spending limit, which suits high-spending businesses. Amex Business Gold and Platinum are the main UK examples. Since January 2026, Amex Gold has a flexible payment option that blurs this distinction slightly.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Corporate card</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">Issued to larger organisations (typically 50+ employees) rather than small businesses. Terms are negotiated directly with the provider. If you have fewer than 20 employees, you&rsquo;re almost certainly looking at a business credit or charge card, not a corporate card.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">How to Choose a Business Credit Card</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Four questions narrow the field before you look at any specific card.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol>
+    <li><strong>Do you carry a balance?</strong> If yes, APR is the primary metric. The Lloyds card (15.95% representative APR) is the lowest available to most businesses. If no, the cost of borrowing is irrelevant and rewards become the deciding factor.</li>
+    <li><strong>Do you need rewards?</strong> If yes, Amex cards offer the strongest Membership Rewards programme. Santander and Capital on Tap offer cashback on Visa/Mastercard. If no, a no-fee card with a low APR is usually the cleaner choice.</li>
+    <li><strong>Do your suppliers accept Amex?</strong> Amex has acceptance gaps in the UK, particularly with smaller suppliers and some government bodies. If a significant share of your spend goes to suppliers who don&rsquo;t take Amex, Amex rewards won&rsquo;t translate to actual value.</li>
+    <li><strong>Do you have a traditional bank account?</strong> Most bank-issued cards require a business current account with the same provider. If you bank with a fintech (Starling, Monzo, Tide), your options narrow to Barclaycard, Capital on Tap, the Amex range, and a small number of fintech cards.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">The Bank Account Requirement for Business Credit Cards</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most bank-issued business credit cards require a business current account with the same bank. We verified this against each provider&rsquo;s eligibility pages: Lloyds, HSBC, NatWest, Santander, and Metro Bank all have this requirement. This means you cannot get a Lloyds credit card unless you bank with Lloyds, even if the Lloyds card has the <a href="/business-credit-cards/low-apr-business-credit-cards/">lowest APR on the market</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The cards without a bank account requirement are: Barclaycard Select, Capital on Tap, the full Amex range, and some fintech cards. If you bank with a fintech provider or simply don&rsquo;t want to switch banks, your realistic shortlist is these providers. We cover <a href="/business-credit-cards/best-business-credit-cards-for-sole-traders/">sole trader eligibility separately</a> since several cards exclude them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Barclaycard is the only major traditional bank card without an existing-account requirement, which is why it appears on most &ldquo;open access&rdquo; shortlists despite its higher APR. We update these eligibility checks quarterly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"callout callout--warning"} -->
+<div class="wp-block-group callout callout--warning" style="border-left:4px solid #d48806;background-color:#fffbf5;padding:18px 20px;border-radius:0 6px 6px 0">
+
+<!-- wp:paragraph -->
+<p><strong>Multiple applications leave visible marks</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Each application triggers a hard credit search, which other lenders can see. Applying to three cards in the same month signals financial stress to underwriters, even if you&rsquo;re approved for all three. Decide which card you want before applying, and space applications at least three months apart if you need to try more than one.</p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Business Credit Card Terms Explained</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Representative APR</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">The interest rate that at least 51% of successful applicants receive. Your actual rate may be higher depending on your credit profile. A card advertised at 19.9% representative APR may give you a rate of 24.9% if your business credit file is thin. The representative APR is a comparison benchmark, not a guarantee.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Purchase rate</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">The interest rate applied to purchases when you carry a balance. Usually the same as the representative APR, but some cards have separate rates for purchases, balance transfers, and cash advances. Always check all three if you plan to use the card for more than straightforward purchases.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Balance transfer</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">Moving an existing card balance to a new card, typically to benefit from a lower rate. 0% balance transfer offers are common on personal credit cards but extremely rare on business cards. If you&rsquo;re carrying expensive debt on a business card, the practical options are switching to the lowest-APR card available or paying the balance down directly. See the <a href="/business-credit-cards/what-is-a-balance-transfer-credit-card/">balance transfer guide</a> for the full picture.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Credit limit</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">The maximum balance the provider will allow on the account. Limits on business cards vary widely &mdash; from &pound;1,000 on entry-level cards to &pound;250,000+ on Capital on Tap for businesses with strong financials. Your initial limit is set at application. You can usually request an increase after six to twelve months of on-time payments.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="padding:16px 20px;border:1px solid #e5e5e5;border-radius:6px;margin:16px 0;background:#fafafa"><strong style="font-size:16px;color:#1a1a1a">Minimum payment</strong><p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.6">The smallest amount you can pay each month without incurring a missed-payment penalty. Paying only the minimum means interest compounds on the remaining balance. On a card at 20% APR, carrying a &pound;5,000 balance and paying only the minimum will cost significantly more than the headline rate suggests over a twelve-month period.</p></div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">What to Check Before Applying for a Business Credit Card</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":false} -->
+<ul>
+    <li>Does the card require a business current account with the same provider?</li>
+    <li>Is your business structure eligible? (Some cards exclude sole traders or require Ltd registration.)</li>
+    <li>What is the minimum turnover requirement?</li>
+    <li>Is there an annual fee, and does your projected spend justify it?</li>
+    <li>What is the interest-free period on purchases?</li>
+    <li>Are additional cardholder fees included or charged separately?</li>
+    <li>Does the card have a foreign transaction fee if you spend abroad?</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Your First Business Credit Card: A Practical Checklist</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you have never had a business credit card before, this checklist will save you from the most common mistakes. Work through it before you apply.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol>
+    <li><strong>Check whether your bank offers a business credit card.</strong> If you bank with Lloyds, HSBC, NatWest, Santander, or Metro Bank, your own bank almost certainly has a card. It will usually have the lowest APR available to you because they already hold your account data. Start here.</li>
+    <li><strong>Confirm your business structure is eligible.</strong> Some cards are limited companies only (Capital on Tap, Funding Circle). Others accept sole traders (Barclaycard, Amex). Check before you apply &mdash; a declined application leaves a mark on your credit file.</li>
+    <li><strong>Calculate your typical monthly spend.</strong> Add up your regular business expenses that could go on a card: software subscriptions, fuel, office supplies, travel, advertising. This number tells you whether a rewards card or a low-APR card makes more sense. Below &pound;1,000/month, rewards barely register. Above &pound;3,000/month, the right rewards card can return &pound;300&ndash;&pound;600 a year.</li>
+    <li><strong>Decide whether you will carry a balance.</strong> Be honest. If you will sometimes carry a balance, APR is your primary metric. If you will always clear in full, APR is irrelevant and you should optimise for rewards or cashback.</li>
+    <li><strong>Check Amex acceptance if you are considering an Amex card.</strong> Call your top five suppliers and ask. If three or more do not accept Amex, go with a Visa or Mastercard card instead.</li>
+    <li><strong>Apply to one card at a time.</strong> Each application creates a hard search on your credit file. Multiple applications in the same month signal financial stress to lenders. Wait at least three months between applications if your first choice declines you.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you have worked through this checklist and still feel uncertain, our <a href="/business-credit-cards/best-business-credit-cards/">full comparison page</a> filters by business type, spend level, and bank account. It will narrow the field to two or three realistic options based on your situation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">What Credit Score Do You Need for a Business Credit Card?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most providers do not publish minimum credit scores. In practice, if your personal credit score is above 650 (on Experian&rsquo;s scale) and your business has been trading for at least six months, you will qualify for most mainstream cards. If your credit is thin or damaged, see our <a href="/business-credit-cards/poor-credit/">business credit cards for poor credit</a> guide. Capital on Tap and Barclaycard are generally more accessible than bank-linked cards for businesses with limited credit history.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">How Long Does a Business Credit Card Application Take?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Fintech providers like Capital on Tap can give you a decision within hours and issue a virtual card immediately on approval. Bank cards typically take five to ten working days from application to receiving the physical card. Amex usually ships within three to five working days of approval. If you need a card urgently, Capital on Tap&rsquo;s instant virtual card is the fastest route available.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The speed difference comes down to underwriting method. Fintech lenders like Capital on Tap and Funding Circle use Open Banking APIs, Companies House data, and credit bureau checks for automated underwriting. They pull your bank transaction history (with your permission), cross-reference it against Companies House filings, and run a credit check &mdash; all in minutes. Traditional banks rely on manual review processes built for their broader lending operations, which is why decisions take days rather than hours. The trade-off: automated underwriting is faster but less flexible. If your financials are borderline, a bank relationship manager may approve what an algorithm would not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Related Pages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":false} -->
+<ul>
+    <li><a href="/business-credit-cards/best-business-credit-cards/">All business credit cards compared</a></li>
+    <li><a href="/business-credit-cards/low-apr-business-credit-cards/">Lowest APR business credit cards</a></li>
+    <li><a href="/business-credit-cards/best-cashback-and-reward/">Cashback and rewards cards</a></li>
+    <li><a href="/business-credit-cards/best-business-charge-cards/">Business charge cards</a></li>
+    <li><a href="/business-credit-cards/best-business-credit-cards-for-sole-traders/">Cards for sole traders</a></li>
+    <li><a href="/business-credit-cards/best-credit-cards-for-start-ups/">Cards for start-ups</a></li>
+    <li><a href="/business-credit-cards/poor-credit/">Cards for poor credit</a></li>
+    <li><a href="/business-credit-cards/business-credit-cards-vs-charge-cards/">Credit cards vs charge cards explained</a></li>
+    <li><a href="/business-credit-cards/what-is-a-balance-transfer-credit-card/">What is a balance transfer?</a></li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Business Credit Card Guide FAQs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div class="cc-faq"><ul class="cc-faq__list"><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">Do I need a business credit card if I&rsquo;m a sole trader?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>You are not required to have one, but a dedicated business card separates your spending for cleaner tax records and builds a business credit profile. If you spend more than &pound;500/month on business expenses, the accounting time saved usually justifies it.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">Does a business credit card affect my personal credit score?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>Most small business credit cards require a personal guarantee, so the application creates a hard search on your personal credit file. Ongoing use primarily builds your business credit profile, but missed payments can affect your personal score as well.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">Can I get a business credit card without switching my bank account?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>Yes. Barclaycard, Capital on Tap, and the full Amex range do not require a business current account with the same provider. Most other bank-issued cards (Lloyds, HSBC, NatWest, Santander) require an existing account.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">What credit score do I need for a business credit card?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>Most providers do not publish minimum scores. In practice, a personal credit score above 650 on Experian&rsquo;s scale and at least six months of trading history will qualify you for most mainstream cards.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">How long does it take to get a business credit card?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>Fintech providers like Capital on Tap can issue a virtual card within hours. Bank cards typically take five to ten working days. Amex usually ships within three to five working days of approval.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">Is Section 75 protection available on business credit cards?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>No. Business credit cards do not benefit from Section 75 of the Consumer Credit Act 1974. That protection applies to personal credit card purchases between &pound;100 and &pound;30,000. For disputed business card purchases, your recourse is the card network&rsquo;s chargeback scheme (Visa or Mastercard), which is voluntary and has shorter time limits.</p></div></details></li><li class="cc-faq__item"><details class="cc-faq__details"><summary class="cc-faq__question">Should I get a credit card or a charge card for my business?<span class="cc-faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></summary><div class="cc-faq__answer"><p>A credit card if you might ever need to carry a balance. A charge card if you always clear in full and want the discipline of mandatory monthly clearance. Most small businesses benefit from a credit card as the safer default.</p></div></details></li></ul></div><script>document.querySelectorAll(".cc-faq__details").forEach(function(d){d.addEventListener("toggle",function(){var item=d.closest(".cc-faq__item");if(d.open){item.classList.add("cc-faq__item--open");}else{item.classList.remove("cc-faq__item--open");}});});</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need a business credit card if I\u2019m a sole trader?","acceptedAnswer":{"@type":"Answer","text":"<p>You are not required to have one, but a dedicated business card separates your spending for cleaner tax records and builds a business credit profile. If you spend more than \u00a3500/month on business expenses, the accounting time saved usually justifies it.</p>"}},{"@type":"Question","name":"Does a business credit card affect my personal credit score?","acceptedAnswer":{"@type":"Answer","text":"<p>Most small business credit cards require a personal guarantee, so the application creates a hard search on your personal credit file. Ongoing use primarily builds your business credit profile, but missed payments can affect your personal score as well.</p>"}},{"@type":"Question","name":"Can I get a business credit card without switching my bank account?","acceptedAnswer":{"@type":"Answer","text":"<p>Yes. Barclaycard, Capital on Tap, and the full Amex range do not require a business current account with the same provider. Most other bank-issued cards (Lloyds, HSBC, NatWest, Santander) require an existing account.</p>"}},{"@type":"Question","name":"What credit score do I need for a business credit card?","acceptedAnswer":{"@type":"Answer","text":"<p>Most providers do not publish minimum scores. In practice, a personal credit score above 650 on Experian\u2019s scale and at least six months of trading history will qualify you for most mainstream cards.</p>"}},{"@type":"Question","name":"How long does it take to get a business credit card?","acceptedAnswer":{"@type":"Answer","text":"<p>Fintech providers like Capital on Tap can issue a virtual card within hours. Bank cards typically take five to ten working days. Amex usually ships within three to five working days of approval.</p>"}},{"@type":"Question","name":"Is Section 75 protection available on business credit cards?","acceptedAnswer":{"@type":"Answer","text":"<p>No. Business credit cards do not benefit from Section 75 of the Consumer Credit Act 1974. That protection applies to personal credit card purchases between \u00a3100 and \u00a330,000. For disputed business card purchases, your recourse is the card network\u2019s chargeback scheme (Visa or Mastercard), which is voluntary and has shorter time limits.</p>"}},{"@type":"Question","name":"Should I get a credit card or a charge card for my business?","acceptedAnswer":{"@type":"Answer","text":"<p>A credit card if you might ever need to carry a balance. A charge card if you always clear in full and want the discipline of mandatory monthly clearance. Most small businesses benefit from a credit card as the safer default.</p>"}}]}</script>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Methodology and Disclosure</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"methodology"} -->
+<div class="wp-block-group methodology" style="border:1px solid #eee;border-radius:6px;padding:20px 24px 28px 24px;background:#f9f9f9">
+
+<!-- wp:paragraph -->
+<p><strong>Sources:</strong> We verified card terms and eligibility criteria against each provider&rsquo;s public product page on 20 March 2026. APR figures are representative rates as published on provider pages.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers linked on this page. This does not affect the editorial content of this guide, which is based on publicly available product information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/editorial-policy/">Read our full editorial policy</a></p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<script>
+(function() {
+  var toc = document.getElementById('cc-toc');
+  var list = document.getElementById('cc-toc-list');
+  if (!toc || !list) return;
+
+  // Gather all H2s, filter out low-value sections, cap at 6
+  var container = document.querySelector('.entry-content') || document.body;
+  var h2s = container.querySelectorAll('h2.wp-block-heading');
+  if (h2s.length < 2) { toc.style.display = 'none'; return; }
+
+  // Sections to exclude from the TOC (case-insensitive partial match)
+  var exclude = ['faq', 'frequently asked', 'methodology', 'sources and method',
+    'editorial policy', 'related reading', 'further reading', 'about the author',
+    'disclaimer', 'also listed', 'also worth considering'];
+  var maxItems = 6;
+
+  // Generate IDs and build TOC links
+  var sections = [];
+  var count = 0;
+  h2s.forEach(function(h2, i) {
+    if (count >= maxItems) return;
+    var text = h2.textContent.trim().toLowerCase();
+    for (var e = 0; e < exclude.length; e++) {
+      if (text.indexOf(exclude[e]) !== -1) return;
+    }
+    var id = h2.id || 'section-' + i;
+    h2.id = id;
+    sections.push({ id: id, el: h2 });
+
+    var li = document.createElement('li');
+    li.className = 'cc-toc__item';
+    var a = document.createElement('a');
+    a.className = 'cc-toc__link';
+    a.href = '#' + id;
+    a.textContent = h2.textContent.trim();
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + id);
+    });
+    li.appendChild(a);
+    list.appendChild(li);
+    count++;
+  });
+
+  // TOC start anchor — TOC vertical position aligns with this marker
+  var tocStart = document.getElementById('cc-toc-start');
+  var minTop = 50; // fixed position once scrolled past anchor (clears WP admin bar)
+
+  // Position TOC horizontally relative to the content area
+  function positionToc() {
+    var entry = document.querySelector('.entry-content.container');
+    if (!entry) return;
+    var rect = entry.getBoundingClientRect();
+    var left = rect.left - 260;
+    if (left < 16) { toc.style.display = 'none'; return; }
+    toc.style.left = left + 'px';
+    toc.style.display = '';
+  }
+
+  // Vertical position: align with toc-start anchor, then lock at minTop
+  function updateTop() {
+    if (!tocStart) {
+      toc.style.top = minTop + 'px';
+      return;
+    }
+    var anchorTop = tocStart.getBoundingClientRect().top;
+    // Use whichever is larger: the anchor position or the minimum fixed position
+    toc.style.top = Math.max(anchorTop, minTop) + 'px';
+  }
+
+  // Scroll spy: highlight current section
+  var links = list.querySelectorAll('.cc-toc__link');
+  var rafId = null;
+  function onScroll() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(function() {
+      rafId = null;
+      updateTop();
+
+      var current = -1;
+      for (var i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].el.getBoundingClientRect().top <= 120) {
+          current = i;
+          break;
+        }
+      }
+      links.forEach(function(link, idx) {
+        if (idx === current) {
+          link.classList.add('cc-toc__link--active');
+        } else {
+          link.classList.remove('cc-toc__link--active');
+        }
+      });
+    });
+  }
+
+  positionToc();
+  updateTop();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', positionToc);
+  onScroll();
+})();
+</script>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script>
+(function() {
+  document.querySelectorAll('.cc-ct__detail-toggle').forEach(function(btn) {
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function() {
+      var rowId = btn.getAttribute('data-detail');
+      var row = document.getElementById(rowId);
+      if (!row) return;
+      var open = row.classList.toggle('cc-ct--open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Less detail ▲' : 'More detail ▼';
+    });
+  });
+})();
+</script>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Guide to Business Credit Cards (2026)", "dateModified": "20 March 2026", "url": "https://businessexpert.co.uk/business-credit-cards/guide-to-business-credit-cards/", "author": {"@type": "Organization", "name": "BusinessExpert", "url": "https://businessexpert.co.uk/about/"}, "publisher": {"@type": "Organization", "name": "BusinessExpert", "url": "https://businessexpert.co.uk/"}}</script>
+<!-- /wp:html -->
+</article>
+</body>
+</html>

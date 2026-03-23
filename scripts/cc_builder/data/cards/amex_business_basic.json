@@ -1,0 +1,53 @@
+{
+  "id": "amex_business_basic",
+  "bank": "American Express",
+  "name": "American Express Basic Business Card",
+  "short_name": "Amex Business Basic",
+  "annual_fee": "&pound;0",
+  "card_type": "Charge card (Pay Over Time option)",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/The-American-Express®-Business-Basic-Card.avif",
+  "img_alt": "American Express Basic Business Card",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0",
+      "modifier": null,
+      "qualifier": "No annual fee"
+    },
+    {
+      "label": "Rewards",
+      "value": "None (no-fee card)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card (Pay Over Time option available)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.americanexpress.com/uk/business/business-cards/basic-card/",
+  "cta_label": "View Amex Basic Business Card Details",
+  "verify_source": "americanexpress.com/uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "santander_business_cashback_credit_card",
+  "bank": "Santander",
+  "name": "Santander Business Cashback Credit Card",
+  "short_name": "Santander Cashback Card",
+  "annual_fee": "&pound;30 per account",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "23.7% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/santander.png",
+  "img_alt": "Santander logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "23.7% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "18.9% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;30 per account",
+      "modifier": null,
+      "qualifier": "Single fee covers all cardholders"
+    },
+    {
+      "label": "Existing Account",
+      "value": "Santander BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.santander.co.uk/business/credit-cards",
+  "cta_label": "View Santander Card Details",
+  "verify_source": "santander.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr",
+    "cashback"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "partnership"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Santander"
+}

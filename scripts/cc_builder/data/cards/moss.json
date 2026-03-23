@@ -1,0 +1,52 @@
+{
+  "id": "moss_business_credit_card",
+  "bank": "Moss",
+  "name": "Moss Business Credit Card",
+  "short_name": "Moss",
+  "annual_fee": "Check provider",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "34.3% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Moss-Business-Credit-Card.jpg",
+  "img_alt": "Moss Business Credit Card",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "34.3% variable",
+      "modifier": "apr",
+      "qualifier": "Interest from 14.9% p.a."
+    },
+    {
+      "label": "Cashback",
+      "value": "Up to 1%",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Repayment",
+      "value": "30 or 60 day terms",
+      "modifier": null,
+      "qualifier": "Flexible repayment cycle"
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.getmoss.com/",
+  "cta_label": "View Moss Details",
+  "verify_source": "getmoss.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "cashback",
+    "instant-approval"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

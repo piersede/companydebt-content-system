@@ -1,0 +1,53 @@
+{
+  "id": "amex_business_platinum",
+  "bank": "American Express",
+  "name": "American Express Business Platinum Card",
+  "short_name": "Amex Business Platinum",
+  "annual_fee": "&pound;650/yr (+&pound;295 supplementary)",
+  "card_type": "Charge card",
+  "reward_type": "Membership Rewards",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/The-American-Express®-Business-Platinum-Card.avif",
+  "img_alt": "American Express Business Platinum Card",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;650/yr (+&pound;295 supplementary)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Rewards",
+      "value": "MR points + 10k bonus per &pound;10k/month",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card with Flexible Payment Option",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.americanexpress.com/uk/business/business-cards/business-platinum-card/",
+  "cta_label": "View Amex Business Platinum Details",
+  "verify_source": "americanexpress.com/uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "rewards",
+    "charge-cards",
+    "travel"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

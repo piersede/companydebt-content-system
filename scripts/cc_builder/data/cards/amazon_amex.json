@@ -1,0 +1,54 @@
+{
+  "id": "amazon_amex",
+  "bank": "American Express",
+  "name": "Amazon Business Prime American Express Card",
+  "short_name": "Amazon Amex",
+  "annual_fee": "&pound;50/yr (free yr 1 if &pound;8k+ spend)",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "26.7% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Amazon-Business-Prime-American-Express-Card.avif",
+  "img_alt": "Amazon Business Prime American Express Card",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;50/yr (free yr 1 if &pound;8k+ spend)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Amazon Cashback",
+      "value": "1.5&ndash;2% on Amazon (0.5% elsewhere)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Representative APR",
+      "value": "26.7% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "Amazon Business account required",
+      "modifier": null,
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.americanexpress.com/uk/business/business-cards/amazon-business-card/",
+  "cta_label": "View Amazon Business Prime Amex Details",
+  "verify_source": "americanexpress.com/uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "cashback",
+    "rewards"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Amazon Business"
+}

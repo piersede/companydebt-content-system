@@ -1,0 +1,54 @@
+{
+  "id": "amex_business_gold",
+  "bank": "American Express",
+  "name": "American Express Business Gold Card",
+  "short_name": "Amex Business Gold",
+  "annual_fee": "&pound;0 yr 1, then &pound;195/yr",
+  "card_type": "Charge card",
+  "reward_type": "Membership Rewards",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/The-American-Express®-Business-Gold-Card.webp",
+  "img_alt": "American Express Business Gold Card",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0 yr 1, then &pound;195/yr",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Rewards",
+      "value": "1 MR point per &pound;1 (2x on Amex Travel)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card with Flexible Payment Option (from Jan 2026)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.americanexpress.com/en-gb/business/benefits/gold-business-card/",
+  "cta_label": "View Amex Business Gold Details",
+  "verify_source": "americanexpress.com/uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "cashback",
+    "rewards",
+    "charge-cards",
+    "travel"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

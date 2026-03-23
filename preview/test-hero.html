@@ -1,0 +1,2085 @@
+<!-- wp:html -->
+<style>
+/* Table of Contents Sidebar — auto-generated from H2s */
+.cc-toc {
+  display: none;
+}
+
+@media (min-width: 1340px) {
+  .cc-toc {
+    display: block;
+    position: fixed;
+    top: 140px;
+    width: 220px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 0 0 20px 0;
+    z-index: 50;
+  }
+  .cc-toc__title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 12px;
+    padding-left: 14px;
+  }
+  .cc-toc__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cc-toc__item {
+    margin: 0;
+    padding: 0;
+  }
+  .cc-toc__link {
+    display: block;
+    padding: 6px 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #666;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .cc-toc__link:hover {
+    color: #333;
+  }
+  .cc-toc__link--active {
+    color: #6b3fa0;
+    border-left-color: #6b3fa0;
+    font-weight: 600;
+  }
+  /* Scrollbar styling */
+  .cc-toc::-webkit-scrollbar {
+    width: 3px;
+  }
+  .cc-toc::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+  }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<style>
+/* Credit Card Comparison Component v4 — BusinessExpert
+   Palette: brand purple #6b3fa0, neutral surfaces, semantic accents only */
+
+/* ── Card shell ── */
+.cc-card {
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+/* ── APR summary strip ── */
+.cc-card__summary-strip {
+  background: #f7f7f8;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 28px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+.cc-card__summary-strip strong {
+  color: #6b3fa0;
+  font-weight: 700;
+}
+
+/* ── Header: image + identity ── */
+.cc-card__header {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto auto;
+  gap: 4px 20px;
+  align-items: start;
+  padding: 20px 28px 16px 28px;
+}
+.cc-card__image {
+  width: 100px;
+  height: 72px;
+  background: #f5f5f6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  grid-row: 1 / 3;
+}
+.cc-card__image img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+}
+.cc-card__identity {
+  min-width: 0;
+}
+.cc-card__fit-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b3fa0;
+  background: none;
+  padding: 0;
+  margin-bottom: 4px;
+}
+.cc-card__identity h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+.cc-card__verdict {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+.cc-card__header-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  grid-column: 2;
+  padding-top: 6px;
+}
+.cc-card__header-cta-note {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* ── 2x2 facts grid ── */
+.cc-card__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 16px 28px 0 28px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+.cc-card__fact {
+  padding: 11px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cc-card__fact:nth-child(even) {
+  border-left: 1px solid #e5e5e5;
+}
+.cc-card__fact:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.cc-card__fact-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #777;
+  margin-bottom: 2px;
+}
+.cc-card__fact-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+.cc-card__fact-value--apr {
+  color: #1a1a1a;
+  font-size: 19px;
+  font-weight: 800;
+}
+.cc-card__fact-qualifier {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.35;
+  margin-top: 1px;
+}
+.cc-card__fact-value--required {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cc-card__fact-value--none-required {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ── Decision rows: Best for / Watch out / Not ideal if / Eligibility ── */
+.cc-card__decision {
+  margin: 20px 28px 0 28px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.cc-card__decision-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  padding: 14px 16px;
+  background: #fff;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid #ebebeb;
+}
+.cc-card__decision-item:last-child {
+  border-bottom: none;
+}
+.cc-card__decision-label {
+  font-weight: 700;
+  font-size: 13px;
+  color: #1a1a1a;
+  padding-top: 1px;
+  white-space: nowrap;
+}
+.cc-card__decision-body {
+  color: #333;
+}
+/* Semantic accents — left bar + label colour only, white backgrounds */
+.cc-card__decision-item--best {
+  border-left-color: #2e7d32;
+  background: #fff;
+}
+.cc-card__decision-item--best .cc-card__decision-label {
+  color: #1b6e1f;
+}
+.cc-card__decision-item--watch {
+  border-left-color: #d48806;
+  background: #fff;
+}
+.cc-card__decision-item--watch .cc-card__decision-label {
+  color: #a86a00;
+}
+.cc-card__decision-item--not {
+  border-left-color: #999;
+  background: #fff;
+}
+.cc-card__decision-item--not .cc-card__decision-label {
+  color: #555;
+}
+.cc-card__decision-item--not .cc-card__decision-body {
+  color: #333;
+  font-size: 14px;
+}
+.cc-card__decision-item--eligibility {
+  border-left-color: #b0b0b0;
+  background: #fff;
+}
+.cc-card__decision-item--eligibility .cc-card__decision-label {
+  color: #555;
+}
+.cc-card__decision-item--eligibility .cc-card__decision-body {
+  color: #333;
+  font-size: 14px;
+}
+
+/* ── Editorial summary heading ── */
+.cc-card__editorial-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 20px 28px 0 28px;
+  line-height: 1.4;
+}
+
+/* ── "Read our full editorial take" expandable bar ── */
+.cc-card__editorial-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 28px 0 28px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #6b3fa0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b3fa0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cc-card__editorial-toggle:hover {
+  background: #f8f5fc;
+}
+
+/* ── CTA + action area ── */
+.cc-card__action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 20px 28px 20px 28px;
+}
+.cc-card__cta {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #6b3fa0;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.cc-card__cta:hover {
+  background: #5a3488;
+}
+
+/* ── Verification / trust line ── */
+.cc-card__trust {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.4;
+  padding-left: 2px;
+}
+
+/* ── Section divider before card listings ── */
+.cc-section-divider {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid #e0e0e0;
+}
+.cc-section-divider__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b3fa0;
+  margin-bottom: 8px;
+}
+.cc-section-divider__label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #6b3fa0;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .cc-card__summary-strip {
+    padding: 10px 20px;
+  }
+  .cc-card__header {
+    grid-template-columns: 80px 1fr;
+    gap: 4px 14px;
+    padding: 16px 20px 12px 20px;
+  }
+  .cc-card__header-cta {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding-top: 8px;
+  }
+  .cc-card__image {
+    width: 80px;
+    height: 58px;
+    padding: 6px;
+    grid-row: 1 / 3;
+  }
+  .cc-card__image img {
+    max-height: 46px;
+  }
+  .cc-card__facts {
+    grid-template-columns: 1fr;
+    margin: 16px 20px 0 20px;
+  }
+  .cc-card__fact:nth-child(even) {
+    border-left: none;
+  }
+  .cc-card__fact {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .cc-card__fact:last-child {
+    border-bottom: none;
+  }
+  .cc-card__decision {
+    margin: 16px 20px 0 20px;
+  }
+  .cc-card__decision-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .cc-card__decision-label {
+    white-space: normal;
+  }
+  .cc-card__editorial-heading {
+    margin: 16px 20px 0 20px;
+  }
+  .cc-card__editorial-toggle {
+    margin: 12px 20px 0 20px;
+  }
+  .cc-card__action {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 20px 20px 20px;
+  }
+  .cc-card__cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<style>
+/* Hero Zone — v4 design: top pick card, trust strip, also-consider */
+.cc-hero-zone {
+  margin: -8px -8px 32px -8px;
+  padding: 28px 28px 0 28px;
+  background: #F9F5FB;
+  border: 1px solid #EDEDF0;
+  border-radius: 12px;
+}
+
+/* ── Top Pick Card ── */
+.cc-hero-tp {
+  background: #fff;
+  border: 1px solid #E5E5EA;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  max-width: 400px;
+  margin: 0 auto 24px auto;
+}
+.cc-hero-tp__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b3fa0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.cc-hero-tp__logo {
+  width: 140px;
+  height: 90px;
+  margin: 0 auto 20px;
+  background: #F4F4F7;
+  border: 1px solid #EDEDF0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  color: #7A7A8A;
+  overflow: hidden;
+}
+.cc-hero-tp__logo img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+}
+.cc-hero-tp__list {
+  list-style: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+.cc-hero-tp__list li {
+  font-size: 14px;
+  color: #4A4A5A;
+  padding: 5px 0 5px 22px;
+  position: relative;
+  line-height: 1.5;
+}
+.cc-hero-tp__list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: #1AA35E;
+  font-weight: 700;
+  font-size: 13px;
+}
+.cc-hero-tp__cta {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #6b3fa0;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.cc-hero-tp__cta:hover {
+  background: #5a3488;
+}
+.cc-hero-tp__sub {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #6b3fa0;
+}
+
+/* ── Trust Strip ── */
+.cc-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px 20px;
+  background: #F7F7F9;
+  border: 1px solid #E5E5EA;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+.cc-hero-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: #7A7A8A;
+}
+.cc-hero-trust__item strong {
+  color: #1A1A2E;
+}
+.cc-hero-trust__dot {
+  width: 6px;
+  height: 6px;
+  background: #6b3fa0;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ── Also Consider Strip ── */
+.cc-hero-also {
+  padding: 0 0 28px 0;
+}
+.cc-hero-also__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b3fa0;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cc-hero-also__label::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  background: #6b3fa0;
+}
+.cc-hero-also__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 780px) {
+  .cc-hero-also__grid { grid-template-columns: 1fr; }
+}
+.cc-hero-also__card {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #E5E5EA;
+  border-radius: 16px;
+  padding: 18px 20px;
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.cc-hero-also__card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  border-color: #ccc;
+}
+.cc-hero-also__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 8.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #fff;
+  padding: 4px 10px 4px 14px;
+  border-radius: 0 0 0 10px;
+}
+.cc-hero-also__badge--gold { background: #F5A623; }
+.cc-hero-also__badge--pink { background: #E8368F; }
+.cc-hero-also__badge--teal { background: #0EA5E9; }
+.cc-hero-also__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #F4F4F7;
+  border: 1px solid #EDEDF0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+  color: #7A7A8A;
+  overflow: hidden;
+}
+.cc-hero-also__logo img {
+  max-width: 100%;
+  max-height: 36px;
+  object-fit: contain;
+}
+.cc-hero-also__info {}
+.cc-hero-also__name {
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1A1A2E;
+}
+.cc-hero-also__tagline {
+  font-size: 12.5px;
+  color: #4A4A5A;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+.cc-hero-also__cta {
+  padding: 9px 16px;
+  background: #6b3fa0;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.cc-hero-also__cta:hover {
+  background: #5a3488;
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<nav class="cc-toc" id="cc-toc" aria-label="Table of contents">
+  <div class="cc-toc__title">On this page</div>
+  <ul class="cc-toc__list" id="cc-toc-list"></ul>
+</nav>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"verdict-box"} -->
+<div class="wp-block-group verdict-box" style="border-left:4px solid #3b5bdb;background-color:#f0f4ff;padding:18px 20px;border-radius:0 6px 6px 0">
+
+<!-- wp:paragraph -->
+<p>There is no single best business credit card. The right choice depends on three things: whether you need to carry a balance (APR matters), whether you clear monthly (rewards matter), and whether your bank offers a card at all (access matters). Most cards on this list require an existing business current account with that bank. If you bank with Starling, Tide, or Monzo, your options narrow to three.</p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<div class="cc-hero-zone">
+<div class="cc-hero-trust">
+  <div class="cc-hero-trust__item"><span class="cc-hero-trust__dot"></span> <strong>16</strong> cards reviewed</div>
+  <div class="cc-hero-trust__item"><span class="cc-hero-trust__dot"></span> <strong>Independently</strong> assessed</div>
+  <div class="cc-hero-trust__item"><span class="cc-hero-trust__dot"></span> Rates verified <strong>20 March 2026</strong></div>
+</div>
+<div class="cc-hero-also">
+  <div class="cc-hero-also__label">Also Consider</div>
+  <div class="cc-hero-also__grid">
+    
+  </div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>We reviewed every major UK business credit card available in March 2026, verified rates and fees against each provider&rsquo;s pricing page, and ranked them by the decision that actually matters to you: what you need the card to do.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The UK business credit card market splits into three lanes. Traditional bank cards (Lloyds, HSBC, NatWest, Santander, Metro Bank) offer the lowest APRs but require you to bank with them. Fintech cards (Capital on Tap, Moss, Funding Circle) offer higher limits and faster decisions but at higher rates. And Amex cards offer the best rewards and travel perks but with acceptance gaps across UK suppliers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This page covers all three. Each card is positioned by what it&rsquo;s actually best for, not by a generic star rating. The difference between the cheapest and most expensive card on this list is over 10 percentage points of APR &mdash; and you may not be able to access either.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Which Type of Card Do You Need?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Your priority</th><th>Look at</th><th>Skip to</th></tr></thead><tbody><tr><td>Lowest ongoing borrowing cost</td><td>Low-APR bank cards</td><td><a href="/business-credit-cards/low-apr-business-credit-cards/">Low APR cards</a></td></tr><tr><td>Earn cashback or rewards on spend</td><td>Amex or cashback cards</td><td><a href="/business-credit-cards/best-cashback-and-reward/">Cashback &amp; rewards</a></td></tr><tr><td>High credit limit (&pound;25k+)</td><td>Capital on Tap or Amex Platinum</td><td>Cards 1 and 12 below</td></tr><tr><td>Don&rsquo;t have a traditional bank account</td><td>Barclaycard, Capital on Tap, or Moss</td><td>Cards 2, 1, and 4 below</td></tr><tr><td>Multiple employee cards with controls</td><td>Moss or Santander</td><td>Cards 4 and 5 below</td></tr><tr><td>Earn Avios for business travel</td><td>BA Amex Accelerating</td><td><a href="/business-credit-cards/best-cards-with-air-miles-avios/">Air miles &amp; Avios</a></td></tr><tr><td>Pay in full monthly (charge card)</td><td>Amex Gold or Lloyds Charge</td><td><a href="/business-credit-cards/best-business-charge-cards/">Charge cards</a></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">The Filter Most Comparison Sites Don&rsquo;t Lead With</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Seven of the twelve cards on this page require an existing business current account with that bank. You cannot apply for a Lloyds card without a Lloyds BCA. You cannot apply for an HSBC card without an HSBC BCA. This isn&rsquo;t a footnote &mdash; it&rsquo;s the most important practical filter in the UK business credit card market.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you bank with one of the five big banks (Lloyds, HSBC, NatWest, Santander, Metro Bank), you have access to the lowest APR cards. If you don&rsquo;t, your realistic options are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ul>
+    <li><strong>Barclaycard Select Cashback</strong> &mdash; 25.5% APR, no account requirement, but the highest rate of the traditional bank cards</li>
+    <li><strong>Capital on Tap</strong> &mdash; no account requirement, high limits, but the actual rate most applicants receive is far above the advertised floor</li>
+    <li><strong>Moss</strong> &mdash; no account requirement, fast decision, but positioned as a spend management tool first</li>
+    <li><strong>Funding Circle</strong> &mdash; fintech cashback card without a bank-switching requirement</li>
+    <li><strong>American Express</strong> &mdash; no BCA requirement, but Amex acceptance is not universal across UK suppliers</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We lead with this filter because it narrows the field immediately. There&rsquo;s no point comparing twelve cards if you can only access four.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="cc-section-divider"><span class="cc-section-divider__label">Detailed card reviews</span></div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Every Card, Reviewed</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Cards are ordered by category: open-access cards first (no bank account needed), then bank-locked cards by APR, then charge cards and rewards specialists. Each card includes verified rates, our editorial assessment, and the specific scenario where it makes sense.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">From 13.86% floor APR &middot; No annual fee &middot; Up to &pound;250,000 limit</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Capital-on-Tap-card.webp" alt="Capital on Tap logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best for high credit limits without switching banks</span>
+      <h3>Capital on Tap Business Credit Card</h3>
+      <div class="cc-card__verdict">The highest credit limits in the UK business card market, no bank account requirement, and no FX fees. But the floor rate is not what most applicants get.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.capitalontap.com/en/business-credit-cards/" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Capital on Tap Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Floor APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">From 13.86% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Rep. APR (secondary sources)</span>
+        <span class="cc-card__fact-value">34.65%&ndash;36.19%</span>
+        <span class="cc-card__fact-qualifier">Uswitch, Merchant Savvy</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;0 (free card) / &pound;299 (Pro card)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Limited companies needing &pound;25k&ndash;&pound;250k credit facilities without switching their business bank</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">Average rate offered Oct&ndash;Dec 2025 was 46.05%. Sole traders are excluded entirely.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You&rsquo;re a sole trader, or you assume the &ldquo;from 13.86%&rdquo; rate is what you&rsquo;ll actually receive</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">UK limited companies and LLPs only. Min &pound;24k turnover. Companies House registration required.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">High limits and open access, but the advertised rate is a floor, not a guarantee</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against capitalontap.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">25.5% APR &middot; No annual fee &middot; No bank account required</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png" alt="Barclaycard logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best card you can get without an existing bank account</span>
+      <h3>Barclaycard Select Cashback Business Credit Card</h3>
+      <div class="cc-card__verdict">The only major business credit card that doesn&rsquo;t require an existing business current account. That open access is the reason to choose it.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.barclaycard.co.uk/business/cards/credit-cards/select-cashback" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Barclaycard Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">25.5% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Cashback</span>
+        <span class="cc-card__fact-value">1% on monthly spend over &pound;2k</span>
+        <span class="cc-card__fact-qualifier">Uncapped</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;0</span>
+        <span class="cc-card__fact-qualifier">No annual fee</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Businesses on Starling, Tide, Monzo, or any bank without its own credit card product</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">25.5% is the highest representative APR among traditional bank cards on this list</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You already bank with Lloyds, HSBC, NatWest, or Santander and could get a lower rate</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Sole traders, partnerships, LTDs. &pound;10k&ndash;&pound;6.5m turnover. No existing account required.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">Open access is genuinely rare in this market &mdash; but 25.5% is the price</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against barclaycard.co.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">34.9% rep. APR &middot; 2% cashback (first 6 months), then 1% uncapped &middot; No existing account required</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Funding-Circle-Cashback_Card_Front.webp" alt="Funding Circle Cashback Business Credit Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Fintech cashback without the bank-account barrier</span>
+      <h3>Funding Circle Cashback Business Credit Card</h3>
+      <div class="cc-card__verdict">A cashback card from a fintech lender. 2% for the first 6 months then 1% uncapped after that. No bank account requirement but limited companies only.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.fundingcircle.com/gb/business-credit-card/" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Funding Circle Cashback Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">34.9% variable</span>
+        <span class="cc-card__fact-qualifier">Interest from 14.9% p.a.</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;0</span>
+        <span class="cc-card__fact-qualifier">No annual fee</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Cashback</span>
+        <span class="cc-card__fact-value">2% first 6 months, then 1% uncapped</span>
+        <span class="cc-card__fact-qualifier">2% capped at &pound;2,000 cashback</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Limited companies wanting cashback without needing a specific bank account</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">34.9% representative APR is significantly higher than the traditional bank cards. Limited companies only, minimum 1 year trading and &pound;30k turnover.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You&rsquo;re a sole trader (excluded) or you carry a balance regularly (APR is high)</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">UK limited companies only. Min 1 year trading, &pound;30k+ turnover. fundingcircle.com.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">Fintech cashback without a bank switch &mdash; but limited companies only</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against fundingcircle.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">34.3% rep. APR &middot; Up to 1% cashback &middot; Multiple employee cards &middot; Spend controls built in</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Moss-Business-Credit-Card.jpg" alt="Moss Business Credit Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best for multi-card spend management</span>
+      <h3>Moss Business Credit Card</h3>
+      <div class="cc-card__verdict">Designed for teams that need multiple cards with per-card spend limits and real-time tracking. Less a credit card, more a spend management platform with credit built in.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.getmoss.com/" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Moss Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">34.3% variable</span>
+        <span class="cc-card__fact-qualifier">Interest from 14.9% p.a.</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Cashback</span>
+        <span class="cc-card__fact-value">Up to 1%</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Repayment</span>
+        <span class="cc-card__fact-value">30 or 60 day terms</span>
+        <span class="cc-card__fact-qualifier">Flexible repayment cycle</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Growing businesses issuing 5+ employee cards who need granular spend controls</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">34.3% representative APR. Pricing is via platform subscription, not just card fees. Check getmoss.com for current plans.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You need a single card with the lowest possible APR, or you&rsquo;re a sole trader</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">UK limited companies and LLPs. Check getmoss.com for full eligibility.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">Spend management first, credit card second &mdash; that&rsquo;s the real positioning</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against getmoss.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">23.7% APR &middot; 1% cashback &middot; &pound;30 flat fee covers all cardholders</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/santander.png" alt="Santander logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best fee structure for multi-cardholder teams</span>
+      <h3>Santander Business Cashback Credit Card</h3>
+      <div class="cc-card__verdict">The flat per-account fee structure means the more employee cards you issue, the better the deal. Most competitors charge per cardholder.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.santander.co.uk/business/credit-cards" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Santander Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">23.7% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Purchase Rate</span>
+        <span class="cc-card__fact-value">18.9% p.a. variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;30 per account</span>
+        <span class="cc-card__fact-qualifier">Single fee covers all cardholders</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">Santander BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Santander business customers issuing 3+ employee cards</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">Restricted to Santander 1|2|3 BCA holders. Personal guarantees required.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You don&rsquo;t bank with Santander and won&rsquo;t switch</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Santander business current account required. Max 2 directors/partners. &pound;500&ndash;&pound;25k limits.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The fee advantage is real for teams &mdash; one flat fee regardless of how many cards you issue</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against santander.co.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">15.95% APR &middot; 14.9% purchase rate &middot; &pound;32 fee waived at &pound;6k+ spend</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png" alt="Lloyds Business Credit Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Lowest representative APR on the market</span>
+      <h3>Lloyds Bank Business Credit Card</h3>
+      <div class="cc-card__verdict">The lowest representative APR available in the UK business credit card market. But only accessible to existing Lloyds business customers.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.lloydsbank.com/business/business-cards/business-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Lloyds Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">15.95% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Purchase Rate</span>
+        <span class="cc-card__fact-value">14.9% p.a. variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;32 per cardholder</span>
+        <span class="cc-card__fact-qualifier">Waived yr 1; waived at &pound;6k+ annual spend</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">Lloyds BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Existing Lloyds customers who carry a balance and can hit the fee waiver threshold</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">&pound;32 annual fee per card. Only waived at &pound;6k+ annual spend per card.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You don&rsquo;t bank with Lloyds and would need to switch just for the rate</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Sole traders, partnerships, company directors. Lloyds BCA required.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The lowest rate available, if you&rsquo;re already banking with Lloyds</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against lloydsbank.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">24.3% APR &middot; No FX fee on overseas purchases &middot; &pound;30/card fee waivable</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/NatWest-Large.png" alt="NatWest logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best for businesses that spend overseas</span>
+      <h3>NatWest Business Credit Card</h3>
+      <div class="cc-card__verdict">The standout feature is zero foreign exchange fees on overseas card purchases. No other traditional bank card on this list offers that.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.natwest.com/business/cards/business-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View NatWest Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">24.3% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Purchase Rate</span>
+        <span class="cc-card__fact-value">16.9% p.a. variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;30 per cardholder</span>
+        <span class="cc-card__fact-qualifier">Waived at &pound;6k+ annual spend per card</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">NatWest BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">NatWest business customers with regular overseas card spend</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">&pound;30 per-cardholder fee stacks up for teams unless each cardholder hits &pound;6k+ spend</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You don&rsquo;t spend overseas, or you don&rsquo;t bank with NatWest</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Turnover under &pound;2m. NatWest BCA required.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">No FX fee is a genuine differentiator if your business spends internationally</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against natwest.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">22% APR &middot; 15.9% purchase rate &middot; &pound;32 fee waived year 1</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/HSBC-Commercial.png" alt="HSBC logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Worth it if you already bank with HSBC</span>
+      <h3>HSBC Business Credit Card</h3>
+      <div class="cc-card__verdict">Competitive purchase rate, but the annual fee is not waivable after year one. Not worth switching banks for.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.business.hsbc.uk/en-gb/products/business-credit-card" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View HSBC Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">22% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Purchase Rate</span>
+        <span class="cc-card__fact-value">15.9% p.a. variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;32 per card</span>
+        <span class="cc-card__fact-qualifier">Waived in year 1</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">HSBC BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Existing HSBC business customers who want a low purchase rate</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">&pound;32 fee is not waivable after year 1. FX fee is 2.99%.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You don&rsquo;t bank with HSBC</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">HSBC business current account required.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">Low purchase rate for HSBC customers &mdash; but the fee sticks after year one</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against business.hsbc.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">18.9% APR &middot; No annual fee &middot; Branch application only</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/metro-bank.png" alt="Metro Bank logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">No-fee card at a competitive rate</span>
+      <h3>Metro Bank Business Credit Card</h3>
+      <div class="cc-card__verdict">No annual fee at all, and a competitive APR. The catch: you must apply in a Metro Bank branch.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.metrobankonline.co.uk/business/borrowing/products/credit-card/" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Metro Bank Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">18.9% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Purchase Rate</span>
+        <span class="cc-card__fact-value">18.9% p.a. variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;0</span>
+        <span class="cc-card__fact-qualifier">No fee, no waiver threshold</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">Metro Bank BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Low-spend businesses near a Metro Bank branch that carry a balance</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">In-branch application only. Metro Bank&rsquo;s branch network is London-centric.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You&rsquo;re not near a Metro Bank branch, or you need to apply online</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Metro Bank BCA required. Must apply in branch.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The simplest cost structure, but the branch-only requirement is a real filter</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against metrobankonline.co.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">&pound;0 yr 1, then &pound;195/year &middot; Membership Rewards points &middot; Charge card (pay monthly)</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="[NEEDS_IMAGE]" alt="American Express Business Gold Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best rewards programme for high-spend businesses</span>
+      <h3>American Express Business Gold Card</h3>
+      <div class="cc-card__verdict">The most flexible rewards programme in the UK business card market. Charge card structure means no revolving debt.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.americanexpress.com/en-gb/business/benefits/gold-business-card/" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Amex Business Gold Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;0 first year, then &pound;195/year</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Rewards</span>
+        <span class="cc-card__fact-value">1 MR point per &pound;1 (2x on Amex Travel)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Card Type</span>
+        <span class="cc-card__fact-value">Charge card with Flexible Payment Option (from Jan 2026)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Businesses spending &pound;5k+/month that can clear the balance monthly and want flexible rewards</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">Annual fee is significant. Amex acceptance is not universal in the UK.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You need to carry a balance, or your suppliers don&rsquo;t accept Amex</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Sole traders, partnerships, limited companies, LLPs. Check americanexpress.com/uk.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The rewards are strong, but it&rsquo;s a charge card &mdash; you pay the full balance every month</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against americanexpress.com/uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">&pound;250/year &middot; 1.5 Avios per &pound;1 (3 on BA) &middot; Travel perks</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="[NEEDS_IMAGE]" alt="British Airways Accelerating Business American Express Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Best for earning Avios on business spend</span>
+      <h3>British Airways Accelerating Business Card</h3>
+      <div class="cc-card__verdict">Purpose-built for Avios earning. If your business travel is on BA, this card converts everyday spend into flights.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="[NEEDS_URL]" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View BA Accelerating Business Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;250</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Avios Earn Rate</span>
+        <span class="cc-card__fact-value">1.5 Avios per &pound;1 (2 On Business Points on BA)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Bonus Avios</span>
+        <span class="cc-card__fact-value">10,000 per &pound;20k spend (up to 30k/year)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">Businesses with frequent BA travel that want to earn Avios on all card spend</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">Amex acceptance gaps in the UK. Annual fee needs enough spend to justify.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">You don&rsquo;t fly BA, or your suppliers don&rsquo;t accept Amex</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Sole traders, partnerships, limited companies, LLPs. Check americanexpress.com/uk.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The direct route to Avios &mdash; if BA is your airline and Amex is accepted by your suppliers</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against americanexpress.com/uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip">&pound;650/year &middot; Centurion lounge access &middot; Charge card</div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="[NEEDS_IMAGE]" alt="American Express Business Platinum Card" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label">Premium charge card with travel perks</span>
+      <h3>American Express Business Platinum Card</h3>
+      <div class="cc-card__verdict">The premium tier of Amex business cards. Lounge access, travel insurance, and the highest reward earn rate &mdash; at a premium price.</div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="[NEEDS_URL]" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Amex Business Platinum Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;650/year (supplementary: &pound;295)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Rewards</span>
+        <span class="cc-card__fact-value">MR points + 10k bonus per &pound;10k/month</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Card Type</span>
+        <span class="cc-card__fact-value">Charge card with Flexible Payment Option</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body">High-spend businesses (&pound;10k+/month) that travel frequently and value lounge access</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body">Highest annual fee of any UK business card. Only viable at scale.</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body">Your monthly spend is under &pound;5k, or you rarely travel internationally</span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body">Sole traders, partnerships, limited companies, LLPs. Check americanexpress.com/uk.</span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading">The perks are genuine, but the annual fee means this only works at high spend volumes</div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against americanexpress.com/uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Also Worth Knowing: Charge Cards and Niche Options</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These cards don&rsquo;t fit the main ranking because they&rsquo;re either charge cards (no revolving credit), niche products, or regional variants. They&rsquo;re listed separately for completeness.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip"></div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png" alt="Lloyds Bank logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label"></span>
+      <h3>Lloyds Bank Business Charge Card</h3>
+      <div class="cc-card__verdict"></div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.lloydsbank.com/business/business-cards/business-charge-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Lloyds Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;32/card (free yr 1, waived at &pound;6k+ spend)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Card Type</span>
+        <span class="cc-card__fact-value">Charge card (full balance monthly by DD)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Interest-Free Period</span>
+        <span class="cc-card__fact-value">Up to 56 days on purchases</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">Lloyds BCA required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading"></div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against lloydsbank.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip"></div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png" alt="Barclaycard logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label"></span>
+      <h3>Barclaycard Select Charge Card</h3>
+      <div class="cc-card__verdict"></div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.barclaycard.co.uk/business/cards/charge-cards/select" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View Barclaycard Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;42 per account</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Card Type</span>
+        <span class="cc-card__fact-value">Charge card (pay in full monthly)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">FX Fee</span>
+        <span class="cc-card__fact-value">2.99% on non-sterling transactions</span>
+        <span class="cc-card__fact-qualifier">Cash fee 3% (min &pound;3)</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--none-required">No existing account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading"></div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against barclaycard.co.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip"></div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/NatWest-Large.png" alt="NatWest logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label"></span>
+      <h3>NatWest Business Plus Credit Card</h3>
+      <div class="cc-card__verdict"></div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.natwest.com/business/cards/business-plus-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View NatWest Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">29% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;70 per cardholder</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Cashback</span>
+        <span class="cc-card__fact-value">0.5%&ndash;3% tiered (capped &pound;600/year)</span>
+        <span class="cc-card__fact-qualifier">0.5% all spend; 1% travel; 2% trade supplies; 3% fuel &amp; EV charging</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">FX Fees</span>
+        <span class="cc-card__fact-value">No foreign transaction charges</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">NatWest business account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading"></div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against natwest.com, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="cc-card">
+  <div class="cc-card__summary-strip"></div>
+
+  <div class="cc-card__header">
+    <div class="cc-card__image">
+      <img src="https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/rbs-logo.png" alt="Royal Bank of Scotland logo" />
+    </div>
+    <div class="cc-card__identity">
+      <span class="cc-card__fit-label"></span>
+      <h3>RBS Business Plus Credit Card</h3>
+      <div class="cc-card__verdict"></div>
+    </div>
+    <div class="cc-card__header-cta">
+      <a href="https://www.rbs.co.uk/business/cards/business-plus-credit-card.html" class="cc-card__cta" target="_blank" rel="noopener noreferrer">View RBS Card Details &rarr;</a>
+      <span class="cc-card__header-cta-note">Opens provider website in new tab</span>
+    </div>
+  </div>
+
+  <div class="cc-card__facts">
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Representative APR</span>
+        <span class="cc-card__fact-value cc-card__fact-value--apr">29% variable</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Annual Fee</span>
+        <span class="cc-card__fact-value">&pound;70 per cardholder</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Cashback</span>
+        <span class="cc-card__fact-value">0.5%&ndash;3% tiered (capped &pound;600/year)</span>
+        <span class="cc-card__fact-qualifier">0.5% all spend; 1% travel; 2% trade supplies; 3% fuel &amp; EV charging</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">FX Fees</span>
+        <span class="cc-card__fact-value">No foreign transaction charges</span>
+      </div>
+      <div class="cc-card__fact">
+        <span class="cc-card__fact-label">Existing Account</span>
+        <span class="cc-card__fact-value cc-card__fact-value--required">RBS business account required</span>
+      </div>
+  </div>
+
+  <div class="cc-card__decision">
+    <div class="cc-card__decision-item cc-card__decision-item--best">
+      <span class="cc-card__decision-label">Best for</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--watch">
+      <span class="cc-card__decision-label">Watch out</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--not">
+      <span class="cc-card__decision-label">Not ideal if</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+    <div class="cc-card__decision-item cc-card__decision-item--eligibility">
+      <span class="cc-card__decision-label">Eligibility</span>
+      <span class="cc-card__decision-body"></span>
+    </div>
+  </div>
+
+  <div class="cc-card__editorial-heading"></div>
+  <div class="cc-card__editorial-toggle">Read our full editorial take &#9660;</div>
+
+  <div class="cc-card__action">
+    <span class="cc-card__trust">Rates verified against rbs.co.uk, 20 March 2026</span>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Side-by-Side Comparison</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"className":"is-style-stripes"} -->
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Card</th><th>Rep. APR</th><th>Annual Fee</th><th>Cashback/Rewards</th><th>Account Required</th><th>Sole Traders</th></tr></thead><tbody><tr><td>Capital on Tap</td><td>From 13.86% (floor)</td><td>&pound;0</td><td>Up to 1%</td><td>No</td><td>No</td></tr><tr><td>Barclaycard Select</td><td>25.5%</td><td>&pound;0</td><td>Up to 1%</td><td>No</td><td>Yes</td></tr><tr><td>Funding Circle</td><td>34.9%</td><td>&pound;0</td><td>2% then 1% cashback</td><td>No</td><td>Ltd companies only</td></tr><tr><td>Moss</td><td>34.3%</td><td>Platform pricing</td><td>Up to 1% cashback</td><td>No</td><td>Ltd companies, LLPs</td></tr><tr><td>Santander</td><td>23.7%</td><td>&pound;30/account</td><td>1% cashback</td><td>Yes</td><td>Not stated</td></tr><tr><td>Lloyds</td><td>15.95%</td><td>&pound;32/card</td><td>None</td><td>Yes</td><td>Yes</td></tr><tr><td>NatWest</td><td>24.3%</td><td>&pound;30/card</td><td>None</td><td>Yes</td><td>Not stated</td></tr><tr><td>HSBC</td><td>22%</td><td>&pound;32/card</td><td>None</td><td>Yes</td><td>Not stated</td></tr><tr><td>Metro Bank</td><td>18.9%</td><td>&pound;0</td><td>None</td><td>Yes</td><td>Yes</td></tr><tr><td>Amex Gold</td><td>N/A (charge)</td><td>&pound;0 yr 1, then &pound;195</td><td>MR points</td><td>No</td><td>All entity types</td></tr><tr><td>BA Amex</td><td>N/A (credit card)</td><td>&pound;250</td><td>Avios</td><td>No</td><td>All entity types</td></tr><tr><td>Amex Platinum</td><td>N/A (charge)</td><td>&pound;650</td><td>MR points</td><td>No</td><td>All entity types</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p><em>Rates verified against provider pricing pages, 20 March 2026. All variable rates may change after publication.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">How We Ranked These Cards</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We did not use a single scoring system. A card with a low APR is not &ldquo;better&rdquo; than a card with high cashback &mdash; they serve different needs. Instead, we grouped cards by what they&rsquo;re genuinely best at:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ul>
+    <li><strong>Open access cards</strong> come first because most readers can&rsquo;t access the bank-locked options</li>
+    <li><strong>Bank-locked cards</strong> are ranked by APR within their group, since carrying cost is the primary differentiator</li>
+    <li><strong>Rewards and charge cards</strong> are listed separately because APR ranking doesn&rsquo;t apply to them</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This is an editorial ranking, not a mathematically weighted score. We prioritised access, then cost, then features &mdash; because a card you can&rsquo;t get is not a card you should be comparing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To give you a concrete example: a business on Tide with &pound;4k monthly spend has exactly three realistic options. Barclaycard at 25.5%, Capital on Tap at whatever rate it offers you, or the Amex range if your suppliers accept it. The seven bank-locked cards on this page are invisible to that business. That access filter shaped the ranking more than any APR difference.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Questions We Get Asked</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Can I get a business credit card as a sole trader?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes, but your options are more limited than for limited companies. Barclaycard, Lloyds, and Metro Bank explicitly accept sole traders. Capital on Tap does not &mdash; it requires Companies House registration. For the others, sole trader eligibility is either confirmed or not stated on their public pages. We&rsquo;ve noted this in each card&rsquo;s entry and in the comparison table.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>See our dedicated page: <a href="/business-credit-cards/best-business-credit-cards-for-sole-traders/">Best business credit cards for sole traders</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Do I need a business bank account to get a business credit card?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For most traditional bank cards, yes. Five of the six bank-issued cards on this list require a business current account with that bank. The exceptions are Barclaycard (no account required), all fintech cards (Capital on Tap, Moss, Funding Circle), and all Amex cards.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">What credit limit can I get?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Traditional bank cards typically offer &pound;500&ndash;&pound;25,000. Capital on Tap offers up to &pound;250,000 for qualifying businesses. Amex charge cards don&rsquo;t have a pre-set spending limit (though they do have a practical ceiling based on your spending pattern). The limit you&rsquo;re offered depends on your business&rsquo;s financial profile, trading history, and the provider&rsquo;s assessment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Should I get a credit card or a charge card?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you need to spread payments over time, you need a credit card. If you can always clear the balance monthly and want rewards, a charge card avoids the temptation of revolving debt. We cover this in detail: <a href="/business-credit-cards/business-credit-cards-vs-charge-cards/">Business credit cards vs charge cards</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Explore by Category</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ul>
+    <li><a href="/business-credit-cards/low-apr-business-credit-cards/">Best low APR business credit cards</a></li>
+    <li><a href="/business-credit-cards/best-cashback-and-reward/">Best cashback and reward cards</a></li>
+    <li><a href="/business-credit-cards/best-business-credit-cards-for-sole-traders/">Best cards for sole traders</a></li>
+    <li><a href="/business-credit-cards/best-credit-cards-for-start-ups/">Best cards for start-ups</a></li>
+    <li><a href="/business-credit-cards/the-best-interest-free-credit-cards/">Best interest-free cards</a></li>
+    <li><a href="/business-credit-cards/what-are-the-best-business-credit-cards-for-travel/">Best cards for travel</a></li>
+    <li><a href="/business-credit-cards/best-cards-with-air-miles-avios/">Best cards for Avios and air miles</a></li>
+    <li><a href="/business-credit-cards/instant-approval-business-credit-cards/">Instant approval cards</a></li>
+    <li><a href="/business-credit-cards/best-business-charge-cards/">Best charge cards</a></li>
+    <li><a href="/business-credit-cards/poor-credit/">Cards for poor credit</a></li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Individual Reviews and Comparisons</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ul>
+    <li><a href="/business-credit-cards/capital-on-tap-review/">Capital on Tap review</a></li>
+    <li><a href="/business-credit-cards/funding-circle-business-credit-card-review/">Funding Circle credit card review</a></li>
+    <li><a href="/business-credit-cards/flexipay-review/">FlexiPay review</a></li>
+    <li><a href="/business-credit-cards/compare-barclaycard-business-credit-cards/">Compare Barclaycard cards</a></li>
+    <li><a href="/business-credit-cards/compare-american-express-business-credit-cards/">Compare Amex cards</a></li>
+    <li><a href="/business-credit-cards/capital-on-tap-vs-amex/">Capital on Tap vs Amex</a></li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Methodology and Disclosure</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"methodology"} -->
+<div class="wp-block-group methodology" style="border:1px solid #eee;border-radius:6px;padding:20px 24px 28px 24px;background:#f9f9f9">
+
+<!-- wp:paragraph -->
+<p><strong>Sources:</strong> All rates, fees, and eligibility criteria were verified against each provider&rsquo;s public pricing page on 20 March 2026. Secondary sources (Finder UK, Uswitch, Merchant Savvy) are noted where used to supplement provider data.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Rate type:</strong> All rates listed are variable unless stated otherwise. Providers may change them at any time after publication.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Affiliate disclosure:</strong> BusinessExpert may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings, which are based on verified rates and publicly available product data.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval. We recommend comparing offers directly with providers before applying.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/editorial-policy/">Read our full editorial policy</a></p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<script>
+(function() {
+  var toc = document.getElementById('cc-toc');
+  var list = document.getElementById('cc-toc-list');
+  if (!toc || !list) return;
+
+  // Gather all H2s in the entry-content area
+  var container = document.querySelector('.entry-content') || document.body;
+  var h2s = container.querySelectorAll('h2.wp-block-heading');
+  if (h2s.length < 2) { toc.style.display = 'none'; return; }
+
+  // Generate IDs and build TOC links
+  var sections = [];
+  h2s.forEach(function(h2, i) {
+    var id = h2.id || 'section-' + i;
+    h2.id = id;
+    sections.push({ id: id, el: h2 });
+
+    var li = document.createElement('li');
+    li.className = 'cc-toc__item';
+    var a = document.createElement('a');
+    a.className = 'cc-toc__link';
+    a.href = '#' + id;
+    a.textContent = h2.textContent.trim();
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + id);
+    });
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  // Position TOC relative to the content area
+  function positionToc() {
+    var entry = document.querySelector('.entry-content.container');
+    if (!entry) return;
+    var rect = entry.getBoundingClientRect();
+    var left = rect.left - 240;
+    if (left < 16) { toc.style.display = 'none'; return; }
+    toc.style.left = left + 'px';
+    toc.style.display = '';
+  }
+
+  // Scroll spy: highlight current section
+  var links = list.querySelectorAll('.cc-toc__link');
+  var rafId = null;
+  function onScroll() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(function() {
+      rafId = null;
+      var current = -1;
+      var scrollY = window.scrollY || document.documentElement.scrollTop;
+      for (var i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].el.getBoundingClientRect().top <= 120) {
+          current = i;
+          break;
+        }
+      }
+      links.forEach(function(link, idx) {
+        if (idx === current) {
+          link.classList.add('cc-toc__link--active');
+        } else {
+          link.classList.remove('cc-toc__link--active');
+        }
+      });
+    });
+  }
+
+  positionToc();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', positionToc);
+  onScroll();
+})();
+</script>
+<!-- /wp:html -->

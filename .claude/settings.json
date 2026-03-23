@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "mcp__Claude_Preview__*",
+      "mcp__05965e8d-9632-4d2a-be45-a36117b74fd3__*",
+      "mcp__Claude_in_Chrome__*",
+      "mcp__mcp-registry__*",
+      "mcp__scheduled-tasks__*",
+      "WebFetch(*)",
+      "WebSearch(*)"
+    ]
+  }
+}

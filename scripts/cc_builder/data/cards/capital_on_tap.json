@@ -1,0 +1,53 @@
+{
+  "id": "capital_on_tap_business_credit_card",
+  "bank": "Capital on Tap",
+  "name": "Capital on Tap Business Credit Card",
+  "short_name": "Capital on Tap",
+  "annual_fee": "&pound;0 (free card) / &pound;299 (Pro card)",
+  "card_type": "Credit card",
+  "reward_type": "Cashback",
+  "representative_apr": "34.9% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Capital-on-Tap-card.webp",
+  "img_alt": "Capital on Tap logo",
+  "facts": [
+    {
+      "label": "Floor APR",
+      "value": "From 13.86% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Representative APR",
+      "value": "34.9% variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0 (free card) / &pound;299 (Pro card)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.capitalontap.com/en/business-credit-cards/",
+  "cta_label": "View Capital on Tap Details",
+  "verify_source": "capitalontap.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr",
+    "cashback",
+    "instant-approval"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

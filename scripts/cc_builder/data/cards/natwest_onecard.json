@@ -1,0 +1,52 @@
+{
+  "id": "natwest_onecard",
+  "bank": "NatWest",
+  "name": "NatWest Onecard",
+  "short_name": "NatWest Onecard",
+  "annual_fee": "&pound;45 per cardholder",
+  "card_type": "Charge card",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "[NEEDS_IMAGE]",
+  "img_alt": "NatWest logo",
+  "facts": [
+    {
+      "label": "Annual Fee",
+      "value": "&pound;45 per cardholder",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Card Type",
+      "value": "Charge card (full balance monthly)",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Travel Insurance",
+      "value": "Up to &pound;100,000 on public transport",
+      "modifier": null,
+      "qualifier": "Up to &pound;25,000 general business travel"
+    },
+    {
+      "label": "Existing Account",
+      "value": "NatWest business account required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.natwest.com/business/products/cards/onecard.html",
+  "cta_label": "View NatWest Onecard Details",
+  "verify_source": "natwest.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp",
+    "partnership"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "NatWest"
+}

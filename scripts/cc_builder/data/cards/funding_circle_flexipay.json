@@ -1,0 +1,52 @@
+{
+  "id": "funding_circle_flexipay",
+  "bank": "Funding Circle",
+  "name": "Funding Circle FlexiPay",
+  "short_name": "Funding Circle FlexiPay",
+  "annual_fee": "&pound;0 (no interest charges)",
+  "card_type": "Charge card",
+  "reward_type": "None",
+  "representative_apr": "",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/Funding-Circle-Cashback_Card_Front.webp",
+  "img_alt": "Funding Circle FlexiPay",
+  "facts": [
+    {
+      "label": "Transaction Fee",
+      "value": "From 1.99% per transaction",
+      "modifier": null,
+      "qualifier": "Fee-free if repaid in 1 instalment"
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;0 (no interest charges)",
+      "modifier": null,
+      "qualifier": "No annual fee, no interest"
+    },
+    {
+      "label": "Payment Terms",
+      "value": "Spread over 1&ndash;12 months",
+      "modifier": null,
+      "qualifier": "1, 3, 6, 9, or 12 month options"
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.fundingcircle.com/gb/flexipay/",
+  "cta_label": "View Funding Circle FlexiPay Details",
+  "verify_source": "fundingcircle.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "charge-cards",
+    "instant-approval"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

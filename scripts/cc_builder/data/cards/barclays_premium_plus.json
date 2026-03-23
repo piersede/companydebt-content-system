@@ -1,0 +1,53 @@
+{
+  "id": "barclaycard_premium_plus_business_credit_card",
+  "bank": "Barclaycard",
+  "name": "Barclaycard Premium Plus Business Credit Card",
+  "short_name": "Barclaycard Premium Plus",
+  "annual_fee": "&pound;100 per account",
+  "card_type": "Credit card",
+  "reward_type": "None",
+  "representative_apr": "36.2% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2024/12/barclaycard.png",
+  "img_alt": "Barclaycard logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "36.2% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;100 per account",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "19.0% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Existing Account",
+      "value": "No existing account required",
+      "modifier": "none-required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.barclaycard.co.uk/business/cards/credit-cards/premium-plus",
+  "cta_label": "View Barclaycard Details",
+  "verify_source": "barclaycard.co.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "rewards"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company",
+    "llp"
+  ],
+  "existing_account_required": false,
+  "existing_account_bank": null
+}

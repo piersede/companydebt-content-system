@@ -1,0 +1,53 @@
+{
+  "id": "lloyds_business_credit_card",
+  "bank": "Lloyds",
+  "name": "Lloyds Bank Business Credit Card",
+  "short_name": "Lloyds Business Card",
+  "annual_fee": "&pound;32 per cardholder",
+  "card_type": "Credit card",
+  "reward_type": "None",
+  "representative_apr": "15.95% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2026/03/LLOYDS-credit-card-image.png",
+  "img_alt": "Lloyds Business Credit Card",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "15.95% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "14.9% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;32 per cardholder",
+      "modifier": null,
+      "qualifier": "Waived yr 1; waived at &pound;6k+ annual spend"
+    },
+    {
+      "label": "Existing Account",
+      "value": "Lloyds BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.lloydsbank.com/business/business-cards/business-credit-card.html",
+  "cta_label": "View Lloyds Card Details",
+  "verify_source": "lloydsbank.com",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr",
+    "sole-traders"
+  ],
+  "accepted_entities": [
+    "sole-trader",
+    "partnership",
+    "limited-company"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "Lloyds"
+}

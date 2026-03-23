@@ -1,0 +1,51 @@
+{
+  "id": "hsbc_business_credit_card",
+  "bank": "HSBC",
+  "name": "HSBC Business Credit Card",
+  "short_name": "HSBC Business Card",
+  "annual_fee": "&pound;32 per card",
+  "card_type": "Credit card",
+  "reward_type": "None",
+  "representative_apr": "22% variable",
+  "img_url": "https://busexp1stg.wpengine.com/wp-content/uploads/2023/08/HSBC-Commercial.png",
+  "img_alt": "HSBC logo",
+  "facts": [
+    {
+      "label": "Representative APR",
+      "value": "22% variable",
+      "modifier": "apr",
+      "qualifier": null
+    },
+    {
+      "label": "Purchase Rate",
+      "value": "15.9% p.a. variable",
+      "modifier": null,
+      "qualifier": null
+    },
+    {
+      "label": "Annual Fee",
+      "value": "&pound;32 per card",
+      "modifier": null,
+      "qualifier": "Waived in year 1"
+    },
+    {
+      "label": "Existing Account",
+      "value": "HSBC BCA required",
+      "modifier": "required",
+      "qualifier": null
+    }
+  ],
+  "cta_url": "https://www.business.hsbc.uk/en-gb/products/business-credit-card",
+  "cta_label": "View HSBC Card Details",
+  "verify_source": "business.hsbc.uk",
+  "verify_date": "20 March 2026",
+  "categories": [
+    "low-apr"
+  ],
+  "accepted_entities": [
+    "limited-company",
+    "partnership"
+  ],
+  "existing_account_required": true,
+  "existing_account_bank": "HSBC"
+}
