@@ -410,7 +410,7 @@ CC_TOC_CSS = '''<style>
 # ── Credit card component v4 ──────────────────────────────────────────
 
 CC_CARD_CSS = '''<style>
-/* Credit Card Comparison Component v4.5 — BusinessExpert
+/* Credit Card Comparison Component v4.5 — Company Debt
    Strip → horizontal header (image | text | CTA) → stats → notes → footer.
    Palette: #6704A4 accent (CTA only). Text: #2A2A2E / #4A4A52 / #6E6E78 / #8A8A94.
    Type scale (4 tiers): 18px title | 14.5px body | 13px secondary | 11px metadata. */

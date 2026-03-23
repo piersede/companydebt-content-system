@@ -233,7 +233,7 @@ def _build_page_research_prompt(page_slug: str, page_title: str, topics: list[st
 
     return f"""You are a professional UK business finance researcher. Today's date is {today}.
 
-Research the following topics for a BusinessExpert.co.uk article:
+Research the following topics for a Company Debt.co.uk article:
 
 ARTICLE: {page_slug}
 TITLE: {page_title}

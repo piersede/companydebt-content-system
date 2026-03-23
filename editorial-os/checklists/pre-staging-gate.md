@@ -43,7 +43,7 @@ Source: `18-seo-signal-governance.md` §Pre-publish SEO signal checklist
 | S9 | Article linked from at least one existing page (or scheduled) | |
 | S10 | Every image has specific, descriptive alt text | |
 | S11 | Last-reviewed date visible on decision-stage pages | |
-| S12 | No more than one BusinessExpert CTA per article | |
+| S12 | No more than one Company Debt CTA per article | |
 
 ---
 
@@ -62,7 +62,7 @@ Only run this pass on comparison, roundup, alternatives, and review articles.
 | C5 | No generic pros/cons phrasing | |
 | C6 | Opener is not winner-first | |
 | C7 | Early decision module present | |
-| C8 | BusinessExpert misfit appears before first product deep dive | |
+| C8 | Company Debt misfit appears before first product deep dive | |
 | C9 | Verdict language not repeated more than twice (intro + conclusion) | |
 | C10 | Product sections do not all expose identical template scaffold | |
 

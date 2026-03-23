@@ -1,4 +1,4 @@
-# Rules Index — BusinessExpert Editorial OS v2.3
+# Rules Index — Company Debt Editorial OS v2.3
 
 One source of truth per rule. If a future rule overlaps with an existing entry, extend the existing source rather than creating a parallel rule elsewhere.
 

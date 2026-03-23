@@ -63,29 +63,29 @@ for (const article of articles) {
 
   // A3: Vendor-summary drift — check if article is just tool descriptions
   const h2s = [...content.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)].map(m => stripHtml(m[1]));
-  const toolNameHeadings = h2s.filter(h => /^(karbon|taxdome|businessexpert|senta|brightmanager|accountancymanager|xero|quickbooks)/i.test(h));
+  const toolNameHeadings = h2s.filter(h => /^(karbon|taxdome|companydebt|senta|brightmanager|accountancymanager|xero|quickbooks)/i.test(h));
   if (toolNameHeadings.length >= 3 && !h2s.some(h => /why|when|should|decision|choose|which/i.test(h))) {
     issues.push('[A3] Vendor-summary drift: 3+ tool-name headings with no decision-oriented heading');
   }
 
   // A5: House product after decision frame
-  const businessexpertIdx = text.toLowerCase().indexOf('businessexpert');
+  const companydebtIdx = text.toLowerCase().indexOf('companydebt');
   const decisionMatch = text.match(augmentRe) || text.match(replaceRe);
-  if (businessexpertIdx > -1 && decisionMatch) {
+  if (companydebtIdx > -1 && decisionMatch) {
     const decisionIdx = text.toLowerCase().indexOf(decisionMatch[0].toLowerCase());
-    if (businessexpertIdx < decisionIdx) {
-      issues.push('[A5] BusinessExpert mentioned before replacement/augmentation distinction');
+    if (companydebtIdx < decisionIdx) {
+      issues.push('[A5] Company Debt mentioned before replacement/augmentation distinction');
     }
   }
 
   // A6: House product not-fit condition
-  const notFitRe = /not (the right|a good|a fit|best suited)|businessexpert (is not|does not|doesn.t|won.t)|not what you need if/i;
-  if (businessexpertIdx > -1 && !notFitRe.test(text)) {
-    issues.push('[A6] BusinessExpert appears without explicit "not the right fit" condition');
+  const notFitRe = /not (the right|a good|a fit|best suited)|companydebt (is not|does not|doesn.t|won.t)|not what you need if/i;
+  if (companydebtIdx > -1 && !notFitRe.test(text)) {
+    issues.push('[A6] Company Debt appears without explicit "not the right fit" condition');
   }
 
   // A7: Conclusion before CTA
-  const ctaRe = /businessexpert\.com\/(pricing|demo|trial|sign.?up|get.?started|book)/i;
+  const ctaRe = /companydebt\.com\/(pricing|demo|trial|sign.?up|get.?started|book)/i;
   const conclusionRe = /<h2[^>]*>[^<]*(conclusion|which should|our view|verdict|which is right)/i;
   const hasCta = ctaRe.test(content);
   const hasConclusion = conclusionRe.test(content);

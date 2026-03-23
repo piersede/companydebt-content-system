@@ -125,4 +125,4 @@ After every check, ask: "Does this article actually help a real reader make a be
 
 ---
 
-*This file adapts the compound engineering principles from vinicius91carvalho/.claude for the BusinessExpert editorial workflow. It delegates to the editorial governance system (09-18) for all content-specific rules.*
+*This file adapts the compound engineering principles from vinicius91carvalho/.claude for the Company Debt editorial workflow. It delegates to the editorial governance system (09-18) for all content-specific rules.*

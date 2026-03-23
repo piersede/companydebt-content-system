@@ -1,4 +1,4 @@
-# Alternatives Page Template — BusinessExpert Editorial OS
+# Alternatives Page Template — Company Debt Editorial OS
 
 ## Required first-fold sequence (in order)
 
@@ -104,7 +104,7 @@ Required questions:
 ## Trust modules
 
 ### Perspective disclosure (top-of-page)
-Approved pattern: "This article was written by the BusinessExpert team and reflects our assessment of the options covered, based on [evidence basis]."
+Approved pattern: "This article was written by the Company Debt team and reflects our assessment of the options covered, based on [evidence basis]."
 Must appear before substantive comparison begins.
 
 ### Verification note

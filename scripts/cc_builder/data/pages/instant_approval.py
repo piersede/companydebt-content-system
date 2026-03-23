@@ -353,7 +353,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified decision speed information against each provider&rsquo;s public product pages and application process descriptions on 20 March 2026. Some decision timelines are approximate; confirm with each provider.',
             '<strong>Capital on Tap rate data:</strong> Average rate offered Oct&ndash;Dec 2025 sourced from Capital on Tap&rsquo;s own published representative rate data.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our editorial assessments of decision speed or card suitability.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our editorial assessments of decision speed or card suitability.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

@@ -17,10 +17,10 @@ Google assigns site-level quality scores that affect every page on the domain. T
 
 ## Signal 2: Product and service review quality
 
-Google has dedicated promotion and demotion classifiers for review pages (`productReviewPUhqPage`, `productReviewPPromotePage`, `productReviewPDemotePage`). These operate at both page and site level. For BusinessExpert, this applies to any content comparing BusinessExpert against alternatives or reviewing practice management software.
+Google has dedicated promotion and demotion classifiers for review pages (`productReviewPUhqPage`, `productReviewPPromotePage`, `productReviewPDemotePage`). These operate at both page and site level. For Company Debt, this applies to any content comparing Company Debt against alternatives or reviewing practice management software.
 
 **Rules:**
-- **Comparison frameworks must be genuine.** Any comparison must include at least one dimension where BusinessExpert is not the strongest fit. See `11-comparison-governance.md`.
+- **Comparison frameworks must be genuine.** Any comparison must include at least one dimension where Company Debt is not the strongest fit. See `11-comparison-governance.md`.
 - **Evidence density matters.** Specific figures — response rate uplifts, time saved per week, client adoption rates, pricing — are extractable signals. Vague comparative claims are not.
 - **Verification dates required.** Every capability claim about a competitor product must include a verification date or a `[VERIFY]` flag.
 
@@ -28,7 +28,7 @@ Google has dedicated promotion and demotion classifiers for review pages (`produ
 
 ## Signal 3: YMYL classification
 
-BusinessExpert's content touches accountancy practice operations, compliance workflows, and financial decision-making. This places it within YMYL-adjacent territory (`ymylNewsV2Score`). Content advising practices on workflow tools that handle client data, HMRC compliance, or financial document management carries higher evidential standards than general SaaS content.
+Company Debt's content touches accountancy practice operations, compliance workflows, and financial decision-making. This places it within YMYL-adjacent territory (`ymylNewsV2Score`). Content advising practices on workflow tools that handle client data, HMRC compliance, or financial document management carries higher evidential standards than general SaaS content.
 
 **Rules:**
 - Every claim about compliance, regulatory requirements, data handling, or client financial outcomes requires a named source or a `[HUMAN CONFIRMATION NEEDED]` flag.
@@ -39,7 +39,7 @@ BusinessExpert's content touches accountancy practice operations, compliance wor
 
 ## Signal 4: Salient term coverage
 
-Google identifies salient terms per document and scores topical coverage depth. Each term has a salience score, IDF, and virtual term frequency. For BusinessExpert's content, covering the full vocabulary of the topic — naturally, not by stuffing — is a quality signal.
+Google identifies salient terms per document and scores topical coverage depth. Each term has a salience score, IDF, and virtual term frequency. For Company Debt's content, covering the full vocabulary of the topic — naturally, not by stuffing — is a quality signal.
 
 **Core salient terms by topic area:**
 
@@ -101,7 +101,7 @@ Google penalises pages with distracting or annoying elements (`clutterScore`). T
 
 **Rules:**
 - Do not embed promotional banners mid-article that break reading flow.
-- Do not stack multiple BusinessExpert CTAs inside a single article — one natural CTA per article is the limit.
+- Do not stack multiple Company Debt CTAs inside a single article — one natural CTA per article is the limit.
 - Avoid decorative visual inserts that add no information value.
 
 ---
@@ -111,8 +111,8 @@ Google penalises pages with distracting or annoying elements (`clutterScore`). T
 Google tracks user click behaviour: good clicks, bad clicks, last-longest clicks (the click that was both the last and longest in a search session). These cannot be manipulated directly, but editorial choices either support or undermine them.
 
 **Rules:**
-- **Title promise must match content.** A title like "How to stop chasing clients for documents" must deliver a practical answer, not redirect the reader to BusinessExpert without substance.
-- **No bait-and-switch.** If the title frames a problem, the article must solve it — not pivot immediately to BusinessExpert as the answer.
+- **Title promise must match content.** A title like "How to stop chasing clients for documents" must deliver a practical answer, not redirect the reader to Company Debt without substance.
+- **No bait-and-switch.** If the title frames a problem, the article must solve it — not pivot immediately to Company Debt as the answer.
 - **Answer the question early.** Readers who find their answer in paragraph 2 are more likely to be last-longest clicks. Delayed answers produce bad clicks.
 - **Every article must have a clear ending.** A reader who reaches the end and finds a useful conclusion is more likely to be satisfied.
 
@@ -135,7 +135,7 @@ Google uses anchor text of inbound and internal links as a content quality signa
 
 **Rules:**
 - **No generic anchor text.** Banned phrases as link anchors: "click here", "read more", "find out more", "this article", "here", "learn more", "this guide", "more information".
-- **Descriptive, destination-accurate anchors.** Use the target topic as the anchor: "how BusinessExpert's document chasing works", "Xero integration setup guide", "automated client portal walkthrough".
+- **Descriptive, destination-accurate anchors.** Use the target topic as the anchor: "how Company Debt's document chasing works", "Xero integration setup guide", "automated client portal walkthrough".
 - **Internal link anchors must match the target page's primary topic.**
 - **Varied anchors for repeated links.** If the same page is linked multiple times, vary the anchor text rather than repeating the same phrase.
 
@@ -143,12 +143,12 @@ Google uses anchor text of inbound and internal links as a content quality signa
 
 ## Signal 11: Commercial and promotional link density (SpamBrain)
 
-SpamBrain and thin-content classifiers are sensitive to the ratio of promotional links to editorial content. A page where the majority of links are CTAs or BusinessExpert product links is a negative quality signal.
+SpamBrain and thin-content classifiers are sensitive to the ratio of promotional links to editorial content. A page where the majority of links are CTAs or Company Debt product links is a negative quality signal.
 
 **Rules:**
 - The balance of links must favour editorial and informational destinations.
-- No paragraph where the only link is to BusinessExpert's pricing page, demo request, or signup without accompanying substantive editorial content.
-- Every BusinessExpert link should sit within genuine editorial context, not act as a standalone CTA in otherwise thin content.
+- No paragraph where the only link is to Company Debt's pricing page, demo request, or signup without accompanying substantive editorial content.
+- Every Company Debt link should sit within genuine editorial context, not act as a standalone CTA in otherwise thin content.
 
 ---
 
@@ -160,7 +160,7 @@ Google explicitly scores the alignment between title, meta description, and cont
 - The title must reflect the actual content of the article, not a keyword target that the article only partially addresses.
 - Meta descriptions must describe what the article actually delivers, not generic "learn more" language.
 - The H1 and title tag should align. Avoid situations where the title tag promises something the H1 frames differently.
-- If the title targets a buyer question ("how to automate document chasing"), the article must answer it directly, not pivot to an BusinessExpert promotion.
+- If the title targets a buyer question ("how to automate document chasing"), the article must answer it directly, not pivot to an Company Debt promotion.
 
 ---
 
@@ -170,7 +170,7 @@ Google's duplicate content detection operates at sub-document level. On a site w
 
 **Rules:**
 - Each article must have a distinct angle. Two articles on "document chasing" cannot cover the same points in the same order.
-- Do not re-use boilerplate product descriptions across articles. Every BusinessExpert product description in a new article must be written for that article's specific framing.
+- Do not re-use boilerplate product descriptions across articles. Every Company Debt product description in a new article must be written for that article's specific framing.
 - Where topics overlap, differentiate by buyer segment, workflow stage, or decision lens — not just by adding a different introduction.
 
 ---
@@ -194,7 +194,7 @@ Google scores images for topical relevance to surrounding content. An image with
 **Rules:**
 - Every image must be directly relevant to the section it appears in. A generic office stock photo in a document-chasing article does not serve image relevance scoring.
 - Alt text must describe the specific content of the image, not a keyword.
-- Screenshots of BusinessExpert's interface should be placed in the section that discusses the feature shown — not grouped at the end or used decoratively.
+- Screenshots of Company Debt's interface should be placed in the section that discusses the feature shown — not grouped at the end or used decoratively.
 - No decorative imagery that has no relationship to the surrounding content.
 
 ---
@@ -215,8 +215,8 @@ Google operates a thin-content classifier distinct from and independent of the l
 Google's quality systems flag content that does not originate from genuine expertise or direct engagement with the subject. These signals apply to human-written filler as much as to AI-generated text.
 
 **Rules:**
-- **No generic filler sentences.** Sentences that could have been written without product familiarity are authenticity signals: "BusinessExpert is a powerful tool that helps practices work more efficiently."
-- **Verdicts must have immediate evidence.** "BusinessExpert reduces document-chasing time" must be followed immediately by its evidence basis (named source, customer data, or a clearly labelled editorial judgement).
+- **No generic filler sentences.** Sentences that could have been written without product familiarity are authenticity signals: "Company Debt is a powerful tool that helps practices work more efficiently."
+- **Verdicts must have immediate evidence.** "Company Debt reduces document-chasing time" must be followed immediately by its evidence basis (named source, customer data, or a clearly labelled editorial judgement).
 - **Uneven specificity is itself a signal.** A mix of highly specific sections and vague filler passages flags the vague passages, even if the rest of the article is strong.
 - **AI prose fingerprints are an authenticity signal.** See `14-failure-modes-and-recovery.md` §16 for the 13 patterns to check.
 
@@ -247,11 +247,11 @@ Run this after the main pre-publish gate. All items must pass.
 | S5 | FAQ depth | No one-sentence FAQ answers; no "see above" cross-references |
 | S6 | Salient term coverage | Core topic vocabulary present naturally (not forced) |
 | S7 | Author byline | Named author present on every published article |
-| S8 | Internal links out | Article links to at least 2 other BusinessExpert site pages with descriptive anchors |
+| S8 | Internal links out | Article links to at least 2 other Company Debt site pages with descriptive anchors |
 | S9 | Internal links in | Article linked from at least one existing page (or scheduled for linking post-publication) |
 | S10 | Image alt text | Every image has specific, descriptive alt text — not generic or keyword-stuffed |
 | S11 | Freshness date | Last-reviewed date visible on decision-stage pages |
-| S12 | CTA density | No more than one BusinessExpert CTA per article; CTAs sit within editorial context |
+| S12 | CTA density | No more than one Company Debt CTA per article; CTAs sit within editorial context |
 
 ---
 
@@ -401,6 +401,6 @@ When auditing: run content factors first, then linking, then trust/E-E-A-T. Flag
 
 - Signal 17 (authenticity) overlaps with `14-failure-modes-and-recovery.md` §16. The failure modes file governs prose quality; this file governs the SEO consequence of the same failures.
 - Signal 3 (YMYL) overlaps with `10-evidence-governance.md`. Evidence governance governs claim treatment; this file governs the SEO consequence.
-- Signal 11 (link density) overlaps with `11-comparison-governance.md` §BusinessExpert mentions. Comparison governance governs fairness; this file governs the SEO consequence.
+- Signal 11 (link density) overlaps with `11-comparison-governance.md` §Company Debt mentions. Comparison governance governs fairness; this file governs the SEO consequence.
 
 When a rule appears in both files, the stricter interpretation applies.

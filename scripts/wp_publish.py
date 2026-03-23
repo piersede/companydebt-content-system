@@ -1,5 +1,5 @@
 """
-BusinessExpert WordPress Publisher
+Company Debt WordPress Publisher
 ===================================
 Pushes article HTML to WordPress staging or production via the REST API.
 
@@ -113,7 +113,7 @@ def create_authenticated_session(creds: dict) -> tuple[requests.Session, str]:
     url = creds["url"]
     api_base = f"{url}/wp-json/wp/v2"
     session = requests.Session()
-    session.headers["User-Agent"] = "BusinessExpert-Publisher/1.0"
+    session.headers["User-Agent"] = "Company Debt-Publisher/1.0"
 
     has_http_auth = bool(creds.get("http_user") and creds.get("http_pass"))
 
@@ -193,7 +193,7 @@ def extract_from_html(html_path: Path) -> dict:
     title = ""
     if soup.title and soup.title.string:
         title = soup.title.string.strip()
-        # Strip site name suffix if present (e.g. " | BusinessExpert")
+        # Strip site name suffix if present (e.g. " | Company Debt")
         title = re.sub(r"\s*\|.*$", "", title).strip()
     if not title:
         h1 = soup.find("h1")
@@ -366,7 +366,7 @@ def push_to_wordpress(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="BusinessExpert WordPress Publisher — pushes article HTML to WP via REST API"
+        description="Company Debt WordPress Publisher — pushes article HTML to WP via REST API"
     )
     parser.add_argument(
         "--file", required=True,
@@ -400,7 +400,7 @@ if __name__ == "__main__":
         print(f"ERROR: File not found: {html_path}")
         sys.exit(1)
 
-    print(f"\nBusinessExpert WordPress Publisher")
+    print(f"\nCompany Debt WordPress Publisher")
     print(f"File:        {html_path}")
     print(f"Target:      {'PRODUCTION ⚠️' if args.prod else 'Staging'}")
     print(f"Post status: {args.status}")

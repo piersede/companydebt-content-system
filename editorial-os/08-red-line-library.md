@@ -14,8 +14,8 @@ Hard rules that must never be broken, regardless of brief, deadline, or content 
 
 ## Authorship red lines
 - Never imply founder status, founder authority, or product-builder authority unless explicitly confirmed by a human
-- Never use "I run BusinessExpert", "we built BusinessExpert", "when we started BusinessExpert", "our founding belief", "the problem we set out to solve", "we created BusinessExpert to solve this", or "I did not build BusinessExpert as..." unless a human has confirmed this authority
-- Never use "we" to imply founding-team or product-building authority. "We" refers to the BusinessExpert team's editorial and operational perspective only
+- Never use "I run Company Debt", "we built Company Debt", "when we started Company Debt", "our founding belief", "the problem we set out to solve", "we created Company Debt to solve this", or "I did not build Company Debt as..." unless a human has confirmed this authority
+- Never use "we" to imply founding-team or product-building authority. "We" refers to the Company Debt team's editorial and operational perspective only
 - Never imply personal ownership of the product or company
 - Never imply first-hand product development experience
 
@@ -47,7 +47,7 @@ Hard rules that must never be broken, regardless of brief, deadline, or content 
 
 ## Comparison red lines
 - Never present a comparison table as exhaustive without stating scope limits
-- Never omit a competitor's genuine strength to favour BusinessExpert
+- Never omit a competitor's genuine strength to favour Company Debt
 - Never state competitor limitations as fact without verifiable evidence
 - Never present estimated or inferred data as confirmed in a comparison table
 - Never infer competitor feature absence from product origin, market focus, or company headquarters (e.g., "US-built" does not prove "no MTD audit trail")
@@ -56,28 +56,28 @@ Hard rules that must never be broken, regardless of brief, deadline, or content 
 - Never omit comparison table metadata (verification date, basis, caution note, scope note)
 
 ## Framework red lines
-- Never present a buyer framework, comparison framework, or category framework where BusinessExpert wins on every dimension. Include at least one meaningful dimension where BusinessExpert is weaker
+- Never present a buyer framework, comparison framework, or category framework where Company Debt wins on every dimension. Include at least one meaningful dimension where Company Debt is weaker
 - Never design an evaluation framework that leads to a predetermined conclusion without acknowledging the bias
-- Never select evaluation criteria solely to favour BusinessExpert
+- Never select evaluation criteria solely to favour Company Debt
 
-## BusinessExpert mention red lines
-- Never introduce BusinessExpert as an abrupt product pivot after neutral competitor or category analysis
-- Never mention BusinessExpert without also stating what it does not do
-- Never present BusinessExpert as a replacement for tools that serve a different purpose without stating the limits
-- Never omit the BusinessExpert disclosure wherever BusinessExpert is mentioned, in any article type
-- Never end a non-BusinessExpert article on BusinessExpert product features or soft CTAs
+## Company Debt mention red lines
+- Never introduce Company Debt as an abrupt product pivot after neutral competitor or category analysis
+- Never mention Company Debt without also stating what it does not do
+- Never present Company Debt as a replacement for tools that serve a different purpose without stating the limits
+- Never omit the Company Debt disclosure wherever Company Debt is mentioned, in any article type
+- Never end a non-Company Debt article on Company Debt product features or soft CTAs
 
 ## Pricing red lines
 - Never criticise competitor pricing without giving actual figures or stating "current pricing could not be verified"
-- Never position BusinessExpert as more economical without stating the basis and limits of the comparison
-- Never omit BusinessExpert pricing when the article recommends cost comparisons
+- Never position Company Debt as more economical without stating the basis and limits of the comparison
+- Never omit Company Debt pricing when the article recommends cost comparisons
 - Never use vague pricing language ("steep", "significant commitment", "premium") as the only price signal when the reader needs figures to decide
 
 ## Decision guidance red lines
 - Never make a recommendation without supporting reasoning
 - Never present buyer guidance without stating who it applies to
 - Never hide trade-offs that a reader would need to make a good decision
-- Never push a reader toward BusinessExpert without acknowledging genuine alternatives
+- Never push a reader toward Company Debt without acknowledging genuine alternatives
 
 ## Customer and outcome red lines
 - Never claim customer results without human-supplied evidence

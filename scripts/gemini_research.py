@@ -1,5 +1,5 @@
 """
-BusinessExpert Deep Research Script
+Company Debt Deep Research Script
 ====================================
 Uses the Gemini Deep Research Agent (Interactions API) to run a single
 batched research prompt covering all articles in the current batch.
@@ -66,7 +66,7 @@ def build_master_prompt(articles: list[dict]) -> str:
 
     prompt = f"""You are a professional UK business finance researcher. Today's date is {today}.
 
-Research the following topics for a series of UK business finance articles for businessexpert.co.uk.
+Research the following topics for a series of UK business finance articles for companydebt.co.uk.
 
 For each article, provide current, verified data from authoritative UK sources.
 Cite the specific source URL and access date for every fact.
@@ -238,7 +238,7 @@ DEFAULT_ARTICLES = [
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="BusinessExpert Deep Research Script — runs one batched Gemini Deep Research prompt"
+        description="Company Debt Deep Research Script — runs one batched Gemini Deep Research prompt"
     )
     parser.add_argument("--batch", help="Path to JSON file with article definitions")
     parser.add_argument("--name", default="research", help="Name for this batch (used in output filename)")

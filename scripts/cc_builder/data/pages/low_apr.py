@@ -355,7 +355,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> All rates, fees, and eligibility criteria were verified against each provider&rsquo;s public pricing page on 20 March 2026. We source product data exclusively from provider websites, regulatory filings (FCA, Companies House), and official industry bodies (UK Finance, Bank of England).',
             '<strong>Rate type:</strong> All rates listed are variable. Providers may change them at any time after publication.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings, which are based on verified rates and publicly available product data. Our methodology and ranking criteria are described above.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings, which are based on verified rates and publicly available product data. Our methodology and ranking criteria are described above.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval. We recommend comparing offers directly with providers before applying.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

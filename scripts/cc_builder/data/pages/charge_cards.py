@@ -335,7 +335,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified product types, fees, and eligibility criteria against each provider&rsquo;s public product pages on 20 March 2026. Some provider terms may not be publicly stated; confirm directly before applying. We update these figures quarterly.',
             '<strong>Product classification:</strong> Cards are classified as charge cards where the provider explicitly states full monthly repayment is required and no revolving credit is available. Where this classification is unclear, it is noted in the individual card entry.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our editorial classification of products or our assessments of suitability.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our editorial classification of products or our assessments of suitability.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

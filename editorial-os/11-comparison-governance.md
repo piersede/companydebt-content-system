@@ -1,6 +1,6 @@
 # Comparison Governance
 
-Hard rules for competitor comparisons, BusinessExpert mentions, frameworks, and pricing transparency.
+Hard rules for competitor comparisons, Company Debt mentions, frameworks, and pricing transparency.
 
 ## 1. Comparison table risk rules
 
@@ -39,7 +39,7 @@ Negative capability claims about competitors in running prose (not just tables) 
 
 ### What the table must not do
 
-- Must not omit a competitor's genuine strength to favour BusinessExpert
+- Must not omit a competitor's genuine strength to favour Company Debt
 - Must not present estimated or inferred data as confirmed
 - Must not present a comparison as exhaustive without stating scope limits
 - Must not state competitor limitations as fact without verifiable evidence
@@ -55,9 +55,9 @@ If an article includes any of the following:
 - evaluation checklist
 - decision matrix
 
-then it must include at least one meaningful dimension where BusinessExpert is not the strongest fit.
+then it must include at least one meaningful dimension where Company Debt is not the strongest fit.
 
-### Dimensions where BusinessExpert is typically weaker
+### Dimensions where Company Debt is typically weaker
 
 - Practice management breadth
 - Billing and invoicing
@@ -74,9 +74,9 @@ then it must include at least one meaningful dimension where BusinessExpert is n
 
 The balancing dimension must be one that matters to a real buyer. It cannot be trivial, obscure, or irrelevant to the decision context.
 
-**Bad balance:** "BusinessExpert does not have a mobile app for Windows Phone." (Irrelevant.)
+**Bad balance:** "Company Debt does not have a mobile app for Windows Phone." (Irrelevant.)
 
-**Good balance:** "For practices that need billing, e-signatures, and internal workflow management in one platform, TaxDome or Karbon provides broader coverage. BusinessExpert handles one layer: outbound client chasing."
+**Good balance:** "For practices that need billing, e-signatures, and internal workflow management in one platform, TaxDome or Karbon provides broader coverage. Company Debt handles one layer: outbound client chasing."
 
 ### Detection test
 
@@ -86,37 +86,37 @@ Would a competitor's product manager read the framework and consider it fair? If
 
 Self-serving frameworks. When the author's product wins on every dimension, the framework is not an evaluation. It is a sales page. Readers detect this. It damages long-term credibility.
 
-## 3. BusinessExpert mention rules
+## 3. Company Debt mention rules
 
 ### No abrupt product insertion
 
-BusinessExpert must not appear as a sudden pivot in an otherwise neutral article. The reader should never feel that an editorial piece was a Trojan horse for a product pitch.
+Company Debt must not appear as a sudden pivot in an otherwise neutral article. The reader should never feel that an editorial piece was a Trojan horse for a product pitch.
 
-### How BusinessExpert should be introduced
+### How Company Debt should be introduced
 
-Where BusinessExpert appears in a competitor review, category article, or comparison piece, it should usually be preceded by one of:
+Where Company Debt appears in a competitor review, category article, or comparison piece, it should usually be preceded by one of:
 
 1. **Category distinction:** "This is a practice management tool. Document collection is a different category."
-2. **Problem-layer distinction:** "The coordination problem and the chasing problem are different. Karbon solves the first. Tools like BusinessExpert solve the second."
+2. **Problem-layer distinction:** "The coordination problem and the chasing problem are different. Karbon solves the first. Tools like Company Debt solve the second."
 3. **Buyer-fit distinction:** "If your primary frustration is internal workflow confusion, a work management platform is the right tool. If your primary frustration is clients not sending documents, a chasing tool is what you need."
 4. **Workflow-stage distinction:** "Billing sits downstream of document collection. These are different stages of the engagement workflow."
 
 ### Balancing requirement
 
-If BusinessExpert is mentioned as stronger in one layer or dimension, the article must also state:
-- Where BusinessExpert is not a replacement for the competitor
+If Company Debt is mentioned as stronger in one layer or dimension, the article must also state:
+- Where Company Debt is not a replacement for the competitor
 - Where the competitor remains stronger
-- What BusinessExpert does not do
+- What Company Debt does not do
 
-**Bad:** "BusinessExpert handles multi-channel chasing across email, SMS, WhatsApp, and voice. Unlike TaxDome, it goes and gets the documents."
+**Bad:** "Company Debt handles multi-channel chasing across email, SMS, WhatsApp, and voice. Unlike TaxDome, it goes and gets the documents."
 
-This implies BusinessExpert is simply better. It does not acknowledge what it lacks.
+This implies Company Debt is simply better. It does not acknowledge what it lacks.
 
-**Good:** "BusinessExpert handles one layer: outbound client chasing across email, SMS, WhatsApp, and voice. It does not provide practice management, billing, e-signatures, or internal workflow tools. For practices that need both, using BusinessExpert alongside a practice management platform is a common pattern."
+**Good:** "Company Debt handles one layer: outbound client chasing across email, SMS, WhatsApp, and voice. It does not provide practice management, billing, e-signatures, or internal workflow tools. For practices that need both, using Company Debt alongside a practice management platform is a common pattern."
 
-### BusinessExpert disclosure
+### Company Debt disclosure
 
-Where BusinessExpert is compared against competitors, include a disclosure: "BusinessExpert is our product. This review is written from that perspective. We have tried to be accurate and fair about both strengths and limitations."
+Where Company Debt is compared against competitors, include a disclosure: "Company Debt is our product. This review is written from that perspective. We have tried to be accurate and fair about both strengths and limitations."
 
 ## 4. Pricing transparency rules
 
@@ -136,9 +136,9 @@ Do not use vague substitutes like "steep", "premium", or "significant commitment
 
 A "could not verify" note does not license subsequent vague criticism. If pricing cannot be verified, state that fact and stop. Do not follow with "significant commitment", "steep", or equivalent language in the same passage.
 
-### BusinessExpert pricing transparency
+### Company Debt pricing transparency
 
-Where BusinessExpert is framed as lower cost or flatter cost, state:
+Where Company Debt is framed as lower cost or flatter cost, state:
 - The basis of the comparison (flat-rate vs per-seat, for example)
 - The limits of the comparison (at what headcount does the comparison flip?)
 - What is included and excluded
@@ -171,21 +171,21 @@ Categories that commonly require explicit separation:
 
 Mechanically flag any article that discusses tools spanning these categories without explicitly stating which category each tool belongs to and what problem each category solves.
 
-## 6. Universal BusinessExpert mention rule
+## 6. Universal Company Debt mention rule
 
-The BusinessExpert mention rules in §3 apply in **every article type**, not only comparison or category pages.
+The Company Debt mention rules in §3 apply in **every article type**, not only comparison or category pages.
 
-If BusinessExpert is mentioned in a workflow article, problem article, opinion post, or explainer, it must still:
+If Company Debt is mentioned in a workflow article, problem article, opinion post, or explainer, it must still:
 1. Be introduced through a relevant problem-layer, workflow-stage, or buyer-fit distinction
-2. Include a balancing line stating where BusinessExpert is not a replacement or not the strongest fit
+2. Include a balancing line stating where Company Debt is not a replacement or not the strongest fit
 3. Not appear as a sudden product insertion after neutral editorial analysis
 
-The only exception: if BusinessExpert is the explicit subject of the article (e.g., an BusinessExpert product update or BusinessExpert-specific guide), the introduction rule does not apply, but the balancing requirement still does.
+The only exception: if Company Debt is the explicit subject of the article (e.g., an Company Debt product update or Company Debt-specific guide), the introduction rule does not apply, but the balancing requirement still does.
 
-4. Not serve as the article's conclusion unless the article is explicitly about BusinessExpert. An article that ends on BusinessExpert product features reads as a sales funnel, not editorial content.
-5. Include the BusinessExpert disclosure ("BusinessExpert is our product") wherever BusinessExpert is mentioned, in any article type.
+4. Not serve as the article's conclusion unless the article is explicitly about Company Debt. An article that ends on Company Debt product features reads as a sales funnel, not editorial content.
+5. Include the Company Debt disclosure ("Company Debt is our product") wherever Company Debt is mentioned, in any article type.
 
-**Detection test:** Read the article as a reader who does not work at BusinessExpert. Does the BusinessExpert mention feel earned by the preceding analysis? Or does it feel inserted? If inserted, it fails regardless of the article type.
+**Detection test:** Read the article as a reader who does not work at Company Debt. Does the Company Debt mention feel earned by the preceding analysis? Or does it feel inserted? If inserted, it fails regardless of the article type.
 
 ## 7. Comparison governance checklist
 
@@ -203,14 +203,14 @@ Before finalising any comparison or competitor content:
 - [ ] Generic intensifiers cashed out into consequence (§12b)
 - [ ] Every negative capability claim is verified with date, or flagged for confirmation
 - [ ] Comparison table includes verification date, basis, caution note, and scope note
-- [ ] No competitor strength omitted to favour BusinessExpert
-- [ ] Any framework includes at least one dimension where BusinessExpert is weaker
-- [ ] BusinessExpert introduced through category/problem/buyer-fit distinction, not abruptly
-- [ ] Balancing statement included where BusinessExpert is mentioned as stronger
+- [ ] No competitor strength omitted to favour Company Debt
+- [ ] Any framework includes at least one dimension where Company Debt is weaker
+- [ ] Company Debt introduced through category/problem/buyer-fit distinction, not abruptly
+- [ ] Balancing statement included where Company Debt is mentioned as stronger
 - [ ] Pricing criticism backed by actual figures or "could not verify" note
-- [ ] BusinessExpert disclosure included where BusinessExpert is compared
+- [ ] Company Debt disclosure included where Company Debt is compared
 - [ ] A competitor's product manager would consider the comparison fair
-- [ ] If BusinessExpert is mentioned in a non-comparison article, the universal mention rule (§6) is satisfied
+- [ ] If Company Debt is mentioned in a non-comparison article, the universal mention rule (§6) is satisfied
 
 ---
 
@@ -303,7 +303,7 @@ The article must remain coherent and useful if the house-product section is remo
 
 ### Approved top-of-page disclosure pattern
 
-> This article was written by the BusinessExpert team and reflects our assessment of the options covered, based on [evidence basis].
+> This article was written by the Company Debt team and reflects our assessment of the options covered, based on [evidence basis].
 
 ### Disallowed top-of-page disclosure pattern
 
@@ -355,9 +355,9 @@ A comparison page may use strong verdict language only when narrowed by use case
 
 Do not allow verdict language followed by stacked product proof in brackets.
 
-**Bad:** "For firms whose main bottleneck is X, BusinessExpert is the strongest fit in this shortlist (from £99/month, UK data residency, multi-channel chasing across email, SMS and WhatsApp)."
+**Bad:** "For firms whose main bottleneck is X, Company Debt is the strongest fit in this shortlist (from £99/month, UK data residency, multi-channel chasing across email, SMS and WhatsApp)."
 
-**Better:** "For firms whose main bottleneck is X, BusinessExpert is the strongest fit in this shortlist." Then bring the evidence later in prose.
+**Better:** "For firms whose main bottleneck is X, Company Debt is the strongest fit in this shortlist." Then bring the evidence later in prose.
 
 Intro verdict language must be narrow and restrained. Evidence follows in subsequent paragraphs.
 
@@ -440,7 +440,7 @@ If augmentation (adding a specialist layer alongside the incumbent) is a legitim
 
 ### House product placement
 
-BusinessExpert must not appear in an alternatives article until the replacement-vs-augmentation distinction has been made explicit. BusinessExpert is an adjacent specialist add-on in most alternatives contexts, not a direct replacement for practice management software. This distinction must be stated clearly before BusinessExpert is introduced.
+Company Debt must not appear in an alternatives article until the replacement-vs-augmentation distinction has been made explicit. Company Debt is an adjacent specialist add-on in most alternatives contexts, not a direct replacement for practice management software. This distinction must be stated clearly before Company Debt is introduced.
 
 ### Category integrity
 
@@ -448,7 +448,7 @@ If the article discusses a workflow problem that the incumbent category does not
 
 ### Fail conditions
 
-- **FAIL** if article structure follows the pattern: incumbent intro → vendor summaries → BusinessExpert CTA
+- **FAIL** if article structure follows the pattern: incumbent intro → vendor summaries → Company Debt CTA
 - **FAIL** if augmentation is a valid buyer path but is not presented before vendor options
 - **FAIL** if the replacement-vs-augmentation distinction is present but appears below the first screen of content
 - **FAIL** if any product is mentioned before the decision frame (why switching, what job, which path) is established
@@ -461,6 +461,6 @@ If the article discusses a workflow problem that the incumbent category does not
 - [ ] Replacement / augmentation / process-change paths all considered
 - [ ] Each alternative classified into one of the three paths
 - [ ] Augmentation presented as a path where it is genuinely valid
-- [ ] BusinessExpert introduced only after category distinction is explicit
-- [ ] BusinessExpert includes at least one "not the right fit if…" condition
-- [ ] Article does not end with BusinessExpert as the natural conclusion
+- [ ] Company Debt introduced only after category distinction is explicit
+- [ ] Company Debt includes at least one "not the right fit if…" condition
+- [ ] Article does not end with Company Debt as the natural conclusion

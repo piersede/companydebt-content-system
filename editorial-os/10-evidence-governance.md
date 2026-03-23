@@ -1,6 +1,6 @@
 # Evidence Governance
 
-Hard rules for evidence honesty, claim support, and source integrity across all BusinessExpert content.
+Hard rules for evidence honesty, claim support, and source integrity across all Company Debt content.
 
 ## 1. Core principle
 
@@ -43,7 +43,7 @@ If the claim cannot be verified, labelled, or flagged, it must not appear. Delet
 ### Treatment 5: Vendor-perspective assessment
 The claim is framed as the publisher's assessment from a declared commercial position.
 
-Example: "In our assessment, based on product design, workflow mechanics, and market positioning, BusinessExpert addresses the chasing layer more directly than tools designed primarily for internal workflow."
+Example: "In our assessment, based on product design, workflow mechanics, and market positioning, Company Debt addresses the chasing layer more directly than tools designed primarily for internal workflow."
 
 This treatment is distinct from Treatment 2 (editorial judgement) because it explicitly acknowledges commercial interest. It is required for evaluative claims about the house product's positioning relative to competitors.
 
@@ -123,7 +123,7 @@ This sounds like evidence. It is not. The reader cannot verify it, challenge it,
 
 ## 5. High-risk claim categories
 
-These claim types require extra scrutiny because they frequently appear in BusinessExpert content and are frequently unsupported:
+These claim types require extra scrutiny because they frequently appear in Company Debt content and are frequently unsupported:
 
 ### Portal adoption rates
 Claims about what percentage of clients use a portal. No public benchmark exists for UK accounting practices. Always flag or source.
@@ -231,7 +231,7 @@ For every evidence-carrying claim, ask: "If a sceptical reader asked 'how do you
 
 If the answer is no, the claim fails evidence governance.
 
-This test applies equally to first-party product claims about BusinessExpert. Claims like "migration cost is zero" must survive the same scrutiny as competitor claims. First-party claims can be just as misleading as third-party claims.
+This test applies equally to first-party product claims about Company Debt. Claims like "migration cost is zero" must survive the same scrutiny as competitor claims. First-party claims can be just as misleading as third-party claims.
 
 ## 7. Source presentation rules
 
@@ -270,7 +270,7 @@ Unacceptable sources for product claims:
 - Affiliate review sites
 - Other publishers covering the same product category
 
-**Why:** Competitor sites introduce their own editorial framing, may carry outdated data, and citing them undermines BusinessExpert's authority as an independent source. A reader who sees us citing MoneySavingExpert for a rate that the bank publishes directly will question why we exist.
+**Why:** Competitor sites introduce their own editorial framing, may carry outdated data, and citing them undermines Company Debt's authority as an independent source. A reader who sees us citing MoneySavingExpert for a rate that the bank publishes directly will question why we exist.
 
 **Exception:** Academic research, FCA thematic reviews, and named industry reports (e.g., a UK Finance annual report) are acceptable even if they are technically third-party, because they are primary data producers in their own right.
 

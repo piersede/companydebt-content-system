@@ -342,7 +342,7 @@ PAGE_CONFIG = {
         {'type': 'heading', 'level': 2, 'text': 'Methodology and Disclosure'},
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified cashback rates, earn rates, and fees against each provider&rsquo;s public pricing page on 20 March 2026. We update these figures quarterly.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our editorial rankings.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our editorial rankings.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

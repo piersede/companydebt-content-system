@@ -46,11 +46,11 @@ for (const article of articles) {
   // T1: Page mode declaration — check for explicit mode signal
   // In practice this is declared in the editorial brief, not in article HTML.
   // Check for implicit signals: disclosure language that declares perspective.
-  const hasDisclosure = /written by the businessexpert team|businessexpert is our product|reflects our assessment|from (?:our|a vendor) perspective/i.test(text);
+  const hasDisclosure = /written by the companydebt team|companydebt is our product|reflects our assessment|from (?:our|a vendor) perspective/i.test(text);
 
   // T2: Perspective disclosure near top (first 20% of text)
   const topQuarter = text.substring(0, Math.floor(text.length * 0.2));
-  const disclosureInTop = /businessexpert is our product|written by the businessexpert team|reflects our assessment/i.test(topQuarter);
+  const disclosureInTop = /companydebt is our product|written by the companydebt team|reflects our assessment/i.test(topQuarter);
   if (!disclosureInTop) {
     issues.push('[T2] Perspective disclosure not found in first 20% of article');
   }
@@ -58,7 +58,7 @@ for (const article of articles) {
   // T3: Category frame fairness — check for binary that only favours house product
   const binaryRe = /(?:the (?:real|core|key) (?:difference|distinction|question) is|the choice (?:comes down|boils down) to)/i;
   if (binaryRe.test(text)) {
-    // Check if the binary mentions a scenario where BusinessExpert is NOT the answer
+    // Check if the binary mentions a scenario where Company Debt is NOT the answer
     const binaryIdx = text.search(binaryRe);
     const afterBinary = text.substring(binaryIdx, binaryIdx + 500);
     if (!/(?:not|neither|if you need|for practices that want).{0,80}(?:karbon|taxdome|senta|brightmanager)/i.test(afterBinary)) {
@@ -67,31 +67,31 @@ for (const article of articles) {
   }
 
   // T4: Real reader choice preserved
-  const businessexpertIdx = text.toLowerCase().indexOf('businessexpert');
-  if (businessexpertIdx > -1) {
+  const companydebtIdx = text.toLowerCase().indexOf('companydebt');
+  if (companydebtIdx > -1) {
     const hasOtherPath = /(?:if (?:you|your firm|the practice) (?:want|need|prefer)|for practices (?:that|whose)).{0,80}(?:karbon|taxdome|senta|brightmanager|accountancymanager)/i.test(text);
     if (!hasOtherPath) {
-      issues.push('[T4] No explicit alternative path preserved for readers who should not choose BusinessExpert');
+      issues.push('[T4] No explicit alternative path preserved for readers who should not choose Company Debt');
     }
   }
 
   // T5: House product not-fit conditions
-  if (businessexpertIdx > -1) {
-    const bestFit = /businessexpert.{0,30}(?:best (?:for|fit|suited)|strongest (?:for|fit)|designed for|built for)/i.test(text);
-    const notFit = /businessexpert.{0,30}(?:not (?:the right|a good|a fit|best)|does not|doesn.t|won.t)|not what you need if/i.test(text);
+  if (companydebtIdx > -1) {
+    const bestFit = /companydebt.{0,30}(?:best (?:for|fit|suited)|strongest (?:for|fit)|designed for|built for)/i.test(text);
+    const notFit = /companydebt.{0,30}(?:not (?:the right|a good|a fit|best)|does not|doesn.t|won.t)|not what you need if/i.test(text);
     const conditions = /(?:makes sense (?:if|when|for)|works (?:best|well) (?:if|when|for)|requires? (?:that|a practice))/i.test(text);
 
-    if (!bestFit) issues.push('[T5a] No explicit "best fit" condition for BusinessExpert');
-    if (!notFit) issues.push('[T5b] No explicit "not a fit" condition for BusinessExpert');
-    if (!conditions) issues.push('[T5c] No "required conditions for adoption" stated for BusinessExpert');
+    if (!bestFit) issues.push('[T5a] No explicit "best fit" condition for Company Debt');
+    if (!notFit) issues.push('[T5b] No explicit "not a fit" condition for Company Debt');
+    if (!conditions) issues.push('[T5c] No "required conditions for adoption" stated for Company Debt');
   }
 
   // T6: Article coherent without house product
-  // Heuristic: check if BusinessExpert appears in more than 30% of paragraphs
+  // Heuristic: check if Company Debt appears in more than 30% of paragraphs
   const paragraphs = content.split(/<!-- \/?wp:paragraph -->/g).filter(p => p.trim().length > 20);
-  const businessexpertParagraphs = paragraphs.filter(p => /businessexpert/i.test(p));
-  if (paragraphs.length > 0 && businessexpertParagraphs.length / paragraphs.length > 0.4) {
-    issues.push(`[T6] BusinessExpert appears in ${Math.round(businessexpertParagraphs.length / paragraphs.length * 100)}% of paragraphs — article may collapse without house product`);
+  const companydebtParagraphs = paragraphs.filter(p => /companydebt/i.test(p));
+  if (paragraphs.length > 0 && companydebtParagraphs.length / paragraphs.length > 0.4) {
+    issues.push(`[T6] Company Debt appears in ${Math.round(companydebtParagraphs.length / paragraphs.length * 100)}% of paragraphs — article may collapse without house product`);
   }
 
   // Methodology / evidence basis

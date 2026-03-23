@@ -1,4 +1,4 @@
-# BusinessExpert Editorial Operating System v2.3
+# Company Debt Editorial Operating System v2.3
 
 A governance system for creating trustworthy, people-first, decision-useful content. This is not guidance. These are hard rules.
 
@@ -51,11 +51,11 @@ Do not duplicate these rules here. This file delegates to that source of truth.
 
 ## 1.1 Editorial north star
 
-BusinessExpert content exists to reduce decision friction for operators and buyers who want competent human support, clearer judgement, and less software noise.
+Company Debt content exists to reduce decision friction for operators and buyers who want competent human support, clearer judgement, and less software noise.
 
 The goal is not maximum traffic. The goal is maximum decision usefulness for the right reader.
 
-BusinessExpert should behave like a maintained advisory library, not a content treadmill.
+Company Debt should behave like a maintained advisory library, not a content treadmill.
 
 ## 1.2 Core editorial principles
 
@@ -73,7 +73,7 @@ Every serious page must add something beyond generic SaaS content:
 - stronger market judgement
 
 ### 3. Human accountability over faceless automation
-BusinessExpert should sound authored, judged, and maintained. Use real bylines, visible methodology, and clear distinctions between fact and judgement.
+Company Debt should sound authored, judged, and maintained. Use real bylines, visible methodology, and clear distinctions between fact and judgement.
 
 ### 4. Calm authority over hype
 The voice should feel composed, senior, direct, and useful.
@@ -171,10 +171,10 @@ This applies especially to: portal adoption rates, response-rate uplifts, time-s
 Full rules in `09-voice-governance.md`. Summary of hard constraints:
 
 ### Authorship identity
-The writer is part of the BusinessExpert team. Not the founder, not the product builder. Do not deviate unless a human explicitly confirms.
+The writer is part of the Company Debt team. Not the founder, not the product builder. Do not deviate unless a human explicitly confirms.
 
 ### Banned founder/builder language
-Never use unless human-confirmed: "I run BusinessExpert", "we built BusinessExpert", "when we started BusinessExpert", "our founding belief", "the problem we set out to solve", "we created BusinessExpert to solve this", "I did not build BusinessExpert as...", or any phrasing implying personal ownership of the product.
+Never use unless human-confirmed: "I run Company Debt", "we built Company Debt", "when we started Company Debt", "our founding belief", "the problem we set out to solve", "we created Company Debt to solve this", "I did not build Company Debt as...", or any phrasing implying personal ownership of the product.
 
 ### "We" rules
 "We" may refer to the editorial team's judgement or the platform's capabilities. "We" must never imply founding-team authority or company-origin narratives.
@@ -197,10 +197,10 @@ Default opening modes: verdict, operating context, or trade-off. Never open with
 Full rules in `11-comparison-governance.md`. Summary:
 
 ### Anti-self-serving framework rule
-If an article presents any buyer, comparison, or category framework, it must include at least one meaningful dimension where BusinessExpert is not the strongest fit. Common dimensions: practice management breadth, billing, e-signatures, internal workflow depth, mature ecosystem.
+If an article presents any buyer, comparison, or category framework, it must include at least one meaningful dimension where Company Debt is not the strongest fit. Common dimensions: practice management breadth, billing, e-signatures, internal workflow depth, mature ecosystem.
 
-### BusinessExpert mention rules
-BusinessExpert must not appear as a sudden product insertion. Where BusinessExpert is introduced in a competitor or category article, it should be preceded by a category distinction, problem-layer distinction, buyer-fit distinction, or workflow-stage distinction. If BusinessExpert is mentioned as stronger in one layer, the article must also state where it is not a replacement.
+### Company Debt mention rules
+Company Debt must not appear as a sudden product insertion. Where Company Debt is introduced in a competitor or category article, it should be preceded by a category distinction, problem-layer distinction, buyer-fit distinction, or workflow-stage distinction. If Company Debt is mentioned as stronger in one layer, the article must also state where it is not a replacement.
 
 ### Comparison table risk rule
 Any negative capability claim about a competitor is high-risk. Each must be verified from current documentation (with date), checked in-product (with date), or flagged for confirmation. Every comparison table must include a verification date, caution note, and evidence basis disclosure.
@@ -209,7 +209,7 @@ Any negative capability claim about a competitor is high-risk. Each must be veri
 
 Do not criticise competitor pricing without giving actual figures or clearly stating pricing could not be verified. See `11-comparison-governance.md` for full rules.
 
-Where BusinessExpert is positioned as lower cost, state the basis and limits. If pricing cannot be verified, say: "Current pricing was not publicly available at the time of writing."
+Where Company Debt is positioned as lower cost, state the basis and limits. If pricing cannot be verified, say: "Current pricing was not publicly available at the time of writing."
 
 ## 1.8 Readability and formatting rules
 
@@ -228,7 +228,7 @@ See `14-failure-modes-and-recovery.md` for the full library of 24 failure modes 
 2. Founder drift
 3. Padded evaluation
 4. Hedged unsupported claims
-5. Abrupt BusinessExpert pivots
+5. Abrupt Company Debt pivots
 6. Self-serving frameworks
 
 Every draft must be checked against these failure modes during the trust pass and adversarial review.

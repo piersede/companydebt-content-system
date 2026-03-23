@@ -477,7 +477,7 @@ CC_TOC_JS = '''<script>
 
 
 CC_CARD_CSS = '''<style>
-/* Credit Card Comparison Component v4 — BusinessExpert
+/* Credit Card Comparison Component v4 — Company Debt
    Palette: brand purple #6b3fa0, neutral surfaces, semantic accents only */
 
 /* ── Card shell ── */
@@ -983,7 +983,7 @@ def main():
 
     para('<strong>Rate type:</strong> All rates listed are variable. Providers may change them at any time after publication.')
 
-    para('<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings, which are based on verified rates and publicly available product data. Our methodology and ranking criteria are described above.')
+    para('<strong>Affiliate disclosure:</strong> Company Debt may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings, which are based on verified rates and publicly available product data. Our methodology and ranking criteria are described above.')
 
     para('<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval. We recommend comparing offers directly with providers before applying.')
 

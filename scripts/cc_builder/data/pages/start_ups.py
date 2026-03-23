@@ -361,7 +361,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified eligibility criteria, APRs, and fee structures against each provider&rsquo;s public product pages on 20 March 2026. Some rates may not be publicly stated; confirm directly with providers.',
             '<strong>&ldquo;Start-up friendly&rdquo; assessment:</strong> This is an editorial judgement based on BCA requirements, published eligibility criteria, and underwriting approach. It is not a claim made by any provider. No provider confirmed a minimum trading history to us directly.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our eligibility assessments or card rankings.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our eligibility assessments or card rankings.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

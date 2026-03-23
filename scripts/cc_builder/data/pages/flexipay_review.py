@@ -321,7 +321,7 @@ PAGE_CONFIG = {
             '<strong>Verification date:</strong> Product details and eligibility verified '
             'against fundingcircle.com on 20 March 2026.',
 
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees '
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees '
             'from some providers listed. This does not affect our product description or '
             'editorial assessment.',
 

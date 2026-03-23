@@ -2,7 +2,7 @@
 
 A reference library of recurring content failures, how to detect them, and how to fix or remove them.
 
-Every failure mode here has been observed in BusinessExpert content. These are not hypothetical risks. They are patterns that recur unless actively prevented.
+Every failure mode here has been observed in Company Debt content. These are not hypothetical risks. They are patterns that recur unless actively prevented.
 
 ---
 
@@ -33,9 +33,9 @@ If the sentence without the first-person prefix says nothing useful, delete the 
 ## 2. Founder drift
 
 **What it looks like:**
-"When we built BusinessExpert, we wanted to solve the chasing problem."
+"When we built Company Debt, we wanted to solve the chasing problem."
 "The problem we set out to solve was..."
-"I did not build BusinessExpert as a practice management tool."
+"I did not build Company Debt as a practice management tool."
 
 **Why it is a problem:**
 The writer is not the founder. Claiming founder authority is false and damages credibility if discovered.
@@ -46,8 +46,8 @@ Search for "we built", "I run", "we started", "we created", "our founding", "set
 **How to fix it:**
 Rewrite from the editorial team perspective.
 
-Before: "We built BusinessExpert to solve the chasing problem."
-After: "BusinessExpert is a document collection tool focused on outbound client chasing."
+Before: "We built Company Debt to solve the chasing problem."
+After: "Company Debt is a document collection tool focused on outbound client chasing."
 
 **When to remove instead of rewrite:**
 If the founder-drift sentence is there purely to establish authority, remove it. The content should establish authority through the quality of the analysis, not through claimed identity.
@@ -99,41 +99,41 @@ If the claim cannot be sourced, labelled, or flagged in a way that adds value, d
 
 ---
 
-## 5. Abrupt BusinessExpert pivot
+## 5. Abrupt Company Debt pivot
 
 **What it looks like:**
-An article spends 800 words neutrally reviewing a competitor or category, then suddenly says: "BusinessExpert handles this differently. We provide multi-channel chasing across email, SMS, WhatsApp, and voice."
+An article spends 800 words neutrally reviewing a competitor or category, then suddenly says: "Company Debt handles this differently. We provide multi-channel chasing across email, SMS, WhatsApp, and voice."
 
 **Why it is a problem:**
 The reader feels ambushed. The neutral analysis was a setup for a product pitch. This damages the credibility of everything that came before it.
 
 **How to detect it:**
-Read the article as a reader who does not work at BusinessExpert. Mark where BusinessExpert first appears. Does it feel earned by the preceding analysis, or does it feel inserted?
+Read the article as a reader who does not work at Company Debt. Mark where Company Debt first appears. Does it feel earned by the preceding analysis, or does it feel inserted?
 
 **How to fix it:**
-Introduce BusinessExpert through a category distinction, problem-layer distinction, or buyer-fit distinction before the mention.
+Introduce Company Debt through a category distinction, problem-layer distinction, or buyer-fit distinction before the mention.
 
-Before: "[800 words about TaxDome] ... BusinessExpert handles this differently."
-After: "[Analysis of TaxDome's chasing layer] ... The coordination problem and the chasing problem are different problems. TaxDome solves the first. Tools focused specifically on outbound document collection, including BusinessExpert, solve the second."
+Before: "[800 words about TaxDome] ... Company Debt handles this differently."
+After: "[Analysis of TaxDome's chasing layer] ... The coordination problem and the chasing problem are different problems. TaxDome solves the first. Tools focused specifically on outbound document collection, including Company Debt, solve the second."
 
 **When to remove instead of rewrite:**
-If the BusinessExpert mention does not add decision value to the article, remove it entirely. Not every article needs to mention BusinessExpert.
+If the Company Debt mention does not add decision value to the article, remove it entirely. Not every article needs to mention Company Debt.
 
 ---
 
 ## 6. Self-serving framework
 
 **What it looks like:**
-A comparison framework where the evaluation criteria are chosen so that BusinessExpert wins on every dimension. The criteria emphasise multi-channel chasing, UK compliance, and flat-rate pricing while omitting practice management breadth, billing, e-signatures, and ecosystem maturity.
+A comparison framework where the evaluation criteria are chosen so that Company Debt wins on every dimension. The criteria emphasise multi-channel chasing, UK compliance, and flat-rate pricing while omitting practice management breadth, billing, e-signatures, and ecosystem maturity.
 
 **Why it is a problem:**
-Readers notice when a framework is rigged. It damages trust in the entire evaluation, not just the BusinessExpert section.
+Readers notice when a framework is rigged. It damages trust in the entire evaluation, not just the Company Debt section.
 
 **How to detect it:**
-Check whether BusinessExpert wins on every dimension. If it does, the framework is self-serving.
+Check whether Company Debt wins on every dimension. If it does, the framework is self-serving.
 
 **How to fix it:**
-Add at least one meaningful dimension where BusinessExpert is not the strongest fit. Common options: practice management depth, billing, e-signatures, internal workflow, mature ecosystem.
+Add at least one meaningful dimension where Company Debt is not the strongest fit. Common options: practice management depth, billing, e-signatures, internal workflow, mature ecosystem.
 
 **When to remove instead of rewrite:**
 If the framework cannot be made credible with balancing dimensions, remove the framework and replace it with direct editorial judgement about fit.
@@ -266,7 +266,7 @@ Take the position. Say who should choose what and why.
 Presenting uncertain or partially supported claims as settled facts. Stating product capabilities without verification caveats. Making compliance claims without checking.
 
 **Why it is a problem:**
-It exposes BusinessExpert to factual risk and damages reader trust.
+It exposes Company Debt to factual risk and damages reader trust.
 
 **How to detect it:**
 For each strong factual claim, ask: "Is this definitely true right now?" If you are not sure, add a caveat or flag for confirmation.
@@ -280,7 +280,7 @@ Downgrade certainty. Add verification dates. Flag for confirmation.
 
 **What it looks like:**
 "TaxDome stores data on US servers, which raises UK GDPR concerns."
-"BusinessExpert is fully UK GDPR compliant."
+"Company Debt is fully UK GDPR compliant."
 
 **Why it is a problem:**
 Compliance claims are factual claims with legal implications. Getting them wrong is worse than getting a feature comparison wrong.
@@ -476,7 +476,7 @@ Move fit/misfit to paragraphs 1-2. The rest of the article supports and elaborat
 ## 23. Padded verdict repetition
 
 **What it looks like:**
-A verdict section that restates the same distinction ("Karbon is for internal workflow, BusinessExpert is for chasing") three or four times in slightly different words across multiple paragraphs.
+A verdict section that restates the same distinction ("Karbon is for internal workflow, Company Debt is for chasing") three or four times in slightly different words across multiple paragraphs.
 
 **Why it is a problem:**
 Repetition wastes the reader's time and signals that the writer has run out of things to say. It reads as padding, not emphasis.
@@ -587,7 +587,7 @@ A reader on an alternatives page has a real decision to make. They are not brows
 2. Weak or vague articulation of what causes a firm to look for an alternative
 3. Unsupported market-pattern language ("growing number", "typically", "tend to") used to describe why readers are searching
 4. Adjacent category tool presented as if equivalent to a direct replacement
-5. House product (BusinessExpert) introduced as an elegant resolution without prior concession or buyer segmentation
+5. House product (Company Debt) introduced as an elegant resolution without prior concession or buyer segmentation
 6. CTA replaces or immediately follows conclusion without a genuine editorial answer to the buyer question
 7. No explicit "not the right fit" condition for the house product
 8. Reader cannot determine replacement vs augmentation without reading past the fold

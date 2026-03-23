@@ -232,7 +232,7 @@ PAGE_CONFIG = {
         {'type': 'heading', 'level': 2, 'text': 'Methodology and Disclosure'},
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified card terms, fees, and eligibility against barclaycard.co.uk on 20 March 2026. We update these figures quarterly. Some details may have changed since verification.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed on this page. This does not affect our card assessments or the order in which products appear.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed on this page. This does not affect our card assessments or the order in which products appear.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Check your eligibility and current terms directly with the provider before applying.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

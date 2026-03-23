@@ -373,7 +373,7 @@ def main():
     total_warns = 0
 
     print("=" * 70)
-    print("EDITORIAL QUALITY CHECK — BusinessExpert Credit Cards")
+    print("EDITORIAL QUALITY CHECK — Company Debt Credit Cards")
     print("=" * 70)
 
     for slug in slugs:

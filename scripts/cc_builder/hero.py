@@ -225,7 +225,7 @@ def build_hero_zone(config: dict, all_cards: list[dict], verdict_text: str = '')
     # Static author attribution fallback (non-JS, for E-E-A-T on YMYL pages)
     author_fallback = (
         '<noscript><p class="cc-hero-author-fallback" style="font-size:14px;color:#666;margin:8px 0 0;">'
-        'Reviewed by the BusinessExpert editorial team'
+        'Reviewed by the Company Debt editorial team'
         '</p></noscript>'
     )
 

@@ -24,11 +24,11 @@ Avoid:
 ## 3. Editorial disclosures
 Where relevant, disclose:
 - affiliate relationships
-- commercial relationships (BusinessExpert is our product)
+- commercial relationships (Company Debt is our product)
 - review methodology limits
 - whether the product was tested directly or assessed from public evidence
 
-On comparison pages, include: "BusinessExpert is our product. This review is written from that perspective. We have tried to be accurate and fair about both strengths and limitations."
+On comparison pages, include: "Company Debt is our product. This review is written from that perspective. We have tried to be accurate and fair about both strengths and limitations."
 
 ## 4. Review methodology
 Serious pages must include a methodology note covering:
@@ -70,10 +70,10 @@ Any negative capability claim ("No", "Not native", "Partial", "Limited", "Requir
 See `11-comparison-governance.md` for full comparison rules.
 
 ### Anti-self-serving framework rule
-If a comparison table or evaluation framework is presented, it must include at least one dimension where BusinessExpert is not the strongest choice. See `11-comparison-governance.md`.
+If a comparison table or evaluation framework is presented, it must include at least one dimension where Company Debt is not the strongest choice. See `11-comparison-governance.md`.
 
 ### Pricing transparency in comparisons
-Do not criticise competitor pricing without giving actual figures. If not publicly verifiable, state: "Current pricing was not publicly available at the time of writing." If BusinessExpert is positioned as more economical, state the basis and limits.
+Do not criticise competitor pricing without giving actual figures. If not publicly verifiable, state: "Current pricing was not publicly available at the time of writing." If Company Debt is positioned as more economical, state the basis and limits.
 
 ## 8. Evidence-carrying claim standard
 Hedging is not evidence. Any claim central to the article's argument must be:
@@ -94,6 +94,6 @@ Strong trust signals include:
 - screenshots or proof assets (human-verified)
 - clear fit / non-fit guidance
 - explicit uncertainty labels
-- at least one dimension where BusinessExpert is acknowledged as weaker (in framework content)
+- at least one dimension where Company Debt is acknowledged as weaker (in framework content)
 - specific pricing figures where cost is part of the argument
 - `[HUMAN CONFIRMATION NEEDED]` flags where claims require verification

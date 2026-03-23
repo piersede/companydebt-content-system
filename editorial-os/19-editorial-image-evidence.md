@@ -1,6 +1,6 @@
 # 19. Editorial Image Evidence System
 
-Images are not decoration. They are proof of work. Every visual asset on a BusinessExpert page must advance a claim, answer a reader question, or provide evidence that text alone cannot deliver.
+Images are not decoration. They are proof of work. Every visual asset on a Company Debt page must advance a claim, answer a reader question, or provide evidence that text alone cannot deliver.
 
 This system is adapted from a forensic audit of Pack Hacker's editorial image architecture and translated for business comparison content (credit cards, software, financial services).
 

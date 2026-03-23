@@ -1,4 +1,4 @@
-# BusinessExpert Editorial OS — System Map
+# Company Debt Editorial OS — System Map
 
 Last updated: March 2026 | v2.3
 

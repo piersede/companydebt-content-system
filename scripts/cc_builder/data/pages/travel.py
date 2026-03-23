@@ -363,7 +363,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified FX fees, travel insurance coverage, and rewards earn rates against each provider&rsquo;s public pricing and product pages on 20 March 2026. Some details require direct provider confirmation.',
             '<strong>Ranking basis:</strong> Cards are ranked by travel utility: FX fee position first, then travel insurance and lounge access, then rewards earn rate. Cards that charge FX fees are listed in the separate section below the main ranking.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our rankings or the identification of FX fees, which are based on publicly available information.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our rankings or the identification of FX fees, which are based on publicly available information.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Travel insurance terms vary by policy &mdash; verify coverage directly with the card provider before travel.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

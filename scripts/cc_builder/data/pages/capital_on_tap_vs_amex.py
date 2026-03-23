@@ -242,7 +242,7 @@ PAGE_CONFIG = {
         {'type': 'heading', 'level': 2, 'text': 'Methodology and Disclosure'},
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified card terms, fees, and eligibility against capitalontap.com and americanexpress.com/uk on 20 March 2026. All figures verified from public product pages. We update these figures quarterly.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed on this page. This does not affect our comparisons or assessments.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed on this page. This does not affect our comparisons or assessments.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Check your eligibility and current terms directly with each provider before applying.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

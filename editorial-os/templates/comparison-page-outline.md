@@ -1,4 +1,4 @@
-# Comparison Page Outline — BusinessExpert Editorial OS
+# Comparison Page Outline — Company Debt Editorial OS
 
 ## 1. Bottom-line difference
 [One paragraph: the core structural difference between the options. Not features — the design philosophy or trade-off that matters most.]
@@ -14,7 +14,7 @@ Fields:
 - Which readers may reasonably land elsewhere
 
 ## 4. Perspective disclosure
-Approved pattern: "This article was written by the BusinessExpert team and reflects our assessment of the options covered, based on [evidence basis]."
+Approved pattern: "This article was written by the Company Debt team and reflects our assessment of the options covered, based on [evidence basis]."
 Must appear before substantive comparison begins.
 
 ## 5. Verification note

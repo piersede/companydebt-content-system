@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BusinessExpert editorial system uses Google's Gemini Deep Research Agent for automated fact verification and data gathering. This document covers the complete workflow from prompt to resolved content.
+The Company Debt editorial system uses Google's Gemini Deep Research Agent for automated fact verification and data gathering. This document covers the complete workflow from prompt to resolved content.
 
 ## Architecture
 

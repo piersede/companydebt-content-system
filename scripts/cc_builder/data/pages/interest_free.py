@@ -394,7 +394,7 @@ PAGE_CONFIG = {
             '<strong>0% introductory period claims:</strong> We found no mainstream UK business credit card currently offering a genuine promotional 0% APR introductory period at the time of writing. Any card listed here as offering 0% intro APR is flagged and should be confirmed directly with the provider before applying.',
             '<strong>Rate type:</strong> All APR figures are representative rates and variable. Providers may change them at any time after publication. The rate you are offered may differ from the representative APR.',
             '<strong>Absorbed content:</strong> This page incorporates content previously published on a separate low-APR business credit cards page. That URL now redirects here.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings or our assessment of product features.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral or affiliate fees from some of the card providers listed on this page. This does not affect our editorial rankings or our assessment of product features.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Credit products are subject to status and provider approval. We recommend comparing offers directly with providers before applying.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

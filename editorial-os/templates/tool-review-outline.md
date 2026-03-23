@@ -16,7 +16,7 @@
 ## 8. Implementation considerations
 [Setup time, learning curve, integration requirements, migration path.]
 ## 9. Alternatives worth considering
-[2-4 alternatives with one-line rationale for each. Include BusinessExpert where relevant with disclosure.]
+[2-4 alternatives with one-line rationale for each. Include Company Debt where relevant with disclosure.]
 ## 10. Final judgement
 [Authored conclusion. Take a clear position. State the main trade-off.]
 ## 11. Methodology and disclosure

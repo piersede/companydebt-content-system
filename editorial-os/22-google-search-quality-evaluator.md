@@ -12,7 +12,7 @@ The file has two parts:
 
 ## 22.1 Purpose
 
-Evaluate any page on the BusinessExpert website against the quality framework defined in the Google Search Quality Evaluator Guidelines. The audit produces a structured quality report with a final quality rating, specific failures, and actionable remediation steps.
+Evaluate any page on the Company Debt website against the quality framework defined in the Google Search Quality Evaluator Guidelines. The audit produces a structured quality report with a final quality rating, specific failures, and actionable remediation steps.
 
 This system exists because Google trains human raters using these guidelines to assess search result quality. Pages that would receive low ratings from a trained rater are pages that Google's algorithms are designed to demote. The audit catches problems that editorial governance alone cannot detect: page-level trust signals, site-wide reputation patterns, ad/content balance, deceptive design, and YMYL compliance gaps.
 
@@ -39,7 +39,7 @@ This audit system is structurally independent from the default content workflow 
 - During normal article drafting or editing (the default workflow handles editorial quality)
 - For copy edits, typo fixes, or minor content updates
 - As a replacement for the pre-publish gate or human-authorship self-audit
-- On third-party pages or competitor sites (the agents assume access to the BusinessExpert codebase and CMS)
+- On third-party pages or competitor sites (the agents assume access to the Company Debt codebase and CMS)
 
 ## 22.5 Execution modes
 
@@ -199,7 +199,7 @@ YMYL topics are those where inaccurate, untrustworthy, or low-quality content co
 
 Pages on clear YMYL topics are held to the highest Page Quality standards. Low-quality content on YMYL topics is rated more severely than equivalent quality on non-YMYL topics.
 
-**BusinessExpert relevance:** All credit card comparison pages, financial product reviews, and business finance guides are clear YMYL (Financial Security). This elevates the E-E-A-T, accuracy, and disclosure requirements for every page in the credit card section.
+**Company Debt relevance:** All credit card comparison pages, financial product reviews, and business finance guides are clear YMYL (Financial Security). This elevates the E-E-A-T, accuracy, and disclosure requirements for every page in the credit card section.
 
 ## 22.14 Main Content quality assessment
 
@@ -619,4 +619,4 @@ Pre-purchase activities that deserve support:
 - Understanding available options (brands, models, pricing)
 - Viewing and visually browsing options
 
-**BusinessExpert relevance:** Credit card comparison pages serve the product research intent. Pages should support browsing, comparison, and informed decision-making — not just push conversions.
+**Company Debt relevance:** Credit card comparison pages serve the product research intent. Pages should support browsing, comparison, and informed decision-making — not just push conversions.

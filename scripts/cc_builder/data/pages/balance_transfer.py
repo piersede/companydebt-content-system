@@ -298,7 +298,7 @@ PAGE_CONFIG = {
             '<strong>Sources:</strong> We verified product terms and APR figures against provider public '
             'pages on 20 March 2026. The absence of 0% balance transfer offers on business cards '
             'is an editorial observation based on reviewing all major UK business card provider pages. We update these figures quarterly.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some '
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some '
             'providers linked on this page. This does not affect our assessment of product terms.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',

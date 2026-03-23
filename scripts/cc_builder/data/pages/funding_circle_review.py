@@ -321,7 +321,7 @@ PAGE_CONFIG = {
             'and eligibility criteria against fundingcircle.com on 20 March 2026. Competitor terms '
             'verified against each provider&rsquo;s website on the same date.',
 
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees '
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees '
             'from some providers listed. This does not affect our rate analysis or editorial '
             'assessment. Our cashback and interest calculations use the same methodology regardless '
             'of commercial relationships.',

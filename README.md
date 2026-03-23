@@ -1,6 +1,6 @@
-# BusinessExpert Content System
+# Company Debt Content System
 
-Private repository for the BusinessExpert editorial operating system, powering content on [businessexpert.co.uk](https://businessexpert.co.uk/).
+Private repository for the Company Debt editorial operating system, powering content on [companydebt.co.uk](https://companydebt.co.uk/).
 
 ---
 
@@ -176,8 +176,8 @@ Changing comparison rules: 11 (comparison)
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/piersede/businessexpert-content-system.git
-cd businessexpert-content-system
+git clone https://github.com/piersede/companydebt-content-system.git
+cd companydebt-content-system
 ```
 
 ### 2. Install Claude Code

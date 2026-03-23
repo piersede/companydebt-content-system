@@ -60,7 +60,7 @@ Limits:
 - no unsupported strong claims
 ### 4. Voice DNA
 Purpose:
-Apply BusinessExpert's authored, calm, expert voice.
+Apply Company Debt's authored, calm, expert voice.
 Inputs:
 - outline or draft
 Decision rules:
@@ -70,7 +70,7 @@ Decision rules:
 - improve scanability
 - preserve uncertainty markers
 Outputs:
-- revised draft in BusinessExpert voice
+- revised draft in Company Debt voice
 Limits:
 - voice must not override evidence honesty
 ### 5. Trust Architecture

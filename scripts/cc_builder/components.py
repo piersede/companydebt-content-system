@@ -513,7 +513,7 @@ def build_article_schema(config: dict) -> str:
 
     verify_date = config.get('verification_date', '20 March 2026')
     slug = config.get('slug', '')
-    url = f'https://businessexpert.co.uk/business-credit-cards/{slug}/' if slug else ''
+    url = f'https://companydebt.co.uk/business-credit-cards/{slug}/' if slug else ''
 
     import json as _json
     schema = {
@@ -524,13 +524,13 @@ def build_article_schema(config: dict) -> str:
         "url": url,
         "author": {
             "@type": "Organization",
-            "name": "BusinessExpert",
-            "url": "https://businessexpert.co.uk/about/"
+            "name": "Company Debt",
+            "url": "https://companydebt.co.uk/about/"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "BusinessExpert",
-            "url": "https://businessexpert.co.uk/"
+            "name": "Company Debt",
+            "url": "https://companydebt.co.uk/"
         }
     }
 

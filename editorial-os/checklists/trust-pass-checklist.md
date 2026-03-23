@@ -1,6 +1,6 @@
 # Trust Pass Checklist (v1 — DEPRECATED)
 
-> **DEPRECATED as of v2.1.** This checklist predates v2 governance and does not cover evidence-carrying claims, Treatment 2 caps, the two-part first-person test, AI prose fingerprints, or universal BusinessExpert mention rules.
+> **DEPRECATED as of v2.1.** This checklist predates v2 governance and does not cover evidence-carrying claims, Treatment 2 caps, the two-part first-person test, AI prose fingerprints, or universal Company Debt mention rules.
 > Use instead: the inline trust pass in `03-workflow-playbook.md` (Stage 6) and the pre-publish gate in `16-pre-publish-gate.md`.
 > Do not use this file as a compliance reference.
 

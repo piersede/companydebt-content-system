@@ -65,7 +65,7 @@ Never open an article with any of these patterns:
 - **Filler warmth:** "I want to help you understand..." / "Let me walk you through..."
 - **First-person scaffolding:** "I think..." / "In my view..." / "I believe..."
 - **Soft abstract framing:** "As firms look to modernise..." / "In today's competitive landscape..."
-- **Self-referential:** "We at BusinessExpert believe..."
+- **Self-referential:** "We at Company Debt believe..."
 - **Reputation/install-base lead:** "X has built a strong reputation..." / "X is widely used..." / "X has a large installed base..." / Any opening that leads with a product's reputation, installed base, or growth before naming the buyer's problem or decision tension
 - **Capability-first without switching trigger:** Opening with what a product does well before identifying who should not choose it, or what problem triggers the buying decision
 - **Balanced scene-setting that delays the buying lens:** Two or more paragraphs of neutral category description before the article's real diagnostic framing appears
@@ -228,22 +228,22 @@ Decision-stage pages (reviews, comparisons, category guides) must end with a met
 6. What good looks like
 7. What to do next
 
-## 6. BusinessExpert mentions in non-comparison content
+## 6. Company Debt mentions in non-comparison content
 
-The BusinessExpert mention rules in `11-comparison-governance.md` §3 and the universal mention rule in §6 apply to all article types, not only comparison and category pages.
+The Company Debt mention rules in `11-comparison-governance.md` §3 and the universal mention rule in §6 apply to all article types, not only comparison and category pages.
 
-If a workflow article, problem article, opinion post, or explainer mentions BusinessExpert:
+If a workflow article, problem article, opinion post, or explainer mentions Company Debt:
 - Introduce it through a problem-layer, workflow-stage, or buyer-fit distinction
-- Include a balancing line about what BusinessExpert does not do
-- Do not use the BusinessExpert mention as the article's conclusion unless the article is explicitly about BusinessExpert
-- Do not end on BusinessExpert product features or soft CTAs ("see a live sequence", "book a demo") in non-BusinessExpert articles
+- Include a balancing line about what Company Debt does not do
+- Do not use the Company Debt mention as the article's conclusion unless the article is explicitly about Company Debt
+- Do not end on Company Debt product features or soft CTAs ("see a live sequence", "book a demo") in non-Company Debt articles
 
 See `11-comparison-governance.md` §6 for full rules.
 
 ## 7. Internal linking governance
 
 ### Rule
-Every article should link to related BusinessExpert content where a reader would naturally want to go deeper. Internal links are a navigation tool, not an SEO exercise.
+Every article should link to related Company Debt content where a reader would naturally want to go deeper. Internal links are a navigation tool, not an SEO exercise.
 
 ### When to link
 - When referencing a category, tool, or concept that has its own article on the site
@@ -271,10 +271,10 @@ Articles may end with one of:
 
 ### CTA rules
 - A CTA is permitted only after the article has delivered its editorial value. It must not replace the conclusion.
-- Permitted CTAs: link to a relevant BusinessExpert page, invite the reader to try a free trial, or suggest booking a call. These must be brief (one sentence or a short standalone line).
+- Permitted CTAs: link to a relevant Company Debt page, invite the reader to try a free trial, or suggest booking a call. These must be brief (one sentence or a short standalone line).
 - CTAs must not appear in the middle of editorial analysis. They belong at the end, after the verdict.
-- Soft CTAs disguised as editorial conclusions are banned. "See how BusinessExpert handles this" as the final sentence of an otherwise neutral article fails the BusinessExpert mention fairness check.
-- Non-BusinessExpert articles (category explainers, opinion posts) should not end on an BusinessExpert CTA unless the article has earned the mention through the universal mention rule.
+- Soft CTAs disguised as editorial conclusions are banned. "See how Company Debt handles this" as the final sentence of an otherwise neutral article fails the Company Debt mention fairness check.
+- Non-Company Debt articles (category explainers, opinion posts) should not end on an Company Debt CTA unless the article has earned the mention through the universal mention rule.
 
 ### Hard fail
 - Article ends on product features or a sales-style CTA without a preceding editorial conclusion
@@ -329,7 +329,7 @@ Absence of an early scan aid on these page types must be justified in review.
 - [ ] Article ends with decision summary, next step, or trade-off restatement
 - [ ] Decision-stage pages include methodology and disclosure section
 - [ ] No section exceeds 400 words without sub-sections
-- [ ] If BusinessExpert is mentioned, universal mention rules are satisfied (see `11-comparison-governance.md` §6)
+- [ ] If Company Debt is mentioned, universal mention rules are satisfied (see `11-comparison-governance.md` §6)
 - [ ] Internal links present where a reader would naturally want to go deeper (§7)
 - [ ] CTA (if present) appears after the editorial conclusion, not before or instead of it (§7a)
 - [ ] Commercial software articles: every major strengths/weaknesses section includes at least one reasoning, consequence, or buyer-condition move (§3c)
@@ -387,20 +387,20 @@ Bottom-of-funnel pages (alternatives, comparisons, reviews) carry a structural r
 - The product CTA must not function as the article conclusion
 - The conclusion section must answer the buyer's question before any commercial call to action
 - The CTA must follow the conclusion, not replace it
-- If the house product (BusinessExpert) is included, the article must explicitly state where BusinessExpert is not the best fit
+- If the house product (Company Debt) is included, the article must explicitly state where Company Debt is not the best fit
 
-### Required concession block for BusinessExpert mentions
+### Required concession block for Company Debt mentions
 
-Every BusinessExpert mention in a BOFU article must be accompanied by:
-- **Best fit:** the specific buyer type and situation where BusinessExpert is strongest
-- **Not best fit:** at least one explicit scenario where BusinessExpert is not the right choice
-- **Adoption conditions:** what must already be true (in the practice's workflow or situation) for BusinessExpert adoption to make sense
+Every Company Debt mention in a BOFU article must be accompanied by:
+- **Best fit:** the specific buyer type and situation where Company Debt is strongest
+- **Not best fit:** at least one explicit scenario where Company Debt is not the right choice
+- **Adoption conditions:** what must already be true (in the practice's workflow or situation) for Company Debt adoption to make sense
 
 This concession block does not need to be a formal table. It can be prose. But all three elements must be present.
 
 ### Fail conditions
 
-- **FAIL** if the conclusion section collapses into a pitch for BusinessExpert
-- **FAIL** if BusinessExpert is named without any limiting conditions
-- **FAIL** if the article does not state at least one scenario where BusinessExpert is not the right answer
+- **FAIL** if the conclusion section collapses into a pitch for Company Debt
+- **FAIL** if Company Debt is named without any limiting conditions
+- **FAIL** if the article does not state at least one scenario where Company Debt is not the right answer
 - **FAIL** if a CTA appears before the editorial conclusion is complete

@@ -8,7 +8,7 @@ from pathlib import Path
 from google import genai
 
 # Load API key from main repo .env
-env_path = Path("C:/Users/piers/Downloads/businessexpert-content-system/.env")
+env_path = Path("C:/Users/piers/Downloads/companydebt-content-system/.env")
 for line in env_path.read_text().splitlines():
     if line.startswith("GEMINI_API_KEY="):
         os.environ["GEMINI_API_KEY"] = line.split("=", 1)[1].strip()

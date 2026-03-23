@@ -325,7 +325,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified card eligibility criteria, underwriting models, and product terms against each provider&rsquo;s public product pages on 20 March 2026. Providers do not publicly state specific poor-credit approval criteria.',
             '<strong>Editorial approach:</strong> This page deliberately avoids framing any card as a guaranteed solution for poor credit. No UK business credit card guarantees approval for applicants with poor credit history. Fintech underwriting models are described on the basis of publicly stated methodology, not tested approval outcomes.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our editorial assessments, which reflect genuine eligibility constraints.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our editorial assessments, which reflect genuine eligibility constraints.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. If you are in financial difficulty, seek advice from an independent financial adviser or a free debt advice service.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

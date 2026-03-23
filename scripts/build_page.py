@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""BusinessExpert Credit Card Page Builder — CLI entry point.
+"""Company Debt Credit Card Page Builder — CLI entry point.
 
 Usage:
     python scripts/build_page.py --page low-apr
@@ -103,7 +103,7 @@ def build_page(slug: str) -> tuple[str, dict]:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='BusinessExpert Credit Card Page Builder'
+        description='Company Debt Credit Card Page Builder'
     )
     parser.add_argument(
         '--page', type=str,

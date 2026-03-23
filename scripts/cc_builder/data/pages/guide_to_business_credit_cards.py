@@ -428,7 +428,7 @@ PAGE_CONFIG = {
             '<strong>Sources:</strong> We verified card terms and eligibility criteria against each '
             'provider&rsquo;s public product page on 20 March 2026. '
             'APR figures are representative rates as published on provider pages.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some '
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some '
             'providers linked on this page. This does not affect the editorial content of this guide, '
             'which is based on publicly available product information.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.',

@@ -6,13 +6,13 @@ Claude must stop, flag, or leave placeholders in the following cases. These are 
 Do not imply founder status, founder authority, or product-builder authority unless explicitly supplied by a human.
 
 Banned phrases (unless human-confirmed):
-- "I run BusinessExpert"
-- "we built BusinessExpert"
-- "when we started BusinessExpert"
+- "I run Company Debt"
+- "we built Company Debt"
+- "when we started Company Debt"
 - "our founding belief"
 - "the problem we set out to solve"
-- "we created BusinessExpert to solve this"
-- "I did not build BusinessExpert as..."
+- "we created Company Debt to solve this"
+- "I did not build Company Debt as..."
 - any phrasing implying personal ownership or product-building authority
 
 If the article needs a founder perspective, a human must supply or confirm it. Do not fabricate or assume this authority.
@@ -46,19 +46,19 @@ This includes:
 Flag with: `[HUMAN CONFIRMATION NEEDED: customer outcome claim]`
 
 ## 5. Internal positioning truths
-If BusinessExpert wants to make a strong brand-positioning claim, a human should confirm it reflects real company truth.
+If Company Debt wants to make a strong brand-positioning claim, a human should confirm it reflects real company truth.
 
 This includes:
-- claims about BusinessExpert's competitive positioning
-- claims about what makes BusinessExpert different
-- claims about BusinessExpert's strategic direction
-- claims about what BusinessExpert deliberately does not do
+- claims about Company Debt's competitive positioning
+- claims about what makes Company Debt different
+- claims about Company Debt's strategic direction
+- claims about what Company Debt deliberately does not do
 
 ## 6. Pricing or contract nuance
 Any unclear pricing, custom quotes, service tiers, or contract specifics need human checking before assertion.
 
 This includes:
-- BusinessExpert's own pricing details
+- Company Debt's own pricing details
 - competitor pricing not available on public pages
 - claims about pricing trends or changes
 - claims about what is included or excluded in a tier

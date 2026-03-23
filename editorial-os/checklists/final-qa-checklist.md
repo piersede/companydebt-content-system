@@ -1,6 +1,6 @@
 # Final QA Checklist (v1 — DEPRECATED)
 
-> **DEPRECATED as of v2.1.** This checklist predates v2 governance and does not include the 12-check pre-publish gate, AI prose fingerprint checks, Treatment 2 caps, or universal BusinessExpert mention rules.
+> **DEPRECATED as of v2.1.** This checklist predates v2 governance and does not include the 12-check pre-publish gate, AI prose fingerprint checks, Treatment 2 caps, or universal Company Debt mention rules.
 > Use instead: `16-pre-publish-gate.md` (12-check hard gate) and `05-scoring-rubric.md` (scoring with v2.1 thresholds).
 > Do not use this file as a compliance reference.
 

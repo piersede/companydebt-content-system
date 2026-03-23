@@ -337,7 +337,7 @@ PAGE_CONFIG = {
         {'type': 'methodology', 'paragraphs': [
             '<strong>Sources:</strong> We verified Avios earn rates, Membership Rewards transfer ratios, and annual fees against each provider&rsquo;s public product pages on 20 March 2026. Capital on Tap&rsquo;s Avios transfer status could not be confirmed from public sources. We update these figures quarterly.',
             '<strong>What this page covers:</strong> Only cards with a confirmed or stated Avios/air miles earning mechanism are listed in the main ranked section. Cards that appear in searches for air miles cards but do not earn Avios are included in the separate section below the main list with a clear explanation.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some providers listed. This does not affect our assessment of which cards earn Avios, which is based on publicly available product information.',
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some providers listed. This does not affect our assessment of which cards earn Avios, which is based on publicly available product information.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice. Avios redemption values and transfer rates may change &mdash; verify directly with BA and Amex before making decisions based on points valuations.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
         ]},

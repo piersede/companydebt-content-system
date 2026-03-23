@@ -4,7 +4,7 @@
     {
       "name": "article-preview",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3333", "--directory", "C:\\Users\\piers\\Downloads\\businessexpert-content-system\\preview"],
+      "runtimeArgs": ["-m", "http.server", "3333", "--directory", "C:\\Users\\piers\\Downloads\\companydebt-content-system\\preview"],
       "port": 3333
     }
   ]

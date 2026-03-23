@@ -1,6 +1,6 @@
 # Readability Governance
 
-Hard rules for paragraph length, punctuation, emphasis, and web formatting across all BusinessExpert content.
+Hard rules for paragraph length, punctuation, emphasis, and web formatting across all Company Debt content.
 
 ## 1. Paragraph length
 
@@ -96,7 +96,7 @@ Use bolding and italics very sparingly. Do not use them decoratively.
 4. Use bold (last resort, sparingly)
 
 ### Bold/italic rendering note
-Bold renders at font-weight 650 in BusinessExpert blog articles, slightly heavier than semi-bold. Italics use the standard italic variant. Both inherit the surrounding text colour (primary for headings and body, tertiary for sources). Do not rely on emphasis to carry meaning that the sentence cannot carry without it.
+Bold renders at font-weight 650 in Company Debt blog articles, slightly heavier than semi-bold. Italics use the standard italic variant. Both inherit the surrounding text colour (primary for headings and body, tertiary for sources). Do not rely on emphasis to carry meaning that the sentence cannot carry without it.
 
 ## 4. Human formatting rule
 
@@ -188,7 +188,7 @@ External links must use `target="_blank"` for new-tab behaviour. The CSS handles
 ## 8. Contractions
 
 ### Rule
-Use natural contractions. BusinessExpert content should sound like a knowledgeable person writing, not a formal document.
+Use natural contractions. Company Debt content should sound like a knowledgeable person writing, not a formal document.
 
 ### Required contractions
 Use these instead of the expanded form:

@@ -31,7 +31,7 @@ Using the brief and source-grounding map, build an outline that:
 - makes trade-offs visible
 - helps a busy reader make a decision quickly
 - follows the correct opening formula for the article type (see `12-structure-governance.md`)
-- includes at least one dimension where BusinessExpert is not the strongest choice (if a framework is used)
+- includes at least one dimension where Company Debt is not the strongest choice (if a framework is used)
 
 ## Draft prompt
 
@@ -41,7 +41,7 @@ Write the first draft. Follow these rules strictly:
 - Calm, direct, expert voice. No hype, no filler.
 - Do not use "I think", "I believe", "in my view", "I would say", "I find", "from what I have seen" unless the sentence genuinely needs it for nuance that cannot be carried any other way.
 - Do not imply founder/builder authority unless explicitly confirmed by a human.
-- Default perspective: part of the BusinessExpert team, editorial operator, category analyst, informed reviewer.
+- Default perspective: part of the Company Debt team, editorial operator, category analyst, informed reviewer.
 - Do not use padded evaluative language ("genuinely good", "well-executed", "useful", "robust solution") unless the sentence immediately specifies what exactly is good, for whom, and with what trade-off.
 
 **Opening rules (see `12-structure-governance.md`):**
@@ -55,15 +55,15 @@ Write the first draft. Follow these rules strictly:
 - Do not use decorative sourcing.
 
 **Framework rules (see `11-comparison-governance.md`):**
-- Any buyer/comparison/category framework must include at least one dimension where BusinessExpert is not the strongest choice.
+- Any buyer/comparison/category framework must include at least one dimension where Company Debt is not the strongest choice.
 
 **Pricing rules:**
 - Do not criticise competitor pricing without actual figures or a "could not verify" note.
-- If BusinessExpert is positioned as more economical, state basis and limits.
+- If Company Debt is positioned as more economical, state basis and limits.
 
-**BusinessExpert mention rules (see `11-comparison-governance.md`):**
-- Introduce BusinessExpert through category/problem/buyer-fit distinction, not abruptly.
-- Include balancing statement where BusinessExpert is mentioned as stronger.
+**Company Debt mention rules (see `11-comparison-governance.md`):**
+- Introduce Company Debt through category/problem/buyer-fit distinction, not abruptly.
+- Include balancing statement where Company Debt is mentioned as stronger.
 
 **Readability rules (see `13-readability-governance.md`):**
 - Paragraphs: 2-3 lines maximum. Blank line between every paragraph.
@@ -100,7 +100,7 @@ Review the draft against every governance rule. Check for:
 - [ ] Unsupported claims: apply evidence-carrying claim rule
 - [ ] Hidden uncertainty: is any uncertain claim presented as settled?
 - [ ] Decorative sourcing: does every cited source actually support the specific claim?
-- [ ] Disclosure needs: is the methodology note present? Is the BusinessExpert disclosure present?
+- [ ] Disclosure needs: is the methodology note present? Is the Company Debt disclosure present?
 - [ ] Methodology gaps: is the evidence basis stated?
 - [ ] Overstatement: is any claim stronger than its evidence supports?
 
@@ -112,13 +112,13 @@ Review the draft against every governance rule. Check for:
 
 **Comparison and framework:**
 - [ ] Self-serving frameworks: does any framework lead to a predetermined conclusion?
-- [ ] Missing balance: is there a dimension where BusinessExpert loses?
+- [ ] Missing balance: is there a dimension where Company Debt loses?
 - [ ] Comparison table risk: is every "No" about a competitor verified with date?
-- [ ] Abrupt BusinessExpert pivot: does BusinessExpert appear through earned distinction or insertion?
+- [ ] Abrupt Company Debt pivot: does Company Debt appear through earned distinction or insertion?
 
 **Pricing:**
 - [ ] Pricing criticism without figures: is competitor pricing criticised without actual numbers?
-- [ ] BusinessExpert cost positioning: is the basis stated?
+- [ ] Company Debt cost positioning: is the basis stated?
 
 **Readability:**
 - [ ] Em dash overuse: replace with full stops, commas, or colons
@@ -152,7 +152,7 @@ Identify:
 - Evidence-carrying claims resting on hedging rather than sources
 - Comparison claims a competitor might dispute
 - Pricing criticisms without figures
-- Abrupt BusinessExpert mentions that feel inserted rather than earned
+- Abrupt Company Debt mentions that feel inserted rather than earned
 - Prose that sounds like competent AI rather than sharp human editorial
 - Em dashes that should be replaced with cleaner punctuation
 - Paragraphs longer than 3 lines that need splitting

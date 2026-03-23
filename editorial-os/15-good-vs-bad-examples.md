@@ -54,29 +54,29 @@ Concrete examples for every major editorial rule. Each entry shows the bad versi
 **Why it fails:** Self-referential filler. The reader did not ask for help. They asked for information.
 
 ### Good
-"The key difference is what each tool is designed to do. Karbon manages internal workflows. BusinessExpert chases clients for documents. They solve different problems."
+"The key difference is what each tool is designed to do. Karbon manages internal workflows. Company Debt chases clients for documents. They solve different problems."
 
 ---
 
 ## Founder drift
 
 ### Bad
-"When we built BusinessExpert, we wanted to solve the problem of accountants spending hours chasing clients for documents."
+"When we built Company Debt, we wanted to solve the problem of accountants spending hours chasing clients for documents."
 
 **Why it fails:** Implies founder/builder authority that has not been confirmed by a human.
 
 ### Good
-"BusinessExpert is a document collection tool built specifically for outbound client chasing in UK accounting practices."
+"Company Debt is a document collection tool built specifically for outbound client chasing in UK accounting practices."
 
 ---
 
 ### Bad
-"I did not build BusinessExpert as a practice management tool. I built it to solve one specific problem."
+"I did not build Company Debt as a practice management tool. I built it to solve one specific problem."
 
 **Why it fails:** Claims builder identity. The writer is part of the editorial team, not the founder.
 
 ### Good
-"BusinessExpert is not a practice management tool. It handles one layer: outbound client chasing across email, SMS, WhatsApp, and voice."
+"Company Debt is not a practice management tool. It handles one layer: outbound client chasing across email, SMS, WhatsApp, and voice."
 
 ---
 
@@ -146,22 +146,22 @@ Concrete examples for every major editorial rule. Each entry shows the bad versi
 
 ---
 
-## Abrupt BusinessExpert mentions
+## Abrupt Company Debt mentions
 
 ### Bad
-"TaxDome's document collection relies on clients logging into the portal. BusinessExpert handles this differently. We chase clients across email, SMS, WhatsApp, and voice, with magic-link upload so they never need a portal login."
+"TaxDome's document collection relies on clients logging into the portal. Company Debt handles this differently. We chase clients across email, SMS, WhatsApp, and voice, with magic-link upload so they never need a portal login."
 
-**Why it fails:** The pivot from TaxDome analysis to BusinessExpert pitch feels inserted, not earned.
+**Why it fails:** The pivot from TaxDome analysis to Company Debt pitch feels inserted, not earned.
 
 ### Good
-"TaxDome's document collection relies on clients logging into the portal to complete Organisers. This works well for clients who are comfortable with portal workflows. For clients who are not, the chasing problem persists because the tool waits for the client to arrive rather than going to them. This is the distinction between a portal-based model and an outbound chasing model. BusinessExpert is built around the second approach: it contacts clients across email, SMS, WhatsApp, and voice. It does not provide practice management, billing, or internal workflow tools."
+"TaxDome's document collection relies on clients logging into the portal to complete Organisers. This works well for clients who are comfortable with portal workflows. For clients who are not, the chasing problem persists because the tool waits for the client to arrive rather than going to them. This is the distinction between a portal-based model and an outbound chasing model. Company Debt is built around the second approach: it contacts clients across email, SMS, WhatsApp, and voice. It does not provide practice management, billing, or internal workflow tools."
 
 ---
 
 ## Self-serving comparisons
 
-### Bad (framework where BusinessExpert wins every dimension)
-| Dimension | TaxDome | BusinessExpert |
+### Bad (framework where Company Debt wins every dimension)
+| Dimension | TaxDome | Company Debt |
 |---|---|---|
 | Multi-channel chasing | No | Yes |
 | WhatsApp integration | No | Yes |
@@ -169,10 +169,10 @@ Concrete examples for every major editorial rule. Each entry shows the bad versi
 | UK GDPR native | No | Yes |
 | Magic-link upload | No | Yes |
 
-**Why it fails:** The criteria are chosen so BusinessExpert wins on every dimension. No dimension where TaxDome is stronger is included. This is a sales table, not an evaluation.
+**Why it fails:** The criteria are chosen so Company Debt wins on every dimension. No dimension where TaxDome is stronger is included. This is a sales table, not an evaluation.
 
 ### Good
-| Dimension | TaxDome | BusinessExpert |
+| Dimension | TaxDome | Company Debt |
 |---|---|---|
 | Multi-channel chasing | Email only (portal-based) | Email, SMS, WhatsApp, voice |
 | Practice management | Full (CRM, billing, workflow) | None |
@@ -236,12 +236,12 @@ When you include context-switching, the cost of stopping advisory or compliance 
 ## Stronger balancing lines
 
 ### Bad
-"BusinessExpert provides a comprehensive chasing solution that handles everything a practice needs."
+"Company Debt provides a comprehensive chasing solution that handles everything a practice needs."
 
-**Why it fails:** "Comprehensive" and "everything" imply completeness. BusinessExpert does one thing.
+**Why it fails:** "Comprehensive" and "everything" imply completeness. Company Debt does one thing.
 
 ### Good
-"BusinessExpert handles one layer: outbound client chasing. It does not provide practice management, billing, e-signatures, or internal workflow tools. For practices that need both chasing and practice management, BusinessExpert works alongside tools like TaxDome or Karbon rather than replacing them."
+"Company Debt handles one layer: outbound client chasing. It does not provide practice management, billing, e-signatures, or internal workflow tools. For practices that need both chasing and practice management, Company Debt works alongside tools like TaxDome or Karbon rather than replacing them."
 
 ---
 
@@ -284,12 +284,12 @@ When you include context-switching, the cost of stopping advisory or compliance 
 ## Padded verdict repetition
 
 ### Bad
-"Karbon is best for internal workflow. BusinessExpert is best for client chasing. These are different problems. If your problem is workflow, choose Karbon. If your problem is chasing, choose BusinessExpert. The right tool depends on which problem matters more to your practice."
+"Karbon is best for internal workflow. Company Debt is best for client chasing. These are different problems. If your problem is workflow, choose Karbon. If your problem is chasing, choose Company Debt. The right tool depends on which problem matters more to your practice."
 
 **Why it fails:** The same distinction stated three times. The reader understood it the first time.
 
 ### Good
-"Karbon solves internal workflow coordination. BusinessExpert solves outbound client chasing. If your firm runs both problems, they work alongside each other rather than replacing each other. Start with whichever problem costs you more hours per week."
+"Karbon solves internal workflow coordination. Company Debt solves outbound client chasing. If your firm runs both problems, they work alongside each other rather than replacing each other. Start with whichever problem costs you more hours per week."
 
 ---
 

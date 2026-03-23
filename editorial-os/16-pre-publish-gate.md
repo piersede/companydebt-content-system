@@ -95,7 +95,7 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Default perspective is editorial team member, category analyst, or informed reviewer
 
 **Hard fail conditions:**
-- Any instance of "I run BusinessExpert", "we built BusinessExpert", "when we started BusinessExpert", or similar founder-drift language without human confirmation
+- Any instance of "I run Company Debt", "we built Company Debt", "when we started Company Debt", or similar founder-drift language without human confirmation
 - Any implication of product-building or founding-team authority
 
 ---
@@ -112,8 +112,8 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - All sources named, dated (with access/review date), and attributed
 - No decorative sourcing (bidirectional check: every source listed is cited in body, every body citation is in Sources)
 - Methodology block present on all decision-stage pages
-- BusinessExpert disclosure present wherever BusinessExpert is mentioned
-- If BusinessExpert is first mentioned in the article body (before the methodology section), an inline disclosure note appears at or near the first mention. The full methodology section at the end is always required on decision-stage pages, but it does not satisfy the inline requirement when the first BusinessExpert mention is more than two sections earlier.
+- Company Debt disclosure present wherever Company Debt is mentioned
+- If Company Debt is first mentioned in the article body (before the methodology section), an inline disclosure note appears at or near the first mention. The full methodology section at the end is always required on decision-stage pages, but it does not satisfy the inline requirement when the first Company Debt mention is more than two sections earlier.
 - No methodology prose repeated inside the body (methodology block is sufficient)
 
 **Hard fail conditions:**
@@ -124,7 +124,7 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Any fabricated evidence or screenshot
 - Any source cited but not checked
 - Missing methodology block on a decision-stage page
-- BusinessExpert is first mentioned more than two sections before the methodology block and no inline disclosure appears near the first mention
+- Company Debt is first mentioned more than two sections before the methodology block and no inline disclosure appears near the first mention
 - Methodology prose duplicated in both the body and the methodology block
 
 ---
@@ -137,7 +137,7 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Every negative capability claim (in tables AND in running prose) verified with date, or flagged for confirmation
 - Negative capability claims not inferred from product origin, market focus, or company headquarters
 - Comparison table includes verification date, basis, caution note, and scope note
-- No competitor strength omitted to favour BusinessExpert
+- No competitor strength omitted to favour Company Debt
 
 **Hard fail conditions:**
 - Any "No" / "Partial" / "Not native" claim about a competitor without verification date or confirmation flag
@@ -150,12 +150,12 @@ These are hard rules. No article may be published or pushed to staging unless ev
 **Question:** Does any evaluation framework lead to a predetermined conclusion?
 
 **Pass criteria:**
-- Any framework includes at least one meaningful dimension where BusinessExpert is not the strongest fit
+- Any framework includes at least one meaningful dimension where Company Debt is not the strongest fit
 - Evaluation criteria would be considered fair by a competitor's product manager
 
 **Hard fail conditions:**
-- Any framework where BusinessExpert wins on every dimension
-- Evaluation criteria clearly selected to favour BusinessExpert
+- Any framework where Company Debt wins on every dimension
+- Evaluation criteria clearly selected to favour Company Debt
 
 ---
 
@@ -165,12 +165,12 @@ These are hard rules. No article may be published or pushed to staging unless ev
 
 **Pass criteria:**
 - No competitor pricing criticism without actual figures or "could not verify" note
-- Where BusinessExpert is positioned as lower cost, basis and limits stated
+- Where Company Debt is positioned as lower cost, basis and limits stated
 - Reader has enough information to make their own pricing judgement
 
 **Hard fail conditions:**
 - Competitor pricing criticised with only vague language ("steep", "significant commitment") and no figures
-- BusinessExpert positioned as cheaper without stating the basis
+- Company Debt positioned as cheaper without stating the basis
 
 ---
 
@@ -192,23 +192,23 @@ These are hard rules. No article may be published or pushed to staging unless ev
 
 ---
 
-## Check 8: BusinessExpert mention fairness [Tier 2 + Tier 3]
+## Check 8: Company Debt mention fairness [Tier 2 + Tier 3]
 
-**Question:** Does BusinessExpert appear naturally and honestly?
+**Question:** Does Company Debt appear naturally and honestly?
 
 **Pass criteria:**
-- BusinessExpert introduced through category/problem/buyer-fit/workflow-stage distinction, not abruptly
-- Balancing statement included where BusinessExpert is mentioned as stronger
-- BusinessExpert disclosure present wherever BusinessExpert is mentioned, in any article type
-- Universal BusinessExpert mention rule satisfied in ALL article types, not just comparisons (see `11-comparison-governance.md` §6)
-- BusinessExpert does not serve as the article's conclusion unless the article is explicitly about BusinessExpert
+- Company Debt introduced through category/problem/buyer-fit/workflow-stage distinction, not abruptly
+- Balancing statement included where Company Debt is mentioned as stronger
+- Company Debt disclosure present wherever Company Debt is mentioned, in any article type
+- Universal Company Debt mention rule satisfied in ALL article types, not just comparisons (see `11-comparison-governance.md` §6)
+- Company Debt does not serve as the article's conclusion unless the article is explicitly about Company Debt
 
 **Hard fail conditions:**
-- Abrupt BusinessExpert pivot after neutral analysis (in any article type)
-- BusinessExpert mentioned without any acknowledgement of what it does not do
-- BusinessExpert mentioned in a non-comparison article without a problem-layer, workflow-stage, or buyer-fit bridge
-- BusinessExpert disclosure missing from any article that mentions BusinessExpert
-- Article ends on BusinessExpert product features or soft CTAs in a non-BusinessExpert article
+- Abrupt Company Debt pivot after neutral analysis (in any article type)
+- Company Debt mentioned without any acknowledgement of what it does not do
+- Company Debt mentioned in a non-comparison article without a problem-layer, workflow-stage, or buyer-fit bridge
+- Company Debt disclosure missing from any article that mentions Company Debt
+- Article ends on Company Debt product features or soft CTAs in a non-Company Debt article
 
 ---
 
@@ -367,7 +367,7 @@ See `10-evidence-governance.md` §12 for the full information gain framework.
 - Named author byline present (authorEntityId)
 - Article links to at least 2 other site pages with descriptive anchors (internal linking / PageRank)
 - Every image has specific, descriptive alt text (image relevance scoring)
-- No more than one BusinessExpert CTA per article; CTA sits within editorial context (SpamBrain / link density)
+- No more than one Company Debt CTA per article; CTA sits within editorial context (SpamBrain / link density)
 - Last-reviewed date visible on decision-stage pages (freshness / LSU)
 
 **Hard fail conditions:**
@@ -393,7 +393,7 @@ See `18-seo-signal-governance.md` for the full 18-signal breakdown and rationale
 | 5 | Framework fairness | 3 | Yes |
 | 6 | Pricing transparency | 2 | Yes |
 | 7 | Paragraph readability | 1 | Yes |
-| 8 | BusinessExpert mention fairness | 2 + 3 | Yes |
+| 8 | Company Debt mention fairness | 2 + 3 | Yes |
 | 9 | Human confirmation flags | 1 | Yes |
 | 10 | Structure compliance | 2 | Yes |
 | 11 | Decision usefulness | 3 | Yes |
@@ -435,7 +435,7 @@ This check has been promoted to Check 1a to prevent systematic skipping. See Che
 - it opens with a winner-first sentence (§12a, `11-comparison-governance.md`)
 - it uses unsupported exclusivity claims ("the only tool that...") without verification
 - it lacks an early decision module (at-a-glance table, "Choose X if..." summary, or problem-split shortlist)
-- it hides BusinessExpert misfit too late (misfit must appear before first product deep dive)
+- it hides Company Debt misfit too late (misfit must appear before first product deep dive)
 - it repeats verdict language more than twice (intro + conclusion maximum)
 - it uses high-sensitivity claims (compliance, hosting, residency, audit trail, pricing, integrations) too smoothly (§5b, `10-evidence-governance.md`)
 - all product sections expose the same visible template scaffold
@@ -445,7 +445,7 @@ This check has been promoted to Check 1a to prevent systematic skipping. See Che
 **Hard fail conditions:**
 - Winner-first opener with no conditional narrowing
 - Missing early decision module
-- No BusinessExpert misfit before first deep dive
+- No Company Debt misfit before first deep dive
 - 3+ high-sensitivity claims without verification framing
 
 **Soft fail conditions:**

@@ -144,10 +144,10 @@ Score each item 1 (fail) or 0 (pass). Any 2 failures caps the article at "needs 
 | A2 | First fold contains a usable decision block | At-a-glance block (keep / replace / add) present within first screen | No decision block; reader must read the article to understand their path |
 | A3 | Article avoids vendor-summary drift | Structure follows decision logic, not a catalogue of tool descriptions | Article is effectively a series of vendor summaries |
 | A4 | Market-pattern claims sourced or marked as judgement | All frequency/trend claims either cited or labelled Treatment 2 with stated basis | Banned phrases present without source or bounded judgement |
-| A5 | House product introduced after decision frame | BusinessExpert appears after replacement-vs-augmentation is explicit | BusinessExpert introduced as a natural next step before frame is established |
-| A6 | House product includes "not the right fit if…" condition | At least one explicit limiting condition for BusinessExpert | BusinessExpert presented as universally appropriate |
+| A5 | House product introduced after decision frame | Company Debt appears after replacement-vs-augmentation is explicit | Company Debt introduced as a natural next step before frame is established |
+| A6 | House product includes "not the right fit if…" condition | At least one explicit limiting condition for Company Debt | Company Debt presented as universally appropriate |
 | A7 | Conclusion answers buyer question before CTA | Editorial conclusion complete before any call to action | Conclusion collapses into pitch |
-| A8 | Sceptical reader test | A reader who does not use BusinessExpert can understand the category and make a decision | Article only makes sense if reader is already predisposed to BusinessExpert |
+| A8 | Sceptical reader test | A reader who does not use Company Debt can understand the category and make a decision | Article only makes sense if reader is already predisposed to Company Debt |
 
 **Thresholds:**
 - 0–1 failures: passes alternatives integrity check

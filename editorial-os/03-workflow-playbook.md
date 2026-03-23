@@ -51,8 +51,8 @@ Hard checklist:
 - [ ] No padded evaluative language without specifics
 - [ ] Strong trade-off framing
 - [ ] Visible fit / non-fit guidance
-- [ ] Any framework includes at least one dimension where BusinessExpert is not strongest
-- [ ] BusinessExpert introduced through category/problem/buyer distinction, not abruptly
+- [ ] Any framework includes at least one dimension where Company Debt is not strongest
+- [ ] Company Debt introduced through category/problem/buyer distinction, not abruptly
 - [ ] Paragraphs 2-3 lines maximum
 - [ ] No em dashes except where absolutely necessary
 - [ ] No decorative bold or italic
@@ -83,15 +83,15 @@ This is the critical governance stage. Apply all of the following:
 - [ ] Fewer than 3 distinct AI prose fingerprints (see `14-failure-modes-and-recovery.md` §16)
 
 ### Comparison and framework checks
-- [ ] Any framework includes a dimension where BusinessExpert is weaker
+- [ ] Any framework includes a dimension where Company Debt is weaker
 - [ ] Every comparison table "No" / "Partial" verified with date, or flagged
 - [ ] Comparison tables include verification date, basis, caution note
-- [ ] No competitor strength omitted to favour BusinessExpert
-- [ ] If BusinessExpert is mentioned in any article type, universal mention rule satisfied (see `11-comparison-governance.md` §6)
+- [ ] No competitor strength omitted to favour Company Debt
+- [ ] If Company Debt is mentioned in any article type, universal mention rule satisfied (see `11-comparison-governance.md` §6)
 
 ### Pricing checks
 - [ ] No competitor pricing criticism without actual figures or "could not verify"
-- [ ] BusinessExpert cost positioning states basis and limits
+- [ ] Company Debt cost positioning states basis and limits
 
 ### Readability checks
 - [ ] No paragraph over 3 rendered lines
@@ -120,7 +120,7 @@ Hard questions:
 - Does any framework lead to a predetermined conclusion?
 - Are there evidence-carrying claims resting only on hedging?
 - Would a competitor's product manager consider comparison claims fair?
-- Does BusinessExpert appear through earned distinction or abrupt insertion?
+- Does Company Debt appear through earned distinction or abrupt insertion?
 - Are there padded evaluative phrases without specifics?
 - Does the prose sound like AI simulating judgement?
 

@@ -1,10 +1,10 @@
 # 17. Audience and Persona
 
-> **NOTE: This persona needs to be customised for BusinessExpert's actual audience.** The rules below were inherited from the Offlode editorial system (which targeted UK accountants). Update the primary audience, pain points, and domain knowledge sections to reflect businessexpert.co.uk's actual readership before publishing any content.
+> **NOTE: This persona needs to be customised for Company Debt's actual audience.** The rules below were inherited from the Offlode editorial system (which targeted UK accountants). Update the primary audience, pain points, and domain knowledge sections to reflect companydebt.co.uk's actual readership before publishing any content.
 
 ## Primary audience
 
-The default BusinessExpert reader is a UK business owner, operator, or decision-maker looking for practical, trustworthy guidance on business tools, software, and operational decisions.
+The default Company Debt reader is a UK business owner, operator, or decision-maker looking for practical, trustworthy guidance on business tools, software, and operational decisions.
 
 They are not reading for entertainment. They are reading to reduce friction, save time, improve control, and make better operational decisions.
 
@@ -95,7 +95,7 @@ Writing fails this audience if it:
 - over-explains basic business realities
 - uses obvious filler or padded praise
 - pretends every business has the same needs
-- pushes BusinessExpert through rigged framing
+- pushes Company Debt through rigged framing
 - claims lived implementation authority not actually established
 - sounds like a founder letter rather than an editorial analysis
 - treats business owners as non-technical or naive

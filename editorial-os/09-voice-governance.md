@@ -1,13 +1,13 @@
 # Voice Governance
 
-Hard rules governing authorship, first-person use, and editorial voice across all BusinessExpert content.
+Hard rules governing authorship, first-person use, and editorial voice across all Company Debt content.
 
 ## 1. Authorship identity
 
-The writer is part of the BusinessExpert team. Not the founder. Not the product builder. Not the technical architect.
+The writer is part of the Company Debt team. Not the founder. Not the product builder. Not the technical architect.
 
 Default perspective options:
-- part of the BusinessExpert team
+- part of the Company Debt team
 - editorial operator
 - informed category analyst
 - accountable reviewer
@@ -19,13 +19,13 @@ Do not deviate from these unless a human explicitly confirms and supplies a diff
 
 Never use any of the following unless a human has explicitly confirmed and supplied the authority:
 
-- "I run BusinessExpert"
-- "we built BusinessExpert"
-- "when we started BusinessExpert"
+- "I run Company Debt"
+- "we built Company Debt"
+- "when we started Company Debt"
 - "our founding belief"
 - "the problem we set out to solve"
-- "we created BusinessExpert to solve this"
-- "I did not build BusinessExpert as..."
+- "we created Company Debt to solve this"
+- "I did not build Company Debt as..."
 - "when I started building this"
 - "our original vision"
 - any phrasing that implies personal ownership of the product or company
@@ -37,7 +37,7 @@ Never use any of the following unless a human has explicitly confirmed and suppl
 ## 3. "We" usage rules
 
 "We" may refer to:
-- the BusinessExpert team's editorial judgement
+- the Company Debt team's editorial judgement
 - the platform's capabilities ("we handle multi-channel chasing")
 - operational perspective ("we recommend starting with email")
 
@@ -47,7 +47,7 @@ Never use any of the following unless a human has explicitly confirmed and suppl
 - company-origin narratives
 - design decisions ("we designed this because...")
 
-**Test:** If a reader asked "who is 'we' here?", would "the BusinessExpert editorial team" be an honest answer? If not, rewrite.
+**Test:** If a reader asked "who is 'we' here?", would "the Company Debt editorial team" be an honest answer? If not, rewrite.
 
 ## 4. First-person discipline
 
@@ -273,7 +273,7 @@ Read each evaluative sentence. Ask: "Could this sentence have been written by so
 ## 5b. Earned authority
 
 ### Rule
-Authority in BusinessExpert articles must come from one or more of these sources:
+Authority in Company Debt articles must come from one or more of these sources:
 - stated reasoning
 - comparison logic
 - observed practical consequence

@@ -316,7 +316,7 @@ PAGE_CONFIG = {
             '<strong>Sources:</strong> We verified product terms against provider public pages on 20 March 2026. '
             'The Amex January 2026 flexible payment change was noted from Amex&rsquo;s UK communications. '
             'We update these figures quarterly. Confirm all details directly with each provider before applying.',
-            '<strong>Affiliate disclosure:</strong> BusinessExpert may receive referral fees from some '
+            '<strong>Affiliate disclosure:</strong> Company Debt may receive referral fees from some '
             'providers listed. This does not affect our editorial assessment of product terms or suitability.',
             '<strong>Regulatory note:</strong> This page is editorial content, not regulated financial advice.',
             '<a href="/editorial-policy/">Read our full editorial policy</a>',
