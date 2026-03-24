@@ -93,8 +93,8 @@ img.post-img.no-lazy-load{display:none !important}
 /* --- Decision router --- */
 .cd-router{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 28px}
 .cd-router>p{display:none}
-.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;background:#fff;border:1px solid rgba(0,40,86,.1);border-left:4px solid #ccc;border-radius:10px;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
-.cd-router__card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,40,86,.1)}
+.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;background:#fff;border:none;border-left:4px solid #ccc;border-radius:10px;text-decoration:none;color:inherit;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:transform .2s ease,box-shadow .2s ease}
+.cd-router__card:hover{transform:translateY(-3px);box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
 .cd-router__card:focus-visible{outline:2px solid #002856;outline-offset:2px}
 .cd-router__card--cvl{border-left-color:#002856}
 .cd-router__card--mvl{border-left-color:#1a7a3a}
@@ -246,15 +246,15 @@ img.post-img.no-lazy-load{display:none !important}
 <!-- PERSONAL LIABILITY ASSESSMENT -->
 
 <style>
-.cd-liability{background:#fff;border:1px solid rgba(0,40,86,.1);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-liability{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
 .cd-liability__title{font-size:22px !important;font-weight:700;color:#d63031;margin:0 0 6px !important;padding:0 !important;border:none !important}
 .cd-liability__subtitle{font-size:15px;color:#555;margin:0 0 22px}
 .cd-liability__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px}
-.cd-liability__item{display:flex;align-items:flex-start;gap:12px;padding:18px 20px;background:#FDFAFA;border:1px solid rgba(214,48,49,.12);border-radius:10px}
+.cd-liability__item{display:flex;align-items:flex-start;gap:12px;padding:18px 20px;background:#fff;border:none;border-radius:10px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0}
 .cd-liability__icon{flex-shrink:0;width:22px;height:22px;color:#d63031;margin-top:1px}
 .cd-liability__text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.5}
 .cd-liability__text strong{font-weight:700;color:#002856}
-.cd-liability__reassurance{background:#F4FAF5;border:1px solid rgba(26,122,58,.15);border-radius:10px;padding:20px 22px;margin:0 0 18px}
+.cd-liability__reassurance{background:#fff;border:none;border-radius:10px;padding:20px 22px;margin:0 0 18px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0}
 .cd-liability__reassurance-title{font-size:16px;font-weight:700;color:#1a7a3a;margin:0 0 8px}
 .cd-liability__reassurance-text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.55}
 .cd-liability__footer{font-size:14px;color:#777;margin:0;line-height:1.5}
@@ -313,12 +313,12 @@ img.post-img.no-lazy-load{display:none !important}
 <!-- COST ESTIMATOR -->
 
 <style>
-.cd-estimator{background:#FBFBFB;border:1px solid rgba(0,40,86,.1);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-estimator{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
 .cd-estimator__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
 .cd-estimator__subtitle{font-size:15px;color:#555;margin:0 0 22px}
 .cd-estimator__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:0 0 22px}
-.cd-estimator__card{background:#fff;border:1px solid rgba(0,40,86,.08);border-radius:10px;padding:24px 20px;text-align:center;transition:box-shadow .2s ease}
-.cd-estimator__card:hover{box-shadow:0 4px 16px rgba(0,40,86,.08)}
+.cd-estimator__card{background:#fff;border:none;border-radius:10px;padding:24px 20px;text-align:center;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:box-shadow .2s ease}
+.cd-estimator__card:hover{box-shadow:rgba(113,113,113,.2) 0 4px 16px 0}
 .cd-estimator__card-label{font-size:12px;color:#777;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;font-weight:600}
 .cd-estimator__card-range{font-size:24px;font-weight:700;color:#002856;margin:0 0 6px}
 .cd-estimator__card-note{font-size:13px;color:#777;margin:0;line-height:1.4}
@@ -485,18 +485,18 @@ img.post-img.no-lazy-load{display:none !important}
 <!-- MENTAL HEALTH AND EMOTIONAL SUPPORT -->
 
 <style>
-.cd-support{background:#F4FAF5;border:1px solid rgba(26,122,58,.12);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-support{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
 .cd-support__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
 .cd-support__subtitle{font-size:15px;color:#555;margin:0 0 20px}
 .cd-support__body p{font-size:16px;line-height:1.65;color:#2A2A2E;margin:0 0 16px}
 .cd-support__body p:last-child{margin-bottom:0}
 .cd-support__helplines{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
-.cd-support__helpline{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid rgba(0,40,86,.08);border-radius:10px;transition:box-shadow .2s ease}
-.cd-support__helpline:hover{box-shadow:0 4px 14px rgba(0,40,86,.07)}
+.cd-support__helpline{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:none;border-radius:10px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:box-shadow .2s ease}
+.cd-support__helpline:hover{box-shadow:rgba(113,113,113,.2) 0 4px 16px 0}
 .cd-support__helpline-icon{flex-shrink:0;font-size:20px;width:28px;text-align:center}
 .cd-support__helpline-text{font-size:14px;color:#2A2A2E;margin:0;line-height:1.45}
 .cd-support__helpline-text strong{display:block;font-size:15px;color:#002856;margin-bottom:3px}
-.cd-support__relief{margin-top:20px;padding-top:18px;border-top:1px solid rgba(26,122,58,.12)}
+.cd-support__relief{margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.06)}
 .cd-support__relief p{font-size:16px;line-height:1.6;color:#2A2A2E;margin:0 0 10px}
 @media(max-width:640px){.cd-support__helplines{grid-template-columns:1fr}.cd-support{padding:22px}}
 </style>
