@@ -9,14 +9,14 @@
 <!-- STICKY TOC -->
 <style>
 .cd-toc{position:fixed;top:194px;left:calc((100vw - 1260px) / 2 - 250px);width:220px;font-size:15px;line-height:1.45;display:none;max-height:calc(100vh - 220px);overflow-y:auto;z-index:10;font-family:Arial,sans-serif}
-.cd-toc__title{font-size:20px !important;font-weight:700;color:#1B365D;margin:0 0 16px 0 !important;padding:0 0 0 16px !important;letter-spacing:0;border:none !important}
+.cd-toc__title{font-size:20px !important;font-weight:700;color:#002856;margin:0 0 16px 0 !important;padding:0 0 0 16px !important;letter-spacing:0;border:none !important}
 .cd-toc__list{list-style:none;margin:0;padding:0}
 /* Hide theme's native TOC accordion */
 .toc{display:none !important}
 .cd-toc__item{margin:0;padding:0}
 .cd-toc__link{display:block;padding:14px 12px 14px 16px;color:#4A4A52;text-decoration:none;border-left:3px solid transparent;transition:color .15s ease,border-color .15s ease}
-.cd-toc__link:hover{color:#1B365D;border-left-color:#E86C24}
-.cd-toc__link--active{color:#1B365D !important;border-left-color:#E86C24 !important}
+.cd-toc__link:hover{color:#002856;border-left-color:#FF6600}
+.cd-toc__link--active{color:#002856 !important;border-left-color:#FF6600 !important}
 @media(min-width:1500px){.cd-toc{display:block}}
 </style>
 
@@ -56,8 +56,11 @@
 <p>Before anything else, work out which of these sounds closest to your situation:</p>
 
 <style>
+/* === SHARED DESIGN TOKENS === */
+/* Navy: #002856 | Orange: #FF6600 | Radius: 10px | Shadow: 0 6px 20px rgba(0,40,86,.08) */
+
 /* --- Typography and spacing overrides --- */
-.main-content h2,.main-content .main-content h2{font-size:28px !important;line-height:1.3 !important;margin-top:48px !important;margin-bottom:18px !important;padding-top:0 !important;font-weight:700;color:#1B365D}
+.main-content h2,.main-content .main-content h2{font-size:28px !important;line-height:1.3 !important;margin-top:48px !important;margin-bottom:18px !important;padding-top:0 !important;font-weight:700;color:#002856}
 .main-content h3,.main-content .main-content h3{font-size:22px !important;line-height:1.35 !important;margin-top:36px !important;margin-bottom:14px !important;padding-top:0 !important;font-weight:700;color:#2A2A2E}
 .main-content p{font-size:17px;line-height:1.65 !important;margin-top:0;margin-bottom:20px !important}
 .main-content ul,.main-content ol{margin-top:0;margin-bottom:20px !important;line-height:1.65}
@@ -66,22 +69,22 @@
 .main-content h2+p,.main-content h3+p{margin-top:0}
 
 /* --- Decision router --- */
-.cd-router{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 28px}
+.cd-router{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 28px}
 .cd-router>p{display:none}
-.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#fff;border:1px solid #e2e2e6;border-left:4px solid #ccc;border-radius:6px;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-.cd-router__card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.cd-router__card:focus-visible{outline:2px solid #1B365D;outline-offset:2px}
-.cd-router__card--cvl{border-left-color:#1B365D}
+.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;background:#fff;border:1px solid rgba(0,40,86,.1);border-left:4px solid #ccc;border-radius:10px;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.cd-router__card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,40,86,.1)}
+.cd-router__card:focus-visible{outline:2px solid #002856;outline-offset:2px}
+.cd-router__card--cvl{border-left-color:#002856}
 .cd-router__card--mvl{border-left-color:#1a7a3a}
-.cd-router__card--compulsory{border-left-color:#c0392b}
-.cd-router__card--unsure{border-left-color:#d4830a}
+.cd-router__card--compulsory{border-left-color:#d63031}
+.cd-router__card--unsure{border-left-color:#FF6600}
 .cd-router__icon{flex-shrink:0;width:36px;height:36px;margin-top:2px}
 .cd-router__body{flex:1;min-width:0}
-.cd-router__title{font-size:16px;font-weight:700;color:#2A2A2E;margin:0 0 6px;line-height:1.3}
-.cd-router__desc{font-size:14px;color:#4A4A52;margin:0;line-height:1.5}
-.cd-router__arrow{flex-shrink:0;width:20px;height:20px;align-self:center;color:#8A8A94;transition:color .15s ease,transform .15s ease}
-.cd-router__card:hover .cd-router__arrow{color:#1B365D;transform:translateX(3px)}
-@media(max-width:640px){.cd-router{grid-template-columns:1fr}.cd-router__card{padding:16px 18px}}
+.cd-router__title{font-size:16px;font-weight:700;color:#002856;margin:0 0 6px;line-height:1.3}
+.cd-router__desc{font-size:14px;color:#555;margin:0;line-height:1.5}
+.cd-router__arrow{flex-shrink:0;width:20px;height:20px;align-self:center;color:#aaa;transition:color .15s ease,transform .15s ease}
+.cd-router__card:hover .cd-router__arrow{color:#FF6600;transform:translateX(3px)}
+@media(max-width:640px){.cd-router{grid-template-columns:1fr}.cd-router__card{padding:18px 20px}}
 </style>
 
 <div class="cd-router" role="list">
@@ -221,19 +224,19 @@
 <!-- PERSONAL LIABILITY ASSESSMENT -->
 
 <style>
-.cd-liability{background:#fff;border:1px solid #EEEAF2;border-left:4px solid #c0392b;border-radius:6px;padding:28px 28px 24px;margin:32px 0}
-.cd-liability__title{font-size:20px !important;font-weight:700;color:#c0392b;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-liability__subtitle{font-size:15px;color:#4A4A52;margin:0 0 20px}
-.cd-liability__grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 20px}
-.cd-liability__item{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;background:#FFF8F7;border:1px solid #F5E0DC;border-radius:6px}
-.cd-liability__icon{flex-shrink:0;width:22px;height:22px;color:#c0392b;margin-top:1px}
-.cd-liability__text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.45}
-.cd-liability__text strong{font-weight:700}
-.cd-liability__reassurance{background:#F0F7F1;border:1px solid #D4E8D8;border-radius:6px;padding:16px 20px;margin:0 0 16px}
-.cd-liability__reassurance-title{font-size:15px;font-weight:700;color:#1a7a3a;margin:0 0 6px}
-.cd-liability__reassurance-text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.5}
-.cd-liability__footer{font-size:14px;color:#6E6E78;margin:0;line-height:1.5}
-@media(max-width:640px){.cd-liability__grid{grid-template-columns:1fr}.cd-liability{padding:20px}}
+.cd-liability{background:#fff;border:1px solid rgba(0,40,86,.1);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-liability__title{font-size:22px !important;font-weight:700;color:#d63031;margin:0 0 6px !important;padding:0 !important;border:none !important}
+.cd-liability__subtitle{font-size:15px;color:#555;margin:0 0 22px}
+.cd-liability__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px}
+.cd-liability__item{display:flex;align-items:flex-start;gap:12px;padding:18px 20px;background:#FDFAFA;border:1px solid rgba(214,48,49,.12);border-radius:10px}
+.cd-liability__icon{flex-shrink:0;width:22px;height:22px;color:#d63031;margin-top:1px}
+.cd-liability__text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.5}
+.cd-liability__text strong{font-weight:700;color:#002856}
+.cd-liability__reassurance{background:#F4FAF5;border:1px solid rgba(26,122,58,.15);border-radius:10px;padding:20px 22px;margin:0 0 18px}
+.cd-liability__reassurance-title{font-size:16px;font-weight:700;color:#1a7a3a;margin:0 0 8px}
+.cd-liability__reassurance-text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.55}
+.cd-liability__footer{font-size:14px;color:#777;margin:0;line-height:1.5}
+@media(max-width:640px){.cd-liability__grid{grid-template-columns:1fr}.cd-liability{padding:22px}}
 </style>
 
 <div class="cd-liability">
@@ -288,20 +291,21 @@
 <!-- COST ESTIMATOR -->
 
 <style>
-.cd-estimator{background:#F8F7FA;border:1px solid #EEEAF2;border-radius:8px;padding:28px 28px 24px;margin:32px 0}
-.cd-estimator__title{font-size:20px !important;font-weight:700;color:#1B365D;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-estimator__subtitle{font-size:15px;color:#4A4A52;margin:0 0 20px}
-.cd-estimator__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:0 0 20px}
-.cd-estimator__card{background:#fff;border:1px solid #EEEAF2;border-radius:6px;padding:20px;text-align:center}
-.cd-estimator__card-label{font-size:13px;color:#6E6E78;text-transform:uppercase;letter-spacing:.04em;margin:0 0 8px}
-.cd-estimator__card-range{font-size:22px;font-weight:700;color:#1B365D;margin:0 0 4px}
-.cd-estimator__card-note{font-size:13px;color:#6E6E78;margin:0}
-.cd-estimator__card--cvl{border-top:3px solid #1B365D}
+.cd-estimator{background:#FBFBFB;border:1px solid rgba(0,40,86,.1);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-estimator__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
+.cd-estimator__subtitle{font-size:15px;color:#555;margin:0 0 22px}
+.cd-estimator__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:0 0 22px}
+.cd-estimator__card{background:#fff;border:1px solid rgba(0,40,86,.08);border-radius:10px;padding:24px 20px;text-align:center;transition:box-shadow .2s ease}
+.cd-estimator__card:hover{box-shadow:0 4px 16px rgba(0,40,86,.08)}
+.cd-estimator__card-label{font-size:12px;color:#777;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;font-weight:600}
+.cd-estimator__card-range{font-size:24px;font-weight:700;color:#002856;margin:0 0 6px}
+.cd-estimator__card-note{font-size:13px;color:#777;margin:0;line-height:1.4}
+.cd-estimator__card--cvl{border-top:3px solid #002856}
 .cd-estimator__card--mvl{border-top:3px solid #1a7a3a}
-.cd-estimator__card--compulsory{border-top:3px solid #c0392b}
-.cd-estimator__footer{font-size:14px;color:#6E6E78;margin:0;line-height:1.5}
-.cd-estimator__footer strong{color:#2A2A2E}
-@media(max-width:640px){.cd-estimator__grid{grid-template-columns:1fr}.cd-estimator{padding:20px}}
+.cd-estimator__card--compulsory{border-top:3px solid #d63031}
+.cd-estimator__footer{font-size:14px;color:#777;margin:0;line-height:1.55}
+.cd-estimator__footer strong{color:#002856}
+@media(max-width:640px){.cd-estimator__grid{grid-template-columns:1fr}.cd-estimator{padding:22px}}
 </style>
 
 <div class="cd-estimator">
@@ -351,15 +355,15 @@
 
 <style>
 /* --- FAQ Accordion --- */
-.cd-faq{margin:24px 0 32px;border-top:1px solid #e2e2e6}
-.cd-faq details{border-bottom:1px solid #e2e2e6}
+.cd-faq{margin:24px 0 32px;border-top:1px solid rgba(0,40,86,.1)}
+.cd-faq details{border-bottom:1px solid rgba(0,40,86,.1)}
 .cd-faq summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;cursor:pointer;font-size:17px;font-weight:700;color:#2A2A2E;line-height:1.4;list-style:none}
 .cd-faq summary::-webkit-details-marker{display:none}
 .cd-faq summary::marker{display:none}
 .cd-faq summary::after{content:'';flex-shrink:0;width:20px;height:20px;margin-left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%238A8A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;transition:transform .2s ease}
 .cd-faq details[open] summary::after{transform:rotate(180deg)}
-.cd-faq summary:hover{color:#1B365D}
-.cd-faq summary:focus-visible{outline:2px solid #1B365D;outline-offset:2px;border-radius:2px}
+.cd-faq summary:hover{color:#002856}
+.cd-faq summary:focus-visible{outline:2px solid #002856;outline-offset:2px;border-radius:2px}
 .cd-faq .cd-faq__answer{padding:0 4px 20px;font-size:17px;line-height:1.65;color:#2A2A2E}
 .cd-faq .cd-faq__answer p{margin:0 0 12px}
 .cd-faq .cd-faq__answer p:last-child{margin-bottom:0}
@@ -459,19 +463,20 @@
 <!-- MENTAL HEALTH AND EMOTIONAL SUPPORT -->
 
 <style>
-.cd-support{background:#F0F7F1;border:1px solid #D4E8D8;border-radius:8px;padding:28px 28px 24px;margin:32px 0}
-.cd-support__title{font-size:20px !important;font-weight:700;color:#1a7a3a;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-support__subtitle{font-size:15px;color:#4A4A52;margin:0 0 18px}
-.cd-support__body p{font-size:16px;line-height:1.6;color:#2A2A2E;margin:0 0 14px}
+.cd-support{background:#F4FAF5;border:1px solid rgba(26,122,58,.12);border-radius:10px;padding:30px;margin:36px 0;box-shadow:0 6px 20px rgba(0,40,86,.06)}
+.cd-support__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
+.cd-support__subtitle{font-size:15px;color:#555;margin:0 0 20px}
+.cd-support__body p{font-size:16px;line-height:1.65;color:#2A2A2E;margin:0 0 16px}
 .cd-support__body p:last-child{margin-bottom:0}
-.cd-support__helplines{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
-.cd-support__helpline{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fff;border:1px solid #D4E8D8;border-radius:6px}
+.cd-support__helplines{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.cd-support__helpline{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid rgba(0,40,86,.08);border-radius:10px;transition:box-shadow .2s ease}
+.cd-support__helpline:hover{box-shadow:0 4px 14px rgba(0,40,86,.07)}
 .cd-support__helpline-icon{flex-shrink:0;font-size:20px;width:28px;text-align:center}
-.cd-support__helpline-text{font-size:14px;color:#2A2A2E;margin:0;line-height:1.4}
-.cd-support__helpline-text strong{display:block;font-size:15px;margin-bottom:2px}
-.cd-support__relief{margin-top:18px;padding-top:16px;border-top:1px solid #D4E8D8}
+.cd-support__helpline-text{font-size:14px;color:#2A2A2E;margin:0;line-height:1.45}
+.cd-support__helpline-text strong{display:block;font-size:15px;color:#002856;margin-bottom:3px}
+.cd-support__relief{margin-top:20px;padding-top:18px;border-top:1px solid rgba(26,122,58,.12)}
 .cd-support__relief p{font-size:16px;line-height:1.6;color:#2A2A2E;margin:0 0 10px}
-@media(max-width:640px){.cd-support__helplines{grid-template-columns:1fr}.cd-support{padding:20px}}
+@media(max-width:640px){.cd-support__helplines{grid-template-columns:1fr}.cd-support{padding:22px}}
 </style>
 
 <div class="cd-support">
