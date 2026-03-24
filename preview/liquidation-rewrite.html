@@ -1,0 +1,292 @@
+<!--
+  Company Liquidation: What UK Directors Need to Know
+  Rewrite for comdebstage.wpengine.com/liquidation/
+  Article type: High-stakes category explainer / guide (YMYL)
+  Last reviewed: March 2026
+  Reviewed by: Chris Andersen, Licensed Insolvency Practitioner
+-->
+
+<!-- BYLINE -->
+<p class="byline">Written by Chris Andersen, Licensed Insolvency Practitioner | Last reviewed: March 2026</p>
+
+<!-- INTRO -->
+
+<p><strong>If your company can't pay its debts, liquidation is one of the ways it ends. But which type applies to you, what it costs, and what happens to you personally all depend on decisions you make now.</strong></p>
+
+<p>Most directors who arrive at this page are in one of three positions: you've had a letter from HMRC, you're weighing up whether to close voluntarily before things get worse, or a creditor is already pushing. Each of those situations leads to a different route, with different costs, timescales, and consequences for you as a director.</p>
+
+<p>This page covers what liquidation actually involves, the three main types, what we've seen trip directors up, and when liquidation isn't the right answer. We've written it to help you work out which path fits your situation before you speak to an insolvency practitioner.</p>
+
+<p>One thing worth being direct about: the longer you wait, the fewer options you have. That isn't a sales line. It's how insolvency law works. Once a creditor petitions to wind up your company, the court controls the process, not you.</p>
+
+<!-- DECISION BLOCK -->
+
+<h2>Which Route Are You Facing?</h2>
+
+<p>Before anything else, work out which of these sounds closest to your situation:</p>
+
+<style>
+.cd-router{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 28px}
+.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:#fff;border:1px solid #e2e2e6;border-left:4px solid #ccc;border-radius:6px;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+.cd-router__card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.cd-router__card:focus-visible{outline:2px solid #1B365D;outline-offset:2px}
+.cd-router__card--cvl{border-left-color:#1B365D}
+.cd-router__card--mvl{border-left-color:#1a7a3a}
+.cd-router__card--compulsory{border-left-color:#c0392b}
+.cd-router__card--unsure{border-left-color:#d4830a}
+.cd-router__icon{flex-shrink:0;width:36px;height:36px;margin-top:2px}
+.cd-router__body{flex:1;min-width:0}
+.cd-router__title{font-size:16px;font-weight:700;color:#2A2A2E;margin:0 0 6px;line-height:1.3}
+.cd-router__desc{font-size:14px;color:#4A4A52;margin:0;line-height:1.5}
+.cd-router__arrow{flex-shrink:0;width:20px;height:20px;align-self:center;color:#8A8A94;transition:color .15s ease,transform .15s ease}
+.cd-router__card:hover .cd-router__arrow{color:#1B365D;transform:translateX(3px)}
+@media(max-width:640px){.cd-router{grid-template-columns:1fr}.cd-router__card{padding:16px 18px}}
+</style>
+
+<div class="cd-router" role="list">
+
+  <a href="/creditors-voluntary-liquidation-cvl/" class="cd-router__card cd-router__card--cvl" role="listitem">
+    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="18" cy="18" r="17" stroke="#1B365D" stroke-width="2"/>
+      <path d="M12 18.5l4 4 8-8.5" stroke="#1B365D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="cd-router__body">
+      <p class="cd-router__title">You want to close the company yourself</p>
+      <p class="cd-router__desc">Creditors' Voluntary Liquidation (CVL). You appoint the IP. You control the timing.</p>
+    </div>
+    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <a href="/members-voluntary-liquidation/" class="cd-router__card cd-router__card--mvl" role="listitem">
+    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="18" cy="18" r="17" stroke="#1a7a3a" stroke-width="2"/>
+      <path d="M13 14h10M13 18h10M13 22h6" stroke="#1a7a3a" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="cd-router__body">
+      <p class="cd-router__title">Your company is solvent and you want to extract value</p>
+      <p class="cd-router__desc">Members' Voluntary Liquidation (MVL). Tax-efficient closure when all debts can be paid in full.</p>
+    </div>
+    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <a href="/compulsory-liquidation/" class="cd-router__card cd-router__card--compulsory" role="listitem">
+    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="18" cy="18" r="17" stroke="#c0392b" stroke-width="2"/>
+      <path d="M18 12v8M18 23v1" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <div class="cd-router__body">
+      <p class="cd-router__title">A creditor has filed a petition against you</p>
+      <p class="cd-router__desc">Compulsory liquidation. Court-ordered. The Official Receiver takes control, not you.</p>
+    </div>
+    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <a href="/insolvency-test/" class="cd-router__card cd-router__card--unsure" role="listitem">
+    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="18" cy="18" r="17" stroke="#d4830a" stroke-width="2"/>
+      <path d="M15 14.5a3.5 3.5 0 0 1 6.15 2.3c0 2.2-3.15 2.7-3.15 2.7M18 23v1" stroke="#d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="cd-router__body">
+      <p class="cd-router__title">You're not sure if the company is insolvent</p>
+      <p class="cd-router__desc">Take our 30-second insolvency test to get a clearer picture before reading further.</p>
+    </div>
+    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+</div>
+
+<p>If you're unsure which applies, that's normal. Most directors we speak to aren't certain until they've had a proper conversation. The important thing is not to assume you can just <a href="/company-strike-off-and-dissolution/">strike off the company</a> and walk away. If there are unpaid debts, that can backfire badly.</p>
+
+<!-- UNDERSTANDING LIQUIDATION -->
+
+<h2>What Company Liquidation Actually Means for You</h2>
+
+<p>Company liquidation is the legal process that ends a limited company by turning its assets into cash and distributing that cash to creditors. The company is dissolved at the end. It stops existing.</p>
+
+<p>That's the textbook version. Here's what it means in practice.</p>
+
+<p>A licensed insolvency practitioner takes control of the company's affairs. They collect what the company owns, settle what it owes (in a legally defined order), and investigate how the company was run. That investigation includes your conduct as a director.</p>
+
+<p>They'll look at whether you kept proper records, took on credit you couldn't repay, paid some creditors ahead of others, or used company money inappropriately. If they find problems, the consequences range from being asked to repay money personally to being disqualified as a director for up to 15 years.</p>
+
+<p>This isn't something that happens to you in the background. You'll need to cooperate fully with the liquidator, hand over books and records, attend meetings if required, and answer questions about transactions going back years.</p>
+
+<p>Directors who've been through it describe the process as stressful but manageable when they've acted early and kept clean records. Directors who delayed tend to face harder questions.</p>
+
+<!-- CVL SECTION -->
+
+<h2>Creditors' Voluntary Liquidation (CVL): The Route Most Directors Choose</h2>
+
+<p>A CVL is the most common form of insolvent liquidation. In 2024-25, CVLs consistently accounted for more than 75% of all company insolvencies in England and Wales, according to the Insolvency Service's quarterly statistics.</p>
+
+<p>The process works like this: you, as director, decide the company can't continue. You appoint an insolvency practitioner, pass a shareholders' resolution to wind up the company, and the IP takes control from there. Creditors get to approve (or replace) the IP at a virtual meeting or through a decision procedure.</p>
+
+<p>The reason most directors prefer a CVL over waiting for a creditor to force the issue: you choose the IP, you control the timing, and you've demonstrated that you acted responsibly when you realised the company was insolvent. That matters, because the IP has a legal duty to report on your conduct to the Insolvency Service. Proactive directors who act early and cooperate tend to get cleaner reports.</p>
+
+<p>The catch is cost. A CVL typically costs between £4,000 and £6,000 plus VAT in practitioner fees, though this varies depending on complexity. If the company has no assets to fund the liquidation, the directors often need to fund it personally.</p>
+
+<p>In many cases, directors can offset this against a <a href="/what-happens-to-a-director-during-liquidation/">director redundancy claim</a> if they were genuinely employed by the company. That claim goes to the Redundancy Payments Service, not the company's funds.</p>
+
+<!-- MVL SECTION -->
+
+<h2>Members' Voluntary Liquidation (MVL): When the Company Is Solvent</h2>
+
+<p>An MVL is for companies that can pay everything they owe. The directors must make a statutory declaration of solvency, confirming that the company will pay all debts in full, plus statutory interest, within 12 months of the winding-up starting. Making a false declaration is a criminal offence.</p>
+
+<p>Directors typically use an MVL to extract retained profits as a capital distribution rather than a dividend. That can mean paying Capital Gains Tax (potentially at 10% with Business Asset Disposal Relief) instead of income tax at higher rates.</p>
+
+<p>But the tax treatment depends on your specific circumstances, and HMRC's approach to MVLs has tightened over recent years. Get tailored tax advice before assuming the savings will apply to you.</p>
+
+<p>If you're unsure whether your company is truly solvent once all liabilities are accounted for, including contingent liabilities, HMRC debts, and any outstanding lease obligations, don't sign the declaration. We've seen directors sign in good faith only to discover a forgotten lease or an HMRC penalty that tipped the balance. An incorrect declaration converts a straightforward MVL into an insolvent liquidation, with personal liability risks attached.</p>
+
+<!-- COMPULSORY SECTION -->
+
+<h2>Compulsory Liquidation: What Happens When a Creditor Forces It</h2>
+
+<p>Compulsory liquidation is court-ordered. It starts when a creditor, most commonly HMRC, files a <a href="/winding-up-petition/">winding-up petition</a> at the High Court.</p>
+
+<p>Here's what makes this route particularly difficult for directors. Once a petition is advertised in the London Gazette, your bank will almost certainly freeze your company's accounts. That's not a threat or a scare tactic. It's standard banking practice. The freeze can happen within 24 hours of the Gazette notice, and it doesn't unfreeze until the petition is dealt with.</p>
+
+<p>The Official Receiver takes control initially. They don't work for you, and they don't take instructions from you. Their job is to protect creditors and investigate how the company ended up here. If they find evidence of wrongful trading, fraudulent trading, or misfeasance, they can take action against you personally.</p>
+
+<p>HMRC now accounts for roughly 60% of all winding-up petitions, according to Insolvency Service data. That's a significant shift from the COVID-era moratorium, when HMRC paused enforcement. The enforcement backlog is clearing, and directors who assumed HMRC debts could be pushed down the road indefinitely are finding out otherwise.</p>
+
+<p>If you've received a statutory demand or a 7-day warning letter from HMRC, you're already on the path toward a petition. That doesn't mean it's too late to act, but the window to explore voluntary options is narrow. Getting advice at this stage, rather than after the petition is filed, gives you materially more control over the outcome.</p>
+
+<!-- DIRECTOR DUTIES -->
+
+<h2>What Liquidation Means for You Personally</h2>
+
+<p>This is the section most directors skip to. That makes sense. The company is a legal entity, but the consequences land on you.</p>
+
+<p>Your duties shift as the company approaches insolvency. Under the Insolvency Act 1986 (as amended), once you know or ought to know that there's no reasonable prospect of avoiding insolvent liquidation, you have a duty to minimise losses to creditors.</p>
+
+<p>Continuing to trade, taking on new credit, or paying yourself ahead of creditors after that point can expose you to personal claims.</p>
+
+<p>During liquidation, the IP investigates your conduct and files a report with the Insolvency Service. They're specifically looking at:</p>
+
+<ul>
+  <li><strong>Wrongful trading:</strong> did you continue trading when you knew (or should have known) the company couldn't avoid insolvency? If so, you can be ordered to contribute personally to the company's debts.</li>
+  <li><strong>Preference payments:</strong> did you pay yourself, family members, or connected creditors ahead of others in the run-up to liquidation? Those payments can be clawed back.</li>
+  <li><strong>Transactions at undervalue:</strong> did you sell company assets below market value, particularly to connected parties?</li>
+  <li><strong>Overdrawn director's loan account:</strong> if you owe money to the company, the liquidator will pursue you for it. This is one of the most common issues we see, and one of the most avoidable.</li>
+  <li><strong>Bounce Back Loan misuse:</strong> if your company received a BBL and the funds weren't used for the business's economic benefit, the liquidator will investigate. The Insolvency Service has been particularly active here. Disqualification periods for BBL misuse have ranged from 7 to 15 years.</li>
+</ul>
+
+<p>In the year ending March 2025, the Insolvency Service secured 1,037 director disqualification orders and undertakings across England and Wales. That's not a theoretical risk. If your conduct raises concerns, you'll face real consequences.</p>
+
+<p>The practical advice: keep records, don't pay yourself preferentially once you suspect insolvency, and get professional advice before you do anything that changes the company's financial position. Directors who can show they took advice early and acted on it are in a much stronger position than those who waited and hoped things would improve.</p>
+
+<!-- COSTS -->
+
+<h2>What Liquidation Costs and Who Pays</h2>
+
+<p>This depends on the type of liquidation and the company's assets.</p>
+
+<p><strong>CVL costs:</strong> practitioner fees typically range from £4,000 to £6,000 plus VAT for straightforward cases. If the company has assets (stock, debtors, equipment), the liquidator's fees are paid from those assets. If the company has nothing, the directors usually need to fund the process.</p>
+
+<p>Many directors don't realise that a redundancy claim can effectively cover or offset the liquidation cost. If you were a genuine employee of the company (on payroll, with a contract of employment), you may be eligible for statutory redundancy pay, unpaid wages, and holiday pay. We've seen directors who assumed they couldn't afford a CVL discover that the redundancy claim covered the entire cost.</p>
+
+<p><strong>Compulsory liquidation costs:</strong> the court fee is £1,880 (as of 2025/26), and there's a £1,600 Official Receiver's deposit. But these costs only tell part of the story.</p>
+
+<p>The real expense of compulsory liquidation is the loss of control: higher professional fees, longer timescales, and a more forensic investigation of your conduct. In our experience, it's almost always more expensive overall than a voluntary route.</p>
+
+<p><strong>MVL costs:</strong> typically £2,000 to £4,000 plus VAT, but this varies with complexity. Since the company is solvent, there's no shortfall. The fees come from the company's assets before final distribution to shareholders.</p>
+
+<p>Don't let the cost of a CVL push you toward striking off the company instead. Strike-off costs almost nothing (£10 for the DS01 form), but if you have unpaid debts, creditors can object, HMRC can restore the company to the register, and you could face investigation for trying to avoid the formal process. The £10 saving can turn into a much larger problem.</p>
+
+<!-- ALTERNATIVES -->
+
+<h2>When Liquidation Isn't the Right Answer</h2>
+
+<p>Liquidation ends the company. If the business itself is viable but the company has accumulated debts it can't service, there may be alternatives worth exploring first. We always recommend directors consider these routes before committing to liquidation.</p>
+
+<p><strong>Company Voluntary Arrangement (CVA):</strong> this is a legally binding agreement with your creditors to repay a proportion of what you owe over a fixed period, usually 3 to 5 years. The company continues trading. It works best when the underlying business is profitable but carrying legacy debt. It doesn't work if the business model itself is broken.</p>
+
+<p>CVAs require 75% creditor approval by value. In our experience, HMRC has become less willing to agree to proposals they consider unrealistic, so the repayment plan needs to be credible.</p>
+
+<p><strong>Administration:</strong> an administrator is appointed to rescue the company or achieve a better outcome for creditors than immediate liquidation would. This is a more complex and expensive process, typically suited to larger businesses with significant assets, employees, or ongoing contracts worth preserving. For micro-businesses and small companies, administration is rarely proportionate.</p>
+
+<p><strong>Informal negotiation:</strong> if the debts are manageable and you have a credible plan, direct negotiation with creditors, including <a href="/time-to-pay-arrangements/">Time to Pay arrangements</a> with HMRC, can sometimes avoid formal insolvency altogether. This only works if you act before creditors lose patience and escalate to legal action.</p>
+
+<p><strong>Strike-off:</strong> this is <em>not</em> an alternative to liquidation for insolvent companies. We mention it here because it's the option directors most commonly ask about, and it's the one most likely to cause problems if used incorrectly. You can only strike off a company that has no outstanding debts, hasn't traded recently, and isn't subject to legal proceedings. If any of those conditions are unmet, don't file a DS01.</p>
+
+<!-- FAQ SECTION -->
+
+<h2>Company Liquidation FAQs</h2>
+
+<h3>Can I Liquidate My Company Without an Insolvency Practitioner?</h3>
+
+<p>No. A CVL and an MVL both require a licensed insolvency practitioner to act as liquidator. There's no self-service option for formal liquidation. The IP is regulated by one of the recognised professional bodies (IPA, ICAEW, ICAS, or the Insolvency Service itself) and has legal obligations to creditors and the Insolvency Service. If someone offers to "liquidate" your company without being a licensed IP, walk away.</p>
+
+<h3>What Happens If I Keep Trading While Insolvent?</h3>
+
+<p>If you know, or should know, that the company can't avoid insolvent liquidation and you continue to trade, you risk a claim for wrongful trading under Section 214 of the Insolvency Act 1986. The court can order you to contribute personally to the company's debts.</p>
+
+<p>The test isn't whether you intended to harm creditors, but whether a reasonably diligent person in your position would have concluded that there was no reasonable prospect of avoiding insolvent liquidation.</p>
+
+<h3>Will Liquidation Automatically Disqualify Me as a Director?</h3>
+
+<p>No, not automatically. Liquidation triggers an investigation into your conduct, not an automatic ban. The IP reports to the Insolvency Service, who decide whether to pursue disqualification. If your conduct was responsible, you kept records, didn't trade wrongfully, and cooperated with the process, disqualification is unlikely. Where disqualification does happen, it's typically for periods of 2 to 15 years depending on the severity of the misconduct.</p>
+
+<h3>How Long Does a CVL Take?</h3>
+
+<p>The initial process, from board meeting to the start of liquidation, typically takes 2 to 4 weeks. The full liquidation, including asset realisation, investigations, and final distribution, usually takes 12 to 18 months for straightforward cases. More complex cases with disputed assets, legal claims, or ongoing investigations can take longer.</p>
+
+<h3>Can I Start Another Company After Liquidation?</h3>
+
+<p>Yes, unless you've been disqualified. If the liquidation concludes without disqualification, you're free to start a new company. However, Section 216 of the Insolvency Act restricts you from using the same or a similar company name for 5 years after liquidation without court permission. This is designed to prevent what's commonly called "phoenixism." If you're planning to continue a similar business, get advice on the naming restrictions before you set anything up.</p>
+
+<h3>What Happens to Outstanding Bounce Back Loans in Liquidation?</h3>
+
+<p>The BBL is a company debt, secured by a government guarantee. In a CVL or compulsory liquidation, the BBL is treated like any other unsecured creditor claim. The government guarantee means the lender gets repaid by the government, not by you personally, as long as the loan was used for the company's economic benefit.</p>
+
+<p>If the liquidator finds the funds were misused (spent on personal expenses, transferred to connected parties, or not used for the business), you could face a misfeasance claim and potential disqualification.</p>
+
+<h3>Is Dissolution the Same as Liquidation?</h3>
+
+<p>No. Dissolution (strike-off) removes the company from the Companies House register without a formal investigation of its affairs. Liquidation is a supervised process with an IP, a creditor process, and an investigation. You can only dissolve a company that meets specific conditions, including having no outstanding debts. Using dissolution to avoid dealing with debts is a common mistake that can lead to the company being restored to the register by a creditor.</p>
+
+<h3>Can I Reverse a Voluntary Liquidation Once It Begins?</h3>
+
+<p>Technically, yes, but it's rare and difficult. The shareholders can pass a resolution to stay the winding up, or the court can make an order to that effect. In practice, once an IP is appointed and creditors are notified, reversing the process requires creditor consent and a convincing case that the company can actually pay its debts. We've seen it happen, but only when circumstances changed dramatically (for example, a major debtor paid an outstanding invoice that changed the company's solvency position).</p>
+
+<h3>Who Pays for the Liquidator's Fees If the Business Has No Assets?</h3>
+
+<p>The directors do. If the company can't fund its own liquidation, the practitioner's fees need to come from somewhere. In many cases, directors fund this through their personal redundancy claims (which are paid by the government's Redundancy Payments Service, not from the company). Some IPs offer payment plans.</p>
+
+<p>If you genuinely can't fund a CVL and no creditor is willing to petition, the company may simply remain dormant and eventually be struck off by Companies House. But that isn't a clean outcome if debts remain outstanding.</p>
+
+<h3>Will My Personal Credit Score Be Affected by Liquidation?</h3>
+
+<p>Company liquidation doesn't directly appear on your personal credit file. However, if you've given personal guarantees for company debts (bank loans, commercial leases, credit cards), those guarantees survive the company's liquidation. The creditor can pursue you personally, and any default will affect your credit score. If you're unsure whether you've given personal guarantees, check your loan agreements and lease contracts now, before the company enters liquidation.</p>
+
+<h3>Can a Liquidator Challenge Transactions Made Before Liquidation?</h3>
+
+<p>Yes. The liquidator can look back at transactions made in the period before liquidation and challenge those that disadvantaged creditors. Preference payments (paying connected creditors ahead of others) can be challenged if made within 2 years of the liquidation starting. Transactions at undervalue can be challenged within the same period. The look-back period is longer for connected parties than for arm's-length creditors.</p>
+
+<h3>Does Compulsory Liquidation Always Mean Investigations Into Directors?</h3>
+
+<p>Yes, it always involves an investigation. The Official Receiver has a statutory duty to investigate the company's affairs and the conduct of its directors. The depth of that investigation varies: straightforward cases with clean records and cooperative directors may involve relatively light scrutiny, while cases involving large creditor losses, missing records, or suspected misconduct will be investigated more thoroughly. The investigation happens regardless of whether anything is found.</p>
+
+<!-- NEXT STEP -->
+
+<h2>Your Next Step</h2>
+
+<p>If you're facing a decision about your company's future, your safest move is to speak to a licensed insolvency practitioner before you take any action. Not after you've tried to strike off the company. Not after you've paid yourself ahead of HMRC. Not after a petition has been filed. Before.</p>
+
+<p>We speak to directors in your situation every day. The initial conversation is free, confidential, and without obligation. We'll help you understand which route applies, what it'll cost, and what to expect.</p>
+
+<p>Call us on <strong>0800 074 6757</strong> during working hours, or use the live chat. If you'd prefer to start with a quick self-assessment, take our <a href="/insolvency-test/">30-second insolvency test</a>.</p>
+
+<!-- METHODOLOGY AND DISCLOSURE -->
+
+<h2>Methodology and Disclosure</h2>
+
+<p>This page was written by the Company Debt editorial team and reviewed by Chris Andersen, a Licensed Insolvency Practitioner regulated by the IPA. It was last reviewed in March 2026.</p>
+
+<p>Company Debt provides insolvency advice and arranges CVLs and MVLs for UK limited company directors. We have a commercial interest in directors choosing to work with us. We've written this page to be useful regardless of whether you use our services, because the guidance applies to any director facing these decisions.</p>
+
+<p>Insolvency statistics cited on this page are sourced from the Insolvency Service's official quarterly and monthly commentary publications. Director disqualification data is from the Insolvency Service's annual report. HMRC petition data is based on Insolvency Service commentary and published court records.</p>
+
+<p>This page is informational. It isn't legal or financial advice tailored to your circumstances. Insolvency decisions involve legal obligations with personal consequences. Speak to a licensed insolvency practitioner before acting on anything you've read here.</p>
