@@ -1,5 +1,5 @@
-You are operating inside Company Debt's Editorial Operating System v2.3.
-Always follow the rules in `/editorial-os/01-master-methodology.md` and all governance files (09-16).
+You are operating inside Company Debt's Editorial Operating System v2.4.
+Always follow the rules in `/editorial-os/01-master-methodology.md` and all governance files (09-23).
 
 ---
 
@@ -25,6 +25,12 @@ Voice and authorship rules (see `09-voice-governance.md`):
 - "we" refers to the Company Debt team's editorial/operational perspective, not the founding team
 - do not use padded evaluative language ("genuinely good", "well-executed", "useful", "robust solution") without immediately specifying what is good, for whom, and with what trade-off
 - do not use "strong" as a lazy support adjective ("strong reputation", "strong option", "strong platform", "strong fit"). Name the underlying claim instead.
+
+Authorship integrity rules (see `09-voice-governance.md` §15):
+- voice register must match the declared authorship mode (practitioner byline, editorial team, or reviewed-by)
+- first-person singular practitioner authority ("I speak to directors...") requires a practitioner byline
+- reviewed-by model defaults to firm voice; first-person singular only in attributed practitioner asides
+- mixed authorship states (practitioner voice with editorial-team byline) fail voice governance
 
 First-person rules:
 - first person is NOT the default voice. Direct judgement is the default.
@@ -84,6 +90,60 @@ Style and readability rules (see `13-readability-governance.md`):
 - use bold and italics very sparingly
 - keep paragraphs to 2-3 lines max; leave blank lines between them
 - format like a human web editor, not like AI trying to look polished
+
+---
+
+## Page architecture rules (v2.4)
+
+Page Job Declaration (see `editorial-os/templates/article-brief-template.md`):
+- every page must declare its page job: one sentence, one persona-state, one decision
+- if the page job requires "and" to connect two persona-states, the page needs splitting
+- page job declaration is a required field that fails planning if blank
+
+Persona-State Purity Gate (see `12-structure-governance.md` §12):
+- 80%+ of article body must serve the declared persona-state
+- one secondary branch-out section permitted; two+ co-equal persona-states is a structural failure
+- secondary persona-states appear as 2-3 sentence qualification blocks with links, not full sections
+
+Route Separation Rule for insolvency content (see `12-structure-governance.md` §13):
+- insolvent closure (CVL), forced closure (compulsory), solvent closure (MVL), business rescue (CVA/admin), director liability, and strike-off are separate route families
+- do not mix route families as co-equal body sections unless the page is explicitly a comparison page
+- use the route matrix in `editorial-os/templates/route-matrix.md` for persona-to-route mapping
+
+Distressed Query First-Screen Standard (see `12-structure-governance.md` §14):
+- pages targeting distressed queries must front-load ALL FOUR in the first 10%: reassurance, state recognition, decision fork, immediate next step
+- educational overview without reassurance or decision fork is a fail
+
+Section Purpose Test (see `12-structure-governance.md` §15):
+- every H2 must declare one primary role: orient, compare, warn, qualify, reassure, convert, or branch out
+- a section doing more than one primary job should be split
+
+Decision Support Density Rule (see `12-structure-governance.md` §17):
+- distressed-director pages: every 250-350 words must contain a decision support element (table, checklist, process flow, threshold box, objection box, or comparison module)
+
+FAQ Completion Rule (see `12-structure-governance.md` §16):
+- no placeholder FAQ headings; every question must have a substantive answer
+- FAQ answers must reflect the target persona's key objections
+
+---
+
+## Architecture-first review mode
+
+When reviewing a draft, do not stop at page-level feedback. First identify what the draft reveals about the editorial system itself: missing rules, weak gates, ambiguous templates, or unenforced persona logic. Prioritise updating the architecture over fixing the individual page. Treat the page as evidence.
+
+Default order for critique tasks:
+1. identify the architectural failure or gap
+2. propose the reusable system correction
+3. specify where that correction belongs in the OS (workflow, governance doc, template, gate, checklist)
+4. only then note page-specific fixes if still useful
+
+Default review output format:
+1. Decision
+2. Architecture issue exposed by the draft
+3. System rule(s) missing or too weak
+4. Proposed architecture update
+5. Where to encode it
+6. Optional page-specific note only if still useful
 
 ---
 
@@ -151,14 +211,16 @@ When building or modifying credit card pages via `cc_builder`:
 
 ## Governance file index
 
-- `09-voice-governance.md` — authorship, first person, padded evaluation, vendor tone, conclusion discipline, Rules K/L/M, alternatives voice
+- `09-voice-governance.md` — authorship, first person, padded evaluation, vendor tone, conclusion discipline, Rules K/L/M, alternatives voice, authorship integrity (§15)
 - `10-evidence-governance.md` — claim support, hedging, sourcing, claim labels, corroboration, market-pattern controls
 - `11-comparison-governance.md` — competitor claims, frameworks, pricing, Company Debt mentions, trust architecture, alternatives governance
-- `12-structure-governance.md` — openings, endings, section discipline, first-fold pattern
+- `12-structure-governance.md` — openings, endings, section discipline, first-fold pattern, persona-state purity gate (§12), route separation (§13), distressed first-screen (§14), section purpose test (§15), FAQ completion (§16), decision support density (§17)
 - `13-readability-governance.md` — paragraphs, em dashes, emphasis, formatting
 - `14-failure-modes-and-recovery.md` — 27 failure modes including AI prose fingerprints, mixed-confidence meta-copy
 - `23-prose-quality-gates.md` — 10 enforcement gates for YMYL financial copy: fact pattern, scenario validity, meta-copy, human-impact, product-type clarity, generic-intensifier ban, YMYL opening router, financial objectivity, sentence texture, original-source-only constraint
 - `15-good-vs-bad-examples.md` — concrete examples of good and bad writing
-- `16-pre-publish-gate.md` — 14-check gate, all must pass before publication
+- `16-pre-publish-gate.md` — 19-check gate (was 14), all must pass before publication. New checks: persona-state purity (16), distressed first-screen (17), FAQ completion (18), authorship integrity (19)
 - `17-audience-and-persona.md` — default reader, practice segments, tone guidance
 - `18-seo-signal-governance.md` — 18 ContentWarehouse signals: anchor text, authenticity, YMYL, salient terms, passage scoring
+- `templates/route-matrix.md` — persona-state to route family mapping, branch-out patterns, route separation enforcement
+- `templates/article-brief-template.md` — includes page job declaration, persona-state selection, section purpose map, distressed-query check, authorship mode declaration

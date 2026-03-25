@@ -547,3 +547,38 @@ Read the opening 200 words without knowing the house product. Ask:
 - Would a reader who chose to stay on the incumbent feel the article understood their situation?
 
 If the answer to any of these is no, the opening fails the voice discipline check.
+
+---
+
+## 15. Authorship Integrity Rule
+
+### Rule
+
+The voice register of the article must match the declared authorship. Mixed authorship states are a voice governance failure.
+
+### Three permitted authorship modes
+
+1. **Practitioner byline** (e.g. "By Chris Andersen, Licensed Insolvency Practitioner")
+   - First-person singular practitioner authority is permitted
+   - "I speak to directors every week who..." is acceptable
+   - The practitioner's lived experience can ground claims
+
+2. **Editorial team byline** (e.g. "By Company Debt Editorial Team")
+   - Firm voice or first-person plural only
+   - "We" refers to the team's editorial/operational perspective
+   - First-person singular practitioner voice is NOT permitted
+
+3. **Reviewed-by model** (e.g. "Written by Editorial Team, Reviewed by Chris Andersen")
+   - Default to firm voice (first-person plural)
+   - First-person singular permitted ONLY in clearly attributed practitioner asides or quotes
+   - The body text must not read as if the practitioner wrote it unless they did
+
+### Fail conditions
+
+- **FAIL** if the article uses first-person singular practitioner voice ("I speak to directors...", "I've sat across the table from...") but the byline is editorial-team-only or reviewed-by
+- **FAIL** if the article switches between practitioner voice and editorial voice without clear attribution
+- **FAIL** if the disclosure section names the editorial team as author but the body reads as practitioner-written
+
+### Detection
+
+Read the first-person instances in the article. For each one, check: does the byline support this level of personal authority? If the byline says "Reviewed by" but the prose says "I speak to directors every week," there is a mismatch.

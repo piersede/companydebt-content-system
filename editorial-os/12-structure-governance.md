@@ -404,3 +404,157 @@ This concession block does not need to be a formal table. It can be prose. But a
 - **FAIL** if Company Debt is named without any limiting conditions
 - **FAIL** if the article does not state at least one scenario where Company Debt is not the right answer
 - **FAIL** if a CTA appears before the editorial conclusion is complete
+
+---
+
+## 12. Persona-State Purity Gate
+
+### Rule
+
+Every page must serve one dominant persona-state for at least 80% of the article body. One secondary branch-out section is permitted. Two or more co-equal persona-states treated as full sections is a structural failure.
+
+### How to check
+
+1. Identify the declared persona-state from the article brief
+2. For each H2 section, ask: does this section serve the declared persona-state?
+3. Count sections serving other persona-states
+4. If more than 20% of sections serve a different state, the page needs splitting or the secondary material needs converting to branch-out blocks
+
+### Fail conditions
+
+- **FAIL** if no persona-state is declared in the brief
+- **FAIL** if two or more persona-states are treated as co-equal body sections
+- **FAIL** if the page mixes crisis-distress, solvent-extraction, and rescue intents as peer sections
+
+### Branch-out pattern
+
+Secondary persona-states should appear as short qualification blocks (2-3 sentences), not full sections. Each qualification block links to its own dedicated page:
+
+> "If your company can pay all debts in full, you likely need an MVL, not this insolvent liquidation guide. See our [MVL guide](/members-voluntary-liquidation/) for solvent closure."
+
+See `editorial-os/templates/route-matrix.md` for the full route matrix and branch-out rules.
+
+---
+
+## 13. Route Separation Rule for Insolvency Content
+
+For Company Debt content specifically, these are separate route families and should not be treated as co-equal sections within a single guide unless the page is explicitly a cross-route comparison:
+
+1. Insolvent closure (CVL)
+2. Forced closure (compulsory liquidation)
+3. Solvent closure (MVL)
+4. Business rescue (CVA, administration)
+5. Director risk / liability
+6. Strike-off vs formal process
+
+### Enforcement
+
+- At brief stage: if the page job maps to two or more route families, split the page
+- At outline stage: if an H2 section serves a different route family, convert to a branch-out block
+- At review stage: flag any page treating MVL and CVL as equal body sections in a non-comparison page
+
+See `editorial-os/templates/route-matrix.md` for the persona-state to route family mapping.
+
+---
+
+## 14. Distressed Query First-Screen Standard
+
+### Rule
+
+For pages targeting distressed or crisis queries (winding-up petition, HMRC enforcement, insolvency, liquidation), the first 10% of the article must contain ALL FOUR of:
+
+1. **Reassurance** — acknowledge the reader's emotional state; normalise the situation
+2. **State recognition** — name the specific scenario the reader is likely in
+3. **Decision fork** — present the 2-3 paths available, not a wall of explanation
+4. **Immediate next step** — a concrete action the reader can take right now
+
+Not two of four. Not three of four. All four.
+
+### Why
+
+The persona framework is explicit: distressed directors are in fight-or-flight mode. They do not process walls of text. They need to know: you understand my situation, here are my options, here is what to do next. Front-loading this is not optional.
+
+### Fail conditions
+
+- **FAIL** if the first 10% contains educational overview without reassurance
+- **FAIL** if the decision fork appears after the first 10%
+- **FAIL** if no immediate next step is offered in the opening section
+- **FAIL** if the opening reads like a textbook definition rather than crisis-appropriate guidance
+
+### Detection
+
+Read the first 10% of the article (roughly the first 300-400 words of a 3,000-word page). Check off each of the four elements. If any is missing, the page fails.
+
+---
+
+## 15. Section Purpose Test
+
+### Rule
+
+Each section in the outline must declare its primary role from this list:
+
+- **orient** — help the reader understand where they are and what applies
+- **compare** — present options with visible trade-offs
+- **warn** — flag risks, consequences, or common mistakes
+- **qualify** — narrow who this section applies to
+- **reassure** — reduce fear or normalise the reader's situation
+- **convert** — move toward a specific next step or CTA
+- **branch out** — redirect readers whose situation fits a different page
+
+### Enforcement
+
+If a section does more than one primary job, it should be rewritten or split. A section that orients AND compares AND warns is trying to do too much.
+
+### How to use
+
+In the article brief's Section Purpose Map, every planned H2 must have exactly one declared role. During review, check whether the section actually performs only that role.
+
+---
+
+## 16. FAQ Completion Rule
+
+### Rule
+
+A page may not ship with placeholder FAQ headings only. If a FAQ section exists, every question must have a substantive answer.
+
+### Requirements
+
+FAQ answers must:
+- Answer actual objections from the target persona-state
+- Reflect persona blockers (affordability, HMRC awareness, personal liability, strike-off temptation, confidentiality)
+- Reduce decision friction, not just restate body content
+
+### Fail conditions
+
+- **FAIL** if any FAQ question has no answer or a placeholder answer
+- **FAIL** if FAQ answers are one sentence only (thin-content risk)
+- **FAIL** if FAQ answers cross-reference other sections with "see above" instead of answering directly
+- **FAIL** if FAQ questions do not reflect the target persona's key objections
+
+---
+
+## 17. Decision Support Density Rule for Distressed Audiences
+
+### Rule
+
+For pages targeting distressed-director queries, every 250-350 words must contain at least one decision support element:
+
+- Decision table or comparison
+- Checklist or numbered steps
+- Process flow or timeline
+- Threshold box (when X happens, do Y)
+- Objection box (common concern + direct answer)
+- Comparison module (route A vs route B)
+- Branch-out qualification block
+
+### Why
+
+The persona framework is explicit that distressed directors do not process walls of text. They need bulleted summaries, visual flows, and bolded thresholds. This rule converts that advice into an enforceable gate.
+
+### Enforcement
+
+Count the words between decision support elements. If any stretch exceeds 350 words of continuous prose without a structural aid, it needs a decision support element inserted.
+
+### Exception
+
+Methodology and disclosure sections are exempt from this rule.
