@@ -171,3 +171,23 @@ No page may retain more than 2 adjacent-but-necessary subtopics as full sections
 ### Enforcement
 
 If a draft contains more than 2 full adjacent sections, fail the workflow planning stage. The architect must either split the page or demote subtopics to branch-out blocks before drafting begins.
+
+---
+
+## Page assembly contract
+
+Every published page must declare its module stack before build.
+
+Required fields:
+- page type
+- primary module
+- allowed secondary modules
+- CTA count limit
+- form-module presence (yes/no)
+- support-module presence (yes/no)
+
+### Enforcement
+
+If the module stack is not declared before build, fail the workflow planning stage. If the published page does not match the declared stack, fail the pre-publish gate (Check 20).
+
+See `21-wordpress-technical-build-quality.md` §22 for the full assembly rules and compatibility matrix.

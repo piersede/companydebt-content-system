@@ -822,4 +822,19 @@ Humanity comes from specificity, accountability, and decision usefulness, not fr
 
 Every reassurance sentence on a distressed page must be paired with one concrete operational fact, threshold, or next step within the next 1 to 2 sentences.
 
+---
+
+## Component-level human authorship
+
+Human tone must survive page assembly, not just drafting.
+
+All embedded modules must preserve:
+- institutional accountability
+- reader-directed service language
+- specificity over generic persuasion
+- consistent pronoun logic
+- consistent disclosure posture
+
+Do not allow editorial pages to switch into anonymous lead-gen voice midstream. If a module cannot match the editorial voice, it must be rewritten or removed.
+
 End of file

@@ -534,3 +534,18 @@ See `12-structure-governance.md` §16.
 - Voice register switches between practitioner and editorial without clear attribution
 
 See `09-voice-governance.md` §15.
+
+---
+
+## Check 20: Page assembly integrity
+
+Fail if the page contains:
+- orphaned component text or placeholder fragments
+- duplicate CTA intent (two or more modules asking for the same action)
+- more than one commercial module with the same function
+- reassurance claims without valid claim class (see `10-evidence-governance.md` §14)
+- support resources that interrupt route selection (see `12-structure-governance.md` §19)
+- module voice that breaks continuity with the editorial body (see `09-voice-governance.md` §17)
+- more than 3 CTA moments before the closing section (see `04-trust-architecture.md` §11)
+
+See `21-wordpress-technical-build-quality.md` §22 for the full page assembly contract.

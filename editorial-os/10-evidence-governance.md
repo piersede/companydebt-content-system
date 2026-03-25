@@ -451,3 +451,29 @@ If a statistic is used to reassure a distressed reader, the copy must:
 ### Rationale
 
 Population-level statistics can easily become over-comforting or legally imprecise. A director reading this content needs to understand that outcomes depend on their specific conduct, not on sector averages. Using aggregate data primarily to calm fear creates a trust risk and a potential regulatory exposure under YMYL standards.
+
+---
+
+## §14 Reassurance claim classes
+
+Classify reassurance claims before publication.
+
+**Class A: legal/process reassurance**
+Example: "Liquidation does not automatically mean disqualification."
+Allowed with sourced legal/process basis.
+
+**Class B: population-level directional reassurance**
+Example: "Thousands of directors go through this every year."
+Allowed with attribution and no personal inference.
+
+**Class C: experiential reassurance**
+Example: "Most directors find the process more manageable than expected."
+Not allowed unless based on named internal research, surveys, or attributable case evidence.
+
+### Rule
+
+Do not use Class C reassurance in YMYL pages without an explicit evidence source. If evidence is absent, replace with process-based reassurance (Class A), not emotional assertion.
+
+### Enforcement
+
+If a reassurance claim cannot be evidenced, remove it or convert it into a concrete process statement. Class C claims without sources fail this gate.

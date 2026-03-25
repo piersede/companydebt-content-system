@@ -116,3 +116,24 @@ If affordability, HMRC visibility, or personal liability first appears in FAQ, f
 ### Rationale
 
 The persona framework identifies specific decision blockers for each persona-state. These must be resolved in the body where they carry structural weight, not deferred to an FAQ section where they become afterthoughts. Core objections buried in FAQ reduce decision usefulness and signal weak page architecture.
+
+---
+
+## 11. CTA discipline for distressed pages
+
+Urgency is allowed. CTA saturation is not.
+
+For Company Debt decision guides:
+- 1 opening CTA
+- 1 contextual CTA after the key route/risk section
+- 1 closing CTA
+- maximum 1 embedded quote/eligibility module
+
+If multiple modules ask for the same action, collapse them into one. If "confidential" is a core trust signal, use it consistently in the chosen CTA, not repetitively across all modules.
+
+### Fail conditions
+
+- **FAIL** if more than 3 CTA moments appear before the closing section
+- **FAIL** if overlapping CTAs with identical function appear in adjacent sections
+- **FAIL** if promotional blocks are inserted between explanation paragraphs without structural separation
+- **FAIL** if "free/confidential/no obligation" is repeated as standalone persuasion copy more than twice

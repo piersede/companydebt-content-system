@@ -604,3 +604,23 @@ Every reassurance sentence on a distressed page must be paired with one concrete
 - **FAIL** if reassurance appears without adjacent operational detail
 - **FAIL** if "we" is used more than twice without anchoring to a specific practice or process
 - **FAIL** if the page relies on generic brand warmth rather than grounded, specific consequences
+
+---
+
+## §17 Voice continuity across page components
+
+Human tone must survive page assembly, not just drafting.
+
+All embedded modules on an editorial page must match the parent page on:
+- pronoun pattern
+- urgency level
+- disclosure posture
+- promise style
+- formality level
+
+### Fail conditions
+
+- **FAIL** if the body is editorial but an inserted module switches to generic lead-gen language
+- **FAIL** if module copy sounds like ad creative rather than governed editorial commerce
+- **FAIL** if reviewer-led trust signals in the body are followed by anonymous conversion copy in the module
+- **FAIL** if an embedded form or CTA uses a different tone register from the surrounding editorial

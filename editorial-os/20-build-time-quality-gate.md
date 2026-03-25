@@ -85,3 +85,18 @@ Mentions of competitor sites for rhetorical contrast (e.g. "most comparison site
 ## 20.6 Adding new checks
 
 New checks are added to `scripts/cc_builder/quality_checks.py`. Each check must return a dict with `check` (identifier), `detail` (human-readable message), and `severity` (`FAIL` or `WARN`). Add the check to either `validate_h2_relevance()` (config-level) or `validate_build_quality()` (HTML-level), and document it in this section.
+
+---
+
+## 20.7 Component hygiene gate (editorial pages)
+
+Before any editorial page passes build or staging push, check for assembly leakage:
+
+- orphaned labels or placeholder text
+- raw component names visible in rendered output
+- broken CTA wrappers or incomplete module markup
+- duplicated heading stubs
+- inline form-module copy that does not match the page voice pattern
+- fragments such as "contact", "read more", "apply now" without their intended UI wrapper
+
+This is a publish-blocking failure at the same severity level as broken HTML or missing schema.

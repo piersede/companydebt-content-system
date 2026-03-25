@@ -579,3 +579,22 @@ If two consecutive body sections fail this test, fail structure governance.
 ### Rationale
 
 The persona framework is explicit that distressed directors cannot process walls of text after the opening. The intro improvement from §14 is necessary but not sufficient — the body must maintain the same structural discipline throughout.
+
+---
+
+## §19 Support module order for distressed pages
+
+For distressed-director pages, modules must follow this sequence:
+1. identify the route
+2. explain the immediate consequence
+3. explain the director's exposure
+4. explain cost/funding
+5. only then surface emotional support resources
+6. close with one final action path
+
+Do not place emotional-support or helpline resources before the user has a working decision model.
+
+### Fail conditions
+
+- **FAIL** if support/helpline content appears before route selection is resolved
+- **FAIL** if emotional support competes with or interrupts the main decision path

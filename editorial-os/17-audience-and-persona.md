@@ -114,3 +114,19 @@ Do not turn emotional support into a long standalone section unless the page typ
 ### Rationale
 
 The persona framework identifies a competitive gap around "life after liquidation" and the resilient founder mindset. The current system partly compensates with emotional support sections, but the architecture should formalise that as a branch pattern — useful but contained — rather than burying it in a long support section that changes the page's purpose.
+
+---
+
+## Internal referrer module
+
+For Company Debt liquidation guides, include one optional short module:
+- Information for your accountant or co-director
+
+Purpose:
+- give the reader a concise professional summary they can forward
+- reduce decision friction from internal gatekeepers
+- replace redundant CTA repetition with practical referral utility
+
+### Rationale
+
+The persona framework explicitly identifies accountants and co-directors as shadow decision makers. An "Information for Your Accountant" section is a better use of page real estate than another generic quote box, and directly addresses a documented conversion blocker.
