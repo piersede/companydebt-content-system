@@ -6,59 +6,11 @@
   Reviewed by: Chris Andersen, Licensed Insolvency Practitioner
 -->
 
-<!-- STICKY TOC -->
+<!-- Page-level overrides -->
 <style>
-.cd-toc{position:fixed;top:194px;left:calc((100vw - 1531px) / 2);width:247px;font-size:14px;line-height:1.16;border-right:1px solid rgba(0,40,86,.1);padding-right:20px;max-height:calc(100vh - 120px);overflow-y:visible;z-index:10;font-family:Arial,sans-serif;display:none}
-@media(min-width:1500px){.content>.container{margin-left:calc((100vw - 1531px) / 2 + 271px) !important;margin-right:auto !important}}
-.cd-toc__title{font-size:20px !important;font-weight:700;color:#002856;margin:0 0 16px 0 !important;padding:0 0 0 16px !important;letter-spacing:0;border:none !important}
-.cd-toc__list{list-style:none;margin:0;padding:0}
-/* Double breadcrumb spacing */
 .breadcrumbs{margin-bottom:28px !important}
-/* Hide theme's native TOC accordion, reviewed-by block, and decorative header image */
-.toc{display:none !important}
-.content-author-rev{display:none !important}
 img.post-img.no-lazy-load{display:none !important}
-.cd-toc__item{margin:0;padding:0}
-.cd-toc__link{display:block;padding:7px 12px 7px 16px;color:#4A4A52;text-decoration:none;border-left:3px solid transparent;transition:color .15s ease,border-color .15s ease}
-.cd-toc__link:hover{color:#002856;border-left-color:#FF6600}
-.cd-toc__link--active{color:#002856 !important;border-left-color:#FF6600 !important}
-@media(min-width:1500px){.cd-toc{display:block}}
 </style>
-
-<nav class="cd-toc" aria-label="Table of contents">
-<ul class="cd-toc__list">
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_0">Types of Liquidation</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_1">How the Process Works</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_2">Creditors' Voluntary (CVL)</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_3">Members' Voluntary (MVL)</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_4">Compulsory Liquidation</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_5">Director Duties and Risks</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_6">Liquidation Costs</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_7">Alternatives to Liquidation</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_8">FAQs</a></li>
-<li class="cd-toc__item"><a class="cd-toc__link" href="#toc_9">Get Advice</a></li>
-</ul>
-</nav>
-
-<!-- REVIEWED BY SIDEBAR BLOCK -->
-<style>
-.cd-reviewed{display:none}
-.cd-reviewed__img{width:122px;height:122px;border-radius:50%;object-fit:cover;margin:0 auto 10px;display:block;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.cd-reviewed__label{font-size:13px;color:#777;text-transform:none;letter-spacing:0;margin:0 0 3px;font-weight:400}
-.cd-reviewed__name{font-size:24px !important;font-weight:700 !important;color:#002856 !important;margin:0 0 2px !important;line-height:1.3 !important}
-.cd-reviewed__role{font-size:13px;color:#555;margin:0 0 5px;line-height:1.4}
-.cd-reviewed__date{font-size:12px;color:#999;margin:0}
-@media(min-width:1500px){.cd-reviewed{display:block;background:#fff;border-radius:10px;box-shadow:rgba(113,113,113,.15) 0 4px 16px 0;padding:22px 20px;text-align:center;margin-bottom:24px;float:right;margin-right:-419px;width:369px;position:relative;z-index:5;margin-top:-114px}
-.col-4>.widget-area{padding-top:328px !important}}
-</style>
-
-<div class="cd-reviewed">
-<img class="cd-reviewed__img" src="https://comdebstage.wpenginepowered.com/wp-content/uploads/2023/03/Chris-Andersen.png" alt="Chris Andersen, Licensed Insolvency Practitioner" width="122" height="122" loading="lazy">
-<p class="cd-reviewed__label">reviewed by</p>
-<p class="cd-reviewed__name">Chris Andersen</p>
-<p class="cd-reviewed__role">Licensed Insolvency Practitioner<br>Regulated by the IPA</p>
-<p class="cd-reviewed__date">Last reviewed: March 2026</p>
-</div>
 
 <!-- INTRO -->
 
@@ -74,8 +26,6 @@ img.post-img.no-lazy-load{display:none !important}
 
 <h2>Types of Company Liquidation</h2>
 
-<p>Before anything else, work out which of these sounds closest to your situation:</p>
-
 <style>
 /* === SHARED DESIGN TOKENS === */
 /* Navy: #002856 | Orange: #FF6600 | Radius: 10px | Shadow: 0 6px 20px rgba(0,40,86,.08) */
@@ -90,76 +40,16 @@ img.post-img.no-lazy-load{display:none !important}
 .main-content h2:first-of-type{margin-top:32px !important}
 .main-content h2+p,.main-content h3+p{margin-top:0}
 
-/* --- Decision router --- */
-.cd-router{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 28px}
-.cd-router>p{display:none}
-.cd-router__card{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;background:#fff;border:none;border-left:4px solid #ccc;border-radius:10px;text-decoration:none;color:inherit;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:transform .2s ease,box-shadow .2s ease}
-.cd-router__card:hover{transform:translateY(-3px);box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
-.cd-router__card:focus-visible{outline:2px solid #002856;outline-offset:2px}
-.cd-router__card--cvl{border-left-color:#002856}
-.cd-router__card--mvl{border-left-color:#1a7a3a}
-.cd-router__card--compulsory{border-left-color:#d63031}
-.cd-router__card--unsure{border-left-color:#FF6600}
-.cd-router__icon{flex-shrink:0;width:36px;height:36px;margin-top:2px}
-.cd-router__body{flex:1;min-width:0}
-.cd-router__title{font-size:16px;font-weight:700;color:#002856;margin:0 0 6px;line-height:1.3}
-.cd-router__desc{font-size:14px;color:#555;margin:0;line-height:1.5}
-.cd-router__arrow{flex-shrink:0;width:20px;height:20px;align-self:center;color:#aaa;transition:color .15s ease,transform .15s ease}
-.cd-router__card:hover .cd-router__arrow{color:#FF6600;transform:translateX(3px)}
-@media(max-width:640px){.cd-router{grid-template-columns:1fr}.cd-router__card{padding:18px 20px}}
 </style>
 
-<div class="cd-router" role="list">
+<p>Before anything else, work out which of these sounds closest to your situation:</p>
 
-  <a href="/creditors-voluntary-liquidation-cvl/" class="cd-router__card cd-router__card--cvl" role="listitem">
-    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="17" stroke="#1B365D" stroke-width="2"/>
-      <path d="M12 18.5l4 4 8-8.5" stroke="#1B365D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div class="cd-router__body">
-      <p class="cd-router__title">You want to close the company yourself</p>
-      <p class="cd-router__desc">Creditors' Voluntary Liquidation (CVL). You appoint the IP. You control the timing.</p>
-    </div>
-    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-
-  <a href="/members-voluntary-liquidation/" class="cd-router__card cd-router__card--mvl" role="listitem">
-    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="17" stroke="#1a7a3a" stroke-width="2"/>
-      <path d="M13 14h10M13 18h10M13 22h6" stroke="#1a7a3a" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <div class="cd-router__body">
-      <p class="cd-router__title">Your company is solvent and you want to extract value</p>
-      <p class="cd-router__desc">Members' Voluntary Liquidation (MVL). Tax-efficient closure when all debts can be paid in full.</p>
-    </div>
-    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-
-  <a href="/compulsory-liquidation/" class="cd-router__card cd-router__card--compulsory" role="listitem">
-    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="17" stroke="#c0392b" stroke-width="2"/>
-      <path d="M18 12v8M18 23v1" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round"/>
-    </svg>
-    <div class="cd-router__body">
-      <p class="cd-router__title">A creditor has filed a petition against you</p>
-      <p class="cd-router__desc">Compulsory liquidation. Court-ordered. The Official Receiver takes control, not you.</p>
-    </div>
-    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-
-  <a href="/insolvency-test/" class="cd-router__card cd-router__card--unsure" role="listitem">
-    <svg class="cd-router__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="18" cy="18" r="17" stroke="#d4830a" stroke-width="2"/>
-      <path d="M15 14.5a3.5 3.5 0 0 1 6.15 2.3c0 2.2-3.15 2.7-3.15 2.7M18 23v1" stroke="#d4830a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div class="cd-router__body">
-      <p class="cd-router__title">You're not sure if the company is insolvent</p>
-      <p class="cd-router__desc">Take our 30-second insolvency test to get a clearer picture before reading further.</p>
-    </div>
-    <svg class="cd-router__arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-
-</div>
+<ul>
+<li><strong>You want to close the company yourself</strong> — <a href="/creditors-voluntary-liquidation-cvl/">Creditors' Voluntary Liquidation (CVL)</a>. You appoint the IP. You control the timing.</li>
+<li><strong>Your company is solvent and you want to extract value</strong> — <a href="/members-voluntary-liquidation/">Members' Voluntary Liquidation (MVL)</a>. Tax-efficient closure when all debts can be paid in full.</li>
+<li><strong>A creditor has filed a petition against you</strong> — <a href="/compulsory-liquidation/">Compulsory liquidation</a>. Court-ordered. The Official Receiver takes control, not you.</li>
+<li><strong>You're not sure if the company is insolvent</strong> — Take our <a href="/insolvency-test/">30-second insolvency test</a> to get a clearer picture before reading further.</li>
+</ul>
 
 <p>If you're unsure which applies, that's normal. Most directors we speak to aren't certain until they've had a proper conversation. The important thing is not to assume you can just <a href="/company-strike-off-and-dissolution/">strike off the company</a> and walk away. If there are unpaid debts, that can backfire badly.</p>
 
@@ -243,54 +133,20 @@ img.post-img.no-lazy-load{display:none !important}
 
 <p>My advice, and I give this to every director I speak to: keep records, don't pay yourself preferentially once you suspect insolvency, and get professional advice before you do anything that changes the company's financial position. The directors who come through this process cleanest are the ones who can show they sought advice early and acted on it. The ones who waited and hoped things would improve? They're the ones who end up in the hardest conversations.</p>
 
-<!-- PERSONAL LIABILITY ASSESSMENT -->
+<h2>Personal Liability in Company Liquidation</h2>
 
-<style>
-.cd-liability{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
-.cd-liability__title{font-size:22px !important;font-weight:700;color:#d63031;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-liability__subtitle{font-size:15px;color:#555;margin:0 0 22px}
-.cd-liability__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px}
-.cd-liability__item{display:flex;align-items:flex-start;gap:12px;padding:18px 20px;background:#fff;border:none;border-radius:10px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0}
-.cd-liability__icon{flex-shrink:0;width:22px;height:22px;color:#d63031;margin-top:1px}
-.cd-liability__text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.5}
-.cd-liability__text strong{font-weight:700;color:#002856}
-.cd-liability__reassurance{background:#fff;border:none;border-radius:10px;padding:20px 22px;margin:0 0 18px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0}
-.cd-liability__reassurance-title{font-size:16px;font-weight:700;color:#1a7a3a;margin:0 0 8px}
-.cd-liability__reassurance-text{font-size:15px;color:#2A2A2E;margin:0;line-height:1.55}
-.cd-liability__footer{font-size:14px;color:#777;margin:0;line-height:1.5}
-@media(max-width:640px){.cd-liability__grid{grid-template-columns:1fr}.cd-liability{padding:22px}}
-</style>
+<p>These are the areas where directors face personal financial risk in liquidation. Not all will apply to you.</p>
 
-<div class="cd-liability">
-<h2 class="cd-liability__title">Personal Liability in Company Liquidation</h2>
-<p class="cd-liability__subtitle">These are the areas where directors face personal financial risk in liquidation. Not all will apply to you.</p>
+<ul>
+<li><strong>Personal guarantees:</strong> bank loans, commercial leases, and credit lines you guaranteed personally survive liquidation. The creditor can pursue you directly.</li>
+<li><strong>Overdrawn director's loan:</strong> if you owe money to the company (DLA in debit), the liquidator will pursue you to repay it.</li>
+<li><strong>Wrongful trading:</strong> if you traded past the point where insolvency was unavoidable, the court can order you to contribute personally to creditor losses.</li>
+<li><strong>Preference payments:</strong> payments to yourself, family, or connected creditors in the run-up to liquidation can be clawed back.</li>
+</ul>
 
-<div class="cd-liability__grid">
-<div class="cd-liability__item">
-<svg class="cd-liability__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="#c0392b" stroke-width="1.5"/><path d="M11 7v5M11 14.5v.5" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/></svg>
-<p class="cd-liability__text"><strong>Personal guarantees:</strong> bank loans, commercial leases, and credit lines you guaranteed personally survive liquidation. The creditor can pursue you directly.</p>
-</div>
-<div class="cd-liability__item">
-<svg class="cd-liability__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="#c0392b" stroke-width="1.5"/><path d="M11 7v5M11 14.5v.5" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/></svg>
-<p class="cd-liability__text"><strong>Overdrawn director's loan:</strong> if you owe money to the company (DLA in debit), the liquidator will pursue you to repay it.</p>
-</div>
-<div class="cd-liability__item">
-<svg class="cd-liability__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="#c0392b" stroke-width="1.5"/><path d="M11 7v5M11 14.5v.5" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/></svg>
-<p class="cd-liability__text"><strong>Wrongful trading:</strong> if you traded past the point where insolvency was unavoidable, the court can order you to contribute personally to creditor losses.</p>
-</div>
-<div class="cd-liability__item">
-<svg class="cd-liability__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="#c0392b" stroke-width="1.5"/><path d="M11 7v5M11 14.5v.5" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/></svg>
-<p class="cd-liability__text"><strong>Preference payments:</strong> payments to yourself, family, or connected creditors in the run-up to liquidation can be clawed back.</p>
-</div>
-</div>
+<p>In 2024-25, around 25,000 companies entered liquidation. The Insolvency Service secured 1,037 disqualification orders. That's roughly a 4% rate, and the vast majority of those were for serious misconduct, not for directors who acted responsibly and sought advice. If you're reading this page and thinking about doing the right thing, the odds are strongly in your favour.</p>
 
-<div class="cd-liability__reassurance">
-<p class="cd-liability__reassurance-title">What the data actually shows</p>
-<p class="cd-liability__reassurance-text">In 2024-25, around 25,000 companies entered liquidation. The Insolvency Service secured 1,037 disqualification orders. That's roughly a 4% rate, and the vast majority of those were for serious misconduct, not for directors who acted responsibly and sought advice. If you're reading this page and thinking about doing the right thing, the odds are strongly in your favour.</p>
-</div>
-
-<p class="cd-liability__footer">Not sure what applies to you? Call us on <strong>0800 074 6757</strong> for a free, confidential assessment of your personal exposure before you make any decisions.</p>
-</div>
+<p>Not sure what applies to you? Call us on <strong>0800 074 6757</strong> for a free, confidential assessment of your personal exposure before you make any decisions.</p>
 
 <!-- COSTS -->
 
@@ -310,50 +166,17 @@ img.post-img.no-lazy-load{display:none !important}
 
 <p>One thing I'd urge you not to do: let the cost of a CVL push you toward striking off the company instead. Strike-off costs almost nothing (£10 for the DS01 form), and I understand the temptation. But if you have unpaid debts, creditors can object, HMRC can restore the company to the register, and you could face investigation for trying to sidestep the formal process. The £10 saving can turn into a much larger problem.</p>
 
-<!-- COST ESTIMATOR -->
+<h3>Liquidation Cost Comparison</h3>
 
-<style>
-.cd-estimator{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
-.cd-estimator__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-estimator__subtitle{font-size:15px;color:#555;margin:0 0 22px}
-.cd-estimator__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:0 0 22px}
-.cd-estimator__card{background:#fff;border:none;border-radius:10px;padding:24px 20px;text-align:center;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:box-shadow .2s ease}
-.cd-estimator__card:hover{box-shadow:rgba(113,113,113,.2) 0 4px 16px 0}
-.cd-estimator__card-label{font-size:12px;color:#777;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;font-weight:600}
-.cd-estimator__card-range{font-size:24px;font-weight:700;color:#002856;margin:0 0 6px}
-.cd-estimator__card-note{font-size:13px;color:#777;margin:0;line-height:1.4}
-.cd-estimator__card--cvl{border-top:3px solid #002856}
-.cd-estimator__card--mvl{border-top:3px solid #1a7a3a}
-.cd-estimator__card--compulsory{border-top:3px solid #d63031}
-.cd-estimator__footer{font-size:14px;color:#777;margin:0;line-height:1.55}
-.cd-estimator__footer strong{color:#002856}
-@media(max-width:640px){.cd-estimator__grid{grid-template-columns:1fr}.cd-estimator{padding:22px}}
-</style>
+<p>Typical fee ranges based on the cases we handle. Your actual cost depends on company complexity.</p>
 
-<div class="cd-estimator">
-<h2 class="cd-estimator__title">Liquidation Cost Comparison</h2>
-<p class="cd-estimator__subtitle">Typical fee ranges based on the cases we handle. Your actual cost depends on company complexity.</p>
+<ul>
+<li><strong>CVL (insolvent):</strong> £4,000 to £6,000 + VAT. The director may offset some or all of this via a redundancy claim.</li>
+<li><strong>MVL (solvent):</strong> £2,000 to £4,000 + VAT. Paid from company assets before final distribution to shareholders.</li>
+<li><strong>Compulsory liquidation:</strong> £3,480+ upfront (court fee £1,880 + Official Receiver deposit £1,600), plus ongoing costs you have no control over.</li>
+</ul>
 
-<div class="cd-estimator__grid">
-<div class="cd-estimator__card cd-estimator__card--cvl">
-<p class="cd-estimator__card-label">CVL (Insolvent)</p>
-<p class="cd-estimator__card-range">£4,000 – £6,000</p>
-<p class="cd-estimator__card-note">+ VAT · director may offset via redundancy claim</p>
-</div>
-<div class="cd-estimator__card cd-estimator__card--mvl">
-<p class="cd-estimator__card-label">MVL (Solvent)</p>
-<p class="cd-estimator__card-range">£2,000 – £4,000</p>
-<p class="cd-estimator__card-note">+ VAT · paid from company assets</p>
-</div>
-<div class="cd-estimator__card cd-estimator__card--compulsory">
-<p class="cd-estimator__card-label">Compulsory</p>
-<p class="cd-estimator__card-range">£3,480+</p>
-<p class="cd-estimator__card-note">court fee £1,880 + OR deposit £1,600 · plus ongoing costs</p>
-</div>
-</div>
-
-<p class="cd-estimator__footer"><strong>Why the range?</strong> Costs depend on the number of creditors, asset complexity, whether employees need to be made redundant, and whether investigations are required. A straightforward single-director company with no assets is at the lower end. A company with stock, debtors, property, and employees will be higher. Call us on <strong>0800 074 6757</strong> for a specific quote based on your situation.</p>
-</div>
+<p>Costs depend on the number of creditors, asset complexity, whether employees need to be made redundant, and whether investigations are required. A straightforward single-director company with no assets is at the lower end. A company with stock, debtors, property, and employees will be higher. Call us on <strong>0800 074 6757</strong> for a specific quote based on your situation.</p>
 
 <!-- ALTERNATIVES -->
 
@@ -482,60 +305,26 @@ img.post-img.no-lazy-load{display:none !important}
 
 </div>
 
-<!-- MENTAL HEALTH AND EMOTIONAL SUPPORT -->
+<h2>Help for Directors Facing Company Liquidation</h2>
 
-<style>
-.cd-support{background:#FBFBFB;border:none;border-radius:10px;padding:24px 22px;margin:36px 0;box-shadow:rgba(113,113,113,.25) 0 9px 25px 0}
-.cd-support__title{font-size:22px !important;font-weight:700;color:#002856;margin:0 0 6px !important;padding:0 !important;border:none !important}
-.cd-support__subtitle{font-size:15px;color:#555;margin:0 0 20px}
-.cd-support__body p{font-size:16px;line-height:1.65;color:#2A2A2E;margin:0 0 16px}
-.cd-support__body p:last-child{margin-bottom:0}
-.cd-support__helplines{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
-.cd-support__helpline{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:none;border-radius:10px;box-shadow:rgba(113,113,113,.1) 0 2px 8px 0;transition:box-shadow .2s ease}
-.cd-support__helpline:hover{box-shadow:rgba(113,113,113,.2) 0 4px 16px 0}
-.cd-support__helpline-icon{flex-shrink:0;font-size:20px;width:28px;text-align:center}
-.cd-support__helpline-text{font-size:14px;color:#2A2A2E;margin:0;line-height:1.45}
-.cd-support__helpline-text strong{display:block;font-size:15px;color:#002856;margin-bottom:3px}
-.cd-support__relief{margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.06)}
-.cd-support__relief p{font-size:16px;line-height:1.6;color:#2A2A2E;margin:0 0 10px}
-@media(max-width:640px){.cd-support__helplines{grid-template-columns:1fr}.cd-support{padding:22px}}
-</style>
+<p>If you're struggling emotionally, you're not unusual. You're normal.</p>
 
-<div class="cd-support">
-<h2 class="cd-support__title">Help for Directors Facing Company Liquidation</h2>
-<p class="cd-support__subtitle">If you're struggling emotionally, you're not unusual. You're normal.</p>
-
-<div class="cd-support__body">
 <p>I've sat across the table from directors who've broken down during our initial conversation. People who built their company from nothing, employed friends and family, and now feel they've let everyone down. That reaction isn't weakness. It's a completely normal response to losing something you built.</p>
 
 <p>Liquidation can trigger genuine grief. The identity you had as a business owner changes overnight. The worry about what the Gazette notice means publicly, the concern about what colleagues and family will think, the difficulty of having that conversation at home. These aren't side issues. For most directors I work with, the emotional weight is harder than the legal process itself.</p>
 
 <p>Two things I'd want you to know. First: thousands of directors go through this every year. You're not alone, and seeking professional advice is the responsible thing to do, not a sign of failure. Second: the directors I've worked with consistently say the same thing once it's over. The reality was more manageable than the fear. The weight does lift.</p>
-</div>
 
-<div class="cd-support__helplines">
-<div class="cd-support__helpline">
-<span class="cd-support__helpline-icon">📞</span>
-<p class="cd-support__helpline-text"><strong>Business Debtline</strong>0800 197 6026 · free, confidential debt advice</p>
-</div>
-<div class="cd-support__helpline">
-<span class="cd-support__helpline-icon">💬</span>
-<p class="cd-support__helpline-text"><strong>Samaritans</strong>116 123 · 24/7, free to call from any phone</p>
-</div>
-<div class="cd-support__helpline">
-<span class="cd-support__helpline-icon">🧠</span>
-<p class="cd-support__helpline-text"><strong>Mind</strong>0300 123 3393 · mental health support and information</p>
-</div>
-<div class="cd-support__helpline">
-<span class="cd-support__helpline-icon">👥</span>
-<p class="cd-support__helpline-text"><strong>Company Debt</strong>0800 074 6757 · free, confidential, no obligation</p>
-</div>
-</div>
+<p>If you need support right now:</p>
 
-<div class="cd-support__relief">
+<ul>
+<li><strong>Business Debtline:</strong> 0800 197 6026 — free, confidential debt advice</li>
+<li><strong>Samaritans:</strong> 116 123 — 24/7, free to call from any phone</li>
+<li><strong>Mind:</strong> 0300 123 3393 — mental health support and information</li>
+<li><strong>Company Debt:</strong> 0800 074 6757 — free, confidential, no obligation</li>
+</ul>
+
 <p>If you're reading this at 2am because you can't sleep, that's okay too. The helplines above are there for exactly this moment. And when you're ready, so are we.</p>
-</div>
-</div>
 
 <!-- NEXT STEP -->
 
