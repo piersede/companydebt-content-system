@@ -67,3 +67,27 @@ A Decision Guide **FAIL**s if:
 - it contains more than 3 major informational branches after the opening
 - it includes a long FAQ section covering secondary queries better suited to supporting pages
 - it explains processes before resolving route selection
+
+### Section function limit
+
+Each section may perform only one primary function:
+- explain
+- compare
+- warn
+- quantify
+- direct action
+
+If a section contains more than one function, it must be split. A CVL section that covers process, employees, cost, and timeline is four functions — it needs splitting or demotion.
+
+### Final action lock requirement
+
+Every decision guide must end with a concrete action section:
+
+```
+## What to do now
+- If HMRC has contacted you → [specific action] today
+- If creditor pressure is escalating → [specific action] within 48h
+- If you are unsure → [specific action]
+```
+
+This replaces soft emotional or generic closing sections. The reader must leave with a time-bound next step, not a summary.

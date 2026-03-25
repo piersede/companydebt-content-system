@@ -477,3 +477,19 @@ Do not use Class C reassurance in YMYL pages without an explicit evidence source
 ### Enforcement
 
 If a reassurance claim cannot be evidenced, remove it or convert it into a concrete process statement. Class C claims without sources fail this gate.
+
+### Reassurance standard
+
+All reassurance on distressed-director pages must be:
+- tied to a legal or process reality (not just emotional comfort)
+- bounded (state what it does NOT guarantee)
+- followed within 1-2 sentences by a concrete action or condition
+
+Disallow vague reassurance based on "most" or "many" without:
+- a named source
+- a stated limit of inference
+- an adjacent operational fact
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself. But if you traded while insolvent or paid yourself preferentially, those are the areas of exposure."
+
+**Not allowed:** "Most directors find the process easier than they expected." (No source, no boundary, no action.)

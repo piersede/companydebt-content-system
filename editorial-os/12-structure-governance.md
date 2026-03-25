@@ -598,3 +598,43 @@ Do not place emotional-support or helpline resources before the user has a worki
 
 - **FAIL** if support/helpline content appears before route selection is resolved
 - **FAIL** if emotional support competes with or interrupts the main decision path
+
+---
+
+## §20 Decision flow enforcement
+
+Every section in a distressed-director decision guide must answer one of:
+- Which route applies?
+- What happens if I delay?
+- What do I personally risk?
+- What will this cost?
+- What should I do next?
+
+If a section does not reduce uncertainty or move the reader toward action, it must be shortened, moved, or removed.
+
+### Fail conditions
+
+- **FAIL** if any body section exists primarily to explain without narrowing the reader's choices
+- **FAIL** if two consecutive sections add context without progressing the decision
+
+---
+
+## §21 Process placement rule
+
+Do not introduce full process explanations before:
+- route selection is clear
+- urgency is established
+- personal exposure is understood
+
+Process sections must follow decision clarity, not precede it.
+
+### Required section order for distressed decision guides
+
+1. Route selection (which path applies)
+2. Urgency and consequences of delay
+3. Personal exposure and risk
+4. Process mechanics (how it works)
+5. Costs and funding
+6. Alternatives (branch-outs only)
+7. Support resources
+8. Final action lock
