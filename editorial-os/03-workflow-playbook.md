@@ -153,3 +153,21 @@ Before publishing, verify:
 - decision value
 - authorship credibility
 - rubric scores (no dimension below 3, average 4+)
+
+---
+
+## Supporting-page offload rule
+
+Before drafting any Company Debt decision guide, classify each subtopic as one of:
+- **core** to the page decision
+- **adjacent but necessary** — needed for context, included as a short section
+- **supporting content to link out** — belongs on its own page
+
+No page may retain more than 2 adjacent-but-necessary subtopics as full sections. All other subtopics must be converted into:
+- branch-out blocks (2-3 sentence qualification with link)
+- inline links
+- dedicated supporting pages
+
+### Enforcement
+
+If a draft contains more than 2 full adjacent sections, fail the workflow planning stage. The architect must either split the page or demote subtopics to branch-out blocks before drafting begins.

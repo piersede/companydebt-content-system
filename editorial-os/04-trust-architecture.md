@@ -97,3 +97,22 @@ Strong trust signals include:
 - at least one dimension where Company Debt is acknowledged as weaker (in framework content)
 - specific pricing figures where cost is part of the argument
 - `[HUMAN CONFIRMATION NEEDED]` flags where claims require verification
+
+---
+
+## 10. Objection stack for Company Debt pages
+
+Resolve the top objections in the main body in this order:
+1. urgency / control
+2. personal exposure
+3. cost / funding
+4. alternatives
+5. action now
+
+FAQ may only contain lower-priority residual questions.
+
+If affordability, HMRC visibility, or personal liability first appears in FAQ, fail trust architecture.
+
+### Rationale
+
+The persona framework identifies specific decision blockers for each persona-state. These must be resolved in the body where they carry structural weight, not deferred to an FAQ section where they become afterthoughts. Core objections buried in FAQ reduce decision usefulness and signal weak page architecture.

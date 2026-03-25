@@ -211,13 +211,13 @@ When building or modifying credit card pages via `cc_builder`:
 
 ## Governance file index
 
-- `09-voice-governance.md` — authorship, first person, padded evaluation, vendor tone, conclusion discipline, Rules K/L/M, alternatives voice, authorship integrity (§15)
-- `10-evidence-governance.md` — claim support, hedging, sourcing, claim labels, corroboration, market-pattern controls
+- `09-voice-governance.md` — authorship, first person, padded evaluation, vendor tone, conclusion discipline, Rules K/L/M, alternatives voice, authorship integrity (§15), insolvency human authority pattern (§16)
+- `10-evidence-governance.md` — claim support, hedging, sourcing, claim labels, corroboration, market-pattern controls, distress reassurance evidence rule (§13)
 - `11-comparison-governance.md` — competitor claims, frameworks, pricing, Company Debt mentions, trust architecture, alternatives governance
-- `12-structure-governance.md` — openings, endings, section discipline, first-fold pattern, persona-state purity gate (§12), route separation (§13), distressed first-screen (§14), section purpose test (§15), FAQ completion (§16), decision support density (§17)
+- `12-structure-governance.md` — openings, endings, section discipline, first-fold pattern, persona-state purity gate (§12), route separation (§13), distressed first-screen (§14), section purpose test (§15), FAQ completion (§16), decision support density (§17), distressed-page body control (§18)
 - `13-readability-governance.md` — paragraphs, em dashes, emphasis, formatting
 - `14-failure-modes-and-recovery.md` — 27 failure modes including AI prose fingerprints, mixed-confidence meta-copy
-- `23-prose-quality-gates.md` — 10 enforcement gates for YMYL financial copy: fact pattern, scenario validity, meta-copy, human-impact, product-type clarity, generic-intensifier ban, YMYL opening router, financial objectivity, sentence texture, original-source-only constraint
+- `23-prose-quality-gates.md` — 12 enforcement gates for YMYL financial copy: fact pattern, scenario validity, meta-copy, human-impact, product-type clarity, generic-intensifier ban, YMYL opening router, financial objectivity, sentence texture, original-source-only constraint, distress reassurance statistics constraint (§11), body decision density gate (§12)
 - `15-good-vs-bad-examples.md` — concrete examples of good and bad writing
 - `16-pre-publish-gate.md` — 19-check gate (was 14), all must pass before publication. New checks: persona-state purity (16), distressed first-screen (17), FAQ completion (18), authorship integrity (19)
 - `17-audience-and-persona.md` — default reader, practice segments, tone guidance

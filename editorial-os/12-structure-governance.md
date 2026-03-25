@@ -558,3 +558,24 @@ Count the words between decision support elements. If any stretch exceeds 350 wo
 ### Exception
 
 Methodology and disclosure sections are exempt from this rule.
+
+---
+
+## §18 Distressed-page body control
+
+After the opening, distressed-director pages must maintain decision density.
+
+No body section may exceed 180 to 220 words without one decision-support element:
+- checklist
+- comparison
+- timeline
+- warning box
+- threshold box
+- consequence summary
+- immediate next step
+
+If two consecutive body sections fail this test, fail structure governance.
+
+### Rationale
+
+The persona framework is explicit that distressed directors cannot process walls of text after the opening. The intro improvement from §14 is necessary but not sufficient — the body must maintain the same structural discipline throughout.

@@ -582,3 +582,25 @@ The voice register of the article must match the declared authorship. Mixed auth
 ### Detection
 
 Read the first-person instances in the article. For each one, check: does the byline support this level of personal authority? If the byline says "Reviewed by" but the prose says "I speak to directors every week," there is a mismatch.
+
+---
+
+## §16 Human authority pattern for insolvency pages
+
+Use:
+- "you" to frame the reader's practical exposure, deadlines, and next decisions
+- firm "we" only where it signals real institutional capability, repeated practice, or process clarity
+- named reviewer signals only where they anchor accountability, not as decorative credentials
+
+Avoid:
+- generic reassurance without operational detail
+- abstract authority claims not tied to what the firm actually does
+- repeating "free, confidential, no obligation" as a substitute for substance
+
+Every reassurance sentence on a distressed page must be paired with one concrete operational fact, threshold, or next step within the next 1 to 2 sentences.
+
+### Fail conditions
+
+- **FAIL** if reassurance appears without adjacent operational detail
+- **FAIL** if "we" is used more than twice without anchoring to a specific practice or process
+- **FAIL** if the page relies on generic brand warmth rather than grounded, specific consequences

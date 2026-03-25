@@ -432,3 +432,22 @@ For every sentence containing a banned phrase, ask: "What is the basis for this 
 If the only available source is a competitor site, the claim must be independently verified against the provider's own documentation, or flagged with `[VERIFY — only competitor source found]`.
 
 Full rules and enforcement: `23-prose-quality-gates.md` §10.
+
+---
+
+## §13 Distress reassurance evidence rule
+
+Do not use broad market statistics to imply low personal risk.
+
+If a statistic is used to reassure a distressed reader, the copy must:
+- state what the statistic does and does not show
+- avoid derived emotional conclusions
+- tie the number to a concrete legal or process point
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself."
+
+**Restricted:** Broad ratio-based reassurance implying personal safety from aggregate market data (e.g. "only 4% of directors face action, so your odds are good").
+
+### Rationale
+
+Population-level statistics can easily become over-comforting or legally imprecise. A director reading this content needs to understand that outcomes depend on their specific conduct, not on sector averages. Using aggregate data primarily to calm fear creates a trust risk and a potential regulatory exposure under YMYL standards.

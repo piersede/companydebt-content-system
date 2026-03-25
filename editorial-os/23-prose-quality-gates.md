@@ -267,3 +267,39 @@ For each bad example submitted:
 2. Output the corrected copy
 3. Output the architecture patch needed to stop recurrence
 4. Output only patch-ready instructions, not commentary
+
+---
+
+## §11 Distress reassurance statistics constraint
+
+Do not use sector-level statistics primarily to calm the reader unless:
+- the statistic is directly relevant to the decision at hand
+- the limit of the inference is stated
+- the risk category is defined narrowly
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself."
+
+**Restricted:** Broad ratio-based reassurance implying personal safety from aggregate market data.
+
+### Enforcement
+
+If a reassurance claim relies on a population-level statistic, the next 1-2 sentences must state the boundary of the inference. If the boundary is missing, fail this gate.
+
+---
+
+## §12 Body decision density gate (distressed pages)
+
+After the first screen, no body section on a distressed-director page may exceed 180-220 words before one of the following appears:
+- a comparison block
+- a checklist
+- a threshold box
+- a timeline
+- a consequence summary
+- a next-step instruction
+- a warning box
+
+If two consecutive sections exceed this limit without decision-support formatting, fail readability and structure.
+
+### Cross-reference
+
+This gate enforces the structural requirement from `12-structure-governance.md` §18. It runs as part of the prose quality gate sequence, after §10 (original-source-only) and before the output contract.

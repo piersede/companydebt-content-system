@@ -794,4 +794,32 @@ Before final output, check:
 
 If no to any, revise.
 
+---
+
+## Insolvency-page human authority rule
+
+On insolvency pages:
+- use "you" for concrete reader impact and action
+- use "we" only where it reflects real practice, repeated operational knowledge, or institutional process
+- keep reassurance adjacent to operational detail
+- prefer grounded, specific consequences over generic brand warmth
+
+Humanity comes from specificity, accountability, and decision usefulness, not from soft reassurance.
+
+### Pronoun mechanics for insolvency content
+
+- "you" frames the reader's practical exposure, deadlines, and next decisions
+- firm "we" signals real institutional capability, repeated practice, or process clarity
+- named reviewer signals anchor accountability, not decorative credentials
+
+### Anti-patterns
+
+- generic reassurance without operational detail
+- abstract authority claims not tied to what the firm actually does
+- repeating "free, confidential, no obligation" as a substitute for substance
+
+### Pairing rule
+
+Every reassurance sentence on a distressed page must be paired with one concrete operational fact, threshold, or next step within the next 1 to 2 sentences.
+
 End of file

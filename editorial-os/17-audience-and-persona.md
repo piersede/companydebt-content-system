@@ -99,3 +99,18 @@ Writing fails this audience if it:
 - claims lived implementation authority not actually established
 - sounds like a founder letter rather than an editorial analysis
 - treats business owners as non-technical or naive
+
+---
+
+## Life-after branch rule
+
+If the persona-state includes shame, grief, or founder-identity loss, add one short branch-out block near the end:
+- what happens after this route
+- whether directors can start again
+- where to go next
+
+Do not turn emotional support into a long standalone section unless the page type is recovery-oriented.
+
+### Rationale
+
+The persona framework identifies a competitive gap around "life after liquidation" and the resilient founder mindset. The current system partly compensates with emotional support sections, but the architecture should formalise that as a branch pattern — useful but contained — rather than burying it in a long support section that changes the page's purpose.
