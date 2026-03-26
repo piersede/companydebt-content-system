@@ -330,3 +330,39 @@ At least once in the first 30% of the page, include:
 - **FAIL** if the page sounds correct but disembodied (no accountable voice)
 - **FAIL** if expertise is implied but no institutional or practitioner presence is visible
 - **FAIL** if sections explain without judging or recommending
+
+---
+
+## §14 Intent payoff rule
+
+Every paragraph must deliver its payoff in the first sentence. The reader should know what this paragraph does for them before finishing sentence one.
+
+### Required pattern
+
+The first sentence of every paragraph must do one of:
+- state a conclusion or decision the reader can act on
+- state a consequence the reader faces
+- state a specific action the reader should take
+
+### Prohibited opening patterns
+
+- **Method-first:** "How most directors fund it..." → lead with the conclusion instead
+- **Compliance-first:** "You must cooperate fully..." → lead with the consequence of not doing so
+- **Statistic-first:** "HMRC accounts for 60%..." → lead with what that means for the reader
+- **Generic advice:** "Keep records and seek advice..." → lead with what specifically goes wrong if they don't
+- **Abstract reassurance:** "Directors who acted early come through cleanest..." → convert to a specific action
+
+### Three-test gate
+
+Every paragraph must pass all three:
+1. **Payoff test** — does the first sentence reduce uncertainty or risk for the reader?
+2. **Decision test** — does the paragraph help the reader decide something?
+3. **Progression test** — does the paragraph move the narrative forward?
+
+A paragraph that fails any test is filler and must be rewritten or removed.
+
+### Fail conditions
+
+- **FAIL** if any paragraph delays its payoff past the first sentence
+- **FAIL** if a paragraph opens with method, compliance, or statistics before stating what it means for the reader
+- **FAIL** if two consecutive paragraphs fail the payoff test
