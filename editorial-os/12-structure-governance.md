@@ -779,3 +779,157 @@ Every section in an insolvency guide must declare one role only:
 
 - **FAIL** if a section attempts multiple roles before its first 2 sentences
 - **FAIL** if a section combines compare + reassure + explain + convert in the same opening
+
+---
+
+## §29 Standard structures for insolvency articles
+
+These structures are mandatory at article-type level. Subheadings may be expanded to capture adjacent search intent, provided the article keeps the same structural logic.
+
+### 1. Definition article
+
+Use when the reader is trying to understand a term, event, or formal insolvency concept.
+
+Required order:
+1. Introduction
+2. What [topic] means
+3. When [topic] happens or applies
+4. Why [topic] matters
+5. How [topic] works in practice
+6. What [topic] means for directors / shareholders / creditors / employees, where relevant
+7. Risks, consequences, or legal effects
+8. Related procedures, alternatives, or next-stage events
+9. Frequently asked questions
+10. Next steps
+
+Typical SEO-rich subheading patterns:
+- What is [topic]?
+- When does [topic] happen?
+- How does [topic] work?
+- What happens if [topic] occurs?
+- What does [topic] mean for directors?
+- [Topic] vs [related term]
+- Can [topic] be stopped / avoided / reversed?
+
+### 2. Procedure article
+
+Use when the reader is trying to understand, complete, or prepare for a formal process.
+
+Required order:
+1. Introduction
+2. When this procedure is used
+3. Who can use it / eligibility / trigger conditions
+4. How the procedure works step by step
+5. What documents, decisions, approvals, or thresholds are involved
+6. How long the procedure takes
+7. What the procedure costs
+8. What happens once the process starts
+9. What happens at the end of the process
+10. Risks, mistakes, or reasons the route may be unsuitable
+11. Alternatives
+12. Frequently asked questions
+13. Next steps
+
+Typical SEO-rich subheading patterns:
+- How to [procedure]
+- Can I [procedure] if the company has debts?
+- How long does [procedure] take?
+- How much does [procedure] cost?
+- What forms or decisions are needed for [procedure]?
+- What happens after [procedure] starts?
+- Alternatives to [procedure]
+
+### 3. Decision article
+
+Use when the reader is comparing routes or deciding which option fits their situation.
+
+Required order:
+1. Introduction
+2. The decision the reader is trying to make
+3. Overview of the options being compared
+4. What option 1 is and when it fits
+5. What option 2 is and when it fits
+6. Key differences
+7. Cost comparison
+8. Speed / control / risk comparison
+9. Which option is better in which situation
+10. Edge cases, exceptions, or common misunderstandings
+11. Frequently asked questions
+12. Recommendation or next steps
+
+Typical SEO-rich subheading patterns:
+- [Option 1] vs [Option 2]
+- Is [option 1] better than [option 2]?
+- Can I use [option 1] if the company has debts?
+- Which is cheaper: [option 1] or [option 2]?
+- Which is faster: [option 1] or [option 2]?
+- When should you choose [option 1] instead of [option 2]?
+
+### 4. Problem-solution article
+
+Use when the reader is dealing with an active problem, warning sign, creditor pressure, or formal legal threat.
+
+Required order:
+1. Introduction
+2. What this problem means
+3. Why it matters now
+4. What happens if it is ignored
+5. Immediate steps to take
+6. What evidence, documents, or facts need to be checked
+7. Formal options available
+8. What the reader should avoid doing
+9. What this means for the company, directors, assets, bank accounts, staff, or creditors, where relevant
+10. When professional advice becomes urgent
+11. Frequently asked questions
+12. Urgent next steps
+
+Typical SEO-rich subheading patterns:
+- What happens if you ignore [problem]?
+- How serious is [problem]?
+- How long do you have to respond to [problem]?
+- Can you stop [problem]?
+- What should directors do after [problem]?
+- Can the company still trade after [problem]?
+- Does [problem] affect bank accounts / employees / personal liability?
+
+### 5. Route-explainer article
+
+Use when the reader needs to understand the available closure, insolvency, or rescue routes before choosing one.
+
+Required order:
+1. Introduction
+2. The main routes available
+3. What each route means
+4. Which routes are for solvent companies and which are for insolvent companies
+5. When each route is usually appropriate
+6. Cost, speed, control, and risk differences
+7. What happens under each route
+8. How to choose the right route
+9. Common mistakes and route-selection errors
+10. Frequently asked questions
+11. Next steps
+
+Typical SEO-rich subheading patterns:
+- How to close a company
+- What are the main ways to close a company?
+- Can you close a company with debts?
+- Strike off vs liquidation
+- Solvent vs insolvent company closure
+- Which closure route is right for my company?
+
+### Opening rule for insolvency pages
+
+The introduction must establish:
+1. what the topic is
+2. what practical question the article answers
+3. what the reader will understand, compare, or be able to decide after reading
+
+The opening should also naturally support the page's primary query and closely related variants.
+
+### Section expansion rule
+
+When expanding a structure for SEO coverage, add sections that deepen the approved article type rather than drift into another type.
+
+Good expansion: adding costs, timing, consequences, and alternatives to a procedure page.
+
+Poor expansion: turning a definition page into a bloated catch-all guide with disconnected procedural and comparison sections.

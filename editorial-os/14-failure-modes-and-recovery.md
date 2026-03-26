@@ -629,3 +629,26 @@ Three distinct failures compound in a single passage: (1) a precise figure paire
 4. Apply the Human-Impact Enforcer (§4): ensure every paragraph ends with a reader consequence
 5. Apply the Generic-Intensifier Ban (§6): replace empty emphasis with the exact mechanism
 6. Run the `comparison_para_mixed_confidence_and_meta_copy` test (see `23-prose-quality-gates.md`)
+
+---
+
+## 28. Structurally correct but search-thin insolvency page
+
+**What it looks like:**
+The article uses the right article type (Definition, Procedure, Decision, Problem-solution, or Route-explainer) and follows the approved section order. But the outline is too narrow to compete for the real query cluster.
+
+**Why it is a problem:**
+A structurally tidy page that misses the obvious follow-on questions loses to competitors who cover the full intent cluster. The page looks editorially clean but is commercially incomplete. It answers the core query but leaves adjacent questions unanswered, pushing the reader back to the SERP.
+
+**Symptoms to search for:**
+1. Core query is answered, but obvious follow-on questions are missing (e.g., a CVL procedure page that covers the steps but omits costs, timing, or director conduct)
+2. Headings are clean but sparse — fewer H2s than competing top-10 pages
+3. The page feels editorially tidy but thin when compared to the query cluster
+4. No FAQ section, or FAQ covers only 2-3 questions when the query cluster has 8-10
+
+**Correction protocol:**
+1. Keep the same article type — do not change the structural model
+2. Map the query cluster (People Also Ask, related searches, competitor H2s)
+3. Expand the section plan with the missing adjacent intents
+4. Add keyword-rich subheadings where they deepen the same structural model
+5. Re-check that the page still reads as one coherent article type rather than a stitched-together collection of answers

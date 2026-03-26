@@ -258,7 +258,66 @@ What this process helps you do, when to use it, preconditions, step-by-step proc
 
 ---
 
-## 1.12 Editorial image evidence system
+## 1.12 Insolvency article structure classification
+
+For insolvency content, article structure must be chosen by topic intent.
+
+Before drafting, classify the page into one of these five structure types:
+
+1. Definition article
+2. Procedure article
+3. Decision article
+4. Problem-solution article
+5. Route-explainer article
+
+This classification is structural. It determines section order, section purpose, and the range of search intents the article should absorb.
+
+The writer must select one primary structure type and build the page around that structure.
+
+### Structure-type mapping examples
+
+- `what is insolvency` → Definition article
+- `what is liquidation` → Definition article
+- `what is a winding up petition` → Definition article
+- `how to strike off a company` → Procedure article
+- `creditors voluntary liquidation process` → Procedure article
+- `strike off vs liquidation` → Decision article
+- `can I close a company with debts` → Decision article
+- `received a winding up petition` → Problem-solution article
+- `company owes HMRC and cannot pay` → Problem-solution article
+- `how to close a company` → Route-explainer article
+- `company closure options` → Route-explainer article
+
+### Required output at brief stage
+
+Every insolvency brief must state:
+
+- Primary structure type
+- Query
+- Reader task
+- Required section order
+- Core subheading set
+- Adjacent search questions to absorb
+
+If the structure type is unclear, resolve that before drafting.
+
+### SEO application
+
+Within the chosen structure type, section planning should absorb the major related search questions that naturally sit beneath the core query.
+
+This does not mean adding generic filler sections. It means expanding the approved structure so the article covers the obvious related intents a strong guide should satisfy.
+
+Examples:
+
+- a definition page should usually absorb meaning, consequences, timing, who is affected, and related alternatives
+- a procedure page should usually absorb eligibility, steps, timing, costs, documents, mistakes, and what happens next
+- a decision page should usually absorb differences, suitability, risks, costs, speed, control, and edge cases
+- a problem-solution page should usually absorb urgency, immediate actions, consequences of delay, formal options, and common defensive questions
+- a route-explainer page should usually absorb all main routes, differences, suitability, risks, and route-selection logic
+
+---
+
+## 1.13 Editorial image evidence system
 
 Full rules in `19-editorial-image-evidence.md`. Every visual asset must advance a claim, answer a reader question, or provide evidence that text alone cannot deliver. Core requirements:
 

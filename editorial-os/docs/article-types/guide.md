@@ -124,3 +124,24 @@ Goal: compare CVA / administration / negotiation / liquidation.
 A Company Debt guide must translate the reader's problem language into the correct legal route.
 
 Do not assume route-name literacy. Do not make the reader decode acronyms in the first paragraph. Name the route after the page has already explained, in ordinary language, what the route actually is.
+
+---
+
+## Insolvency guide pages
+
+Insolvency guides must use the insolvency structure classification in `01-master-methodology.md` §1.12 and the matching section order in `12-structure-governance.md` §29.
+
+The structure must be selected first. The outline must then be expanded with keyword-relevant subheadings that absorb adjacent search intent without breaking the article type.
+
+Guide planning for insolvency content must do two things together:
+
+1. choose the correct structural model
+2. widen the subheading plan to capture the obvious related questions attached to that query cluster
+
+Examples:
+
+- a page targeting `what is insolvency` should usually cover meaning, tests, causes, consequences, who is affected, and related procedures
+- a page targeting `how to strike off a company` should usually cover eligibility, process, timing, costs, debts, objections, and alternatives
+- a page targeting `strike off vs liquidation` should usually cover differences, suitability, risks, cost, speed, control, and debt scenarios
+
+The guide should feel complete for the search intent, not merely structurally tidy.

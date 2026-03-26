@@ -153,3 +153,16 @@ Score each item 1 (fail) or 0 (pass). Any 2 failures caps the article at "needs 
 - 0–1 failures: passes alternatives integrity check
 - 2–3 failures: article capped at draft; requires rewrite before publish
 - 4+ failures: structural fail; article must be rebuilt from the alternatives-page-outline template
+
+---
+
+## S-Structure fit (insolvency articles)
+
+Does the article use the correct insolvency structure type for the query (see `01-master-methodology.md` §1.12) and expand it into a genuinely search-complete outline (see `12-structure-governance.md` §29)?
+
+Score down when:
+- the article uses the wrong structure type for the query intent
+- the page is structurally neat but too thin for the query cluster
+- the page adds SEO-shaped sections that do not fit the governing article type
+- the section order weakens clarity or decision support
+- the article drifts from one structure type into another mid-page

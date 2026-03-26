@@ -549,3 +549,19 @@ Fail if the page contains:
 - more than 3 CTA moments before the closing section (see `04-trust-architecture.md` §11)
 
 See `21-wordpress-technical-build-quality.md` §22 for the full page assembly contract.
+
+---
+
+## Check 21: Structure-type compliance [Tier 1]
+
+For insolvency articles only. See `01-master-methodology.md` §1.12 and `12-structure-governance.md` §29.
+
+**Pass** only if the insolvency article clearly matches one approved structure type (Definition, Procedure, Decision, Problem-solution, or Route-explainer) and follows its required structural logic.
+
+A page can be broader than the minimum template, but the added sections must still support the same article type and search intent.
+
+**FAIL** if:
+- the article uses the wrong structure type for the query
+- the section order does not match the reader task
+- the article has been expanded with generic sections that do not serve the query cluster
+- the article drifts from one structure type into another mid-page
