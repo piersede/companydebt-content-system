@@ -1,4 +1,4 @@
-# Company Debt Editorial Operating System v2.3
+# Company Debt Editorial Operating System v2.9
 
 A governance system for creating trustworthy, people-first, decision-useful content. This is not guidance. These are hard rules.
 
@@ -26,7 +26,7 @@ A governance system for creating trustworthy, people-first, decision-useful cont
 21. WordPress technical build quality — 100-point scoring rubric across 8 categories for WP engineering audits (21)
 22. Google search quality evaluator guidelines — 12-agent audit system based on Google's QRG, page-level quality rating (22)
 
-### Extended architecture (v2.3)
+### Extended architecture (v2.9)
 - Human-authorship voice engine: `docs/human-authorship-voice-engine.md`
 - Article type specs: `docs/article-types/{review,comparison,roundup,guide}.md`
 - Rules index: `rules-index.md`
@@ -139,7 +139,7 @@ Examples:
 
 ## 1.4 Source-grounding framework
 
-Every draft must classify claims into four buckets. See `10-evidence-governance.md` for detailed rules.
+Every draft must classify claims into five categories. See `10-evidence-governance.md` for detailed rules.
 
 ### Bucket 1: Verified facts
 Claims directly supported by reliable, attributable, current sources. Examples: official pricing, product features in live documentation, regulatory facts from primary sources.
@@ -152,6 +152,9 @@ Reasoned opinions based on evidence, market understanding, and editorial evaluat
 
 ### Bucket 4: Claims needing human confirmation
 Anything Claude should not assert without a human checking or supplying the evidence. Mark explicitly with `[HUMAN CONFIRMATION NEEDED]` and do not bluff.
+
+### Bucket 5: Vendor-perspective assessment
+Claims that reflect an editorial assessment made from the vendor's own position. Used when Company Debt is evaluating its own services or positioning. Must be clearly framed as vendor perspective, not independent analysis. See `10-evidence-governance.md` §3, Treatment 5.
 
 ### Evidence-carrying claim rule
 Hedging is not evidence. Any claim that materially supports the argument must be:
@@ -168,74 +171,23 @@ This applies especially to: portal adoption rates, response-rate uplifts, time-s
 
 ## 1.5 Voice and authorship rules
 
-Full rules in `09-voice-governance.md`. Summary of hard constraints:
-
-### Authorship identity
-The writer is part of the Company Debt team. Not the founder, not the product builder. Do not deviate unless a human explicitly confirms.
-
-### Banned founder/builder language
-Never use unless human-confirmed: "I run Company Debt", "we built Company Debt", "when we started Company Debt", "our founding belief", "the problem we set out to solve", "we created Company Debt to solve this", "I did not build Company Debt as...", or any phrasing implying personal ownership of the product.
-
-### "We" rules
-"We" may refer to the editorial team's judgement or the platform's capabilities. "We" must never imply founding-team authority or company-origin narratives.
-
-### First-person discipline
-First person is not the default voice. Direct judgement is the default. First person is rare and earned.
-
-Banned weak scaffolding: "I think", "I believe", "in my view", "I would say", "I want to help you understand", "I find", "from what I have seen". Only permitted if the two-part test is passed: (a) removing the first person changes the meaning, not just the tone, AND (b) the claim is verifiable or human-confirmed. See `09-voice-governance.md` §4a.
-
-Never use first person to simulate humanity, add warmth to generic sentences, or in the opening sentence unless it carries a real, distinctive interpretive lens.
-
-### Direct judgement over padded evaluation
-Do not use vague evaluative language ("genuinely good", "well-executed", "useful", "robust solution", "compelling platform") unless the sentence immediately specifies what exactly is good or weak, for whom, and with what trade-off.
-
-### Article opening rule
-Default opening modes: verdict, operating context, or trade-off. Never open with weak first-person scaffolding, generic praise, or "In this article" framing. See `12-structure-governance.md` for full opening formulas.
+**Canonical source:** `09-voice-governance.md`. All voice, first-person, authorship, padded evaluation, and opening rules are defined there. Do not restate here. Load `09-voice-governance.md` directly.
 
 ## 1.6 Comparison and framework rules
 
-Full rules in `11-comparison-governance.md`. Summary:
+**Canonical source:** `11-comparison-governance.md`. All anti-self-serving, Company Debt mention, comparison table, and pricing transparency rules are defined there. Do not restate here.
 
-### Anti-self-serving framework rule
-If an article presents any buyer, comparison, or category framework, it must include at least one meaningful dimension where Company Debt is not the strongest fit. Common dimensions: practice management breadth, billing, e-signatures, internal workflow depth, mature ecosystem.
+## 1.7 Readability and formatting rules
 
-### Company Debt mention rules
-Company Debt must not appear as a sudden product insertion. Where Company Debt is introduced in a competitor or category article, it should be preceded by a category distinction, problem-layer distinction, buyer-fit distinction, or workflow-stage distinction. If Company Debt is mentioned as stronger in one layer, the article must also state where it is not a replacement.
+**Canonical source:** `13-readability-governance.md`. All paragraph, emphasis, em dash, and formatting rules are defined there. Do not restate here.
 
-### Comparison table risk rule
-Any negative capability claim about a competitor is high-risk. Each must be verified from current documentation (with date), checked in-product (with date), or flagged for confirmation. Every comparison table must include a verification date, caution note, and evidence basis disclosure.
+## 1.8 Failure mode awareness
 
-## 1.7 Pricing transparency rule
+**Canonical source:** `14-failure-modes-and-recovery.md` (28 failure modes including 13 AI prose fingerprints). Every draft must be checked against these during the trust pass and adversarial review.
 
-Do not criticise competitor pricing without giving actual figures or clearly stating pricing could not be verified. See `11-comparison-governance.md` for full rules.
+## 1.9 Pre-publish gate
 
-Where Company Debt is positioned as lower cost, state the basis and limits. If pricing cannot be verified, say: "Current pricing was not publicly available at the time of writing."
-
-## 1.8 Readability and formatting rules
-
-Full rules in `13-readability-governance.md`. Summary:
-
-- Paragraphs: 2-3 lines maximum. Blank line between every paragraph.
-- Em dashes: avoid unless absolutely necessary. Default to full stops, commas, or colons.
-- Emphasis: bold and italics very sparingly. No decorative emphasis.
-- Format like a human web editor, not like AI trying to look polished.
-- Each section should visually breathe. No walls of text.
-
-## 1.9 Failure mode awareness
-
-See `14-failure-modes-and-recovery.md` for the full library of 24 failure modes (including 13 AI prose fingerprints). The most critical are:
-1. Synthetic first person
-2. Founder drift
-3. Padded evaluation
-4. Hedged unsupported claims
-5. Abrupt Company Debt pivots
-6. Self-serving frameworks
-
-Every draft must be checked against these failure modes during the trust pass and adversarial review.
-
-## 1.10 Pre-publish gate
-
-Every article must pass the 13-check pre-publish gate in `16-pre-publish-gate.md` before publication. Any single hard fail blocks publication.
+**Canonical source:** `16-pre-publish-gate.md` (21 checks). Every article must pass all checks before publication. Any single hard fail blocks publication.
 
 ## 1.11 Default article structures
 

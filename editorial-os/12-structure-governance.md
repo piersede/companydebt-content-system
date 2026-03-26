@@ -562,7 +562,7 @@ FAQ answers must:
 
 ### Rule
 
-For pages targeting distressed-director queries, every 250-350 words must contain at least one decision support element:
+For pages targeting distressed-director queries, every 250-350 words must contain at least one decision support element. For acute distress pages (crisis-defense, winding-up petition, HMRC enforcement), the tighter threshold in §18 (180-220 words) applies instead.
 
 - Decision table or comparison
 - Checklist or numbered steps
@@ -666,20 +666,14 @@ Process sections must follow decision clarity, not precede it.
 
 ---
 
-## §22 Section intent purity
+## §22 Section intent purity [CONSOLIDATED INTO §15]
 
-Each section must serve exactly one intent:
-- **Immediate action** (crisis — what to do right now)
-- **Decision** (comparison — help the reader choose between options)
-- **Explanation** (supporting — background needed to understand the decision)
+This rule has been merged into §15 (Section Purpose Test). The intent-purity requirement (first 2 sentences must deliver the section's purpose) is now enforced as part of §15. The three intent categories (immediate action, decision, explanation) map to §15's role taxonomy as follows:
+- Immediate action → orient, warn, convert
+- Decision → compare, qualify
+- Explanation → reassure, branch out
 
-The first two sentences of every section must deliver that intent. If a reader cannot identify what the section is for within 2 sentences, it fails.
-
-### Fail conditions
-
-- **FAIL** if a section mixes explanation with decision without structural separation
-- **FAIL** if a section delays its purpose beyond sentence 2
-- **FAIL** if an explanation section exists without connecting to a decision the reader faces
+See §15 for the canonical section purpose test.
 
 ---
 

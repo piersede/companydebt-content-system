@@ -541,7 +541,7 @@ If the evaluative claim cannot be grounded in reasoning, comparison, or conseque
 
 ---
 
-## 25. Taxonomic human-flattening
+## 25b. Taxonomic human-flattening
 
 **What it looks like:**
 The article is structurally correct but reads like a categorisation engine rather than a human guide. Sections have compressed labels. Sentences are clipped and declarative. Workflow problems are described in abstract SaaS shorthand rather than lived consequences.

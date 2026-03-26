@@ -101,7 +101,7 @@ Google penalises pages with distracting or annoying elements (`clutterScore`). T
 
 **Rules:**
 - Do not embed promotional banners mid-article that break reading flow.
-- Do not stack multiple Company Debt CTAs inside a single article — one natural CTA per article is the limit.
+- Do not stack multiple Company Debt CTAs inside a single article. Default: one natural CTA per article. Exception: distressed-director pages may use up to 3 CTA moments (opening, contextual, closing) per `04-trust-architecture.md` §11, provided each sits within editorial context and no two adjacent sections contain CTAs.
 - Avoid decorative visual inserts that add no information value.
 
 ---
@@ -251,7 +251,7 @@ Run this after the main pre-publish gate. All items must pass.
 | S9 | Internal links in | Article linked from at least one existing page (or scheduled for linking post-publication) |
 | S10 | Image alt text | Every image has specific, descriptive alt text — not generic or keyword-stuffed |
 | S11 | Freshness date | Last-reviewed date visible on decision-stage pages |
-| S12 | CTA density | No more than one Company Debt CTA per article; CTAs sit within editorial context |
+| S12 | CTA density | Default: 1 CTA per article. Distressed pages: up to 3 (opening, contextual, closing). All CTAs must sit within editorial context |
 
 ---
 

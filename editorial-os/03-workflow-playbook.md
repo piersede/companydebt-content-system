@@ -155,7 +155,7 @@ Pause and mark where a human must add:
 Every `[HUMAN CONFIRMATION NEEDED]` flag must remain visible until resolved.
 
 ## Stage 9: Pre-publish gate
-Run the 13-check pre-publish gate from `16-pre-publish-gate.md`.
+Run the 21-check pre-publish gate from `16-pre-publish-gate.md`.
 
 Every check must pass. Any single hard fail blocks publication.
 

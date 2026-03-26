@@ -155,20 +155,23 @@ Large refactor workflow (see `docs/checkpoint-workflow.md`):
 - show visible proof at each checkpoint — "I updated the file" is not verification
 
 Default content workflow:
-1. reader-intent brief
+0. persona-state lock (complete the Persona-State Lock in `templates/article-brief-template.md` — no drafting without this)
+1. reader-intent brief (page job declaration, structure type classification for insolvency content)
+1b. information gain research (MANDATORY for YMYL — run `scripts/gemini_research.py` or manual primary-source checks, save to `/research/`)
 2. source-grounding map (with evidence-carrying claim check)
-3. outline
+3. outline (with section purpose map; for insolvency content, use structure type from `12-structure-governance.md` §29)
 4. first draft
-5. trust pass (evidence, voice, comparison, pricing, readability checks)
-6. adversarial review (run against 27 failure modes in `14-failure-modes-and-recovery.md`)
+4b. human-authorship pass (pronoun audit, voice engine check from `docs/human-authorship-voice-engine.md`, scene/texture injection)
+5. trust pass (evidence → voice → comparison → readability → pricing, in that order)
+6. adversarial review (28 failure modes in `14-failure-modes-and-recovery.md` + 14 prose quality gates in `23-prose-quality-gates.md` + 13 AI fingerprints)
 7. human-input placeholders
-8. pre-publish gate (14 checks, all must pass, see `16-pre-publish-gate.md`)
+8. pre-publish gate (21 checks, all must pass, see `16-pre-publish-gate.md`)
+8b. staging-push gate (human-authorship self-audit + SEO S1-S12 + pre-publish checks 1a/15 — see staging-push gate section below)
 9. final revision
 
 If support is weak, downgrade certainty.
 If human confirmation is required, mark it explicitly with `[HUMAN CONFIRMATION NEEDED]`.
 If the draft sounds generic, rewrite for stronger information gain.
-For YMYL pages, run Gemini deep research (`scripts/gemini_research.py`) or manual primary-source checks before outlining. Save output to `/research/`. See `10-evidence-governance.md` §12 and `03-workflow-playbook.md` Stage 1b.
 
 Content rewrite rule: changes > 20% of article body trigger the full workflow from Stage 5 onward. Quick copy edits (typos, date updates, single-sentence fixes) are exempt.
 
