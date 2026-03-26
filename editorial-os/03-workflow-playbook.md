@@ -11,6 +11,23 @@ Gather only what matters:
 
 Output: raw evidence pack
 
+### Stage 1b: Information gain research (mandatory for YMYL pages)
+
+After gathering the raw evidence pack, run a targeted research step to identify facts that competitors omit.
+
+For insolvency/financial pages:
+1. Formulate 15-20 specific research questions grouped by topic
+2. Run via `scripts/gemini_research.py` or manual primary-source checks
+3. Save output to `/research/` with date and page slug
+4. Identify 3+ facts that no top-10 competitor includes on the equivalent page
+5. Tag each fact with the H2 section where it adds most decision value
+
+Research questions must target: primary-source statistics, enforcement data, process facts competitors avoid, regulatory changes, and specific thresholds/fees/rates.
+
+**FAIL** if a YMYL page enters outlining without a completed research file.
+
+See `10-evidence-governance.md` §12 for the full information gain framework.
+
 ## Stage 2: Reader-intent brief
 Define:
 - who this is for (operational reader, not vague persona)

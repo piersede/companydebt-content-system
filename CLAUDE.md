@@ -168,6 +168,7 @@ Default content workflow:
 If support is weak, downgrade certainty.
 If human confirmation is required, mark it explicitly with `[HUMAN CONFIRMATION NEEDED]`.
 If the draft sounds generic, rewrite for stronger information gain.
+For YMYL pages, run Gemini deep research (`scripts/gemini_research.py`) or manual primary-source checks before outlining. Save output to `/research/`. See `10-evidence-governance.md` §12 and `03-workflow-playbook.md` Stage 1b.
 
 Content rewrite rule: changes > 20% of article body trigger the full workflow from Stage 5 onward. Quick copy edits (typos, date updates, single-sentence fixes) are exempt.
 

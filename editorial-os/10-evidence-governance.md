@@ -403,6 +403,26 @@ If the consensus is correct, say so — but say it better, with more precision, 
 
 During trust pass and adversarial review, score each H2 section: does it contain at least one information-gain element? Tally across the article. Fewer than 3 net-new elements across the entire article = hard fail. Any H2 section with zero information-gain elements = rewrite that section.
 
+### Research-driven information gain (mandatory for YMYL pages)
+
+For YMYL insolvency and financial pages, information gain cannot be satisfied by editorial judgement alone. At least 2 of the 3 required net-new elements must come from primary-source research, not from reframing competitor content.
+
+**Workflow requirement:** Before the outline stage, run a research step to identify facts competitors omit. This can use:
+- the Gemini Deep Research Agent (`scripts/gemini_research.py`) for batched fact verification
+- manual primary-source checks (Insolvency Service, HMRC, FCA, Companies House, Bank of England)
+- the `run_info_gain_research.py` script for structured research bundles
+
+**Research question design:** Questions must target:
+1. primary-source statistics that competitors cite vaguely or not at all
+2. enforcement data (disqualification rates, HMRC petition volumes, timeline specifics)
+3. process facts competitors omit because they're uncomfortable (e.g. unsecured creditor distribution rates)
+4. regulatory warnings or changes not yet reflected in competitor content
+5. specific thresholds, fees, or rates that competitors round or skip
+
+**Output:** A saved research file in `/research/` with sourced answers. Information gain facts are then patched into the draft at the H2 section where they add most decision value.
+
+**FAIL** if a YMYL page goes to trust pass without a corresponding research file or documented primary-source check.
+
 ---
 
 ### Hard rule: inference is not evidence
