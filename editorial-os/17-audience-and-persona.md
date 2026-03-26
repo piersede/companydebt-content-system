@@ -130,3 +130,24 @@ Purpose:
 ### Rationale
 
 The persona framework explicitly identifies accountants and co-directors as shadow decision makers. An "Information for Your Accountant" section is a better use of page real estate than another generic quote box, and directly addresses a documented conversion blocker.
+
+---
+
+## Director language vs formal process language
+
+For UK insolvency content, default to the director's lived language first:
+- close the company
+- cannot pay debts
+- HMRC is chasing
+- creditor pressure
+- court action
+- shut the business down properly
+
+Treat formal terms as second-step labels:
+- Creditors' Voluntary Liquidation
+- Members' Voluntary Liquidation
+- administration
+- wrongful trading
+- transactions at undervalue
+
+Writers must not assume that a distressed director knows the route name they need. The page should name the route only after describing it in practical language.

@@ -487,6 +487,31 @@ Read the first 10% of the article (roughly the first 300-400 words of a 3,000-wo
 
 ---
 
+## §14a Terminology bridge rule
+
+Do not open with a legal process label unless the reader has already been oriented in plain English.
+
+For Company Debt pages, assume many distressed directors understand the problem before they understand the formal route name. They may know they need to close the company, avoid HMRC escalation, or stop a creditor forcing action — but they may not know terms like CVL, MVL, administration, or wrongful trading at the start.
+
+Opening order must be:
+1. Reader state in plain language
+2. Decision in plain language
+3. Consequence of acting vs waiting
+4. Only then the formal process name, introduced as the label for the route already described
+
+**Allowed:**
+"If your company cannot pay its debts and you have decided it needs to close, the key question is whether you close it voluntarily now or wait for a creditor to force the issue. The voluntary route is called a Creditors' Voluntary Liquidation, or CVL."
+
+**Not allowed:**
+"If your company is insolvent and needs to close, you must choose between a CVL and compulsory liquidation."
+
+### Fail conditions
+
+- **FAIL** if a distressed-intent opening introduces technical insolvency terminology or acronyms before the reader has been oriented in plain-English problem language
+- **PASS** only if the intro first states the practical situation, the immediate decision, and the consequence of delay — and only then introduces the formal legal label
+
+---
+
 ## 15. Section Purpose Test
 
 ### Rule

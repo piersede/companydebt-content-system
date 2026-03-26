@@ -118,3 +118,9 @@ Goal: compare CVA / administration / negotiation / liquidation.
 
 - **FAIL** if more than one archetype is treated as primary
 - **FAIL** if a page attempts to be a crisis-defense AND a controlled-exit AND a cost-comparison simultaneously
+
+### Terminology bridge
+
+A Company Debt guide must translate the reader's problem language into the correct legal route.
+
+Do not assume route-name literacy. Do not make the reader decode acronyms in the first paragraph. Name the route after the page has already explained, in ordinary language, what the route actually is.
