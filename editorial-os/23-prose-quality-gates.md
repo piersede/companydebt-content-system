@@ -303,3 +303,30 @@ If two consecutive sections exceed this limit without decision-support formattin
 ### Cross-reference
 
 This gate enforces the structural requirement from `12-structure-governance.md` §18. It runs as part of the prose quality gate sequence, after §10 (original-source-only) and before the output contract.
+
+---
+
+## §13 Human authority gate — YMYL distress pages
+
+Each major section must contain, within its first 120 words:
+
+1. A direct claim or judgment
+2. A concrete mechanism, consequence, or factual trigger
+3. The practical effect on the reader
+
+At least once in the first 30% of the page, include:
+- institutional accountability ("we help directors...", "we usually see...")
+- direct reader framing ("if you've received...", "if HMRC has...")
+- explicit editorial judgment ("this is usually the better route when...")
+
+### Pattern: assertion → mechanism → human impact
+
+**Pass:** "If you act now, you choose the IP and control the timing. If a creditor petitions first, the court appoints the Official Receiver — you lose the ability to choose, and the investigation is more intensive."
+
+**Fail:** "Liquidation is a legal process that can be initiated voluntarily or by court order. The process involves the appointment of a liquidator who manages the company's affairs."
+
+### Fail conditions
+
+- **FAIL** if the page sounds correct but disembodied (no accountable voice)
+- **FAIL** if expertise is implied but no institutional or practitioner presence is visible
+- **FAIL** if sections explain without judging or recommending

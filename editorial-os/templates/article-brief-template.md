@@ -22,6 +22,23 @@ Example: "Help an overwhelmed insolvent director decide whether CVL, compulsory 
 
 **Purity target:** 80%+ of the article must remain inside this persona-state. One secondary branch-out section is permitted. Two or more co-equal persona-states is a structural failure — split the page.
 
+## Persona-State Lock [REQUIRED — NO DRAFTING WITHOUT THIS]
+
+| Field | Value |
+|---|---|
+| Primary persona | |
+| Primary stage in journey | |
+| Primary legal/commercial condition | |
+| Primary search intent | |
+| Primary CTA mode | (crisis intervention / controlled closure / cost resolution / rescue strategy / liability assessment) |
+| Secondary personas allowed after 30% | |
+| Secondary personas forbidden in opening | |
+| Top 3 blockers | |
+| Top 3 trust signals | |
+| Top 2 objections to answer before section 3 | |
+
+**Rule:** No insolvency page may enter drafting without a completed Persona-State Lock. If the page contains advice for more than one major persona, the opening and first 30% must still serve one dominant state only.
+
 ## Persona Trigger Identification [REQUIRED BEFORE DRAFTING]
 
 Before drafting, define:

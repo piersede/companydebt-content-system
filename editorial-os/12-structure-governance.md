@@ -717,3 +717,40 @@ Urgency must be stated directly, not implied. "Acting early helps" is not suffic
 
 - **FAIL** if urgency is implied but never stated with specific consequences
 - **FAIL** if the first 2 sections contain no explicit delay-consequence statement
+
+---
+
+## §27 Decision hierarchy rule for distress pages
+
+The first 25% of the page must resolve these in order:
+
+1. What state am I in?
+2. What happens if I delay?
+3. What is the correct route?
+4. What should I do now?
+
+Do not introduce broad alternatives, emotional support resources, secondary route exploration, or generic educational material until the primary route and next action are established.
+
+### Fail conditions
+
+- **FAIL** if rescue options appear before route assignment
+- **FAIL** if emotional support appears before the reader has a working decision model
+- **FAIL** if the first 25% does not complete all four steps
+
+---
+
+## §28 Section role discipline
+
+Every section in an insolvency guide must declare one role only:
+
+- classify
+- warn
+- compare
+- explain process
+- resolve objection
+- convert
+
+### Fail conditions
+
+- **FAIL** if a section attempts multiple roles before its first 2 sentences
+- **FAIL** if a section combines compare + reassure + explain + convert in the same opening

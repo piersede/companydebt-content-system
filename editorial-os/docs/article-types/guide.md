@@ -91,3 +91,30 @@ Every decision guide must end with a concrete action section:
 ```
 
 This replaces soft emotional or generic closing sections. The reader must leave with a time-bound next step, not a summary.
+
+---
+
+## Insolvency guide archetypes
+
+Do not draft a generic liquidation guide by default. Choose exactly one archetype before outlining:
+
+**1. Crisis-defense page**
+Reader state: statutory demand, HMRC warning, petition risk.
+Goal: preserve control and force immediate action.
+
+**2. Controlled-exit page**
+Reader state: accepts closure, wants to choose CVL.
+Goal: explain process, cost, timing, and conduct risk.
+
+**3. Cost-comparison page**
+Reader state: CVL vs strike-off vs compulsory liquidation.
+Goal: resolve affordability and route confusion.
+
+**4. Rescue-options page**
+Reader state: business may still be viable.
+Goal: compare CVA / administration / negotiation / liquidation.
+
+### Fail conditions
+
+- **FAIL** if more than one archetype is treated as primary
+- **FAIL** if a page attempts to be a crisis-defense AND a controlled-exit AND a cost-comparison simultaneously

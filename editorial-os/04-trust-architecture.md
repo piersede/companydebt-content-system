@@ -155,3 +155,21 @@ Each CTA must map to the declared persona-state:
 
 - **FAIL** if CTA is generic and does not reflect the page's declared persona-state
 - **FAIL** if CTA language does not match the urgency level of the persona (crisis persona gets urgent CTA, comparison persona gets evaluative CTA)
+
+---
+
+## Required objection pack for insolvency pages
+
+Before the first long explanatory section, the page must answer at least 2 of:
+
+- Can I still control this?
+- What will this cost?
+- Will HMRC find out?
+- Will my bank account be frozen?
+- Am I personally at risk?
+- Is there a route other than closure?
+
+### Fail conditions
+
+- **FAIL** if the page delays affordability or control-loss reassurance until after process exposition
+- **FAIL** if none of the top persona blockers are addressed in the first 20% of the page
