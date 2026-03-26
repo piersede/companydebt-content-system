@@ -638,3 +638,82 @@ Process sections must follow decision clarity, not precede it.
 6. Alternatives (branch-outs only)
 7. Support resources
 8. Final action lock
+
+---
+
+## §22 Section intent purity
+
+Each section must serve exactly one intent:
+- **Immediate action** (crisis — what to do right now)
+- **Decision** (comparison — help the reader choose between options)
+- **Explanation** (supporting — background needed to understand the decision)
+
+The first two sentences of every section must deliver that intent. If a reader cannot identify what the section is for within 2 sentences, it fails.
+
+### Fail conditions
+
+- **FAIL** if a section mixes explanation with decision without structural separation
+- **FAIL** if a section delays its purpose beyond sentence 2
+- **FAIL** if an explanation section exists without connecting to a decision the reader faces
+
+---
+
+## §23 Persona-state lock
+
+Every page must declare before drafting:
+- **Primary persona** (e.g. Crisis Defender, Spongebob Seeker, BBL Worrier, Strategic Wind-Downer)
+- **Stage** (Crisis / Option Comparison / Validation)
+
+All sections must serve the declared persona-state. If content addresses a different persona, it must be:
+- a branch-out block (2-3 sentences + link), not a full section
+- explicitly labelled as "if this doesn't apply to you"
+
+### Fail conditions
+
+- **FAIL** if more than one persona-stage is addressed without explicit segmentation
+- **FAIL** if generic content serves no specific persona's decision need
+
+---
+
+## §24 Escalation flow
+
+Content must follow one linear path matching the user's decision journey:
+
+1. Situation recognition ("this is where you are")
+2. Immediate options ("these are your choices")
+3. Consequences of inaction ("this is what happens if you wait")
+4. Controlled solution ("this is the path you control")
+5. Next step CTA ("do this now")
+
+### Fail conditions
+
+- **FAIL** if the page loops back into explanation after reaching decision content
+- **FAIL** if options are introduced without stakes
+- **FAIL** if consequences appear before the reader knows their options
+
+---
+
+## §25 Anti-genericity gate
+
+Scan every section for:
+- Definitions that could apply to any country or context
+- Sections that explain "what is X" without decision impact
+- Paragraphs that do not move the reader closer to action
+
+If more than 15% of page content is generic (not tied to a specific decision, persona, or UK legal context), the page fails.
+
+---
+
+## §26 Urgency insertion rule
+
+Within the first 2 sections, the page must explicitly state:
+- What happens if the director waits
+- What control is lost by delay
+- What changes if a creditor acts first
+
+Urgency must be stated directly, not implied. "Acting early helps" is not sufficient. "If a creditor petitions first, the court appoints the Official Receiver and you lose the ability to choose your own IP" is.
+
+### Fail conditions
+
+- **FAIL** if urgency is implied but never stated with specific consequences
+- **FAIL** if the first 2 sections contain no explicit delay-consequence statement

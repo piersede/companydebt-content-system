@@ -137,3 +137,21 @@ If multiple modules ask for the same action, collapse them into one. If "confide
 - **FAIL** if overlapping CTAs with identical function appear in adjacent sections
 - **FAIL** if promotional blocks are inserted between explanation paragraphs without structural separation
 - **FAIL** if "free/confidential/no obligation" is repeated as standalone persuasion copy more than twice
+
+---
+
+## CTA-persona alignment
+
+Each CTA must map to the declared persona-state:
+
+| Persona state | CTA pattern | Not allowed |
+|---|---|---|
+| Crisis Defender | "Speak to an insolvency expert today" / "Call now — the clock is running" | Generic "get in touch" |
+| Spongebob Seeker | "Check your liquidation options" / "See if redundancy covers your fees" | Generic "call for advice" |
+| BBL Worrier | "Request a confidential liability assessment" | Generic "speak to us" |
+| Strategic Wind-Downer | "Book a strategic options review" | Generic "get help" |
+
+### Fail conditions
+
+- **FAIL** if CTA is generic and does not reflect the page's declared persona-state
+- **FAIL** if CTA language does not match the urgency level of the persona (crisis persona gets urgent CTA, comparison persona gets evaluative CTA)

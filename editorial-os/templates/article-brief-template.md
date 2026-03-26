@@ -22,6 +22,15 @@ Example: "Help an overwhelmed insolvent director decide whether CVL, compulsory 
 
 **Purity target:** 80%+ of the article must remain inside this persona-state. One secondary branch-out section is permitted. Two or more co-equal persona-states is a structural failure — split the page.
 
+## Persona Trigger Identification [REQUIRED BEFORE DRAFTING]
+
+Before drafting, define:
+- **Trigger event:** (e.g. HMRC letter, cashflow collapse, creditor petition, BBL repayment demand)
+- **Emotional state:** (panic / avoidance / comparison / resignation)
+- **Time pressure:** (hours / days / weeks / months)
+
+This 3-line block must be written and approved before any content is drafted. If the trigger cannot be identified, the page may be too broad.
+
 ## Who is this for?
 
 [Define the operational reader. Not a broad persona — a specific person with a specific problem.]
