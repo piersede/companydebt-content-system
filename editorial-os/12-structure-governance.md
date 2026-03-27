@@ -911,6 +911,17 @@ Typical SEO-rich subheading patterns:
 - Solvent vs insolvent company closure
 - Which closure route is right for my company?
 
+### Table of Contents placement rule
+
+Every article must include a manual Table of Contents block positioned immediately before the first H2. The theme's auto-generated TOC is hidden via CSS because its insertion point is unpredictable.
+
+The TOC must:
+- Use the `.toc` class with a `Contents` heading
+- Link to every H2 on the page via anchor IDs
+- Every H2 must have a unique `id` attribute (slugified heading text)
+
+Do not rely on the theme to generate or position the TOC. Include it in the page content HTML.
+
 ### Opening rule for insolvency pages
 
 The introduction must establish:
