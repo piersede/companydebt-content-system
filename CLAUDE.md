@@ -182,7 +182,7 @@ Content rewrite rule: changes > 20% of article body trigger the full workflow fr
 Before pushing ANY content to the WordPress staging database, run these three passes in order. All must pass.
 
 1. **Human-authorship self-audit** (from `docs/human-authorship-voice-engine.md` §Self-audit):
-   Hard fails (any blocks push): "you" density ≥ 8/1k words, "we" ≥ 5/1k words, ≥ 3 concrete scenes in 1k+ articles, ≥ 2 evaluative bite lines, no 3+ same-pattern paragraphs, no section > 200 words with zero "you", lived-reality anchor in every major section, verdict compresses the real decision.
+   Hard fails (any blocks push): "you" density < 4/1k or ≥ 8/1k words, "we" density < 2/1k or ≥ 5/1k words, ≥ 3 concrete scenes in 1k+ articles, ≥ 2 evaluative bite lines, no 3+ same-pattern paragraphs, no section > 200 words with zero "you", lived-reality anchor in every major section, verdict compresses the real decision. Zero "you" or zero "we" is a hard fail — mechanically passing the ceiling while having no human voice is worse than exceeding the ceiling.
 
 2. **SEO signal checklist** (S1-S12 from `18-seo-signal-governance.md`). F1-F69 required on new articles and major rewrites.
 
