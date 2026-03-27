@@ -1,3 +1,18 @@
+<style>
+.cd-faq{margin:24px 0 32px}
+.cd-faq details{border-bottom:1px solid rgba(0,40,86,.08)}
+.cd-faq summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;cursor:pointer;font-size:17px;font-weight:700;color:#2A2A2E;line-height:1.4;list-style:none}
+.cd-faq summary::-webkit-details-marker{display:none}
+.cd-faq summary::marker{display:none}
+.cd-faq summary::after{content:'';flex-shrink:0;width:20px;height:20px;margin-left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%238A8A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;transition:transform .2s ease}
+.cd-faq details[open] summary::after{transform:rotate(180deg)}
+.cd-faq summary:hover{color:#002856}
+.cd-faq summary:focus-visible{outline:2px solid #002856;outline-offset:2px;border-radius:2px}
+.cd-faq .cd-faq__answer{padding:0 4px 20px;font-size:17px;line-height:1.65;color:#2A2A2E}
+.cd-faq .cd-faq__answer p{margin:0 0 12px}
+.cd-faq .cd-faq__answer p:last-child{margin-bottom:0}
+</style>
+
 <h2>Closing a Limited Company: The Routes, the Costs, and How to Choose</h2>
 
 <p>Closing a limited company is not one process. It is a choice between several routes, and the right one depends almost entirely on whether the company can pay what it owes.</p>
@@ -264,55 +279,79 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<details>
-  <summary>Can I close a company with debts?</summary>
-  <p>Yes, but not through strike-off. If the company has debts it cannot pay, the appropriate route is usually a Creditors' Voluntary Liquidation (CVL). This is a formal insolvency process where a licensed insolvency practitioner takes control of the closure, realises any assets, and distributes proceeds to creditors. The company is dissolved at the end of the process, and the debts are written off against the company, not the directors personally (unless personal guarantees are involved). See our <a href="/creditors-voluntary-liquidation-cvl/">CVL guide</a> for the full process.</p>
+
+<div class="cd-faq" itemscope itemtype="https://schema.org/FAQPage">
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can I close a company with debts?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes, but not through strike-off. If the company has debts it cannot pay, the appropriate route is usually a Creditors' Voluntary Liquidation (CVL). This is a formal insolvency process where a licensed insolvency practitioner takes control of the closure, realises any assets, and distributes proceeds to creditors. The company is dissolved at the end of the process, and the debts are written off against the company, not the directors personally (unless personal guarantees are involved). See our <a href="/creditors-voluntary-liquidation-cvl/">CVL guide</a> for the full process.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How much does it cost to close a limited company?</summary>
-  <p>It depends entirely on the route. Strike-off costs £10 in filing fees plus accountant costs for final returns. An MVL typically costs £2,000 to £5,000 plus VAT in insolvency practitioner fees. A CVL typically costs £4,000 to £6,000 plus VAT. Compulsory liquidation costs the company £10,000 or more and is not controlled by the directors. If you are eligible for director redundancy through a CVL, the payout (up to £21,000) can offset most or all of the cost.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How much does it cost to close a limited company?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>It depends entirely on the route. Strike-off costs £10 in filing fees plus accountant costs for final returns. An MVL typically costs £2,000 to £5,000 plus VAT in insolvency practitioner fees. A CVL typically costs £4,000 to £6,000 plus VAT. Compulsory liquidation costs the company £10,000 or more and is not controlled by the directors. If you are eligible for director redundancy through a CVL, the payout (up to £21,000) can offset most or all of the cost.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How long does it take to close a company?</summary>
-  <p>Strike-off takes three to six months from filing to dissolution. An MVL takes six to twelve months, sometimes longer if assets are complex. A CVL typically completes the main process within three to six months, though the formal dissolution can take longer. Compulsory liquidation is the slowest route, often taking one to three years because the Official Receiver works across a large caseload.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How long does it take to close a company?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Strike-off takes three to six months from filing to dissolution. An MVL takes six to twelve months, sometimes longer if assets are complex. A CVL typically completes the main process within three to six months, though the formal dissolution can take longer. Compulsory liquidation is the slowest route, often taking one to three years because the Official Receiver works across a large caseload.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What is the difference between strike-off and liquidation?</summary>
-  <p>Strike-off is an administrative process through Companies House. It is cheap and simple but only works for solvent companies with no significant assets. Liquidation (whether MVL, CVL, or compulsory) is a formal legal process overseen by a licensed insolvency practitioner. It handles debts, distributes assets, and provides legal closure. The key difference: strike-off does not deal with debts or creditors. If the company owes money, strike-off is not the right route. See our <a href="/liquidation/">liquidation overview</a> for a full comparison.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What is the difference between strike-off and liquidation?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Strike-off is an administrative process through Companies House. It is cheap and simple but only works for solvent companies with no significant assets. Liquidation (whether MVL, CVL, or compulsory) is a formal legal process overseen by a licensed insolvency practitioner. It handles debts, distributes assets, and provides legal closure. The key difference: strike-off does not deal with debts or creditors. If the company owes money, strike-off is not the right route. See our <a href="/liquidation/">liquidation overview</a> for a full comparison.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to company debts when a company is dissolved?</summary>
-  <p>Debts owed by the company are written off against the company when it is dissolved through a formal liquidation process (MVL, CVL, or compulsory). However, any debts with personal guarantees survive the company's closure and remain the director's personal responsibility. HMRC can also pursue directors personally for unpaid PAYE and National Insurance in some circumstances. If the company is dissolved via strike-off while debts remain unpaid, creditors can apply to restore it to the Companies House register.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to company debts when a company is dissolved?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Debts owed by the company are written off against the company when it is dissolved through a formal liquidation process (MVL, CVL, or compulsory). However, any debts with personal guarantees survive the company's closure and remain the director's personal responsibility. HMRC can also pursue directors personally for unpaid PAYE and National Insurance in some circumstances. If the company is dissolved via strike-off while debts remain unpaid, creditors can apply to restore it to the Companies House register.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Am I personally liable for company debts?</summary>
-  <p>In most cases, a director's liability is limited to the amount unpaid on their shares. But there are important exceptions. Personal guarantees (common with bank loans, leases, and Bounce Back Loans) make the director personally liable for that specific debt regardless of the company's status. Directors can also face personal liability for wrongful trading if they allowed the company to continue trading while insolvent, or for misfeasance if company assets were misused. A properly conducted CVL reduces, but does not eliminate, the risk of personal claims.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Am I personally liable for company debts?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>In most cases, a director's liability is limited to the amount unpaid on their shares. But there are important exceptions. Personal guarantees (common with bank loans, leases, and Bounce Back Loans) make the director personally liable for that specific debt regardless of the company's status. Directors can also face personal liability for wrongful trading if they allowed the company to continue trading while insolvent, or for misfeasance if company assets were misused. A properly conducted CVL reduces, but does not eliminate, the risk of personal claims.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can I claim redundancy if I am a director?</summary>
-  <p>Potentially, yes. If you are on the company payroll with an employment contract, pay yourself through PAYE, and work regular hours for the company, you may qualify for redundancy pay from the Redundancy Payments Service when the company enters liquidation. The maximum statutory redundancy payout is currently around £21,000, depending on age and length of service. Not every director qualifies. The criteria relate to your employment status, not your directorship. Ask your insolvency practitioner to assess your eligibility before choosing a closure route.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can I claim redundancy if I am a director?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Potentially, yes. If you are on the company payroll with an employment contract, pay yourself through PAYE, and work regular hours for the company, you may qualify for redundancy pay from the Redundancy Payments Service when the company enters liquidation. The maximum statutory redundancy payout is currently around £21,000, depending on age and length of service. Not every director qualifies. The criteria relate to your employment status, not your directorship. Ask your insolvency practitioner to assess your eligibility before choosing a closure route.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can HMRC object to my company being struck off?</summary>
-  <p>Yes. HMRC is the most common objector to strike-off applications. If the company has outstanding Corporation Tax, VAT, or PAYE liabilities, HMRC will typically object during the two-month Gazette notice period. This suspends the strike-off process. The company remains on the register, the debts remain, and the directors are back where they started, except that HMRC now knows the company was trying to close without paying. If you suspect HMRC is owed money, do not file for strike-off until you have confirmed the position.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can HMRC object to my company being struck off?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes. HMRC is the most common objector to strike-off applications. If the company has outstanding Corporation Tax, VAT, or PAYE liabilities, HMRC will typically object during the two-month Gazette notice period. This suspends the strike-off process. The company remains on the register, the debts remain, and the directors are back where they started, except that HMRC now knows the company was trying to close without paying. If you suspect HMRC is owed money, do not file for strike-off until you have confirmed the position.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens if I do nothing and just leave the company dormant?</summary>
-  <p>The company remains on the Companies House register, and you remain a director with ongoing legal obligations. You must still file annual accounts, a confirmation statement, and Company Tax Returns. Failure to file results in penalties and, eventually, Companies House may strike the company off the register. But creditors can still pursue the company and its directors during that time. HMRC debts accrue interest and penalties. Leaving an insolvent company dormant does not make the debts go away. It typically makes the situation worse and more expensive to resolve later.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens if I do nothing and just leave the company dormant?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>The company remains on the Companies House register, and you remain a director with ongoing legal obligations. You must still file annual accounts, a confirmation statement, and Company Tax Returns. Failure to file results in penalties and, eventually, Companies House may strike the company off the register. But creditors can still pursue the company and its directors during that time. HMRC debts accrue interest and penalties. Leaving an insolvent company dormant does not make the debts go away. It typically makes the situation worse and more expensive to resolve later.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Should I speak to an insolvency practitioner before choosing a route?</summary>
-  <p>If there is any possibility the company is insolvent, yes. An initial consultation with a licensed insolvency practitioner is typically free, confidential, and without obligation. The IP can assess the company's financial position, confirm which routes are available, and explain the implications of each. For solvent companies with no debts, your accountant can usually handle the strike-off or refer you for an MVL. For anything involving unpaid debts, creditor pressure, or uncertainty about solvency, professional insolvency advice is not optional. It is how you avoid the mistakes listed above.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Should I speak to an insolvency practitioner before choosing a route?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>If there is any possibility the company is insolvent, yes. An initial consultation with a licensed insolvency practitioner is typically free, confidential, and without obligation. The IP can assess the company's financial position, confirm which routes are available, and explain the implications of each. For solvent companies with no debts, your accountant can usually handle the strike-off or refer you for an MVL. For anything involving unpaid debts, creditor pressure, or uncertainty about solvency, professional insolvency advice is not optional. It is how you avoid the mistakes listed above.</p>
+</div></div>
 </details>
+</div>
+
 
 
 <h2>Next Steps</h2>

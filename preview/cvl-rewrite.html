@@ -1,3 +1,18 @@
+<style>
+.cd-faq{margin:24px 0 32px}
+.cd-faq details{border-bottom:1px solid rgba(0,40,86,.08)}
+.cd-faq summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;cursor:pointer;font-size:17px;font-weight:700;color:#2A2A2E;line-height:1.4;list-style:none}
+.cd-faq summary::-webkit-details-marker{display:none}
+.cd-faq summary::marker{display:none}
+.cd-faq summary::after{content:'';flex-shrink:0;width:20px;height:20px;margin-left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%238A8A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;transition:transform .2s ease}
+.cd-faq details[open] summary::after{transform:rotate(180deg)}
+.cd-faq summary:hover{color:#002856}
+.cd-faq summary:focus-visible{outline:2px solid #002856;outline-offset:2px;border-radius:2px}
+.cd-faq .cd-faq__answer{padding:0 4px 20px;font-size:17px;line-height:1.65;color:#2A2A2E}
+.cd-faq .cd-faq__answer p{margin:0 0 12px}
+.cd-faq .cd-faq__answer p:last-child{margin-bottom:0}
+</style>
+
 <h2>Closing an Insolvent Company Through a CVL</h2>
 
 <p>If the company cannot pay its debts and continuing to trade is no longer viable, a Creditors' Voluntary Liquidation (CVL) is the standard route for an orderly shutdown. Directors initiate the process, a licensed insolvency practitioner takes control of asset realisation, and the company is dissolved once creditors have been dealt with.</p>
@@ -163,55 +178,79 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<details>
-  <summary>Can directors choose the insolvency practitioner in a CVL?</summary>
-  <p>Directors propose the IP, but creditors have the right to appoint a different one during the decision procedure. In practice, creditors rarely exercise this right in small-company CVLs, so the directors' choice usually stands.</p>
+
+<div class="cd-faq" itemscope itemtype="https://schema.org/FAQPage">
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can directors choose the insolvency practitioner in a CVL?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Directors propose the IP, but creditors have the right to appoint a different one during the decision procedure. In practice, creditors rarely exercise this right in small-company CVLs, so the directors' choice usually stands.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Do directors need to attend a creditors' meeting?</summary>
-  <p>Physical meetings are no longer mandatory. The Insolvency Rules 2016 replaced them with a "decision procedure" that can be conducted by correspondence (deemed consent). Creditors can request a meeting, but this is uncommon. Directors may need to answer questions from the liquidator or creditors in writing.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Do directors need to attend a creditors' meeting?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Physical meetings are no longer mandatory. The Insolvency Rules 2016 replaced them with a "decision procedure" that can be conducted by correspondence (deemed consent). Creditors can request a meeting, but this is uncommon. Directors may need to answer questions from the liquidator or creditors in writing.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to employees in a CVL?</summary>
-  <p>Employees are made redundant when the liquidator is appointed (or when trading ceases, if earlier). They can claim statutory redundancy pay, unpaid wages (up to 8 weeks), holiday pay, and notice pay from the Redundancy Payments Service. These are preferential claims under the Insolvency Act 1986.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to employees in a CVL?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Employees are made redundant when the liquidator is appointed (or when trading ceases, if earlier). They can claim statutory redundancy pay, unpaid wages (up to 8 weeks), holiday pay, and notice pay from the Redundancy Payments Service. These are preferential claims under the Insolvency Act 1986.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can HMRC block a CVL?</summary>
-  <p>HMRC cannot block a CVL. The decision to enter a CVL is made by the shareholders, not creditors. However, if HMRC has already filed a winding-up petition, the court process may overtake the CVL unless the petition is withdrawn or the CVL is commenced before the hearing date.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can HMRC block a CVL?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>HMRC cannot block a CVL. The decision to enter a CVL is made by the shareholders, not creditors. However, if HMRC has already filed a winding-up petition, the court process may overtake the CVL unless the petition is withdrawn or the CVL is commenced before the hearing date.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Does a CVL affect the director's credit rating?</summary>
-  <p>A CVL does not directly appear on a director's personal credit file. However, any personal guarantees that are called in, or personal insolvency that follows (bankruptcy or an IVA), will affect the director's credit rating. Director disqualification is a public record held by the Insolvency Service.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Does a CVL affect the director's credit rating?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>A CVL does not directly appear on a director's personal credit file. However, any personal guarantees that are called in, or personal insolvency that follows (bankruptcy or an IVA), will affect the director's credit rating. Director disqualification is a public record held by the Insolvency Service.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What if the company has no assets at all?</summary>
-  <p>A CVL can proceed even if the company has no realisable assets. The IP's fees must still be paid, typically upfront by the directors. This is one reason redundancy funding is relevant: it can provide the funds to cover liquidation costs.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What if the company has no assets at all?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>A CVL can proceed even if the company has no realisable assets. The IP's fees must still be paid, typically upfront by the directors. This is one reason redundancy funding is relevant: it can provide the funds to cover liquidation costs.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can a CVL be reversed once started?</summary>
-  <p>Once the liquidator is appointed, the process is extremely difficult to reverse. The court can stay or terminate a winding up under s.112 of the Insolvency Act 1986, but this requires an application supported by evidence that the company is in fact solvent. In practice, reversal almost never happens.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can a CVL be reversed once started?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Once the liquidator is appointed, the process is extremely difficult to reverse. The court can stay or terminate a winding up under s.112 of the Insolvency Act 1986, but this requires an application supported by evidence that the company is in fact solvent. In practice, reversal almost never happens.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to company bank accounts?</summary>
-  <p>The liquidator takes control of all company bank accounts on appointment. Any remaining balances become part of the liquidation estate. Directors cannot withdraw funds after the liquidator's appointment. Banks typically freeze accounts as soon as they are notified of the liquidation.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to company bank accounts?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>The liquidator takes control of all company bank accounts on appointment. Any remaining balances become part of the liquidation estate. Directors cannot withdraw funds after the liquidator's appointment. Banks typically freeze accounts as soon as they are notified of the liquidation.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Are bounce-back loans treated differently in a CVL?</summary>
-  <p>Bounce-back loans are unsecured debts and rank alongside other unsecured creditors. The government guarantee protects the lender, not the borrower. Directors are not personally liable for the loan unless they gave a personal guarantee or the loan was misused (which can trigger separate investigation). The liquidator will review how the loan funds were applied.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Are bounce-back loans treated differently in a CVL?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Bounce-back loans are unsecured debts and rank alongside other unsecured creditors. The government guarantee protects the lender, not the borrower. Directors are not personally liable for the loan unless they gave a personal guarantee or the loan was misused (which can trigger separate investigation). The liquidator will review how the loan funds were applied.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How soon after a CVL can a director start a new company?</summary>
-  <p>Immediately, unless the director has been disqualified. The restriction under s.216 of the Insolvency Act 1986 applies to the company name (or a similar name), not to directorship itself. A disqualified director cannot act as a director of any company for the duration of the disqualification (2 to 15 years).</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How soon after a CVL can a director start a new company?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Immediately, unless the director has been disqualified. The restriction under s.216 of the Insolvency Act 1986 applies to the company name (or a similar name), not to directorship itself. A disqualified director cannot act as a director of any company for the duration of the disqualification (2 to 15 years).</p>
+</div></div>
 </details>
+</div>
+
 
 <h2>What to Do Now</h2>
 

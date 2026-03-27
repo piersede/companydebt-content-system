@@ -1,3 +1,18 @@
+<style>
+.cd-faq{margin:24px 0 32px}
+.cd-faq details{border-bottom:1px solid rgba(0,40,86,.08)}
+.cd-faq summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;cursor:pointer;font-size:17px;font-weight:700;color:#2A2A2E;line-height:1.4;list-style:none}
+.cd-faq summary::-webkit-details-marker{display:none}
+.cd-faq summary::marker{display:none}
+.cd-faq summary::after{content:'';flex-shrink:0;width:20px;height:20px;margin-left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%238A8A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;transition:transform .2s ease}
+.cd-faq details[open] summary::after{transform:rotate(180deg)}
+.cd-faq summary:hover{color:#002856}
+.cd-faq summary:focus-visible{outline:2px solid #002856;outline-offset:2px;border-radius:2px}
+.cd-faq .cd-faq__answer{padding:0 4px 20px;font-size:17px;line-height:1.65;color:#2A2A2E}
+.cd-faq .cd-faq__answer p{margin:0 0 12px}
+.cd-faq .cd-faq__answer p:last-child{margin-bottom:0}
+</style>
+
 <h2>Company Strike Off and Dissolution: When It Works, When It Backfires</h2>
 
 <p>Striking off a company costs £10. Liquidation costs thousands. That price gap is why most directors searching for a way out land here first.</p>
@@ -192,55 +207,79 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<details>
-  <summary>Can I strike off a company with debts?</summary>
-  <p>You can file the DS01 form, but any creditor (including HMRC) can object and halt the process. Even if the company is dissolved with debts outstanding, creditors can apply to restore it to the register for up to six years (HMRC for up to 20 years). Strike-off does not eliminate debts. If the company is insolvent, a <a href="/creditors-voluntary-liquidation-cvl/">CVL</a> is the formal route for dealing with those debts properly.</p>
+
+<div class="cd-faq" itemscope itemtype="https://schema.org/FAQPage">
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can I strike off a company with debts?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>You can file the DS01 form, but any creditor (including HMRC) can object and halt the process. Even if the company is dissolved with debts outstanding, creditors can apply to restore it to the register for up to six years (HMRC for up to 20 years). Strike-off does not eliminate debts. If the company is insolvent, a <a href="/creditors-voluntary-liquidation-cvl/">CVL</a> is the formal route for dealing with those debts properly.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How much does it cost to strike off a company?</summary>
-  <p>The Companies House filing fee is £10 online (£44 by post). That is the direct cost. If you have outstanding accounts, tax returns, or a VAT registration to close, the total cost will include accountant fees to resolve those. For a clean company with no loose ends, £10 is the genuine total.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How much does it cost to strike off a company?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>The Companies House filing fee is £10 online (£44 by post). That is the direct cost. If you have outstanding accounts, tax returns, or a VAT registration to close, the total cost will include accountant fees to resolve those. For a clean company with no loose ends, £10 is the genuine total.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How long does company strike-off take?</summary>
-  <p>Minimum three months from filing the DS01 to dissolution. Companies House processing takes 2-4 weeks, then there is a mandatory two-month Gazette notice period. If HMRC or a creditor objects, the timeline extends until the issue is resolved, which can take six months or longer.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How long does company strike-off take?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Minimum three months from filing the DS01 to dissolution. Companies House processing takes 2-4 weeks, then there is a mandatory two-month Gazette notice period. If HMRC or a creditor objects, the timeline extends until the issue is resolved, which can take six months or longer.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to a Bounce Back Loan if the company is struck off?</summary>
-  <p>The loan does not disappear. The lender can object to the strike-off, or apply to restore the company to the register after dissolution. If you personally guaranteed the loan (which is not standard for BBLs but applies to some), the creditor can pursue you directly. Using a CVL to deal with a BBL provides a formal, transparent resolution that a strike-off does not.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to a Bounce Back Loan if the company is struck off?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>The loan does not disappear. The lender can object to the strike-off, or apply to restore the company to the register after dissolution. If you personally guaranteed the loan (which is not standard for BBLs but applies to some), the creditor can pursue you directly. Using a CVL to deal with a BBL provides a formal, transparent resolution that a strike-off does not.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can HMRC object to strike-off?</summary>
-  <p>Yes, and they do so frequently. HMRC monitors Gazette notices and objects if the company has outstanding Corporation Tax, VAT, PAYE, or unfiled returns. An HMRC objection suspends the dissolution until the tax position is cleared. This is the most common reason strike-off applications fail.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can HMRC object to strike-off?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes, and they do so frequently. HMRC monitors Gazette notices and objects if the company has outstanding Corporation Tax, VAT, PAYE, or unfiled returns. An HMRC objection suspends the dissolution until the tax position is cleared. This is the most common reason strike-off applications fail.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to the company bank account after strike-off?</summary>
-  <p>Most banks freeze the account when the Gazette notice is published. Any remaining balance passes to the Crown as bona vacantia after dissolution. To recover funds, you must either apply to the Treasury Solicitor or apply to restore the company, both of which involve cost, paperwork, and delay.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to the company bank account after strike-off?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Most banks freeze the account when the Gazette notice is published. Any remaining balance passes to the Crown as bona vacantia after dissolution. To recover funds, you must either apply to the Treasury Solicitor or apply to restore the company, both of which involve cost, paperwork, and delay.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can a struck-off company be restored?</summary>
-  <p>Yes. A company can be restored to the register through an administrative restoration (by the former directors) or a court order (by a creditor, shareholder, or other interested party). Creditors have six years. HMRC has up to 20 years. Once restored, the company exists again as if it had never been dissolved, and all debts are enforceable.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can a struck-off company be restored?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes. A company can be restored to the register through an administrative restoration (by the former directors) or a court order (by a creditor, shareholder, or other interested party). Creditors have six years. HMRC has up to 20 years. Once restored, the company exists again as if it had never been dissolved, and all debts are enforceable.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Do I still need to file accounts and tax returns during strike-off?</summary>
-  <p>Yes. Until the company is formally dissolved, your filing obligations continue. You must file a final set of accounts with Companies House and a final Corporation Tax return with HMRC. Outstanding filings are one of the most common triggers for HMRC objections.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Do I still need to file accounts and tax returns during strike-off?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes. Until the company is formally dissolved, your filing obligations continue. You must file a final set of accounts with Companies House and a final Corporation Tax return with HMRC. Outstanding filings are one of the most common triggers for HMRC objections.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What is bona vacantia?</summary>
-  <p>Bona vacantia means "ownerless goods." When a company is dissolved, any assets it still owns pass to the Crown. This includes bank balances, property, vehicles, intellectual property, and debts owed to the company. The Treasury Solicitor manages bona vacantia assets in England and Wales. Recovering assets from the Crown is possible but involves a formal application process and is not guaranteed.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What is bona vacantia?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Bona vacantia means "ownerless goods." When a company is dissolved, any assets it still owns pass to the Crown. This includes bank balances, property, vehicles, intellectual property, and debts owed to the company. The Treasury Solicitor manages bona vacantia assets in England and Wales. Recovering assets from the Crown is possible but involves a formal application process and is not guaranteed.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Is strike-off the same as liquidation?</summary>
-  <p>No. Strike-off is an administrative process for closing a solvent company that has stopped trading. Liquidation is a formal insolvency process managed by a licensed insolvency practitioner. Liquidation deals with creditors, distributes assets, investigates director conduct, and provides statutory protections for employees. Strike-off does none of these things. If the company has debts, liquidation is the appropriate route.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Is strike-off the same as liquidation?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>No. Strike-off is an administrative process for closing a solvent company that has stopped trading. Liquidation is a formal insolvency process managed by a licensed insolvency practitioner. Liquidation deals with creditors, distributes assets, investigates director conduct, and provides statutory protections for employees. Strike-off does none of these things. If the company has debts, liquidation is the appropriate route.</p>
+</div></div>
 </details>
+</div>
+
 
 
 <h2>Next Steps</h2>

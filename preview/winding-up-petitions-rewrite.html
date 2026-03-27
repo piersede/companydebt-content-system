@@ -1,3 +1,18 @@
+<style>
+.cd-faq{margin:24px 0 32px}
+.cd-faq details{border-bottom:1px solid rgba(0,40,86,.08)}
+.cd-faq summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;cursor:pointer;font-size:17px;font-weight:700;color:#2A2A2E;line-height:1.4;list-style:none}
+.cd-faq summary::-webkit-details-marker{display:none}
+.cd-faq summary::marker{display:none}
+.cd-faq summary::after{content:'';flex-shrink:0;width:20px;height:20px;margin-left:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%238A8A94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;transition:transform .2s ease}
+.cd-faq details[open] summary::after{transform:rotate(180deg)}
+.cd-faq summary:hover{color:#002856}
+.cd-faq summary:focus-visible{outline:2px solid #002856;outline-offset:2px;border-radius:2px}
+.cd-faq .cd-faq__answer{padding:0 4px 20px;font-size:17px;line-height:1.65;color:#2A2A2E}
+.cd-faq .cd-faq__answer p{margin:0 0 12px}
+.cd-faq .cd-faq__answer p:last-child{margin-bottom:0}
+</style>
+
 <h2>A creditor is trying to force your company into liquidation. You have days, not weeks, to respond.</h2>
 
 <p>If a winding-up petition has been filed against your company, your bank account is likely to be frozen within hours of the petition appearing in the London Gazette. Once that happens, trading becomes almost impossible. The court will not wait for you to catch up.</p>
@@ -200,55 +215,79 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<details>
-  <summary>Can a winding-up petition be stopped after it has been filed?</summary>
-  <p>Yes. A petition can be stopped by paying the debt in full (plus the petitioner's costs), by successfully disputing the debt on substantial grounds, or by the petitioning creditor agreeing to withdraw it following a negotiation. The company can also ask the court to dismiss or adjourn the petition at the hearing. However, once a winding-up order has been granted, it is extremely difficult to reverse.</p>
+
+<div class="cd-faq" itemscope itemtype="https://schema.org/FAQPage">
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can a winding-up petition be stopped after it has been filed?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Yes. A petition can be stopped by paying the debt in full (plus the petitioner's costs), by successfully disputing the debt on substantial grounds, or by the petitioning creditor agreeing to withdraw it following a negotiation. The company can also ask the court to dismiss or adjourn the petition at the hearing. However, once a winding-up order has been granted, it is extremely difficult to reverse.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How quickly will the bank freeze the company account?</summary>
-  <p>Most major UK banks freeze company accounts within 24 hours of the winding-up petition appearing in the London Gazette. Some banks act even faster through automated Gazette monitoring. The freeze is not a legal requirement but a risk management decision by the bank. Once the account is frozen, a validation order from the court is needed to authorise specific payments.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How quickly will the bank freeze the company account?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Most major UK banks freeze company accounts within 24 hours of the winding-up petition appearing in the London Gazette. Some banks act even faster through automated Gazette monitoring. The freeze is not a legal requirement but a risk management decision by the bank. Once the account is frozen, a validation order from the court is needed to authorise specific payments.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What is a validation order and how do I get one?</summary>
-  <p>A validation order is a court order under Section 127 of the Insolvency Act 1986 that authorises the company to make specific payments from its bank account despite the petition being in place. Without one, any payment made after the petition date can be voided by the court. You apply to the court with evidence of which payments are essential (wages, rent, key suppliers). A licensed insolvency practitioner or solicitor can prepare and file the application.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What is a validation order and how do I get one?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>A validation order is a court order under Section 127 of the Insolvency Act 1986 that authorises the company to make specific payments from its bank account despite the petition being in place. Without one, any payment made after the petition date can be voided by the court. You apply to the court with evidence of which payments are essential (wages, rent, key suppliers). A licensed insolvency practitioner or solicitor can prepare and file the application.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What is the difference between a statutory demand and a winding-up petition?</summary>
-  <p>A statutory demand is a formal written notice requiring payment of a debt within 21 days. It is not a court application. A winding-up petition is the next step: a formal application to the court to force the company into compulsory liquidation. The statutory demand is the warning. The petition is the action. If you receive a statutory demand, you have 21 days to pay, negotiate, or dispute before a petition can be filed.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What is the difference between a statutory demand and a winding-up petition?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>A statutory demand is a formal written notice requiring payment of a debt within 21 days. It is not a court application. A winding-up petition is the next step: a formal application to the court to force the company into compulsory liquidation. The statutory demand is the warning. The petition is the action. If you receive a statutory demand, you have 21 days to pay, negotiate, or dispute before a petition can be filed.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can I still trade after a winding-up petition has been filed?</summary>
-  <p>Technically, the company is not yet in liquidation and trading is not automatically prohibited. However, two risks make continued trading dangerous. First, the bank freeze triggered by the Gazette notice may make it physically impossible to trade. Second, any new debts incurred after the petition date increase your personal exposure to wrongful trading claims if the company is ultimately wound up. Take professional advice before continuing to trade.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can I still trade after a winding-up petition has been filed?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Technically, the company is not yet in liquidation and trading is not automatically prohibited. However, two risks make continued trading dangerous. First, the bank freeze triggered by the Gazette notice may make it physically impossible to trade. Second, any new debts incurred after the petition date increase your personal exposure to wrongful trading claims if the company is ultimately wound up. Take professional advice before continuing to trade.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to directors in a compulsory liquidation?</summary>
-  <p>In a compulsory liquidation, the Official Receiver conducts a mandatory investigation into the conduct of all directors. This covers the entire period leading up to insolvency. If the investigation finds wrongful trading, fraudulent trading, preference payments, or transactions at undervalue, directors can face personal liability for company debts and disqualification for up to 15 years. The investigation is more formal and less collaborative than in a director-led CVL.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to directors in a compulsory liquidation?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>In a compulsory liquidation, the Official Receiver conducts a mandatory investigation into the conduct of all directors. This covers the entire period leading up to insolvency. If the investigation finds wrongful trading, fraudulent trading, preference payments, or transactions at undervalue, directors can face personal liability for company debts and disqualification for up to 15 years. The investigation is more formal and less collaborative than in a director-led CVL.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Is a CVL better than compulsory liquidation for directors?</summary>
-  <p>In most cases, yes. A <a href="/creditors-voluntary-liquidation-cvl/">CVL</a> allows directors to choose their own licensed insolvency practitioner, maintain more influence over how assets are realised, and go through a less confrontational investigation process. The investigation still happens, but it is conducted by the chosen IP rather than the Official Receiver. Directors who move to a CVL before a winding-up order is granted generally face less personal exposure than those who are forced into compulsory liquidation.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Is a CVL better than compulsory liquidation for directors?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>In most cases, yes. A <a href="/creditors-voluntary-liquidation-cvl/">CVL</a> allows directors to choose their own licensed insolvency practitioner, maintain more influence over how assets are realised, and go through a less confrontational investigation process. The investigation still happens, but it is conducted by the chosen IP rather than the Official Receiver. Directors who move to a CVL before a winding-up order is granted generally face less personal exposure than those who are forced into compulsory liquidation.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>How much does it cost to defend a winding-up petition?</summary>
-  <p>The cost depends on the defence route. Paying the debt in full costs the debt amount plus the petitioner's legal costs (typically £1,500 to £3,000 for the petition itself). Disputing the petition through a solicitor can cost £2,000 to £10,000 or more depending on complexity. Moving to a CVL typically costs £3,000 to £6,000 plus VAT for a straightforward case, though this varies by company size and complexity. [HUMAN CONFIRMATION NEEDED: verify current typical CVL cost range]</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">How much does it cost to defend a winding-up petition?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>The cost depends on the defence route. Paying the debt in full costs the debt amount plus the petitioner's legal costs (typically £1,500 to £3,000 for the petition itself). Disputing the petition through a solicitor can cost £2,000 to £10,000 or more depending on complexity. Moving to a CVL typically costs £3,000 to £6,000 plus VAT for a straightforward case, though this varies by company size and complexity. [HUMAN CONFIRMATION NEEDED: verify current typical CVL cost range]</p>
+</div></div>
 </details>
 
-<details>
-  <summary>Can HMRC withdraw a winding-up petition?</summary>
-  <p>HMRC can agree to withdraw a petition if the full debt (including costs and interest) is paid, or if a credible time-to-pay arrangement is agreed. HMRC is generally less willing to negotiate once a petition has been filed than at the statutory demand stage. The earlier you engage, the more likely a negotiated outcome. See our detailed guide on <a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">HMRC winding-up petitions</a>.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">Can HMRC withdraw a winding-up petition?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>HMRC can agree to withdraw a petition if the full debt (including costs and interest) is paid, or if a credible time-to-pay arrangement is agreed. HMRC is generally less willing to negotiate once a petition has been filed than at the statutory demand stage. The earlier you engage, the more likely a negotiated outcome. See our detailed guide on <a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">HMRC winding-up petitions</a>.</p>
+</div></div>
 </details>
 
-<details>
-  <summary>What happens to employees if the company is wound up?</summary>
-  <p>Employees are automatically dismissed when a winding-up order is made. They become preferential creditors for arrears of wages (up to £800), accrued holiday pay, and notice pay. Redundancy payments are not paid from company assets. Instead, employees claim through the Redundancy Payments Service, which is funded by the National Insurance Fund and administered by the Insolvency Service. There are statutory caps on redundancy payments based on age, length of service, and weekly pay limits.</p>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<summary itemprop="name">What happens to employees if the company is wound up?</summary>
+<div class="cd-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">
+<p>Employees are automatically dismissed when a winding-up order is made. They become preferential creditors for arrears of wages (up to £800), accrued holiday pay, and notice pay. Redundancy payments are not paid from company assets. Instead, employees claim through the Redundancy Payments Service, which is funded by the National Insurance Fund and administered by the Insolvency Service. There are statutory caps on redundancy payments based on age, length of service, and weekly pay limits.</p>
+</div></div>
 </details>
+</div>
+
 
 
 <h2>Urgent Next Steps</h2>
