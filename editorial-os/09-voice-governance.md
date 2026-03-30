@@ -15,6 +15,15 @@ Default perspective options:
 
 Do not deviate from these unless a human explicitly confirms and supplies a different authority.
 
+### Regulated-practitioner authority restriction
+
+Do not imply regulated-practitioner authority (insolvency practitioner, solicitor, or FCA-regulated adviser) unless the statement is:
+- written by a named licensed insolvency practitioner or solicitor, OR
+- reviewed by a named IP/solicitor and attributed with a "Reviewed by" credit, OR
+- explicitly attributed to a named professional with their regulatory status stated
+
+The editorial team may describe insolvency processes, legal consequences, and director duties — but must not speak as though delivering regulated advice. Phrases like "we advise you to" or "our recommendation is" must be backed by named IP review or flagged with `[HUMAN CONFIRMATION NEEDED]`.
+
 ## 2. Banned founder and builder language
 
 Never use any of the following unless a human has explicitly confirmed and supplied the authority:

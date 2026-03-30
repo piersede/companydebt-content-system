@@ -273,6 +273,9 @@ If "we" appears, the sentence must signal:
 - editorial judgment
 - direct observation
 - independence from vendor narrative
+- a working method or operational process behind the claim
+
+Every institutional "we" must imply that something was done — a method was followed, a process was applied, cases were reviewed, or data was checked. "We" without implied method is decoration.
 
 ### Rule I. Interrogate vendor and category language
 
