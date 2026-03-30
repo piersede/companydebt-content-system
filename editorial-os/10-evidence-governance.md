@@ -423,6 +423,25 @@ For YMYL insolvency and financial pages, information gain cannot be satisfied by
 
 **FAIL** if a YMYL page goes to trust pass without a corresponding research file or documented primary-source check.
 
+### Information gain placement rule
+
+Information gained from research must be integrated without breaking the article's flow or decision logic.
+
+**Inline placement (default):** If a research finding directly supports the section it would sit in — reinforcing a claim, adding a threshold, or providing a statistic that makes the existing argument sharper — place it inline within the existing paragraph or as an adjacent sentence.
+
+**Standalone placement (fallback):** If the research finding is valuable but does not fit naturally into any existing section — because it changes topic, introduces a tangent, or would break the reader's decision path — do not force it inline. Instead, place it in a dedicated short block titled one of:
+
+- **"What the data shows"** — for statistical or enforcement findings
+- **"What we see in practice"** — for operational patterns from Company Debt's caseload
+- **"Key finding"** — for a single high-impact fact that deserves emphasis
+
+This block should appear immediately after the section it most closely relates to, as a 2-4 sentence standalone paragraph with a bold lead-in. It must not interrupt a decision sequence or delay the reader's next action.
+
+**FAIL if:**
+- research findings are forced into paragraphs where they break the narrative
+- research findings are dropped entirely because no natural inline position exists
+- a standalone block is used to dump multiple unrelated findings (one finding per block; if there are several, distribute them through the article)
+
 ---
 
 ### Hard rule: inference is not evidence
