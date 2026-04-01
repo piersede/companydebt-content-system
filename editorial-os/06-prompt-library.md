@@ -198,3 +198,31 @@ Does the article use at least two of the five approved compositional moves? If t
 
 **Declarative snap check:**
 Find the article's sharpest claim. Is it a short, declarative sentence? If it is buried in a longer paragraph or softened by qualifiers, extract it and let it stand alone.
+
+---
+
+## Insolvency article briefing prompt
+
+When briefing an insolvency article:
+
+1. Classify the page as one of:
+   - Definition
+   - Procedure
+   - Decision
+   - Problem-solution
+   - Route-explainer
+
+2. Generate the outline using the matching section order from `12-structure-governance.md` §29.
+
+3. Expand that outline into a keyword-aware subheading plan that captures the major adjacent search questions relevant to the query.
+
+Brief output must include:
+
+- Target query
+- Selected structure type
+- One-line reader task
+- Full section order
+- Proposed H2/H3 plan
+- Related search questions being absorbed
+
+The outline should be structurally consistent and search-complete.

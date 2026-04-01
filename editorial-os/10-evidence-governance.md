@@ -403,6 +403,45 @@ If the consensus is correct, say so — but say it better, with more precision, 
 
 During trust pass and adversarial review, score each H2 section: does it contain at least one information-gain element? Tally across the article. Fewer than 3 net-new elements across the entire article = hard fail. Any H2 section with zero information-gain elements = rewrite that section.
 
+### Research-driven information gain (mandatory for YMYL pages)
+
+For YMYL insolvency and financial pages, information gain cannot be satisfied by editorial judgement alone. At least 2 of the 3 required net-new elements must come from primary-source research, not from reframing competitor content.
+
+**Workflow requirement:** Before the outline stage, run a research step to identify facts competitors omit. This can use:
+- the Gemini Deep Research Agent (`scripts/gemini_research.py`) for batched fact verification
+- manual primary-source checks (Insolvency Service, HMRC, FCA, Companies House, Bank of England)
+- the `run_info_gain_research.py` script for structured research bundles
+
+**Research question design:** Questions must target:
+1. primary-source statistics that competitors cite vaguely or not at all
+2. enforcement data (disqualification rates, HMRC petition volumes, timeline specifics)
+3. process facts competitors omit because they're uncomfortable (e.g. unsecured creditor distribution rates)
+4. regulatory warnings or changes not yet reflected in competitor content
+5. specific thresholds, fees, or rates that competitors round or skip
+
+**Output:** A saved research file in `/research/` with sourced answers. Information gain facts are then patched into the draft at the H2 section where they add most decision value.
+
+**FAIL** if a YMYL page goes to trust pass without a corresponding research file or documented primary-source check.
+
+### Information gain placement rule
+
+Information gained from research must be integrated without breaking the article's flow or decision logic.
+
+**Inline placement (default):** If a research finding directly supports the section it would sit in — reinforcing a claim, adding a threshold, or providing a statistic that makes the existing argument sharper — place it inline within the existing paragraph or as an adjacent sentence.
+
+**Standalone placement (fallback):** If the research finding is valuable but does not fit naturally into any existing section — because it changes topic, introduces a tangent, or would break the reader's decision path — do not force it inline. Instead, place it in a dedicated short block titled one of:
+
+- **"What the data shows"** — for statistical or enforcement findings
+- **"What we see in practice"** — for operational patterns from Company Debt's caseload
+- **"Key finding"** — for a single high-impact fact that deserves emphasis
+
+This block should appear immediately after the section it most closely relates to, as a 2-4 sentence standalone paragraph with a bold lead-in. It must not interrupt a decision sequence or delay the reader's next action.
+
+**FAIL if:**
+- research findings are forced into paragraphs where they break the narrative
+- research findings are dropped entirely because no natural inline position exists
+- a standalone block is used to dump multiple unrelated findings (one finding per block; if there are several, distribute them through the article)
+
 ---
 
 ### Hard rule: inference is not evidence
@@ -432,3 +471,64 @@ For every sentence containing a banned phrase, ask: "What is the basis for this 
 If the only available source is a competitor site, the claim must be independently verified against the provider's own documentation, or flagged with `[VERIFY — only competitor source found]`.
 
 Full rules and enforcement: `23-prose-quality-gates.md` §10.
+
+---
+
+## §13 Distress reassurance evidence rule
+
+Do not use broad market statistics to imply low personal risk.
+
+If a statistic is used to reassure a distressed reader, the copy must:
+- state what the statistic does and does not show
+- avoid derived emotional conclusions
+- tie the number to a concrete legal or process point
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself."
+
+**Restricted:** Broad ratio-based reassurance implying personal safety from aggregate market data (e.g. "only 4% of directors face action, so your odds are good").
+
+### Rationale
+
+Population-level statistics can easily become over-comforting or legally imprecise. A director reading this content needs to understand that outcomes depend on their specific conduct, not on sector averages. Using aggregate data primarily to calm fear creates a trust risk and a potential regulatory exposure under YMYL standards.
+
+---
+
+## §14 Reassurance claim classes
+
+Classify reassurance claims before publication.
+
+**Class A: legal/process reassurance**
+Example: "Liquidation does not automatically mean disqualification."
+Allowed with sourced legal/process basis.
+
+**Class B: population-level directional reassurance**
+Example: "Thousands of directors go through this every year."
+Allowed with attribution and no personal inference.
+
+**Class C: experiential reassurance**
+Example: "Most directors find the process more manageable than expected."
+Not allowed unless based on named internal research, surveys, or attributable case evidence.
+
+### Rule
+
+Do not use Class C reassurance in YMYL pages without an explicit evidence source. If evidence is absent, replace with process-based reassurance (Class A), not emotional assertion.
+
+### Enforcement
+
+If a reassurance claim cannot be evidenced, remove it or convert it into a concrete process statement. Class C claims without sources fail this gate.
+
+### Reassurance standard
+
+All reassurance on distressed-director pages must be:
+- tied to a legal or process reality (not just emotional comfort)
+- bounded (state what it does NOT guarantee)
+- followed within 1-2 sentences by a concrete action or condition
+
+Disallow vague reassurance based on "most" or "many" without:
+- a named source
+- a stated limit of inference
+- an adjacent operational fact
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself. But if you traded while insolvent or paid yourself preferentially, those are the areas of exposure."
+
+**Not allowed:** "Most directors find the process easier than they expected." (No source, no boundary, no action.)

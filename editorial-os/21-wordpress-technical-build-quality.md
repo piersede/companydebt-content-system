@@ -222,3 +222,64 @@ When producing an audit report, follow this structure:
 3. **Per-category scoring.** Score each category with evidence citations.
 4. **Priority findings.** Ranked by risk, not by category order. Security and performance issues surface first.
 5. **Recommendations.** Specific, actionable items with expected effort and impact.
+
+---
+
+## §22 Editorial page assembly controls
+
+Every editorial page must declare its module stack before build.
+
+Required fields:
+- page type
+- primary module
+- secondary modules
+- CTA count
+- form-module presence
+- support-module presence
+
+Fail build if:
+- module stack exceeds allowed count for page type
+- duplicate CTA functions appear
+- inline component fragments or placeholders remain
+- injected module voice does not match parent page voice pattern
+
+### Company Debt decision guide module stack
+
+Primary module:
+- editorial decision guide
+
+Allowed secondary modules:
+- 1 crisis intervention module
+- 1 cost/eligibility module
+- 1 emotional-support module
+- 1 final CTA module
+
+Forbidden:
+- stacked promotional modules with overlapping intent
+- inline component fragments or placeholder labels
+- two or more quote/lead-gen modules on the same page
+- support resources inserted before core decision content is resolved
+
+### Commercial module compatibility matrix
+
+For decision guides:
+- Intro CTA: allowed
+- Inline quote form: allowed only if the page job includes cost-estimation intent
+- Crisis intervention box: allowed only once
+- Emotional support box: allowed only after practical route content
+- Lead-gen quote form + separate urgent-callout + final CTA: not all three unless one is demoted to plain text
+
+If two modules solve the same user action, keep one and remove the rest.
+
+### Component hygiene gate
+
+Fail the page if any of the following appear:
+- orphaned labels
+- placeholder text
+- raw component names
+- broken CTA wrappers
+- duplicated heading stubs
+- inline form-module copy that does not match the page voice pattern
+- fragments such as "contact", "read more", "apply now" without their intended UI wrapper
+
+This is a publish-blocking failure.

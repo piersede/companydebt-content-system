@@ -404,3 +404,537 @@ This concession block does not need to be a formal table. It can be prose. But a
 - **FAIL** if Company Debt is named without any limiting conditions
 - **FAIL** if the article does not state at least one scenario where Company Debt is not the right answer
 - **FAIL** if a CTA appears before the editorial conclusion is complete
+
+---
+
+## 12. Persona-State Purity Gate
+
+### Rule
+
+Every page must serve one dominant persona-state for at least 80% of the article body. One secondary branch-out section is permitted. Two or more co-equal persona-states treated as full sections is a structural failure.
+
+### How to check
+
+1. Identify the declared persona-state from the article brief
+2. For each H2 section, ask: does this section serve the declared persona-state?
+3. Count sections serving other persona-states
+4. If more than 20% of sections serve a different state, the page needs splitting or the secondary material needs converting to branch-out blocks
+
+### Fail conditions
+
+- **FAIL** if no persona-state is declared in the brief
+- **FAIL** if two or more persona-states are treated as co-equal body sections
+- **FAIL** if the page mixes crisis-distress, solvent-extraction, and rescue intents as peer sections
+
+### Branch-out pattern
+
+Secondary persona-states should appear as short qualification blocks (2-3 sentences), not full sections. Each qualification block links to its own dedicated page:
+
+> "If your company can pay all debts in full, you likely need an MVL, not this insolvent liquidation guide. See our [MVL guide](/members-voluntary-liquidation/) for solvent closure."
+
+See `editorial-os/templates/route-matrix.md` for the full route matrix and branch-out rules.
+
+---
+
+## 13. Route Separation Rule for Insolvency Content
+
+For Company Debt content specifically, these are separate route families and should not be treated as co-equal sections within a single guide unless the page is explicitly a cross-route comparison:
+
+1. Insolvent closure (CVL)
+2. Forced closure (compulsory liquidation)
+3. Solvent closure (MVL)
+4. Business rescue (CVA, administration)
+5. Director risk / liability
+6. Strike-off vs formal process
+
+### Enforcement
+
+- At brief stage: if the page job maps to two or more route families, split the page
+- At outline stage: if an H2 section serves a different route family, convert to a branch-out block
+- At review stage: flag any page treating MVL and CVL as equal body sections in a non-comparison page
+
+See `editorial-os/templates/route-matrix.md` for the persona-state to route family mapping.
+
+---
+
+## 14. Distressed Query First-Screen Standard
+
+### Rule
+
+For pages targeting distressed or crisis queries (winding-up petition, HMRC enforcement, insolvency, liquidation), the first 10% of the article must contain ALL FOUR of:
+
+1. **Reassurance** — acknowledge the reader's emotional state; normalise the situation
+2. **State recognition** — name the specific scenario the reader is likely in
+3. **Decision fork** — present the 2-3 paths available, not a wall of explanation
+4. **Immediate next step** — a concrete action the reader can take right now
+
+Not two of four. Not three of four. All four.
+
+### Why
+
+The persona framework is explicit: distressed directors are in fight-or-flight mode. They do not process walls of text. They need to know: you understand my situation, here are my options, here is what to do next. Front-loading this is not optional.
+
+### Fail conditions
+
+- **FAIL** if the first 10% contains educational overview without reassurance
+- **FAIL** if the decision fork appears after the first 10%
+- **FAIL** if no immediate next step is offered in the opening section
+- **FAIL** if the opening reads like a textbook definition rather than crisis-appropriate guidance
+
+### Detection
+
+Read the first 10% of the article (roughly the first 300-400 words of a 3,000-word page). Check off each of the four elements. If any is missing, the page fails.
+
+---
+
+## §14a Terminology bridge rule
+
+Do not open with a legal process label unless the reader has already been oriented in plain English.
+
+For Company Debt pages, assume many distressed directors understand the problem before they understand the formal route name. They may know they need to close the company, avoid HMRC escalation, or stop a creditor forcing action — but they may not know terms like CVL, MVL, administration, or wrongful trading at the start.
+
+Opening order must be:
+1. Reader state in plain language
+2. Decision in plain language
+3. Consequence of acting vs waiting
+4. Only then the formal process name, introduced as the label for the route already described
+
+**Allowed:**
+"If your company cannot pay its debts and you have decided it needs to close, the key question is whether you close it voluntarily now or wait for a creditor to force the issue. The voluntary route is called a Creditors' Voluntary Liquidation, or CVL."
+
+**Not allowed:**
+"If your company is insolvent and needs to close, you must choose between a CVL and compulsory liquidation."
+
+### Fail conditions
+
+- **FAIL** if a distressed-intent opening introduces technical insolvency terminology or acronyms before the reader has been oriented in plain-English problem language
+- **PASS** only if the intro first states the practical situation, the immediate decision, and the consequence of delay — and only then introduces the formal legal label
+
+---
+
+## 15. Section Purpose Test
+
+### Rule
+
+Each section in the outline must declare its primary role from this list:
+
+- **orient** — help the reader understand where they are and what applies
+- **compare** — present options with visible trade-offs
+- **warn** — flag risks, consequences, or common mistakes
+- **qualify** — narrow who this section applies to
+- **reassure** — reduce fear or normalise the reader's situation
+- **convert** — move toward a specific next step or CTA
+- **branch out** — redirect readers whose situation fits a different page
+
+### Enforcement
+
+If a section does more than one primary job, it should be rewritten or split. A section that orients AND compares AND warns is trying to do too much.
+
+### How to use
+
+In the article brief's Section Purpose Map, every planned H2 must have exactly one declared role. During review, check whether the section actually performs only that role.
+
+---
+
+## 16. FAQ Completion Rule
+
+### Rule
+
+A page may not ship with placeholder FAQ headings only. If a FAQ section exists, every question must have a substantive answer.
+
+### Requirements
+
+FAQ answers must:
+- Answer actual objections from the target persona-state
+- Reflect persona blockers (affordability, HMRC awareness, personal liability, strike-off temptation, confidentiality)
+- Reduce decision friction, not just restate body content
+
+### Fail conditions
+
+- **FAIL** if any FAQ question has no answer or a placeholder answer
+- **FAIL** if FAQ answers are one sentence only (thin-content risk)
+- **FAIL** if FAQ answers cross-reference other sections with "see above" instead of answering directly
+- **FAIL** if FAQ questions do not reflect the target persona's key objections
+
+---
+
+## 17. Decision Support Density Rule for Distressed Audiences
+
+### Rule
+
+For pages targeting distressed-director queries, every 250-350 words must contain at least one decision support element. For acute distress pages (crisis-defense, winding-up petition, HMRC enforcement), the tighter threshold in §18 (180-220 words) applies instead.
+
+- Decision table or comparison
+- Checklist or numbered steps
+- Process flow or timeline
+- Threshold box (when X happens, do Y)
+- Objection box (common concern + direct answer)
+- Comparison module (route A vs route B)
+- Branch-out qualification block
+
+### Why
+
+The persona framework is explicit that distressed directors do not process walls of text. They need bulleted summaries, visual flows, and bolded thresholds. This rule converts that advice into an enforceable gate.
+
+### Enforcement
+
+Count the words between decision support elements. If any stretch exceeds 350 words of continuous prose without a structural aid, it needs a decision support element inserted.
+
+### Exception
+
+Methodology and disclosure sections are exempt from this rule.
+
+---
+
+## §18 Distressed-page body control
+
+After the opening, distressed-director pages must maintain decision density.
+
+No body section may exceed 180 to 220 words without one decision-support element:
+- checklist
+- comparison
+- timeline
+- warning box
+- threshold box
+- consequence summary
+- immediate next step
+
+If two consecutive body sections fail this test, fail structure governance.
+
+### Rationale
+
+The persona framework is explicit that distressed directors cannot process walls of text after the opening. The intro improvement from §14 is necessary but not sufficient — the body must maintain the same structural discipline throughout.
+
+---
+
+## §19 Support module order for distressed pages
+
+For distressed-director pages, modules must follow this sequence:
+1. identify the route
+2. explain the immediate consequence
+3. explain the director's exposure
+4. explain cost/funding
+5. only then surface emotional support resources
+6. close with one final action path
+
+Do not place emotional-support or helpline resources before the user has a working decision model.
+
+### Fail conditions
+
+- **FAIL** if support/helpline content appears before route selection is resolved
+- **FAIL** if emotional support competes with or interrupts the main decision path
+
+---
+
+## §20 Decision flow enforcement
+
+Every section in a distressed-director decision guide must answer one of:
+- Which route applies?
+- What happens if I delay?
+- What do I personally risk?
+- What will this cost?
+- What should I do next?
+
+If a section does not reduce uncertainty or move the reader toward action, it must be shortened, moved, or removed.
+
+### Fail conditions
+
+- **FAIL** if any body section exists primarily to explain without narrowing the reader's choices
+- **FAIL** if two consecutive sections add context without progressing the decision
+
+---
+
+## §21 Process placement rule
+
+Do not introduce full process explanations before:
+- route selection is clear
+- urgency is established
+- personal exposure is understood
+
+Process sections must follow decision clarity, not precede it.
+
+### Required section order for distressed decision guides
+
+1. Route selection (which path applies)
+2. Urgency and consequences of delay
+3. Personal exposure and risk
+4. Process mechanics (how it works)
+5. Costs and funding
+6. Alternatives (branch-outs only)
+7. Support resources
+8. Final action lock
+
+---
+
+## §22 Section intent purity [CONSOLIDATED INTO §15]
+
+This rule has been merged into §15 (Section Purpose Test). The intent-purity requirement (first 2 sentences must deliver the section's purpose) is now enforced as part of §15. The three intent categories (immediate action, decision, explanation) map to §15's role taxonomy as follows:
+- Immediate action → orient, warn, convert
+- Decision → compare, qualify
+- Explanation → reassure, branch out
+
+See §15 for the canonical section purpose test.
+
+---
+
+## §23 Persona-state lock
+
+Every page must declare before drafting:
+- **Primary persona** (e.g. Crisis Defender, Spongebob Seeker, BBL Worrier, Strategic Wind-Downer)
+- **Stage** (Crisis / Option Comparison / Validation)
+
+All sections must serve the declared persona-state. If content addresses a different persona, it must be:
+- a branch-out block (2-3 sentences + link), not a full section
+- explicitly labelled as "if this doesn't apply to you"
+
+### Fail conditions
+
+- **FAIL** if more than one persona-stage is addressed without explicit segmentation
+- **FAIL** if generic content serves no specific persona's decision need
+
+---
+
+## §24 Escalation flow
+
+Content must follow one linear path matching the user's decision journey:
+
+1. Situation recognition ("this is where you are")
+2. Immediate options ("these are your choices")
+3. Consequences of inaction ("this is what happens if you wait")
+4. Controlled solution ("this is the path you control")
+5. Next step CTA ("do this now")
+
+### Fail conditions
+
+- **FAIL** if the page loops back into explanation after reaching decision content
+- **FAIL** if options are introduced without stakes
+- **FAIL** if consequences appear before the reader knows their options
+
+---
+
+## §25 Anti-genericity gate
+
+Scan every section for:
+- Definitions that could apply to any country or context
+- Sections that explain "what is X" without decision impact
+- Paragraphs that do not move the reader closer to action
+
+If more than 15% of page content is generic (not tied to a specific decision, persona, or UK legal context), the page fails.
+
+---
+
+## §26 Urgency insertion rule
+
+Within the first 2 sections, the page must explicitly state:
+- What happens if the director waits
+- What control is lost by delay
+- What changes if a creditor acts first
+
+Urgency must be stated directly, not implied. "Acting early helps" is not sufficient. "If a creditor petitions first, the court appoints the Official Receiver and you lose the ability to choose your own IP" is.
+
+### Fail conditions
+
+- **FAIL** if urgency is implied but never stated with specific consequences
+- **FAIL** if the first 2 sections contain no explicit delay-consequence statement
+
+---
+
+## §27 Decision hierarchy rule for distress pages
+
+The first 25% of the page must resolve these in order:
+
+1. What state am I in?
+2. What happens if I delay?
+3. What is the correct route?
+4. What should I do now?
+
+Do not introduce broad alternatives, emotional support resources, secondary route exploration, or generic educational material until the primary route and next action are established.
+
+### Fail conditions
+
+- **FAIL** if rescue options appear before route assignment
+- **FAIL** if emotional support appears before the reader has a working decision model
+- **FAIL** if the first 25% does not complete all four steps
+
+---
+
+## §28 Section role discipline
+
+Every section in an insolvency guide must declare one role only:
+
+- classify
+- warn
+- compare
+- explain process
+- resolve objection
+- convert
+
+### Fail conditions
+
+- **FAIL** if a section attempts multiple roles before its first 2 sentences
+- **FAIL** if a section combines compare + reassure + explain + convert in the same opening
+
+---
+
+## §29 Standard structures for insolvency articles
+
+These structures are mandatory at article-type level. Subheadings may be expanded to capture adjacent search intent, provided the article keeps the same structural logic.
+
+### 1. Definition article
+
+Use when the reader is trying to understand a term, event, or formal insolvency concept.
+
+Required order:
+1. Introduction
+2. What [topic] means
+3. When [topic] happens or applies
+4. Why [topic] matters
+5. How [topic] works in practice
+6. What [topic] means for directors / shareholders / creditors / employees, where relevant
+7. Risks, consequences, or legal effects
+8. Related procedures, alternatives, or next-stage events
+9. Frequently asked questions
+10. Next steps
+
+Typical SEO-rich subheading patterns:
+- What is [topic]?
+- When does [topic] happen?
+- How does [topic] work?
+- What happens if [topic] occurs?
+- What does [topic] mean for directors?
+- [Topic] vs [related term]
+- Can [topic] be stopped / avoided / reversed?
+
+### 2. Procedure article
+
+Use when the reader is trying to understand, complete, or prepare for a formal process.
+
+Required order:
+1. Introduction
+2. When this procedure is used
+3. Who can use it / eligibility / trigger conditions
+4. How the procedure works step by step
+5. What documents, decisions, approvals, or thresholds are involved
+6. How long the procedure takes
+7. What the procedure costs
+8. What happens once the process starts
+9. What happens at the end of the process
+10. Risks, mistakes, or reasons the route may be unsuitable
+11. Alternatives
+12. Frequently asked questions
+13. Next steps
+
+Typical SEO-rich subheading patterns:
+- How to [procedure]
+- Can I [procedure] if the company has debts?
+- How long does [procedure] take?
+- How much does [procedure] cost?
+- What forms or decisions are needed for [procedure]?
+- What happens after [procedure] starts?
+- Alternatives to [procedure]
+
+### 3. Decision article
+
+Use when the reader is comparing routes or deciding which option fits their situation.
+
+Required order:
+1. Introduction
+2. The decision the reader is trying to make
+3. Overview of the options being compared
+4. What option 1 is and when it fits
+5. What option 2 is and when it fits
+6. Key differences
+7. Cost comparison
+8. Speed / control / risk comparison
+9. Which option is better in which situation
+10. Edge cases, exceptions, or common misunderstandings
+11. Frequently asked questions
+12. Recommendation or next steps
+
+Typical SEO-rich subheading patterns:
+- [Option 1] vs [Option 2]
+- Is [option 1] better than [option 2]?
+- Can I use [option 1] if the company has debts?
+- Which is cheaper: [option 1] or [option 2]?
+- Which is faster: [option 1] or [option 2]?
+- When should you choose [option 1] instead of [option 2]?
+
+### 4. Problem-solution article
+
+Use when the reader is dealing with an active problem, warning sign, creditor pressure, or formal legal threat.
+
+Required order:
+1. Introduction
+2. What this problem means
+3. Why it matters now
+4. What happens if it is ignored
+5. Immediate steps to take
+6. What evidence, documents, or facts need to be checked
+7. Formal options available
+8. What the reader should avoid doing
+9. What this means for the company, directors, assets, bank accounts, staff, or creditors, where relevant
+10. When professional advice becomes urgent
+11. Frequently asked questions
+12. Urgent next steps
+
+Typical SEO-rich subheading patterns:
+- What happens if you ignore [problem]?
+- How serious is [problem]?
+- How long do you have to respond to [problem]?
+- Can you stop [problem]?
+- What should directors do after [problem]?
+- Can the company still trade after [problem]?
+- Does [problem] affect bank accounts / employees / personal liability?
+
+### 5. Route-explainer article
+
+Use when the reader needs to understand the available closure, insolvency, or rescue routes before choosing one.
+
+Required order:
+1. Introduction
+2. The main routes available
+3. What each route means
+4. Which routes are for solvent companies and which are for insolvent companies
+5. When each route is usually appropriate
+6. Cost, speed, control, and risk differences
+7. What happens under each route
+8. How to choose the right route
+9. Common mistakes and route-selection errors
+10. Frequently asked questions
+11. Next steps
+
+Typical SEO-rich subheading patterns:
+- How to close a company
+- What are the main ways to close a company?
+- Can you close a company with debts?
+- Strike off vs liquidation
+- Solvent vs insolvent company closure
+- Which closure route is right for my company?
+
+### Table of Contents placement rule
+
+Every article must include a manual Table of Contents block positioned immediately before the first H2. The theme's auto-generated TOC is hidden via CSS because its insertion point is unpredictable.
+
+The TOC must:
+- Use the `.toc` class with a `Contents` heading
+- Link to every H2 on the page via anchor IDs
+- Every H2 must have a unique `id` attribute (slugified heading text)
+
+Do not rely on the theme to generate or position the TOC. Include it in the page content HTML.
+
+### Opening rule for insolvency pages
+
+The introduction must establish:
+1. what the topic is
+2. what practical question the article answers
+3. what the reader will understand, compare, or be able to decide after reading
+
+The opening should also naturally support the page's primary query and closely related variants.
+
+### Section expansion rule
+
+When expanding a structure for SEO coverage, add sections that deepen the approved article type rather than drift into another type.
+
+Good expansion: adding costs, timing, consequences, and alternatives to a procedure page.
+
+Poor expansion: turning a definition page into a bloated catch-all guide with disconnected procedural and comparison sections.

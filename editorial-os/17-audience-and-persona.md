@@ -1,101 +1,196 @@
 # 17. Audience and Persona
 
-> **NOTE: This persona needs to be customised for Company Debt's actual audience.** The rules below were inherited from the Offlode editorial system (which targeted UK accountants). Update the primary audience, pain points, and domain knowledge sections to reflect companydebt.co.uk's actual readership before publishing any content.
-
 ## Primary audience
 
-The default Company Debt reader is a UK business owner, operator, or decision-maker looking for practical, trustworthy guidance on business tools, software, and operational decisions.
+The default Company Debt reader is a **director of a UK limited company facing debt, creditor pressure, or insolvency**. They are not reading for general business advice. They are reading because something has gone wrong and they need to understand their options, their personal exposure, and what to do next.
 
-They are not reading for entertainment. They are reading to reduce friction, save time, improve control, and make better operational decisions.
+Most readers arrive in a state of stress, confusion, or fear. Many have never dealt with insolvency before. They may have received an HMRC letter, a statutory demand, or a call from a creditor. Some are weighing up whether to close the company voluntarily. Others are trying to work out if they are personally liable.
+
+The writing must respect this emotional state while delivering decision-grade information.
 
 ## Secondary audiences
 
-Secondary readers may include:
-- small business owners and founders
-- operations managers
-- finance and admin leads
-- practice managers (accountancy, legal, professional services)
-- freelancers and contractors
-- HR and payroll decision-makers
+- **Accountants and bookkeepers** — often the first professional a director consults. They may refer the director to Company Debt or forward content to them. See Internal Referrer Module below.
+- **Co-directors and business partners** — may be involved in the decision but not the one doing the research.
+- **Solicitors and legal advisers** — occasionally checking insolvency guidance for clients.
+- **Employees** — searching for what happens to their jobs, redundancy pay, or unpaid wages.
 
-These readers matter, but the writing should default to the mindset of a working business professional dealing with real operational drag.
+## Named persona-states
 
-## Business segments
+Every piece of content must be written for one primary persona-state. These are the five director states Company Debt serves:
 
-### Sole traders and micro-businesses
-Usually resource-constrained. Need simple tools, quick wins, and minimal implementation burden. Sensitive to cost, complexity, and wasted time.
+### 1. Crisis Defender
 
-### Small businesses (2-20 employees)
-Often juggling growth with inconsistent process. May already use some software but still suffer from manual workarounds. Need operational leverage without introducing chaos.
+**Profile:** SME director facing immediate forced liquidation, usually by HMRC.
+**Trigger:** Receipt of a winding-up petition or 7-day warning letter from HMRC.
+**Emotional state:** Panic, fear of frozen bank accounts, shame about Gazette publication.
+**Awareness:** High awareness of the threat, low awareness of legal defences or voluntary options.
+**Goals:** Stop the petition, prevent bank freeze, buy negotiation time.
+**Core fears:** Loss of control to Official Receiver, wrongful trading investigation, reputational damage.
+**Decision blockers:** Stress paralysis, lack of funds, mistrust of advisers.
+**Search behaviour:** Short-tail, high-urgency queries ("HMRC 7 day letter help", "stop winding up petition").
+**Trust signals needed:** 24/7 availability, Licensed IP status, free and confidential, immediate action.
+**Best CTAs:** "Call now for free defence advice", "Speak to an expert today".
+**Commercial readiness:** HIGH — must act within 7-day window.
 
-### Medium-sized businesses (20-100 employees)
-More likely to have structured workflows, team handoffs, compliance pressure, and segmented responsibilities. Need tools that reduce admin load, improve visibility, and fit into a wider systems stack.
+### 2. Spongebob Opportunity Seeker
 
-### Growing multi-site or multi-team operations
-More likely to care about governance, auditability, role clarity, team efficiency, and process consistency.
+**Profile:** Micro-business or contractor director trying to exit cheaply via dissolution rather than formal liquidation.
+**Trigger:** Business no longer profitable or HMRC chasing arrears.
+**Emotional state:** Pragmatic, slightly cynical, weary of high insolvency costs.
+**Awareness:** Believes they have found a "legal hack" (Spongebob Plan) to avoid CVL costs.
+**Goals:** Close the company for the £10 strike-off fee, avoid professional fees, write off debts.
+**Core fears:** HMRC restoring the company to the register, personal investigation, missing redundancy payouts.
+**Decision blockers:** High perceived cost of liquidation vs nominal strike-off cost.
+**Search behaviour:** Detailed how-to queries with forum-derived terms ("dissolving company with BBL").
+**Trust signals:** Plain-English risk explanations, transparency on redundancy funding.
+**Best CTAs:** "Check my redundancy eligibility", "Get a fixed-price liquidation quote".
+**Commercial readiness:** MEDIUM — needs to see strike-off risks before converting.
 
-## Reader jobs to be done
+### 3. BBL-Anxious Micro-Business Owner
 
-The reader usually wants one or more of the following:
-- find the right software for their specific situation
-- compare tools without sitting through a sales call
-- understand whether a product fits their existing workflow
-- see whether a broader platform or a focused tool is the better answer
-- avoid making the wrong software decision
-- reduce time spent on manual admin
-- improve operational efficiency
+**Profile:** Director terrified of Bounce Back Loan default consequences, often fuelled by misinformation.
+**Trigger:** Headlines about BBL fraud crackdowns or repayment deadlines.
+**Emotional state:** Extreme anxiety, guilt, fear of losing home, confusion over guarantee status.
+**Awareness:** Confused — knows they cannot pay but unclear on personal liability or whether misuse triggers prosecution.
+**Goals:** Confirm personal liability status, understand legal options for BBL debt, avoid disqualification.
+**Core fears:** Criminal prosecution, 11-15 year disqualification bans, compensation orders.
+**Decision blockers:** Fear that engaging an IP will trigger an investigation.
+**Search behaviour:** Consequence-led queries ("BBL misuse consequences", "can I be jailed for BBL").
+**Trust signals:** Confidentiality assurances, case studies, grey-area explanations.
+**Best CTAs:** "Speak to a BBL specialist", "Request a confidential liability assessment".
+**Commercial readiness:** HIGH — fear of investigation drives formal liquidation.
 
-## Buying anxieties
+### 4. Strategic SME Refiner
 
-The reader may worry about:
-- paying for software that does not solve the actual bottleneck
-- adding another tool unnecessarily
-- introducing complexity into the stack
-- poor team adoption
-- staff resistance
-- weak integration with existing systems
-- compliance and data handling concerns
-- vague marketing claims not grounded in business reality
+**Profile:** Experienced director of a larger viable business burdened by legacy debt, seeking rescue not closure.
+**Trigger:** Major customer default or sudden cashflow squeeze.
+**Emotional state:** Resolute, professional, focused on turnaround.
+**Awareness:** High — understands Administration and CVAs but needs expert execution.
+**Goals:** Preserve business as going concern, protect employees, manage stakeholders.
+**Core fears:** Loss of the business, reputational damage in their industry.
+**Decision blockers:** Complexity of rescue process, need for upfront stabilisation funding.
+**Search behaviour:** Technical queries ("Pre-pack administration timeline", "CVA vs Administration for SMEs").
+**Trust signals:** Proof of turnaround experience, partner-led service, sector expertise.
+**Best CTAs:** "Book a strategic options review", "Download the SME rescue guide".
+**Commercial readiness:** LOW-MEDIUM — in options-evaluation phase, requires nurturing.
 
-## What the reader already knows
+### 5. Windfall Researcher
 
-Assume the reader already understands:
-- the basic shape of running a UK business
-- common admin and compliance pressures
-- the cost of manual workarounds in staff time
-- that not every software tool is right for every business
+**Profile:** Specifically focused on director redundancy to fund liquidation and provide a personal financial buffer.
+**Overlap:** Shares traits with Spongebob and Crisis Defender personas.
+**Goals:** Maximise personal financial recovery from the company's closure.
+**Search behaviour:** "Director redundancy pay", "can directors claim redundancy in liquidation".
+**Commercial readiness:** MEDIUM-HIGH — redundancy claim is often the hook that converts to CVL.
 
-Do not over-explain obvious business realities.
+## Search journey stages
+
+### Stage 1: Vague concern ("sleepless nights")
+Triggers: difficulty meeting payroll, late VAT payments.
+Searches: "company can't pay bills", "is my company insolvent".
+Needs: simple insolvency test.
+
+### Stage 2: Symptom checking ("HMRC reality")
+Triggers: statutory demand or persistent HMRC debt collection.
+Searches: "HMRC statutory demand response", "can HMRC seize business assets".
+Needs: understanding HMRC powers vs trade creditor powers.
+
+### Stage 3: Legal threat recognition ("crisis")
+Triggers: winding-up petition served or bank account frozen.
+Searches: "stop winding up petition", "freeze company bank account help".
+Needs: immediate legal intervention.
+
+### Stage 4: Option comparison ("cost and risk")
+Triggers: acceptance the company cannot continue.
+Searches: "CVL vs strike off", "cost of liquidation UK", "director redundancy eligibility".
+Needs: comparative costs and timelines.
+
+### Stage 5: Readiness for consultation ("trust")
+Triggers: need to speak to a person.
+Searches: "best insolvency practitioners UK", "CompanyDebt.com reviews".
+Needs: proof of expertise, direct contact info.
+
+## Persona-to-route matrix
+
+| Persona-state | Core fear | Core decision | Right page family | Primary CTA |
+|---|---|---|---|---|
+| Crisis Defender | petition / frozen account | stop immediate threat | defence / emergency | urgent call |
+| Spongebob Seeker | cheap escape / HMRC objection | strike-off vs CVL | comparison / risk guide | risk check |
+| BBL Worrier | liability / disqualification | personal exposure | liability hub | confidential assessment |
+| Strategic Wind-Downer | do it properly / preserve dignity | orderly closure | CVL guide | options review |
+| Solvent Closer | tax-efficient extraction | MVL suitability | MVL guide | tax-led review |
 
 ## Tone guidance
 
-Write for capable, busy professionals. Sound informed, calm, specific, and operationally literate.
+Write for distressed, time-poor directors. Sound informed, calm, specific, and direct.
 
 Favour:
 - direct judgement
-- concrete trade-offs
-- practical implications
-- clear distinctions
-- respect for the reader's intelligence
+- concrete thresholds and deadlines
+- practical next steps
+- clear route distinctions
+- reassurance tied to process facts (not abstract comfort)
 
 Avoid:
-- hype
-- startup swagger
-- abstract SaaS language
-- patronising explanation
-- fake certainty
-- founder mythology
+- generic SaaS or business advice language
+- patronising explanation of obvious business realities
+- fake certainty about outcomes that depend on facts
+- founder mythology or startup swagger
 - overuse of first person
-- generic claims about "transforming businesses"
+- abstract claims about "helping businesses"
 
-## Red lines for this audience
+## Red lines
 
 Writing fails this audience if it:
-- sounds like generic B2B SaaS copy
+- sounds like generic insolvency content that could apply to any country
 - over-explains basic business realities
-- uses obvious filler or padded praise
-- pretends every business has the same needs
+- uses obvious filler or padded reassurance
+- pretends every director's situation is the same
 - pushes Company Debt through rigged framing
-- claims lived implementation authority not actually established
-- sounds like a founder letter rather than an editorial analysis
-- treats business owners as non-technical or naive
+- claims practitioner authority not actually established
+- treats directors as naive or ignorant
+- delays the decision point behind educational exposition
+
+---
+
+## Director language vs formal process language
+
+For UK insolvency content, default to the director's lived language first:
+- close the company
+- cannot pay debts
+- HMRC is chasing
+- creditor pressure
+- court action
+- shut the business down properly
+
+Treat formal terms as second-step labels:
+- Creditors' Voluntary Liquidation
+- Members' Voluntary Liquidation
+- administration
+- wrongful trading
+- transactions at undervalue
+
+Writers must not assume that a distressed director knows the route name they need. The page should name the route only after describing it in practical language.
+
+---
+
+## Life-after branch rule
+
+If the persona-state includes shame, grief, or founder-identity loss, add one short branch-out block near the end:
+- what happens after this route
+- whether directors can start again
+- where to go next
+
+Do not turn emotional support into a long standalone section unless the page type is recovery-oriented.
+
+---
+
+## Internal referrer module
+
+For Company Debt liquidation guides, include one optional short module:
+- Information for your accountant or co-director
+
+Purpose:
+- give the reader a concise professional summary they can forward
+- reduce decision friction from internal gatekeepers
+- replace redundant CTA repetition with practical referral utility

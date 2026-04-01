@@ -97,3 +97,79 @@ Strong trust signals include:
 - at least one dimension where Company Debt is acknowledged as weaker (in framework content)
 - specific pricing figures where cost is part of the argument
 - `[HUMAN CONFIRMATION NEEDED]` flags where claims require verification
+
+---
+
+## 10. Objection stack for Company Debt pages
+
+Resolve the top objections in the main body in this order:
+1. urgency / control
+2. personal exposure
+3. cost / funding
+4. alternatives
+5. action now
+
+FAQ may only contain lower-priority residual questions.
+
+If affordability, HMRC visibility, or personal liability first appears in FAQ, fail trust architecture.
+
+### Rationale
+
+The persona framework identifies specific decision blockers for each persona-state. These must be resolved in the body where they carry structural weight, not deferred to an FAQ section where they become afterthoughts. Core objections buried in FAQ reduce decision usefulness and signal weak page architecture.
+
+---
+
+## 11. CTA discipline for distressed pages
+
+Urgency is allowed. CTA saturation is not.
+
+For Company Debt decision guides:
+- 1 opening CTA
+- 1 contextual CTA after the key route/risk section
+- 1 closing CTA
+- maximum 1 embedded quote/eligibility module
+
+If multiple modules ask for the same action, collapse them into one. If "confidential" is a core trust signal, use it consistently in the chosen CTA, not repetitively across all modules.
+
+### Fail conditions
+
+- **FAIL** if more than 3 CTA moments appear before the closing section
+- **FAIL** if overlapping CTAs with identical function appear in adjacent sections
+- **FAIL** if promotional blocks are inserted between explanation paragraphs without structural separation
+- **FAIL** if "free/confidential/no obligation" is repeated as standalone persuasion copy more than twice
+
+---
+
+## CTA-persona alignment
+
+Each CTA must map to the declared persona-state:
+
+| Persona state | CTA pattern | Not allowed |
+|---|---|---|
+| Crisis Defender | "Speak to an insolvency expert today" / "Call now — the clock is running" | Generic "get in touch" |
+| Spongebob Seeker | "Check your liquidation options" / "See if redundancy covers your fees" | Generic "call for advice" |
+| BBL Worrier | "Request a confidential liability assessment" | Generic "speak to us" |
+| Strategic Wind-Downer | "Book a strategic options review" | Generic "get help" |
+
+### Fail conditions
+
+- **FAIL** if CTA is generic and does not reflect the page's declared persona-state
+- **FAIL** if CTA language does not match the urgency level of the persona (crisis persona gets urgent CTA, comparison persona gets evaluative CTA)
+
+---
+
+## Required objection pack for insolvency pages
+
+Before the first long explanatory section, the page must answer at least 2 of:
+
+- Can I still control this?
+- What will this cost?
+- Will HMRC find out?
+- Will my bank account be frozen?
+- Am I personally at risk?
+- Is there a route other than closure?
+
+### Fail conditions
+
+- **FAIL** if the page delays affordability or control-loss reassurance until after process exposition
+- **FAIL** if none of the top persona blockers are addressed in the first 20% of the page

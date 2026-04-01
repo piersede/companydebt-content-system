@@ -15,6 +15,15 @@ Default perspective options:
 
 Do not deviate from these unless a human explicitly confirms and supplies a different authority.
 
+### Regulated-practitioner authority restriction
+
+Do not imply regulated-practitioner authority (insolvency practitioner, solicitor, or FCA-regulated adviser) unless the statement is:
+- written by a named licensed insolvency practitioner or solicitor, OR
+- reviewed by a named IP/solicitor and attributed with a "Reviewed by" credit, OR
+- explicitly attributed to a named professional with their regulatory status stated
+
+The editorial team may describe insolvency processes, legal consequences, and director duties — but must not speak as though delivering regulated advice. Phrases like "we advise you to" or "our recommendation is" must be backed by named IP review or flagged with `[HUMAN CONFIRMATION NEEDED]`.
+
 ## 2. Banned founder and builder language
 
 Never use any of the following unless a human has explicitly confirmed and supplied the authority:
@@ -547,3 +556,80 @@ Read the opening 200 words without knowing the house product. Ask:
 - Would a reader who chose to stay on the incumbent feel the article understood their situation?
 
 If the answer to any of these is no, the opening fails the voice discipline check.
+
+---
+
+## 15. Authorship Integrity Rule
+
+### Rule
+
+The voice register of the article must match the declared authorship. Mixed authorship states are a voice governance failure.
+
+### Three permitted authorship modes
+
+1. **Practitioner byline** (e.g. "By Chris Andersen, Licensed Insolvency Practitioner")
+   - First-person singular practitioner authority is permitted
+   - "I speak to directors every week who..." is acceptable
+   - The practitioner's lived experience can ground claims
+
+2. **Editorial team byline** (e.g. "By Company Debt Editorial Team")
+   - Firm voice or first-person plural only
+   - "We" refers to the team's editorial/operational perspective
+   - First-person singular practitioner voice is NOT permitted
+
+3. **Reviewed-by model** (e.g. "Written by Editorial Team, Reviewed by Chris Andersen")
+   - Default to firm voice (first-person plural)
+   - First-person singular permitted ONLY in clearly attributed practitioner asides or quotes
+   - The body text must not read as if the practitioner wrote it unless they did
+
+### Fail conditions
+
+- **FAIL** if the article uses first-person singular practitioner voice ("I speak to directors...", "I've sat across the table from...") but the byline is editorial-team-only or reviewed-by
+- **FAIL** if the article switches between practitioner voice and editorial voice without clear attribution
+- **FAIL** if the disclosure section names the editorial team as author but the body reads as practitioner-written
+
+### Detection
+
+Read the first-person instances in the article. For each one, check: does the byline support this level of personal authority? If the byline says "Reviewed by" but the prose says "I speak to directors every week," there is a mismatch.
+
+---
+
+## §16 Human authority pattern for insolvency pages
+
+Use:
+- "you" to frame the reader's practical exposure, deadlines, and next decisions
+- firm "we" only where it signals real institutional capability, repeated practice, or process clarity
+- named reviewer signals only where they anchor accountability, not as decorative credentials
+
+Avoid:
+- generic reassurance without operational detail
+- abstract authority claims not tied to what the firm actually does
+- repeating "free, confidential, no obligation" as a substitute for substance
+
+Every reassurance sentence on a distressed page must be paired with one concrete operational fact, threshold, or next step within the next 1 to 2 sentences.
+
+### Fail conditions
+
+- **FAIL** if reassurance appears without adjacent operational detail
+- **FAIL** if "we" is used more than twice without anchoring to a specific practice or process
+- **FAIL** if the page relies on generic brand warmth rather than grounded, specific consequences
+
+---
+
+## §17 Voice continuity across page components
+
+Human tone must survive page assembly, not just drafting.
+
+All embedded modules on an editorial page must match the parent page on:
+- pronoun pattern
+- urgency level
+- disclosure posture
+- promise style
+- formality level
+
+### Fail conditions
+
+- **FAIL** if the body is editorial but an inserted module switches to generic lead-gen language
+- **FAIL** if module copy sounds like ad creative rather than governed editorial commerce
+- **FAIL** if reviewer-led trust signals in the body are followed by anonymous conversion copy in the module
+- **FAIL** if an embedded form or CTA uses a different tone register from the surrounding editorial

@@ -267,3 +267,102 @@ For each bad example submitted:
 2. Output the corrected copy
 3. Output the architecture patch needed to stop recurrence
 4. Output only patch-ready instructions, not commentary
+
+---
+
+## §11 Distress reassurance statistics constraint
+
+Do not use sector-level statistics primarily to calm the reader unless:
+- the statistic is directly relevant to the decision at hand
+- the limit of the inference is stated
+- the risk category is defined narrowly
+
+**Allowed:** "Liquidation does not automatically mean disqualification. The Insolvency Service investigates conduct, not the fact of liquidation itself."
+
+**Restricted:** Broad ratio-based reassurance implying personal safety from aggregate market data.
+
+### Enforcement
+
+If a reassurance claim relies on a population-level statistic, the next 1-2 sentences must state the boundary of the inference. If the boundary is missing, fail this gate.
+
+---
+
+## §12 Body decision density gate (distressed pages)
+
+After the first screen, no body section on a distressed-director page may exceed 180-220 words before one of the following appears:
+- a comparison block
+- a checklist
+- a threshold box
+- a timeline
+- a consequence summary
+- a next-step instruction
+- a warning box
+
+If two consecutive sections exceed this limit without decision-support formatting, fail readability and structure.
+
+### Cross-reference
+
+This gate enforces the structural requirement from `12-structure-governance.md` §18. It runs as part of the prose quality gate sequence, after §10 (original-source-only) and before the output contract.
+
+---
+
+## §13 Human authority gate — YMYL distress pages
+
+Each major section must contain, within its first 120 words:
+
+1. A direct claim or judgment
+2. A concrete mechanism, consequence, or factual trigger
+3. The practical effect on the reader
+
+At least once in the first 30% of the page, include:
+- institutional accountability ("we help directors...", "we usually see...")
+- direct reader framing ("if you've received...", "if HMRC has...")
+- explicit editorial judgment ("this is usually the better route when...")
+
+### Pattern: assertion → mechanism → human impact
+
+**Pass:** "If you act now, you choose the IP and control the timing. If a creditor petitions first, the court appoints the Official Receiver — you lose the ability to choose, and the investigation is more intensive."
+
+**Fail:** "Liquidation is a legal process that can be initiated voluntarily or by court order. The process involves the appointment of a liquidator who manages the company's affairs."
+
+### Fail conditions
+
+- **FAIL** if the page sounds correct but disembodied (no accountable voice)
+- **FAIL** if expertise is implied but no institutional or practitioner presence is visible
+- **FAIL** if sections explain without judging or recommending
+
+---
+
+## §14 Intent payoff rule
+
+Every paragraph must deliver its payoff in the first sentence. The reader should know what this paragraph does for them before finishing sentence one.
+
+### Required pattern
+
+The first sentence of every paragraph must do one of:
+- state a conclusion or decision the reader can act on
+- state a consequence the reader faces
+- state a specific action the reader should take
+
+### Prohibited opening patterns
+
+- **Method-first:** "How most directors fund it..." → lead with the conclusion instead
+- **Compliance-first:** "You must cooperate fully..." → lead with the consequence of not doing so
+- **Statistic-first:** "HMRC accounts for 60%..." → lead with what that means for the reader
+- **Generic advice:** "Keep records and seek advice..." → lead with what specifically goes wrong if they don't
+- **Abstract reassurance:** "Directors who acted early come through cleanest..." → convert to a specific action
+
+### Three-test gate
+
+Every paragraph must pass all three:
+1. **Payoff test** — does the first sentence reduce uncertainty or risk for the reader?
+2. **Decision test** — does the paragraph help the reader decide something?
+3. **Progression test** — does the paragraph move the narrative forward?
+
+A paragraph that fails any test is filler and must be rewritten or removed.
+
+### Fail conditions
+
+- **FAIL** if any paragraph delays its payoff past the first sentence
+- **FAIL** if a paragraph opens with method, compliance, or statistics before stating what it means for the reader
+- **FAIL** if two consecutive paragraphs fail the payoff test

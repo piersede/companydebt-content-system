@@ -11,6 +11,23 @@ Gather only what matters:
 
 Output: raw evidence pack
 
+### Stage 1b: Information gain research (mandatory for YMYL pages)
+
+After gathering the raw evidence pack, run a targeted research step to identify facts that competitors omit.
+
+For insolvency/financial pages:
+1. Formulate 15-20 specific research questions grouped by topic
+2. Run via `scripts/gemini_research.py` or manual primary-source checks
+3. Save output to `/research/` with date and page slug
+4. Identify 3+ facts that no top-10 competitor includes on the equivalent page
+5. Tag each fact with the H2 section where it adds most decision value
+
+Research questions must target: primary-source statistics, enforcement data, process facts competitors avoid, regulatory changes, and specific thresholds/fees/rates.
+
+**FAIL** if a YMYL page enters outlining without a completed research file.
+
+See `10-evidence-governance.md` §12 for the full information gain framework.
+
 ## Stage 2: Reader-intent brief
 Define:
 - who this is for (operational reader, not vague persona)
@@ -138,7 +155,7 @@ Pause and mark where a human must add:
 Every `[HUMAN CONFIRMATION NEEDED]` flag must remain visible until resolved.
 
 ## Stage 9: Pre-publish gate
-Run the 13-check pre-publish gate from `16-pre-publish-gate.md`.
+Run the 21-check pre-publish gate from `16-pre-publish-gate.md`.
 
 Every check must pass. Any single hard fail blocks publication.
 
@@ -153,3 +170,41 @@ Before publishing, verify:
 - decision value
 - authorship credibility
 - rubric scores (no dimension below 3, average 4+)
+
+---
+
+## Supporting-page offload rule
+
+Before drafting any Company Debt decision guide, classify each subtopic as one of:
+- **core** to the page decision
+- **adjacent but necessary** — needed for context, included as a short section
+- **supporting content to link out** — belongs on its own page
+
+No page may retain more than 2 adjacent-but-necessary subtopics as full sections. All other subtopics must be converted into:
+- branch-out blocks (2-3 sentence qualification with link)
+- inline links
+- dedicated supporting pages
+
+### Enforcement
+
+If a draft contains more than 2 full adjacent sections, fail the workflow planning stage. The architect must either split the page or demote subtopics to branch-out blocks before drafting begins.
+
+---
+
+## Page assembly contract
+
+Every published page must declare its module stack before build.
+
+Required fields:
+- page type
+- primary module
+- allowed secondary modules
+- CTA count limit
+- form-module presence (yes/no)
+- support-module presence (yes/no)
+
+### Enforcement
+
+If the module stack is not declared before build, fail the workflow planning stage. If the published page does not match the declared stack, fail the pre-publish gate (Check 20).
+
+See `21-wordpress-technical-build-quality.md` §22 for the full assembly rules and compatibility matrix.

@@ -401,6 +401,11 @@ See `18-seo-signal-governance.md` for the full 18-signal breakdown and rationale
 | 13 | Commercial software article quality | 2 + 3 | Yes |
 | 13a | Authored authority | 3 | Yes |
 | 14 | SEO signal compliance | 1 + 2 | Yes |
+| 15 | Comparison page publish-readiness | 2 + 3 | Yes |
+| 16 | Persona-state purity | 2 | Yes |
+| 17 | Distressed query first-screen | 2 | Yes |
+| 18 | FAQ completion | 1 + 2 | Yes |
+| 19 | Authorship integrity | 2 | Yes |
 
 Every check is a hard gate. An article that fails any single check must be revised before publication.
 
@@ -452,3 +457,111 @@ This check has been promoted to Check 1a to prevent systematic skipping. See Che
 - Winner language repeated 3 times (1 over limit)
 - Minor template repetition across sections
 - 1-2 high-sensitivity claims lacking source framing
+
+---
+
+## Check 16: Persona-state purity [Tier 2]
+
+**Question:** Does this page stay inside one dominant persona-state?
+
+*Apply to all insolvency content pages.*
+
+**Pass criteria:**
+- Page job declaration present in brief (one sentence, one persona-state, one decision)
+- 80%+ of article body serves the declared persona-state
+- Secondary persona-states appear as branch-out blocks (2-3 sentences + link), not full sections
+- Route families not mixed as co-equal sections unless the page is explicitly a comparison page
+
+**Hard fail conditions:**
+- No page job declaration
+- Two or more persona-states treated as co-equal body sections
+- MVL (solvent) treated as a peer section in an insolvent liquidation guide
+- Crisis defence and strategic wind-down mixed without clear separation
+
+See `12-structure-governance.md` §12-13 and `editorial-os/templates/route-matrix.md`.
+
+---
+
+## Check 17: Distressed query first-screen [Tier 2]
+
+**Question:** Does this distressed-query page front-load the four required elements?
+
+*Apply to pages targeting crisis, enforcement, or high-distress queries.*
+
+**Pass criteria:**
+- First 10% of the article contains ALL FOUR: reassurance, state recognition, decision fork, immediate next step
+- Opening reads as crisis-appropriate guidance, not textbook overview
+
+**Hard fail conditions:**
+- Any of the four elements missing from the first 10%
+- First 10% reads as educational overview without reassurance or decision fork
+- No immediate next step in the opening section
+
+See `12-structure-governance.md` §14.
+
+---
+
+## Check 18: FAQ completion [Tier 1 + Tier 2]
+
+**Question:** Are all FAQ answers substantive and persona-aligned?
+
+**Pass criteria:**
+- Every FAQ question has a substantive answer (not placeholder or one-sentence)
+- FAQ answers reflect persona blockers (affordability, HMRC awareness, personal liability, confidentiality)
+- No FAQ answer cross-references with "see above" instead of answering directly
+
+**Hard fail conditions:**
+- Any FAQ question with no answer or placeholder
+- Any FAQ answer that is one sentence only
+- FAQ questions do not reflect the target persona's key objections
+
+See `12-structure-governance.md` §16.
+
+---
+
+## Check 19: Authorship integrity [Tier 2]
+
+**Question:** Does the voice register match the declared authorship?
+
+**Pass criteria:**
+- Authorship mode declared in brief (practitioner byline, editorial team, or reviewed-by)
+- First-person singular practitioner voice used only when the byline supports it
+- No switching between practitioner and editorial voice without attribution
+
+**Hard fail conditions:**
+- First-person singular practitioner authority ("I speak to directors...") with editorial-team-only or reviewed-by byline
+- Disclosure names editorial team as author but body reads as practitioner-written
+- Voice register switches between practitioner and editorial without clear attribution
+
+See `09-voice-governance.md` §15.
+
+---
+
+## Check 20: Page assembly integrity
+
+Fail if the page contains:
+- orphaned component text or placeholder fragments
+- duplicate CTA intent (two or more modules asking for the same action)
+- more than one commercial module with the same function
+- reassurance claims without valid claim class (see `10-evidence-governance.md` §14)
+- support resources that interrupt route selection (see `12-structure-governance.md` §19)
+- module voice that breaks continuity with the editorial body (see `09-voice-governance.md` §17)
+- more than 3 CTA moments before the closing section (see `04-trust-architecture.md` §11)
+
+See `21-wordpress-technical-build-quality.md` §22 for the full page assembly contract.
+
+---
+
+## Check 21: Structure-type compliance [Tier 1]
+
+For insolvency articles only. See `01-master-methodology.md` §1.12 and `12-structure-governance.md` §29.
+
+**Pass** only if the insolvency article clearly matches one approved structure type (Definition, Procedure, Decision, Problem-solution, or Route-explainer) and follows its required structural logic.
+
+A page can be broader than the minimum template, but the added sections must still support the same article type and search intent.
+
+**FAIL** if:
+- the article uses the wrong structure type for the query
+- the section order does not match the reader task
+- the article has been expanded with generic sections that do not serve the query cluster
+- the article drifts from one structure type into another mid-page
