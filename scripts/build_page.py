@@ -29,6 +29,7 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 from cc_builder.data.loader import load_cards_for_page, list_available_cards
 from cc_builder.quality_checks import run_all_checks, print_report
+from page_runtime_metadata import resolve_page_runtime_metadata
 from runtime_pack_router import resolve_runtime_context
 
 
@@ -163,14 +164,23 @@ def main():
         '--page-class', type=str, default=None,
         help='Optional Company Debt page class for runtime context inspection'
     )
+    parser.add_argument(
+        '--freshness-tier', type=str, default=None,
+        help='Optional freshness tier for runtime context inspection'
+    )
     args = parser.parse_args()
 
     if args.list:
         print('Registered pages:')
         for slug in sorted(PAGE_REGISTRY.keys()):
             config = load_page_config(slug)
+            runtime_metadata = resolve_page_runtime_metadata(config, slug=config.get('slug', slug))
             wp_id = config.get('wp_page_id', '?')
-            print(f'  {slug}  (WP ID: {wp_id}, type: {config.get("page_type", "?")})')
+            print(
+                f'  {slug}  (WP ID: {wp_id}, type: {config.get("page_type", "?")}, '
+                f'page_class: {runtime_metadata.page_class or "?"}, '
+                f'freshness: {runtime_metadata.freshness_tier or "?"})'
+            )
         return
 
     if args.cards:
@@ -228,12 +238,14 @@ def main():
         sys.exit(1)
 
     config = load_page_config(args.page)
+    runtime_metadata = resolve_page_runtime_metadata(config, slug=config.get('slug', args.page))
 
     if args.show_runtime_packs:
         runtime = resolve_runtime_context(
             args.task,
             page_type=config.get('page_type'),
-            page_class=args.page_class,
+            page_class=args.page_class or runtime_metadata.page_class,
+            freshness_tier=args.freshness_tier or runtime_metadata.freshness_tier,
             slug=config.get('slug', args.page),
         )
         print('System-decided runtime context:')

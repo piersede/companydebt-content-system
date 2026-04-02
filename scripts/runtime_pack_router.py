@@ -89,6 +89,16 @@ PAGE_CLASS_CANONICAL = {
     "case_insight": ["27-article-type-structure.md", "24-content-registry.md"],
 }
 
+FRESHNESS_OVERLAYS = {
+    "aging": "overlays/freshness-sensitive.md",
+    "stale": "overlays/freshness-sensitive.md",
+}
+
+FRESHNESS_CANONICAL = {
+    "aging": ["25-update-logic.md"],
+    "stale": ["25-update-logic.md"],
+}
+
 
 def normalize_page_type(page_type: str | None) -> str | None:
     if not page_type:
@@ -117,9 +127,28 @@ def normalize_page_class(page_class: str | None) -> str | None:
     return aliases.get(lowered, lowered)
 
 
-def infer_overlay_paths(page_type: str | None, slug: str | None = None, page_class: str | None = None) -> list[str]:
+def normalize_freshness_tier(freshness_tier: str | None) -> str | None:
+    if not freshness_tier:
+        return None
+    lowered = freshness_tier.strip().lower().replace("-", "_").replace(" ", "_")
+    aliases = {
+        "fresh": "current",
+        "up_to_date": "current",
+        "needs_refresh": "aging",
+        "refresh_due": "stale",
+    }
+    return aliases.get(lowered, lowered)
+
+
+def infer_overlay_paths(
+    page_type: str | None,
+    slug: str | None = None,
+    page_class: str | None = None,
+    freshness_tier: str | None = None,
+) -> list[str]:
     normalized = normalize_page_type(page_type)
     normalized_page_class = normalize_page_class(page_class)
+    normalized_freshness = normalize_freshness_tier(freshness_tier)
     slug = (slug or "").strip().lower()
     overlays: list[str] = []
 
@@ -139,10 +168,22 @@ def infer_overlay_paths(page_type: str | None, slug: str | None = None, page_cla
         if overlay not in overlays:
             overlays.append(overlay)
 
+    if normalized_freshness in FRESHNESS_OVERLAYS:
+        overlay = FRESHNESS_OVERLAYS[normalized_freshness]
+        if overlay not in overlays:
+            overlays.append(overlay)
+
     return overlays
 
 
-def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: str | None = None, page_class: str | None = None) -> dict:
+def resolve_runtime_context(
+    task: str,
+    *,
+    page_type: str | None = None,
+    slug: str | None = None,
+    page_class: str | None = None,
+    freshness_tier: str | None = None,
+) -> dict:
     normalized_task = task.strip().lower()
     if normalized_task not in TASK_BASE_PACKS:
         valid = ", ".join(sorted(TASK_BASE_PACKS))
@@ -153,16 +194,21 @@ def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: st
     if stage_pack:
         packs.append(stage_pack)
 
-    for overlay in infer_overlay_paths(page_type, slug, page_class):
+    for overlay in infer_overlay_paths(page_type, slug, page_class, freshness_tier):
         if overlay not in packs:
             packs.append(overlay)
 
     canonical = [str(EDITORIAL_DIR / rel) for rel in TASK_CANONICAL.get(normalized_task, [])]
     normalized_page_type = normalize_page_type(page_type)
     normalized_page_class = normalize_page_class(page_class)
+    normalized_freshness = normalize_freshness_tier(freshness_tier)
     for rel in ARTICLE_TYPE_CANONICAL.get(normalized_page_type, []):
         canonical.append(str(EDITORIAL_DIR / rel))
     for rel in PAGE_CLASS_CANONICAL.get(normalized_page_class, []):
+        path = str(EDITORIAL_DIR / rel)
+        if path not in canonical:
+            canonical.append(path)
+    for rel in FRESHNESS_CANONICAL.get(normalized_freshness, []):
         path = str(EDITORIAL_DIR / rel)
         if path not in canonical:
             canonical.append(path)
@@ -171,6 +217,7 @@ def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: st
         "task": normalized_task,
         "page_type": normalized_page_type,
         "page_class": normalized_page_class,
+        "freshness_tier": normalized_freshness,
         "slug": slug,
         "runtime_packs": [str(RUNTIME_DIR / rel) for rel in packs],
         "canonical_refs": canonical,
@@ -182,11 +229,18 @@ def main() -> None:
     parser.add_argument("--task", required=True, help="Task or workflow stage")
     parser.add_argument("--page-type", default=None, help="Page type, if known")
     parser.add_argument("--page-class", default=None, help="Company Debt page class, if known")
+    parser.add_argument("--freshness-tier", default=None, help="Freshness tier, if known")
     parser.add_argument("--slug", default=None, help="Page slug, if known")
     parser.add_argument("--json", action="store_true", help="Emit JSON")
     args = parser.parse_args()
 
-    recommendation = resolve_runtime_context(args.task, page_type=args.page_type, page_class=args.page_class, slug=args.slug)
+    recommendation = resolve_runtime_context(
+        args.task,
+        page_type=args.page_type,
+        page_class=args.page_class,
+        freshness_tier=args.freshness_tier,
+        slug=args.slug,
+    )
     if args.json:
         print(json.dumps(recommendation, indent=2))
         return
@@ -196,6 +250,8 @@ def main() -> None:
         print(f"Page type: {recommendation['page_type']}")
     if recommendation["page_class"]:
         print(f"Page class: {recommendation['page_class']}")
+    if recommendation["freshness_tier"]:
+        print(f"Freshness tier: {recommendation['freshness_tier']}")
     if recommendation["slug"]:
         print(f"Slug: {recommendation['slug']}")
 

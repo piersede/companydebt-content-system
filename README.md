@@ -192,6 +192,8 @@ python scripts/build_page.py --page capital-on-tap-review --show-runtime-packs -
 python scripts/benchmark_runtime_packs.py
 ```
 
+The page builder now infers runtime-routing metadata such as `page_class` and `freshness_tier` from page config by default, so humans should only pass those manually when testing edge cases.
+
 Human-authorship safeguard:
 
 - token savings must not come from thinning out concrete scenes, earned pronouns, friction, evaluative bite, rhythm, or moral clarity

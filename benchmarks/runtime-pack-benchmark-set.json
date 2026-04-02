@@ -5,6 +5,7 @@
       "task": "draft",
       "page_type": "review",
       "page_class": "entity_owner",
+      "freshness_tier": "current",
       "slug": "capital-on-tap-review",
       "acceptance_checks": [
         "Concrete scenes remain explicit",
@@ -19,6 +20,7 @@
       "task": "draft",
       "page_type": "roundup",
       "page_class": "debt_solution_comparison",
+      "freshness_tier": "current",
       "slug": "best-business-credit-cards",
       "acceptance_checks": [
         "Fit and non-fit remain explicit",
@@ -32,6 +34,7 @@
       "task": "draft",
       "page_type": "guide",
       "page_class": "process_guide",
+      "freshness_tier": "current",
       "slug": "guide-to-business-credit-cards",
       "acceptance_checks": [
         "Working-day consequence remains explicit",
@@ -45,6 +48,7 @@
       "task": "review",
       "page_type": "comparison",
       "page_class": "entity_modifier",
+      "freshness_tier": "current",
       "slug": "compare-amex",
       "acceptance_checks": [
         "Replacement versus augmentation remains explicit",
@@ -57,6 +61,7 @@
       "name": "director-risk trust pass",
       "task": "trust-pass",
       "page_class": "director_risk",
+      "freshness_tier": "aging",
       "slug": "director-wrongful-trading-risk",
       "acceptance_checks": [
         "Director-risk structure stays statutory and protective",

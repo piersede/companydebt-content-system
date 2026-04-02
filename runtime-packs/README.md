@@ -33,3 +33,9 @@ Helpful commands:
 - `python scripts/runtime_pack_router.py --task draft --page-type review --slug capital-on-tap-review`
 - `python scripts/build_page.py --page capital-on-tap-review --show-runtime-packs --task draft`
 - `python scripts/benchmark_runtime_packs.py`
+
+Metadata routing:
+
+- the builder should infer `page_class` and `freshness_tier` from page config wherever possible
+- explicit metadata in the page config should win over heuristics
+- humans can still override values at the CLI, but routine work should not need that
