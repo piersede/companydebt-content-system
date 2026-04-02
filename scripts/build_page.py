@@ -159,6 +159,10 @@ def main():
         '--task', type=str, default='build',
         help='Task name for runtime context inspection (default: build)'
     )
+    parser.add_argument(
+        '--page-class', type=str, default=None,
+        help='Optional Company Debt page class for runtime context inspection'
+    )
     args = parser.parse_args()
 
     if args.list:
@@ -229,6 +233,7 @@ def main():
         runtime = resolve_runtime_context(
             args.task,
             page_type=config.get('page_type'),
+            page_class=args.page_class,
             slug=config.get('slug', args.page),
         )
         print('System-decided runtime context:')

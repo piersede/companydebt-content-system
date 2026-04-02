@@ -61,6 +61,34 @@ ARTICLE_TYPE_CANONICAL = {
     "brand_comparison": ["docs/article-types/comparison.md"],
 }
 
+PAGE_CLASS_OVERLAYS = {
+    "entity_owner": "overlays/entity-owner.md",
+    "entity_modifier": "overlays/entity-modifier.md",
+    "trigger": "overlays/trigger.md",
+    "enforcement": "overlays/enforcement.md",
+    "director_risk": "overlays/director-risk.md",
+    "pricing_cost": "overlays/pricing-cost.md",
+    "process_guide": "overlays/process-guide.md",
+    "recovery_strategy": "overlays/recovery-strategy.md",
+    "debt_solution_comparison": "overlays/debt-solution-comparison.md",
+    "legal_compliance": "overlays/legal-compliance.md",
+    "case_insight": "overlays/case-insight.md",
+}
+
+PAGE_CLASS_CANONICAL = {
+    "entity_owner": ["27-article-type-structure.md", "24-content-registry.md"],
+    "entity_modifier": ["27-article-type-structure.md", "24-content-registry.md"],
+    "trigger": ["27-article-type-structure.md", "24-content-registry.md"],
+    "enforcement": ["27-article-type-structure.md", "24-content-registry.md"],
+    "director_risk": ["27-article-type-structure.md", "24-content-registry.md"],
+    "pricing_cost": ["27-article-type-structure.md", "24-content-registry.md"],
+    "process_guide": ["27-article-type-structure.md", "24-content-registry.md"],
+    "recovery_strategy": ["27-article-type-structure.md", "24-content-registry.md"],
+    "debt_solution_comparison": ["27-article-type-structure.md", "24-content-registry.md"],
+    "legal_compliance": ["27-article-type-structure.md", "24-content-registry.md"],
+    "case_insight": ["27-article-type-structure.md", "24-content-registry.md"],
+}
+
 
 def normalize_page_type(page_type: str | None) -> str | None:
     if not page_type:
@@ -71,8 +99,27 @@ def normalize_page_type(page_type: str | None) -> str | None:
     return lowered
 
 
-def infer_overlay_paths(page_type: str | None, slug: str | None = None) -> list[str]:
+def normalize_page_class(page_class: str | None) -> str | None:
+    if not page_class:
+        return None
+    lowered = page_class.strip().lower().replace("-", "_").replace(" ", "_")
+    aliases = {
+        "entityowner": "entity_owner",
+        "entitymodifier": "entity_modifier",
+        "directorrisk": "director_risk",
+        "pricingcost": "pricing_cost",
+        "processguide": "process_guide",
+        "recoverystrategy": "recovery_strategy",
+        "debtsolutioncomparison": "debt_solution_comparison",
+        "legalcompliance": "legal_compliance",
+        "caseinsight": "case_insight",
+    }
+    return aliases.get(lowered, lowered)
+
+
+def infer_overlay_paths(page_type: str | None, slug: str | None = None, page_class: str | None = None) -> list[str]:
     normalized = normalize_page_type(page_type)
+    normalized_page_class = normalize_page_class(page_class)
     slug = (slug or "").strip().lower()
     overlays: list[str] = []
 
@@ -87,10 +134,15 @@ def infer_overlay_paths(page_type: str | None, slug: str | None = None) -> list[
         if "-alternative" in slug or "alternative" in slug or slug.startswith("compare-"):
             overlays.append("overlays/alternatives.md")
 
+    if normalized_page_class in PAGE_CLASS_OVERLAYS:
+        overlay = PAGE_CLASS_OVERLAYS[normalized_page_class]
+        if overlay not in overlays:
+            overlays.append(overlay)
+
     return overlays
 
 
-def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: str | None = None) -> dict:
+def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: str | None = None, page_class: str | None = None) -> dict:
     normalized_task = task.strip().lower()
     if normalized_task not in TASK_BASE_PACKS:
         valid = ", ".join(sorted(TASK_BASE_PACKS))
@@ -101,18 +153,24 @@ def resolve_runtime_context(task: str, *, page_type: str | None = None, slug: st
     if stage_pack:
         packs.append(stage_pack)
 
-    for overlay in infer_overlay_paths(page_type, slug):
+    for overlay in infer_overlay_paths(page_type, slug, page_class):
         if overlay not in packs:
             packs.append(overlay)
 
     canonical = [str(EDITORIAL_DIR / rel) for rel in TASK_CANONICAL.get(normalized_task, [])]
     normalized_page_type = normalize_page_type(page_type)
+    normalized_page_class = normalize_page_class(page_class)
     for rel in ARTICLE_TYPE_CANONICAL.get(normalized_page_type, []):
         canonical.append(str(EDITORIAL_DIR / rel))
+    for rel in PAGE_CLASS_CANONICAL.get(normalized_page_class, []):
+        path = str(EDITORIAL_DIR / rel)
+        if path not in canonical:
+            canonical.append(path)
 
     return {
         "task": normalized_task,
         "page_type": normalized_page_type,
+        "page_class": normalized_page_class,
         "slug": slug,
         "runtime_packs": [str(RUNTIME_DIR / rel) for rel in packs],
         "canonical_refs": canonical,
@@ -123,11 +181,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Inspect system-decided runtime pack stacks")
     parser.add_argument("--task", required=True, help="Task or workflow stage")
     parser.add_argument("--page-type", default=None, help="Page type, if known")
+    parser.add_argument("--page-class", default=None, help="Company Debt page class, if known")
     parser.add_argument("--slug", default=None, help="Page slug, if known")
     parser.add_argument("--json", action="store_true", help="Emit JSON")
     args = parser.parse_args()
 
-    recommendation = resolve_runtime_context(args.task, page_type=args.page_type, slug=args.slug)
+    recommendation = resolve_runtime_context(args.task, page_type=args.page_type, page_class=args.page_class, slug=args.slug)
     if args.json:
         print(json.dumps(recommendation, indent=2))
         return
@@ -135,6 +194,8 @@ def main() -> None:
     print(f"Task: {recommendation['task']}")
     if recommendation["page_type"]:
         print(f"Page type: {recommendation['page_type']}")
+    if recommendation["page_class"]:
+        print(f"Page class: {recommendation['page_class']}")
     if recommendation["slug"]:
         print(f"Slug: {recommendation['slug']}")
 

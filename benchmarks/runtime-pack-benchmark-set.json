@@ -4,6 +4,7 @@
       "name": "review draft",
       "task": "draft",
       "page_type": "review",
+      "page_class": "entity_owner",
       "slug": "capital-on-tap-review",
       "acceptance_checks": [
         "Concrete scenes remain explicit",
@@ -17,6 +18,7 @@
       "name": "roundup draft",
       "task": "draft",
       "page_type": "roundup",
+      "page_class": "debt_solution_comparison",
       "slug": "best-business-credit-cards",
       "acceptance_checks": [
         "Fit and non-fit remain explicit",
@@ -29,6 +31,7 @@
       "name": "guide draft",
       "task": "draft",
       "page_type": "guide",
+      "page_class": "process_guide",
       "slug": "guide-to-business-credit-cards",
       "acceptance_checks": [
         "Working-day consequence remains explicit",
@@ -41,12 +44,24 @@
       "name": "alternatives review",
       "task": "review",
       "page_type": "comparison",
+      "page_class": "entity_modifier",
       "slug": "compare-amex",
       "acceptance_checks": [
         "Replacement versus augmentation remains explicit",
         "Conclusion-before-CTA discipline is preserved",
         "Qualified call-out-box rules remain available where needed",
         "Comparison structure still preserves decision-trust and house-product containment"
+      ]
+    },
+    {
+      "name": "director-risk trust pass",
+      "task": "trust-pass",
+      "page_class": "director_risk",
+      "slug": "director-wrongful-trading-risk",
+      "acceptance_checks": [
+        "Director-risk structure stays statutory and protective",
+        "Freshness logic remains available for volatile legal claims",
+        "Qualified call-out-box constraints remain available"
       ]
     }
   ]

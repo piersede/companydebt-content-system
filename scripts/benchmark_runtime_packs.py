@@ -23,6 +23,13 @@ def file_tokens(path: Path) -> int:
 
 def benchmark_case(case: dict) -> dict:
     recommendation = resolve_runtime_context(case["task"], page_type=case.get("page_type"), slug=case.get("slug"))
+    if case.get("page_class"):
+        recommendation = resolve_runtime_context(
+            case["task"],
+            page_type=case.get("page_type"),
+            page_class=case.get("page_class"),
+            slug=case.get("slug"),
+        )
     runtime_paths = [Path(p) for p in recommendation["runtime_packs"]]
     canonical_paths = [Path(p) for p in recommendation["canonical_refs"]]
 
@@ -36,6 +43,7 @@ def benchmark_case(case: dict) -> dict:
         "task": case["task"],
         "slug": case.get("slug"),
         "page_type": case.get("page_type"),
+        "page_class": case.get("page_class"),
         "runtime_tokens": runtime_tokens,
         "canonical_tokens": canonical_tokens,
         "tokens_saved": saved,
