@@ -49,7 +49,7 @@ Source: `18-seo-signal-governance.md` §Pre-publish SEO signal checklist
 
 ## Pass 3: Comparison page readiness (if applicable)
 
-Source: `16-pre-publish-gate.md` Checks 14a + 15
+Source: `16-pre-publish-gate.md` Checks 1a + 15
 
 Only run this pass on comparison, roundup, alternatives, and review articles.
 

@@ -1,6 +1,6 @@
 # Company Debt Editorial OS — System Map
 
-Last updated: March 2026 | v2.3
+Last updated: April 2026 | v2.4
 
 Use this file to orient yourself. It answers: "What do we have, what does each part do, and where do I go to change it?"
 
@@ -8,7 +8,7 @@ Use this file to orient yourself. It answers: "What do we have, what does each p
 
 ## What's in this system
 
-1. **Core editorial workflow** — 22 governance files covering voice, evidence, structure, readability, comparisons, failure modes, and pre-publish checks. This is the main content engine. (`01` through `18`)
+1. **Core editorial workflow** — governance files covering voice, evidence, structure, readability, comparisons, failure modes, and pre-publish checks. This is the main content engine. (`01`, `03` through `23`)
 2. **Editorial image evidence system** — claim-then-verify visual strategy, proof visual types, capture standards, metadata and SEO protocol for all images. (`19`)
 3. **Build-time quality gate** — automated checks that run on every page build. FAIL-level violations block publishing. Covers heading hierarchy, image attributes, accessibility, JSON-LD, affiliate disclosure, and link safety. (`20`)
 4. **WordPress technical build quality** — 100-point scoring rubric across 8 categories for auditing WordPress engineering. Includes WP-CLI, HTTP, and database evidence playbooks. (`21`)
@@ -19,7 +19,7 @@ Use this file to orient yourself. It answers: "What do we have, what does each p
 ## Full file map
 
 ```
-EDITORIAL OS v2.3
+EDITORIAL OS v2.4
 │
 ├── CORE EDITORIAL WORKFLOW ─── how we write and publish content
 │   ├── 01  Master methodology        ← north star, principles, article structures
@@ -40,7 +40,7 @@ EDITORIAL OS v2.3
 │   └── 08  Red line library           ← hard boundaries that cannot be crossed
 │
 ├── QUALITY GATES ──────────── what blocks publication
-│   ├── 16  Pre-publish gate           ← 14 checks, all must pass before publish
+│   ├── 16  Pre-publish gate           ← 16 checks, all must pass before publish
 │   ├── 05  Scoring rubric             ← scoring criteria (trust T1-T6, alternatives A1-A8)
 │   ├── 14  Failure modes & recovery   ← 27 failure modes including 13 AI prose fingerprints
 │   ├── 15  Good vs bad examples       ← concrete examples for calibration
@@ -55,6 +55,15 @@ EDITORIAL OS v2.3
 │
 ├── WORDPRESS ENGINEERING ──── technical build quality for the WP site
 │   └── 21  WordPress technical build  ← 100-point rubric, 8 categories, evidence playbooks
+│
+├── CONTENT REGISTRY ──────── entity ownership and anti-cannibalisation
+│   └── 24  Content registry          ← entity ownership, metadata schema, overlap control
+│
+├── UPDATE LOGIC ──────────── freshness and volatility governance
+│   └── 25  Update logic              ← volatility model, triggers, refresh classes
+│
+├── CALL-OUT BOXES ────────── structured decision interventions
+│   └── 26  Call-out box governance   ← 8 box types, evidence ladder, placement rules
 │
 ├── SEARCH QUALITY AUDIT ───── standalone audit against Google's QRG
 │   └── 22  Google search quality evaluator  ← 12-agent system, NOT part of core workflow
@@ -82,13 +91,9 @@ EDITORIAL OS v2.3
 │   └── checklists/check_human_tone.js
 │
 ├── HUMAN PROCESS ──────────── checklists for manual review
-│   ├── checklists/trust-pass-checklist.md
-│   ├── checklists/adversarial-review-checklist.md
-│   ├── checklists/final-qa-checklist.md
 │   └── checklists/pre-staging-gate.md
 │
 └── SUPPORT FILES
-    ├── 02  Skills architecture         ← agent skill definitions
     ├── 07  Human input map             ← where human judgement is required
     ├── rules-index.md                  ← one rule, one source of truth lookup
     └── docs/agent-workflow.md          ← how the AI agent uses this system
@@ -153,6 +158,9 @@ Changing comparison rules: 11 (comparison)
 | Who we write for | `17-audience-and-persona.md` |
 | Article type-specific rules | `docs/article-types/{review,comparison,roundup,guide}.md` |
 | Starter templates for new articles | `templates/` |
+| Entity ownership and anti-cannibalisation | `24-content-registry.md` |
+| Content freshness and update triggers | `25-update-logic.md` |
+| Call-out box types and evidence rules | `26-call-out-box-governance.md` |
 | Rule lookup (which file owns which rule) | `rules-index.md` |
 | Failure patterns to avoid | `14-failure-modes-and-recovery.md` |
 | What good and bad writing looks like | `15-good-vs-bad-examples.md` |
@@ -163,5 +171,5 @@ Changing comparison rules: 11 (comparison)
 
 - **22 (Google search quality evaluator)** is a standalone audit tool. It does NOT run as part of the normal writing or publishing workflow. Invoke it manually for YMYL pages, ranking drops, or periodic reviews.
 - **20 (build-time quality gate)** runs automatically on every page build. You cannot bypass it.
-- **16 (pre-publish gate)** is a human-reviewed checklist. Every article must pass all 14 checks.
+- **16 (pre-publish gate)** is a human-reviewed checklist. Every article must pass all 16 checks.
 - **rules-index.md** is the single lookup for "which file owns this rule." If you add a rule, register it there.

@@ -541,7 +541,7 @@ If the evaluative claim cannot be grounded in reasoning, comparison, or conseque
 
 ---
 
-## 25. Taxonomic human-flattening
+## 26. Taxonomic human-flattening
 
 **What it looks like:**
 The article is structurally correct but reads like a categorisation engine rather than a human guide. Sections have compressed labels. Sentences are clipped and declarative. Workflow problems are described in abstract SaaS shorthand rather than lived consequences.
@@ -573,7 +573,7 @@ This failure mode is about prose quality, not content. The fix is always rewriti
 
 ---
 
-## 26. Alternatives page collapse
+## 27. Alternatives page collapse
 
 **What it looks like:**
 The page appears to answer an alternatives query but collapses into a sequence of vendor summaries ending in a soft pitch for the house product. The reader reaches the end knowing which tools exist but not which path makes sense for their situation.
@@ -604,7 +604,7 @@ A reader on an alternatives page has a real decision to make. They are not brows
 
 ---
 
-## 27. Mixed-confidence and meta-copy in comparison prose
+## 28. Mixed-confidence and meta-copy in comparison prose
 
 **What it looks like:**
 "A consultancy on Tide spending £5,000 a month cannot access Lloyds at 15.95% — they need a Lloyds BCA. Their realistic options are Barclaycard at 25.5% or Capital on Tap at whatever rate it offers. That bank-account filter changes everything."

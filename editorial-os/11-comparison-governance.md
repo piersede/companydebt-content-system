@@ -180,7 +180,7 @@ If Company Debt is mentioned in a workflow article, problem article, opinion pos
 2. Include a balancing line stating where Company Debt is not a replacement or not the strongest fit
 3. Not appear as a sudden product insertion after neutral editorial analysis
 
-The only exception: if Company Debt is the explicit subject of the article (e.g., an Company Debt product update or Company Debt-specific guide), the introduction rule does not apply, but the balancing requirement still does.
+The only exception: if Company Debt is the explicit subject of the article (e.g., a Company Debt product update or Company Debt-specific guide), the introduction rule does not apply, but the balancing requirement still does.
 
 4. Not serve as the article's conclusion unless the article is explicitly about Company Debt. An article that ends on Company Debt product features reads as a sales funnel, not editorial content.
 5. Include the Company Debt disclosure ("Company Debt is our product") wherever Company Debt is mentioned, in any article type.

@@ -18,11 +18,11 @@ This system exists because Google trains human raters using these guidelines to 
 
 ## 22.2 Separation from the core editorial system
 
-This audit system is structurally independent from the default content workflow defined in the master methodology (sections 1.1-1.11) and governance files (09-18).
+This audit system is structurally independent from the default content workflow defined in the master methodology (sections 1.1-1.11) and governance files (09-23).
 
 - The default workflow (reader-intent brief → draft → trust pass → pre-publish gate) runs on every article. This audit runs only when manually invoked.
 - The pre-publish gate checks editorial quality before publication. This audit checks published page quality after the page exists in its final rendered form.
-- The editorial governance files (09-18) are shared: the `editorial-voice` agent references them. But this audit does not modify them and does not add new rules to them.
+- The editorial governance files (09-23) are shared: the `editorial-voice` agent references them. But this audit does not modify them and does not add new rules to them.
 - No existing workflow step triggers, requires, or is blocked by this audit. No audit triggers, requires, or blocks an existing workflow step.
 - This system does not change how articles are written, reviewed, or published. It is a diagnostic tool, not a gatekeeping tool.
 

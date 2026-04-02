@@ -160,7 +160,7 @@ Google explicitly scores the alignment between title, meta description, and cont
 - The title must reflect the actual content of the article, not a keyword target that the article only partially addresses.
 - Meta descriptions must describe what the article actually delivers, not generic "learn more" language.
 - The H1 and title tag should align. Avoid situations where the title tag promises something the H1 frames differently.
-- If the title targets a buyer question ("how to automate document chasing"), the article must answer it directly, not pivot to an Company Debt promotion.
+- If the title targets a buyer question ("how to automate document chasing"), the article must answer it directly, not pivot to a Company Debt promotion.
 
 ---
 

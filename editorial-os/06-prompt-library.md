@@ -158,7 +158,7 @@ Identify:
 - Paragraphs longer than 3 lines that need splitting
 - Scattered bold or italic that does not aid comprehension
 
-Run against all 24 failure modes in `14-failure-modes-and-recovery.md`.
+Run against all 28 failure modes in `14-failure-modes-and-recovery.md`.
 
 State whether the page passes or fails. List exact fixes required.
 

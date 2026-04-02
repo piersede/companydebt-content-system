@@ -1,4 +1,4 @@
-# Rules Index — Company Debt Editorial OS v2.3
+# Rules Index — Company Debt Editorial OS v2.4
 
 One source of truth per rule. If a future rule overlaps with an existing entry, extend the existing source rather than creating a parallel rule elsewhere.
 
@@ -61,7 +61,7 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Floating evaluative phrase bans | `09-voice-governance.md` §5 (disallowed stand-alone evaluation) |
 | Thin authenticity-marker bans | `09-voice-governance.md` §5 (disallowed authenticity markers) |
 
-## Comparison page prose discipline (v2.3 patch 3)
+## Comparison page prose discipline
 
 | Rule family | Source |
 |-------------|--------|
@@ -88,9 +88,9 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Rule family | Source |
 |-------------|--------|
 | False neutrality (FM-13) | `14-failure-modes-and-recovery.md` |
-| Taxonomic human-flattening (FM-25) | `14-failure-modes-and-recovery.md` |
-| Alternatives page collapse (FM-26) | `14-failure-modes-and-recovery.md` |
-| Mixed-confidence and meta-copy (FM-27) | `14-failure-modes-and-recovery.md` |
+| Taxonomic human-flattening (FM-26) | `14-failure-modes-and-recovery.md` |
+| Alternatives page collapse (FM-27) | `14-failure-modes-and-recovery.md` |
+| Mixed-confidence and meta-copy (FM-28) | `14-failure-modes-and-recovery.md` |
 
 ## Prose quality gates (YMYL financial copy)
 
@@ -106,6 +106,37 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | §8 Financial Objectivity Check | Ensure promoted cards show drawbacks/limits | `23-prose-quality-gates.md` §8 |
 | §9 Sentence Texture Calibrator | Reduce AI cadence, vary sentence structure | `23-prose-quality-gates.md` §9 |
 | §10 Source Constraint | Original sources only, never competitor sites | `23-prose-quality-gates.md` §10 |
+
+## Content registry and entity ownership
+
+| Rule family | Source |
+|-------------|--------|
+| Entity ownership (one entity, one canonical URL) | `24-content-registry.md` §24.2 |
+| Content object types (10 classes) | `24-content-registry.md` §24.3 |
+| Intent ownership (4 intent classes) | `24-content-registry.md` §24.5 |
+| Anti-cannibalisation rules | `24-content-registry.md` §24.6 |
+| Commissioning protocol | `24-content-registry.md` §24.7 |
+
+## Update logic and freshness
+
+| Rule family | Source |
+|-------------|--------|
+| Volatility model (V0-V4) | `25-update-logic.md` §25.1 |
+| Hard triggers (72-hour review) | `25-update-logic.md` §25.2 |
+| Soft triggers (14-day acceleration) | `25-update-logic.md` §25.3 |
+| Freshness tiers by page type | `25-update-logic.md` §25.4 |
+| Refresh classes (L0-L4) | `25-update-logic.md` §25.5 |
+| Guardrails | `25-update-logic.md` §25.7 |
+
+## Call-out box governance
+
+| Rule family | Source |
+|-------------|--------|
+| 8 approved call-out types | `26-call-out-box-governance.md` §26.2 |
+| Evidence ladder (Levels A-D) | `26-call-out-box-governance.md` §26.3 |
+| Call-out box schema | `26-call-out-box-governance.md` §26.4 |
+| Fail conditions (7 hard gates) | `26-call-out-box-governance.md` §26.5 |
+| QA escalation for IP review | `26-call-out-box-governance.md` §26.8 |
 
 ## Enforcement scripts
 
@@ -128,4 +159,4 @@ The following checks are not yet covered by scripts. Prefer extending existing c
 
 ---
 
-*Last updated: v2.3 patch integration, March 2026*
+*Last updated: v2.4 (with content registry, update logic, and call-out box governance), April 2026*

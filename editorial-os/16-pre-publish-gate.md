@@ -414,7 +414,7 @@ For each check, record: pass or fail. If fail, record the specific issue and the
 
 Do not publish with any open failures. Do not downgrade a hard fail to a "note for next time." Fix it or do not publish.
 
-**Important:** The v1 checklists in `/checklists/` (trust-pass, adversarial-review, final-qa) are deprecated. They do not cover v2.3 governance rules. Use this pre-publish gate and the inline checklists in `03-workflow-playbook.md` instead. Running a deprecated checklist does not satisfy any pre-publish gate check.
+**Important:** The v1 checklists (trust-pass, adversarial-review, final-qa) were removed in v2.4. Use this pre-publish gate and the inline checklists in `03-workflow-playbook.md` instead.
 
 ---
 

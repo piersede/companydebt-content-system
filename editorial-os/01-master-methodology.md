@@ -1,10 +1,10 @@
-# Company Debt Editorial Operating System v2.3
+# Company Debt Editorial Operating System v2.4
 
 A governance system for creating trustworthy, people-first, decision-useful content. This is not guidance. These are hard rules.
 
 ## Contents
 1. Master editorial methodology (this file)
-2. Skills architecture (02)
+2. *(removed — deprecated v1 skills architecture)*
 3. Workflow playbook (03)
 4. Trust architecture standard (04)
 5. Scoring rubric (05)
@@ -25,12 +25,17 @@ A governance system for creating trustworthy, people-first, decision-useful cont
 20. Build-time quality gate — automated checks that run on every page build, FAIL/WARN enforcement (20)
 21. WordPress technical build quality — 100-point scoring rubric across 8 categories for WP engineering audits (21)
 22. Google search quality evaluator guidelines — 12-agent audit system based on Google's QRG, page-level quality rating (22)
+23. Prose quality gates — 10 enforcement modules for YMYL financial comparison copy (23)
+24. Content registry — entity ownership, anti-cannibalisation, content object types, page metadata schema (24)
+25. Update logic — volatility model, freshness tiers, hard/soft triggers, refresh classes, volatile facts ledger (25)
+26. Call-out box governance — 8 approved box types, evidence ladder, placement rules, QA escalation (26)
 
-### Extended architecture (v2.3)
+### Extended architecture (v2.4)
 - Human-authorship voice engine: `docs/human-authorship-voice-engine.md`
 - Article type specs: `docs/article-types/{review,comparison,roundup,guide}.md`
 - Rules index: `rules-index.md`
 - Enforcement scripts: `checklists/check_*.js`
+- Checklists: `checklists/pre-staging-gate.md`
 
 ### Human-authorship execution
 
@@ -223,7 +228,7 @@ Full rules in `13-readability-governance.md`. Summary:
 
 ## 1.9 Failure mode awareness
 
-See `14-failure-modes-and-recovery.md` for the full library of 24 failure modes (including 13 AI prose fingerprints). The most critical are:
+See `14-failure-modes-and-recovery.md` for the full library of 28 failure modes (including 13 AI prose fingerprints). The most critical are:
 1. Synthetic first person
 2. Founder drift
 3. Padded evaluation
@@ -235,7 +240,7 @@ Every draft must be checked against these failure modes during the trust pass an
 
 ## 1.10 Pre-publish gate
 
-Every article must pass the 13-check pre-publish gate in `16-pre-publish-gate.md` before publication. Any single hard fail blocks publication.
+Every article must pass the 16-check pre-publish gate in `16-pre-publish-gate.md` before publication. Any single hard fail blocks publication.
 
 ## 1.11 Default article structures
 

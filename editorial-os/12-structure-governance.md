@@ -243,22 +243,35 @@ See `11-comparison-governance.md` §6 for full rules.
 ## 7. Internal linking governance
 
 ### Rule
-Every article should link to related Company Debt content where a reader would naturally want to go deeper. Internal links are a navigation tool, not an SEO exercise.
+Every article should link to related Company Debt content where a reader would naturally want to go deeper. Internal links are a navigation tool, not an SEO exercise. They also enforce entity ownership — see `24-content-registry.md` for the full anti-cannibalisation model.
 
-### When to link
-- When referencing a category, tool, or concept that has its own article on the site
-- When a reader who stops here might benefit from a more detailed piece on a subtopic
-- When a comparison or review mentions an alternative that has its own review
+### Three-direction minimum
+Every non-hub page must have links in three directions:
+- **Upward:** to parent hub
+- **Sideways:** to alternatives, comparisons, or adjacent legal actions
+- **Downward:** to children, steps, or execution detail
+
+### Link types
+1. **Structural links** (parent/owner/sibling/decision guide) — template-driven, required
+2. **Contextual decision links** (trigger→solution, solution→risk) — in-body, editorial
+3. **Evidence links** (citations to primary sources) — see `10-evidence-governance.md` §7a
+4. **Commercial links** (context-appropriate CTAs) — see §7a below
+
+### Anchor text anti-cannibalisation
+- Only entity-owner pages should receive exact-match head term anchors at scale
+- Modifier pages must receive modifier-specific anchors ("liquidation cost," not "liquidation")
+- Scenario pages must not use "What is [entity]?" as an internal anchor to themselves — reserve that framing for the canonical owner
 
 ### How to link
 - Anchor text should describe what the reader will find, not generic "click here" or "read more"
 - Link in the flow of editorial prose, not in a bolted-on "Related articles" list at the bottom (unless a structured list genuinely helps navigation)
-- Maximum 3-5 internal links per 1,000 words of body content. More than that creates visual clutter and dilutes signal.
+- Maximum 3-5 internal links per 1,000 words of body content
 
 ### What not to do
 - Do not add internal links to meet an SEO quota
 - Do not link the same destination more than once in an article
 - Do not link to pages that do not yet exist
+- Do not link scenario pages to themselves using entity-owner anchor text
 
 ## 7a. CTA and ending governance
 
@@ -274,7 +287,7 @@ Articles may end with one of:
 - Permitted CTAs: link to a relevant Company Debt page, invite the reader to try a free trial, or suggest booking a call. These must be brief (one sentence or a short standalone line).
 - CTAs must not appear in the middle of editorial analysis. They belong at the end, after the verdict.
 - Soft CTAs disguised as editorial conclusions are banned. "See how Company Debt handles this" as the final sentence of an otherwise neutral article fails the Company Debt mention fairness check.
-- Non-Company Debt articles (category explainers, opinion posts) should not end on an Company Debt CTA unless the article has earned the mention through the universal mention rule.
+- Non-Company Debt articles (category explainers, opinion posts) should not end on a Company Debt CTA unless the article has earned the mention through the universal mention rule.
 
 ### Hard fail
 - Article ends on product features or a sales-style CTA without a preceding editorial conclusion

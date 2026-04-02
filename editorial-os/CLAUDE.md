@@ -1,5 +1,5 @@
-You are operating inside Company Debt's Editorial Operating System v2.3.
-Always follow the rules in `/editorial-os/01-master-methodology.md` and all governance files (09-16).
+You are operating inside Company Debt's Editorial Operating System v2.4.
+Always follow the rules in `/editorial-os/01-master-methodology.md` and all governance files (09-23).
 
 Core requirements:
 - write people-first, decision-useful, trustworthy content
@@ -121,9 +121,9 @@ Default workflow:
 3. outline
 4. first draft
 5. trust pass (evidence, voice, comparison, pricing, readability checks)
-6. adversarial review (run against 27 failure modes in `14-failure-modes-and-recovery.md`)
+6. adversarial review (run against 28 failure modes in `14-failure-modes-and-recovery.md`)
 7. human-input placeholders
-8. pre-publish gate (14 checks, all must pass, see `16-pre-publish-gate.md`)
+8. pre-publish gate (16 checks, all must pass, see `16-pre-publish-gate.md`)
 9. final revision
 
 If support is weak, downgrade certainty.
@@ -168,11 +168,18 @@ Before pushing ANY content to the WordPress staging database (via REST API, PHP 
 
 2. SEO signal checklist (S1–S12 from `18-seo-signal-governance.md` §Pre-publish SEO signal checklist)
 
-3. Pre-publish gate Checks 14a + 15 (from `16-pre-publish-gate.md`) — human-authorship integrity and comparison page readiness
+3. Pre-publish gate Checks 1a + 15 (from `16-pre-publish-gate.md`) — human-authorship integrity and comparison page readiness
 
 The human-authorship pass runs FIRST because it catches the failures that matter most to readers and that mechanical checks cannot detect. SEO and structural checks run after.
 
+For the full executable checklist with scoring tables, see `checklists/pre-staging-gate.md`.
+
 Content rewrite rule: A content rewrite that changes more than 20% of the article body triggers the full workflow from Stage 5 onward (first draft → trust pass → adversarial review → human input → pre-publish gate). A "rewrite" includes: full article rewrites, structural reorganisation, tone/voice passes, trust-infrastructure changes, and comparison-system patch application. Quick copy edits (typos, date updates, single-sentence fixes) are exempt.
+
+Insolvency-specific governance (v2.4):
+- `24-content-registry.md` - entity ownership, anti-cannibalisation, content object types, page metadata schema
+- `25-update-logic.md` - volatility model (V0-V4), freshness tiers, hard/soft triggers, refresh classes, volatile facts ledger
+- `26-call-out-box-governance.md` - 8 approved box types, evidence ladder (A-D), placement rules, QA escalation for IP review
 
 Governance files to consult:
 - `09-voice-governance.md` - authorship, first person, padded evaluation, vendor-perspective tone (§8), conclusion discipline (§9), Rules K/L/M (§10-12), human tone (§13), alternatives page voice discipline (§14)
@@ -180,14 +187,14 @@ Governance files to consult:
 - `11-comparison-governance.md` - competitor claims, frameworks, pricing, Company Debt mentions, commercial page mode (§8), trust-first rule (§9), category-framing neutrality (§10), house-product containment (§11), disclosure architecture (§12), alternatives page governance (§13)
 - `12-structure-governance.md` - openings, endings, section discipline, first-fold pattern, commercial containment
 - `13-readability-governance.md` - paragraphs, em dashes, emphasis, formatting
-- `14-failure-modes-and-recovery.md` - 27 failure modes to check against (including AI prose fingerprints, alternatives page collapse, taxonomic human-flattening, and mixed-confidence meta-copy)
+- `14-failure-modes-and-recovery.md` - 28 failure modes to check against (including AI prose fingerprints, alternatives page collapse, taxonomic human-flattening, and mixed-confidence meta-copy)
 - `23-prose-quality-gates.md` - 10 enforcement gates for YMYL financial copy: fact pattern, scenario validity, meta-copy, human-impact, product-type clarity, generic-intensifier ban, YMYL opening router, financial objectivity, sentence texture, original-source-only constraint
 - `15-good-vs-bad-examples.md` - concrete examples of good and bad writing
-- `16-pre-publish-gate.md` - 14-check gate, all must pass before publication
+- `16-pre-publish-gate.md` - 16-check gate, all must pass before publication
 - `17-audience-and-persona.md` - default reader, practice segments, pain points, tone guidance
 - `18-seo-signal-governance.md` - 18 Google ContentWarehouse API signals: anchor text, authenticity, YMYL, salient terms, passage scoring, internal linking, and more
 
-Rule families registered (v2.3):
+Rule families registered (v2.4):
 - commercial comparison page mode (§8, `11-comparison-governance.md`)
 - trust-first vendor comparison (§9, `11-comparison-governance.md`)
 - category-framing neutrality (§10, `11-comparison-governance.md`)
@@ -206,5 +213,5 @@ Rule families registered (v2.3):
 - vendor-perspective tone discipline (§8, `09-voice-governance.md`)
 - commercial comparison trust checks (T1-T6, `05-scoring-rubric.md`)
 - trust-failure cap (scoring logic, `05-scoring-rubric.md`)
-- taxonomic human-flattening (FM-25, `14-failure-modes-and-recovery.md`)
+- taxonomic human-flattening (FM-26, `14-failure-modes-and-recovery.md`)
 - script-enforced trust architecture (check_comparison_integrity.js, check_trust_architecture.js, check_intro_quality.js, check_human_tone.js)

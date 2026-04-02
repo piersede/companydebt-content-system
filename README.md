@@ -43,7 +43,7 @@ editorial-os/
 │   └── 08  Red line library           ← hard boundaries that cannot be crossed
 │
 ├── QUALITY GATES ──────────── what blocks publication
-│   ├── 16  Pre-publish gate           ← 14 checks, all must pass before publish
+│   ├── 16  Pre-publish gate           ← 16 checks, all must pass before publish
 │   ├── 05  Scoring rubric             ← scoring criteria (trust T1-T6, alternatives A1-A8)
 │   ├── 14  Failure modes & recovery   ← 27 failure modes including 13 AI prose fingerprints
 │   ├── 15  Good vs bad examples       ← concrete examples for calibration
@@ -85,13 +85,9 @@ editorial-os/
 │   └── checklists/check_human_tone.js
 │
 ├── HUMAN PROCESS ──────────── checklists for manual review
-│   ├── checklists/trust-pass-checklist.md
-│   ├── checklists/adversarial-review-checklist.md
-│   ├── checklists/final-qa-checklist.md
 │   └── checklists/pre-staging-gate.md
 │
 └── SUPPORT FILES
-    ├── 02  Skills architecture         ← agent skill definitions
     ├── 07  Human input map             ← where human judgement is required
     ├── rules-index.md                  ← one rule, one source of truth lookup
     └── docs/agent-workflow.md          ← how the AI agent uses this system
@@ -166,7 +162,7 @@ Changing comparison rules: 11 (comparison)
 
 - **22 (Google search quality evaluator)** is a standalone audit tool. It does NOT run as part of the normal writing or publishing workflow. Invoke it manually for YMYL pages, ranking drops, or periodic reviews.
 - **20 (build-time quality gate)** runs automatically on every page build. You cannot bypass it.
-- **16 (pre-publish gate)** is a human-reviewed checklist. Every article must pass all 14 checks.
+- **16 (pre-publish gate)** is a human-reviewed checklist. Every article must pass all 16 checks.
 - **rules-index.md** is the single lookup for "which file owns this rule." If you add a rule, register it there.
 
 ---

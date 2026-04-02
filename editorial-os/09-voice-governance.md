@@ -348,7 +348,7 @@ For every article, ask: "Does this article name at least one operational frustra
 
 If the article discusses problems only in category language ("document collection challenges", "workflow inefficiencies"), it fails the lived-friction test. Rewrite with specifics: "the client who has been asked three times and still has not sent their P60."
 
-## 7a. Voice quality checklist
+## 7e. Voice quality checklist
 
 Before finalising any article, check:
 
