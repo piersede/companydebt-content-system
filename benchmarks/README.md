@@ -7,6 +7,7 @@ Quality supremacy rule:
 - token savings are subordinate to editorial quality
 - if a runtime-pack change lowers trust, sharpness, decision usefulness, or human-authorship credibility, reject it
 - if a runtime-pack change weakens entity ownership, freshness handling, or decision-critical call-out-box discipline, reject it
+- if a runtime-pack change weakens page-type structure discipline or decision-layer endings, reject it
 
 Non-compressible human-authorship checklist:
 

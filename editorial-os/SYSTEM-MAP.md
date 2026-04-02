@@ -16,6 +16,13 @@ Use this file to orient yourself. It answers: "What do we have, what does each p
 
 ---
 
+The system also now includes:
+
+- `24-content-registry.md` for entity ownership, metadata, and anti-cannibalisation
+- `25-update-logic.md` for freshness, volatility, and rerun logic
+- `26-call-out-box-governance.md` for typed information-gain boxes
+- `27-article-type-structure.md` for canonical page-type architecture
+
 ## Full file map
 
 ```
@@ -151,7 +158,7 @@ Changing comparison rules: 11 (comparison)
 | WordPress engineering standards | `21-wordpress-technical-build-quality.md` |
 | Google quality audit process | `22-google-search-quality-evaluator.md` |
 | Who we write for | `17-audience-and-persona.md` |
-| Article type-specific rules | `docs/article-types/{review,comparison,roundup,guide}.md` |
+| Article type-specific rules | `docs/article-types/{review,comparison,roundup,guide}.md` + `27-article-type-structure.md` |
 | Starter templates for new articles | `templates/` |
 | Rule lookup (which file owns which rule) | `rules-index.md` |
 | Failure patterns to avoid | `14-failure-modes-and-recovery.md` |

@@ -17,6 +17,7 @@ Do not load the whole directory by default during routine drafting if runtime pa
 - `24-content-registry.md`: entity ownership, metadata, anti-cannibalisation
 - `25-update-logic.md`: freshness, volatility, rerun logic
 - `26-call-out-box-governance.md`: decision-critical call-out box rules
+- `27-article-type-structure.md`: canonical page-type structures and decision-layer endings
 - `docs/human-authorship-voice-engine.md`: the full human-authorship model
 
 ## Working rule

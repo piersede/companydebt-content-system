@@ -22,6 +22,7 @@ Compact review pack for trust passes, adversarial review, and final editorial ch
 - scope drift into sibling entity ownership
 - stale claims that should have triggered a refresh under volatility rules
 - call-out boxes that fail evidence or placement rules
+- page structure that does not match the declared page type or intent
 
 ## Human-authorship enforcement
 

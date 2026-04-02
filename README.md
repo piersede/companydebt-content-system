@@ -17,6 +17,13 @@ The editorial system has six major components:
 
 ---
 
+It also now includes:
+
+- a content-registry layer for entity ownership, metadata, and anti-cannibalisation
+- freshness governance and rerun logic
+- call-out-box governance for typed information gain
+- a dedicated article-type structure system with canonical page-type templates
+
 ## Full system map
 
 Use this to find exactly where to go. It answers: "What does each part do, and where do I go to change it?"

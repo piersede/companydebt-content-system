@@ -50,6 +50,7 @@ Add an article-type overlay on top of this pack when relevant.
 - Reach the real buyer tension early.
 - Respect canonical entity ownership and scope. Do not let a page drift into owning a sibling topic it should only reference.
 - Keep the page's primary intent clear: definition, decision, execution, or escalation.
+- Match the page structure to its canonical page type. Do not improvise a structure that conflicts with the article-type system.
 
 ## Human-authorship texture
 
@@ -100,4 +101,5 @@ This pack compresses material primarily from:
 - `editorial-os/24-content-registry.md`
 - `editorial-os/25-update-logic.md`
 - `editorial-os/26-call-out-box-governance.md`
+- `editorial-os/27-article-type-structure.md`
 - `editorial-os/docs/human-authorship-voice-engine.md`

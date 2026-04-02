@@ -9,7 +9,8 @@
         "Concrete scenes remain explicit",
         "Verdict compresses the real decision",
         "Evaluative bite remains available",
-        "Primary entity ownership remains clear"
+        "Primary entity ownership remains clear",
+        "Declared page type still controls structure"
       ]
     },
     {
@@ -20,7 +21,8 @@
       "acceptance_checks": [
         "Fit and non-fit remain explicit",
         "Human-authorship markers are not thinned out",
-        "Scope does not drift into sibling ownership"
+        "Scope does not drift into sibling ownership",
+        "Roundup structure still ends in a decision layer"
       ]
     },
     {
@@ -31,7 +33,8 @@
       "acceptance_checks": [
         "Working-day consequence remains explicit",
         "Generic category explanation is still suppressed",
-        "Audience lane remains appropriate"
+        "Audience lane remains appropriate",
+        "Guide structure still matches canonical page-type pattern"
       ]
     },
     {
@@ -42,7 +45,8 @@
       "acceptance_checks": [
         "Replacement versus augmentation remains explicit",
         "Conclusion-before-CTA discipline is preserved",
-        "Qualified call-out-box rules remain available where needed"
+        "Qualified call-out-box rules remain available where needed",
+        "Comparison structure still preserves decision-trust and house-product containment"
       ]
     }
   ]

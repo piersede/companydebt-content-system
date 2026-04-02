@@ -38,12 +38,12 @@ TASK_BASE_PACKS = {
 }
 
 TASK_CANONICAL = {
-    "brief": ["01-master-methodology.md", "03-workflow-playbook.md", "17-audience-and-persona.md", "24-content-registry.md"],
+    "brief": ["01-master-methodology.md", "03-workflow-playbook.md", "17-audience-and-persona.md", "24-content-registry.md", "27-article-type-structure.md"],
     "research": ["10-evidence-governance.md", "19-editorial-image-evidence.md"],
     "source-grounding": ["10-evidence-governance.md", "04-trust-architecture.md", "25-update-logic.md", "26-call-out-box-governance.md"],
-    "outline": ["12-structure-governance.md"],
-    "draft": ["09-voice-governance.md", "12-structure-governance.md", "13-readability-governance.md", "17-audience-and-persona.md", "24-content-registry.md", "26-call-out-box-governance.md"],
-    "rewrite": ["09-voice-governance.md", "12-structure-governance.md", "23-prose-quality-gates.md", "24-content-registry.md", "26-call-out-box-governance.md"],
+    "outline": ["12-structure-governance.md", "27-article-type-structure.md"],
+    "draft": ["09-voice-governance.md", "12-structure-governance.md", "13-readability-governance.md", "17-audience-and-persona.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md"],
+    "rewrite": ["09-voice-governance.md", "12-structure-governance.md", "23-prose-quality-gates.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md"],
     "trust-pass": ["10-evidence-governance.md", "16-pre-publish-gate.md", "23-prose-quality-gates.md", "24-content-registry.md", "25-update-logic.md", "26-call-out-box-governance.md"],
     "review": ["05-scoring-rubric.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md"],
     "adversarial-review": ["11-comparison-governance.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md", "24-content-registry.md", "26-call-out-box-governance.md"],

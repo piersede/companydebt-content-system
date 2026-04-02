@@ -30,6 +30,7 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Comparison disarmament and vendor-language interrogation | `docs/article-types/comparison.md` |
 | Roundup anti-ghost-listicle rules | `docs/article-types/roundup.md` |
 | Guide friction / consequence translation | `docs/article-types/guide.md` |
+| Canonical page-type structures and decision-layer endings | `27-article-type-structure.md` |
 
 ## Commercial comparison governance
 
