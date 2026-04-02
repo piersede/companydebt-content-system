@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "name": "review draft",
+      "task": "draft",
+      "page_type": "review",
+      "slug": "capital-on-tap-review",
+      "acceptance_checks": [
+        "Concrete scenes remain explicit",
+        "Verdict compresses the real decision",
+        "Evaluative bite remains available"
+      ]
+    },
+    {
+      "name": "roundup draft",
+      "task": "draft",
+      "page_type": "roundup",
+      "slug": "best-business-credit-cards",
+      "acceptance_checks": [
+        "Fit and non-fit remain explicit",
+        "Human-authorship markers are not thinned out"
+      ]
+    },
+    {
+      "name": "guide draft",
+      "task": "draft",
+      "page_type": "guide",
+      "slug": "guide-to-business-credit-cards",
+      "acceptance_checks": [
+        "Working-day consequence remains explicit",
+        "Generic category explanation is still suppressed"
+      ]
+    },
+    {
+      "name": "alternatives review",
+      "task": "review",
+      "page_type": "comparison",
+      "slug": "compare-amex",
+      "acceptance_checks": [
+        "Replacement versus augmentation remains explicit",
+        "Conclusion-before-CTA discipline is preserved"
+      ]
+    }
+  ]
+}

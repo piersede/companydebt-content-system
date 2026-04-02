@@ -171,6 +171,24 @@ Changing comparison rules: 11 (comparison)
 
 ---
 
+## Runtime context
+
+The system should decide the default runtime context automatically.
+
+Canonical governance remains in `editorial-os/`, but routine execution should use `runtime-packs/` plus local `CLAUDE.md` files rather than loading the whole editorial system every turn.
+
+Useful commands:
+
+```bash
+python scripts/runtime_pack_router.py --task draft --page-type review --slug capital-on-tap-review
+python scripts/build_page.py --page capital-on-tap-review --show-runtime-packs --task draft
+python scripts/benchmark_runtime_packs.py
+```
+
+Human-authorship safeguard:
+
+- token savings must not come from thinning out concrete scenes, earned pronouns, friction, evaluative bite, rhythm, or moral clarity
+
 ## Setup
 
 ### 1. Clone the repo
@@ -192,7 +210,7 @@ npm install -g @anthropic-ai/claude-code
 claude
 ```
 
-Claude automatically loads `CLAUDE.md`, which contains all editorial system instructions. The governance files in `editorial-os/` are referenced from there.
+Claude automatically loads the root `CLAUDE.md`, which is now a lean universal routing layer. Relevant local `CLAUDE.md` files and runtime packs should provide task-specific context. Canonical governance remains in `editorial-os/`.
 
 ---
 

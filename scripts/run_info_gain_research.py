@@ -1,15 +1,20 @@
 """
 Information Gain Research Runner
-Fires off batched Deep Research prompts to fill editorial gaps across all 20 credit card pages.
-Consolidates into thematic research bundles to minimise API calls.
+Fires off batched Deep Research prompts to fill editorial gaps across the
+credit card pages while reusing a shared prompt scaffold.
 """
-import os, time, json
+
+import os
+import time
 from pathlib import Path
+
 from google import genai
 
-# Load API key from main repo .env
+from research_prompt_utils import build_bundle_prompt
+
+
 env_path = Path("C:/Users/piers/Downloads/companydebt-content-system/.env")
-for line in env_path.read_text().splitlines():
+for line in env_path.read_text(encoding="utf-8").splitlines():
     if line.startswith("GEMINI_API_KEY="):
         os.environ["GEMINI_API_KEY"] = line.split("=", 1)[1].strip()
         break
@@ -18,153 +23,166 @@ client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 OUT = Path("research")
 OUT.mkdir(exist_ok=True)
 
-# --- Research bundles (themed to minimise calls) ---
 
 BUNDLES = {
     "01_rates_and_costs": {
         "title": "UK Business Credit Card Rates, Costs, and Lending Data",
         "pages_served": [
-            "capital_on_tap_review", "low_apr", "best_business_credit_cards",
-            "cashback_reward", "interest_free", "balance_transfer",
-            "funding_circle_review", "poor_credit"
+            "capital_on_tap_review",
+            "low_apr",
+            "best_business_credit_cards",
+            "cashback_reward",
+            "interest_free",
+            "balance_transfer",
+            "funding_circle_review",
+            "poor_credit",
         ],
-        "prompt": """Research UK business credit card rates, lending data, and cost transparency. Answer every section. If primary data is unavailable, follow the backup instruction.
-
+        "body": """
 SECTION 1: CAPITAL ON TAP HISTORICAL AVERAGE RATES
-Primary: Compile every publicly available Capital on Tap average interest rate disclosure by quarter, going back as far as data exists. Check capitalontap.com legal pages, Companies House filings, FCA submissions, and investor materials. For each quarter provide: quarter, average rate percentage, source URL.
-Backup: If only the most recent quarter exists, check third-party sources (FCA, journalists, comparison sites, Trustpilot reviews mentioning rates, Reddit) for any mentions of Capital on Tap average rates in prior periods.
+Primary: Compile every publicly available Capital on Tap average interest rate disclosure by quarter, going back as far as data exists. Check capitalontap.com legal pages, Companies House filings, FCA submissions, and investor materials. For each quarter provide quarter, average rate percentage, and source URL.
+Backup: If only the most recent quarter exists, check third-party sources for mentions of Capital on Tap average rates in prior periods.
 
 SECTION 2: RATE DISTRIBUTION
-Does Capital on Tap publish any data on the distribution of rates offered (e.g. what percentage of applicants receive rates below 20%, 20-35%, 35-50%, above 50%)? Check their website, FCA filings, Companies House annual accounts, and investor materials.
+Determine whether Capital on Tap publishes any distribution data on rates offered, including ranges such as below 20%, 20-35%, 35-50%, and above 50%.
 
 SECTION 3: COMPETITIVE RATE TABLE
-Find the current representative APR, any published average rates, annual fees, foreign transaction fees, cashback rates, and maximum credit limits for: Barclaycard Select Cashback, Barclaycard Premium Plus, Lloyds Bank Business Card, NatWest Business Credit Card, HSBC Business Credit Card, Funding Circle Business Credit Card, Tide Business Credit Card, Metro Bank Business Credit Card, Co-op Business Credit Card, and Capital on Tap (both free and Pro tiers). Present as a comparison table with source URLs.
+Find the current representative APR, published average rates if any, annual fees, foreign transaction fees, cashback rates, and maximum credit limits for Barclaycard Select Cashback, Barclaycard Premium Plus, Lloyds, NatWest, HSBC, Funding Circle, Tide, Metro Bank, Co-op, and Capital on Tap free and Pro tiers.
 
 SECTION 4: BALANCE CARRYING DATA
-What percentage of UK small businesses carrying business credit cards clear the balance in full each month vs carry a balance? Check Bank of England, UK Finance, and FCA publications from 2023-2026.
+Find what percentage of UK small businesses with business credit cards clear the balance in full each month versus carry a balance.
 
 SECTION 5: TOTAL UK BUSINESS CREDIT CARD DEBT
-What is the total outstanding balance on UK business credit cards? Bank of England or UK Finance data.
+Find the total outstanding balance on UK business credit cards from Bank of England or UK Finance data.
 
 SECTION 6: BUSINESS VS PERSONAL CARD APR PREMIUM
-What is the average personal credit card APR in the UK (from FCA or Bank of England) compared to business cards, to quantify the business card premium?
+Find the average personal credit card APR in the UK and compare it with business card APRs to quantify any business-card premium.
 
 SECTION 7: 0% BUSINESS CARD HISTORY
-Has any UK business credit card ever offered a genuine promotional 0% introductory APR period or 0% balance transfer rate? Check Moneyfacts, Defaqto, or archived product data from the last 5 years.
+Check whether any UK business credit card has offered a genuine promotional 0% introductory APR period or 0% balance transfer rate in the last five years.
 
 SECTION 8: CASHBACK SPECIFICS
-What are Barclaycard Select Cashback's exact tier thresholds and rates? Are there caps on NatWest, Barclaycard, or Funding Circle cashback? What spend categories are excluded from Funding Circle's cashback? Has HMRC published updated guidance on business cashback tax treatment since BIM40455?
+Find Barclaycard Select Cashback tier thresholds and rates, cashback caps on NatWest, Barclaycard, or Funding Circle, excluded spend categories for Funding Circle, and any updated HMRC guidance on business cashback tax treatment since BIM40455.
 
 SECTION 9: FLEXIPAY FEE SCHEDULE
-What is Funding Circle FlexiPay's full fee schedule by repayment term (1, 3, 6, 12 months)? Who is the card issuer behind the Funding Circle business credit card? What competing BNPL-for-business products exist in the UK (iwoca PayLater, Kriya PayLater, Liberis) and what are their terms?
+Find Funding Circle FlexiPay's full fee schedule by repayment term, the card issuer behind the Funding Circle business credit card, and key terms for competing BNPL-for-business products in the UK.
 
-SECTION 10: SECURED/POOR CREDIT PRODUCTS
-Are there any UK providers offering secured business credit cards or business credit-builder products as of 2026? Check Cashplus, Suits Me, Pockit, and fintech entrants. What are the Experian/Equifax score thresholds that Capital on Tap and Funding Circle use? How long does an Experian score typically take to move from Poor (0-560) to Fair (561-720)?
-
-FORMAT: Clear section headers matching SECTION 1-10. State primary or backup for each. Include exact URLs for every data point. Flag anything unverified."""
+SECTION 10: SECURED OR POOR-CREDIT PRODUCTS
+Check whether any UK providers offer secured business credit cards or business credit-builder products as of 2026, including Cashplus, Suits Me, Pockit, and fintech entrants. Find any published score thresholds used by Capital on Tap and Funding Circle if available.
+""",
     },
-
     "02_amex_and_rewards": {
         "title": "Amex Business Cards, Rewards, and Travel Benefits",
         "pages_served": [
-            "compare_amex", "capital_on_tap_vs_amex", "air_miles_avios",
-            "charge_cards", "travel", "cashback_reward",
-            "credit_cards_vs_charge_cards"
+            "compare_amex",
+            "capital_on_tap_vs_amex",
+            "air_miles_avios",
+            "charge_cards",
+            "travel",
+            "cashback_reward",
+            "credit_cards_vs_charge_cards",
         ],
-        "prompt": """Research American Express UK business card products, rewards programmes, and travel card benefits. Answer every section. If primary data is unavailable, follow the backup instruction.
-
+        "body": """
 SECTION 1: AMEX UK MERCHANT ACCEPTANCE
-What is the current UK merchant acceptance rate for American Express? Check Amex investor reports, FCA data, and published network statistics. Also find country-by-country acceptance data for the US, France, Germany, Australia, and Japan.
-Backup: Find the most recent published estimate from Amex, financial journalists, or industry reports.
+Find the current UK merchant acceptance rate for American Express and, if available, country-by-country acceptance data for the US, France, Germany, Australia, and Japan. Backup to the most recent published estimates if direct network statistics are unavailable.
 
 SECTION 2: MEMBERSHIP REWARDS VALUATIONS
-What are the current Membership Rewards transfer ratios to Avios, Virgin Points, Hilton Honors, and Marriott Bonvoy for UK business cardholders? What is the average pence-per-point redemption value across the top 5 redemption routes? Check HeadForPoints, FlyerTalk UK, and points valuation trackers.
+Find current UK business-cardholder transfer ratios to Avios, Virgin Points, Hilton Honors, and Marriott Bonvoy, plus indicative redemption values across the strongest redemption routes.
 
 SECTION 3: AMEX BUSINESS PLATINUM BENEFITS
-What are the current Amex Business Platinum UK travel benefits in detail? Centurion lounge access, Priority Pass, travel insurance coverage limits (medical, cancellation, baggage, per-trip duration, geographical exclusions), and any other specific perks.
+Detail current UK Amex Business Platinum travel benefits including lounge access, insurance limits, trip duration limits, and relevant exclusions.
 
 SECTION 4: AMEX PAY OVER TIME
-What is the current interest rate on Amex Business Gold's "Pay Over Time" feature in the UK? What purchases qualify? What is the minimum payment? What is the interest rate on Amex Business Basic's equivalent feature?
+Find the current interest rate and operating details for Amex Business Gold Pay Over Time and the equivalent feature on Amex Business Basic.
 
 SECTION 5: AMEX LATE PAYMENT FEES
-What are the specific late payment fees for UK Amex Business Gold and Platinum charge cards? What is the escalation process (first missed payment, second, suspension)?
+Find the specific late payment fees and escalation process for UK Amex Business Gold and Platinum charge cards.
 
 SECTION 6: AMEX CREDIT LIMITS
-What do "no pre-set spending limit" charge cards actually offer in practice? What initial credit allowances do Amex Business Gold and Platinum typically provide to new businesses at different revenue tiers? Check forums, HeadForPoints, FlyerTalk for real-world reports.
+Find real-world reports and any published information that clarify what no pre-set spending limit means in practice and what initial allowances are typically seen.
 
 SECTION 7: AVIOS AVAILABILITY
-What is the actual reward seat availability rate on BA's most popular UK short-haul routes? Are there published studies or travel community data on how often off-peak Avios seats are bookable? What is the real-world pence-per-Avios redemption value across economy, premium economy, and business class?
+Find any published studies or community-backed data on BA reward seat availability and real-world pence-per-Avios values across cabin classes.
 
 SECTION 8: BA AMEX BUSINESS VS PERSONAL
-Does the BA Amex Accelerating Business card earn a companion voucher at any spend threshold? What are the exact differences between the business and personal BA Amex cards?
+Find whether the BA Amex Accelerating Business card earns a companion voucher and summarize the exact differences between the business and personal BA Amex cards.
 
 SECTION 9: TRAVEL CARD FX FEES
-What are the exact FX fees and ATM fees for Amex Business Gold and BA Amex Accelerating cards? What is the Visa and Mastercard wholesale exchange rate margin above interbank? Does NatWest's 0% FX fee apply to online overseas merchant purchases?
+Find exact FX and ATM fees for the key travel cards, the typical Visa and Mastercard exchange-rate margin above interbank, and whether NatWest's 0% FX fee applies to online overseas merchant purchases.
 
 SECTION 10: CHARGE CARD MARKET DATA
-What percentage of UK business card applications are for charge cards vs credit cards? Do UK business lenders treat charge card accounts differently from credit card accounts in credit assessments? Do Lloyds, Barclaycard, Co-op, and NatWest currently offer standalone business charge card products?
-
-FORMAT: Clear section headers. State primary or backup for each. Include exact URLs. Flag anything unverified."""
+Find any data on UK business charge-card versus credit-card application mix, treatment in credit assessments, and whether Lloyds, Barclaycard, Co-op, and NatWest currently offer standalone business charge cards.
+""",
     },
-
     "03_eligibility_and_underwriting": {
         "title": "UK Business Credit Card Eligibility, Approval Rates, and Underwriting",
         "pages_served": [
-            "sole_traders", "start_ups", "instant_approval",
-            "poor_credit", "guide_to_business_credit_cards",
-            "capital_on_tap_review", "compare_barclaycard"
+            "sole_traders",
+            "start_ups",
+            "instant_approval",
+            "poor_credit",
+            "guide_to_business_credit_cards",
+            "capital_on_tap_review",
+            "compare_barclaycard",
         ],
-        "prompt": """Research UK business credit card eligibility criteria, approval processes, and underwriting practices. Answer every section. If primary data is unavailable, follow the backup instruction.
-
+        "body": """
 SECTION 1: SOLE TRADER NUMBERS
-What is the current HMRC or ONS figure for the number of sole traders in the UK? How has it changed over 3 years? Source and URL required.
+Find the current HMRC or ONS figure for the number of sole traders in the UK and how it has changed over the last three years.
 
 SECTION 2: APPROVAL RATES
-What are the published or reported approval rates for Capital on Tap, Moss, Funding Circle, Barclaycard, and Amex business card applications? Check FCA submissions, investor reports, Companies House filings, and intermediary data. What about approval rate differentials between sole traders and limited companies?
+Find published or reported approval rates for Capital on Tap, Moss, Funding Circle, Barclaycard, and Amex business card applications, including any sole-trader versus limited-company differentials.
 
 SECTION 3: CREDIT LIMITS ACTUALLY GRANTED
-What are typical credit limits actually offered to UK SMEs by provider and turnover band? Any data from FCA, providers, forums, or brokers on what businesses with £100k-£500k and £500k-£2m turnover actually receive?
+Find typical credit limits actually offered to UK SMEs by provider and turnover band, including any reliable forum, broker, or regulatory data.
 
 SECTION 4: UNDERWRITING DATA SOURCES
-What data sources do Capital on Tap, Moss, and Funding Circle use in automated underwriting? (Open Banking, Companies House, credit bureaux.) Any published details from provider documentation or FCA filings?
+Find what data sources Capital on Tap, Moss, and Funding Circle use in automated underwriting, including Open Banking, Companies House, and credit-bureau inputs where documented.
 
 SECTION 5: APPLICATION EXPERIENCE
-Find detailed first-hand accounts of applying for Capital on Tap, Barclaycard, and Amex business cards. How many screens/steps, what information requested, soft vs hard search, decision timeline, what the offer screen shows. Check Trustpilot, Reddit (r/UKPersonalFinance, r/UKBusiness), YouTube walkthroughs, and comparison site reviews.
+Find detailed first-hand accounts of applying for Capital on Tap, Barclaycard, and Amex business cards, including step count, information requested, search type, timeline, and what the offer screen shows.
 
 SECTION 6: REAPPLICATION POLICIES
-What is Capital on Tap's policy on reapplication after decline? Stated cooling-off period? Do Barclaycard or Amex publish reapplication guidance?
+Find reapplication policies after decline for Capital on Tap, Barclaycard, and Amex, including cooling-off periods where stated.
 
 SECTION 7: VIRTUAL CARD CAPABILITIES
-What are the specific virtual card capabilities on Capital on Tap and Moss? Contactless limits, online transaction limits, Apple Pay/Google Pay compatibility, number of virtual cards per account?
+Find specific virtual card capabilities on Capital on Tap and Moss, including wallet support, limits, and virtual-card counts.
 
 SECTION 8: SECTION 75 PROTECTION
-Which specific UK business credit cards are confirmed to have Section 75 consumer protection? Provider confirmations or FCA guidance?
+Find which specific UK business credit cards are confirmed to have Section 75 protection, citing provider confirmations or FCA guidance.
 
 SECTION 9: FCA COMPLAINT DATA
-What are the FCA-registered complaint volumes for Capital on Tap, Barclaycard, Amex, Lloyds, and Funding Circle business card products? Complaints per 1,000 accounts if available?
+Find complaint volumes for Capital on Tap, Barclaycard, Amex, Lloyds, and Funding Circle business card products, plus complaints per 1,000 accounts if available.
 
 SECTION 10: ACCOUNTING SOFTWARE INTEGRATION
-Which UK business credit cards have native Xero, FreeAgent, and QuickBooks bank feed integrations vs requiring manual CSV import?
+Find which UK business credit cards have native Xero, FreeAgent, and QuickBooks integrations versus CSV-only workflows.
 
 SECTION 11: FCA REGULATORY CONTEXT
-Has the FCA published any guidance or thematic reviews about the gap between advertised "from" rates and actual rates on business credit cards or SME lending? Any enforcement actions involving Capital on Tap? Any guidance on business card pricing transparency vs personal cards?
-
-FORMAT: Clear section headers. State primary or backup for each. Include exact URLs. Flag anything unverified."""
-    }
+Find any FCA guidance or thematic review material on advertised-from rates versus actual rates, pricing transparency, or enforcement actions relevant to business credit cards and SME lending.
+""",
+    },
 }
 
 
 def run_research(bundle_key, bundle):
     """Fire off a single Deep Research call and save results."""
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"Starting: {bundle['title']}")
     print(f"Serves pages: {', '.join(bundle['pages_served'])}")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
+
+    prompt = build_bundle_prompt(
+        bundle["title"],
+        bundle["body"],
+        extra_rules=[
+            "Preserve the section headings exactly.",
+            "Include exact URLs for every data point where possible.",
+            "State clearly when only backup-source evidence was available.",
+        ],
+    )
 
     interaction = client.interactions.create(
         agent="deep-research-pro-preview-12-2025",
-        input=bundle["prompt"],
-        background=True
+        input=prompt,
+        background=True,
     )
     print(f"Interaction ID: {interaction.id}")
 
@@ -181,8 +199,8 @@ def run_research(bundle_key, bundle):
             out_file.write_text(result, encoding="utf-8")
             print(f"  Saved to {out_file} ({len(result)} chars)")
             return True
-        elif interaction.status == "failed":
-            err = getattr(interaction, 'error', 'Unknown error')
+        if interaction.status == "failed":
+            err = getattr(interaction, "error", "Unknown error")
             print(f"  FAILED: {err}")
             out_file = OUT / f"{bundle_key}_FAILED.txt"
             out_file.write_text(str(err), encoding="utf-8")
@@ -199,8 +217,8 @@ if __name__ == "__main__":
         success = run_research(key, bundle)
         results[key] = "completed" if success else "failed"
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("RESULTS SUMMARY")
     for key, status in results.items():
         print(f"  {key}: {status}")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")

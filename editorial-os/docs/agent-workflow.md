@@ -4,6 +4,12 @@ Adapted from vinicius91carvalho/.claude compound engineering system.
 This file governs agent behaviour during editorial and development tasks.
 It does not override any editorial governance rules (09-18).
 
+Runtime context rule:
+
+- humans should not need to decide which runtime packs to use in routine work
+- the system should resolve the smallest relevant context automatically
+- if runtime compression weakens human authorship, decision usefulness, or trust, reject it
+
 ---
 
 ## Value Hierarchy

@@ -1,5 +1,13 @@
 # Workflow Playbook
 
+Runtime rule:
+
+- the editorial system should decide the default execution context
+- use compact runtime packs for routine work
+- consult canonical governance when a rule needs full detail or a conflict appears
+- do not ask humans to choose packs manually during normal workflow
+- human-authorship markers remain non-compressible during execution
+
 ## Stage 1: Research intake
 Gather only what matters:
 - official product pages

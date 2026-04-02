@@ -29,6 +29,7 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 from cc_builder.data.loader import load_cards_for_page, list_available_cards
 from cc_builder.quality_checks import run_all_checks, print_report
+from runtime_pack_router import resolve_runtime_context
 
 
 # ── Page registry ──────────────────────────────────────────────────────
@@ -150,6 +151,14 @@ def main():
         '--dry-run', action='store_true',
         help='Show research prompt without calling API'
     )
+    parser.add_argument(
+        '--show-runtime-packs', action='store_true',
+        help='Show the system-decided runtime context for the requested page and task'
+    )
+    parser.add_argument(
+        '--task', type=str, default='build',
+        help='Task name for runtime context inspection (default: build)'
+    )
     args = parser.parse_args()
 
     if args.list:
@@ -213,6 +222,17 @@ def main():
     if not args.page:
         parser.print_help()
         sys.exit(1)
+
+    config = load_page_config(args.page)
+
+    if args.show_runtime_packs:
+        runtime = resolve_runtime_context(
+            args.task,
+            page_type=config.get('page_type'),
+            slug=config.get('slug', args.page),
+        )
+        print('System-decided runtime context:')
+        print(json.dumps(runtime, indent=2))
 
     # Build
     print(f'Building page: {args.page}')
