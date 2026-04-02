@@ -13,3 +13,5 @@ Rules:
 - keep prompts structured and reusable where possible
 - prefer shared prompt builders over repeated prose-heavy prompt blobs
 - if a script changes what context is loaded, benchmark the savings and check human-authorship safeguards
+- script changes must preserve the always-on quality kernel for article work, even when they reduce routing overhead
+- default Claude-side entrypoints here are `editorial_task_entry.py`, `distill_research.py`, `prepare_revision_packet.py`, and `measure_workflow_tokens.py`

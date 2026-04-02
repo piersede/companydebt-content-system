@@ -48,6 +48,12 @@ If the article sounds generic, bloodless, over-balanced, or like AI simulating j
 - Treat `editorial-os/` as canonical governance, not default runtime payload.
 - Use `runtime-packs/` as the compact execution layer.
 - Consult canonical governance only when the runtime layer is insufficient or a rule conflict appears.
+- For article and page work, keep the quality kernel always available: runtime core pack, stage pack, page-class overlay, and the human-authorship / trust standards carried by those compact packs.
+- For page-specific drafting, review, or rewrite work, run `python scripts/editorial_task_entry.py --page <slug> --task <task>` first and treat that packet as the default working context.
+- For research-heavy work, distill large research files first with `python scripts/distill_research.py --slug <slug> <source-files...>`.
+- For rewrite work, prepare a compact packet with `python scripts/prepare_revision_packet.py --page <slug> --task rewrite --notes <note-files...>`.
+- Use `EDITORIAL-OPERATOR-PLAYBOOK.md` as the default human workflow guide inside Claude.
+- Routing narrows irrelevant context. It must not remove quality-critical standards.
 
 ## Where to go
 
