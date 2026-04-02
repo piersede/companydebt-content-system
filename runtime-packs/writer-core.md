@@ -48,6 +48,8 @@ Add an article-type overlay on top of this pack when relevant.
 - Every major section should help the reader decide, avoid a mistake, understand a trade-off, or defend a shortlist.
 - If a paragraph does none of those jobs, cut or rewrite it.
 - Reach the real buyer tension early.
+- Respect canonical entity ownership and scope. Do not let a page drift into owning a sibling topic it should only reference.
+- Keep the page's primary intent clear: definition, decision, execution, or escalation.
 
 ## Human-authorship texture
 
@@ -62,6 +64,8 @@ These markers are non-compressible in execution:
 - include at least a few asymmetrical editorial lines that sound unmistakably thought-through
 - allow mild UK texture where natural
 - allow moral clarity where unfairness, cost, or buyer harm is real
+- where call-out boxes are used, they must shift judgement rather than repeat nearby copy
+- call-out boxes must respect audience lane, evidence level, and placement rules
 
 Do not let the article become bloodless, over-balanced, or taxonomic.
 
@@ -93,4 +97,7 @@ This pack compresses material primarily from:
 - `editorial-os/13-readability-governance.md`
 - `editorial-os/17-audience-and-persona.md`
 - `editorial-os/23-prose-quality-gates.md`
+- `editorial-os/24-content-registry.md`
+- `editorial-os/25-update-logic.md`
+- `editorial-os/26-call-out-box-governance.md`
 - `editorial-os/docs/human-authorship-voice-engine.md`

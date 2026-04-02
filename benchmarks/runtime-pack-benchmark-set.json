@@ -8,7 +8,8 @@
       "acceptance_checks": [
         "Concrete scenes remain explicit",
         "Verdict compresses the real decision",
-        "Evaluative bite remains available"
+        "Evaluative bite remains available",
+        "Primary entity ownership remains clear"
       ]
     },
     {
@@ -18,7 +19,8 @@
       "slug": "best-business-credit-cards",
       "acceptance_checks": [
         "Fit and non-fit remain explicit",
-        "Human-authorship markers are not thinned out"
+        "Human-authorship markers are not thinned out",
+        "Scope does not drift into sibling ownership"
       ]
     },
     {
@@ -28,7 +30,8 @@
       "slug": "guide-to-business-credit-cards",
       "acceptance_checks": [
         "Working-day consequence remains explicit",
-        "Generic category explanation is still suppressed"
+        "Generic category explanation is still suppressed",
+        "Audience lane remains appropriate"
       ]
     },
     {
@@ -38,7 +41,8 @@
       "slug": "compare-amex",
       "acceptance_checks": [
         "Replacement versus augmentation remains explicit",
-        "Conclusion-before-CTA discipline is preserved"
+        "Conclusion-before-CTA discipline is preserved",
+        "Qualified call-out-box rules remain available where needed"
       ]
     }
   ]

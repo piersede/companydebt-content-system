@@ -19,6 +19,9 @@ Compact review pack for trust passes, adversarial review, and final editorial ch
 - generic praise or padded evaluation
 - taxonomy-engine prose
 - bloodless neutrality where sharper judgement is warranted
+- scope drift into sibling entity ownership
+- stale claims that should have triggered a refresh under volatility rules
+- call-out boxes that fail evidence or placement rules
 
 ## Human-authorship enforcement
 
@@ -42,5 +45,6 @@ Ask:
 - does this actually help a real reader make a better decision?
 - does it sound authored rather than generated?
 - does it retain the full human-authorship model during execution?
+- does it respect entity ownership, freshness logic, and box governance?
 
 If not, revise.

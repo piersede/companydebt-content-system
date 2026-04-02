@@ -26,6 +26,7 @@ Non-compressible rule:
 - do not thin out human-authorship markers in runtime packs
 - token savings must come from removing duplication, excess routing, or irrelevant context
 - token savings must not come from compressing concrete scenes, earned pronoun logic, friction, evaluative bite, rhythm, cultural texture, or moral clarity
+- token savings must not remove entity ownership, freshness logic, or call-out-box governance where those are relevant to the task
 
 Helpful commands:
 
