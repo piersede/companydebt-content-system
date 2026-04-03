@@ -87,6 +87,15 @@ Do not let the article become bloodless, over-balanced, or taxonomic.
 - shorten the sharpest claim into a declarative line
 - rewrite any paragraph that sounds like AI simulating judgement
 
+## Voice Calibration Targets
+
+- "A debt solution that looks tidy on paper can still become unworkable once directors, creditors, and cash flow pressures collide."
+- "The practical question is not whether this route exists, but whether it still makes sense when time, leverage, and stress are all running against you."
+- "A cheaper-looking option is not necessarily the lower-cost one if it makes the next mistake more likely."
+- "Some advice sounds reassuring until you ask who carries the risk if the plan fails. That answer belongs in the copy."
+- "When a page is about rescue, the reader needs honest friction, not calm abstraction."
+- "If a recommendation only works in the best-case version of events, that limitation is part of the verdict."
+
 ## Canonical source map
 
 This pack compresses material primarily from:

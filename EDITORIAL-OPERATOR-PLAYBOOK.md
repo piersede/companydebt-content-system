@@ -5,7 +5,7 @@
 - Start a new thread for each major rewrite.
 - Keep research, drafting, revision, and system work in separate threads.
 - Point Claude at the exact page or file, not the whole repo.
-- Use the compact runtime path by default. Canonical governance is for ambiguity, auditing, or maintenance only.
+- Use the compact runtime path by default, but keep the quality kernel on every article turn: writer-core, the relevant stage pack, the page-class overlay, and the human-authorship / trust layer.
 
 ## Recommended Entry Commands
 - `python scripts/editorial_task_entry.py --page <slug> --task draft`
@@ -24,7 +24,7 @@
 ## Revision Discipline
 - Rewrite from the revision packet, not from the whole repo context.
 - Reopen canon only if the notes expose a genuine conflict or quality-risk question.
-- Preserve the human-authorship layer while changing only the sections that need work.
+- Enforce the human-authorship layer while changing only the sections that need work.
 
 ## Token-Survival Rule
 - If the thread is becoming long, end it and start a fresh one rather than carrying accumulated history.

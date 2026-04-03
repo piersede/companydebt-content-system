@@ -64,7 +64,7 @@ def render_markdown(payload: dict) -> str:
         f"- Canonical refs: `{payload['canonical_tokens_estimate']}`",
         "",
         "## Operator Rule",
-        "- Stay on the runtime path unless ambiguity or quality risk requires checking canon.",
+        "- Use this packet for routing only. Keep the quality kernel loaded every time: writer-core, relevant stage pack, overlay, and human-authorship / trust rules. Reopen canon when those quality-bearing layers need verification or extension.",
     ]
     return "\n".join(lines) + "\n"
 

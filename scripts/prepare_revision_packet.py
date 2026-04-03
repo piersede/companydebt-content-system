@@ -49,7 +49,7 @@ def build_packet(page: str, task: str, note_paths: list[Path]) -> str:
         "## Revision Instructions",
         "- Work from the specific notes and changed sections first.",
         "- Do not reread the whole system unless the notes expose a real ambiguity.",
-        "- Preserve the human-authorship layer while changing only the targeted problems.",
+        "- Enforce the human-authorship layer while changing only the targeted problems.",
         "",
         "## Notes Snapshot",
     ]
