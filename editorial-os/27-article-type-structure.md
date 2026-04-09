@@ -166,11 +166,7 @@ Must not do:
 - provide personalized legal advice
 
 Required structure:
-1. What this usually means
-2. What to do in the next 72 hours
-3. Options ranked from least irreversible
-4. Director duties and personal risk
-5. Decision layer ending with route selection
+Use Canonical Heading Blueprint 2: The Immediate Crisis (The Triage Unit).
 
 ### Definition and glossary pages
 
@@ -217,11 +213,7 @@ Must not do:
 - skip red flags or stakeholder impacts
 
 Required structure:
-1. Before you start
-2. Step-by-step timeline
-3. What can go wrong
-4. Stakeholder impacts
-5. Decision layer ending with execution checklist
+Use Canonical Heading Blueprint 1: The Statutory Procedure (The Service Pillar).
 
 ### Recovery strategy guides
 
@@ -249,11 +241,7 @@ Must not do:
 - present the matrix without scenario gating
 
 Required structure:
-1. Quick chooser
-2. Informal options
-3. Formal rescue options
-4. Closure options
-5. Decision layer ending with evidence-pack checklist
+Use Canonical Heading Blueprint 3: The Strategic Comparison (The Decision Maker).
 
 ### Legal and compliance explainers
 
@@ -266,11 +254,7 @@ Must not do:
 - imply guaranteed outcomes
 
 Required structure:
-1. What the law says
-2. When it becomes a real risk
-3. What good practice looks like
-4. How it interacts with insolvency routes
-5. Decision layer ending with stop-doing and start-doing guidance
+Use Canonical Heading Blueprint 4: The Director Shield (Liability) when the dominant intent is personal exposure, house protection, director investigation, or asset risk.
 
 ### Case insight pages
 
@@ -297,6 +281,165 @@ Give practical scripts and boundaries for stabilizing pressure.
 Must not do:
 - encourage misleading statements
 - imply that a template replaces advice
+
+---
+
+## 27.5 Canonical Heading Blueprints
+
+These blueprints are part of the Company Debt structure system. They are not optional overlays and must not be rewritten into looser variants.
+
+Before running any blueprint, define:
+
+- `{{KSP}}` (Key Search Phrase): The high-volume main term.
+- `{{SK}}` (Semantic Keyword): A natural variation or synonym.
+- `{{ACTION}}`: The user's goal.
+
+### Blueprint 1: The Statutory Procedure (The Service Pillar)
+
+Best for:
+Standard insolvency tools such as CVL, MVL, and Administration.
+
+H1:
+How to Use `{{KSP}}` to `{{ACTION}}` Your Company and Write Off Debt
+
+H2:
+What is `{{KSP}}`? (A Simple Guide to `{{SK}}`)
+
+H2:
+The Two Legal Tests for `{{KSP}}` Eligibility
+
+H3:
+The Cash-Flow Test for `{{SK}}`
+
+H3:
+The Balance Sheet Test: Do Your Liabilities Outweigh Assets?
+
+H2:
+The `{{KSP}}` Timeline: How Long Does `{{SK}}` Take?
+
+H2:
+Director Duties: Your Legal Responsibilities During `{{KSP}}`
+
+H2:
+Are There Risks or Disadvantages to `{{KSP}}`?
+
+H2:
+`{{KSP}}` Costs: How Much Does `{{SK}}` Usually Cost?
+
+H2:
+FAQs About `{{KSP}}` and `{{SK}}`
+
+H2:
+Sources for `{{KSP}}` and `{{SK}}`
+
+### Blueprint 2: The Immediate Crisis (The Triage Unit)
+
+Best for:
+Specific threats such as HMRC, Bailiffs, and Winding Up Petitions.
+
+H1:
+`{{KSP}}` Arrears: Your 24-Hour Action Plan to `{{ACTION}}` Enforcement
+
+H2:
+Immediate Risks of `{{KSP}}`: What Happens if You Don’t Pay `{{SK}}`?
+
+H2:
+3 Ways to `{{ACTION}}` `{{KSP}}` and Protect Your Business
+
+H3:
+Option 1: Negotiating a Time to Pay (TTP) for `{{SK}}`
+
+H3:
+Option 2: Using Administration to Freeze `{{KSP}}` Action
+
+H3:
+Option 3: Proposing a CVA to Manage `{{SK}}` Debts
+
+H2:
+Personal Liability: Can `{{KSP}}` Creditors Pursue Your Personal Assets?
+
+H2:
+How to Negotiate with Creditors Regarding `{{SK}}`
+
+H2:
+Summary Checklist: What to Do After Receiving a `{{KSP}}` Notice
+
+H2:
+FAQs About `{{KSP}}` Arrears and `{{SK}}` Enforcement
+
+H2:
+Sources for `{{KSP}}` and `{{SK}}`
+
+### Blueprint 3: The Strategic Comparison (The Decision Maker)
+
+Best for:
+Helping a user choose between two paths.
+
+H1:
+`{{KSP_A}}` vs `{{KSP_B}}`: Which `{{SK}}` Route Protects You Best?
+
+H2:
+Comparison Table: `{{KSP_A}}` vs `{{KSP_B}}` at a Glance
+
+H2:
+Why You Should Choose `{{KSP_A}}` for `{{SK}}` Purposes
+
+H2:
+When `{{KSP_B}}` is the Only Way to `{{ACTION}}` Your Business
+
+H2:
+Comparing the Cost and Speed of `{{KSP_A}}` vs `{{KSP_B}}`
+
+H3:
+Director Control During `{{SK}}` Procedures
+
+H2:
+The Verdict: Which `{{ACTION}}` Plan is Right for Your `{{SK}}` Issues?
+
+H2:
+FAQs About `{{KSP_A}}` vs `{{KSP_B}}`
+
+H2:
+Sources for `{{KSP_A}}`, `{{KSP_B}}`, and `{{SK}}`
+
+### Blueprint 4: The Director Shield (Liability)
+
+Best for:
+Personal risk, house protection, and legal investigations.
+
+H1:
+`{{KSP}}`: How to Protect Your House and Assets from `{{SK}}`
+
+H2:
+Understanding `{{KSP}}` Liability for UK Company Directors
+
+H2:
+How `{{KSP}}` and `{{SK}}` Can Lead to Personal Asset Seizure
+
+H2:
+The Liquidator’s Investigation into `{{KSP}}` and `{{SK}}`
+
+H3:
+Identifying Preferences and Undervalue Transactions
+
+H3:
+Managing Overdrawn Director’s Loan Accounts during `{{SK}}`
+
+H2:
+Can a Director Be Disqualified for `{{KSP}}` Failures?
+
+H2:
+Next Steps: Mitigating Your Personal Risk from `{{SK}}`
+
+H2:
+FAQs About `{{KSP}}`, `{{SK}}`, and Director Liability
+
+H2:
+Sources for `{{KSP}}`, `{{SK}}`, and Director Liability
+
+### Semantic Anchor Instruction
+
+When writing the article, ensure that the `{{KSP}}` appears in the H1 and at least two H2s. Use `{{SK}}` in the remaining H2s and H3s to build topical authority without over-optimization. Every H2 must follow the "So What" rule: it must state a clear benefit or risk to the reader in the header itself.
 
 Required structure:
 1. When this template is appropriate

@@ -1,19 +1,37 @@
 # Director Risk Outline
 
-## 1. What the risk is
-[Direct statement of the exposure.]
+Use Canonical Heading Blueprint 4: The Director Shield (Liability).
 
-## 2. What the law says
-[Primary legal anchor.]
+Before drafting, define:
+- `{{KSP}}`
+- `{{SK}}`
 
-## 3. When it becomes a real problem
-[Triggers, evidence, and timing.]
+# H1
+`{{KSP}}`: How to Protect Your House and Assets from `{{SK}}`
 
-## 4. What good practice looks like
-[Documentation, decisions, and boundaries.]
+## H2
+Understanding `{{KSP}}` Liability for UK Company Directors
 
-## 5. How it interacts with insolvency routes
-[Why the route chosen affects exposure.]
+## H2
+How `{{KSP}}` and `{{SK}}` Can Lead to Personal Asset Seizure
 
-## 6. Decision layer
-[Stop doing, start doing, and when to escalate.]
+## H2
+The Liquidator’s Investigation into `{{KSP}}` and `{{SK}}`
+
+### H3
+Identifying Preferences and Undervalue Transactions
+
+### H3
+Managing Overdrawn Director’s Loan Accounts during `{{SK}}`
+
+## H2
+Can a Director Be Disqualified for `{{KSP}}` Failures?
+
+## H2
+Next Steps: Mitigating Your Personal Risk from `{{SK}}`
+
+## H2
+FAQs About `{{KSP}}`, `{{SK}}`, and Director Liability
+
+## H2
+Sources for `{{KSP}}`, `{{SK}}`, and Director Liability

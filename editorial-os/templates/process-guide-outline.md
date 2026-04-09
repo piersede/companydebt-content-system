@@ -1,19 +1,41 @@
 # Process Guide Outline
 
-## 1. Before you start
-[Eligibility and red flags.]
+Use Canonical Heading Blueprint 1: The Statutory Procedure (The Service Pillar).
 
-## 2. Step-by-step timeline
-[Preparation, initiation, in-process stages, after-stage.]
+Before drafting, define:
+- `{{KSP}}`
+- `{{SK}}`
+- `{{ACTION}}`
 
-## 3. Documents and evidence needed
-[What to gather.]
+# H1
+How to Use `{{KSP}}` to `{{ACTION}}` Your Company and Write Off Debt
 
-## 4. What can go wrong
-[Failure points and recovery.]
+## H2
+What is `{{KSP}}`? (A Simple Guide to `{{SK}}`)
 
-## 5. Stakeholder impacts
-[Directors, employees, creditors, lenders, HMRC.]
+## H2
+The Two Legal Tests for `{{KSP}}` Eligibility
 
-## 6. Decision layer
-[Execution checklist and urgent detours.]
+### H3
+The Cash-Flow Test for `{{SK}}`
+
+### H3
+The Balance Sheet Test: Do Your Liabilities Outweigh Assets?
+
+## H2
+The `{{KSP}}` Timeline: How Long Does `{{SK}}` Take?
+
+## H2
+Director Duties: Your Legal Responsibilities During `{{KSP}}`
+
+## H2
+Are There Risks or Disadvantages to `{{KSP}}`?
+
+## H2
+`{{KSP}}` Costs: How Much Does `{{SK}}` Usually Cost?
+
+## H2
+FAQs About `{{KSP}}` and `{{SK}}`
+
+## H2
+Sources for `{{KSP}}` and `{{SK}}`

@@ -1,19 +1,37 @@
 # Legal Compliance Explainer Outline
 
-## 1. What the law says
-[Statutory or case-law anchor.]
+Use Canonical Heading Blueprint 4: The Director Shield (Liability) when the dominant search intent is personal exposure, asset protection, investigation risk, or director disqualification.
 
-## 2. When it becomes a live risk
-[Trigger conditions.]
+Before drafting, define:
+- `{{KSP}}`
+- `{{SK}}`
 
-## 3. What good practice looks like
-[Documentation and conduct.]
+# H1
+`{{KSP}}`: How to Protect Your House and Assets from `{{SK}}`
 
-## 4. How it interacts with insolvency routes
-[Procedural implications.]
+## H2
+Understanding `{{KSP}}` Liability for UK Company Directors
 
-## 5. Stop doing / start doing
-[Practical protective actions.]
+## H2
+How `{{KSP}}` and `{{SK}}` Can Lead to Personal Asset Seizure
 
-## 6. Decision layer
-[When to escalate for qualified advice.]
+## H2
+The Liquidator’s Investigation into `{{KSP}}` and `{{SK}}`
+
+### H3
+Identifying Preferences and Undervalue Transactions
+
+### H3
+Managing Overdrawn Director’s Loan Accounts during `{{SK}}`
+
+## H2
+Can a Director Be Disqualified for `{{KSP}}` Failures?
+
+## H2
+Next Steps: Mitigating Your Personal Risk from `{{SK}}`
+
+## H2
+FAQs About `{{KSP}}`, `{{SK}}`, and Director Liability
+
+## H2
+Sources for `{{KSP}}`, `{{SK}}`, and Director Liability

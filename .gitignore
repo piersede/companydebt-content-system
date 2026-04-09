@@ -14,3 +14,6 @@ desktop.ini
 *.env
 credentials*
 secrets*
+
+# Bernstein runtime state
+editorial-os/bernstein-state/
