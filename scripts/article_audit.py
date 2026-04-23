@@ -479,7 +479,7 @@ def check_keyword_h2s(title: str, body: str) -> CheckResult:
             "that", "for", "with", "your", "this", "into", "about"}
     # Only consider words with >3 chars and not in stop list, take first 3.
     title_words = [w.lower() for w in re.findall(r"\w+", title)
-                   if len(w) > 3 and w.lower() not in stop][:3]
+                   if len(w) > 3 and w.lower() not in stop and not w.isdigit()][:3]
     if not h2s or not title_words:
         return CheckResult(id="19", tier="T2", name="Keyword-rich H2s", passed=False,
                            detail="no H2s or no title keywords to check")
