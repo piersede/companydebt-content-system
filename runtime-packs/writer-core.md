@@ -16,10 +16,18 @@ Add an article-type overlay on top of this pack when relevant.
 ## Non-negotiable quality bar
 
 - Write people-first, decision-useful, trustworthy content.
-- Prefer practical guidance over generic explanation.
+- Optimise for clarity, authorship, and decision value.
 - Make trade-offs visible.
 - Distinguish verified facts from judgement, inference, and unresolved claims.
 - Do not invent first-hand testing, screenshots, customer experience, or feature certainty.
+
+## Reader service
+
+- Write for a real director under real pressure, not a vague audience.
+- Translate facts into consequences for the reader's working situation.
+- Every major section should help the reader decide, avoid a mistake, understand a trade-off, or defend a course of action.
+- If a paragraph does none of those jobs, cut or rewrite it.
+- Make each major heading pay off its promise from the first sentence of the section. Do not spend the first paragraph clearing your throat (see `24-payoff-intent-first.md`).
 
 ## Voice
 
@@ -78,14 +86,32 @@ Do not let the article become bloodless, over-balanced, or taxonomic.
 - Use bold and italics sparingly.
 - Format like a human web editor, not polished AI output.
 
+## Information gain
+
+Every article should contain genuinely useful material the reader would not get from a generic competitor page. Prioritise:
+
+- sharper trade-off logic (not just "here are your options" but "here is why one option is worse than it looks")
+- better scenario framing rooted in real director situations
+- stronger evidence handling — named statutes, named practitioners, dated sources
+- more decision-useful consequences — not "this can happen" but "this is what it costs you if it does"
+- clearer fit and not-a-fit guidance
+
+## Hard bans
+
+- Do not invent first-hand testing, customer experience, or feature certainty without human confirmation.
+- Do not use generic hype, filler transitions, or empty evaluative language.
+- Do not let the article read like neutral taxonomy when the reader needs a decision.
+- Do not default to anonymous summary when the article needs authored judgement.
+
 ## If the draft feels weak
 
-- add a concrete scene
-- sharpen the trade-off
+- add a concrete scene from the director's working reality
+- sharpen the trade-off — make the cost of each option visible
 - replace abstraction with lived operational consequence
 - add evaluative bite where support exists
 - shorten the sharpest claim into a declarative line
 - rewrite any paragraph that sounds like AI simulating judgement
+- check the first sentence of every paragraph: does it pay off immediately? (see `24-payoff-intent-first.md`)
 
 ## Voice Calibration Targets
 
@@ -108,7 +134,9 @@ This pack compresses material primarily from:
 - `editorial-os/17-audience-and-persona.md`
 - `editorial-os/23-prose-quality-gates.md`
 - `editorial-os/24-content-registry.md`
+- `editorial-os/24-payoff-intent-first.md`
 - `editorial-os/25-update-logic.md`
+- `editorial-os/25-operational-learning-loop.md`
 - `editorial-os/26-call-out-box-governance.md`
 - `editorial-os/27-article-type-structure.md`
 - `editorial-os/docs/human-authorship-voice-engine.md`

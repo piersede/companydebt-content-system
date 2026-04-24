@@ -15,7 +15,9 @@ Do not load the whole directory by default during routine drafting if runtime pa
 - `18-seo-signal-governance.md`: search signal rules
 - `23-prose-quality-gates.md`: YMYL prose enforcement
 - `24-content-registry.md`: entity ownership, metadata, anti-cannibalisation
+- `24-payoff-intent-first.md`: paragraph-level payoff gate — first sentence must deliver decision value
 - `25-update-logic.md`: freshness, volatility, rerun logic
+- `25-operational-learning-loop.md`: workflow learning governance — checkpoint discipline, batch rules, scope control
 - `26-call-out-box-governance.md`: decision-critical call-out box rules
 - `27-article-type-structure.md`: canonical page-type structures and decision-layer endings
 - `docs/human-authorship-voice-engine.md`: the full human-authorship model

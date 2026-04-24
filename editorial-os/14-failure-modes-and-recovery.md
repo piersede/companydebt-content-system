@@ -604,6 +604,60 @@ A reader on an alternatives page has a real decision to make. They are not brows
 
 ---
 
+## 28. Template fatigue — repeated phrases and boilerplate across the article set
+
+**What it looks like:**
+The same anchor phrases, structural beats, and closing paragraphs appear across multiple articles in a cluster. Each individual article looks passable. Reading two or three in sequence reveals that the writing is being assembled from a fixed vocabulary rather than authored fresh.
+
+Observed instances from the liquidation hub batch (April 2026):
+- "We speak to directors every week who..." — opening move used across three articles
+- "We are direct about this..." — used in three articles as a pivot into a serious consequence
+- The closing CTA paragraph was near-verbatim across all five articles: "Company Debt connects directors with licensed insolvency practitioners who deal with [X] every day. If [situation], a confidential conversation now will clarify your options before they narrow further."
+
+**Why it is a problem:**
+A reader who visits two articles in the same cluster will notice the repeated phrases. When they do, the entire authorship credibility of the site drops — because the phrases no longer read as a consistent editorial voice, they read as a template being filled in. The human-authorship markers that Bernstein requires are undermined if those markers are themselves formulaic.
+
+Template fatigue is especially corrosive in a YMYL context. A director in genuine distress who reads two articles and notices the same closing paragraph will not feel advised. They will feel processed.
+
+**How to detect it:**
+After producing any batch of three or more articles in the same section or cluster:
+
+1. Search for the following phrase stems across all articles in the batch:
+   - "We speak to directors every week who"
+   - "We are direct about this"
+   - "confidential conversation now"
+   - "before they narrow further"
+   - "every day" (in the context of the closing practitioner CTA)
+   - "we have written this page to explain"
+
+2. If any stem appears in more than two articles in the batch, flag it for variation.
+
+3. Read the final paragraph of each article in the batch consecutively. If they are structurally identical (same sentence pattern, same CTA structure), they must be differentiated before publication.
+
+**How to fix it:**
+
+Closings: The CTA paragraph must reflect what the reader has just learned, not a generic redirect. Each article's closing should name the specific decision or action the reader faces — not "clarify your options" but what those options actually are for this particular situation.
+
+Before (repeated across batch):
+"Company Debt connects directors with licensed insolvency practitioners who deal with [creditor enforcement / asset recovery / insolvency] every day. If [you have received X / you have already done X], a confidential conversation now will clarify your options before they narrow further."
+
+After (article-specific, earned):
+For the creditor court article: "The first 48 hours are the only window where a director still controls the route. An insolvency practitioner can tell you within one call whether you are defending, negotiating, or managing an orderly exit."
+
+For the hidden assets article: "Voluntary disclosure to the liquidator is one of the few things that materially changes your position once assets have moved. If that window is still open for you, the conversation needs to happen today."
+
+Opening moves: Vary the vehicle. "We speak to directors every week who..." is a legitimate device — once per batch. After that, use a different opening move: a consequence stated directly, a concrete scene without framing, a number that reframes the reader's assumptions, a one-line declarative that the article then unpacks.
+
+"We are direct about this": reserve for the single most serious consequence in a batch. When every article uses it, none of them land it.
+
+**When to remove instead of rewrite:**
+The CTA paragraph is always rewritable. If a closing cannot be made specific to the article, shorten it to one sentence and cut the generic middle. A short, honest close is better than a long boilerplate one.
+
+**Production rule:**
+Before publishing any batch of three or more articles in a cluster, run a phrase-stem check across the set. No phrase stem from the detection list should appear in more than two articles in the same batch. The closing paragraph must be structurally distinct in every article.
+
+---
+
 ## 27. Mixed-confidence and meta-copy in comparison prose
 
 **What it looks like:**
@@ -629,3 +683,35 @@ Three distinct failures compound in a single passage: (1) a precise figure paire
 4. Apply the Human-Impact Enforcer (§4): ensure every paragraph ends with a reader consequence
 5. Apply the Generic-Intensifier Ban (§6): replace empty emphasis with the exact mechanism
 6. Run the `comparison_para_mixed_confidence_and_meta_copy` test (see `23-prose-quality-gates.md`)
+
+---
+
+## 29. Delayed intent payoff
+
+**What it looks like:**
+"Before we look at the options, it helps to understand how the process works."
+"This section covers what happens at each stage of a CVL."
+"Here is how the timeline breaks down."
+"Options are ordered by suitability: voluntary routes first, then creditor-driven ones."
+"These routes don't fit the main categories because they require specific conditions."
+
+**Why it is a problem:**
+The paragraph delays the useful point. The first sentence describes the article, the section, or a process step instead of delivering the answer, constraint, recommendation, or consequence the director came for. On insolvency pages where readers are under pressure and scanning for relevance, every sentence of delay increases the chance they miss the decision-critical information or disengage.
+
+**Symptoms to search for:**
+
+1. First sentence describes the article, section, or page structure rather than giving a decision or constraint
+2. First sentence gives process advice ("Before you decide...", "Start by understanding...")
+3. First sentence is a scene-setting or context-building sentence that delays the answer
+4. First sentence contains no high-value payload token (procedure, deadline, personal liability, route, consequence, decision rule)
+5. Paragraph ordering follows writer logic (explanation → answer) rather than reader logic (answer → explanation)
+6. Decision-changing caveats buried in paragraph 3+ instead of paragraphs 1–2
+
+**Correction protocol:**
+
+1. Apply the Payoff-Intent-First Gate (§1, `24-payoff-intent-first.md`): rewrite so the first sentence states the answer or constraint directly
+2. Apply the Meta-Opening Stripper (§2): convert article-centric openings to decision-centric openings
+3. Apply the Paragraph Structure rule (§3): payoff → evidence → consequence
+4. Apply the Caveat Promotion Rule (§6): if a caveat changes the director's decision, move it to paragraphs 1–2
+5. Apply the Segment-First Heading Support rule (§7): when a heading asks a segmentation question, the first paragraph must answer it immediately
+6. Run the `paragraph_opening_must_payoff_intent` test (see `24-payoff-intent-first.md`)

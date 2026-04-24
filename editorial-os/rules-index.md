@@ -92,6 +92,29 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Taxonomic human-flattening (FM-25) | `14-failure-modes-and-recovery.md` |
 | Alternatives page collapse (FM-26) | `14-failure-modes-and-recovery.md` |
 | Mixed-confidence and meta-copy (FM-27) | `14-failure-modes-and-recovery.md` |
+| Template fatigue / repeated phrase patterns (FM-28) | `14-failure-modes-and-recovery.md` |
+| Delayed intent payoff (FM-29) | `14-failure-modes-and-recovery.md` |
+
+## Payoff-intent-first gate
+
+| Gate | Purpose | Source |
+|------|---------|--------|
+| §1 First-Sentence Payoff Rule | Front-load decision value in every paragraph | `24-payoff-intent-first.md` |
+| §2 Meta-Opening Stripper | Reject article-centric paragraph openings | `24-payoff-intent-first.md` |
+| §3 Paragraph Structure | Payoff → evidence → consequence ordering | `24-payoff-intent-first.md` |
+| §6 Caveat Promotion Rule | Decision-changing caveats must not be buried | `24-payoff-intent-first.md` |
+
+## Operational learning loop
+
+| Rule family | Source |
+|-------------|--------|
+| Checkpoint discipline | `25-operational-learning-loop.md` |
+| Fresh-thread rule | `25-operational-learning-loop.md` |
+| Quality-kernel preservation | `25-operational-learning-loop.md` |
+| Batch vs single-page boundary | `25-operational-learning-loop.md` |
+| Scope discipline on mechanical tasks | `25-operational-learning-loop.md` |
+| Promotion rule for learnings | `25-operational-learning-loop.md` |
+| Transfer rule from other systems | `25-operational-learning-loop.md` |
 
 ## Prose quality gates (YMYL financial copy)
 

@@ -1,5 +1,12 @@
-# Adversarial Review Stage
+# Stage Pack: Adversarial Review
 
-- read as a sceptical expert, time-poor buyer, and trust-sensitive reader
-- ask what a sharp reader would distrust
-- ask whether the article sounds like AI simulating judgement
+Goal:
+
+- attack the draft from the perspective of a sceptical expert, a time-poor director, and a trust-sensitive reader
+
+Rules:
+
+- identify what feels generic, unsupported, unclear, or self-serving
+- flag any AI-simulated judgement patterns
+- test whether the article would still be useful to a director who never contacts us
+- list exact fixes required for the draft to pass

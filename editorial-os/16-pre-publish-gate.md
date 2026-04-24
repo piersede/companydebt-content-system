@@ -401,6 +401,8 @@ See `18-seo-signal-governance.md` for the full 18-signal breakdown and rationale
 | 13 | Commercial software article quality | 2 + 3 | Yes |
 | 13a | Authored authority | 3 | Yes |
 | 14 | SEO signal compliance | 1 + 2 | Yes |
+| 15 | Comparison page publish-readiness | 2 + 3 | Yes (comparison articles only) |
+| 16 | Batch template fatigue | 1 | Yes (batches of 3+ articles) |
 
 Every check is a hard gate. An article that fails any single check must be revised before publication.
 
@@ -452,3 +454,39 @@ This check has been promoted to Check 1a to prevent systematic skipping. See Che
 - Winner language repeated 3 times (1 over limit)
 - Minor template repetition across sections
 - 1-2 high-sensitivity claims lacking source framing
+
+---
+
+## Check 16: Batch template fatigue [Tier 1] — applies when publishing 3 or more articles from the same cluster in one batch
+
+**Question:** Does this article repeat anchor phrases or structural beats that already appear in other articles being published at the same time?
+
+*Run this check across the full batch, not per-article in isolation.*
+
+**Phrase-stem search — no stem should appear in more than 2 articles in the same batch:**
+
+Search all articles in the batch for:
+- `"We speak to directors every week who"`
+- `"We are direct about this"`
+- `"confidential conversation now"`
+- `"before they narrow further"`
+- `"every day"` (in the practitioner CTA context)
+- `"we have written this page to explain"`
+- `"A confidential conversation"` (any variant)
+
+**Closing paragraph check:**
+Read the final paragraph of each article in the batch consecutively. If two or more are structurally identical (same sentence pattern, same CTA move), both must be rewritten before publication.
+
+**Pass criteria:**
+- No phrase stem from the list above appears in more than 2 articles in the batch
+- No two articles in the batch share a structurally identical closing paragraph
+- Each article's closing reflects the specific action or decision the reader faces after reading that article — not a generic redirect
+
+**Hard fail conditions:**
+- Any phrase stem appears in 3 or more articles in the same batch
+- Two or more articles share a closing paragraph that is structurally identical (same sentence template, different [X] substitution)
+
+**How to fix:**
+Rewrite the closing paragraph to be article-specific (see `14-failure-modes-and-recovery.md` §28 for before/after examples). Vary the opening anchor phrase: use a concrete consequence, a number, or a direct scene rather than "We speak to directors every week who."
+
+For single-article publication, this check does not apply. Run it on every batch of 3 or more.

@@ -89,6 +89,7 @@ function usage() {
     '  node editorial-os/bernstein.js checkpoint-complete <page-id-or-slug> <checkpoint-id> [--note "..."]',
     '  node editorial-os/bernstein.js checkpoint-reset <page-id-or-slug> <checkpoint-id>',
     '  node editorial-os/bernstein.js gate-sync <page-id-or-slug>',
+    '  node editorial-os/bernstein.js verify-loop <page-id-or-slug> [--auto-fix] [--max-attempts N]',
     '  node editorial-os/bernstein.js publish <page-id-or-slug>',
     '  node editorial-os/bernstein.js status <page-id-or-slug> [--json]',
   ].join('\n'));
@@ -444,6 +445,79 @@ function syncGateCheckpoints(state, gateResult) {
   }
 }
 
+function parseHardFails(output) {
+  const failures = [];
+  for (const match of output.matchAll(/HARD FAIL:\s*(.+?)\s*[—-]\s*(.+)/g)) {
+    failures.push({ check: match[1].trim(), detail: match[2].trim() });
+  }
+  return failures;
+}
+
+function buildAutoFixPrompt(pageId, articleFile, failures, attempt) {
+  const target = articleFile ? `\`${articleFile}\`` : `page id ${pageId}`;
+  return [
+    `Fix quality gate HARD FAILs in ${target} for Company Debt page ${pageId}. This is attempt ${attempt}.`,
+    '',
+    'Rules:',
+    '- Fix ONLY the specific failures listed below.',
+    '- Do not change structure, add features, rewrite sections, or modify anything not causing a failure.',
+    '- Read the file first. Apply minimal targeted edits.',
+    '- Do not mark anything as done without verifying the fix.',
+    '',
+    'HARD FAILs to resolve:',
+    ...failures.map((f) => `- ${f.check}: ${f.detail}`),
+    '',
+    `After fixing, run: python scripts/quality_check.py --page ${pageId}`,
+    'The fix is complete only when HARD FAIL count = 0.',
+  ].join('\n');
+}
+
+function runVerifyLoop(pageId, articleFile, options) {
+  const { spawnSync } = require('child_process');
+  const maxAttempts = Math.min(parseInt(String(options['max-attempts'] || options.maxAttempts || '5'), 10), 10);
+  const autoFix = Boolean(options['auto-fix'] || options.autoFix);
+  const { page, state } = ensureStateForPage(pageId);
+  if (!state.verification_runs) state.verification_runs = [];
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const gateResult = runQualityCheck(page.page_id);
+    const failures = parseHardFails(gateResult.output);
+    const run = { attempt, at: nowIso(), exit_code: gateResult.exitCode, failures };
+    state.verification_runs.push(run);
+
+    if (gateResult.exitCode === 0) {
+      syncGateCheckpoints(state, gateResult);
+      saveState(page.page_id, state);
+      return { status: 'passed', attempts: attempt, output: gateResult.output };
+    }
+
+    if (!autoFix || attempt === maxAttempts) {
+      saveState(page.page_id, state);
+      return { status: 'failed', attempts: attempt, failures, output: gateResult.output };
+    }
+
+    const fixPrompt = buildAutoFixPrompt(page.page_id, articleFile || state.article_file, failures, attempt);
+    const stateDir = path.dirname(statePathFor(page.page_id));
+    ensureDir(stateDir);
+    const fixPromptPath = path.join(stateDir, `fix-prompt-attempt-${attempt}.md`);
+    fs.writeFileSync(fixPromptPath, `${fixPrompt}\n`, 'utf8');
+
+    const fixResult = spawnSync('claude', ['-p', fixPrompt], {
+      cwd: ROOT, encoding: 'utf8', env: { ...process.env }, timeout: 300000,
+    });
+    run.fix_applied = fixResult.status === 0;
+    run.fix_exit = fixResult.status;
+    run.fix_prompt = fixPromptPath;
+    if (fixResult.status !== 0) {
+      saveState(page.page_id, state);
+      return { status: 'fix_error', attempts: attempt, failures, fix_stderr: (fixResult.stderr || '').slice(0, 500) };
+    }
+  }
+
+  saveState(page.page_id, state);
+  return { status: 'failed', attempts: maxAttempts, message: 'Max attempts reached without passing.' };
+}
+
 function buildResumeBrief(state, stage, runResult, backlog, selectedItem, processBundle) {
   const bundlePaths = processBundle || existingProcessBundlePaths(state);
   const nextCandidate = findNextItem(backlog);
@@ -691,28 +765,43 @@ async function main() {
       const identifier = positional[0];
       if (!identifier) throw new Error('Page id or slug is required.');
       const { page, state } = ensureStateForPage(identifier);
-      const gateResult = runQualityCheck(page.page_id);
-      syncGateCheckpoints(state, gateResult);
-      if (gateResult.exitCode !== 0) {
+      const maxAttempts = parseInt(String(options['max-attempts'] || '5'), 10);
+      process.stderr.write(`[bernstein] Running quality verify-loop for ${page.page_id}...\n`);
+      const loopResult = runVerifyLoop(page.page_id, state.article_file, { 'auto-fix': true, 'max-attempts': String(maxAttempts) });
+      if (loopResult.status !== 'passed') {
         recordFailure({
           pageId: page.page_id,
           stage: 'gate',
           summary: 'Quality gate failed during gate-sync.',
-          detail: gateResult.output,
+          detail: loopResult.output || loopResult.message || '',
           statePath: statePathFor(page.page_id),
           checkpointIds: ['pre_publish_gate_passed', 'editorial_spot_check_complete'],
         });
+      } else {
+        process.stderr.write(`[bernstein] verify-loop passed after ${loopResult.attempts} attempt(s).\n`);
       }
-      saveState(page.page_id, state);
+      const { state: freshState } = ensureStateForPage(page.page_id);
       console.log(JSON.stringify({
         page: page.page_id,
-        exit_code: gateResult.exitCode,
+        status: loopResult.status,
+        attempts: loopResult.attempts,
         checkpoints: {
-          pre_publish_gate_passed: state.checkpoints.pre_publish_gate_passed.status,
-          editorial_spot_check_complete: state.checkpoints.editorial_spot_check_complete.status,
+          pre_publish_gate_passed: freshState.checkpoints.pre_publish_gate_passed.status,
+          editorial_spot_check_complete: freshState.checkpoints.editorial_spot_check_complete.status,
         },
-        output: gateResult.output,
+        failures: loopResult.failures || [],
+        output: loopResult.output,
       }, null, 2));
+      return;
+    }
+
+    if (command === 'verify-loop') {
+      const identifier = positional[0];
+      if (!identifier) throw new Error('Page id or slug is required.');
+      const { page, state } = ensureStateForPage(identifier);
+      const result = runVerifyLoop(page.page_id, state.article_file, options);
+      console.log(JSON.stringify(result, null, 2));
+      process.exit(result.status === 'passed' ? 0 : 1);
       return;
     }
 
