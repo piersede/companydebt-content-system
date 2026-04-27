@@ -20,6 +20,7 @@ Do not load the whole directory by default during routine drafting if runtime pa
 - `25-operational-learning-loop.md`: workflow learning governance — checkpoint discipline, batch rules, scope control
 - `26-call-out-box-governance.md`: decision-critical call-out box rules
 - `27-article-type-structure.md`: canonical page-type structures and decision-layer endings
+- `28-htag-semantic-framework.md`: UK insolvency H-tag architecture (14 page families, slot model, QA checklist)
 - `docs/human-authorship-voice-engine.md`: the full human-authorship model
 
 ## Working rule

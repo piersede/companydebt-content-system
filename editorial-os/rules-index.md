@@ -31,6 +31,7 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Roundup anti-ghost-listicle rules | `docs/article-types/roundup.md` |
 | Guide friction / consequence translation | `docs/article-types/guide.md` |
 | Canonical page-type structures and decision-layer endings | `27-article-type-structure.md` |
+| UK insolvency H-tag architecture (14 page families, slot model) | `28-htag-semantic-framework.md` |
 
 ## Commercial comparison governance
 
@@ -104,6 +105,19 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | §3 Paragraph Structure | Payoff → evidence → consequence ordering | `24-payoff-intent-first.md` |
 | §6 Caveat Promotion Rule | Decision-changing caveats must not be buried | `24-payoff-intent-first.md` |
 
+## H-tag semantic architecture (UK insolvency content)
+
+| Rule family | Source |
+|-------------|--------|
+| Non-negotiable H-tag rules (10) | `28-htag-semantic-framework.md` §"Non-negotiable rules" |
+| Semantic slot model (variable H3s, fixed H2 architecture) | `28-htag-semantic-framework.md` §"The semantic slot model" |
+| Core Bracket Library (placeholder taxonomy) | `28-htag-semantic-framework.md` §"Core Bracket Library" |
+| 14 page-family templates with H1/H2/H3 structures | `28-htag-semantic-framework.md` §"Template 1–14" |
+| Coverage checklist (which titles fall under which family) | `28-htag-semantic-framework.md` §"Coverage checklist" |
+| Final QA checklist (run on every rewrite) | `28-htag-semantic-framework.md` §"Final QA checklist" |
+| Pre-publish gate enforcement | `16-pre-publish-gate.md` Check 14 |
+| General H2 semantic-relevance principle (non-insolvency content) | `18-seo-signal-governance.md` §5a |
+
 ## Operational learning loop
 
 | Rule family | Source |
@@ -149,6 +163,7 @@ The following checks are not yet covered by scripts. Prefer extending existing c
 - Generic pros/cons bullets (extend `check_human_tone.js`)
 - Verdict neutrality / over-balanced endings in review and comparison pieces (extend `check_comparison_integrity.js`)
 - Sections lacking lived operational anchors in substantive commercial-software articles (extend `check_human_tone.js`)
+- H-tag page-family conformance and slot-fill specificity for UK insolvency content (extend `scripts/article_audit.py` — currently only checks ≥30% H2 keyword coverage; does not yet detect generic H3s reusable across unrelated pages, FAQ-must-be-final-H2, or page-family architecture match per `28-htag-semantic-framework.md`)
 
 ---
 

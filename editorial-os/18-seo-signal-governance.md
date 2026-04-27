@@ -82,6 +82,8 @@ H2s should be semantically connected to the page topic, but must read naturally 
 
 **Enforcement:** The build script runs `validate_h2_relevance()` as an advisory check (WARN only). Heading hierarchy violations (level skips) remain FAIL-level.
 
+**UK insolvency content — stricter rules apply.** For pages in the UK insolvency, liquidation, HMRC, creditor and recovery families, the general guidance above is replaced by `28-htag-semantic-framework.md`. That framework defines fixed architecture per page family and variable, title-specific H3 semantics. Generic H2/H3 wording that could appear on five unrelated pages is a hard fail in those families, not a WARN.
+
 ---
 
 ## Signal 6: Freshness signals (Last Significant Update)

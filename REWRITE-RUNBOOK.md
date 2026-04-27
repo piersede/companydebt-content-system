@@ -53,11 +53,13 @@ Write to the canonical gate AND the Tier 3 editorial rules. Target structure:
 
 1. Metadata header (preserve exactly)
 2. Opening (2–3 paragraphs). Concrete scene, reader-addressed, no meta-commentary. No banned opening patterns ("this page explains", "in this guide", etc.)
-3. 5–9 H2 sections, keyword-rich (≥ 30% of H2s contain a primary title keyword)
-4. "Your Next Step" H2 — the Rule J verdict
-5. FAQ accordion (`wp:ub/content-toggle-block` from Ultimate Blocks) with 5–7 panels. This emits FAQPage schema on the frontend.
+3. **H-tag architecture per `editorial-os/28-htag-semantic-framework.md`.** Identify the article's page family (1–14), then build the H2/H3 structure from the matching template. H2 architecture is fixed by family; H3 wording must be slot-filled from the exact title (no generic, reusable H3s).
+4. "Your Next Step" H2 — the Rule J verdict (sits between the family-specific H2s and the Methodology/Sources/FAQ closure)
+5. FAQ accordion (`wp:ub/content-toggle-block` from Ultimate Blocks) with 5–7 panels. The FAQ H2 must be the final H2, formatted "Frequently Asked Questions About (Primary Keyword)". This emits FAQPage schema on the frontend.
 6. Methodology & Disclosure H2 — who wrote / reviewed, statutory basis, Company Debt disclosure
 7. Sources & References H2 — bulleted list with `legislation.gov.uk` links
+
+**H-tag QA before re-audit:** run the 8-question checklist at the foot of `28-htag-semantic-framework.md`. Any H3 that could appear unchanged on five unrelated pages must be rewritten.
 
 ### 5. Mechanical gate requirements
 

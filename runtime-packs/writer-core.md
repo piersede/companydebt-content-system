@@ -139,4 +139,5 @@ This pack compresses material primarily from:
 - `editorial-os/25-operational-learning-loop.md`
 - `editorial-os/26-call-out-box-governance.md`
 - `editorial-os/27-article-type-structure.md`
+- `editorial-os/28-htag-semantic-framework.md` (load when the article is UK insolvency / liquidation / HMRC / creditor / recovery)
 - `editorial-os/docs/human-authorship-voice-engine.md`
