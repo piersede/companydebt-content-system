@@ -1942,10 +1942,6 @@ header .header-right .header-phone:hover {
   color: #fff;
 }
 
-#cookie_action_close_header:hover {
-  background: var(--c-blue-dark) !important;
-}
-
 footer {
   background: var(--c-blue-dark);
   padding: 48px 0 20px 0;
@@ -4874,4 +4870,44 @@ body.page-template-take-the-test-template .section-footer-author .avatar-image {
 }
 body.page-template-take-the-test-template .section-footer-author .footer-author-links {
   text-decoration: none !important;
+}
+
+/* ==========================================================================
+   CLS fix — CookieYes consent banner
+   The banner is fired by GTM (async) and injected after first paint. Without
+   the rules below, CookieYes' CSS arrives a frame late and the banner is
+   briefly in normal flow, pushing content downward → CLS spike.
+   These rules pre-position the banner as a fixed overlay so injection never
+   shifts surrounding content. Z-index sits below LiveChat (max-int).
+   ========================================================================== */
+.cky-consent-container,
+.cky-consent-bar-wrapper,
+.cky-consent-bar,
+.cky-modal,
+[class*="cky-consent"],
+[id*="cky-consent"] {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  contain: layout style;
+  z-index: 99999;
+}
+
+.cky-modal,
+.cky-modal-open {
+  top: auto !important;
+}
+
+.cky-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99998;
+}
+
+/* Defend against any plugin-added body offset that would itself shift layout */
+body.cky-consent-bar-active,
+body[class*="cky-"] {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
