@@ -51,6 +51,18 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Corroboration requirement | `10-evidence-governance.md` §10 |
 | Market-pattern claim controls | `10-evidence-governance.md` §11 |
 
+## Structure and heading governance
+
+| Rule family | Source |
+|-------------|--------|
+| Opening and closing structure rules | `12-structure-governance.md` §1–11 |
+| H3 cannibalisation / heading promotion rule | `12-structure-governance.md` §12 |
+| H3 density rule (4+ H3s → table trigger) | `12-structure-governance.md` §12 |
+| Table formatting rules (left-aligned headers, is-style-stripes) | `12-structure-governance.md` §13 |
+| H3 question-form phrasing default | `12-structure-governance.md` §14 |
+| FAQ placement rule (FAQs = final H2) | `12-structure-governance.md` §12 |
+| Canonical heading blueprints by article type | `27-article-type-structure.md` §27.5 |
+
 ## Voice and tone governance
 
 | Rule family | Source |
