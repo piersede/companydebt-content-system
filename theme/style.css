@@ -6222,3 +6222,13 @@ body.archive h3 {
   line-height: 33px !important;
   font-weight: 600 !important;
 }
+
+/* Carousel parent-width fix -- 20260429-160851
+   .articles-carousel sits inside a Bootstrap .row.articles-row (display:flex)
+   so without explicit width:100% + flex:1 1 auto it sizes to content (small).
+   This makes single-item carousels collapse to ~74px cards. !important so it
+   wins regardless of any later-source rule that doesn't include these. */
+.be-related-articles .articles-carousel {
+  width: 100% !important;
+  flex: 1 1 auto !important;
+}
