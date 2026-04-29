@@ -9,6 +9,7 @@ from datetime import date, datetime
 DATE_FORMATS = ("%d %B %Y", "%d %b %Y", "%B %Y", "%b %Y")
 
 SLUG_PAGE_CLASS_OVERRIDES = {
+    # ── Credit card section (original entries) ─────────────────────────────
     "capital-on-tap-review": "entity_owner",
     "funding-circle-review": "entity_owner",
     "flexipay-review": "entity_owner",
@@ -20,6 +21,90 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "balance-transfer": "process_guide",
     "guide-to-business-credit-cards": "process_guide",
     "credit-cards-vs-charge-cards": "debt_solution_comparison",
+
+    # ── Liquidation section ────────────────────────────────────────────────
+    # entity_owner — canonical "what is X" type / hub pages
+    "liquidation": "entity_owner",
+    "creditors-voluntary-liquidation": "entity_owner",
+    "compulsory-liquidation": "entity_owner",
+    "members-voluntary-liquidation": "entity_owner",
+    "voluntary-liquidation": "entity_owner",
+    "insolvency-vs-bankruptcy": "entity_owner",
+    "liquidating-a-group-company-or-holding-company-in-the-uk": "entity_owner",
+    "can-i-liquidate-a-dormant-company": "entity_owner",
+    "can-i-liquidate-my-company-with-a-bounce-back-loan": "entity_owner",
+    # asset-type pages sit under entity_owner (explaining what X is/becomes)
+    "company-property-and-real-estate-in-liquidation": "entity_owner",
+    "company-vehicles-and-equipment-in-liquidation": "entity_owner",
+    "intellectual-property-and-trading-assets-in-liquidation": "entity_owner",
+    "company-pensions-and-liquidation": "entity_owner",
+    "business-bank-account-in-liquidation": "entity_owner",
+
+    # process_guide — procedural / step-by-step / what happens next
+    "how-to-prepare-for-company-liquidation": "process_guide",
+    "timeline": "process_guide",
+    "directors-conduct-report-2": "process_guide",
+    "leases-and-contracts-in-liquidation": "process_guide",
+    "creditor-meetings-in-liquidation": "process_guide",
+    "how-to-choose-the-right-insolvency-procedure": "process_guide",
+    "how-to-challenge-a-liquidators-decisions-or-fees": "process_guide",
+    "liquidators-powers-and-duties": "process_guide",
+    "how-to-prove-your-debt-in-company-liquidation": "process_guide",
+    "can-i-choose-my-liquidator": "process_guide",
+    "liquidating-a-company-with-no-assets-or-bank-account-uk": "process_guide",
+    "which-creditors-get-paid-first": "process_guide",
+    "what-happens-after-company-liquidation": "process_guide",
+    "what-happens-to-employees": "process_guide",
+    "insolvency-checklist": "process_guide",
+    "list-of-liquidation-documents": "process_guide",
+
+    # director_risk — director liability, conduct, personal exposure
+    "what-happens-to-directors-in-liquidation": "director_risk",
+    "whats-the-risk-of-being-disqualified-as-a-director": "director_risk",
+    "can-directors-go-to-prison-for-company-debt": "director_risk",
+    "can-directors-pay-themselves-before-liquidation": "director_risk",
+    "what-happens-if-a-director-resigns-before-liquidation": "director_risk",
+    "what-happens-if-a-director-transfers-assets-before-insolvency": "director_risk",
+    "when-should-a-director-stop-trading": "director_risk",
+    "director-conduct-review": "director_risk",
+    "paying-staff-but-not-hmrc-before-liquidation": "director_risk",
+    "what-happens-if-a-director-hides-company-assets": "director_risk",
+    "can-a-director-be-sued-personally-by-creditors": "director_risk",
+    "redundancy-payments-for-directors-in-an-mvl": "director_risk",
+
+    # pricing_cost — fees, costs, affordability
+    "how-much-does-liquidation-cost": "pricing_cost",
+
+    # enforcement — creditor action, legal pressure, petitions
+    "bailiffs-high-court-enforcement-officers": "enforcement",
+    "dealing-with-an-hmrc-winding-up-petition": "enforcement",
+    "can-a-supplier-force-my-company-into-liquidation": "enforcement",
+    "winding-up-petition-vs-compulsory-liquidation": "enforcement",
+    "ccj-when-going-insolvent": "enforcement",
+    "what-happens-if-a-creditor-takes-me-to-court": "enforcement",
+    "hmrc-as-a-creditor-in-liquidation": "enforcement",
+
+    # recovery_strategy — alternatives, decisions, planning ahead
+    "alternatives-to-company-liquidation": "recovery_strategy",
+    "cant-afford-to-liquidate": "recovery_strategy",
+    "company-restoration-after-liquidation": "recovery_strategy",
+    "should-i-close-my-company-or-try-to-save-it": "recovery_strategy",
+    "cva-vs-strike-off-vs-liquidation": "recovery_strategy",
+    "can-you-liquidate-to-avoid-paying-suppliers": "recovery_strategy",
+
+    # legal_compliance — dissolution, regulatory, statutory timelines
+    "company-strike-off-and-dissolution": "legal_compliance",
+    "liquidation-vs-dissolution-strike-off": "legal_compliance",
+    "liquidation-deadlines-and-time-limits": "legal_compliance",
+    "liquidating-a-limited-liability-partnership": "legal_compliance",
+    "liquidating-a-charity-or-non-profit": "legal_compliance",
+    "can-i-start-a-new-company-after-liquidating-my-old-one": "legal_compliance",
+
+    # trigger — triage / "is this my situation?" decision pages
+    "am-i-solvent": "trigger",
+    "voluntary-vs-compulsory-liquidation": "trigger",
+    "seek-insolvency-advice-before-missing-payments": "trigger",
+    "what-happens-if-i-stop-paying-company-debts": "trigger",
 }
 
 

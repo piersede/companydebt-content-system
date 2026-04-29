@@ -404,3 +404,114 @@ This concession block does not need to be a formal table. It can be prose. But a
 - **FAIL** if Company Debt is named without any limiting conditions
 - **FAIL** if the article does not state at least one scenario where Company Debt is not the right answer
 - **FAIL** if a CTA appears before the editorial conclusion is complete
+
+---
+
+## 12. Heading promotion rule (H3 cannibalisation)
+
+**Hard rule:** Before making a topic an H3, ask whether that topic is a likely standalone article elsewhere on the site. If yes, do not promote it to H3 automatically.
+
+### H3s are for article-specific subtopics only
+
+Use an H3 only when the subtopic is directly specific to the current article's primary keyword. If the subtopic is a neighbouring concept — a related risk, law, process or option — that has or should have its own dedicated page, keep it inside the section as a table row, checklist item, bolded label, or H4.
+
+### Heading cannibalisation examples
+
+Do not use the following as H3s on broad sector or topic articles unless the article is specifically about that concept:
+
+- Wrongful Trading
+- Director Disqualification
+- Preferences / Transactions at Undervalue
+- Personal Guarantees
+- CVA, Administration, CVL, Pre-Pack
+- Time to Pay, Winding-Up Petition
+- High Court Writ, Controlled Goods Agreement, Validation Order
+
+Use them as H3s only when:
+- the article title is about that concept, **or**
+- the concept is a core process within the article's exact search intent (e.g. "Rescue Options" on a sector insolvency page).
+
+### Preferred containment patterns
+
+When a section must cover supporting concepts without promoting them to H3:
+
+| Pattern | Use when |
+|---|---|
+| Risk or comparison table | Multiple related risks or options of roughly equal weight |
+| Checklist | Sequential actions or must-do items |
+| Bolded inline labels | Short explanatory points that don't need their own heading |
+| H4 (sparingly) | Section is long and scanability suffers, but subtopics are supporting rather than primary |
+| Internal link block | Concept has a full guide on site; refer rather than duplicate |
+
+**Prefer:** H2 → short intro → table  
+**Avoid:** H2 → H3 → H3 → H3 → H3 (when the H3s are neighbouring article themes, not article-specific subtopics)
+
+### H3 density rule
+
+A section with four or more H3s of roughly equal weight is a signal that the content belongs in a table, not a heading list. Apply the containment patterns above before adding a fourth H3 to any H2 section.
+
+**Count check:** Before finalising a draft, count H3s per H2. If any H2 section has four or more H3s:
+1. Are they parallel in weight and structure? → Convert to table.
+2. Are two of them closely related? → Merge or fold one inline as bold.
+3. Are any of them neighbouring article topics? → Remove per the cannibalisation rule above.
+
+**Article-level check:** Also assess the total H3 count across the article. A high H3 count (relative to article length) is usually a sign that containment patterns were not used where they should have been.
+
+### FAQ placement rule
+
+FAQs must always be the final H2 in the article body. Methodology, disclosure, sources and references must not appear after the FAQ section as normal H2s. Place them in a collapsible component, footer block, or non-H2 support element.
+
+---
+
+## 13. Table formatting rules
+
+**Site rule — enforced in CSS:** Table column headers (`<th>`) must always be left-aligned. This is set globally in the theme stylesheet and applies to all `wp-block-table` instances.
+
+### Content rules for tables
+
+- Column headers must be concise noun phrases, not sentences.
+- Do not centre-align column headers in editorial content, even for short labels.
+- Use the `is-style-stripes` Gutenberg table class for all article tables (applies the site's branded header row style).
+- Table rows must be complete: do not leave cells empty unless absence is itself meaningful.
+- For risk, comparison or option tables, use three columns maximum: concept | detail | action or outcome.
+
+---
+
+## 14. H3 phrasing rule (question-form headings)
+
+**Default:** H3 headings should be phrased as questions.
+
+Question-form H3s mirror natural-language search queries, signal passage-level relevance, and make the sub-topic immediately scannable for the reader. A heading like "What Are the Main Risks for Directors?" communicates more than "Main Risks for Directors" — it frames the section as an answer, not a label.
+
+### Conversion pattern
+
+| Noun-phrase form | Question form |
+|---|---|
+| Main Risks for Directors | What Are the Main Risks for Directors? |
+| Director Duties Shift Towards Creditors | When Do Director Duties Shift Towards Creditors? |
+| 13-Week Cashflow Forecast | What Should the 13-Week Cashflow Forecast Cover? |
+| Self-Funded Residents | What Happens to Self-Funded Residents? |
+
+### Exception categories
+
+Do **not** convert to question form when the H3 falls into one of these categories:
+
+| Category | Example | Why |
+|---|---|---|
+| Named process or procedure | Creditors' Voluntary Liquidation; Controlled Wind-Down With Local Authority Involvement | The heading IS the thing — converting to "What Is CVL?" makes it a definition stub, not a section heading |
+| Action imperative in a checklist section | Notify CQC and the Placing Local Authority; Prepare a Care-Specific Cashflow Forecast | The section register is how-to; imperatives match the voice |
+| Conditional scenario label | If the Business Is Viable but Under Cash Pressure; If a Rescue Procedure Is Needed | Already acts as a signpost condition; question form is redundant |
+| Component label slot | Quick Answer; Our Take; Watch Out | UI label, not a semantic heading |
+
+### Semantic relevance and keyword discipline
+
+H3s must remain semantically tied to the primary article topic, but must not repeat the exact primary keyword phrase mechanically. The question form naturally creates variation ("What Are the Main Risks for Directors?" contains the topic without repeating "care home insolvency" verbatim). Use semantic variation — a related phrase, a consequence, a sub-concept — rather than forcing the exact keyword into every heading.
+
+- Include a topical term where it reads naturally
+- Do not pad the question to fit a keyword: "What Are the Main Care Home Insolvency Risks for Care Home Directors?" is over-optimised
+- One or two H3s per article anchoring the keyword variation is sufficient
+
+### Fail conditions
+
+- **FAIL** if an H3 is a bare noun phrase that is not a named process, action step, conditional, or UI label
+- **FAIL** if the exact primary keyword phrase is force-repeated in more than two H3s across the article

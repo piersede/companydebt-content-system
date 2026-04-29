@@ -391,7 +391,7 @@ H2:
 Comparing the Cost and Speed of `{{KSP_A}}` vs `{{KSP_B}}`
 
 H3:
-Director Control During `{{SK}}` Procedures
+How Much Director Control Do You Retain During `{{SK}}`?
 
 H2:
 The Verdict: Which `{{ACTION}}` Plan is Right for Your `{{SK}}` Issues?
@@ -420,10 +420,10 @@ H2:
 The Liquidator’s Investigation into `{{KSP}}` and `{{SK}}`
 
 H3:
-Identifying Preferences and Undervalue Transactions
+What Are Preferences and Undervalue Transactions?
 
 H3:
-Managing Overdrawn Director’s Loan Accounts during `{{SK}}`
+How Do Overdrawn Director’s Loan Accounts Affect `{{SK}}`?
 
 H2:
 Can a Director Be Disqualified for `{{KSP}}` Failures?
@@ -440,6 +440,10 @@ Sources for `{{KSP}}`, `{{SK}}`, and Director Liability
 ### Semantic Anchor Instruction
 
 When writing the article, ensure that the `{{KSP}}` appears in the H1 and at least two H2s. Use `{{SK}}` in the remaining H2s and H3s to build topical authority without over-optimization. Every H2 must follow the "So What" rule: it must state a clear benefit or risk to the reader in the header itself.
+
+H3s must follow the question-form default: phrase them as questions unless they are named processes, action imperatives, conditional scenario labels, or UI label slots. See `12-structure-governance.md §14` for the full rule and exception table.
+
+H3s must remain semantically tied to the primary article topic. Include `{{SK}}` or a close variation in H3s where it reads naturally — do not force the exact keyword phrase into every heading.
 
 Required structure:
 1. When this template is appropriate

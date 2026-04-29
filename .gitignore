@@ -17,3 +17,6 @@ secrets*
 
 # Bernstein runtime state
 editorial-os/bernstein-state/
+
+# Build artifacts — generated HTML, PHP, dumps, batch outputs
+tmp/

@@ -42,12 +42,12 @@ TASK_CANONICAL = {
     "research": ["10-evidence-governance.md", "19-editorial-image-evidence.md"],
     "source-grounding": ["10-evidence-governance.md", "04-trust-architecture.md", "25-update-logic.md", "26-call-out-box-governance.md"],
     "outline": ["12-structure-governance.md", "27-article-type-structure.md"],
-    "draft": ["09-voice-governance.md", "12-structure-governance.md", "13-readability-governance.md", "17-audience-and-persona.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md"],
-    "rewrite": ["09-voice-governance.md", "12-structure-governance.md", "23-prose-quality-gates.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md"],
+    "draft": ["09-voice-governance.md", "12-structure-governance.md", "13-readability-governance.md", "17-audience-and-persona.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md", "28-readability-components.md"],
+    "rewrite": ["09-voice-governance.md", "12-structure-governance.md", "23-prose-quality-gates.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md", "28-readability-components.md"],
     "trust-pass": ["10-evidence-governance.md", "16-pre-publish-gate.md", "23-prose-quality-gates.md", "24-content-registry.md", "25-update-logic.md", "26-call-out-box-governance.md"],
     "review": ["05-scoring-rubric.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md"],
     "adversarial-review": ["11-comparison-governance.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md", "24-content-registry.md", "26-call-out-box-governance.md"],
-    "final-polish": ["13-readability-governance.md", "16-pre-publish-gate.md", "25-update-logic.md"],
+    "final-polish": ["13-readability-governance.md", "16-pre-publish-gate.md", "25-update-logic.md", "28-readability-components.md"],
     "build": ["20-build-time-quality-gate.md", "21-wordpress-technical-build-quality.md", "24-content-registry.md"],
     "deploy": ["16-pre-publish-gate.md", "20-build-time-quality-gate.md", "24-content-registry.md", "25-update-logic.md", "26-call-out-box-governance.md"],
 }
@@ -73,6 +73,7 @@ PAGE_CLASS_OVERLAYS = {
     "debt_solution_comparison": "overlays/debt-solution-comparison.md",
     "legal_compliance": "overlays/legal-compliance.md",
     "case_insight": "overlays/case-insight.md",
+    "distress_use_case": "overlays/distress-use-case.md",
 }
 
 PAGE_CLASS_CANONICAL = {
@@ -87,6 +88,7 @@ PAGE_CLASS_CANONICAL = {
     "debt_solution_comparison": ["27-article-type-structure.md", "24-content-registry.md"],
     "legal_compliance": ["27-article-type-structure.md", "24-content-registry.md"],
     "case_insight": ["27-article-type-structure.md", "24-content-registry.md"],
+    "distress_use_case": ["27-article-type-structure.md", "24-content-registry.md"],
 }
 
 FRESHNESS_OVERLAYS = {
@@ -97,6 +99,19 @@ FRESHNESS_OVERLAYS = {
 FRESHNESS_CANONICAL = {
     "aging": ["25-update-logic.md"],
     "stale": ["25-update-logic.md"],
+}
+
+COMPONENT_PACKS = {
+    "distress_use_case": "components/distress-use-case.md",
+    "entity_owner":      "components/entity-owner.md",
+    "director_risk":     "components/director-risk.md",
+    "enforcement":       "components/enforcement.md",
+    "trigger":           "components/trigger.md",
+    "pricing_cost":      "components/pricing-cost.md",
+    "process_guide":     "components/process-guide.md",
+    "legal_compliance":  "components/legal-compliance.md",
+    "recovery_strategy": "components/recovery-strategy.md",
+    "case_insight":      "components/case-insight.md",
 }
 
 
@@ -123,6 +138,9 @@ def normalize_page_class(page_class: str | None) -> str | None:
         "debtsolutioncomparison": "debt_solution_comparison",
         "legalcompliance": "legal_compliance",
         "caseinsight": "case_insight",
+        "distressusecase": "distress_use_case",
+        "distress": "distress_use_case",
+        "use_case": "distress_use_case",
     }
     return aliases.get(lowered, lowered)
 
@@ -213,6 +231,12 @@ def resolve_runtime_context(
         if path not in canonical:
             canonical.append(path)
 
+    component_pack: str | None = None
+    if normalized_page_class in COMPONENT_PACKS:
+        component_pack = str(RUNTIME_DIR / COMPONENT_PACKS[normalized_page_class])
+        if component_pack not in canonical:
+            canonical.append(component_pack)
+
     return {
         "task": normalized_task,
         "page_type": normalized_page_type,
@@ -221,6 +245,7 @@ def resolve_runtime_context(
         "slug": slug,
         "runtime_packs": [str(RUNTIME_DIR / rel) for rel in packs],
         "canonical_refs": canonical,
+        "component_pack": component_pack,
     }
 
 
