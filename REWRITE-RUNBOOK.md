@@ -61,6 +61,8 @@ Write to the canonical gate AND the Tier 3 editorial rules. Target structure:
 
 **H-tag QA before re-audit:** run the 8-question checklist at the foot of `28-htag-semantic-framework.md`. Any H3 that could appear unchanged on five unrelated pages must be rewritten.
 
+**Bold pass before re-audit:** run the active bold pass per `editorial-os/13-readability-governance.md` §3a. For each H2 section, identify the one or two chunks a skimming reader would need to act correctly, and bold them (1–8 words each). Confirm article-level bold density sits in the 2–6% band, ceiling 8% of body word count. Each H2 should carry at least one bolded chunk; if it cannot, the section is padding and should be cut or rewritten. The audit script does not yet enforce the 8% ceiling — registered as a script enforcement gap in `editorial-os/rules-index.md`.
+
 ### 5. Mechanical gate requirements
 
 The script enforces these. You can fail any one and the gate blocks.

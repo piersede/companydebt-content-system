@@ -118,6 +118,16 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Pre-publish gate enforcement | `16-pre-publish-gate.md` Check 14 |
 | General H2 semantic-relevance principle (non-insolvency content) | `18-seo-signal-governance.md` §5a |
 
+## Emphasis discipline (bold + italic)
+
+| Rule family | Source |
+|-------------|--------|
+| When bold is acceptable / unacceptable | `13-readability-governance.md` §3 |
+| Quantitative ceiling: bold body-text density ≤ 8%, target band 2–6% | `13-readability-governance.md` §3a |
+| Active bold pass during rewrite (per-H2 chunk identification) | `13-readability-governance.md` §3 "Active bold pass" |
+| Italic discipline | `13-readability-governance.md` §3 |
+| Preference order: stronger sentence > subhead > standalone para > bold (last) | `13-readability-governance.md` §3 |
+
 ## Operational learning loop
 
 | Rule family | Source |
@@ -164,6 +174,8 @@ The following checks are not yet covered by scripts. Prefer extending existing c
 - Verdict neutrality / over-balanced endings in review and comparison pieces (extend `check_comparison_integrity.js`)
 - Sections lacking lived operational anchors in substantive commercial-software articles (extend `check_human_tone.js`)
 - H-tag page-family conformance and slot-fill specificity for UK insolvency content (extend `scripts/article_audit.py` — currently only checks ≥30% H2 keyword coverage; does not yet detect generic H3s reusable across unrelated pages, FAQ-must-be-final-H2, or page-family architecture match per `28-htag-semantic-framework.md`)
+- Bold body-text density: ≤ 8% ceiling, target band 2–6% (extend `scripts/article_audit.py` — measure ratio of words inside `<strong>` / `**` to total body words excluding Sources / FAQ / Methodology / table headers; flag if outside the band per `13-readability-governance.md` §3a)
+- Per-H2 bold presence: each H2 section should contain at least one bolded chunk; sections with zero bolded chunks are usually padding (extend `scripts/article_audit.py` to surface as a WARN, not a hard fail, per `13-readability-governance.md` §3a)
 
 ---
 
