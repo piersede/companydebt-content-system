@@ -4911,3 +4911,465 @@ body[class*="cky-"] {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* ==========================================================================
+   Editorial Component Palette
+   Reusable cd-* classes for callout boxes and structural readability patterns.
+   All colour values use existing :root variables except where noted (*).
+   Governed by editorial-os/28-readability-components.md
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base callout block — shared structure for all 8 editorial callout types
+   -------------------------------------------------------------------------- */
+.cd-callout {
+  border-left: 4px solid var(--c-border);
+  background-color: var(--c-bcg-third);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+.cd-callout__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-border);
+  margin: 0 0 0.35rem;
+}
+.cd-callout__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+.cd-callout p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+.cd-callout p + p {
+  margin-top: 0.65rem;
+}
+
+/* 8 modifier variants */
+.cd-callout--companydbt-view {
+  border-left-color: var(--c-blue-dark);
+  background-color: var(--c-blue-light);
+}
+.cd-callout--key-takeaway {
+  border-left-color: var(--c-blue-dark);
+  background-color: var(--c-blue-light);
+}
+.cd-callout--companydbt-view .cd-callout__label {
+  color: var(--c-blue-dark);
+}
+
+.cd-callout--directors-miss {
+  border-left-color: var(--c-orange);
+  background-color: #fff8f3;
+}
+.cd-callout--directors-miss .cd-callout__label {
+  color: var(--c-orange);
+}
+
+.cd-callout--risk-warning {
+  border-left-color: #c0392b; /* no --c-red variable exists */
+  background-color: #fdf3f2;
+}
+.cd-callout--risk-warning .cd-callout__label {
+  color: #c0392b;
+}
+
+.cd-callout--cost-reality {
+  border-left-color: var(--c-blue-medium);
+  background-color: var(--c-bcg-third);
+}
+.cd-callout--cost-reality .cd-callout__label {
+  color: var(--c-blue-medium);
+}
+
+.cd-callout--legal-exposure {
+  border-left-color: #8b0000; /* no --c-red-dark variable exists */
+  background-color: #fdf0f0;
+}
+.cd-callout--legal-exposure .cd-callout__label {
+  color: #8b0000;
+}
+
+.cd-callout--recovery-path {
+  border-left-color: #2e7d32; /* no --c-green variable exists */
+  background-color: #f3fdf4;
+}
+.cd-callout--recovery-path .cd-callout__label {
+  color: #2e7d32;
+}
+
+.cd-callout--creditor-perspective {
+  border-left-color: var(--c-border);
+  background-color: var(--c-bcg-third);
+}
+
+.cd-callout--timeline-reality {
+  border-left-color: var(--c-orange);
+  background-color: #fff8f2;
+}
+.cd-callout--timeline-reality .cd-callout__label {
+  color: var(--c-orange);
+}
+
+/* --------------------------------------------------------------------------
+   Key Takeaway — lightweight summary block after major sections
+   -------------------------------------------------------------------------- */
+.cd-key-takeaway {
+  background-color: var(--c-blue-light);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  margin: 2.5rem 0;
+}
+.cd-key-takeaway__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-key-takeaway p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+.cd-key-takeaway p + p {
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Process Steps — numbered sequence for "what happens next" sections
+   -------------------------------------------------------------------------- */
+.cd-process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.cd-process-steps__item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.cd-process-steps__item:last-child {
+  border-bottom: none;
+}
+.cd-process-steps__number {
+  min-width: 2rem;
+  height: 2rem;
+  background: var(--c-blue-dark);
+  color: var(--c-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-bold);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  font-family: var(--ff-main);
+}
+.cd-process-steps__content {
+  flex: 1;
+}
+.cd-process-steps__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-p);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.3rem;
+}
+.cd-process-steps__body {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Inline CTA — high-intent call to action within main content
+   -------------------------------------------------------------------------- */
+.cd-inline-cta {
+  background: var(--c-blue-dark);
+  color: var(--c-white);
+  padding: 1.5rem 1.75rem;
+  border-radius: 3px;
+  margin: 3rem 0;
+}
+.cd-inline-cta__headline {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-white);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+.cd-inline-cta__body {
+  font-size: var(--fs-p);
+  color: var(--c-white);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+.cd-inline-cta__button {
+  display: inline-block;
+  background: var(--c-button-primary-bcg);
+  color: var(--c-button-primary-text);
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-p);
+  text-decoration: none;
+  font-family: var(--ff-main);
+}
+.cd-inline-cta__button:hover {
+  background: var(--c-button-primary-hover);
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Do / Don't panel — practical advice comparison
+   -------------------------------------------------------------------------- */
+.cd-do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.cd-do-dont__do,
+.cd-do-dont__dont {
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+}
+.cd-do-dont__do {
+  border-top: 3px solid #2e7d32;
+  background: #f3fdf4;
+}
+.cd-do-dont__dont {
+  border-top: 3px solid #c0392b;
+  background: #fdf3f2;
+}
+.cd-do-dont__label {
+  font-weight: var(--fw-bold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+  font-family: var(--ff-main);
+}
+.cd-do-dont__do .cd-do-dont__label {
+  color: #2e7d32;
+}
+.cd-do-dont__dont .cd-do-dont__label {
+  color: #c0392b;
+}
+.cd-do-dont ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cd-do-dont li {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.55;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.cd-do-dont li:last-child {
+  border-bottom: none;
+}
+.wp-block-group.cd-do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* --------------------------------------------------------------------------
+   Card Grid — grouped themes, causes, risks, pressure points
+   -------------------------------------------------------------------------- */
+.cd-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.cd-card-grid__card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem;
+}
+.cd-card-grid__icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+.cd-card-grid__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-card-grid__body {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Orientation Block — "Who this is for / When to act" near page top
+   -------------------------------------------------------------------------- */
+.cd-orientation-block {
+  background: var(--c-bcg-third);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+.cd-orientation-block__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.6rem;
+}
+.cd-orientation-block ul {
+  margin: 0.4rem 0 0.75rem;
+  padding-left: 1.25rem;
+}
+.cd-orientation-block li {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  padding: 0.2rem 0;
+}
+.cd-orientation-block p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   On This Page — anchor nav; sticky variant for desktop
+   -------------------------------------------------------------------------- */
+.cd-on-this-page {
+  background: var(--c-bcg-third);
+  border-left: 3px solid var(--c-blue-dark);
+  border-radius: 0 2px 2px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.cd-on-this-page__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-on-this-page nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cd-on-this-page nav li {
+  padding: 0;
+}
+.cd-on-this-page nav a {
+  color: var(--c-link);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-decoration: none;
+}
+.cd-on-this-page nav a:hover {
+  text-decoration: underline;
+}
+.cd-on-this-page--sticky {
+  position: sticky;
+  top: 1rem;
+}
+@media (max-width: 768px) {
+  .cd-on-this-page--sticky {
+    position: static;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Question Section — heading treatment for question-led sub-sections
+   -------------------------------------------------------------------------- */
+.cd-question-section {
+  color: var(--c-blue-dark);
+  font-size: var(--fs-h3);
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Decision List — styled bullet list for decision points
+   -------------------------------------------------------------------------- */
+.cd-decision-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.cd-decision-list li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 0.55rem;
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+}
+.cd-decision-list li::before {
+  content: "\2022";
+  color: var(--c-orange);
+  font-weight: var(--fw-bold);
+  position: absolute;
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ Accordion wrapper — wraps existing ub/content-toggle-block
+   -------------------------------------------------------------------------- */
+.cd-faq-accordion {
+  margin: 2rem 0;
+  border-top: 2px solid var(--c-border);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile overrides
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .cd-callout {
+    border-left-width: 3px;
+    padding: 1rem 1.1rem;
+  }
+  .cd-do-dont {
+    grid-template-columns: 1fr;
+  }
+  .cd-inline-cta {
+    padding: 1.25rem 1.25rem;
+  }
+  .cd-inline-cta__button {
+    display: block;
+    text-align: center;
+  }
+}

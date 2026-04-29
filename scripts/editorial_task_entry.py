@@ -36,6 +36,7 @@ def build_payload(page: str, task: str) -> dict:
         "verification_date": metadata.verification_date,
         "runtime_packs": runtime["runtime_packs"],
         "canonical_refs": runtime["canonical_refs"],
+        "component_pack": runtime.get("component_pack"),
     }
     payload["runtime_tokens_estimate"] = sum(estimate_tokens_from_file(path) for path in payload["runtime_packs"])
     payload["canonical_tokens_estimate"] = sum(estimate_tokens_from_file(path) for path in payload["canonical_refs"])
@@ -62,6 +63,10 @@ def render_markdown(payload: dict) -> str:
         "## Token Estimate",
         f"- Runtime packs: `{payload['runtime_tokens_estimate']}`",
         f"- Canonical refs: `{payload['canonical_tokens_estimate']}`",
+        "",
+        "## Component Guidance",
+        (f"- Component pack: `{payload['component_pack']}`" if payload.get("component_pack") else "- No component pack mapped for this page class. See `editorial-os/28-readability-components.md` §28.5 for manual selection."),
+        "- Apply 2–3 components maximum. Never all. Rhythm rules: no two same-type blocks adjacent, no component in the first two paragraphs, ≤4 total.",
         "",
         "## Operator Rule",
         "- Use this packet for routing only. Keep the quality kernel loaded every time: writer-core, relevant stage pack, overlay, and human-authorship / trust rules. Reopen canon when those quality-bearing layers need verification or extension.",
