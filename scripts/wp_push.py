@@ -70,7 +70,8 @@ add_action('init', function() {{
     if (is_wp_error($r)) {{
         echo 'ERR: ' . $r->get_error_message();
     }} else {{
-        echo 'OK: post=' . $r . ' content_len=' . strlen($p['content']);
+        $permalink = get_permalink($r);
+        echo 'OK: post=' . $r . ' content_len=' . strlen($p['content']) . ' url=' . $permalink;
     }}
 
     wp_cache_flush();
@@ -178,6 +179,9 @@ def push(post_id: int, html_path: pathlib.Path, status: str | None,
     )
     print(f"http: {resp.status_code}")
     print(f"body: {resp.text[:300]}")
+    url_m = re.search(r"url=(https?://\S+)", resp.text)
+    if url_m:
+        print(f"url:         {url_m.group(1)}")
 
     # Local cleanup
     php_local.unlink(missing_ok=True)
