@@ -53,13 +53,13 @@ Write to the canonical gate AND the Tier 3 editorial rules. Target structure:
 
 1. Metadata header (preserve exactly)
 2. Opening (2–3 paragraphs). Concrete scene, reader-addressed, no meta-commentary. No banned opening patterns ("this page explains", "in this guide", etc.)
-3. **H-tag architecture per `editorial-os/28-htag-semantic-framework.md`.** Identify the article's page family (1–14), then build the H2/H3 structure from the matching template. H2 architecture is fixed by family; H3 wording must be slot-filled from the exact title (no generic, reusable H3s).
-4. "Your Next Step" H2 — the Rule J verdict (sits between the family-specific H2s and the Methodology/Sources/FAQ closure)
-5. FAQ accordion (`wp:ub/content-toggle-block` from Ultimate Blocks) with 5–7 panels. The FAQ H2 must be the final H2, formatted "Frequently Asked Questions About (Primary Keyword)". This emits FAQPage schema on the frontend.
-6. Methodology & Disclosure H2 — who wrote / reviewed, statutory basis, Company Debt disclosure
-7. Sources & References H2 — bulleted list with `legislation.gov.uk` links
+3. **H-tag architecture per `editorial-os/28-htag-semantic-framework.md`.** Identify the article's page family (1–14), then build the H2/H3 structure from the matching template. H2 architecture is fixed by family; H3 wording must be slot-filled from the exact title (no generic, reusable H3s). **Run the heading-cannibalisation diagnostic** before locking H3s — neighbouring topics with their own dedicated pages must be tables, links, or bolded labels, not H3s.
+4. "Your Next Step" / "What Should Directors Do Next?" H2 — the Rule J verdict (split-the-audience triage)
+5. **FAQ accordion (`wp:ub/content-toggle-block` from Ultimate Blocks) with 5–7 panels — and the FAQ H2 must be the FINAL H2 in the article.** Format the heading as "Frequently Asked Questions About (Primary Keyword)". Emits FAQPage schema. **No editorial H2 may follow.**
+6. Methodology & Disclosure block — who wrote / reviewed, statutory basis, Company Debt disclosure. **Wrap as a styled label inside an `<aside>`, `<footer>`, or styled `<div>` (e.g. `<p class="methodology-label"><strong>Methodology and Disclosure</strong></p>`), NOT as an `<h2>` in the main article flow.** The audit script detects the block heading-agnostically.
+7. Sources & References block — bulleted list with `legislation.gov.uk` links. Same rule: styled label, not an `<h2>`.
 
-**H-tag QA before re-audit:** run the 8-question checklist at the foot of `28-htag-semantic-framework.md`. Any H3 that could appear unchanged on five unrelated pages must be rewritten.
+**H-tag QA before re-audit:** run the QA checklist at the foot of `28-htag-semantic-framework.md`. Any H3 that could appear unchanged on five unrelated pages must be rewritten. Run the heading-cannibalisation diagnostic — H3s that name a sibling page's topic must be demoted.
 
 **Bold pass before re-audit:** run the active bold pass per `editorial-os/13-readability-governance.md` §3a. For each H2 section, identify the one or two chunks a skimming reader would need to act correctly, and bold them (1–8 words each). Confirm article-level bold density sits in the 2–6% band, ceiling 8% of body word count. Each H2 should carry at least one bolded chunk; if it cannot, the section is padding and should be cut or rewritten. The audit script does not yet enforce the 8% ceiling — registered as a script enforcement gap in `editorial-os/rules-index.md`.
 

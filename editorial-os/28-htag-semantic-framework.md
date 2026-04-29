@@ -25,9 +25,11 @@ The architecture (number and order of H2 sections) is fixed per page family. The
 5. Do not use body-copy prompts as headings.
 6. Do not add broad insolvency sections unless they directly support the page intent.
 7. Do not create sections that should be separate dedicated pages.
-8. Every page must end with an FAQ section: `H2: Frequently Asked Questions About (Primary Keyword)`.
+8. Every page must end with an FAQ section: `H2: Frequently Asked Questions About (Primary Keyword)`. **The FAQ H2 must be the FINAL H2 in the visible article.** No editorial H2 may appear after it.
 9. Most pages should stop at H3.
 10. Use British spelling and UK legal/business terminology.
+11. **Heading cannibalisation rule.** Do not promote neighbouring topics into H3s when they have their own dedicated pages or when they pull the article into a different page intent. Supporting concepts should usually be handled as: (a) table rows, (b) checklist items, (c) bolded labels inside a paragraph, (d) short linked summaries, (e) internal-link cards. An H3 must directly support THIS article's title, not a sibling page's title.
+12. **Methodology and Sources sit OUTSIDE the main H-tag flow.** They may exist as a footer module, sidebar, collapsible editorial note, source box, or styled labels (e.g. `<p class="methodology-label"><strong>Methodology and Disclosure</strong></p>` or inside an `<aside>` / `<footer>` / styled `<div>`), but **not as `<h2>` elements in the article body**. Their content (author, reviewer, statutory references, gov.uk links) is required by the pre-publish gate and must be present — only their wrapping element changes.
 
 ---
 
@@ -898,8 +900,28 @@ Insolvency & Liquidation Hub; HMRC Debt & Enforcement Hub; Glossary of UK Insolv
 - [ ] Could any H3 be reused unchanged on five unrelated pages? If yes, rewrite it.
 - [ ] Has the article avoided drifting into a broader insolvency guide?
 - [ ] Are related guides directly connected to the title, not just the wider category?
-- [ ] Is the FAQ section the final H2?
+- [ ] Is the FAQ H2 the **FINAL** H2 in the article? No editorial H2 may follow it.
 - [ ] Does the FAQ heading include the primary keyword?
+- [ ] Are Methodology & Disclosure and Sources & References **outside** the main H-tag flow (styled labels in a footer/aside/div, not `<h2>` elements)?
+- [ ] For each H3 in this article: would the H3's content be better as a table row, bolded label, checklist item, or linked card pointing to the dedicated page that owns the topic? If yes, demote.
+
+## Heading cannibalisation diagnostic
+
+For each H3 you have written, ask:
+
+1. **Does this H3 belong to a sibling page?** Wrongful trading, preferences, personal guarantees, PLNs, director disqualification, CVA, Administration, CVL, TTP — these all have their own dedicated pages. If your article's H3 is one of these and the article's title is *not* the H3 topic, demote.
+2. **Could a reader land on this article and feel they got a half-version of another article?** If yes, you have promoted a neighbouring topic into your hierarchy. Demote the H3 to a table row or short linked summary.
+3. **Is the H3 wording specific to this title or generic to the sector?** "Wrongful Trading Risk" is generic. "Wrongful Trading Risk Under Live Creditor Pressure" is title-specific (still likely a demote candidate, because the dedicated page owns the concept).
+
+**Default demotion patterns when a topic should not be an H3:**
+
+- **Risk lists**: convert to a comparison table with columns *Risk / Why it matters in this context / What directors should do*. Each risk is one row, not one H3.
+- **Procedure mentions** (TTP, CVA, Administration, CVL, IVA, etc.): use a comparison table with columns *Option / When it fits / When it does not* and link to the dedicated page from each row.
+- **Creditor types / sector lists**: bullet list with bolded labels and one-line summaries, each pointing to the spoke article.
+- **Statute lists**: inline parenthetical references (e.g. "section 214 of the Insolvency Act 1986 — wrongful trading") rather than dedicated H3s per statute.
+- **Long related-guides sections**: a single short H2 *Related Guides* with a flat link list or link cards. No H3 subsections inside it.
+
+The discipline this enforces: every H3 directly serves the article's own title intent. Topics that orbit the title sit in tables, lists, and links — not in the heading hierarchy.
 
 ---
 

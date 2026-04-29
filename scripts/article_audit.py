@@ -431,18 +431,54 @@ def check_internal_links(body: str) -> CheckResult:
     )
 
 
-def check_faq_accordion(raw_html: str) -> CheckResult:
+def check_faq_accordion(raw_html: str, body: str) -> CheckResult:
     """
     Repo memory (feedback_faqs_accordion.md): FAQs must be in accordion format.
     The Ultimate Blocks wp:ub/content-toggle-block emits FAQPage schema on the
     front end, so its presence satisfies both the accordion and schema rules.
+
+    Per editorial-os/28-htag-semantic-framework.md (April 2026 update),
+    the FAQ H2 must be the FINAL H2 in the main article flow. Methodology
+    and Sources blocks must sit OUTSIDE the H2 hierarchy (as styled labels
+    in a footer/aside/div, not as h2). Any H2 appearing AFTER the FAQ H2 is
+    a hierarchy violation that demotes the FAQ from its routing position.
     """
     has_ub = bool(re.search(r"wp:ub/content-toggle", raw_html, re.I))
+    if not has_ub:
+        return CheckResult(
+            id="16", tier="T2",
+            name="FAQ accordion present + FAQ is final H2",
+            passed=False,
+            detail="no accordion block found",
+        )
+    # Find the FAQ H2 position
+    faq_re = re.compile(r"<h2[^>]*>\s*(?:Frequently\s+Asked\s+Questions|FAQs?\b)", re.I)
+    m = faq_re.search(body)
+    if not m:
+        return CheckResult(
+            id="16", tier="T2",
+            name="FAQ accordion present + FAQ is final H2",
+            passed=False,
+            detail="accordion present but no FAQ H2 found",
+        )
+    # Any H2 after the FAQ H2?
+    tail = body[m.end():]
+    later_h2 = re.search(r"<h2\b", tail)
+    if later_h2:
+        # Identify which H2 violated the rule
+        later_h2_text = re.search(r"<h2[^>]*>([^<]{0,80})", tail)
+        violator = later_h2_text.group(1).strip() if later_h2_text else "unknown"
+        return CheckResult(
+            id="16", tier="T2",
+            name="FAQ accordion present + FAQ is final H2",
+            passed=False,
+            detail=f"accordion present but H2 follows FAQ: '{violator[:60]}'",
+        )
     return CheckResult(
         id="16", tier="T2",
-        name="FAQ accordion present (wp:ub/content-toggle)",
-        passed=has_ub,
-        detail="wp:ub/content-toggle present" if has_ub else "no accordion block found",
+        name="FAQ accordion present + FAQ is final H2",
+        passed=True,
+        detail="wp:ub/content-toggle present, FAQ is final H2",
     )
 
 
@@ -450,22 +486,67 @@ def check_methodology(body: str) -> CheckResult:
     """
     editorial-os/16-pre-publish-gate.md Check 3 + Check 10:
     decision-stage pages require a Methodology block.
+
+    Per editorial-os/28-htag-semantic-framework.md (April 2026 update),
+    Methodology/Disclosure should NOT sit in the main H-tag flow as an H2 —
+    that promotes it into the article hierarchy and pushes editorial H2s
+    out of the FAQs-as-final-H2 discipline. Detection is heading-agnostic:
+    we look for the Methodology/Disclosure label as a heading (h2/h3/h4/h5/h6)
+    OR as a styled label inside a div/section/aside (typically <strong> or
+    <p class="...">), provided it is followed by editorial-process or
+    disclosure content within ~2,000 chars.
     """
-    has = bool(re.search(r"<h2[^>]*>\s*Methodology", body, re.I))
+    # Heading match (any level) OR styled label match
+    label_re = re.compile(
+        r"(?:<h[2-6][^>]*>|<(?:strong|b|p|div|span|aside|footer)[^>]*>)\s*"
+        r"Methodology(?:\s*(?:&amp;|&|and)\s*Disclosure)?",
+        re.I,
+    )
+    m = label_re.search(body)
+    if not m:
+        return CheckResult(id="17", tier="T2",
+                           name="Methodology & Disclosure block present",
+                           passed=False)
+    # Must be followed by some editorial-process content within 2k chars
+    tail = body[m.end():m.end() + 2000].lower()
+    has_substance = (
+        "editorial team" in tail or "reviewed" in tail or "written by" in tail
+        or "company debt" in tail or "insolvency practitioner" in tail
+    )
     return CheckResult(
         id="17", tier="T2",
-        name="Methodology & Disclosure section present",
-        passed=has,
+        name="Methodology & Disclosure block present",
+        passed=has_substance,
+        detail="block found" if has_substance else "label found but no substance within 2k chars",
     )
 
 
 def check_sources(body: str) -> CheckResult:
-    """editorial-os/10-evidence-governance.md — Sources & References required."""
-    has = bool(re.search(r"<h2[^>]*>\s*Sources\s*(?:&amp;|&)?\s*References", body, re.I))
+    """
+    editorial-os/10-evidence-governance.md — Sources & References required.
+    Per editorial-os/28-htag-semantic-framework.md (April 2026 update),
+    Sources/References should NOT sit in the main H-tag flow as an H2.
+    Detection is heading-agnostic (any heading level OR styled label),
+    requires the label AND at least one legislation.gov.uk or gov.uk link
+    nearby (within 4k chars) to confirm substance.
+    """
+    label_re = re.compile(
+        r"(?:<h[2-6][^>]*>|<(?:strong|b|p|div|span|aside|footer)[^>]*>)\s*"
+        r"Sources\s*(?:&amp;|&|and)?\s*References",
+        re.I,
+    )
+    m = label_re.search(body)
+    if not m:
+        return CheckResult(id="18", tier="T2",
+                           name="Sources & References block present",
+                           passed=False)
+    tail = body[m.end():m.end() + 4000].lower()
+    has_substance = "legislation.gov.uk" in tail or "gov.uk" in tail
     return CheckResult(
         id="18", tier="T2",
-        name="Sources & References section present",
-        passed=has,
+        name="Sources & References block present",
+        passed=has_substance,
+        detail="block found" if has_substance else "label found but no gov.uk/legislation.gov.uk link nearby",
     )
 
 
@@ -552,7 +633,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_template(meta["template"]),
         check_author(meta["author"]),
         check_internal_links(body),
-        check_faq_accordion(raw),
+        check_faq_accordion(raw, body),
         check_methodology(body),
         check_sources(body),
         check_keyword_h2s(meta["title"], body),
