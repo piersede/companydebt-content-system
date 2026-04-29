@@ -83,7 +83,8 @@ Do not let the article become bloodless, over-balanced, or taxonomic.
 - Keep paragraphs to 2-3 lines in normal article formatting.
 - Leave a blank line between paragraphs.
 - Prefer full stops, commas, or colons over em dashes.
-- Use bold and italics sparingly.
+- Use bold with measured intent: actively identify decision-critical chunks (statutes, deadlines, thresholds, the reader's next action, the hard fact that overturns assumption) and bold them in 1–8 word chunks. Aim for 2–6% body-text bold density, ceiling 8%. Each H2 should contain at least one bolded chunk; sections with zero bolded chunks are usually padding. Full rules: `editorial-os/13-readability-governance.md` §3 / §3a.
+- Use italics sparingly.
 - Format like a human web editor, not polished AI output.
 
 ## Information gain
@@ -139,4 +140,5 @@ This pack compresses material primarily from:
 - `editorial-os/25-operational-learning-loop.md`
 - `editorial-os/26-call-out-box-governance.md`
 - `editorial-os/27-article-type-structure.md`
+- `editorial-os/28-htag-semantic-framework.md` (load when the article is UK insolvency / liquidation / HMRC / creditor / recovery)
 - `editorial-os/docs/human-authorship-voice-engine.md`

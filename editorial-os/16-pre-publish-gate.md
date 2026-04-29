@@ -369,6 +369,7 @@ See `10-evidence-governance.md` §12 for the full information gain framework.
 - Every image has specific, descriptive alt text (image relevance scoring)
 - No more than one Company Debt CTA per article; CTA sits within editorial context (SpamBrain / link density)
 - Last-reviewed date visible on decision-stage pages (freshness / LSU)
+- For UK insolvency, liquidation, HMRC, creditor and recovery articles: H-tag architecture and slot semantics conform to `28-htag-semantic-framework.md` — correct page family selected, H3s are title-specific (not reusable across five unrelated pages), FAQ H2 is final and keyword-bearing
 
 **Hard fail conditions:**
 - Any generic anchor text instance ("click here", "here", "read more", etc.)
@@ -376,8 +377,9 @@ See `10-evidence-governance.md` §12 for the full information gain framework.
 - Any FAQ answer that is one sentence only or cross-references with "see above"
 - Missing author byline
 - Zero internal links to other site pages
+- For UK insolvency content: H-tag structure does not match the assigned page family in `28-htag-semantic-framework.md`, or three or more H3s are generic enough to appear unchanged on unrelated pages
 
-See `18-seo-signal-governance.md` for the full 18-signal breakdown and rationale.
+See `18-seo-signal-governance.md` for the full 18-signal breakdown and rationale. See `28-htag-semantic-framework.md` for the UK insolvency H-tag architecture and the final QA checklist.
 
 ---
 

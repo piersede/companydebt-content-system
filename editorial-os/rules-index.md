@@ -31,6 +31,7 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | Roundup anti-ghost-listicle rules | `docs/article-types/roundup.md` |
 | Guide friction / consequence translation | `docs/article-types/guide.md` |
 | Canonical page-type structures and decision-layer endings | `27-article-type-structure.md` |
+| UK insolvency H-tag architecture (14 page families, slot model) | `28-htag-semantic-framework.md` |
 
 ## Commercial comparison governance
 
@@ -116,6 +117,34 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 | §3 Paragraph Structure | Payoff → evidence → consequence ordering | `24-payoff-intent-first.md` |
 | §6 Caveat Promotion Rule | Decision-changing caveats must not be buried | `24-payoff-intent-first.md` |
 
+## H-tag semantic architecture (UK insolvency content)
+
+| Rule family | Source |
+|-------------|--------|
+| Non-negotiable H-tag rules (13, including FAQ-final, Methodology-outside-flow, Heading Promotion test) | `28-htag-semantic-framework.md` §"Non-negotiable rules" |
+| Heading Promotion test (4-question per-H3 test — binding) | `28-htag-semantic-framework.md` §"The Heading Promotion test" |
+| H3 Demotion list (21 topics that must not be H3s on broad pages) | `28-htag-semantic-framework.md` §"The H3 Demotion list" |
+| When to use H3s, tables, H4s, or bolded labels (format matrix) | `28-htag-semantic-framework.md` §"When to use H3s, tables, H4s, or bolded labels" |
+| Cross-family Section-Type patterns (A: Risks, B: Options, C: Related Guides, D: What Directors Should Do) | `28-htag-semantic-framework.md` §"Cross-family section-type patterns" |
+| Semantic slot model (variable H3s, fixed H2 architecture) | `28-htag-semantic-framework.md` §"The semantic slot model" |
+| Core Bracket Library (placeholder taxonomy) | `28-htag-semantic-framework.md` §"Core Bracket Library" |
+| 14 page-family templates with H1/H2/H3 structures + v3.2 H3 promotion controls | `28-htag-semantic-framework.md` §"Template 1–14" |
+| Coverage checklist (which titles fall under which family) | `28-htag-semantic-framework.md` §"Coverage checklist" |
+| Final QA checklist — 8-question test + semantic-relevance checks | `28-htag-semantic-framework.md` §"Final QA checklist" |
+| Heading cannibalisation diagnostic (3-question per-H3 + 5 demotion patterns) | `28-htag-semantic-framework.md` §"Heading cannibalisation diagnostic" |
+| Pre-publish gate enforcement | `16-pre-publish-gate.md` Check 14 |
+| General H2 semantic-relevance principle (non-insolvency content) | `18-seo-signal-governance.md` §5a |
+
+## Emphasis discipline (bold + italic)
+
+| Rule family | Source |
+|-------------|--------|
+| When bold is acceptable / unacceptable | `13-readability-governance.md` §3 |
+| Quantitative ceiling: bold body-text density ≤ 8%, target band 2–6% | `13-readability-governance.md` §3a |
+| Active bold pass during rewrite (per-H2 chunk identification) | `13-readability-governance.md` §3 "Active bold pass" |
+| Italic discipline | `13-readability-governance.md` §3 |
+| Preference order: stronger sentence > subhead > standalone para > bold (last) | `13-readability-governance.md` §3 |
+
 ## Operational learning loop
 
 | Rule family | Source |
@@ -161,6 +190,9 @@ The following checks are not yet covered by scripts. Prefer extending existing c
 - Generic pros/cons bullets (extend `check_human_tone.js`)
 - Verdict neutrality / over-balanced endings in review and comparison pieces (extend `check_comparison_integrity.js`)
 - Sections lacking lived operational anchors in substantive commercial-software articles (extend `check_human_tone.js`)
+- H-tag page-family conformance and slot-fill specificity for UK insolvency content (extend `scripts/article_audit.py` — currently only checks ≥30% H2 keyword coverage; does not yet detect generic H3s reusable across unrelated pages, FAQ-must-be-final-H2, or page-family architecture match per `28-htag-semantic-framework.md`)
+- Bold body-text density: ≤ 8% ceiling, target band 2–6% (extend `scripts/article_audit.py` — measure ratio of words inside `<strong>` / `**` to total body words excluding Sources / FAQ / Methodology / table headers; flag if outside the band per `13-readability-governance.md` §3a)
+- Per-H2 bold presence: each H2 section should contain at least one bolded chunk; sections with zero bolded chunks are usually padding (extend `scripts/article_audit.py` to surface as a WARN, not a hard fail, per `13-readability-governance.md` §3a)
 
 ---
 

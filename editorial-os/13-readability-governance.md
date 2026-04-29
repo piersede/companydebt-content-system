@@ -60,7 +60,7 @@ Em dashes are acceptable:
 ## 3. Emphasis rules
 
 ### Rule
-Use bolding and italics very sparingly. Do not use them decoratively.
+Use bolding and italics with measured intent. During rewrite, **actively identify the chunks that meet the "acceptable bold" criteria below and bold them** — do not leave decision-critical phrases in unhighlighted body prose. At the same time, do not bold decoratively. The ceiling is quantitative (see §3a below).
 
 ### When bold is acceptable
 - **Lead terms in structured lists:** The bold word or phrase at the start of a list item that names the concept, followed by explanatory text. This is the primary editorial use of bold.
@@ -68,6 +68,9 @@ Use bolding and italics very sparingly. Do not use them decoratively.
 - **Critical terms on first introduction** (once per term, not repeatedly through the article)
 - **Summary verdict lines** where the emphasis is editorially necessary and the sentence cannot carry it alone
 - **Decision-critical phrases** in fit/misfit guidance (e.g., "If your bottleneck is **internal visibility**, Karbon addresses it directly")
+- **Statutes, deadlines, thresholds, and statutory caps** the reader must not miss (e.g., the **21-day clock** from a statutory demand, the **75% creditor vote**, the **£800 preferential wages cap**)
+- **The reader's next action** in "Your Next Step" / verdict sections, where the action itself is the editorial payload
+- **The hard fact that overturns the reader's likely assumption** (e.g., "A CVA does **not** extinguish a personal guarantee")
 
 ### When bold is not acceptable
 - Scattering bold through body text to simulate emphasis
@@ -76,6 +79,27 @@ Use bolding and italics very sparingly. Do not use them decoratively.
 - Decorative emphasis that adds visual noise without aiding comprehension
 - Bolding more than one phrase per paragraph (except in structured lists)
 - Re-bolding a term that was already bolded earlier in the article
+- Bolding entire sentences or long clauses (bold a word or short phrase, not a block)
+- Bolding within FAQ answers more than once per panel
+
+### §3a. Quantitative ceiling
+
+**Bold body-text density: ≤ 8% of body word count must be inside `<strong>` (or `**`) tags.**
+
+- Body word count for this purpose excludes the Sources & References list, FAQ accordion answers, Methodology section, and table-header cells.
+- Aim for the band 2–6% on most articles. Above 8% reads as panicked highlighting and triggers AI-fingerprint suspicion.
+- An average 2,500-word article should carry roughly 50–150 bolded words across 8–20 short bolded chunks, not one long bolded sentence.
+- Each H2 section should contain **at least one** bolded chunk meeting the criteria above; if a section has none, either the section lacks a decision-critical anchor (rewrite the section) or the editor is under-using bold (add it).
+
+### Active bold pass (during rewrite)
+
+After a draft hits voice and structure targets, do a dedicated bold pass:
+
+1. Read each H2 section and identify the one or two chunks that, if the reader skimmed and read only those, would still let them act correctly.
+2. Bold those chunks. Keep each bolded chunk to 1–8 words where possible; never a full sentence.
+3. If you cannot find a chunk worth bolding in a section, the section is probably padding — rewrite or cut.
+4. Check the article-level density against the 8% ceiling. If over, demote the weakest bolded chunks back to plain text.
+5. Confirm no paragraph carries more than one bolded chunk (lists exempt).
 
 ### When italic is acceptable
 - **Editorial asides and caveats** that shift the reading of a sentence (e.g., "This is true *if* the practice has already outgrown spreadsheets")
