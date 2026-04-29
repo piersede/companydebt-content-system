@@ -5373,3 +5373,852 @@ body[class*="cky-"] {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   DESIGN RESTORE BLOCK START -- appended 20260429-121128
+   Restores rule blocks lost in the 28-Apr 16:00 SFTP overwrite.
+   Pure append. To remove: delete from this comment to the matching
+   'DESIGN RESTORE BLOCK END' marker below.
+   ========================================================================== */
+
+/* ==========================================================================
+   APPEND-ONLY RESTORE PATCH — generated 2026-04-29 11:17
+   Restores rule blocks present in known-good (146,526-byte version, 15:05
+   upload before the 16:00 callout-edit incident) but missing from current
+   live. Pure addition: zero existing live lines modified.
+   ========================================================================== */
+
+.be-related-articles .carousel-item,
+.be-related-articles .col-3 {
+  /* Fixed-width slots, not flex-grow. flex-shrink:0 prevents the
+     "17 items squash to 5.9% each" failure mode; flex-grow:0 prevents
+     the "1 item stretches to 100%" failure mode. The carousel JS at
+     assets/js/related-articles.js assumes each card is exactly 25% of
+     .carousel-items width, so this rule and the breakpoint rules below
+     must stay aligned with its setSlideWidth() function. */
+  flex: 0 0 25% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-prev,
+.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-next {
+  display: block;
+}
+.be-related-articles .carousel-item a,
+.be-related-articles .col-3 a {
+  text-decoration: none;
+}
+.be-related-articles .carousel-item img,
+.be-related-articles .col-3 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+.be-related-articles .carousel-item a:first-of-type,
+.be-related-articles .col-3 a:first-of-type {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--c-blue-dark, #002856);
+  display: block;
+  margin-bottom: 6px;
+}
+.be-related-articles .carousel-item a:first-of-type:hover,
+.be-related-articles .col-3 a:first-of-type:hover {
+  color: #f60;
+}
+.be-related-articles .carousel-item,
+.be-related-articles .col-3,
+.be-related-articles .carousel-item .article-date-author,
+.be-related-articles .col-3 .article-date-author,
+.be-related-articles .carousel-item .author-date,
+.be-related-articles .col-3 .author-date {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  color: rgb(36, 36, 36) !important;
+  font-weight: 400 !important;
+}
+.be-related-articles .carousel-item a:first-of-type,
+.be-related-articles .col-3 a:first-of-type,
+.be-related-articles .carousel-item .article-title,
+.be-related-articles .col-3 .article-title {
+  font-size: 20px !important;
+  line-height: 24px !important;
+  font-weight: 700 !important;
+  color: var(--c-blue-dark, #002856) !important;
+}
+.be-related-articles .carousel-item .article-read-more,
+.be-related-articles .col-3 .article-read-more {
+  display: none !important;
+}
+.be-related-articles .carousel-item a:last-of-type,
+.be-related-articles .col-3 a:last-of-type {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(36, 36, 36);
+  display: inline-block;
+  margin-top: 4px;
+}
+@media (max-width: 1037px) {
+  /* Header row: ensure vertical centering */
+  header .row {
+    align-items: center;
+  }
+
+  /* Hamburger button: visible with white bars */
+  header .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 8px;
+    order: 10;
+  }
+  header .menu-toggle .line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+
+  /* Kill mobile-cta bar and desktop phone pill */
+  header .header-right .header-cta,
+  nav.main-navigation a.mobile-cta {
+    display: none !important;
+  }
+
+  /* Header-right: pushed to the right, contains search icon next to hamburger */
+  header .header-right {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-left: auto;
+  }
+  header .header-right .header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Header acts as positioning anchor for dropdown panel */
+  header#masthead {
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* Mobile menu — matches companydebt.com live design */
+  body.menu-toggled {
+    overflow: hidden;
+  }
+  header nav.main-navigation {
+    position: static;
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: visible;
+    flex: 0 0 0 !important;
+    display: none !important;
+  }
+  header nav.main-navigation.toggled {
+    display: block !important;
+    background: #002856 !important;
+    position: absolute !important;
+    top: 92px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 92px) !important;
+    overflow: auto !important;
+    z-index: 1000;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul > li {
+    width: 100% !important;
+    padding: 10px 30px !important;
+    height: auto !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: transparent !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul li span {
+    cursor: pointer;
+    color: #fff !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    position: relative;
+    font-family: Arial, sans-serif !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    font-weight: 700 !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li span {
+    font-size: 15px !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children {
+    position: relative;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul > li.menu-item-has-children {
+    padding-right: 40px !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children span.menu-arrow {
+    position: absolute !important;
+    width: 24px;
+    height: 24px;
+    top: 13px;
+    right: 30px;
+    transform: none;
+    display: block !important;
+    background: transparent !important;
+    cursor: pointer;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children span.menu-arrow::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    border: solid #fff !important;
+    border-width: 0 3px 3px 0 !important;
+    top: 3px !important;
+    right: 6px !important;
+    width: 11px !important;
+    height: 11px !important;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    background: transparent !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children.focus span.menu-arrow::after {
+    transform: rotate(-135deg);
+    top: 8px;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu {
+    position: relative !important;
+    width: 100% !important;
+    top: 10px !important;
+    left: auto !important;
+    right: auto !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    display: none !important;
+    padding: 0 15px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    border: none !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.focus > .sub-menu {
+    display: block !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li {
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    display: block !important;
+    line-height: 1.6 !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li span {
+    line-height: 1.6 !important;
+    color: #fff !important;
+  }
+  /* Hide author bio section on mobile */
+  .section-footer-author {
+    display: none !important;
+  }
+
+
+  /* Stack 3-column inline-style grids in article body on mobile */
+  .col-8.main-content div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Related articles carousel: show 1 item per view on mobile */
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hide the inline chevron next to item text — the right-side arrow handles expand/collapse */
+  header nav.main-navigation .menu-header-menu-container > ul > li.menu-item-has-children > span::after,
+  header nav.main-navigation .menu-header-menu-container > ul > li.menu-item-has-children > a::after {
+    display: none !important;
+  }
+/* Reset asymmetric right padding from Additional CSS so mobile body text matches left padding */  body.page .main-content,  body.single-post .main-content {    padding-right: 15px !important;  }
+
+  /* Reduce social icons top padding on mobile to match Explore gap */
+  footer .social-icons {
+    padding-top: 16px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    flex: 0 0 50% !important;
+    max-width: none !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    /* 33% (not 33.333%) to match the JS slideWidth integer value;
+       a 1% under-fill on the right is invisible and beats sub-pixel
+       transition drift between -33% translate and 33.333% card width. */
+    flex: 0 0 33% !important;
+    max-width: none !important;
+  }
+}
+body.page-template-content-page-hub_with_buttons h1,
+body.page-template-content-page-custom_archive h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-page-hub_with_buttons h2,
+body.page-template-content-page-custom_archive h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-page-hub_with_buttons h1.page-title {
+  margin-bottom: 40px !important;  /* matches 40px breadcrumbs→H1 gap on this template */
+}
+body.page-template-content-page-custom_archive h1.post-title {
+  margin-bottom: 64px !important;  /* matches 64px breadcrumbs→H1 gap on this template */
+}
+body.page-template-content-page-hub_with_buttons .main-content.content > p {
+  margin-bottom: 40px !important;
+}
+body.page-template-content-page-custom_archive .main-content.content > p {
+  margin-bottom: 64px !important;
+}
+body.page-template-content-page-hub_with_buttons .col-12.main-content.content,
+body.page-template-content-page-custom_archive .col-12.main-content.content {
+  padding-right: 15px !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row,
+body.page-template-content-page-custom_archive .section-hub-boxes .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 33px !important;  /* equal vertical + horizontal */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+  margin-bottom: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes,
+body.page-template-content-page-custom_archive .section-hub-boxes {
+  margin-top: 33px !important;
+}
+body.page-template-content-page-hub_with_buttons .main-content.content .section-cd-gravity-form-widget,
+body.page-template-content-page-custom_archive .main-content.content .section-cd-gravity-form-widget,
+body.page-template-content-page-hub_with_buttons .main-content.content .section-widget-download,
+body.page-template-content-page-custom_archive .main-content.content .section-widget-download {
+  margin-bottom: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::before,
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::after,
+body.page-template-content-page-custom_archive .section-hub-boxes .row::before,
+body.page-template-content-page-custom_archive .section-hub-boxes .row::after {
+  display: none !important;
+}
+@media (min-width: 1038px) {
+  body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+  body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+    flex: 1 1 calc((100% - 66px) / 3) !important;
+    max-width: none !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+  background: #F7F9FC !important;
+  border: 1px solid rgba(0, 40, 86, 0.04) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .hub-box .bg-image,
+body.page-template-content-page-custom_archive .section-hub-boxes .hub-box .bg-image {
+  display: none !important;
+}
+body.page-template-content-page-hub_with_buttons .hub-box-content ul,
+body.page-template-content-page-custom_archive .hub-box-content ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .hub-box-content ul li,
+body.page-template-content-page-hub_with_buttons .hub-box-content ul li a,
+body.page-template-content-page-custom_archive .hub-box-content ul li,
+body.page-template-content-page-custom_archive .hub-box-content ul li a {
+  font-size: 18px !important;
+}
+body.page-template-content-full-width-page h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-full-width-page h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us {
+  background: #F5F8FE !important;
+  border: 1px solid rgba(0, 40, 86, 0.06) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.07) !important;
+  padding: 24px !important;
+  min-height: 0 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us > span.wp-block-cover__background,
+body.page-template-content-full-width-page .wp-block-cover.contact-us > .wp-block-cover__gradient-background {
+  display: none !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us,
+body.page-template-content-full-width-page .wp-block-cover.contact-us p,
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gfield_label {
+  color: rgb(36, 36, 36) !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="text"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="email"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="tel"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us textarea {
+  border-radius: 4px !important;
+  border: 1px solid #B8BED5 !important;
+  background: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  padding: 8px 12px !important;
+  min-height: 0 !important;
+  color: rgb(36, 36, 36) !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input::placeholder,
+body.page-template-content-full-width-page .wp-block-cover.contact-us textarea::placeholder {
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  color: #7a8599 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button {
+  background: #f60 !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 6px 24px !important;
+  border: none !important;
+  cursor: pointer;
+  transition: background 0.2s ease !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"]:hover,
+body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"]:hover,
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button:hover {
+  background: #e55a00 !important;
+}
+@media (max-width: 1037px) {
+  .breadcrumbs {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  .breadcrumbs > span {
+    font-size: 0 !important;
+  }
+  .breadcrumbs > span > span:first-child,
+  .breadcrumbs > span > span:first-child *,
+  .breadcrumbs > span > span.breadcrumb_last,
+  .breadcrumbs > span > span.breadcrumb_last * {
+    font-size: 14px !important;
+  }
+  /* 2-item trail (Home / Current): show a plain separator, no ellipsis */
+  .breadcrumbs > span > span.breadcrumb_last::before {
+    content: " / ";
+    font-size: 14px !important;
+  }
+  /* 3+ items: replace the separator with " / … / " */
+  .breadcrumbs > span > span.breadcrumb_last:not(:nth-child(2))::before {
+    content: " / … / ";
+    font-size: 14px !important;
+  }
+}
+/* ===================================================================
+   Meet the Team template — author card grid
+   Adds the 4-column desktop layout, card styling, and mobile responsive
+   breakpoints. The H1 mobile scale lives in the block below.
+   =================================================================== */
+
+/* Heading scale */
+body.page-template-content-meet-the-team h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-meet-the-team h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-meet-the-team .page-header h1 {
+  margin-bottom: 40px !important;
+}
+
+/* Author cards — 4 per row, equal 33px gap */
+body.page-template-content-meet-the-team .row.members {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 33px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.page-template-content-meet-the-team .row.members .col-4 {
+  flex: 0 0 calc((100% - 99px) / 4) !important;
+  max-width: calc((100% - 99px) / 4) !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+/* Suppress legacy clearfix pseudo-elements that would steal flex space */
+body.page-template-content-meet-the-team .row.members::before,
+body.page-template-content-meet-the-team .row.members::after {
+  display: none !important;
+}
+
+/* Card box */
+body.page-template-content-meet-the-team .row.members .team-member {
+  background: #F7F9FC !important;
+  border: 1px solid rgba(0, 40, 86, 0.04) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
+  padding: 24px !important;
+  transition: box-shadow 0.2s ease !important;
+  flex: 1 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+body.page-template-content-meet-the-team a.team-member-href:hover .team-member {
+  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.14) !important;
+}
+
+/* Equal-height cards via flex chain: col-4 → anchor → team-member */
+body.page-template-content-meet-the-team .row.members a.team-member-href {
+  display: flex !important;
+  flex: 1 !important;
+  width: 100% !important;
+}
+
+/* Kill link underlines across the whole card */
+body.page-template-content-meet-the-team a.team-member-href,
+body.page-template-content-meet-the-team a.team-member-href:hover,
+body.page-template-content-meet-the-team a.team-member-href * {
+  text-decoration: none !important;
+}
+
+/* Headshots — circular */
+body.page-template-content-meet-the-team .team-member-avatar-photo img {
+  border-radius: 9999px !important;
+}
+
+/* Name (H3) */
+body.page-template-content-meet-the-team h3.team-member-name {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+/* Job title */
+body.page-template-content-meet-the-team .team-member-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  color: rgb(36, 36, 36) !important;
+  text-decoration: none !important;
+}
+
+/* Remove the trailing orange arrow — card stays clickable via the anchor */
+body.page-template-content-meet-the-team .team-member > img {
+  display: none !important;
+}
+
+/* Spacing below the cards grid before the CTA section */
+body.page-template-content-meet-the-team .section-meet-the-team {
+  margin-bottom: 40px !important;
+}
+
+/* Mobile responsive grid
+   ≤767px: 2 columns; ≤479px: 1 column so names never break letter-by-letter */
+@media (max-width: 767px) {
+  body.page-template-content-meet-the-team .row.members .col-4 {
+    flex: 0 0 calc((100% - 33px) / 2) !important;
+    max-width: calc((100% - 33px) / 2) !important;
+  }
+}
+@media (max-width: 479px) {
+  body.page-template-content-meet-the-team .row.members .col-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  body.page-template-content-meet-the-team .row.members {
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template h1,
+  body.page-template-content-page-hub_with_buttons h1,
+  body.page-template-content-page-custom_archive h1,
+  body.page-template-content-meet-the-team h1,
+  body.page-template-content-full-width-page h1,
+  body.post-template-default h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.post-template-default h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default h1.post-title {
+  margin-top: 57px !important;
+  margin-bottom: 135px !important;
+}
+body.post-template-default h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default .col-8.main-content,
+body.post-template-default .col-8.main-content p,
+body.post-template-default .col-8.main-content li {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 32px !important;
+  font-weight: 400 !important;
+  color: rgb(36, 36, 36) !important;
+}
+body.post-template-default .section-footer-author {
+  padding-top: 85px !important;
+  padding-bottom: 85px !important;
+}
+body.post-template-default .section-footer-author .footer-author-name {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default .section-footer-author .avatar-image {
+  max-width: 200px !important;
+}
+body.post-template-default .section-footer-author .footer-author-links {
+  text-decoration: none !important;
+}
+body.page-template-about-us .main-content.content {
+  padding-right: 0 !important;
+}
+body.page-template-about-us .main-content.content > .wp-block-group.container:first-child {
+  display: none !important;
+}
+body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+  padding-bottom: 108px !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.page-template-about-us .tilted-content-content {
+  padding-left: 0 !important;
+}
+body.post-template-post-sectors .sector-title {
+  display: none !important;
+}
+body.post-template-post-sectors h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.post-template-post-sectors h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.post-template-post-sectors h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.post-template-post-sectors .col-12.content .wp-block-group.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+}
+body.post-template-post-sectors .col-12.content .wp-block-buttons {
+  margin-top: 64px !important;
+  margin-bottom: 64px !important;
+}
+body.post-template-post-sectors .col-12.content .section-columns-full-width {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+body.post-template-post-sectors .col-12.content .section-columns-full-width h3.section-title {
+  text-align: center !important;
+  margin-bottom: 35px !important;
+}
+body.post-template-post-sectors .two-halfs-with-image.two-halfs-left-image .content__left {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+h1 b, h1 strong,
+h2 b, h2 strong,
+h3 b, h3 strong,
+h4 b, h4 strong,
+h5 b, h5 strong,
+h6 b, h6 strong {
+  font-weight: inherit !important;
+}
+body.page-template-about-us h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-about-us h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-about-us h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.archive h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.archive h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.archive h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.archive .page-title__container {
+  margin-bottom: 40px !important;
+}
+body.archive .articles-list > article {
+  display: flex !important;
+  flex-direction: column !important;
+}
+body.archive .articles-list > article > a {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  height: 100% !important;
+}
+body.archive .articles-list > article > a > .read-more-btn {
+  margin-top: auto !important;
+}
+
+/* DESIGN RESTORE BLOCK END */
+
+/* ==========================================================================
+   H3 site-wide 26px FINAL REAPPLY -- 20260429-123317
+   Re-applied after Piers' 12:27 UTC live edit reverted these. The 30/38
+   take-the-test rule earlier in the file is cascade-overridden by the
+   explicit re-statement below. This block must survive into the git
+   commit so any future restore can reference it.
+   ========================================================================== */
+body.page-template-take-the-test-template h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-content-page-hub_with_buttons h3,
+body.page-template-content-page-custom_archive h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-content-full-width-page h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.post-template-default h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.post-template-post-sectors h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-about-us h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.archive h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
