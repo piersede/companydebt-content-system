@@ -109,12 +109,17 @@ One source of truth per rule. If a future rule overlaps with an existing entry, 
 
 | Rule family | Source |
 |-------------|--------|
-| Non-negotiable H-tag rules (10) | `28-htag-semantic-framework.md` §"Non-negotiable rules" |
+| Non-negotiable H-tag rules (13, including FAQ-final, Methodology-outside-flow, Heading Promotion test) | `28-htag-semantic-framework.md` §"Non-negotiable rules" |
+| Heading Promotion test (4-question per-H3 test — binding) | `28-htag-semantic-framework.md` §"The Heading Promotion test" |
+| H3 Demotion list (21 topics that must not be H3s on broad pages) | `28-htag-semantic-framework.md` §"The H3 Demotion list" |
+| When to use H3s, tables, H4s, or bolded labels (format matrix) | `28-htag-semantic-framework.md` §"When to use H3s, tables, H4s, or bolded labels" |
+| Cross-family Section-Type patterns (A: Risks, B: Options, C: Related Guides, D: What Directors Should Do) | `28-htag-semantic-framework.md` §"Cross-family section-type patterns" |
 | Semantic slot model (variable H3s, fixed H2 architecture) | `28-htag-semantic-framework.md` §"The semantic slot model" |
 | Core Bracket Library (placeholder taxonomy) | `28-htag-semantic-framework.md` §"Core Bracket Library" |
-| 14 page-family templates with H1/H2/H3 structures | `28-htag-semantic-framework.md` §"Template 1–14" |
+| 14 page-family templates with H1/H2/H3 structures + v3.2 H3 promotion controls | `28-htag-semantic-framework.md` §"Template 1–14" |
 | Coverage checklist (which titles fall under which family) | `28-htag-semantic-framework.md` §"Coverage checklist" |
-| Final QA checklist (run on every rewrite) | `28-htag-semantic-framework.md` §"Final QA checklist" |
+| Final QA checklist — 8-question test + semantic-relevance checks | `28-htag-semantic-framework.md` §"Final QA checklist" |
+| Heading cannibalisation diagnostic (3-question per-H3 + 5 demotion patterns) | `28-htag-semantic-framework.md` §"Heading cannibalisation diagnostic" |
 | Pre-publish gate enforcement | `16-pre-publish-gate.md` Check 14 |
 | General H2 semantic-relevance principle (non-insolvency content) | `18-seo-signal-governance.md` §5a |
 

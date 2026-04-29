@@ -30,6 +30,71 @@ The architecture (number and order of H2 sections) is fixed per page family. The
 10. Use British spelling and UK legal/business terminology.
 11. **Heading cannibalisation rule.** Do not promote neighbouring topics into H3s when they have their own dedicated pages or when they pull the article into a different page intent. Supporting concepts should usually be handled as: (a) table rows, (b) checklist items, (c) bolded labels inside a paragraph, (d) short linked summaries, (e) internal-link cards. An H3 must directly support THIS article's title, not a sibling page's title.
 12. **Methodology and Sources sit OUTSIDE the main H-tag flow.** They may exist as a footer module, sidebar, collapsible editorial note, source box, or styled labels (e.g. `<p class="methodology-label"><strong>Methodology and Disclosure</strong></p>` or inside an `<aside>` / `<footer>` / styled `<div>`), but **not as `<h2>` elements in the article body**. Their content (author, reviewer, statutory references, gov.uk links) is required by the pre-publish gate and must be present — only their wrapping element changes.
+13. **Heading Promotion test (per-H3, not per-template).** Templates do not authorise an H3 just because the slot exists. Before creating any H3, run the four-question test below. The test is the binding rule; the templates are a starting structure that the test refines.
+
+---
+
+## The Heading Promotion test
+
+Before creating any H3 in any article, ask:
+
+1. Is this subtopic directly part of the article's primary search intent?
+2. Is this subtopic specific enough to this article that it would not appear unchanged across several other pages?
+3. Would this subtopic likely have its own standalone article elsewhere on the site?
+4. Would promoting this subtopic to H3 make the page compete with another guide?
+
+**Use an H3 only when:** yes to 1, yes to 2, no or acceptable to 3, no to 4.
+
+If the subtopic is relevant but broad, adjacent, or cannibalising, demote it into:
+
+- a table row,
+- a short bullet,
+- a bolded inline label,
+- a checklist item,
+- an internal-link card,
+- or an H4 only if the section needs scanability and a table would be too cramped.
+
+---
+
+## The H3 Demotion list
+
+The following topics each have their own dedicated page on the Company Debt site. Do **NOT** make any of them an H3 on a different article unless the article title is specifically about that topic, the topic is one of the main solutions promised by the title, or the page is explicitly a comparison or decision guide:
+
+- Wrongful Trading
+- Director Disqualification
+- Preferences (Section 239 IA 1986)
+- Transactions at Undervalue (Section 238 IA 1986)
+- Personal Guarantees
+- Personal Liability Notices (PLN)
+- Company Voluntary Arrangement (CVA)
+- Administration
+- Pre-Pack Administration
+- Creditors' Voluntary Liquidation (CVL)
+- Members' Voluntary Liquidation (MVL)
+- Time to Pay (TTP)
+- Winding-Up Petitions
+- Statutory Demands
+- Validation Orders
+- High Court Writs
+- Controlled Goods Agreements
+- HMRC Penalties
+- HMRC Bailiffs
+- Insolvency Act 1986
+- Companies Act 2006
+
+Otherwise, place them in a table, checklist, short linked summary, or internal-link block.
+
+---
+
+## When to use H3s, tables, H4s, or bolded labels
+
+| Format | Use for |
+|---|---|
+| **H3** | Causes specific to the primary keyword; stages in the primary process; direct risks specific to the primary keyword; direct actions specific to the primary keyword; decision branches central to the article; FAQ questions |
+| **Table** | Risk summaries; option comparisons; creditor-type comparisons; procedure comparisons; director-duty summaries; deadlines and response windows; documents needed; pros and cons; "what happens next" sequences where each row is not a full section |
+| **H4** | Long H2 sections that need scanability where the subtopic is important but should not be promoted to H3 AND a table would be too cramped |
+| **Bolded label** | Short explanatory items; examples; warning signs; mistakes; brief legal concepts; mini-definitions inside a section |
+| **Internal-link card** | Related guides; neighbouring procedures; deeper legal topics; separate HMRC / enforcement pages; full guides on specific insolvency risks |
 
 ---
 
@@ -88,9 +153,114 @@ The H3s are now slots. Each slot must be replaced with the most precise heading 
 1. Identify the primary search intent from the article title.
 2. Choose the closest page family from the 14 templates below.
 3. Replace every bracketed slot with title-specific wording.
-4. Remove any section that would pull the article into a different page intent.
-5. Add only related guides that are one click away from the current query, not broad category links.
-6. End with FAQs about the exact primary keyword.
+4. **Run the Heading Promotion test on every H3 the template suggests.** Demote any H3 that fails the test using the §"When to use H3s, tables, H4s, or bolded labels" matrix.
+5. Apply the cross-family section-type patterns below where the section type is one of: Risks, Options, Related Guides, What Directors Should Do.
+6. Remove any section that would pull the article into a different page intent.
+7. Add only related guides that are one click away from the current query, not broad category links.
+8. End with FAQs about the exact primary keyword.
+
+---
+
+## Cross-family section-type patterns
+
+These four patterns override the generic family-template structure for the named section types. They apply to all 14 page families.
+
+### A. Risks section pattern
+
+**Default for broad / overview pages.** Use a single H2 + a risk table. Do **NOT** use H3s for individual risk topics if those risks (wrongful trading, preferences, personal guarantees, PLN, director disqualification, misfeasance, etc.) have their own dedicated pages.
+
+```
+H2: What Risks Should Directors Watch With (Primary Keyword)?
+
+[Table with three columns:]
+| Risk | Why it matters for (Primary Keyword) | What to do |
+|---|---|---|
+| **Wrongful trading** | (one sentence) | (one sentence) |
+| **Preference payments** | (one sentence) | (one sentence) |
+| **Transactions at undervalue** | (one sentence) | (one sentence) |
+| **Personal guarantees** | (one sentence) | (one sentence) |
+| **HMRC personal liability** | (one sentence) | (one sentence) |
+| **Director disqualification** | (one sentence) | (one sentence) |
+```
+
+**Promote a single risk to H3 only if** the entire article is about that risk (e.g. on a dedicated wrongful-trading page, "Wrongful Trading Tests" can be an H3; on a creditor-pressure page, it is a row).
+
+### B. Options section pattern
+
+**Default for broad / overview pages.** Use category-level H3s + a procedure comparison table. Do **NOT** make TTP, CVA, Administration, Pre-Pack, CVL, MVL, or Strike-Off into H3s on a broad page.
+
+```
+H2: What Options Are Available for (Primary Keyword)?
+
+H3: Informal Agreement or Repayment Plan
+H3: Rescue or Restructuring Procedure
+H3: Sale, Closure or Insolvency Procedure
+
+[Table with five columns:]
+| Option | When it fits | What it does | Main director risk | Related guide |
+|---|---|---|---|---|
+| **Time to Pay** | (one phrase) | (one phrase) | (one phrase) | [link] |
+| **Forbearance** | ... | ... | ... | [link] |
+| **CVA** | ... | ... | ... | [link] |
+| **Administration** | ... | ... | ... | [link] |
+| **Pre-Pack Sale** | ... | ... | ... | [link] |
+| **CVL** | ... | ... | ... | [link] |
+| **MVL** | ... | ... | ... | [link] |
+| **Strike off** | ... | ... | ... | [link] |
+```
+
+**Promote a single procedure to H3 only when** the article title is about that procedure or the procedure is one of the article's main search-intent solutions.
+
+### C. Related Guides section pattern
+
+**Default for non-hub articles.** Short link block. No H3 subsections.
+
+```
+H2: Related Guides
+
+[3–6 link cards or bullets, descriptive anchors, each pointing to a directly connected sibling page.]
+```
+
+Do not turn this section into a second hub. Each related guide must be directly connected to the current article and must not introduce a new branch of intent.
+
+**Recommended link counts:**
+- Normal articles: 3–6 links
+- Hub pages: 8–12 links (page family 14 only)
+
+### D. What Directors Should Do section pattern
+
+This is the section that bites worst on cannibalisation when written generically. **The H3s must be article-specific actions**, not generic insolvency advice.
+
+```
+H2: What Directors Should Do About (Primary Keyword)
+  H3: (Immediate Action Specific to Primary Keyword)
+  H3: (Document, Evidence or Test Specific to Primary Keyword)
+  H3: (Risk-Control Action Specific to Primary Keyword)
+  H3: (Relevant Adviser, Regulator or Procedure Specific to Primary Keyword)
+```
+
+**Banned generic H3s** (these appear on too many unrelated pages):
+- Review Cashflow
+- Speak to Creditors
+- Get Advice
+- Check Solvency
+- Consider Insolvency Options
+
+**Banned cannibalising H3s** on broad pages (use the Demotion list):
+- Wrongful Trading (unless that's the article)
+- Preferences (unless that's the article)
+- CVA (unless that's the article)
+- Administration (unless that's the article)
+
+**Example — creditor-pressure page (correct):**
+```
+H3: Build a Creditor Clock List
+H3: Record Board Decisions and Cashflow Assumptions
+H3: Stop Selective or Connected-Party Payments
+H3: Take Advice Before Making Written Offers
+```
+
+These H3s only fit a creditor-pressure article. They would not appear unchanged on a wrongful-trading article or a CVA article. That is the test.
 
 ---
 
@@ -190,6 +360,12 @@ H2: Frequently Asked Questions About (Director Conduct Keyword)
 
 **Notes:** Do not let every director-duties page become a Companies Act overview. Only include statutory sections that match the title.
 
+**Patch v3.2 — H3 promotion controls for director-conduct pages:**
+
+- The conduct topic in the title (e.g. wrongful trading, disqualification, conduct review) may be promoted heavily — H3s for triggers, evidence, defences, court / Insolvency Service interactions tied directly to that conduct topic.
+- **Other director liability or conduct topics** must be table rows in a "Risks" or "Related Conduct" table, not H3s.
+- **"Related Guides"** — short link card block, not H3-led.
+
 ---
 
 ## Template 3: Personal liability and personal exposure
@@ -240,6 +416,13 @@ H2: Frequently Asked Questions About (Personal Liability Keyword)
 ```
 
 **Notes:** Avoid generic "limited liability" sections unless the title specifically requires explaining where limited liability stops.
+
+**Patch v3.2 — H3 promotion controls for personal liability pages:**
+
+- The liability named in the title (e.g. PLN, PG, overdrawn DLA) may be promoted heavily — H3s for triggers, mechanism, defences specific to that liability.
+- **Neighbouring liability types** (e.g. wrongful trading on a PLN page) must be table rows, not H3s.
+- **"What Risks Should Directors Watch With (Liability Keyword)?"** — risk table; H3s only where directly specific to the named liability.
+- **"Options"** — H3s only for direct options (settlement, appeal, defence). Use a table for related insolvency or personal-debt routes (IVA, bankruptcy, DRO).
 
 ---
 
@@ -298,6 +481,14 @@ H2: Frequently Asked Questions About (HMRC Keyword)
 ```
 
 **Notes:** HMRC pages must keep HMRC as the semantic centre. Do not turn them into broad creditor-pressure pages unless HMRC enforcement is the title intent.
+
+**Patch v3.2 — H3 promotion controls for HMRC pages:**
+
+- Use H3s for: the specific HMRC notice / penalty / investigation / enforcement action in the title; the deadlines or response windows tied to that action; the direct taxpayer or director response; the direct challenge / appeal / negotiation route.
+- Use **tables** for: penalties; deadlines; HMRC powers; escalation routes; director risks; payment options; related HMRC notices.
+- The "Risks" section: apply the cross-family **Risks pattern (A)** — single H2 + risk table. Promote a risk to H3 only if the article is about that specific risk.
+- The "Options" section: apply the cross-family **Options pattern (B)** — three category H3s + a comparison table covering Time to Pay, appeal / review, CVA, Administration, liquidation, PLN, and winding-up where they are options for resolving the named HMRC action. Do not give each route its own H3.
+- The "What to Do" section: apply the cross-family **What Directors Should Do pattern (D)** — every H3 must be a specific action tied to the named HMRC action (e.g. "Reply to the s.36 Discovery Assessment Within 30 Days"), not a generic insolvency H3.
 
 ---
 
@@ -448,6 +639,13 @@ H2: Frequently Asked Questions About (Liquidation Keyword)
 
 **Notes:** Cost, timeline and document pages should use those exact concepts heavily. Do not give every liquidation page the same process H3s.
 
+**Patch v3.2 — H3 promotion controls for liquidation / closure pages:**
+
+- Promote procedure-specific steps to H3 only when the article title is about that procedure.
+- The "Costs, Assets and Creditor Outcomes" section: prefer a **table** unless costs / assets / outcomes are central to the article title. Only use H3s where each one is title-specific.
+- The "Risks" section: apply the cross-family **Risks pattern (A)** — risk table. Do not promote wrongful trading, preferences, misfeasance, or director disqualification to H3 unless the article is about that risk.
+- The "Alternatives" section: use broad H3 categories (Rescue / Sale / Closure) plus a comparison table for CVA, Administration, MVL, CVL, Strike-Off. Do not create mini-guides to those routes unless the title is a comparison page.
+
 ---
 
 ## Template 8: Liquidation assets, contracts, property, pensions and trading assets
@@ -546,6 +744,13 @@ H2: Frequently Asked Questions About (Procedure Keyword)
 ```
 
 **Notes:** Comparison pages such as *CVA vs Strike-Off vs Liquidation* should keep comparison wording throughout the headings.
+
+**Patch v3.2 — H3 promotion controls for specific closure-route pages:**
+
+- The procedure named in the title may be promoted heavily — its process steps, requirements, costs, and timescales can each be H3.
+- Other procedures referenced in the article (e.g. CVA on a CVL page) must be table rows in an "Alternatives" comparison table, not H3s.
+- The "Risks" section: apply the cross-family **Risks pattern (A)** — risk table.
+- The "Alternatives" section: apply the cross-family **Options pattern (B)** — three category H3s plus a comparison table.
 
 ---
 
@@ -649,6 +854,15 @@ H2: Frequently Asked Questions About (Recovery Keyword)
 
 **Notes:** This is the page family that needs the most variable H3s. Do not reuse generic cashflow, creditor pressure or solvency H3s unless the title is about those things.
 
+**Patch v3.2 — H3 promotion controls for business rescue / recovery pages:**
+
+These are broad pages. The defaults below override the generic Template 11 H-tag tree where the section type is one of: Risks, Options, Related Guides, What Directors Should Do.
+
+- **"What Risks Should Directors Watch With (Recovery Keyword)?"** — apply cross-family **Risks pattern (A)**. Risk table. Standard director-liability topics are rows, not H3s, unless the article is about them.
+- **"What Options Are Available for (Recovery Keyword)?"** — apply cross-family **Options pattern (B)**. 2–3 category H3s only (Informal Agreement / Rescue or Restructuring / Sale, Closure or Insolvency). TTP, CVA, Administration, Pre-Pack, CVL, MVL, Strike-Off go in the comparison table.
+- **"What Directors Should Do About (Recovery Keyword)"** — apply cross-family **What Directors Should Do pattern (D)**. Every H3 must be specific to the title. No generic "Review Cashflow" / "Speak to Creditors" / "Get Advice" H3s.
+- **"Related Guides"** — short link card block. No H3 subsections.
+
 ---
 
 ## Template 12: Insolvency practitioner, liquidator, regulator, fees and meetings
@@ -745,6 +959,14 @@ H2: Frequently Asked Questions About (Specific Question Keyword)
 ```
 
 **Notes:** For question pages, keep the question language. Do not convert them into broad explainers.
+
+**Patch v3.2 — H3 promotion controls for "Specific Problem / Can-I" pages, including creditor-pressure pages:**
+
+- **Triage section** ("Which X Should You Deal With First?") — use H3s only for pressure / problem categories if the article title is about triage. Otherwise use a priority table.
+- **"What Risks Should Directors Watch With (Question Keyword)?"** — apply cross-family **Risks pattern (A)**. Risk table. Do not use H3s for wrongful trading, preferences, personal guarantees, PLNs, or disqualification unless the article is specifically about that risk.
+- **"What Options Are Left if (Question Keyword) Escalates?"** — apply cross-family **Options pattern (B)**. Use H3s for broad option categories only (Informal / Formal Moratorium or Rescue / Closure). Use a table for TTP, CVA, Administration, CVL, injunctions, validation orders, or other standalone procedures.
+- **"What to Do Before Responding"** — apply cross-family **What Directors Should Do pattern (D)**. Every H3 must be a specific action tied to the question, not a generic insolvency H3.
+- **"Related Guides"** — short link card block.
 
 ---
 
@@ -894,16 +1116,24 @@ Insolvency & Liquidation Hub; HMRC Debt & Enforcement Hub; Glossary of UK Insolv
 
 ## Final QA checklist (run on every rewrite)
 
+The 8-question test below is the binding QA. Every standardised template and every rewrite must pass it.
+
+1. **Are H3s reserved for article-specific subtopics?** (Run the 4-question Heading Promotion test on every H3.)
+2. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list.)
+3. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
+4. **Are Option sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B.)
+5. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
+6. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
+7. **Are FAQs the final H2?** (No editorial H2 may follow.)
+8. **Does the page still satisfy the article title without becoming a hub?** (Hub framing is reserved for Template 14 and titles that explicitly are hubs / decision guides.)
+
+**Plus the original semantic-relevance checks:**
+
 - [ ] Does the H1 match the title-tag intent closely?
 - [ ] Does every H2 contain the primary keyword, a close variant, or a necessary legal/commercial subtopic?
-- [ ] Does every H3 feel specific to this exact article?
 - [ ] Could any H3 be reused unchanged on five unrelated pages? If yes, rewrite it.
 - [ ] Has the article avoided drifting into a broader insolvency guide?
-- [ ] Are related guides directly connected to the title, not just the wider category?
-- [ ] Is the FAQ H2 the **FINAL** H2 in the article? No editorial H2 may follow it.
 - [ ] Does the FAQ heading include the primary keyword?
-- [ ] Are Methodology & Disclosure and Sources & References **outside** the main H-tag flow (styled labels in a footer/aside/div, not `<h2>` elements)?
-- [ ] For each H3 in this article: would the H3's content be better as a table row, bolded label, checklist item, or linked card pointing to the dedicated page that owns the topic? If yes, demote.
 
 ## Heading cannibalisation diagnostic
 
