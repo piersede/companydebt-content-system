@@ -2746,10 +2746,6 @@ section.section-widget-download div.button,
   padding: 0 40px;
   max-width: 100%;
   overflow: visible;
-  /* Fill the parent .articles-row width so single-item carousels don't sit
-     on the left edge with empty space to the right. */
-  width: 100%;
-  flex: 1 1 auto;
 }
 .be-related-articles .carousel-items {
   display: flex !important;
@@ -2758,37 +2754,16 @@ section.section-widget-download div.button,
   max-width: 100% !important;
   width: 100% !important;
 }
-.be-related-articles .carousel-item,
-.be-related-articles .col-3 {
-  /* Fixed-width slots, not flex-grow. flex-shrink:0 prevents the
-     "17 items squash to 5.9% each" failure mode; flex-grow:0 prevents
-     the "1 item stretches to 100%" failure mode. The carousel JS at
-     assets/js/related-articles.js assumes each card is exactly 25% of
-     .carousel-items width, so this rule and the breakpoint rules below
-     must stay aligned with its setSlideWidth() function. */
+.be-related-articles .carousel-item {
   flex: 0 0 25% !important;
-  max-width: none !important;
   min-width: 0 !important;
   box-sizing: border-box;
   padding: 0 8px;
 }
-/* Prev/next arrows: hidden by default; shown only when there are 5+ items
-   (i.e. when the .carousel-items overflow actually needs scrolling). Uses
-   CSS :has() — supported in all modern browsers as of 2024. */
-.be-related-articles .carousel-prev,
-.be-related-articles .carousel-next {
-  display: none;
-}
-.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-prev,
-.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-next {
-  display: block;
-}
-.be-related-articles .carousel-item a,
-.be-related-articles .col-3 a {
+.be-related-articles .carousel-item a {
   text-decoration: none;
 }
-.be-related-articles .carousel-item img,
-.be-related-articles .col-3 img {
+.be-related-articles .carousel-item img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -2796,8 +2771,7 @@ section.section-widget-download div.button,
   display: block;
   margin-bottom: 12px;
 }
-.be-related-articles .carousel-item a:first-of-type,
-.be-related-articles .col-3 a:first-of-type {
+.be-related-articles .carousel-item a:first-of-type {
   font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -2806,42 +2780,22 @@ section.section-widget-download div.button,
   display: block;
   margin-bottom: 6px;
 }
-.be-related-articles .carousel-item a:first-of-type:hover,
-.be-related-articles .col-3 a:first-of-type:hover {
+.be-related-articles .carousel-item a:first-of-type:hover {
   color: #f60;
 }
-/* Card-level typography — explicit !important to beat the broader
-   `.be-related-articles > .container > .row > div` rule at line 2742
-   that otherwise bleeds 22/700/blue through to the carousel-item. */
-.be-related-articles .carousel-item,
-.be-related-articles .col-3,
-.be-related-articles .carousel-item .article-date-author,
-.be-related-articles .col-3 .article-date-author,
 .be-related-articles .carousel-item .author-date,
-.be-related-articles .col-3 .author-date {
-  font-family: Arial, sans-serif !important;
-  font-size: 18px !important;
-  line-height: 24px !important;
-  color: rgb(36, 36, 36) !important;
-  font-weight: 400 !important;
+.be-related-articles .carousel-item > br + text,
+.be-related-articles .carousel-item {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(36, 36, 36);
+  line-height: 18px;
+  font-weight: 400;
 }
-/* Re-assert title link styling (20/24/700 navy) since the above rule
-   would otherwise cascade 18/400/grey to the title too via inheritance */
-.be-related-articles .carousel-item a:first-of-type,
-.be-related-articles .col-3 a:first-of-type,
-.be-related-articles .carousel-item .article-title,
-.be-related-articles .col-3 .article-title {
-  font-size: 20px !important;
-  line-height: 24px !important;
-  font-weight: 700 !important;
-  color: var(--c-blue-dark, #002856) !important;
-}
-.be-related-articles .carousel-item .article-read-more,
-.be-related-articles .col-3 .article-read-more {
+.be-related-articles .carousel-item .article-read-more {
   display: none !important;
 }
-.be-related-articles .carousel-item a:last-of-type,
-.be-related-articles .col-3 a:last-of-type {
+.be-related-articles .carousel-item a:last-of-type {
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -3572,8 +3526,7 @@ body .section-cd-gravity-form-widget .gform_footer input[type="submit"] {
   }
 
   /* Related articles carousel: show 1 item per view on mobile */
-  .be-related-articles .carousel-item,
-  .be-related-articles .col-3 {
+  .be-related-articles .carousel-item {
     flex: 0 0 100% !important;
     max-width: 100% !important;
   }
@@ -3588,28 +3541,6 @@ body .section-cd-gravity-form-widget .gform_footer input[type="submit"] {
   /* Reduce social icons top padding on mobile to match Explore gap */
   footer .social-icons {
     padding-top: 16px !important;
-  }
-}
-
-/* Related-articles carousel: tablet/small-desktop breakpoints.
-   Source-ordered AFTER the @media (max-width: 1037px) 1-up rule above so
-   these win at 768-1023 and 1024-1280. Must stay aligned with the JS
-   setSlideWidth() breakpoints in assets/js/related-articles.js. */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .be-related-articles .carousel-item,
-  .be-related-articles .col-3 {
-    flex: 0 0 50% !important;
-    max-width: none !important;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .be-related-articles .carousel-item,
-  .be-related-articles .col-3 {
-    /* 33% (not 33.333%) to match the JS slideWidth integer value;
-       a 1% under-fill on the right is invisible and beats sub-pixel
-       transition drift between -33% translate and 33.333% card width. */
-    flex: 0 0 33% !important;
-    max-width: none !important;
   }
 }
 
@@ -4920,8 +4851,8 @@ body.page-template-take-the-test-template h2 {
   font-weight: 700 !important;
 }
 body.page-template-take-the-test-template h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
+  font-size: 30px !important;
+  line-height: 38px !important;
   font-weight: 600 !important;
 }
 /* "Written by" section — match H2 scale + 85px vertical breathing room */
@@ -4939,639 +4870,6 @@ body.page-template-take-the-test-template .section-footer-author .avatar-image {
 }
 body.page-template-take-the-test-template .section-footer-author .footer-author-links {
   text-decoration: none !important;
-}
-
-/* ===================================================================
-   Hub templates — shared design system
-   Applies to: content-page-hub_with_buttons AND content-page-custom_archive
-   (both render the acf/hub-box block inside .main-content.content)
-   =================================================================== */
-
-/* Heading scale (mirrors take-the-test) */
-body.page-template-content-page-hub_with_buttons h1,
-body.page-template-content-page-custom_archive h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.page-template-content-page-hub_with_buttons h2,
-body.page-template-content-page-custom_archive h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.page-template-content-page-hub_with_buttons h3,
-body.page-template-content-page-custom_archive h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-/* Symmetric breathing room below H1 — each template keeps its own native top-margin rhythm */
-body.page-template-content-page-hub_with_buttons h1.page-title {
-  margin-bottom: 40px !important;  /* matches 40px breadcrumbs→H1 gap on this template */
-}
-body.page-template-content-page-custom_archive h1.post-title {
-  margin-bottom: 64px !important;  /* matches 64px breadcrumbs→H1 gap on this template */
-}
-/* Intro paragraph above the hub boxes — bottom margin mirrors H1→para gap for symmetric rhythm */
-body.page-template-content-page-hub_with_buttons .main-content.content > p {
-  margin-bottom: 40px !important;
-}
-body.page-template-content-page-custom_archive .main-content.content > p {
-  margin-bottom: 64px !important;
-}
-/* Reset legacy sidebar-reservation padding on .main-content (no sidebar on hub templates) */
-body.page-template-content-page-hub_with_buttons .col-12.main-content.content,
-body.page-template-content-page-custom_archive .col-12.main-content.content {
-  padding-right: 15px !important;
-}
-/* Hub boxes — flex layout applies at all viewports; 3 per row cap on desktop only */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .row,
-body.page-template-content-page-custom_archive .section-hub-boxes .row {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 33px !important;  /* equal vertical + horizontal */
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-/* Kill theme default margin-bottom on col-4 that was stacking 30px on top of the flex gap */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
-body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
-  margin-bottom: 0 !important;
-}
-/* Guarantee 33px minimum gap above the hub boxes — matters on mobile where
-   functions.php injects the `after-breadcrumbs-mobile-sidebar` widget (Gravity callback form)
-   between the intro paragraph and the boxes. On desktop the paragraph's larger margin wins. */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes,
-body.page-template-content-page-custom_archive .section-hub-boxes {
-  margin-top: 33px !important;
-}
-/* Also zero any margin-bottom on the injected mobile sidebar widget so it doesn't add
-   stack on top of the 33px above */
-body.page-template-content-page-hub_with_buttons .main-content.content .section-cd-gravity-form-widget,
-body.page-template-content-page-custom_archive .main-content.content .section-cd-gravity-form-widget,
-body.page-template-content-page-hub_with_buttons .main-content.content .section-widget-download,
-body.page-template-content-page-custom_archive .main-content.content .section-widget-download {
-  margin-bottom: 0 !important;
-}
-/* Suppress the legacy clearfix pseudo-elements that steal flex space */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::before,
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::after,
-body.page-template-content-page-custom_archive .section-hub-boxes .row::before,
-body.page-template-content-page-custom_archive .section-hub-boxes .row::after {
-  display: none !important;
-}
-/* Desktop — cap at 3 per row with flexible basis */
-@media (min-width: 1038px) {
-  body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
-  body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
-    flex: 1 1 calc((100% - 66px) / 3) !important;
-    max-width: none !important;
-    width: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-/* Box styling — adopt sidebar widget design system (bg, radius, border, shadow) */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
-body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
-  background: #F7F9FC !important;
-  border: 1px solid rgba(0, 40, 86, 0.04) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
-}
-/* Hide the ACF icon/image at the top of each hub box (icon field may be populated on some
-   pages e.g. sample-letters) — the redesigned hub card is icon-free by convention. ACF data
-   is preserved; only the visual output is suppressed. */
-body.page-template-content-page-hub_with_buttons .section-hub-boxes .hub-box .bg-image,
-body.page-template-content-page-custom_archive .section-hub-boxes .hub-box .bg-image {
-  display: none !important;
-}
-/* List items — no bullets, 18px */
-body.page-template-content-page-hub_with_buttons .hub-box-content ul,
-body.page-template-content-page-custom_archive .hub-box-content ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-body.page-template-content-page-hub_with_buttons .hub-box-content ul li,
-body.page-template-content-page-hub_with_buttons .hub-box-content ul li a,
-body.page-template-content-page-custom_archive .hub-box-content ul li,
-body.page-template-content-page-custom_archive .hub-box-content ul li a {
-  font-size: 18px !important;
-}
-
-/* ===================================================================
-   Meet the Team template — heading scale + author cards
-   =================================================================== */
-
-/* Heading scale (mirrors take-the-test, except the H3 team-member names which
-   get a dedicated 24px rule further down) */
-body.page-template-content-meet-the-team h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.page-template-content-meet-the-team h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-/* H1 breathing room: 40px below matches the 40px breadcrumbs→H1 gap */
-body.page-template-content-meet-the-team .page-header h1 {
-  margin-bottom: 40px !important;
-}
-
-/* Author cards — 4 per row, equal 33px gap (horizontal + vertical) */
-body.page-template-content-meet-the-team .row.members {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 33px !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-body.page-template-content-meet-the-team .row.members .col-4 {
-  flex: 0 0 calc((100% - 99px) / 4) !important;   /* 100% minus 3 gaps, divided by 4 */
-  max-width: calc((100% - 99px) / 4) !important;
-  padding: 0 !important;
-  margin-bottom: 0 !important;
-}
-/* Suppress legacy clearfix pseudo-elements that would steal flex space */
-body.page-template-content-meet-the-team .row.members::before,
-body.page-template-content-meet-the-team .row.members::after {
-  display: none !important;
-}
-
-/* Card box — sidebar widget design system (bg, radius, border, shadow) */
-body.page-template-content-meet-the-team .row.members .team-member {
-  background: #F7F9FC !important;
-  border: 1px solid rgba(0, 40, 86, 0.04) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
-  padding: 24px !important;
-  transition: box-shadow 0.2s ease !important;
-}
-/* Hover — slightly darker/deeper shadow */
-body.page-template-content-meet-the-team a.team-member-href:hover .team-member {
-  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.14) !important;
-}
-/* Equal-height cards: chain flex from col-4 → anchor → team-member so every box
-   stretches to match the tallest sibling (job titles wrapping to 2 lines, etc.) */
-body.page-template-content-meet-the-team .row.members .col-4 {
-  display: flex !important;
-  flex-direction: column !important;
-}
-body.page-template-content-meet-the-team .row.members a.team-member-href {
-  display: flex !important;
-  flex: 1 !important;
-  width: 100% !important;
-}
-body.page-template-content-meet-the-team .row.members .team-member {
-  flex: 1 !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Keep the whole card clickable (anchor wraps .team-member) + kill any link underlines */
-body.page-template-content-meet-the-team a.team-member-href,
-body.page-template-content-meet-the-team a.team-member-href:hover,
-body.page-template-content-meet-the-team a.team-member-href * {
-  text-decoration: none !important;
-}
-
-/* Headshots — circular */
-body.page-template-content-meet-the-team .team-member-avatar-photo img {
-  border-radius: 9999px !important;
-}
-
-/* Name (H3) — 24px, not underlined, dark-blue inherits */
-body.page-template-content-meet-the-team h3.team-member-name {
-  font-size: 24px !important;
-  line-height: 32px !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-}
-
-/* Job title — Arial 18/24 weight 400, dark grey, not underlined */
-body.page-template-content-meet-the-team .team-member-position {
-  font-family: Arial, sans-serif !important;
-  font-size: 18px !important;
-  line-height: 24px !important;
-  font-weight: 400 !important;
-  color: rgb(36, 36, 36) !important;
-  text-decoration: none !important;
-}
-
-/* Remove the trailing orange arrow image — the whole card remains clickable via the anchor */
-body.page-template-content-meet-the-team .team-member > img {
-  display: none !important;
-}
-
-/* Visual separation between the cards grid and the full-width CTA section below —
-   40px matches the breadcrumbs→H1 gap */
-body.page-template-content-meet-the-team .section-meet-the-team {
-  margin-bottom: 40px !important;
-}
-
-/* ===================================================================
-   Content Full-Width Page template (used by /contact-us/)
-   — heading scale + contact form styled as sidebar widget
-   =================================================================== */
-
-/* Heading scale (mirrors take-the-test) */
-body.page-template-content-full-width-page h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.page-template-content-full-width-page h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.page-template-content-full-width-page h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-
-/* Contact form container — mirror the sidebar Gravity Form widget box */
-body.page-template-content-full-width-page .wp-block-cover.contact-us {
-  background: #F5F8FE !important;
-  border: 1px solid rgba(0, 40, 86, 0.06) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.07) !important;
-  padding: 24px !important;
-  min-height: 0 !important;
-}
-/* Kill the Gutenberg cover overlay span that was providing the dark dim background */
-body.page-template-content-full-width-page .wp-block-cover.contact-us > span.wp-block-cover__background,
-body.page-template-content-full-width-page .wp-block-cover.contact-us > .wp-block-cover__gradient-background {
-  display: none !important;
-}
-/* Restore readable text colour inside the cover (it was set up as .is-light/white-text) */
-body.page-template-content-full-width-page .wp-block-cover.contact-us,
-body.page-template-content-full-width-page .wp-block-cover.contact-us p,
-body.page-template-content-full-width-page .wp-block-cover.contact-us .gfield_label {
-  color: rgb(36, 36, 36) !important;
-}
-
-/* Form fields — match the sidebar widget's input styling */
-body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="text"],
-body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="email"],
-body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="tel"],
-body.page-template-content-full-width-page .wp-block-cover.contact-us textarea {
-  border-radius: 4px !important;
-  border: 1px solid #B8BED5 !important;
-  background: #fff !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 15px !important;
-  padding: 8px 12px !important;
-  min-height: 0 !important;
-  color: rgb(36, 36, 36) !important;
-}
-body.page-template-content-full-width-page .wp-block-cover.contact-us input::placeholder,
-body.page-template-content-full-width-page .wp-block-cover.contact-us textarea::placeholder {
-  font-family: Arial, sans-serif !important;
-  font-size: 15px !important;
-  color: #7a8599 !important;
-}
-/* Submit button — orange to match sidebar widget */
-body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"],
-body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"],
-body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button {
-  background: #f60 !important;
-  color: #fff !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  border-radius: 4px !important;
-  height: 46px !important;
-  min-height: 46px !important;
-  padding: 6px 24px !important;
-  border: none !important;
-  cursor: pointer;
-  transition: background 0.2s ease !important;
-}
-body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"]:hover,
-body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"]:hover,
-body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button:hover {
-  background: #e55a00 !important;
-}
-
-/* ===================================================================
-   Mobile breadcrumb truncation (site-wide)
-   Goal: on ≤1037px, show only "Home / Current page" or "Home / … / Current
-   page" with ellipsis overflow. Desktop completely untouched.
-   Technique: collapse wrapper font-size to 0 so both intermediate spans AND
-   the plain-text " / " separator nodes disappear; restore font-size only on
-   first and last spans; inject the ellipsis via ::before on .breadcrumb_last.
-   :not(:nth-child(2)) keeps the ellipsis out when there are no intermediate
-   items (2-item trail).
-   =================================================================== */
-@media (max-width: 1037px) {
-  .breadcrumbs {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-  }
-  .breadcrumbs > span {
-    font-size: 0 !important;
-  }
-  .breadcrumbs > span > span:first-child,
-  .breadcrumbs > span > span:first-child *,
-  .breadcrumbs > span > span.breadcrumb_last,
-  .breadcrumbs > span > span.breadcrumb_last * {
-    font-size: 14px !important;
-  }
-  /* 2-item trail (Home / Current): show a plain separator, no ellipsis */
-  .breadcrumbs > span > span.breadcrumb_last::before {
-    content: " / ";
-    font-size: 14px !important;
-  }
-  /* 3+ items: replace the separator with " / … / " */
-  .breadcrumbs > span > span.breadcrumb_last:not(:nth-child(2))::before {
-    content: " / … / ";
-    font-size: 14px !important;
-  }
-}
-
-/* ===================================================================
-   Mobile H1 scale for selected templates (≤1037px)
-   Overrides the desktop 48/56 scale on these 5 templates only; desktop unchanged.
-   Colour + font-weight intentionally left untouched.
-   =================================================================== */
-@media (max-width: 1037px) {
-  body.page-template-take-the-test-template h1,
-  body.page-template-content-page-hub_with_buttons h1,
-  body.page-template-content-page-custom_archive h1,
-  body.page-template-content-meet-the-team h1,
-  body.page-template-content-full-width-page h1,
-  body.post-template-default h1 {
-    font-size: 36px !important;
-    line-height: 41px !important;
-  }
-}
-
-/* ===================================================================
-   Post Default template (single.php → template-parts/content.php — used by
-   all standard posts, e.g. /articles/.../). Mirrors take-the-test styling.
-   =================================================================== */
-
-/* Heading scale — same as take-the-test */
-body.post-template-default h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.post-template-default h1.post-title {
-  margin-top: 57px !important;
-  margin-bottom: 135px !important;
-}
-body.post-template-default h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.post-template-default h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-
-/* Body content — Arial 18/32/400 dark grey for paragraphs in the main column */
-body.post-template-default .col-8.main-content,
-body.post-template-default .col-8.main-content p,
-body.post-template-default .col-8.main-content li {
-  font-family: Arial, sans-serif !important;
-  font-size: 18px !important;
-  line-height: 32px !important;
-  font-weight: 400 !important;
-  color: rgb(36, 36, 36) !important;
-}
-
-/* "Written by" footer-author section — match take-the-test: 85px vertical
-   breathing room, 36/44/700 author name, 200px avatar, no link underline */
-body.post-template-default .section-footer-author {
-  padding-top: 85px !important;
-  padding-bottom: 85px !important;
-}
-body.post-template-default .section-footer-author .footer-author-name {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.post-template-default .section-footer-author .avatar-image {
-  max-width: 200px !important;
-}
-body.post-template-default .section-footer-author .footer-author-links {
-  text-decoration: none !important;
-}
-
-/* ===================================================================
-   About Us template (templates/about-us.php)
-   — fix horizontal alignment of in-content `.container` blocks +
-     take-the-test heading scale (incl. mobile H1)
-   =================================================================== */
-
-/* Reset legacy sidebar-reservation right-padding on .main-content so any
-   inner `.container` block centres on the full viewport width — aligning with
-   breadcrumbs + topnav logo. */
-body.page-template-about-us .main-content.content {
-  padding-right: 0 !important;
-}
-
-/* Hide the orange WHO ARE WE block at the top of page content */
-body.page-template-about-us .main-content.content > .wp-block-group.container:first-child {
-  display: none !important;
-}
-
-/* Promote the first tilted-content section's heading to act as the page H1
-   (visual only — underlying element is still a div from the block template).
-   padding-bottom: 108px gives a symmetric visual gap below the heading text
-   that matches the 108px breadcrumbs→heading gap above. */
-body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-  padding-bottom: 108px !important;
-}
-@media (max-width: 1037px) {
-  body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
-    font-size: 36px !important;
-    line-height: 41px !important;
-  }
-}
-
-/* Fix 100px text indent inside tilted-content-content — paragraphs were
-   sitting at left=437.5 instead of 337.5 (topnav-logo edge) */
-body.page-template-about-us .tilted-content-content {
-  padding-left: 0 !important;
-}
-
-/* ===================================================================
-   Sector Post template (templates/post-sectors.php)
-   =================================================================== */
-
-/* Hide the eyebrow .sector-title (e.g. "Cleaning") that sits between
-   breadcrumbs and H1 — template-wide for all posts using this template */
-body.post-template-post-sectors .sector-title {
-  display: none !important;
-}
-
-/* Heading scale (mirrors take-the-test) */
-body.post-template-post-sectors h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.post-template-post-sectors h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.post-template-post-sectors h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-/* Mobile H1 override — matches other templates' mobile H1 rule */
-@media (max-width: 1037px) {
-  body.post-template-post-sectors h1 {
-    font-size: 36px !important;
-    line-height: 41px !important;
-  }
-}
-
-/* Body content alignment fix: the page content starts with a
-   <div class="wp-block-group container"> which adds its own 15px
-   padding on top of the parent .col-12's 15px padding. That double
-   padding pushed body paragraphs 15px further right than the H1.
-   Zero the inner container's horizontal padding so body aligns with H1. */
-body.post-template-post-sectors .col-12.content .wp-block-group.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: none !important;
-}
-
-/* Button (Contact Us etc.) — vertical breathing room matches the 64px
-   breadcrumbs→H1 gap, so the button sits with symmetric rhythm */
-body.post-template-post-sectors .col-12.content .wp-block-buttons {
-  margin-top: 64px !important;
-  margin-bottom: 64px !important;
-}
-
-/* Pressure-points section (.section-columns-full-width inside the_content):
-   - Extend the light-blue background to full viewport width via a "break-out"
-     pattern (negative margins) while leaving the inner .container flow intact
-   - Centre the section title
-   - Add symmetric breathing room below the title to match the 35px section
-     padding-top above it */
-body.post-template-post-sectors .col-12.content .section-columns-full-width {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-}
-body.post-template-post-sectors .col-12.content .section-columns-full-width h3.section-title {
-  text-align: center !important;
-  margin-bottom: 35px !important;
-}
-
-/* Belt-and-braces: ensure the left-image half sits flush with the page edge */
-body.post-template-post-sectors .two-halfs-with-image.two-halfs-left-image .content__left {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-/* Stop inline <b>/<strong> inside headings from rendering at a bumped-up
-   weight. Browser UA stylesheets default <b>/<strong> to `font-weight: bolder`,
-   which resolves to the NEXT step up from the parent — so H2 at 700 + <strong>
-   at `bolder` computes to 900. Same happens inside H1/H3/H4/H5/H6 and causes
-   mixed weights in the same heading (e.g. "Related <strong>Content</strong>"
-   renders with "Content" heavier than "Related"). Applied site-wide. */
-h1 b, h1 strong,
-h2 b, h2 strong,
-h3 b, h3 strong,
-h4 b, h4 strong,
-h5 b, h5 strong,
-h6 b, h6 strong {
-  font-weight: inherit !important;
-}
-
-/* Heading scale (mirrors take-the-test) */
-body.page-template-about-us h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.page-template-about-us h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.page-template-about-us h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-/* Mobile H1 override — matches the other templates' mobile H1 rule */
-@media (max-width: 1037px) {
-  body.page-template-about-us h1 {
-    font-size: 36px !important;
-    line-height: 41px !important;
-  }
-}
-
-/* ===================================================================
-   Archive template (archive.php — /articles/, category & tag archives)
-   — heading scale (incl. mobile H1) + 40px H1→cards gap + equal-height cards
-   =================================================================== */
-
-/* Heading scale (mirrors take-the-test) */
-body.archive h1 {
-  font-size: 48px !important;
-  line-height: 56px !important;
-  font-weight: 700 !important;
-}
-body.archive h2 {
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-}
-body.archive h3 {
-  font-size: 26px !important;
-  line-height: 33px !important;
-  font-weight: 600 !important;
-}
-/* Mobile H1 override — matches the per-template mobile rule above */
-@media (max-width: 1037px) {
-  body.archive h1 {
-    font-size: 36px !important;
-    line-height: 41px !important;
-  }
-}
-
-/* Space below H1: 40px to match the breadcrumbs→H1 gap */
-body.archive .page-title__container {
-  margin-bottom: 40px !important;
-}
-
-/* Equal-height article cards: chain flex from article → anchor so read-more
-   pins to the bottom of every card and aligns across the row */
-body.archive .articles-list > article {
-  display: flex !important;
-  flex-direction: column !important;
-}
-body.archive .articles-list > article > a {
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 !important;
-  height: 100% !important;
-}
-body.archive .articles-list > article > a > .read-more-btn {
-  margin-top: auto !important;
 }
 
 /* ==========================================================================
@@ -5612,4 +4910,1315 @@ body.cky-consent-bar-active,
 body[class*="cky-"] {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   Editorial Component Palette
+   Reusable cd-* classes for callout boxes and structural readability patterns.
+   All colour values use existing :root variables except where noted (*).
+   Governed by editorial-os/28-readability-components.md
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base callout block — shared structure for all 8 editorial callout types
+   -------------------------------------------------------------------------- */
+.cd-callout {
+  border-left: 4px solid var(--c-border);
+  background-color: var(--c-bcg-third);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+.cd-callout__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-border);
+  margin: 0 0 0.35rem;
+}
+.cd-callout__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+.cd-callout p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+.cd-callout p + p {
+  margin-top: 0.65rem;
+}
+
+/* 8 modifier variants */
+.cd-callout--companydbt-view {
+  border-left-color: var(--c-blue-dark);
+  background-color: var(--c-blue-light);
+}
+.cd-callout--key-takeaway {
+  border-left-color: var(--c-blue-dark);
+  background-color: var(--c-blue-light);
+}
+.cd-callout--companydbt-view .cd-callout__label {
+  color: var(--c-blue-dark);
+}
+
+.cd-callout--directors-miss {
+  border-left-color: var(--c-orange);
+  background-color: #fff8f3;
+}
+.cd-callout--directors-miss .cd-callout__label {
+  color: var(--c-orange);
+}
+
+.cd-callout--risk-warning {
+  border-left-color: #c0392b; /* no --c-red variable exists */
+  background-color: #fdf3f2;
+}
+.cd-callout--risk-warning .cd-callout__label {
+  color: #c0392b;
+}
+
+.cd-callout--cost-reality {
+  border-left-color: var(--c-blue-medium);
+  background-color: var(--c-bcg-third);
+}
+.cd-callout--cost-reality .cd-callout__label {
+  color: var(--c-blue-medium);
+}
+
+.cd-callout--legal-exposure {
+  border-left-color: #8b0000; /* no --c-red-dark variable exists */
+  background-color: #fdf0f0;
+}
+.cd-callout--legal-exposure .cd-callout__label {
+  color: #8b0000;
+}
+
+.cd-callout--recovery-path {
+  border-left-color: #2e7d32; /* no --c-green variable exists */
+  background-color: #f3fdf4;
+}
+.cd-callout--recovery-path .cd-callout__label {
+  color: #2e7d32;
+}
+
+.cd-callout--creditor-perspective {
+  border-left-color: var(--c-border);
+  background-color: var(--c-bcg-third);
+}
+
+.cd-callout--timeline-reality {
+  border-left-color: var(--c-orange);
+  background-color: #fff8f2;
+}
+.cd-callout--timeline-reality .cd-callout__label {
+  color: var(--c-orange);
+}
+
+/* --------------------------------------------------------------------------
+   Key Takeaway — lightweight summary block after major sections
+   -------------------------------------------------------------------------- */
+.cd-key-takeaway {
+  background-color: var(--c-blue-light);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  margin: 2.5rem 0;
+}
+.cd-key-takeaway__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-key-takeaway p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+.cd-key-takeaway p + p {
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Process Steps — numbered sequence for "what happens next" sections
+   -------------------------------------------------------------------------- */
+.cd-process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.cd-process-steps__item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.cd-process-steps__item:last-child {
+  border-bottom: none;
+}
+.cd-process-steps__number {
+  min-width: 2rem;
+  height: 2rem;
+  background: var(--c-blue-dark);
+  color: var(--c-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-bold);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  font-family: var(--ff-main);
+}
+.cd-process-steps__content {
+  flex: 1;
+}
+.cd-process-steps__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-p);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.3rem;
+}
+.cd-process-steps__body {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Inline CTA — high-intent call to action within main content
+   -------------------------------------------------------------------------- */
+.cd-inline-cta {
+  background: var(--c-blue-dark);
+  color: var(--c-white);
+  padding: 1.5rem 1.75rem;
+  border-radius: 3px;
+  margin: 3rem 0;
+}
+.cd-inline-cta__headline {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-white);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+.cd-inline-cta__body {
+  font-size: var(--fs-p);
+  color: var(--c-white);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+.cd-inline-cta__button {
+  display: inline-block;
+  background: var(--c-button-primary-bcg);
+  color: var(--c-button-primary-text);
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-p);
+  text-decoration: none;
+  font-family: var(--ff-main);
+}
+.cd-inline-cta__button:hover {
+  background: var(--c-button-primary-hover);
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Do / Don't panel — practical advice comparison
+   -------------------------------------------------------------------------- */
+.cd-do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.cd-do-dont__do,
+.cd-do-dont__dont {
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+}
+.cd-do-dont__do {
+  border-top: 3px solid #2e7d32;
+  background: #f3fdf4;
+}
+.cd-do-dont__dont {
+  border-top: 3px solid #c0392b;
+  background: #fdf3f2;
+}
+.cd-do-dont__label {
+  font-weight: var(--fw-bold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+  font-family: var(--ff-main);
+}
+.cd-do-dont__do .cd-do-dont__label {
+  color: #2e7d32;
+}
+.cd-do-dont__dont .cd-do-dont__label {
+  color: #c0392b;
+}
+.cd-do-dont ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cd-do-dont li {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.55;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.cd-do-dont li:last-child {
+  border-bottom: none;
+}
+.wp-block-group.cd-do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* --------------------------------------------------------------------------
+   Card Grid — grouped themes, causes, risks, pressure points
+   -------------------------------------------------------------------------- */
+.cd-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.cd-card-grid__card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem;
+}
+.cd-card-grid__icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+.cd-card-grid__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-card-grid__body {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Orientation Block — "Who this is for / When to act" near page top
+   -------------------------------------------------------------------------- */
+.cd-orientation-block {
+  background: var(--c-bcg-third);
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+.cd-orientation-block__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.6rem;
+}
+.cd-orientation-block ul {
+  margin: 0.4rem 0 0.75rem;
+  padding-left: 1.25rem;
+}
+.cd-orientation-block li {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  padding: 0.2rem 0;
+}
+.cd-orientation-block p {
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   On This Page — anchor nav; sticky variant for desktop
+   -------------------------------------------------------------------------- */
+.cd-on-this-page {
+  background: var(--c-bcg-third);
+  border-left: 3px solid var(--c-blue-dark);
+  border-radius: 0 2px 2px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.cd-on-this-page__label {
+  font-family: var(--ff-main);
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-blue-dark);
+  margin: 0 0 0.5rem;
+}
+.cd-on-this-page nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cd-on-this-page nav li {
+  padding: 0;
+}
+.cd-on-this-page nav a {
+  color: var(--c-link);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-decoration: none;
+}
+.cd-on-this-page nav a:hover {
+  text-decoration: underline;
+}
+.cd-on-this-page--sticky {
+  position: sticky;
+  top: 1rem;
+}
+@media (max-width: 768px) {
+  .cd-on-this-page--sticky {
+    position: static;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Question Section — heading treatment for question-led sub-sections
+   -------------------------------------------------------------------------- */
+.cd-question-section {
+  color: var(--c-blue-dark);
+  font-size: var(--fs-h3);
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Decision List — styled bullet list for decision points
+   -------------------------------------------------------------------------- */
+.cd-decision-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.cd-decision-list li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 0.55rem;
+  font-size: var(--fs-p);
+  color: var(--c-font-dark);
+  line-height: 1.6;
+}
+.cd-decision-list li::before {
+  content: "\2022";
+  color: var(--c-orange);
+  font-weight: var(--fw-bold);
+  position: absolute;
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ Accordion wrapper — wraps existing ub/content-toggle-block
+   -------------------------------------------------------------------------- */
+.cd-faq-accordion {
+  margin: 2rem 0;
+  border-top: 2px solid var(--c-border);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile overrides
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .cd-callout {
+    border-left-width: 3px;
+    padding: 1rem 1.1rem;
+  }
+  .cd-do-dont {
+    grid-template-columns: 1fr;
+  }
+  .cd-inline-cta {
+    padding: 1.25rem 1.25rem;
+  }
+  .cd-inline-cta__button {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   DESIGN RESTORE BLOCK START -- appended 20260429-121128
+   Restores rule blocks lost in the 28-Apr 16:00 SFTP overwrite.
+   Pure append. To remove: delete from this comment to the matching
+   'DESIGN RESTORE BLOCK END' marker below.
+   ========================================================================== */
+
+/* ==========================================================================
+   APPEND-ONLY RESTORE PATCH — generated 2026-04-29 11:17
+   Restores rule blocks present in known-good (146,526-byte version, 15:05
+   upload before the 16:00 callout-edit incident) but missing from current
+   live. Pure addition: zero existing live lines modified.
+   ========================================================================== */
+
+.be-related-articles .carousel-item,
+.be-related-articles .col-3 {
+  /* Fixed-width slots, not flex-grow. flex-shrink:0 prevents the
+     "17 items squash to 5.9% each" failure mode; flex-grow:0 prevents
+     the "1 item stretches to 100%" failure mode. The carousel JS at
+     assets/js/related-articles.js assumes each card is exactly 25% of
+     .carousel-items width, so this rule and the breakpoint rules below
+     must stay aligned with its setSlideWidth() function. */
+  flex: 0 0 25% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-prev,
+.be-related-articles:has(.carousel-item:nth-of-type(5)) .carousel-next {
+  display: block;
+}
+.be-related-articles .carousel-item a,
+.be-related-articles .col-3 a {
+  text-decoration: none;
+}
+.be-related-articles .carousel-item img,
+.be-related-articles .col-3 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+.be-related-articles .carousel-item a:first-of-type,
+.be-related-articles .col-3 a:first-of-type {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--c-blue-dark, #002856);
+  display: block;
+  margin-bottom: 6px;
+}
+.be-related-articles .carousel-item a:first-of-type:hover,
+.be-related-articles .col-3 a:first-of-type:hover {
+  color: #f60;
+}
+.be-related-articles .carousel-item,
+.be-related-articles .col-3,
+.be-related-articles .carousel-item .article-date-author,
+.be-related-articles .col-3 .article-date-author,
+.be-related-articles .carousel-item .author-date,
+.be-related-articles .col-3 .author-date {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  color: rgb(36, 36, 36) !important;
+  font-weight: 400 !important;
+}
+.be-related-articles .carousel-item a:first-of-type,
+.be-related-articles .col-3 a:first-of-type,
+.be-related-articles .carousel-item .article-title,
+.be-related-articles .col-3 .article-title {
+  font-size: 20px !important;
+  line-height: 24px !important;
+  font-weight: 700 !important;
+  color: var(--c-blue-dark, #002856) !important;
+}
+.be-related-articles .carousel-item .article-read-more,
+.be-related-articles .col-3 .article-read-more {
+  display: none !important;
+}
+.be-related-articles .carousel-item a:last-of-type,
+.be-related-articles .col-3 a:last-of-type {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(36, 36, 36);
+  display: inline-block;
+  margin-top: 4px;
+}
+@media (max-width: 1037px) {
+  /* Header row: ensure vertical centering */
+  header .row {
+    align-items: center;
+  }
+
+  /* Hamburger button: visible with white bars */
+  header .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 8px;
+    order: 10;
+  }
+  header .menu-toggle .line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+
+  /* Kill mobile-cta bar and desktop phone pill */
+  header .header-right .header-cta,
+  nav.main-navigation a.mobile-cta {
+    display: none !important;
+  }
+
+  /* Header-right: pushed to the right, contains search icon next to hamburger */
+  header .header-right {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-left: auto;
+  }
+  header .header-right .header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Header acts as positioning anchor for dropdown panel */
+  header#masthead {
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* Mobile menu — matches companydebt.com live design */
+  body.menu-toggled {
+    overflow: hidden;
+  }
+  header nav.main-navigation {
+    position: static;
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: visible;
+    flex: 0 0 0 !important;
+    display: none !important;
+  }
+  header nav.main-navigation.toggled {
+    display: block !important;
+    background: #002856 !important;
+    position: absolute !important;
+    top: 92px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 92px) !important;
+    overflow: auto !important;
+    z-index: 1000;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-direction: column;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul > li {
+    width: 100% !important;
+    padding: 10px 30px !important;
+    height: auto !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: transparent !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul li span {
+    cursor: pointer;
+    color: #fff !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    position: relative;
+    font-family: Arial, sans-serif !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    font-weight: 700 !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li span {
+    font-size: 15px !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children {
+    position: relative;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container > ul > li.menu-item-has-children {
+    padding-right: 40px !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children span.menu-arrow {
+    position: absolute !important;
+    width: 24px;
+    height: 24px;
+    top: 13px;
+    right: 30px;
+    transform: none;
+    display: block !important;
+    background: transparent !important;
+    cursor: pointer;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children span.menu-arrow::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    border: solid #fff !important;
+    border-width: 0 3px 3px 0 !important;
+    top: 3px !important;
+    right: 6px !important;
+    width: 11px !important;
+    height: 11px !important;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    background: transparent !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.menu-item-has-children.focus span.menu-arrow::after {
+    transform: rotate(-135deg);
+    top: 8px;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu {
+    position: relative !important;
+    width: 100% !important;
+    top: 10px !important;
+    left: auto !important;
+    right: auto !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    display: none !important;
+    padding: 0 15px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    border: none !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul li.focus > .sub-menu {
+    display: block !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li {
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    display: block !important;
+    line-height: 1.6 !important;
+  }
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li a,
+  header nav.main-navigation.toggled .menu-header-menu-container ul.sub-menu li span {
+    line-height: 1.6 !important;
+    color: #fff !important;
+  }
+  /* Hide author bio section on mobile */
+  .section-footer-author {
+    display: none !important;
+  }
+
+
+  /* Stack 3-column inline-style grids in article body on mobile */
+  .col-8.main-content div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Related articles carousel: show 1 item per view on mobile */
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hide the inline chevron next to item text — the right-side arrow handles expand/collapse */
+  header nav.main-navigation .menu-header-menu-container > ul > li.menu-item-has-children > span::after,
+  header nav.main-navigation .menu-header-menu-container > ul > li.menu-item-has-children > a::after {
+    display: none !important;
+  }
+/* Reset asymmetric right padding from Additional CSS so mobile body text matches left padding */  body.page .main-content,  body.single-post .main-content {    padding-right: 15px !important;  }
+
+  /* Reduce social icons top padding on mobile to match Explore gap */
+  footer .social-icons {
+    padding-top: 16px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    flex: 0 0 50% !important;
+    max-width: none !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .be-related-articles .carousel-item,
+  .be-related-articles .col-3 {
+    /* 33% (not 33.333%) to match the JS slideWidth integer value;
+       a 1% under-fill on the right is invisible and beats sub-pixel
+       transition drift between -33% translate and 33.333% card width. */
+    flex: 0 0 33% !important;
+    max-width: none !important;
+  }
+}
+body.page-template-content-page-hub_with_buttons h1,
+body.page-template-content-page-custom_archive h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-page-hub_with_buttons h2,
+body.page-template-content-page-custom_archive h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-page-hub_with_buttons h1.page-title {
+  margin-bottom: 40px !important;  /* matches 40px breadcrumbs→H1 gap on this template */
+}
+body.page-template-content-page-custom_archive h1.post-title {
+  margin-bottom: 64px !important;  /* matches 64px breadcrumbs→H1 gap on this template */
+}
+body.page-template-content-page-hub_with_buttons .main-content.content > p {
+  margin-bottom: 40px !important;
+}
+body.page-template-content-page-custom_archive .main-content.content > p {
+  margin-bottom: 64px !important;
+}
+body.page-template-content-page-hub_with_buttons .col-12.main-content.content,
+body.page-template-content-page-custom_archive .col-12.main-content.content {
+  padding-right: 15px !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row,
+body.page-template-content-page-custom_archive .section-hub-boxes .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 33px !important;  /* equal vertical + horizontal */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+  margin-bottom: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes,
+body.page-template-content-page-custom_archive .section-hub-boxes {
+  margin-top: 33px !important;
+}
+body.page-template-content-page-hub_with_buttons .main-content.content .section-cd-gravity-form-widget,
+body.page-template-content-page-custom_archive .main-content.content .section-cd-gravity-form-widget,
+body.page-template-content-page-hub_with_buttons .main-content.content .section-widget-download,
+body.page-template-content-page-custom_archive .main-content.content .section-widget-download {
+  margin-bottom: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::before,
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .row::after,
+body.page-template-content-page-custom_archive .section-hub-boxes .row::before,
+body.page-template-content-page-custom_archive .section-hub-boxes .row::after {
+  display: none !important;
+}
+@media (min-width: 1038px) {
+  body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+  body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+    flex: 1 1 calc((100% - 66px) / 3) !important;
+    max-width: none !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .col-4,
+body.page-template-content-page-custom_archive .section-hub-boxes .col-4 {
+  background: #F7F9FC !important;
+  border: 1px solid rgba(0, 40, 86, 0.04) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
+}
+body.page-template-content-page-hub_with_buttons .section-hub-boxes .hub-box .bg-image,
+body.page-template-content-page-custom_archive .section-hub-boxes .hub-box .bg-image {
+  display: none !important;
+}
+body.page-template-content-page-hub_with_buttons .hub-box-content ul,
+body.page-template-content-page-custom_archive .hub-box-content ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+body.page-template-content-page-hub_with_buttons .hub-box-content ul li,
+body.page-template-content-page-hub_with_buttons .hub-box-content ul li a,
+body.page-template-content-page-custom_archive .hub-box-content ul li,
+body.page-template-content-page-custom_archive .hub-box-content ul li a {
+  font-size: 18px !important;
+}
+body.page-template-content-full-width-page h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-full-width-page h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us {
+  background: #F5F8FE !important;
+  border: 1px solid rgba(0, 40, 86, 0.06) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.07) !important;
+  padding: 24px !important;
+  min-height: 0 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us > span.wp-block-cover__background,
+body.page-template-content-full-width-page .wp-block-cover.contact-us > .wp-block-cover__gradient-background {
+  display: none !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us,
+body.page-template-content-full-width-page .wp-block-cover.contact-us p,
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gfield_label {
+  color: rgb(36, 36, 36) !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="text"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="email"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="tel"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us textarea {
+  border-radius: 4px !important;
+  border: 1px solid #B8BED5 !important;
+  background: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  padding: 8px 12px !important;
+  min-height: 0 !important;
+  color: rgb(36, 36, 36) !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input::placeholder,
+body.page-template-content-full-width-page .wp-block-cover.contact-us textarea::placeholder {
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  color: #7a8599 !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"],
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button {
+  background: #f60 !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 6px 24px !important;
+  border: none !important;
+  cursor: pointer;
+  transition: background 0.2s ease !important;
+}
+body.page-template-content-full-width-page .wp-block-cover.contact-us input[type="submit"]:hover,
+body.page-template-content-full-width-page .wp-block-cover.contact-us button[type="submit"]:hover,
+body.page-template-content-full-width-page .wp-block-cover.contact-us .gform_button:hover {
+  background: #e55a00 !important;
+}
+@media (max-width: 1037px) {
+  .breadcrumbs {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  .breadcrumbs > span {
+    font-size: 0 !important;
+  }
+  .breadcrumbs > span > span:first-child,
+  .breadcrumbs > span > span:first-child *,
+  .breadcrumbs > span > span.breadcrumb_last,
+  .breadcrumbs > span > span.breadcrumb_last * {
+    font-size: 14px !important;
+  }
+  /* 2-item trail (Home / Current): show a plain separator, no ellipsis */
+  .breadcrumbs > span > span.breadcrumb_last::before {
+    content: " / ";
+    font-size: 14px !important;
+  }
+  /* 3+ items: replace the separator with " / … / " */
+  .breadcrumbs > span > span.breadcrumb_last:not(:nth-child(2))::before {
+    content: " / … / ";
+    font-size: 14px !important;
+  }
+}
+/* ===================================================================
+   Meet the Team template — author card grid
+   Adds the 4-column desktop layout, card styling, and mobile responsive
+   breakpoints. The H1 mobile scale lives in the block below.
+   =================================================================== */
+
+/* Heading scale */
+body.page-template-content-meet-the-team h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-meet-the-team h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.page-template-content-meet-the-team .page-header h1 {
+  margin-bottom: 40px !important;
+}
+
+/* Author cards — 4 per row, equal 33px gap */
+body.page-template-content-meet-the-team .row.members {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 33px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body.page-template-content-meet-the-team .row.members .col-4 {
+  flex: 0 0 calc((100% - 99px) / 4) !important;
+  max-width: calc((100% - 99px) / 4) !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+/* Suppress legacy clearfix pseudo-elements that would steal flex space */
+body.page-template-content-meet-the-team .row.members::before,
+body.page-template-content-meet-the-team .row.members::after {
+  display: none !important;
+}
+
+/* Card box */
+body.page-template-content-meet-the-team .row.members .team-member {
+  background: #F7F9FC !important;
+  border: 1px solid rgba(0, 40, 86, 0.04) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.05) !important;
+  padding: 24px !important;
+  transition: box-shadow 0.2s ease !important;
+  flex: 1 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+body.page-template-content-meet-the-team a.team-member-href:hover .team-member {
+  box-shadow: 0 4px 20px rgba(0, 40, 86, 0.14) !important;
+}
+
+/* Equal-height cards via flex chain: col-4 → anchor → team-member */
+body.page-template-content-meet-the-team .row.members a.team-member-href {
+  display: flex !important;
+  flex: 1 !important;
+  width: 100% !important;
+}
+
+/* Kill link underlines across the whole card */
+body.page-template-content-meet-the-team a.team-member-href,
+body.page-template-content-meet-the-team a.team-member-href:hover,
+body.page-template-content-meet-the-team a.team-member-href * {
+  text-decoration: none !important;
+}
+
+/* Headshots — circular */
+body.page-template-content-meet-the-team .team-member-avatar-photo img {
+  border-radius: 9999px !important;
+}
+
+/* Name (H3) */
+body.page-template-content-meet-the-team h3.team-member-name {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+/* Job title */
+body.page-template-content-meet-the-team .team-member-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  color: rgb(36, 36, 36) !important;
+  text-decoration: none !important;
+}
+
+/* Remove the trailing orange arrow — card stays clickable via the anchor */
+body.page-template-content-meet-the-team .team-member > img {
+  display: none !important;
+}
+
+/* Spacing below the cards grid before the CTA section */
+body.page-template-content-meet-the-team .section-meet-the-team {
+  margin-bottom: 40px !important;
+}
+
+/* Mobile responsive grid
+   ≤767px: 2 columns; ≤479px: 1 column so names never break letter-by-letter */
+@media (max-width: 767px) {
+  body.page-template-content-meet-the-team .row.members .col-4 {
+    flex: 0 0 calc((100% - 33px) / 2) !important;
+    max-width: calc((100% - 33px) / 2) !important;
+  }
+}
+@media (max-width: 479px) {
+  body.page-template-content-meet-the-team .row.members .col-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  body.page-template-content-meet-the-team .row.members {
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template h1,
+  body.page-template-content-page-hub_with_buttons h1,
+  body.page-template-content-page-custom_archive h1,
+  body.page-template-content-meet-the-team h1,
+  body.page-template-content-full-width-page h1,
+  body.post-template-default h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.post-template-default h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default h1.post-title {
+  margin-top: 57px !important;
+  margin-bottom: 135px !important;
+}
+body.post-template-default h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default .col-8.main-content,
+body.post-template-default .col-8.main-content p,
+body.post-template-default .col-8.main-content li {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 32px !important;
+  font-weight: 400 !important;
+  color: rgb(36, 36, 36) !important;
+}
+body.post-template-default .section-footer-author {
+  padding-top: 85px !important;
+  padding-bottom: 85px !important;
+}
+body.post-template-default .section-footer-author .footer-author-name {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+body.post-template-default .section-footer-author .avatar-image {
+  max-width: 200px !important;
+}
+body.post-template-default .section-footer-author .footer-author-links {
+  text-decoration: none !important;
+}
+body.page-template-about-us .main-content.content {
+  padding-right: 0 !important;
+}
+body.page-template-about-us .main-content.content > .wp-block-group.container:first-child {
+  display: none !important;
+}
+body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+  padding-bottom: 108px !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-about-us .main-content.content > section.section-tilted-content-two-cols:first-of-type .tilted-content-heading {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.page-template-about-us .tilted-content-content {
+  padding-left: 0 !important;
+}
+body.post-template-post-sectors .sector-title {
+  display: none !important;
+}
+body.post-template-post-sectors h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.post-template-post-sectors h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.post-template-post-sectors h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.post-template-post-sectors .col-12.content .wp-block-group.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+}
+body.post-template-post-sectors .col-12.content .wp-block-buttons {
+  margin-top: 64px !important;
+  margin-bottom: 64px !important;
+}
+body.post-template-post-sectors .col-12.content .section-columns-full-width {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+body.post-template-post-sectors .col-12.content .section-columns-full-width h3.section-title {
+  text-align: center !important;
+  margin-bottom: 35px !important;
+}
+body.post-template-post-sectors .two-halfs-with-image.two-halfs-left-image .content__left {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+h1 b, h1 strong,
+h2 b, h2 strong,
+h3 b, h3 strong,
+h4 b, h4 strong,
+h5 b, h5 strong,
+h6 b, h6 strong {
+  font-weight: inherit !important;
+}
+body.page-template-about-us h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.page-template-about-us h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-about-us h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.archive h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+}
+body.archive h2 {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 1037px) {
+  body.archive h1 {
+    font-size: 36px !important;
+    line-height: 41px !important;
+  }
+}
+body.archive .page-title__container {
+  margin-bottom: 40px !important;
+}
+body.archive .articles-list > article {
+  display: flex !important;
+  flex-direction: column !important;
+}
+body.archive .articles-list > article > a {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  height: 100% !important;
+}
+body.archive .articles-list > article > a > .read-more-btn {
+  margin-top: auto !important;
+}
+
+/* DESIGN RESTORE BLOCK END */
+
+/* ==========================================================================
+   H3 site-wide 26px FINAL REAPPLY -- 20260429-123317
+   Re-applied after Piers' 12:27 UTC live edit reverted these. The 30/38
+   take-the-test rule earlier in the file is cascade-overridden by the
+   explicit re-statement below. This block must survive into the git
+   commit so any future restore can reference it.
+   ========================================================================== */
+body.page-template-take-the-test-template h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-content-page-hub_with_buttons h3,
+body.page-template-content-page-custom_archive h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-content-full-width-page h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.post-template-default h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.post-template-post-sectors h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.page-template-about-us h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
+}
+body.archive h3 {
+  font-size: 26px !important;
+  line-height: 33px !important;
+  font-weight: 600 !important;
 }
