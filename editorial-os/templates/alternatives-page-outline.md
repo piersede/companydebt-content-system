@@ -1,5 +1,7 @@
 # Alternatives Page Template — Company Debt Editorial OS
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 11 (business rescue/recovery/insolvency avoidance) or Template 13 (specific problem/"Can I" query) depending on primary intent. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## Required first-fold sequence (in order)
 
 1. H1

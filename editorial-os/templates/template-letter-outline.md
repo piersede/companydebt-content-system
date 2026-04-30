@@ -1,5 +1,7 @@
 # Template Letter Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 14: Hubs, glossaries and section index pages. Apply file 28 universal H-tag rules (§"Non-negotiable rules") when converting this outline to article headings. -->
+
 ## 1. When this letter is appropriate
 [Use-case boundary.]
 

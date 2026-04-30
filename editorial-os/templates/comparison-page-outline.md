@@ -1,5 +1,7 @@
 # Comparison Page Outline — Company Debt Editorial OS
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 11: Business rescue, recovery, trading, sale and insolvency avoidance. If Blueprint 3 headings below conflict with Template 11, file 28 wins. -->
+
 Use Canonical Heading Blueprint 3: The Strategic Comparison (The Decision Maker).
 
 Before drafting, define:

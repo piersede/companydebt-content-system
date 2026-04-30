@@ -1,5 +1,7 @@
 # Process Guide Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 9: Specific closure route or insolvency procedure. If Blueprint 1 headings below conflict with Template 9, file 28 wins. -->
+
 Use Canonical Heading Blueprint 1: The Statutory Procedure (The Service Pillar).
 
 Before drafting, define:

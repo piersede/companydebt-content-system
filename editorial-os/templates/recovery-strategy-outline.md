@@ -1,5 +1,7 @@
 # Recovery Strategy Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 11: Business rescue, recovery, trading, sale and insolvency avoidance. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## 1. What recovery means here
 [Commercial and legal framing.]
 

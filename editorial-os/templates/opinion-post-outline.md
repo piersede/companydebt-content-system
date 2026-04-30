@@ -1,4 +1,7 @@
 # Opinion-Led Post Outline
+
+<!-- H-tag authority: No locked page-family template in editorial-os/28-htag-semantic-framework.md applies to opinion posts. Apply file 28 universal H-tag rules (§"Non-negotiable rules") — particularly the FAQ-final rule and heading cannibalisation rule. -->
+
 ## 1. Strong thesis early
 [State the argument clearly in the first two paragraphs. No slow build-up.]
 ## 2. What most people get wrong

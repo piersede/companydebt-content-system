@@ -1,4 +1,7 @@
 # Category Explainer Outline
+
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 14: Hubs, glossaries and section index pages. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## 1. Plain-English category definition
 [What this category of tool or process actually does, in language a non-specialist would understand.]
 ## 2. Why businesses look for it

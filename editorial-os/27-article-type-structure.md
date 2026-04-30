@@ -286,6 +286,8 @@ Must not do:
 
 ## 27.5 Canonical Heading Blueprints
 
+**H-tag authority:** The master H-tag registry for all page families is `editorial-os/28-htag-semantic-framework.md`. For each blueprint below, file 28 is canonical for H-tag architecture. If a blueprint heading conflicts with the corresponding file 28 page-family template, file 28 wins.
+
 These blueprints are part of the Company Debt structure system. They are not optional overlays and must not be rewritten into looser variants.
 
 Before running any blueprint, define:

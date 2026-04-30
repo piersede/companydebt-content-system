@@ -1,4 +1,7 @@
 # Tool Review Outline
+
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 12 (insolvency practitioner, liquidator, regulator, fees and meetings) for IP/service reviews. No locked family applies for general software/tool reviews — apply file 28 universal H-tag rules (§"Non-negotiable rules") regardless. -->
+
 ## 1. Verdict at the top
 [One-paragraph summary: what the tool does well, where it falls short, who it is best for.]
 ## 2. Who it is best for

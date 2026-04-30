@@ -1,5 +1,7 @@
 # Trigger Page Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 13: Specific problem or "Can I" query. If Blueprint 2 headings below conflict with Template 13, file 28 wins. -->
+
 Use Canonical Heading Blueprint 2: The Immediate Crisis (The Triage Unit).
 
 Before drafting, define:

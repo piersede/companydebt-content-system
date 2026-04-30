@@ -1,5 +1,7 @@
 # Case Insight Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 13: Specific problem or "Can I" query. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## 1. Situation summary
 [Trigger and context.]
 

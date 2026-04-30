@@ -1,5 +1,7 @@
 # Entity Modifier Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 1 (specific legal concept/statute) or Template 9 (closure route variant) depending on article scope. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## 1. Narrow quick answer
 [What this subtopic changes about the core route.]
 

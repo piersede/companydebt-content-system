@@ -176,6 +176,12 @@ Decision-stage pages (reviews, comparisons, category guides) must end with a met
 
 ## 5. Structure templates by content type
 
+**H-tag authority:** Locked H-tag templates for UK insolvency, liquidation, HMRC, creditor and recovery content are maintained in the master registry:
+
+→ `editorial-os/28-htag-semantic-framework.md`
+
+That file is canonical for H-tag architecture (H1/H2/H3 structure, heading promotion, demotion lists, slot model). If anything in the content-type patterns below conflicts with file 28, file 28 wins.
+
 ### Tool review structure
 1. Verdict and fit summary
 2. Who it is best for
@@ -408,6 +414,8 @@ This concession block does not need to be a formal table. It can be prose. But a
 ---
 
 ## 12. Heading promotion rule (H3 cannibalisation)
+
+> Canonical binding rule: `editorial-os/28-htag-semantic-framework.md` §"Heading cannibalisation rule" (rule 11) and §"The Heading Promotion test". The rules below are consistent summaries; file 28 is authoritative.
 
 **Hard rule:** Before making a topic an H3, ask whether that topic is a likely standalone article elsewhere on the site. If yes, do not promote it to H3 automatically.
 

@@ -1,5 +1,7 @@
 # Director Risk Outline
 
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 2 (director duties/conduct/disqualification) or Template 3 (personal liability/exposure) depending on primary intent. If Blueprint 4 headings below conflict with the relevant template, file 28 wins. -->
+
 Use Canonical Heading Blueprint 4: The Director Shield (Liability).
 
 Before drafting, define:

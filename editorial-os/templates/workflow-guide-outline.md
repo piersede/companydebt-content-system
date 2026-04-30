@@ -1,4 +1,7 @@
 # Workflow or Process Guide Outline
+
+<!-- H-tag authority: editorial-os/28-htag-semantic-framework.md → Template 9: Specific closure route or insolvency procedure. Apply file 28 H-tag structure when converting this outline to article headings. -->
+
 ## 1. What this process helps you do
 [Clear statement of the outcome. Not what the process is — what it achieves.]
 ## 2. When to use it
