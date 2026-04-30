@@ -91,6 +91,25 @@ Use bolding and italics with measured intent. During rewrite, **actively identif
 - An average 2,500-word article should carry roughly 50–150 bolded words across 8–20 short bolded chunks, not one long bolded sentence.
 - Each H2 section should contain **at least one** bolded chunk meeting the criteria above; if a section has none, either the section lacks a decision-critical anchor (rewrite the section) or the editor is under-using bold (add it).
 
+### §3b. Lead paragraph emphasis (HARD RULE)
+
+**Do not put `<strong>`, `<b>`, or `**...**` inside the first paragraph of any article.**
+
+The theme already bolds the lead paragraph automatically via:
+
+```css
+.site-main .main-content > p:first-of-type { font-weight: 700; }
+.content > p:first-of-type                 { font-weight: 700; }
+```
+
+When a writer adds `<strong>` to a phrase inside an already-bold lead paragraph, the global theme rule `b, strong { font-weight: bolder; }` ([style.css:228](theme/style.css:228)) escalates that phrase to font-weight 800/900 because `bolder` resolves *relative to the parent's weight*. The result is a visibly heavier sub-string inside the lead — what reviewers see as "double-bolding".
+
+**The active bold pass in §3a applies to body sections only, not to the lead paragraph.** The lead is already the article's visual anchor; further emphasis is redundant and produces the compounding bug above.
+
+**If you want to emphasise a phrase that currently sits in the lead:** move the phrase to the second paragraph (which is plain-weight and accepts `<strong>` cleanly), or rewrite the lead so the phrase is its own short paragraph.
+
+**Enforcement:** `scripts/article_audit.py` Check 21 fails if the first `<p>` in the body contains any `<strong>` or `<b>` tag.
+
 ### Active bold pass (during rewrite)
 
 After a draft hits voice and structure targets, do a dedicated bold pass:

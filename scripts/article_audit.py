@@ -13,9 +13,9 @@ Source of truth:
   - editorial-os/14-failure-modes-and-recovery.md §16  (AI fingerprints)
 
 Emits per article:
-  - Detailed pass/fail on each of the 20 scorable items
+  - Detailed pass/fail on each of the 21 scorable items
   - A binary GATE verdict (PASS / FAIL) driven by the canonical hard-fail list
-  - A /20 score suitable for the Monday "Post Score" column
+  - A /21 score suitable for the Monday "Post Score" column
 
 Tier 3 editorial checks (information gain per section, authored authority,
 evaluative bite, concrete scenes) are NOT automated here — the script prints
@@ -629,6 +629,47 @@ def check_keyword_h2s(title: str, body: str) -> CheckResult:
     )
 
 
+def check_lead_paragraph_no_strong(body: str) -> CheckResult:
+    """
+    editorial-os/13-readability-governance.md §3b — Lead paragraph emphasis (HARD RULE).
+
+    Theme CSS auto-bolds the first paragraph of every article:
+        .site-main .main-content > p:first-of-type { font-weight: 700; }
+        .content > p:first-of-type                 { font-weight: 700; }
+
+    Combined with the global rule `b, strong { font-weight: bolder; }`, any
+    <strong> or <b> inside the first <p> escalates to weight 800/900 because
+    `bolder` resolves relative to the parent's weight. The visible effect is
+    a heavier sub-string inside the already-bold lead — the "double-bold"
+    reviewers flag.
+
+    Rule: the first <p> in the body must contain no <strong> or <b> tag.
+    The active bold pass applies to body sections only, never the lead.
+    """
+    first_p = re.search(r"<p[^>]*>(.*?)</p>", body, re.DOTALL | re.I)
+    if not first_p:
+        return CheckResult(
+            id="21", tier="T1",
+            name="Lead paragraph: no <strong> or <b> (theme auto-bolds)",
+            passed=True,
+            detail="no <p> found",
+        )
+    inner = first_p.group(1)
+    if re.search(r"<(?:strong|b)\b", inner, re.I):
+        snippet = re.sub(r"<[^>]+>", "", inner).strip()
+        return CheckResult(
+            id="21", tier="T1",
+            name="Lead paragraph: no <strong> or <b> (theme auto-bolds)",
+            passed=False,
+            detail=f"first paragraph contains <strong> or <b> (theme already bolds it): \"{snippet[:80]}...\"",
+        )
+    return CheckResult(
+        id="21", tier="T1",
+        name="Lead paragraph: no <strong> or <b> (theme auto-bolds)",
+        passed=True,
+    )
+
+
 def check_paragraph_length(body: str) -> CheckResult:
     """
     editorial-os/13-readability-governance.md: no paragraph exceeds ~4 rendered
@@ -693,12 +734,23 @@ def audit_file(path: Path) -> ArticleAudit:
         check_sources(body),
         check_keyword_h2s(meta["title"], body),
         check_paragraph_length(body),
+        check_lead_paragraph_no_strong(body),
     ]
     return audit
 
 
-def _square(score: int) -> str:
-    if score >= 20:
+def _square(score: int, max_score: int = 21) -> str:
+    """Score colour square.
+
+    The brackets scale to whatever the current max is, so adding a check (e.g.,
+    /20 -> /21) does not silently change which articles get the green tick:
+        \u2705 : full pass (== max_score)
+        \uD83D\uDFE8 : within 1 of max (15..max_score-1 historically)
+        \uD83D\uDFE7 : 10..14
+        \uD83D\uDFE5 : 5..9
+        \u2B1B : 0..4
+    """
+    if score >= max_score:
         return "\u2705"
     if score >= 15:
         return "\U0001F7E8"
@@ -715,7 +767,7 @@ def print_report(a: ArticleAudit) -> None:
     print(f"{a.title or a.path}")
     print(f"  file={a.path}")
     print(f"  post_id={a.post_id} author={a.author} FM={a.featured_media} template={a.template}")
-    print(f"  words={a.word_count}  score={_square(a.score)} {a.score}/{a.max_score}  GATE: {verdict}")
+    print(f"  words={a.word_count}  score={_square(a.score, a.max_score)} {a.score}/{a.max_score}  GATE: {verdict}")
     print()
     for c in a.checks:
         mark = "\u2713" if c.passed else "\u2717"
@@ -763,7 +815,7 @@ def main() -> int:
     print(f"{'Article':<55}{'Score':<10}{'Gate':<6}{'Words':<7}")
     for a in audits:
         title = (a.title or Path(a.path).name)[:54]
-        sc = f"{_square(a.score)} {a.score}/{a.max_score}"
+        sc = f"{_square(a.score, a.max_score)} {a.score}/{a.max_score}"
         gate = "PASS" if a.gate_passed else "FAIL"
         print(f"{title:<55}{sc:<10}{gate:<6}{a.word_count:<7}")
 

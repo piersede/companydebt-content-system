@@ -37,17 +37,17 @@ The score it produces (out of 20) IS the score. Do not modify.
 
 ### 3. Update Monday Pre Score
 
-Monday board `18406273663` ("Content Rework Tracker"), column `text_mm1ypyg5` (Pre Score). Format: `<square> <n>/20` where squares are:
+Monday board `18406273663` ("Content Rework Tracker"), column `text_mm1ypyg5` (Pre Score). Format: `<square> <n>/<max>` where `<max>` is whatever the canonical audit currently reports (the framework added a 21st check on lead-paragraph emphasis in April 2026, so current max is 21). Squares are bracket-based:
 
 - ⬛ 0–4
 - 🟥 5–9
 - 🟧 10–14
 - 🟨 15–19
-- ✅ 20
+- ✅ full pass (== current max)
 
 Use GraphQL variables, not inline strings (Monday's parser rejects surrogate-pair emojis in inline GraphQL).
 
-### 4. Rewrite to 20/20
+### 4. Rewrite to full pass
 
 Write to the canonical gate AND the Tier 3 editorial rules. Target structure:
 
@@ -80,6 +80,7 @@ The script enforces these. You can fail any one and the gate blocks.
 | Internal links | ≥ 3 to `companydebt.com` / staging |
 | Structural | Methodology, Sources, FAQ accordion, featured image, template, author (ID 34 = Chris Andersen), no body hero image in first 2k chars, word count ≥ 800 |
 | Linked sources | Every Sources `<li>` has an `<a href>` link OR an explicit `<!-- no-url: <reason> -->` opt-out marker (§7b) |
+| Lead paragraph | First `<p>` of the body contains no `<strong>` or `<b>`. Theme auto-bolds the lead via `p:first-of-type`; inline `<strong>` compounds via `bolder` to weight 800/900 (`13-readability-governance.md` §3b) |
 
 ### 6. Tier 3 editorial rules (Rules A–J)
 
@@ -145,15 +146,15 @@ Hard fails from Check 1a (`16-pre-publish-gate.md`):
 
 If citing anything else, verify against `legislation.gov.uk` first. When in doubt, omit.
 
-### 8. Re-audit to confirm 20/20
+### 8. Re-audit to confirm full pass
 
 ```bash
 python scripts/article_audit.py --drafts drafts --slug <postid> --quiet
 ```
 
-Target: `✅ 20/20 PASS` or at worst `🟨 19/20 PASS` (soft paragraph-length flag).
+Target: `✅ <max>/<max> PASS` (currently 21/21) or at worst one short with the soft paragraph-length flag.
 
-The two non-editorial reasons for 19/20 FAIL that are acceptable:
+The two non-editorial reasons for a one-short FAIL that are acceptable:
 - FM=0 (featured image not set in WP admin — flag for WP admin action)
 - Author metadata wrong (not 34/Chris Andersen — flag for WP admin action)
 

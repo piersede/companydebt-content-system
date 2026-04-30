@@ -186,11 +186,13 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Maximum 1 em dash in the entire article (zero preferred)
 - Bold used sparingly (fewer than 5 instances in body text)
 - Each section has visual breathing room
+- The first paragraph of the article contains no `<strong>` or `<b>` tag. The theme auto-bolds the lead via `p:first-of-type`; adding inline `<strong>` produces a compounding double-bold via `b, strong { font-weight: bolder }`. See `13-readability-governance.md` §3b.
 
 **Hard fail conditions:**
 - Any paragraph exceeding 4 rendered lines (hard ceiling)
 - Multiple paragraphs at 4 rendered lines in the same section (pattern of density)
 - Formatting that looks typographically busy or AI-styled
+- Any `<strong>` or `<b>` tag inside the first paragraph of the article (breaks the lead-paragraph emphasis rule, §3b)
 
 ---
 
