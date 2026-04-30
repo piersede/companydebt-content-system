@@ -57,7 +57,7 @@ Write to the canonical gate AND the Tier 3 editorial rules. Target structure:
 4. "Your Next Step" / "What Should Directors Do Next?" H2 — the Rule J verdict (split-the-audience triage)
 5. **FAQ accordion (`wp:ub/content-toggle-block` from Ultimate Blocks) with 5–7 panels — and the FAQ H2 must be the FINAL H2 in the article.** Format the heading as "Frequently Asked Questions About (Primary Keyword)". Emits FAQPage schema. **No editorial H2 may follow.**
 6. Methodology & Disclosure block — who wrote / reviewed, statutory basis, Company Debt disclosure. **Wrap as a styled label inside an `<aside>`, `<footer>`, or styled `<div>` (e.g. `<p class="methodology-label"><strong>Methodology and Disclosure</strong></p>`), NOT as an `<h2>` in the main article flow.** The audit script detects the block heading-agnostically.
-7. Sources & References block — bulleted list with `legislation.gov.uk` links. Same rule: styled label, not an `<h2>`.
+7. Sources & References block — bulleted list, every `<li>` carries a clickable link to the cited source (`legislation.gov.uk`, `gov.uk`, named industry report URL, etc.) per `editorial-os/10-evidence-governance.md` §7b. Bare-name citations only acceptable with an explicit `<!-- no-url: <reason> -->` opt-out marker on the same line, used sparingly. Same heading rule: styled label, not an `<h2>`.
 
 **H-tag QA before re-audit:** run the QA checklist at the foot of `28-htag-semantic-framework.md`. Any H3 that could appear unchanged on five unrelated pages must be rewritten. Run the heading-cannibalisation diagnostic — H3s that name a sibling page's topic must be demoted.
 
@@ -79,6 +79,7 @@ The script enforces these. You can fail any one and the gate blocks.
 | Banned openings | zero |
 | Internal links | ≥ 3 to `companydebt.com` / staging |
 | Structural | Methodology, Sources, FAQ accordion, featured image, template, author (ID 34 = Chris Andersen), no body hero image in first 2k chars, word count ≥ 800 |
+| Linked sources | Every Sources `<li>` has an `<a href>` link OR an explicit `<!-- no-url: <reason> -->` opt-out marker (§7b) |
 
 ### 6. Tier 3 editorial rules (Rules A–J)
 

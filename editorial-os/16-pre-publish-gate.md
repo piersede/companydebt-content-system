@@ -110,6 +110,7 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Every Treatment 2 claim states its reasoning basis in the text
 - No central claim rests solely on hedging
 - All sources named, dated (with access/review date), and attributed
+- Every entry in the Sources & References block carries a clickable URL when one exists publicly. Bare-name citations only acceptable with an explicit `<!-- no-url: <reason> -->` opt-out marker on the same line. See `10-evidence-governance.md` §7b.
 - No decorative sourcing (bidirectional check: every source listed is cited in body, every body citation is in Sources)
 - Methodology block present on all decision-stage pages
 - Company Debt disclosure present wherever Company Debt is mentioned
@@ -123,6 +124,7 @@ These are hard rules. No article may be published or pushed to staging unless ev
 - Article's central argument depends primarily on editorial judgement rather than sourced evidence
 - Any fabricated evidence or screenshot
 - Any source cited but not checked
+- Any Sources `<li>` without a clickable URL and without an explicit `<!-- no-url: <reason> -->` opt-out marker
 - Missing methodology block on a decision-stage page
 - Company Debt is first mentioned more than two sections before the methodology block and no inline disclosure appears near the first mention
 - Methodology prose duplicated in both the body and the methodology block
