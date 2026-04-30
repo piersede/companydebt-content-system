@@ -276,6 +276,33 @@ Unacceptable sources for product claims:
 
 **Detection test:** For every sourced claim, ask: "Did the data originate with this source, or did this source get it from somewhere else?" If the latter, go to the original source.
 
+### 7b. Source link requirement (HARD RULE)
+
+Every entry in the Sources & References block must carry a clickable link to the cited source when one exists publicly. Bare citations by name only (e.g., a `<li>` containing "Insolvency Act 1986" with no URL) are not acceptable.
+
+**Why:** the reader cannot verify a claim without the URL. A name-only citation forces the reader to guess where the source lives, and degrades to decorative sourcing in practice — it looks evidentiary without being it. The Sources block is the article's verification surface; if a reader cannot click through, it has not done its job.
+
+**Required form:**
+
+```html
+<li><strong>Insolvency Act 1986</strong> — primary legislation governing UK
+corporate insolvency. <a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"
+target="_blank" rel="noopener">legislation.gov.uk</a></li>
+```
+
+**Opt-out for the rare exception.** If a citation has no public URL (internal data, paywalled academic paper not on a public mirror, private R3 working group note, oral source), keep the bullet but add an explicit opt-out marker on the same line:
+
+```html
+<li><strong>R3 member consensus on CVL fee ranges</strong> — informal industry
+benchmark, not publicly published. <!-- no-url: not publicly published --></li>
+```
+
+The marker `<!-- no-url: <reason> -->` documents that the missing URL is intentional and gives the reader (and the next editor) a reason. Without the marker, the bullet fails the audit gate.
+
+**When the opt-out is wrong:** if you find yourself reaching for it for more than 1 in 7 sources, the Sources block is doing too much. Either find the public URL for those entries, or move them out of Sources into a separate notes paragraph — the Sources block is for verifiable references only.
+
+**Enforcement:** `scripts/article_audit.py` Check 18 fails if any `<li>` in the Sources block lacks both an `<a href>` and a `no-url` opt-out marker.
+
 ## 8. Decorative sourcing
 
 Decorative sourcing is when a source is mentioned to create the appearance of evidence without actually supporting the specific claim.
@@ -299,6 +326,7 @@ Before finalising any article:
 - [ ] Every Treatment 2 claim states its reasoning basis in the text
 - [ ] No central claim rests solely on hedging
 - [ ] All sources are named, dated (with access/review date), and attributed
+- [ ] Every Sources `<li>` carries a clickable link OR an explicit `<!-- no-url: <reason> -->` opt-out (§7b)
 - [ ] All high-risk claim categories have been reviewed
 - [ ] No decorative sourcing (bidirectional check: every source listed is cited in body, every body citation is in Sources)
 - [ ] No fabricated evidence

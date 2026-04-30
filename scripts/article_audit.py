@@ -523,12 +523,20 @@ def check_methodology(body: str) -> CheckResult:
 
 def check_sources(body: str) -> CheckResult:
     """
-    editorial-os/10-evidence-governance.md — Sources & References required.
+    editorial-os/10-evidence-governance.md §7 + §7b — Sources & References required,
+    every entry must carry a clickable URL when one exists publicly.
+
     Per editorial-os/28-htag-semantic-framework.md (April 2026 update),
     Sources/References should NOT sit in the main H-tag flow as an H2.
-    Detection is heading-agnostic (any heading level OR styled label),
-    requires the label AND at least one legislation.gov.uk or gov.uk link
-    nearby (within 4k chars) to confirm substance.
+    Detection is heading-agnostic (any heading level OR styled label).
+
+    Pass criteria:
+      - Block label present (h2-h6 OR styled label)
+      - At least one gov.uk / legislation.gov.uk link nearby (substance check)
+      - Every <li> within the Sources block contains either
+          (a) an <a href="..."> link, OR
+          (b) an explicit opt-out marker: <!-- no-url: <reason> -->
+        per editorial-os/10-evidence-governance.md §7b "Source link requirement".
     """
     label_re = re.compile(
         r"(?:<h[2-6][^>]*>|<(?:strong|b|p|div|span|aside|footer)[^>]*>)\s*"
@@ -540,13 +548,60 @@ def check_sources(body: str) -> CheckResult:
         return CheckResult(id="18", tier="T2",
                            name="Sources & References block present",
                            passed=False)
-    tail = body[m.end():m.end() + 4000].lower()
-    has_substance = "legislation.gov.uk" in tail or "gov.uk" in tail
+
+    # Region of interest: from label to end of next </ul> (or 6k chars fallback)
+    region_end = body.find("</ul>", m.end())
+    if region_end == -1:
+        region_end = m.end() + 6000
+    else:
+        region_end += len("</ul>")
+    region = body[m.end():region_end]
+    region_lower = region.lower()
+
+    has_substance = "legislation.gov.uk" in region_lower or "gov.uk" in region_lower
+    if not has_substance:
+        return CheckResult(
+            id="18", tier="T2",
+            name="Sources & References block present",
+            passed=False,
+            detail="label found but no gov.uk/legislation.gov.uk link nearby",
+        )
+
+    # Source link requirement: every <li> must carry an <a href> OR an explicit no-url opt-out.
+    li_blocks = re.findall(r"<li[^>]*>(.*?)</li>", region, re.DOTALL | re.I)
+    if not li_blocks:
+        # No <li> structure — fall through to substance-only pass (some sources blocks
+        # are paragraph-style; we don't enforce <li> structure here).
+        return CheckResult(
+            id="18", tier="T2",
+            name="Sources & References block present",
+            passed=True,
+            detail="block found (no <li> structure)",
+        )
+
+    no_link: list[str] = []
+    for li in li_blocks:
+        has_link = bool(re.search(r"<a\s[^>]*href=[\"'][^\"']+[\"']", li, re.I))
+        has_opt_out = bool(re.search(r"<!--\s*no-url\b[^>]*-->", li, re.I))
+        if not has_link and not has_opt_out:
+            # Capture first 60 chars of bullet text for the failure message
+            text = re.sub(r"<[^>]+>", "", li).strip()
+            no_link.append(text[:60])
+
+    if no_link:
+        sample = "; ".join(no_link[:3])
+        return CheckResult(
+            id="18", tier="T2",
+            name="Sources & References block present",
+            passed=False,
+            detail=f"{len(no_link)} source bullet(s) without a link or no-url opt-out: {sample}",
+        )
+
     return CheckResult(
         id="18", tier="T2",
         name="Sources & References block present",
-        passed=has_substance,
-        detail="block found" if has_substance else "label found but no gov.uk/legislation.gov.uk link nearby",
+        passed=True,
+        detail=f"{len(li_blocks)} sources, all linked",
     )
 
 
