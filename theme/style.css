@@ -6261,3 +6261,14 @@ body.archive h3 {
   background: #F7F9FC;
   font-weight: 600;
 }
+
+/* .cd-do-dont layout fix -- 20260430-094905
+   Piers' .cd-do-dont sets display:grid with 2 columns expecting .__do and
+   .__dont as direct children. Gutenberg wraps content in an extra
+   .wp-block-group__inner-container, breaking the grid (only 1 grid child).
+   display:contents makes the wrapper transparent so the grid sees the real
+   .__do/.__dont blocks as its grid items. Existing mobile breakpoint at
+   ~5357 (max-width:1037px stack) continues to work. */
+.cd-do-dont > .wp-block-group__inner-container {
+  display: contents;
+}
