@@ -6232,3 +6232,32 @@ body.archive h3 {
   width: 100% !important;
   flex: 1 1 auto !important;
 }
+
+/* ==========================================================================
+   Article body tables -- comparison and data tables in .main-content
+   Adds thin borders + light-grey first row + first column to make multi-
+   column comparison tables (e.g. /closing-a-limited-company/ Strike-off vs
+   MVL vs CVL vs Compulsory) readable. Scope is .main-content so sidebar
+   widgets, forms, and admin UI are untouched. F7F9FC matches sidebar-
+   widget bg in the existing design system.
+   ========================================================================== */
+.main-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 24px 0;
+}
+.main-content table th,
+.main-content table td {
+  border: 1px solid #d8dde6;
+  padding: 12px 14px;
+  vertical-align: top;
+  text-align: left;
+}
+.main-content table thead th {
+  background: #F7F9FC;
+  font-weight: 700;
+}
+.main-content table tbody tr td:first-child {
+  background: #F7F9FC;
+  font-weight: 600;
+}
