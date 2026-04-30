@@ -86,6 +86,51 @@ Otherwise, place them in a table, checklist, short linked summary, or internal-l
 
 ---
 
+## H3 budget by article type (HARD GUIDANCE)
+
+H3s must be **earned**, not defaulted to. The discipline differs by article type because search intent differs.
+
+### The default decision rule
+
+Before adding ANY H3, ask: **could a table row, bold label, bullet, or link card carry this content equally well?** If yes, demote. H3 only when the subsection has enough depth that promoting it produces clarity rather than visual noise.
+
+### Per-article-type budgets
+
+| Article type | H3 budget | Why |
+|---|---|---|
+| **Definition / "What is X" / overview pages** | Low — H3s only in 2-3 sections that are genuinely procedural or sub-question driven | Search intent is definitional. Readers want a clean explainer, not a hub. Promoting every supporting point inflates the heading map and turns the page into a mini-encyclopedia. |
+| **Procedure / step-by-step / "How to" guides** | Higher — H3s for each major stage of the process | Search intent is procedural. The reader needs to navigate the steps. |
+| **Comparison / decision pages** | H3s where each branch needs distinct explanation | Each comparison branch may be a real subsection. |
+| **Sector-specific deep-dives** | H3s where the sector's subtopics are unique | Generic H3s belong on the hub article. |
+| **Hub / glossary / index pages** | None or near-none — link cards instead | A hub's job is navigation, not nested explanation. |
+| **Detailed checklist articles** | H3s per major checklist phase | Each phase carries a distinct cluster of items. |
+
+### The default-to-table policy for definition and overview pages
+
+On a definition / "What is X" / overview page, the **default** placement for supporting content is:
+
+- **Comparison content** (types, options, routes): comparison table.
+- **Lists of duties, risks, costs, deadlines**: table or bullet list with bold labels.
+- **Neighbouring guide topics**: link cards in a single Related Guides H2.
+- **Sub-questions central to the title** (e.g., "What happens to X after Y?"): H3 — these are earned.
+- **Process stages** (only if the title promises process coverage): H3 per stage — these are earned.
+
+The default for everything else on these pages is **not H3**.
+
+### Anti-pattern: the inflated definition page
+
+A definition page becomes a different article when:
+
+- Every supporting point becomes its own H3
+- Related-guide topics are promoted to H3 with mini-explanations beneath them
+- A "What is X?" page reads like an "X: A Director's Guide" page
+- The H3 count rivals or exceeds a real procedure-guide page on the same topic
+- Sibling-page topics (per the H3 Demotion list) appear in the heading hierarchy
+
+When the page becomes a hub instead of a definition, simplify. Do not let a "What is X?" page absorb the H3 count of every neighbouring guide it references.
+
+---
+
 ## When to use H3s, tables, H4s, or bolded labels
 
 | Format | Use for |
@@ -1116,16 +1161,17 @@ Insolvency & Liquidation Hub; HMRC Debt & Enforcement Hub; Glossary of UK Insolv
 
 ## Final QA checklist (run on every rewrite)
 
-The 8-question test below is the binding QA. Every standardised template and every rewrite must pass it.
+The 9-question test below is the binding QA. Every standardised template and every rewrite must pass it.
 
-1. **Are H3s reserved for article-specific subtopics?** (Run the 4-question Heading Promotion test on every H3.)
-2. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list.)
-3. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
-4. **Are Option sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B.)
-5. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
-6. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
-7. **Are FAQs the final H2?** (No editorial H2 may follow.)
-8. **Does the page still satisfy the article title without becoming a hub?** (Hub framing is reserved for Template 14 and titles that explicitly are hubs / decision guides.)
+1. **Is the page answering the exact title?** Read the title aloud. Read the page. Are they the same article? A "What Is Company Liquidation?" page must explain liquidation as a whole, not become a CVL guide. A "How to Prepare for Liquidation" page must walk through preparation, not redirect to definitions. If the article has drifted, restructure or rename.
+2. **Is it becoming a different article from the title?** The most common failure: a definition page absorbs so much CVL/director-conduct/cost detail that it reads as the deeper guide it should link to. If yes, demote the deep sections to tables, bullets, or link cards.
+3. **Are H3s reserved for article-specific subtopics?** (Run the 4-question Heading Promotion test on every H3, then check the per-article-type budget above.)
+4. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list.)
+5. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
+6. **Are Option sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B.)
+7. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
+8. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
+9. **Are FAQs the final H2?** (No editorial H2 may follow.)
 
 **Plus the original semantic-relevance checks:**
 
