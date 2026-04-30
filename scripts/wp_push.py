@@ -62,8 +62,11 @@ add_action('init', function() {{
     // Run as admin so wp_update_post skips kses filtering on block content
     wp_set_current_user(1);
 
-    $update = ['ID' => (int) $p['post_id'], 'post_content' => $p['content']];
-    if (!empty($p['title']))  $update['post_title']  = $p['title'];
+    // wp_update_post expects slashed input; without wp_slash, internal
+    // wp_unslash strips one level of backslashes — breaks JSON unicode
+    // escapes (e.g. <) inside Gutenberg block attributes.
+    $update = ['ID' => (int) $p['post_id'], 'post_content' => wp_slash($p['content'])];
+    if (!empty($p['title']))  $update['post_title']  = wp_slash($p['title']);
     if (!empty($p['status'])) $update['post_status'] = $p['status'];
 
     $r = wp_update_post($update, true);
