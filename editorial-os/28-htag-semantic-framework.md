@@ -94,16 +94,22 @@ H3s must be **earned**, not defaulted to. The discipline differs by article type
 
 Before adding ANY H3, ask: **could a table row, bold label, bullet, or link card carry this content equally well?** If yes, demote. H3 only when the subsection has enough depth that promoting it produces clarity rather than visual noise.
 
-### Per-article-type budgets
+### Step 1 — classify the page type before choosing H3 density
+
+Before drafting any heading structure, classify the article into one of the eight types below. Page type determines how many H3s are appropriate.
 
 | Article type | H3 budget | Why |
 |---|---|---|
-| **Definition / "What is X" / overview pages** | Low — H3s only in 2-3 sections that are genuinely procedural or sub-question driven | Search intent is definitional. Readers want a clean explainer, not a hub. Promoting every supporting point inflates the heading map and turns the page into a mini-encyclopedia. |
-| **Procedure / step-by-step / "How to" guides** | Higher — H3s for each major stage of the process | Search intent is procedural. The reader needs to navigate the steps. |
-| **Comparison / decision pages** | H3s where each branch needs distinct explanation | Each comparison branch may be a real subsection. |
-| **Sector-specific deep-dives** | H3s where the sector's subtopics are unique | Generic H3s belong on the hub article. |
-| **Hub / glossary / index pages** | None or near-none — link cards instead | A hub's job is navigation, not nested explanation. |
-| **Detailed checklist articles** | H3s per major checklist phase | Each phase carries a distinct cluster of items. |
+| **Definition / explainer / "What is X" / overview pages** | Low — H3s only in 2-3 sections that are genuinely procedural or sub-question driven | Search intent is definitional. Readers want a clean explainer, not a hub. Promoting every supporting point inflates the heading map and turns the page into a mini-encyclopedia. |
+| **Process / procedure / step-by-step / "How to" guides** | Higher — H3s for each major stage of the process | Search intent is procedural. The reader needs to navigate the steps. |
+| **Decision guides** | H3s where each decision branch is a real user intent and needs distinct explanation | Each branch may be a real subsection. |
+| **Comparison pages** | H3s only when each option needs substantive standalone explanation rather than a table row | Most comparisons are better served by a single comparison table with H3s reserved for genuinely complex options. |
+| **Risk guides** | H3s for each risk only when the page is dedicated to that risk family | Where risks have their own sibling pages, demote to a risk table per cross-family pattern A. |
+| **Sector-specific guides** | H3s where the sector's subtopics are unique | Generic H3s belong on the hub article. |
+| **Hub pages** | None or near-none — link cards instead | A hub's job is navigation, not nested explanation. |
+| **Checklist articles** | H3s per major checklist phase | Each phase carries a distinct cluster of items. |
+
+Classifying first is the discipline that prevents bloat. A "What is..." title should never silently inherit a procedure-guide's H3 budget just because the topic family overlaps.
 
 ### The default-to-table policy for definition and overview pages
 
@@ -128,6 +134,234 @@ A definition page becomes a different article when:
 - Sibling-page topics (per the H3 Demotion list) appear in the heading hierarchy
 
 When the page becomes a hub instead of a definition, simplify. Do not let a "What is X?" page absorb the H3 count of every neighbouring guide it references.
+
+---
+
+## Step 2 — decide section format per H2 (before writing any H3s)
+
+For every H2, choose the format **before** drafting H3s. Do not default to H3.
+
+### The H3 density rule
+
+For each H2, decide whether the section needs:
+
+- no H3s
+- 2 to 4 H3s
+- a comparison table
+- a risk table
+- a checklist
+- bolded labels with bullets
+- link cards
+- a summary box
+
+**Use no H3s when the section is:**
+
+- a quick summary or "at a Glance"
+- a list of types, routes, or options
+- a list of warning signs or triggers
+- a list of costs or fees
+- a comparison of routes or alternatives
+- a related guides section
+- a risk overview where each risk has its own dedicated article
+
+**Use H3s when the section is:**
+
+- a core process the title promises (e.g. "How X works")
+- a complex explanation that needs distinct subtopics
+- a direct answer to separate reader questions (e.g. "What happens to debts / employees / directors after X?")
+- a central part of the article title
+- specific enough that it will not cannibalise another page
+
+### Section-format decision tree
+
+For every H2, pick the format using this rule:
+
+| If the H2 is... | Use... |
+|---|---|
+| A summary or "at a Glance" | A summary box (styled aside). No H3s. |
+| A comparison of types, options, or routes | A comparison table. No H3s. |
+| A list of risks (where the risks have sibling pages) | A risk table per cross-family pattern A. No H3s. |
+| A central process with distinct stages | H3s, one per stage. |
+| A list of short actions or duties | A checklist or table. No H3s. |
+| A pointer to neighbouring pages | Link cards per cross-family pattern C. No H3s. |
+| A set of short definitions or labelled points | Bold labels with bullets. No H3s. |
+| A long explanation with distinct subtopics central to the title | H3s, one per subtopic. |
+
+---
+
+## The "What is X?" default template (overrides topic-specific templates)
+
+When the title is a definition request — typically starting with "What is...", "What does ... mean", or otherwise framing the page as a broad explainer — use the leaner structure below regardless of the topic family. This template **overrides the H3-heavier defaults in Templates 1–14** when the title is definition-led.
+
+```
+H1: What Is (Primary Keyword)?
+
+H2: (Primary Keyword) at a Glance
+  → Summary box only. No H3s.
+  → Inside the box, use bold labels: Meaning / Used when / Who runs it / Director priority.
+
+H2: What Is (Primary Keyword)?
+  H3: (Primary Keyword) Meaning
+  H3: What Happens When (Primary Keyword Verb-ed)
+  → 1 to 2 H3s only. Drop the second if redundant.
+
+H2: Types of (Primary Keyword)
+  → Comparison table only. No H3s unless the article is specifically a detailed type guide.
+  → Columns: Type / Used when / Who starts it / Who controls the process / Related guide.
+
+H2: When Should (Subject) Go Into / Use (Primary Keyword)?
+  → Bold labels or bullets only. No H3s unless each situation needs substantial explanation.
+
+H2: How (Primary Keyword) Works
+  H3: (Process Step 1)
+  H3: (Process Step 2)
+  H3: (Process Step 3)
+  H3: (Process Step 4)
+  → H3s justified here because process steps are the core promise.
+
+H2: What Should Directors Do During (Primary Keyword)?
+  → Table or checklist only. No H3s unless the article is specifically a director-action guide.
+  → Columns: Director action / Why it matters / What to do.
+
+H2: (Primary Keyword) Costs and Timelines
+  → Table only. No H3s unless the article is specifically about costs or timelines.
+  → Columns: Item / Typical range or timing / Notes.
+
+H2: What Happens After (Primary Keyword)?
+  H3: What Happens to (Distinct Question 1)
+  H3: What Happens to (Distinct Question 2)
+  H3: What Happens to (Distinct Question 3)
+  H3: What Happens to (Distinct Question 4)
+  → H3s justified because each is a distinct reader question (debts, employees, directors, creditors etc.).
+
+H2: (Primary Keyword) vs Other Options
+  → Comparison table only. No H3s unless the article is specifically a decision guide.
+  → Columns: Route / Best used when / What happens / Main director consideration / Related guide.
+
+H2: Related Guides
+  → Short link cards or bullets only. No H3s.
+
+H2: Frequently Asked Questions About (Primary Keyword)
+  → FAQ accordion. Final article H2.
+```
+
+**Total H3 budget for a "What is X?" page using this template:** roughly 10 — concentrated in the three sections (the definition split, the process, and the post-event distinct-questions section) where the title genuinely demands them. Every other H2 uses table, summary box, checklist, bold-label list, or link cards.
+
+If a topic-specific template (1–14) suggests more H3s than this for a definition-led title, the topic-specific template is wrong for that title. Use the What is X? template above, then layer in the topic-specific terminology for the bracket fills.
+
+---
+
+## Step 3 — section-specific format patterns
+
+These patterns refine Step 2 for the recurring section types that appear across most insolvency articles. Apply them whenever the H2 matches one of these section roles.
+
+### Pattern: "Types of X"
+
+Do not automatically make each type an H3.
+
+For broad explainers and definition pages, use a comparison table:
+
+```
+H2: Types of (Primary Keyword)
+
+Columns: Type / Used when / Who starts it / Who controls the process / Related guide
+Rows:    one per type, linking to the dedicated guide for that type
+```
+
+Use H3s for types only when:
+- the page is a detailed type-comparison guide,
+- each type needs a substantial explanation,
+- or the article title explicitly asks for a comparison of types.
+
+### Pattern: "Costs and Timelines for X"
+
+Do not automatically make each cost or timeline item an H3.
+
+For broad explainers, use a single table:
+
+```
+H2: (Primary Keyword) Costs and Timelines
+
+Columns: Item / Typical range or timing / Notes
+```
+
+Use H3s only if the article is specifically about costs, fees, or timelines (e.g. titled "How Much Does X Cost?" or "How Long Does X Take?").
+
+### Pattern: "What Should Directors Do During X"
+
+Do not automatically make each director duty an H3.
+
+For broad pages, use a table or checklist:
+
+```
+H2: What Should Directors Do During (Primary Keyword)?
+
+Columns: Director action / Why it matters / What to do
+Rows:    one per duty, with the legal basis (section reference) where relevant
+```
+
+Use H3s only when the article is a director-action guide or when the action is central to the title.
+
+### Pattern: "Related Guides"
+
+Do not use H3s for related guides unless the page is a hub.
+
+```
+H2: Related Guides
+
+Format: short link cards or a bulleted link list
+```
+
+Each link should support the current article without turning it into a navigation hub. This refines cross-family pattern C — applies on every page that has a Related Guides section, not just hubs.
+
+### Pattern: cannibalisation demotion
+
+If a proposed H3 is also a likely standalone article on the site, demote it unless the current page is specifically about that topic. Demote to:
+
+- table row,
+- bold label,
+- checklist item,
+- short linked summary inside a paragraph, or
+- a card inside the Related Guides section.
+
+Topics that should be **mentioned, compared, and linked** but should NOT automatically become H3s on a broad explainer page (refines the H3 Demotion list above with the most common offenders):
+
+- Creditors' Voluntary Liquidation
+- Compulsory Liquidation
+- Members' Voluntary Liquidation
+- Strike-off
+- Administration
+- Pre-Pack Administration
+- Company Voluntary Arrangement (CVA)
+- Wrongful trading
+- Preferences (s.239 IA 1986)
+- Director disqualification
+- Personal guarantees
+- HMRC Time to Pay
+- Winding-up petition
+- Statutory demand
+
+These can appear in tables, comparison rows, link cards, or short linked summaries inside paragraphs. They should not silently become H3s on a "What is X?" page just because the broader topic family touches them.
+
+---
+
+## Step 4 — final H3 reduction pass
+
+After generating the structure, run an H3 reduction pass over every proposed H3.
+
+For every H3, ask:
+
+1. Does this need a full subsection (multiple paragraphs of distinct content)?
+2. Is this central to the article title?
+3. Is it better as a table row?
+4. Is it better as a bold label inside a paragraph or bullet list?
+5. Is it better as a checklist item?
+6. Is it better as a related-guide link card?
+7. Could this H3 cannibalise a dedicated page on the topic?
+
+If the answer to questions 1 or 2 is "no", or to questions 3–6 is "yes", **demote**. If the answer to question 7 is "yes" and the page is not specifically about that topic, **demote**.
+
+The reduction pass is not optional. Run it before final QA, not after. Heading bloat caught at QA usually means a structural redo; heading bloat caught at the reduction pass is a quick demotion.
 
 ---
 
@@ -638,14 +872,14 @@ H2: Frequently Asked Questions About (Solvency Keyword)
 
 ## Template 7: Company liquidation overview, process, costs and timelines
 
-**Use for:**
-- What Is Company Liquidation?
-- Company Bankruptcy Explained
+**Use for procedure-led titles in this family:**
 - How Long Does It Take to Liquidate a Company?
 - How Much Does Company Liquidation Cost?
 - How to Prepare for Company Liquidation
 - List of Documents You'll Need for Liquidation
 - Liquidation Deadlines and Time Limits
+
+**Do NOT use this template for definition-led titles** such as "What Is Company Liquidation?" or "Company Bankruptcy Explained". Those are broad explainers — use the **"What is X?" default template** above (the leaner structure with comparison tables, summary box, and link cards in place of most H3s). The template below is H3-heavier because procedure / cost / timeline / document titles legitimately need more subsections; those H3s are not justified on a definition-led "What is..." page.
 
 **H-tag structure:**
 
@@ -1161,17 +1395,19 @@ Insolvency & Liquidation Hub; HMRC Debt & Enforcement Hub; Glossary of UK Insolv
 
 ## Final QA checklist (run on every rewrite)
 
-The 9-question test below is the binding QA. Every standardised template and every rewrite must pass it.
+The 11-question test below is the binding QA. Every standardised template and every rewrite must pass it. Questions 1–4 are the title-discipline gate; questions 5–11 are the structural gate.
 
 1. **Is the page answering the exact title?** Read the title aloud. Read the page. Are they the same article? A "What Is Company Liquidation?" page must explain liquidation as a whole, not become a CVL guide. A "How to Prepare for Liquidation" page must walk through preparation, not redirect to definitions. If the article has drifted, restructure or rename.
 2. **Is it becoming a different article from the title?** The most common failure: a definition page absorbs so much CVL/director-conduct/cost detail that it reads as the deeper guide it should link to. If yes, demote the deep sections to tables, bullets, or link cards.
-3. **Are H3s reserved for article-specific subtopics?** (Run the 4-question Heading Promotion test on every H3, then check the per-article-type budget above.)
-4. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list.)
-5. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
-6. **Are Option sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B.)
-7. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
-8. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
-9. **Are FAQs the final H2?** (No editorial H2 may follow.)
+3. **Did Step 1 classify the page type correctly?** A "What is..." title is a definition page, regardless of how rich the topic family is. The classification decides the H3 budget; bypassing classification is what produces inflated explainers.
+4. **Did the Step 4 H3 reduction pass run before this QA?** For every H3 in the draft: does it need a full subsection, is it central to the title, and could it be a table row, bold label, checklist item, or link card instead? If reduction was skipped, the rest of this checklist will mask the bloat.
+5. **Are H3s reserved for article-specific subtopics?** (Run the 4-question Heading Promotion test on every H3, then check the per-article-type budget above.)
+6. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list and the cannibalisation demotion pattern.)
+7. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
+8. **Are Option / Types / Comparison sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B + the "Types of X" section pattern.)
+9. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
+10. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
+11. **Are FAQs the final H2?** (No editorial H2 may follow.)
 
 **Plus the original semantic-relevance checks:**
 
