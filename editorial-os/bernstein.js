@@ -24,12 +24,13 @@ const { createWorkerBundle, publishWordPressArticle } = require('./lib/bernstein
 
 const ROOT = path.resolve(__dirname, '..');
 const BACKLOG_PATH = path.join(STATE_ROOT, 'companydebt-backlog.json');
-const STAGE_SEQUENCE = ['research', 'draft', 'review', 'revise', 'gate', 'publish'];
+const STAGE_SEQUENCE = ['research', 'draft', 'review', 'revise', 'humanise', 'gate', 'publish'];
 const STAGES = {
   research: { next: ['draft'], budget: 7000, description: 'Ground the page against page config, runtime context, and evidence inputs.' },
   draft: { next: ['review'], budget: 9000, description: 'Produce or update the page draft using the Company Debt runtime packs.' },
   review: { next: ['revise', 'gate'], budget: 5000, description: 'Stress-test the draft against voice, evidence, comparison, and trust rules.' },
-  revise: { next: ['review', 'gate'], budget: 5000, description: 'Apply only the bounded fixes required by review or gate findings.' },
+  revise: { next: ['review', 'humanise'], budget: 5000, description: 'Apply only the bounded fixes required by review or gate findings.' },
+  humanise: { next: ['gate'], budget: 4000, description: 'Restore voice, authorship texture, and human markers after structural revision.' },
   gate: { next: ['publish'], budget: 4000, description: 'Run the Company Debt quality gates and capture failures explicitly.' },
   publish: { next: [], budget: 3000, description: 'Publish through the Company Debt page builder flow and confirm the handoff.' },
 };
@@ -43,6 +44,7 @@ const CHECKPOINT_DEFS = {
   end_matter_complete: { stage: 'draft', description: 'Verification date, methodology, and required end-matter are present.' },
   review_notes_complete: { stage: 'review', description: 'Review findings or explicit pass rationale are recorded.' },
   revision_changes_applied: { stage: 'revise', description: 'Requested fixes from review or gate have been applied.' },
+  humanise_complete: { stage: 'humanise', description: 'Voice and authorship markers restored after revision.' },
   pre_publish_gate_passed: { stage: 'gate', description: 'The Company Debt quality checker passed.' },
   editorial_spot_check_complete: { stage: 'gate', description: 'A final editorial spot check was recorded after the gate.' },
   publish_payload_ready: { stage: 'publish', description: 'Publish payload, metadata, and preview artifact are ready.' },
@@ -54,7 +56,8 @@ const STAGE_START_REQUIREMENTS = {
   draft: ['registry_entry_verified', 'research_packet_ready', 'source_inputs_gathered', 'decision_brief_complete'],
   review: ['draft_file_ready', 'runtime_rules_applied', 'end_matter_complete'],
   revise: ['review_notes_complete'],
-  gate: ['draft_file_ready', 'runtime_rules_applied', 'end_matter_complete', 'review_notes_complete'],
+  humanise: ['revision_changes_applied'],
+  gate: ['draft_file_ready', 'runtime_rules_applied', 'end_matter_complete', 'review_notes_complete', 'humanise_complete'],
   publish: ['pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready'],
 };
 const STAGE_COMPLETION_REQUIREMENTS = {
@@ -62,13 +65,14 @@ const STAGE_COMPLETION_REQUIREMENTS = {
   draft: ['draft_file_ready', 'runtime_rules_applied', 'end_matter_complete'],
   review: ['review_notes_complete'],
   revise: ['revision_changes_applied'],
+  humanise: ['humanise_complete'],
   gate: ['pre_publish_gate_passed', 'editorial_spot_check_complete'],
   publish: ['publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
 };
 const DOWNSTREAM_RESETS = {
-  draft: ['pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
-  review: ['pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
-  revise: ['pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
+  draft: ['humanise_complete', 'pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
+  review: ['humanise_complete', 'pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
+  revise: ['humanise_complete', 'pre_publish_gate_passed', 'editorial_spot_check_complete', 'publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
   gate: ['publish_payload_ready', 'wordpress_publish_confirmed', 'post_publish_checks_complete'],
 };
 

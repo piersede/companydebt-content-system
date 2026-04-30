@@ -13,6 +13,7 @@ const STAGE_TASK_MAP = {
   draft: 'draft',
   review: 'review',
   revise: 'rewrite',
+  humanise: 'humanise',
   gate: 'trust-pass',
   publish: 'deploy',
 };

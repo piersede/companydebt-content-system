@@ -20,6 +20,7 @@ STAGE_PACKS = {
     "trust-pass": "stages/trust-pass.md",
     "adversarial-review": "stages/adversarial-review.md",
     "final-polish": "stages/final-polish.md",
+    "humanise": "stages/humanise.md",
 }
 
 TASK_BASE_PACKS = {
@@ -29,6 +30,7 @@ TASK_BASE_PACKS = {
     "outline": ["writer-core.md"],
     "draft": ["writer-core.md"],
     "rewrite": ["writer-core.md", "review-core.md"],
+    "humanise": ["writer-core.md"],
     "trust-pass": ["review-core.md"],
     "review": ["review-core.md"],
     "adversarial-review": ["review-core.md"],
@@ -43,7 +45,8 @@ TASK_CANONICAL = {
     "source-grounding": ["10-evidence-governance.md", "04-trust-architecture.md", "25-update-logic.md", "26-call-out-box-governance.md"],
     "outline": ["12-structure-governance.md", "27-article-type-structure.md"],
     "draft": ["09-voice-governance.md", "12-structure-governance.md", "13-readability-governance.md", "17-audience-and-persona.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md", "28-readability-components.md"],
-    "rewrite": ["09-voice-governance.md", "12-structure-governance.md", "23-prose-quality-gates.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md", "28-readability-components.md"],
+    "rewrite": ["12-structure-governance.md", "24-content-registry.md", "26-call-out-box-governance.md", "27-article-type-structure.md", "28-readability-components.md"],
+    "humanise": ["09-voice-governance.md", "23-prose-quality-gates.md", "docs/human-authorship-voice-engine.md"],
     "trust-pass": ["10-evidence-governance.md", "16-pre-publish-gate.md", "23-prose-quality-gates.md", "24-content-registry.md", "25-update-logic.md", "26-call-out-box-governance.md"],
     "review": ["05-scoring-rubric.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md"],
     "adversarial-review": ["11-comparison-governance.md", "14-failure-modes-and-recovery.md", "16-pre-publish-gate.md", "24-content-registry.md", "26-call-out-box-governance.md"],
