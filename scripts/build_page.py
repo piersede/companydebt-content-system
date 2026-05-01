@@ -61,6 +61,11 @@ PAGE_REGISTRY = {
     'guide-to-business-credit-cards': 'cc_builder.data.pages.guide_to_business_credit_cards',
     'credit-cards-vs-charge-cards': 'cc_builder.data.pages.credit_cards_vs_charge_cards',
     'balance-transfer': 'cc_builder.data.pages.balance_transfer',
+    # ── Insolvency pages ────────────────────────────────────────────────
+    # Slim configs (slug, title, page_type, wp_page_id, verification_date).
+    # Page-class routing for these slugs is in scripts/page_runtime_metadata.py
+    # SLUG_PAGE_CLASS_OVERRIDES.
+    'liquidation': 'cc_builder.data.pages.liquidation',
 }
 
 
