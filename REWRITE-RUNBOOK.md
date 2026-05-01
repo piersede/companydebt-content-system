@@ -80,7 +80,8 @@ The script enforces these. You can fail any one and the gate blocks.
 | Internal links | ≥ 3 to `companydebt.com` / staging |
 | Structural | Methodology, Sources, FAQ accordion, featured image, template, author (ID 34 = Chris Andersen), no body hero image in first 2k chars, word count ≥ 800 |
 | Linked sources | Every Sources `<li>` has an `<a href>` link OR an explicit `<!-- no-url: <reason> -->` opt-out marker (§7b) |
-| Lead paragraph | First `<p>` of the body contains no `<strong>` or `<b>`. Theme auto-bolds the lead via `p:first-of-type`; inline `<strong>` compounds via `bolder` to weight 800/900 (`13-readability-governance.md` §3b) |
+| Lead paragraph | First `<p>` of the body contains no `<strong>` or `<b>`. Theme auto-bolds via `p:first-of-type`. (`13-readability-governance.md` §3b, audit Check 21) |
+| Auto-bolded table cells | No `<strong>` or `<b>` inside `<th>` headers or first-column `<td>` cells. Theme auto-bolds both. (`13-readability-governance.md` §3b, audit Check 23) |
 
 ### 6. Tier 3 editorial rules (Rules A–J)
 
