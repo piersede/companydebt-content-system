@@ -239,7 +239,11 @@ H2: (Primary Keyword) vs Other Options
   → Columns: Route / Best used when / What happens / Main director consideration / Related guide.
 
 H2: Related Guides
-  → Short link cards or bullets only. No H3s.
+  → Bulleted link list (Gutenberg wp:list block). No H3s.
+  → Each list item: <a href="...">Page Title</a>: short one-line description.
+  → A styled "link cards" grid is NOT a default — it requires theme CSS that
+    does not currently exist. Use the wp:list pattern shown in Pattern:
+    "Related Guides" below.
 
 H2: Frequently Asked Questions About (Primary Keyword)
   → FAQ accordion. Final article H2.
@@ -306,11 +310,25 @@ Use H3s only when the article is a director-action guide or when the action is c
 
 Do not use H3s for related guides unless the page is a hub.
 
-```
-H2: Related Guides
+**Canonical format — Gutenberg `wp:list` block, link + description per item:**
 
-Format: short link cards or a bulleted link list
+```html
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Related Guides</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+  <!-- wp:list-item --><li><a href="/path/">Page Title</a>: short one-line description.</li><!-- /wp:list-item -->
+  <!-- wp:list-item --><li><a href="/path/">Page Title</a>: short one-line description.</li><!-- /wp:list-item -->
+  ...
+</ul>
+<!-- /wp:list -->
 ```
+
+This renders cleanly with the theme's existing list styling. No new CSS is needed.
+
+**Do NOT use a "link cards" grid pattern with bespoke class names** (e.g. `cd-link-cards`, `cd-link-card`, etc.) unless the matching CSS already exists in `theme/style.css`. The framework previously suggested "link cards" as a design idea; in practice, writing card markup with classes the theme does not know about produces a wall of underlined inline links because the browser falls back to default `<a>` styling and the description text inherits the link colour. If a future theme update adds a styled card grid, this pattern can be promoted then; until that lands, use the `wp:list` pattern above.
 
 Each link should support the current article without turning it into a navigation hub. This refines cross-family pattern C — applies on every page that has a Related Guides section, not just hubs.
 
@@ -492,13 +510,15 @@ H3: Sale, Closure or Insolvency Procedure
 
 ### C. Related Guides section pattern
 
-**Default for non-hub articles.** Short link block. No H3 subsections.
+**Default for non-hub articles.** Short link block, Gutenberg `wp:list` block. No H3 subsections.
 
 ```
 H2: Related Guides
 
-[3–6 link cards or bullets, descriptive anchors, each pointing to a directly connected sibling page.]
+[3–6 bulleted list items. Each item: <a href="...">Page Title</a>: short description. Use the wp:list block markup. See the detailed Pattern: "Related Guides" below for the canonical code template.]
 ```
+
+Do not write a "link cards" grid using bespoke class names. The theme does not currently style such classes, and the browser falls back to default underlined-anchor rendering for the whole block. Use the `wp:list` pattern.
 
 Do not turn this section into a second hub. Each related guide must be directly connected to the current article and must not introduce a new branch of intent.
 
