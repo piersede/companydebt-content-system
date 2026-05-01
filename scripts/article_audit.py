@@ -13,9 +13,9 @@ Source of truth:
   - editorial-os/14-failure-modes-and-recovery.md §16  (AI fingerprints)
 
 Emits per article:
-  - Detailed pass/fail on each of the 22 scorable items
+  - Detailed pass/fail on each of the 23 scorable items
   - A binary GATE verdict (PASS / FAIL) driven by the canonical hard-fail list
-  - A /22 score suitable for the Monday "Post Score" column
+  - A /23 score suitable for the Monday "Post Score" column
 
 Tier 3 editorial checks (information gain per section, authored authority,
 evaluative bite, concrete scenes) are NOT automated here — the script prints
@@ -629,6 +629,62 @@ def check_keyword_h2s(title: str, body: str) -> CheckResult:
     )
 
 
+def check_no_strong_in_auto_bolded_table_cells(body: str) -> CheckResult:
+    """
+    editorial-os/13-readability-governance.md §3b — Auto-bolded contexts (HARD RULE).
+
+    Theme CSS auto-bolds two table contexts:
+        .main-content table thead th { font-weight: 700; }
+        .main-content table tbody tr td:first-child { font-weight: 600; }
+
+    Wrapping <th> header text or first-column <td> cells in <strong> or <b>
+    is redundant and was the cause of double-bold table-cell rendering on
+    /liquidation/ before the bolder→700 theme fix landed (May 2026). The
+    theme fix prevents the visual compounding, but the writing rule still
+    applies as defence in depth: a future theme change or a different theme
+    family could reintroduce the cascade.
+
+    Pass criteria: no <strong>/<b> inside <th> elements anywhere in <thead>,
+    and no <strong>/<b> inside the first <td> of each <tr> within <tbody>.
+    """
+    # Iterate every <table>...</table> in the body
+    offenders: list[str] = []
+    for tm in re.finditer(r"<table\b[^>]*>(.*?)</table>", body, re.DOTALL | re.I):
+        table = tm.group(1)
+        # Check thead <th> cells
+        thead_match = re.search(r"<thead\b[^>]*>(.*?)</thead>", table, re.DOTALL | re.I)
+        if thead_match:
+            for th in re.findall(r"<th\b[^>]*>(.*?)</th>", thead_match.group(1), re.DOTALL | re.I):
+                if re.search(r"<(?:strong|b)\b", th, re.I):
+                    text = re.sub(r"<[^>]+>", "", th).strip()
+                    offenders.append(f"<th>: {text[:50]}")
+        # Check tbody first-<td> per row
+        tbody_match = re.search(r"<tbody\b[^>]*>(.*?)</tbody>", table, re.DOTALL | re.I)
+        rows_source = tbody_match.group(1) if tbody_match else table
+        # Skip thead rows if no <tbody> wrapper
+        if not tbody_match and thead_match:
+            rows_source = rows_source.replace(thead_match.group(0), "")
+        for tr in re.findall(r"<tr\b[^>]*>(.*?)</tr>", rows_source, re.DOTALL | re.I):
+            first_td = re.search(r"<td\b[^>]*>(.*?)</td>", tr, re.DOTALL | re.I)
+            if first_td and re.search(r"<(?:strong|b)\b", first_td.group(1), re.I):
+                text = re.sub(r"<[^>]+>", "", first_td.group(1)).strip()
+                offenders.append(f"<td:first>: {text[:50]}")
+
+    if offenders:
+        sample = "; ".join(offenders[:3])
+        return CheckResult(
+            id="23", tier="T2",
+            name="No <strong>/<b> in <th> or first-column <td> (theme auto-bolds)",
+            passed=False,
+            detail=f"{len(offenders)} cell(s) with redundant emphasis: {sample}",
+        )
+    return CheckResult(
+        id="23", tier="T2",
+        name="No <strong>/<b> in <th> or first-column <td> (theme auto-bolds)",
+        passed=True,
+    )
+
+
 def check_block_comment_json_no_raw_html(raw_html: str) -> CheckResult:
     """
     Gutenberg block markers carry attribute values as inline JSON inside
@@ -784,6 +840,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_paragraph_length(body),
         check_lead_paragraph_no_strong(body),
         check_block_comment_json_no_raw_html(raw),
+        check_no_strong_in_auto_bolded_table_cells(body),
     ]
     return audit
 

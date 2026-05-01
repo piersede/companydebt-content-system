@@ -91,24 +91,44 @@ Use bolding and italics with measured intent. During rewrite, **actively identif
 - An average 2,500-word article should carry roughly 50–150 bolded words across 8–20 short bolded chunks, not one long bolded sentence.
 - Each H2 section should contain **at least one** bolded chunk meeting the criteria above; if a section has none, either the section lacks a decision-critical anchor (rewrite the section) or the editor is under-using bold (add it).
 
-### §3b. Lead paragraph emphasis (HARD RULE)
+### §3b. Auto-bolded contexts (HARD RULE)
 
-**Do not put `<strong>`, `<b>`, or `**...**` inside the first paragraph of any article.**
+**Do not put `<strong>`, `<b>`, or `**...**` inside any context the theme already auto-bolds.** Wrapping is redundant — and historically produced visibly compounded weight via the `bolder` keyword cascade. The theme CSS now sets `b, strong { font-weight: 700 }` so the visual compounding is gone, but the writing rule still applies as defence in depth: a future theme change or a different theme could re-introduce the cascade.
 
-The theme already bolds the lead paragraph automatically via:
+**Auto-bolded contexts the writer must NOT wrap in `<strong>`:**
 
-```css
-.site-main .main-content > p:first-of-type { font-weight: 700; }
-.content > p:first-of-type                 { font-weight: 700; }
-```
+| Context | Theme rule | Audit check |
+|---|---|---|
+| First `<p>` of body | `.site-main .main-content > p:first-of-type { font-weight: 700; }` | Check 21 |
+| First-column `<td>` cells in `<tbody>` | `.main-content table tbody tr td:first-child { font-weight: 600; }` | Check 23 |
+| `<th>` column headers in `<thead>` | `.main-content table thead th { font-weight: 700; }` | Check 23 |
+| `<dt>` definition terms | `dt { font-weight: 700; }` | not yet enforced — uncommon in articles |
 
-When a writer adds `<strong>` to a phrase inside an already-bold lead paragraph, the global theme rule `b, strong { font-weight: bolder; }` ([style.css:228](theme/style.css:228)) escalates that phrase to font-weight 800/900 because `bolder` resolves *relative to the parent's weight*. The result is a visibly heavier sub-string inside the lead — what reviewers see as "double-bolding".
+**Why the rule still matters even after the `bolder`→`700` theme fix:**
 
-**The active bold pass in §3a applies to body sections only, not to the lead paragraph.** The lead is already the article's visual anchor; further emphasis is redundant and produces the compounding bug above.
+Before May 2026 the theme had `b, strong { font-weight: bolder; }`. `bolder` resolves *relative to the parent's weight*, so `<strong>` inside an already-bold context (lead paragraph weight 700, table first-cell weight 600) escalated to weight 700/800/900 depending on which font weights were available. The result was a visibly heavier sub-string — the "double-bold" reviewers flagged on /liquidation/.
 
-**If you want to emphasise a phrase that currently sits in the lead:** move the phrase to the second paragraph (which is plain-weight and accepts `<strong>` cleanly), or rewrite the lead so the phrase is its own short paragraph.
+The theme rule is now `font-weight: 700`, which is absolute. `<strong>` always renders at 700, regardless of parent weight. The compounding bug is fixed at root.
 
-**Enforcement:** `scripts/article_audit.py` Check 21 fails if the first `<p>` in the body contains any `<strong>` or `<b>` tag.
+The writing rule (don't wrap auto-bolded contexts) stays in place because:
+
+- The theme contract may change. A new theme inheriting `bolder` re-introduces the bug everywhere `<strong>` sits inside an already-bold container.
+- Wrapping is editorially redundant. The theme's auto-bold is already doing the visual emphasis work.
+- Audit enforcement is cheap; relying on theme behaviour to mask writer mistakes is brittle.
+
+**The active bold pass in §3a applies to body sections only, not to auto-bolded contexts.** Specifically: not the lead paragraph, not first-column table cells, not column headers. Those surfaces are already the visual anchor of their section; further emphasis is redundant.
+
+**If you want to emphasise a phrase that currently sits in an auto-bolded context:**
+
+- For the lead paragraph: move the phrase to the second paragraph (which is plain-weight and accepts `<strong>` cleanly), or rewrite the lead so the phrase is its own short paragraph.
+- For table cells: emphasise the value column or a non-first column, where the cell weight is plain. The first-column row label is already visually distinct via the auto-bold.
+
+**Enforcement:**
+
+- `scripts/article_audit.py` Check 21 fails if the first `<p>` in the body contains any `<strong>` or `<b>` tag.
+- `scripts/article_audit.py` Check 23 fails if any `<th>` inside `<thead>`, or any first-column `<td>` inside `<tbody>`, contains `<strong>` or `<b>`.
+
+**Theme baseline:** `b, strong { font-weight: 700 }` since [theme/style.css:228](theme/style.css:228) was patched in May 2026. Do not revert this to `bolder` without a corresponding update to the auto-bolded-contexts list above.
 
 ### Active bold pass (during rewrite)
 
