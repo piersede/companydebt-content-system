@@ -13,9 +13,9 @@ Source of truth:
   - editorial-os/14-failure-modes-and-recovery.md §16  (AI fingerprints)
 
 Emits per article:
-  - Detailed pass/fail on each of the 21 scorable items
+  - Detailed pass/fail on each of the 22 scorable items
   - A binary GATE verdict (PASS / FAIL) driven by the canonical hard-fail list
-  - A /21 score suitable for the Monday "Post Score" column
+  - A /22 score suitable for the Monday "Post Score" column
 
 Tier 3 editorial checks (information gain per section, authored authority,
 evaluative bite, concrete scenes) are NOT automated here — the script prints
@@ -629,6 +629,54 @@ def check_keyword_h2s(title: str, body: str) -> CheckResult:
     )
 
 
+def check_block_comment_json_no_raw_html(raw_html: str) -> CheckResult:
+    """
+    Gutenberg block markers carry attribute values as inline JSON inside
+    HTML comments, e.g.:
+        <!-- wp:ub/content-toggle-panel-block {"panelTitle":"\\u003cstrong\\u003e..."} -->
+
+    If a writer puts raw HTML in a JSON string value (e.g. panelTitle:"<strong>..."),
+    WordPress's content_save_pre filters HTML-escape the inner block-comment
+    marker on save, which breaks the Gutenberg block parser and the inner
+    blocks never render (Ultimate Blocks accordion panels collapse to escaped
+    text). The fix is to JSON-unicode-escape the < and > characters in
+    attribute values:
+        "panelTitle":"\\u003cstrong\\u003e..."  ✓
+        "panelTitle":"<strong>..."              ✗ (this check fails)
+
+    This check scans every <!-- wp:... {...} --> marker and flags any JSON
+    attribute string that contains raw < or > characters. The fix is
+    automated by tools/escape_block_attrs.py once that exists; for now,
+    writers manually replace <X> with \\u003cX\\u003e in panelTitle and
+    similar attributes.
+    """
+    # Match block-comment markers with JSON attributes
+    block_re = re.compile(r"<!--\s*wp:[\w/-]+\s+(\{[^}]*\})\s*-->", re.DOTALL)
+    offenders: list[str] = []
+    for m in block_re.finditer(raw_html):
+        json_blob = m.group(1)
+        # Find string values: "key":"value"  -- look for raw < or > inside the value
+        # Skip values where < is already <-escaped
+        for sm in re.finditer(r'"([^"]+)"\s*:\s*"((?:\\.|[^"\\])*)"', json_blob):
+            key = sm.group(1)
+            value = sm.group(2)
+            if "<" in value or ">" in value:
+                offenders.append(f"{key}: {value[:60]}")
+    if offenders:
+        sample = "; ".join(offenders[:3])
+        return CheckResult(
+            id="22", tier="T1",
+            name="Block-comment JSON attrs use \\u003c-escapes for HTML",
+            passed=False,
+            detail=f"{len(offenders)} attr(s) with raw HTML in JSON: {sample}",
+        )
+    return CheckResult(
+        id="22", tier="T1",
+        name="Block-comment JSON attrs use \\u003c-escapes for HTML",
+        passed=True,
+    )
+
+
 def check_lead_paragraph_no_strong(body: str) -> CheckResult:
     """
     editorial-os/13-readability-governance.md §3b — Lead paragraph emphasis (HARD RULE).
@@ -735,6 +783,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_keyword_h2s(meta["title"], body),
         check_paragraph_length(body),
         check_lead_paragraph_no_strong(body),
+        check_block_comment_json_no_raw_html(raw),
     ]
     return audit
 
