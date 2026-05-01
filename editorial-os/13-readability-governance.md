@@ -130,6 +130,31 @@ The writing rule (don't wrap auto-bolded contexts) stays in place because:
 
 **Theme baseline:** `b, strong { font-weight: 700 }` since [theme/style.css:228](theme/style.css:228) was patched in May 2026. Do not revert this to `bolder` without a corresponding update to the auto-bolded-contexts list above.
 
+### §3c. Table cell brevity (HARD RULE)
+
+**Table cells are scan units, not paragraphs.** A reader scans a table; they do not read it. Cell text that runs past two short sentences breaks the table's job and signals that the H2 should be paragraph form instead.
+
+**Thresholds:**
+
+| Cell type | Target | Hard ceiling |
+|---|---|---|
+| `<th>` column header | ≤ 30 chars | 50 chars |
+| `<td>` body cell | ≤ 120 chars | 200 chars |
+
+**When a cell wants to be longer than 200 chars, the section is wrong-shape.** One of three options:
+
+1. **Split the cell into sibling rows.** If the explanation contains "made within 6 months for arm's-length parties or 2 years for connected parties", that's two facts — give them two rows.
+2. **Move the detail out of the table.** A paragraph after the table can carry the depth that the cell cannot. The table stays a scan unit; the paragraph carries the explanation.
+3. **Drop the table entirely.** If every cell wants to be long, the section is genuinely prose. Use bullets with bold labels, or a sequence of short paragraphs, instead of forcing a table layout that fights the content.
+
+**Why this matters:**
+
+- Wide cells stack badly on mobile. A 350-char cell becomes a wall of text in a narrow column.
+- Long cells make the table un-scannable. The reader has to read every cell at body-prose pace, which defeats the format.
+- Editorially, prose-in-a-table is usually the writer hedging on whether the section deserves a table at all. The brevity rule forces that decision.
+
+**Enforcement:** `scripts/article_audit.py` Check 24 fails (soft) if any `<td>` body cell exceeds 200 chars or any `<th>` header exceeds 50 chars. Soft fail because paragraph-length is also soft and the cells are stylistic; treat the soft flag as a real flag — it is what reviewers will see first on the rendered page.
+
 ### Active bold pass (during rewrite)
 
 After a draft hits voice and structure targets, do a dedicated bold pass:
