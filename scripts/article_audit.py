@@ -13,9 +13,9 @@ Source of truth:
   - editorial-os/14-failure-modes-and-recovery.md §16  (AI fingerprints)
 
 Emits per article:
-  - Detailed pass/fail on each of the 23 scorable items
+  - Detailed pass/fail on each of the 24 scorable items
   - A binary GATE verdict (PASS / FAIL) driven by the canonical hard-fail list
-  - A /23 score suitable for the Monday "Post Score" column
+  - A /24 score suitable for the Monday "Post Score" column
 
 Tier 3 editorial checks (information gain per section, authored authority,
 evaluative bite, concrete scenes) are NOT automated here — the script prints
@@ -629,6 +629,59 @@ def check_keyword_h2s(title: str, body: str) -> CheckResult:
     )
 
 
+def check_table_cell_brevity(body: str) -> CheckResult:
+    """
+    editorial-os/13-readability-governance.md §3c — Table cell brevity (HARD RULE).
+
+    Table cells are scan units, not paragraphs. Long cells stack badly on
+    mobile, defeat the table's job (reader scans, doesn't read), and usually
+    indicate the H2 should be paragraph form instead.
+
+    Thresholds:
+      <th> column header: 50 chars hard ceiling (target 30)
+      <td> body cell:     200 chars hard ceiling (target 120)
+
+    Soft fail (paragraph-length sibling): the gate still passes, but the
+    flag should be treated as a real signal during review.
+    """
+    th_offenders: list[str] = []
+    td_offenders: list[str] = []
+
+    for tm in re.finditer(r"<table\b[^>]*>(.*?)</table>", body, re.DOTALL | re.I):
+        table = tm.group(1)
+        for th in re.findall(r"<th\b[^>]*>(.*?)</th>", table, re.DOTALL | re.I):
+            text = re.sub(r"<[^>]+>", "", th).strip()
+            if len(text) > 50:
+                th_offenders.append(f"{len(text)}ch: {text[:60]}")
+        for td in re.findall(r"<td\b[^>]*>(.*?)</td>", table, re.DOTALL | re.I):
+            text = re.sub(r"<[^>]+>", "", td).strip()
+            if len(text) > 200:
+                td_offenders.append(f"{len(text)}ch: {text[:60]}")
+
+    total = len(th_offenders) + len(td_offenders)
+    if total == 0:
+        return CheckResult(
+            id="24", tier="T2",
+            name="Table cells concise (<th> ≤50ch, <td> ≤200ch)",
+            passed=True,
+            hard_fail=False,
+        )
+
+    parts: list[str] = []
+    if th_offenders:
+        parts.append(f"{len(th_offenders)} <th> over 50ch")
+    if td_offenders:
+        parts.append(f"{len(td_offenders)} <td> over 200ch")
+    sample = (th_offenders[:2] + td_offenders[:2])[:3]
+    return CheckResult(
+        id="24", tier="T2",
+        name="Table cells concise (<th> ≤50ch, <td> ≤200ch)",
+        passed=False,
+        detail=f"{', '.join(parts)} — {'; '.join(sample)}",
+        hard_fail=False,  # soft, like paragraph-length
+    )
+
+
 def check_no_strong_in_auto_bolded_table_cells(body: str) -> CheckResult:
     """
     editorial-os/13-readability-governance.md §3b — Auto-bolded contexts (HARD RULE).
@@ -841,6 +894,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_lead_paragraph_no_strong(body),
         check_block_comment_json_no_raw_html(raw),
         check_no_strong_in_auto_bolded_table_cells(body),
+        check_table_cell_brevity(body),
     ]
     return audit
 

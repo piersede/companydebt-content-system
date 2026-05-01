@@ -1425,6 +1425,7 @@ The 11-question test below is the binding QA. Every standardised template and ev
 6. **Are neighbouring standalone topics demoted into tables, bullets, H4s, or link cards?** (Check against the H3 Demotion list and the cannibalisation demotion pattern.)
 7. **Are Risk sections using tables** where the risks would otherwise cannibalise other pages? (Cross-family Risks pattern A.)
 8. **Are Option / Types / Comparison sections using comparison tables** where the procedures would otherwise cannibalise other pages? (Cross-family Options pattern B + the "Types of X" section pattern.)
+8a. **Are table cells concise?** Body cells ≤ 200 chars, headers ≤ 50 chars. Long cells mean the section wants to be paragraph form, not a table. (`13-readability-governance.md` §3c, audit Check 24.)
 9. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
 10. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
 11. **Are FAQs the final H2?** (No editorial H2 may follow.)

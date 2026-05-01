@@ -82,6 +82,7 @@ The script enforces these. You can fail any one and the gate blocks.
 | Linked sources | Every Sources `<li>` has an `<a href>` link OR an explicit `<!-- no-url: <reason> -->` opt-out marker (§7b) |
 | Lead paragraph | First `<p>` of the body contains no `<strong>` or `<b>`. Theme auto-bolds via `p:first-of-type`. (`13-readability-governance.md` §3b, audit Check 21) |
 | Auto-bolded table cells | No `<strong>` or `<b>` inside `<th>` headers or first-column `<td>` cells. Theme auto-bolds both. (`13-readability-governance.md` §3b, audit Check 23) |
+| Table cell brevity | `<th>` ≤ 50 chars, `<td>` ≤ 200 chars (target 30 / 120). Cells are scan units, not paragraphs. Long cell → split into rows, move detail to a paragraph after the table, or drop the table entirely. (`13-readability-governance.md` §3c, audit Check 24, soft fail) |
 
 ### 6. Tier 3 editorial rules (Rules A–J)
 
