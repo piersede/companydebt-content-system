@@ -6272,3 +6272,111 @@ body.archive h3 {
 .cd-do-dont > .wp-block-group__inner-container {
   display: contents;
 }
+
+/* ==========================================================================
+   Take-the-test template typography system v2 -- 20260511-115844
+   Scope: body.page-template-take-the-test-template ONLY. Other templates
+   are deliberately untouched at this stage. Replaces prior H-tag rules
+   (H1 48/56, H2 36/44, H3 26/33) with the new spec.
+   ========================================================================== */
+
+:root {
+  --navy-900: #102A43;
+  --navy-800: #1F3C5A;
+  --navy-700: #2F4F6F;
+  --text-primary: #1F2933;
+  --text-secondary: #52606D;
+  --text-muted: #7B8794;
+  --bg-soft: #F7FAFC;
+  --border-soft: #E6EDF3;
+  --accent-blue: #2B6CB0;
+}
+
+/* Headings -- desktop */
+body.page-template-take-the-test-template h1,
+body.page-template-take-the-test-template h1.post-title,
+body.page-template-take-the-test-template h1.page-title {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--navy-900) !important;
+}
+body.page-template-take-the-test-template h2 {
+  font-size: 34px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--navy-900) !important;
+  margin-top: 72px !important;
+  margin-bottom: 24px !important;
+}
+body.page-template-take-the-test-template h3 {
+  font-size: 24px !important;
+  line-height: 1.22 !important;
+  font-weight: 600 !important;
+  color: var(--navy-800) !important;
+  margin-top: 40px !important;
+  margin-bottom: 14px !important;
+}
+body.page-template-take-the-test-template h4 {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Body / prose / small -- scoped to .main-content so sidebar widgets unaffected */
+body.page-template-take-the-test-template .main-content p,
+body.page-template-take-the-test-template .main-content li {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .main-content small,
+body.page-template-take-the-test-template .main-content .small {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: var(--text-muted) !important;
+}
+
+/* Links inside article body */
+body.page-template-take-the-test-template .main-content a {
+  color: #1F5FAF !important;
+}
+body.page-template-take-the-test-template .main-content a:hover {
+  color: #163E72 !important;
+}
+
+/* Mobile (<=1037px to match existing breakpoint convention) */
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template h1,
+  body.page-template-take-the-test-template h1.post-title,
+  body.page-template-take-the-test-template h1.page-title {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+  }
+  body.page-template-take-the-test-template h2 {
+    font-size: 28px !important;
+    line-height: 1.16 !important;
+    margin-top: 56px !important;
+    margin-bottom: 20px !important;
+  }
+  body.page-template-take-the-test-template h3 {
+    font-size: 22px !important;
+    line-height: 1.24 !important;
+    margin-top: 32px !important;
+    margin-bottom: 12px !important;
+  }
+  body.page-template-take-the-test-template h4 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  body.page-template-take-the-test-template .main-content p,
+  body.page-template-take-the-test-template .main-content li {
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+  }
+}
