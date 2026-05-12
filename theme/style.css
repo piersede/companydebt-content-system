@@ -6460,3 +6460,17 @@ body.page-template-take-the-test-template .col-12.page-header {
 body.page-template-take-the-test-template .col-12.page-header {
   padding-bottom: 72px !important;
 }
+
+/* Hero band TRUE visual gap above breadcrumbs (20px) -- 20260512-101913
+   .breadcrumbs internal padding-top:14 + line-height half-leading ~6 already
+   provides ~20px of visual whitespace above the text. Setting .page-header
+   padding-top to 0 so total visual gap from topnav bottom to bc text top
+   matches the 20px target. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 0 !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 0 !important;
+  }
+}
