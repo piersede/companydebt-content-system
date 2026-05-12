@@ -6380,3 +6380,48 @@ body.page-template-take-the-test-template .main-content a:hover {
     line-height: 1.65 !important;
   }
 }
+
+/* ==========================================================================
+   Hero band on take-the-test template -- 20260512-095601
+   Full-bleed light-blue band right below the topnav, containing the
+   breadcrumbs + H1. Scope: body.page-template-take-the-test-template ONLY.
+   Uses an absolute-positioned ::before pseudo-element with 100vw width and
+   negative left margin to break out of the .container, while keeping the
+   breadcrumbs and H1 in their original .container-aligned positions. 
+   Existing H1 margin-bottom (135px from older rule) is reset to 0 inside
+   the band so the band has predictable height.
+   ========================================================================== */
+body.page-template-take-the-test-template .col-12.page-header {
+  position: relative;
+  z-index: 0;
+  padding-top: 40px !important;
+  padding-bottom: 56px !important;
+  margin-bottom: 56px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: #EAF2F8;
+  z-index: -1;
+}
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-bottom: 0 !important;
+}
+/* Tighten breadcrumbs gap above H1 inside the band */
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs {
+  margin-bottom: 16px !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 24px !important;
+    padding-bottom: 36px !important;
+    margin-bottom: 32px !important;
+  }
+}
