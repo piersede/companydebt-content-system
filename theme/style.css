@@ -6597,3 +6597,8 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author-revie
   line-height: 1.2 !important;
   margin: 16px 0 0 0 !important;
 }
+
+/* Hero author position: 14 -> 15px -- 20260512-104357 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  font-size: 15px !important;
+}
