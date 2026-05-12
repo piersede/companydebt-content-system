@@ -6522,3 +6522,66 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author-revie
 body.page-template-take-the-test-template aside.widget-area .widget__reviewed-by {
   display: none !important;
 }
+
+/* Hero band rhythm v2 -- premium editorial spacing -- 20260512-103615
+   Targets (text-to-text visual):
+     topnav -> bc text: 80px (band padding-top + bc internals)
+     bc text -> H1 text: 36px
+     H1 text -> author photo top: 32px
+     author last-text -> band bottom: 88px
+     H1 line-height: 1.05, max-width 800
+     author block internal gaps: ~3px between lines */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 59px !important;
+  padding-bottom: 86px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs,
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title,
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-left: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  font-size: 48px !important;
+  line-height: 1.05 !important;
+  max-width: 800px !important;
+  margin-top: 21px !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-top: 32px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta {
+  gap: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-name {
+  line-height: 1.15 !important;
+  margin: 0 0 1px 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  line-height: 1.15 !important;
+  margin: 0 0 1px 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed {
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+
+/* Hero rhythm v2 tuning -- 20260512-103709
+   measured: bc->h1=25 (target 36, +11), h1->photo=35 (target 32, -3),
+   pos->rev=0 (target 2-4, bump position mb to 3px). */
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-top: 32px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-top: 29px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  margin: 0 0 3px 0 !important;
+}
