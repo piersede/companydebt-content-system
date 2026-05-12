@@ -6446,3 +6446,9 @@ body.page-template-take-the-test-template .col-12.page-header .breadcrumbs a {
     padding-top: 16px !important;
   }
 }
+
+/* Hero band balance -- 20260512-101424
+   Match H1->band-bottom gap to breadcrumbs->H1 gap (57px) per Theo. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-bottom: 57px !important;
+}
