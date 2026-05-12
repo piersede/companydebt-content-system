@@ -6425,3 +6425,24 @@ body.page-template-take-the-test-template .col-12.page-header .breadcrumbs {
     margin-bottom: 32px !important;
   }
 }
+
+/* Hero band refinements -- 20260512-100332
+   1) Reduce breadcrumb-to-topnav gap from 40 to 20 (desktop) / 16 (mobile)
+   2) Soften bg from #EAF2F8 to #f8f9fd
+   3) Style breadcrumb parent links: bold, navy-900, no underline */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 20px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header::before {
+  background: #f8f9fd;
+}
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs a {
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+  text-decoration: none !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 16px !important;
+  }
+}
