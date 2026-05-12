@@ -93,9 +93,49 @@ function resolvePageConfigPath(page) {
   return path.join(ROOT, 'scripts', ...parts) + '.py';
 }
 
+function findWpPostStateItem(identifier) {
+  // WP-post pages aren't in cc_builder's registry; their state files live at
+  // STATE_ROOT/wp-<post_id>/state.json. If the identifier matches a WP-post state
+  // file (by page_id, by post_id, or by slug), return the synthetic page object
+  // stored in that state.
+  const needle = String(identifier || '').trim().toLowerCase();
+  if (!needle) return null;
+  if (!fs.existsSync(STATE_ROOT)) return null;
+  for (const dirent of fs.readdirSync(STATE_ROOT, { withFileTypes: true })) {
+    if (!dirent.isDirectory()) continue;
+    if (!dirent.name.startsWith('wp-')) continue;
+    const statePath = path.join(STATE_ROOT, dirent.name, 'state.json');
+    if (!fs.existsSync(statePath)) continue;
+    try {
+      const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+      if (state.mode !== 'wp_post') continue;
+      const postId = String(state.wp_post_id || '').toLowerCase();
+      const slug = String(state.slug || '').toLowerCase();
+      const pageId = String(state.page_id || '').toLowerCase();
+      if (needle === postId || needle === slug || needle === pageId) {
+        return {
+          mode: 'wp_post',
+          page_id: state.page_id,
+          wp_post_id: state.wp_post_id,
+          slug: state.slug,
+          title: state.title || state.slug,
+          target_url: state.target_url || null,
+          page_type: 'wp_post',
+        };
+      }
+    } catch (_e) {
+      // ignore malformed state file; continue scanning
+    }
+  }
+  return null;
+}
+
 function findRegistryItem(identifier) {
   const needle = String(identifier || '').trim().toLowerCase();
   if (!needle) return null;
+  // WP-post lookup first — these aren't in the cc_builder registry.
+  const wpPost = findWpPostStateItem(identifier);
+  if (wpPost) return wpPost;
   return loadRegistrySnapshot().find((item) => (
     String(item.page_id).toLowerCase() === needle
     || String(item.slug).toLowerCase() === needle
@@ -109,6 +149,30 @@ function resolveRuntimeContext(identifier, stage = 'draft') {
   if (!page) throw new Error(`Unknown page "${identifier}".`);
 
   const task = STAGE_TASK_MAP[stage] || stage;
+
+  // WP-post mode: the article is a WordPress post pulled to drafts/<wp_post_id>_<slug>.html.
+  // Skip the cc_builder runtime_pack_router (which expects cc_builder page metadata) and return
+  // a synthetic context pointing at the drafts file.
+  if (page.mode === 'wp_post') {
+    return {
+      ...page,
+      task,
+      article_file: path.join(ROOT, 'drafts', `${page.wp_post_id}_${page.slug}.html`),
+      target_url: page.target_url || `https://comdebstage.wpengine.com/${page.slug}/`,
+      page_config_file: null,
+      runtime_packs: [
+        'runtime-packs/writer-core.md',
+        'runtime-packs/wp-post-rewrite.md',
+      ],
+      canonical_refs: [
+        'editorial-os/16-pre-publish-gate.md',
+        'editorial-os/10-evidence-governance.md',
+        'editorial-os/13-readability-governance.md',
+        'editorial-os/28-htag-semantic-framework.md',
+      ],
+    };
+  }
+
   const script = [
     'import json, sys',
     'from pathlib import Path',
