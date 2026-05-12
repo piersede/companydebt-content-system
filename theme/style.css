@@ -6452,3 +6452,11 @@ body.page-template-take-the-test-template .col-12.page-header .breadcrumbs a {
 body.page-template-take-the-test-template .col-12.page-header {
   padding-bottom: 57px !important;
 }
+
+/* Hero band TRUE visual balance -- 20260512-101726
+   Earlier 57/57 was box-to-box. Text-to-text was 72/57 because the H1
+   has padding-top:10 + larger line-height half-leading above the glyphs
+   than below. Bumping padding-bottom to 72 to equalise visible whitespace. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-bottom: 72px !important;
+}
