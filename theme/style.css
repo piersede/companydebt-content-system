@@ -6272,3 +6272,343 @@ body.archive h3 {
 .cd-do-dont > .wp-block-group__inner-container {
   display: contents;
 }
+
+/* ==========================================================================
+   Take-the-test template typography system v2 -- 20260511-115844
+   Scope: body.page-template-take-the-test-template ONLY. Other templates
+   are deliberately untouched at this stage. Replaces prior H-tag rules
+   (H1 48/56, H2 36/44, H3 26/33) with the new spec.
+   ========================================================================== */
+
+:root {
+  --navy-900: #102A43;
+  --navy-800: #1F3C5A;
+  --navy-700: #2F4F6F;
+  --text-primary: #1F2933;
+  --text-secondary: #52606D;
+  --text-muted: #7B8794;
+  --bg-soft: #F7FAFC;
+  --border-soft: #E6EDF3;
+  --accent-blue: #2B6CB0;
+}
+
+/* Headings -- desktop */
+body.page-template-take-the-test-template h1,
+body.page-template-take-the-test-template h1.post-title,
+body.page-template-take-the-test-template h1.page-title {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--navy-900) !important;
+}
+body.page-template-take-the-test-template h2 {
+  font-size: 34px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--navy-900) !important;
+  margin-top: 72px !important;
+  margin-bottom: 24px !important;
+}
+body.page-template-take-the-test-template h3 {
+  font-size: 24px !important;
+  line-height: 1.22 !important;
+  font-weight: 600 !important;
+  color: var(--navy-800) !important;
+  margin-top: 40px !important;
+  margin-bottom: 14px !important;
+}
+body.page-template-take-the-test-template h4 {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Body / prose / small -- scoped to .main-content so sidebar widgets unaffected */
+body.page-template-take-the-test-template .main-content p,
+body.page-template-take-the-test-template .main-content li {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .main-content small,
+body.page-template-take-the-test-template .main-content .small {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: var(--text-muted) !important;
+}
+
+/* Links inside article body */
+body.page-template-take-the-test-template .main-content a {
+  color: #1F5FAF !important;
+}
+body.page-template-take-the-test-template .main-content a:hover {
+  color: #163E72 !important;
+}
+
+/* Mobile (<=1037px to match existing breakpoint convention) */
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template h1,
+  body.page-template-take-the-test-template h1.post-title,
+  body.page-template-take-the-test-template h1.page-title {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+  }
+  body.page-template-take-the-test-template h2 {
+    font-size: 28px !important;
+    line-height: 1.16 !important;
+    margin-top: 56px !important;
+    margin-bottom: 20px !important;
+  }
+  body.page-template-take-the-test-template h3 {
+    font-size: 22px !important;
+    line-height: 1.24 !important;
+    margin-top: 32px !important;
+    margin-bottom: 12px !important;
+  }
+  body.page-template-take-the-test-template h4 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  body.page-template-take-the-test-template .main-content p,
+  body.page-template-take-the-test-template .main-content li {
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* ==========================================================================
+   Hero band on take-the-test template -- 20260512-095601
+   Full-bleed light-blue band right below the topnav, containing the
+   breadcrumbs + H1. Scope: body.page-template-take-the-test-template ONLY.
+   Uses an absolute-positioned ::before pseudo-element with 100vw width and
+   negative left margin to break out of the .container, while keeping the
+   breadcrumbs and H1 in their original .container-aligned positions. 
+   Existing H1 margin-bottom (135px from older rule) is reset to 0 inside
+   the band so the band has predictable height.
+   ========================================================================== */
+body.page-template-take-the-test-template .col-12.page-header {
+  position: relative;
+  z-index: 0;
+  padding-top: 40px !important;
+  padding-bottom: 56px !important;
+  margin-bottom: 56px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: #EAF2F8;
+  z-index: -1;
+}
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-bottom: 0 !important;
+}
+/* Tighten breadcrumbs gap above H1 inside the band */
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs {
+  margin-bottom: 16px !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 24px !important;
+    padding-bottom: 36px !important;
+    margin-bottom: 32px !important;
+  }
+}
+
+/* Hero band refinements -- 20260512-100332
+   1) Reduce breadcrumb-to-topnav gap from 40 to 20 (desktop) / 16 (mobile)
+   2) Soften bg from #EAF2F8 to #f8f9fd
+   3) Style breadcrumb parent links: bold, navy-900, no underline */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 20px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header::before {
+  background: #f8f9fd;
+}
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs a {
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+  text-decoration: none !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 16px !important;
+  }
+}
+
+/* Hero band balance -- 20260512-101424
+   Match H1->band-bottom gap to breadcrumbs->H1 gap (57px) per Theo. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-bottom: 57px !important;
+}
+
+/* Hero band TRUE visual balance -- 20260512-101726
+   Earlier 57/57 was box-to-box. Text-to-text was 72/57 because the H1
+   has padding-top:10 + larger line-height half-leading above the glyphs
+   than below. Bumping padding-bottom to 72 to equalise visible whitespace. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-bottom: 72px !important;
+}
+
+/* Hero band TRUE visual gap above breadcrumbs (20px) -- 20260512-101913
+   .breadcrumbs internal padding-top:14 + line-height half-leading ~6 already
+   provides ~20px of visual whitespace above the text. Setting .page-header
+   padding-top to 0 so total visual gap from topnav bottom to bc text top
+   matches the 20px target. */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 0 !important;
+}
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header {
+    padding-top: 0 !important;
+  }
+}
+
+/* Hero author block -- take-the-test template 20260512-102402 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-photo {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.25 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-name {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: var(--navy-900) !important;
+  line-height: 1.25 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.3 !important;
+}
+
+/* Hero author reviewed-on line -- 20260512-102840 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.3 !important;
+  margin-top: 2px !important;
+}
+
+/* Hide author sidebar widget on take-the-test (redundant with hero author) -- 20260512-103136 */
+body.page-template-take-the-test-template aside.widget-area .widget__reviewed-by {
+  display: none !important;
+}
+
+/* Hero band rhythm v2 -- premium editorial spacing -- 20260512-103615
+   Targets (text-to-text visual):
+     topnav -> bc text: 80px (band padding-top + bc internals)
+     bc text -> H1 text: 36px
+     H1 text -> author photo top: 32px
+     author last-text -> band bottom: 88px
+     H1 line-height: 1.05, max-width 800
+     author block internal gaps: ~3px between lines */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 59px !important;
+  padding-bottom: 86px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs,
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title,
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-left: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  font-size: 48px !important;
+  line-height: 1.05 !important;
+  max-width: 800px !important;
+  margin-top: 21px !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-top: 32px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta {
+  gap: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-name {
+  line-height: 1.15 !important;
+  margin: 0 0 1px 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  line-height: 1.15 !important;
+  margin: 0 0 1px 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed {
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+
+/* Hero rhythm v2 tuning -- 20260512-103709
+   measured: bc->h1=25 (target 36, +11), h1->photo=35 (target 32, -3),
+   pos->rev=0 (target 2-4, bump position mb to 3px). */
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-top: 32px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-top: 29px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  margin: 0 0 3px 0 !important;
+}
+
+/* Reviewed-on moved out of .hero-author flex row, now sibling below -- 20260512-104117
+   Restyle to match the author's name (bold + navy-900) and a bit larger
+   so it carries weight. Left-aligned with the headshot (sits at .col-12
+   left edge naturally as a block element). */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+  line-height: 1.2 !important;
+  margin: 16px 0 0 0 !important;
+}
+
+/* Hero author position: 14 -> 15px -- 20260512-104357 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-position {
+  font-size: 15px !important;
+}
+
+/* Hero band bottom border (matches sidebar widget border) -- 20260512-104841 */
+body.page-template-take-the-test-template .col-12.page-header::before {
+  border-bottom: 1px solid rgba(0, 40, 86, 0.04);
+}
+
+/* Reviewed-on gap matches H1->author gap (28px) -- 20260512-105151 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed {
+  margin-top: 28px !important;
+}
