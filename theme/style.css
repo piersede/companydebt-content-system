@@ -6671,3 +6671,8 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author-meta 
   color: var(--navy-900) !important;
   margin: 0 !important;
 }
+
+/* Breadcrumb current-page color on take-the-test -- 20260514-113637 */
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs .breadcrumb_last {
+  color: rgb(82, 96, 109) !important;
+}
