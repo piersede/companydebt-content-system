@@ -6630,3 +6630,29 @@ aside.widget-area .cd-sidebar-title {
   color: rgb(0, 40, 86) !important;
   margin: 0 0 12px 0 !important;
 }
+
+/* Hero author inline layout v3 (single line) -- 20260514-111719
+   Replaces .hero-author-meta + standalone .hero-author-reviewed with one
+   .hero-author-line: <name>, <position> | <date>. */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-line {
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-line .hero-author-name {
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-line .hero-author-position {
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-line .hero-author-sep {
+  margin: 0 8px !important;
+  color: var(--text-muted) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-line .hero-author-date {
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+}
