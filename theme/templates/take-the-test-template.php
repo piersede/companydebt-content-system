@@ -43,9 +43,9 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
                                     <div class="hero-author-line">
                                         <span class="hero-author-name"><?php echo esc_html($_hero_author_name); ?></span><?php if ( $_hero_author_position ) { ?>, <span class="hero-author-position"><?php echo esc_html($_hero_author_position); ?></span><?php } ?>
                                     </div>
-                                    <div class="hero-author-reviewed">Reviewed on <?php echo get_the_modified_date('d/m/Y'); ?></div>
                                 </div>
                             </div>
+                            <div class="hero-author-reviewed">Reviewed on <?php echo get_the_modified_date('d/m/Y'); ?></div>
                             <?php
                         }
                     }

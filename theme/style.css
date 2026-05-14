@@ -6676,3 +6676,21 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author-meta 
 body.page-template-take-the-test-template .col-12.page-header .breadcrumbs .breadcrumb_last {
   color: rgb(82, 96, 109) !important;
 }
+
+/* Breadcrumb » separator spacing + reviewed-on detached back below author -- 20260514-114202 */
+body.page-template-take-the-test-template .col-12.page-header .breadcrumbs .bc-sep {
+  margin: 0 8px !important;
+}
+/* Reviewed-on standalone sibling of .hero-author (back outside meta column).
+   Target match: visual gap above ~= H1->photo gap (28px). With reviewed-on
+   line-height 1.4 on font-size 15 -> half-leading ~3px above text, so set
+   margin-top: 25px so visual = 25 + 3 = 28. */
+body.page-template-take-the-test-template .col-12.page-header > .hero-author-reviewed,
+body.page-template-take-the-test-template .col-12.page-header .hero-author + .hero-author-reviewed {
+  margin-top: 25px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+}
