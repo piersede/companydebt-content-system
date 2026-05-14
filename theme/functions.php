@@ -927,3 +927,15 @@ add_filter( 'wpseo_sitemap_entry', function( $entry, $type, $post ) {
 	}
 	return $entry;
 }, 10, 3 );
+
+
+/**
+ * Breadcrumb separator: replace default '/' with raquo '»' on take-the-test
+ * template only. Filter the Yoast SEO breadcrumb separator output.
+ */
+add_filter( 'wpseo_breadcrumb_separator', function( $separator ) {
+    if ( is_page_template( 'templates/take-the-test-template.php' ) ) {
+        return '&raquo;';
+    }
+    return $separator;
+} );
