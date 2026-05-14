@@ -6721,3 +6721,62 @@ body.page-template-take-the-test-template .col-12.page-header .hero-pill + h1.po
 body.page-template-take-the-test-template .col-12.page-header .hero-pill + h1.page-title {
   margin-top: 4px !important;
 }
+
+/* Hero v4 -- 20260514-150434
+   - GUIDE pill hidden (still in CSS but no element renders it; safety override).
+   - Author meta: stacked (name 18px on line 1, position 15 on line 2).
+   - Reviewed-on: flex row with calendar+Reviewed-on date | shield+Verified&Trusted */
+body.page-template-take-the-test-template .col-12.page-header .hero-pill {
+  display: none !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta .hero-author-name {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+  margin: 0 !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta .hero-author-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+}
+/* Reviewed-on row: icon items separated by thin vertical divider */
+body.page-template-take-the-test-template .col-12.page-header > .hero-author-reviewed,
+body.page-template-take-the-test-template .col-12.page-header .hero-author + .hero-author-reviewed {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed .hero-meta-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed .hero-meta-icon {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  color: var(--text-secondary) !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed .hero-meta-divider {
+  display: inline-block !important;
+  width: 1px !important;
+  height: 16px !important;
+  background-color: rgba(82, 96, 109, 0.3) !important;
+}
