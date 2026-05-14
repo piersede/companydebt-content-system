@@ -935,7 +935,7 @@ add_filter( 'wpseo_sitemap_entry', function( $entry, $type, $post ) {
  */
 add_filter( 'wpseo_breadcrumb_separator', function( $separator ) {
     if ( is_page_template( 'templates/take-the-test-template.php' ) ) {
-        return '&raquo;';
+        return '<span class="bc-sep">&raquo;</span>';
     }
     return $separator;
 } );
