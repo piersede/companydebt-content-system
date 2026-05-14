@@ -24,7 +24,6 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
 						yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' );
 					}
 					?>
-                    <div class="hero-pill">GUIDE</div>
                     <h1 class="post-title"><?php the_title(); ?></h1>
 
                     <?php
@@ -41,12 +40,23 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
                                     echo wp_get_attachment_image( $_hero_author_photo_id, 'thumbnail', false, ["class" => "hero-author-photo", "alt" => esc_attr($_hero_author_name)] );
                                 } ?>
                                 <div class="hero-author-meta">
-                                    <div class="hero-author-line">
-                                        <span class="hero-author-name"><?php echo esc_html($_hero_author_name); ?></span><?php if ( $_hero_author_position ) { ?>, <span class="hero-author-position"><?php echo esc_html($_hero_author_position); ?></span><?php } ?>
-                                    </div>
+                                    <div class="hero-author-name"><?php echo esc_html($_hero_author_name); ?></div>
+                                    <?php if ( $_hero_author_position ) { ?>
+                                        <div class="hero-author-position"><?php echo esc_html($_hero_author_position); ?></div>
+                                    <?php } ?>
                                 </div>
                             </div>
-                            <div class="hero-author-reviewed">Reviewed on <?php echo get_the_modified_date('d/m/Y'); ?></div>
+                            <div class="hero-author-reviewed">
+                                <span class="hero-meta-item">
+                                    <svg class="hero-meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <span>Reviewed on <?php echo get_the_modified_date('d/m/Y'); ?></span>
+                                </span>
+                                <span class="hero-meta-divider" aria-hidden="true"></span>
+                                <span class="hero-meta-item">
+                                    <svg class="hero-meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L4 5 V11 C4 16 7.5 20 12 22 C16.5 20 20 16 20 11 V5 L12 2 Z"/><path d="M9 12 L11 14 L15 10"/></svg>
+                                    <span>Verified &amp; Trusted</span>
+                                </span>
+                            </div>
                             <?php
                         }
                     }
