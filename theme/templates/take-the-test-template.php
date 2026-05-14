@@ -39,10 +39,11 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
                                 <?php if ( $_hero_author_photo_id ) {
                                     echo wp_get_attachment_image( $_hero_author_photo_id, 'thumbnail', false, ["class" => "hero-author-photo", "alt" => esc_attr($_hero_author_name)] );
                                 } ?>
-                                <div class="hero-author-line">
-                                    <span class="hero-author-name"><?php echo esc_html($_hero_author_name); ?></span><?php if ( $_hero_author_position ) { ?>, <span class="hero-author-position"><?php echo esc_html($_hero_author_position); ?></span><?php } ?>
-                                    <span class="hero-author-sep">|</span>
-                                    <span class="hero-author-date"><?php echo get_the_modified_date('d/m/Y'); ?></span>
+                                <div class="hero-author-meta">
+                                    <div class="hero-author-line">
+                                        <span class="hero-author-name"><?php echo esc_html($_hero_author_name); ?></span><?php if ( $_hero_author_position ) { ?>, <span class="hero-author-position"><?php echo esc_html($_hero_author_position); ?></span><?php } ?>
+                                    </div>
+                                    <div class="hero-author-reviewed">Reviewed on <?php echo get_the_modified_date('d/m/Y'); ?></div>
                                 </div>
                             </div>
                             <?php
