@@ -6656,3 +6656,18 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author-line 
   font-weight: 400 !important;
   color: var(--text-secondary) !important;
 }
+
+/* Hero author meta column with stacked 'Reviewed on' line -- 20260514-112925 */
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author-meta .hero-author-reviewed {
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  color: var(--navy-900) !important;
+  margin: 0 !important;
+}
