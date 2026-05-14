@@ -24,6 +24,7 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
 						yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' );
 					}
 					?>
+                    <div class="hero-pill">GUIDE</div>
                     <h1 class="post-title"><?php the_title(); ?></h1>
 
                     <?php

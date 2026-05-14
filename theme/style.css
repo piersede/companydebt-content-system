@@ -6700,3 +6700,24 @@ body.page-template-take-the-test-template .col-12.page-header > .hero-author-rev
 body.page-template-take-the-test-template .col-12.page-header .hero-author + .hero-author-reviewed {
   margin-top: 56px !important;
 }
+
+/* Hero pill 'GUIDE' above H1 -- 20260514-145359
+   Mirrors .cd-custom-widget__pill spec (Arial 11/600/28-lh/rgb(122,133,153)).
+   Tight to H1 below (8px), section-break space above (preserves bc->pill ~24px). */
+body.page-template-take-the-test-template .col-12.page-header .hero-pill {
+  font-family: Arial, sans-serif !important;
+  font-size: 11px !important;
+  line-height: 28px !important;
+  font-weight: 600 !important;
+  color: rgb(122, 133, 153) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Tighten H1 margin-top now that pill sits between bc and H1 */
+body.page-template-take-the-test-template .col-12.page-header .hero-pill + h1,
+body.page-template-take-the-test-template .col-12.page-header .hero-pill + h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header .hero-pill + h1.page-title {
+  margin-top: 4px !important;
+}
