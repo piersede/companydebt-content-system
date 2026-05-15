@@ -6815,3 +6815,36 @@ body.page-template-take-the-test-template .col-12.page-header {
 body.page-template-take-the-test-template .col-12.page-header {
   margin-bottom: 88px !important;
 }
+
+/* Vertical rhythm v3 -- 20260515-102501
+   Targets (text-to-text where applicable):
+     Nav -> bc:        56px
+     BC -> H1:         32px
+     H1 -> author:     40px
+     Author -> meta:   28px
+     Meta -> band-bot: 56px
+     Band-bot -> body: 72px (white section top padding) */
+body.page-template-take-the-test-template .col-12.page-header {
+  padding-top: 35px !important;
+  padding-bottom: 54px !important;
+  margin-bottom: 72px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-top: 24px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header .hero-author {
+  margin-top: 40px !important;
+}
+body.page-template-take-the-test-template .col-12.page-header > .hero-author-reviewed,
+body.page-template-take-the-test-template .col-12.page-header .hero-author + .hero-author-reviewed {
+  margin-top: 28px !important;
+}
+
+/* Rhythm v3 tune -- bc->h1 measured 28, target 32, +4 -- 20260515-102545 */
+body.page-template-take-the-test-template .col-12.page-header h1,
+body.page-template-take-the-test-template .col-12.page-header h1.post-title,
+body.page-template-take-the-test-template .col-12.page-header h1.page-title {
+  margin-top: 28px !important;
+}
