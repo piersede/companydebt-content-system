@@ -6895,3 +6895,8 @@ body .section-widget-download,
 body section.section-widget-download {
   background: #f4f7fe !important;
 }
+
+/* Free Insolvency Test sidebar widget (.content-cd-list-with-button) bg -> #f4f7fe -- 20260515-113939 */
+.content-cd-list-with-button {
+  background: #f4f7fe !important;
+}
