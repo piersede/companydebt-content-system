@@ -53,8 +53,8 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
                                 </span>
                                 <span class="hero-meta-divider" aria-hidden="true"></span>
                                 <span class="hero-meta-item">
-                                    <svg class="hero-meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L4 5 V11 C4 16 7.5 20 12 22 C16.5 20 20 16 20 11 V5 L12 2 Z"/><path d="M9 12 L11 14 L15 10"/></svg>
-                                    <span>Verified &amp; Trusted</span>
+                                    <svg class="hero-meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span><?php echo (int) cd_reading_time_minutes(); ?>min read</span>
                                 </span>
                             </div>
                             <?php
