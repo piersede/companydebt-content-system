@@ -6880,3 +6880,18 @@ body.page-template-take-the-test-template .col-12.page-header {
 body.page-template-take-the-test-template .col-12.page-header::before {
   background: #f4f7fe !important;
 }
+
+/* Sidebar widget backgrounds harmonised to hero band #f4f7fe -- 20260515-113553
+   Only overrides background-color on the four widget classes that already
+   have a background today. Doesn't touch content widgets (.toc,
+   .content-cd-list-with-button) or any widget that doesn't currently
+   have a background. Template-agnostic. */
+.widget-reviewed-by,
+.cd-custom-widget,
+body .section-cd-gravity-form-widget,
+body .section-cd-gravity-form-widget.gf-widget,
+body section.section-cd-gravity-form-widget.gf-widget,
+body .section-widget-download,
+body section.section-widget-download {
+  background: #f4f7fe !important;
+}
