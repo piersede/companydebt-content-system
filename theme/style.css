@@ -6900,3 +6900,8 @@ body section.section-widget-download {
 .content-cd-list-with-button {
   background: #f4f7fe !important;
 }
+
+/* TOC background -> #f4f7fe (match hero band + sidebar widgets) -- 20260515-135623 */
+.toc {
+  background: #f4f7fe !important;
+}
