@@ -6859,3 +6859,19 @@ body.page-template-take-the-test-template .col-12.page-header .hero-author + .he
 body.page-template-take-the-test-template .col-12.page-header {
   margin-bottom: 56px !important;
 }
+
+/* Mobile: stack the reviewed-on row vertically + hide divider -- 20260515-103557 */
+@media (max-width: 1037px) {
+  body.page-template-take-the-test-template .col-12.page-header > .hero-author-reviewed,
+  body.page-template-take-the-test-template .col-12.page-header .hero-author + .hero-author-reviewed {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed .hero-meta-divider {
+    display: none !important;
+  }
+  body.page-template-take-the-test-template .col-12.page-header .hero-author-reviewed .hero-meta-item {
+    white-space: nowrap !important;
+  }
+}
