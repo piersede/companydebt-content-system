@@ -939,3 +939,24 @@ add_filter( 'wpseo_breadcrumb_separator', function( $separator ) {
     }
     return $separator;
 } );
+
+
+/**
+ * Reading time in minutes for the given post (or current post in loop).
+ * Word count uses raw $post->post_content (no filter chain) to keep render
+ * cheap (~1ms). 220 wpm is a comfortable read speed for dense UK insolvency
+ * content. Floors at 1 minute so very short posts still show '1min read'.
+ */
+function cd_reading_time_minutes( $post = null ) {
+    $post = get_post( $post );
+    if ( ! $post ) {
+        return 1;
+    }
+    $text = wp_strip_all_tags( (string) $post->post_content );
+    $words = str_word_count( $text );
+    if ( $words < 1 ) {
+        return 1;
+    }
+    $minutes = (int) ceil( $words / 220 );
+    return max( 1, $minutes );
+}
