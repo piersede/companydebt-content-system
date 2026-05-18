@@ -7231,3 +7231,27 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
   margin-bottom: 0 !important;
 }
+
+/* =================================================================
+   footer-author: vertical padding 70/70 across all breakpoints.
+   Overrides earlier 128/96/72 stepdown.
+   -- 20260518-155739 ================================================== */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+}
+@media (max-width: 1037px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+}
