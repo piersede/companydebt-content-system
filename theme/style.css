@@ -7530,3 +7530,28 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 .section-footer-author .footer-author-linkedin:active {
   transform: translateY(1px) !important;
 }
+
+/* =================================================================
+   footer-author LinkedIn: two-tone palette
+   - Rounded square: #002856 (dark navy from author name)
+   - 'in' letterforms: #f4f7fe (section bg / light blue)
+   - Hover: subtle bg lift to #1F3C5A; 'in' to pure white for contrast
+   -- 20260518-170242 ================================================== */
+.section-footer-author .footer-author-linkedin .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin .li-square {
+  fill: #002856 !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-linkedin .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin .li-in {
+  fill: #f4f7fe !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-linkedin:hover .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin:hover .li-square {
+  fill: #1F3C5A !important;
+}
+.section-footer-author .footer-author-linkedin:hover .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin:hover .li-in {
+  fill: #FFFFFF !important;
+}
