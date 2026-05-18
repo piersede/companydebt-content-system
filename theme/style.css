@@ -7423,3 +7423,38 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   color: #1F3C5A !important;
   text-decoration: none !important;
 }
+
+/* =================================================================
+   footer-author v2 tweaks
+   - Headshot: square with 12px corner radius (was full circle)
+   - Eyebrow ("ARTICLE WRITTEN BY"): Arial 400 / 19 / 34 / #52606D
+     (still uppercase via text-transform; source text is caps)
+   - 15px margin-bottom on eyebrow (gap to author/title line)
+   - 15px margin-bottom on H2 .footer-author-name (gap to biography)
+   -- 20260518-164642 ================================================== */
+
+/* Headshot -> square + 12px corner radius */
+.section-footer-author .avatar-image,
+body.page-template-take-the-test-template .section-footer-author .avatar-image {
+  border-radius: 12px !important;
+}
+
+/* Eyebrow restyle */
+.section-footer-author .footer-author-eyebrow,
+body.page-template-take-the-test-template .section-footer-author .footer-author-eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-size: 19px !important;
+  line-height: 34px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #52606D !important;
+  text-transform: uppercase !important;
+  margin: 0 0 15px 0 !important;
+  padding: 0 !important;
+}
+
+/* H2 author name: 15px gap below to bio */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  margin: 0 0 15px 0 !important;
+}
