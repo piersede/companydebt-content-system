@@ -7490,3 +7490,43 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-eyebrow {
   text-transform: none !important;
 }
+
+/* =================================================================
+   footer-author: LinkedIn icon under biography (conditional render)
+   - Inline SVG, 24x24, LinkedIn brand blue with darker hover
+   - 18px top margin (slightly larger than 15px text rhythm to feel
+     visually separate from the bio paragraph)
+   -- 20260518-165718 ================================================== */
+.section-footer-author .footer-author-social,
+body.page-template-take-the-test-template .section-footer-author .footer-author-social {
+  margin: 18px 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+.section-footer-author .footer-author-linkedin,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0A66C2 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, transform 0.05s ease !important;
+}
+.section-footer-author .footer-author-linkedin svg,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin svg {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+}
+.section-footer-author .footer-author-linkedin:hover,
+body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin:hover {
+  color: #004182 !important;
+  text-decoration: none !important;
+}
+.section-footer-author .footer-author-linkedin:active {
+  transform: translateY(1px) !important;
+}
