@@ -7327,3 +7327,91 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   margin: 0 0 32px 0 !important;
   padding: 0 !important;
 }
+
+/* =================================================================
+   footer-author: full spec adjust
+   - section pad 72/72
+   - container max-width 1220
+   - image 208 + gap 92
+   - row align flex-start (image top-aligns with H1)
+   - H1 36/1.15/700; subtitle 24/1.3/700; body 18/1.75/400
+   - body max-width 650
+   - vertical spacing 14 / 34 / 24
+   -- 20260518-161916 ================================================== */
+
+/* Section padding */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+@media (max-width: 1037px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+}
+
+/* Container max-width 1220 */
+.section-footer-author > .container,
+body.page-template-take-the-test-template .section-footer-author > .container {
+  max-width: 1220px !important;
+}
+
+/* Row: top-align (image with H1), gap 92px */
+.section-footer-author .container > .row {
+  align-items: flex-start !important;
+  gap: 92px !important;
+}
+@media (max-width: 900px) {
+  .section-footer-author .container > .row {
+    align-items: flex-start !important;
+    gap: 32px !important;
+  }
+}
+
+/* H1 (Written by ...) */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  font-size: 36px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  margin: 0 0 14px 0 !important;
+}
+
+/* Subtitle (credential) */
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  margin: 0 0 34px 0 !important;
+}
+
+/* Body description block: max-width 650 */
+.section-footer-author .footer-author-description,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description {
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  max-width: 650px !important;
+}
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  margin: 0 0 24px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
