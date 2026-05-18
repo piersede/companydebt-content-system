@@ -7624,3 +7624,30 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
   margin-bottom: 0 !important;
 }
+
+/* =================================================================
+   footer-author: eyebrow bold, name+title re-asserted at 24/29/600/#1F3C5A
+   -- 20260518-173606 ================================================== */
+.section-footer-author .footer-author-eyebrow,
+body.page-template-take-the-test-template .section-footer-author .footer-author-eyebrow {
+  font-weight: 700 !important;
+}
+
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name,
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 24px !important;
+  line-height: 29px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #1F3C5A !important;
+  letter-spacing: normal !important;
+}
+.section-footer-author .footer-author-name a,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name a {
+  font-weight: 600 !important;
+  color: #1F3C5A !important;
+  text-decoration: none !important;
+}
