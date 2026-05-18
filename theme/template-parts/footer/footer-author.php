@@ -11,8 +11,9 @@ $author_fullname = get_the_author_meta('display_name');
 				<?php echo wp_get_attachment_image( get_field( 'photo',  'user_'. $author_id ), 'full', false,  ["class" => "avatar-image", "alt" => "Avatar Image"] ); ?>
             </div>
 			<div class="col-auto col-author-content">
+				<div class="footer-author-eyebrow">ARTICLE WRITTEN BY</div>
 				<div class="footer-author-name">
-				Written by <a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_fullname ?></a>
+				<a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_fullname ?></a>
 				</div>
 				<div class="footer-author-position"><?php the_field('professional_position',  'user_'. $author_id ); ?></div>
                 <div class="social-media">

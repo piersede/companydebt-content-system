@@ -7351,3 +7351,21 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   line-height: 1.8 !important;
   font-weight: 400 !important;
 }
+
+/* =================================================================
+   footer-author: new structure -- eyebrow above author name.
+   - .footer-author-eyebrow: Arial 600 / 11 / 28lh / #7A8599 / uppercase
+   - 'Written by' literal removed from H2 in PHP; H2 styling untouched
+   -- 20260518-163429 ================================================== */
+.section-footer-author .footer-author-eyebrow,
+body.page-template-take-the-test-template .section-footer-author .footer-author-eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-size: 11px !important;
+  line-height: 28px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #7A8599 !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
