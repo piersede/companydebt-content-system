@@ -21,8 +21,7 @@ $author_fullname = get_the_author_meta('display_name');
                 </div>
 				<div class="footer-author-description"><?php the_field('director_description',  'user_'. $author_id ); ?></div>
 			    <div class="footer-author-links">
-                    <a href="/meet-the-team/">Meet our experts</a>
-                    <a href="<?php echo get_author_posts_url($author_id); ?>">More from this author</a>
+                    <a class="footer-author-cta" href="/meet-the-team/">Meet our experts</a>
                 </div>
             </div>
 		</div>

@@ -7141,3 +7141,47 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
     max-width: 180px !important;
   }
 }
+
+/* =================================================================
+   footer-author CTA: 'Meet our experts' rendered as solid button.
+   Overrides the editorial inline-link style added earlier.
+   -- 20260518-155016 ================================================== */
+.section-footer-author .footer-author-links {
+  gap: 16px !important;
+  margin-top: 40px !important;
+}
+.section-footer-author .footer-author-links a.footer-author-cta,
+body.page-template-take-the-test-template .section-footer-author .footer-author-links a.footer-author-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  color: #FFFFFF !important;
+  background: #F47C20 !important;
+  border: 1px solid #F47C20 !important;
+  border-radius: 6px !important;
+  padding: 14px 28px !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(15, 47, 87, 0.08) !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.05s ease !important;
+}
+/* Kill the inherited '::after' arrow from the inline-link rule */
+.section-footer-author .footer-author-links a.footer-author-cta::after {
+  content: none !important;
+  margin-left: 0 !important;
+  transform: none !important;
+}
+.section-footer-author .footer-author-links a.footer-author-cta:hover,
+body.page-template-take-the-test-template .section-footer-author .footer-author-links a.footer-author-cta:hover {
+  background: #DD6A12 !important;
+  border-color: #DD6A12 !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(15, 47, 87, 0.14) !important;
+}
+.section-footer-author .footer-author-links a.footer-author-cta:active {
+  transform: translateY(1px) !important;
+}
