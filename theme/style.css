@@ -7185,3 +7185,21 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 .section-footer-author .footer-author-links a.footer-author-cta:active {
   transform: translateY(1px) !important;
 }
+
+/* =================================================================
+   footer-author: section bg -> #f4f7fe (match hero + sidebar widgets);
+   row: align-items center so headshot centres against full text column.
+   -- 20260518-155228 ================================================== */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  background: #f4f7fe !important;
+  border-top: none !important;
+}
+.section-footer-author .container > .row {
+  align-items: center !important;
+}
+@media (max-width: 900px) {
+  .section-footer-author .container > .row {
+    align-items: flex-start !important;
+  }
+}
