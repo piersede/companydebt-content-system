@@ -7555,3 +7555,59 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-linkedin:hover .li-in {
   fill: #FFFFFF !important;
 }
+
+/* =================================================================
+   footer-author: email icon to the left of LinkedIn, same two-tone
+   palette. .footer-author-social is now a flex row with 10px gap.
+   .footer-author-icon is the shared parent class for both icons.
+   -- 20260518-171045 ================================================== */
+.section-footer-author .footer-author-social,
+body.page-template-take-the-test-template .section-footer-author .footer-author-social {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 18px 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+
+/* Shared icon link styling (both email + LinkedIn) */
+.section-footer-author .footer-author-icon,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+  transition: transform 0.05s ease !important;
+}
+.section-footer-author .footer-author-icon svg,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+}
+.section-footer-author .footer-author-icon .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-square {
+  fill: #002856 !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-in {
+  fill: #f4f7fe !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon:hover .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-square {
+  fill: #1F3C5A !important;
+}
+.section-footer-author .footer-author-icon:hover .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-in {
+  fill: #FFFFFF !important;
+}
+.section-footer-author .footer-author-icon:active {
+  transform: translateY(1px) !important;
+}

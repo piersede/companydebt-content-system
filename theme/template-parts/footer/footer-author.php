@@ -17,13 +17,16 @@ $author_fullname = get_the_author_meta('display_name');
 				</div>
 				<div class="footer-author-description"><?php the_field('director_description',  'user_'. $author_id ); ?></div>
 				<?php $_li_url = trim( (string) get_field( 'linkedin', 'user_'. $author_id ) ); ?>
-				<?php if ( $_li_url ) : ?>
 				<div class="footer-author-social">
-					<a class="footer-author-linkedin" href="<?php echo esc_url( $_li_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( $author_fullname ); ?> on LinkedIn">
+					<a class="footer-author-icon footer-author-email" href="/contact-us/" target="_blank" rel="noopener" aria-label="Contact us">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect class="li-square" x="0" y="0" width="24" height="24" rx="3"/><path class="li-in" d="M5 7h14a1 1 0 0 1 1 1v.41l-8 4.8-8-4.8V8a1 1 0 0 1 1-1zm-1 3.58V16a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5.42l-7.49 4.49a1 1 0 0 1-1.02 0L4 10.58z"/></svg>
+					</a>
+					<?php if ( $_li_url ) : ?>
+					<a class="footer-author-icon footer-author-linkedin" href="<?php echo esc_url( $_li_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( $author_fullname ); ?> on LinkedIn">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect class="li-square" x="0" y="0" width="24" height="24" rx="3"/><path class="li-in" d="M7.119 20.452H3.555V9h3.564v11.452zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM20.447 20.452h-3.554v-5.569c0-1.328-.024-3.037-1.852-3.037-1.853 0-2.137 1.445-2.137 2.939v5.667H9.351V9h3.414v1.561h.049c.477-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288z"/></svg>
 					</a>
+					<?php endif; ?>
 				</div>
-				<?php endif; ?>
             </div>
 		</div>
 	</div>
