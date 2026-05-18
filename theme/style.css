@@ -7263,3 +7263,16 @@ body.page-template-take-the-test-template .section-footer-author {
 body.page-template-take-the-test-template .section-footer-author > .container {
   max-width: 1250px !important;
 }
+
+/* =================================================================
+   footer-author: widen bio to 750px (was 640).
+   Bumps col-author-content cap from 700 to 750 to match.
+   -- 20260518-160616 ================================================== */
+.section-footer-author .col-auto.col-author-content,
+body.page-template-take-the-test-template .section-footer-author .col-auto.col-author-content {
+  max-width: 750px !important;
+}
+.section-footer-author .footer-author-description,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description {
+  max-width: 750px !important;
+}
