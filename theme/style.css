@@ -7611,3 +7611,16 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 .section-footer-author .footer-author-icon:active {
   transform: translateY(1px) !important;
 }
+
+/* =================================================================
+   footer-author bio: tighten paragraph gap to 20px visual
+   (margin 5px + 2*7.6px line-height half-leading = ~20px visual)
+   -- 20260518-173417 ================================================== */
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  margin: 0 0 5px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
