@@ -7387,3 +7387,17 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   padding: 0 !important;
   vertical-align: baseline !important;
 }
+
+/* =================================================================
+   footer-author: position styling matches author name exactly.
+   Arial 700 / 36 / 44 / #002856 -- same as .footer-author-name H2.
+   -- 20260518-164009 ================================================== */
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #002856 !important;
+}
