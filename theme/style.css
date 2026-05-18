@@ -7369,3 +7369,21 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* =================================================================
+   footer-author: position is now an inline span inside .footer-author-name
+   - .footer-author-position rendered inline next to author name
+   - H2 mb bumped to 32 to preserve the gap to the bio (previously
+     supplied by the position div's mb)
+   -- 20260518-163733 ================================================== */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  margin: 0 0 32px 0 !important;
+}
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: baseline !important;
+}
