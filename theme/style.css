@@ -7458,26 +7458,3 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-name {
   margin: 0 0 15px 0 !important;
 }
-
-/* =================================================================
-   footer-author: drop eyebrow, restore 'Written by' literal,
-   restyle whole H2 line as Arial 700 / 36 / 44 / #002856
-   -- 20260518-164851 ================================================== */
-.section-footer-author .footer-author-name,
-body.page-template-take-the-test-template .section-footer-author .footer-author-name,
-.section-footer-author .footer-author-position,
-body.page-template-take-the-test-template .section-footer-author .footer-author-position {
-  font-family: Arial, sans-serif !important;
-  font-size: 36px !important;
-  line-height: 44px !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
-  color: #002856 !important;
-  letter-spacing: normal !important;
-}
-.section-footer-author .footer-author-name a,
-body.page-template-take-the-test-template .section-footer-author .footer-author-name a {
-  font-weight: 700 !important;
-  color: #002856 !important;
-  text-decoration: none !important;
-}
