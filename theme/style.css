@@ -7276,3 +7276,39 @@ body.page-template-take-the-test-template .section-footer-author .col-auto.col-a
 body.page-template-take-the-test-template .section-footer-author .footer-author-description {
   max-width: 750px !important;
 }
+
+/* =================================================================
+   footer-author: 'Written by' H2 -> Arial 700 / 36 / 44 / #002856
+   CTA button -> #ff6600 (with darker hover)
+   -- 20260518-160935 ================================================== */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  color: #002856 !important;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+}
+.section-footer-author .footer-author-name a,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+/* CTA button colour update */
+.section-footer-author .footer-author-links a.footer-author-cta,
+body.page-template-take-the-test-template .section-footer-author .footer-author-links a.footer-author-cta {
+  background: #ff6600 !important;
+  border-color: #ff6600 !important;
+  color: #FFFFFF !important;
+}
+.section-footer-author .footer-author-links a.footer-author-cta:hover,
+body.page-template-take-the-test-template .section-footer-author .footer-author-links a.footer-author-cta:hover {
+  background: #e65500 !important;
+  border-color: #e65500 !important;
+  color: #FFFFFF !important;
+}
