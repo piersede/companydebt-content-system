@@ -6905,3 +6905,239 @@ body section.section-widget-download {
 .toc {
   background: #f4f7fe !important;
 }
+
+/* ==========================================================================
+   Methodology & Disclosure / Sources & References aside labels
+   Style them to the take-the-test H2 visual scale while keeping them as
+   <p> elements (not <h2>) so they don't bloat the page's heading outline.
+
+   The base prose rule `body.page-template-take-the-test-template .main-content p`
+   (specificity 0,0,2,2 + !important) would otherwise force these labels to
+   18px / 400-weight / grey — so this rule mirrors that path with one extra
+   class hook to win the cascade (specificity 0,0,3,2).
+
+   Hooks: .cd-methodology__label, .cd-sources__label (auto-applied by the
+   canonical <aside> structure we ship in every take-the-test article).
+   Added 2026-05-15, specificity-fixed 2026-05-18.
+   ========================================================================== */
+body.page-template-take-the-test-template .main-content p.cd-methodology__label,
+body.page-template-take-the-test-template .main-content p.cd-sources__label {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  color: var(--c-blue-dark) !important;
+  margin-top: 72px !important;
+  margin-bottom: 24px !important;
+  padding-top: 0 !important;
+}
+body.page-template-take-the-test-template .main-content p.cd-methodology__label strong,
+body.page-template-take-the-test-template .main-content p.cd-sources__label strong {
+  /* Inherit so the inner <strong> doesn't compound (browser default = bolder). */
+  font-weight: inherit !important;
+}
+
+/* =================================================================
+   'Written by' footer-author section -- premium editorial redesign
+   Site-wide (every template that loads this template-part).
+   Dual-selector pattern (.section-... + body.page-template-... .section-...)
+   beats the existing take-the-test typography v2 !important overrides
+   via source-order tie-break.
+   -- 20260518-154401 ================================================== */
+/* Section: bg, top border, vertical padding */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  background: #F5F7FA !important;
+  border-top: 1px solid #E3EAF2 !important;
+  padding-top: 128px !important;
+  padding-bottom: 128px !important;
+  margin-top: 0 !important;
+}
+@media (max-width: 1037px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+}
+/* Container max-width 1180 */
+.section-footer-author > .container {
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Inner row: flex, gap 72 */
+.section-footer-author .container > .row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 72px !important;
+  margin: 0 !important;
+}
+/* Portrait column */
+.section-footer-author .container > .row > .col-auto:first-child {
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+.section-footer-author .avatar-image,
+body.page-template-take-the-test-template .section-footer-author .avatar-image {
+  width: 208px !important;
+  height: 208px !important;
+  max-width: 208px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+/* Text column: max 700 */
+.section-footer-author .col-auto.col-author-content {
+  flex: 1 1 auto !important;
+  max-width: 700px !important;
+  padding: 0 !important;
+}
+/* H2 (Written by ...) */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  font-family: Arial, sans-serif !important;
+  font-size: 52px !important;
+  line-height: 1.05 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  color: #0F2F57 !important;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+}
+.section-footer-author .footer-author-name a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+/* Credential line */
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  color: #0F2F57 !important;
+  margin: 0 0 32px 0 !important;
+  padding: 0 !important;
+}
+/* Trust metadata row */
+.section-footer-author .footer-author-trust-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin: 0 0 40px 0 !important;
+}
+.section-footer-author .footer-author-trust-pill {
+  display: inline-block !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  padding: 10px 14px !important;
+  border-radius: 999px !important;
+  background: #EEF4FA !important;
+  color: #0F2F57 !important;
+  border: 1px solid #DCE7F3 !important;
+}
+/* Social media (LinkedIn icon): hide -- not part of new design */
+.section-footer-author .social-media {
+  display: none !important;
+}
+/* Body copy */
+.section-footer-author .footer-author-description {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  color: #1E2A36 !important;
+  max-width: 640px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.section-footer-author .footer-author-description p {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: #1E2A36 !important;
+  margin: 0 0 24px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
+/* CTA links (was orange buttons) -> editorial inline links */
+.section-footer-author .footer-author-links {
+  display: flex !important;
+  gap: 28px !important;
+  margin: 40px 0 0 0 !important;
+  padding: 0 !important;
+}
+.section-footer-author .footer-author-links a,
+body.page-template-take-the-test-template .section-footer-author .footer-author-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #F47C20 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease, text-decoration 0.2s ease !important;
+}
+.section-footer-author .footer-author-links a::after {
+  content: ' \2192' !important;
+  display: inline-block !important;
+  margin-left: 4px !important;
+  transition: transform 0.2s ease !important;
+}
+.section-footer-author .footer-author-links a:hover {
+  text-decoration: underline !important;
+  color: #F47C20 !important;
+}
+.section-footer-author .footer-author-links a:hover::after {
+  transform: translateX(3px) !important;
+}
+/* Mobile: stack vertically below 900px */
+@media (max-width: 900px) {
+  .section-footer-author .container > .row {
+    flex-direction: column !important;
+    gap: 32px !important;
+    align-items: flex-start !important;
+  }
+  .section-footer-author .avatar-image,
+  body.page-template-take-the-test-template .section-footer-author .avatar-image {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+  }
+  .section-footer-author .footer-author-name,
+  body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+    font-size: 38px !important;
+  }
+  .section-footer-author .footer-author-position,
+  body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+    font-size: 17px !important;
+  }
+}
+/* Tablet: 180 portrait */
+@media (max-width: 1037px) and (min-width: 901px) {
+  .section-footer-author .avatar-image,
+  body.page-template-take-the-test-template .section-footer-author .avatar-image {
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+  }
+}
