@@ -7203,3 +7203,31 @@ body.page-template-take-the-test-template .section-footer-author {
     align-items: flex-start !important;
   }
 }
+
+/* =================================================================
+   footer-author bio: match body content typography exactly
+   (Arial / 400 / 18px / 31px line-height / #52606D)
+   -- 20260518-155530 ================================================== */
+.section-footer-author .footer-author-description,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #52606D !important;
+}
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #52606D !important;
+  margin: 0 0 24px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
