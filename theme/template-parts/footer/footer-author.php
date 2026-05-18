@@ -3,15 +3,6 @@ $author_id = get_the_author_meta('ID');
 $author_nickname = get_the_author_meta('nickname');
 $author_first_name = get_the_author_meta('first_name');
 $author_fullname = get_the_author_meta('display_name');
-
-// Trust metadata pills shown below the credential line.
-// Placeholder list for now; can be moved to an ACF user repeater field
-// ('trust_pills') later for per-author customisation.
-$_trust_pills = array(
-    'Licensed by IPA',
-    'ICAS Member',
-    'TMA Member',
-);
 ?>
 <section class="section-footer-author">
 	<div class="container">
@@ -24,13 +15,6 @@ $_trust_pills = array(
 				Written by <a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_fullname ?></a>
 				</div>
 				<div class="footer-author-position"><?php the_field('professional_position',  'user_'. $author_id ); ?></div>
-				<?php if ( ! empty( $_trust_pills ) ) : ?>
-				<div class="footer-author-trust-row">
-					<?php foreach ( $_trust_pills as $_pill ) : ?>
-						<span class="footer-author-trust-pill"><?php echo esc_html( $_pill ); ?></span>
-					<?php endforeach; ?>
-				</div>
-				<?php endif; ?>
                 <div class="social-media">
                     <a href="<?php the_field('linkedin',  'user_'. $author_id ); ?>"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/03/linkedin_white_30.png" alt="5 Starts" width="30" height="30"></a>
 
