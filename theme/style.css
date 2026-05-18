@@ -7327,3 +7327,27 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   margin: 0 0 32px 0 !important;
   padding: 0 !important;
 }
+
+/* =================================================================
+   footer-author: try1
+   - Job title (subtitle): 30 / 1.25 / 700
+   - Body: 19 / 1.8 / 400
+   -- 20260518-162424 ================================================== */
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  font-size: 30px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+}
+.section-footer-author .footer-author-description,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description {
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
