@@ -8,85 +8,73 @@
     const prevButton = document.querySelector(".carousel-prev");
     const nextButton = document.querySelector(".carousel-next");
 
-    const SLIDE_MS = 500;
-    const SLIDE_EASE = "cubic-bezier(0.4, 0, 0.2, 1)";
-
-    let slideWidth = 25;
+    const FADE_MS = 250;
     let visibleSlides = 4;
     let isTransitioning = false;
 
-    function setSlideWidth() {
+    function setVisibleSlides() {
       if (window.innerWidth <= 767) {
-        slideWidth = 100;
         visibleSlides = 1;
-      } else if (window.innerWidth > 767 && window.innerWidth <= 1023) {
-        slideWidth = 50;
+      } else if (window.innerWidth <= 1023) {
         visibleSlides = 2;
-      } else if (window.innerWidth > 1023 && window.innerWidth <= 1280) {
-        slideWidth = 33;
+      } else if (window.innerWidth <= 1280) {
         visibleSlides = 3;
       } else {
-        slideWidth = 25;
         visibleSlides = 4;
       }
-      carousel.style.setProperty("--slide-width", `${slideWidth}%`);
     }
 
-    // Enable transition via inline style (avoids any CSS-class cascade issues)
-    function enableTransition() {
-      carousel.style.transition = `transform ${SLIDE_MS}ms ${SLIDE_EASE}`;
-      carousel.style.willChange = "transform";
-    }
-    function disableTransition() {
-      carousel.style.transition = "none";
+    function fadeIn(el) {
+      if (!el) return;
+      el.style.transition = "none";
+      el.style.opacity = "0";
+      // Commit the opacity:0 in this frame, then animate to 1 on the next
+      void el.offsetWidth;
+      el.style.transition = `opacity ${FADE_MS}ms ease`;
+      el.style.opacity = "1";
+      setTimeout(() => {
+        el.style.transition = "";
+        el.style.opacity = "";
+      }, FADE_MS + 30);
     }
 
     function handleNext() {
       if (isTransitioning) return;
       isTransitioning = true;
 
-      enableTransition();
-      // Trigger slide on next frame so the browser commits the transition style
-      // before mutating transform (otherwise transform jumps without animating)
-      requestAnimationFrame(() => {
-        carousel.style.transform = `translateX(-${slideWidth}%)`;
-      });
+      // Rotate DOM: move first card to the end (the off-screen card on the
+      // right -- which is the new rightmost visible card -- is now in slot N)
+      carousel.appendChild(carousel.firstElementChild);
+
+      // Fade in the new rightmost visible card so it doesn't pop in jarringly
+      const newRightmost = carousel.children[visibleSlides - 1];
+      fadeIn(newRightmost);
 
       setTimeout(() => {
-        // Animation done. Suspend transition, mutate DOM, reset transform,
-        // force a synchronous reflow so the snap-back doesn't animate, then
-        // re-enable transition for the next click.
-        disableTransition();
-        carousel.appendChild(carousel.firstElementChild);
-        carousel.style.transform = "translateX(0)";
-        void carousel.offsetWidth; // force reflow
         isTransitioning = false;
-      }, SLIDE_MS + 20); // small buffer to make sure the visual animation has fully painted
+      }, FADE_MS + 30);
     }
 
     function handlePrev() {
       if (isTransitioning) return;
       isTransitioning = true;
 
-      // Pre-position: move last to start, jump transform left by one slide
-      // (no transition) so the layout is identical to the current visual,
-      // then transition back to translateX(0) on the next frame.
-      disableTransition();
-      carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
-      carousel.style.transform = `translateX(-${slideWidth}%)`;
-      void carousel.offsetWidth; // commit the no-transition state
+      // Rotate DOM the other way: move last card to the beginning
+      carousel.insertBefore(
+        carousel.lastElementChild,
+        carousel.firstElementChild
+      );
 
-      requestAnimationFrame(() => {
-        enableTransition();
-        carousel.style.transform = "translateX(0)";
-      });
+      // Fade in the new leftmost card
+      const newLeftmost = carousel.children[0];
+      fadeIn(newLeftmost);
 
       setTimeout(() => {
         isTransitioning = false;
-      }, SLIDE_MS + 20);
+      }, FADE_MS + 30);
     }
 
-    setSlideWidth();
+    setVisibleSlides();
 
     if (nextButton) nextButton.addEventListener("click", handleNext);
     if (prevButton) prevButton.addEventListener("click", handlePrev);
@@ -111,17 +99,10 @@
       handleSwipe();
     });
 
-    window.addEventListener("resize", () => {
-      setSlideWidth();
-    });
-
-    // Autoslide disabled
-    // setInterval(function () { handleNext(); }, 4000);
+    window.addEventListener("resize", setVisibleSlides);
 
     // ------------------------------------------------------------------
-    // Review popup logic (preserved from the original file — used by
-    // testimonials-style carousels elsewhere on the site; does nothing
-    // when .carousel-items contains article cards).
+    // Review popup logic (preserved from the original file)
     // ------------------------------------------------------------------
     const reviewItems = document.querySelectorAll(
       ".carousel-items .cd-review-item"
