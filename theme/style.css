@@ -7831,3 +7831,11 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-stroke {
   stroke: #FFFFFF !important;
 }
+
+/* footer-author bio line-height -> 28px (was 1.8) -- 20260519-102913 */
+.section-footer-author .footer-author-description,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description,
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  line-height: 28px !important;
+}
