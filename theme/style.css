@@ -7682,3 +7682,67 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-in {
   fill: currentColor !important;
 }
+
+/* =================================================================
+   footer-author: portrait headshot + larger two-tone icons
+   - Headshot: 220 x 280 portrait crop, object-fit cover, 12px radius
+   - Icons: 36x36 rounded-square (rx 4) two-tone — dark navy bg,
+     light glyph; hover lifts to slightly lighter navy + pure white.
+   - Bumps icon gap from 10 to 12 to match the bigger footprint.
+   -- 20260519-094538 ================================================== */
+
+/* Headshot -> portrait crop */
+.section-footer-author .avatar-image,
+body.page-template-take-the-test-template .section-footer-author .avatar-image {
+  width: 220px !important;
+  height: 280px !important;
+  max-width: 220px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
+@media (max-width: 900px) {
+  .section-footer-author .avatar-image,
+  body.page-template-take-the-test-template .section-footer-author .avatar-image {
+    width: 200px !important;
+    height: 240px !important;
+    max-width: 200px !important;
+  }
+}
+
+/* Icons: bring back the rounded-square, two-tone fill, at 36x36 */
+.section-footer-author .footer-author-social,
+body.page-template-take-the-test-template .section-footer-author .footer-author-social {
+  gap: 12px !important;
+}
+.section-footer-author .footer-author-icon svg,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon svg {
+  width: 36px !important;
+  height: 36px !important;
+  fill: initial !important;
+}
+.section-footer-author .footer-author-icon .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-square {
+  display: inline !important;
+  fill: #002856 !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-in {
+  fill: #f4f7fe !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon:hover .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-square {
+  fill: #1F3C5A !important;
+}
+.section-footer-author .footer-author-icon:hover .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-in {
+  fill: #FFFFFF !important;
+}
+/* Reset the bare-icon currentColor styling so it doesn't leak through */
+.section-footer-author .footer-author-icon,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon {
+  color: inherit !important;
+}
