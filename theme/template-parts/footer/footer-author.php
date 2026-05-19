@@ -12,9 +12,8 @@ $author_fullname = get_the_author_meta('display_name');
             </div>
 			<div class="col-auto col-author-content">
 				<div class="footer-author-eyebrow">Article written by</div>
-				<div class="footer-author-name">
-				<?php echo esc_html( $author_fullname ); ?><span class="footer-author-position">, <?php echo trim( get_field('professional_position',  'user_'. $author_id ) ); ?></span>
-				</div>
+				<div class="footer-author-name"><?php echo esc_html( $author_fullname ); ?></div>
+				<div class="footer-author-position"><?php echo trim( get_field('professional_position',  'user_'. $author_id ) ); ?></div>
 				<div class="footer-author-description"><?php the_field('director_description',  'user_'. $author_id ); ?></div>
 				<?php $_li_url = trim( (string) get_field( 'linkedin', 'user_'. $author_id ) ); ?>
 				<div class="footer-author-social">

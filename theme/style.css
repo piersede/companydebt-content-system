@@ -7855,3 +7855,28 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .avatar-image {
   border-radius: 6px !important;
 }
+
+/* footer-author: stack name + position vertically -- 20260519-103541 */
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #002856 !important;
+  letter-spacing: normal !important;
+  margin: 0 0 8px 0 !important;
+}
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  display: block !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 24px !important;
+  line-height: 29px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #1F3C5A !important;
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+}
