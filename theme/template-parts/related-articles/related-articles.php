@@ -48,15 +48,9 @@
         }
     }
 
+    // Heading is locked site-wide to 'Related Articles' — the per-post ACF
+    // override (be_related_articles_heading) is intentionally ignored.
     $heading = 'Related Articles';
-
-    if ( ! empty( $related_articles ) ) {
-        $ra_heading = get_field( 'be_related_articles_heading', $post->ID );
-
-        if ( ! empty( $ra_heading ) ) {
-            $heading = $ra_heading;
-        }
-    }
 ?>
 <?php 
 if ( ! empty( $related_articles ) ) : 
