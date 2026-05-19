@@ -1,0 +1,37 @@
+source url,target url,redirect code,description
+/liquidation-hub/,/liquidation/,301,Fix broken chain — multiple pages redirect here
+/articles/common-causes-of-construction-insolvency/,/insolvency/,301,Fix broken chain — construction insolvency article deleted
+/articles/88-year-old-retailer-bhs-goes-company-liquidation/,/liquidation/,301,Fix broken chain — BHS liquidation article deleted
+/articles/covid-19-effects-on-cruise-industry/,/articles/,301,Fix broken chain — COVID cruise article deleted
+/articles/jamie-oliver-restaurant-restructure-london/,/articles/,301,Fix broken chain — Jamie Oliver article deleted
+/articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/,/articles/,301,Fix broken chain — swimming pool closures article deleted
+/advice/what-is-meant-by-a-zombie-company/,/insolvency/,301,Fix broken chain — zombie company page deleted
+/hmrc/hmrc-office-locations-uk/,/hmrc/,301,Fix broken chain — HMRC offices page deleted (DR50+ backlinks)
+/articles/gieves-hawkes-facing-liquidation/,/liquidation/,301,Wikipedia backlink (DR97) — Gieves & Hawkes liquidation article
+/articles/gieves-hawkes-facing-liquidation,/liquidation/,301,Wikipedia backlink — no-trailing-slash variant
+/what-support-is-available-for-military-veterans-starting-a-business/,/,301,15 backlinks (3×DR50+) — redirected to dead external site
+/how-is-your-business-going-to-be-affected-by-climate-change/,/articles/,301,10 backlinks — climate change infographic page
+/articles/how-is-your-business-going-to-be-affected-by-climate-change/,/articles/,301,Climate change article path variant
+/how-to-increase-happiness-and-productivity-in-the-workplace/,/,301,3 backlinks (2×DR50+) — generic business content
+/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/,/articles/,301,3 backlinks (1×DR50+)
+/features/airlines-brace-for-a-longer-and-deeper-crisis-in-2021/,/articles/,301,DR70+ backlink — airlines COVID article
+/articles/bank-of-england-warns-of-sme-debt-vulnerablity/,/articles/,301,2 backlinks (1×DR50+) — Bank of England SME article
+/articles/late-invoice-payments-continue-big-problem-british-businesses/,/insolvency/,301,DR60+ backlink — late payment insolvency article
+/news/brexit-impact-on-smes-and-the-insolvency-regime/,/insolvency/,301,DR60+ backlink — Brexit insolvency article
+/guides/7-top-tips-to-make-sure-you-survive-company-insolvency/,/insolvency/,301,DR50+ backlink
+/guides/an-sme-s-guide-to-reducing-basic-business-expenditure-costs/,/company-cash-flow-problems/,301,DR50+ backlink
+/company-rescue-solutions/advantages-disadvantages-administration,/company-administration/,301,DR60+ backlink — no-trailing-slash variant (slash version already redirects)
+/faqs/what-is-insolvency,/insolvency/,301,DR60+ backlink — no-trailing-slash variant
+/what-can-bailiffs-seize-from-a-limited-company/,/winding-up-petitions/,301,2 backlinks (2×DR50+)
+/how-to-save-money-with-social-media/,/,301,DR50+ backlink — off-topic content
+/support-for-military-veterans-starting-a-business-in-canada/,/,301,3 backlinks — Canada-specific page not relevant to UK insolvency
+/articles/6000-fuel-hikes-taxi-sector/,/articles/,301,Research-based article deleted
+/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/,/articles/,301,Digital tax article deleted
+/articles/is-harley-davidson-heading-for-a-crash/,/articles/,301,Harley Davidson article deleted
+/articles/wayne-rooney-scores-21m-from-company-liquidation/,/liquidation/,301,Celebrity liquidation article deleted
+/guides/make-complaint-insolvency-practitioner-part-1/,/insolvency/what-is-an-insolvency-practitioner/,301,Guide deleted
+/guides/rescue-guides/5-top-company-rescue-tips-for-struggling-businesses/,/insolvency/business-recovery-services/,301,Guide deleted
+/hmrc/hmrcs-connect-computer-system/,/hmrc/,301,HMRC CONNECT article deleted
+/invoice-finance/,/company-cash-flow-problems/,301,Invoice finance hub deleted
+/liquidation/striking-off-dissolving-company/,/closing-a-limited-company/,301,Strike-off article deleted
+/download-our-covid-19-business-survival-guide/,/bounce-back-loan-support-hub/,301,COVID guide download removed
