@@ -8188,3 +8188,23 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles .carousel-item .article-meta {
   margin-top: auto !important;
 }
+
+/* be-related-articles: whole-card click target (incl. image) -- 20260519-115103 */
+.be-related-articles .carousel-item .anchor-box-link,
+.be-related-articles .col-3 .anchor-box-link {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  display: block !important;
+  background: transparent !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+}
+.be-related-articles .carousel-item article {
+  cursor: pointer !important;
+}
+/* Title still highlights on card hover for visual feedback */
+.be-related-articles .carousel-item article:hover .article-title {
+  color: #ff6600 !important;
+  transition: color 0.2s ease !important;
+}
