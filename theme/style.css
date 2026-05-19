@@ -8329,3 +8329,24 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles .carousel-items .col-3 {
   scroll-snap-align: start !important;
 }
+
+/* be-related-articles: translate-based carousel (Swiper-pattern) -- 20260519-145722 */
+.be-related-articles .carousel-items {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  overflow: clip visible !important;
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+  scrollbar-width: auto !important;
+  width: 100% !important;
+  /* transform/transition managed by JS */
+}
+.be-related-articles .carousel-items::-webkit-scrollbar {
+  display: revert !important;
+}
+.be-related-articles .carousel-items .carousel-item,
+.be-related-articles .carousel-items .col-3 {
+  scroll-snap-align: none !important;
+}

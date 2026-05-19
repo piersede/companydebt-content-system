@@ -8,20 +8,52 @@
     const prevButton = document.querySelector(".carousel-prev");
     const nextButton = document.querySelector(".carousel-next");
 
-    function getCardStep() {
-      const first = carousel.querySelector(".carousel-item");
-      if (!first) return 0;
-      const r = first.getBoundingClientRect();
-      const cs = getComputedStyle(first);
-      const ml = parseFloat(cs.marginLeft) || 0;
-      const mr = parseFloat(cs.marginRight) || 0;
-      return r.width + ml + mr;
+    const SLIDE_MS = 500;
+    const SLIDE_EASE = "cubic-bezier(0.4, 0, 0.2, 1)";
+
+    let slideWidth = 25;       // percent of carousel-items width per card
+    let visibleSlides = 4;
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    const slides = Array.from(carousel.querySelectorAll(".carousel-item"));
+    const totalSlides = slides.length;
+
+    function setSlideWidth() {
+      if (window.innerWidth <= 767) {
+        slideWidth = 100;
+        visibleSlides = 1;
+      } else if (window.innerWidth <= 1023) {
+        slideWidth = 50;
+        visibleSlides = 2;
+      } else if (window.innerWidth <= 1280) {
+        slideWidth = 33;
+        visibleSlides = 3;
+      } else {
+        slideWidth = 25;
+        visibleSlides = 4;
+      }
+      carousel.style.setProperty("--slide-width", `${slideWidth}%`);
+      // Clamp index if needed
+      const maxIndex = Math.max(0, totalSlides - visibleSlides);
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      applyTransform(false);
+      updateButtons();
+    }
+
+    function applyTransform(animate) {
+      carousel.style.transition = animate
+        ? `transform ${SLIDE_MS}ms ${SLIDE_EASE}`
+        : "none";
+      carousel.style.willChange = "transform";
+      carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
     }
 
     function updateButtons() {
       if (!prevButton || !nextButton) return;
-      const atStart = carousel.scrollLeft <= 1;
-      const atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+      const maxIndex = Math.max(0, totalSlides - visibleSlides);
+      const atStart = currentIndex <= 0;
+      const atEnd = currentIndex >= maxIndex;
       prevButton.style.opacity = atStart ? "0.35" : "1";
       prevButton.style.pointerEvents = atStart ? "none" : "auto";
       nextButton.style.opacity = atEnd ? "0.35" : "1";
@@ -29,21 +61,53 @@
     }
 
     function handleNext() {
-      carousel.scrollBy({ left: getCardStep(), behavior: "smooth" });
+      if (isTransitioning) return;
+      const maxIndex = Math.max(0, totalSlides - visibleSlides);
+      if (currentIndex >= maxIndex) return;
+      isTransitioning = true;
+      currentIndex++;
+      applyTransform(true);
+      setTimeout(() => {
+        isTransitioning = false;
+        updateButtons();
+      }, SLIDE_MS + 20);
     }
 
     function handlePrev() {
-      carousel.scrollBy({ left: -getCardStep(), behavior: "smooth" });
+      if (isTransitioning) return;
+      if (currentIndex <= 0) return;
+      isTransitioning = true;
+      currentIndex--;
+      applyTransform(true);
+      setTimeout(() => {
+        isTransitioning = false;
+        updateButtons();
+      }, SLIDE_MS + 20);
     }
+
+    setSlideWidth();
 
     if (nextButton) nextButton.addEventListener("click", handleNext);
     if (prevButton) prevButton.addEventListener("click", handlePrev);
 
-    carousel.addEventListener("scroll", updateButtons, { passive: true });
-    window.addEventListener("resize", updateButtons);
+    // Touch swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-    // Initial button state
-    setTimeout(updateButtons, 0);
+    carousel.addEventListener("touchstart", (event) => {
+      touchStartX = event.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchend", (event) => {
+      touchEndX = event.changedTouches[0].clientX;
+      if (touchEndX < touchStartX - 50) {
+        handleNext();
+      } else if (touchEndX > touchStartX + 50) {
+        handlePrev();
+      }
+    });
+
+    window.addEventListener("resize", setSlideWidth);
 
     // ------------------------------------------------------------------
     // Review popup logic (preserved from the original file)

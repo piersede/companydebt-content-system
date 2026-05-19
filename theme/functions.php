@@ -371,7 +371,7 @@ function company_debt_webpigment_scripts() {
 	if ( is_singular() ) {
 		wp_enqueue_script( 'company-debt-webpigment-single', get_template_directory_uri() . '/assets/js/single.js', array( 'jquery' ), _S_VERSION, true );
 		if ( get_field( 'enable_related_articles', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_related_articles' ) ) {
-			wp_enqueue_script( 'company-debt-webpigment-related-articles', get_template_directory_uri() . '/assets/js/related-articles.js', array( 'jquery' ), _S_VERSION, true );
+			wp_enqueue_script( 'company-debt-webpigment-related-articles', get_template_directory_uri() . '/assets/js/related-articles.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/js/related-articles.js' ), true );
 		}
 	}
 
