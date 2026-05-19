@@ -49,7 +49,8 @@ function cd_410_gone_articles() {
         '/articles/can-manchester-united-get-out-from-under-its-455-5m-debt',
         '/articles/bobby-davros-business-goes-bust',
         '/articles/insolvent-wine-scammers',
-        '/articles/is-harley-davidson-heading-for-a-crash',
+        '/articles/save-the-british-chippy',
+        '/articles/1-in-180-companies-faces-insolvency-in-2024',
     ];
 
     if ( ! in_array( $path, $gone, true ) ) {
