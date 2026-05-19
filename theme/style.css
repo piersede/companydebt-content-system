@@ -8386,3 +8386,8 @@ body.page-template-take-the-test-template .section-footer-author {
 body.page-template-take-the-test-template .footer-cta-block {
   background: #ffffff !important;
 }
+
+/* be-related-articles: bottom padding 50 -> 60 -- 20260519-162155 */
+.be-related-articles {
+  padding-bottom: 60px !important;
+}
