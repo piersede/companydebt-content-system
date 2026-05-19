@@ -8391,3 +8391,33 @@ body.page-template-take-the-test-template .footer-cta-block {
 .be-related-articles {
   padding-bottom: 60px !important;
 }
+
+/* be-related-articles: mobile (<=767) -- one card per view, native swipe -- 20260519-162435 */
+@media (max-width: 767px) {
+  .be-related-articles .carousel-items {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    gap: 16px !important;
+    /* Allow native scrolling -- JS transforms are no-ops here because */
+    /* desktop rule sets transform: none !important higher in cascade. */
+  }
+  .be-related-articles .carousel-items::-webkit-scrollbar {
+    display: none !important;
+  }
+  .be-related-articles .carousel-items .carousel-item,
+  .be-related-articles .carousel-items .col-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    scroll-snap-align: start !important;
+  }
+  /* arrows already hidden site-wide -- keep them hidden on mobile too */
+  .be-related-articles .carousel-prev,
+  .be-related-articles .carousel-next {
+    display: none !important;
+  }
+}
