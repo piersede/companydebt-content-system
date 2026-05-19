@@ -7815,3 +7815,19 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-in {
   fill: #FFFFFF !important;
 }
+
+/* =================================================================
+   footer-author icons: outlined (stroked) email + phone glyphs.
+   .li-stroke -> fill:none, stroke colour-controlled with same palette
+   pattern as the filled .li-in for the LinkedIn icon.
+   -- 20260519-101331 ================================================== */
+.section-footer-author .footer-author-icon .li-stroke,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-stroke {
+  fill: none !important;
+  stroke: #002856 !important;
+  transition: stroke 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon:hover .li-stroke,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-stroke {
+  stroke: #FFFFFF !important;
+}
