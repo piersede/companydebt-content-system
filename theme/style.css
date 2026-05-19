@@ -7651,3 +7651,34 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   color: #1F3C5A !important;
   text-decoration: none !important;
 }
+
+/* =================================================================
+   footer-author icons: bare filled SVGs (no surrounding square),
+   styled with currentColor. Dark blue default, light blue on hover.
+   -- 20260519-092754 ================================================== */
+.section-footer-author .footer-author-icon,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon {
+  color: #002856 !important;
+  background: transparent !important;
+  transition: color 0.2s ease, transform 0.05s ease !important;
+}
+.section-footer-author .footer-author-icon:hover,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover {
+  color: #4F7FB8 !important;
+}
+.section-footer-author .footer-author-icon svg,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  fill: currentColor !important;
+}
+/* Neutralise the older two-tone .li-square / .li-in rules so any stale
+   markup or browser cache doesn't carry a square background through. */
+.section-footer-author .footer-author-icon .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-square {
+  display: none !important;
+}
+.section-footer-author .footer-author-icon .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-in {
+  fill: currentColor !important;
+}
