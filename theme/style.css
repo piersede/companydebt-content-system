@@ -8208,3 +8208,14 @@ body.page-template-take-the-test-template .section-footer-author {
   color: #ff6600 !important;
   transition: color 0.2s ease !important;
 }
+
+/* be-related-articles: let card shadows escape vertically -- 20260519-115734 */
+.be-related-articles .carousel-items {
+  overflow: visible !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+/* Small bottom padding gives breathing room for the dropped shadow */
+.be-related-articles .articles-carousel {
+  padding-bottom: 12px !important;
+}
