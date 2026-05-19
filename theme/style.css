@@ -8243,3 +8243,51 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles .carousel-items .carousel-item .article-meta {
   margin-top: auto !important;
 }
+
+/* be-related-articles: circular white arrow buttons, centered against cards -- 20260519-142541 */
+/* Match top + bottom padding on the carousel container so absolute centering hits the cards */
+.be-related-articles .articles-carousel {
+  padding-top: 12px !important;
+}
+.be-related-articles .carousel-prev,
+.be-related-articles .carousel-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0,40,86,0.06) !important;
+  box-shadow: 0 2px 8px rgba(0,40,86,0.10) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+  color: #1F3C5A !important;
+}
+.be-related-articles .carousel-prev { left: 0 !important; }
+.be-related-articles .carousel-next { right: 0 !important; }
+.be-related-articles .carousel-prev:hover,
+.be-related-articles .carousel-next:hover {
+  box-shadow: 0 6px 16px rgba(0,40,86,0.18) !important;
+  transform: translateY(-50%) scale(1.06) !important;
+  color: #002856 !important;
+}
+.be-related-articles .carousel-prev svg,
+.be-related-articles .carousel-next svg {
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+}
+/* Override the SVG path inline fill="#000000" so it tracks the wrapper colour */
+.be-related-articles .carousel-prev svg path,
+.be-related-articles .carousel-next svg path {
+  fill: currentColor !important;
+}
+/* Keep the existing mirror trick on the next arrow */
+.be-related-articles .carousel-next svg {
+  transform: scaleX(-1) !important;
+}
