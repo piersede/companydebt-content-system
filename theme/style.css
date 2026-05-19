@@ -8080,3 +8080,26 @@ body.page-template-take-the-test-template .footer-cta-block {
 body.page-template-take-the-test-template .section-footer-author {
   border-bottom: 1px solid rgba(0,40,86,0.06) !important;
 }
+
+/* be-related-articles: eyebrow + restyled section title -- 20260519-114402 */
+.be-related-articles .related-articles-eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-size: 19px !important;
+  line-height: 34px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #52606D !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
+.be-related-articles .section-articles-title {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #002856 !important;
+  letter-spacing: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
