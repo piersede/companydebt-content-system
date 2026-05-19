@@ -99,13 +99,22 @@ if ( ! empty( $related_articles ) ) :
 		        ?>
             <div class="col-3 carousel-item">
                 <article>
-			            <?php echo wp_kses_post( $thumbnail ); ?>
-                        <a href="<?php echo esc_url( $link ); ?>">  <div class="article-title"><?php echo esc_html( get_the_title( $related_article_id ) ); ?></div></a>
-                        <div class="article-date-author">
-				            <?php echo esc_html( $author . ', ' . get_the_modified_date( 'j M Y', $related_article_id ) ); ?>
+                    <?php echo wp_kses_post( $thumbnail ); ?>
+                    <div class="article-body">
+                        <a href="<?php echo esc_url( $link ); ?>"><div class="article-title"><?php echo esc_html( get_the_title( $related_article_id ) ); ?></div></a>
+                        <div class="article-meta">
+                            <span class="meta-author">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+                                <?php echo esc_html( $author ); ?>
+                            </span>
+                            <span class="meta-divider" aria-hidden="true"></span>
+                            <span class="meta-date">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                <?php echo esc_html( get_the_modified_date( 'j M Y', $related_article_id ) ); ?>
+                            </span>
                         </div>
-                        
-                        <a href="<?php echo esc_url( $link ); ?>" class="anchor-box-link"></a>
+                    </div>
+                    <a href="<?php echo esc_url( $link ); ?>" class="anchor-box-link"></a>
                 </article>
             </div>
 	        <?php endforeach; ?>

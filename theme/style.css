@@ -8103,3 +8103,66 @@ body.page-template-take-the-test-template .section-footer-author {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* be-related-articles: card redesign -- 20260519-114807 */
+.be-related-articles .carousel-item article {
+  position: relative !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0,40,86,0.06) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(0,40,86,0.06) !important;
+  overflow: hidden !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+.be-related-articles .carousel-item article:hover {
+  box-shadow: 0 6px 18px rgba(0,40,86,0.12) !important;
+  transform: translateY(-2px) !important;
+}
+.be-related-articles .carousel-item img,
+.be-related-articles .col-3 img {
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+.be-related-articles .carousel-item .article-body,
+.be-related-articles .col-3 .article-body {
+  padding: 18px 20px 20px !important;
+}
+.be-related-articles .carousel-item .article-title,
+.be-related-articles .col-3 .article-title {
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 16px 0 !important;
+}
+.be-related-articles .carousel-item .article-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  color: #6B7280 !important;
+}
+.be-related-articles .carousel-item .meta-author,
+.be-related-articles .carousel-item .meta-date {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #6B7280 !important;
+}
+.be-related-articles .carousel-item .meta-author svg,
+.be-related-articles .carousel-item .meta-date svg {
+  width: 14px !important;
+  height: 14px !important;
+  fill: currentColor !important;
+  flex-shrink: 0 !important;
+}
+.be-related-articles .carousel-item .meta-divider {
+  width: 1px !important;
+  height: 12px !important;
+  background: #D1D5DB !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
