@@ -8299,3 +8299,11 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles .carousel-next {
   right: -39px !important;
 }
+
+/* be-related-articles: the missing transition the JS expects -- 20260519-143219 */
+/* JS toggles .sliding-transition on .carousel-items to switch transform animation on/off.
+   Without this rule the transform change is instant, which is why the slide "glitches". */
+.be-related-articles .carousel-items.sliding-transition {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform !important;
+}
