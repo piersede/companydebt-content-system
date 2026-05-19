@@ -8036,3 +8036,40 @@ body.page-template-take-the-test-template .section-footer-author .avatar-image {
 body.page-template-take-the-test-template .footer-cta-block {
   margin-top: 55px !important;
 }
+
+/* footer-author: bottom padding 24 -> 40 (match top) -- 20260519-110820 */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  padding-bottom: 40px !important;
+}
+@media (max-width: 1037px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-bottom: 40px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-bottom: 40px !important;
+  }
+}
+
+/* footer-cta-block redesign: bg #f4f7fe, drop orange bar, add eyebrow -- 20260519-111734 */
+.footer-cta-block {
+  background: #f4f7fe !important;
+}
+.footer-cta-block .footer-cta-block-content {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+.footer-cta-block .footer-cta-eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-size: 19px !important;
+  line-height: 34px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #52606D !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
