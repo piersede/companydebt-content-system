@@ -7746,3 +7746,72 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-icon {
   color: inherit !important;
 }
+
+/* =================================================================
+   footer-author: revert headshot to square; clean icon containers
+   - Headshot: 260x260 square (slightly bigger than original 208 so
+     its height roughly matches the stacked text column).
+   - Icons: 40x40 rounded-square light-blue container + dark navy
+     glyph; invert on hover (navy bg + white glyph).
+   - Replaces the rectangular portrait + dark-square icons from the
+     previous block.
+   -- 20260519-095225 ================================================== */
+
+/* Headshot: square again */
+.section-footer-author .avatar-image,
+body.page-template-take-the-test-template .section-footer-author .avatar-image {
+  width: 260px !important;
+  height: 260px !important;
+  max-width: 260px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
+@media (max-width: 1037px) and (min-width: 901px) {
+  .section-footer-author .avatar-image,
+  body.page-template-take-the-test-template .section-footer-author .avatar-image {
+    width: 220px !important;
+    height: 220px !important;
+    max-width: 220px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author .avatar-image,
+  body.page-template-take-the-test-template .section-footer-author .avatar-image {
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 200px !important;
+  }
+}
+
+/* Icons: 40x40, light-blue container, dark navy glyph, invert on hover */
+.section-footer-author .footer-author-social,
+body.page-template-take-the-test-template .section-footer-author .footer-author-social {
+  gap: 10px !important;
+}
+.section-footer-author .footer-author-icon svg,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+.section-footer-author .footer-author-icon .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-square {
+  display: inline !important;
+  fill: #E1E9F5 !important;
+  rx: 4 !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon .li-in {
+  fill: #002856 !important;
+  transition: fill 0.2s ease !important;
+}
+.section-footer-author .footer-author-icon:hover .li-square,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-square {
+  fill: #002856 !important;
+}
+.section-footer-author .footer-author-icon:hover .li-in,
+body.page-template-take-the-test-template .section-footer-author .footer-author-icon:hover .li-in {
+  fill: #FFFFFF !important;
+}
