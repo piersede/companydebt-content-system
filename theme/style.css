@@ -8375,3 +8375,9 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles > .container > .row:first-child {
   margin-bottom: 24px !important;
 }
+
+/* footer-author: drop bottom border -- 20260519-161817 */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  border-bottom: none !important;
+}
