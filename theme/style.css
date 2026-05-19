@@ -7880,3 +7880,48 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
   margin: 0 0 20px 0 !important;
   padding: 0 !important;
 }
+
+/* footer-author rhythm pass -- 20260519-103915 */
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  padding-top: 40px !important;
+  padding-bottom: 24px !important;
+}
+@media (max-width: 1037px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 40px !important;
+    padding-bottom: 24px !important;
+  }
+}
+@media (max-width: 900px) {
+  .section-footer-author,
+  body.page-template-take-the-test-template .section-footer-author {
+    padding-top: 40px !important;
+    padding-bottom: 24px !important;
+  }
+}
+.section-footer-author .footer-author-eyebrow,
+body.page-template-take-the-test-template .section-footer-author .footer-author-eyebrow {
+  margin: 0 0 20px 0 !important;
+}
+.section-footer-author .footer-author-name,
+body.page-template-take-the-test-template .section-footer-author .footer-author-name {
+  margin: 0 0 10px 0 !important;
+}
+.section-footer-author .footer-author-position,
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  margin: 0 0 28px 0 !important;
+}
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  margin: 0 0 20px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
+.section-footer-author .footer-author-social,
+body.page-template-take-the-test-template .section-footer-author .footer-author-social {
+  margin: 28px 0 0 0 !important;
+}
