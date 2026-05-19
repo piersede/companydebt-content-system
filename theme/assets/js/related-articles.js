@@ -42,11 +42,20 @@
     }
 
     function applyTransform(animate) {
-      carousel.style.transition = animate
-        ? `transform ${SLIDE_MS}ms ${SLIDE_EASE}`
-        : "none";
-      carousel.style.willChange = "transform";
-      carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+      // Use setProperty with 'important' so inline styles beat any CSS
+      // !important rules that may target .carousel-items (an earlier
+      // scroll-snap attempt left transform: none !important in the cascade).
+      carousel.style.setProperty(
+        "transition",
+        animate ? `transform ${SLIDE_MS}ms ${SLIDE_EASE}` : "none",
+        "important"
+      );
+      carousel.style.setProperty("will-change", "transform", "important");
+      carousel.style.setProperty(
+        "transform",
+        `translateX(-${currentIndex * slideWidth}%)`,
+        "important"
+      );
     }
 
     function updateButtons() {
