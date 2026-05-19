@@ -8089,3 +8089,28 @@ body.page-template-take-the-test-template .section-footer-author {
   color: #ff6600 !important;
   font-weight: 600 !important;
 }
+
+/* footer-cta-block: Speak to an Expert button (topnav phone button style) -- 20260519-112236 */
+.footer-cta-block .footer-cta-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 46px !important;
+  background-color: #ff6600 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  padding: 0 22px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: background 0.2s !important;
+  margin: 10px 0 0 0 !important;
+}
+.footer-cta-block .footer-cta-button:hover {
+  background: #e55a00 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
