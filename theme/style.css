@@ -8291,3 +8291,11 @@ body.page-template-take-the-test-template .section-footer-author {
 .be-related-articles .carousel-next svg {
   transform: scaleX(-1) !important;
 }
+
+/* be-related-articles arrows: 35px gap from cards (push outside via negative offset) -- 20260519-142850 */
+.be-related-articles .carousel-prev {
+  left: -39px !important;
+}
+.be-related-articles .carousel-next {
+  right: -39px !important;
+}
