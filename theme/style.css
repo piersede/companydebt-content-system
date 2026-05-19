@@ -7849,3 +7849,9 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
   margin-bottom: 0 !important;
 }
+
+/* headshot corner radius 12 -> 6 -- 20260519-103352 */
+.section-footer-author .avatar-image,
+body.page-template-take-the-test-template .section-footer-author .avatar-image {
+  border-radius: 6px !important;
+}
