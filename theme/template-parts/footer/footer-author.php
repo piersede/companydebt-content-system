@@ -33,5 +33,22 @@ $author_fullname = get_the_author_meta('display_name');
 		</div>
 	</div>
 </section>
-
+<script>
+(function(){
+	function size(){
+		document.querySelectorAll('.section-footer-author').forEach(function(sec){
+			var content = sec.querySelector('.col-author-content');
+			var imgCol  = sec.querySelector('.row > .col-auto:first-child');
+			if (!content || !imgCol) return;
+			if (window.innerWidth < 900) { imgCol.style.width = ''; imgCol.style.height = ''; return; }
+			var h = content.getBoundingClientRect().height;
+			imgCol.style.width  = h + 'px';
+			imgCol.style.height = h + 'px';
+		});
+	}
+	if (document.readyState !== 'loading') { size(); } else { document.addEventListener('DOMContentLoaded', size); }
+	window.addEventListener('load', size);
+	window.addEventListener('resize', size);
+})();
+</script>
 
