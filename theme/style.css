@@ -8310,3 +8310,53 @@ body.page-template-take-the-test-template .section-footer-author {
   width: 100% !important;
   /* No transform/transition rules here -- JS owns them */
 }
+
+/* Slick wraps .carousel-items children in .slick-list > .slick-track */
+/* Allow shadows to escape via overflow-y visible on slick-list */
+.be-related-articles .carousel-items .slick-list {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  padding-bottom: 12px !important;
+}
+.be-related-articles .carousel-items .slick-slide {
+  height: auto !important;
+}
+.be-related-articles .carousel-items .slick-slide > div {
+  height: 100% !important;
+  padding: 0 8px !important;
+}
+/* The .col-3 .carousel-item div sits inside slick-slide; keep its width fluid */
+.be-related-articles .carousel-items.slick-initialized .carousel-item,
+.be-related-articles .carousel-items.slick-initialized .col-3 {
+  flex: none !important;
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* be-related-articles: STATIC 4-card grid (carousel disabled) -- 20260519-160826 */
+/* Arrows hidden. carousel-items reset to a normal flex row that fits 4 cards. */
+.be-related-articles .carousel-prev,
+.be-related-articles .carousel-next {
+  display: none !important;
+}
+.be-related-articles .articles-carousel {
+  padding: 0 !important;
+}
+.be-related-articles .carousel-items {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
+  transform: none !important;
+  transition: none !important;
+  width: 100% !important;
+  gap: 16px !important;
+}
+/* Cards expand evenly across the row (4 cards = 25% each minus gap) */
+.be-related-articles .carousel-items .carousel-item,
+.be-related-articles .carousel-items .col-3 {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}

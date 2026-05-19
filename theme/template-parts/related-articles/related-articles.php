@@ -51,10 +51,13 @@
     // Heading is locked site-wide to 'Related Articles' — the per-post ACF
     // override (be_related_articles_heading) is intentionally ignored.
     $heading = 'Related Articles';
+
+    // Static 4-card grid (no carousel) -- cap at 4 if editors added more.
+    $related_articles = array_slice( $related_articles, 0, 4 );
 ?>
-<?php 
-if ( ! empty( $related_articles ) ) : 
-    $total_articles = count( $related_articles );    
+<?php
+if ( ! empty( $related_articles ) ) :
+    $total_articles = count( $related_articles );
     ?>
 <section class="be-related-articles has-carousel">
     <div class="container">
@@ -101,7 +104,7 @@ if ( ! empty( $related_articles ) ) :
                 <article>
                     <?php echo wp_kses_post( $thumbnail ); ?>
                     <div class="article-body">
-                        <a href="<?php echo esc_url( $link ); ?>"><div class="article-title"><?php echo esc_html( get_the_title( $related_article_id ) ); ?></div></a>
+                        <div class="article-title"><?php echo esc_html( get_the_title( $related_article_id ) ); ?></div>
                         <div class="article-meta">
                             <span class="meta-author">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
