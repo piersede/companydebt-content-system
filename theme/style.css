@@ -7839,3 +7839,13 @@ body.page-template-take-the-test-template .section-footer-author .footer-author-
 body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
   line-height: 28px !important;
 }
+
+/* footer-author bio: p margin -> 0 0 20px 0 (matches body content) -- 20260519-103306 */
+.section-footer-author .footer-author-description p,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p {
+  margin: 0 0 20px 0 !important;
+}
+.section-footer-author .footer-author-description p:last-child,
+body.page-template-take-the-test-template .section-footer-author .footer-author-description p:last-child {
+  margin-bottom: 0 !important;
+}
