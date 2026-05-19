@@ -8031,3 +8031,8 @@ body.page-template-take-the-test-template .section-footer-author .avatar-image {
     height: 200px !important;
   }
 }
+
+/* footer-cta-block: 55px top gap on take-the-test template only -- 20260519-110409 */
+body.page-template-take-the-test-template .footer-cta-block {
+  margin-top: 55px !important;
+}
