@@ -8114,3 +8114,12 @@ body.page-template-take-the-test-template .section-footer-author {
   color: #ffffff !important;
   text-decoration: none !important;
 }
+
+/* author/cta separator: drop the 55px gap, add a thin divider on author section instead -- 20260519-112934 */
+body.page-template-take-the-test-template .footer-cta-block {
+  margin-top: 0 !important;
+}
+.section-footer-author,
+body.page-template-take-the-test-template .section-footer-author {
+  border-bottom: 1px solid rgba(0,40,86,0.06) !important;
+}
