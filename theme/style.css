@@ -8421,3 +8421,12 @@ body.page-template-take-the-test-template .footer-cta-block {
     display: none !important;
   }
 }
+
+/* be-related-articles mobile: 16px side padding so cards arent flush -- 20260519-162846 */
+@media (max-width: 767px) {
+  .be-related-articles .carousel-items {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    scroll-padding-left: 16px !important;
+  }
+}
