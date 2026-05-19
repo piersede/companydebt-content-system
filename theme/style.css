@@ -8381,3 +8381,8 @@ body.page-template-take-the-test-template .section-footer-author {
 body.page-template-take-the-test-template .section-footer-author {
   border-bottom: none !important;
 }
+
+/* footer-cta-block: white bg on take-the-test template only -- 20260519-161926 */
+body.page-template-take-the-test-template .footer-cta-block {
+  background: #ffffff !important;
+}
