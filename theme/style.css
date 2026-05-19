@@ -8166,3 +8166,25 @@ body.page-template-take-the-test-template .section-footer-author {
   display: inline-block !important;
   flex-shrink: 0 !important;
 }
+
+/* be-related-articles: fixed card height = 4-line-title card -- 20260519-114943 */
+.be-related-articles .carousel-item article {
+  min-height: 350px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.be-related-articles .carousel-item .article-body {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.be-related-articles .carousel-item .article-title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+.be-related-articles .carousel-item .article-meta {
+  margin-top: auto !important;
+}
