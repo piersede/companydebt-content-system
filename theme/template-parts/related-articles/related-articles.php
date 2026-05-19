@@ -117,7 +117,7 @@ if ( ! empty( $related_articles ) ) :
                             </span>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url( $link ); ?>" class="anchor-box-link"></a>
+                    <a href="<?php echo esc_url( $link ); ?>" class="anchor-box-link" target="_blank" rel="noopener"></a>
                 </article>
             </div>
 	        <?php endforeach; ?>
