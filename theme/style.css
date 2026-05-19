@@ -8360,3 +8360,18 @@ body.page-template-take-the-test-template .section-footer-author {
   padding: 0 !important;
   max-width: none !important;
 }
+
+/* be-related-articles: bg #f4f7fe, 50/50 padding -- 20260519-161507 */
+.be-related-articles {
+  background: #f4f7fe !important;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+/* Cancel any margin-bottom on articles-row that would add space below cards */
+.be-related-articles .articles-row {
+  margin-bottom: 0 !important;
+}
+/* Heading row mb already exists; ensure consistent */
+.be-related-articles > .container > .row:first-child {
+  margin-bottom: 24px !important;
+}
