@@ -107,51 +107,110 @@
 })();
 
 /* -------------------------------------------------------------------
- * .cd-sources block transformation
- * Scoped to /liquidation/ (page-id-7669) for v1 iteration. To roll out
+ * .cd-sources block transformation + category grouping
+ * Scoped to /liquidation/ (page-id-7669) for the iteration. To roll out
  * site-wide, drop the body-class check.
  *
  * For each <li> inside <aside class="cd-sources">:
- *   - Strip leading "— " (or any dash) from the text node after <strong>,
- *     capitalize first letter, wrap in <span class="cd-source-desc">
- *   - Strip leading " – " from the text node after </a>, wrap in
+ *   - Strip leading "— " from text after <strong>, capitalize, wrap in
+ *     <span class="cd-source-desc">
+ *   - Strip leading " – " from text after </a>, wrap in
  *     <span class="cd-source-domain">
+ *   - Classify by URL into 'legislation' | 'publication' | 'guidance'
+ *   - Open in new tab
+ * Then re-group the <li>s under labelled subheadings.
  * ------------------------------------------------------------------- */
 (function () {
-  function transformSources() {
-    if (!document.body.classList.contains("page-id-7669")) return;
-    document.querySelectorAll(".cd-sources li").forEach(function (li) {
-      if (li.dataset.cdTransformed === "1") return;
-      const a = li.querySelector("a");
-      if (a) {
-        // Open source links in a new tab
-        a.setAttribute("target", "_blank");
-        a.setAttribute("rel", "noopener");
-        Array.from(a.childNodes).forEach(function (node) {
-          if (node.nodeType !== 3) return; // text only
-          let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "");
-          txt = txt.trim();
-          if (!txt) { node.remove(); return; }
-          txt = txt.charAt(0).toUpperCase() + txt.slice(1);
-          const span = document.createElement("span");
-          span.className = "cd-source-desc";
-          span.textContent = txt;
-          node.replaceWith(span);
-        });
-      }
-      Array.from(li.childNodes).forEach(function (node) {
+  const CATEGORIES = [
+    { key: "legislation", label: "Primary Legislation" },
+    { key: "publication", label: "Official Publications" },
+    { key: "guidance",    label: "Guidance & Resources" },
+  ];
+
+  function classify(href) {
+    let u;
+    try { u = new URL(href, window.location.origin); } catch (e) { return "guidance"; }
+    const d = u.hostname.replace(/^www\./, "");
+    if (d === "legislation.gov.uk") return "legislation";
+    if (d === "thegazette.co.uk") return "publication";
+    if (d === "gov.uk" || d.endsWith(".gov.uk")) {
+      return u.pathname.startsWith("/government/") ? "publication" : "guidance";
+    }
+    return "guidance";
+  }
+
+  function cleanLi(li) {
+    if (li.dataset.cdTransformed === "1") return;
+    const a = li.querySelector("a");
+    if (a) {
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+      Array.from(a.childNodes).forEach(function (node) {
         if (node.nodeType !== 3) return;
-        let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "");
-        txt = txt.trim();
+        let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "").trim();
         if (!txt) { node.remove(); return; }
+        txt = txt.charAt(0).toUpperCase() + txt.slice(1);
         const span = document.createElement("span");
-        span.className = "cd-source-domain";
+        span.className = "cd-source-desc";
         span.textContent = txt;
         node.replaceWith(span);
       });
-      li.dataset.cdTransformed = "1";
+    }
+    Array.from(li.childNodes).forEach(function (node) {
+      if (node.nodeType !== 3) return;
+      let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "").trim();
+      if (!txt) { node.remove(); return; }
+      const span = document.createElement("span");
+      span.className = "cd-source-domain";
+      span.textContent = txt;
+      node.replaceWith(span);
     });
+    li.dataset.cdTransformed = "1";
   }
+
+  function transformAside(aside) {
+    if (aside.dataset.cdGrouped === "1") return;
+    const lis = Array.from(aside.querySelectorAll("ul > li"));
+    if (!lis.length) return;
+
+    // Clean + classify
+    const buckets = { legislation: [], publication: [], guidance: [] };
+    lis.forEach(function (li) {
+      cleanLi(li);
+      const a = li.querySelector("a");
+      const href = a ? a.getAttribute("href") : "";
+      const cat = classify(href);
+      li.classList.add("cd-source", "cd-source--" + cat);
+      buckets[cat].push(li);
+    });
+
+    // Remove the original <ul> wrapper(s)
+    aside.querySelectorAll("ul").forEach(function (ul) { ul.remove(); });
+
+    // Append one group per category that has items
+    CATEGORIES.forEach(function (cat) {
+      const items = buckets[cat.key];
+      if (!items.length) return;
+      const groupDiv = document.createElement("div");
+      groupDiv.className = "cd-sources__group cd-sources__group--" + cat.key;
+      const h4 = document.createElement("h4");
+      h4.className = "cd-sources__subhead";
+      h4.textContent = cat.label;
+      groupDiv.appendChild(h4);
+      const newUl = document.createElement("ul");
+      items.forEach(function (li) { newUl.appendChild(li); });
+      groupDiv.appendChild(newUl);
+      aside.appendChild(groupDiv);
+    });
+
+    aside.dataset.cdGrouped = "1";
+  }
+
+  function transformSources() {
+    if (!document.body.classList.contains("page-id-7669")) return;
+    document.querySelectorAll(".cd-sources").forEach(transformAside);
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", transformSources);
   } else {
