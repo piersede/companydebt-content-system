@@ -105,3 +105,53 @@
     reviewItems.forEach(item => item.addEventListener("click", handleClick));
   });
 })();
+
+/* -------------------------------------------------------------------
+ * .cd-sources block transformation
+ * Scoped to /liquidation/ (page-id-7669) for v1 iteration. To roll out
+ * site-wide, drop the body-class check.
+ *
+ * For each <li> inside <aside class="cd-sources">:
+ *   - Strip leading "— " (or any dash) from the text node after <strong>,
+ *     capitalize first letter, wrap in <span class="cd-source-desc">
+ *   - Strip leading " – " from the text node after </a>, wrap in
+ *     <span class="cd-source-domain">
+ * ------------------------------------------------------------------- */
+(function () {
+  function transformSources() {
+    if (!document.body.classList.contains("page-id-7669")) return;
+    document.querySelectorAll(".cd-sources li").forEach(function (li) {
+      if (li.dataset.cdTransformed === "1") return;
+      const a = li.querySelector("a");
+      if (a) {
+        Array.from(a.childNodes).forEach(function (node) {
+          if (node.nodeType !== 3) return; // text only
+          let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "");
+          txt = txt.trim();
+          if (!txt) { node.remove(); return; }
+          txt = txt.charAt(0).toUpperCase() + txt.slice(1);
+          const span = document.createElement("span");
+          span.className = "cd-source-desc";
+          span.textContent = txt;
+          node.replaceWith(span);
+        });
+      }
+      Array.from(li.childNodes).forEach(function (node) {
+        if (node.nodeType !== 3) return;
+        let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "");
+        txt = txt.trim();
+        if (!txt) { node.remove(); return; }
+        const span = document.createElement("span");
+        span.className = "cd-source-domain";
+        span.textContent = txt;
+        node.replaceWith(span);
+      });
+      li.dataset.cdTransformed = "1";
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", transformSources);
+  } else {
+    transformSources();
+  }
+})();
