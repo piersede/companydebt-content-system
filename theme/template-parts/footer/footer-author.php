@@ -19,6 +19,22 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 				</div>
 				<div class="footer-author-name"><?php echo esc_html( $author_fullname ); ?></div>
 				<div class="footer-author-position"><?php echo trim( get_field('professional_position',  'user_'. $author_id ) ); ?></div>
+				<?php
+				$_pills = array_filter( array_map( 'trim', array(
+					(string) get_field( 'trust_pill_1', 'user_' . $author_id ),
+					(string) get_field( 'trust_pill_2', 'user_' . $author_id ),
+					(string) get_field( 'trust_pill_3', 'user_' . $author_id ),
+				) ) );
+				if ( ! empty( $_pills ) ) : ?>
+				<div class="footer-author-pills">
+					<?php foreach ( $_pills as $_pill ) : ?>
+					<span class="footer-author-pill">
+						<svg class="footer-author-pill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+						<?php echo esc_html( $_pill ); ?>
+					</span>
+					<?php endforeach; ?>
+				</div>
+				<?php endif; ?>
 			</div>
 			<div class="col-auto col-author-actions">
 				<a class="footer-author-action" href="/contact-us/" target="_blank" rel="noopener">
