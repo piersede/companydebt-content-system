@@ -124,6 +124,9 @@
       if (li.dataset.cdTransformed === "1") return;
       const a = li.querySelector("a");
       if (a) {
+        // Open source links in a new tab
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener");
         Array.from(a.childNodes).forEach(function (node) {
           if (node.nodeType !== 3) return; // text only
           let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "");
