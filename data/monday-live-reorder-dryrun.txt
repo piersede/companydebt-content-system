@@ -1,0 +1,585 @@
+Loading GA CSV: C:\Users\theoc\Downloads\Pages_and_screens_Page_path_and_screen_class.csv
+  parsed 271 GA rows
+Fetching 'Live' group from Monday board 18406273663...
+  fetched 378 Live items
+Detected path-based CSV — using direct URL matching
+
+=== Proposed new order for 'Live' group (378 items) ===
+
+Rank   Views  Item name  -->  /path/
+--------------------------------------------------------------------------------------------------------------
+   1     283  Company Liquidation: What Directors Need to Know              -->  /liquidation/
+   2      74  Contact Us                                                    -->  /contact-us/
+   3      58  What Happens to Employees?                                    -->  /liquidation/what-happens-to-employees/
+   4      38  Time to Pay HMRC                                              -->  /hmrc/time-to-pay-hmrc/
+   5      37  Company Administration Hub                                    -->  /company-administration/
+   6      35  Closing a Limited Company                                     -->  /closing-a-limited-company/
+   7      29  Covid 19 Effects On Cruise Industry                           -->  /articles/covid-19-effects-on-cruise-industry/
+   8      28  Winding Up Petitions                                          -->  /winding-up-petitions/
+   9      26  Are Directors Personally Liable?                              -->  /advice/are-directors-personally-liable-for-company-debts/
+  10      25  Creditors Voluntary Liquidation (CVL)                         -->  /liquidation/creditors-voluntary-liquidation/
+  11      23  Meet The Team                                                 -->  /meet-the-team/
+  12      23  Overdrawn Directors Loan Accounts                             -->  /advice/overdrawn-directors-loan-accounts/
+  13      21  Insolvency                                                    -->  /insolvency/insolvency-act-1986/
+  14      21  Insolvency Act 1986                                           -->  /insolvency/insolvency-act-1986/
+  15      19  Cannot Afford Redundancy                                      -->  /company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/
+  16      18  Cannot Pay PAYE                                               -->  /hmrc/cant-pay-paye/
+  17      16  Can I Be Sued After Dissolution?                              -->  /liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/
+  18      16  Cannot Pay VAT                                                -->  /hmrc/cant-pay-vat/
+  19      16  Pre-Pack Administration                                       -->  /what-is-a-pre-pack-administration/
+  20      13  Company Strike Off and Dissolution                            -->  /liquidation/company-strike-off-and-dissolution/
+  21      13  Director Redundancy                                           -->  /director-redundancy/
+  22      12  About Us                                                      -->  /about-us/
+  23      12  Fixed and Floating Charges                                    -->  /advice/what-are-fixed-and-floating-charges/
+  24      11  Bounce Back Loan Hub                                          -->  /bounce-back-loan-support-hub/
+  25      11  Clothing Retailer Usc Close 30 Unfashionable Stores           -->  /articles/clothing-retailer-usc-close-30-unfashionable-stores/
+  26      11  Problems Paying Corporation Tax                               -->  /hmrc/problems-paying-corporation-tax-hmrc/
+  27      11  Shareholders Liable for Debts                                 -->  /insolvency/shareholders-liable-company-debts/
+  28      11  Uk Insolvency Statistics                                      -->  /uk-insolvency-statistics/
+  29      10  Free Business Debt Advice                                     -->  /advice/get-free-business-debt-advice/
+  30      10  HMRC Offices Contact Guide                                    -->  /hmrc/hmrc-offices-contact-guide/
+  31      10  Limited Company Bankruptcy                                    -->  /insolvency/limited-company-bankruptcy/
+  32       9  Advice                                                        -->  /advice/
+  33       9  Cannot Pay Suppliers                                          -->  /company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/
+  34       9  Director Responsibilities After Strike Off                    -->  /liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/
+  35       9  Tax Penalties                                                 -->  /hmrc/tax-penalties/
+  36       9  What Does Receivership Mean?                                  -->  /receivership-mean-business/
+  37       9  What Is Limited Liability?                                    -->  /advice/what-is-limited-liability/
+  38       8  Can a Director Get a Criminal Record?                         -->  /advice/can-director-criminal-record/
+  39       8  Care Home Insolvency                                          -->  /care-home-insolvency/
+  40       8  Check If Company Is Insolvent                                 -->  /insolvency/check-if-a-company-is-insolvent/
+  41       8  Company Voluntary Arrangement                                 -->  /company-rescue-solutions/company-voluntary-arrangement/
+  42       8  Compulsory Liquidation                                        -->  /liquidation/compulsory-liquidation/
+  43       8  Insolvent Company Owes Me Money                               -->  /insolvency/insolvent-company-owes-me-money/
+  44       8  Notice to Appoint Administrators                              -->  /company-administration/notice-of-intention-to-appoint-administrators/
+  45       8  Pub Closures In The Uk                                        -->  /articles/pub-closures-in-the-uk/
+  46       7  Directors Personal Guarantees                                 -->  /advice/directors-personal-guarantees/
+  47       7  Dissolving With BBL                                           -->  /bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/
+  48       7  HMRC Tax Debt Hub                                             -->  /hmrc/
+  49       7  Wayne Rooney Scores 21M From Company Liquidation              -->  /articles/wayne-rooney-scores-21m-from-company-liquidation/
+  50       6  Cease Trading                                                 -->  /insolvency/cease-trading/
+  51       6  Cleaning Contractors                                          -->  /sectors/cleaning-contractors/
+  52       6  Frozen Bank Account                                           -->  /advice/frozen-bank-account/
+  53       6  Lengthy Disqualifications For Four Directors Involved In Vat  -->  /articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/
+  54       6  Spouse Liability for Business Debts                           -->  /insolvency/personal-liability-spouses-business-debts/
+  55       6  What Happens to Directors?                                    -->  /liquidation/what-happens-to-directors-in-liquidation/
+  56       6  Which Creditors Get Paid First?                               -->  /liquidation/which-creditors-get-paid-first/
+  57       5  Bobby Davros Business Goes Bust                               -->  /articles/bobby-davros-business-goes-bust/
+  58       5  Can a Director Be Made Bankrupt?                              -->  /advice/can-a-director-be-made-bankrupt-if-a-business-fails/
+  59       5  Challenge a Statutory Demand                                  -->  /company-cash-flow-problems/challenge-a-statutory-demand/
+  60       5  Company Vehicles in Liquidation                               -->  /liquidation/company-vehicles-and-equipment-in-liquidation/
+  61       5  Controlled Goods Agreement                                    -->  /hmrc/controlled-goods-agreement/
+  62       5  High Court Writ                                               -->  /insolvency/what-is-a-high-court-writ/
+  63       5  HMRC Fraud Investigations                                     -->  /hmrc/hmrc-fraud-investigations/
+  64       5  HMRC Tax Investigations                                       -->  /hmrc/hmrc-tax-investigations/
+  65       5  Insolvency Advice                                             -->  /advice/insolvency-advice-for-directors/
+  66       5  Insolvency Advice for Directors                               -->  /advice/insolvency-advice-for-directors/
+  67       5  Preferential vs Non-Preferential Creditors                    -->  /insolvency/preferential-non-preferential-creditors/
+  68       5  Privacy Policy                                                -->  /privacy-policy/
+  69       5  The Orla Kiely Fashion Brand Shuts Up Shop                    -->  /articles/the-orla-kiely-fashion-brand-shuts-up-shop/
+  70       5  VAT Penalties                                                 -->  /hmrc/vat-penalties/
+  71       5  What Is an IP?                                                -->  /insolvency/what-is-an-insolvency-practitioner/
+  72       4  1 In 180 Companies Faces Insolvency In 2024                   -->  /articles/1-in-180-companies-faces-insolvency-in-2024/
+  73       4  BBL Default                                                   -->  /bounce-back-loan-support-hub/what-happens-if-i-default/
+  74       4  Business Recovery Services                                    -->  /insolvency/business-recovery-services/
+  75       4  Can Directors Pay Themselves Before Liquidation?              -->  /liquidation/can-directors-pay-themselves-before-liquidation/
+  76       4  Cannot Pay Business Energy                                    -->  /company-cash-flow-problems/cant-pay-business-energy/
+  77       4  Cannot Pay Business Rates                                     -->  /company-cash-flow-problems/cant-pay-business-rates/
+  78       4  Cannot Pay Commercial Lease                                   -->  /company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/
+  79       4  Company Cannot Pay Debts                                      -->  /insolvency/what-happens-if-a-company-cannot-pay-its-debts/
+  80       4  Company Pensions and Liquidation                              -->  /liquidation/company-pensions-and-liquidation/
+  81       4  Company Secretary Liability                                   -->  /insolvency/personally-liabilty-of-company-secretary/
+  82       4  Director Redundancy in MVL                                    -->  /liquidation/redundancy-payments-for-directors-in-an-mvl/
+  83       4  I Have No Knowledge Of This Debt                              -->  /sample-letters/i-have-no-knowledge-of-this-debt/
+  84       4  Losing House if Company Goes Bust                             -->  /advice/losing-house-if-company-goes-bust/
+  85       4  Members Voluntary Liquidation (MVL)                           -->  /liquidation/members-voluntary-liquidation/
+  86       4  Misfeasance                                                   -->  /advice/misfeasance/
+  87       4  Paying Staff but Not HMRC                                     -->  /liquidation/paying-staff-but-not-hmrc-before-liquidation/
+  88       4  Personal Guarantee Insurance                                  -->  /advice/personal-guarantee-insurance/
+  89       4  Redundancy in CVA                                             -->  /company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/
+  90       4  Statement of Affairs                                          -->  /insolvency/statement-of-affairs/
+  91       4  Taking Money Out of a Limited Company                         -->  /advice/how-to-legally-take-money-out-of-a-limited-company/
+  92       4  Tell Debt Collector To Stop Contacting You                    -->  /sample-letters/tell-debt-collector-to-stop-contacting-you/
+  93       4  Unenforceable Personal Guarantee                              -->  /advice/unenforceable-personal-guarantee/
+  94       4  Validation Order                                              -->  /insolvency/validation-order/
+  95       4  Write Off My Debt                                             -->  /sample-letters/write-off-my-debt/
+  96       4  Wrongful Trading                                              -->  /insolvency/what-is-wrongful-trading/
+  97       3  Am I Solvent?                                                 -->  /liquidation/am-i-solvent/
+  98       3  Articles                                                      -->  /articles/
+  99       3  BBL Fraud                                                     -->  /bounce-back-loan-support-hub/bounce-back-loan-fraud/
+ 100       3  Can Personal Assets Be Seized?                                -->  /advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/
+ 101       3  Cannot Pay Staff Wages                                        -->  /company-cash-flow-problems/cant-pay-staff-wages/
+ 102       3  Companies Act 2006                                            -->  /advice/what-is-the-companies-act-2006/
+ 103       3  Company Property in Liquidation                               -->  /liquidation/company-property-and-real-estate-in-liquidation/
+ 104       3  Duties of a Company Director                                  -->  /advice/what-are-the-duties-and-responsibilities-of-a-company-director/
+ 105       3  Freezing Order                                                -->  /insolvency/what-is-a-freezing-order-or-injunction/
+ 106       3  Gieves Hawkes Facing Liquidation                              -->  /articles/gieves-hawkes-facing-liquidation/
+ 107       3  Guides Resources Hub                                          -->  /guides-resources-hub/
+ 108       3  Hotels                                                        -->  /sectors/hotels/
+ 109       3  Liquidating a Group Company                                   -->  /liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/
+ 110       3  Liquidation Documents                                         -->  /liquidation/list-of-liquidation-documents/
+ 111       3  Liquidators Powers and Duties                                 -->  /liquidation/liquidators-powers-and-duties/
+ 112       3  Personal Liability Notices                                    -->  /hmrc/personal-liability-notices/
+ 113       3  Phoenix Companies                                             -->  /advice/what-are-phoenix-companies/
+ 114       3  Sample Letters                                                -->  /sample-letters/
+ 115       3  Save The British Chippy                                       -->  /articles/save-the-british-chippy/
+ 116       3  Security Bonds                                                -->  /hmrc/security-bonds/
+ 117       3  Travel Firm Collapses As It Cannot Pay Refunds                -->  /articles/travel-firm-collapses-as-it-cannot-pay-refunds/
+ 118       3  Understanding HMRC Debt Collection                            -->  /hmrc/understanding-hmrc-debt-collection/
+ 119       3  What Is the Insolvency Service?                               -->  /insolvency/what-is-the-insolvency-service/
+ 120       3  Writing Off Directors Loan                                    -->  /advice/writing-off-a-directors-loan-account/
+ 121       2  88 Year Old Retailer Bhs Goes Company Liquidation             -->  /articles/88-year-old-retailer-bhs-goes-company-liquidation/
+ 122       2  Bailiffs and High Court Enforcement Officers                  -->  /liquidation/bailiffs-high-court-enforcement-officers/
+ 123       2  Boulestin Avoids Closure                                      -->  /articles/boulestin-avoids-closure/
+ 124       2  Business Restructuring                                        -->  /advice/business-restructuring/
+ 125       2  Can Bradford Rugby Club Saved Liquidation                     -->  /articles/can-bradford-rugby-club-saved-liquidation/
+ 126       2  Can HMRC Shut Down My Business?                               -->  /hmrc/can-hmrc-shut-down-my-business/
+ 127       2  Cease Trading Template                                        -->  /sample-letters/cease-trading-template/
+ 128       2  Childcare                                                     -->  /sectors/childcare/
+ 129       2  Company Financial Difficulties                                -->  /company-cash-flow-problems/company-is-having-financial-difficulties/
+ 130       2  Company Restoration After Liquidation                         -->  /liquidation/company-restoration-after-liquidation/
+ 131       2  County Court Judgements                                       -->  /county-court-judgements/
+ 132       2  Creditors Meeting                                             -->  /insolvency/creditors-meeting/
+ 133       2  Customer Insolvency                                           -->  /insolvency/what-to-do-about-customer-insolvency/
+ 134       2  Debt Charities UK                                             -->  /debt-charities-uk/
+ 135       2  Debt Management Guide                                         -->  /advice/debt-management-guide/
+ 136       2  Directors Duties to Creditors                                 -->  /advice/directors-duties-to-creditors/
+ 137       2  Disqualified Directors Jailed Continuing Control Companies    -->  /articles/disqualified-directors-jailed-continuing-control-companies/
+ 138       2  Find a Liquidator Near Me                                     -->  /insolvency/find-a-liquidator-near-me/
+ 139       2  HMRC Compliance Checks                                        -->  /hmrc/hmrc-compliance-checks/
+ 140       2  HMRC Penalties and Investigations                             -->  /hmrc/hmrc-penalties-investigations/
+ 141       2  HMRC Winding Up Petition                                      -->  /winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/
+ 142       2  How Much Does Liquidation Cost?                               -->  /liquidation/how-much-does-liquidation-cost/
+ 143       2  I Cannot Afford To Repay My Debt                              -->  /sample-letters/i-cannot-afford-to-repay-my-debt/
+ 144       2  Insolvent Wine Scammers                                       -->  /articles/insolvent-wine-scammers/
+ 145       2  Joint Liability for Unpaid VAT                                -->  /hmrc/joint-and-several-liability-for-unpaid-vat/
+ 146       2  Leases and Contracts in Liquidation                           -->  /liquidation/leases-and-contracts-in-liquidation/
+ 147       2  Liquidating an LLP                                            -->  /liquidation/liquidating-a-limited-liability-partnership/
+ 148       2  Liquidation Deadlines                                         -->  /liquidation/liquidation-deadlines-and-time-limits/
+ 149       2  Liquidation vs Dissolution                                    -->  /liquidation/liquidation-vs-dissolution-strike-off/
+ 150       2  LPA Receivership                                              -->  /insolvency/lpa-receivership/
+ 151       2  Pre-Pack Advantages and Disadvantages                         -->  /what-is-a-pre-pack-administration/advantages-and-disadvantages/
+ 152       2  Request A Reduced Monthly Payment                             -->  /sample-letters/request-a-reduced-monthly-payment/
+ 153       2  Restaurants                                                   -->  /sectors/restaurants/
+ 154       2  Save a Struggling Business                                    -->  /insolvency/how-to-save-a-struggling-business/
+ 155       2  Scaffolder Censured Over Bounce Back Loan                     -->  /articles/scaffolder-censured-over-bounce-back-loan/
+ 156       2  UK Insolvency Flowchart                                       -->  /liquidation/uk-insolvency-flowchart/
+ 157       2  Voluntary vs Compulsory Liquidation                           -->  /liquidation/voluntary-vs-compulsory-liquidation/
+ 158       2  What Can HMRC Bailiffs Take?                                  -->  /hmrc/what-can-hmrc-bailiffs-take/
+ 159       2  What Is a Statutory Demand?                                   -->  /company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/
+ 160       1  12 Year Ban For Director Who Pocketed Covid Loan Cash         -->  /articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/
+ 161       1  Administration vs CVA                                         -->  /company-administration/vs-cva/
+ 162       1  Administration vs Receivership                                -->  /company-administration/vs-administrative-receivership/
+ 163       1  Alternatives to Company Liquidation                           -->  /liquidation/alternatives-to-company-liquidation/
+ 164       1  Antecedent Transactions                                       -->  /insolvency/antecedent-transactions/
+ 165       1  Barnsley Shopping Centre Enters Receivership                  -->  /articles/barnsley-shopping-centre-enters-receivership/
+ 166       1  Bespoke Kitchen Manufacturer                                  -->  /case-studies/bespoke-kitchen-manufacturer/
+ 167       1  Biggest Struggles for Business Owners                         -->  /company-cash-flow-problems/biggest-struggles-for-small-business-owners/
+ 168       1  Business Bank Account in Liquidation                          -->  /liquidation/business-bank-account-in-liquidation/
+ 169       1  Can a Director Be Sued Personally?                            -->  /liquidation/can-a-director-be-sued-personally-by-creditors/
+ 170       1  Can I Lose My House With BBL?                                 -->  /bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/
+ 171       1  Cannot Afford to Liquidate                                    -->  /liquidation/cant-afford-to-liquidate/
+ 172       1  Cannot Pay Company Mortgage                                   -->  /company-cash-flow-problems/cant-pay-a-company-mortgage/
+ 173       1  Cannot Repay Business Loan                                    -->  /company-cash-flow-problems/cant-afford-to-repay-business-loan/
+ 174       1  Cash Flow Problems Hub                                        -->  /company-cash-flow-problems/
+ 175       1  Charity                                                       -->  /sectors/charity/
+ 176       1  Close or Save My Company?                                     -->  /liquidation/should-i-close-my-company-or-try-to-save-it/
+ 177       1  Common Causes Of Construction Insolvency                      -->  /articles/common-causes-of-construction-insolvency/
+ 178       1  Company Rescue Recovery Hub                                   -->  /company-rescue-recovery-hub/
+ 179       1  Construction                                                  -->  /sectors/construction/
+ 180       1  Cookie Policy Company Debt                                    -->  /cookie-policy-company-debt/
+ 181       1  Corporation Tax Penalties                                     -->  /hmrc/corporation-tax-penalties/
+ 182       1  Crackdown On Directors Who Close Companies To Avoid Debts     -->  /articles/crackdown-on-directors-who-close-companies-to-avoid-debts/
+ 183       1  Creditor Meetings in Liquidation                              -->  /liquidation/creditor-meetings-in-liquidation/
+ 184       1  Creditor Negotiations                                         -->  /insolvency/creditor-negotiations/
+ 185       1  CVA Pros and Cons                                             -->  /company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/
+ 186       1  CVA vs Strike Off vs Liquidation                              -->  /liquidation/cva-vs-strike-off-vs-liquidation/
+ 187       1  Dealing With Creditor Pressure                                -->  /insolvency/dealing-with-creditor-pressure/
+ 188       1  Director Guarantees in CVA                                    -->  /company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/
+ 189       1  Directors Conduct Report                                      -->  /liquidation/directors-conduct-report-2/
+ 190       1  Directors Conflict of Interest                                -->  /advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/
+ 191       1  Directors Liability for BBL                                   -->  /bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/
+ 192       1  Distraint Order Notice                                        -->  /hmrc/distraint-order-notice/
+ 193       1  Entertainment                                                 -->  /sectors/entertainment/
+ 194       1  Freight Forwarder                                             -->  /case-studies/freight-forwarder/
+ 195       1  Funding Options for SMEs                                      -->  /advice/funding-options-for-smes-in-the-uk/
+ 196       1  High Court Closes Insolvent Mini Bond Group                   -->  /articles/high-court-closes-insolvent-mini-bond-group/
+ 197       1  HMRC as Creditor in Liquidation                               -->  /liquidation/hmrc-as-a-creditor-in-liquidation/
+ 198       1  HMRC IR35 Investigations                                      -->  /advice/hmrcs-ir35-investigations-different/
+ 199       1  HMRC Threatening Letters                                      -->  /hmrc/hmrc-threatening-letters/
+ 200       1  Hoverboard Retailer                                           -->  /case-studies/hoverboard-retailer/
+ 201       1  How Much Is The Digital Sales Tax Going To Affect Big Tech    -->  /articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/
+ 202       1  I Need More Information About This Debt                       -->  /sample-letters/i-need-more-information-about-this-debt/
+ 203       1  Individual Voluntary Arrangement                              -->  /insolvency/what-is-an-individual-voluntary-arrangement/
+ 204       1  Insolvency Checklist                                          -->  /liquidation/insolvency-checklist/
+ 205       1  Insolvency News Commentary                                    -->  /insolvency-news-commentary/
+ 206       1  Insolvency Test                                               -->  /insolvency/insolvency-test/
+ 207       1  IP and Assets in Liquidation                                  -->  /liquidation/intellectual-property-and-trading-assets-in-liquidation/
+ 208       1  Is Harley Davidson Heading For A Crash                        -->  /articles/is-harley-davidson-heading-for-a-crash/
+ 209       1  Jamie Oliver Restaurant Restructure London                    -->  /articles/jamie-oliver-restaurant-restructure-london/
+ 210       1  Kids Company Directors Face Disqualification Proceedings      -->  /articles/kids-company-directors-face-disqualification-proceedings/
+ 211       1  Language School                                               -->  /case-studies/language-school/
+ 212       1  Liquidating a Dormant Company                                 -->  /liquidation/can-i-liquidate-a-dormant-company/
+ 213       1  Liquidating With No Assets                                    -->  /liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/
+ 214       1  Liquidation Timeline                                          -->  /liquidation/timeline/
+ 215       1  Notice of Enforcement                                         -->  /hmrc/notice-of-enforcement/
+ 216       1  Partnership Voluntary Arrangements                            -->  /company-rescue-solutions/partnership-voluntary-arrangements/
+ 217       1  Personal Liability for CBILS                                  -->  /advice/personal-liability-for-cbils-loans/
+ 218       1  Preferential Payments                                         -->  /insolvency/preferential-payments-during-insolvency/
+ 219       1  Prepare for Liquidation                                       -->  /liquidation/how-to-prepare-for-company-liquidation/
+ 220       1  Preventing Director Disputes                                  -->  /advice/preventing-company-director-disputes/
+ 221       1  Prove Your Debt in Liquidation                                -->  /liquidation/how-to-prove-your-debt-in-company-liquidation/
+ 222       1  Retail Insolvency Trends                                      -->  /insolvency/retail-industry-insolvency-trends/
+ 223       1  Risks of Personal Guarantee                                   -->  /advice/the-risks-of-signing-a-personal-guarantee/
+ 224       1  Secured vs Unsecured Creditors                                -->  /insolvency/secured-vs-unsecured-creditors/
+ 225       1  Security Bond Notices                                         -->  /hmrc/security-bond-notices/
+ 226       1  Seo Consultancy                                               -->  /case-studies/seo-consultancy/
+ 227       1  Starting a New Company After Liquidation                      -->  /liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/
+ 228       1  Subcontractor Agency                                          -->  /case-studies/subcontractor-agency/
+ 229       1  Taxi Companies                                                -->  /sectors/taxi-companies/
+ 230       1  Transport and Haulage Insolvency                              -->  /transport-haulage-insolvency/
+ 231       1  Travel                                                        -->  /sectors/travel/
+ 232       1  Warning Signs of Insolvency                                   -->  /insolvency/what-are-the-warning-signs-of-an-insolvent-company/
+ 233       1  What Happens After Liquidation?                               -->  /liquidation/what-happens-after-company-liquidation/
+ 234       1  What Is a Creditor?                                           -->  /insolvency/what-is-a-creditor/
+ 235       1  Will The Energy Crisis Mean The End For Britains Bakeries     -->  /articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/
+ 236       0  124 Pints To Save The Pub                                     -->  /articles/124-pints-to-save-the-pub/
+ 237       0  35 Of Charities Fear Insolvency Due To Cost Of Living Crisis  -->  /articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/
+ 238       0  39 Of Hair And Beauty Sector Still Furloughed                 -->  /articles/39-of-hair-and-beauty-sector-still-furloughed/
+ 239       0  6000 Fuel Hikes Taxi Sector                                   -->  /articles/6000-fuel-hikes-taxi-sector/
+ 240       0  80 Homebase Stores Set To Close As Part Of Cva                -->  /articles/80-homebase-stores-set-to-close-as-part-of-cva/
+ 241       0  Accelerated Payment Notices                                   -->  /hmrc/accelerated-payment-notices-apn/
+ 242       0  Accountants                                                   -->  /services-to/accountants/
+ 243       0  Accreditations                                                -->  /accreditations/
+ 244       0  All Dishes Off Menu For Dacampos My Pasta Bar                 -->  /articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/
+ 245       0  Articles Insights Hub                                         -->  /business-insolvency/articles-insights-hub/
+ 246       0  Asset Based And Other Lenders                                 -->  /services-to/asset-based-and-other-lenders/
+ 247       0  Automotive                                                    -->  /sectors/automotive/
+ 248       0  Banks                                                         -->  /services-to/banks/
+ 249       0  Bans For Uk Directors Who Avoid Repaying Bounce Back Loans    -->  /articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/
+ 250       0  British Cycle Sales Hit 39 Year Low                           -->  /articles/british-cycle-sales-hit-39-year-low/
+ 251       0  Building Contractor                                           -->  /case-studies/building-contractor/
+ 252       0  Business Debt Advice                                          -->  /business-debt-advice/
+ 253       0  Business Insolvency                                           -->  /business-insolvency/
+ 254       0  Can a Supplier Force Liquidation?                             -->  /liquidation/can-a-supplier-force-my-company-into-liquidation/
+ 255       0  Can Directors Go to Prison?                                   -->  /liquidation/can-directors-go-to-prison-for-company-debt/
+ 256       0  Can Heathrow Survive Covid 19                                 -->  /articles/can-heathrow-survive-covid-19/
+ 257       0  Can I Choose My Liquidator?                                   -->  /liquidation/can-i-choose-my-liquidator/
+ 258       0  Can Manchester United Get Out From Under Its 455 5M Debt      -->  /articles/can-manchester-united-get-out-from-under-its-455-5m-debt/
+ 259       0  Cannot Pay CBILS                                              -->  /bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/
+ 260       0  Carehomes                                                     -->  /sectors/carehomes/
+ 261       0  Case Studies                                                  -->  /case-studies/
+ 262       0  CCJ When Going Insolvent                                      -->  /liquidation/ccj-when-going-insolvent/
+ 263       0  Challenge a Liquidators Fees                                  -->  /liquidation/how-to-challenge-a-liquidators-decisions-or-fees/
+ 264       0  Charity and Non-Profit Insolvency                             -->  /charity-non-profit-insolvency/
+ 265       0  Chinese Takeaway                                              -->  /case-studies/chinese-takeaway/
+ 266       0  Choose the Right Insolvency Procedure                         -->  /liquidation/how-to-choose-the-right-insolvency-procedure/
+ 267       0  Coffee Shop Owners Say Lattes Would Have To Be 7 To Follow E  -->  /articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/
+ 268       0  Construction Insolvency                                       -->  /construction-insolvency/
+ 269       0  Corporate Finance                                             -->  /case-studies/corporate-finance/
+ 270       0  Creditor Takes Me to Court                                    -->  /liquidation/what-happens-if-a-creditor-takes-me-to-court/
+ 271       0  Creditors                                                     -->  /services-to/creditors/
+ 272       0  Creditors Guides To Insolvency Practitioners Fees             -->  /insolvency/creditors-guides-to-insolvency-practitioners-fees/
+ 273       0  Creditors Voluntary Liquidation With Phoenix                  -->  /case-studies/creditors-voluntary-liquidation-with-phoenix/
+ 274       0  CVA Fails Mid-Term                                            -->  /company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/
+ 275       0  CVA vs Administration                                         -->  /company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/
+ 276       0  CVA vs Liquidation                                            -->  /company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/
+ 277       0  Debt Charities For Consumers                                  -->  /articles/debt-charities-for-consumers/
+ 278       0  Debt Creditor Pressure Hub                                    -->  /debt-creditor-pressure-hub/
+ 279       0  Director Accountancy Errors                                   -->  /advice/what-is-a-directors-responsibility-for-accountancy-errors/
+ 280       0  Director Conduct Review                                       -->  /liquidation/director-conduct-review/
+ 281       0  Director Hides Assets                                         -->  /liquidation/what-happens-if-a-director-hides-company-assets/
+ 282       0  Director Protection Hub                                       -->  /director-protection-hub/
+ 283       0  Director Resigns Before Liquidation                           -->  /liquidation/what-happens-if-a-director-resigns-before-liquidation/
+ 284       0  Director Transfers Assets                                     -->  /liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/
+ 285       0  Directors Disqualification                                    -->  /advice/directors-disqualification/
+ 286       0  Dissolution                                                   -->  /case-studies/dissolution/
+ 287       0  Dry Cleaning Laundry                                          -->  /sectors/dry-cleaning-laundry/
+ 288       0  Energy                                                        -->  /sectors/energy/
+ 289       0  Energy Provider Insolvency                                    -->  /energy-provider-insolvency/
+ 290       0  Equestrian Failed Company Voluntary Arrangement Administrati  -->  /articles/equestrian-failed-company-voluntary-arrangement-administration/
+ 291       0  Events                                                        -->  /sectors/events/
+ 292       0  Failed Arena Television Leaves Trail Of Losses And Faces Fra  -->  /articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/
+ 293       0  Find Out Why The Transport Industry Is Prone To Insolvency    -->  /articles/find-out-why-the-transport-industry-is-prone-to-insolvency/
+ 294       0  Gyms                                                          -->  /sectors/gyms/
+ 295       0  Hairdresser                                                   -->  /case-studies/hairdresser/
+ 296       0  Hardware Maintenance                                          -->  /case-studies/hardware-maintenance/
+ 297       0  Haulage                                                       -->  /sectors/haulage/
+ 298       0  HMRC Criminal Investigations                                  -->  /hmrc/hmrc-criminal-investigations/
+ 299       0  HMRC Debt Enforcement Hub                                     -->  /hmrc/hmrc-debt-enforcement-hub/
+ 300       0  HMRC Enforcement Action                                       -->  /hmrc/hmrc-enforcement-action/
+ 301       0  HMRC Follower Notice                                          -->  /hmrc/hmrc-follower-notice/
+ 302       0  HMRC Freezes Bank Account                                     -->  /hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/
+ 303       0  HMRC Rejects Time to Pay                                      -->  /hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/
+ 304       0  HMRC Sends Bailiffs                                           -->  /hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/
+ 305       0  Hold Action On My Account                                     -->  /sample-letters/hold-action-on-my-account/
+ 306       0  Hospitality Insolvency                                        -->  /hospitality-restaurant-insolvency/
+ 307       0  How Will Carillions Insolvency Effect Its Supply Chain        -->  /articles/how-will-carillions-insolvency-effect-its-supply-chain/
+ 308       0  Ignoring HMRC Letters                                         -->  /hmrc/what-happens-if-you-ignore-hmrc-letters/
+ 309       0  Individual Voluntary Arrangement                              -->  /case-studies/individual-voluntary-arrangement/
+ 310       0  Individual Voluntary Arrangement With New Limited Company     -->  /case-studies/individual-voluntary-arrangement-with-new-limited-company/
+ 311       0  Information Technology                                        -->  /case-studies/information-technology/
+ 312       0  Insolvencies Within The Technology Sector                     -->  /articles/insolvencies-within-the-technology-sector/
+ 313       0  Insolvency Myths Debunked                                     -->  /liquidation/insolvency-myths-debunked/
+ 314       0  Insolvency Rescue Fish Chip Sector                            -->  /sectors/insolvency-rescue-fish-chip-sector/
+ 315       0  Insolvency Rescue Solutions For Garden Centers                -->  /sectors/insolvency-rescue-solutions-for-garden-centers/
+ 316       0  Insolvency vs Bankruptcy                                      -->  /liquidation/insolvency-vs-bankruptcy/
+ 317       0  Insolvent Company Investigations                              -->  /insolvency/insolvent-company-investigations/
+ 318       0  It Consultancy                                                -->  /case-studies/it-consultancy/
+ 319       0  Jeweller                                                      -->  /case-studies/jeweller/
+ 320       0  Leeds Dino Trail Collapses Into Administration                -->  /articles/leeds-dino-trail-collapses-into-administration/
+ 321       0  Leisure                                                       -->  /sectors/leisure/
+ 322       0  Light Touch Administration                                    -->  /company-administration/light-touch-administration/
+ 323       0  Liquidating a Charity                                         -->  /liquidation/liquidating-a-charity-or-non-profit/
+ 324       0  Liquidating to Avoid Paying Suppliers                         -->  /liquidation/can-you-liquidate-to-avoid-paying-suppliers/
+ 325       0  Liquidating With a BBL                                        -->  /liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/
+ 326       0  Liquidation Hub                                               -->  /liquidation/liquidation-hub/
+ 327       0  Managing Debt Related Stress                                  -->  /articles/managing-debt-related-stress/
+ 328       0  Manufacturing                                                 -->  /sectors/manufacturing/
+ 329       0  Manufacturing Insolvency                                      -->  /manufacturing-insolvency/
+ 330       0  Mental Health and Debt Stress                                 -->  /mental-health-debt-stress-support/
+ 331       0  Mental Health Debt Stress Support                             -->  /mental-health-debt-stress-support/
+ 332       0  Monarch Airline Insolvency                                    -->  /articles/monarch-airline-insolvency/
+ 333       0  More Small Energy Providers Face Collapse As Crisis Deepens   -->  /articles/more-small-energy-providers-face-collapse-as-crisis-deepens/
+ 334       0  Online Travel Agent                                           -->  /case-studies/online-travel-agent/
+ 335       0  Paradise Papers                                               -->  /articles/paradise-papers/
+ 336       0  Pay HMRC or Suppliers First?                                  -->  /hmrc/pay-hmrc-or-suppliers-first/
+ 337       0  Personal Guarantees                                           -->  /case-studies/personal-guarantees/
+ 338       0  Pet Store                                                     -->  /case-studies/pet-store/
+ 339       0  Pink Biscuit Manufacturer Rivington Biscuits Goes Company Ad  -->  /articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/
+ 340       0  Pizza Restaurant                                              -->  /case-studies/pizza-restaurant/
+ 341       0  Plastering Company                                            -->  /case-studies/plastering-company/
+ 342       0  Plumbing                                                      -->  /case-studies/plumbing/
+ 343       0  Poolmageddon 79 Of Uk Pools May Close Within 6 Months         -->  /articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/
+ 344       0  Pre-Pack Administration                                       -->  /company-rescue-solutions/pre-packs/
+ 345       0  Prize Draw Terms Conditions                                   -->  /prize-draw-terms-conditions/
+ 346       0  Professional Services                                         -->  /sectors/professional-services/
+ 347       0  Professional Services Insolvency                              -->  /professional-services-insolvency/
+ 348       0  Property                                                      -->  /sectors/property/
+ 349       0  Recruitment                                                   -->  /sectors/recruitment/
+ 350       0  Recruitment Consultant                                        -->  /case-studies/recruitment-consultant/
+ 351       0  Reduce Insolvency Risk                                        -->  /insolvency/how-to-reduce-insolvency-risk/
+ 352       0  Rescue From Insolvency                                        -->  /insolvency/rescue-your-business-from-insolvency/
+ 353       0  Rescue Solutions Hub                                          -->  /company-rescue-solutions/
+ 354       0  Retail                                                        -->  /sectors/retail/
+ 355       0  Risk of Director Disqualification                             -->  /liquidation/whats-the-risk-of-being-disqualified-as-a-director/
+ 356       0  Schools                                                       -->  /sectors/schools/
+ 357       0  Sector Insolvency Hub                                         -->  /sector-insolvency-hub/
+ 358       0  Sector Specific Insolvency                                    -->  /sector-specific-insolvency/
+ 359       0  Sectors                                                       -->  /sectors/
+ 360       0  Seek Advice Before Missing Payments                           -->  /liquidation/seek-insolvency-advice-before-missing-payments/
+ 361       0  Sell an Insolvent Company                                     -->  /insolvency/can-you-sell-your-insolvent-company/
+ 362       0  Services To                                                   -->  /services-to/
+ 363       0  Solicitors                                                    -->  /services-to/solicitors/
+ 364       0  Stop or Avoid Insolvency                                      -->  /insolvency/stop-or-avoid-insolvency/
+ 365       0  Stop Paying Company Debts                                     -->  /liquidation/what-happens-if-i-stop-paying-company-debts/
+ 366       0  Terms Conditions                                              -->  /terms-conditions/
+ 367       0  Tescos Rated Worst Payer Uk Small Businesses                  -->  /articles/tescos-rated-worst-payer-uk-small-businesses/
+ 368       0  Time To Pay And Creditor Voluntary Liquidation                -->  /case-studies/time-to-pay-and-creditor-voluntary-liquidation/
+ 369       0  Trade Out of Insolvency                                       -->  /insolvency/can-we-trade-out-of-insolvency/
+ 370       0  Transactions at Undervalue                                    -->  /insolvency/transactions-at-undervalue/
+ 371       0  UK Insolvency Glossary                                        -->  /liquidation/uk-insolvency-glossary/
+ 372       0  Use CVA to Close a Company                                    -->  /company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/
+ 373       0  Voluntary Liquidation                                         -->  /liquidation/voluntary-liquidation/
+ 374       0  When a CVA Fails                                              -->  /company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/
+ 375       0  When to Stop Trading                                          -->  /liquidation/when-should-a-director-stop-trading/
+ 376       0  Why Debt Is Not Always Bad                                    -->  /company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/
+ 377       0  Womens Fashion Store                                          -->  /case-studies/womens-fashion-store/
+ 378       0  WUP vs Compulsory Liquidation                                 -->  /liquidation/winding-up-petition-vs-compulsory-liquidation/
+
+--- Monday items with 0 views in GA window (143) — pushed to bottom ---
+  - 124 Pints To Save The Pub                                /articles/124-pints-to-save-the-pub/
+  - 35 Of Charities Fear Insolvency Due To Cost Of Living Crisis  /articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/
+  - 39 Of Hair And Beauty Sector Still Furloughed            /articles/39-of-hair-and-beauty-sector-still-furloughed/
+  - 6000 Fuel Hikes Taxi Sector                              /articles/6000-fuel-hikes-taxi-sector/
+  - 80 Homebase Stores Set To Close As Part Of Cva           /articles/80-homebase-stores-set-to-close-as-part-of-cva/
+  - Accelerated Payment Notices                              /hmrc/accelerated-payment-notices-apn/
+  - Accountants                                              /services-to/accountants/
+  - Accreditations                                           /accreditations/
+  - All Dishes Off Menu For Dacampos My Pasta Bar            /articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/
+  - Articles Insights Hub                                    /business-insolvency/articles-insights-hub/
+  - Asset Based And Other Lenders                            /services-to/asset-based-and-other-lenders/
+  - Automotive                                               /sectors/automotive/
+  - Banks                                                    /services-to/banks/
+  - Bans For Uk Directors Who Avoid Repaying Bounce Back Loans  /articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/
+  - British Cycle Sales Hit 39 Year Low                      /articles/british-cycle-sales-hit-39-year-low/
+  - Building Contractor                                      /case-studies/building-contractor/
+  - Business Debt Advice                                     /business-debt-advice/
+  - Business Insolvency                                      /business-insolvency/
+  - Can a Supplier Force Liquidation?                        /liquidation/can-a-supplier-force-my-company-into-liquidation/
+  - Can Directors Go to Prison?                              /liquidation/can-directors-go-to-prison-for-company-debt/
+  - Can Heathrow Survive Covid 19                            /articles/can-heathrow-survive-covid-19/
+  - Can I Choose My Liquidator?                              /liquidation/can-i-choose-my-liquidator/
+  - Can Manchester United Get Out From Under Its 455 5M Debt  /articles/can-manchester-united-get-out-from-under-its-455-5m-debt/
+  - Cannot Pay CBILS                                         /bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/
+  - Carehomes                                                /sectors/carehomes/
+  - Case Studies                                             /case-studies/
+  - CCJ When Going Insolvent                                 /liquidation/ccj-when-going-insolvent/
+  - Challenge a Liquidators Fees                             /liquidation/how-to-challenge-a-liquidators-decisions-or-fees/
+  - Charity and Non-Profit Insolvency                        /charity-non-profit-insolvency/
+  - Chinese Takeaway                                         /case-studies/chinese-takeaway/
+  - Choose the Right Insolvency Procedure                    /liquidation/how-to-choose-the-right-insolvency-procedure/
+  - Coffee Shop Owners Say Lattes Would Have To Be 7 To Follow Energy Hikes  /articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/
+  - Construction Insolvency                                  /construction-insolvency/
+  - Corporate Finance                                        /case-studies/corporate-finance/
+  - Creditor Takes Me to Court                               /liquidation/what-happens-if-a-creditor-takes-me-to-court/
+  - Creditors                                                /services-to/creditors/
+  - Creditors Guides To Insolvency Practitioners Fees        /insolvency/creditors-guides-to-insolvency-practitioners-fees/
+  - Creditors Voluntary Liquidation With Phoenix             /case-studies/creditors-voluntary-liquidation-with-phoenix/
+  - CVA Fails Mid-Term                                       /company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/
+  - CVA vs Administration                                    /company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/
+  - CVA vs Liquidation                                       /company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/
+  - Debt Charities For Consumers                             /articles/debt-charities-for-consumers/
+  - Debt Creditor Pressure Hub                               /debt-creditor-pressure-hub/
+  - Director Accountancy Errors                              /advice/what-is-a-directors-responsibility-for-accountancy-errors/
+  - Director Conduct Review                                  /liquidation/director-conduct-review/
+  - Director Hides Assets                                    /liquidation/what-happens-if-a-director-hides-company-assets/
+  - Director Protection Hub                                  /director-protection-hub/
+  - Director Resigns Before Liquidation                      /liquidation/what-happens-if-a-director-resigns-before-liquidation/
+  - Director Transfers Assets                                /liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/
+  - Directors Disqualification                               /advice/directors-disqualification/
+  - Dissolution                                              /case-studies/dissolution/
+  - Dry Cleaning Laundry                                     /sectors/dry-cleaning-laundry/
+  - Energy                                                   /sectors/energy/
+  - Energy Provider Insolvency                               /energy-provider-insolvency/
+  - Equestrian Failed Company Voluntary Arrangement Administration  /articles/equestrian-failed-company-voluntary-arrangement-administration/
+  - Events                                                   /sectors/events/
+  - Failed Arena Television Leaves Trail Of Losses And Faces Fraud Probe  /articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/
+  - Find Out Why The Transport Industry Is Prone To Insolvency  /articles/find-out-why-the-transport-industry-is-prone-to-insolvency/
+  - Gyms                                                     /sectors/gyms/
+  - Hairdresser                                              /case-studies/hairdresser/
+  - Hardware Maintenance                                     /case-studies/hardware-maintenance/
+  - Haulage                                                  /sectors/haulage/
+  - HMRC Criminal Investigations                             /hmrc/hmrc-criminal-investigations/
+  - HMRC Debt Enforcement Hub                                /hmrc/hmrc-debt-enforcement-hub/
+  - HMRC Enforcement Action                                  /hmrc/hmrc-enforcement-action/
+  - HMRC Follower Notice                                     /hmrc/hmrc-follower-notice/
+  - HMRC Freezes Bank Account                                /hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/
+  - HMRC Rejects Time to Pay                                 /hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/
+  - HMRC Sends Bailiffs                                      /hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/
+  - Hold Action On My Account                                /sample-letters/hold-action-on-my-account/
+  - Hospitality Insolvency                                   /hospitality-restaurant-insolvency/
+  - How Will Carillions Insolvency Effect Its Supply Chain   /articles/how-will-carillions-insolvency-effect-its-supply-chain/
+  - Ignoring HMRC Letters                                    /hmrc/what-happens-if-you-ignore-hmrc-letters/
+  - Individual Voluntary Arrangement                         /case-studies/individual-voluntary-arrangement/
+  - Individual Voluntary Arrangement With New Limited Company  /case-studies/individual-voluntary-arrangement-with-new-limited-company/
+  - Information Technology                                   /case-studies/information-technology/
+  - Insolvencies Within The Technology Sector                /articles/insolvencies-within-the-technology-sector/
+  - Insolvency Myths Debunked                                /liquidation/insolvency-myths-debunked/
+  - Insolvency Rescue Fish Chip Sector                       /sectors/insolvency-rescue-fish-chip-sector/
+  - Insolvency Rescue Solutions For Garden Centers           /sectors/insolvency-rescue-solutions-for-garden-centers/
+  - Insolvency vs Bankruptcy                                 /liquidation/insolvency-vs-bankruptcy/
+  - Insolvent Company Investigations                         /insolvency/insolvent-company-investigations/
+  - It Consultancy                                           /case-studies/it-consultancy/
+  - Jeweller                                                 /case-studies/jeweller/
+  - Leeds Dino Trail Collapses Into Administration           /articles/leeds-dino-trail-collapses-into-administration/
+  - Leisure                                                  /sectors/leisure/
+  - Light Touch Administration                               /company-administration/light-touch-administration/
+  - Liquidating a Charity                                    /liquidation/liquidating-a-charity-or-non-profit/
+  - Liquidating to Avoid Paying Suppliers                    /liquidation/can-you-liquidate-to-avoid-paying-suppliers/
+  - Liquidating With a BBL                                   /liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/
+  - Liquidation Hub                                          /liquidation/liquidation-hub/
+  - Managing Debt Related Stress                             /articles/managing-debt-related-stress/
+  - Manufacturing                                            /sectors/manufacturing/
+  - Manufacturing Insolvency                                 /manufacturing-insolvency/
+  - Mental Health and Debt Stress                            /mental-health-debt-stress-support/
+  - Mental Health Debt Stress Support                        /mental-health-debt-stress-support/
+  - Monarch Airline Insolvency                               /articles/monarch-airline-insolvency/
+  - More Small Energy Providers Face Collapse As Crisis Deepens  /articles/more-small-energy-providers-face-collapse-as-crisis-deepens/
+  - Online Travel Agent                                      /case-studies/online-travel-agent/
+  - Paradise Papers                                          /articles/paradise-papers/
+  - Pay HMRC or Suppliers First?                             /hmrc/pay-hmrc-or-suppliers-first/
+  - Personal Guarantees                                      /case-studies/personal-guarantees/
+  - Pet Store                                                /case-studies/pet-store/
+  - Pink Biscuit Manufacturer Rivington Biscuits Goes Company Administration  /articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/
+  - Pizza Restaurant                                         /case-studies/pizza-restaurant/
+  - Plastering Company                                       /case-studies/plastering-company/
+  - Plumbing                                                 /case-studies/plumbing/
+  - Poolmageddon 79 Of Uk Pools May Close Within 6 Months    /articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/
+  - Pre-Pack Administration                                  /company-rescue-solutions/pre-packs/
+  - Prize Draw Terms Conditions                              /prize-draw-terms-conditions/
+  - Professional Services                                    /sectors/professional-services/
+  - Professional Services Insolvency                         /professional-services-insolvency/
+  - Property                                                 /sectors/property/
+  - Recruitment                                              /sectors/recruitment/
+  - Recruitment Consultant                                   /case-studies/recruitment-consultant/
+  - Reduce Insolvency Risk                                   /insolvency/how-to-reduce-insolvency-risk/
+  - Rescue From Insolvency                                   /insolvency/rescue-your-business-from-insolvency/
+  - Rescue Solutions Hub                                     /company-rescue-solutions/
+  - Retail                                                   /sectors/retail/
+  - Risk of Director Disqualification                        /liquidation/whats-the-risk-of-being-disqualified-as-a-director/
+  - Schools                                                  /sectors/schools/
+  - Sector Insolvency Hub                                    /sector-insolvency-hub/
+  - Sector Specific Insolvency                               /sector-specific-insolvency/
+  - Sectors                                                  /sectors/
+  - Seek Advice Before Missing Payments                      /liquidation/seek-insolvency-advice-before-missing-payments/
+  - Sell an Insolvent Company                                /insolvency/can-you-sell-your-insolvent-company/
+  - Services To                                              /services-to/
+  - Solicitors                                               /services-to/solicitors/
+  - Stop or Avoid Insolvency                                 /insolvency/stop-or-avoid-insolvency/
+  - Stop Paying Company Debts                                /liquidation/what-happens-if-i-stop-paying-company-debts/
+  - Terms Conditions                                         /terms-conditions/
+  - Tescos Rated Worst Payer Uk Small Businesses             /articles/tescos-rated-worst-payer-uk-small-businesses/
+  - Time To Pay And Creditor Voluntary Liquidation           /case-studies/time-to-pay-and-creditor-voluntary-liquidation/
+  - Trade Out of Insolvency                                  /insolvency/can-we-trade-out-of-insolvency/
+  - Transactions at Undervalue                               /insolvency/transactions-at-undervalue/
+  - UK Insolvency Glossary                                   /liquidation/uk-insolvency-glossary/
+  - Use CVA to Close a Company                               /company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/
+  - Voluntary Liquidation                                    /liquidation/voluntary-liquidation/
+  - When a CVA Fails                                         /company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/
+  - When to Stop Trading                                     /liquidation/when-should-a-director-stop-trading/
+  - Why Debt Is Not Always Bad                               /company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/
+  - Womens Fashion Store                                     /case-studies/womens-fashion-store/
+  - WUP vs Compulsory Liquidation                            /liquidation/winding-up-petition-vs-compulsory-liquidation/
+
+--- Monday items sharing the SAME path (3) — NEED YOUR DECISION ---
+  - /advice/insolvency-advice-for-directors/  (5 views)
+      id 11624427364  Insolvency Advice for Directors
+      id 11765826600  Insolvency Advice
+  - /insolvency/insolvency-act-1986/  (21 views)
+      id 11624438802  Insolvency Act 1986
+      id 11765826667  Insolvency
+  - /mental-health-debt-stress-support/  (0 views)
+      id 11624482651  Mental Health and Debt Stress
+      id 11765819605  Mental Health Debt Stress Support
+
+--- GA paths with NO Monday item (37) — informational only, NOT added ---
+   386  /
+    56  /quick-quote/
+    20  /insolvency-calculator/
+    10  /stressed-directors-guide/
+     5  /how-is-your-business-going-to-be-affected-by-climate-change/
+     3  /author/mike-smith/
+     3  /insolvency/
+     2  /articles/wind-tower-firm-enters-administration/
+     2  /author/chrisandersen/
+     2  /liquidation-hub/ccj-when-going-insolvent/
+     2  /site-map/
+     1  /articles/if-you-are-failing-to-plan-you-are-planning-to-fail/
+     1  /articles/scottish-company-praised-by-nicola-sturgeon-collapses/
+     1  /articles/should-you-take-a-dividend-as-a-director-of-a-limited-company/
+     1  /author/ed-smith/
+     1  /author/tony-smith/
+     1  /can-a-supplier-force-my-company-into-liquidation/
+     1  /case-studies/restaurants-leisure/
+     1  /creditors-voluntary-liquidation-cvl/
+     1  /express-liquidation/
+     1  /hmrc-tax-problems/calculate-national-insurance-ni-employees-employers/
+     1  /how-to-increase-happiness-and-productivity-in-the-workplace/
+     1  /liquidation-hub/
+     1  /liquidation/form-ds01-dissolve-company/
+     1  /news/company-closure/compulsory-liquidation-company-closure/winding-up-petition-leads-to-golfing-investment-directors-19-year-bans/
+     1  /news/eu-insolvency-proposals-aim-rescue-struggling-businesses/
+     1  /news/hmrc-news/hmrc-changes-tack-on-overpaid-vat-repayments-arising-out-of-insolvency/
+     1  /news/rescue-news/unipart-automotive-administration/
+     1  /news/software-launched-to-help-businesses-receive-earlier-invoice-payment/
+     1  /news/supermarket-price-wars-force-food-producer-insolvency-to-triple/
+     1  /risks-of-signing-a-personal-guarantee/
+     1  /test-article-2/
+     1  /testimonials/childrens-play-centre-f/
+     1  /testimonials/de-of-kent/
+     1  /testimonials/mobile-data-communications-company-west-sussex-b-w/
+     1  /what-is-the-small-business-enterprise-and-employment-act-2015/
+     1  /wp-admin/null/
+
+Snapshot written to data\monday-live-reorder-plan.json

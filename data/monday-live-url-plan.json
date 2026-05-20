@@ -1,0 +1,3033 @@
+{
+  "will_write": [
+    {
+      "id": "11624386772",
+      "name": "Company Liquidation: What Directors Need to Know",
+      "path": "/liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/",
+      "display_text": "/liquidation/"
+    },
+    {
+      "id": "11765829313",
+      "name": "Contact Us",
+      "path": "/contact-us/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/contact-us/",
+      "display_text": "/contact-us/"
+    },
+    {
+      "id": "11624393596",
+      "name": "What Happens to Employees?",
+      "path": "/liquidation/what-happens-to-employees/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-to-employees/",
+      "display_text": "/liquidation/what-happens-to-employees/"
+    },
+    {
+      "id": "11624411464",
+      "name": "Time to Pay HMRC",
+      "path": "/hmrc/time-to-pay-hmrc/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/time-to-pay-hmrc/",
+      "display_text": "/hmrc/time-to-pay-hmrc/"
+    },
+    {
+      "id": "11624416229",
+      "name": "Company Administration Hub",
+      "path": "/company-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/",
+      "display_text": "/company-administration/"
+    },
+    {
+      "id": "11624369515",
+      "name": "Closing a Limited Company",
+      "path": "/closing-a-limited-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/closing-a-limited-company/",
+      "display_text": "/closing-a-limited-company/"
+    },
+    {
+      "id": "11765818773",
+      "name": "Covid 19 Effects On Cruise Industry",
+      "path": "/articles/covid-19-effects-on-cruise-industry/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/covid-19-effects-on-cruise-industry/",
+      "display_text": "/articles/covid-19-effects-on-cruise-industry/"
+    },
+    {
+      "id": "11624375116",
+      "name": "Winding Up Petitions",
+      "path": "/winding-up-petitions/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/winding-up-petitions/",
+      "display_text": "/winding-up-petitions/"
+    },
+    {
+      "id": "11624445212",
+      "name": "Are Directors Personally Liable?",
+      "path": "/advice/are-directors-personally-liable-for-company-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/are-directors-personally-liable-for-company-debts/",
+      "display_text": "/advice/are-directors-personally-liable-for-company-debts/"
+    },
+    {
+      "id": "11624375113",
+      "name": "Creditors Voluntary Liquidation (CVL)",
+      "path": "/liquidation/creditors-voluntary-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/creditors-voluntary-liquidation/",
+      "display_text": "/liquidation/creditors-voluntary-liquidation/"
+    },
+    {
+      "id": "11765829121",
+      "name": "Meet The Team",
+      "path": "/meet-the-team/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/meet-the-team/",
+      "display_text": "/meet-the-team/"
+    },
+    {
+      "id": "11624438393",
+      "name": "Overdrawn Directors Loan Accounts",
+      "path": "/advice/overdrawn-directors-loan-accounts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/overdrawn-directors-loan-accounts/",
+      "display_text": "/advice/overdrawn-directors-loan-accounts/"
+    },
+    {
+      "id": "11765826667",
+      "name": "Insolvency",
+      "path": "/insolvency/insolvency-act-1986/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/insolvency-act-1986/",
+      "display_text": "/insolvency/insolvency-act-1986/"
+    },
+    {
+      "id": "11624438802",
+      "name": "Insolvency Act 1986",
+      "path": "/insolvency/insolvency-act-1986/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/insolvency-act-1986/",
+      "display_text": "/insolvency/insolvency-act-1986/"
+    },
+    {
+      "id": "11624420641",
+      "name": "Cannot Afford Redundancy",
+      "path": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+      "display_text": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/"
+    },
+    {
+      "id": "11624427023",
+      "name": "Cannot Pay PAYE",
+      "path": "/hmrc/cant-pay-paye/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/cant-pay-paye/",
+      "display_text": "/hmrc/cant-pay-paye/"
+    },
+    {
+      "id": "11624394039",
+      "name": "Can I Be Sued After Dissolution?",
+      "path": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+      "display_text": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/"
+    },
+    {
+      "id": "11624426650",
+      "name": "Cannot Pay VAT",
+      "path": "/hmrc/cant-pay-vat/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/cant-pay-vat/",
+      "display_text": "/hmrc/cant-pay-vat/"
+    },
+    {
+      "id": "11624458314",
+      "name": "Pre-Pack Administration",
+      "path": "/what-is-a-pre-pack-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/what-is-a-pre-pack-administration/",
+      "display_text": "/what-is-a-pre-pack-administration/"
+    },
+    {
+      "id": "11624371391",
+      "name": "Company Strike Off and Dissolution",
+      "path": "/liquidation/company-strike-off-and-dissolution/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/",
+      "display_text": "/liquidation/company-strike-off-and-dissolution/"
+    },
+    {
+      "id": "11624438964",
+      "name": "Director Redundancy",
+      "path": "/director-redundancy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/director-redundancy/",
+      "display_text": "/director-redundancy/"
+    },
+    {
+      "id": "11765933669",
+      "name": "About Us",
+      "path": "/about-us/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/about-us/",
+      "display_text": "/about-us/"
+    },
+    {
+      "id": "11624458953",
+      "name": "Fixed and Floating Charges",
+      "path": "/advice/what-are-fixed-and-floating-charges/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-are-fixed-and-floating-charges/",
+      "display_text": "/advice/what-are-fixed-and-floating-charges/"
+    },
+    {
+      "id": "11624416118",
+      "name": "Bounce Back Loan Hub",
+      "path": "/bounce-back-loan-support-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/",
+      "display_text": "/bounce-back-loan-support-hub/"
+    },
+    {
+      "id": "11765828729",
+      "name": "Clothing Retailer Usc Close 30 Unfashionable Stores",
+      "path": "/articles/clothing-retailer-usc-close-30-unfashionable-stores/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/clothing-retailer-usc-close-30-unfashionable-stores/",
+      "display_text": "/articles/clothing-retailer-usc-close-30-unfashionable-stores/"
+    },
+    {
+      "id": "11624429860",
+      "name": "Problems Paying Corporation Tax",
+      "path": "/hmrc/problems-paying-corporation-tax-hmrc/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/problems-paying-corporation-tax-hmrc/",
+      "display_text": "/hmrc/problems-paying-corporation-tax-hmrc/"
+    },
+    {
+      "id": "11624457310",
+      "name": "Shareholders Liable for Debts",
+      "path": "/insolvency/shareholders-liable-company-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/shareholders-liable-company-debts/",
+      "display_text": "/insolvency/shareholders-liable-company-debts/"
+    },
+    {
+      "id": "11765922529",
+      "name": "Uk Insolvency Statistics",
+      "path": "/uk-insolvency-statistics/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/uk-insolvency-statistics/",
+      "display_text": "/uk-insolvency-statistics/"
+    },
+    {
+      "id": "11624427201",
+      "name": "Free Business Debt Advice",
+      "path": "/advice/get-free-business-debt-advice/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/get-free-business-debt-advice/",
+      "display_text": "/advice/get-free-business-debt-advice/"
+    },
+    {
+      "id": "11624453671",
+      "name": "HMRC Offices Contact Guide",
+      "path": "/hmrc/hmrc-offices-contact-guide/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-offices-contact-guide/",
+      "display_text": "/hmrc/hmrc-offices-contact-guide/"
+    },
+    {
+      "id": "11624438596",
+      "name": "Limited Company Bankruptcy",
+      "path": "/insolvency/limited-company-bankruptcy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/limited-company-bankruptcy/",
+      "display_text": "/insolvency/limited-company-bankruptcy/"
+    },
+    {
+      "id": "11765823294",
+      "name": "Advice",
+      "path": "/advice/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/",
+      "display_text": "/advice/"
+    },
+    {
+      "id": "11624458851",
+      "name": "Cannot Pay Suppliers",
+      "path": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+      "display_text": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/"
+    },
+    {
+      "id": "11624422979",
+      "name": "Director Responsibilities After Strike Off",
+      "path": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+      "display_text": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/"
+    },
+    {
+      "id": "11624454041",
+      "name": "Tax Penalties",
+      "path": "/hmrc/tax-penalties/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/tax-penalties/",
+      "display_text": "/hmrc/tax-penalties/"
+    },
+    {
+      "id": "11624460396",
+      "name": "What Does Receivership Mean?",
+      "path": "/receivership-mean-business/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/receivership-mean-business/",
+      "display_text": "/receivership-mean-business/"
+    },
+    {
+      "id": "11624429836",
+      "name": "What Is Limited Liability?",
+      "path": "/advice/what-is-limited-liability/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-is-limited-liability/",
+      "display_text": "/advice/what-is-limited-liability/"
+    },
+    {
+      "id": "11624454074",
+      "name": "Can a Director Get a Criminal Record?",
+      "path": "/advice/can-director-criminal-record/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/can-director-criminal-record/",
+      "display_text": "/advice/can-director-criminal-record/"
+    },
+    {
+      "id": "11624460160",
+      "name": "Care Home Insolvency",
+      "path": "/care-home-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/care-home-insolvency/",
+      "display_text": "/care-home-insolvency/"
+    },
+    {
+      "id": "11624442014",
+      "name": "Check If Company Is Insolvent",
+      "path": "/insolvency/check-if-a-company-is-insolvent/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/check-if-a-company-is-insolvent/",
+      "display_text": "/insolvency/check-if-a-company-is-insolvent/"
+    },
+    {
+      "id": "11624445712",
+      "name": "Company Voluntary Arrangement",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/"
+    },
+    {
+      "id": "11624386877",
+      "name": "Compulsory Liquidation",
+      "path": "/liquidation/compulsory-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/compulsory-liquidation/",
+      "display_text": "/liquidation/compulsory-liquidation/"
+    },
+    {
+      "id": "11624446136",
+      "name": "Insolvent Company Owes Me Money",
+      "path": "/insolvency/insolvent-company-owes-me-money/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/insolvent-company-owes-me-money/",
+      "display_text": "/insolvency/insolvent-company-owes-me-money/"
+    },
+    {
+      "id": "11624425168",
+      "name": "Notice to Appoint Administrators",
+      "path": "/company-administration/notice-of-intention-to-appoint-administrators/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/notice-of-intention-to-appoint-administrators/",
+      "display_text": "/company-administration/notice-of-intention-to-appoint-administrators/"
+    },
+    {
+      "id": "11765838461",
+      "name": "Pub Closures In The Uk",
+      "path": "/articles/pub-closures-in-the-uk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/pub-closures-in-the-uk/",
+      "display_text": "/articles/pub-closures-in-the-uk/"
+    },
+    {
+      "id": "11624411671",
+      "name": "Directors Personal Guarantees",
+      "path": "/advice/directors-personal-guarantees/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/directors-personal-guarantees/",
+      "display_text": "/advice/directors-personal-guarantees/"
+    },
+    {
+      "id": "11624425067",
+      "name": "Dissolving With BBL",
+      "path": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+      "display_text": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/"
+    },
+    {
+      "id": "11624453791",
+      "name": "HMRC Tax Debt Hub",
+      "path": "/hmrc/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/",
+      "display_text": "/hmrc/"
+    },
+    {
+      "id": "11765838518",
+      "name": "Wayne Rooney Scores 21M From Company Liquidation",
+      "path": "/articles/wayne-rooney-scores-21m-from-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/wayne-rooney-scores-21m-from-company-liquidation/",
+      "display_text": "/articles/wayne-rooney-scores-21m-from-company-liquidation/"
+    },
+    {
+      "id": "11624416274",
+      "name": "Cease Trading",
+      "path": "/insolvency/cease-trading/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/cease-trading/",
+      "display_text": "/insolvency/cease-trading/"
+    },
+    {
+      "id": "11765819581",
+      "name": "Cleaning Contractors",
+      "path": "/sectors/cleaning-contractors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/cleaning-contractors/",
+      "display_text": "/sectors/cleaning-contractors/"
+    },
+    {
+      "id": "11624456573",
+      "name": "Frozen Bank Account",
+      "path": "/advice/frozen-bank-account/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/frozen-bank-account/",
+      "display_text": "/advice/frozen-bank-account/"
+    },
+    {
+      "id": "11765838893",
+      "name": "Lengthy Disqualifications For Four Directors Involved In Vat Fraud",
+      "path": "/articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/",
+      "display_text": "/articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/"
+    },
+    {
+      "id": "11624423494",
+      "name": "Spouse Liability for Business Debts",
+      "path": "/insolvency/personal-liability-spouses-business-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/personal-liability-spouses-business-debts/",
+      "display_text": "/insolvency/personal-liability-spouses-business-debts/"
+    },
+    {
+      "id": "11624441253",
+      "name": "What Happens to Directors?",
+      "path": "/liquidation/what-happens-to-directors-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-to-directors-in-liquidation/",
+      "display_text": "/liquidation/what-happens-to-directors-in-liquidation/"
+    },
+    {
+      "id": "11624423160",
+      "name": "Which Creditors Get Paid First?",
+      "path": "/liquidation/which-creditors-get-paid-first/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/which-creditors-get-paid-first/",
+      "display_text": "/liquidation/which-creditors-get-paid-first/"
+    },
+    {
+      "id": "11765838357",
+      "name": "Bobby Davros Business Goes Bust",
+      "path": "/articles/bobby-davros-business-goes-bust/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/bobby-davros-business-goes-bust/",
+      "display_text": "/articles/bobby-davros-business-goes-bust/"
+    },
+    {
+      "id": "11624426888",
+      "name": "Can a Director Be Made Bankrupt?",
+      "path": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+      "display_text": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/"
+    },
+    {
+      "id": "11624423386",
+      "name": "Challenge a Statutory Demand",
+      "path": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/challenge-a-statutory-demand/",
+      "display_text": "/company-cash-flow-problems/challenge-a-statutory-demand/"
+    },
+    {
+      "id": "11624422535",
+      "name": "Company Vehicles in Liquidation",
+      "path": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-vehicles-and-equipment-in-liquidation/",
+      "display_text": "/liquidation/company-vehicles-and-equipment-in-liquidation/"
+    },
+    {
+      "id": "11624453859",
+      "name": "Controlled Goods Agreement",
+      "path": "/hmrc/controlled-goods-agreement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/controlled-goods-agreement/",
+      "display_text": "/hmrc/controlled-goods-agreement/"
+    },
+    {
+      "id": "11624467037",
+      "name": "High Court Writ",
+      "path": "/insolvency/what-is-a-high-court-writ/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-a-high-court-writ/",
+      "display_text": "/insolvency/what-is-a-high-court-writ/"
+    },
+    {
+      "id": "11624445155",
+      "name": "HMRC Fraud Investigations",
+      "path": "/hmrc/hmrc-fraud-investigations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-fraud-investigations/",
+      "display_text": "/hmrc/hmrc-fraud-investigations/"
+    },
+    {
+      "id": "11624393844",
+      "name": "HMRC Tax Investigations",
+      "path": "/hmrc/hmrc-tax-investigations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-tax-investigations/",
+      "display_text": "/hmrc/hmrc-tax-investigations/"
+    },
+    {
+      "id": "11765826600",
+      "name": "Insolvency Advice",
+      "path": "/advice/insolvency-advice-for-directors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/insolvency-advice-for-directors/",
+      "display_text": "/advice/insolvency-advice-for-directors/"
+    },
+    {
+      "id": "11624427364",
+      "name": "Insolvency Advice for Directors",
+      "path": "/advice/insolvency-advice-for-directors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/insolvency-advice-for-directors/",
+      "display_text": "/advice/insolvency-advice-for-directors/"
+    },
+    {
+      "id": "11624425503",
+      "name": "Preferential vs Non-Preferential Creditors",
+      "path": "/insolvency/preferential-non-preferential-creditors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/",
+      "display_text": "/insolvency/preferential-non-preferential-creditors/"
+    },
+    {
+      "id": "11765831060",
+      "name": "Privacy Policy",
+      "path": "/privacy-policy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/privacy-policy/",
+      "display_text": "/privacy-policy/"
+    },
+    {
+      "id": "11765854723",
+      "name": "The Orla Kiely Fashion Brand Shuts Up Shop",
+      "path": "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+      "display_text": "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/"
+    },
+    {
+      "id": "11624423074",
+      "name": "VAT Penalties",
+      "path": "/hmrc/vat-penalties/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/vat-penalties/",
+      "display_text": "/hmrc/vat-penalties/"
+    },
+    {
+      "id": "11624423794",
+      "name": "What Is an IP?",
+      "path": "/insolvency/what-is-an-insolvency-practitioner/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-an-insolvency-practitioner/",
+      "display_text": "/insolvency/what-is-an-insolvency-practitioner/"
+    },
+    {
+      "id": "11765825978",
+      "name": "1 In 180 Companies Faces Insolvency In 2024",
+      "path": "/articles/1-in-180-companies-faces-insolvency-in-2024/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/1-in-180-companies-faces-insolvency-in-2024/",
+      "display_text": "/articles/1-in-180-companies-faces-insolvency-in-2024/"
+    },
+    {
+      "id": "11624423521",
+      "name": "BBL Default",
+      "path": "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/what-happens-if-i-default/",
+      "display_text": "/bounce-back-loan-support-hub/what-happens-if-i-default/"
+    },
+    {
+      "id": "11624454558",
+      "name": "Business Recovery Services",
+      "path": "/insolvency/business-recovery-services/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/business-recovery-services/",
+      "display_text": "/insolvency/business-recovery-services/"
+    },
+    {
+      "id": "11624437179",
+      "name": "Can Directors Pay Themselves Before Liquidation?",
+      "path": "/liquidation/can-directors-pay-themselves-before-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-directors-pay-themselves-before-liquidation/",
+      "display_text": "/liquidation/can-directors-pay-themselves-before-liquidation/"
+    },
+    {
+      "id": "11624420478",
+      "name": "Cannot Pay Business Energy",
+      "path": "/company-cash-flow-problems/cant-pay-business-energy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-pay-business-energy/",
+      "display_text": "/company-cash-flow-problems/cant-pay-business-energy/"
+    },
+    {
+      "id": "11624426990",
+      "name": "Cannot Pay Business Rates",
+      "path": "/company-cash-flow-problems/cant-pay-business-rates/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-pay-business-rates/",
+      "display_text": "/company-cash-flow-problems/cant-pay-business-rates/"
+    },
+    {
+      "id": "11624457035",
+      "name": "Cannot Pay Commercial Lease",
+      "path": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+      "display_text": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/"
+    },
+    {
+      "id": "11624423870",
+      "name": "Company Cannot Pay Debts",
+      "path": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+      "display_text": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/"
+    },
+    {
+      "id": "11624429763",
+      "name": "Company Pensions and Liquidation",
+      "path": "/liquidation/company-pensions-and-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-pensions-and-liquidation/",
+      "display_text": "/liquidation/company-pensions-and-liquidation/"
+    },
+    {
+      "id": "11624446252",
+      "name": "Company Secretary Liability",
+      "path": "/insolvency/personally-liabilty-of-company-secretary/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/personally-liabilty-of-company-secretary/",
+      "display_text": "/insolvency/personally-liabilty-of-company-secretary/"
+    },
+    {
+      "id": "11624426587",
+      "name": "Director Redundancy in MVL",
+      "path": "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+      "display_text": "/liquidation/redundancy-payments-for-directors-in-an-mvl/"
+    },
+    {
+      "id": "11765823205",
+      "name": "I Have No Knowledge Of This Debt",
+      "path": "/sample-letters/i-have-no-knowledge-of-this-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/i-have-no-knowledge-of-this-debt/",
+      "display_text": "/sample-letters/i-have-no-knowledge-of-this-debt/"
+    },
+    {
+      "id": "11624415794",
+      "name": "Losing House if Company Goes Bust",
+      "path": "/advice/losing-house-if-company-goes-bust/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/losing-house-if-company-goes-bust/",
+      "display_text": "/advice/losing-house-if-company-goes-bust/"
+    },
+    {
+      "id": "11624426492",
+      "name": "Members Voluntary Liquidation (MVL)",
+      "path": "/liquidation/members-voluntary-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/members-voluntary-liquidation/",
+      "display_text": "/liquidation/members-voluntary-liquidation/"
+    },
+    {
+      "id": "11624456600",
+      "name": "Misfeasance",
+      "path": "/advice/misfeasance/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/misfeasance/",
+      "display_text": "/advice/misfeasance/"
+    },
+    {
+      "id": "11624429597",
+      "name": "Paying Staff but Not HMRC",
+      "path": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+      "display_text": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/"
+    },
+    {
+      "id": "11624427370",
+      "name": "Personal Guarantee Insurance",
+      "path": "/advice/personal-guarantee-insurance/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/personal-guarantee-insurance/",
+      "display_text": "/advice/personal-guarantee-insurance/"
+    },
+    {
+      "id": "11624411995",
+      "name": "Redundancy in CVA",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/"
+    },
+    {
+      "id": "11624454961",
+      "name": "Statement of Affairs",
+      "path": "/insolvency/statement-of-affairs/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/statement-of-affairs/",
+      "display_text": "/insolvency/statement-of-affairs/"
+    },
+    {
+      "id": "11624458873",
+      "name": "Taking Money Out of a Limited Company",
+      "path": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/how-to-legally-take-money-out-of-a-limited-company/",
+      "display_text": "/advice/how-to-legally-take-money-out-of-a-limited-company/"
+    },
+    {
+      "id": "11765834003",
+      "name": "Tell Debt Collector To Stop Contacting You",
+      "path": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+      "display_text": "/sample-letters/tell-debt-collector-to-stop-contacting-you/"
+    },
+    {
+      "id": "11624453923",
+      "name": "Unenforceable Personal Guarantee",
+      "path": "/advice/unenforceable-personal-guarantee/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/unenforceable-personal-guarantee/",
+      "display_text": "/advice/unenforceable-personal-guarantee/"
+    },
+    {
+      "id": "11624478664",
+      "name": "Validation Order",
+      "path": "/insolvency/validation-order/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/validation-order/",
+      "display_text": "/insolvency/validation-order/"
+    },
+    {
+      "id": "11765855238",
+      "name": "Write Off My Debt",
+      "path": "/sample-letters/write-off-my-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/write-off-my-debt/",
+      "display_text": "/sample-letters/write-off-my-debt/"
+    },
+    {
+      "id": "11624468941",
+      "name": "Wrongful Trading",
+      "path": "/insolvency/what-is-wrongful-trading/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-wrongful-trading/",
+      "display_text": "/insolvency/what-is-wrongful-trading/"
+    },
+    {
+      "id": "11624440880",
+      "name": "Am I Solvent?",
+      "path": "/liquidation/am-i-solvent/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/am-i-solvent/",
+      "display_text": "/liquidation/am-i-solvent/"
+    },
+    {
+      "id": "11765826409",
+      "name": "Articles",
+      "path": "/articles/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/",
+      "display_text": "/articles/"
+    },
+    {
+      "id": "11624427290",
+      "name": "BBL Fraud",
+      "path": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+      "display_text": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/"
+    },
+    {
+      "id": "11624445220",
+      "name": "Can Personal Assets Be Seized?",
+      "path": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+      "display_text": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/"
+    },
+    {
+      "id": "11624441885",
+      "name": "Cannot Pay Staff Wages",
+      "path": "/company-cash-flow-problems/cant-pay-staff-wages/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-pay-staff-wages/",
+      "display_text": "/company-cash-flow-problems/cant-pay-staff-wages/"
+    },
+    {
+      "id": "11624411774",
+      "name": "Companies Act 2006",
+      "path": "/advice/what-is-the-companies-act-2006/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-is-the-companies-act-2006/",
+      "display_text": "/advice/what-is-the-companies-act-2006/"
+    },
+    {
+      "id": "11624410702",
+      "name": "Company Property in Liquidation",
+      "path": "/liquidation/company-property-and-real-estate-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-property-and-real-estate-in-liquidation/",
+      "display_text": "/liquidation/company-property-and-real-estate-in-liquidation/"
+    },
+    {
+      "id": "11624411734",
+      "name": "Duties of a Company Director",
+      "path": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+      "display_text": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/"
+    },
+    {
+      "id": "11624425611",
+      "name": "Freezing Order",
+      "path": "/insolvency/what-is-a-freezing-order-or-injunction/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-a-freezing-order-or-injunction/",
+      "display_text": "/insolvency/what-is-a-freezing-order-or-injunction/"
+    },
+    {
+      "id": "11765838663",
+      "name": "Gieves Hawkes Facing Liquidation",
+      "path": "/articles/gieves-hawkes-facing-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/gieves-hawkes-facing-liquidation/",
+      "display_text": "/articles/gieves-hawkes-facing-liquidation/"
+    },
+    {
+      "id": "11765854977",
+      "name": "Guides Resources Hub",
+      "path": "/guides-resources-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/guides-resources-hub/",
+      "display_text": "/guides-resources-hub/"
+    },
+    {
+      "id": "11765823562",
+      "name": "Hotels",
+      "path": "/sectors/hotels/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/hotels/",
+      "display_text": "/sectors/hotels/"
+    },
+    {
+      "id": "11624437341",
+      "name": "Liquidating a Group Company",
+      "path": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+      "display_text": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/"
+    },
+    {
+      "id": "11624433740",
+      "name": "Liquidation Documents",
+      "path": "/liquidation/list-of-liquidation-documents/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/list-of-liquidation-documents/",
+      "display_text": "/liquidation/list-of-liquidation-documents/"
+    },
+    {
+      "id": "11624433715",
+      "name": "Liquidators Powers and Duties",
+      "path": "/liquidation/liquidators-powers-and-duties/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidators-powers-and-duties/",
+      "display_text": "/liquidation/liquidators-powers-and-duties/"
+    },
+    {
+      "id": "11624454035",
+      "name": "Personal Liability Notices",
+      "path": "/hmrc/personal-liability-notices/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/personal-liability-notices/",
+      "display_text": "/hmrc/personal-liability-notices/"
+    },
+    {
+      "id": "11624416190",
+      "name": "Phoenix Companies",
+      "path": "/advice/what-are-phoenix-companies/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-are-phoenix-companies/",
+      "display_text": "/advice/what-are-phoenix-companies/"
+    },
+    {
+      "id": "11765833247",
+      "name": "Sample Letters",
+      "path": "/sample-letters/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/",
+      "display_text": "/sample-letters/"
+    },
+    {
+      "id": "11765921927",
+      "name": "Save The British Chippy",
+      "path": "/articles/save-the-british-chippy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/save-the-british-chippy/",
+      "display_text": "/articles/save-the-british-chippy/"
+    },
+    {
+      "id": "11624394000",
+      "name": "Security Bonds",
+      "path": "/hmrc/security-bonds/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/security-bonds/",
+      "display_text": "/hmrc/security-bonds/"
+    },
+    {
+      "id": "11765822829",
+      "name": "Travel Firm Collapses As It Cannot Pay Refunds",
+      "path": "/articles/travel-firm-collapses-as-it-cannot-pay-refunds/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/travel-firm-collapses-as-it-cannot-pay-refunds/",
+      "display_text": "/articles/travel-firm-collapses-as-it-cannot-pay-refunds/"
+    },
+    {
+      "id": "11624453785",
+      "name": "Understanding HMRC Debt Collection",
+      "path": "/hmrc/understanding-hmrc-debt-collection/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/understanding-hmrc-debt-collection/",
+      "display_text": "/hmrc/understanding-hmrc-debt-collection/"
+    },
+    {
+      "id": "11624455268",
+      "name": "What Is the Insolvency Service?",
+      "path": "/insolvency/what-is-the-insolvency-service/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-the-insolvency-service/",
+      "display_text": "/insolvency/what-is-the-insolvency-service/"
+    },
+    {
+      "id": "11624426847",
+      "name": "Writing Off Directors Loan",
+      "path": "/advice/writing-off-a-directors-loan-account/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/writing-off-a-directors-loan-account/",
+      "display_text": "/advice/writing-off-a-directors-loan-account/"
+    },
+    {
+      "id": "11765921676",
+      "name": "88 Year Old Retailer Bhs Goes Company Liquidation",
+      "path": "/articles/88-year-old-retailer-bhs-goes-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/88-year-old-retailer-bhs-goes-company-liquidation/",
+      "display_text": "/articles/88-year-old-retailer-bhs-goes-company-liquidation/"
+    },
+    {
+      "id": "11624394203",
+      "name": "Bailiffs and High Court Enforcement Officers",
+      "path": "/liquidation/bailiffs-high-court-enforcement-officers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/bailiffs-high-court-enforcement-officers/",
+      "display_text": "/liquidation/bailiffs-high-court-enforcement-officers/"
+    },
+    {
+      "id": "11765830305",
+      "name": "Boulestin Avoids Closure",
+      "path": "/articles/boulestin-avoids-closure/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/boulestin-avoids-closure/",
+      "display_text": "/articles/boulestin-avoids-closure/"
+    },
+    {
+      "id": "11624394243",
+      "name": "Business Restructuring",
+      "path": "/advice/business-restructuring/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/business-restructuring/",
+      "display_text": "/advice/business-restructuring/"
+    },
+    {
+      "id": "11765822911",
+      "name": "Can Bradford Rugby Club Saved Liquidation",
+      "path": "/articles/can-bradford-rugby-club-saved-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/can-bradford-rugby-club-saved-liquidation/",
+      "display_text": "/articles/can-bradford-rugby-club-saved-liquidation/"
+    },
+    {
+      "id": "11624441555",
+      "name": "Can HMRC Shut Down My Business?",
+      "path": "/hmrc/can-hmrc-shut-down-my-business/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/can-hmrc-shut-down-my-business/",
+      "display_text": "/hmrc/can-hmrc-shut-down-my-business/"
+    },
+    {
+      "id": "11765836891",
+      "name": "Cease Trading Template",
+      "path": "/sample-letters/cease-trading-template/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/cease-trading-template/",
+      "display_text": "/sample-letters/cease-trading-template/"
+    },
+    {
+      "id": "11765839263",
+      "name": "Childcare",
+      "path": "/sectors/childcare/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/childcare/",
+      "display_text": "/sectors/childcare/"
+    },
+    {
+      "id": "11624454164",
+      "name": "Company Financial Difficulties",
+      "path": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/company-is-having-financial-difficulties/",
+      "display_text": "/company-cash-flow-problems/company-is-having-financial-difficulties/"
+    },
+    {
+      "id": "11624429310",
+      "name": "Company Restoration After Liquidation",
+      "path": "/liquidation/company-restoration-after-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/company-restoration-after-liquidation/",
+      "display_text": "/liquidation/company-restoration-after-liquidation/"
+    },
+    {
+      "id": "11624425678",
+      "name": "County Court Judgements",
+      "path": "/county-court-judgements/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/county-court-judgements/",
+      "display_text": "/county-court-judgements/"
+    },
+    {
+      "id": "11624456810",
+      "name": "Creditors Meeting",
+      "path": "/insolvency/creditors-meeting/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/creditors-meeting/",
+      "display_text": "/insolvency/creditors-meeting/"
+    },
+    {
+      "id": "11624425690",
+      "name": "Customer Insolvency",
+      "path": "/insolvency/what-to-do-about-customer-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-to-do-about-customer-insolvency/",
+      "display_text": "/insolvency/what-to-do-about-customer-insolvency/"
+    },
+    {
+      "id": "11624456310",
+      "name": "Debt Charities UK",
+      "path": "/debt-charities-uk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/debt-charities-uk/",
+      "display_text": "/debt-charities-uk/"
+    },
+    {
+      "id": "11624426796",
+      "name": "Debt Management Guide",
+      "path": "/advice/debt-management-guide/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/debt-management-guide/",
+      "display_text": "/advice/debt-management-guide/"
+    },
+    {
+      "id": "11624416269",
+      "name": "Directors Duties to Creditors",
+      "path": "/advice/directors-duties-to-creditors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/directors-duties-to-creditors/",
+      "display_text": "/advice/directors-duties-to-creditors/"
+    },
+    {
+      "id": "11765838536",
+      "name": "Disqualified Directors Jailed Continuing Control Companies",
+      "path": "/articles/disqualified-directors-jailed-continuing-control-companies/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/disqualified-directors-jailed-continuing-control-companies/",
+      "display_text": "/articles/disqualified-directors-jailed-continuing-control-companies/"
+    },
+    {
+      "id": "11624416149",
+      "name": "Find a Liquidator Near Me",
+      "path": "/insolvency/find-a-liquidator-near-me/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/find-a-liquidator-near-me/",
+      "display_text": "/insolvency/find-a-liquidator-near-me/"
+    },
+    {
+      "id": "11624445299",
+      "name": "HMRC Compliance Checks",
+      "path": "/hmrc/hmrc-compliance-checks/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-compliance-checks/",
+      "display_text": "/hmrc/hmrc-compliance-checks/"
+    },
+    {
+      "id": "11624427067",
+      "name": "HMRC Penalties and Investigations",
+      "path": "/hmrc/hmrc-penalties-investigations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-penalties-investigations/",
+      "display_text": "/hmrc/hmrc-penalties-investigations/"
+    },
+    {
+      "id": "11624426468",
+      "name": "HMRC Winding Up Petition",
+      "path": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+      "display_text": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/"
+    },
+    {
+      "id": "11624422761",
+      "name": "How Much Does Liquidation Cost?",
+      "path": "/liquidation/how-much-does-liquidation-cost/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/how-much-does-liquidation-cost/",
+      "display_text": "/liquidation/how-much-does-liquidation-cost/"
+    },
+    {
+      "id": "11765830784",
+      "name": "I Cannot Afford To Repay My Debt",
+      "path": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/i-cannot-afford-to-repay-my-debt/",
+      "display_text": "/sample-letters/i-cannot-afford-to-repay-my-debt/"
+    },
+    {
+      "id": "11765922032",
+      "name": "Insolvent Wine Scammers",
+      "path": "/articles/insolvent-wine-scammers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/insolvent-wine-scammers/",
+      "display_text": "/articles/insolvent-wine-scammers/"
+    },
+    {
+      "id": "11624424813",
+      "name": "Joint Liability for Unpaid VAT",
+      "path": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/joint-and-several-liability-for-unpaid-vat/",
+      "display_text": "/hmrc/joint-and-several-liability-for-unpaid-vat/"
+    },
+    {
+      "id": "11624415568",
+      "name": "Leases and Contracts in Liquidation",
+      "path": "/liquidation/leases-and-contracts-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/leases-and-contracts-in-liquidation/",
+      "display_text": "/liquidation/leases-and-contracts-in-liquidation/"
+    },
+    {
+      "id": "11624424752",
+      "name": "Liquidating an LLP",
+      "path": "/liquidation/liquidating-a-limited-liability-partnership/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidating-a-limited-liability-partnership/",
+      "display_text": "/liquidation/liquidating-a-limited-liability-partnership/"
+    },
+    {
+      "id": "11624410741",
+      "name": "Liquidation Deadlines",
+      "path": "/liquidation/liquidation-deadlines-and-time-limits/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidation-deadlines-and-time-limits/",
+      "display_text": "/liquidation/liquidation-deadlines-and-time-limits/"
+    },
+    {
+      "id": "11624426599",
+      "name": "Liquidation vs Dissolution",
+      "path": "/liquidation/liquidation-vs-dissolution-strike-off/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidation-vs-dissolution-strike-off/",
+      "display_text": "/liquidation/liquidation-vs-dissolution-strike-off/"
+    },
+    {
+      "id": "11624459488",
+      "name": "LPA Receivership",
+      "path": "/insolvency/lpa-receivership/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/lpa-receivership/",
+      "display_text": "/insolvency/lpa-receivership/"
+    },
+    {
+      "id": "11624425834",
+      "name": "Pre-Pack Advantages and Disadvantages",
+      "path": "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+      "display_text": "/what-is-a-pre-pack-administration/advantages-and-disadvantages/"
+    },
+    {
+      "id": "11765855013",
+      "name": "Request A Reduced Monthly Payment",
+      "path": "/sample-letters/request-a-reduced-monthly-payment/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/request-a-reduced-monthly-payment/",
+      "display_text": "/sample-letters/request-a-reduced-monthly-payment/"
+    },
+    {
+      "id": "11765829654",
+      "name": "Restaurants",
+      "path": "/sectors/restaurants/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/restaurants/",
+      "display_text": "/sectors/restaurants/"
+    },
+    {
+      "id": "11624423548",
+      "name": "Save a Struggling Business",
+      "path": "/insolvency/how-to-save-a-struggling-business/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/how-to-save-a-struggling-business/",
+      "display_text": "/insolvency/how-to-save-a-struggling-business/"
+    },
+    {
+      "id": "11765838546",
+      "name": "Scaffolder Censured Over Bounce Back Loan",
+      "path": "/articles/scaffolder-censured-over-bounce-back-loan/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/scaffolder-censured-over-bounce-back-loan/",
+      "display_text": "/articles/scaffolder-censured-over-bounce-back-loan/"
+    },
+    {
+      "id": "11624460231",
+      "name": "UK Insolvency Flowchart",
+      "path": "/liquidation/uk-insolvency-flowchart/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/uk-insolvency-flowchart/",
+      "display_text": "/liquidation/uk-insolvency-flowchart/"
+    },
+    {
+      "id": "11624415488",
+      "name": "Voluntary vs Compulsory Liquidation",
+      "path": "/liquidation/voluntary-vs-compulsory-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/voluntary-vs-compulsory-liquidation/",
+      "display_text": "/liquidation/voluntary-vs-compulsory-liquidation/"
+    },
+    {
+      "id": "11624453571",
+      "name": "What Can HMRC Bailiffs Take?",
+      "path": "/hmrc/what-can-hmrc-bailiffs-take/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/what-can-hmrc-bailiffs-take/",
+      "display_text": "/hmrc/what-can-hmrc-bailiffs-take/"
+    },
+    {
+      "id": "11624459089",
+      "name": "What Is a Statutory Demand?",
+      "path": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+      "display_text": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/"
+    },
+    {
+      "id": "11765823157",
+      "name": "12 Year Ban For Director Who Pocketed Covid Loan Cash",
+      "path": "/articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/",
+      "display_text": "/articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/"
+    },
+    {
+      "id": "11624454212",
+      "name": "Administration vs CVA",
+      "path": "/company-administration/vs-cva/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/vs-cva/",
+      "display_text": "/company-administration/vs-cva/"
+    },
+    {
+      "id": "11624416249",
+      "name": "Administration vs Receivership",
+      "path": "/company-administration/vs-administrative-receivership/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/vs-administrative-receivership/",
+      "display_text": "/company-administration/vs-administrative-receivership/"
+    },
+    {
+      "id": "11624410768",
+      "name": "Alternatives to Company Liquidation",
+      "path": "/liquidation/alternatives-to-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/alternatives-to-company-liquidation/",
+      "display_text": "/liquidation/alternatives-to-company-liquidation/"
+    },
+    {
+      "id": "11624459278",
+      "name": "Antecedent Transactions",
+      "path": "/insolvency/antecedent-transactions/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/antecedent-transactions/",
+      "display_text": "/insolvency/antecedent-transactions/"
+    },
+    {
+      "id": "11765828580",
+      "name": "Barnsley Shopping Centre Enters Receivership",
+      "path": "/articles/barnsley-shopping-centre-enters-receivership/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/barnsley-shopping-centre-enters-receivership/",
+      "display_text": "/articles/barnsley-shopping-centre-enters-receivership/"
+    },
+    {
+      "id": "11765828862",
+      "name": "Bespoke Kitchen Manufacturer",
+      "path": "/case-studies/bespoke-kitchen-manufacturer/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/bespoke-kitchen-manufacturer/",
+      "display_text": "/case-studies/bespoke-kitchen-manufacturer/"
+    },
+    {
+      "id": "11624426988",
+      "name": "Biggest Struggles for Business Owners",
+      "path": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+      "display_text": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/"
+    },
+    {
+      "id": "11624429333",
+      "name": "Business Bank Account in Liquidation",
+      "path": "/liquidation/business-bank-account-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/business-bank-account-in-liquidation/",
+      "display_text": "/liquidation/business-bank-account-in-liquidation/"
+    },
+    {
+      "id": "11624438083",
+      "name": "Can a Director Be Sued Personally?",
+      "path": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-a-director-be-sued-personally-by-creditors/",
+      "display_text": "/liquidation/can-a-director-be-sued-personally-by-creditors/"
+    },
+    {
+      "id": "11624458845",
+      "name": "Can I Lose My House With BBL?",
+      "path": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+      "display_text": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/"
+    },
+    {
+      "id": "11624410885",
+      "name": "Cannot Afford to Liquidate",
+      "path": "/liquidation/cant-afford-to-liquidate/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/cant-afford-to-liquidate/",
+      "display_text": "/liquidation/cant-afford-to-liquidate/"
+    },
+    {
+      "id": "11624423600",
+      "name": "Cannot Pay Company Mortgage",
+      "path": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+      "display_text": "/company-cash-flow-problems/cant-pay-a-company-mortgage/"
+    },
+    {
+      "id": "11624458984",
+      "name": "Cannot Repay Business Loan",
+      "path": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+      "display_text": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/"
+    },
+    {
+      "id": "11624441718",
+      "name": "Cash Flow Problems Hub",
+      "path": "/company-cash-flow-problems/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/",
+      "display_text": "/company-cash-flow-problems/"
+    },
+    {
+      "id": "11765934646",
+      "name": "Charity",
+      "path": "/sectors/charity/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/charity/",
+      "display_text": "/sectors/charity/"
+    },
+    {
+      "id": "11624423027",
+      "name": "Close or Save My Company?",
+      "path": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/should-i-close-my-company-or-try-to-save-it/",
+      "display_text": "/liquidation/should-i-close-my-company-or-try-to-save-it/"
+    },
+    {
+      "id": "11765832661",
+      "name": "Common Causes Of Construction Insolvency",
+      "path": "/articles/common-causes-of-construction-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/common-causes-of-construction-insolvency/",
+      "display_text": "/articles/common-causes-of-construction-insolvency/"
+    },
+    {
+      "id": "11765834236",
+      "name": "Company Rescue Recovery Hub",
+      "path": "/company-rescue-recovery-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-recovery-hub/",
+      "display_text": "/company-rescue-recovery-hub/"
+    },
+    {
+      "id": "11765834252",
+      "name": "Construction",
+      "path": "/sectors/construction/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/construction/",
+      "display_text": "/sectors/construction/"
+    },
+    {
+      "id": "11765826585",
+      "name": "Cookie Policy Company Debt",
+      "path": "/cookie-policy-company-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/cookie-policy-company-debt/",
+      "display_text": "/cookie-policy-company-debt/"
+    },
+    {
+      "id": "11624411353",
+      "name": "Corporation Tax Penalties",
+      "path": "/hmrc/corporation-tax-penalties/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/corporation-tax-penalties/",
+      "display_text": "/hmrc/corporation-tax-penalties/"
+    },
+    {
+      "id": "11765826068",
+      "name": "Crackdown On Directors Who Close Companies To Avoid Debts",
+      "path": "/articles/crackdown-on-directors-who-close-companies-to-avoid-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/crackdown-on-directors-who-close-companies-to-avoid-debts/",
+      "display_text": "/articles/crackdown-on-directors-who-close-companies-to-avoid-debts/"
+    },
+    {
+      "id": "11624424836",
+      "name": "Creditor Meetings in Liquidation",
+      "path": "/liquidation/creditor-meetings-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/creditor-meetings-in-liquidation/",
+      "display_text": "/liquidation/creditor-meetings-in-liquidation/"
+    },
+    {
+      "id": "11624478683",
+      "name": "Creditor Negotiations",
+      "path": "/insolvency/creditor-negotiations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/creditor-negotiations/",
+      "display_text": "/insolvency/creditor-negotiations/"
+    },
+    {
+      "id": "11624430076",
+      "name": "CVA Pros and Cons",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/"
+    },
+    {
+      "id": "11624393504",
+      "name": "CVA vs Strike Off vs Liquidation",
+      "path": "/liquidation/cva-vs-strike-off-vs-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/cva-vs-strike-off-vs-liquidation/",
+      "display_text": "/liquidation/cva-vs-strike-off-vs-liquidation/"
+    },
+    {
+      "id": "11624457147",
+      "name": "Dealing With Creditor Pressure",
+      "path": "/insolvency/dealing-with-creditor-pressure/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/dealing-with-creditor-pressure/",
+      "display_text": "/insolvency/dealing-with-creditor-pressure/"
+    },
+    {
+      "id": "11624411862",
+      "name": "Director Guarantees in CVA",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/"
+    },
+    {
+      "id": "11624426530",
+      "name": "Directors Conduct Report",
+      "path": "/liquidation/directors-conduct-report-2/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/directors-conduct-report-2/",
+      "display_text": "/liquidation/directors-conduct-report-2/"
+    },
+    {
+      "id": "11624416188",
+      "name": "Directors Conflict of Interest",
+      "path": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+      "display_text": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/"
+    },
+    {
+      "id": "11624394348",
+      "name": "Directors Liability for BBL",
+      "path": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+      "display_text": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/"
+    },
+    {
+      "id": "11624445348",
+      "name": "Distraint Order Notice",
+      "path": "/hmrc/distraint-order-notice/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/distraint-order-notice/",
+      "display_text": "/hmrc/distraint-order-notice/"
+    },
+    {
+      "id": "11765819364",
+      "name": "Entertainment",
+      "path": "/sectors/entertainment/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/entertainment/",
+      "display_text": "/sectors/entertainment/"
+    },
+    {
+      "id": "11765838713",
+      "name": "Freight Forwarder",
+      "path": "/case-studies/freight-forwarder/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/freight-forwarder/",
+      "display_text": "/case-studies/freight-forwarder/"
+    },
+    {
+      "id": "11624423213",
+      "name": "Funding Options for SMEs",
+      "path": "/advice/funding-options-for-smes-in-the-uk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/funding-options-for-smes-in-the-uk/",
+      "display_text": "/advice/funding-options-for-smes-in-the-uk/"
+    },
+    {
+      "id": "11765829197",
+      "name": "High Court Closes Insolvent Mini Bond Group",
+      "path": "/articles/high-court-closes-insolvent-mini-bond-group/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/high-court-closes-insolvent-mini-bond-group/",
+      "display_text": "/articles/high-court-closes-insolvent-mini-bond-group/"
+    },
+    {
+      "id": "11624415505",
+      "name": "HMRC as Creditor in Liquidation",
+      "path": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/hmrc-as-a-creditor-in-liquidation/",
+      "display_text": "/liquidation/hmrc-as-a-creditor-in-liquidation/"
+    },
+    {
+      "id": "11624420669",
+      "name": "HMRC IR35 Investigations",
+      "path": "/advice/hmrcs-ir35-investigations-different/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/hmrcs-ir35-investigations-different/",
+      "display_text": "/advice/hmrcs-ir35-investigations-different/"
+    },
+    {
+      "id": "11624394255",
+      "name": "HMRC Threatening Letters",
+      "path": "/hmrc/hmrc-threatening-letters/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-threatening-letters/",
+      "display_text": "/hmrc/hmrc-threatening-letters/"
+    },
+    {
+      "id": "11765838957",
+      "name": "Hoverboard Retailer",
+      "path": "/case-studies/hoverboard-retailer/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/hoverboard-retailer/",
+      "display_text": "/case-studies/hoverboard-retailer/"
+    },
+    {
+      "id": "11765811738",
+      "name": "How Much Is The Digital Sales Tax Going To Affect Big Tech",
+      "path": "/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/",
+      "display_text": "/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/"
+    },
+    {
+      "id": "11765826630",
+      "name": "I Need More Information About This Debt",
+      "path": "/sample-letters/i-need-more-information-about-this-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/i-need-more-information-about-this-debt/",
+      "display_text": "/sample-letters/i-need-more-information-about-this-debt/"
+    },
+    {
+      "id": "11624459961",
+      "name": "Individual Voluntary Arrangement",
+      "path": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-an-individual-voluntary-arrangement/",
+      "display_text": "/insolvency/what-is-an-individual-voluntary-arrangement/"
+    },
+    {
+      "id": "11624425863",
+      "name": "Insolvency Checklist",
+      "path": "/liquidation/insolvency-checklist/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/insolvency-checklist/",
+      "display_text": "/liquidation/insolvency-checklist/"
+    },
+    {
+      "id": "11765826597",
+      "name": "Insolvency News Commentary",
+      "path": "/insolvency-news-commentary/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency-news-commentary/",
+      "display_text": "/insolvency-news-commentary/"
+    },
+    {
+      "id": "11624423551",
+      "name": "Insolvency Test",
+      "path": "/insolvency/insolvency-test/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/insolvency-test/",
+      "display_text": "/insolvency/insolvency-test/"
+    },
+    {
+      "id": "11624411589",
+      "name": "IP and Assets in Liquidation",
+      "path": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+      "display_text": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/"
+    },
+    {
+      "id": "11765826424",
+      "name": "Is Harley Davidson Heading For A Crash",
+      "path": "/articles/is-harley-davidson-heading-for-a-crash/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/is-harley-davidson-heading-for-a-crash/",
+      "display_text": "/articles/is-harley-davidson-heading-for-a-crash/"
+    },
+    {
+      "id": "11765854685",
+      "name": "Jamie Oliver Restaurant Restructure London",
+      "path": "/articles/jamie-oliver-restaurant-restructure-london/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/jamie-oliver-restaurant-restructure-london/",
+      "display_text": "/articles/jamie-oliver-restaurant-restructure-london/"
+    },
+    {
+      "id": "11765818733",
+      "name": "Kids Company Directors Face Disqualification Proceedings",
+      "path": "/articles/kids-company-directors-face-disqualification-proceedings/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/kids-company-directors-face-disqualification-proceedings/",
+      "display_text": "/articles/kids-company-directors-face-disqualification-proceedings/"
+    },
+    {
+      "id": "11765830767",
+      "name": "Language School",
+      "path": "/case-studies/language-school/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/language-school/",
+      "display_text": "/case-studies/language-school/"
+    },
+    {
+      "id": "11624441125",
+      "name": "Liquidating a Dormant Company",
+      "path": "/liquidation/can-i-liquidate-a-dormant-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-i-liquidate-a-dormant-company/",
+      "display_text": "/liquidation/can-i-liquidate-a-dormant-company/"
+    },
+    {
+      "id": "11624429024",
+      "name": "Liquidating With No Assets",
+      "path": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+      "display_text": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/"
+    },
+    {
+      "id": "11624445144",
+      "name": "Liquidation Timeline",
+      "path": "/liquidation/timeline/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/timeline/",
+      "display_text": "/liquidation/timeline/"
+    },
+    {
+      "id": "11624393889",
+      "name": "Notice of Enforcement",
+      "path": "/hmrc/notice-of-enforcement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/notice-of-enforcement/",
+      "display_text": "/hmrc/notice-of-enforcement/"
+    },
+    {
+      "id": "11624427150",
+      "name": "Partnership Voluntary Arrangements",
+      "path": "/company-rescue-solutions/partnership-voluntary-arrangements/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/partnership-voluntary-arrangements/",
+      "display_text": "/company-rescue-solutions/partnership-voluntary-arrangements/"
+    },
+    {
+      "id": "11624394327",
+      "name": "Personal Liability for CBILS",
+      "path": "/advice/personal-liability-for-cbils-loans/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/personal-liability-for-cbils-loans/",
+      "display_text": "/advice/personal-liability-for-cbils-loans/"
+    },
+    {
+      "id": "11624425509",
+      "name": "Preferential Payments",
+      "path": "/insolvency/preferential-payments-during-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/",
+      "display_text": "/insolvency/preferential-payments-during-insolvency/"
+    },
+    {
+      "id": "11624426532",
+      "name": "Prepare for Liquidation",
+      "path": "/liquidation/how-to-prepare-for-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/how-to-prepare-for-company-liquidation/",
+      "display_text": "/liquidation/how-to-prepare-for-company-liquidation/"
+    },
+    {
+      "id": "11624426828",
+      "name": "Preventing Director Disputes",
+      "path": "/advice/preventing-company-director-disputes/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/preventing-company-director-disputes/",
+      "display_text": "/advice/preventing-company-director-disputes/"
+    },
+    {
+      "id": "11624440936",
+      "name": "Prove Your Debt in Liquidation",
+      "path": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+      "display_text": "/liquidation/how-to-prove-your-debt-in-company-liquidation/"
+    },
+    {
+      "id": "11624466673",
+      "name": "Retail Insolvency Trends",
+      "path": "/insolvency/retail-industry-insolvency-trends/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/retail-industry-insolvency-trends/",
+      "display_text": "/insolvency/retail-industry-insolvency-trends/"
+    },
+    {
+      "id": "11624434378",
+      "name": "Risks of Personal Guarantee",
+      "path": "/advice/the-risks-of-signing-a-personal-guarantee/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/the-risks-of-signing-a-personal-guarantee/",
+      "display_text": "/advice/the-risks-of-signing-a-personal-guarantee/"
+    },
+    {
+      "id": "11624446459",
+      "name": "Secured vs Unsecured Creditors",
+      "path": "/insolvency/secured-vs-unsecured-creditors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/",
+      "display_text": "/insolvency/secured-vs-unsecured-creditors/"
+    },
+    {
+      "id": "11624445258",
+      "name": "Security Bond Notices",
+      "path": "/hmrc/security-bond-notices/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/security-bond-notices/",
+      "display_text": "/hmrc/security-bond-notices/"
+    },
+    {
+      "id": "11765830790",
+      "name": "Seo Consultancy",
+      "path": "/case-studies/seo-consultancy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/seo-consultancy/",
+      "display_text": "/case-studies/seo-consultancy/"
+    },
+    {
+      "id": "11624398202",
+      "name": "Starting a New Company After Liquidation",
+      "path": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+      "display_text": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/"
+    },
+    {
+      "id": "11765823232",
+      "name": "Subcontractor Agency",
+      "path": "/case-studies/subcontractor-agency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/subcontractor-agency/",
+      "display_text": "/case-studies/subcontractor-agency/"
+    },
+    {
+      "id": "11765839348",
+      "name": "Taxi Companies",
+      "path": "/sectors/taxi-companies/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/taxi-companies/",
+      "display_text": "/sectors/taxi-companies/"
+    },
+    {
+      "id": "11624425679",
+      "name": "Transport and Haulage Insolvency",
+      "path": "/transport-haulage-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/transport-haulage-insolvency/",
+      "display_text": "/transport-haulage-insolvency/"
+    },
+    {
+      "id": "11765829422",
+      "name": "Travel",
+      "path": "/sectors/travel/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/travel/",
+      "display_text": "/sectors/travel/"
+    },
+    {
+      "id": "11624446470",
+      "name": "Warning Signs of Insolvency",
+      "path": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+      "display_text": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/"
+    },
+    {
+      "id": "11624453291",
+      "name": "What Happens After Liquidation?",
+      "path": "/liquidation/what-happens-after-company-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-after-company-liquidation/",
+      "display_text": "/liquidation/what-happens-after-company-liquidation/"
+    },
+    {
+      "id": "11624479117",
+      "name": "What Is a Creditor?",
+      "path": "/insolvency/what-is-a-creditor/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/what-is-a-creditor/",
+      "display_text": "/insolvency/what-is-a-creditor/"
+    },
+    {
+      "id": "11765838678",
+      "name": "Will The Energy Crisis Mean The End For Britains Bakeries",
+      "path": "/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/",
+      "display_text": "/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/"
+    },
+    {
+      "id": "11765836484",
+      "name": "124 Pints To Save The Pub",
+      "path": "/articles/124-pints-to-save-the-pub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/124-pints-to-save-the-pub/",
+      "display_text": "/articles/124-pints-to-save-the-pub/"
+    },
+    {
+      "id": "11765836582",
+      "name": "35 Of Charities Fear Insolvency Due To Cost Of Living Crisis",
+      "path": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+      "display_text": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/"
+    },
+    {
+      "id": "11765832689",
+      "name": "39 Of Hair And Beauty Sector Still Furloughed",
+      "path": "/articles/39-of-hair-and-beauty-sector-still-furloughed/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/39-of-hair-and-beauty-sector-still-furloughed/",
+      "display_text": "/articles/39-of-hair-and-beauty-sector-still-furloughed/"
+    },
+    {
+      "id": "11765833232",
+      "name": "6000 Fuel Hikes Taxi Sector",
+      "path": "/articles/6000-fuel-hikes-taxi-sector/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/6000-fuel-hikes-taxi-sector/",
+      "display_text": "/articles/6000-fuel-hikes-taxi-sector/"
+    },
+    {
+      "id": "11765921786",
+      "name": "80 Homebase Stores Set To Close As Part Of Cva",
+      "path": "/articles/80-homebase-stores-set-to-close-as-part-of-cva/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/80-homebase-stores-set-to-close-as-part-of-cva/",
+      "display_text": "/articles/80-homebase-stores-set-to-close-as-part-of-cva/"
+    },
+    {
+      "id": "11624438438",
+      "name": "Accelerated Payment Notices",
+      "path": "/hmrc/accelerated-payment-notices-apn/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/accelerated-payment-notices-apn/",
+      "display_text": "/hmrc/accelerated-payment-notices-apn/"
+    },
+    {
+      "id": "11765855152",
+      "name": "Accountants",
+      "path": "/services-to/accountants/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/accountants/",
+      "display_text": "/services-to/accountants/"
+    },
+    {
+      "id": "11765838297",
+      "name": "Accreditations",
+      "path": "/accreditations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/accreditations/",
+      "display_text": "/accreditations/"
+    },
+    {
+      "id": "11765818568",
+      "name": "All Dishes Off Menu For Dacampos My Pasta Bar",
+      "path": "/articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/",
+      "display_text": "/articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/"
+    },
+    {
+      "id": "11765838598",
+      "name": "Articles Insights Hub",
+      "path": "/business-insolvency/articles-insights-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/business-insolvency/articles-insights-hub/",
+      "display_text": "/business-insolvency/articles-insights-hub/"
+    },
+    {
+      "id": "11765823811",
+      "name": "Asset Based And Other Lenders",
+      "path": "/services-to/asset-based-and-other-lenders/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/asset-based-and-other-lenders/",
+      "display_text": "/services-to/asset-based-and-other-lenders/"
+    },
+    {
+      "id": "11765838907",
+      "name": "Automotive",
+      "path": "/sectors/automotive/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/automotive/",
+      "display_text": "/sectors/automotive/"
+    },
+    {
+      "id": "11765829813",
+      "name": "Banks",
+      "path": "/services-to/banks/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/banks/",
+      "display_text": "/services-to/banks/"
+    },
+    {
+      "id": "11765921708",
+      "name": "Bans For Uk Directors Who Avoid Repaying Bounce Back Loans",
+      "path": "/articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/",
+      "display_text": "/articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/"
+    },
+    {
+      "id": "11765922370",
+      "name": "British Cycle Sales Hit 39 Year Low",
+      "path": "/articles/british-cycle-sales-hit-39-year-low/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/british-cycle-sales-hit-39-year-low/",
+      "display_text": "/articles/british-cycle-sales-hit-39-year-low/"
+    },
+    {
+      "id": "11765826767",
+      "name": "Building Contractor",
+      "path": "/case-studies/building-contractor/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/building-contractor/",
+      "display_text": "/case-studies/building-contractor/"
+    },
+    {
+      "id": "11624438780",
+      "name": "Business Debt Advice",
+      "path": "/business-debt-advice/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/get-free-business-debt-advice/",
+      "display_text": "/business-debt-advice/"
+    },
+    {
+      "id": "11765922009",
+      "name": "Business Insolvency",
+      "path": "/business-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/business-insolvency/",
+      "display_text": "/business-insolvency/"
+    },
+    {
+      "id": "11624415227",
+      "name": "Can a Supplier Force Liquidation?",
+      "path": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+      "display_text": "/liquidation/can-a-supplier-force-my-company-into-liquidation/"
+    },
+    {
+      "id": "11624468715",
+      "name": "Can Directors Go to Prison?",
+      "path": "/liquidation/can-directors-go-to-prison-for-company-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-directors-go-to-prison-for-company-debt/",
+      "display_text": "/liquidation/can-directors-go-to-prison-for-company-debt/"
+    },
+    {
+      "id": "11765826378",
+      "name": "Can Heathrow Survive Covid 19",
+      "path": "/articles/can-heathrow-survive-covid-19/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/can-heathrow-survive-covid-19/",
+      "display_text": "/articles/can-heathrow-survive-covid-19/"
+    },
+    {
+      "id": "11624415317",
+      "name": "Can I Choose My Liquidator?",
+      "path": "/liquidation/can-i-choose-my-liquidator/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-i-choose-my-liquidator/",
+      "display_text": "/liquidation/can-i-choose-my-liquidator/"
+    },
+    {
+      "id": "11765826236",
+      "name": "Can Manchester United Get Out From Under Its 455 5M Debt",
+      "path": "/articles/can-manchester-united-get-out-from-under-its-455-5m-debt/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/can-manchester-united-get-out-from-under-its-455-5m-debt/",
+      "display_text": "/articles/can-manchester-united-get-out-from-under-its-455-5m-debt/"
+    },
+    {
+      "id": "11624411680",
+      "name": "Cannot Pay CBILS",
+      "path": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+      "display_text": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/"
+    },
+    {
+      "id": "11765838908",
+      "name": "Carehomes",
+      "path": "/sectors/carehomes/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/carehomes/",
+      "display_text": "/sectors/carehomes/"
+    },
+    {
+      "id": "11765819323",
+      "name": "Case Studies",
+      "path": "/case-studies/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/",
+      "display_text": "/case-studies/"
+    },
+    {
+      "id": "11624469042",
+      "name": "CCJ When Going Insolvent",
+      "path": "/liquidation/ccj-when-going-insolvent/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/ccj-when-going-insolvent/",
+      "display_text": "/liquidation/ccj-when-going-insolvent/"
+    },
+    {
+      "id": "11624444515",
+      "name": "Challenge a Liquidators Fees",
+      "path": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+      "display_text": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/"
+    },
+    {
+      "id": "11624458132",
+      "name": "Charity and Non-Profit Insolvency",
+      "path": "/charity-non-profit-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/charity-non-profit-insolvency/",
+      "display_text": "/charity-non-profit-insolvency/"
+    },
+    {
+      "id": "11765828766",
+      "name": "Chinese Takeaway",
+      "path": "/case-studies/chinese-takeaway/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/chinese-takeaway/",
+      "display_text": "/case-studies/chinese-takeaway/"
+    },
+    {
+      "id": "11624422898",
+      "name": "Choose the Right Insolvency Procedure",
+      "path": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/how-to-choose-the-right-insolvency-procedure/",
+      "display_text": "/liquidation/how-to-choose-the-right-insolvency-procedure/"
+    },
+    {
+      "id": "11765838652",
+      "name": "Coffee Shop Owners Say Lattes Would Have To Be 7 To Follow Energy Hikes",
+      "path": "/articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/",
+      "display_text": "/articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/"
+    },
+    {
+      "id": "11624424156",
+      "name": "Construction Insolvency",
+      "path": "/construction-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/construction-insolvency/",
+      "display_text": "/construction-insolvency/"
+    },
+    {
+      "id": "11765854937",
+      "name": "Corporate Finance",
+      "path": "/case-studies/corporate-finance/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/corporate-finance/",
+      "display_text": "/case-studies/corporate-finance/"
+    },
+    {
+      "id": "11624453063",
+      "name": "Creditor Takes Me to Court",
+      "path": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+      "display_text": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/"
+    },
+    {
+      "id": "11765826749",
+      "name": "Creditors",
+      "path": "/services-to/creditors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/creditors/",
+      "display_text": "/services-to/creditors/"
+    },
+    {
+      "id": "11765829118",
+      "name": "Creditors Guides To Insolvency Practitioners Fees",
+      "path": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+      "display_text": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/"
+    },
+    {
+      "id": "11765826325",
+      "name": "Creditors Voluntary Liquidation With Phoenix",
+      "path": "/case-studies/creditors-voluntary-liquidation-with-phoenix/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/creditors-voluntary-liquidation-with-phoenix/",
+      "display_text": "/case-studies/creditors-voluntary-liquidation-with-phoenix/"
+    },
+    {
+      "id": "11624430070",
+      "name": "CVA Fails Mid-Term",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/"
+    },
+    {
+      "id": "11624454691",
+      "name": "CVA vs Administration",
+      "path": "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/vs-cva/",
+      "display_text": "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/"
+    },
+    {
+      "id": "11624445726",
+      "name": "CVA vs Liquidation",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/"
+    },
+    {
+      "id": "11765839083",
+      "name": "Debt Charities For Consumers",
+      "path": "/articles/debt-charities-for-consumers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/debt-charities-for-consumers/",
+      "display_text": "/articles/debt-charities-for-consumers/"
+    },
+    {
+      "id": "11765829359",
+      "name": "Debt Creditor Pressure Hub",
+      "path": "/debt-creditor-pressure-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/debt-creditor-pressure-hub/",
+      "display_text": "/debt-creditor-pressure-hub/"
+    },
+    {
+      "id": "11624457031",
+      "name": "Director Accountancy Errors",
+      "path": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+      "display_text": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/"
+    },
+    {
+      "id": "11624424455",
+      "name": "Director Conduct Review",
+      "path": "/liquidation/director-conduct-review/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/director-conduct-review/",
+      "display_text": "/liquidation/director-conduct-review/"
+    },
+    {
+      "id": "11624424785",
+      "name": "Director Hides Assets",
+      "path": "/liquidation/what-happens-if-a-director-hides-company-assets/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-if-a-director-hides-company-assets/",
+      "display_text": "/liquidation/what-happens-if-a-director-hides-company-assets/"
+    },
+    {
+      "id": "11765819423",
+      "name": "Director Protection Hub",
+      "path": "/director-protection-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/director-protection-hub/",
+      "display_text": "/director-protection-hub/"
+    },
+    {
+      "id": "11624441207",
+      "name": "Director Resigns Before Liquidation",
+      "path": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+      "display_text": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/"
+    },
+    {
+      "id": "11624423765",
+      "name": "Director Transfers Assets",
+      "path": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+      "display_text": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/"
+    },
+    {
+      "id": "11624394357",
+      "name": "Directors Disqualification",
+      "path": "/advice/directors-disqualification/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/advice/directors-disqualification/",
+      "display_text": "/advice/directors-disqualification/"
+    },
+    {
+      "id": "11765811669",
+      "name": "Dissolution",
+      "path": "/case-studies/dissolution/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/dissolution/",
+      "display_text": "/case-studies/dissolution/"
+    },
+    {
+      "id": "11765834434",
+      "name": "Dry Cleaning Laundry",
+      "path": "/sectors/dry-cleaning-laundry/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/dry-cleaning-laundry/",
+      "display_text": "/sectors/dry-cleaning-laundry/"
+    },
+    {
+      "id": "11765837090",
+      "name": "Energy",
+      "path": "/sectors/energy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/energy/",
+      "display_text": "/sectors/energy/"
+    },
+    {
+      "id": "11624439051",
+      "name": "Energy Provider Insolvency",
+      "path": "/energy-provider-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/energy-provider-insolvency/",
+      "display_text": "/energy-provider-insolvency/"
+    },
+    {
+      "id": "11765838661",
+      "name": "Equestrian Failed Company Voluntary Arrangement Administration",
+      "path": "/articles/equestrian-failed-company-voluntary-arrangement-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/equestrian-failed-company-voluntary-arrangement-administration/",
+      "display_text": "/articles/equestrian-failed-company-voluntary-arrangement-administration/"
+    },
+    {
+      "id": "11765854944",
+      "name": "Events",
+      "path": "/sectors/events/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/events/",
+      "display_text": "/sectors/events/"
+    },
+    {
+      "id": "11765934179",
+      "name": "Failed Arena Television Leaves Trail Of Losses And Faces Fraud Probe",
+      "path": "/articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/",
+      "display_text": "/articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/"
+    },
+    {
+      "id": "11765826070",
+      "name": "Find Out Why The Transport Industry Is Prone To Insolvency",
+      "path": "/articles/find-out-why-the-transport-industry-is-prone-to-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/find-out-why-the-transport-industry-is-prone-to-insolvency/",
+      "display_text": "/articles/find-out-why-the-transport-industry-is-prone-to-insolvency/"
+    },
+    {
+      "id": "11765934648",
+      "name": "Gyms",
+      "path": "/sectors/gyms/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/gyms/",
+      "display_text": "/sectors/gyms/"
+    },
+    {
+      "id": "11765811716",
+      "name": "Hairdresser",
+      "path": "/case-studies/hairdresser/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/hairdresser/",
+      "display_text": "/case-studies/hairdresser/"
+    },
+    {
+      "id": "11765830638",
+      "name": "Hardware Maintenance",
+      "path": "/case-studies/hardware-maintenance/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/hardware-maintenance/",
+      "display_text": "/case-studies/hardware-maintenance/"
+    },
+    {
+      "id": "11765922225",
+      "name": "Haulage",
+      "path": "/sectors/haulage/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/haulage/",
+      "display_text": "/sectors/haulage/"
+    },
+    {
+      "id": "11624434345",
+      "name": "HMRC Criminal Investigations",
+      "path": "/hmrc/hmrc-criminal-investigations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-criminal-investigations/",
+      "display_text": "/hmrc/hmrc-criminal-investigations/"
+    },
+    {
+      "id": "11624426608",
+      "name": "HMRC Debt Enforcement Hub",
+      "path": "/hmrc/hmrc-debt-enforcement-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-debt-enforcement-hub/",
+      "display_text": "/hmrc/hmrc-debt-enforcement-hub/"
+    },
+    {
+      "id": "11624453513",
+      "name": "HMRC Enforcement Action",
+      "path": "/hmrc/hmrc-enforcement-action/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-enforcement-action/",
+      "display_text": "/hmrc/hmrc-enforcement-action/"
+    },
+    {
+      "id": "11624438228",
+      "name": "HMRC Follower Notice",
+      "path": "/hmrc/hmrc-follower-notice/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/hmrc-follower-notice/",
+      "display_text": "/hmrc/hmrc-follower-notice/"
+    },
+    {
+      "id": "11624458767",
+      "name": "HMRC Freezes Bank Account",
+      "path": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+      "display_text": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/"
+    },
+    {
+      "id": "11624445602",
+      "name": "HMRC Rejects Time to Pay",
+      "path": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+      "display_text": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/"
+    },
+    {
+      "id": "11624441644",
+      "name": "HMRC Sends Bailiffs",
+      "path": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+      "display_text": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/"
+    },
+    {
+      "id": "11765829152",
+      "name": "Hold Action On My Account",
+      "path": "/sample-letters/hold-action-on-my-account/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sample-letters/hold-action-on-my-account/",
+      "display_text": "/sample-letters/hold-action-on-my-account/"
+    },
+    {
+      "id": "11765826274",
+      "name": "How Will Carillions Insolvency Effect Its Supply Chain",
+      "path": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+      "display_text": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/"
+    },
+    {
+      "id": "11624453730",
+      "name": "Ignoring HMRC Letters",
+      "path": "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+      "display_text": "/hmrc/what-happens-if-you-ignore-hmrc-letters/"
+    },
+    {
+      "id": "11765818965",
+      "name": "Individual Voluntary Arrangement",
+      "path": "/case-studies/individual-voluntary-arrangement/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/individual-voluntary-arrangement/",
+      "display_text": "/case-studies/individual-voluntary-arrangement/"
+    },
+    {
+      "id": "11765922577",
+      "name": "Individual Voluntary Arrangement With New Limited Company",
+      "path": "/case-studies/individual-voluntary-arrangement-with-new-limited-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/individual-voluntary-arrangement-with-new-limited-company/",
+      "display_text": "/case-studies/individual-voluntary-arrangement-with-new-limited-company/"
+    },
+    {
+      "id": "11765838609",
+      "name": "Information Technology",
+      "path": "/case-studies/information-technology/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/information-technology/",
+      "display_text": "/case-studies/information-technology/"
+    },
+    {
+      "id": "11765830644",
+      "name": "Insolvencies Within The Technology Sector",
+      "path": "/articles/insolvencies-within-the-technology-sector/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/insolvencies-within-the-technology-sector/",
+      "display_text": "/articles/insolvencies-within-the-technology-sector/"
+    },
+    {
+      "id": "11624438800",
+      "name": "Insolvency Myths Debunked",
+      "path": "/liquidation/insolvency-myths-debunked/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/insolvency-myths-debunked/",
+      "display_text": "/liquidation/insolvency-myths-debunked/"
+    },
+    {
+      "id": "11765826849",
+      "name": "Insolvency Rescue Fish Chip Sector",
+      "path": "/sectors/insolvency-rescue-fish-chip-sector/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/insolvency-rescue-fish-chip-sector/",
+      "display_text": "/sectors/insolvency-rescue-fish-chip-sector/"
+    },
+    {
+      "id": "11765833568",
+      "name": "Insolvency Rescue Solutions For Garden Centers",
+      "path": "/sectors/insolvency-rescue-solutions-for-garden-centers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/insolvency-rescue-solutions-for-garden-centers/",
+      "display_text": "/sectors/insolvency-rescue-solutions-for-garden-centers/"
+    },
+    {
+      "id": "11624425753",
+      "name": "Insolvency vs Bankruptcy",
+      "path": "/liquidation/insolvency-vs-bankruptcy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/insolvency-vs-bankruptcy/",
+      "display_text": "/liquidation/insolvency-vs-bankruptcy/"
+    },
+    {
+      "id": "11624423437",
+      "name": "Insolvent Company Investigations",
+      "path": "/insolvency/insolvent-company-investigations/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/insolvent-company-investigations/",
+      "display_text": "/insolvency/insolvent-company-investigations/"
+    },
+    {
+      "id": "11765830986",
+      "name": "It Consultancy",
+      "path": "/case-studies/it-consultancy/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/it-consultancy/",
+      "display_text": "/case-studies/it-consultancy/"
+    },
+    {
+      "id": "11765828532",
+      "name": "Jeweller",
+      "path": "/case-studies/jeweller/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/jeweller/",
+      "display_text": "/case-studies/jeweller/"
+    },
+    {
+      "id": "11765823065",
+      "name": "Leeds Dino Trail Collapses Into Administration",
+      "path": "/articles/leeds-dino-trail-collapses-into-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/leeds-dino-trail-collapses-into-administration/",
+      "display_text": "/articles/leeds-dino-trail-collapses-into-administration/"
+    },
+    {
+      "id": "11765855216",
+      "name": "Leisure",
+      "path": "/sectors/leisure/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/leisure/",
+      "display_text": "/sectors/leisure/"
+    },
+    {
+      "id": "11624425147",
+      "name": "Light Touch Administration",
+      "path": "/company-administration/light-touch-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-administration/light-touch-administration/",
+      "display_text": "/company-administration/light-touch-administration/"
+    },
+    {
+      "id": "11624437548",
+      "name": "Liquidating a Charity",
+      "path": "/liquidation/liquidating-a-charity-or-non-profit/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidating-a-charity-or-non-profit/",
+      "display_text": "/liquidation/liquidating-a-charity-or-non-profit/"
+    },
+    {
+      "id": "11624437473",
+      "name": "Liquidating to Avoid Paying Suppliers",
+      "path": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+      "display_text": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/"
+    },
+    {
+      "id": "11624433879",
+      "name": "Liquidating With a BBL",
+      "path": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+      "display_text": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/"
+    },
+    {
+      "id": "11624425693",
+      "name": "Liquidation Hub",
+      "path": "/liquidation/liquidation-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/liquidation-hub/",
+      "display_text": "/liquidation/liquidation-hub/"
+    },
+    {
+      "id": "11765828391",
+      "name": "Managing Debt Related Stress",
+      "path": "/articles/managing-debt-related-stress/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/managing-debt-related-stress/",
+      "display_text": "/articles/managing-debt-related-stress/"
+    },
+    {
+      "id": "11765829703",
+      "name": "Manufacturing",
+      "path": "/sectors/manufacturing/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/manufacturing/",
+      "display_text": "/sectors/manufacturing/"
+    },
+    {
+      "id": "11624450638",
+      "name": "Manufacturing Insolvency",
+      "path": "/manufacturing-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/manufacturing-insolvency/",
+      "display_text": "/manufacturing-insolvency/"
+    },
+    {
+      "id": "11624482651",
+      "name": "Mental Health and Debt Stress",
+      "path": "/mental-health-debt-stress-support/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/mental-health-debt-stress-support/",
+      "display_text": "/mental-health-debt-stress-support/"
+    },
+    {
+      "id": "11765819605",
+      "name": "Mental Health Debt Stress Support",
+      "path": "/mental-health-debt-stress-support/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/mental-health-debt-stress-support/",
+      "display_text": "/mental-health-debt-stress-support/"
+    },
+    {
+      "id": "11765921845",
+      "name": "Monarch Airline Insolvency",
+      "path": "/articles/monarch-airline-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/monarch-airline-insolvency/",
+      "display_text": "/articles/monarch-airline-insolvency/"
+    },
+    {
+      "id": "11765854392",
+      "name": "More Small Energy Providers Face Collapse As Crisis Deepens",
+      "path": "/articles/more-small-energy-providers-face-collapse-as-crisis-deepens/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/more-small-energy-providers-face-collapse-as-crisis-deepens/",
+      "display_text": "/articles/more-small-energy-providers-face-collapse-as-crisis-deepens/"
+    },
+    {
+      "id": "11765823426",
+      "name": "Online Travel Agent",
+      "path": "/case-studies/online-travel-agent/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/online-travel-agent/",
+      "display_text": "/case-studies/online-travel-agent/"
+    },
+    {
+      "id": "11765828890",
+      "name": "Paradise Papers",
+      "path": "/articles/paradise-papers/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/paradise-papers/",
+      "display_text": "/articles/paradise-papers/"
+    },
+    {
+      "id": "11624411393",
+      "name": "Pay HMRC or Suppliers First?",
+      "path": "/hmrc/pay-hmrc-or-suppliers-first/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/hmrc/pay-hmrc-or-suppliers-first/",
+      "display_text": "/hmrc/pay-hmrc-or-suppliers-first/"
+    },
+    {
+      "id": "11765832905",
+      "name": "Personal Guarantees",
+      "path": "/case-studies/personal-guarantees/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/personal-guarantees/",
+      "display_text": "/case-studies/personal-guarantees/"
+    },
+    {
+      "id": "11765854888",
+      "name": "Pet Store",
+      "path": "/case-studies/pet-store/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/pet-store/",
+      "display_text": "/case-studies/pet-store/"
+    },
+    {
+      "id": "11765854645",
+      "name": "Pink Biscuit Manufacturer Rivington Biscuits Goes Company Administration",
+      "path": "/articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/",
+      "display_text": "/articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/"
+    },
+    {
+      "id": "11765839119",
+      "name": "Pizza Restaurant",
+      "path": "/case-studies/pizza-restaurant/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/pizza-restaurant/",
+      "display_text": "/case-studies/pizza-restaurant/"
+    },
+    {
+      "id": "11765828751",
+      "name": "Plastering Company",
+      "path": "/case-studies/plastering-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/plastering-company/",
+      "display_text": "/case-studies/plastering-company/"
+    },
+    {
+      "id": "11765819050",
+      "name": "Plumbing",
+      "path": "/case-studies/plumbing/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/plumbing/",
+      "display_text": "/case-studies/plumbing/"
+    },
+    {
+      "id": "11765828712",
+      "name": "Poolmageddon 79 Of Uk Pools May Close Within 6 Months",
+      "path": "/articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/",
+      "display_text": "/articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/"
+    },
+    {
+      "id": "11624445929",
+      "name": "Pre-Pack Administration",
+      "path": "/company-rescue-solutions/pre-packs/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/what-is-a-pre-pack-administration/",
+      "display_text": "/company-rescue-solutions/pre-packs/"
+    },
+    {
+      "id": "11765854879",
+      "name": "Prize Draw Terms Conditions",
+      "path": "/prize-draw-terms-conditions/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/prize-draw-terms-conditions/",
+      "display_text": "/prize-draw-terms-conditions/"
+    },
+    {
+      "id": "11765829504",
+      "name": "Professional Services",
+      "path": "/sectors/professional-services/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/professional-services/",
+      "display_text": "/sectors/professional-services/"
+    },
+    {
+      "id": "11624458168",
+      "name": "Professional Services Insolvency",
+      "path": "/professional-services-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/professional-services-insolvency/",
+      "display_text": "/professional-services-insolvency/"
+    },
+    {
+      "id": "11765922853",
+      "name": "Property",
+      "path": "/sectors/property/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/property/",
+      "display_text": "/sectors/property/"
+    },
+    {
+      "id": "11765922526",
+      "name": "Recruitment",
+      "path": "/sectors/recruitment/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/recruitment/",
+      "display_text": "/sectors/recruitment/"
+    },
+    {
+      "id": "11765830697",
+      "name": "Recruitment Consultant",
+      "path": "/case-studies/recruitment-consultant/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/recruitment-consultant/",
+      "display_text": "/case-studies/recruitment-consultant/"
+    },
+    {
+      "id": "11624445888",
+      "name": "Reduce Insolvency Risk",
+      "path": "/insolvency/how-to-reduce-insolvency-risk/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/how-to-reduce-insolvency-risk/",
+      "display_text": "/insolvency/how-to-reduce-insolvency-risk/"
+    },
+    {
+      "id": "11624455105",
+      "name": "Rescue From Insolvency",
+      "path": "/insolvency/rescue-your-business-from-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/rescue-your-business-from-insolvency/",
+      "display_text": "/insolvency/rescue-your-business-from-insolvency/"
+    },
+    {
+      "id": "11624430181",
+      "name": "Rescue Solutions Hub",
+      "path": "/company-rescue-solutions/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/",
+      "display_text": "/company-rescue-solutions/"
+    },
+    {
+      "id": "11765823661",
+      "name": "Retail",
+      "path": "/sectors/retail/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/retail/",
+      "display_text": "/sectors/retail/"
+    },
+    {
+      "id": "11624426674",
+      "name": "Risk of Director Disqualification",
+      "path": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+      "display_text": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/"
+    },
+    {
+      "id": "11765855221",
+      "name": "Schools",
+      "path": "/sectors/schools/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/schools/",
+      "display_text": "/sectors/schools/"
+    },
+    {
+      "id": "11765819368",
+      "name": "Sector Insolvency Hub",
+      "path": "/sector-insolvency-hub/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sector-insolvency-hub/",
+      "display_text": "/sector-insolvency-hub/"
+    },
+    {
+      "id": "11765823453",
+      "name": "Sector Specific Insolvency",
+      "path": "/sector-specific-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sector-specific-insolvency/",
+      "display_text": "/sector-specific-insolvency/"
+    },
+    {
+      "id": "11765934231",
+      "name": "Sectors",
+      "path": "/sectors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/sectors/",
+      "display_text": "/sectors/"
+    },
+    {
+      "id": "11624455714",
+      "name": "Seek Advice Before Missing Payments",
+      "path": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/seek-insolvency-advice-before-missing-payments/",
+      "display_text": "/liquidation/seek-insolvency-advice-before-missing-payments/"
+    },
+    {
+      "id": "11624478632",
+      "name": "Sell an Insolvent Company",
+      "path": "/insolvency/can-you-sell-your-insolvent-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/can-you-sell-your-insolvent-company/",
+      "display_text": "/insolvency/can-you-sell-your-insolvent-company/"
+    },
+    {
+      "id": "11765858065",
+      "name": "Services To",
+      "path": "/services-to/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/",
+      "display_text": "/services-to/"
+    },
+    {
+      "id": "11765823740",
+      "name": "Solicitors",
+      "path": "/services-to/solicitors/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/services-to/solicitors/",
+      "display_text": "/services-to/solicitors/"
+    },
+    {
+      "id": "11624479014",
+      "name": "Stop or Avoid Insolvency",
+      "path": "/insolvency/stop-or-avoid-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/stop-or-avoid-insolvency/",
+      "display_text": "/insolvency/stop-or-avoid-insolvency/"
+    },
+    {
+      "id": "11624453297",
+      "name": "Stop Paying Company Debts",
+      "path": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/what-happens-if-i-stop-paying-company-debts/",
+      "display_text": "/liquidation/what-happens-if-i-stop-paying-company-debts/"
+    },
+    {
+      "id": "11765922803",
+      "name": "Terms Conditions",
+      "path": "/terms-conditions/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/terms-conditions/",
+      "display_text": "/terms-conditions/"
+    },
+    {
+      "id": "11765922267",
+      "name": "Tescos Rated Worst Payer Uk Small Businesses",
+      "path": "/articles/tescos-rated-worst-payer-uk-small-businesses/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/articles/tescos-rated-worst-payer-uk-small-businesses/",
+      "display_text": "/articles/tescos-rated-worst-payer-uk-small-businesses/"
+    },
+    {
+      "id": "11765838797",
+      "name": "Time To Pay And Creditor Voluntary Liquidation",
+      "path": "/case-studies/time-to-pay-and-creditor-voluntary-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/time-to-pay-and-creditor-voluntary-liquidation/",
+      "display_text": "/case-studies/time-to-pay-and-creditor-voluntary-liquidation/"
+    },
+    {
+      "id": "11624423782",
+      "name": "Trade Out of Insolvency",
+      "path": "/insolvency/can-we-trade-out-of-insolvency/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/can-we-trade-out-of-insolvency/",
+      "display_text": "/insolvency/can-we-trade-out-of-insolvency/"
+    },
+    {
+      "id": "11624416394",
+      "name": "Transactions at Undervalue",
+      "path": "/insolvency/transactions-at-undervalue/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/insolvency/transactions-at-undervalue/",
+      "display_text": "/insolvency/transactions-at-undervalue/"
+    },
+    {
+      "id": "11624425599",
+      "name": "UK Insolvency Glossary",
+      "path": "/liquidation/uk-insolvency-glossary/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/uk-insolvency-glossary/",
+      "display_text": "/liquidation/uk-insolvency-glossary/"
+    },
+    {
+      "id": "11624425143",
+      "name": "Use CVA to Close a Company",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/"
+    },
+    {
+      "id": "11624453279",
+      "name": "Voluntary Liquidation",
+      "path": "/liquidation/voluntary-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/voluntary-liquidation/",
+      "display_text": "/liquidation/voluntary-liquidation/"
+    },
+    {
+      "id": "11624454687",
+      "name": "When a CVA Fails",
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+      "display_text": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/"
+    },
+    {
+      "id": "11624424852",
+      "name": "When to Stop Trading",
+      "path": "/liquidation/when-should-a-director-stop-trading/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/when-should-a-director-stop-trading/",
+      "display_text": "/liquidation/when-should-a-director-stop-trading/"
+    },
+    {
+      "id": "11624423319",
+      "name": "Why Debt Is Not Always Bad",
+      "path": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+      "display_text": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/"
+    },
+    {
+      "id": "11765826702",
+      "name": "Womens Fashion Store",
+      "path": "/case-studies/womens-fashion-store/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/case-studies/womens-fashion-store/",
+      "display_text": "/case-studies/womens-fashion-store/"
+    },
+    {
+      "id": "11624441472",
+      "name": "WUP vs Compulsory Liquidation",
+      "path": "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+      "existing_live_url": "",
+      "live_url": "https://www.companydebt.com/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+      "display_text": "/liquidation/winding-up-petition-vs-compulsory-liquidation/"
+    }
+  ],
+  "skip_404_or_error": [
+    {
+      "id": "11624438622",
+      "name": "Hospitality Insolvency",
+      "path": "/hospitality-restaurant-insolvency/",
+      "existing_live_url": "",
+      "status": 500,
+      "final_url": "https://www.companydebt.com/hospitality-restaurant-insolvency/"
+    }
+  ],
+  "skip_existing": [],
+  "skip_redirect_offsite": [],
+  "no_path": []
+}
