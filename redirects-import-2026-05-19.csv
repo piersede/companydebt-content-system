@@ -35,3 +35,9 @@ source url,target url,redirect code,description
 /invoice-finance/,/company-cash-flow-problems/,301,Invoice finance hub deleted
 /liquidation/striking-off-dissolving-company/,/closing-a-limited-company/,301,Strike-off article deleted
 /download-our-covid-19-business-survival-guide/,/bounce-back-loan-support-hub/,301,COVID guide download removed
+/articles/coronavirus-business-help/,/liquidation/,301,Fix broken chain — /coronavirus-business-help/ destination was 404
+/articles/could-you-be-held-personally-liable-for-your-business-debts/,/winding-up-petitions/personal-liability/,301,DR39 backlinks — personal liability article
+/articles/tourism-sector-faces-6-2bn-loss/,/liquidation/,301,DR39 backlinks — tourism sector article
+/articles/warning-signs-consequences-of-business-insolvency/,/liquidation/,301,DR37 backlinks — insolvency warning signs article
+/articles/if-you-dont-pay-back-a-bounce-back-loan/,/liquidation/,301,Backlinks lost — tidy redirect
+/articles/communicating-with-creditors/,/liquidation/,301,Backlinks lost — tidy redirect
