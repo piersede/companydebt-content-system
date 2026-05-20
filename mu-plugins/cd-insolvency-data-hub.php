@@ -119,16 +119,63 @@ add_action( 'wp_head', function() {
     $page_url = home_url( '/uk-insolvency-statistics/' );
     $modified = get_the_modified_date( 'Y-m-d', get_queried_object_id() );
 
+    $faq_items = array(
+        array(
+            'q' => 'How many UK company insolvencies were there in April 2026?',
+            'a' => 'There were 2,085 registered company insolvencies in England and Wales in April 2026, on a seasonally adjusted basis. That was 2% higher than March 2026 and 3% higher than April 2025. Scotland recorded 107 insolvencies and Northern Ireland 40 in the same month.',
+        ),
+        array(
+            'q' => 'What is the current UK company insolvency rate?',
+            'a' => 'The 12-month rolling company insolvency rate for England and Wales was 51.8 per 10,000 active companies in the year to April 2026 — equal to one in 193 companies. The rate is slightly lower than the 52.5 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession.',
+        ),
+        array(
+            'q' => 'Which procedure accounts for the most UK company insolvencies?',
+            'a' => "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,510 CVLs in April 2026 — 72% of all company insolvencies for the month. Compulsory liquidations (371) and administrations (183) followed, with very small numbers of CVAs (20) and receiverships (1).",
+        ),
+        array(
+            'q' => 'Which UK sectors have the most company insolvencies?',
+            'a' => 'Across the 12 months to March 2026, construction (3,827, 16%), wholesale and retail (3,642, 16%), and accommodation and food services (3,295, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies.',
+        ),
+        array(
+            'q' => 'When is the next UK insolvency statistics release?',
+            'a' => 'The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 19 June 2026. This page is updated each month from the official release.',
+        ),
+        array(
+            'q' => 'Where does this UK insolvency data come from?',
+            'a' => 'Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them.',
+        ),
+    );
+
+    $faq_main_entities = array();
+    foreach ( $faq_items as $item ) {
+        $faq_main_entities[] = array(
+            '@type'          => 'Question',
+            'name'           => $item['q'],
+            'acceptedAnswer' => array(
+                '@type' => 'Answer',
+                'text'  => $item['a'],
+            ),
+        );
+    }
+
     $schema = array(
         '@context' => 'https://schema.org',
         '@graph'   => array(
             array(
                 '@type'        => 'WebPage',
                 '@id'          => $page_url . '#webpage',
-                'name'         => 'UK Company Insolvency Statistics 2026',
-                'description'  => 'Monthly UK company insolvency statistics using Insolvency Service and Companies House data. Track CVLs, compulsory liquidations, administrations, insolvency rates and sector trends.',
+                'name'         => 'UK Company Insolvency Statistics: April 2026 Update',
+                'description'  => 'Latest UK company insolvency statistics — April 2026 figures from the Insolvency Service (published 19 May 2026). Monthly headline counts, the 12-month rolling rate, sector breakdown and UK-nations comparison.',
                 'dateModified' => $modified,
+                'datePublished'=> $modified,
+                'inLanguage'   => 'en-GB',
                 'publisher'    => array( '@id' => home_url( '/' ) . '#organization' ),
+                'about'        => array(
+                    array( '@type' => 'Thing', 'name' => 'UK company insolvency' ),
+                    array( '@type' => 'Thing', 'name' => 'Creditors voluntary liquidation' ),
+                    array( '@type' => 'Thing', 'name' => 'Compulsory liquidation' ),
+                    array( '@type' => 'Thing', 'name' => 'Company administration' ),
+                ),
             ),
             array(
                 '@type' => 'Organization',
@@ -139,15 +186,15 @@ add_action( 'wp_head', function() {
             array(
                 '@type'           => 'BreadcrumbList',
                 'itemListElement' => array(
-                    array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',                                 'item' => home_url( '/' ) ),
-                    array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Insolvency',                           'item' => home_url( '/insolvency/' ) ),
-                    array( '@type' => 'ListItem', 'position' => 3, 'name' => 'UK Company Insolvency Statistics 2026','item' => $page_url ),
+                    array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',                                                  'item' => home_url( '/' ) ),
+                    array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Insolvency',                                            'item' => home_url( '/insolvency/' ) ),
+                    array( '@type' => 'ListItem', 'position' => 3, 'name' => 'UK Company Insolvency Statistics: April 2026 Update',   'item' => $page_url ),
                 ),
             ),
             array(
                 '@type'                => 'Dataset',
-                'name'                 => 'UK Company Insolvency Statistics 2026',
-                'description'          => 'Monthly company insolvency statistics for the United Kingdom by procedure, sector and jurisdiction, presented from official Insolvency Service and Companies House releases.',
+                'name'                 => 'UK Company Insolvency Statistics: April 2026',
+                'description'          => 'Monthly company insolvency statistics for the United Kingdom by procedure, sector and jurisdiction. April 2026 release published 19 May 2026 by the Insolvency Service. Includes headline counts (2,085 England and Wales) and the 12-month rolling rate (51.8 per 10,000).',
                 'creator'              => array(
                     '@type' => 'GovernmentOrganization',
                     'name'  => 'Insolvency Service',
@@ -156,10 +203,17 @@ add_action( 'wp_head', function() {
                 'publisher'            => array( '@id' => home_url( '/' ) . '#organization' ),
                 'spatialCoverage'      => array( '@type' => 'Place', 'name' => 'United Kingdom' ),
                 'temporalCoverage'     => '2000-01/2026-04',
-                'isBasedOn'            => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Administrative company insolvency records and Companies House register data.',
+                'datePublished'        => '2026-05-19',
                 'dateModified'         => $modified,
+                'isBasedOn'            => 'https://www.gov.uk/government/statistics/company-insolvencies-april-2026/commentary-company-insolvency-statistics-april-2026',
+                'measurementTechnique' => 'Administrative company insolvency records and Companies House register data.',
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'keywords'             => 'UK company insolvency, insolvency statistics, CVL statistics, compulsory liquidation, administration, insolvency rate, sector insolvency',
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $faq_main_entities,
             ),
         ),
     );

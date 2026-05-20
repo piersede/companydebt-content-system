@@ -25,6 +25,11 @@ body.page-template-data-hub-template .col-12.main-content.data-hub-content {
     max-width: 100%;
 }
 body.page-template-data-hub-template .cd-data-hub { max-width: none; }
+/* The dashboard uses width:100vw + negative-margin bleed sections. On mobile
+   the parent container is slightly narrower than the viewport (scrollbar gutter),
+   which makes those sections push past the body. Clip horizontal overflow at
+   the body level so nothing escapes the viewport. */
+body.page-template-data-hub-template { overflow-x: hidden; }
 
 /* Theme rule `body.page .main-content h2/h3/p` is high specificity and will
    override the dashboard's scoped typography. Re-state at matching
@@ -36,34 +41,54 @@ body.page-template-data-hub-template .main-content .cd-data-hub h3 {
     margin-top: 0;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub h1 {
-    font-size: clamp(44px, 5vw, 68px);
-    line-height: 0.98;
+    font-size: clamp(40px, 5vw, 56px);
+    line-height: 1.02;
     letter-spacing: -0.04em;
     font-weight: 700;
-    margin: 0 0 1.25rem;
+    margin: 0 0 32px;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub h2 {
-    font-size: clamp(32px, 3.4vw, 44px);
-    line-height: 1.08;
+    font-size: 32px;
+    line-height: 1.12;
     letter-spacing: -0.025em;
     font-weight: 700;
     margin: 0;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub h3 {
-    font-size: 22px;
-    line-height: 1.25;
+    font-size: 20px;
+    line-height: 1.3;
     font-weight: 650;
-    margin: 1.5em 0 0.6em;
+    margin: 40px 0 16px;
+}
+/* Procedure card name is semantic H3 but visually a small uppercase label. */
+body.page-template-data-hub-template .main-content .cd-data-hub h3.cd-procard__name {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #667085;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+/* Long-run side-note value is semantic H3 but visually a calm 16px label. */
+body.page-template-data-hub-template .main-content .cd-data-hub h3.cd-side-note__v {
+    font-size: 16px;
+    font-weight: 650;
+    color: #101828;
+    margin: 0 0 6px;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    text-transform: none;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub p {
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.65;
-    margin: 0 0 18px;
+    margin: 0 0 16px;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub .cd-lede {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.55;
-    margin: 0 0 1.75rem;
+    margin: 0 0 32px;
     max-width: 660px;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-intro {
@@ -73,38 +98,54 @@ body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-intr
     max-width: 720px;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub .cd-source-note {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.55;
-    margin: 14px 0 0;
+    margin: 12px 0 0;
 }
 body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text p {
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.65;
 }
-/* Page-header (breadcrumbs + byline) sits in the WP .container at the top.
-   Match dashboard rhythm with a sensible margin below. */
+/* Page-header (breadcrumbs + byline) shares the hero's 1240px container so
+   all top elements align to the same left/right edges. */
 body.page-template-data-hub-template .page-header {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 16px 24px 0;
+    max-width: 1240px;
+    margin: 0 auto 32px;
+    padding: 24px 32px 0;
 }
+body.page-template-data-hub-template .page-header .breadcrumbs {
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+/* Byline as compact metadata, not attribution. Date is bolded — it carries
+   the freshness signal — and the author name sits in muted text. */
 body.page-template-data-hub-template .data-hub-byline {
-    margin: 0.5rem 0 0;
-    font-size: 14px;
-    color: #667085;
+    margin: 0;
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 400;
 }
-body.page-template-data-hub-template .data-hub-byline__by {
-    color: #98a2b3;
-    margin-right: 0.25rem;
+body.page-template-data-hub-template .data-hub-byline__by { color: #9ca3af; margin-right: 0.25rem; }
+body.page-template-data-hub-template .data-hub-byline__name { color: #9ca3af; font-weight: 400; }
+body.page-template-data-hub-template .data-hub-byline__sep { margin: 0 0.45rem; color: #d0d5dd; }
+body.page-template-data-hub-template .data-hub-byline__date { color: #4b5563; font-weight: 600; }
+/* Mobile: tighten page-header to match hero's mobile inline padding. */
+@media (max-width: 700px) {
+    body.page-template-data-hub-template .page-header {
+        padding: 24px 20px 0;
+        margin-bottom: 40px;
+    }
 }
-body.page-template-data-hub-template .data-hub-byline__name {
-    color: #101828;
-    font-weight: 500;
-}
-body.page-template-data-hub-template .data-hub-byline__sep {
-    margin: 0 0.45rem;
-    color: #d0d5dd;
-}
+/* Hide the theme's auto-injected Related Articles section on this template —
+   the data-hub brief specifies: keep only Source/citation and the bottom CTA
+   after the data sections. */
+body.page-template-data-hub-template .be-related-articles { display: none !important; }
+/* Hide the theme's auto-injected "Get Called Back" gravity-form widget that
+   the after-breadcrumbs-area hook prepends to every page. The dashboard
+   provides its own CTA at the bottom and the form above the data is noise. */
+body.page-template-data-hub-template #after-breadcrumbs-area,
+body.page-template-data-hub-template .section-cd-gravity-form-widget { display: none !important; }
 </style>
 
 <main id="primary" class="site-main">
@@ -128,10 +169,10 @@ body.page-template-data-hub-template .data-hub-byline__sep {
                         if ( $_hero_author_name ) {
                             ?>
                             <p class="data-hub-byline">
+                                <span class="data-hub-byline__date">Reviewed <?php echo get_the_modified_date('j F Y'); ?></span>
+                                <span class="data-hub-byline__sep" aria-hidden="true">·</span>
                                 <span class="data-hub-byline__by">By</span>
                                 <span class="data-hub-byline__name"><?php echo esc_html($_hero_author_name); ?></span>
-                                <span class="data-hub-byline__sep" aria-hidden="true">·</span>
-                                <span class="data-hub-byline__date">Reviewed on <?php echo get_the_modified_date('j F Y'); ?></span>
                             </p>
                             <?php
                         }

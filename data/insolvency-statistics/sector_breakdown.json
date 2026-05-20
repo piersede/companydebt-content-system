@@ -1,0 +1,154 @@
+{
+  "window_start": "Apr 2025",
+  "window_end": "Mar 2026",
+  "total_known_sector": 23266,
+  "sections": [
+    {
+      "code": "F",
+      "label_short": "Construction",
+      "label_full": "Construction",
+      "count": 3827,
+      "share_pct": 16
+    },
+    {
+      "code": "G",
+      "label_short": "Wholesale and retail",
+      "label_full": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+      "count": 3642,
+      "share_pct": 16
+    },
+    {
+      "code": "I",
+      "label_short": "Accommodation and food",
+      "label_full": "Accommodation and food service activities",
+      "count": 3295,
+      "share_pct": 14
+    },
+    {
+      "code": "N",
+      "label_short": "Admin and support",
+      "label_full": "Administrative and support service activities",
+      "count": 2374,
+      "share_pct": 10
+    },
+    {
+      "code": "M",
+      "label_short": "Professional services",
+      "label_full": "Professional, scientific and technical activities",
+      "count": 2002,
+      "share_pct": 9
+    },
+    {
+      "code": "C",
+      "label_short": "Manufacturing",
+      "label_full": "Manufacturing",
+      "count": 1876,
+      "share_pct": 8
+    },
+    {
+      "code": "J",
+      "label_short": "Information and communication",
+      "label_full": "Information and communication",
+      "count": 1437,
+      "share_pct": 6
+    },
+    {
+      "code": "S",
+      "label_short": "Other services",
+      "label_full": "Other service activities",
+      "count": 1012,
+      "share_pct": 4
+    },
+    {
+      "code": "L",
+      "label_short": "Real estate",
+      "label_full": "Real estate activities",
+      "count": 896,
+      "share_pct": 4
+    },
+    {
+      "code": "H",
+      "label_short": "Transport and storage",
+      "label_full": "Transport and storage",
+      "count": 707,
+      "share_pct": 3
+    },
+    {
+      "code": "Q",
+      "label_short": "Health and social work",
+      "label_full": "Human health and social work activities",
+      "count": 642,
+      "share_pct": 3
+    },
+    {
+      "code": "K",
+      "label_short": "Finance and insurance",
+      "label_full": "Financial and insurance activities",
+      "count": 481,
+      "share_pct": 2
+    },
+    {
+      "code": "R",
+      "label_short": "Arts and recreation",
+      "label_full": "Arts, entertainment and recreation",
+      "count": 476,
+      "share_pct": 2
+    },
+    {
+      "code": "P",
+      "label_short": "Education",
+      "label_full": "Education",
+      "count": 246,
+      "share_pct": 1
+    },
+    {
+      "code": "E",
+      "label_short": "Water and waste",
+      "label_full": "Water supply; sewerage, waste management and remediation activities",
+      "count": 154,
+      "share_pct": 1
+    },
+    {
+      "code": "A",
+      "label_short": "Agriculture",
+      "label_full": "Agriculture, forestry and fishing",
+      "count": 81,
+      "share_pct": 0
+    },
+    {
+      "code": "D",
+      "label_short": "Electricity and gas",
+      "label_full": "Electricity, gas, steam and air conditioning supply",
+      "count": 55,
+      "share_pct": 0
+    },
+    {
+      "code": "B",
+      "label_short": "Mining and quarrying",
+      "label_full": "Mining and quarrying",
+      "count": 26,
+      "share_pct": 0
+    },
+    {
+      "code": "O",
+      "label_short": "Public administration",
+      "label_full": "Public administration and defence; compulsory social security",
+      "count": 26,
+      "share_pct": 0
+    },
+    {
+      "code": "T",
+      "label_short": "Households as employers",
+      "label_full": "Activities of households as employers",
+      "count": 8,
+      "share_pct": 0
+    },
+    {
+      "code": "U",
+      "label_short": "Extraterritorial",
+      "label_full": "Activities of extraterritorial organisations and bodies",
+      "count": 3,
+      "share_pct": 0
+    }
+  ]
+}
