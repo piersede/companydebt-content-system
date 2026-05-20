@@ -53,7 +53,7 @@
     $heading = 'Related Articles';
 
     // Static 4-card grid (no carousel) -- cap at 4 if editors added more.
-    $related_articles = array_slice( $related_articles, 0, 4 );
+    $related_articles = array_slice( (array) $related_articles, 0, 4 );
 ?>
 <?php
 if ( ! empty( $related_articles ) ) :
