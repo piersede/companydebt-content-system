@@ -53,7 +53,9 @@
     $heading = 'Related Articles';
 
     // Static 4-card grid (no carousel) -- cap at 4 if editors added more.
-    $related_articles = array_slice( (array) $related_articles, 0, 4 );
+    // Guard: ACF returns false (not []) for an empty field; (array)false = [false] which
+    // causes the loop to run once with id=false, falling back to the current $post.
+    $related_articles = array_slice( is_array( $related_articles ) ? $related_articles : [], 0, 4 );
 ?>
 <?php
 if ( ! empty( $related_articles ) ) :
