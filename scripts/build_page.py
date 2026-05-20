@@ -66,6 +66,7 @@ PAGE_REGISTRY = {
     # Page-class routing for these slugs is in scripts/page_runtime_metadata.py
     # SLUG_PAGE_CLASS_OVERRIDES.
     'liquidation': 'cc_builder.data.pages.liquidation',
+    'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
 }
 
 
@@ -101,6 +102,31 @@ def build_page(slug: str) -> tuple[str, dict]:
     elif page_type == 'guide':
         from cc_builder.page_types.guide import assemble
         content = assemble(config, cards, separate_cards)
+    elif page_type in ('data_reference', 'definition', 'process_guide', 'hub'):
+        # Insolvency and editorial pages: read content directly from the draft file.
+        # Draft files live at drafts/{wp_page_id}_{slug}.html and contain WordPress
+        # block content preceded by metadata comment lines (<!-- TITLE: ... --> etc.).
+        wp_id = config.get('wp_page_id', '')
+        slug = config.get('slug', '')
+        draft_path = SCRIPTS_DIR.parent / 'drafts' / f'{wp_id}_{slug}.html'
+        if not draft_path.exists():
+            print(f"ERROR: Draft file not found: {draft_path}")
+            sys.exit(1)
+        raw = draft_path.read_text(encoding='utf-8')
+        # Strip leading metadata comment lines and blank lines
+        lines = raw.splitlines()
+        content_lines = []
+        past_header = False
+        for line in lines:
+            if not past_header:
+                stripped = line.strip()
+                if stripped.startswith('<!-- TITLE:') or stripped.startswith('<!-- POST ID:') or stripped.startswith('<!-- LINK:'):
+                    continue
+                if stripped == '' and not content_lines:
+                    continue
+                past_header = True
+            content_lines.append(line)
+        content = '\n'.join(content_lines).strip()
     else:
         print(f"ERROR: Unknown page type '{page_type}'")
         sys.exit(1)
@@ -263,13 +289,20 @@ def main():
     block_count = content.count('<!-- wp:')
     print(f'Generated {block_count} blocks, {len(content):,} chars')
 
-    # Quality checks (always run, block publish on FAIL)
-    passed, violations = run_all_checks(config, content)
-    print_report(violations, args.page)
-    if not passed and args.publish:
-        print('\nERROR: Quality checks failed. Fix FAIL issues before publishing.',
-              file=sys.stderr)
-        sys.exit(1)
+    # Quality checks — CC assembler checks only; skip for editorial page types
+    # that go through the Bernstein pipeline gate instead.
+    _EDITORIAL_PAGE_TYPES = {'data_reference', 'definition', 'process_guide', 'hub'}
+    if config.get('page_type') in _EDITORIAL_PAGE_TYPES:
+        passed = True
+        violations = []
+        print(f'  (quality checks skipped for editorial page type: {config.get("page_type")})')
+    else:
+        passed, violations = run_all_checks(config, content)
+        print_report(violations, args.page)
+        if not passed and args.publish:
+            print('\nERROR: Quality checks failed. Fix FAIL issues before publishing.',
+                  file=sys.stderr)
+            sys.exit(1)
 
     # Write JSON output
     out_path = os.path.join(tempfile.gettempdir(), f'wp_push_{args.page}.json')

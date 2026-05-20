@@ -118,16 +118,25 @@ def create_authenticated_session(creds: dict) -> tuple[requests.Session, str]:
     has_http_auth = bool(creds.get("http_user") and creds.get("http_pass"))
 
     if has_http_auth:
-        # WP Engine staging: cookie-based auth
-        # Uses login credentials (WP_USERNAME/WP_PASSWORD), not app password
+        # WP Engine staging: cookie-based auth.
+        # The app password (WP_STAGING_APP_PASSWORD) is what wp-login.php currently
+        # accepts here — WP_PASSWORD started returning 403 after a recent WP Engine
+        # security change. Referer/Origin headers are also required for the POST.
         http_auth = (creds["http_user"], creds["http_pass"])
         wp_login_user = os.getenv("WP_USERNAME", creds["username"])
-        wp_login_pass = os.getenv("WP_PASSWORD", creds["password"])
+        wp_login_pass = creds["password"]
+
+        # GET wp-login.php first to set the test cookie nginx expects
+        session.get(f"{url}/wp-login.php", auth=http_auth, timeout=15)
 
         # Step 1: Log in via wp-login.php
         login_resp = session.post(
             f"{url}/wp-login.php",
             auth=http_auth,
+            headers={
+                "Referer": f"{url}/wp-login.php",
+                "Origin": url,
+            },
             data={
                 "log": wp_login_user,
                 "pwd": wp_login_pass,
@@ -138,10 +147,14 @@ def create_authenticated_session(creds: dict) -> tuple[requests.Session, str]:
             allow_redirects=True,
             timeout=30,
         )
-        wp_cookies = [c.name for c in session.cookies if "wordpress" in c.name.lower()]
-        if not wp_cookies:
+        auth_cookies = [
+            c.name for c in session.cookies
+            if c.name.startswith("wordpress_logged_in_") or c.name == "wpe-auth"
+        ]
+        if not auth_cookies:
             print(f"\nERROR: WP login failed — no auth cookies received.")
-            print(f"Check WP_USERNAME and WP_PASSWORD in .env.")
+            print(f"Login response status: {login_resp.status_code}")
+            print(f"Check WP_STAGING_USERNAME and WP_STAGING_APP_PASSWORD in .env.")
             sys.exit(1)
 
         # Step 2: Get REST nonce from admin page
