@@ -188,6 +188,8 @@
     aside.querySelectorAll("ul").forEach(function (ul) { ul.remove(); });
 
     // Append one group per category that has items
+    let totalCount = 0;
+    let firstCatCount = 0;
     CATEGORIES.forEach(function (cat) {
       const items = buckets[cat.key];
       if (!items.length) return;
@@ -201,7 +203,31 @@
       items.forEach(function (li) { newUl.appendChild(li); });
       groupDiv.appendChild(newUl);
       aside.appendChild(groupDiv);
+      if (firstCatCount === 0) firstCatCount = items.length;
+      totalCount += items.length;
     });
+
+    // Collapse pattern: show first category + up to 3 of its rows; rest
+    // hidden behind a "Read more sources (X)" toggle button.
+    const PREVIEW_COUNT = 3;
+    const previewShown = Math.min(PREVIEW_COUNT, firstCatCount);
+    const hiddenCount = totalCount - previewShown;
+    if (hiddenCount > 0) {
+      aside.classList.add("is-collapsed");
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cd-sources__toggle";
+      btn.setAttribute("aria-expanded", "false");
+      btn.textContent = "Read more sources (" + hiddenCount + ")";
+      btn.addEventListener("click", function () {
+        const collapsed = aside.classList.toggle("is-collapsed");
+        btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+        btn.textContent = collapsed
+          ? "Read more sources (" + hiddenCount + ")"
+          : "Show fewer sources";
+      });
+      aside.appendChild(btn);
+    }
 
     aside.dataset.cdGrouped = "1";
   }
