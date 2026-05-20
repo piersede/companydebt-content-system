@@ -51,6 +51,12 @@ function cd_410_gone_articles() {
         '/articles/insolvent-wine-scammers',
         '/articles/save-the-british-chippy',
         '/articles/1-in-180-companies-faces-insolvency-in-2024',
+        '/insolvency/dissolving-a-limited-company',
+        '/template-letter-chasing-debtor-payments',
+        '/bank_account/anna-big-business',
+        '/bank_account/counting-up-2',
+        '/bank_account/tide-plus',
+        '/money-transfer/worldremit-review-2024',
     ];
 
     if ( ! in_array( $path, $gone, true ) ) {
