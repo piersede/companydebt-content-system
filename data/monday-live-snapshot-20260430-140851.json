@@ -1,0 +1,1892 @@
+[
+  {
+    "position": 1,
+    "id": "11624440880",
+    "name": "Am I Solvent?"
+  },
+  {
+    "position": 2,
+    "id": "11624394203",
+    "name": "Bailiffs and High Court Enforcement Officers"
+  },
+  {
+    "position": 3,
+    "id": "11624429333",
+    "name": "Business Bank Account in Liquidation"
+  },
+  {
+    "position": 4,
+    "id": "11624438083",
+    "name": "Can a Director Be Sued Personally?"
+  },
+  {
+    "position": 5,
+    "id": "11624415227",
+    "name": "Can a Supplier Force Liquidation?"
+  },
+  {
+    "position": 6,
+    "id": "11624437179",
+    "name": "Can Directors Pay Themselves Before Liquidation?"
+  },
+  {
+    "position": 7,
+    "id": "11624394039",
+    "name": "Can I Be Sued After Dissolution?"
+  },
+  {
+    "position": 8,
+    "id": "11624415317",
+    "name": "Can I Choose My Liquidator?"
+  },
+  {
+    "position": 9,
+    "id": "11624410885",
+    "name": "Cannot Afford to Liquidate"
+  },
+  {
+    "position": 10,
+    "id": "11624444515",
+    "name": "Challenge a Liquidators Fees"
+  },
+  {
+    "position": 11,
+    "id": "11624422898",
+    "name": "Choose the Right Insolvency Procedure"
+  },
+  {
+    "position": 12,
+    "id": "11624423027",
+    "name": "Close or Save My Company?"
+  },
+  {
+    "position": 13,
+    "id": "11624369515",
+    "name": "Closing a Limited Company"
+  },
+  {
+    "position": 14,
+    "id": "11624386772",
+    "name": "Company Liquidation: What Directors Need to Know"
+  },
+  {
+    "position": 15,
+    "id": "11624429763",
+    "name": "Company Pensions and Liquidation"
+  },
+  {
+    "position": 16,
+    "id": "11624410702",
+    "name": "Company Property in Liquidation"
+  },
+  {
+    "position": 17,
+    "id": "11624429310",
+    "name": "Company Restoration After Liquidation"
+  },
+  {
+    "position": 18,
+    "id": "11624371391",
+    "name": "Company Strike Off and Dissolution"
+  },
+  {
+    "position": 19,
+    "id": "11624422535",
+    "name": "Company Vehicles in Liquidation"
+  },
+  {
+    "position": 20,
+    "id": "11624386877",
+    "name": "Compulsory Liquidation"
+  },
+  {
+    "position": 21,
+    "id": "11624424836",
+    "name": "Creditor Meetings in Liquidation"
+  },
+  {
+    "position": 22,
+    "id": "11624453063",
+    "name": "Creditor Takes Me to Court"
+  },
+  {
+    "position": 23,
+    "id": "11624375113",
+    "name": "Creditors Voluntary Liquidation (CVL)"
+  },
+  {
+    "position": 24,
+    "id": "11624393504",
+    "name": "CVA vs Strike Off vs Liquidation"
+  },
+  {
+    "position": 25,
+    "id": "11624424455",
+    "name": "Director Conduct Review"
+  },
+  {
+    "position": 26,
+    "id": "11624424785",
+    "name": "Director Hides Assets"
+  },
+  {
+    "position": 27,
+    "id": "11624426587",
+    "name": "Director Redundancy in MVL"
+  },
+  {
+    "position": 28,
+    "id": "11624441207",
+    "name": "Director Resigns Before Liquidation"
+  },
+  {
+    "position": 29,
+    "id": "11624422979",
+    "name": "Director Responsibilities After Strike Off"
+  },
+  {
+    "position": 30,
+    "id": "11624426530",
+    "name": "Directors Conduct Report"
+  },
+  {
+    "position": 31,
+    "id": "11624415505",
+    "name": "HMRC as Creditor in Liquidation"
+  },
+  {
+    "position": 32,
+    "id": "11624422761",
+    "name": "How Much Does Liquidation Cost?"
+  },
+  {
+    "position": 33,
+    "id": "11624411589",
+    "name": "IP and Assets in Liquidation"
+  },
+  {
+    "position": 34,
+    "id": "11624415568",
+    "name": "Leases and Contracts in Liquidation"
+  },
+  {
+    "position": 35,
+    "id": "11624437548",
+    "name": "Liquidating a Charity"
+  },
+  {
+    "position": 36,
+    "id": "11624441125",
+    "name": "Liquidating a Dormant Company"
+  },
+  {
+    "position": 37,
+    "id": "11624437341",
+    "name": "Liquidating a Group Company"
+  },
+  {
+    "position": 38,
+    "id": "11624424752",
+    "name": "Liquidating an LLP"
+  },
+  {
+    "position": 39,
+    "id": "11624437473",
+    "name": "Liquidating to Avoid Paying Suppliers"
+  },
+  {
+    "position": 40,
+    "id": "11624433879",
+    "name": "Liquidating With a BBL"
+  },
+  {
+    "position": 41,
+    "id": "11624429024",
+    "name": "Liquidating With No Assets"
+  },
+  {
+    "position": 42,
+    "id": "11624410741",
+    "name": "Liquidation Deadlines"
+  },
+  {
+    "position": 43,
+    "id": "11624433740",
+    "name": "Liquidation Documents"
+  },
+  {
+    "position": 44,
+    "id": "11624445144",
+    "name": "Liquidation Timeline"
+  },
+  {
+    "position": 45,
+    "id": "11624426599",
+    "name": "Liquidation vs Dissolution"
+  },
+  {
+    "position": 46,
+    "id": "11624433715",
+    "name": "Liquidators Powers and Duties"
+  },
+  {
+    "position": 47,
+    "id": "11624426492",
+    "name": "Members Voluntary Liquidation (MVL)"
+  },
+  {
+    "position": 48,
+    "id": "11624429597",
+    "name": "Paying Staff but Not HMRC"
+  },
+  {
+    "position": 49,
+    "id": "11624426532",
+    "name": "Prepare for Liquidation"
+  },
+  {
+    "position": 50,
+    "id": "11624440936",
+    "name": "Prove Your Debt in Liquidation"
+  },
+  {
+    "position": 51,
+    "id": "11624426674",
+    "name": "Risk of Director Disqualification"
+  },
+  {
+    "position": 52,
+    "id": "11624398202",
+    "name": "Starting a New Company After Liquidation"
+  },
+  {
+    "position": 53,
+    "id": "11624453297",
+    "name": "Stop Paying Company Debts"
+  },
+  {
+    "position": 54,
+    "id": "11624453279",
+    "name": "Voluntary Liquidation"
+  },
+  {
+    "position": 55,
+    "id": "11624415488",
+    "name": "Voluntary vs Compulsory Liquidation"
+  },
+  {
+    "position": 56,
+    "id": "11624453291",
+    "name": "What Happens After Liquidation?"
+  },
+  {
+    "position": 57,
+    "id": "11624441253",
+    "name": "What Happens to Directors?"
+  },
+  {
+    "position": 58,
+    "id": "11624393596",
+    "name": "What Happens to Employees?"
+  },
+  {
+    "position": 59,
+    "id": "11624424852",
+    "name": "When to Stop Trading"
+  },
+  {
+    "position": 60,
+    "id": "11624423160",
+    "name": "Which Creditors Get Paid First?"
+  },
+  {
+    "position": 61,
+    "id": "11624441472",
+    "name": "WUP vs Compulsory Liquidation"
+  },
+  {
+    "position": 62,
+    "id": "11624375116",
+    "name": "Winding Up Petitions"
+  },
+  {
+    "position": 63,
+    "id": "11624425863",
+    "name": "Insolvency Checklist"
+  },
+  {
+    "position": 64,
+    "id": "11624425753",
+    "name": "Insolvency vs Bankruptcy"
+  },
+  {
+    "position": 65,
+    "id": "11624410768",
+    "name": "Alternatives to Company Liquidation"
+  },
+  {
+    "position": 66,
+    "id": "11624423765",
+    "name": "Director Transfers Assets"
+  },
+  {
+    "position": 67,
+    "id": "11624455714",
+    "name": "Seek Advice Before Missing Payments"
+  },
+  {
+    "position": 68,
+    "id": "11624460231",
+    "name": "UK Insolvency Flowchart"
+  },
+  {
+    "position": 69,
+    "id": "11624425599",
+    "name": "UK Insolvency Glossary"
+  },
+  {
+    "position": 70,
+    "id": "11624438800",
+    "name": "Insolvency Myths Debunked"
+  },
+  {
+    "position": 71,
+    "id": "11624468715",
+    "name": "Can Directors Go to Prison?"
+  },
+  {
+    "position": 72,
+    "id": "11624469042",
+    "name": "CCJ When Going Insolvent"
+  },
+  {
+    "position": 73,
+    "id": "11624416249",
+    "name": "Administration vs Receivership"
+  },
+  {
+    "position": 74,
+    "id": "11624416229",
+    "name": "Company Administration Hub"
+  },
+  {
+    "position": 75,
+    "id": "11624425168",
+    "name": "Notice to Appoint Administrators"
+  },
+  {
+    "position": 76,
+    "id": "11624425147",
+    "name": "Light Touch Administration"
+  },
+  {
+    "position": 77,
+    "id": "11624454212",
+    "name": "Administration vs CVA"
+  },
+  {
+    "position": 78,
+    "id": "11624454691",
+    "name": "CVA vs Administration"
+  },
+  {
+    "position": 79,
+    "id": "11624394243",
+    "name": "Business Restructuring"
+  },
+  {
+    "position": 80,
+    "id": "11624445212",
+    "name": "Are Directors Personally Liable?"
+  },
+  {
+    "position": 81,
+    "id": "11624426888",
+    "name": "Can a Director Be Made Bankrupt?"
+  },
+  {
+    "position": 82,
+    "id": "11624445220",
+    "name": "Can Personal Assets Be Seized?"
+  },
+  {
+    "position": 83,
+    "id": "11624454074",
+    "name": "Can a Director Get a Criminal Record?"
+  },
+  {
+    "position": 84,
+    "id": "11624394357",
+    "name": "Directors Disqualification"
+  },
+  {
+    "position": 85,
+    "id": "11624411464",
+    "name": "Time to Pay HMRC"
+  },
+  {
+    "position": 86,
+    "id": "11624426650",
+    "name": "Cannot Pay VAT"
+  },
+  {
+    "position": 87,
+    "id": "11624427023",
+    "name": "Cannot Pay PAYE"
+  },
+  {
+    "position": 88,
+    "id": "11624429860",
+    "name": "Problems Paying Corporation Tax"
+  },
+  {
+    "position": 89,
+    "id": "11624438596",
+    "name": "Limited Company Bankruptcy"
+  },
+  {
+    "position": 90,
+    "id": "11624442014",
+    "name": "Check If Company Is Insolvent"
+  },
+  {
+    "position": 91,
+    "id": "11624453671",
+    "name": "HMRC Offices Contact Guide"
+  },
+  {
+    "position": 92,
+    "id": "11624457310",
+    "name": "Shareholders Liable for Debts"
+  },
+  {
+    "position": 93,
+    "id": "11624458314",
+    "name": "Pre-Pack Administration"
+  },
+  {
+    "position": 94,
+    "id": "11624411774",
+    "name": "Companies Act 2006"
+  },
+  {
+    "position": 95,
+    "id": "11624445712",
+    "name": "Company Voluntary Arrangement"
+  },
+  {
+    "position": 96,
+    "id": "11624457031",
+    "name": "Director Accountancy Errors"
+  },
+  {
+    "position": 97,
+    "id": "11624416188",
+    "name": "Directors Conflict of Interest"
+  },
+  {
+    "position": 98,
+    "id": "11624426796",
+    "name": "Debt Management Guide"
+  },
+  {
+    "position": 99,
+    "id": "11624416269",
+    "name": "Directors Duties to Creditors"
+  },
+  {
+    "position": 100,
+    "id": "11624411671",
+    "name": "Directors Personal Guarantees"
+  },
+  {
+    "position": 101,
+    "id": "11624458953",
+    "name": "Fixed and Floating Charges"
+  },
+  {
+    "position": 102,
+    "id": "11624427201",
+    "name": "Free Business Debt Advice"
+  },
+  {
+    "position": 103,
+    "id": "11624411734",
+    "name": "Duties of a Company Director"
+  },
+  {
+    "position": 104,
+    "id": "11624423213",
+    "name": "Funding Options for SMEs"
+  },
+  {
+    "position": 105,
+    "id": "11624420669",
+    "name": "HMRC IR35 Investigations"
+  },
+  {
+    "position": 106,
+    "id": "11624427364",
+    "name": "Insolvency Advice for Directors"
+  },
+  {
+    "position": 107,
+    "id": "11624456573",
+    "name": "Frozen Bank Account"
+  },
+  {
+    "position": 108,
+    "id": "11624415794",
+    "name": "Losing House if Company Goes Bust"
+  },
+  {
+    "position": 109,
+    "id": "11624438393",
+    "name": "Overdrawn Directors Loan Accounts"
+  },
+  {
+    "position": 110,
+    "id": "11624416190",
+    "name": "Phoenix Companies"
+  },
+  {
+    "position": 111,
+    "id": "11624427370",
+    "name": "Personal Guarantee Insurance"
+  },
+  {
+    "position": 112,
+    "id": "11624456600",
+    "name": "Misfeasance"
+  },
+  {
+    "position": 113,
+    "id": "11624394327",
+    "name": "Personal Liability for CBILS"
+  },
+  {
+    "position": 114,
+    "id": "11624426828",
+    "name": "Preventing Director Disputes"
+  },
+  {
+    "position": 115,
+    "id": "11624411680",
+    "name": "Cannot Pay CBILS"
+  },
+  {
+    "position": 116,
+    "id": "11624426847",
+    "name": "Writing Off Directors Loan"
+  },
+  {
+    "position": 117,
+    "id": "11624423521",
+    "name": "BBL Default"
+  },
+  {
+    "position": 118,
+    "id": "11624458873",
+    "name": "Taking Money Out of a Limited Company"
+  },
+  {
+    "position": 119,
+    "id": "11624427290",
+    "name": "BBL Fraud"
+  },
+  {
+    "position": 120,
+    "id": "11624453923",
+    "name": "Unenforceable Personal Guarantee"
+  },
+  {
+    "position": 121,
+    "id": "11624429836",
+    "name": "What Is Limited Liability?"
+  },
+  {
+    "position": 122,
+    "id": "11624434378",
+    "name": "Risks of Personal Guarantee"
+  },
+  {
+    "position": 123,
+    "id": "11624458845",
+    "name": "Can I Lose My House With BBL?"
+  },
+  {
+    "position": 124,
+    "id": "11624394348",
+    "name": "Directors Liability for BBL"
+  },
+  {
+    "position": 125,
+    "id": "11624420478",
+    "name": "Cannot Pay Business Energy"
+  },
+  {
+    "position": 126,
+    "id": "11624420641",
+    "name": "Cannot Afford Redundancy"
+  },
+  {
+    "position": 127,
+    "id": "11624454164",
+    "name": "Company Financial Difficulties"
+  },
+  {
+    "position": 128,
+    "id": "11624423386",
+    "name": "Challenge a Statutory Demand"
+  },
+  {
+    "position": 129,
+    "id": "11624457035",
+    "name": "Cannot Pay Commercial Lease"
+  },
+  {
+    "position": 130,
+    "id": "11624458851",
+    "name": "Cannot Pay Suppliers"
+  },
+  {
+    "position": 131,
+    "id": "11624423600",
+    "name": "Cannot Pay Company Mortgage"
+  },
+  {
+    "position": 132,
+    "id": "11624425067",
+    "name": "Dissolving With BBL"
+  },
+  {
+    "position": 133,
+    "id": "11624458984",
+    "name": "Cannot Repay Business Loan"
+  },
+  {
+    "position": 134,
+    "id": "11624426988",
+    "name": "Biggest Struggles for Business Owners"
+  },
+  {
+    "position": 135,
+    "id": "11624459089",
+    "name": "What Is a Statutory Demand?"
+  },
+  {
+    "position": 136,
+    "id": "11624426990",
+    "name": "Cannot Pay Business Rates"
+  },
+  {
+    "position": 137,
+    "id": "11624441718",
+    "name": "Cash Flow Problems Hub"
+  },
+  {
+    "position": 138,
+    "id": "11624441885",
+    "name": "Cannot Pay Staff Wages"
+  },
+  {
+    "position": 139,
+    "id": "11624434345",
+    "name": "HMRC Criminal Investigations"
+  },
+  {
+    "position": 140,
+    "id": "11624426608",
+    "name": "HMRC Debt Enforcement Hub"
+  },
+  {
+    "position": 141,
+    "id": "11624411353",
+    "name": "Corporation Tax Penalties"
+  },
+  {
+    "position": 142,
+    "id": "11624423319",
+    "name": "Why Debt Is Not Always Bad"
+  },
+  {
+    "position": 143,
+    "id": "11624445155",
+    "name": "HMRC Fraud Investigations"
+  },
+  {
+    "position": 144,
+    "id": "11624438228",
+    "name": "HMRC Follower Notice"
+  },
+  {
+    "position": 145,
+    "id": "11624445299",
+    "name": "HMRC Compliance Checks"
+  },
+  {
+    "position": 146,
+    "id": "11624438438",
+    "name": "Accelerated Payment Notices"
+  },
+  {
+    "position": 147,
+    "id": "11624441555",
+    "name": "Can HMRC Shut Down My Business?"
+  },
+  {
+    "position": 148,
+    "id": "11624445602",
+    "name": "HMRC Rejects Time to Pay"
+  },
+  {
+    "position": 149,
+    "id": "11624445348",
+    "name": "Distraint Order Notice"
+  },
+  {
+    "position": 150,
+    "id": "11624453513",
+    "name": "HMRC Enforcement Action"
+  },
+  {
+    "position": 151,
+    "id": "11624453859",
+    "name": "Controlled Goods Agreement"
+  },
+  {
+    "position": 152,
+    "id": "11624458767",
+    "name": "HMRC Freezes Bank Account"
+  },
+  {
+    "position": 153,
+    "id": "11624427067",
+    "name": "HMRC Penalties and Investigations"
+  },
+  {
+    "position": 154,
+    "id": "11624394255",
+    "name": "HMRC Threatening Letters"
+  },
+  {
+    "position": 155,
+    "id": "11624411393",
+    "name": "Pay HMRC or Suppliers First?"
+  },
+  {
+    "position": 156,
+    "id": "11624393844",
+    "name": "HMRC Tax Investigations"
+  },
+  {
+    "position": 157,
+    "id": "11624394000",
+    "name": "Security Bonds"
+  },
+  {
+    "position": 158,
+    "id": "11624393889",
+    "name": "Notice of Enforcement"
+  },
+  {
+    "position": 159,
+    "id": "11624423074",
+    "name": "VAT Penalties"
+  },
+  {
+    "position": 160,
+    "id": "11624424813",
+    "name": "Joint Liability for Unpaid VAT"
+  },
+  {
+    "position": 161,
+    "id": "11624441644",
+    "name": "HMRC Sends Bailiffs"
+  },
+  {
+    "position": 162,
+    "id": "11624445258",
+    "name": "Security Bond Notices"
+  },
+  {
+    "position": 163,
+    "id": "11624454035",
+    "name": "Personal Liability Notices"
+  },
+  {
+    "position": 164,
+    "id": "11624454041",
+    "name": "Tax Penalties"
+  },
+  {
+    "position": 165,
+    "id": "11624453791",
+    "name": "HMRC Tax Debt Hub"
+  },
+  {
+    "position": 166,
+    "id": "11624453571",
+    "name": "What Can HMRC Bailiffs Take?"
+  },
+  {
+    "position": 167,
+    "id": "11624453785",
+    "name": "Understanding HMRC Debt Collection"
+  },
+  {
+    "position": 168,
+    "id": "11624453730",
+    "name": "Ignoring HMRC Letters"
+  },
+  {
+    "position": 169,
+    "id": "11624423551",
+    "name": "Insolvency Test"
+  },
+  {
+    "position": 170,
+    "id": "11624467037",
+    "name": "High Court Writ"
+  },
+  {
+    "position": 171,
+    "id": "11624459961",
+    "name": "Individual Voluntary Arrangement"
+  },
+  {
+    "position": 172,
+    "id": "11624438802",
+    "name": "Insolvency Act 1986"
+  },
+  {
+    "position": 173,
+    "id": "11624425611",
+    "name": "Freezing Order"
+  },
+  {
+    "position": 174,
+    "id": "11624446136",
+    "name": "Insolvent Company Owes Me Money"
+  },
+  {
+    "position": 175,
+    "id": "11624425509",
+    "name": "Preferential Payments"
+  },
+  {
+    "position": 176,
+    "id": "11624459488",
+    "name": "LPA Receivership"
+  },
+  {
+    "position": 177,
+    "id": "11624423437",
+    "name": "Insolvent Company Investigations"
+  },
+  {
+    "position": 178,
+    "id": "11624425503",
+    "name": "Preferential vs Non-Preferential Creditors"
+  },
+  {
+    "position": 179,
+    "id": "11624416394",
+    "name": "Transactions at Undervalue"
+  },
+  {
+    "position": 180,
+    "id": "11624446470",
+    "name": "Warning Signs of Insolvency"
+  },
+  {
+    "position": 181,
+    "id": "11624423494",
+    "name": "Spouse Liability for Business Debts"
+  },
+  {
+    "position": 182,
+    "id": "11624423782",
+    "name": "Trade Out of Insolvency"
+  },
+  {
+    "position": 183,
+    "id": "11624423794",
+    "name": "What Is an IP?"
+  },
+  {
+    "position": 184,
+    "id": "11624478632",
+    "name": "Sell an Insolvent Company"
+  },
+  {
+    "position": 185,
+    "id": "11624479014",
+    "name": "Stop or Avoid Insolvency"
+  },
+  {
+    "position": 186,
+    "id": "11624479117",
+    "name": "What Is a Creditor?"
+  },
+  {
+    "position": 187,
+    "id": "11624478664",
+    "name": "Validation Order"
+  },
+  {
+    "position": 188,
+    "id": "11624454961",
+    "name": "Statement of Affairs"
+  },
+  {
+    "position": 189,
+    "id": "11624416118",
+    "name": "Bounce Back Loan Hub"
+  },
+  {
+    "position": 190,
+    "id": "11765854977",
+    "name": "Guides Resources Hub"
+  },
+  {
+    "position": 191,
+    "id": "11765823294",
+    "name": "Advice"
+  },
+  {
+    "position": 192,
+    "id": "11765833247",
+    "name": "Sample Letters"
+  },
+  {
+    "position": 193,
+    "id": "11765819368",
+    "name": "Sector Insolvency Hub"
+  },
+  {
+    "position": 194,
+    "id": "11624425693",
+    "name": "Liquidation Hub"
+  },
+  {
+    "position": 195,
+    "id": "11765829121",
+    "name": "Meet The Team"
+  },
+  {
+    "position": 196,
+    "id": "11765829313",
+    "name": "Contact Us"
+  },
+  {
+    "position": 197,
+    "id": "11765826409",
+    "name": "Articles"
+  },
+  {
+    "position": 198,
+    "id": "11765819323",
+    "name": "Case Studies"
+  },
+  {
+    "position": 199,
+    "id": "11765934231",
+    "name": "Sectors"
+  },
+  {
+    "position": 200,
+    "id": "11765858065",
+    "name": "Services To"
+  },
+  {
+    "position": 201,
+    "id": "11765933669",
+    "name": "About Us"
+  },
+  {
+    "position": 202,
+    "id": "11624430070",
+    "name": "CVA Fails Mid-Term"
+  },
+  {
+    "position": 203,
+    "id": "11624425834",
+    "name": "Pre-Pack Advantages and Disadvantages"
+  },
+  {
+    "position": 204,
+    "id": "11624438780",
+    "name": "Business Debt Advice"
+  },
+  {
+    "position": 205,
+    "id": "11624438964",
+    "name": "Director Redundancy"
+  },
+  {
+    "position": 206,
+    "id": "11624425678",
+    "name": "County Court Judgements"
+  },
+  {
+    "position": 207,
+    "id": "11624456310",
+    "name": "Debt Charities UK"
+  },
+  {
+    "position": 208,
+    "id": "11624468941",
+    "name": "Wrongful Trading"
+  },
+  {
+    "position": 209,
+    "id": "11624482651",
+    "name": "Mental Health and Debt Stress"
+  },
+  {
+    "position": 210,
+    "id": "11624460396",
+    "name": "What Does Receivership Mean?"
+  },
+  {
+    "position": 211,
+    "id": "11624455268",
+    "name": "What Is the Insolvency Service?"
+  },
+  {
+    "position": 212,
+    "id": "11765855221",
+    "name": "Schools"
+  },
+  {
+    "position": 213,
+    "id": "11765819364",
+    "name": "Entertainment"
+  },
+  {
+    "position": 214,
+    "id": "11765934648",
+    "name": "Gyms"
+  },
+  {
+    "position": 215,
+    "id": "11765922225",
+    "name": "Haulage"
+  },
+  {
+    "position": 216,
+    "id": "11765922853",
+    "name": "Property"
+  },
+  {
+    "position": 217,
+    "id": "11765855216",
+    "name": "Leisure"
+  },
+  {
+    "position": 218,
+    "id": "11765934646",
+    "name": "Charity"
+  },
+  {
+    "position": 219,
+    "id": "11765839348",
+    "name": "Taxi Companies"
+  },
+  {
+    "position": 220,
+    "id": "11765823562",
+    "name": "Hotels"
+  },
+  {
+    "position": 221,
+    "id": "11765823740",
+    "name": "Solicitors"
+  },
+  {
+    "position": 222,
+    "id": "11765854944",
+    "name": "Events"
+  },
+  {
+    "position": 223,
+    "id": "11765823661",
+    "name": "Retail"
+  },
+  {
+    "position": 224,
+    "id": "11765922526",
+    "name": "Recruitment"
+  },
+  {
+    "position": 225,
+    "id": "11765855152",
+    "name": "Accountants"
+  },
+  {
+    "position": 226,
+    "id": "11765819581",
+    "name": "Cleaning Contractors"
+  },
+  {
+    "position": 227,
+    "id": "11765826849",
+    "name": "Insolvency Rescue Fish Chip Sector"
+  },
+  {
+    "position": 228,
+    "id": "11765823811",
+    "name": "Asset Based And Other Lenders"
+  },
+  {
+    "position": 229,
+    "id": "11765829504",
+    "name": "Professional Services"
+  },
+  {
+    "position": 230,
+    "id": "11765826749",
+    "name": "Creditors"
+  },
+  {
+    "position": 231,
+    "id": "11765829422",
+    "name": "Travel"
+  },
+  {
+    "position": 232,
+    "id": "11765829654",
+    "name": "Restaurants"
+  },
+  {
+    "position": 233,
+    "id": "11765829703",
+    "name": "Manufacturing"
+  },
+  {
+    "position": 234,
+    "id": "11765829813",
+    "name": "Banks"
+  },
+  {
+    "position": 235,
+    "id": "11765833568",
+    "name": "Insolvency Rescue Solutions For Garden Centers"
+  },
+  {
+    "position": 236,
+    "id": "11765834252",
+    "name": "Construction"
+  },
+  {
+    "position": 237,
+    "id": "11765834434",
+    "name": "Dry Cleaning Laundry"
+  },
+  {
+    "position": 238,
+    "id": "11765837090",
+    "name": "Energy"
+  },
+  {
+    "position": 239,
+    "id": "11765839263",
+    "name": "Childcare"
+  },
+  {
+    "position": 240,
+    "id": "11765838907",
+    "name": "Automotive"
+  },
+  {
+    "position": 241,
+    "id": "11765838908",
+    "name": "Carehomes"
+  },
+  {
+    "position": 242,
+    "id": "11765811738",
+    "name": "How Much Is The Digital Sales Tax Going To Affect Big Tech"
+  },
+  {
+    "position": 243,
+    "id": "11765811669",
+    "name": "Dissolution"
+  },
+  {
+    "position": 244,
+    "id": "11765818733",
+    "name": "Kids Company Directors Face Disqualification Proceedings"
+  },
+  {
+    "position": 245,
+    "id": "11765826068",
+    "name": "Crackdown On Directors Who Close Companies To Avoid Debts"
+  },
+  {
+    "position": 246,
+    "id": "11765823065",
+    "name": "Leeds Dino Trail Collapses Into Administration"
+  },
+  {
+    "position": 247,
+    "id": "11765818773",
+    "name": "Covid 19 Effects On Cruise Industry"
+  },
+  {
+    "position": 248,
+    "id": "11765819050",
+    "name": "Plumbing"
+  },
+  {
+    "position": 249,
+    "id": "11765823232",
+    "name": "Subcontractor Agency"
+  },
+  {
+    "position": 250,
+    "id": "11765823157",
+    "name": "12 Year Ban For Director Who Pocketed Covid Loan Cash"
+  },
+  {
+    "position": 251,
+    "id": "11765826325",
+    "name": "Creditors Voluntary Liquidation With Phoenix"
+  },
+  {
+    "position": 252,
+    "id": "11765818965",
+    "name": "Individual Voluntary Arrangement"
+  },
+  {
+    "position": 253,
+    "id": "11765826236",
+    "name": "Can Manchester United Get Out From Under Its 455 5M Debt"
+  },
+  {
+    "position": 254,
+    "id": "11765822829",
+    "name": "Travel Firm Collapses As It Cannot Pay Refunds"
+  },
+  {
+    "position": 255,
+    "id": "11765818568",
+    "name": "All Dishes Off Menu For Dacampos My Pasta Bar"
+  },
+  {
+    "position": 256,
+    "id": "11765825978",
+    "name": "1 In 180 Companies Faces Insolvency In 2024"
+  },
+  {
+    "position": 257,
+    "id": "11765828712",
+    "name": "Poolmageddon 79 Of Uk Pools May Close Within 6 Months"
+  },
+  {
+    "position": 258,
+    "id": "11765823426",
+    "name": "Online Travel Agent"
+  },
+  {
+    "position": 259,
+    "id": "11765826767",
+    "name": "Building Contractor"
+  },
+  {
+    "position": 260,
+    "id": "11765822911",
+    "name": "Can Bradford Rugby Club Saved Liquidation"
+  },
+  {
+    "position": 261,
+    "id": "11765811716",
+    "name": "Hairdresser"
+  },
+  {
+    "position": 262,
+    "id": "11765828766",
+    "name": "Chinese Takeaway"
+  },
+  {
+    "position": 263,
+    "id": "11765828391",
+    "name": "Managing Debt Related Stress"
+  },
+  {
+    "position": 264,
+    "id": "11765828890",
+    "name": "Paradise Papers"
+  },
+  {
+    "position": 265,
+    "id": "11765826424",
+    "name": "Is Harley Davidson Heading For A Crash"
+  },
+  {
+    "position": 266,
+    "id": "11765826702",
+    "name": "Womens Fashion Store"
+  },
+  {
+    "position": 267,
+    "id": "11765830305",
+    "name": "Boulestin Avoids Closure"
+  },
+  {
+    "position": 268,
+    "id": "11765826070",
+    "name": "Find Out Why The Transport Industry Is Prone To Insolvency"
+  },
+  {
+    "position": 269,
+    "id": "11765828862",
+    "name": "Bespoke Kitchen Manufacturer"
+  },
+  {
+    "position": 270,
+    "id": "11765826378",
+    "name": "Can Heathrow Survive Covid 19"
+  },
+  {
+    "position": 271,
+    "id": "11765838518",
+    "name": "Wayne Rooney Scores 21M From Company Liquidation"
+  },
+  {
+    "position": 272,
+    "id": "11765828532",
+    "name": "Jeweller"
+  },
+  {
+    "position": 273,
+    "id": "11765829197",
+    "name": "High Court Closes Insolvent Mini Bond Group"
+  },
+  {
+    "position": 274,
+    "id": "11765828729",
+    "name": "Clothing Retailer Usc Close 30 Unfashionable Stores"
+  },
+  {
+    "position": 275,
+    "id": "11765826274",
+    "name": "How Will Carillions Insolvency Effect Its Supply Chain"
+  },
+  {
+    "position": 276,
+    "id": "11765832661",
+    "name": "Common Causes Of Construction Insolvency"
+  },
+  {
+    "position": 277,
+    "id": "11765830638",
+    "name": "Hardware Maintenance"
+  },
+  {
+    "position": 278,
+    "id": "11765828580",
+    "name": "Barnsley Shopping Centre Enters Receivership"
+  },
+  {
+    "position": 279,
+    "id": "11765830697",
+    "name": "Recruitment Consultant"
+  },
+  {
+    "position": 280,
+    "id": "11765836484",
+    "name": "124 Pints To Save The Pub"
+  },
+  {
+    "position": 281,
+    "id": "11765838713",
+    "name": "Freight Forwarder"
+  },
+  {
+    "position": 282,
+    "id": "11765838678",
+    "name": "Will The Energy Crisis Mean The End For Britains Bakeries"
+  },
+  {
+    "position": 283,
+    "id": "11765854392",
+    "name": "More Small Energy Providers Face Collapse As Crisis Deepens"
+  },
+  {
+    "position": 284,
+    "id": "11765830767",
+    "name": "Language School"
+  },
+  {
+    "position": 285,
+    "id": "11765830644",
+    "name": "Insolvencies Within The Technology Sector"
+  },
+  {
+    "position": 286,
+    "id": "11765838546",
+    "name": "Scaffolder Censured Over Bounce Back Loan"
+  },
+  {
+    "position": 287,
+    "id": "11765838598",
+    "name": "Articles Insights Hub"
+  },
+  {
+    "position": 288,
+    "id": "11765836582",
+    "name": "35 Of Charities Fear Insolvency Due To Cost Of Living Crisis"
+  },
+  {
+    "position": 289,
+    "id": "11765838661",
+    "name": "Equestrian Failed Company Voluntary Arrangement Administration"
+  },
+  {
+    "position": 290,
+    "id": "11765830790",
+    "name": "Seo Consultancy"
+  },
+  {
+    "position": 291,
+    "id": "11765833232",
+    "name": "6000 Fuel Hikes Taxi Sector"
+  },
+  {
+    "position": 292,
+    "id": "11765838461",
+    "name": "Pub Closures In The Uk"
+  },
+  {
+    "position": 293,
+    "id": "11765838536",
+    "name": "Disqualified Directors Jailed Continuing Control Companies"
+  },
+  {
+    "position": 294,
+    "id": "11765830986",
+    "name": "It Consultancy"
+  },
+  {
+    "position": 295,
+    "id": "11765832905",
+    "name": "Personal Guarantees"
+  },
+  {
+    "position": 296,
+    "id": "11765838357",
+    "name": "Bobby Davros Business Goes Bust"
+  },
+  {
+    "position": 297,
+    "id": "11765838893",
+    "name": "Lengthy Disqualifications For Four Directors Involved In Vat Fraud"
+  },
+  {
+    "position": 298,
+    "id": "11765832689",
+    "name": "39 Of Hair And Beauty Sector Still Furloughed"
+  },
+  {
+    "position": 299,
+    "id": "11765922370",
+    "name": "British Cycle Sales Hit 39 Year Low"
+  },
+  {
+    "position": 300,
+    "id": "11765854723",
+    "name": "The Orla Kiely Fashion Brand Shuts Up Shop"
+  },
+  {
+    "position": 301,
+    "id": "11765854888",
+    "name": "Pet Store"
+  },
+  {
+    "position": 302,
+    "id": "11765838609",
+    "name": "Information Technology"
+  },
+  {
+    "position": 303,
+    "id": "11765838797",
+    "name": "Time To Pay And Creditor Voluntary Liquidation"
+  },
+  {
+    "position": 304,
+    "id": "11765921676",
+    "name": "88 Year Old Retailer Bhs Goes Company Liquidation"
+  },
+  {
+    "position": 305,
+    "id": "11765921845",
+    "name": "Monarch Airline Insolvency"
+  },
+  {
+    "position": 306,
+    "id": "11765838663",
+    "name": "Gieves Hawkes Facing Liquidation"
+  },
+  {
+    "position": 307,
+    "id": "11765922267",
+    "name": "Tescos Rated Worst Payer Uk Small Businesses"
+  },
+  {
+    "position": 308,
+    "id": "11765838652",
+    "name": "Coffee Shop Owners Say Lattes Would Have To Be 7 To Follow Energy Hikes"
+  },
+  {
+    "position": 309,
+    "id": "11765839083",
+    "name": "Debt Charities For Consumers"
+  },
+  {
+    "position": 310,
+    "id": "11765921927",
+    "name": "Save The British Chippy"
+  },
+  {
+    "position": 311,
+    "id": "11765854937",
+    "name": "Corporate Finance"
+  },
+  {
+    "position": 312,
+    "id": "11765921708",
+    "name": "Bans For Uk Directors Who Avoid Repaying Bounce Back Loans"
+  },
+  {
+    "position": 313,
+    "id": "11765828751",
+    "name": "Plastering Company"
+  },
+  {
+    "position": 314,
+    "id": "11765854645",
+    "name": "Pink Biscuit Manufacturer Rivington Biscuits Goes Company Administration"
+  },
+  {
+    "position": 315,
+    "id": "11765838957",
+    "name": "Hoverboard Retailer"
+  },
+  {
+    "position": 316,
+    "id": "11765854685",
+    "name": "Jamie Oliver Restaurant Restructure London"
+  },
+  {
+    "position": 317,
+    "id": "11765934179",
+    "name": "Failed Arena Television Leaves Trail Of Losses And Faces Fraud Probe"
+  },
+  {
+    "position": 318,
+    "id": "11765921786",
+    "name": "80 Homebase Stores Set To Close As Part Of Cva"
+  },
+  {
+    "position": 319,
+    "id": "11765839119",
+    "name": "Pizza Restaurant"
+  },
+  {
+    "position": 320,
+    "id": "11765922577",
+    "name": "Individual Voluntary Arrangement With New Limited Company"
+  },
+  {
+    "position": 321,
+    "id": "11765922032",
+    "name": "Insolvent Wine Scammers"
+  },
+  {
+    "position": 322,
+    "id": "11624425143",
+    "name": "Use CVA to Close a Company"
+  },
+  {
+    "position": 323,
+    "id": "11624427150",
+    "name": "Partnership Voluntary Arrangements"
+  },
+  {
+    "position": 324,
+    "id": "11624430076",
+    "name": "CVA Pros and Cons"
+  },
+  {
+    "position": 325,
+    "id": "11624411995",
+    "name": "Redundancy in CVA"
+  },
+  {
+    "position": 326,
+    "id": "11624445929",
+    "name": "Pre-Pack Administration"
+  },
+  {
+    "position": 327,
+    "id": "11624454687",
+    "name": "When a CVA Fails"
+  },
+  {
+    "position": 328,
+    "id": "11624445726",
+    "name": "CVA vs Liquidation"
+  },
+  {
+    "position": 329,
+    "id": "11624430181",
+    "name": "Rescue Solutions Hub"
+  },
+  {
+    "position": 330,
+    "id": "11624411862",
+    "name": "Director Guarantees in CVA"
+  },
+  {
+    "position": 331,
+    "id": "11624460160",
+    "name": "Care Home Insolvency"
+  },
+  {
+    "position": 332,
+    "id": "11624424156",
+    "name": "Construction Insolvency"
+  },
+  {
+    "position": 333,
+    "id": "11624425679",
+    "name": "Transport and Haulage Insolvency"
+  },
+  {
+    "position": 334,
+    "id": "11624426468",
+    "name": "HMRC Winding Up Petition"
+  },
+  {
+    "position": 335,
+    "id": "11624438622",
+    "name": "Hospitality Insolvency"
+  },
+  {
+    "position": 336,
+    "id": "11624439051",
+    "name": "Energy Provider Insolvency"
+  },
+  {
+    "position": 337,
+    "id": "11624450638",
+    "name": "Manufacturing Insolvency"
+  },
+  {
+    "position": 338,
+    "id": "11624458132",
+    "name": "Charity and Non-Profit Insolvency"
+  },
+  {
+    "position": 339,
+    "id": "11624458168",
+    "name": "Professional Services Insolvency"
+  },
+  {
+    "position": 340,
+    "id": "11765829359",
+    "name": "Debt Creditor Pressure Hub"
+  },
+  {
+    "position": 341,
+    "id": "11765834236",
+    "name": "Company Rescue Recovery Hub"
+  },
+  {
+    "position": 342,
+    "id": "11765819423",
+    "name": "Director Protection Hub"
+  },
+  {
+    "position": 343,
+    "id": "11765826630",
+    "name": "I Need More Information About This Debt"
+  },
+  {
+    "position": 344,
+    "id": "11765823205",
+    "name": "I Have No Knowledge Of This Debt"
+  },
+  {
+    "position": 345,
+    "id": "11765826597",
+    "name": "Insolvency News Commentary"
+  },
+  {
+    "position": 346,
+    "id": "11765855013",
+    "name": "Request A Reduced Monthly Payment"
+  },
+  {
+    "position": 347,
+    "id": "11765830784",
+    "name": "I Cannot Afford To Repay My Debt"
+  },
+  {
+    "position": 348,
+    "id": "11765819605",
+    "name": "Mental Health Debt Stress Support"
+  },
+  {
+    "position": 349,
+    "id": "11765829152",
+    "name": "Hold Action On My Account"
+  },
+  {
+    "position": 350,
+    "id": "11765831060",
+    "name": "Privacy Policy"
+  },
+  {
+    "position": 351,
+    "id": "11765836891",
+    "name": "Cease Trading Template"
+  },
+  {
+    "position": 352,
+    "id": "11765838297",
+    "name": "Accreditations"
+  },
+  {
+    "position": 353,
+    "id": "11765826585",
+    "name": "Cookie Policy Company Debt"
+  },
+  {
+    "position": 354,
+    "id": "11765922803",
+    "name": "Terms Conditions"
+  },
+  {
+    "position": 355,
+    "id": "11765854879",
+    "name": "Prize Draw Terms Conditions"
+  },
+  {
+    "position": 356,
+    "id": "11765823453",
+    "name": "Sector Specific Insolvency"
+  },
+  {
+    "position": 357,
+    "id": "11624457147",
+    "name": "Dealing With Creditor Pressure"
+  },
+  {
+    "position": 358,
+    "id": "11624423548",
+    "name": "Save a Struggling Business"
+  },
+  {
+    "position": 359,
+    "id": "11624445888",
+    "name": "Reduce Insolvency Risk"
+  },
+  {
+    "position": 360,
+    "id": "11624416274",
+    "name": "Cease Trading"
+  },
+  {
+    "position": 361,
+    "id": "11624454558",
+    "name": "Business Recovery Services"
+  },
+  {
+    "position": 362,
+    "id": "11624455105",
+    "name": "Rescue From Insolvency"
+  },
+  {
+    "position": 363,
+    "id": "11624416149",
+    "name": "Find a Liquidator Near Me"
+  },
+  {
+    "position": 364,
+    "id": "11624466673",
+    "name": "Retail Insolvency Trends"
+  },
+  {
+    "position": 365,
+    "id": "11624478683",
+    "name": "Creditor Negotiations"
+  },
+  {
+    "position": 366,
+    "id": "11624456810",
+    "name": "Creditors Meeting"
+  },
+  {
+    "position": 367,
+    "id": "11624459278",
+    "name": "Antecedent Transactions"
+  },
+  {
+    "position": 368,
+    "id": "11765834003",
+    "name": "Tell Debt Collector To Stop Contacting You"
+  },
+  {
+    "position": 369,
+    "id": "11765922529",
+    "name": "Uk Insolvency Statistics"
+  },
+  {
+    "position": 370,
+    "id": "11765826600",
+    "name": "Insolvency Advice"
+  },
+  {
+    "position": 371,
+    "id": "11765829118",
+    "name": "Creditors Guides To Insolvency Practitioners Fees"
+  },
+  {
+    "position": 372,
+    "id": "11624425690",
+    "name": "Customer Insolvency"
+  },
+  {
+    "position": 373,
+    "id": "11765855238",
+    "name": "Write Off My Debt"
+  },
+  {
+    "position": 374,
+    "id": "11624446252",
+    "name": "Company Secretary Liability"
+  },
+  {
+    "position": 375,
+    "id": "11624423870",
+    "name": "Company Cannot Pay Debts"
+  },
+  {
+    "position": 376,
+    "id": "11765826667",
+    "name": "Insolvency"
+  },
+  {
+    "position": 377,
+    "id": "11624446459",
+    "name": "Secured vs Unsecured Creditors"
+  },
+  {
+    "position": 378,
+    "id": "11765922009",
+    "name": "Business Insolvency"
+  }
+]

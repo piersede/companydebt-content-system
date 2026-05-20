@@ -49,15 +49,45 @@ async function createWorkerBundle({
   const stageTask = STAGE_TASK_MAP[stage] || stage;
 
   const taskEntryPath = path.join(workerDir, `${stageTask}-task-entry.md`);
-  runPython([
-    path.join('scripts', 'editorial_task_entry.py'),
-    '--page',
-    state.page_id,
-    '--task',
-    stageTask,
-    '--output',
-    taskEntryPath,
-  ]);
+  if (page.mode === 'wp_post' || state.mode === 'wp_post') {
+    // Synthesize a task-entry brief for wp-post mode (editorial_task_entry.py requires a
+    // cc_builder page config which doesn't exist for WordPress posts).
+    const wpPostId = state.wp_post_id || page.wp_post_id;
+    writeMarkdown(taskEntryPath, [
+      `# Task Entry: ${state.page_id}`,
+      '',
+      `- Mode: \`wp_post\``,
+      `- Task: \`${stageTask}\``,
+      `- Title: ${state.title || page.title || state.slug}`,
+      `- WP post id: \`${wpPostId}\``,
+      `- Slug: \`${state.slug}\``,
+      `- Article file: \`${state.article_file}\``,
+      `- Target URL: \`${state.target_url}\``,
+      '',
+      '## Runtime Path',
+      '- runtime-packs/writer-core.md',
+      '- runtime-packs/wp-post-rewrite.md (if available; otherwise rely on canonical refs)',
+      '',
+      '## Canonical References',
+      '- editorial-os/16-pre-publish-gate.md',
+      '- editorial-os/10-evidence-governance.md',
+      '- editorial-os/13-readability-governance.md',
+      '- editorial-os/28-htag-semantic-framework.md',
+      '',
+      '## Operator Rule',
+      '- Quality kernel is non-negotiable: voice, evidence governance, FAQ-final discipline, and the article_audit gate must all pass.',
+    ]);
+  } else {
+    runPython([
+      path.join('scripts', 'editorial_task_entry.py'),
+      '--page',
+      state.page_id,
+      '--task',
+      stageTask,
+      '--output',
+      taskEntryPath,
+    ]);
+  }
 
   let revisionPacketPath = null;
   if (stage === 'revise') {
@@ -110,6 +140,20 @@ async function createWorkerBundle({
   ]);
 
   const processChecklistPath = path.join(workerDir, 'process-checklist.md');
+  const isWpPost = state.mode === 'wp_post' || page.mode === 'wp_post';
+  const wpPostId = state.wp_post_id || page.wp_post_id;
+  const commands = isWpPost
+    ? [
+        `- Pull fresh from staging: \`python tmp/wp_pull.py ${state.slug}\` (writes to tmp/pulls/, then copy to drafts/)`,
+        `- Quality gate (Tier 2 mechanical): \`python scripts/article_audit.py --drafts drafts --slug ${wpPostId}\``,
+        `- Quality gate with HARD FAIL output: \`python scripts/article_audit.py --drafts drafts --slug ${wpPostId} --gate-format\``,
+        `- Push to staging: \`python scripts/wp_push.py --id ${wpPostId} --file ${state.article_file}\``,
+      ]
+    : [
+        `- Build preview: \`python scripts/build_page.py --page ${state.page_id} --preview\``,
+        `- Quality check: \`python scripts/quality_check.py --page ${state.page_id}\``,
+        `- Publish: \`python scripts/build_page.py --page ${state.page_id} --publish\``,
+      ];
   writeMarkdown(processChecklistPath, [
     `# Process Checklist: ${state.page_id}`,
     '',
@@ -117,11 +161,10 @@ async function createWorkerBundle({
     '- Use Company Debt runtime packs and scripts. Do not invent a parallel workflow.',
     '- Keep revisions bounded when the findings are bounded.',
     '- Regenerate the packet if the thread drifts or the working set gets noisy.',
+    ...(isWpPost ? ['- Mode: **wp_post** — operate on the rendered HTML in `drafts/`. Gate uses `scripts/article_audit.py`. Publish uses `scripts/wp_push.py`.'] : []),
     '',
     '## Commands',
-    `- Build preview: \`python scripts/build_page.py --page ${state.page_id} --preview\``,
-    `- Quality check: \`python scripts/quality_check.py --page ${state.page_id}\``,
-    `- Publish: \`python scripts/build_page.py --page ${state.page_id} --publish\``,
+    ...commands,
   ]);
 
   const publishPayloadPath = path.join(workerDir, 'publish-payload.json');
@@ -162,13 +205,35 @@ async function createWorkerBundle({
   };
 }
 
-async function publishWordPressArticle({ pageId }) {
-  const result = spawnPython([
-    path.join('scripts', 'build_page.py'),
-    '--page',
-    String(pageId),
-    '--publish',
-  ], { timeout: 240000 });
+async function publishWordPressArticle({ page, state, pageId }) {
+  // Back-compat: legacy callers may pass {pageId} directly. Resolve to a page object.
+  const resolvedPage = page || (pageId ? findRegistryItem(pageId) : null);
+  if (!resolvedPage) {
+    return { ok: false, reason: `Unknown page for publish: ${pageId || '(none)'}` };
+  }
+
+  let pythonArgs;
+  if (resolvedPage.mode === 'wp_post') {
+    // WP-post mode: push the rendered HTML draft via scripts/wp_push.py.
+    const articleFile = state && state.article_file
+      ? state.article_file
+      : path.join(ROOT, 'drafts', `${resolvedPage.wp_post_id}_${resolvedPage.slug}.html`);
+    pythonArgs = [
+      path.join('scripts', 'wp_push.py'),
+      '--id', String(resolvedPage.wp_post_id),
+      '--file', articleFile,
+    ];
+  } else {
+    // cc_builder mode (legacy): build_page.py --publish.
+    pythonArgs = [
+      path.join('scripts', 'build_page.py'),
+      '--page',
+      String(resolvedPage.page_id),
+      '--publish',
+    ];
+  }
+
+  const result = spawnPython(pythonArgs, { timeout: 240000 });
 
   if (result.error && ['ENOENT', 'EPERM'].includes(result.error.code)) {
     return {
@@ -186,7 +251,7 @@ async function publishWordPressArticle({ pageId }) {
 
   return {
     ok: true,
-    mode: 'publish',
+    mode: resolvedPage.mode === 'wp_post' ? 'wp_publish' : 'publish',
     output: (result.stdout || '').trim(),
   };
 }

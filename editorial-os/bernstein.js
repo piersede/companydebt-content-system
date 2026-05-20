@@ -80,6 +80,7 @@ function usage() {
   console.error([
     'Usage:',
     '  node editorial-os/bernstein.js init <page-id-or-slug>',
+    '  node editorial-os/bernstein.js init-wp-post <wp-slug>          # WordPress post rewrite mode',
     '  node editorial-os/bernstein.js packet <page-id-or-slug> <stage> [--note <file>]',
     '  node editorial-os/bernstein.js run <page-id-or-slug> <stage> [--note <file>]',
     '  node editorial-os/bernstein.js complete <page-id-or-slug> <stage> --summary "..." [--next <stage>] [--status completed|blocked]',
@@ -92,6 +93,7 @@ function usage() {
     '  node editorial-os/bernstein.js checkpoint-status <page-id-or-slug> [--json]',
     '  node editorial-os/bernstein.js checkpoint-complete <page-id-or-slug> <checkpoint-id> [--note "..."]',
     '  node editorial-os/bernstein.js checkpoint-reset <page-id-or-slug> <checkpoint-id>',
+    '  node editorial-os/bernstein.js info-gain-template <page-id-or-slug>   # emit per-H2 audit template (review stage)',
     '  node editorial-os/bernstein.js gate-sync <page-id-or-slug>',
     '  node editorial-os/bernstein.js verify-loop <page-id-or-slug> [--auto-fix] [--max-attempts N]',
     '  node editorial-os/bernstein.js publish <page-id-or-slug>',
@@ -351,9 +353,18 @@ function createPacket(page, state, stage, noteFiles) {
     `- Completion requirements: \`${packet.required_completion_checkpoints.join(', ') || 'none'}\``,
     '',
     '## Commands',
-    `- Task entry: \`python scripts/editorial_task_entry.py --page ${page.page_id} --task ${taskName}\``,
-    `- Preview build: \`python scripts/build_page.py --page ${page.page_id} --preview\``,
-    `- Quality check: \`python scripts/quality_check.py --page ${page.page_id}\``,
+    ...(page.mode === 'wp_post'
+      ? [
+          '- Task entry: synthesized into the worker bundle (no cc_builder page config exists for WordPress posts).',
+          `- Pull fresh from staging: \`python tmp/wp_pull.py ${page.slug}\``,
+          `- Quality gate (Tier 2 mechanical): \`python scripts/article_audit.py --drafts drafts --slug ${page.wp_post_id} --gate-format\``,
+          `- Push to staging: \`python scripts/wp_push.py --id ${page.wp_post_id} --file drafts/${page.wp_post_id}_${page.slug}.html\``,
+        ]
+      : [
+          `- Task entry: \`python scripts/editorial_task_entry.py --page ${page.page_id} --task ${taskName}\``,
+          `- Preview build: \`python scripts/build_page.py --page ${page.page_id} --preview\``,
+          `- Quality check: \`python scripts/quality_check.py --page ${page.page_id}\``,
+        ]),
     '',
   ];
   if (noteExcerpts.length) {
@@ -428,8 +439,34 @@ function ensureActionableRun(page, state, stage, options = {}) {
   return { ...runPageStage(page, state, stage, options), reused_active_run: false };
 }
 
-function runQualityCheck(pageId) {
-  const result = spawnPython([path.join('scripts', 'quality_check.py'), '--page', String(pageId)], { timeout: 240000 });
+function runQualityCheck(pageOrId) {
+  // Accept either a page object (preferred — exposes .mode) or a bare page id (legacy).
+  const page = typeof pageOrId === 'object' && pageOrId !== null
+    ? pageOrId
+    : (findRegistryItemSafe(pageOrId) || { page_id: pageOrId });
+
+  // WP-post mode: gate via scripts/article_audit.py against drafts/<post_id>_<slug>.html.
+  if (page.mode === 'wp_post') {
+    const result = spawnPython(
+      [
+        path.join('scripts', 'article_audit.py'),
+        '--drafts', 'drafts',
+        '--slug', String(page.wp_post_id),
+        '--gate-format',
+      ],
+      { timeout: 240000 },
+    );
+    if (result.error && ['ENOENT', 'EPERM'].includes(result.error.code)) {
+      return { exitCode: 1, output: 'No Python runtime found. Set PYTHON_BIN or install a Python executable on PATH.' };
+    }
+    const output = [result.stdout || '', result.stderr || ''].filter(Boolean).join('\n').trim();
+    // article_audit exits 0 iff every audited file passes its gate; non-zero otherwise.
+    const exitCode = result.status === 0 ? 0 : 1;
+    return { exitCode, output };
+  }
+
+  // cc_builder mode (legacy): scripts/quality_check.py.
+  const result = spawnPython([path.join('scripts', 'quality_check.py'), '--page', String(page.page_id)], { timeout: 240000 });
   if (result.error && ['ENOENT', 'EPERM'].includes(result.error.code)) {
     return { exitCode: 1, output: 'No Python runtime found. Set PYTHON_BIN or install a Python executable on PATH.' };
   }
@@ -437,6 +474,130 @@ function runQualityCheck(pageId) {
   const summaryMatch = output.match(/SUMMARY:\s+(\d+)\s+pass,\s+(\d+)\s+fail/i);
   const failCount = summaryMatch ? Number(summaryMatch[2]) : (result.status || 0);
   return { exitCode: failCount === 0 ? 0 : 1, output };
+}
+
+function findRegistryItemSafe(identifier) {
+  try { return findRegistryItem(identifier); } catch (_e) { return null; }
+}
+
+function infoGainTemplatePath(state) {
+  return path.join(stateDirFor(state.page_id), 'runs', 'info-gain-audit.md');
+}
+
+function emitInfoGainTemplate(state) {
+  const articleFile = state.article_file;
+  const templatePath = infoGainTemplatePath(state);
+  ensureDir(path.dirname(templatePath));
+  const result = spawnPython([
+    path.join('scripts', 'info_gain_audit.py'),
+    '--file', articleFile,
+    '--emit-template',
+    '--output', templatePath,
+  ], { timeout: 60000 });
+  const output = [result.stdout || '', result.stderr || ''].filter(Boolean).join('\n').trim();
+  return { exitCode: result.status === 0 ? 0 : 1, stdout: output, template_path: templatePath };
+}
+
+function runInfoGainCheck(state) {
+  const articleFile = state.article_file;
+  const templatePath = infoGainTemplatePath(state);
+  if (!fs.existsSync(templatePath)) {
+    return {
+      ok: false,
+      output: `No info-gain audit template at ${templatePath}.`,
+      template_path: templatePath,
+      summary: 'no template',
+    };
+  }
+  const result = spawnPython([
+    path.join('scripts', 'info_gain_audit.py'),
+    '--file', articleFile,
+    '--check', templatePath,
+  ], { timeout: 60000 });
+  const output = [result.stdout || '', result.stderr || ''].filter(Boolean).join('\n').trim();
+  const ok = result.status === 0;
+  // Extract a one-line summary from the audit output for the checkpoint note.
+  const summaryMatch = output.match(/INFO-GAIN AUDIT:\s*(PASS|FAIL)[^\n]*/);
+  const summary = summaryMatch ? summaryMatch[0] : (ok ? 'PASS' : 'FAIL');
+  return { ok, output, template_path: templatePath, summary };
+}
+
+function initWpPost(slug) {
+  // Pull fresh content from staging via tmp/wp_pull.py — this writes to tmp/pulls/<post_id>_<slug>.html
+  // and prints "id=<post_id> slug=<slug> ..." on its first line of output.
+  const { execFileSync } = require('child_process');
+  const wpPullPath = path.join('tmp', 'wp_pull.py');
+  const pythonBin = process.env.PYTHON_BIN || 'python';
+  let pullOutput = '';
+  try {
+    pullOutput = execFileSync(pythonBin, [wpPullPath, slug], {
+      cwd: ROOT,
+      encoding: 'utf8',
+      timeout: 120000,
+    });
+  } catch (e) {
+    throw new Error(`wp_pull.py failed for slug "${slug}": ${e.stderr || e.message}`);
+  }
+
+  // Parse the post id and other metadata from wp_pull's output line.
+  const idMatch = pullOutput.match(/id=(\d+)/);
+  if (!idMatch) throw new Error(`Could not parse post id from wp_pull output:\n${pullOutput}`);
+  const wpPostId = parseInt(idMatch[1], 10);
+  const titleMatch = pullOutput.match(/title='([^']*)'/);
+  const title = titleMatch ? titleMatch[1].replace(/&amp;/g, '&') : slug;
+
+  // wp_pull saves to tmp/pulls/<post_id>_<slug>.html. Copy to drafts/<post_id>_<slug>.html so
+  // article_audit.py and the wp-post rewrite workflow find it.
+  const pullPath = path.join(ROOT, 'tmp', 'pulls', `${wpPostId}_${slug}.html`);
+  if (!fs.existsSync(pullPath)) {
+    throw new Error(`Expected pulled file not found: ${pullPath}`);
+  }
+  const draftsDir = path.join(ROOT, 'drafts');
+  ensureDir(draftsDir);
+  const draftPath = path.join(draftsDir, `${wpPostId}_${slug}.html`);
+  fs.copyFileSync(pullPath, draftPath);
+
+  // Build synthetic page and state.
+  const pageId = `wp-${wpPostId}`;
+  const targetUrl = `https://comdebstage.wpengine.com/${slug}/`;
+  const page = {
+    mode: 'wp_post',
+    page_id: pageId,
+    wp_post_id: wpPostId,
+    slug,
+    title,
+    target_url: targetUrl,
+    page_type: 'wp_post',
+  };
+
+  // Pre-existing state takes precedence (resume mid-rewrite).
+  const existing = loadState(pageId);
+  if (existing && existing.mode === 'wp_post') {
+    return { page, state: existing };
+  }
+
+  const runtime = resolveRuntimeContext(page, 'draft');
+  const state = ensureCheckpointState({
+    version: 1,
+    mode: 'wp_post',
+    page_id: pageId,
+    wp_post_id: wpPostId,
+    slug,
+    title,
+    article_file: runtime.article_file,
+    created_at: nowIso(),
+    updated_at: nowIso(),
+    current_stage: 'research',
+    status: 'active',
+    backlog_item_id: null,
+    target_url: targetUrl,
+    runtime_context: runtime,
+    active_run: null,
+    decisions: [],
+    open_risks: [],
+    stage_history: [],
+  });
+  return { page, state };
 }
 
 function syncGateCheckpoints(state, gateResult) {
@@ -484,7 +645,7 @@ function runVerifyLoop(pageId, articleFile, options) {
   if (!state.verification_runs) state.verification_runs = [];
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    const gateResult = runQualityCheck(page.page_id);
+    const gateResult = runQualityCheck(page);
     const failures = parseHardFails(gateResult.output);
     const run = { attempt, at: nowIso(), exit_code: gateResult.exitCode, failures };
     state.verification_runs.push(run);
@@ -646,6 +807,25 @@ async function main() {
       return;
     }
 
+    if (command === 'init-wp-post') {
+      const slug = positional[0];
+      if (!slug) throw new Error('WP slug is required (e.g. what-happens-if-you-ignore-hmrc-letters).');
+      const result = initWpPost(slug);
+      ensureLearningFiles();
+      ensureDir(path.join(stateDirFor(result.state.page_id), 'runs'));
+      saveState(result.state.page_id, result.state);
+      console.log(JSON.stringify({
+        mode: 'wp_post',
+        page_id: result.state.page_id,
+        wp_post_id: result.state.wp_post_id,
+        slug: result.state.slug,
+        article_file: result.state.article_file,
+        target_url: result.state.target_url,
+        state_path: statePathFor(result.state.page_id),
+      }, null, 2));
+      return;
+    }
+
     if (command === 'packet') {
       const identifier = positional[0];
       const stage = positional[1];
@@ -748,9 +928,46 @@ async function main() {
       const checkpointId = positional[1];
       if (!identifier || !checkpointId) throw new Error('Page id or slug and checkpoint id are required.');
       const { page, state } = ensureStateForPage(identifier);
+
+      // Enforced gate: review_notes_complete cannot be ticked until the
+      // info-gain audit (scripts/info_gain_audit.py) passes against a
+      // filled-in template at editorial-os/bernstein-state/<page>/runs/info-gain-audit.md.
+      // §Check 12a (Information gain) is mechanically scaffolded so the
+      // review stage can't advance on prose-quality vibes alone.
+      if (checkpointId === 'review_notes_complete') {
+        const ig = runInfoGainCheck(state);
+        if (!ig.ok) {
+          process.stderr.write(`\n[bernstein] review_notes_complete BLOCKED — info-gain audit failed:\n\n`);
+          process.stderr.write(`${ig.output}\n\n`);
+          process.stderr.write(
+            `Run:\n` +
+            `  node editorial-os/bernstein.js info-gain-template ${page.page_id}\n` +
+            `Fill in the template at:\n  ${ig.template_path}\n` +
+            `Then re-run:\n  node editorial-os/bernstein.js checkpoint-complete ${page.page_id} review_notes_complete --note "..."\n`
+          );
+          process.exit(1);
+        }
+        const noteSuffix = ` [info-gain audit: ${ig.summary}]`;
+        const userNote = options.note && options.note !== true ? options.note : '';
+        const finalNote = userNote ? `${userNote}${noteSuffix}` : `info-gain audit passed${noteSuffix}`;
+        const result = completeCheckpoint(state, checkpointId, finalNote);
+        saveState(page.page_id, state);
+        console.log(JSON.stringify(result, null, 2));
+        return;
+      }
+
       const result = completeCheckpoint(state, checkpointId, options.note && options.note !== true ? options.note : '');
       saveState(page.page_id, state);
       console.log(JSON.stringify(result, null, 2));
+      return;
+    }
+
+    if (command === 'info-gain-template') {
+      const identifier = positional[0];
+      if (!identifier) throw new Error('Page id or slug is required.');
+      const { state } = ensureStateForPage(identifier);
+      const result = emitInfoGainTemplate(state);
+      console.log(result.stdout);
       return;
     }
 
@@ -814,7 +1031,7 @@ async function main() {
       if (!identifier) throw new Error('Page id or slug is required.');
       const { page, state } = ensureStateForPage(identifier);
       assertStageReady(state, 'publish');
-      const result = await publishWordPressArticle({ pageId: page.page_id });
+      const result = await publishWordPressArticle({ page, state });
       if (!result.ok) throw new Error(result.reason);
       completeCheckpoint(state, 'wordpress_publish_confirmed', 'Company Debt build/publish command succeeded.');
       saveState(page.page_id, state);

@@ -1,0 +1,4671 @@
+[
+  {
+    "item_id": "11624386772",
+    "item_name": "Company Liquidation: What Directors Need to Know",
+    "path": "/liquidation/",
+    "views": 283,
+    "matched_titles": [
+      [
+        "/liquidation/",
+        283,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765829313",
+    "item_name": "Contact Us",
+    "path": "/contact-us/",
+    "views": 74,
+    "matched_titles": [
+      [
+        "/contact-us/",
+        74,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624393596",
+    "item_name": "What Happens to Employees?",
+    "path": "/liquidation/what-happens-to-employees/",
+    "views": 58,
+    "matched_titles": [
+      [
+        "/liquidation/what-happens-to-employees/",
+        58,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411464",
+    "item_name": "Time to Pay HMRC",
+    "path": "/hmrc/time-to-pay-hmrc/",
+    "views": 38,
+    "matched_titles": [
+      [
+        "/hmrc/time-to-pay-hmrc/",
+        38,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416229",
+    "item_name": "Company Administration Hub",
+    "path": "/company-administration/",
+    "views": 37,
+    "matched_titles": [
+      [
+        "/company-administration/",
+        37,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624369515",
+    "item_name": "Closing a Limited Company",
+    "path": "/closing-a-limited-company/",
+    "views": 35,
+    "matched_titles": [
+      [
+        "/closing-a-limited-company/",
+        35,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765818773",
+    "item_name": "Covid 19 Effects On Cruise Industry",
+    "path": "/articles/covid-19-effects-on-cruise-industry/",
+    "views": 29,
+    "matched_titles": [
+      [
+        "/articles/covid-19-effects-on-cruise-industry/",
+        29,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624375116",
+    "item_name": "Winding Up Petitions",
+    "path": "/winding-up-petitions/",
+    "views": 28,
+    "matched_titles": [
+      [
+        "/winding-up-petitions/",
+        28,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445212",
+    "item_name": "Are Directors Personally Liable?",
+    "path": "/advice/are-directors-personally-liable-for-company-debts/",
+    "views": 26,
+    "matched_titles": [
+      [
+        "/advice/are-directors-personally-liable-for-company-debts/",
+        26,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624375113",
+    "item_name": "Creditors Voluntary Liquidation (CVL)",
+    "path": "/liquidation/creditors-voluntary-liquidation/",
+    "views": 25,
+    "matched_titles": [
+      [
+        "/liquidation/creditors-voluntary-liquidation/",
+        25,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765829121",
+    "item_name": "Meet The Team",
+    "path": "/meet-the-team/",
+    "views": 23,
+    "matched_titles": [
+      [
+        "/meet-the-team/",
+        23,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624438393",
+    "item_name": "Overdrawn Directors Loan Accounts",
+    "path": "/advice/overdrawn-directors-loan-accounts/",
+    "views": 23,
+    "matched_titles": [
+      [
+        "/advice/overdrawn-directors-loan-accounts/",
+        23,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826667",
+    "item_name": "Insolvency",
+    "path": "/insolvency/insolvency-act-1986/",
+    "views": 21,
+    "matched_titles": [
+      [
+        "/insolvency/insolvency-act-1986/",
+        21,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624438802",
+    "item_name": "Insolvency Act 1986",
+    "path": "/insolvency/insolvency-act-1986/",
+    "views": 21,
+    "matched_titles": [
+      [
+        "/insolvency/insolvency-act-1986/",
+        21,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624420641",
+    "item_name": "Cannot Afford Redundancy",
+    "path": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+    "views": 19,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+        19,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427023",
+    "item_name": "Cannot Pay PAYE",
+    "path": "/hmrc/cant-pay-paye/",
+    "views": 18,
+    "matched_titles": [
+      [
+        "/hmrc/cant-pay-paye/",
+        18,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394039",
+    "item_name": "Can I Be Sued After Dissolution?",
+    "path": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+    "views": 16,
+    "matched_titles": [
+      [
+        "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+        16,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426650",
+    "item_name": "Cannot Pay VAT",
+    "path": "/hmrc/cant-pay-vat/",
+    "views": 16,
+    "matched_titles": [
+      [
+        "/hmrc/cant-pay-vat/",
+        16,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458314",
+    "item_name": "Pre-Pack Administration",
+    "path": "/what-is-a-pre-pack-administration/",
+    "views": 16,
+    "matched_titles": [
+      [
+        "/what-is-a-pre-pack-administration/",
+        16,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624371391",
+    "item_name": "Company Strike Off and Dissolution",
+    "path": "/liquidation/company-strike-off-and-dissolution/",
+    "views": 13,
+    "matched_titles": [
+      [
+        "/liquidation/company-strike-off-and-dissolution/",
+        13,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624438964",
+    "item_name": "Director Redundancy",
+    "path": "/director-redundancy/",
+    "views": 13,
+    "matched_titles": [
+      [
+        "/director-redundancy/",
+        13,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765933669",
+    "item_name": "About Us",
+    "path": "/about-us/",
+    "views": 12,
+    "matched_titles": [
+      [
+        "/about-us/",
+        12,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458953",
+    "item_name": "Fixed and Floating Charges",
+    "path": "/advice/what-are-fixed-and-floating-charges/",
+    "views": 12,
+    "matched_titles": [
+      [
+        "/advice/what-are-fixed-and-floating-charges/",
+        12,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416118",
+    "item_name": "Bounce Back Loan Hub",
+    "path": "/bounce-back-loan-support-hub/",
+    "views": 11,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/",
+        11,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765828729",
+    "item_name": "Clothing Retailer Usc Close 30 Unfashionable Stores",
+    "path": "/articles/clothing-retailer-usc-close-30-unfashionable-stores/",
+    "views": 11,
+    "matched_titles": [
+      [
+        "/articles/clothing-retailer-usc-close-30-unfashionable-stores/",
+        11,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429860",
+    "item_name": "Problems Paying Corporation Tax",
+    "path": "/hmrc/problems-paying-corporation-tax-hmrc/",
+    "views": 11,
+    "matched_titles": [
+      [
+        "/hmrc/problems-paying-corporation-tax-hmrc/",
+        11,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624457310",
+    "item_name": "Shareholders Liable for Debts",
+    "path": "/insolvency/shareholders-liable-company-debts/",
+    "views": 11,
+    "matched_titles": [
+      [
+        "/insolvency/shareholders-liable-company-debts/",
+        11,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765922529",
+    "item_name": "Uk Insolvency Statistics",
+    "path": "/uk-insolvency-statistics/",
+    "views": 11,
+    "matched_titles": [
+      [
+        "/uk-insolvency-statistics/",
+        11,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427201",
+    "item_name": "Free Business Debt Advice",
+    "path": "/advice/get-free-business-debt-advice/",
+    "views": 10,
+    "matched_titles": [
+      [
+        "/advice/get-free-business-debt-advice/",
+        10,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453671",
+    "item_name": "HMRC Offices Contact Guide",
+    "path": "/hmrc/hmrc-offices-contact-guide/",
+    "views": 10,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-offices-contact-guide/",
+        10,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624438596",
+    "item_name": "Limited Company Bankruptcy",
+    "path": "/insolvency/limited-company-bankruptcy/",
+    "views": 10,
+    "matched_titles": [
+      [
+        "/insolvency/limited-company-bankruptcy/",
+        10,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765823294",
+    "item_name": "Advice",
+    "path": "/advice/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/advice/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458851",
+    "item_name": "Cannot Pay Suppliers",
+    "path": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624422979",
+    "item_name": "Director Responsibilities After Strike Off",
+    "path": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454041",
+    "item_name": "Tax Penalties",
+    "path": "/hmrc/tax-penalties/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/hmrc/tax-penalties/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624460396",
+    "item_name": "What Does Receivership Mean?",
+    "path": "/receivership-mean-business/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/receivership-mean-business/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429836",
+    "item_name": "What Is Limited Liability?",
+    "path": "/advice/what-is-limited-liability/",
+    "views": 9,
+    "matched_titles": [
+      [
+        "/advice/what-is-limited-liability/",
+        9,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454074",
+    "item_name": "Can a Director Get a Criminal Record?",
+    "path": "/advice/can-director-criminal-record/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/advice/can-director-criminal-record/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624460160",
+    "item_name": "Care Home Insolvency",
+    "path": "/care-home-insolvency/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/care-home-insolvency/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624442014",
+    "item_name": "Check If Company Is Insolvent",
+    "path": "/insolvency/check-if-a-company-is-insolvent/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/insolvency/check-if-a-company-is-insolvent/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445712",
+    "item_name": "Company Voluntary Arrangement",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/company-rescue-solutions/company-voluntary-arrangement/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624386877",
+    "item_name": "Compulsory Liquidation",
+    "path": "/liquidation/compulsory-liquidation/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/liquidation/compulsory-liquidation/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624446136",
+    "item_name": "Insolvent Company Owes Me Money",
+    "path": "/insolvency/insolvent-company-owes-me-money/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/insolvency/insolvent-company-owes-me-money/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425168",
+    "item_name": "Notice to Appoint Administrators",
+    "path": "/company-administration/notice-of-intention-to-appoint-administrators/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/company-administration/notice-of-intention-to-appoint-administrators/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838461",
+    "item_name": "Pub Closures In The Uk",
+    "path": "/articles/pub-closures-in-the-uk/",
+    "views": 8,
+    "matched_titles": [
+      [
+        "/articles/pub-closures-in-the-uk/",
+        8,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411671",
+    "item_name": "Directors Personal Guarantees",
+    "path": "/advice/directors-personal-guarantees/",
+    "views": 7,
+    "matched_titles": [
+      [
+        "/advice/directors-personal-guarantees/",
+        7,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425067",
+    "item_name": "Dissolving With BBL",
+    "path": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+    "views": 7,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+        7,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453791",
+    "item_name": "HMRC Tax Debt Hub",
+    "path": "/hmrc/",
+    "views": 7,
+    "matched_titles": [
+      [
+        "/hmrc/",
+        7,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838518",
+    "item_name": "Wayne Rooney Scores 21M From Company Liquidation",
+    "path": "/articles/wayne-rooney-scores-21m-from-company-liquidation/",
+    "views": 7,
+    "matched_titles": [
+      [
+        "/articles/wayne-rooney-scores-21m-from-company-liquidation/",
+        7,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416274",
+    "item_name": "Cease Trading",
+    "path": "/insolvency/cease-trading/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/insolvency/cease-trading/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765819581",
+    "item_name": "Cleaning Contractors",
+    "path": "/sectors/cleaning-contractors/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/sectors/cleaning-contractors/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624456573",
+    "item_name": "Frozen Bank Account",
+    "path": "/advice/frozen-bank-account/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/advice/frozen-bank-account/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838893",
+    "item_name": "Lengthy Disqualifications For Four Directors Involved In Vat Fraud",
+    "path": "/articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/articles/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423494",
+    "item_name": "Spouse Liability for Business Debts",
+    "path": "/insolvency/personal-liability-spouses-business-debts/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/insolvency/personal-liability-spouses-business-debts/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624441253",
+    "item_name": "What Happens to Directors?",
+    "path": "/liquidation/what-happens-to-directors-in-liquidation/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/liquidation/what-happens-to-directors-in-liquidation/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423160",
+    "item_name": "Which Creditors Get Paid First?",
+    "path": "/liquidation/which-creditors-get-paid-first/",
+    "views": 6,
+    "matched_titles": [
+      [
+        "/liquidation/which-creditors-get-paid-first/",
+        6,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838357",
+    "item_name": "Bobby Davros Business Goes Bust",
+    "path": "/articles/bobby-davros-business-goes-bust/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/articles/bobby-davros-business-goes-bust/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426888",
+    "item_name": "Can a Director Be Made Bankrupt?",
+    "path": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423386",
+    "item_name": "Challenge a Statutory Demand",
+    "path": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/challenge-a-statutory-demand/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624422535",
+    "item_name": "Company Vehicles in Liquidation",
+    "path": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453859",
+    "item_name": "Controlled Goods Agreement",
+    "path": "/hmrc/controlled-goods-agreement/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/hmrc/controlled-goods-agreement/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624467037",
+    "item_name": "High Court Writ",
+    "path": "/insolvency/what-is-a-high-court-writ/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-a-high-court-writ/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445155",
+    "item_name": "HMRC Fraud Investigations",
+    "path": "/hmrc/hmrc-fraud-investigations/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-fraud-investigations/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624393844",
+    "item_name": "HMRC Tax Investigations",
+    "path": "/hmrc/hmrc-tax-investigations/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-tax-investigations/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826600",
+    "item_name": "Insolvency Advice",
+    "path": "/advice/insolvency-advice-for-directors/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/advice/insolvency-advice-for-directors/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427364",
+    "item_name": "Insolvency Advice for Directors",
+    "path": "/advice/insolvency-advice-for-directors/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/advice/insolvency-advice-for-directors/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425503",
+    "item_name": "Preferential vs Non-Preferential Creditors",
+    "path": "/insolvency/preferential-non-preferential-creditors/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/insolvency/preferential-non-preferential-creditors/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765831060",
+    "item_name": "Privacy Policy",
+    "path": "/privacy-policy/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/privacy-policy/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765854723",
+    "item_name": "The Orla Kiely Fashion Brand Shuts Up Shop",
+    "path": "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423074",
+    "item_name": "VAT Penalties",
+    "path": "/hmrc/vat-penalties/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/hmrc/vat-penalties/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423794",
+    "item_name": "What Is an IP?",
+    "path": "/insolvency/what-is-an-insolvency-practitioner/",
+    "views": 5,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-an-insolvency-practitioner/",
+        5,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765825978",
+    "item_name": "1 In 180 Companies Faces Insolvency In 2024",
+    "path": "/articles/1-in-180-companies-faces-insolvency-in-2024/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/articles/1-in-180-companies-faces-insolvency-in-2024/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423521",
+    "item_name": "BBL Default",
+    "path": "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454558",
+    "item_name": "Business Recovery Services",
+    "path": "/insolvency/business-recovery-services/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/business-recovery-services/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624437179",
+    "item_name": "Can Directors Pay Themselves Before Liquidation?",
+    "path": "/liquidation/can-directors-pay-themselves-before-liquidation/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/liquidation/can-directors-pay-themselves-before-liquidation/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624420478",
+    "item_name": "Cannot Pay Business Energy",
+    "path": "/company-cash-flow-problems/cant-pay-business-energy/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-pay-business-energy/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426990",
+    "item_name": "Cannot Pay Business Rates",
+    "path": "/company-cash-flow-problems/cant-pay-business-rates/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-pay-business-rates/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624457035",
+    "item_name": "Cannot Pay Commercial Lease",
+    "path": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423870",
+    "item_name": "Company Cannot Pay Debts",
+    "path": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429763",
+    "item_name": "Company Pensions and Liquidation",
+    "path": "/liquidation/company-pensions-and-liquidation/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/liquidation/company-pensions-and-liquidation/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624446252",
+    "item_name": "Company Secretary Liability",
+    "path": "/insolvency/personally-liabilty-of-company-secretary/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/personally-liabilty-of-company-secretary/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426587",
+    "item_name": "Director Redundancy in MVL",
+    "path": "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765823205",
+    "item_name": "I Have No Knowledge Of This Debt",
+    "path": "/sample-letters/i-have-no-knowledge-of-this-debt/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/sample-letters/i-have-no-knowledge-of-this-debt/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624415794",
+    "item_name": "Losing House if Company Goes Bust",
+    "path": "/advice/losing-house-if-company-goes-bust/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/advice/losing-house-if-company-goes-bust/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426492",
+    "item_name": "Members Voluntary Liquidation (MVL)",
+    "path": "/liquidation/members-voluntary-liquidation/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/liquidation/members-voluntary-liquidation/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624456600",
+    "item_name": "Misfeasance",
+    "path": "/advice/misfeasance/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/advice/misfeasance/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429597",
+    "item_name": "Paying Staff but Not HMRC",
+    "path": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427370",
+    "item_name": "Personal Guarantee Insurance",
+    "path": "/advice/personal-guarantee-insurance/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/advice/personal-guarantee-insurance/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411995",
+    "item_name": "Redundancy in CVA",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454961",
+    "item_name": "Statement of Affairs",
+    "path": "/insolvency/statement-of-affairs/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/statement-of-affairs/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458873",
+    "item_name": "Taking Money Out of a Limited Company",
+    "path": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765834003",
+    "item_name": "Tell Debt Collector To Stop Contacting You",
+    "path": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453923",
+    "item_name": "Unenforceable Personal Guarantee",
+    "path": "/advice/unenforceable-personal-guarantee/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/advice/unenforceable-personal-guarantee/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624478664",
+    "item_name": "Validation Order",
+    "path": "/insolvency/validation-order/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/validation-order/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765855238",
+    "item_name": "Write Off My Debt",
+    "path": "/sample-letters/write-off-my-debt/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/sample-letters/write-off-my-debt/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624468941",
+    "item_name": "Wrongful Trading",
+    "path": "/insolvency/what-is-wrongful-trading/",
+    "views": 4,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-wrongful-trading/",
+        4,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624440880",
+    "item_name": "Am I Solvent?",
+    "path": "/liquidation/am-i-solvent/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/liquidation/am-i-solvent/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826409",
+    "item_name": "Articles",
+    "path": "/articles/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/articles/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427290",
+    "item_name": "BBL Fraud",
+    "path": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445220",
+    "item_name": "Can Personal Assets Be Seized?",
+    "path": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624441885",
+    "item_name": "Cannot Pay Staff Wages",
+    "path": "/company-cash-flow-problems/cant-pay-staff-wages/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-pay-staff-wages/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411774",
+    "item_name": "Companies Act 2006",
+    "path": "/advice/what-is-the-companies-act-2006/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/advice/what-is-the-companies-act-2006/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624410702",
+    "item_name": "Company Property in Liquidation",
+    "path": "/liquidation/company-property-and-real-estate-in-liquidation/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/liquidation/company-property-and-real-estate-in-liquidation/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411734",
+    "item_name": "Duties of a Company Director",
+    "path": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425611",
+    "item_name": "Freezing Order",
+    "path": "/insolvency/what-is-a-freezing-order-or-injunction/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-a-freezing-order-or-injunction/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838663",
+    "item_name": "Gieves Hawkes Facing Liquidation",
+    "path": "/articles/gieves-hawkes-facing-liquidation/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/articles/gieves-hawkes-facing-liquidation/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765854977",
+    "item_name": "Guides Resources Hub",
+    "path": "/guides-resources-hub/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/guides-resources-hub/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765823562",
+    "item_name": "Hotels",
+    "path": "/sectors/hotels/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/sectors/hotels/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624437341",
+    "item_name": "Liquidating a Group Company",
+    "path": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624433740",
+    "item_name": "Liquidation Documents",
+    "path": "/liquidation/list-of-liquidation-documents/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/liquidation/list-of-liquidation-documents/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624433715",
+    "item_name": "Liquidators Powers and Duties",
+    "path": "/liquidation/liquidators-powers-and-duties/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/liquidation/liquidators-powers-and-duties/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454035",
+    "item_name": "Personal Liability Notices",
+    "path": "/hmrc/personal-liability-notices/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/hmrc/personal-liability-notices/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416190",
+    "item_name": "Phoenix Companies",
+    "path": "/advice/what-are-phoenix-companies/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/advice/what-are-phoenix-companies/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765833247",
+    "item_name": "Sample Letters",
+    "path": "/sample-letters/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/sample-letters/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765921927",
+    "item_name": "Save The British Chippy",
+    "path": "/articles/save-the-british-chippy/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/articles/save-the-british-chippy/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394000",
+    "item_name": "Security Bonds",
+    "path": "/hmrc/security-bonds/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/hmrc/security-bonds/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765822829",
+    "item_name": "Travel Firm Collapses As It Cannot Pay Refunds",
+    "path": "/articles/travel-firm-collapses-as-it-cannot-pay-refunds/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/articles/travel-firm-collapses-as-it-cannot-pay-refunds/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453785",
+    "item_name": "Understanding HMRC Debt Collection",
+    "path": "/hmrc/understanding-hmrc-debt-collection/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/hmrc/understanding-hmrc-debt-collection/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624455268",
+    "item_name": "What Is the Insolvency Service?",
+    "path": "/insolvency/what-is-the-insolvency-service/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-the-insolvency-service/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426847",
+    "item_name": "Writing Off Directors Loan",
+    "path": "/advice/writing-off-a-directors-loan-account/",
+    "views": 3,
+    "matched_titles": [
+      [
+        "/advice/writing-off-a-directors-loan-account/",
+        3,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765921676",
+    "item_name": "88 Year Old Retailer Bhs Goes Company Liquidation",
+    "path": "/articles/88-year-old-retailer-bhs-goes-company-liquidation/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/88-year-old-retailer-bhs-goes-company-liquidation/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394203",
+    "item_name": "Bailiffs and High Court Enforcement Officers",
+    "path": "/liquidation/bailiffs-high-court-enforcement-officers/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/bailiffs-high-court-enforcement-officers/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765830305",
+    "item_name": "Boulestin Avoids Closure",
+    "path": "/articles/boulestin-avoids-closure/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/boulestin-avoids-closure/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394243",
+    "item_name": "Business Restructuring",
+    "path": "/advice/business-restructuring/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/advice/business-restructuring/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765822911",
+    "item_name": "Can Bradford Rugby Club Saved Liquidation",
+    "path": "/articles/can-bradford-rugby-club-saved-liquidation/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/can-bradford-rugby-club-saved-liquidation/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624441555",
+    "item_name": "Can HMRC Shut Down My Business?",
+    "path": "/hmrc/can-hmrc-shut-down-my-business/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/hmrc/can-hmrc-shut-down-my-business/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765836891",
+    "item_name": "Cease Trading Template",
+    "path": "/sample-letters/cease-trading-template/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/sample-letters/cease-trading-template/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765839263",
+    "item_name": "Childcare",
+    "path": "/sectors/childcare/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/sectors/childcare/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454164",
+    "item_name": "Company Financial Difficulties",
+    "path": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429310",
+    "item_name": "Company Restoration After Liquidation",
+    "path": "/liquidation/company-restoration-after-liquidation/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/company-restoration-after-liquidation/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425678",
+    "item_name": "County Court Judgements",
+    "path": "/county-court-judgements/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/county-court-judgements/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624456810",
+    "item_name": "Creditors Meeting",
+    "path": "/insolvency/creditors-meeting/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/insolvency/creditors-meeting/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425690",
+    "item_name": "Customer Insolvency",
+    "path": "/insolvency/what-to-do-about-customer-insolvency/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/insolvency/what-to-do-about-customer-insolvency/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624456310",
+    "item_name": "Debt Charities UK",
+    "path": "/debt-charities-uk/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/debt-charities-uk/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426796",
+    "item_name": "Debt Management Guide",
+    "path": "/advice/debt-management-guide/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/advice/debt-management-guide/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416269",
+    "item_name": "Directors Duties to Creditors",
+    "path": "/advice/directors-duties-to-creditors/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/advice/directors-duties-to-creditors/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838536",
+    "item_name": "Disqualified Directors Jailed Continuing Control Companies",
+    "path": "/articles/disqualified-directors-jailed-continuing-control-companies/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/disqualified-directors-jailed-continuing-control-companies/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416149",
+    "item_name": "Find a Liquidator Near Me",
+    "path": "/insolvency/find-a-liquidator-near-me/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/insolvency/find-a-liquidator-near-me/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445299",
+    "item_name": "HMRC Compliance Checks",
+    "path": "/hmrc/hmrc-compliance-checks/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-compliance-checks/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427067",
+    "item_name": "HMRC Penalties and Investigations",
+    "path": "/hmrc/hmrc-penalties-investigations/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-penalties-investigations/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426468",
+    "item_name": "HMRC Winding Up Petition",
+    "path": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624422761",
+    "item_name": "How Much Does Liquidation Cost?",
+    "path": "/liquidation/how-much-does-liquidation-cost/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/how-much-does-liquidation-cost/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765830784",
+    "item_name": "I Cannot Afford To Repay My Debt",
+    "path": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765922032",
+    "item_name": "Insolvent Wine Scammers",
+    "path": "/articles/insolvent-wine-scammers/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/insolvent-wine-scammers/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624424813",
+    "item_name": "Joint Liability for Unpaid VAT",
+    "path": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624415568",
+    "item_name": "Leases and Contracts in Liquidation",
+    "path": "/liquidation/leases-and-contracts-in-liquidation/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/leases-and-contracts-in-liquidation/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624424752",
+    "item_name": "Liquidating an LLP",
+    "path": "/liquidation/liquidating-a-limited-liability-partnership/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/liquidating-a-limited-liability-partnership/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624410741",
+    "item_name": "Liquidation Deadlines",
+    "path": "/liquidation/liquidation-deadlines-and-time-limits/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/liquidation-deadlines-and-time-limits/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426599",
+    "item_name": "Liquidation vs Dissolution",
+    "path": "/liquidation/liquidation-vs-dissolution-strike-off/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/liquidation-vs-dissolution-strike-off/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624459488",
+    "item_name": "LPA Receivership",
+    "path": "/insolvency/lpa-receivership/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/insolvency/lpa-receivership/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425834",
+    "item_name": "Pre-Pack Advantages and Disadvantages",
+    "path": "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765855013",
+    "item_name": "Request A Reduced Monthly Payment",
+    "path": "/sample-letters/request-a-reduced-monthly-payment/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/sample-letters/request-a-reduced-monthly-payment/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765829654",
+    "item_name": "Restaurants",
+    "path": "/sectors/restaurants/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/sectors/restaurants/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423548",
+    "item_name": "Save a Struggling Business",
+    "path": "/insolvency/how-to-save-a-struggling-business/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/insolvency/how-to-save-a-struggling-business/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838546",
+    "item_name": "Scaffolder Censured Over Bounce Back Loan",
+    "path": "/articles/scaffolder-censured-over-bounce-back-loan/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/articles/scaffolder-censured-over-bounce-back-loan/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624460231",
+    "item_name": "UK Insolvency Flowchart",
+    "path": "/liquidation/uk-insolvency-flowchart/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/uk-insolvency-flowchart/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624415488",
+    "item_name": "Voluntary vs Compulsory Liquidation",
+    "path": "/liquidation/voluntary-vs-compulsory-liquidation/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/liquidation/voluntary-vs-compulsory-liquidation/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453571",
+    "item_name": "What Can HMRC Bailiffs Take?",
+    "path": "/hmrc/what-can-hmrc-bailiffs-take/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/hmrc/what-can-hmrc-bailiffs-take/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624459089",
+    "item_name": "What Is a Statutory Demand?",
+    "path": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+    "views": 2,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+        2,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765823157",
+    "item_name": "12 Year Ban For Director Who Pocketed Covid Loan Cash",
+    "path": "/articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/12-year-ban-for-director-who-pocketed-covid-loan-cash/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624454212",
+    "item_name": "Administration vs CVA",
+    "path": "/company-administration/vs-cva/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-administration/vs-cva/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416249",
+    "item_name": "Administration vs Receivership",
+    "path": "/company-administration/vs-administrative-receivership/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-administration/vs-administrative-receivership/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624410768",
+    "item_name": "Alternatives to Company Liquidation",
+    "path": "/liquidation/alternatives-to-company-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/alternatives-to-company-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624459278",
+    "item_name": "Antecedent Transactions",
+    "path": "/insolvency/antecedent-transactions/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/antecedent-transactions/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765828580",
+    "item_name": "Barnsley Shopping Centre Enters Receivership",
+    "path": "/articles/barnsley-shopping-centre-enters-receivership/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/barnsley-shopping-centre-enters-receivership/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765828862",
+    "item_name": "Bespoke Kitchen Manufacturer",
+    "path": "/case-studies/bespoke-kitchen-manufacturer/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/bespoke-kitchen-manufacturer/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426988",
+    "item_name": "Biggest Struggles for Business Owners",
+    "path": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429333",
+    "item_name": "Business Bank Account in Liquidation",
+    "path": "/liquidation/business-bank-account-in-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/business-bank-account-in-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624438083",
+    "item_name": "Can a Director Be Sued Personally?",
+    "path": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458845",
+    "item_name": "Can I Lose My House With BBL?",
+    "path": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624410885",
+    "item_name": "Cannot Afford to Liquidate",
+    "path": "/liquidation/cant-afford-to-liquidate/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/cant-afford-to-liquidate/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423600",
+    "item_name": "Cannot Pay Company Mortgage",
+    "path": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624458984",
+    "item_name": "Cannot Repay Business Loan",
+    "path": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624441718",
+    "item_name": "Cash Flow Problems Hub",
+    "path": "/company-cash-flow-problems/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-cash-flow-problems/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765934646",
+    "item_name": "Charity",
+    "path": "/sectors/charity/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sectors/charity/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423027",
+    "item_name": "Close or Save My Company?",
+    "path": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765832661",
+    "item_name": "Common Causes Of Construction Insolvency",
+    "path": "/articles/common-causes-of-construction-insolvency/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/common-causes-of-construction-insolvency/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765834236",
+    "item_name": "Company Rescue Recovery Hub",
+    "path": "/company-rescue-recovery-hub/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-rescue-recovery-hub/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765834252",
+    "item_name": "Construction",
+    "path": "/sectors/construction/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sectors/construction/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826585",
+    "item_name": "Cookie Policy Company Debt",
+    "path": "/cookie-policy-company-debt/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/cookie-policy-company-debt/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411353",
+    "item_name": "Corporation Tax Penalties",
+    "path": "/hmrc/corporation-tax-penalties/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/hmrc/corporation-tax-penalties/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826068",
+    "item_name": "Crackdown On Directors Who Close Companies To Avoid Debts",
+    "path": "/articles/crackdown-on-directors-who-close-companies-to-avoid-debts/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/crackdown-on-directors-who-close-companies-to-avoid-debts/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624424836",
+    "item_name": "Creditor Meetings in Liquidation",
+    "path": "/liquidation/creditor-meetings-in-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/creditor-meetings-in-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624478683",
+    "item_name": "Creditor Negotiations",
+    "path": "/insolvency/creditor-negotiations/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/creditor-negotiations/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624430076",
+    "item_name": "CVA Pros and Cons",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624393504",
+    "item_name": "CVA vs Strike Off vs Liquidation",
+    "path": "/liquidation/cva-vs-strike-off-vs-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/cva-vs-strike-off-vs-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624457147",
+    "item_name": "Dealing With Creditor Pressure",
+    "path": "/insolvency/dealing-with-creditor-pressure/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/dealing-with-creditor-pressure/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411862",
+    "item_name": "Director Guarantees in CVA",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426530",
+    "item_name": "Directors Conduct Report",
+    "path": "/liquidation/directors-conduct-report-2/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/directors-conduct-report-2/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624416188",
+    "item_name": "Directors Conflict of Interest",
+    "path": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394348",
+    "item_name": "Directors Liability for BBL",
+    "path": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445348",
+    "item_name": "Distraint Order Notice",
+    "path": "/hmrc/distraint-order-notice/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/hmrc/distraint-order-notice/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765819364",
+    "item_name": "Entertainment",
+    "path": "/sectors/entertainment/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sectors/entertainment/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838713",
+    "item_name": "Freight Forwarder",
+    "path": "/case-studies/freight-forwarder/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/freight-forwarder/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423213",
+    "item_name": "Funding Options for SMEs",
+    "path": "/advice/funding-options-for-smes-in-the-uk/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/funding-options-for-smes-in-the-uk/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765829197",
+    "item_name": "High Court Closes Insolvent Mini Bond Group",
+    "path": "/articles/high-court-closes-insolvent-mini-bond-group/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/high-court-closes-insolvent-mini-bond-group/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624415505",
+    "item_name": "HMRC as Creditor in Liquidation",
+    "path": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624420669",
+    "item_name": "HMRC IR35 Investigations",
+    "path": "/advice/hmrcs-ir35-investigations-different/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/hmrcs-ir35-investigations-different/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394255",
+    "item_name": "HMRC Threatening Letters",
+    "path": "/hmrc/hmrc-threatening-letters/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/hmrc/hmrc-threatening-letters/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838957",
+    "item_name": "Hoverboard Retailer",
+    "path": "/case-studies/hoverboard-retailer/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/hoverboard-retailer/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765811738",
+    "item_name": "How Much Is The Digital Sales Tax Going To Affect Big Tech",
+    "path": "/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/how-much-is-the-digital-sales-tax-going-to-affect-big-tech/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826630",
+    "item_name": "I Need More Information About This Debt",
+    "path": "/sample-letters/i-need-more-information-about-this-debt/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sample-letters/i-need-more-information-about-this-debt/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624459961",
+    "item_name": "Individual Voluntary Arrangement",
+    "path": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-an-individual-voluntary-arrangement/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425863",
+    "item_name": "Insolvency Checklist",
+    "path": "/liquidation/insolvency-checklist/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/insolvency-checklist/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826597",
+    "item_name": "Insolvency News Commentary",
+    "path": "/insolvency-news-commentary/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency-news-commentary/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624423551",
+    "item_name": "Insolvency Test",
+    "path": "/insolvency/insolvency-test/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/insolvency-test/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624411589",
+    "item_name": "IP and Assets in Liquidation",
+    "path": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765826424",
+    "item_name": "Is Harley Davidson Heading For A Crash",
+    "path": "/articles/is-harley-davidson-heading-for-a-crash/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/is-harley-davidson-heading-for-a-crash/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765854685",
+    "item_name": "Jamie Oliver Restaurant Restructure London",
+    "path": "/articles/jamie-oliver-restaurant-restructure-london/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/jamie-oliver-restaurant-restructure-london/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765818733",
+    "item_name": "Kids Company Directors Face Disqualification Proceedings",
+    "path": "/articles/kids-company-directors-face-disqualification-proceedings/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/kids-company-directors-face-disqualification-proceedings/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765830767",
+    "item_name": "Language School",
+    "path": "/case-studies/language-school/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/language-school/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624441125",
+    "item_name": "Liquidating a Dormant Company",
+    "path": "/liquidation/can-i-liquidate-a-dormant-company/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/can-i-liquidate-a-dormant-company/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624429024",
+    "item_name": "Liquidating With No Assets",
+    "path": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445144",
+    "item_name": "Liquidation Timeline",
+    "path": "/liquidation/timeline/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/timeline/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624393889",
+    "item_name": "Notice of Enforcement",
+    "path": "/hmrc/notice-of-enforcement/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/hmrc/notice-of-enforcement/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624427150",
+    "item_name": "Partnership Voluntary Arrangements",
+    "path": "/company-rescue-solutions/partnership-voluntary-arrangements/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/company-rescue-solutions/partnership-voluntary-arrangements/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624394327",
+    "item_name": "Personal Liability for CBILS",
+    "path": "/advice/personal-liability-for-cbils-loans/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/personal-liability-for-cbils-loans/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425509",
+    "item_name": "Preferential Payments",
+    "path": "/insolvency/preferential-payments-during-insolvency/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/preferential-payments-during-insolvency/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426532",
+    "item_name": "Prepare for Liquidation",
+    "path": "/liquidation/how-to-prepare-for-company-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/how-to-prepare-for-company-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624426828",
+    "item_name": "Preventing Director Disputes",
+    "path": "/advice/preventing-company-director-disputes/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/preventing-company-director-disputes/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624440936",
+    "item_name": "Prove Your Debt in Liquidation",
+    "path": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624466673",
+    "item_name": "Retail Insolvency Trends",
+    "path": "/insolvency/retail-industry-insolvency-trends/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/retail-industry-insolvency-trends/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624434378",
+    "item_name": "Risks of Personal Guarantee",
+    "path": "/advice/the-risks-of-signing-a-personal-guarantee/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/advice/the-risks-of-signing-a-personal-guarantee/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624446459",
+    "item_name": "Secured vs Unsecured Creditors",
+    "path": "/insolvency/secured-vs-unsecured-creditors/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/secured-vs-unsecured-creditors/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624445258",
+    "item_name": "Security Bond Notices",
+    "path": "/hmrc/security-bond-notices/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/hmrc/security-bond-notices/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765830790",
+    "item_name": "Seo Consultancy",
+    "path": "/case-studies/seo-consultancy/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/seo-consultancy/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624398202",
+    "item_name": "Starting a New Company After Liquidation",
+    "path": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765823232",
+    "item_name": "Subcontractor Agency",
+    "path": "/case-studies/subcontractor-agency/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/case-studies/subcontractor-agency/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765839348",
+    "item_name": "Taxi Companies",
+    "path": "/sectors/taxi-companies/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sectors/taxi-companies/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624425679",
+    "item_name": "Transport and Haulage Insolvency",
+    "path": "/transport-haulage-insolvency/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/transport-haulage-insolvency/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765829422",
+    "item_name": "Travel",
+    "path": "/sectors/travel/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/sectors/travel/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624446470",
+    "item_name": "Warning Signs of Insolvency",
+    "path": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624453291",
+    "item_name": "What Happens After Liquidation?",
+    "path": "/liquidation/what-happens-after-company-liquidation/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/liquidation/what-happens-after-company-liquidation/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11624479117",
+    "item_name": "What Is a Creditor?",
+    "path": "/insolvency/what-is-a-creditor/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/insolvency/what-is-a-creditor/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765838678",
+    "item_name": "Will The Energy Crisis Mean The End For Britains Bakeries",
+    "path": "/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/",
+    "views": 1,
+    "matched_titles": [
+      [
+        "/articles/will-the-energy-crisis-mean-the-end-for-britains-bakeries/",
+        1,
+        "path",
+        1.0
+      ]
+    ],
+    "match_type": "path"
+  },
+  {
+    "item_id": "11765836484",
+    "item_name": "124 Pints To Save The Pub",
+    "path": "/articles/124-pints-to-save-the-pub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765836582",
+    "item_name": "35 Of Charities Fear Insolvency Due To Cost Of Living Crisis",
+    "path": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765832689",
+    "item_name": "39 Of Hair And Beauty Sector Still Furloughed",
+    "path": "/articles/39-of-hair-and-beauty-sector-still-furloughed/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765833232",
+    "item_name": "6000 Fuel Hikes Taxi Sector",
+    "path": "/articles/6000-fuel-hikes-taxi-sector/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765921786",
+    "item_name": "80 Homebase Stores Set To Close As Part Of Cva",
+    "path": "/articles/80-homebase-stores-set-to-close-as-part-of-cva/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624438438",
+    "item_name": "Accelerated Payment Notices",
+    "path": "/hmrc/accelerated-payment-notices-apn/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765855152",
+    "item_name": "Accountants",
+    "path": "/services-to/accountants/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838297",
+    "item_name": "Accreditations",
+    "path": "/accreditations/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765818568",
+    "item_name": "All Dishes Off Menu For Dacampos My Pasta Bar",
+    "path": "/articles/all-dishes-off-menu-for-dacampos-my-pasta-bar/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838598",
+    "item_name": "Articles Insights Hub",
+    "path": "/business-insolvency/articles-insights-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823811",
+    "item_name": "Asset Based And Other Lenders",
+    "path": "/services-to/asset-based-and-other-lenders/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838907",
+    "item_name": "Automotive",
+    "path": "/sectors/automotive/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829813",
+    "item_name": "Banks",
+    "path": "/services-to/banks/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765921708",
+    "item_name": "Bans For Uk Directors Who Avoid Repaying Bounce Back Loans",
+    "path": "/articles/bans-for-uk-directors-who-avoid-repaying-bounce-back-loans/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922370",
+    "item_name": "British Cycle Sales Hit 39 Year Low",
+    "path": "/articles/british-cycle-sales-hit-39-year-low/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826767",
+    "item_name": "Building Contractor",
+    "path": "/case-studies/building-contractor/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624438780",
+    "item_name": "Business Debt Advice",
+    "path": "/business-debt-advice/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922009",
+    "item_name": "Business Insolvency",
+    "path": "/business-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624415227",
+    "item_name": "Can a Supplier Force Liquidation?",
+    "path": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624468715",
+    "item_name": "Can Directors Go to Prison?",
+    "path": "/liquidation/can-directors-go-to-prison-for-company-debt/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826378",
+    "item_name": "Can Heathrow Survive Covid 19",
+    "path": "/articles/can-heathrow-survive-covid-19/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624415317",
+    "item_name": "Can I Choose My Liquidator?",
+    "path": "/liquidation/can-i-choose-my-liquidator/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826236",
+    "item_name": "Can Manchester United Get Out From Under Its 455 5M Debt",
+    "path": "/articles/can-manchester-united-get-out-from-under-its-455-5m-debt/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624411680",
+    "item_name": "Cannot Pay CBILS",
+    "path": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838908",
+    "item_name": "Carehomes",
+    "path": "/sectors/carehomes/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765819323",
+    "item_name": "Case Studies",
+    "path": "/case-studies/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624469042",
+    "item_name": "CCJ When Going Insolvent",
+    "path": "/liquidation/ccj-when-going-insolvent/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624444515",
+    "item_name": "Challenge a Liquidators Fees",
+    "path": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624458132",
+    "item_name": "Charity and Non-Profit Insolvency",
+    "path": "/charity-non-profit-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828766",
+    "item_name": "Chinese Takeaway",
+    "path": "/case-studies/chinese-takeaway/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624422898",
+    "item_name": "Choose the Right Insolvency Procedure",
+    "path": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838652",
+    "item_name": "Coffee Shop Owners Say Lattes Would Have To Be 7 To Follow Energy Hikes",
+    "path": "/articles/coffee-shop-owners-say-lattes-would-have-to-be-7-to-follow-energy-hikes/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624424156",
+    "item_name": "Construction Insolvency",
+    "path": "/construction-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854937",
+    "item_name": "Corporate Finance",
+    "path": "/case-studies/corporate-finance/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624453063",
+    "item_name": "Creditor Takes Me to Court",
+    "path": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826749",
+    "item_name": "Creditors",
+    "path": "/services-to/creditors/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829118",
+    "item_name": "Creditors Guides To Insolvency Practitioners Fees",
+    "path": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826325",
+    "item_name": "Creditors Voluntary Liquidation With Phoenix",
+    "path": "/case-studies/creditors-voluntary-liquidation-with-phoenix/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624430070",
+    "item_name": "CVA Fails Mid-Term",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624454691",
+    "item_name": "CVA vs Administration",
+    "path": "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624445726",
+    "item_name": "CVA vs Liquidation",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765839083",
+    "item_name": "Debt Charities For Consumers",
+    "path": "/articles/debt-charities-for-consumers/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829359",
+    "item_name": "Debt Creditor Pressure Hub",
+    "path": "/debt-creditor-pressure-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624457031",
+    "item_name": "Director Accountancy Errors",
+    "path": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624424455",
+    "item_name": "Director Conduct Review",
+    "path": "/liquidation/director-conduct-review/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624424785",
+    "item_name": "Director Hides Assets",
+    "path": "/liquidation/what-happens-if-a-director-hides-company-assets/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765819423",
+    "item_name": "Director Protection Hub",
+    "path": "/director-protection-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624441207",
+    "item_name": "Director Resigns Before Liquidation",
+    "path": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624423765",
+    "item_name": "Director Transfers Assets",
+    "path": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624394357",
+    "item_name": "Directors Disqualification",
+    "path": "/advice/directors-disqualification/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765811669",
+    "item_name": "Dissolution",
+    "path": "/case-studies/dissolution/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765834434",
+    "item_name": "Dry Cleaning Laundry",
+    "path": "/sectors/dry-cleaning-laundry/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765837090",
+    "item_name": "Energy",
+    "path": "/sectors/energy/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624439051",
+    "item_name": "Energy Provider Insolvency",
+    "path": "/energy-provider-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838661",
+    "item_name": "Equestrian Failed Company Voluntary Arrangement Administration",
+    "path": "/articles/equestrian-failed-company-voluntary-arrangement-administration/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854944",
+    "item_name": "Events",
+    "path": "/sectors/events/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765934179",
+    "item_name": "Failed Arena Television Leaves Trail Of Losses And Faces Fraud Probe",
+    "path": "/articles/failed-arena-television-leaves-trail-of-losses-and-faces-fraud-probe/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826070",
+    "item_name": "Find Out Why The Transport Industry Is Prone To Insolvency",
+    "path": "/articles/find-out-why-the-transport-industry-is-prone-to-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765934648",
+    "item_name": "Gyms",
+    "path": "/sectors/gyms/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765811716",
+    "item_name": "Hairdresser",
+    "path": "/case-studies/hairdresser/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765830638",
+    "item_name": "Hardware Maintenance",
+    "path": "/case-studies/hardware-maintenance/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922225",
+    "item_name": "Haulage",
+    "path": "/sectors/haulage/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624434345",
+    "item_name": "HMRC Criminal Investigations",
+    "path": "/hmrc/hmrc-criminal-investigations/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624426608",
+    "item_name": "HMRC Debt Enforcement Hub",
+    "path": "/hmrc/hmrc-debt-enforcement-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624453513",
+    "item_name": "HMRC Enforcement Action",
+    "path": "/hmrc/hmrc-enforcement-action/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624438228",
+    "item_name": "HMRC Follower Notice",
+    "path": "/hmrc/hmrc-follower-notice/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624458767",
+    "item_name": "HMRC Freezes Bank Account",
+    "path": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624445602",
+    "item_name": "HMRC Rejects Time to Pay",
+    "path": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624441644",
+    "item_name": "HMRC Sends Bailiffs",
+    "path": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829152",
+    "item_name": "Hold Action On My Account",
+    "path": "/sample-letters/hold-action-on-my-account/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624438622",
+    "item_name": "Hospitality Insolvency",
+    "path": "/hospitality-restaurant-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826274",
+    "item_name": "How Will Carillions Insolvency Effect Its Supply Chain",
+    "path": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624453730",
+    "item_name": "Ignoring HMRC Letters",
+    "path": "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765818965",
+    "item_name": "Individual Voluntary Arrangement",
+    "path": "/case-studies/individual-voluntary-arrangement/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922577",
+    "item_name": "Individual Voluntary Arrangement With New Limited Company",
+    "path": "/case-studies/individual-voluntary-arrangement-with-new-limited-company/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838609",
+    "item_name": "Information Technology",
+    "path": "/case-studies/information-technology/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765830644",
+    "item_name": "Insolvencies Within The Technology Sector",
+    "path": "/articles/insolvencies-within-the-technology-sector/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624438800",
+    "item_name": "Insolvency Myths Debunked",
+    "path": "/liquidation/insolvency-myths-debunked/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826849",
+    "item_name": "Insolvency Rescue Fish Chip Sector",
+    "path": "/sectors/insolvency-rescue-fish-chip-sector/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765833568",
+    "item_name": "Insolvency Rescue Solutions For Garden Centers",
+    "path": "/sectors/insolvency-rescue-solutions-for-garden-centers/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624425753",
+    "item_name": "Insolvency vs Bankruptcy",
+    "path": "/liquidation/insolvency-vs-bankruptcy/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624423437",
+    "item_name": "Insolvent Company Investigations",
+    "path": "/insolvency/insolvent-company-investigations/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765830986",
+    "item_name": "It Consultancy",
+    "path": "/case-studies/it-consultancy/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828532",
+    "item_name": "Jeweller",
+    "path": "/case-studies/jeweller/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823065",
+    "item_name": "Leeds Dino Trail Collapses Into Administration",
+    "path": "/articles/leeds-dino-trail-collapses-into-administration/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765855216",
+    "item_name": "Leisure",
+    "path": "/sectors/leisure/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624425147",
+    "item_name": "Light Touch Administration",
+    "path": "/company-administration/light-touch-administration/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624437548",
+    "item_name": "Liquidating a Charity",
+    "path": "/liquidation/liquidating-a-charity-or-non-profit/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624437473",
+    "item_name": "Liquidating to Avoid Paying Suppliers",
+    "path": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624433879",
+    "item_name": "Liquidating With a BBL",
+    "path": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624425693",
+    "item_name": "Liquidation Hub",
+    "path": "/liquidation/liquidation-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828391",
+    "item_name": "Managing Debt Related Stress",
+    "path": "/articles/managing-debt-related-stress/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829703",
+    "item_name": "Manufacturing",
+    "path": "/sectors/manufacturing/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624450638",
+    "item_name": "Manufacturing Insolvency",
+    "path": "/manufacturing-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624482651",
+    "item_name": "Mental Health and Debt Stress",
+    "path": "/mental-health-debt-stress-support/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765819605",
+    "item_name": "Mental Health Debt Stress Support",
+    "path": "/mental-health-debt-stress-support/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765921845",
+    "item_name": "Monarch Airline Insolvency",
+    "path": "/articles/monarch-airline-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854392",
+    "item_name": "More Small Energy Providers Face Collapse As Crisis Deepens",
+    "path": "/articles/more-small-energy-providers-face-collapse-as-crisis-deepens/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823426",
+    "item_name": "Online Travel Agent",
+    "path": "/case-studies/online-travel-agent/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828890",
+    "item_name": "Paradise Papers",
+    "path": "/articles/paradise-papers/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624411393",
+    "item_name": "Pay HMRC or Suppliers First?",
+    "path": "/hmrc/pay-hmrc-or-suppliers-first/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765832905",
+    "item_name": "Personal Guarantees",
+    "path": "/case-studies/personal-guarantees/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854888",
+    "item_name": "Pet Store",
+    "path": "/case-studies/pet-store/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854645",
+    "item_name": "Pink Biscuit Manufacturer Rivington Biscuits Goes Company Administration",
+    "path": "/articles/pink-biscuit-manufacturer-rivington-biscuits-goes-company-administration/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765839119",
+    "item_name": "Pizza Restaurant",
+    "path": "/case-studies/pizza-restaurant/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828751",
+    "item_name": "Plastering Company",
+    "path": "/case-studies/plastering-company/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765819050",
+    "item_name": "Plumbing",
+    "path": "/case-studies/plumbing/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765828712",
+    "item_name": "Poolmageddon 79 Of Uk Pools May Close Within 6 Months",
+    "path": "/articles/poolmageddon-79-of-uk-pools-may-close-within-6-months/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624445929",
+    "item_name": "Pre-Pack Administration",
+    "path": "/company-rescue-solutions/pre-packs/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765854879",
+    "item_name": "Prize Draw Terms Conditions",
+    "path": "/prize-draw-terms-conditions/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765829504",
+    "item_name": "Professional Services",
+    "path": "/sectors/professional-services/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624458168",
+    "item_name": "Professional Services Insolvency",
+    "path": "/professional-services-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922853",
+    "item_name": "Property",
+    "path": "/sectors/property/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922526",
+    "item_name": "Recruitment",
+    "path": "/sectors/recruitment/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765830697",
+    "item_name": "Recruitment Consultant",
+    "path": "/case-studies/recruitment-consultant/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624445888",
+    "item_name": "Reduce Insolvency Risk",
+    "path": "/insolvency/how-to-reduce-insolvency-risk/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624455105",
+    "item_name": "Rescue From Insolvency",
+    "path": "/insolvency/rescue-your-business-from-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624430181",
+    "item_name": "Rescue Solutions Hub",
+    "path": "/company-rescue-solutions/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823661",
+    "item_name": "Retail",
+    "path": "/sectors/retail/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624426674",
+    "item_name": "Risk of Director Disqualification",
+    "path": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765855221",
+    "item_name": "Schools",
+    "path": "/sectors/schools/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765819368",
+    "item_name": "Sector Insolvency Hub",
+    "path": "/sector-insolvency-hub/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823453",
+    "item_name": "Sector Specific Insolvency",
+    "path": "/sector-specific-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765934231",
+    "item_name": "Sectors",
+    "path": "/sectors/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624455714",
+    "item_name": "Seek Advice Before Missing Payments",
+    "path": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624478632",
+    "item_name": "Sell an Insolvent Company",
+    "path": "/insolvency/can-you-sell-your-insolvent-company/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765858065",
+    "item_name": "Services To",
+    "path": "/services-to/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765823740",
+    "item_name": "Solicitors",
+    "path": "/services-to/solicitors/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624479014",
+    "item_name": "Stop or Avoid Insolvency",
+    "path": "/insolvency/stop-or-avoid-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624453297",
+    "item_name": "Stop Paying Company Debts",
+    "path": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922803",
+    "item_name": "Terms Conditions",
+    "path": "/terms-conditions/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765922267",
+    "item_name": "Tescos Rated Worst Payer Uk Small Businesses",
+    "path": "/articles/tescos-rated-worst-payer-uk-small-businesses/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765838797",
+    "item_name": "Time To Pay And Creditor Voluntary Liquidation",
+    "path": "/case-studies/time-to-pay-and-creditor-voluntary-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624423782",
+    "item_name": "Trade Out of Insolvency",
+    "path": "/insolvency/can-we-trade-out-of-insolvency/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624416394",
+    "item_name": "Transactions at Undervalue",
+    "path": "/insolvency/transactions-at-undervalue/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624425599",
+    "item_name": "UK Insolvency Glossary",
+    "path": "/liquidation/uk-insolvency-glossary/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624425143",
+    "item_name": "Use CVA to Close a Company",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624453279",
+    "item_name": "Voluntary Liquidation",
+    "path": "/liquidation/voluntary-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624454687",
+    "item_name": "When a CVA Fails",
+    "path": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624424852",
+    "item_name": "When to Stop Trading",
+    "path": "/liquidation/when-should-a-director-stop-trading/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624423319",
+    "item_name": "Why Debt Is Not Always Bad",
+    "path": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11765826702",
+    "item_name": "Womens Fashion Store",
+    "path": "/case-studies/womens-fashion-store/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  },
+  {
+    "item_id": "11624441472",
+    "item_name": "WUP vs Compulsory Liquidation",
+    "path": "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+    "views": 0,
+    "matched_titles": [],
+    "match_type": "none"
+  }
+]

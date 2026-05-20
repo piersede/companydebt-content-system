@@ -303,6 +303,32 @@ The marker `<!-- no-url: <reason> -->` documents that the missing URL is intenti
 
 **Enforcement:** `scripts/article_audit.py` Check 18 fails if any `<li>` in the Sources block lacks both an `<a href>` and a `no-url` opt-out marker.
 
+### 7b.1 Anti-pattern: suffix-only anchor (HARD RULE)
+
+The clickable element of a Sources `<li>` must be the citation itself, not a trailing domain suffix. This anti-pattern looks compliant but degrades the reader's verification path:
+
+```html
+<!-- BAD: only "legislation.gov.uk" is clickable -->
+<li>Insolvency Act 1986, section 214 (wrongful trading) -
+<a href="https://www.legislation.gov.uk/ukpga/1986/45/section/214">legislation.gov.uk</a></li>
+```
+
+A reader scanning the page sees the descriptive citation as plain text and the bare domain as a small attribution link. The link is technically present, but the *citation* is unclickable. This is the same problem as a bare-name citation, dressed up with a decorative attribution link.
+
+**Required form** is one of:
+
+```html
+<!-- GOOD: title is the link, attribution suffix is plain text -->
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/214">Insolvency Act 1986, section 214 (wrongful trading)</a> - legislation.gov.uk</li>
+
+<!-- ALSO GOOD: whole bullet is the link -->
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/214">Insolvency Act 1986, section 214 (wrongful trading) (legislation.gov.uk)</a></li>
+```
+
+**Detection rule:** the audit fails a `<li>` when (a) every anchor inside the `<li>` has anchor text that matches a bare hostname pattern (e.g., `legislation.gov.uk`, `gov.uk`, `r3.org.uk`) AND (b) more than 20 chars of substantive plain text sit outside the anchors. Both conditions must hold; an attribution suffix on its own is fine if the citation title is also wrapped in an anchor.
+
+**Enforcement:** `scripts/article_audit.py` Check 18 fails on the suffix-only anchor anti-pattern from May 2026 onward.
+
 ## 8. Decorative sourcing
 
 Decorative sourcing is when a source is mentioned to create the appearance of evidence without actually supporting the specific claim.
