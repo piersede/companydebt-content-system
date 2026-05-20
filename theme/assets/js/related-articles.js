@@ -218,13 +218,13 @@
       btn.type = "button";
       btn.className = "cd-sources__toggle";
       btn.setAttribute("aria-expanded", "false");
-      btn.textContent = "Read more sources (" + hiddenCount + ")";
+      btn.textContent = "Show More Sources (" + hiddenCount + ")";
       btn.addEventListener("click", function () {
         const collapsed = aside.classList.toggle("is-collapsed");
         btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
         btn.textContent = collapsed
-          ? "Read more sources (" + hiddenCount + ")"
-          : "Show fewer sources";
+          ? "Show More Sources (" + hiddenCount + ")"
+          : "Show Fewer Sources";
       });
       aside.appendChild(btn);
     }
