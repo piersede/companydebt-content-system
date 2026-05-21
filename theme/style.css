@@ -6862,7 +6862,8 @@ body section.section-widget-download {
 .toc {
   background: #f4f7fe !important;
 }/* Sources & References aside label (page-scoped sibling of methodology) */
-body.page-template-take-the-test-template .main-content p.cd-sources__label {
+body.page-template-take-the-test-template .main-content p.cd-sources__label,
+.main-content p.cd-sources__label {
   font-family: Arial, sans-serif !important;
   font-size: 24px !important;
   line-height: 29px !important;
@@ -6873,7 +6874,8 @@ body.page-template-take-the-test-template .main-content p.cd-sources__label {
   padding-top: 0 !important;
   letter-spacing: normal !important;
 }
-body.page-template-take-the-test-template .main-content p.cd-sources__label strong {
+body.page-template-take-the-test-template .main-content p.cd-sources__label strong,
+.main-content p.cd-sources__label strong {
   font-weight: inherit !important;
   color: inherit !important;
   font-size: inherit !important;
