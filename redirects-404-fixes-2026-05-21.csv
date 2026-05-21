@@ -1,0 +1,34 @@
+source url,target url,redirect code,description
+/liquidation/what-happens-to-company-assets/,/liquidation/,301,Liquidation sub-page deleted — redirect to hub
+/liquidation/the-difference-between-solvent-and-insolvent-company-liquidation/,/liquidation/,301,Liquidation sub-page deleted — redirect to hub
+/liquidation/what-happens-to-the-shares-of-a-company-that-has-been-liquidated/,/liquidation/,301,Liquidation sub-page deleted — redirect to hub
+/liquidation/directors-conduct-report/,/liquidation/directors-disqualification/,301,Liquidation sub-page deleted — redirect to closest live page
+/liquidation/company-liquidation-what-is-the-value-of-your-intellectual-property/,/liquidation/,301,Liquidation sub-page deleted — redirect to hub
+/faqs/what-is-the-role-of-a-liquidator-in-company-liquidation/,/liquidation/,301,FAQ deleted — redirect to liquidation hub
+/faqs/,/insolvency/,301,FAQs section removed — redirect to insolvency hub
+/insolvent-company-investigations/,/insolvency/,301,Page deleted — redirect to insolvency hub
+/overdrawn-directors-loan-account-during-liquidation/,/liquidation/overdrawn-directors-loan-account/,301,Page moved to liquidation sub-path
+/advice/cant-repay-bounce-back-loan/,/bounce-back-loan-support-hub/,301,Page deleted — redirect to BBL hub
+/what-happens-to-a-director-during-liquidation/,/liquidation/,301,Page deleted — redirect to liquidation hub
+/creditors-voluntary-liquidation-cvl/,/liquidation/creditors-voluntary-liquidation/,301,Old slug — redirect to canonical CVL page
+/winding-up-petition/,/winding-up-petitions/,301,Singular slug — redirect to canonical plural URL
+/tax-debt/,/hmrc-tax-problems/,301,Page deleted — redirect to HMRC tax hub
+/advice/director-disqualification/,/liquidation/directors-disqualification/,301,Old advice CPT path — redirect to current disqualification page
+/hmrc/hmrc-compliance-team/,/hmrc/,301,Page deleted — redirect to HMRC hub
+/company-strike-off-and-dissolution/,/closing-a-limited-company/,301,Old combined page — redirect to closing hub
+/company-strike-off-and-dissolution,/closing-a-limited-company/,301,Old combined page no trailing slash — redirect to closing hub
+/company-strike-off/hmrc-objection-striking-off/,/company-strike-off/,301,Sub-page deleted — redirect to strike-off hub
+/what-are-the-reasons-for-dissolving-your-business/,/closing-a-limited-company/,301,Page deleted — redirect to closing hub
+/easily-dissolve-company/,/closing-a-limited-company/,301,Page deleted — redirect to closing hub
+/hmrc/what-is-a-nudge-letter-from-hmrc/,/hmrc/,301,Page deleted — redirect to HMRC hub
+/closing-a-limited-company/costs-of-closing-a-company/,/closing-a-limited-company/,301,Sub-page deleted — redirect to closing hub
+/closing-a-limited-company/dissolved-vs-dormant/,/closing-a-limited-company/,301,Sub-page deleted — redirect to closing hub
+/closing-a-limited-company/first-gazette-notice-for-compulsory-strike-off/,/company-strike-off/,301,Sub-page deleted — redirect to strike-off hub
+/closing-a-limited-company/close-a-limited-company-with-debts/,/closing-a-limited-company/,301,Sub-page deleted — redirect to closing hub
+/bailiffs-high-court-enforcement-officers/,/winding-up-petitions/,301,Page deleted — redirect to WUP hub
+/high-court-enforcement-officers/,/winding-up-petitions/,301,Page deleted — redirect to WUP hub
+/insolvency/high-court-enforcement-officers/,/winding-up-petitions/,301,Insolvency sub-page deleted — redirect to WUP hub
+/what-is-solvent-liquidation/,/members-voluntary-liquidation/,301,Page deleted — solvent liquidation = MVL
+/company-debt-blog/i-cant-afford-to-pay-my-companys-suppliers-what-should-i-do/,/company-cash-flow-problems/,301,Old blog CPT — redirect to cash flow hub
+/company-rescue-solutions/pre-packs/what-are-phoenix-companies-and-are-they-legal/,/company-rescue-solutions/pre-packs/,301,Page deleted — redirect to pre-packs hub
+/how-is-your-business-going-to-be-affected-by-climate-change,/articles/,301,No-trailing-slash variant of May-19 redirect
