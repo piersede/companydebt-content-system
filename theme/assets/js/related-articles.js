@@ -108,8 +108,8 @@
 
 /* -------------------------------------------------------------------
  * .cd-sources block transformation + category grouping
- * Scoped to /liquidation/ (page-id-7669) for the iteration. To roll out
- * site-wide, drop the body-class check.
+ * Scoped to the take-the-test template. Runs on any singular page
+ * whose body carries .page-template-take-the-test-template.
  *
  * For each <li> inside <aside class="cd-sources">:
  *   - Strip leading "— " from text after <strong>, capitalize, wrap in
@@ -233,7 +233,7 @@
   }
 
   function transformSources() {
-    if (!document.body.classList.contains("page-id-7669")) return;
+    if (!document.body.classList.contains("page-template-take-the-test-template")) return;
     document.querySelectorAll(".cd-sources").forEach(transformAside);
   }
 
