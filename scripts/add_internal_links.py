@@ -1,0 +1,331 @@
+"""
+Add internal links to Company Debt draft HTML files from an Ahrefs CSV export.
+
+Each CSV row specifies a source page, a keyword (anchor text), the exact sentence
+context where it appears, and the target page URL. The script locates the right
+paragraph using the context string, then wraps the keyword with an <a href>.
+
+Usage:
+    python scripts/add_internal_links.py <csv_path> [--dry-run]
+
+Rules:
+  - One link per target page per source page (no duplicate destinations)
+  - Context-pinned: keyword is linked in the exact paragraph matching the context
+  - Headings are never touched (only wp:paragraph blocks)
+  - Staging URL format used (comdebstage.wpengine.com)
+  - Pages without a local draft file are skipped and reported
+"""
+
+import csv
+import re
+import sys
+from pathlib import Path
+from html import unescape
+from urllib.parse import urlparse
+from collections import defaultdict
+
+DRAFTS_DIR = Path(__file__).parent.parent / "drafts"
+PROD_HOST  = "https://www.companydebt.com"
+STAGE_HOST = "https://comdebstage.wpengine.com"
+
+# ---------------------------------------------------------------------------
+# Draft file index
+# ---------------------------------------------------------------------------
+
+def build_draft_index():
+    """Return dict mapping slug -> Path for every HTML file in drafts/."""
+    index = {}
+    for path in DRAFTS_DIR.glob("*.html"):
+        stem = path.stem
+
+        # {numeric_id}_{slug}.html
+        m = re.match(r"^\d+_(.+)$", stem)
+        if m:
+            index[m.group(1)] = path
+            continue
+
+        # art_{numeric_id}.html — read LINK: comment to derive slug
+        if re.match(r"^art_\d+$", stem):
+            try:
+                with open(path, encoding="utf-8", errors="replace") as fh:
+                    for _ in range(10):
+                        line = fh.readline()
+                        lm = re.search(r"LINK:\s*(https?://[^\s]+)", line)
+                        if lm:
+                            parsed = urlparse(lm.group(1))
+                            slug = parsed.path.rstrip("/").split("/")[-1]
+                            if slug:
+                                index[slug] = path
+                            break
+            except OSError:
+                pass
+
+    return index
+
+
+# ---------------------------------------------------------------------------
+# Paragraph matching
+# ---------------------------------------------------------------------------
+
+def _plain(html: str) -> str:
+    """Strip HTML tags and unescape entities; collapse whitespace."""
+    text = re.sub(r"<[^>]+>", " ", html)
+    text = unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _normalize(text: str) -> str:
+    """Normalize for matching: strip tags, unescape, replace non-ASCII with space, lowercase."""
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = unescape(text)
+    # Replace non-ASCII chars (replacement chars �, smart quotes, em dashes, etc.)
+    text = re.sub(r"[^\x00-\x7F]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text.lower()
+
+
+def find_paragraph_for_context(draft_html: str, context_text: str):
+    """
+    Find the wp:paragraph block whose plain text contains the context sentence.
+    Returns (block_start, block_end) within draft_html, or None.
+    """
+    ctx_norm = _normalize(context_text)
+
+    # Search both paragraph and list-item blocks (not headings)
+    block_pattern = re.compile(
+        r"<!-- wp:(?:paragraph|list-item)(?:\s[^>]*)? -->(.*?)<!-- /wp:(?:paragraph|list-item) -->",
+        re.DOTALL | re.IGNORECASE,
+    )
+
+    # Pre-compute normalized text for all searchable blocks once
+    candidates = [
+        (m.start(), m.end(), _normalize(m.group(1)))
+        for m in block_pattern.finditer(draft_html)
+    ]
+
+    # Try progressively shorter fragments from different positions in context
+    for frag_len in (60, 40, 25, 15):
+        if len(ctx_norm) < frag_len:
+            continue
+        for start_frac in (0.05, 0.25, 0.5, 0.7):
+            start = int(len(ctx_norm) * start_frac)
+            fragment = ctx_norm[start : start + frag_len].strip()
+            if len(fragment) < 10:
+                continue
+            for bs, be, para_norm in candidates:
+                if fragment in para_norm:
+                    return bs, be
+
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Link insertion
+# ---------------------------------------------------------------------------
+
+def insert_link_in_block(block_html: str, keyword: str, href: str):
+    """
+    Wrap the first unlinked occurrence of keyword in block_html with <a href>.
+    Returns the modified block, or None if the keyword was not found / already linked.
+    """
+    # Split into alternating text/tag segments
+    parts = re.split(r"(<[^>]+>)", block_html)
+
+    in_anchor = False
+    result = []
+    replaced = False
+    kw_lower = keyword.lower()
+
+    for i, part in enumerate(parts):
+        if i % 2 == 1:  # tag or comment
+            if re.match(r"<a[\s>]", part, re.IGNORECASE):
+                in_anchor = True
+            elif re.match(r"</a\s*>", part, re.IGNORECASE):
+                in_anchor = False
+            result.append(part)
+        else:  # text node
+            if not replaced and not in_anchor:
+                idx = part.lower().find(kw_lower)
+                if idx != -1:
+                    original_kw = part[idx : idx + len(keyword)]
+                    result.append(part[:idx])
+                    result.append(f'<a href="{href}">{original_kw}</a>')
+                    result.append(part[idx + len(keyword) :])
+                    replaced = True
+                    continue
+            result.append(part)
+
+    return "".join(result) if replaced else None
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def to_staging(url: str) -> str:
+    return url.replace(PROD_HOST, STAGE_HOST)
+
+
+def already_linked(draft_html: str, staging_url: str) -> bool:
+    tgt = staging_url.rstrip("/")
+    return tgt in draft_html or (tgt + "/") in draft_html
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    dry_run = "--dry-run" in sys.argv
+    positional = [a for a in sys.argv[1:] if not a.startswith("-")]
+    if not positional:
+        print("Usage: python scripts/add_internal_links.py <csv_path> [--dry-run]")
+        sys.exit(1)
+
+    csv_path = Path(positional[0])
+    if not csv_path.exists():
+        print(f"ERROR: CSV not found: {csv_path}")
+        sys.exit(1)
+
+    # Build draft index
+    print("Building draft index…")
+    draft_index = build_draft_index()
+    print(f"  {len(draft_index)} draft files indexed\n")
+
+    # Parse CSV (tab-delimited, may have quoted fields)
+    opportunities: dict[str, list] = defaultdict(list)
+    total_rows = 0
+    with open(csv_path, encoding="utf-16", newline="") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        for row in reader:
+            src = row.get("Source page", "").strip().strip('"')
+            kw  = row.get("Keyword", "").strip().strip('"')
+            ctx = row.get("Keyword context", "").strip().strip('"')
+            tgt = row.get("Target page", "").strip().strip('"')
+            if src and kw and ctx and tgt:
+                opportunities[src].append((kw, ctx, tgt))
+                total_rows += 1
+
+    print(f"CSV: {total_rows} opportunities across {len(opportunities)} source pages\n")
+
+    # Stats
+    stats = {
+        "inserted":              0,
+        "skipped_no_draft":      0,
+        "skipped_duplicate":     0,
+        "skipped_ctx_not_found": 0,
+        "skipped_kw_missing":    0,
+    }
+
+    no_draft_pages: list[str] = []
+    report_lines:   list[str] = []
+    modified:       list[tuple[str, Path]] = []  # (slug, path)
+
+    for src_url in sorted(opportunities):
+        links = opportunities[src_url]
+
+        # Derive slug from URL
+        slug = urlparse(src_url).path.rstrip("/").split("/")[-1]
+
+        if slug not in draft_index:
+            stats["skipped_no_draft"] += len(links)
+            no_draft_pages.append(f"  {src_url}  (slug={slug})")
+            continue
+
+        draft_path = draft_index[slug]
+        with open(draft_path, encoding="utf-8") as fh:
+            draft_html = fh.read()
+
+        original_html = draft_html
+        page_lines = [f"\n### {src_url}\n    {draft_path.name}"]
+        page_changed = False
+
+        # Deduplicate: same keyword+target within a page shouldn't appear twice
+        seen_targets_this_page: set[str] = set()
+
+        for kw, ctx, tgt_url in links:
+            staging_tgt = to_staging(tgt_url)
+
+            # Skip if target already linked anywhere in the draft
+            if staging_tgt in seen_targets_this_page or already_linked(draft_html, staging_tgt):
+                stats["skipped_duplicate"] += 1
+                page_lines.append(f"  SKIP(dup)  [{kw}] → {tgt_url}")
+                seen_targets_this_page.add(staging_tgt)
+                continue
+            seen_targets_this_page.add(staging_tgt)
+
+            # Find the matching paragraph
+            location = find_paragraph_for_context(draft_html, ctx)
+            if location is None:
+                stats["skipped_ctx_not_found"] += 1
+                page_lines.append(f"  SKIP(ctx)  [{kw}] → {tgt_url}")
+                continue
+
+            block_start, block_end = location
+            block_html = draft_html[block_start:block_end]
+
+            # Insert link
+            new_block = insert_link_in_block(block_html, kw, staging_tgt)
+            if new_block is None:
+                stats["skipped_kw_missing"] += 1
+                page_lines.append(f"  SKIP(kw?)  [{kw}] → {tgt_url}")
+                continue
+
+            draft_html = draft_html[:block_start] + new_block + draft_html[block_end:]
+            stats["inserted"] += 1
+            page_lines.append(f"  INSERTED   [{kw}] → {tgt_url}")
+            page_changed = True
+
+        report_lines.extend(page_lines)
+
+        if page_changed:
+            if not dry_run:
+                with open(draft_path, "w", encoding="utf-8") as fh:
+                    fh.write(draft_html)
+            modified.append((slug, draft_path))
+
+    # Build report
+    report_parts = [
+        "# Internal Link Additions Report",
+        f"CSV: {csv_path}",
+        f"Mode: {'DRY RUN' if dry_run else 'LIVE'}",
+        "",
+        "## Summary",
+        f"  Inserted:                {stats['inserted']}",
+        f"  Skipped (no draft):      {stats['skipped_no_draft']}",
+        f"  Skipped (dup target):    {stats['skipped_duplicate']}",
+        f"  Skipped (ctx not found): {stats['skipped_ctx_not_found']}",
+        f"  Skipped (kw missing):    {stats['skipped_kw_missing']}",
+        "",
+        "## Pages without a draft file",
+    ] + (no_draft_pages or ["  (none)"]) + [
+        "",
+        "## Per-page detail",
+    ] + report_lines + [
+        "",
+        "## Slugs to publish",
+    ] + ([f"  {slug}" for slug, _ in modified] or ["  (none)"])
+
+    report_text = "\n".join(report_parts)
+
+    # Print summary
+    print("\n".join(report_parts[:12]))
+
+    if dry_run:
+        print(f"\n[DRY RUN — no files written]")
+        print(f"Would modify {len(modified)} draft files:")
+        for slug, path in modified:
+            print(f"  {path.name}")
+    else:
+        report_path = DRAFTS_DIR / "link_additions_report.txt"
+        with open(report_path, "w", encoding="utf-8") as fh:
+            fh.write(report_text)
+        print(f"\nModified {len(modified)} draft files.")
+        print(f"Report: {report_path}")
+        print(f"\nSlugs to publish ({len(modified)}):")
+        for slug, _ in modified:
+            print(f"  {slug}")
+
+
+if __name__ == "__main__":
+    main()
