@@ -233,7 +233,7 @@
   }
 
   function transformSources() {
-    if (!document.body.classList.contains("page-template-take-the-test-template")) return;
+    if (!document.body.classList.contains("page-template-take-the-test-template") && !document.body.classList.contains("postid-47451")) return;
     document.querySelectorAll(".cd-sources").forEach(transformAside);
   }
 

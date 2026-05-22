@@ -1,0 +1,2569 @@
+{
+  "posts": [
+    {
+      "id": 47451,
+      "slug": "chinese-takeaway",
+      "status": "publish",
+      "type": "post",
+      "link": "https://comdebstage.wpengine.com/case-studies/chinese-takeaway/",
+      "title": {
+        "rendered": "Chinese Takeaway Case Study (Creditors’ Voluntary Liquidation)"
+      },
+      "template": ""
+    }
+  ],
+  "pages": [
+    {
+      "id": 79615,
+      "slug": "can-a-supplier-force-my-company-into-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+      "title": {
+        "rendered": "Can a Supplier Force My Company Into Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79606,
+      "slug": "what-happens-if-a-creditor-takes-me-to-court",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+      "title": {
+        "rendered": "What Happens If a Creditor Takes Me to Court?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79596,
+      "slug": "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+      "title": {
+        "rendered": "What Happens If HMRC Rejects Your Time to Pay Arrangement?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79588,
+      "slug": "what-happens-if-you-ignore-hmrc-letters",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+      "title": {
+        "rendered": "What Happens If You Ignore HMRC Letters?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79580,
+      "slug": "can-hmrc-shut-down-my-business",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/can-hmrc-shut-down-my-business/",
+      "title": {
+        "rendered": "Can HMRC Shut Down My Business?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79571,
+      "slug": "what-happens-if-hmrc-sends-bailiffs-to-a-business",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+      "title": {
+        "rendered": "What Happens If HMRC Sends Bailiffs to a Business?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79563,
+      "slug": "what-happens-if-hmrc-freezes-your-business-bank-account",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+      "title": {
+        "rendered": "What Happens If HMRC Freezes Your Business Bank Account?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79553,
+      "slug": "can-directors-pay-themselves-before-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-directors-pay-themselves-before-liquidation/",
+      "title": {
+        "rendered": "Can Directors Pay Themselves Before Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79545,
+      "slug": "what-happens-if-a-director-transfers-assets-before-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+      "title": {
+        "rendered": "What Happens If a Director Transfers Assets Before Insolvency?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79537,
+      "slug": "can-a-director-be-sued-personally-by-creditors",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-a-director-be-sued-personally-by-creditors/",
+      "title": {
+        "rendered": "Can a Director Be Sued Personally by Creditors?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79529,
+      "slug": "what-happens-if-a-director-hides-company-assets",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-if-a-director-hides-company-assets/",
+      "title": {
+        "rendered": "What Happens If a Director Hides Company Assets?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79515,
+      "slug": "can-directors-go-to-prison-for-company-debt",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-directors-go-to-prison-for-company-debt/",
+      "title": {
+        "rendered": "Can Directors Go to Prison for Company Debt?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79507,
+      "slug": "what-happens-if-i-stop-paying-company-debts",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-if-i-stop-paying-company-debts/",
+      "title": {
+        "rendered": "What Happens If I Stop Paying Company Debts?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79498,
+      "slug": "pay-hmrc-or-suppliers-first",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/pay-hmrc-or-suppliers-first/",
+      "title": {
+        "rendered": "Should I Pay HMRC or Suppliers First?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79489,
+      "slug": "seek-insolvency-advice-before-missing-payments",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/seek-insolvency-advice-before-missing-payments/",
+      "title": {
+        "rendered": "Should I Seek Insolvency Advice Before Missing Payments?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79480,
+      "slug": "when-should-a-director-stop-trading",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/when-should-a-director-stop-trading/",
+      "title": {
+        "rendered": "When Should a Director Stop Trading?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79472,
+      "slug": "should-i-close-my-company-or-try-to-save-it",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/should-i-close-my-company-or-try-to-save-it/",
+      "title": {
+        "rendered": "Should I Close My Company or Try to Save It?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79463,
+      "slug": "insolvency-myths-debunked",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/insolvency-myths-debunked/",
+      "title": {
+        "rendered": "Common Insolvency Myths Debunked"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79455,
+      "slug": "insolvency-vs-bankruptcy",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/insolvency-vs-bankruptcy/",
+      "title": {
+        "rendered": "UK Insolvency vs Bankruptcy: What’s the Difference?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79445,
+      "slug": "list-of-liquidation-documents",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/list-of-liquidation-documents/",
+      "title": {
+        "rendered": "List of Documents You’ll Need for Liquidation"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79436,
+      "slug": "directors-responsibilities-after-a-company-is-struck-off",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+      "title": {
+        "rendered": "Director’s Responsibilities After a Company Is Struck Off"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79423,
+      "slug": "insolvency-checklist",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/insolvency-checklist/",
+      "title": {
+        "rendered": "Checklist: What to Do When Insolvency Is Likely"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79412,
+      "slug": "uk-insolvency-flowchart",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/uk-insolvency-flowchart/",
+      "title": {
+        "rendered": "UK Insolvency Flowchart for Company Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79404,
+      "slug": "uk-insolvency-glossary",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/uk-insolvency-glossary/",
+      "title": {
+        "rendered": "Glossary of UK Insolvency Terms"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79396,
+      "slug": "director-conduct-review",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/director-conduct-review/",
+      "title": {
+        "rendered": "Director Conduct Review: Common Mistakes to Avoid"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79387,
+      "slug": "use-a-cva-to-close-a-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+      "title": {
+        "rendered": "Can I Use a CVA to Close a Company?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79379,
+      "slug": "business-bank-account-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/business-bank-account-in-liquidation/",
+      "title": {
+        "rendered": "What Happens to a Business Bank Account in Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79369,
+      "slug": "director-guarantees-in-a-cva",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+      "title": {
+        "rendered": "What Happens to Director Guarantees in a CVA?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79360,
+      "slug": "ccj-when-going-insolvent",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/ccj-when-going-insolvent/",
+      "title": {
+        "rendered": "What If I Have a CCJ When Going Insolvent?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79351,
+      "slug": "can-i-choose-my-liquidator",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-i-choose-my-liquidator/",
+      "title": {
+        "rendered": "Can I Choose My Liquidator or Does HMRC Appoint One?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79342,
+      "slug": "hmrc-as-a-creditor-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/hmrc-as-a-creditor-in-liquidation/",
+      "title": {
+        "rendered": "HMRC as a Creditor in Liquidation: What to Expect"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79332,
+      "slug": "what-happens-if-a-cva-fails-mid-term",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+      "title": {
+        "rendered": "What Happens if a CVA Fails Mid-Term?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79322,
+      "slug": "winding-up-petition-vs-compulsory-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+      "title": {
+        "rendered": "Winding-Up Petition vs Compulsory Liquidation: Key Differences"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79313,
+      "slug": "light-touch-administration",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/light-touch-administration/",
+      "title": {
+        "rendered": "Light-Touch Administration: What it Means and How it Works"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79304,
+      "slug": "cva-vs-strike-off-vs-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/cva-vs-strike-off-vs-liquidation/",
+      "title": {
+        "rendered": "CVA vs Strike-Off vs Liquidation: A UK Director’s Decision Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79295,
+      "slug": "company-voluntary-arrangement-vs-administration-which-to-choose",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/",
+      "title": {
+        "rendered": "Company Voluntary Arrangement vs Administration: Which to Choose?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79285,
+      "slug": "liquidating-a-group-company-or-holding-company-in-the-uk",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+      "title": {
+        "rendered": "Liquidating a Group Company or Holding Company in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79276,
+      "slug": "can-you-liquidate-to-avoid-paying-suppliers",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+      "title": {
+        "rendered": "Can You Liquidate to Avoid Paying Suppliers?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79266,
+      "slug": "can-i-liquidate-a-dormant-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-i-liquidate-a-dormant-company/",
+      "title": {
+        "rendered": "Can I Liquidate a Dormant Company?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79256,
+      "slug": "liquidating-a-company-with-no-assets-or-bank-account-uk",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+      "title": {
+        "rendered": "Liquidating a Company with No Assets or Bank Account (UK)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79246,
+      "slug": "can-i-liquidate-my-company-with-a-bounce-back-loan",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+      "title": {
+        "rendered": "Can I Liquidate My Company with a Bounce Back Loan?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 79236,
+      "slug": "can-i-start-a-new-company-after-liquidating-my-old-one",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+      "title": {
+        "rendered": "Can I Start a New Company After Liquidating My Old One?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78835,
+      "slug": "whats-the-risk-of-being-disqualified-as-a-director",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+      "title": {
+        "rendered": "What’s the Risk of Being Disqualified as a Director?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78851,
+      "slug": "voluntary-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/",
+      "title": {
+        "rendered": "Voluntary Liquidation: The One Decision That Changes The Outcome For Everyone"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78825,
+      "slug": "paying-staff-but-not-hmrc-before-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+      "title": {
+        "rendered": "What If I Pay Staff but Not HMRC Before Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78812,
+      "slug": "redundancy-payments-for-directors-in-an-mvl",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+      "title": {
+        "rendered": "Redundancy Payments for Directors in an MVL"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78797,
+      "slug": "what-happens-if-a-director-resigns-before-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+      "title": {
+        "rendered": "What Happens if a Director Resigns Before Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78781,
+      "slug": "can-i-be-sued-after-my-company-is-dissolved",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+      "title": {
+        "rendered": "Can I Be Sued After My Company Is Dissolved?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78771,
+      "slug": "liquidating-a-charity-or-non-profit",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidating-a-charity-or-non-profit/",
+      "title": {
+        "rendered": "Liquidating a Charity or Non-Profit: What Trustees Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78756,
+      "slug": "liquidating-a-limited-liability-partnership",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidating-a-limited-liability-partnership/",
+      "title": {
+        "rendered": "Liquidating a Limited Liability Partnership (LLP): A Clear Guide to UK Insolvency Procedures"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78707,
+      "slug": "company-restoration-after-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-restoration-after-liquidation/",
+      "title": {
+        "rendered": "Company Restoration After Liquidation: When and How Dissolved Companies Can Be Restored"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78690,
+      "slug": "liquidation-deadlines-and-time-limits",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidation-deadlines-and-time-limits/",
+      "title": {
+        "rendered": "Liquidation Deadlines and Time Limits: Key Dates Every Director and Creditor Should Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78673,
+      "slug": "liquidators-powers-and-duties",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidators-powers-and-duties/",
+      "title": {
+        "rendered": "Liquidator’s Powers and Duties: A Complete UK Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78654,
+      "slug": "how-to-challenge-a-liquidators-decisions-or-fees",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+      "title": {
+        "rendered": "How to Challenge a Liquidator&#8217;s Decisions or Fees"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78635,
+      "slug": "creditor-meetings-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/creditor-meetings-in-liquidation/",
+      "title": {
+        "rendered": "Creditor Meetings in Liquidation: Rights, Procedures and What to Expect"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78613,
+      "slug": "how-to-prove-your-debt-in-company-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+      "title": {
+        "rendered": "How to Prove Your Debt in Company Liquidation: A Creditor’s Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78596,
+      "slug": "company-vehicles-and-equipment-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-vehicles-and-equipment-in-liquidation/",
+      "title": {
+        "rendered": "Company Vehicles and Equipment in Liquidation: What Happens to Physical Assets"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78578,
+      "slug": "intellectual-property-and-trading-assets-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+      "title": {
+        "rendered": "Intellectual Property and Trading Assets in Liquidation: Valuation and Disposal"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78560,
+      "slug": "company-property-and-real-estate-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-property-and-real-estate-in-liquidation/",
+      "title": {
+        "rendered": "Company Property and Real Estate in Liquidation: What Happens and How It’s Sold"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78191,
+      "slug": "leases-and-contracts-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/leases-and-contracts-in-liquidation/",
+      "title": {
+        "rendered": "Leases and Contracts in Liquidation: What Happens to Agreements When a Company Winds Up"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78163,
+      "slug": "company-pensions-and-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-pensions-and-liquidation/",
+      "title": {
+        "rendered": "Company Pensions and Liquidation: What Happens to Employee Retirement Funds in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78129,
+      "slug": "directors-conduct-report-2",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/directors-conduct-report-2/",
+      "title": {
+        "rendered": "The Director’s Conduct Report in Liquidation: What It Is &amp; Why It Matters"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 78102,
+      "slug": "how-to-choose-the-right-insolvency-procedure",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/how-to-choose-the-right-insolvency-procedure/",
+      "title": {
+        "rendered": "How to Choose the Right Insolvency Procedure: A UK Director’s Decision Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77916,
+      "slug": "voluntary-vs-compulsory-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/voluntary-vs-compulsory-liquidation/",
+      "title": {
+        "rendered": "Voluntary vs Compulsory Liquidation: What’s the Difference and Why It Matters"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77883,
+      "slug": "liquidation-vs-dissolution-strike-off",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/liquidation-vs-dissolution-strike-off/",
+      "title": {
+        "rendered": "Liquidation vs Dissolution (Strike Off): Choosing the Right Route to Close Your UK Company"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77814,
+      "slug": "how-to-prepare-for-company-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/how-to-prepare-for-company-liquidation/",
+      "title": {
+        "rendered": "How to Prepare for Company Liquidation: A Director’s Step-by-Step Checklist"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77960,
+      "slug": "cant-afford-to-liquidate",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/cant-afford-to-liquidate/",
+      "title": {
+        "rendered": "Can’t Afford to Liquidate: Options When Your Company Has No Funds for Insolvency Fees"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77739,
+      "slug": "which-creditors-get-paid-first",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/which-creditors-get-paid-first/",
+      "title": {
+        "rendered": "Who Gets Paid First in Liquidation? A Complete Guide to Creditor Priority in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77693,
+      "slug": "insolvency-news-commentary",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency-news-commentary/",
+      "title": {
+        "rendered": "Insolvency News &amp; Commentary"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77684,
+      "slug": "debt-charities-uk",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/debt-charities-uk/",
+      "title": {
+        "rendered": "Debt Charities in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77681,
+      "slug": "mental-health-debt-stress-support",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/mental-health-debt-stress-support/",
+      "title": {
+        "rendered": "Mental Health &amp; Debt Stress Support"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77401,
+      "slug": "sector-specific-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sector-specific-insolvency/",
+      "title": {
+        "rendered": "Sector-Specific Insolvency"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77396,
+      "slug": "director-protection-hub",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/director-protection-hub/",
+      "title": {
+        "rendered": "Director Protection Hub"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77372,
+      "slug": "company-rescue-recovery-hub",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-recovery-hub/",
+      "title": {
+        "rendered": "Company Rescue &amp; Recovery Hub"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77205,
+      "slug": "hmrc-debt-enforcement-hub",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-debt-enforcement-hub/",
+      "title": {
+        "rendered": "HMRC Debt &amp; Enforcement Hub"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77278,
+      "slug": "company-strike-off-and-dissolution",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/company-strike-off-and-dissolution/",
+      "title": {
+        "rendered": "Company Strike Off and Dissolution Explained: UK Process, Requirements &amp; Alternatives"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77218,
+      "slug": "charity-non-profit-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/charity-non-profit-insolvency/",
+      "title": {
+        "rendered": "Charity &amp; Non-Profit Insolvency in the UK: Duties, Risks &amp; Recovery Options"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77216,
+      "slug": "hospitality-restaurant-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hospitality-restaurant-insolvency/",
+      "title": {
+        "rendered": "Hospitality &amp; Restaurant Insolvency in the UK: Causes, Risks &amp; Rescue Options"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77207,
+      "slug": "manufacturing-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/manufacturing-insolvency/",
+      "title": {
+        "rendered": "Manufacturing Insolvency in the UK: Causes, Risks &amp; Solutions for Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77186,
+      "slug": "care-home-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/care-home-insolvency/",
+      "title": {
+        "rendered": "Care Home Insolvency in the UK: Causes, Risks &amp; Solutions for Owners and Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77181,
+      "slug": "energy-provider-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/energy-provider-insolvency/",
+      "title": {
+        "rendered": "Energy Provider Insolvency in the UK: Causes, Ofgem’s Role &amp; Options for Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77175,
+      "slug": "professional-services-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/professional-services-insolvency/",
+      "title": {
+        "rendered": "Professional Services Insolvency in the UK: Duties, Risks &amp; Solutions for Firms"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77162,
+      "slug": "hmrc-enforcement-action",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-enforcement-action/",
+      "title": {
+        "rendered": "HMRC Enforcement Action"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77161,
+      "slug": "transport-haulage-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/transport-haulage-insolvency/",
+      "title": {
+        "rendered": "Transport &amp; Haulage Insolvency in the UK: Causes, Risks &amp; Solutions for Operators"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77157,
+      "slug": "construction-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/construction-insolvency/",
+      "title": {
+        "rendered": "Construction Insolvency in the UK: Causes, Warning Signs &amp; Rescue Options"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77146,
+      "slug": "debt-creditor-pressure-hub",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/debt-creditor-pressure-hub/",
+      "title": {
+        "rendered": "Debt &amp; Creditor Pressure Hub"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 77097,
+      "slug": "bailiffs-high-court-enforcement-officers",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/bailiffs-high-court-enforcement-officers/",
+      "title": {
+        "rendered": "Bailiffs &amp; High Court Enforcement Officers: A UK Business Guide to Rights, Risks &amp; Next Steps"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 76920,
+      "slug": "hmrc-penalties-investigations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-penalties-investigations/",
+      "title": {
+        "rendered": "HMRC Penalties &amp; Investigations"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 76904,
+      "slug": "am-i-solvent",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/am-i-solvent/",
+      "title": {
+        "rendered": "Am I Solvent? Solvency Tests Explained for UK Businesses"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 76323,
+      "slug": "insolvency-advice-for-directors",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/insolvency-advice-for-directors/",
+      "title": {
+        "rendered": "Insolvency Advice for Directors: Key Considerations"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 75111,
+      "slug": "overdrawn-directors-loan-accounts",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/overdrawn-directors-loan-accounts/",
+      "title": {
+        "rendered": "Overdrawn Directors&#8217; Loan Accounts"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 74439,
+      "slug": "notice-of-intention-to-appoint-administrators",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/notice-of-intention-to-appoint-administrators/",
+      "title": {
+        "rendered": "What is a Notice of Intention (NOI) to Appoint Administrators?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 74390,
+      "slug": "when-a-cva-fails",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+      "title": {
+        "rendered": "What Happens if a Company Voluntary Arrangement (CVA) Fails?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 74382,
+      "slug": "when-employers-cant-afford-redundancy-payments",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+      "title": {
+        "rendered": "What if an Employer Can&#8217;t Afford Redundancy Payments?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 74372,
+      "slug": "cant-pay-a-company-mortgage",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+      "title": {
+        "rendered": "Can’t Pay a Limited Company Mortgage? Risks, Director Liability &amp; Solutions Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 74264,
+      "slug": "challenge-a-statutory-demand",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/challenge-a-statutory-demand/",
+      "title": {
+        "rendered": "Setting Aside a Statutory Demand Against a Company"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 73778,
+      "slug": "alternatives-to-company-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/alternatives-to-company-liquidation/",
+      "title": {
+        "rendered": "Alternatives to Company Liquidation: Rescue and Recovery Options for UK Businesses"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 71514,
+      "slug": "directors-duties-to-creditors",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/directors-duties-to-creditors/",
+      "title": {
+        "rendered": "What are a Directors’ Duties to Creditors in the UK?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 70501,
+      "slug": "preferential-payments-during-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/preferential-payments-during-insolvency/",
+      "title": {
+        "rendered": "What Are Preferential Payments? A UK Director’s Guide Under the Insolvency Act 1986"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68736,
+      "slug": "company-is-having-financial-difficulties",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/company-is-having-financial-difficulties/",
+      "title": {
+        "rendered": "What To Do if Your Company is Having Financial Difficulties: Legal Duties &amp; Solutions"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68387,
+      "slug": "insolvent-company-investigations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/insolvent-company-investigations/",
+      "title": {
+        "rendered": "Insolvency Investigations Explained: Process, Risks &amp; What UK Directors Should Expect"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68356,
+      "slug": "advantages-and-disadvantages",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+      "title": {
+        "rendered": "Advantages &amp; Disadvantages of a Pre-Pack Administration"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68221,
+      "slug": "get-free-business-debt-advice",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/get-free-business-debt-advice/",
+      "title": {
+        "rendered": "How to Get Free Business Debt Advice"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68216,
+      "slug": "what-is-a-directors-responsibility-for-accountancy-errors",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+      "title": {
+        "rendered": "What is a Director&#8217;s Responsibility for Accountancy Errors?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68207,
+      "slug": "are-directors-personally-liable-for-company-debts",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/are-directors-personally-liable-for-company-debts/",
+      "title": {
+        "rendered": "Are Directors Personally Liable for Company Debts?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68211,
+      "slug": "what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+      "title": {
+        "rendered": "What are a Company Director’s Duties to Avoid and Disclose Conflicts of Interest"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68192,
+      "slug": "preventing-company-director-disputes",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/preventing-company-director-disputes/",
+      "title": {
+        "rendered": "Company Director Disputes"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68189,
+      "slug": "how-to-legally-take-money-out-of-a-limited-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/how-to-legally-take-money-out-of-a-limited-company/",
+      "title": {
+        "rendered": "How to Legally Take Money out of a Limited Company"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68183,
+      "slug": "funding-options-for-smes-in-the-uk",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/funding-options-for-smes-in-the-uk/",
+      "title": {
+        "rendered": "Funding Options for SMEs in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68180,
+      "slug": "directors-personal-guarantees",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/directors-personal-guarantees/",
+      "title": {
+        "rendered": "A Guide to Directors&#8217; Personal Guarantees"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68134,
+      "slug": "creditor-negotiations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/creditor-negotiations/",
+      "title": {
+        "rendered": "Creditor Negotiations: A UK Director&#8217;s Tactical Playbook"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68130,
+      "slug": "business-recovery-services",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/business-recovery-services/",
+      "title": {
+        "rendered": "Business Recovery Services"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68123,
+      "slug": "what-are-the-warning-signs-of-an-insolvent-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+      "title": {
+        "rendered": "What are the Warning Signs of an Insolvent Company?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68120,
+      "slug": "can-you-sell-your-insolvent-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/can-you-sell-your-insolvent-company/",
+      "title": {
+        "rendered": "Can you Sell Your Insolvent Business?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68117,
+      "slug": "how-to-save-a-struggling-business",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/how-to-save-a-struggling-business/",
+      "title": {
+        "rendered": "How to Save a Struggling Business?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68115,
+      "slug": "rescue-your-business-from-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/rescue-your-business-from-insolvency/",
+      "title": {
+        "rendered": "Can You Rescue a Business from Insolvency?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68101,
+      "slug": "dealing-with-creditor-pressure",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/dealing-with-creditor-pressure/",
+      "title": {
+        "rendered": "Creditor Pressure: A UK Director’s Guide to Legal Risks, Debt Demands &amp; Solutions"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 68076,
+      "slug": "county-court-judgements",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/county-court-judgements/",
+      "title": {
+        "rendered": "County Court Judgments (CCJs): A UK Business Owner&#8217;s Guide to Risks &amp; Solutions"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67962,
+      "slug": "what-is-a-statutory-demand-against-a-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+      "title": {
+        "rendered": "Statutory Demands: A UK Director’s Guide to Deadlines, Risks &amp; Next Steps"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67957,
+      "slug": "why-debt-is-not-always-a-bad-thing-for-your-business",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+      "title": {
+        "rendered": "Understanding Good Debt vs Bad Debt"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67828,
+      "slug": "accelerated-payment-notices-apn",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/accelerated-payment-notices-apn/",
+      "title": {
+        "rendered": "Accelerated Payment Notices (APNs)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67809,
+      "slug": "hmrc",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/",
+      "title": {
+        "rendered": "Help with HMRC Pressure"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67757,
+      "slug": "transactions-at-undervalue",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/transactions-at-undervalue/",
+      "title": {
+        "rendered": "What Are Transactions at Undervalue? Definition, Examples, and Consequences (UK Insolvency Act 1986)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67535,
+      "slug": "pros-and-cons",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+      "title": {
+        "rendered": "What are the Advantages and Disadvantages of a CVA?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67505,
+      "slug": "can-a-director-be-made-bankrupt-if-a-business-fails",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+      "title": {
+        "rendered": "Can a Director be Made Bankrupt?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 67438,
+      "slug": "dealing-with-an-hmrc-winding-up-petition",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+      "title": {
+        "rendered": "HMRC Winding Up Petitions: A UK Director’s Guide to Risks, Consequences &amp; Solutions"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 66834,
+      "slug": "what-is-a-pre-pack-administration",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/what-is-a-pre-pack-administration/",
+      "title": {
+        "rendered": "Pre-Pack Administration"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 66786,
+      "slug": "what-is-wrongful-trading",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-wrongful-trading/",
+      "title": {
+        "rendered": "What Is Wrongful Trading? UK Law, Risks, and Penalties for Company Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 65614,
+      "slug": "closing-a-limited-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/closing-a-limited-company/",
+      "title": {
+        "rendered": "How to Close a Limited Company in the UK: Options, Duties &amp; Step-by-Step Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 65593,
+      "slug": "directors-disqualification",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/directors-disqualification/",
+      "title": {
+        "rendered": "Director Disqualification"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 65483,
+      "slug": "company-administration",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/",
+      "title": {
+        "rendered": "What is Company Administration?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 65238,
+      "slug": "what-happens-after-company-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-after-company-liquidation/",
+      "title": {
+        "rendered": "What Happens After Company Liquidation in the UK? Assets, Debts, and Director Duties Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 58601,
+      "slug": "cant-pay-business-energy",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-pay-business-energy/",
+      "title": {
+        "rendered": "Can’t Pay Business Energy Bills? Risks, Consequences &amp; Solutions for UK Companies"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 55381,
+      "slug": "writing-off-a-directors-loan-account",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/writing-off-a-directors-loan-account/",
+      "title": {
+        "rendered": "Can I Write Off an Overdrawn Director&#8217;s Loan Account?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53625,
+      "slug": "can-i-lose-my-house-with-a-bounce-back-loan",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+      "title": {
+        "rendered": "Can I Lose My House with a Bounce Back Loan? A UK Director’s Guide to Personal Liability"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53187,
+      "slug": "cease-trading-template",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/cease-trading-template/",
+      "title": {
+        "rendered": "Cease Trading &#8211; Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53185,
+      "slug": "i-need-more-information-about-this-debt",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/i-need-more-information-about-this-debt/",
+      "title": {
+        "rendered": "I Need More Information About this Debt &#8211; Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53174,
+      "slug": "request-a-reduced-monthly-payment",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/request-a-reduced-monthly-payment/",
+      "title": {
+        "rendered": "Request a Reduced Monthly Payment &#8211; Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53166,
+      "slug": "i-cannot-afford-to-repay-my-debt",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/i-cannot-afford-to-repay-my-debt/",
+      "title": {
+        "rendered": "I Cannot Afford to Repay my Debt &#8211; Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53158,
+      "slug": "hold-action-on-my-account",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/hold-action-on-my-account/",
+      "title": {
+        "rendered": "Hold Action on my Account While I Get Advice &#8211; Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 53159,
+      "slug": "i-have-no-knowledge-of-this-debt",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/sample-letters/i-have-no-knowledge-of-this-debt/",
+      "title": {
+        "rendered": "I Have No Knowledge of this Debt Template Letter"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 52808,
+      "slug": "find-a-liquidator-near-me",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/find-a-liquidator-near-me/",
+      "title": {
+        "rendered": "Find an Insolvency Practitioner Near Me: UK Directors’ Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 52771,
+      "slug": "what-is-the-companies-act-2006",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-is-the-companies-act-2006/",
+      "title": {
+        "rendered": "The Companies Act 2006: A Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 50819,
+      "slug": "cant-pay-coronavirus-business-interruption-loan-cbils",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+      "title": {
+        "rendered": "Can’t Repay a CBILS Loan? Options and Advice for UK Company Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 50629,
+      "slug": "personal-liability-for-cbils-loans",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/personal-liability-for-cbils-loans/",
+      "title": {
+        "rendered": "Director Liability for CBILS Loans: What UK Company Directors Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 47550,
+      "slug": "what-is-the-insolvency-service",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-the-insolvency-service/",
+      "title": {
+        "rendered": "Insolvency Service Explained: Role, Powers &amp; What UK Directors Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7674,
+      "slug": "creditors-voluntary-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/",
+      "title": {
+        "rendered": "Creditors’ Voluntary Liquidation (CVL): A Practical Guide for UK Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 46674,
+      "slug": "what-is-a-creditor",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-a-creditor/",
+      "title": {
+        "rendered": "Understanding Creditors in UK Insolvency: Types, Rights &amp; Director Duties"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 46579,
+      "slug": "bounce-back-loan-fraud",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+      "title": {
+        "rendered": "Bounce Back Loan Fraud &amp; Misuse: What UK Company Directors Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 46222,
+      "slug": "what-happens-to-directors-in-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-to-directors-in-liquidation/",
+      "title": {
+        "rendered": "What Happens to Directors in Liquidation? Duties, Risks, and Liabilities in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 44055,
+      "slug": "cant-pay-staff-wages",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-pay-staff-wages/",
+      "title": {
+        "rendered": "Can’t Pay Staff Wages? Legal Duties, Risks &amp; Solutions for UK Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 43917,
+      "slug": "cant-afford-to-repay-business-loan",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+      "title": {
+        "rendered": "Can’t Pay Business Loans? Legal Risks, Director Liability &amp; Solutions Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 43745,
+      "slug": "dissolving-a-company-with-bounce-back-loan",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+      "title": {
+        "rendered": "Can I Dissolve a Company with a Bounce Back Loan? UK Rules for Directors Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 43675,
+      "slug": "what-happens-if-i-default",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/what-happens-if-i-default/",
+      "title": {
+        "rendered": "Can&#8217;t Repay Your Bounce Back Loan? A UK Director&#8217;s Guide to Risks &amp; Solutions"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 43580,
+      "slug": "directors-liability-for-bounce-back-loans",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+      "title": {
+        "rendered": "Personal Liability for Bounce Back Loans: What UK Company Directors Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 43522,
+      "slug": "unenforceable-personal-guarantee",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/unenforceable-personal-guarantee/",
+      "title": {
+        "rendered": "What is an Unenforceable Personal Guarantee?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 41082,
+      "slug": "can-personal-assets-of-directors-be-seized-from-a-ltd-company",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+      "title": {
+        "rendered": "Can Personal Assets of Directors be Seized from a Ltd Company?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 39500,
+      "slug": "what-is-a-high-court-writ",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-a-high-court-writ/",
+      "title": {
+        "rendered": "High Court Writs Explained: A UK Business Guide to Enforcement, Risks &amp; Next Steps"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 38597,
+      "slug": "losing-house-if-company-goes-bust",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/losing-house-if-company-goes-bust/",
+      "title": {
+        "rendered": "If my Limited Company Goes Bust Will I Lose my House?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 31237,
+      "slug": "cant-pay-a-commercial-lease-or-rent",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+      "title": {
+        "rendered": "Can’t Pay Commercial Rent or Lease? Legal Risks &amp; Solutions for UK Businesses"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 31199,
+      "slug": "business-restructuring",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/business-restructuring/",
+      "title": {
+        "rendered": "Business Restructuring: A Comprehensive Guide for UK Business Onwers"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 29543,
+      "slug": "lpa-receivership",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/lpa-receivership/",
+      "title": {
+        "rendered": "LPA Receivership Explained: A UK Guide for Company Directors and Property Owners"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 28761,
+      "slug": "corporation-tax-penalties",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/corporation-tax-penalties/",
+      "title": {
+        "rendered": "What are HMRC&#8217;s Corporation Tax Penalties?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 28526,
+      "slug": "personal-liability-spouses-business-debts",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/personal-liability-spouses-business-debts/",
+      "title": {
+        "rendered": "Am I Liable for My Spouse&#8217;s Business Debts?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26902,
+      "slug": "biggest-struggles-for-small-business-owners",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+      "title": {
+        "rendered": "Top 9 Challenges for Small Business Owners"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26888,
+      "slug": "stop-or-avoid-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/stop-or-avoid-insolvency/",
+      "title": {
+        "rendered": "How Can I Stop or Avoid Insolvency?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26347,
+      "slug": "cant-pay-business-rates",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/cant-pay-business-rates/",
+      "title": {
+        "rendered": "Can’t Pay Business Rates? Legal Consequences &amp; Solutions for UK Companies"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26298,
+      "slug": "misfeasance",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/misfeasance/",
+      "title": {
+        "rendered": "What Is Misfeasance? A UK Director’s Guide to Duties, Risks, and Claims"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26279,
+      "slug": "cease-trading",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/cease-trading/",
+      "title": {
+        "rendered": "What Does It Mean When a Company Has Ceased Trading? UK Guide for Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26234,
+      "slug": "debt-management-guide",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/debt-management-guide/",
+      "title": {
+        "rendered": "How to Manage Business Debt"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26218,
+      "slug": "business-debt-advice",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/business-debt-advice/",
+      "title": {
+        "rendered": "Get Free Business Debt Advice"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 26139,
+      "slug": "company-cash-flow-problems",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-cash-flow-problems/",
+      "title": {
+        "rendered": "Cash Flow Problems: Causes, Warning Signs &amp; Solutions for UK Businesses"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 25310,
+      "slug": "validation-order",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/validation-order/",
+      "title": {
+        "rendered": "Validation Orders Explained: How to Keep Trading After a Winding-Up Petition"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 24780,
+      "slug": "personal-guarantee-insurance",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/personal-guarantee-insurance/",
+      "title": {
+        "rendered": "Personal Guarantee Insurance (PGI)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8414,
+      "slug": "time-to-pay-hmrc",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/time-to-pay-hmrc/",
+      "title": {
+        "rendered": "Time to Pay Arrangements (TTP)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 24760,
+      "slug": "what-are-fixed-and-floating-charges",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-are-fixed-and-floating-charges/",
+      "title": {
+        "rendered": "Fixed and Floating Charges Explained for UK Company Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 24434,
+      "slug": "what-is-a-freezing-order-or-injunction",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-a-freezing-order-or-injunction/",
+      "title": {
+        "rendered": "Freezing Orders &amp; Injunctions Explained: A UK Director’s Guide to Risks &amp; Responses"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 24402,
+      "slug": "what-are-the-duties-and-responsibilities-of-a-company-director",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+      "title": {
+        "rendered": "Directors’ Duties &amp; Responsibilities"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7687,
+      "slug": "winding-up-petitions",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/winding-up-petitions/",
+      "title": {
+        "rendered": "Winding Up Petitions: A UK Guide for Creditors and Debtors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 24080,
+      "slug": "can-we-trade-out-of-insolvency",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/can-we-trade-out-of-insolvency/",
+      "title": {
+        "rendered": "Can we Trade Out of Insolvency?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 9443,
+      "slug": "cant-pay-vat",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/cant-pay-vat/",
+      "title": {
+        "rendered": "What Happens if I Can&#8217;t Pay the VAT?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 23698,
+      "slug": "how-much-does-liquidation-cost",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/how-much-does-liquidation-cost/",
+      "title": {
+        "rendered": "How Much Does Company Liquidation Cost in the UK? Fees and Funding Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 22785,
+      "slug": "the-risks-of-signing-a-personal-guarantee",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/the-risks-of-signing-a-personal-guarantee/",
+      "title": {
+        "rendered": "What are the Risks of Signing a Personal Guarantee?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 22554,
+      "slug": "limited-company-bankruptcy",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/limited-company-bankruptcy/",
+      "title": {
+        "rendered": "Company Bankruptcy Explained: UK Insolvency Procedures and Director Options"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 22277,
+      "slug": "insolvent-company-owes-me-money",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/insolvent-company-owes-me-money/",
+      "title": {
+        "rendered": "What to Do When an Insolvent Company Owes You Money: UK Creditor Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 21122,
+      "slug": "shareholders-liable-company-debts",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/shareholders-liable-company-debts/",
+      "title": {
+        "rendered": "Are Shareholders Liable for Company Debts?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 21011,
+      "slug": "what-is-limited-liability",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-is-limited-liability/",
+      "title": {
+        "rendered": "Limited Liability Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7669,
+      "slug": "liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/",
+      "title": {
+        "rendered": "What is Company Liquidation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 20681,
+      "slug": "can-director-criminal-record",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/can-director-criminal-record/",
+      "title": {
+        "rendered": "Can a Director have a Criminal Record?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 20435,
+      "slug": "partnership-voluntary-arrangements",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/partnership-voluntary-arrangements/",
+      "title": {
+        "rendered": "Partnership Voluntary Arrangements"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 20428,
+      "slug": "vs-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+      "title": {
+        "rendered": "Company Voluntary Arrangement vs. Liquidation"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 20380,
+      "slug": "making-employees-redundant-cva",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+      "title": {
+        "rendered": "Making Employees Redundant in a Company Voluntary Arrangement (CVA)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 17568,
+      "slug": "timeline",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/timeline/",
+      "title": {
+        "rendered": "How Long Does It Take to Liquidate a Company in the UK? Timelines Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 16662,
+      "slug": "what-is-an-individual-voluntary-arrangement",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-an-individual-voluntary-arrangement/",
+      "title": {
+        "rendered": "Individual Voluntary Arrangement (IVA) Explained: UK Debt Solution Guide"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 16565,
+      "slug": "hmrc-offices-contact-guide",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-offices-contact-guide/",
+      "title": {
+        "rendered": "HMRC Contact Guide for UK Businesses: Offices, Numbers &amp; How to Deal with Tax Arrears"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 16353,
+      "slug": "hmrc-follower-notice",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-follower-notice/",
+      "title": {
+        "rendered": "HMRC Follower Notices"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 16106,
+      "slug": "vs-administrative-receivership",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/vs-administrative-receivership/",
+      "title": {
+        "rendered": "How to Compare Administration and Administrative Receivership"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 15203,
+      "slug": "check-if-a-company-is-insolvent",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/check-if-a-company-is-insolvent/",
+      "title": {
+        "rendered": "How to Check If a Company is Insolvent?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 15141,
+      "slug": "vs-cva",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-administration/vs-cva/",
+      "title": {
+        "rendered": "CVA vs Administration"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8408,
+      "slug": "problems-paying-corporation-tax-hmrc",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/problems-paying-corporation-tax-hmrc/",
+      "title": {
+        "rendered": "Can&#8217;t Pay Corporation Tax: What are the Options?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7676,
+      "slug": "members-voluntary-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/",
+      "title": {
+        "rendered": "Members’ Voluntary Liquidation (MVL) Explained"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 15010,
+      "slug": "what-happens-to-employees",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/what-happens-to-employees/",
+      "title": {
+        "rendered": "What Happens to Employees in Liquidation? Redundancy Rights and Payments in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14914,
+      "slug": "director-redundancy",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/director-redundancy/",
+      "title": {
+        "rendered": "Director Redundancy Pay Guide (UK): Eligibility, Entitlements &amp; How to Claim"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14912,
+      "slug": "vat-penalties",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/vat-penalties/",
+      "title": {
+        "rendered": "VAT Penalties"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14775,
+      "slug": "tax-penalties",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/tax-penalties/",
+      "title": {
+        "rendered": "HMRC Tax Penalties"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14619,
+      "slug": "hmrcs-ir35-investigations-different",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/hmrcs-ir35-investigations-different/",
+      "title": {
+        "rendered": "What Happens in an HMRC IR35 Investigation?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14460,
+      "slug": "hmrc-criminal-investigations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-criminal-investigations/",
+      "title": {
+        "rendered": "HMRC Criminal Investigations"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 14158,
+      "slug": "hmrc-fraud-investigations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-fraud-investigations/",
+      "title": {
+        "rendered": "HMRC Fraud Investigations"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 13766,
+      "slug": "preferential-non-preferential-creditors",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/preferential-non-preferential-creditors/",
+      "title": {
+        "rendered": "What is a Preferential and Non-Preferential Creditor?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11788,
+      "slug": "frozen-bank-account",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/frozen-bank-account/",
+      "title": {
+        "rendered": "My Company Bank Account is Frozen: What Can We Do?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 13600,
+      "slug": "insolvency-test",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/insolvency-test/",
+      "title": {
+        "rendered": "What Is the Corporate Insolvency Test? A UK Director’s Guide Under the Insolvency Act 1986"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 13513,
+      "slug": "statement-of-affairs",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/statement-of-affairs/",
+      "title": {
+        "rendered": "What Is a Statement of Affairs? UK Insolvency Guide for Company Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 13029,
+      "slug": "understanding-hmrc-debt-collection",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/understanding-hmrc-debt-collection/",
+      "title": {
+        "rendered": "HMRC&#8217;s Debt Collection Process"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 12979,
+      "slug": "what-can-hmrc-bailiffs-take",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/what-can-hmrc-bailiffs-take/",
+      "title": {
+        "rendered": "HMRC Bailiffs"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 12958,
+      "slug": "controlled-goods-agreement",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/controlled-goods-agreement/",
+      "title": {
+        "rendered": "What is a Controlled Goods Agreement Letter From HMRC?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8358,
+      "slug": "what-is-an-insolvency-practitioner",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/insolvency/what-is-an-insolvency-practitioner/",
+      "title": {
+        "rendered": "Insolvency Practitioner Explained: Role, Duties &amp; How They Help UK Directors"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11644,
+      "slug": "notice-of-enforcement",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/notice-of-enforcement/",
+      "title": {
+        "rendered": "HMRC Notice of Enforcement"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11516,
+      "slug": "joint-and-several-liability-for-unpaid-vat",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/joint-and-several-liability-for-unpaid-vat/",
+      "title": {
+        "rendered": "Joint and Several Liability for Unpaid VAT"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11384,
+      "slug": "hmrc-tax-investigations",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-tax-investigations/",
+      "title": {
+        "rendered": "HMRC Tax Investigations"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11229,
+      "slug": "security-bonds",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/security-bonds/",
+      "title": {
+        "rendered": "HMRC Security Bonds: What do Directors Need to Know?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11228,
+      "slug": "what-are-phoenix-companies",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/advice/what-are-phoenix-companies/",
+      "title": {
+        "rendered": "What is a Phoenix Company and are They Legal?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 11193,
+      "slug": "hmrc-compliance-checks",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-compliance-checks/",
+      "title": {
+        "rendered": "HMRC Compliance Checks"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 10930,
+      "slug": "distraint-order-notice",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/distraint-order-notice/",
+      "title": {
+        "rendered": "Distraint Orders: What You Need to Know"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 10564,
+      "slug": "security-bond-notices",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/security-bond-notices/",
+      "title": {
+        "rendered": "HMRC Security Bonds"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 10562,
+      "slug": "personal-liability-notices",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/personal-liability-notices/",
+      "title": {
+        "rendered": "Personal Liability Notices (PLNs): Understanding Your Personal Risk"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 9702,
+      "slug": "receivership-mean-business",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/receivership-mean-business/",
+      "title": {
+        "rendered": "Receivership"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8396,
+      "slug": "pre-packs",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/pre-packs/",
+      "title": {
+        "rendered": "What is a Pre-Pack Administration?"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8350,
+      "slug": "hmrc-threatening-letters",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/hmrc-threatening-letters/",
+      "title": {
+        "rendered": "HMRC Threatening Letters"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 8324,
+      "slug": "cant-pay-paye",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/hmrc/cant-pay-paye/",
+      "title": {
+        "rendered": "A Guide to PAYE Arrears"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7685,
+      "slug": "company-voluntary-arrangement",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/",
+      "title": {
+        "rendered": "Company Voluntary Arrangements (CVA)"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7680,
+      "slug": "compulsory-liquidation",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/",
+      "title": {
+        "rendered": "Compulsory Liquidation in the UK"
+      },
+      "template": "templates/take-the-test-template.php"
+    },
+    {
+      "id": 7665,
+      "slug": "company-rescue-solutions",
+      "status": "publish",
+      "type": "page",
+      "link": "https://comdebstage.wpengine.com/company-rescue-solutions/",
+      "title": {
+        "rendered": "Company Rescue Solutions Overview"
+      },
+      "template": "templates/take-the-test-template.php"
+    }
+  ]
+}
