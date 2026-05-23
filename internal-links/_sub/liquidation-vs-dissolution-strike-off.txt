@@ -1,0 +1,247 @@
+<!-- TITLE: Liquidation vs Dissolution (Strike Off): Choosing the Right Route to Close Your UK Company -->
+<!-- POST ID: 77883 / TYPE: pages / AUTHOR: 34 / FM: 77829 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/liquidation-vs-dissolution-strike-off/ -->
+
+<p>Liquidation ends a company by realising its assets and paying creditors in statutory order. Dissolution removes a company from the register without that process. The choice between them depends on whether the company has debts it cannot pay, assets worth distributing, or creditors who might object.</p>
+
+
+
+<p>We see this regularly: directors who pick the wrong route do not just waste time and money. They create personal liability.</p>
+
+
+
+<p>If you dissolve a company that should have been liquidated, the debts do not disappear. Creditors can restore the company to the register and pursue you personally, and the Insolvency Service can investigate your conduct as if the company had been formally wound up.</p>
+
+
+
+<p>We see this happen more often than you would expect, usually because a director chose dissolution to save on liquidation fees without understanding what they were leaving exposed.</p>
+
+
+
+<p>This page compares the two routes directly, explains where each one works and where it does not, and helps you decide which closure path actually fits your company's position.</p>
+
+
+
+<h2 class="wp-block-heading">Liquidation vs Dissolution: Comparison Table</h2>
+
+
+
+<p>Before you read the detail, this table gives you the headline differences. If your company has outstanding debts it cannot pay, the right-hand column is almost certainly where you need to be.</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th></th><th>Dissolution (Strike Off)</th><th>Liquidation</th></tr></thead><tbody><tr><td>What it does</td><td>Removes the company from the register</td><td>Formally winds up the company, realises assets, pays creditors</td></tr><tr><td>Who controls it</td><td>Directors apply to Companies House</td><td>Licensed insolvency practitioner or Official Receiver</td></tr><tr><td>Suitable when</td><td>No debts, no assets above £25k, no ongoing disputes</td><td>Company has debts it cannot pay, or assets to distribute</td></tr><tr><td>Cost</td><td>£10 filing fee (DS01 form)</td><td>From £3,000+ (MVL) or £5,000+ (CVL)</td></tr><tr><td>Timeline</td><td>3 months from Gazette notice</td><td>6 to 18 months typically</td></tr><tr><td>Creditor protection</td><td>None beyond the Gazette notice</td><td>Full statutory process with priority waterfall</td></tr><tr><td>Director investigation</td><td>None unless company is restored</td><td>Mandatory in compulsory; discretionary in voluntary</td></tr><tr><td>Tax clearance</td><td>Required from HMRC before strike off</td><td>Handled by the liquidator</td></tr><tr><td>Personal risk if wrong route</td><td>High: creditors can restore and pursue you</td><td>Lower: formal process provides legal protection</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading">When Dissolution Is the Right Choice</h2>
+
+
+
+<p>Dissolution is the £10 option. It is also the option that creates the most personal liability when chosen incorrectly. Dissolution works when the company has genuinely finished trading, has no outstanding debts, and has no assets worth more than £25,000 to distribute.</p>
+
+
+
+<p>You apply to Companies House using form DS01, the application is published in the London Gazette, and if nobody objects within three months, the company is struck off the register.</p>
+
+
+
+<p>The cost is £10 and the process is straightforward. For a dormant company or a shell that was never traded, dissolution is the sensible route. There is no reason to pay for a formal liquidation when there is nothing to wind up.</p>
+
+
+
+<p>But dissolution only works cleanly when the company is genuinely clean. You must notify all creditors, members, and employees within seven days of the application. HMRC must have no outstanding assessments, returns, or enquiries. If any creditor objects during the three-month Gazette window, Companies House will not proceed with the strike off.</p>
+
+
+
+<p>The £25,000 threshold matters for tax. If the company has distributable reserves above £25,000, distributions made before or during dissolution are treated as income rather than capital gains. That is a significant tax difference.</p>
+
+
+
+<p>If your reserves exceed that threshold, an MVL lets you extract them at capital gains rates, which for many directors saves more in tax than the MVL costs in fees.</p>
+
+
+
+<h2 class="wp-block-heading">When Liquidation Is the Only Safe Route</h2>
+
+
+
+<p>If the company owes money it cannot pay, liquidation is the only route that provides you with a defensible position. A CVL appoints a licensed insolvency practitioner who takes control of the company's affairs, realises its assets, and distributes the proceeds to creditors in the order set out by the Insolvency Act 1986.</p>
+
+
+
+<p>The critical difference is legal protection. When a company is properly liquidated, creditors receive what the assets can pay, the statutory process is followed, and the directors' conduct is assessed formally. Our guide to <a href="/liquidation/voluntary-vs-compulsory-liquidation/">voluntary vs compulsory liquidation</a> explains why acting before a creditor petitions matters.</p>
+
+
+
+<p>If you acted responsibly, the process protects you. If you dissolved the company instead, you skipped all of that, and creditors have six years to apply for restoration and come after you personally.</p>
+
+
+
+<p>We speak to directors almost every week who dissolved a company two or three years ago and are now facing a restoration application from a creditor or HMRC. The money they saved by not liquidating is nothing compared to the legal costs and personal liability they are now dealing with. If your company has debts, the apparent saving from dissolution is a false economy.</p>
+
+
+
+<h2 class="wp-block-heading">Comparing the Cost and Speed of Each Route</h2>
+
+
+
+<p><strong>Dissolution</strong> costs £10 and takes approximately three months from application to removal from the register. It is the cheapest and fastest way to close a company, and for genuinely clean companies, that speed is an advantage.</p>
+
+
+
+<p><strong>Members' Voluntary Liquidation (MVL)</strong> typically costs from £3,000 to £5,000 plus VAT. It takes 6 to 12 months and is used when the company is solvent but has assets above the £25,000 threshold that the directors want to extract at capital gains rates. The tax saving usually exceeds the cost of the MVL.</p>
+
+
+
+<p><strong>Creditors' Voluntary Liquidation (CVL)</strong> starts from around £5,000 and can cost significantly more depending on the complexity. It takes 12 to 18 months and is the correct route when the company is insolvent. The cost is paid from the company's assets, not from the directors' personal funds.</p>
+
+
+
+<p>We tell every director who asks about this: the comparison that matters is not the headline cost. It is the total exposure. Dissolution at £10 followed by a restoration application, legal defence, and personal liability claim will cost you far more than a CVL would have.</p>
+
+
+
+<p>We have sat with directors who spent £30,000 defending a restoration application that a £5,000 CVL would have resolved cleanly. The saving they thought they made was the most expensive decision of their business career.</p>
+
+
+
+<h3 class="wp-block-heading">Director Control During Each Route</h3>
+
+
+
+<p>In dissolution, you retain full control. You make the application, manage any creditor queries, and handle HMRC clearance yourself. That control is an advantage when the company is clean and a liability when it is not, because every decision you make without professional oversight is a decision a liquidator may later scrutinise.</p>
+
+
+
+<p>In a CVL, control transfers to the liquidator on appointment. You cooperate with their investigation, provide records, and answer questions. You do not make commercial decisions for the company from that point. For directors who have been carrying the stress of an insolvent business, that transfer of control is often a relief rather than a loss.</p>
+
+
+
+<h2 class="wp-block-heading">Tax Implications: The Hidden Liquidation vs Dissolution Difference</h2>
+
+
+
+<p>In our work with directors across the UK, we find that tax is often the factor that tips the decision. If you are closing a solvent company and distributing reserves below £25,000, dissolution followed by a capital distribution can work.</p>
+
+
+
+<p>Above that threshold, the distribution is taxed as income unless you use an MVL, where distributions qualify for capital gains treatment and potentially Business Asset Disposal Relief (10% rate on the first £1 million of qualifying gains).</p>
+
+
+
+<p>For an insolvent company, the tax position is different. In a CVL, the liquidator handles all tax obligations, files the final returns, and agrees any outstanding HMRC liabilities as part of the formal process.</p>
+
+
+
+<p>In dissolution, you are responsible for ensuring HMRC has been fully settled before you apply, and if you get it wrong, HMRC can object to the strike off or restore the company afterwards.</p>
+
+
+
+<p>HMRC is the most common creditor to object to a company strike-off and dissolution. If you have any outstanding VAT, Corporation Tax, or PAYE liabilities, resolve them before applying. HMRC does not need a large debt to block a dissolution. We have seen strike-off applications blocked over debts as small as a few hundred pounds.</p>
+
+
+
+<h2 class="wp-block-heading">Liquidation or Dissolution: Which Route Fits Your Company?</h2>
+
+
+
+<p>In our experience, the decision is simpler than most directors expect:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>No debts, no assets above £25k, HMRC clear:</strong> dissolution is the right route. It is cheap, fast, and appropriate.</li>
+<li><strong>Solvent but assets above £25k:</strong> an MVL saves you tax and closes the company formally. The fee is usually recovered through the tax saving.</li>
+<li><strong>Insolvent or uncertain:</strong> a CVL is the only route that protects you personally. Dissolution with outstanding debts is not a saving. It is a deferred liability with interest.</li>
+</ul>
+
+
+
+<p>If you are not sure which category your company falls into, our guide on whether to close or save your company may help, and our overview of <a href="/closing-a-limited-company/">company closure options</a> compares every route side by side.</p>
+
+
+
+<p>Either way, Company Debt connects directors with licensed insolvency practitioners who can assess your position and recommend the right route based on your actual numbers, not assumptions. A 30-minute conversation now can save you years of consequences from choosing the wrong closure path.</p>
+
+
+
+<h2 class="wp-block-heading">FAQs on Liquidation vs Dissolution</h2>
+
+
+<!-- wp:ub/content-toggle-block {"blockID":"77883-liquidation-dissolution-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I dissolve a company that has outstanding debts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>You can apply, but creditors can object during the three-month Gazette notice period, and the application will be blocked. Even if the dissolution goes through, creditors have up to six years to apply for the company to be restored to the register and pursue their claims.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The debts do not disappear with the company. They follow you.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs dissolution cheaper than liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The filing fee is £10 versus £3,000 or more for liquidation. But cost should be measured by total exposure, not filing fees. <a href="/liquidation/company-strike-off-and-dissolution/">Dissolving a company</a> that should have been liquidated can result in restoration proceedings, personal liability, and legal costs that far exceed what a formal liquidation would have cost.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>For solvent companies with assets above £25,000, an MVL often saves more in tax than it costs in fees.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC block a company from being struck off?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. HMRC is the most common objector to strike-off applications. Any outstanding VAT, Corporation Tax, PAYE, or open enquiry can trigger an objection. HMRC does not need a large debt to block the process. Clear all tax liabilities and file all outstanding returns before applying for dissolution.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to company assets after dissolution?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Any assets remaining at the time of dissolution become property of the Crown (bona vacantia) under the Companies Act 2006. This includes bank balances, property, intellectual property, and any other assets the company owned.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If you want to recover those assets, you need to apply for the company's restoration, which is expensive and time-consuming. Distribute or realise assets before dissolution, or use an MVL to handle it formally.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a dissolved company be restored to the register?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A company can be restored by administrative restoration (within six years, by a former director) or by court order (within six years, by any interested party including a creditor).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>When a company is restored, it is treated as though it was never dissolved. All liabilities revive, and the directors are personally accountable for the period during which the company was struck off.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I need an insolvency practitioner for dissolution?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Not for the dissolution itself. You can apply directly to Companies House using form DS01.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>However, if you are unsure whether the company qualifies for dissolution, or if there is any risk that creditors could object, a short consultation with a licensed insolvency practitioner is worth the cost. Getting the route decision wrong is far more expensive than getting advice upfront.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors choosing between formal liquidation and voluntary strike-off (dissolution) when closing a limited company.</p>
+<p>We've drawn on the Insolvency Act 1986 (particularly sections 84 to 106 on voluntary winding up and sections 117 to 162 on compulsory winding up), the Companies Act 2006 (Part 31, sections 1000 to 1034 on striking off and restoration), HMRC guidance on distributions in a winding up and Business Asset Disposal Relief, and current Companies House guidance on the DS01 process.</p>
+<p>Where we describe how closure decisions play out operationally, including HMRC's approach to objecting to strike-offs, the personal-liability tail of restoration applications, and the £25,000 capital-versus-income tax threshold, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/part/IV"><strong>Insolvency Act 1986, Part IV (voluntary winding up)</strong> &mdash; sections 84 to 106, the statutory basis for both CVL and MVL routes when liquidation is the correct closure path</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/part/IV/chapter/VI"><strong>Insolvency Act 1986, sections 117 to 162 (compulsory winding up)</strong> &mdash; rules under which a creditor can petition the court if directors dissolve a company that owed debts</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/part/31"><strong>Companies Act 2006, Part 31 (strike off and restoration)</strong> &mdash; sections 1000 to 1034 governing voluntary dissolution and the conditions a company must meet to use the DS01 route</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/section/1029"><strong>Companies Act 2006, section 1029 (court restoration)</strong> &mdash; the mechanism creditors use to restore a struck-off company and pursue directors who chose dissolution over liquidation</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/guidance/business-asset-disposal-relief"><strong>HMRC: Business Asset Disposal Relief guidance</strong> &mdash; tax treatment of capital distributions in a solvent winding up, relevant when MVL is chosen over strike-off for retained reserves</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/strike-off-your-company-from-companies-register"><strong>Companies House: DS01 strike-off application</strong> &mdash; official process, eligibility tests, and director obligations for dissolving a company outside formal liquidation</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/bona-vacantia"><strong>Treasury Solicitor: bona vacantia</strong> &mdash; what happens to assets left on the balance sheet at dissolution, which pass to the Crown rather than to shareholders</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; investigates director conduct after closure and can pursue disqualification whether the company was liquidated or improperly dissolved</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

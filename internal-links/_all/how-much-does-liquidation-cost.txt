@@ -1,0 +1,285 @@
+<!-- TITLE: How Much Does Company Liquidation Cost in the UK? Fees and Funding Explained -->
+<!-- POST ID: 23698 / TYPE: pages / AUTHOR: 34 / FM: 70038 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/how-much-does-liquidation-cost/ -->
+
+<!-- wp:paragraph -->
+<p>The first question on almost every call is: how much? The honest answer is that a straightforward Creditors' Voluntary Liquidation costs between £4,000 and £7,000 plus VAT, paid from company assets or director funding.</p>
+<p>But that number is the insolvency practitioner's fee, not the total bill. By the time you add the bond premium, Gazette notices, Companies House filing, and disbursements, the real cost is usually 15-20% higher than the headline quote.</p>
+<p>One director we worked with described the experience as "like getting a builder's quote, except the walls are already falling down and you can't get a second opinion on Tuesday." He was not wrong about the urgency, but he was wrong about the second opinion. You can and should get one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This guide sets out the realistic cost of each <a href="/liquidation/">liquidation</a> route in the UK, what the fees actually cover, where hidden costs sit, who pays, and the funding options available when the company has no cash left. It is written from our position as licensed insolvency practitioners at Company Debt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+
+<!-- wp:group {"className":"cd-callout cd-calloutu002du002dcost-reality"} -->
+<div class="wp-block-group cd-callout cd-callout--cost-reality">
+  <p class="cd-callout__label">Cost Reality</p>
+  <p class="cd-callout__title">The Headline IP Fee Is Not the Total Bill , Add 15–20% for Disbursements</p>
+  <!-- wp:paragraph -->
+  <p>A CVL IP fee of £4,000–£7,000 plus VAT is the practitioner's charge, not the all-in cost. Bond premium (typically £200–£400), London Gazette notices (two required), Companies House filing, statutory mailings, and creditor communications add £500–£1,500 to most cases.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>Directors who compare quotes solely on the IP fee and miss disbursements regularly find the final bill 15–20% above the number they agreed to. Always ask for a full cost estimate including disbursements, VAT, and anticipated expenses , not just the headline IP fee.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<h2 class="wp-block-heading">Typical Cost Ranges by Liquidation Type</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The cost depends entirely on the route. Here are the realistic ranges as of April 2026:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong><a href="/liquidation/creditors-voluntary-liquidation/">Creditors' Voluntary Liquidation (CVL)</a>:</strong> £4,000 to £7,000 plus VAT for the IP's fee in a straightforward case. Add £500 to £1,500 for disbursements (bond, Gazette, Companies House, statutory mailings). Total: typically £5,000 to £9,000 all-in. Complex cases with significant assets, disputed claims, or director-conduct issues can run higher.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Compulsory Liquidation:</strong> The petitioning creditor pays £343 court fee plus £2,600 petition deposit to the Insolvency Service, plus their own legal costs (typically £1,500 to £4,000). The Official Receiver's fees and any subsequent private liquidator's fees come from the company's estate. Directors pay nothing personally unless they gave guarantees or face clawback claims.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Members' Voluntary Liquidation (MVL):</strong> £2,000 to £4,000 plus VAT for a solvent company with straightforward assets. MVLs are cheaper because there is no creditor investigation and the process is shorter. Used when the company is solvent and directors want to extract retained profits tax-efficiently.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We quote fixed fees for straightforward CVLs so directors know the number before they commit. If the case is likely to be complex, we say so upfront and explain what drives the cost higher.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the Liquidation Fee Actually Covers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The IP's fee covers the professional work of running the liquidation from start to finish.</p>
+<p>That includes: preparing the Statement of Affairs with the directors, convening the shareholders' meeting and creditors' decision procedure, and realising the company's assets (chasing debtors, selling stock and equipment, collecting bank balances).</p>
+<p>Other work covered: adjudicating creditor claims, investigating director conduct and filing the D-report, distributing proceeds in the statutory priority order, filing all statutory returns with Companies House and the Insolvency Service, and dissolving the company at the end of the process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the fee does not cover: the company's own debts (those are paid from asset realisations, not from the IP's fee), any personal liability the director carries (guarantees, wrongful-trading claims, preference recoveries), or the cost of legal advice if the director needs separate representation. The IP acts for the estate and the creditors, not for the director personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Changes the Liquidation Cost</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Several factors push a CVL above the standard range:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Asset complexity.</strong> A company with property, vehicles on HP, retention-of-title stock, and disputed debtor balances takes longer to realise than a company with a bank account and a laptop. More assets means more work means higher fees.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Number of creditors.</strong> More creditors means more correspondence, more proofs of debt to adjudicate, and a higher chance of a creditor requisitioning a physical meeting or forming a liquidation committee.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Director-conduct issues.</strong> If the liquidator discovers potential preferences, transactions at undervalue, or wrongful trading, the investigation takes more time and the D-report is more detailed. Recovery actions (pursuing the director for clawback) add further cost to the estate.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Employees.</strong> Companies with staff require the liquidator to handle redundancy notifications, employee claims to the Insolvency Service, and TUPE considerations if the business is being sold as a going concern.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Legal disputes.</strong> If a creditor challenges the liquidator's decisions, or if the liquidator needs to bring court proceedings to recover assets, legal costs escalate quickly. These are paid from the estate and reduce the dividend available to creditors.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our rule for directors is: ask the IP what they expect the total cost to be, including disbursements, not just the headline fee. A quote of "£4,500 plus VAT" that becomes £7,000 once you add everything else is not a transparent quote. We give a single all-in number wherever possible.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+  <p class="cd-key-takeaway__label">Key Takeaway</p>
+  <!-- wp:paragraph -->
+  <p>Early voluntary liquidation is almost always cheaper than compulsory liquidation forced by a creditor , both in practitioner fees and in the personal conduct scrutiny that follows compulsory processes. The longer a director waits after the insolvency trigger point, the higher the total cost of the eventual process.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<h2 class="wp-block-heading">Who Pays for Company Liquidation?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In a CVL, the liquidator's fees are paid from the company's assets. If the company has assets (cash in the bank, debtor balances, equipment to sell), the fee comes from the realisations before any distribution to creditors. If the company has no assets, the fee must come from somewhere else, usually the director's personal funds or a director redundancy claim assigned to the IP.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In a compulsory liquidation, the petitioning creditor bears the upfront cost (court fee, deposit, legal fees). The Official Receiver's fees and any private liquidator's fees come from the estate. The director pays nothing personally for the process itself, although they may face personal claims arising from the investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The cost paradox is obvious: directors who cannot afford to liquidate are often the ones who most need to, because the alternative (drifting, trading while insolvent, or attempting an unlawful strike-off) carries far higher personal risk. See our guide on what to do when you <a href="/liquidation/cant-afford-to-liquidate/">can't afford to liquidate</a> for the full set of options.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Redundancy as a Liquidation Funding Source</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Many directors do not realise they may qualify for a statutory redundancy payment when their company enters liquidation.</p>
+<p>If you are an employee of the company (contract of employment, PAYE, at least two years continuous service), you can claim redundancy pay, unpaid wages, holiday pay, and notice pay from the Insolvency Service via the National Insurance Fund. The average successful claim is £9,000 to £12,000, and payments usually come through within six to eight weeks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This claim can be assigned to the insolvency practitioner to cover the cost of the CVL. It is not a loophole. It is a statutory entitlement designed to protect working directors.</p>
+<p>We assess eligibility at the first consultation and handle the claim as part of our standard CVL service. For directors who thought they could not afford liquidation, the redundancy claim is frequently the answer.</p>
+<p>One director we helped had £600 in the company account and assumed he was stuck. His redundancy claim came to £11,400, which covered the CVL fee, the disbursements, and left him with several thousand pounds of personal entitlement on top.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">CVL vs Compulsory: The Cost Comparison That Matters</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Directors sometimes assume that waiting for a creditor to petition (compulsory liquidation) is cheaper because they do not pay anything upfront. That is true in a narrow sense, but misleading overall.</p>
+<p>In a compulsory liquidation, the total cost to the estate is almost always higher because the Official Receiver charges administrative fees, the court process adds costs, and the creditor's legal fees are treated as an expense of the liquidation.</p>
+<p>The net result is less money available for creditor dividends, more scrutiny of director conduct (the OR's investigation is less nuanced than a private IP's), and zero control over timing, appointment, or process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell directors that the CVL is nearly always cheaper for the estate and better for the director.</p>
+<p>The only scenario where compulsory liquidation makes sense from a cost perspective is when the company genuinely has no assets, no director redundancy claim, and no way to fund the CVL. In that case, compulsory liquidation is the fallback, not the plan. See our guide to creditors' voluntary liquidation for the full CVL process and timeline.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Hidden Liquidation Costs and Fees to Watch For</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The costs that catch directors by surprise are usually not the IP's fee. They are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Personal guarantees.</strong> The liquidation ends the company's debts, but personal guarantees survive. If you guaranteed the overdraft, the lease, or a supplier account, the creditor can pursue you personally after the liquidation. This is not a liquidation "cost" in the formal sense, but it is the cost directors feel most acutely.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Overdrawn director's loan account.</strong> If you owe the company money, the liquidator will demand it back. The amount is a debt you owe the creditors, and it is pursued personally. See our guide to director's loan accounts in liquidation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preference and undervalue claims.</strong> If the liquidator identifies payments to you or connected parties that were preferential or at undervalue, they will seek to recover the money from you personally. These are not fees, they are clawbacks, and they can be tens of thousands of pounds.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>VAT on the IP's fee.</strong> The headline fee is usually quoted plus VAT. For a £5,000 fee, that is an extra £1,000. Make sure you understand whether the quote includes or excludes VAT.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Liquidation Cost Misunderstandings</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>"Liquidation should cost less because the company has no money."</strong> The cost of running a liquidation is driven by complexity, not by the company's bank balance. A company with no assets but 50 creditors and a director-conduct issue costs more to liquidate than a company with £100,000 in the bank and two creditors. The IP's work is the same regardless of what is in the account.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I can shop around for the cheapest liquidator."</strong> You can and you should compare quotes. But the cheapest quote is not always the best value. Ask what is included, what the disbursements are, whether the fee is fixed or estimated, and what happens if the case becomes complex. A fixed-fee CVL from a reputable IP is almost always better value than a low headline figure that escalates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"The creditors pay for the liquidation."</strong> In a CVL, the creditors do not pay for the liquidation. The IP's fee comes from the company's assets (which would otherwise go to creditors). The fee reduces the dividend. In a compulsory liquidation, the petitioning creditor pays the upfront costs, but the OR's fees still come from the estate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:ub/call-to-action-block {"blockID":"a1b2c3d4-23698-pre-faq","ub_call_to_action_headline_text":"\u003cstrong\u003eGet a Quick and Easy Liquidation Quote\u003c/strong\u003e","ub_cta_content_text":"Talk to a licensed IP about your liquidation cost and funding\u003cbr\u003e\u003cstrong\u003e\u003cbr\u003e✓ 100% Confidential | ✓ No Obligation | ✓ Licensed and Regulated Advice\u003c/strong\u003e","ub_cta_button_text":"Get a Quote","headColor":"#002856","contentFontSize":17,"buttonColor":"#ff6600","buttonTextColor":"#ffffff","buttonWidth":300,"ctaBackgroundColor":"#e7f6fd","ctaBorderColor":"#ffffff","url":"https://comdebstage.wpengine.com/quick-quote/","padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}} /-->
+
+<!-- wp:html -->
+<h2 class="wp-block-heading">FAQs on Liquidation Costs</h2>
+
+<div class="wp-block-ub-content-toggle wp-block-ub-content-toggle-block" id="ub-content-toggle-block-faq-23698" data-mobilecollapse="false" data-desktopcollapse="true" data-preventcollapse="false" data-showonlyone="false">
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-0">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-0-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>What is the cheapest way to liquidate a company?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-0-faq-23698">
+<p>A CVL funded by a director redundancy claim is usually the cheapest route for an insolvent company. The claim covers the IP's fee and disbursements, and the director pays nothing from personal savings.</p>
+<p>If you do not qualify for redundancy, the cheapest option is a straightforward CVL at a fixed fee from a reputable IP. Strike-off is cheaper but is only lawful for solvent companies with no creditors.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-1">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-1-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>Can I pay the liquidator in instalments?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-1-faq-23698">
+<p>Some IPs offer instalment arrangements for director-funded CVLs. We offer this where appropriate. The key is that the fee must be agreed and committed before the process begins, because the liquidator cannot start work without certainty of funding. Ask the IP about payment terms at the first consultation.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-2">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-2-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>Are there any government grants to cover liquidation costs?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-2-faq-23698">
+<p>No. There are no government grants for liquidation fees. The closest mechanism is the director redundancy claim through the National Insurance Fund, which is a statutory entitlement (not a grant) and can be assigned to cover the CVL fee. Some directors also use personal savings, family loans, or credit facilities to fund the process.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-3">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-3-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>What happens if the company has no assets and I cannot pay personally?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-3-faq-23698">
+<p>If you qualify for a director redundancy claim, that can fund the CVL. If you do not, the fallback is compulsory liquidation by creditor petition, which costs you nothing personally but removes your control over the process. See our guide on can't afford to liquidate for the full set of options.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-4">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-4-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>Do I have to pay VAT on the liquidator's fee?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-4-faq-23698">
+<p>Yes. IP fees are subject to VAT at the standard rate (currently 20%). A quoted fee of £5,000 plus VAT means a total of £6,000. Always confirm whether a quote includes or excludes VAT before committing.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-23698-5">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-5-faq-23698">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-23698" style="color: #000000"><strong>Is a compulsory liquidation really free for the director?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-5-faq-23698">
+<p>The director pays nothing for the liquidation process itself. But compulsory liquidation costs the estate more in total (OR fees, court costs, creditor legal fees), leaves less for creditor dividends, removes director control, and increases the chance of a director-conduct investigation. It is free in the narrow sense and more expensive in every other sense.</p>
+	</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"faq-asset-loader-23698","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>Company Debt is a firm of licensed insolvency practitioners regulated by the Insolvency Practitioners Association. If you instruct us, we act as your IP and our fees are paid from company assets, a director redundancy claim, or director funding. This page is written from that position and is not independent legal advice.</p>
+<p>The fee ranges in this guide are based on our direct experience of pricing CVLs, MVLs, and compulsory liquidation work in England and Wales as of April 2026. Court fees and petition deposits are set by statute. Redundancy claim figures are based on average outcomes through the Insolvency Service's National Insurance Fund.</p>
+<p>Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, Sections 100 and 176ZA</strong> &mdash; statutory basis for CVL liquidator appointment by creditors and the rule that liquidation expenses are paid in priority from floating-charge assets</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>Insolvency Service</strong> &mdash; official guidance on compulsory liquidation petition deposits, Official Receiver fees, and the statutory route when HMRC or trade creditors petition the court</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/claim-redundancy"><strong>GOV.UK: Redundancy Payments Service</strong> &mdash; how directors and employees claim statutory redundancy, notice pay, and arrears from the National Insurance Fund once the company enters liquidation</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/publications/fees-in-the-civil-and-family-courts-main-fees-ex50"><strong>HMCTS Fees Order (EX50)</strong> &mdash; current schedule of court fees including the winding-up petition fee payable by petitioning creditors before the hearing</a> - gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents/made"><strong>Insolvency (England and Wales) Rules 2016, Part 18</strong> &mdash; procedural framework for fixing and approving insolvency practitioner remuneration on a time-cost, fixed-fee, or percentage basis</a> - legislation.gov.uk</li>
+<li><a href="https://insolvency-practitioners.org.uk/"><strong>Insolvency Practitioners Association</strong> &mdash; recognised professional body authorising licensed IPs and providing a public search to verify the practitioner quoting your liquidation</a> - insolvency-practitioners.org.uk</li>
+<li><a href="https://www.gov.uk/closing-a-limited-company"><strong>Companies House: Closing a Limited Company</strong> &mdash; comparison of striking off versus formal liquidation, including the £33 strike-off application fee and when it is the wrong route</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

@@ -1,0 +1,405 @@
+<!-- TITLE: Company Pensions and Liquidation: What Happens to Employee Retirement Funds in the UK -->
+<!-- POST ID: 78163 / TYPE: pages / AUTHOR: 34 / FM: 78165 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/company-pensions-and-liquidation/ -->
+
+<!-- wp:paragraph -->
+<p>Most directors calling us about pensions and insolvency are asking one of two questions: will my staff lose their retirement savings, and am I going to be personally ruined.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The answers are very different, and they depend on one thing you probably have not looked at in years, the scheme type. If you run a defined contribution (DC) workplace pension, most of the worry is unnecessary.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you run or inherited a defined benefit (DB) scheme, there is a number called the Section 75 employer debt that can turn a £2m wind-up into a £25m one overnight. Most directors have never heard of it. That is usually how the conversation starts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows covers how workplace pensions are treated in a UK liquidation, the role of the Pension Protection Fund, the Section 75 mechanism that drives the risk, what directors must do in the first 14 days, and the statutory protections that run alongside the insolvency. Written from our position as licensed insolvency practitioners at Company Debt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer for Company Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Employees' pension savings are generally protected when a company liquidates, but the mechanism of protection depends on the scheme type. Defined contribution pots are held by the scheme trustee or provider in the employee's name and are not part of the company's insolvency estate. They are safe.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Defined benefit schemes trigger an "employer insolvency event" that crystallises the Section 75 debt, moves the scheme into a PPF assessment period, and eventually either transfers members to the Pension Protection Fund at compensation levels or (rarely) rescues the scheme through a buyout.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you run a DB scheme, the rule is simple: make no promises to trustees, members, or the regulator until you have taken specialist advice. The Section 75 debt is rarely a personal debt of the director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But The Pensions Regulator has powers (called Contribution Notices and Financial Support Directions) to chase connected parties, including directors and parent companies, if there is any suggestion the insolvency was engineered to dump the deficit. This is the area where directors most often stumble, usually by saying something well-meaning in an email that gets quoted back six months later.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Identifying the Pension Scheme Type Before Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The very first thing you need to know about your exposure is what kind of scheme the company operates. This sounds obvious but many directors of smaller companies have inherited legacy arrangements and are unclear on the detail. We tell directors to check three things immediately:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Defined contribution (DC) via a master trust or workplace pension provider.</strong> The most common scheme type for SMEs post-auto-enrolment. Providers include NEST, The People's Pension, Smart Pension, Aviva, Legal &amp; General, and Scottish Widows. Employee pots are ring-fenced and safe. Your obligation as a director at liquidation is to clear any unpaid employer contributions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Defined benefit (DB) occupational pension scheme.</strong> Less common in private SMEs but still present in older businesses, particularly manufacturing, engineering, and professional services. DB schemes promise a specific pension based on salary and service, and the employer carries the investment and longevity risk. These schemes trigger Section 75 debt on insolvency.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Hybrid or legacy arrangements.</strong> Some companies operate both a DB section (often closed to new members) and a DC section. Each is treated separately under the rules. Check with the trustees or the scheme administrator for a current summary.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Directors often think they have a DC scheme and discover, late on, that they also inherited a closed DB section from a company they acquired years ago. One director we helped bought a small engineering firm in 2019, operated it for four years with no issue, and only discovered at the point of cash-flow pressure that the acquisition came with a closed final-salary section.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Its Section 75 exposure was bigger than the company was worth. He had never been told. No one had filed the right paperwork to alert him. That is how these situations begin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Check the scheme documents, not your memory. The DB section, closed or not, is usually where the real liability sits, and "we didn't even know it was there" is not a defence The Pensions Regulator finds persuasive.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Defined Contribution Pensions in Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DC pension pots are owned by the employee, not the company. The money sits with the scheme trustee or provider under the member's name, invested according to the member's choice (or the scheme's default fund). On liquidation, DC pots are not part of the insolvency estate and cannot be clawed back to pay creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Employees keep what they have accumulated, and the scheme continues to manage it until the member draws it. Pensions are only one part of the picture; our guide on <a href="/liquidation/what-happens-to-employees/">how liquidation affects employees</a> covers wages, redundancy, and notice pay alongside the pension position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The one area of exposure is unpaid employer contributions. If the company collected employee contributions from salaries but did not pass them to the scheme, or owes its own employer contributions at the date of liquidation, the trustees can prove in the liquidation. Unpaid employee contributions rank preferential; unpaid employer contributions rank unsecured. Our guide to <a href="/liquidation/which-creditors-get-paid-first/">creditor payment priority</a> sets out where each class of claim sits in the distribution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell directors to settle any in-flight contributions immediately if they can, because unpaid employee contributions attract particular scrutiny from The Pensions Regulator as a potential breach of trust.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Defined Benefit Pensions and the PPF Route</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DB schemes are a different world. The moment the employer enters any formal insolvency (liquidation, administration, a CVA, or a scheme of arrangement), the scheme enters a PPF assessment period.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is a waiting room, typically twelve to twenty-four months, during which the PPF decides whether the scheme can be saved by a buyout with an insurer or whether it will move into the PPF itself permanently.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The PPF's role is to protect members of eligible DB schemes when the sponsoring employer fails. Compensation is generally 90% of accrued pension for members below normal pension age (capped by the PPF compensation cap for higher earners) and 100% for members already in receipt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These figures are set by the Pensions Act 2004 and can be adjusted by Parliament. The PPF is funded by a levy on all eligible DB schemes, not by the Treasury.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>During the assessment period, the scheme trustees remain in office but operate under PPF oversight. Benefit payments continue at PPF compensation levels. Member rights are fixed at the assessment date, which means benefit increases that would otherwise have applied during the assessment period do not accrue.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-calloutu002du002dkey-takeaway"} -->
+<div class="wp-block-group cd-callout cd-callout--key-takeaway">
+<p class="cd-callout__label">Key Takeaway</p>
+<!-- wp:paragraph -->
+<p>In the vast majority of cases we deal with, the pension scheme is DC and the employees' savings are safe. The worry is almost always disproportionate to the actual risk. The genuine danger sits entirely in defined benefit schemes, and specifically in the Section 75 debt that crystallises on an insolvency event.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If you are not certain which type of scheme you have, find out before the liquidation conversation goes further. The difference between DC and DB is the difference between a problem that resolves itself and one that can define your financial position for years.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Section 75 Employer Debt: The Pension Mechanism Most Directors Miss</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 75 of the Pensions Act 1995 is the provision that crystallises the employer's liability to a DB scheme on an insolvency event. The mechanism is deliberately brutal.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Instead of using the scheme's ongoing funding estimate (the figure that assumes the business keeps trading), the law forces the calculation to use the full cost of handing the whole scheme to an insurance company. The difference between those two numbers can be enormous.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A scheme that looks like it needs £10 million to stay funded might generate a £25 million Section 75 debt the moment the company enters insolvency. One case we handled: the actuary rang on a Tuesday morning with a provisional Section 75 figure that was three times the number on the audited accounts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The director had to sit down. That kind of phone call, first thing, is how most DB-scheme directors learn how the numbers actually work.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Section 75 debt becomes an unsecured claim in the liquidation alongside trade creditors. Because it is almost always far larger than any other claim, it dominates the unsecured pool and ends up dictating the pence-in-the-pound recovery for every other creditor. The PPF steps into the scheme's shoes, taking over its claim in the liquidation on the members' behalf.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For directors, the key question is whether the Section 75 debt can be pushed onto you personally or onto a parent company. Under the Pensions Act 2004, The Pensions Regulator has powers (called Contribution Notices and Financial Support Directions) to go after people connected to the business if there is evidence the insolvency was set up to dump the pension liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These powers reach beyond the insolvent company to parent companies, shareholders, and in extreme cases, directors personally. We see this most often in pre-pack administrations where the buyer is connected to the seller.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Fraud Compensation Fund: Second-Layer Pension Protection</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Fraud Compensation Fund, established under the Pensions Act 2004 and administered by the PPF, is a separate and often overlooked protection. It compensates members of occupational pension schemes where the scheme has suffered a loss due to dishonesty (typically pension liberation fraud or asset misappropriation).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Fund sits behind the PPF. PPF protects members when the employer fails. The Fraud Compensation Fund protects members when the scheme itself has been looted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For liquidation cases, the Fraud Compensation Fund is relevant where the company's insolvency is accompanied by evidence of misuse of scheme assets. Claims are assessed by the PPF and can take two to five years to resolve.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors whose conduct, including your own, involves pension asset misuse face criminal liability under the Pensions Act 2004 and Theft Act 1968, not just civil claims.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">First 14 Days: Director Pension Duty Checklist</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The moment you realise the company is heading into insolvency and a pension scheme is in scope, your clock starts. The first 14 days determine how much control you retain and how much regulatory exposure you accumulate. Our standard checklist for you:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Identify the scheme type</strong> (DC, DB, hybrid) and the trustee or provider. Get current contact details.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Calculate unpaid contributions</strong> (employee and employer). Settle what you can before insolvency if the company has cash, focusing on employee contributions first.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Notify the trustees</strong> that an insolvency event is probable. They have their own duties to members and the regulator.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Notify The Pensions Regulator</strong> through the appropriate channel. For DB schemes, this is often done via the trustees and the scheme actuary.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Obtain a Section 75 estimate</strong> if you run a DB scheme. The trustees' actuary can provide a provisional figure within days.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Take insolvency advice</strong> before any restructuring or pre-pack discussions. The TPR clearance framework can apply.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Document every decision</strong> in board minutes. This is the director's best protection against later moral-hazard claims.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We walk directors through all seven steps at the first consultation. Missing any of them does not automatically create personal liability, but it materially weakens your position as a director if TPR later investigates the circumstances of the insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-calloutu002du002dtimeline-reality"} -->
+<div class="wp-block-group cd-callout cd-callout--timeline-reality">
+<p class="cd-callout__label">Timeline Reality</p>
+<!-- wp:paragraph --><p>The first 14 days set the tone for the entire pension aspect of a liquidation. Identify your scheme type, notify the trustees and TPR, and document every decision in board minutes. Silence, delay, or informal trustee conversations that are not minuted are the three most common ways directors create personal exposure from obligations that should have stayed the company's alone.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">TPR Clearance and Pre-Pack Pension Risk</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Where a restructuring or pre-pack administration is being contemplated and a DB pension scheme is in scope, The Pensions Regulator's clearance framework becomes important.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Clearance is a statutory process under the Pensions Act 2004 in which the buyer, seller, and connected parties can apply to TPR for confirmation that the proposed transaction will not trigger a Contribution Notice or Financial Support Direction.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Clearance is not guaranteed. TPR applies a materiality test and will consider the impact on the scheme, the fairness of the proposed transaction, and whether any mitigation (cash injection, parental guarantee, escrow) is offered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The process takes six to twelve weeks and can add material cost to the deal. In our experience, pre-pack buyers consistently underestimate the time TPR needs, which delays transactions and sometimes kills them. We advise engaging TPR early, not late.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Alternatives When Pensions Dominate Company Liabilities</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the Section 75 debt is so large that it dominates the balance sheet and a straightforward liquidation would obliterate all other creditor recoveries, the alternatives we consider with directors include:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Regulated Apportionment Arrangement (RAA).</strong> A specialist tool where the business hands the pension scheme to the PPF in return for an agreed cash payment, letting the rest of the business survive without going insolvent. You will need both the PPF and The Pensions Regulator to approve. It is expensive and rarely granted, but occasionally the right fit.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Company Voluntary Arrangement (CVA) with PPF approval.</strong> A CVA restructures all creditor debts including the Section 75 claim, but the PPF has a dominant vote and rarely approves without meaningful mitigation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Administration with a planned business sale.</strong> Preserves the trading business for buyers while the pension liability stays with the insolvent shell. Requires careful TPR engagement to avoid moral-hazard claims.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Buyout by an insurer.</strong> For well-funded schemes, the trustees may be able to secure members' benefits with an insurance company, sometimes above PPF compensation levels. Expensive but the best member outcome.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Pensions-led restructurings are specialist work. The interaction between insolvency law, pension law, and regulator practice is dense, and directors who try to improvise here tend to end up with Contribution Notices attached to their personal assets and a disqualification file open at the Insolvency Service. It is not an area to muddle through.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Pension Misunderstandings Directors Bring to Us</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>"Employees will lose their pensions if we liquidate."</em> Rarely. DC pots are ring-fenced and safe. DB members transfer to the PPF at compensation levels, which are lower than the promised scheme benefits but are genuine statutory protection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"Section 75 debt is just a technicality."</em> It is not. It crystallises on the insolvency event, is calculated on buyout assumptions, and dominates the unsecured creditor pool. Ignoring it is how directors end up with Contribution Notices against them personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"We can avoid the pension liability by setting up a new company."</em> This is exactly the pattern TPR was given moral-hazard powers to defeat. Any sale or restructuring that leaves the scheme worse off than it would have been in a straightforward wind-up is vulnerable to a Contribution Notice. See our guide on <a href="/insolvency/what-is-wrongful-trading/">wrongful trading</a> for the broader director-duty framework.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"The PPF will cover everything."</em> The PPF pays compensation, not full scheme benefits. Members below normal pension age receive approximately 90% of accrued pension, subject to a compensation cap that affects higher earners. Members at or above normal pension age generally receive 100% of what they were getting. Future increases are capped at specific rates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:ub/call-to-action-block {"blockID":"a1b2c3d4-78163-pre-faq","ub_call_to_action_headline_text":"\u003cstrong\u003eGet a Quick and Easy Liquidation Quote\u003c/strong\u003e","ub_cta_content_text":"Talk to a licensed IP before you respond to the trustees\u003cbr\u003e\u003cstrong\u003e\u003cbr\u003e✓ 100% Confidential | ✓ No Obligation | ✓ Licensed and Regulated Advice\u003c/strong\u003e","ub_cta_button_text":"Get a Quote","headColor":"#002856","contentFontSize":17,"buttonColor":"#ff6600","buttonTextColor":"#ffffff","buttonWidth":300,"ctaBackgroundColor":"#e7f6fd","ctaBorderColor":"#ffffff","url":"https://comdebstage.wpengine.com/quick-quote/","padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}} /-->
+
+<!-- wp:html -->
+<h2 class="wp-block-heading">FAQs on Company Pensions and Liquidation</h2>
+
+<div class="wp-block-ub-content-toggle wp-block-ub-content-toggle-block" id="ub-content-toggle-block-faq-78163" data-mobilecollapse="false" data-desktopcollapse="true" data-preventcollapse="false" data-showonlyone="false">
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-0">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-0-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>Are employee pensions safe if the company liquidates?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-0-faq-78163">
+<p>Generally yes. DC pots are held in the employee's name by the scheme trustee or provider and are not part of the insolvency estate. DB members transfer to the Pension Protection Fund at compensation levels. The one exposure is unpaid contributions the company was supposed to pass through, which become a claim in the liquidation.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-1">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-1-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>What is Section 75 employer debt?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-1-faq-78163">
+<p>Section 75 of the Pensions Act 1995 crystallises the employer's liability to a defined benefit pension scheme on an insolvency event. The debt is calculated on a full buyout basis (the cost of securing members' benefits with an insurer) rather than on ongoing funding assumptions. It becomes an unsecured claim in the liquidation and typically dominates the creditor pool.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-2">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-2-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>Can The Pensions Regulator pursue directors personally?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-2-faq-78163">
+<p>Yes, in specific circumstances. Under the Pensions Act 2004, TPR can issue Contribution Notices (Section 38) and Financial Support Directions (Section 43) against connected or associated persons, including directors and parent companies, where there is evidence the insolvency was engineered to avoid the pension liability. The bar is high but the reach is real.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-3">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-3-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>What happens to unpaid employer pension contributions at liquidation?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-3-faq-78163">
+<p>Unpaid contributions owed at the liquidation date become claims in the insolvency. Unpaid employee contributions (deducted from salaries but not passed to the scheme) rank as preferential claims under Schedule 6 of the Insolvency Act 1986, limited to statutory caps. Unpaid employer contributions rank as unsecured. Employees can also claim from the National Insurance Fund.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-4">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-4-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>How long does a PPF assessment period last?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-4-faq-78163">
+<p>Typically twelve to twenty-four months. During the assessment, the PPF reviews scheme assets and liabilities, tests whether the scheme can be rescued above PPF compensation levels (a buyout with an insurer), and ultimately either transfers members to the PPF or completes a rescue. Benefit payments continue at PPF compensation levels throughout the assessment period.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-5">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-5-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>What is the Fraud Compensation Fund and when does it apply?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-5-faq-78163">
+<p>The Fraud Compensation Fund, administered by the PPF under the Pensions Act 2004, compensates members of occupational pension schemes that have suffered loss due to dishonesty. It is separate from and sits behind the PPF. Claims apply where scheme assets have been looted or misappropriated. Directors whose conduct includes pension asset misuse face civil claims and criminal liability in parallel.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-6">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-6-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>Do I need TPR clearance for a pre-pack administration?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-6-faq-78163">
+<p>If a DB pension scheme is in scope and the deal involves connected parties, TPR clearance is strongly advisable. Clearance lets the regulator confirm the transaction will not trigger Contribution Notices or Financial Support Directions. It takes six to twelve weeks and can add material cost, but it is the only way to manage moral-hazard risk with certainty.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-78163-7">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-7-faq-78163">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-78163" style="color: #000000"><strong>What should I do first if the company cannot afford pension contributions?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-7-faq-78163">
+<p>Take insolvency advice within days, not weeks. Unpaid pension contributions accumulate quickly and attract particular scrutiny from TPR. Engage the scheme trustees early, provide honest information about the company's position, and avoid making commitments you cannot keep. Silence and optimism are the two most common mistakes. Call us on 0800 074 6757 for free initial advice.</p>
+	</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"faq-asset-loader-78163","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>Company Debt is a firm of licensed insolvency practitioners regulated by the Insolvency Practitioners Association. If you instruct us, we act as your IP and our fees are paid from company assets or director funding. We work alongside specialist pensions counsel when a DB scheme is in scope. This page is written from that position and is not independent legal advice.</p>
+<p>The statutory references in this guide are to the Pensions Act 1995 (Section 75), the Pensions Act 2004 (Sections 38, 43, 120, and the PPF and Fraud Compensation Fund provisions), the Insolvency Act 1986, and the Occupational Pension Schemes (Employer Debt) Regulations 2005.</p>
+<p>All references are current for England and Wales as of April 2026. Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1995/26/contents"><strong>Pensions Act 1995</strong> &mdash; Section 75 mechanism that crystallises defined-benefit buy-out debt against the sponsoring employer on insolvency</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2004/35/contents"><strong>Pensions Act 2004</strong> &mdash; establishes the Pension Protection Fund, Contribution Notices, Financial Support Directions, and the Fraud Compensation Fund</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2005/678/contents/made"><strong>Occupational Pension Schemes (Employer Debt) Regulations 2005</strong> &mdash; rules for calculating and apportioning the Section 75 debt on a buy-out basis</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, Schedule 6</strong> &mdash; ranks unpaid employee pension contributions as preferential debts ahead of floating-charge creditors in the liquidation waterfall</a> - legislation.gov.uk</li>
+<li><a href="https://www.ppf.co.uk/"><strong>Pension Protection Fund</strong> &mdash; assessment period rules, statutory compensation levels for DB members, and the annual PPF levy directors should know about</a> - ppf.co.uk</li>
+<li><a href="https://www.thepensionsregulator.gov.uk/"><strong>The Pensions Regulator</strong> &mdash; moral-hazard powers, clearance applications before restructuring, and employer auto-enrolment duties up to the appointment date</a> - thepensionsregulator.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>Insolvency Service</strong> &mdash; routes unpaid pension contributions, redundancy pay, and notice claims through the National Insurance Fund when the employer cannot pay</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

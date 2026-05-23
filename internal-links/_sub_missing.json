@@ -1,0 +1,589 @@
+{
+ "/liquidation/timeline/": {
+  "id": 17568,
+  "slug": "timeline",
+  "missing": [
+   "/liquidation/liquidation-deadlines-and-time-limits/",
+   "/liquidation/how-to-prepare-for-company-liquidation/"
+  ],
+  "chars": 17103
+ },
+ "/liquidation/liquidation-deadlines-and-time-limits/": {
+  "id": 78690,
+  "slug": "liquidation-deadlines-and-time-limits",
+  "missing": [
+   "/liquidation/how-to-prepare-for-company-liquidation/",
+   "/liquidation/",
+   "/liquidation/timeline/"
+  ],
+  "chars": 18606
+ },
+ "/liquidation/how-to-prepare-for-company-liquidation/": {
+  "id": 77814,
+  "slug": "how-to-prepare-for-company-liquidation",
+  "missing": [
+   "/liquidation/list-of-liquidation-documents/",
+   "/liquidation/",
+   "/liquidation/timeline/"
+  ],
+  "chars": 37233
+ },
+ "/liquidation/list-of-liquidation-documents/": {
+  "id": 79445,
+  "slug": "list-of-liquidation-documents",
+  "missing": [
+   "/liquidation/creditor-meetings-in-liquidation/",
+   "/liquidation/how-to-prepare-for-company-liquidation/"
+  ],
+  "chars": 23627
+ },
+ "/liquidation/creditor-meetings-in-liquidation/": {
+  "id": 78635,
+  "slug": "creditor-meetings-in-liquidation",
+  "missing": [
+   "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+   "/liquidation/liquidators-powers-and-duties/"
+  ],
+  "chars": 22474
+ },
+ "/liquidation/how-to-prove-your-debt-in-company-liquidation/": {
+  "id": 78613,
+  "slug": "how-to-prove-your-debt-in-company-liquidation",
+  "missing": [
+   "/liquidation/liquidators-powers-and-duties/",
+   "/liquidation/which-creditors-get-paid-first/"
+  ],
+  "chars": 16220
+ },
+ "/liquidation/liquidators-powers-and-duties/": {
+  "id": 78673,
+  "slug": "liquidators-powers-and-duties",
+  "missing": [
+   "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+   "/liquidation/creditor-meetings-in-liquidation/"
+  ],
+  "chars": 28622
+ },
+ "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/": {
+  "id": 78654,
+  "slug": "how-to-challenge-a-liquidators-decisions-or-fees",
+  "missing": [
+   "/liquidation/can-i-choose-my-liquidator/",
+   "/liquidation/liquidators-powers-and-duties/"
+  ],
+  "chars": 26984
+ },
+ "/liquidation/can-i-choose-my-liquidator/": {
+  "id": 79351,
+  "slug": "can-i-choose-my-liquidator",
+  "missing": [
+   "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+   "/liquidation/liquidators-powers-and-duties/",
+   "/liquidation/how-much-does-liquidation-cost/"
+  ],
+  "chars": 21088
+ },
+ "/liquidation/how-to-choose-the-right-insolvency-procedure/": {
+  "id": 78102,
+  "slug": "how-to-choose-the-right-insolvency-procedure",
+  "missing": [
+   "/liquidation/timeline/",
+   "/liquidation/",
+   "/liquidation/alternatives-to-company-liquidation/"
+  ],
+  "chars": 28788
+ },
+ "/liquidation/what-happens-to-directors-in-liquidation/": {
+  "id": 46222,
+  "slug": "what-happens-to-directors-in-liquidation",
+  "missing": [
+   "/liquidation/director-conduct-review/"
+  ],
+  "chars": 21938
+ },
+ "/liquidation/director-conduct-review/": {
+  "id": 79396,
+  "slug": "director-conduct-review",
+  "missing": [
+   "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+   "/liquidation/what-happens-to-directors-in-liquidation/",
+   "/liquidation/"
+  ],
+  "chars": 26980
+ },
+ "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/": {
+  "id": 78835,
+  "slug": "whats-the-risk-of-being-disqualified-as-a-director",
+  "missing": [
+   "/liquidation/can-directors-go-to-prison-for-company-debt/",
+   "/liquidation/director-conduct-review/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 27816
+ },
+ "/liquidation/can-directors-go-to-prison-for-company-debt/": {
+  "id": 79515,
+  "slug": "can-directors-go-to-prison-for-company-debt",
+  "missing": [
+   "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+   "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 17149
+ },
+ "/liquidation/can-a-director-be-sued-personally-by-creditors/": {
+  "id": 79537,
+  "slug": "can-a-director-be-sued-personally-by-creditors",
+  "missing": [
+   "/liquidation/what-happens-if-a-director-hides-company-assets/",
+   "/liquidation/can-directors-go-to-prison-for-company-debt/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 31179
+ },
+ "/liquidation/what-happens-if-a-director-hides-company-assets/": {
+  "id": 79529,
+  "slug": "what-happens-if-a-director-hides-company-assets",
+  "missing": [
+   "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+   "/liquidation/director-conduct-review/"
+  ],
+  "chars": 21214
+ },
+ "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/": {
+  "id": 79545,
+  "slug": "what-happens-if-a-director-transfers-assets-before-insolvency",
+  "missing": [
+   "/liquidation/can-directors-pay-themselves-before-liquidation/",
+   "/liquidation/what-happens-if-a-director-hides-company-assets/",
+   "/liquidation/director-conduct-review/"
+  ],
+  "chars": 17235
+ },
+ "/liquidation/can-directors-pay-themselves-before-liquidation/": {
+  "id": 79553,
+  "slug": "can-directors-pay-themselves-before-liquidation",
+  "missing": [
+   "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 38738
+ },
+ "/liquidation/what-happens-if-a-director-resigns-before-liquidation/": {
+  "id": 78797,
+  "slug": "what-happens-if-a-director-resigns-before-liquidation",
+  "missing": [
+   "/liquidation/when-should-a-director-stop-trading/",
+   "/liquidation/can-directors-pay-themselves-before-liquidation/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 20969
+ },
+ "/liquidation/when-should-a-director-stop-trading/": {
+  "id": 79480,
+  "slug": "when-should-a-director-stop-trading",
+  "missing": [
+   "/liquidation/what-happens-to-directors-in-liquidation/",
+   "/liquidation/seek-insolvency-advice-before-missing-payments/"
+  ],
+  "chars": 21688
+ },
+ "/liquidation/company-property-and-real-estate-in-liquidation/": {
+  "id": 78560,
+  "slug": "company-property-and-real-estate-in-liquidation",
+  "missing": [
+   "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+   "/liquidation/",
+   "/liquidation/which-creditors-get-paid-first/"
+  ],
+  "chars": 33576
+ },
+ "/liquidation/company-vehicles-and-equipment-in-liquidation/": {
+  "id": 78596,
+  "slug": "company-vehicles-and-equipment-in-liquidation",
+  "missing": [
+   "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+   "/liquidation/"
+  ],
+  "chars": 26755
+ },
+ "/liquidation/intellectual-property-and-trading-assets-in-liquidation/": {
+  "id": 78578,
+  "slug": "intellectual-property-and-trading-assets-in-liquidation",
+  "missing": [
+   "/liquidation/leases-and-contracts-in-liquidation/",
+   "/liquidation/",
+   "/liquidation/company-vehicles-and-equipment-in-liquidation/"
+  ],
+  "chars": 22589
+ },
+ "/liquidation/leases-and-contracts-in-liquidation/": {
+  "id": 78191,
+  "slug": "leases-and-contracts-in-liquidation",
+  "missing": [
+   "/liquidation/company-pensions-and-liquidation/",
+   "/liquidation/",
+   "/liquidation/liquidators-powers-and-duties/"
+  ],
+  "chars": 23982
+ },
+ "/liquidation/company-pensions-and-liquidation/": {
+  "id": 78163,
+  "slug": "company-pensions-and-liquidation",
+  "missing": [
+   "/liquidation/business-bank-account-in-liquidation/",
+   "/liquidation/what-happens-to-employees/",
+   "/liquidation/which-creditors-get-paid-first/"
+  ],
+  "chars": 34769
+ },
+ "/liquidation/business-bank-account-in-liquidation/": {
+  "id": 79379,
+  "slug": "business-bank-account-in-liquidation",
+  "missing": [
+   "/liquidation/company-property-and-real-estate-in-liquidation/",
+   "/liquidation/",
+   "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/"
+  ],
+  "chars": 30740
+ },
+ "/liquidation/liquidation-vs-dissolution-strike-off/": {
+  "id": 77883,
+  "slug": "liquidation-vs-dissolution-strike-off",
+  "missing": [
+   "/liquidation/voluntary-vs-compulsory-liquidation/",
+   "/closing-a-limited-company/"
+  ],
+  "chars": 19170
+ },
+ "/liquidation/voluntary-vs-compulsory-liquidation/": {
+  "id": 77916,
+  "slug": "voluntary-vs-compulsory-liquidation",
+  "missing": [
+   "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+   "/liquidation/voluntary-liquidation/"
+  ],
+  "chars": 19725
+ },
+ "/liquidation/winding-up-petition-vs-compulsory-liquidation/": {
+  "id": 79322,
+  "slug": "winding-up-petition-vs-compulsory-liquidation",
+  "missing": [
+   "/liquidation/cva-vs-strike-off-vs-liquidation/"
+  ],
+  "chars": 22817
+ },
+ "/liquidation/cva-vs-strike-off-vs-liquidation/": {
+  "id": 79304,
+  "slug": "cva-vs-strike-off-vs-liquidation",
+  "missing": [
+   "/liquidation/insolvency-vs-bankruptcy/",
+   "/liquidation/"
+  ],
+  "chars": 23277
+ },
+ "/liquidation/insolvency-vs-bankruptcy/": {
+  "id": 79455,
+  "slug": "insolvency-vs-bankruptcy",
+  "missing": [
+   "/liquidation/liquidation-vs-dissolution-strike-off/"
+  ],
+  "chars": 13280
+ },
+ "/liquidation/liquidating-a-charity-or-non-profit/": {
+  "id": 78771,
+  "slug": "liquidating-a-charity-or-non-profit",
+  "missing": [
+   "/liquidation/liquidating-a-limited-liability-partnership/",
+   "/liquidation/members-voluntary-liquidation/"
+  ],
+  "chars": 30704
+ },
+ "/liquidation/liquidating-a-limited-liability-partnership/": {
+  "id": 78756,
+  "slug": "liquidating-a-limited-liability-partnership",
+  "missing": [
+   "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/"
+  ],
+  "chars": 23920
+ },
+ "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/": {
+  "id": 79285,
+  "slug": "liquidating-a-group-company-or-holding-company-in-the-uk",
+  "missing": [
+   "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+   "/liquidation/creditors-voluntary-liquidation/",
+   "/liquidation/members-voluntary-liquidation/"
+  ],
+  "chars": 27264
+ },
+ "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/": {
+  "id": 79256,
+  "slug": "liquidating-a-company-with-no-assets-or-bank-account-uk",
+  "missing": [
+   "/liquidation/can-i-liquidate-a-dormant-company/",
+   "/liquidation/cant-afford-to-liquidate/"
+  ],
+  "chars": 25345
+ },
+ "/liquidation/can-i-liquidate-a-dormant-company/": {
+  "id": 79266,
+  "slug": "can-i-liquidate-a-dormant-company",
+  "missing": [
+   "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/"
+  ],
+  "chars": 28312
+ },
+ "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/": {
+  "id": 79246,
+  "slug": "can-i-liquidate-my-company-with-a-bounce-back-loan",
+  "missing": [
+   "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 26132
+ },
+ "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/": {
+  "id": 79236,
+  "slug": "can-i-start-a-new-company-after-liquidating-my-old-one",
+  "missing": [
+   "/liquidation/company-restoration-after-liquidation/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 24375
+ },
+ "/liquidation/company-restoration-after-liquidation/": {
+  "id": 78707,
+  "slug": "company-restoration-after-liquidation",
+  "missing": [
+   "/liquidation/liquidating-a-charity-or-non-profit/",
+   "/liquidation/what-happens-after-company-liquidation/",
+   "/liquidation/"
+  ],
+  "chars": 31137
+ },
+ "/liquidation/what-happens-to-employees/": {
+  "id": 15010,
+  "slug": "what-happens-to-employees",
+  "missing": [
+   "/liquidation/which-creditors-get-paid-first/",
+   "/director-redundancy/"
+  ],
+  "chars": 23901
+ },
+ "/liquidation/which-creditors-get-paid-first/": {
+  "id": 77739,
+  "slug": "which-creditors-get-paid-first",
+  "missing": [
+   "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+   "/liquidation/creditors-voluntary-liquidation/",
+   "/liquidation/how-to-prove-your-debt-in-company-liquidation/"
+  ],
+  "chars": 21333
+ },
+ "/liquidation/hmrc-as-a-creditor-in-liquidation/": {
+  "id": 79342,
+  "slug": "hmrc-as-a-creditor-in-liquidation",
+  "missing": [
+   "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+   "/liquidation/which-creditors-get-paid-first/",
+   "/liquidation/"
+  ],
+  "chars": 22278
+ },
+ "/liquidation/paying-staff-but-not-hmrc-before-liquidation/": {
+  "id": 78825,
+  "slug": "paying-staff-but-not-hmrc-before-liquidation",
+  "missing": [
+   "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+   "/liquidation/which-creditors-get-paid-first/",
+   "/liquidation/what-happens-to-employees/"
+  ],
+  "chars": 22942
+ },
+ "/liquidation/what-happens-if-i-stop-paying-company-debts/": {
+  "id": 79507,
+  "slug": "what-happens-if-i-stop-paying-company-debts",
+  "missing": [
+   "/liquidation/what-happens-after-company-liquidation/"
+  ],
+  "chars": 21256
+ },
+ "/liquidation/what-happens-after-company-liquidation/": {
+  "id": 65238,
+  "slug": "what-happens-after-company-liquidation",
+  "missing": [
+   "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+   "/liquidation/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 18222
+ },
+ "/liquidation/redundancy-payments-for-directors-in-an-mvl/": {
+  "id": 78812,
+  "slug": "redundancy-payments-for-directors-in-an-mvl",
+  "missing": [
+   "/liquidation/what-happens-to-employees/"
+  ],
+  "chars": 26592
+ },
+ "/liquidation/should-i-close-my-company-or-try-to-save-it/": {
+  "id": 79472,
+  "slug": "should-i-close-my-company-or-try-to-save-it",
+  "missing": [
+   "/liquidation/alternatives-to-company-liquidation/",
+   "/liquidation/"
+  ],
+  "chars": 19528
+ },
+ "/liquidation/alternatives-to-company-liquidation/": {
+  "id": 73778,
+  "slug": "alternatives-to-company-liquidation",
+  "missing": [
+   "/liquidation/am-i-solvent/",
+   "/liquidation/",
+   "/liquidation/creditors-voluntary-liquidation/"
+  ],
+  "chars": 17654
+ },
+ "/liquidation/am-i-solvent/": {
+  "id": 76904,
+  "slug": "am-i-solvent",
+  "missing": [
+   "/liquidation/seek-insolvency-advice-before-missing-payments/",
+   "/liquidation/",
+   "/liquidation/voluntary-liquidation/"
+  ],
+  "chars": 29461
+ },
+ "/liquidation/seek-insolvency-advice-before-missing-payments/": {
+  "id": 79489,
+  "slug": "seek-insolvency-advice-before-missing-payments",
+  "missing": [
+   "/liquidation/cant-afford-to-liquidate/",
+   "/liquidation/"
+  ],
+  "chars": 17416
+ },
+ "/liquidation/cant-afford-to-liquidate/": {
+  "id": 77960,
+  "slug": "cant-afford-to-liquidate",
+  "missing": [
+   "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+   "/liquidation/how-much-does-liquidation-cost/"
+  ],
+  "chars": 24907
+ },
+ "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/": {
+  "id": 79276,
+  "slug": "can-you-liquidate-to-avoid-paying-suppliers",
+  "missing": [
+   "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+   "/liquidation/which-creditors-get-paid-first/"
+  ],
+  "chars": 23501
+ },
+ "/liquidation/can-a-supplier-force-my-company-into-liquidation/": {
+  "id": 79615,
+  "slug": "can-a-supplier-force-my-company-into-liquidation",
+  "missing": [
+   "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+   "/liquidation/creditors-voluntary-liquidation/"
+  ],
+  "chars": 30448
+ },
+ "/liquidation/what-happens-if-a-creditor-takes-me-to-court/": {
+  "id": 79606,
+  "slug": "what-happens-if-a-creditor-takes-me-to-court",
+  "missing": [
+   "/liquidation/ccj-when-going-insolvent/",
+   "/liquidation/creditors-voluntary-liquidation/"
+  ],
+  "chars": 21244
+ },
+ "/liquidation/ccj-when-going-insolvent/": {
+  "id": 79360,
+  "slug": "ccj-when-going-insolvent",
+  "missing": [
+   "/liquidation/bailiffs-high-court-enforcement-officers/",
+   "/liquidation/"
+  ],
+  "chars": 15535
+ },
+ "/liquidation/bailiffs-high-court-enforcement-officers/": {
+  "id": 77097,
+  "slug": "bailiffs-high-court-enforcement-officers",
+  "missing": [
+   "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+   "/winding-up-petitions/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 33333
+ },
+ "/liquidation/uk-insolvency-flowchart/": {
+  "id": 79412,
+  "slug": "uk-insolvency-flowchart",
+  "missing": [
+   "/liquidation/uk-insolvency-glossary/",
+   "/liquidation/",
+   "/liquidation/how-to-choose-the-right-insolvency-procedure/"
+  ],
+  "chars": 13371
+ },
+ "/liquidation/uk-insolvency-glossary/": {
+  "id": 79404,
+  "slug": "uk-insolvency-glossary",
+  "missing": [
+   "/liquidation/insolvency-checklist/",
+   "/liquidation/",
+   "/liquidation/compulsory-liquidation/"
+  ],
+  "chars": 20133
+ },
+ "/liquidation/insolvency-checklist/": {
+  "id": 79423,
+  "slug": "insolvency-checklist",
+  "missing": [
+   "/liquidation/insolvency-myths-debunked/",
+   "/liquidation/seek-insolvency-advice-before-missing-payments/"
+  ],
+  "chars": 25316
+ },
+ "/liquidation/insolvency-myths-debunked/": {
+  "id": 79463,
+  "slug": "insolvency-myths-debunked",
+  "missing": [
+   "/liquidation/uk-insolvency-flowchart/",
+   "/liquidation/"
+  ],
+  "chars": 15534
+ },
+ "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/": {
+  "id": 78781,
+  "slug": "can-i-be-sued-after-my-company-is-dissolved",
+  "missing": [
+   "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 23844
+ },
+ "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/": {
+  "id": 79436,
+  "slug": "directors-responsibilities-after-a-company-is-struck-off",
+  "missing": [
+   "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+   "/liquidation/"
+  ],
+  "chars": 24324
+ },
+ "/receivership-mean-business/": {
+  "id": 9702,
+  "slug": "receivership-mean-business",
+  "missing": [
+   "/liquidation/compulsory-liquidation/",
+   "/liquidation/",
+   "/liquidation/what-happens-to-directors-in-liquidation/"
+  ],
+  "chars": 20020
+ }
+}

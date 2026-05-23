@@ -1,0 +1,213 @@
+<!-- wp:paragraph -->
+<p>PAYE is the tax you deducted from your employees' wages. If you collected it and did not pay it to HMRC, you are holding money that was never yours to spend.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>HMRC knows the exact amount because you reported it through RTI. They will pursue it more aggressively than almost any other tax debt because they consider it theft from the public purse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We do not soften this because the reality does not soften it. PAYE arrears are the most common trigger for HMRC enforcement action against UK companies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Unlike Corporation Tax, where the debt is the company's own tax liability, PAYE is money you collected from your employees and were supposed to pass to HMRC. The distinction matters legally and practically: HMRC can issue personal liability notices to directors for unpaid PAYE, and it is a preferential debt in insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors who treated PAYE as a flexible cash-flow buffer discover that it is the fastest route to a winding-up petition.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: What to Do When You Cannot Pay PAYE</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Call HMRC's Business Payment Support Service on 0300 200 3835 immediately. Request a Time to Pay arrangement.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>PAYE is due by the 22nd of each month (or 19th if paying by post). If you know you cannot meet the next deadline, call before it passes. HMRC is more willing to negotiate before you are in default than after. If you are already months behind, call anyway: a late TTP is better than no TTP.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell directors: PAYE is the one tax debt you cannot afford to ignore. It creates personal liability, it has preferential status in insolvency, and HMRC pursues it faster than any other tax type. Every week of delay adds to the debt and to your personal exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why PAYE Debt Is More Dangerous Than Other Tax Debts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three features make PAYE uniquely dangerous for directors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>First, personal liability notices. Under the Income Tax (PAYE) Regulations 2003 and the Social Security Contributions Regulations, HMRC can issue personal liability notices to directors for unpaid PAYE income tax and employee National Insurance contributions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These are personal debts: they survive the company's liquidation and can be enforced against your personal assets. This route does not exist for VAT or Corporation Tax.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Second, preferential creditor status. PAYE and employee NICs are secondary preferential debts since December 2020. In liquidation, HMRC's PAYE claim ranks ahead of floating charge holders and unsecured creditors in the creditor priority order. This means HMRC recovers more from PAYE in insolvency than from Corporation Tax, which makes them less inclined to negotiate and more willing to petition.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Third, real-time reporting. HMRC knows exactly what you owe because you reported it through RTI (Real Time Information) with every payroll run. There is no ambiguity about the amount.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You told HMRC what you deducted, and they know to the penny what you have not paid over. We see directors who hope HMRC does not know the exact figure. They do. RTI made that hope obsolete.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">HMRC Enforcement Timeline for Unpaid PAYE</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>HMRC moves faster on PAYE than on most other tax debts. The typical sequence is set out below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table>
+<thead>
+<tr><th>Stage</th><th>What HMRC does</th></tr>
+</thead>
+<tbody>
+<tr><td>Month 1</td><td>Payment missed. HMRC's system flags the non-payment automatically. A generic reminder may be generated.</td></tr>
+<tr><td>Months 2 to 3</td><td>Formal demand letters arrive. Late payment interest applies at 7.5%. Repeat-default penalties run from 1% to 4% in a tax year.</td></tr>
+<tr><td>Months 3 to 6</td><td>HMRC may instruct enforcement agents (bailiffs) under Taking Control of Goods powers, or serve a statutory demand for debts over £750. We see PAYE enforcement referrals as early as 3 months in.</td></tr>
+<tr><td>Months 6 and beyond</td><td>Winding-up petition filed and advertised in the London Gazette. Your bank freezes the accounts. The court hearing follows 6 to 10 weeks later.</td></tr>
+</tbody>
+</table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>The threshold for petitioning is not the amount owed. It is HMRC's assessment of whether you are going to pay voluntarily. PAYE arrears, more than any other tax type, signal that you have already crossed that line.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Personal Liability Notices for PAYE</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the risk that separates PAYE from every other tax debt. HMRC can issue a personal liability notice (PLN) to any director who was responsible for the company's tax affairs during the period the PAYE was unpaid. The notice makes you personally liable for the unpaid PAYE and employee NICs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A PLN is a personal debt. It survives the company's liquidation. HMRC can enforce it through county court judgement, bailiffs, charging orders against your property, and ultimately bankruptcy proceedings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have worked with directors who received PLNs for £20,000 to £50,000 months after the company was dissolved. They assumed the problem ended with the company. It did not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You can appeal a PLN within 30 days of receiving it. Grounds for appeal include: you were not a director during the relevant period, you had no responsibility for the company's tax affairs, or the amount is incorrect. We advise taking specialist tax advice immediately if you receive a PLN. The 30-day appeal window is strict.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Time to Pay for PAYE: How to Negotiate With HMRC</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The process is the same as for other HMRC debts, but the context is different because PAYE arrears signal that you have been using employee tax deductions as working capital, which HMRC treats seriously.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Call 0300 200 3835.</strong> Explain the position honestly. HMRC already knows the amounts from RTI.</li>
+<li><strong>Propose a realistic repayment schedule.</strong> 6 to 12 months is typical. You must continue to pay current PAYE on time during the TTP.</li>
+<li><strong>Demonstrate viability.</strong> HMRC will ask whether the business can sustain the repayments plus current obligations. If it cannot, TTP is not the right tool: insolvency advice is.</li>
+<li><strong>Be current on other taxes.</strong> A TTP for PAYE when you are also behind on VAT and Corporation Tax is a much harder negotiation.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We find HMRC is less willing to agree TTP for PAYE than for Corporation Tax, precisely because of the personal liability and preferential status dynamics. The earlier you call, the better the odds. A director who calls before the first payment is missed has significantly more credibility than one who calls six months later.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What You Should Do About PAYE Arrears Right Now</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Call HMRC today.</strong> 0300 200 3835. Do not wait for the next payroll date.</li>
+<li><strong>Continue running payroll and filing RTI submissions on time.</strong> Falling behind on filing as well as payment creates additional penalties and destroys your credibility with HMRC.</li>
+<li><strong>Check your personal exposure.</strong> If HMRC issues a PLN, you need personal legal advice. Director liability for PAYE is personal, not corporate.</li>
+<li><strong>If PAYE arrears are part of a wider cash-flow crisis,</strong> speak to a licensed insolvency practitioner. A TTP fixes a timing problem. It does not fix an insolvent business.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Company Debt connects directors with licensed insolvency practitioners who deal with HMRC PAYE debt every day. A free, confidential consultation will tell you where you stand and what your options are.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Unpaid PAYE</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"7d2c8a91-4e5b-4a72-bd3f-c8e9b6a1f102","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC make me personally liable for unpaid PAYE?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. HMRC can issue a personal liability notice to any director responsible for the company's tax affairs. This creates a personal debt for the unpaid PAYE and employee NICs that survives the company's liquidation. You can appeal within 30 days of receiving the notice.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs PAYE a preferential debt in liquidation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Since December 2020, PAYE income tax and employee NICs are secondary preferential debts. They rank ahead of floating charge holders and unsecured creditors. This means HMRC recovers more from PAYE in liquidation than from Corporation Tax (which is unsecured), making them more willing to petition for PAYE debts.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow quickly does HMRC act on unpaid PAYE?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Faster than for most other tax types. Enforcement referrals can happen as early as 3 months after the first missed payment. Winding-up petitions typically follow at 6 months and beyond. HMRC treats PAYE as collected tax (not the company's own liability), which drives faster enforcement.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I negotiate a payment plan for PAYE arrears?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, through a Time to Pay arrangement. Call 0300 200 3835. HMRC is less willing to negotiate on PAYE than on Corporation Tax, so calling early and demonstrating that the business is viable are critical. You must continue to pay current PAYE on time during the arrangement.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I ignore PAYE demand letters?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>HMRC escalates faster than for any other tax type. Bailiff visits, statutory demands, and winding-up petitions follow within months rather than years. We have seen petitions issued for PAYE debts under £10,000. Ignoring the letters does not buy time. It removes options.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes liquidation wipe out my PAYE liability as a director?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Liquidation closes the company's PAYE debt as a corporate liability. It does not close any personal liability notice already issued, and HMRC can issue a PLN after liquidation if the conduct review surfaces evidence of director responsibility. The company may be gone; the personal exposure can outlive it.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Income Tax (PAYE) Regulations 2003, the Social Security Contributions Regulations 2001, the Finance Act 2020 (HMRC secondary preferential creditor status), the Insolvency Act 1986 (sections 124 and 214), and HMRC enforcement guidance current as of May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/uksi/2003/2682/contents/made"><strong>Income Tax (PAYE) Regulations 2003</strong> &mdash; employer obligations, RTI reporting, and the framework for personal liability notices on unpaid PAYE</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2001/1004/contents"><strong>Social Security Contributions Regulations 2001</strong> &mdash; employee NIC collection, remittance, and director PLN exposure</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2020/14/schedule/28"><strong>Finance Act 2020, Schedule 28</strong> &mdash; HMRC secondary preferential creditor status for PAYE and employee NICs from 1 December 2020</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; section 124 (winding-up petition), section 175 (preferential debts), section 214 (wrongful trading)</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/difficulties-paying-hmrc"><strong>HMRC &mdash; Business Payment Support Service</strong> &mdash; official Time to Pay route, contact details, and current published criteria</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/publications/rates-and-allowances-hmrc-interest-rates-for-late-and-early-payments"><strong>HMRC &mdash; Late payment interest rates</strong>: published rate currently 7.5% for late PAYE</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/running-payroll/paying-hmrc"><strong>HMRC &mdash; Penalties for late payment of PAYE</strong>: banded percentages from 1% to 4% based on number of defaults in a tax year</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

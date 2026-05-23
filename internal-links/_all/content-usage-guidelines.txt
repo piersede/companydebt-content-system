@@ -1,0 +1,35 @@
+<!-- wp:heading {"level":3} -->
+<h3>Our Editorial Policy</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>All articles on insolvency are written by our inhouse licensed insolvency practitioners whose biographies and accreditations can be seen here: https://comdebstage.wpengine.com/meet-the-team/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":60739,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/11/Company-Rescue-Options-for-Businesses-in-Financial-Difficulty-6.jpg" alt="Editorial Policy &amp; Content Usage Guidelines" class="wp-image-60739"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Our mission is to provide the most comprehensive, well structured and easily understandable information on debt, insolvency and wider business matters on the web.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We always provide links to primary source material such as HM &amp; Revenue's own website, Acts of the UK Parliament, Scottish Parliament, Welsh Parliament and the Northern Ireland Assembly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>What Company Debt Content Can You Use? And How?</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>You are welcome to share links to any of our content by email and social media. </li><li>Feel free to republish in full any Company Debt-original images (such as charts, graphs, infographics, videos, or SlideShares) by copying or embedding them and including them in your content, as long as you honor the Content Attribution Policy below. (Note: This does&nbsp;<em>not&nbsp;</em>include any stock images we've purchased for use in our content.)</li><li>Unfortunately, we can't<strong> </strong>let you republish in full any of our text-based content on the web. Why? Well, duplicate content is just bad for SEO, and Google will not appreciate it.</li><li>You cannot claim our content as your original ideas (i.e. using our content and publishing it on a channel as your own). We love that you want to share it, but please just share the original link instead. Thank you!</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>Content Attribution Policy</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Attribute</strong> Company Debt as the source.</li><li><strong>Link to the original</strong> Company Debt source you're referencing:<ul><li>For references to a Company Debt blog article, link to the URL of the specific blog article you're referencing.</li><li>For references to Company Debt downloadable content offers behind a form, please link to the landing page URL with the form for that individual offer.</li></ul></li></ul>
+<!-- /wp:list -->

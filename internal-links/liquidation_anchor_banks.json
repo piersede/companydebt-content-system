@@ -1,0 +1,585 @@
+{
+  "_README": "Anchor banks for the liquidation-cluster internal-link rebuild. Each target has five anchor categories (exact, close_variants, process, risk_consequence, contextual_longtail) plus a 'negative' list of phrases that must NEVER point here. One phrase points to exactly one target across the whole cluster. ROUTING RULE: broad anchors go to hubs, route-specific anchors go to route pages, decision/comparison anchors go to decision pages. Placement script picks the first natural fit, rotating categories for diversity; no single anchor used more than 6x cluster-wide; exact-match kept to a minority per target.",
+
+  "/liquidation/": {
+    "role": "hub",
+    "inbound_cap": 50,
+    "exact": ["company liquidation", "liquidation"],
+    "close_variants": ["the company liquidation process", "liquidating a company", "liquidating a limited company", "liquidation of a limited company", "formal company liquidation"],
+    "process": ["how company liquidation works", "what liquidation involves", "going through liquidation", "putting a company into liquidation", "appointing a liquidator"],
+    "risk_consequence": ["when a company is liquidated", "what happens when a company enters liquidation", "the consequences of company liquidation", "closing an insolvent company through liquidation", "when liquidation becomes unavoidable"],
+    "contextual_longtail": ["what happens when a company is liquidated", "if your company is heading for liquidation", "when directors need to understand the liquidation process", "before deciding whether liquidation is the right route", "where liquidation is the likely next step"],
+    "negative": ["CVL", "Creditors' Voluntary Liquidation", "Members' Voluntary Liquidation", "MVL", "winding-up petition", "compulsory liquidation", "company strike off", "dissolution", "voluntary liquidation", "closing a limited company"]
+  },
+
+  "/liquidation/creditors-voluntary-liquidation/": {
+    "role": "core_spoke",
+    "inbound_cap": 28,
+    "exact": ["Creditors' Voluntary Liquidation", "Creditors Voluntary Liquidation", "CVL"],
+    "close_variants": ["a Creditors' Voluntary Liquidation", "the CVL process", "Creditors' Voluntary Liquidation (CVL)", "insolvent voluntary liquidation", "a CVL procedure"],
+    "process": ["enter a CVL", "place the company into a CVL", "start a CVL", "close the company through a CVL", "appoint a liquidator through a CVL"],
+    "risk_consequence": ["voluntarily liquidate an insolvent company", "close an insolvent company through a CVL", "an orderly insolvent closure", "avoid being forced into compulsory liquidation", "act before a creditor forces liquidation"],
+    "contextual_longtail": ["when continuing to trade is no longer viable", "if the company cannot pay its debts and needs to close", "where directors choose liquidation before a creditor acts", "when a CVL is the right route for an insolvent company", "before the company is forced into liquidation by creditors"],
+    "negative": ["company liquidation", "liquidation", "voluntary liquidation", "winding-up petition", "compulsory liquidation", "company closure", "closing a limited company", "insolvency", "HMRC debt", "creditor pressure"]
+  },
+
+  "/liquidation/compulsory-liquidation/": {
+    "role": "core_spoke",
+    "inbound_cap": 18,
+    "exact": ["compulsory liquidation"],
+    "close_variants": ["compulsory company liquidation", "court-ordered liquidation", "forced liquidation"],
+    "process": ["being forced into compulsory liquidation", "the compulsory liquidation process"],
+    "risk_consequence": ["the company is wound up by the court", "a creditor forces the company into liquidation", "court-ordered closure"],
+    "contextual_longtail": ["if a winding-up petition leads to compulsory liquidation", "when the court orders the company to be wound up"],
+    "negative": ["CVL", "voluntary liquidation", "company liquidation", "winding-up petition"]
+  },
+
+  "/liquidation/members-voluntary-liquidation/": {
+    "role": "core_spoke",
+    "inbound_cap": 16,
+    "exact": ["Members' Voluntary Liquidation", "MVL"],
+    "close_variants": ["a Members' Voluntary Liquidation", "the MVL process", "Members' Voluntary Liquidation (MVL)"],
+    "process": ["enter an MVL", "close a solvent company through an MVL", "place a solvent company into an MVL"],
+    "risk_consequence": ["solvent liquidation", "tax-efficient closure of a solvent company", "distributing assets through an MVL"],
+    "contextual_longtail": ["when a solvent company has served its purpose", "if the company is solvent and the directors want to close it"],
+    "negative": ["CVL", "Creditors' Voluntary Liquidation", "voluntary liquidation", "compulsory liquidation", "company liquidation"]
+  },
+
+  "/liquidation/voluntary-liquidation/": {
+    "role": "core_spoke",
+    "inbound_cap": 14,
+    "exact": ["voluntary liquidation"],
+    "close_variants": ["voluntary liquidation routes", "the two forms of voluntary liquidation", "voluntary liquidation options", "CVL and MVL", "MVL vs CVL"],
+    "process": ["choosing a voluntary liquidation route", "deciding between an MVL and a CVL", "choosing between solvent and insolvent liquidation", "decide which voluntary liquidation route applies", "compare CVL and MVL"],
+    "risk_consequence": ["taking control of the company's closure", "choosing the wrong voluntary liquidation route", "deciding whether the company is solvent or insolvent", "closing the company before a creditor decides for you", "the liquidation route depends on whether the company can pay its debts"],
+    "contextual_longtail": ["if the directors decide to close the company themselves", "when directors need to choose between MVL and CVL", "where the company may be solvent or insolvent", "before deciding which voluntary liquidation route applies", "if you are unsure whether the company needs an MVL or a CVL"],
+    "negative": ["CVL", "Creditors' Voluntary Liquidation", "MVL", "Members' Voluntary Liquidation", "company liquidation", "compulsory liquidation", "winding-up petition", "strike off", "dissolution"]
+  },
+
+  "/liquidation/company-strike-off-and-dissolution/": {
+    "role": "core_spoke",
+    "inbound_cap": 18,
+    "exact": ["company strike off", "strike off", "dissolution"],
+    "close_variants": ["strike off and dissolution", "dissolving a company", "striking off a company", "company dissolution", "dissolving a limited company"],
+    "process": ["apply to strike off the company", "dissolve the company", "remove the company from the register", "strike the company off the register", "file a DS01 form"],
+    "risk_consequence": ["closing a company by strike off", "when strike off is the wrong route for an indebted company", "why creditors can object to strike off", "the risk of striking off a company with debts", "when dissolution can be challenged"],
+    "contextual_longtail": ["if the company has no debts and can be dissolved", "when a company can be struck off the register", "if the company is solvent and no longer needed", "before applying to dissolve the company", "where strike off is available instead of liquidation"],
+    "negative": ["liquidation", "company liquidation", "CVL", "Creditors' Voluntary Liquidation", "MVL", "Members' Voluntary Liquidation", "winding-up petition", "compulsory liquidation", "close a limited company with debts"]
+  },
+
+  "/liquidation/how-much-does-liquidation-cost/": {
+    "role": "core_spoke",
+    "inbound_cap": 16,
+    "exact": ["liquidation costs", "the cost of liquidation"],
+    "close_variants": ["how much liquidation costs", "company liquidation costs", "the cost of liquidating a company", "liquidation fees"],
+    "process": ["paying for liquidation", "what liquidation costs", "funding the cost of liquidation"],
+    "risk_consequence": ["covering liquidation costs when funds are tight", "how liquidation is paid for"],
+    "contextual_longtail": ["what a CVL costs", "how much it costs to liquidate a company"],
+    "negative": ["CVL", "company liquidation", "cheap liquidation", "free liquidation"]
+  },
+
+  "/closing-a-limited-company/": {
+    "role": "bridge",
+    "inbound_cap": 14,
+    "exact": ["closing a limited company", "close a limited company"],
+    "close_variants": ["closing a company", "how to close a company", "company closure options", "ways to close a company", "closing a UK limited company"],
+    "process": ["closing down a limited company", "shutting down a limited company", "deciding how to close the company", "choose the right company closure route", "work out how the company should be closed"],
+    "risk_consequence": ["choosing how to close the company", "deciding the right closure route", "closing the company in the wrong way", "whether the company should be struck off or liquidated", "what directors need to check before closing a company"],
+    "contextual_longtail": ["when directors want to close the company", "the options for closing a limited company", "if you are not sure how to close the company", "before choosing between strike off, MVL and CVL", "where the right closure route depends on debts and solvency"],
+    "negative": ["liquidation", "company liquidation", "CVL", "Creditors' Voluntary Liquidation", "MVL", "Members' Voluntary Liquidation", "strike off", "dissolution", "winding-up petition"]
+  },
+
+  "/winding-up-petitions/": {
+    "role": "bridge",
+    "inbound_cap": 20,
+    "exact": ["winding-up petition", "winding up petition"],
+    "close_variants": ["company winding-up petition", "petition to wind up a company", "creditor winding-up petition", "HMRC winding-up petition"],
+    "process": ["served with a winding-up petition", "stop a winding-up petition", "respond to a winding-up petition", "defend a winding-up petition"],
+    "risk_consequence": ["threat of a winding-up petition", "court action to wind up the company", "creditor action to force liquidation", "risk of compulsory liquidation"],
+    "contextual_longtail": ["if a creditor petitions to wind up the company", "when HMRC threatens a winding-up petition", "after receiving a winding-up petition"],
+    "negative": ["HMRC debt", "business debt", "creditor pressure", "company liquidation", "insolvency advice", "company closure", "can't pay suppliers"]
+  },
+
+  "/director-redundancy/": {
+    "role": "bridge",
+    "inbound_cap": 12,
+    "exact": ["director redundancy", "director redundancy pay"],
+    "close_variants": ["redundancy payments for directors", "director redundancy claim", "claiming director redundancy"],
+    "process": ["claim redundancy as a director", "making a director redundancy claim"],
+    "risk_consequence": ["redundancy a director can claim after liquidation", "what a director can recover in redundancy"],
+    "contextual_longtail": ["if a director qualifies for redundancy pay", "redundancy a director may be entitled to after a CVL"],
+    "negative": ["employee redundancy", "redundancy", "liquidation costs", "company closure"]
+  },
+
+  "_SUB_SPOKE_TARGETS": "Below: lighter banks for sub-spoke pages that receive sibling links. Compact form (exact + close_variants + descriptive). Inbound cap 8 unless noted.",
+
+  "/liquidation/what-happens-to-directors-in-liquidation/": {
+    "role": "group_anchor", "inbound_cap": 16,
+    "exact": ["what happens to directors in liquidation"],
+    "close_variants": ["a director's position in liquidation", "directors during liquidation", "where directors stand in liquidation"],
+    "process": ["a director's role once a liquidator is appointed"],
+    "risk_consequence": ["how a director is affected by liquidation"],
+    "contextual_longtail": ["what liquidation means for the directors"],
+    "negative": ["CVL", "company liquidation", "director disqualification"]
+  },
+
+  "/liquidation/what-happens-to-employees/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["what happens to employees in liquidation"],
+    "close_variants": ["employees in liquidation", "staff during liquidation", "how liquidation affects employees"],
+    "process": ["employee redundancy in a liquidation"],
+    "risk_consequence": ["what employees are owed when a company is liquidated"],
+    "contextual_longtail": ["how staff are treated when the company closes"],
+    "negative": ["director redundancy", "CVL", "company liquidation"]
+  },
+
+  "/liquidation/which-creditors-get-paid-first/": {
+    "role": "sub_spoke", "inbound_cap": 10,
+    "exact": ["which creditors get paid first"],
+    "close_variants": ["the order creditors are paid", "creditor payment priority", "the order of creditor priority"],
+    "process": ["how creditors are ranked in a liquidation"],
+    "risk_consequence": ["where each creditor sits in the payment order"],
+    "contextual_longtail": ["who gets paid first when a company is liquidated"],
+    "negative": ["CVL", "company liquidation", "HMRC debt"]
+  },
+
+  "/liquidation/alternatives-to-company-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 10,
+    "exact": ["alternatives to liquidation", "alternatives to company liquidation"],
+    "close_variants": ["options other than liquidation", "ways to avoid liquidation"],
+    "process": ["exploring alternatives before liquidating"],
+    "risk_consequence": ["whether liquidation can be avoided"],
+    "contextual_longtail": ["if there is a route that avoids closing the company"],
+    "negative": ["CVL", "company liquidation", "company rescue"]
+  },
+
+  "/liquidation/director-conduct-review/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["director conduct review"],
+    "close_variants": ["the liquidator's review of director conduct", "conduct review in liquidation"],
+    "process": ["how a liquidator assesses director conduct"],
+    "risk_consequence": ["how director conduct is examined after liquidation"],
+    "contextual_longtail": ["when a liquidator reviews what the directors did"],
+    "negative": ["director disqualification", "CVL", "wrongful trading"]
+  },
+
+  "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["director disqualification", "being disqualified as a director"],
+    "close_variants": ["the risk of director disqualification", "disqualification as a director"],
+    "process": ["how director disqualification proceedings work"],
+    "risk_consequence": ["the risk of disqualification after liquidation"],
+    "contextual_longtail": ["if a director could be disqualified"],
+    "negative": ["director conduct review", "CVL", "company liquidation"]
+  },
+
+  "/liquidation/liquidators-powers-and-duties/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["liquidator's powers and duties", "a liquidator's powers"],
+    "close_variants": ["what a liquidator does", "the liquidator's role"],
+    "process": ["how a liquidator carries out their duties"],
+    "risk_consequence": ["the control a liquidator takes"],
+    "contextual_longtail": ["what powers the liquidator has"],
+    "negative": ["CVL", "company liquidation", "choose a liquidator"]
+  },
+
+  "/liquidation/how-to-prove-your-debt-in-company-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["proving a debt in liquidation", "prove your debt in liquidation"],
+    "close_variants": ["submitting a claim in a liquidation", "making a creditor claim"],
+    "process": ["how to submit a proof of debt"],
+    "risk_consequence": ["recovering money owed by a liquidated company"],
+    "contextual_longtail": ["if you are owed money by a company in liquidation"],
+    "negative": ["which creditors get paid first", "CVL"]
+  },
+
+  "/liquidation/creditor-meetings-in-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["creditor meetings in liquidation", "the creditors' meeting"],
+    "close_variants": ["the decision process for creditors", "creditor decision procedure"],
+    "process": ["how the creditors' meeting works"],
+    "risk_consequence": ["the creditors' role in appointing a liquidator"],
+    "contextual_longtail": ["what happens at the creditors' meeting"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/company-property-and-real-estate-in-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["company property in liquidation", "real estate in liquidation"],
+    "close_variants": ["what happens to company property", "company premises in liquidation"],
+    "process": ["how property is dealt with in a liquidation"],
+    "risk_consequence": ["company property being realised by the liquidator"],
+    "contextual_longtail": ["what happens to the company's property when it is liquidated"],
+    "negative": ["CVL", "company assets", "company vehicles"]
+  },
+
+  "/liquidation/company-vehicles-and-equipment-in-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["company vehicles in liquidation", "company equipment in liquidation"],
+    "close_variants": ["vehicles and equipment in a liquidation", "what happens to company vehicles"],
+    "process": ["how vehicles and equipment are realised"],
+    "risk_consequence": ["company assets being sold by the liquidator"],
+    "contextual_longtail": ["what happens to vehicles and equipment when a company is liquidated"],
+    "negative": ["CVL", "company property", "company assets"]
+  },
+
+  "/liquidation/timeline/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["liquidation timeline", "the liquidation timeline"],
+    "close_variants": ["how long liquidation takes", "the timeline for liquidation"],
+    "process": ["the stages of a liquidation"],
+    "risk_consequence": ["how long a company stays in liquidation"],
+    "contextual_longtail": ["what the liquidation process looks like step by step"],
+    "negative": ["CVL", "company liquidation", "liquidation deadlines"]
+  },
+
+  "/liquidation/liquidation-deadlines-and-time-limits/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["liquidation deadlines", "liquidation time limits"],
+    "close_variants": ["statutory deadlines in a liquidation", "key dates in a liquidation"],
+    "process": ["the deadlines a director must meet"],
+    "risk_consequence": ["missing a liquidation deadline"],
+    "contextual_longtail": ["the time limits that apply during liquidation"],
+    "negative": ["liquidation timeline", "CVL"]
+  },
+
+  "/liquidation/how-to-prepare-for-company-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["preparing for liquidation", "how to prepare for liquidation"],
+    "close_variants": ["getting ready for liquidation", "what to do before liquidation"],
+    "process": ["the steps to take before liquidation"],
+    "risk_consequence": ["preparing the company for an orderly closure"],
+    "contextual_longtail": ["how a director should prepare for liquidation"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/list-of-liquidation-documents/": {
+    "role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidation documents", "the documents needed for liquidation"],
+    "close_variants": ["paperwork required for liquidation", "the liquidation paperwork"],
+    "process": ["the documents a director must provide"],
+    "risk_consequence": ["the records the liquidator needs"],
+    "contextual_longtail": ["what paperwork a liquidation involves"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/cant-afford-to-liquidate/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["can't afford to liquidate", "cannot afford to liquidate"],
+    "close_variants": ["liquidating with no money", "no funds to liquidate"],
+    "process": ["paying for liquidation when the company has no money"],
+    "risk_consequence": ["when there is no money to cover liquidation"],
+    "contextual_longtail": ["if the company cannot afford the cost of liquidation"],
+    "negative": ["liquidation costs", "CVL"]
+  },
+
+  "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["liquidating a company with no assets"],
+    "close_variants": ["liquidation with no assets", "liquidating an asset-less company"],
+    "process": ["how a no-asset company is liquidated"],
+    "risk_consequence": ["liquidating when there is nothing left to realise"],
+    "contextual_longtail": ["if the company has no assets or bank account"],
+    "negative": ["CVL", "can't afford to liquidate"]
+  },
+
+  "/liquidation/seek-insolvency-advice-before-missing-payments/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["seek insolvency advice early", "getting insolvency advice early"],
+    "close_variants": ["taking advice before missing payments", "early insolvency advice"],
+    "process": ["speaking to an insolvency practitioner early"],
+    "risk_consequence": ["why early advice protects directors"],
+    "contextual_longtail": ["if the company is struggling, taking advice early"],
+    "negative": ["CVL", "company liquidation", "contact us"]
+  },
+
+  "/liquidation/when-should-a-director-stop-trading/": {
+    "role": "sub_spoke", "inbound_cap": 8,
+    "exact": ["when to stop trading", "when a director should stop trading"],
+    "close_variants": ["the point a director must stop trading", "knowing when to cease trading"],
+    "process": ["deciding when to stop trading"],
+    "risk_consequence": ["the risk of trading on while insolvent", "wrongful trading risk"],
+    "contextual_longtail": ["when continuing to trade becomes a personal risk"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/company-restoration-after-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["company restoration after liquidation", "restoring a company"],
+    "close_variants": ["bringing a company back to the register"],
+    "process": ["how a dissolved company is restored"],
+    "risk_consequence": ["restoring a company after it has been closed"],
+    "contextual_longtail": ["if a company needs to be restored after liquidation"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/what-happens-after-company-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["what happens after liquidation", "after company liquidation"],
+    "close_variants": ["life after liquidation", "once the liquidation is complete"],
+    "process": ["what follows the end of a liquidation"],
+    "risk_consequence": ["a director's position after liquidation"],
+    "contextual_longtail": ["what happens once the company has been liquidated"],
+    "negative": ["CVL", "company liquidation"]
+  },
+
+  "/liquidation/what-happens-if-a-director-hides-company-assets/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["hiding company assets", "a director hiding company assets"],
+    "close_variants": ["concealing company assets", "withholding company assets"],
+    "process": ["how concealed assets are uncovered"],
+    "risk_consequence": ["the consequences of hiding company assets"],
+    "contextual_longtail": ["if a director conceals assets before liquidation"],
+    "negative": ["transferring assets", "CVL", "misfeasance"]
+  },
+
+  "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["transferring assets before insolvency", "transferring company assets"],
+    "close_variants": ["moving assets before insolvency", "asset transfers before liquidation"],
+    "process": ["how pre-insolvency transfers are challenged"],
+    "risk_consequence": ["the risk of transferring assets before insolvency", "transactions at undervalue"],
+    "contextual_longtail": ["if assets were moved before the company became insolvent"],
+    "negative": ["hiding company assets", "CVL"]
+  },
+
+  "/liquidation/can-directors-go-to-prison-for-company-debt/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["can directors go to prison for company debt"],
+    "close_variants": ["prison for company debt", "criminal liability for directors"],
+    "process": ["when director conduct becomes criminal"],
+    "risk_consequence": ["the most serious consequences of director misconduct"],
+    "contextual_longtail": ["whether a director can be imprisoned over company debt"],
+    "negative": ["director disqualification", "CVL"]
+  },
+
+  "/liquidation/redundancy-payments-for-directors-in-an-mvl/": {
+    "role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["director redundancy in an MVL"],
+    "close_variants": ["redundancy for directors in a solvent liquidation"],
+    "process": ["claiming redundancy within an MVL"],
+    "risk_consequence": ["what a director can claim in an MVL"],
+    "contextual_longtail": ["redundancy a director may claim when the company is solvent"],
+    "negative": ["director redundancy", "MVL"]
+  },
+
+  "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/": {
+    "role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["challenging a liquidator's fees", "challenge a liquidator's decision"],
+    "close_variants": ["disputing a liquidator's fees", "objecting to a liquidator's decision"],
+    "process": ["how to challenge a liquidator"],
+    "risk_consequence": ["a creditor's right to challenge the liquidator"],
+    "contextual_longtail": ["if you disagree with a liquidator's decision or fees"],
+    "negative": ["liquidator's powers and duties", "CVL"]
+  },
+
+  "/liquidation/liquidation-vs-dissolution-strike-off/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["liquidation vs strike off", "liquidation vs dissolution"],
+    "close_variants": ["the difference between liquidation and strike off", "strike off compared to liquidation"],
+    "process": ["choosing between liquidation and strike off"],
+    "risk_consequence": ["when strike off is not a safe alternative to liquidation"],
+    "contextual_longtail": ["whether to liquidate or strike off the company"],
+    "negative": ["CVL", "company liquidation", "strike off"]
+  },
+
+  "/liquidation/voluntary-vs-compulsory-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["voluntary vs compulsory liquidation"],
+    "close_variants": ["the difference between voluntary and compulsory liquidation"],
+    "process": ["choosing voluntary liquidation over a compulsory one"],
+    "risk_consequence": ["why voluntary liquidation is better than a forced one"],
+    "contextual_longtail": ["whether to liquidate voluntarily or wait to be forced"],
+    "negative": ["CVL", "compulsory liquidation", "voluntary liquidation"]
+  },
+
+  "/liquidation/winding-up-petition-vs-compulsory-liquidation/": {
+    "role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["winding-up petition vs compulsory liquidation"],
+    "close_variants": ["how a winding-up petition becomes compulsory liquidation"],
+    "process": ["the path from petition to compulsory liquidation"],
+    "risk_consequence": ["how a petition leads to the company being wound up"],
+    "contextual_longtail": ["the link between a winding-up petition and compulsory liquidation"],
+    "negative": ["winding-up petition", "compulsory liquidation"]
+  },
+
+  "/liquidation/should-i-close-my-company-or-try-to-save-it/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["should I close my company", "close the company or try to save it"],
+    "close_variants": ["whether to close or save the company", "closing or rescuing the company"],
+    "process": ["deciding whether to close or rescue the company"],
+    "risk_consequence": ["when the company can no longer be saved"],
+    "contextual_longtail": ["if you are weighing closure against rescue"],
+    "negative": ["CVL", "company liquidation", "alternatives to liquidation"]
+  },
+
+  "/liquidation/how-to-choose-the-right-insolvency-procedure/": {
+    "role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["choosing the right insolvency procedure", "the right insolvency procedure"],
+    "close_variants": ["how to choose an insolvency procedure", "picking the right insolvency route"],
+    "process": ["working out which insolvency procedure applies"],
+    "risk_consequence": ["choosing the wrong insolvency procedure"],
+    "contextual_longtail": ["if you are unsure which insolvency procedure fits"],
+    "negative": ["CVL", "company liquidation", "alternatives to liquidation"]
+  },
+
+  "/receivership-mean-business/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["receivership"], "close_variants": ["company receivership", "administrative receivership"],
+    "process": ["a receiver being appointed"], "risk_consequence": ["a secured creditor appointing a receiver"],
+    "contextual_longtail": ["when a lender appoints a receiver over the company"], "negative": ["CVL", "compulsory liquidation"]},
+
+  "/liquidation/can-i-choose-my-liquidator/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["choosing your liquidator", "can I choose my liquidator"], "close_variants": ["appointing your own liquidator"],
+    "process": ["choosing who handles the liquidation"], "risk_consequence": ["the director's say over who is appointed"],
+    "contextual_longtail": ["if you want to choose the liquidator yourself"], "negative": ["CVL", "liquidator's powers and duties"]},
+
+  "/liquidation/can-a-director-be-sued-personally-by-creditors/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["a director being sued personally"], "close_variants": ["personal claims against a director", "directors sued by creditors"],
+    "process": ["how a personal claim against a director arises"], "risk_consequence": ["a director facing a personal claim from creditors"],
+    "contextual_longtail": ["if creditors pursue a director personally"], "negative": ["CVL", "director disqualification"]},
+
+  "/liquidation/can-directors-pay-themselves-before-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["paying directors before liquidation"], "close_variants": ["director payments before liquidation", "directors paying themselves before liquidation"],
+    "process": ["taking money out before liquidation"], "risk_consequence": ["the risk of paying directors ahead of creditors"],
+    "contextual_longtail": ["if directors take payments before the company is liquidated"], "negative": ["CVL", "overdrawn director's loan account"]},
+
+  "/liquidation/what-happens-if-a-director-resigns-before-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["resigning before liquidation"], "close_variants": ["a director resigning before liquidation"],
+    "process": ["resigning as a director ahead of liquidation"], "risk_consequence": ["why resigning does not remove a director's liability"],
+    "contextual_longtail": ["if a director resigns before the company is liquidated"], "negative": ["CVL", "what happens to directors in liquidation"]},
+
+  "/liquidation/intellectual-property-and-trading-assets-in-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["intellectual property in liquidation"], "close_variants": ["trading assets in liquidation", "IP and trading assets in liquidation"],
+    "process": ["how IP and trading assets are realised"], "risk_consequence": ["intangible assets being sold by the liquidator"],
+    "contextual_longtail": ["what happens to intellectual property when a company is liquidated"], "negative": ["CVL", "company property"]},
+
+  "/liquidation/leases-and-contracts-in-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["leases and contracts in liquidation"], "close_variants": ["leases in liquidation", "contracts in liquidation"],
+    "process": ["how leases and contracts are dealt with"], "risk_consequence": ["ongoing contracts ending in liquidation"],
+    "contextual_longtail": ["what happens to leases and contracts when a company is liquidated"], "negative": ["CVL", "company property"]},
+
+  "/liquidation/company-pensions-and-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["company pensions in liquidation"], "close_variants": ["pensions and liquidation", "pension schemes in liquidation"],
+    "process": ["how a pension scheme is handled in liquidation"], "risk_consequence": ["what happens to a company pension scheme"],
+    "contextual_longtail": ["what happens to pensions when a company is liquidated"], "negative": ["CVL", "what happens to employees"]},
+
+  "/liquidation/business-bank-account-in-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["the business bank account in liquidation"], "close_variants": ["company bank account in liquidation", "bank account during liquidation"],
+    "process": ["the company bank account being frozen"], "risk_consequence": ["losing access to the company bank account"],
+    "contextual_longtail": ["what happens to the bank account when a company is liquidated"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/cva-vs-strike-off-vs-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["CVA vs strike off vs liquidation"], "close_variants": ["comparing CVA, strike off and liquidation"],
+    "process": ["choosing between a CVA, strike off and liquidation"], "risk_consequence": ["picking the wrong closure or rescue route"],
+    "contextual_longtail": ["how a CVA, strike off and liquidation compare"], "negative": ["CVL", "company liquidation", "strike off"]},
+
+  "/liquidation/insolvency-vs-bankruptcy/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["insolvency vs bankruptcy"], "close_variants": ["the difference between insolvency and bankruptcy"],
+    "process": ["how insolvency differs from bankruptcy"], "risk_consequence": ["why companies are not made bankrupt"],
+    "contextual_longtail": ["the difference between company insolvency and personal bankruptcy"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/liquidating-a-limited-liability-partnership/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidating an LLP", "liquidating a limited liability partnership"], "close_variants": ["LLP liquidation"],
+    "process": ["how an LLP is liquidated"], "risk_consequence": ["closing an insolvent LLP"],
+    "contextual_longtail": ["if a limited liability partnership needs to be liquidated"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidating a group company"], "close_variants": ["liquidating a holding company", "group company liquidation"],
+    "process": ["how a group or holding company is liquidated"], "risk_consequence": ["the knock-on effect across a group"],
+    "contextual_longtail": ["if a company within a group needs to be liquidated"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/can-i-liquidate-a-dormant-company/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidating a dormant company"], "close_variants": ["closing a dormant company"],
+    "process": ["how a dormant company is closed"], "risk_consequence": ["whether a dormant company needs liquidation"],
+    "contextual_longtail": ["if a dormant company needs to be closed"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/": {"role": "sub_spoke", "inbound_cap": 6,
+    "exact": ["liquidating a company with a Bounce Back Loan"], "close_variants": ["liquidation with a Bounce Back Loan", "a Bounce Back Loan in liquidation"],
+    "process": ["liquidating despite an unpaid Bounce Back Loan"], "risk_consequence": ["what happens to a Bounce Back Loan in liquidation"],
+    "contextual_longtail": ["if the company has an unpaid Bounce Back Loan"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["starting a new company after liquidation"], "close_variants": ["a new company after liquidation", "trading again after liquidation"],
+    "process": ["setting up a new company after liquidation"], "risk_consequence": ["the rules on reusing a company name"],
+    "contextual_longtail": ["if a director wants to start again after liquidation"], "negative": ["CVL", "phoenix company"]},
+
+  "/liquidation/liquidating-a-charity-or-non-profit/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidating a charity"], "close_variants": ["liquidating a non-profit", "charity liquidation"],
+    "process": ["how a charity or non-profit is liquidated"], "risk_consequence": ["closing an insolvent charity"],
+    "contextual_longtail": ["if a charity or non-profit can no longer continue"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/hmrc-as-a-creditor-in-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["HMRC as a creditor in liquidation"], "close_variants": ["HMRC's position in a liquidation", "HMRC as a creditor"],
+    "process": ["how HMRC ranks as a creditor"], "risk_consequence": ["HMRC's preferential creditor status"],
+    "contextual_longtail": ["where HMRC sits when a company is liquidated"], "negative": ["CVL", "which creditors get paid first"]},
+
+  "/liquidation/paying-staff-but-not-hmrc-before-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["paying staff before liquidation"], "close_variants": ["paying staff but not HMRC", "choosing who to pay before liquidation"],
+    "process": ["deciding which creditors to pay before liquidation"], "risk_consequence": ["the risk of preferring some creditors over others"],
+    "contextual_longtail": ["if there is only enough to pay some creditors before liquidation"], "negative": ["CVL", "which creditors get paid first"]},
+
+  "/liquidation/what-happens-if-i-stop-paying-company-debts/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["stopping paying company debts"], "close_variants": ["if you stop paying company debts"],
+    "process": ["what follows once company debts go unpaid"], "risk_consequence": ["creditor action after debts go unpaid"],
+    "contextual_longtail": ["if the company can no longer pay its debts"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/am-i-solvent/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["am I solvent"], "close_variants": ["checking if the company is solvent", "whether the company is solvent"],
+    "process": ["testing whether the company is solvent"], "risk_consequence": ["recognising the company is insolvent"],
+    "contextual_longtail": ["if you are unsure whether the company is solvent"], "negative": ["CVL", "insolvency test"]},
+
+  "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["liquidating to avoid paying suppliers"], "close_variants": ["using liquidation to avoid supplier debts"],
+    "process": ["why liquidation does not erase wrongdoing"], "risk_consequence": ["the risk of liquidating to dodge supplier debts"],
+    "contextual_longtail": ["if liquidation is being considered to avoid paying suppliers"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/what-happens-if-a-creditor-takes-me-to-court/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["a creditor taking you to court"], "close_variants": ["court action by a creditor", "being taken to court by a creditor"],
+    "process": ["what happens once a creditor goes to court"], "risk_consequence": ["a court judgment leading to enforcement"],
+    "contextual_longtail": ["if a creditor has started court action"], "negative": ["winding-up petition", "CVL"]},
+
+  "/liquidation/ccj-when-going-insolvent/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["a CCJ when going insolvent"], "close_variants": ["county court judgment when insolvent", "a CCJ against the company"],
+    "process": ["how a CCJ escalates"], "risk_consequence": ["a CCJ leading to enforcement action"],
+    "contextual_longtail": ["if the company has received a county court judgment"], "negative": ["winding-up petition", "CVL"]},
+
+  "/liquidation/bailiffs-high-court-enforcement-officers/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["bailiffs and high court enforcement officers"], "close_variants": ["high court enforcement officers", "bailiffs at the company"],
+    "process": ["what enforcement officers can do"], "risk_consequence": ["enforcement officers seizing company assets"],
+    "contextual_longtail": ["if bailiffs or enforcement officers are attending the company"], "negative": ["winding-up petition", "CVL"]},
+
+  "/liquidation/can-a-supplier-force-my-company-into-liquidation/": {"role": "sub_spoke", "inbound_cap": 5,
+    "exact": ["a supplier forcing the company into liquidation"], "close_variants": ["being forced into liquidation by a supplier"],
+    "process": ["how a supplier can force liquidation"], "risk_consequence": ["a supplier petitioning to wind up the company"],
+    "contextual_longtail": ["if a supplier is threatening to force the company into liquidation"], "negative": ["winding-up petition", "compulsory liquidation"]},
+
+  "/liquidation/uk-insolvency-glossary/": {"role": "reference", "inbound_cap": 4,
+    "exact": ["the insolvency glossary", "UK insolvency glossary"], "close_variants": ["insolvency terms explained"],
+    "process": ["looking up an insolvency term"], "risk_consequence": ["understanding insolvency terminology"],
+    "contextual_longtail": ["if an insolvency term is unfamiliar"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/insolvency-checklist/": {"role": "reference", "inbound_cap": 4,
+    "exact": ["the insolvency checklist", "an insolvency checklist"], "close_variants": ["a checklist for insolvent directors"],
+    "process": ["working through the insolvency checklist"], "risk_consequence": ["the steps a director should not miss"],
+    "contextual_longtail": ["if you want a checklist for an insolvent company"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/insolvency-myths-debunked/": {"role": "reference", "inbound_cap": 4,
+    "exact": ["insolvency myths"], "close_variants": ["common insolvency myths", "insolvency myths debunked"],
+    "process": ["separating insolvency fact from fiction"], "risk_consequence": ["acting on a false belief about insolvency"],
+    "contextual_longtail": ["if you have heard conflicting things about insolvency"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/uk-insolvency-flowchart/": {"role": "reference", "inbound_cap": 4,
+    "exact": ["the insolvency flowchart", "UK insolvency flowchart"], "close_variants": ["an insolvency decision flowchart"],
+    "process": ["following the insolvency flowchart"], "risk_consequence": ["seeing where the company sits in the process"],
+    "contextual_longtail": ["if you want to see the insolvency routes at a glance"], "negative": ["CVL", "company liquidation"]},
+
+  "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/": {"role": "sub_spoke", "inbound_cap": 4,
+    "exact": ["a director's responsibilities after strike off"], "close_variants": ["directors' responsibilities after a company is struck off"],
+    "process": ["what a director must still do after strike off"], "risk_consequence": ["ongoing duties after a company is struck off"],
+    "contextual_longtail": ["if a company has been struck off the register"], "negative": ["CVL", "strike off"]},
+
+  "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/": {"role": "sub_spoke", "inbound_cap": 4,
+    "exact": ["being sued after a company is dissolved"], "close_variants": ["can I be sued after dissolution", "claims after a company is dissolved"],
+    "process": ["how a dissolved company can be restored for a claim"], "risk_consequence": ["liability surviving dissolution"],
+    "contextual_longtail": ["if a claim arises after the company is dissolved"], "negative": ["CVL", "strike off"]}
+}

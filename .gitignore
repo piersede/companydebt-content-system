@@ -21,6 +21,9 @@ editorial-os/bernstein-state/
 # Build artifacts — generated HTML, PHP, dumps, batch outputs
 tmp/
 case_studies_hub_raw.html
+content_cache.json
+dconduct_pages.json
+_page_*.html
 
 # Claude Code worktrees
 .claude/worktrees/

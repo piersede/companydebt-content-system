@@ -1,0 +1,232 @@
+<!-- TITLE: Creditor Meetings in Liquidation: Rights, Procedures and What to Expect -->
+<!-- POST ID: 78635 / TYPE: pages / AUTHOR: 34 / FM: 78637 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/creditor-meetings-in-liquidation/ -->
+
+<!-- wp:paragraph -->
+<p>Most directors walk into the creditors' decision procedure expecting a room full of angry suppliers. The reality in 2026 is that there is no room. The 2016 Insolvency Rules replaced the old physical creditor meeting with a virtual process called a "deemed consent" or "decision procedure," and in practice, the whole thing happens by email and proxy form.</p>
+<p>You fill in a Statement of Affairs, the liquidator sends the paperwork to every creditor on the list, and the creditors who care enough to vote do so from their desks. The whole thing is strangely quiet for something that ends a business. One director we worked with described it as "the quietest thing that ever happened to a business that owed £1.2 million."</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are heading into a CVL, the questions that actually matter are: who votes, when a physical meeting can still be forced, how voting and committee mechanics work, and where the Statement of Affairs carries the most weight. The sections below answer each in order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer on Creditor Meetings in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In <a href="/liquidation/creditors-voluntary-liquidation/">a Creditors' Voluntary Liquidation</a>, creditors no longer attend a physical meeting by default. Instead, the liquidator runs a "decision procedure" under Part 15 of the Insolvency (England and Wales) Rules 2016, which is usually a correspondence-based process where creditors submit their proofs of debt and proxy votes by a deadline.</p>
+<p>If the creditors accept the director's nominee as liquidator (which they almost always do), the appointment is confirmed and the process moves forward. The old-style creditors' meeting still exists in law, but it only happens if creditors holding at least 10% of the total debt by value specifically ask for one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For directors, the practical consequence is this: the creditors' decision procedure is less confrontational than the old meeting, but it is not less important. The creditors still decide who runs the liquidation, still vote on the liquidator's fees, and still have the power to form a liquidation committee that oversees the process.</p>
+<p>The paperwork you provide in the Statement of Affairs is the foundation of every decision the creditors make. Get it wrong and the whole case starts on the wrong foot. We tell directors that the decision procedure is the single document you will be judged by for the rest of the liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Changed in 2017 for Creditor Meetings in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before April 2017, every CVL required a physical creditors' meeting under Section 98 of the Insolvency Act 1986.</p>
+<p>Directors sat in a hired room, often a hotel conference suite, while creditors (or more often their proxies) asked questions and voted on the liquidator's appointment. The meetings were expensive for the estate, poorly attended, and almost always produced the same outcome: the director's nominee was confirmed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Insolvency (England and Wales) Rules 2016, which came into force in April 2017, replaced this with three options: deemed consent (the cheapest and most common), a virtual meeting, or a correspondence procedure.</p>
+<p>Physical meetings can still be held, but only if creditors actively request one. In our caseload since 2017, fewer than 5% of CVLs have resulted in a physical meeting being requisitioned. The rest are resolved on paper before the deadline passes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The practical effect for directors is significant. You no longer have to sit across a table from your biggest creditor and explain why their invoice was not paid. The Statement of Affairs does the talking for you. That is less stressful, but it also means the document carries more weight than it ever did, because it is the only version of events the creditors see before they vote.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the Creditor Decision Procedure Works in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The sequence is straightforward. You instruct a licensed insolvency practitioner. The IP helps you prepare a Statement of Affairs listing every asset, every liability, every creditor with their address and the amount owed.</p>
+<p>The shareholders pass a special resolution to wind up the company. The IP then sends the Statement of Affairs, a notice of the decision procedure, proxy forms, and proofs of debt to every known creditor. Creditors have a set deadline (usually 14 to 21 days) to submit their vote and proof of claim. Once the deadline passes, the IP tallies the votes and confirms the appointment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-process-steps"} -->
+<div class="wp-block-group cd-process-steps">
+<!-- wp:list {"ordered":true} -->
+<ol><li>Instruct a licensed insolvency practitioner and prepare the Statement of Affairs listing all assets, liabilities, and creditors.</li><li>Shareholders pass a special resolution to wind up the company.</li><li>IP sends the Statement of Affairs, decision procedure notice, proxy forms, and proofs of debt to every known creditor.</li><li>Creditors submit votes and proofs of claim by the stated deadline (typically 14–21 days).</li><li>IP tallies votes, adjudicates proofs, and confirms the liquidator's appointment.</li></ol>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>In practice, 90% or more of creditor votes in a typical CVL are cast by proxy before the deadline. HMRC almost always votes by proxy. Trade creditors frequently do not vote at all, either because the amount owed is too small to justify their time or because they have already written the debt off.</p>
+<p>The result is that the decision procedure usually confirms the director's nominee without opposition. It feels like a bit of an anticlimax, and that is exactly how it should feel. One case we handled: a company with 47 trade creditors and HMRC saw exactly three proxy votes returned, all in favour, and the case was confirmed in under a week.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Creditors Can Force a Physical Meeting in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Under Rule 15.18 of the Insolvency Rules 2016, creditors holding at least 10% of the total debt by value can requisition a physical meeting.</p>
+<p>The request must be made within five business days of the decision procedure notice being sent. If the threshold is met, the liquidator must convene a meeting, and the cost comes out of the estate (which means the creditors themselves bear it indirectly through lower dividends).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002drisk-warning"} -->
+<div class="wp-block-group cd-callout cd-callout--risk-warning">
+<p class="cd-callout__label">Risk Warning</p>
+<!-- wp:paragraph --><p>Under Rule 15.18 of the Insolvency (England and Wales) Rules 2016, creditors holding 10% or more of total debt by value can requisition a physical meeting, but only within five business days of the decision procedure notice being sent.</p>
+<p>If a major creditor makes this request, the liquidator must convene a physical meeting, at which creditors can challenge the director's nominee and propose their own choice of liquidator.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>In practice this rarely happens. The 10% threshold is high enough that only a major creditor (usually HMRC or a single large trade creditor) can trigger it alone, and the cost-benefit rarely makes sense.</p>
+<p>The main reason a creditor requisitions a physical meeting is to challenge the director's nominee and propose an alternative liquidator, which is a power play that signals a deeper concern about director conduct or asset recovery.</p>
+<p>If you receive notice that a physical meeting has been requisitioned, take advice immediately. It usually means a creditor is preparing to make the liquidation harder for you, not easier.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Creditor Proofs of Debt, Voting, and Quorum at Liquidation Meetings</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every creditor who wants to vote must submit a proof of debt, a formal document setting out the amount owed, the basis of the claim, and any supporting evidence (invoices, statements, contracts).</p>
+<p>The liquidator adjudicates each proof before allowing the creditor to vote. Creditors whose proofs are rejected (for example, because the debt is disputed or unsubstantiated) lose their vote and their place in the distribution. Our guide on <a href="/liquidation/how-to-prove-your-debt-in-company-liquidation/">submitting a claim in a liquidation</a> sets out how to complete a proof of debt and what evidence to attach.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Voting is by value of debt, not by number of creditors. A single creditor owed £500,000 outvotes fifty creditors owed £1,000 each. This is the mechanic that makes HMRC dominant in most liquidations: as the largest single creditor in the majority of insolvent companies, HMRC's proxy vote usually determines the outcome.</p>
+<p>For directors, the practical point is that keeping HMRC informed and cooperative before the decision procedure is more important than worrying about trade creditors. See our guide on HMRC as a creditor in liquidation for the detail on how HMRC uses its voting power.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Quorum for a virtual or correspondence decision procedure is one creditor who has submitted a valid proof of debt and voted. That is all it takes. The days of worrying about whether enough creditors would turn up to make a meeting quorate are gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Liquidation Committees and Fee Approval by Creditors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Creditors can form a liquidation committee of three to five members to oversee the liquidator's conduct of the case. The committee approves the liquidator's fees, reviews progress reports, and can request additional investigations. In practice, committees are formed in roughly a third of CVLs, usually where HMRC is a significant creditor or where a large trade creditor wants ongoing visibility.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The fee-approval power is the one that matters most. If a committee is formed, the liquidator's fees must be approved by the committee before they are drawn from the estate. If no committee is formed, the liquidator can seek fee approval directly from the creditors as a whole, or (if no one engages) apply to the court.</p>
+<p>The practical consequence for directors is indirect but real: a liquidation committee that actively scrutinises fees tends to produce a cheaper liquidation, which means more money available for creditor dividends and less scrutiny of the director's conduct report. Our guide to <a href="/liquidation/liquidators-powers-and-duties/">what a liquidator does</a> explains the conduct the committee is there to oversee.</p>
+<p>We tell directors that a well-functioning committee is usually a positive signal, not a threat. For the broader CVL mechanics see our guide to creditors' voluntary liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+<p class="cd-key-takeaway__label">Key Takeaway</p>
+<!-- wp:paragraph --><p>A liquidation committee keeps the liquidator's fees in check and is usually a sign that creditors are engaged rather than hostile. For most directors, a well-functioning committee means a cheaper, faster process, not additional scrutiny of your conduct.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Directors Should Expect at Creditor Meetings in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There is no "day" in the old sense.</p>
+<p>The decision procedure runs over a deadline window, and the director's main role is to have prepared the Statement of Affairs accurately and completely before the notice goes out. Once the procedure is live, you wait. The liquidator manages the creditor communications, adjudicates the proofs, and counts the votes. You will be told the outcome, usually within a few days of the deadline closing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If a physical meeting is requisitioned, the experience is different. You will be asked to attend. Creditors can ask you questions about the company's affairs, your conduct, and specific transactions in the run-up to insolvency.</p>
+<p>The questions can be pointed. We prepare directors for these meetings the same way we prepare them for court: know the numbers, answer honestly, do not speculate, and do not argue with the creditor. The meeting is not a debate. It is a formal procedure with minutes that go on the record.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings About Creditor Meetings in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>"The creditors' meeting decides whether to liquidate."</strong> No. The shareholders' resolution decides that. The creditors' decision procedure confirms the liquidator and sets the terms of the case. By the time the decision procedure runs, liquidation is already happening.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"If no one turns up, the liquidation stops."</strong> It does not. A quorum of one creditor is enough for a decision procedure, and if no creditor engages at all, the liquidator is still appointed under the terms of the shareholders' resolution. The process continues regardless.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"Creditors can outvote me and choose a different liquidator."</strong> They can, but it almost never happens in a straightforward CVL. In our caseload, the director's nominee is challenged in fewer than 3% of cases, and usually only where there is a significant dispute about director conduct or a connected-party asset purchase.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I have to attend a meeting and face my creditors."</strong> Not unless a physical meeting is requisitioned, which is rare. The default process is correspondence-based. Most directors never sit in a room with a creditor during the entire liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Creditor Meetings in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78635-creditor-meetings-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I have to attend a creditors' meeting?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only if a physical meeting is requisitioned by creditors holding 10%+ of debt by value, which is rare. The default process since April 2017 is a correspondence-based decision procedure. Most directors never attend a meeting in person during the entire liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan creditors reject my choice of liquidator?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, by majority value of votes cast. But in practice this happens in fewer than 3% of CVLs in our caseload. Creditors usually accept the director's nominee unless there is a specific concern about director conduct or a connected-party transaction that warrants independent scrutiny.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is a proof of debt and do I need to file one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A proof of debt is a formal claim submitted by a creditor setting out how much they are owed and the basis of the claim.</p>
+<p>Directors do not file proofs of debt. Creditors do. Your role is to prepare the Statement of Affairs accurately so the liquidator knows who to contact. If you are also a creditor of the company (for example, through an unpaid director's loan), you submit a proof separately in that capacity.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is a liquidation committee and should I worry about one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A liquidation committee is a group of 3 to 5 creditors who oversee the liquidator's work and approve fees. Committees are formed in roughly a third of CVLs. For directors, a committee is usually a neutral or positive development: it keeps fees in check and gives the case structure. It is not a sign that creditors are targeting you personally.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does the decision procedure take?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>From the notice being sent to the deadline closing is usually 14 to 21 days. The liquidator confirms the outcome within a few days after that. The whole process from first instruction to confirmed appointment is typically two to three weeks for a straightforward CVL. See our guide to creditors' voluntary liquidation for the full timeline.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC block the liquidation at the decision procedure?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>HMRC cannot block a CVL, but as the largest creditor by value in most cases, their vote effectively decides who is appointed as liquidator. If HMRC objects to the director's nominee (which is rare), they can propose an alternative. HMRC cannot stop the liquidation itself, only influence who runs it.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I get the Statement of Affairs wrong?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Errors in the Statement of Affairs are taken seriously.</p>
+<p>If the liquidator discovers material omissions or inaccuracies, it undermines your credibility for the rest of the case and can trigger additional investigation into director conduct. Deliberate misstatements can result in criminal prosecution. We prepare the Statement of Affairs with directors line by line to make sure it is complete and defensible.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors heading into a Creditors' Voluntary Liquidation and trying to understand what the post-2017 creditor decision procedure actually involves.</p>
+<p>We've drawn on the Insolvency Act 1986 (sections 98 and 100 on creditors' meetings and liquidator appointment), the Insolvency (England and Wales) Rules 2016 (Part 15 on decision procedures, deemed consent, requisitioning of meetings under Rule 15.18, and proxy voting), and current Insolvency Service and Insolvency Practitioners Association guidance.</p>
+<p>Where we describe how decision procedures play out operationally, including the proportion of cases that resolve on paper rather than via a physical meeting and the practical weight the Statement of Affairs carries with creditors, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 98 and 100 set the statutory basis for creditors' meetings and the appointment of a liquidator in a CVL</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; Part 15 governs decision procedures, deemed consent, proxy voting, and the 10% threshold for requisitioning a physical meeting under Rule 15.18</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on creditor decision procedures, the Statement of Affairs, and liquidation committee mechanics</a> - gov.uk</li>
+<li><a href="https://ipa.uk.com/"><strong>Insolvency Practitioners Association</strong> &mdash; professional conduct rules for IPs running decision procedures, fee approval votes, and creditor communications</a> - ipa.uk.com</li>
+</ul>
+</aside>
+<!-- /wp:html -->

@@ -1,0 +1,223 @@
+<!-- TITLE: Glossary of UK Insolvency Terms -->
+<!-- POST ID: 79404 / TYPE: pages / AUTHOR: 34 / FM: 79407 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/uk-insolvency-glossary/ -->
+
+<!-- wp:paragraph -->
+<p>UK insolvency law uses specific terms that mean specific things. Using them interchangeably, or not understanding them at all, leads to bad decisions. This glossary defines every term you are likely to encounter as a UK company director during financial difficulty, insolvency, or liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We compiled this list from the questions directors actually ask us. We hear the same confusions every week, and we find that clarifying the vocabulary at the start of the process saves you hours of misunderstanding later. If you want a practical companion to these definitions, our <a href="/liquidation/insolvency-checklist/">insolvency checklist</a> sets out the steps a director should not miss.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most directors arrive at their first consultation not knowing the difference between insolvency and liquidation, between a CVL and a CVA, or between a fixed charge and a floating charge. These are not academic distinctions. Each one changes what happens to your company, your creditors, and you personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are going through this process, we believe understanding the vocabulary gives you the ability to follow what your insolvency practitioner is telling you and to make informed decisions rather than nodding along.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">UK Insolvency Glossary: Key Terms A-Z</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Administration.</strong> A formal insolvency process that we see used when creditor pressure on your company is intense. An administrator (a licensed IP) takes control of the company under court protection. An automatic moratorium prevents all creditor enforcement during administration.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Purpose: rescue the company, achieve a better result for creditors than liquidation, or realise assets for secured and preferential creditors. See alternatives to liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Balance-sheet test.</strong> One of the two statutory insolvency tests under section 123 of the Insolvency Act 1986. Your company fails the balance-sheet test if its total liabilities (including contingent and prospective liabilities) exceed its total assets. Failing either test means the company is insolvent.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Bona vacantia.</strong> Latin for "ownerless goods." When a company is dissolved, any assets that were not realised during liquidation become property of the Crown. The Treasury Solicitor's Bona Vacantia Division manages these assets. You can apply for restoration of the company to recover bona vacantia assets, but the process is expensive.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cash-flow test.</strong> The other statutory insolvency test. A company fails the cash-flow test if it cannot pay its debts as they fall due. If you are juggling creditors, delaying HMRC, or relying on next month's revenue to cover this month's obligations, you are likely failing this test.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Company Voluntary Arrangement (CVA).</strong> A binding agreement between the company and its creditors to repay a proportion of the debt over 3-5 years. Requires 75% creditor approval by value. The company continues to trade under director control, supervised by a licensed IP. We find CVAs work when the business is viable but has a specific, identifiable debt problem.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Connected party.</strong> A person connected to the company for the purposes of the Insolvency Act. Includes directors, shadow directors, their spouses, family members, and other companies they control. Transactions with connected parties in the two years before insolvency face heightened scrutiny and presumed preference.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Contribution order.</strong> A court order under section 214 (wrongful trading) requiring a director to contribute personally to the company's assets. The amount is based on the increase in the company's net deficiency between the date you should have stopped trading and the date the company entered liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Creditors' Voluntary Liquidation (CVL).</strong> The standard route for closing an insolvent company voluntarily. You initiate the process, appoint a liquidator, and the company's assets are realised and distributed to creditors in the statutory priority order. See our CVL guide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Declaration of Solvency.</strong> A statutory declaration by directors in a Members' Voluntary Liquidation (MVL) confirming the company can pay all its debts, including interest, within 12 months. Making a false declaration is a criminal offence and creates personal liability for you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Director disqualification.</strong> A court order or voluntary undertaking under the Company Directors Disqualification Act 1986 that bans a person from acting as a director for 2-15 years. Triggered by unfit conduct including wrongful trading, Crown debt accumulation, and persistent late filing. See our disqualification guide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Dissolution.</strong> The removal of a company from the Companies House register. Occurs automatically three months after the liquidator files the final return, or through voluntary strike-off (form DS01). A dissolved company can be restored within six years. See strike-off and dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Fixed charge.</strong> A security interest over a specific, identified asset (typically property or specific equipment). The charge holder has a direct claim over that asset and ranks first in the creditor priority order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Floating charge.</strong> A security interest over a class of assets (typically "all assets not subject to a fixed charge"). The charge "floats" over the assets while the company trades and crystallises into a fixed charge on a trigger event (usually insolvency). Floating charge holders rank after preferential creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Fraudulent trading.</strong> A criminal offence under section 213 of the Insolvency Act. Carrying on the business of a company with intent to defraud creditors. Maximum sentence: 10 years' imprisonment. See can directors go to prison.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Insolvency.</strong> The state of being unable to pay debts. We stress this point: your company is insolvent if it fails either the cash-flow test or the balance-sheet test under section 123 of the Insolvency Act 1986. Insolvency is a financial state, not a legal process. Liquidation, administration, and CVA are legal processes that respond to insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Insolvency practitioner (IP).</strong> A licensed professional authorised to act in formal insolvency proceedings. Must be licensed by one of the recognised professional bodies (IPA, ICAEW, ICAS, or the Law Society). All liquidators, administrators, and CVA supervisors must be licensed IPs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Liquidation.</strong> The formal process of winding up a company: realising its assets, paying creditors in the statutory priority order, and dissolving the company. Can be voluntary (MVL or CVL) or compulsory (court-ordered). See our <a href="/liquidation/">liquidation guide</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Members' Voluntary Liquidation (MVL).</strong> A liquidation route for solvent companies. Used to close a company and distribute surplus assets to shareholders at capital gains rates. Requires a Declaration of Solvency. See our MVL guide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Misfeasance.</strong> A breach of duty by a director. Under section 212 of the Insolvency Act, the liquidator can bring a misfeasance claim to recover losses caused by a director's breach of fiduciary duties, including duties of care, skill, and diligence.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Moratorium.</strong> A legal freeze on creditor enforcement action. Applies automatically in administration. Also available as a standalone process under Part A1 of the Insolvency Act (introduced by the Corporate Insolvency and Governance Act 2020) for eligible companies seeking time to explore rescue options.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Official Receiver.</strong> A civil servant employed by the Insolvency Service who is appointed automatically as liquidator in compulsory liquidations. The Official Receiver has a mandatory duty to investigate the conduct of every director in a compulsory liquidation, including you if your company is wound up by the court.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Preference.</strong> A payment or action that puts a creditor in a better position than they would have been in if the company had gone straight into liquidation. The liquidator can challenge preferences made within six months of insolvency (two years for connected parties) under section 239.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Preferential creditors.</strong> Creditors who rank ahead of floating charge holders and unsecured creditors. Includes employees (up to £800 unpaid wages, plus holiday pay) and HMRC for certain collected taxes (PAYE, employee NICs, VAT) since December 2020.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Prescribed part.</strong> A portion of floating charge realisations ring-fenced for unsecured creditors under section 176A: 50% of the first £10,000, plus 20% above that, capped at £800,000.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Proof of debt.</strong> A formal claim submitted by a creditor to participate in distributions from the liquidation. Creditors must submit proof of debt to receive any dividend.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Shadow director.</strong> A person whose instructions the formally appointed directors are accustomed to follow (section 251, Companies Act 2006). Shadow directors have the same duties and liabilities as appointed directors, including exposure to wrongful trading and disqualification.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Statement of affairs.</strong> A verified document listing every asset, liability, creditor, and security held over the company's property. Required within 14 days of a CVL resolution or 21 days of a compulsory winding-up order. Failure to deliver in compulsory liquidation is a criminal offence.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Statutory demand.</strong> A formal demand for payment of a debt over £750. If unsatisfied after 21 days, it provides grounds for a winding-up petition.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Transaction at undervalue.</strong> A transaction where the company transfers an asset for significantly less than it is worth (section 238). The liquidator can reverse such transactions made within two years of insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Winding-up order.</strong> A court order placing a company into <a href="/liquidation/compulsory-liquidation/">compulsory liquidation</a>. Made when the court grants a winding-up petition. The Official Receiver is appointed as liquidator from the date of the order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Winding-up petition.</strong> A formal application to the court by a creditor to wind up the company compulsorily. The most common ground is that the company is unable to pay its debts. Advertising the petition in the London Gazette triggers an automatic bank account freeze.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Wrongful trading.</strong> A civil claim under section 214 of the Insolvency Act. Applies when you continued trading when you knew, or should have known, that insolvent liquidation was unavoidable, without taking steps to minimise creditor losses. Results in a personal contribution order, not imprisonment. See when to stop trading.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs About UK Insolvency Terminology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79404-faq-block","theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"titleColor":"#000000","hasFAQSchema":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between insolvency and liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Insolvency is a financial state: the company cannot pay its debts. Liquidation is a legal process: the company's assets are realised and distributed to creditors before the company is dissolved. A company can be insolvent without being in liquidation (if it is still trading), and a company can be in liquidation without being insolvent (an MVL for solvent companies).</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between a CVL and a CVA?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>A CVL (Creditors' Voluntary Liquidation) closes the company permanently. A CVA (Company Voluntary Arrangement) keeps the company trading while restructuring its debts over 3-5 years. A CVL is for companies that cannot be saved. A CVA is for companies that can be saved if the debt burden is managed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat does 'licensed insolvency practitioner' mean?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>An insolvency practitioner (IP) is a professional authorised by law to act in formal insolvency proceedings. They must hold a licence from a recognised professional body (IPA, ICAEW, ICAS, or the Law Society) and meet ongoing regulatory, educational, and insurance requirements. Only licensed IPs can act as liquidators, administrators, or CVA supervisors.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between a fixed charge and a floating charge?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>A fixed charge attaches to a specific identified asset (typically property or named equipment); the lender has a direct claim over that exact asset.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A floating charge sits over a shifting pool of assets (stock, debtors, cash) while you trade, and crystallises into a fixed charge on insolvency. Fixed charge holders rank first in the distribution order; floating charge holders rank behind preferential creditors and the prescribed part.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eAm I personally liable for the company's debts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Limited liability normally protects you from company debts, but four routes break that protection.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>These are: personal guarantees you signed (most commonly for bank facilities and commercial leases); an overdrawn director's loan account at the date of liquidation; wrongful trading under section 214 if you kept trading past the point of no reasonable prospect; and HMRC personal liability notices for unpaid PAYE/NIC where misconduct is proven.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A licensed IP will tell you which of these apply to your facts before you commit to any route.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This glossary is written by the Company Debt editorial team for UK directors of limited companies who need plain-English definitions of the insolvency vocabulary they are about to hear from a licensed practitioner.</p>
+<p>We have drawn on the Insolvency Act 1986 (sections 123, 212, 213, 214, 238, 239 and Part A1), the Companies Act 2006 (section 251 on shadow directors and Part 31 on dissolution and restoration), the Company Directors Disqualification Act 1986, and the Corporate Insolvency and Governance Act 2020.</p>
+<p>The relevant sections cover the statutory insolvency tests, misfeasance, fraudulent and wrongful trading, antecedent transactions, and the standalone moratorium introduced in 2020.</p>
+<p>Where we describe how these terms play out in practice, including the operational difference between a CVL and a CVA, the conduct triggers that escalate to disqualification, and the way HMRC's preferential ranking has reshaped distributions since December 2020, we draw on cases handled across our advisory referral network.</p>
+<p>The definitions have been reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the IPA.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; primary statute behind most glossary entries, including section 123 insolvency tests, sections 212&ndash;214 director liability, sections 238&ndash;239 antecedent transactions, and Part A1 moratorium</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; defines the disqualification, unfit-conduct, and undertaking terminology used throughout the glossary</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; underpins glossary entries on shadow directors (section 251) and the dissolution and restoration regime in Part 31</a> - legislation.gov.uk</li>
+<li><a href="https://www.bailii.org/uk/cases/UKSC/2022/25.html"><strong>BTI 2014 LLC v Sequana SA [2022] UKSC 25</strong> &mdash; Supreme Court ruling we cite for the creditor-duty shift, defining when directors must prioritise creditor interests</a> - bailii.org</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; source for official definitions, regulator conduct, and the procedural detail behind CVL, compulsory liquidation, and bankruptcy entries</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

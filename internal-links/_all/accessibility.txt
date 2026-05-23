@@ -1,0 +1,51 @@
+<!-- wp:paragraph -->
+<p>Below is more detail about the accessibility of the CompanyDebt.com website. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Links</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Links on the CompanyDebt.com open in new windows.</li><li>All links can be followed, regardless of the internet browser you are using. There are no ‘JavaScript pseudo-links’.</li><li>As much as possible, the links included on CompanyDebt.com are written to make sense out of context. There are numerous browsers, such as Opera, Lynx, JAWS and Home Page Opera, which can extract the links so the user can browse the list away from the page.</li><li>Many of the links on this website have title attributes which help to describe the link in more detail. That’s not the case where the link already accurately describes the target.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Visual design</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Cascading style sheets are used on CompanyDebt.com for visual layout.</li><li>The content on the website is still readable even if the internet browser being used does not support style sheets. </li><li>We have endeavoured to maintain a high background-foreground contrast across CompanyDebt.com.</li><li>CompanyDebt.com only uses font sizes that are compatible with the user-specified ‘text size’ option in visual browsers.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Images</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>All of the images on CompanyDebt.com include ALT attributes which describe the images in more detail. If images are purely decorative then they have null ALT attributes. </li><li>More complex images include descriptive LONGDESC attributes or inline descriptions which are used to explain the significance of the images to non-visual readers. &nbsp;</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Scripting</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>CompanyDebt.com uses scripting for visual effects. However, even if scripting is unavailable, all content remains fully accessible. </li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Forms</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>HTML label tags are used to associate labels with fields.</li><li>All forms follow a logical Tab sequence.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Disability Discrimination Act</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>CompanyDebt.com complies with the requirements of the British Disability Discrimination Act. However, if you need any assistance reading or understanding the content on the website or encounter any accessibility issues, please do not hesitate to get in touch with our team and we will do our best to fix them. <br></p>
+<!-- /wp:paragraph -->

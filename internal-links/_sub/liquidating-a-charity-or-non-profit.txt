@@ -1,0 +1,412 @@
+<!-- wp:paragraph -->
+<p>Most charity trustees never expect to face liquidation. You joined the board to support a cause, not to wind up a company. But when a charity's debts outpace its income and no realistic rescue exists, your legal obligations are real and the consequences of inaction are serious.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Charity insolvency sits in an awkward overlap between company law and charity law. The Insolvency Act 1986 applies in much the same way as it does to any limited company, but the Charity Commission adds a second layer that affects you directly: reporting, consent requirements, and beneficiary-protection duties that most commercial insolvency advice ignores entirely.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If your charity is an unincorporated trust or a CIO rather than a company limited by guarantee, the route is different again. The structural form determines almost everything about how the wind-down works.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This guide sets out what trustees actually need to do, where liability sits, and what tends to go wrong. We work with charities and non-profits alongside commercial companies, and the mistakes we see trustees make are often rooted in one misunderstanding: assuming the process is identical to a standard corporate wind-down.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+  <p class="cd-callout__label">Legal Exposure</p>
+  <p class="cd-callout__title">Charity Trustees Face Dual Regulatory Exposure: Insolvency Service and Charity Commission</p>
+  <!-- wp:paragraph -->
+  <p>A charitable company limited by guarantee that enters a CVL is subject to the same Insolvency Act 1986 provisions as any limited company; this includes wrongful trading under section 214 and preference claims under section 239.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>The Charity Commission adds a second layer: trustees must notify the Commission of the insolvency, the Commission can open a statutory inquiry, and it may require evidence that beneficiary obligations and restricted fund conditions were respected throughout the wind-down.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>Trustees who treat charity insolvency as identical to a standard commercial CVL risk regulatory action from two authorities simultaneously.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer on Charity Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A charity can be liquidated if it is insolvent, but the process depends on the charity's legal structure. Charitable companies limited by guarantee follow largely the same <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation (CVL)</a> process as any other limited company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Unincorporated charities and CIOs have separate wind-down mechanisms. In all cases, you must notify the Charity Commission, restricted funds cannot simply be pooled with general assets, and you carry personal duties as trustee that go beyond those of ordinary company directors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Charity Liquidation Becomes Necessary</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The trigger for your charity is the same one that applies to any company: your charity cannot pay its debts as they fall due, or its liabilities exceed its assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What differs, and what we see repeatedly, is how slowly the realisation often arrives. Charities rarely have a single moment of financial crisis. Instead, grant funding dries up gradually, service contracts are not renewed, and reserves erode over two or three years while the board focuses on programme delivery.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The board meeting where you first raise insolvency out loud is, in our experience, often months too late. By that point, HMRC arrears have built up, staff redundancy costs are unfunded, and restricted grant money has been spent on general overheads.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If this sounds like your situation, the priority is getting formal insolvency advice before the position worsens further. If you continue trading a charity that is insolvent, you risk the same accusations of wrongful trading that apply to commercial directors under section 214 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you recognise any of the following, your charity may already be insolvent:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Loss of a major funder or grant programme</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Accumulated PAYE/VAT debts to HMRC</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Lease obligations the charity can no longer afford</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Regulatory action or safeguarding failures that destroy the charity's ability to operate</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Merger or restructuring attempts that have stalled</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Role of the Charity Commission in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the first major departure from commercial liquidation. When a charitable company enters insolvency, you must notify the Charity Commission. Under section 169 of the Charities Act 2011, the charity's auditors, trustees, or officers are required to report matters of material significance, and insolvency clearly qualifies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Commission does not run your liquidation. That remains the job of the appointed insolvency practitioner. But the Commission has the power to open a regulatory compliance case, to appoint an interim manager, or to restrict the trustees' actions during the process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In our experience, early notification tends to go better than late disclosure. We have handled cases where the Commission's response to a proactive trustee board was supportive and procedural, while late or evasive reporting triggered a formal inquiry.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The notification letter to the Commission should set out the charity's financial position, what steps the trustees have taken, and whether an insolvency practitioner has been appointed. Getting that letter right matters. It establishes the trustees' good faith and demonstrates that they have not simply walked away from their duties.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Charity Liquidation Differs from Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your charity is a company limited by guarantee (the most common structure for medium and large charities), the mechanics of liquidation are largely familiar. A licensed insolvency practitioner is appointed, assets are realised, and creditors are paid according to the statutory hierarchy. Other non-standard entities follow their own rules, and our guide to <a href="/liquidation/liquidating-a-limited-liability-partnership/">liquidating an LLP</a> covers one common example.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But several features make charity liquidation genuinely different:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>No shareholders.</strong> A company limited by guarantee has members, not shareholders. There are no dividends or equity to distribute. The members' liability is typically capped at £1. This simplifies some elements but changes the dynamics of who has standing in the process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Restricted and designated funds.</strong> Charities often hold money that was given for a specific purpose. You cannot simply throw these restricted funds into the general pot. The legal position on restricted funds in an insolvency is genuinely complex, and getting it wrong exposes trustees to personal liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cy-près applications.</strong> Where a charity is being wound up and has surplus assets (rare in an insolvency, more common in a solvent dissolution), those assets must typically go to another charity with similar objects. The Charity Commission may direct this under cy-près provisions. Where a charity is solvent and simply closing, a <a href="/liquidation/members-voluntary-liquidation/">Members' Voluntary Liquidation</a> is usually the appropriate route.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Dual regulatory oversight.</strong> Companies House and the Charity Commission both need to be kept informed. The insolvency practitioner handles Companies House filings, but the charity-specific reporting falls partly on the trustees themselves.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Insolvency Process for Charitable Companies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For a charitable company limited by guarantee, the most common insolvency route is a creditors' voluntary liquidation. The process follows the same legal framework as a standard CVL:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>The trustees (as directors) resolve that the charity cannot continue due to its debts.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A licensed insolvency practitioner is appointed as liquidator.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A members' meeting passes a resolution for voluntary winding up.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A creditors' decision procedure confirms the appointment of the liquidator.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The liquidator realises assets, investigates the charity's affairs, adjudicates claims, and distributes funds to creditors.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The charity is dissolved at Companies House and removed from the Charity Commission register.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The cost of liquidation for a charitable company is broadly comparable to any small company CVL, though cases involving restricted funds or regulatory complications can increase the work involved. Expect the liquidator's fees to be a first charge on the charity's remaining assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In some cases, administration may be appropriate instead, particularly if there is a realistic prospect of transferring the charity's services to another organisation while protecting creditors. This is more common with charities that deliver commissioned public services, where continuity matters to beneficiaries and funders.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Charity Liquidation for Unincorporated Charities and CIOs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Not every charity is a company. Unincorporated charitable trusts and associations do not have separate legal personality. They cannot be wound up under the Insolvency Act because there is no company to liquidate. Instead, you as trustee are personally responsible for the charity's debts unless a contract specifically limits liability to the charity's assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is the structural trap we see catch volunteer trustees of small charities. If the charity has entered contracts in the trustees' names (a lease, an employment contract, a service agreement), those trustees may be personally liable for the outstanding obligations. The charity's assets are used first, but if they are insufficient, creditors can pursue the trustees individually.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Charitable Incorporated Organisations (CIOs) sit between the two models. A CIO has its own legal personality, so trustees generally have limited liability, similar to directors of a company limited by guarantee. CIOs are regulated by the Charity Commission rather than Companies House.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The wind-up of an insolvent CIO follows a process set out in the Charities Act 2011 and associated regulations, with the Charity Commission playing a more direct role than in a standard company liquidation. If you are a trustee of an unincorporated charity that is insolvent, take legal advice immediately. The personal exposure is real and it is not capped at £1.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Trustee Duties and Personal Liability in Charity Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Charity trustees are subject to duties under both the Charities Act 2011 and (for charitable companies) the Companies Act 2006. Once insolvency is on the horizon, additional duties arise under the Insolvency Act 1986. The key areas of risk are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Wrongful trading (section 214, Insolvency Act 1986).</strong> If trustees knew or ought to have known that the charity had no reasonable prospect of avoiding insolvent liquidation, and they failed to take every step to minimise losses to creditors, they can be held personally liable for the increase in the charity's debts from that point onward.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Breach of fiduciary duty.</strong> Trustees owe duties to the charity's beneficiaries, not to themselves. Using charity funds to pay trustee expenses ahead of creditor claims, or prioritising one creditor (often HMRC) at the expense of others without proper advice, can amount to a breach.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Misfeasance.</strong> A liquidator can apply to the court under section 212 of the Insolvency Act 1986 where a trustee has misapplied charity property or been guilty of any breach of duty. In our casework this is consistently a personal claim against the individual trustee.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Trustee indemnity insurance offers some protection, but policies typically exclude dishonesty and sometimes exclude claims arising from insolvency. We always advise trustees to check the wording of their policy before assuming you are covered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002ddirectors-miss"} -->
+<div class="wp-block-group cd-callout cd-callout--directors-miss">
+  <p class="cd-callout__label">What Most Directors Miss</p>
+  <p class="cd-callout__title">Restricted Funds Cannot Be Used to Pay General Creditors, Even in Insolvency</p>
+  <!-- wp:paragraph -->
+  <p>Most commercial insolvency practitioners advise charities as if all assets are available to creditors. They are not. Restricted funds; donations given for a specific purpose; must be applied to that purpose or returned to donors, even in insolvency.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>They cannot simply be pooled with unrestricted assets and distributed to trade creditors. Charity trustees who allow restricted funds to be used for general creditor payments face personal liability to the Charity Commission for breach of trust, separate from any Insolvency Service investigation.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>The liquidator and the trustees must identify and ring-fence restricted funds before the liquidation begins.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens to Restricted Funds in Charity Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the issue that causes the most difficulty in charity insolvencies, and it is where trustee boards most often get into trouble.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Restricted funds are donations or grants given to a charity for a specific purpose. A grant to run a youth programme, a legacy left for building maintenance, a donation restricted to a particular geographic area. The charity holds these funds on trust for that purpose. They do not belong to the charity in the same way that general unrestricted income does.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The conversation about restricted funds is often the most uncomfortable one in the room. A trustee board facing insolvency may have already spent restricted money on keeping the lights on.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If restricted funds have been misapplied, the charity may owe restitution to the original donors or their representatives, and the Charity Commission will want to understand how it happened. In our experience, they always do investigate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where restricted funds remain intact, the legal position is that they should not form part of the general estate available to creditors. They are held on a separate trust.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The liquidator will need to identify whether any restricted funds exist, whether they have been properly ring-fenced, and whether they should be returned to the funder or transferred to another charity that can fulfil the original purpose.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, the accounting is rarely clean. Charities under financial pressure often lack the systems to track restricted fund movements accurately. This is a problem that gets worse the longer the board delays seeking advice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical Steps to Prepare for Charity Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your charity is approaching insolvency, the following steps will help protect the trustees and give the eventual liquidator a clearer starting position:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Take formal insolvency advice early.</strong> A licensed insolvency practitioner can assess whether the charity is technically insolvent and what options exist. This conversation is usually free of charge at the initial stage.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Minute every board decision.</strong> From the point insolvency is first discussed, detailed minutes protect trustees. Record what information the board had, what advice was taken, and why decisions were made.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Notify the Charity Commission.</strong> Do not wait until the liquidator is appointed. Early, transparent reporting demonstrates good governance.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Separate restricted funds immediately.</strong> If restricted money has been commingled with general funds, identify the amounts and ring-fence what remains. If restricted funds have been spent, document when and why.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Stop taking on new obligations.</strong> Do not sign new contracts, take on new staff, or accept new grant funding if the charity cannot meet its existing debts. Continuing to trade while insolvent increases personal risk for every trustee.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Communicate with staff and key funders.</strong> Employees have statutory redundancy rights. Funders may need to be informed under the terms of their grant agreements. Neither conversation is pleasant, but both are better had early.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Gather your records.</strong> The liquidator will need bank statements, management accounts, board minutes, grant agreements, lease documents, and employee contracts. Gaps in records slow the process and increase costs.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Mistakes Trustees Make in Charity Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We see the same errors repeatedly across our charity insolvency cases. Many of them stem from trustees treating the charity like a struggling commercial business rather than a regulated entity with beneficiary obligations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Delaying too long.</strong> The single most common mistake. Charity boards are often composed of volunteers who meet quarterly. By the time insolvency reaches a board agenda, the financial position may have deteriorated significantly since the last meeting. Monthly financial reporting is essential once cash flow is under pressure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Paying HMRC first.</strong> Trustees under pressure often prioritise HMRC because the letters feel most threatening. But preferring one creditor over others when the charity is insolvent can amount to a preference under section 239 of the Insolvency Act 1986, which the liquidator can unwind.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Ignoring the Charity Commission.</strong> Some trustees assume the Commission will make things harder. In our experience, the opposite is more common. The Commission's response to honest, early disclosure is usually measured. Its response to discovering problems after the fact tends to be less forgiving.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Treating restricted funds as a cash reserve.</strong> Under financial pressure, it is tempting to use restricted grant money to cover payroll or rent. This is a breach of trust and it creates a personal liability for the trustees who authorised the spending.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Assuming trustee indemnity insurance covers everything.</strong> It does not. Read the exclusions. Many policies will not respond to claims arising from the charity's insolvency, particularly where the insurer considers the trustee should have acted sooner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Liquidating a Charity or Non-Profit</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78771-faq-block","theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"titleColor":"#000000","hasFAQSchema":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a charity go into liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Yes. A charitable company limited by guarantee can be placed into liquidation in the same way as any other limited company. If the charity is insolvent, the usual route is a creditors' voluntary liquidation. Unincorporated charities cannot be liquidated under the Insolvency Act, but their trustees remain personally liable for debts, and the charity can be dissolved through the Charity Commission.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eAre charity trustees personally liable for debts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>It depends on the charity's structure. Trustees of a company limited by guarantee or a CIO generally have limited liability (typically £1). Trustees of unincorporated charities may be personally liable for debts the charity has incurred, particularly where contracts were entered in the trustees' names.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>In all cases, trustees can face personal liability for wrongful trading, misfeasance, or breach of fiduciary duty if they act improperly during an insolvency.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo we need to tell the Charity Commission before liquidating?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Yes. Trustees have a duty to report matters of material significance to the Charity Commission under section 169 of the Charities Act 2011. Insolvency qualifies. You should notify the Commission as early as possible, ideally before the formal liquidation process begins. The Commission does not run your liquidation, but it maintains regulatory oversight throughout.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to restricted funds if the charity is liquidated?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Restricted funds are held on trust for a specific purpose. They should not form part of the general estate available to creditors. The liquidator will assess whether restricted funds remain intact, whether they were properly ring-fenced, and whether they should be returned to the funder or transferred to another charity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If restricted funds have been misapplied, the trustees who authorised the spending may face personal liability.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much does it cost to liquidate a charity?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>The cost is broadly similar to liquidating any small limited company, typically starting from around £3,000 to £5,000 plus VAT for a simple case. Charities with restricted fund complications, property assets, or regulatory issues will cost more.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The liquidator's fees are paid from the charity's remaining assets and are subject to approval by creditors. An initial consultation with a licensed insolvency practitioner is usually free.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan charity trustees be disqualified as directors?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>If the charity is a company limited by guarantee, its trustees are also directors for the purposes of the Company Directors Disqualification Act 1986. The liquidator is required to submit a report on the conduct of every director, and if misconduct is found, the Secretary of State can seek a disqualification order.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A disqualification would prevent the individual from acting as a director or charity trustee for a specified period.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for trustees of UK charities and non-profits facing insolvency, covering charitable companies limited by guarantee, Charitable Incorporated Organisations (CIOs), and unincorporated charitable trusts.</p>
+<p>We have drawn on the Insolvency Act 1986 (sections 84, 212, 214 and 239 covering voluntary winding up, misfeasance, wrongful trading, and preferences), the Charities Act 2011 (section 169 on reporting matters of material significance, and Part 16 on cy-près provisions), and the Companies Act 2006 (sections 170 to 177 on directors' duties as applied to trustees of charitable companies).</p>
+<p>Where we describe how charity insolvencies play out operationally, including dual regulatory exposure between the Insolvency Service and the Charity Commission, the ring-fencing of restricted funds, and the personal liability traps faced by trustees of unincorporated charities, we draw on cases handled by Company Debt and its advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm regulated through licensed insolvency practitioner referrals. We are not the Charity Commission and we have no commercial relationship with any grant-making body. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+<p><em>Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</em></p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; applies to charitable companies in the same way as commercial entities, including sections 212 misfeasance, 214 wrongful trading and 239 preferences relevant to trustee-directors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2011/25/contents"><strong>Charities Act 2011</strong> &mdash; section 169 reporting duty for matters of material significance, plus Part 16 cy-pr&egrave;s rules governing how restricted funds and surplus assets must be applied</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; sections 170&ndash;177 directors' general duties, which apply to charity trustee-directors of companies limited by guarantee throughout the wind-down</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; framework for trustee-director conduct review and disqualification orders following charity insolvency</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/charity-commission"><strong>Charity Commission</strong> &mdash; regulator for charities in England and Wales; guidance CC12 on managing charity finances and CC25 on trustee financial essentials inform the duties referenced here</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

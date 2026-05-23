@@ -1,0 +1,278 @@
+<!-- wp:paragraph -->
+<p>If your company enters liquidation, your employees lose their jobs. They do not lose all their rights. UK insolvency law gives employees of insolvent employers a statutory safety net: claims against the National Insurance Fund for unpaid wages, holiday pay, notice pay, and redundancy.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Redundancy Payments Service handles those claims once the liquidator confirms the insolvency, so the burden of paying out does not sit on the company's empty bank account.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Delaying liquidation to protect your staff usually has the opposite effect. Every week of further trading while insolvent grows the creditor pool, shrinks the recoverable assets, and pushes you closer to a wrongful trading claim under section 214 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Employees who are told early can claim from the National Insurance Fund while you manage the closure properly. Employees who find out on the last day get less notice, less time, and less of everything the statute was designed to give them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We speak to directors in this position every week. The hardest part is rarely the legal process. It is sitting down with the foreman who has been there twelve years, or the office manager who runs the payroll, and explaining what is about to happen. The directors who handle that conversation honestly tend to come out of the conduct review cleanest.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<aside class="cd-callout cd-callout--summary">
+<p class="cd-callout__label"><strong>Employee Rights at a Glance</strong></p>
+<p><strong>What ends:</strong> all employment contracts terminate on the day of the winding-up resolution (CVL) or the winding-up order (compulsory liquidation). The liquidator may keep a small number of employees on briefly to assist with the wind-down.</p>
+<p><strong>What pays out:</strong> arrears of pay, holiday pay, statutory notice pay, statutory redundancy, and unpaid pension contributions, all from the National Insurance Fund (within statutory caps).</p>
+<p><strong>Who handles it:</strong> the Redundancy Payments Service (RPS), part of the Insolvency Service. The liquidator notifies them and provides the employee data.</p>
+<p><strong>Director priority:</strong> tell staff early, hand the liquidator complete payroll and contract records, do not make ad hoc top-up payments outside payroll, and start collective consultation before the resolution if you have 20 or more employees being made redundant.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Employees Are Made Redundant in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In a <a href="/liquidation/creditors-voluntary-liquidation/">Creditors' Voluntary Liquidation</a>, employees are typically made redundant on or shortly after the date of the winding-up resolution. The liquidator may retain a small number of employees briefly to assist with the wind-down, but most staff are let go immediately. In a compulsory liquidation, the winding-up order itself terminates all employment contracts automatically.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The timing of redundancy is one of the most painful parts of the process for directors. Many want to keep staff employed as long as possible, but every week of continued employment while the company is insolvent adds to the creditor claims and tightens the wrongful-trading exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our guide on when to stop trading explains where that threshold sits in practice. The liquidator's later assessment will weigh whether retaining staff served the wind-down or whether it was an emotional decision that grew the creditor losses. The instinct is honourable. The conduct report cares about the consequences.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Employees Can Claim from the National Insurance Fund</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Employment Rights Act 1996 (Part XII, sections 182 to 190) gives employees of insolvent employers a statutory safety net. Claims are paid from the National Insurance Fund and processed by the Redundancy Payments Service. The figures below reflect the statutory weekly cap of <strong>£751 from 6 April 2026</strong> (the cap is reviewed each April).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Entitlement</th><th>Statutory cap</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Arrears of pay</td><td>Up to 8 weeks, capped at £751 per week</td><td>Wages earned but unpaid before the company entered liquidation. Higher earners recover only up to the cap.</td></tr>
+<tr><td>Holiday pay</td><td>Up to 6 weeks, capped at £751 per week</td><td>Statutory holiday entitlement (5.6 weeks per year) earned but not taken.</td></tr>
+<tr><td>Statutory notice pay</td><td>1 week per year of service, max 12 weeks, capped at £751</td><td>Compensates for the notice period the employee did not receive when employment terminated.</td></tr>
+<tr><td>Statutory redundancy pay</td><td>0.5 to 1.5 weeks' pay per year of service (age-based), max 20 years, capped at £751</td><td>Maximum statutory redundancy payment is £22,530 (£751 × 30).</td></tr>
+<tr><td>Unpaid pension contributions</td><td>Up to 12 months of employer contributions</td><td>Paid into the relevant pension scheme, not directly to the employee.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>The RPS sends claim forms to employees once the liquidator has formally confirmed the insolvency. In our experience, employees who understand the process before the resolution date are less anxious and more cooperative during the wind-down. A director who holds a genuine contract of employment can claim too, and our guide to <a href="/director-redundancy/">redundancy payments for directors</a> sets out the qualifying conditions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A ten-minute conversation in the break room on a Wednesday morning, explaining what they can claim and how, costs you nothing and changes how the closure feels for everyone in the room.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>The cap matters.</strong> An employee earning £900 a week recovers only £751 per week from the Fund. The shortfall sits as an unsecured claim in the liquidation, where most unsecured creditors recover little or nothing. We tell directors this directly: the safety net is real but not generous, and your higher-paid staff should understand it before they hear it from a claim form.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Preferential Creditor Status for Employees in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Under Schedule 6 of the Insolvency Act 1986, employees are preferential creditors for up to four months' unpaid wages (capped at £800 per employee) plus accrued holiday pay. Preferential rank means employees are paid ahead of HMRC's secondary preferential claims and ahead of all unsecured creditors in the distribution waterfall. Our guide to <a href="/liquidation/which-creditors-get-paid-first/">the order of creditor priority</a> sets out where every class of creditor sits.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice the preferential claim is usually subrogated to the Redundancy Payments Service. The Fund pays the employee, then steps into the employee's shoes as a preferential creditor in the liquidation. The employee gets paid from the Fund. The Fund recovers what it can from the company estate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors sometimes assume they need to pay employees directly before liquidation to protect them. In most cases that backfires. The statutory safety net handles employee claims more reliably than ad hoc payments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Worse, ad hoc payments made when the company is insolvent are textbook preference candidates under section 239 of the Insolvency Act 1986. The liquidator can claw them back, and the payment that was meant to look after staff ends up looking like preferring connected parties.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<aside class="cd-callout cd-callout--key-takeaway">
+<p class="cd-callout__label"><strong>Key Takeaway</strong></p>
+<p>Employees rank as preferential creditors for up to four months' unpaid wages (£800 cap) and accrued holiday pay, ahead of HMRC's secondary preferential claims and all unsecured creditors.</p>
+<p>The Redundancy Payments Service then pays the employee from the National Insurance Fund and steps into the employee's preferential position in the liquidation. Do not make ad hoc top-up payments to staff when the company is insolvent. Those payments create personal preference risk for you and rarely improve the outcome for your staff.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When TUPE Applies in a Liquidation Sale</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the liquidator sells the business (or part of it) as a going concern, the Transfer of Undertakings (Protection of Employment) Regulations 2006 may apply. Under TUPE, employees transfer automatically to the new employer on their existing terms and conditions, with continuity of service preserved. They are not made redundant, and dismissing them because of the transfer is automatically unfair.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>TUPE applies when there is a transfer of an economic entity that retains its identity. In practice, that means a business sale where the buyer takes the trading operation, the customers, and the staff. It does not apply to a pure asset sale where the buyer takes the equipment but not the business as a going concern.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see TUPE cause confusion in liquidation sales because the liquidator's duty is to maximise recoveries for creditors, and a sale that preserves jobs through TUPE can sometimes achieve a higher price than a breakup sale. The buyer must accept the employees on their existing terms.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are buying back the business through a new company (a pre-pack or a phoenix arrangement), TUPE obligations transfer to the new company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We recommend specialist employment law advice on any transaction where TUPE may apply. Errors here are the kind that surface as a tribunal claim eight months after the sale, and by then the cost of getting it right would have been a fraction of the cost of getting it wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Obligations During Employee Redundancy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The four obligations below are what the liquidator and the Insolvency Service look for evidence of when the conduct report is filed. Failure on any of them is the kind of thing that turns a clean closure into a personal-liability question.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Obligation</th><th>Statutory basis</th><th>What good practice looks like</th></tr></thead>
+<tbody>
+<tr>
+<td>Collective consultation (20+ redundancies)</td>
+<td>Trade Union and Labour Relations (Consolidation) Act 1992, s.188</td>
+<td>30 days before first dismissal (45 days for 100+). Failure is a s.194 criminal offence; protective award up to 90 days' pay per employee. Cannot be retrospectively fixed.</td>
+</tr>
+<tr>
+<td>Individual notification</td>
+<td>Employment Rights Act 1996</td>
+<td>Each employee receives written notice of redundancy and the reasons for it. A short, honest letter is better than a long defensive one.</td>
+</tr>
+<tr>
+<td>Provide accurate records to the liquidator</td>
+<td>Insolvency Act 1986, s.235 (cooperation duty)</td>
+<td>Employment contracts, payroll records, holiday balances, length-of-service calculations. Incomplete records delay every employee's claim and reflect badly in the conduct report.</td>
+</tr>
+<tr>
+<td>Notify the Insolvency Service via the liquidator</td>
+<td>Employment Rights Act 1996, s.187</td>
+<td>Within 14 days of the winding-up resolution or order. Liquidator handles the filing; you ensure they have the data to do it promptly.</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>Of those four, we see directors fail on collective consultation more often than any other. If you are planning a CVL and the company has 20 or more employees being made redundant within a 90-day window, consultation must start before the winding-up resolution is passed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The liquidator cannot retrospectively fix a failure to consult. By the time the resolution is on the agenda, you have already missed the window.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<aside class="cd-callout cd-callout--risk-warning">
+<p class="cd-callout__label"><strong>Risk Warning</strong></p>
+<p>Collective consultation under section 188 of the Trade Union and Labour Relations (Consolidation) Act 1992 must begin at least 30 days before the first dismissal where 20 or more employees are being made redundant at one establishment within 90 days. The window is 45 days where 100 or more employees are involved.</p>
+<p>Failure is a criminal offence under section 194 and exposes the company (and directors personally where the failure is theirs) to a protective award of up to 90 days' pay per affected employee. The obligation cannot be retrospectively cured after the resolution is passed.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Directors Should Do Next</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company is approaching liquidation and you have employees, we recommend the following sequence. None of it requires legal training to do. Most of it requires honesty and reasonable record-keeping.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol>
+<li>Pull together complete employee records: contracts, payroll history, holiday balances, length-of-service calculations for every employee. The liquidator and the RPS will need them.</li>
+<li>If you have 20 or more employees being made redundant, begin collective consultation now, before the winding-up resolution. This is the obligation directors miss most often.</li>
+<li>Talk to your staff honestly: explain what is happening, what they can claim from the National Insurance Fund, and how the RPS process works. The conversation lands better in person than in a letter.</li>
+<li>Do not make ad hoc payments to employees outside the normal payroll cycle if the company is insolvent. The statutory safety net handles employee claims, and ad hoc payments create personal preference risk under section 239 IA 1986.</li>
+<li>Speak to a licensed insolvency practitioner who can advise on the timing and sequencing of employee redundancies within the liquidation process. The earlier the call, the more options you have.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you are not yet sure whether the company is genuinely insolvent, take our 30-second insolvency test first to confirm where the position actually stands. Make no further preferential payments before you have had advice from us or another regulated firm. The cases that go badly for staff and for directors are rarely the ones where the director acted too soon.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions About Employees in Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"15010-employees-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWill my employees get their statutory redundancy pay?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, where they qualify. Employees with at least two years' continuous service are entitled to statutory redundancy pay. If the company cannot pay, they claim it from the National Insurance Fund through the Redundancy Payments Service.</p>
+<p>The maximum statutory payment is £22,530 (£751 weekly cap × 30, reflecting up to 20 years of service at 1.5 weeks per year). The RPS processes the claim once the liquidator has formally confirmed the insolvency.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does it take for employees to receive their money?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The Redundancy Payments Service aims to process complete claims within 6 weeks. In practice, straightforward claims are often paid within 3 to 6 weeks of submission. Complex cases or claims with incomplete records take longer.</p>
+<p>Providing accurate, organised employee records to the liquidator is the single biggest thing you can do to speed up your staff's claims.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I have to consult employees before making them redundant?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>If you are making 20 or more employees redundant at one establishment within 90 days, yes: collective consultation must begin at least 30 days before the first dismissal (45 days for 100 or more). The legal basis is section 188 of the Trade Union and Labour Relations (Consolidation) Act 1992.</p>
+<p>For fewer than 20 redundancies there is no statutory collective-consultation requirement, but individual consultation is still good practice and reduces the risk of unfair dismissal claims later.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to employees if the business is sold as a going concern?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The Transfer of Undertakings (Protection of Employment) Regulations 2006 (TUPE) may apply. Under TUPE, employees transfer automatically to the new employer on their existing terms and conditions, with continuity of service preserved.</p>
+<p>They are not made redundant, and dismissing them because of the transfer is automatically unfair. The buyer must accept the transferring employees on their current terms. If you are buying back the business through a new company, TUPE obligations transfer to the new company too.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan employees claim for unfair dismissal when the company is liquidated?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Redundancy because the company is closing is a fair reason for dismissal under the Employment Rights Act 1996. The risk is procedural: if you failed to follow the correct consultation procedure, or dismissed employees for reasons unrelated to the closure, they may have grounds for an unfair dismissal claim.</p>
+<p>In practice, unfair dismissal claims in liquidation are rare because the company has no assets to satisfy a tribunal award. The procedural failure can still affect your personal conduct assessment, though, where the failure was yours.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan an employee claim for wages I paid them in cash off the books?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Generally no. The Redundancy Payments Service pays claims based on PAYE records and documented employment contracts. Off-the-books cash payments are not on those records and will not feature in the claim calculation.</p>
+<p>The employee loses out, and the cash payments themselves can surface in the conduct review as evidence of broader compliance failure. Get the payroll records correct from the start; ad hoc cash arrangements never end well in liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Employment Rights Act 1996 (Part XI on redundancy and Part XII on insolvency of employers) and the Trade Union and Labour Relations (Consolidation) Act 1992 (s.188 collective consultation, s.194 offence).</p>
+<p>Additional references: the Transfer of Undertakings (Protection of Employment) Regulations 2006, and the Insolvency Act 1986 (Schedule 6 preferential debts, s.235 cooperation, s.239 preferences).</p>
+<p>The £751 weekly statutory pay cap reflects the rate from 6 April 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner and are paid from company assets or director funding. We may also receive a fee where you engage another practitioner through our network. Last reviewed May 2026.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1996/18/contents"><strong>Employment Rights Act 1996</strong> &mdash; redundancy and insolvency-of-employers framework, including statutory pay cap, RPS claims, and unfair-dismissal protection. Parts XI and XII (sections 182&ndash;190)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1992/52/contents"><strong>Trade Union and Labour Relations (Consolidation) Act 1992</strong> &mdash; collective consultation duty (section 188) and the offence for failure to consult (section 194)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2006/246/contents"><strong>Transfer of Undertakings (Protection of Employment) Regulations 2006</strong> &mdash; TUPE, automatic transfer of contracts on a going-concern sale</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; Schedule 6 preferential debts (employee wages and holiday pay), section 235 cooperation duty, section 239 preference clawback</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/redundant-your-rights/redundancy-pay"><strong>Statutory weekly redundancy pay cap</strong> &mdash; £751 from 6 April 2026, applied to all RPS claims under Part XII Employment Rights Act 1996</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/redundancy-payments-service"><strong>Redundancy Payments Service</strong> &mdash; claim process, eligibility, and current weekly cap. Operated by the Insolvency Service</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner</strong> &mdash; verify a liquidator's licence and regulatory body</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

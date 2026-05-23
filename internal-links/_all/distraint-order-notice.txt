@@ -1,0 +1,252 @@
+<!-- TITLE: Distraint Orders: What You Need to Know -->
+<!-- POST ID: 10930 / TYPE: pages / AUTHOR: 34 / FM: 71214 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/hmrc/distraint-order-notice/ -->
+
+<!-- wp:paragraph -->
+<p>If you have received a Notice of Enforcement, you have probably been ignoring HMRC letters for 90 days or more. The 7-day countdown on that notice is the last formal warning before an enforcement agent stands on your company's premises.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The word "distraint" is what HMRC themselves still use, but the modern regime is the Taking Control of Goods process under Schedule 12 of the Tribunals, Courts and Enforcement Act 2007. The mechanics, the fees, the exempt goods, the agent's powers, all of it shifted in April 2014. If you have been told the old rules, you are operating on outdated assumptions.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Below, we walk through what happens between the Notice of Enforcement and the goods being sold at auction, what fees crystallise at each stage, what the agent cannot take, and what to do if the notice is already on your desk.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The £1,500-2,500 of statutory fees that get added to a £10,000 HMRC debt is the number nobody talks about until it's too late to negotiate, so we lead with it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Understanding Distraint and the Taking Control of Goods Process</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>"Distraint" is the old name. From April 2014, the legal framework changed to the Taking Control of Goods regime under Schedule 12 of the Tribunals, Courts and Enforcement Act 2007 (TCEA), with operational detail in the Taking Control of Goods Regulations 2013 and the Taking Control of Goods (Fees) Regulations 2014.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The modern process has three statutory fee stages:</p>
+<!-- /wp:paragraph -->
+<!-- wp:table -->
+<figure class="wp-block-table"><table>
+<thead><tr>
+<th>Stage</th>
+<th>Fee</th>
+<th>When charged</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Compliance</td>
+<td>£75 + VAT</td>
+<td>On letter before action (Notice of Enforcement)</td>
+</tr>
+<tr>
+<td>Enforcement Stage 1</td>
+<td>£190 + 7.5% over £1,000</td>
+<td>On first agent visit</td>
+</tr>
+<tr>
+<td>Enforcement Stage 2</td>
+<td>£495 + 7.5% over £1,000</td>
+<td>On removal of goods</td>
+</tr>
+<tr>
+<td>Sale Stage</td>
+<td>£525 + 7.5% over £1,000</td>
+<td>On auction sale</td>
+</tr>
+</tbody>
+</table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>The percentages compound. A £10,000 HMRC debt that runs all the way to sale typically adds £1,500-2,500 in agent fees on top of the original amount; the debtor pays the agent's costs.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The 7-day Notice of Enforcement under Schedule 12 paragraph 7 TCEA 2007 is the formal opening. Until that notice expires, no agent visit can happen. From day 8 onwards, the agent is entitled to attend.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step-by-Step: What Happens During the Distraint Process</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The process runs in four stages:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Stage 1: Notice of Enforcement (NOE).</strong> HMRC's enforcement agent sends the NOE; typically by post to the registered office. The notice gives 7 clear days before any visit. Compliance fee of £75 + VAT crystallises immediately. This is the cheapest stage to resolve the issue.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Stage 2: First visit.</strong> Agent attends business premises. Peaceful entry only at this stage; but business premises (unlike dwellings) allow forced entry on the second visit under Schedule 12 paras 19-20. The agent identifies goods, lists them, and offers a <a href="https://companydebt.com/hmrc/controlled-goods-agreement/">Controlled Goods Agreement</a> (CGA).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Stage 3: Controlled Goods Agreement OR removal.</strong> Under r.13 of the Taking Control of Goods Regulations 2013 and Schedule 12 para 13 TCEA 2007, a CGA is a written agreement allowing the debtor to keep using the goods while the agent retains legal possession. CGA gives 7+ days to settle or arrange TTP.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Refusing a CGA triggers immediate removal of goods and the Enforcement Stage 2 fee (£495 + 7.5% over £1,000).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Stage 4: Auction sale.</strong> Removed goods sold at public auction within 7 days minimum. Sale Stage fee £525 + 7.5% over £1,000 applied. Proceeds settle the debt + fees; surplus (if any) returned to debtor.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Your point of decision is between Stage 1 and Stage 3. Once removal happens, the cost-of-cure rises sharply and the practical control over what happens next leaves you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Directors' Rights and Obligations During a Distraint</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The agent's powers are real, but limited. Exempt goods under regulations 4 and 5 of the Taking Control of Goods Regulations 2013 include:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Tools and equipment necessary for trade</strong> up to £1,350 in value</li>
+<li><strong>Basic IT equipment necessary for business operations</strong></li>
+<li><strong>Third-party-owned goods</strong>, with proof; HP vehicles, leased equipment, retention-of-title stock that has not yet vested in the company</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The agent must accept exemption claims with proof. Practical preparation: photograph and inventory anything you expect to claim as exempt, keep supplier finance agreements + delivery notes + retention-of-title contracts accessible.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Director rights:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>See identification</strong>; Certificate of Compliance under TCG Regs r.7, photo ID, formal writ/warrant reference</li>
+<li><strong>Challenge under Sch 12 para 66 TCEA 2007</strong>; county court application within 7 days, £77 court fee</li>
+<li><strong>Third-party claim under CPR 85 Interpleader</strong>; £334 fee, where third party claims ownership of seized goods</li>
+<li><strong>Vulnerability disclosure</strong>; confirmed mental health condition, terminal illness, or recent bereavement triggers withdrawal under the CIVEA (Civil Enforcement Association) code; agent's firm must reassess</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Director obligations are basic civility: allow peaceful entry on first visit to business premises (refusal escalates to forced entry on the second visit), do not move or hide listed goods (criminal offence under s.68 TCEA 2007 to interfere with goods under control), produce evidence of exempt-goods status if claimed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Respond to a Notice of Enforcement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The 7-day NOE window is the cheapest stage at which to resolve the issue. Numbered immediate sequence:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Verify the debt.</strong> Check the HMRC reference number against your Business Tax Account. Confirm the amount is correct and that the underlying assessment is valid.</li>
+<li><strong>Pay in full if possible.</strong> The cheapest option; £75 Compliance fee only, no further escalation.</li>
+<li><strong>Call BPSS within 24 hours</strong> on 0300 200 3835 to negotiate <a href="https://companydebt.com/hmrc/time-to-pay-hmrc/">Time to Pay</a>. BPSS handles proactive cannot-pay cases; their authority is up to 12 months TTP on the call, longer with manager approval. This routes the case off the enforcement track.</li>
+<li><strong>Don't call <a href="https://companydebt.com/hmrc/understanding-hmrc-debt-collection/">HMRC Debt Management</a></strong> (0300 200 3887) instead. Debt Management handles enforcement-track cases, and calling them at NOE stage reinforces the enforcement framing.</li>
+<li><strong>If amount is unmanageable</strong>, instruct an <a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">insolvency practitioner</a> within 48 hours. The IP diagnostic call is free industry-wide; cheapest insurance against escalation.</li>
+</ol>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The routing logic matters more than directors realise. In our casework, BPSS treats the case as "the company wants to pay but cannot pay now"; Debt Management treats the case as "the company has been pursued and has not paid." We see the same call to different numbers produce materially different outcomes.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Section 184 of the Insolvency Act 1986 imposes a 14-day grace period on HMRC after the writ is received; short, but a genuine window for last-minute settlement before sale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Avoiding the Serious Consequences of Full Enforcement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In our experience, the agent visit is the end of one process and the beginning of another. A TCoG enforcement is rarely an isolated event; it usually signals broader insolvency.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A distraint visit + multi-tax-type arrears (CT + VAT + PAYE) = structural insolvency signal under section 123(1)(e) of the Insolvency Act 1986. Once at this point:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>s.214 wrongful trading exposure.</strong> Continuing to trade after the distraint visit + accumulating new credit creates evidence for a future liquidator's contribution-order claim. The "every reasonable step to minimise creditor loss" defence under s.214(3) becomes harder to maintain.</li>
+<li><strong>Winding-up petition is likely next.</strong> HMRC presents around 3,000-4,000 winding-up petitions per year under s.122(1)(f). TCoG visits typically precede petitions by 60-120 days.</li>
+<li><strong>Bank freeze risk.</strong> Once a petition is presented, Gazette advertisement triggers proactive bank freeze under s.127 IA 1986 voidance risk.</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Our advice is rarely "ride this out": engage a licensed insolvency practitioner before the next escalation step. A pre-petition CVL costs £4-7k for a typical SME and preserves your control over IP choice.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A compulsory liquidation after petition is no direct cost to you but routes the conduct review through wider Schedule 1 CDDA 1986 investigation. The earlier you engage us, the wider your option set.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Seeking Professional Help When Distraint Is Imminent</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Two categories of professional advice matter:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Licensed insolvency practitioner</strong>; for assessing the company's overall position. The diagnostic call is free industry-wide under s.388 IA 1986 and the Insolvency Practitioners Regulations 2005. Verify the IP's licence on the ICAEW register or the IPA register. The IP confirms whether the company can survive the distraint or whether formal procedure is needed.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Specialist tax + insolvency lawyer</strong>; for disputed HMRC assessments. Tier 1 tax chambers (11KBW, Pump Court Tax Chambers, 11 New Square) handle First-tier Tribunal appeals + judicial review of HMRC decisions. Typical retainer £15-50k for complex cases; £2-5k for routine appeal preparation.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The cost-benefit framing for SMEs:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>£4-7k SME CVL + IP diagnostic call now</li>
+<li>vs £1,500-2,500 enforcement fees + petition + Schedule 1 CDDA disqualification investigation</li>
+<li>vs £30k-100k+ wrongful trading contribution order if liquidator finds the director traded on past point-of-no-return</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The IP diagnostic is free. There is no cost saving from delaying it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Distraint Order Notices</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"10930-faq-block","theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"titleColor":"#000000","hasFAQSchema":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much can HMRC's enforcement agents add to my debt?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>A £10,000 debt typically attracts £1,500-2,500 in statutory agent fees if it goes through to sale; £75 Compliance + £190 + 7.5% Stage 1 + £495 + 7.5% Stage 2 + £525 + 7.5% Sale. Fees compound at each stage and the debtor pays them on top of the original tax.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC's agents force entry to my business premises?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>On the first visit, peaceful entry only. On the second visit, forced entry is permitted under Schedule 12 para 19-20 TCEA 2007. Dwellings (homes) require peaceful entry on every visit.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat can the agents NOT take?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Trade tools up to £1,350, basic IT equipment necessary for the business, third-party-owned goods (with proof), pets, child essentials, medical equipment. HP-financed and leased equipment is not company property; the agent must release it on proof of finance agreement.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I stop the process after the NOE arrives?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Yes, by paying in full, agreeing Time to Pay with HMRC (call BPSS 0300 200 3835 within 7 days), or formally challenging the underlying debt at First-tier Tribunal. The 7-day NOE window is the cheapest stage at which to act.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes an enforcement agent visit mean I'm insolvent?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>It is a strong signal; usually structural insolvency under s.123(1)(e) IA 1986 by the time you're at this point. Free IP diagnostic call is the right next step; cost-of-delay is real once the wrongful trading window opens.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors managing the issue covered above.</p>
+<p>We have drawn on the relevant statutory framework cited inline in the article (see Sources below) and on current Insolvency Service and HMRC guidance where applicable.</p>
+<p>Where we describe how the issue plays out operationally, including the practical sequencing of director responses and the personal-liability tail of late action, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/2007/15/schedule/12"><strong>Tribunals, Courts and Enforcement Act 2007, Schedule 12</strong> &mdash; the statutory framework governing Taking Control of Goods, including the Notice of Enforcement, agent powers, and forced entry rules at business premises</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2013/1894/contents/made"><strong>Taking Control of Goods Regulations 2013</strong> &mdash; procedural rules setting the 7-day notice period, exempt goods thresholds, and Controlled Goods Agreement requirements</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2014/1/contents/made"><strong>Taking Control of Goods (Fees) Regulations 2014</strong> &mdash; the statutory fee schedule for Compliance, Enforcement Stages 1 and 2, and Sale Stage, plus the 7.5% uplift over £1,000</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/bailiffs"><strong>GOV.UK: Being visited by bailiffs</strong> &mdash; plain-English guidance on enforcement agent visits, peaceful entry rules, and rights when goods are listed or removed</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

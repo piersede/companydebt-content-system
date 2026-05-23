@@ -31,9 +31,9 @@ DRY_RUN       = '--apply' not in sys.argv
 # Covers: URL restructures, live-site links pointing to moved slugs,
 # staging links with old parent paths.
 REMAP = {
-    # Pre-pack administration moved to top-level
+    # Pre-pack administration — canonical URL
     'https://comdebstage.wpengine.com/company-rescue-solutions/pre-pack-administration/':
-        '/what-is-a-pre-pack-administration/',
+        '/company-rescue-solutions/pre-packs/',
 
     # CVA vs liquidation — old slug/path variations
     'https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/cva-vs-liquidation/':

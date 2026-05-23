@@ -1,0 +1,421 @@
+<!-- TITLE: Can a Director Be Sued Personally by Creditors? -->
+<!-- POST ID: 79537 / TYPE: pages / AUTHOR: 34 / FM: 79540 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/can-a-director-be-sued-personally-by-creditors/ -->
+
+<!-- wp:paragraph -->
+<p>The short answer is: usually no, but the exceptions matter. If you're a director of a UK limited company, your creditors can almost never pursue you personally for company debts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The legal separation between you and the company is real and it holds in most situations. The exceptions are where things go wrong, and understanding them is how we help directors protect themselves before enforcement starts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are reading this because a creditor has threatened personal action, the right starting point is to know which exposure they actually have. Most threats are bluster. A few are not. The difference is the difference between a paid-off worry and a defended claim.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It's written for directors of UK limited companies, not sole traders or partners, whose position is very different.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For the broader context around closing, rescuing, or restructuring a UK limited company, see our liquidation hub.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Quick answer if you're worried about your personal exposure</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Creditor chasing a company debt only:</strong> limited liability protects you. The judgment against the company doesn't become a judgment against you unless one of the exceptions below applies.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>You've signed a personal guarantee:</strong> the creditor can pursue you personally for the guaranteed amount, separately from any action against the company. This is the single most common route to personal liability.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Company has entered liquidation:</strong> the liquidator can bring claims against you for wrongful trading, misfeasance, preferences, or overdrawn director's loan accounts. These are separate from creditor claims.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why UK Limited Companies Normally Shield Their Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The whole point of a limited company is that it's a separate legal person. When the company enters into a contract, borrows money, or buys stock on credit, the company is the party to that contract, not the director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A creditor suing over unpaid invoices sues the company, gets a judgment against the company, and enforces against the company's assets. The director's personal assets are outside that process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This principle was established in <em>Salomon v A Salomon &amp; Co Ltd</em> [1897] AC 22 and has been the foundation of company law for over a century.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The court will only pierce the corporate veil in exceptional circumstances, typically involving fraud or the deliberate use of the company structure to evade legal obligations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In our experience, many directors believe the veil is thinner than it actually is. It isn't. When directors are held personally liable, it's almost always because of something specific they did or signed, not because a court decided to set the company structure aside.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When a Creditor Can Sue You Personally</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There are specific situations where a creditor can bring a direct claim against you as an individual. These are the ones we walk directors through when we're checking their exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+<p class="cd-callout__label">Legal Exposure</p>
+<!-- wp:paragraph --><p>Section 216 of the Insolvency Act 1986 makes a director personally liable for all debts incurred by a phoenix company if they re-use a prohibited name within five years of an insolvent liquidation without court leave. This is not a discretionary remedy. Liability attaches automatically on proof of the prohibited name use, with no requirement to show intent or loss caused.</p><p>Separately, a personal guarantee signed in connection with a company facility is a binding personal contract enforceable by the creditor independently of any insolvency process, with no time constraint tied to the company's fate.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p><strong>Personal guarantees.</strong> If you've signed a personal guarantee for a company debt (typically a bank facility, a commercial lease, or a major supplier account), the creditor can pursue you for the guaranteed amount directly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is a separate contract between the director and the creditor. The creditor doesn't have to wait for the company to fail or for a liquidator to be appointed. They can sue both the company and the director in parallel.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Fraud or misrepresentation.</strong> If you made a fraudulent statement to obtain credit (for example, giving false financial information to a lender), you can be sued personally in tort for deceit. Proving fraud is difficult, but where it's proven, the corporate veil offers no protection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Negligent misstatement.</strong> Under the principle in <em>Hedley Byrne v Heller</em> [1964] AC 465, a director who makes a negligent statement that a third party reasonably relies on can be personally liable. This is narrow and mostly applies in professional services contexts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Director signing in personal capacity.</strong> If a contract is signed "John Smith" rather than "John Smith, Director of XYZ Ltd acting on behalf of the company," a court may find that the director was acting in personal capacity, not as agent for the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This catches directors out more often than expected on leases and supply agreements.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Phoenix company abuse.</strong> Running a company into liquidation and then immediately starting a new one in the same business, using a similar name, to abandon the old company's debts, may trigger Section 216 of the Insolvency Act 1986 (restrictions on re-use of company names).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A breach of Section 216 can make a director personally liable for the debts of the new company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Creditors Usually Cannot Do</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Because fear drives most of these calls, we think it's worth being explicit about what a creditor cannot do, even when they threaten to do it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cannot enforce against the director's home for a company debt.</strong> A judgment against the company doesn't give the creditor any right to the director's personal property. This is true even if the creditor is aggressive and tries to claim otherwise.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cannot freeze a personal bank account for a company debt.</strong> The same principle applies. A creditor enforcing a company judgment can freeze company accounts, not personal ones, unless they also have a judgment directly against the director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cannot pursue a director for company debts after liquidation.</strong> Once the company is wound up and dissolved, company debts for which the director has no personal exposure are gone. The exception is if conduct during the company's life created specific personal liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Cannot send bailiffs to a director's home for a company debt.</strong> Enforcement agents act against the company. They can visit the registered office or trading premises, but not the director's home, to enforce a company judgment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Insolvency Office-Holder Claims: Wrongful Trading and Contribution Orders</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the company goes into liquidation, the liquidator has powers to bring claims against directors that creditors themselves cannot bring. These claims are separate from the creditor-versus-company dispute and can be brought even if no creditor is pursuing you directly. Our guide to <a href="/liquidation/what-happens-to-directors-in-liquidation/">a director's position in liquidation</a> sets out where directors stand once a liquidator is appointed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Wrongful trading (Section 214 Insolvency Act 1986).</strong> If the liquidator proves the director continued trading when they knew, or should have known, there was no reasonable prospect of avoiding insolvent liquidation, the court can order a personal contribution to the company's assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The test is not whether harm was intended; it's what a reasonably diligent director in the same position should have concluded.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Fraudulent trading (Section 213).</strong> A more serious allegation, requiring proof of actual intent to defraud creditors. If proven, it carries personal liability and potentially criminal consequences. Our guide to whether <a href="/liquidation/can-directors-go-to-prison-for-company-debt/">directors can go to prison for company debt</a> explains when conduct crosses into criminal territory.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Misfeasance (Section 212).</strong> If a director has breached a duty to the company (for example, taking money improperly, paying themselves at creditors' expense, or failing to maintain proper records), the liquidator can apply for an order requiring restoration of the money or compensation. The consequences are more serious still where a director has been <a href="/liquidation/what-happens-if-a-director-hides-company-assets/">concealing company assets</a> from the liquidator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Preferences (Section 239).</strong> If a director caused the company to pay one creditor ahead of others in the run-up to liquidation, and that creditor was connected, the liquidator can apply to unwind the payment. The recipient (whether the director, a family member, or a connected company) must repay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Transactions at undervalue (Section 238).</strong> If a director caused the company to dispose of an asset for less than its value, typically to a connected party, the liquidator can reverse the transaction.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Overdrawn director's loan accounts.</strong> If you owe money to the company (DLA in debit), the liquidator treats that as an asset of the company and will pursue you to repay it. This is one of the most common and most avoidable sources of personal exposure we see.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>See our dedicated guide on wrongful trading for the detailed version.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">A worked example: how exposure adds up</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To make this less abstract, here is the kind of arithmetic we run with directors on a first call. Take a company with £180,000 of unsecured trade debt entering liquidation:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>PG on the bank facility:</strong> £40,000 → the bank pursues this directly under the guarantee, regardless of liquidation</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Overdrawn director's loan account:</strong> £25,000 → the liquidator demands repayment as a debt owed to the company</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preference payments to family in the last 6 months:</strong> £15,000 → clawed back by the liquidator under Section 239</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Total day-one personal exposure: £80,000, not the £180,000 the director was worried about. The other £100,000 of unsecured trade debt is the company's, not the director's. Knowing the difference is the difference between negotiating from a position of clarity and panicking into worse decisions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Check Your Personal Exposure</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you're worried about personal liability, the honest assessment starts with four questions. These are the ones we run through in a first call with a director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Have you signed any personal guarantees?</strong> Dig out the loan agreements, lease agreements, and major supplier contracts. Check whether you signed in personal capacity for any of them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Banks almost always require a PG for business lending. Commercial landlords often require a PG for new leases. Some major suppliers ask for one on the account application.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Is your director's loan account overdrawn?</strong> Check the latest management accounts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you owe the company money (through dividends paid without sufficient reserves, expenses drawn that weren't reimbursed, or direct loans), that balance becomes a debt the liquidator will pursue if the company enters insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Have you made any preferential payments recently?</strong> Paying yourself, family members, or related companies ahead of other creditors in the months before a company becomes insolvent is exactly what Section 239 is designed to catch. Look back at the last six months of payments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>When did you first realise the company was in trouble?</strong> Under <em>BTI v Sequana</em> [2022] UKSC 25, the duty to consider creditors' interests arises when insolvency is "probable."</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you continued trading past that point without taking advice or documenting the decision, you may have wrongful trading exposure. Your board minutes and cash-flow records from that period will matter enormously if the liquidator later investigates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical Steps to Limit Risk</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The strongest protection is acting early, documenting decisions, and taking advice before the company enters formal insolvency. We have seen directors go through investigations with clean outcomes simply because they kept contemporaneous records. Specifically:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Keep board minutes.</strong> Every significant financial decision should be documented in contemporaneous board minutes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>"The board reviewed the cash-flow forecast, considered the options, took advice from [IP firm], and decided to [action]" is the kind of record that protects you in any subsequent investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Stop preferential payments the moment you have doubts.</strong> No more paying directors, family, or connected companies ahead of other creditors. No asset sales at below market value. No new credit you can't realistically repay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Get advice from a licensed IP before taking any major decision.</strong> Call a licensed insolvency practitioner, not an unregulated "debt advisor." The cost of a one-hour consultation is tiny compared to the cost of getting wrongful trading or preferences wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Consider the formal options while you still have time.</strong> A CVA, administration, or CVL entered voluntarily gives you more control than waiting for a creditor to petition and compulsory liquidation to follow. Voluntary routes also produce cleaner conduct reports.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-do-dont"} -->
+<div class="wp-block-group cd-do-dont">
+<div class="cd-do-dont__do">
+<p class="cd-do-dont__label">Do</p>
+<!-- wp:list --><ul><li>Review all loan agreements, lease agreements, and supplier contracts to identify personal guarantees you have signed</li><li>Keep contemporaneous board minutes recording every significant financial decision and the reasoning behind it</li><li>Take advice from a licensed insolvency practitioner before the company enters any formal insolvency process</li><li>Ensure all contracts you sign on behalf of the company are clearly executed in your director capacity, not in your own name</li><li>Initiate a CVL voluntarily if the company is insolvent, because it produces cleaner conduct reports than compulsory liquidation</li></ul><!-- /wp:list -->
+</div>
+<div class="cd-do-dont__dont">
+<p class="cd-do-dont__label">Don't</p>
+<!-- wp:list --><ul><li>Assume a creditor's threat to "come after you personally" for a company debt is legally enforceable; verify what exposure actually exists</li><li>Pay family members, connected companies, or your own loan account ahead of HMRC or trade creditors in the months before insolvency</li><li>Resign as director thinking it eliminates liability for past conduct, because it does not</li><li>Start a new company using a name similar to the liquidated company without taking Section 216 advice first</li><li>Ignore a letter from the Insolvency Service about director conduct; non-engagement makes outcomes worse</li></ul><!-- /wp:list -->
+</div>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings Cleared Up</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three misunderstandings we hear on almost every first call. We try to clear these up in the first five minutes because they stop directors from acting when they should.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"If I resign as a director, the creditors can't come after me."</strong> Resigning doesn't eliminate exposure for anything that happened during the director's term. Wrongful trading, misfeasance, preferences, and personal guarantees all survive resignation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What resignation can do is limit exposure for decisions made after the resignation date, but only if the resignation was genuine and documented.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"If I put the company into liquidation, I'm admitting I did something wrong."</strong> No. Initiating a CVL when the company is insolvent is exactly what the law expects.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It demonstrates responsible action. Directors who initiate voluntary liquidation consistently receive cleaner conduct reports than those forced into it by a creditor petition.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"The bank told me I'd be personally liable for everything."</strong> Banks sometimes tell directors this to pressure payment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What they usually mean is that you're personally liable under the personal guarantee you signed for the specific facility in question. That's different from being liable for all company debts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002ddirectors-miss"} -->
+<div class="wp-block-group cd-callout cd-callout--directors-miss">
+<p class="cd-callout__label">What Most Directors Miss</p>
+<!-- wp:paragraph -->
+<p>Shadow directors and de facto directors face identical personal liability to formally appointed directors. But many never realise they qualify as directors at all.</p><p>Under the Insolvency Act 1986 and Companies Act 2006, if you routinely give instructions that the appointed directors follow, or if you act as a director without being formally registered at Companies House, you can face wrongful trading claims, misfeasance proceedings, and disqualification regardless of your job title.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>This catches sleeping shareholders who become operationally active during a crisis, and it catches founders who stepped off the board but remained the de facto decision-maker. The legal test is what you actually did, not what your appointment letter says.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Whether a Director Can Be Sued Personally by Creditors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79537-director-liability-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a creditor take my house if the company can't pay?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Not for a company debt alone. A judgment against the company cannot be enforced against your home unless you have signed a personal guarantee, a legal charge over your home, or the court has pierced the corporate veil (which is very rare).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If the creditor only holds a company judgment, your home is safe. If they hold a personal guarantee, it depends on the terms of the guarantee and whether the PG is secured against your home specifically.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is a personal guarantee and how do I know if I've signed one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A personal guarantee is a separate contract in which you agree to pay a company debt personally if the company doesn't. Banks almost always require a PG for business loans and overdrafts. Commercial landlords often require one for new leases. Some major suppliers ask for one on trade account applications.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Check your loan agreements, lease agreements, and supplier contracts. If you signed anything titled "Personal Guarantee," "Indemnity," or "Guarantor," you may have personal exposure on that debt.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC pursue me personally for company tax debts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In specific circumstances, yes. HMRC can issue a Personal Liability Notice (PLN) against a director for unpaid NICs if it believes the non-payment was due to fraud or serious neglect. HMRC can also issue Joint and Several Liability Notices in tax avoidance or phoenixism cases.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>These are specific statutory powers and are not used routinely, but where HMRC decides to use them, the director becomes personally liable for the tax debt.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat's the difference between wrongful trading and fraudulent trading?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Wrongful trading (Section 214 of the Insolvency Act 1986) is based on what you knew or should have known about the company's prospects. It does not require proof of intent to harm creditors.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Fraudulent trading (Section 213) is more serious: it requires proof of actual intent to defraud creditors, and it carries potential criminal consequences as well as personal civil liability. Wrongful trading is brought by the liquidator; fraudulent trading can also be prosecuted criminally by the Insolvency Service or the Crown.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes resigning as director protect me from liability?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Resignation doesn't eliminate exposure for anything that happened while you were a director. You can still face wrongful trading claims, misfeasance proceedings, preference claw-back, and enforcement on personal guarantees after resignation.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Resignation can limit your exposure for decisions made after the resignation date, but only if the resignation is genuine and properly documented. Resigning as a tactic to escape liability for past conduct will not work.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIf I'm a shadow director or de facto director, am I exposed?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. The Insolvency Act 1986 and Companies Act 2006 extend director liabilities to shadow directors (people whose instructions the actual directors follow) and de facto directors (people who act as directors without being formally appointed).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If you control or instruct the company's management even without being on the register at Companies House, you can still be held liable for wrongful trading, misfeasance, and disqualification.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I insure against personal liability as a director?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Directors and Officers (D&amp;O) insurance is available and can cover defence costs and some civil liability. However, standard D&amp;O policies typically exclude fraudulent conduct, personal guarantees, overdrawn director's loan accounts, and insolvency-related liability claims, which are some of the most common sources of exposure. Check the policy wording carefully before relying on it.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long can a liquidator look back at my conduct?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>For preferences and transactions at undervalue under the Insolvency Act 1986, the look-back period is two years for connected parties and six months for arm's-length transactions, measured from the onset of insolvency.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>For wrongful trading, there's no fixed look-back: the liquidator can examine conduct from the point the director knew or should have known insolvent liquidation was unavoidable. Your board minutes, cash-flow forecasts, and correspondence from the relevant period are the key evidence.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors weighing whether a creditor's threat to pursue them personally has any legal basis.</p>
+<p>We've drawn on the Insolvency Act 1986 (particularly sections 212, 213, 214, 216, 238 and 239), the Companies Act 2006 (directors' duties), and case law including Salomon v A Salomon &amp; Co Ltd [1897] AC 22, Hedley Byrne v Heller [1964] AC 465, and BTI 2014 LLC v Sequana SA [2022] UKSC 25.</p>
+<p>Where we describe how creditor threats and office-holder claims play out operationally, including HMRC Personal Liability Notice practice, Section 216 phoenix-name traps, and the way connected-party preferences are unwound, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 212 misfeasance, 213 fraudulent trading, 214 wrongful trading, 216 re-use of names, 238 transactions at undervalue, and 239 preferences</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; statutory codification of the seven directors' duties owed to the company, breach of which can ground personal claims by a liquidator</a> - legislation.gov.uk</li>
+<li><a href="https://www.supremecourt.uk/cases/uksc-2019-0046.html"><strong>BTI 2014 LLC v Sequana SA [2022] UKSC 25</strong> &mdash; Supreme Court ruling on when directors must shift focus to creditors' interests as insolvency becomes likely</a> - supremecourt.uk</li>
+<li class="cd-source--noref"><span><strong><em>Salomon v A Salomon &amp; Co Ltd</em> [1897] AC 22</strong> &mdash; House of Lords decision establishing separate legal personality, the foundation of limited liability that protects directors from company debts</span> <!-- no-url: pre-2000 House of Lords case report not available on free public legal database --></li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>Insolvency Service</strong> &mdash; official guidance on directors' conduct, disqualification, and the post-liquidation investigation process</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

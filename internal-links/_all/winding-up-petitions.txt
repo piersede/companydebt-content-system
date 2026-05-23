@@ -1,0 +1,360 @@
+<!-- wp:paragraph -->
+<p>If a winding-up petition has been filed against your company, the bank account is likely to freeze within hours of the petition appearing in the London Gazette. Once that happens, trading becomes almost impossible. The court will not wait for you to catch up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A winding-up petition is not a warning letter you can set aside. It is a formal application to the High Court asking a judge to order the <a href="/liquidation/compulsory-liquidation/">compulsory liquidation</a> of your company under section 122 of the Insolvency Act 1986.</p>
+<p>If no response is filed before the hearing date, the court can grant a winding-up order in your absence. Control passes to the Official Receiver and your ability to influence the outcome disappears.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The window to act is short. Most petitions allow 7 to 14 days before the hearing. Some directors have less. The cases we see go cleanest are the ones where the director called us the same day the petition arrived. The cases that go badly are the ones where the bank-freeze letter arrived before the legal advice did.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<aside class="cd-callout cd-callout--summary">
+<p class="cd-callout__label"><strong>Winding-Up Petitions at a Glance</strong></p>
+<p><strong>What it is:</strong> a court application by a creditor (typically HMRC) under sections 122 to 124 of the Insolvency Act 1986 to wind up your company compulsorily.</p>
+<p><strong>Trigger:</strong> usually an unpaid statutory demand or an undisputed debt of £750 or more, or a creditor judgment that has gone unpaid.</p>
+<p><strong>Bank-freeze risk:</strong> most UK banks freeze the company account within 24 hours of the Gazette advertisement.</p>
+<p><strong>Director priority:</strong> respond before the hearing, not after. Pay, dispute, negotiate adjournment, or convert to a director-led CVL. Doing nothing produces a winding-up order and the Official Receiver.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a Winding-Up Petition Is in UK Law</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A winding-up petition is the legal application a creditor makes to the court asking for your company to be compulsorily wound up. It is the final step in a formal escalation process, governed by the Insolvency Act 1986 (sections 122 to 124) and the Insolvency (England and Wales) Rules 2016. Petitions typically follow an unpaid statutory demand or an undisputed debt of £750 or more.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The petition is not a negotiation tool. It is an enforcement step. Once the petition is filed it becomes a matter of public record when it is advertised in the London Gazette, and the Gazette notice is what triggers the bank freeze.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Aspect</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Who can file</td><td>Any creditor owed £750 or more (HMRC included), the company itself, or in some cases the Secretary of State.</td></tr>
+<tr><td>Legal basis</td><td>Insolvency Act 1986, sections 122 (grounds), 123 (insolvency tests), and 124 (who may petition).</td></tr>
+<tr><td>Court</td><td>Companies Court (part of the High Court) in London, or a District Registry in the company's region.</td></tr>
+<tr><td>Petitioner's cost</td><td>£343 court fee plus a £2,600 deposit. Borne by the creditor, then charged to the eventual estate.</td></tr>
+<tr><td>Service window</td><td>The petition must be advertised in the Gazette at least 7 business days before the hearing.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>HMRC files the majority of UK winding-up petitions. If your petition comes from HMRC, the dynamics are slightly different and the negotiation playbook is narrower than it looks. We cover the HMRC route in our guide to dealing with an HMRC winding-up petition.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why a Winding-Up Petition Matters Right Now</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The damage from a winding-up petition does not start at the court hearing. It starts the moment the petition is advertised in the London Gazette. The typical sequence once a petition is filed:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>Day 1, petition served:</strong> the company receives formal notice. The hearing date is set, usually 7 to 14 days away.</li>
+<li><strong>Day 7+, Gazette publication:</strong> the petition is advertised in the London Gazette. Banks run automated checks against the Gazette. Most major UK banks freeze the company account within 24 hours.</li>
+<li><strong>Bank freeze:</strong> wages, suppliers, rent, and HMRC payments all stop. Trading effectively halts.</li>
+<li><strong>Creditor pile-on:</strong> other creditors see the Gazette notice and may file supporting petitions or accelerate their own recovery.</li>
+<li><strong>Court hearing:</strong> if the petition is not resolved by the hearing, the judge can make a winding-up order.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The bank freeze is the immediate crisis. Directors often assume they have until the hearing to act. In practice, the Gazette publication can make your company unviable days before the court even sits. If your company relies on its bank account to operate, the Gazette advertisement is the real deadline, not the hearing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens If You Ignore the Winding-Up Petition</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you do nothing, the court will almost certainly grant a winding-up order at the hearing. The consequences are immediate and severe.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Consequence</th><th>What it means in practice</th></tr></thead>
+<tbody>
+<tr><td>Official Receiver appointed</td><td>A government officer takes control of the company. Director authority ends on appointment day.</td></tr>
+<tr><td>Assets seized and sold</td><td>The Official Receiver collects and sells company assets to pay creditors. You have no say in valuation or sale.</td></tr>
+<tr><td>Mandatory director investigation</td><td>The Official Receiver investigates every director's conduct in the period leading up to insolvency.</td></tr>
+<tr><td>Wrongful trading risk</td><td>If you continued trading when you should have stopped, personal liability under section 214 IA 1986 follows.</td></tr>
+<tr><td>Disqualification risk</td><td>Serious misconduct findings can lead to a disqualification order under section 6 of the Company Directors Disqualification Act 1986, for 2 to 15 years.</td></tr>
+<tr><td>Public record</td><td>The compulsory liquidation is permanently recorded at Companies House and on the Insolvency Service's published Gazette feed.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>A compulsory liquidation through the court is the worst outcome for directors. It removes your control, maximises personal exposure, and creates the longest paper trail. We explain the full process in our compulsory liquidation guide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Five Responses to a Winding-Up Petition</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You have five practical responses once a winding-up petition has been filed. The right one depends on whether the debt is owed, whether you can pay, and whether the business is viable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Response</th><th>When it fits</th><th>Risk if mishandled</th></tr></thead>
+<tbody>
+<tr>
+<td>Pay the debt in full</td>
+<td>The company can pay the principal plus the petitioner's costs before the hearing.</td>
+<td>Cleanest resolution; petitioner usually withdraws or court dismisses.</td>
+</tr>
+<tr>
+<td>Dispute the debt</td>
+<td>The debt is genuinely contested on substantial grounds, not raised tactically.</td>
+<td>Tactical objections raised first time after the petition is filed rarely succeed.</td>
+</tr>
+<tr>
+<td>Negotiate a payment arrangement</td>
+<td>The company has the means to pay over time; the petitioner is open to it.</td>
+<td>Time pressure works against you. HMRC negotiates least flexibly post-petition.</td>
+</tr>
+<tr>
+<td>Apply for a validation order</td>
+<td>You need to keep wages and essential payments running while the petition is resolved.</td>
+<td>Without one, payments after the petition date can be voided under section 127 IA 1986.</td>
+</tr>
+<tr>
+<td>Convert to a Creditors' Voluntary Liquidation</td>
+<td>The company is insolvent and rescue is not realistic; you act before the hearing.</td>
+<td>Done early, this preserves your IP choice and produces a cleaner conduct outcome.</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Statutory Demand to Winding-Up Petition: the Escalation Path</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most winding-up petitions do not arrive without warning. The typical escalation runs through three stages, each one narrowing your options.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol>
+<li><strong>Unpaid debt:</strong> the creditor chases payment through letters, calls, or debt collection agents. You still have all options.</li>
+<li><strong>Statutory demand:</strong> a formal written demand for payment, giving your company 21 days to pay or reach an agreement. This is the formal precursor to a petition. Take advice this week.</li>
+<li><strong>Winding-up petition:</strong> if the statutory demand is not satisfied within 21 days, the creditor can file at court. Once filed, the Gazette publication and hearing date drive the timeline. Take advice today.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The statutory demand stage is the critical intervention point. If you have received a statutory demand but no petition has been filed yet, you have more options and more time. The 21-day window is when negotiation, dispute, or restructuring is most effective.</p>
+<p>After the petition is filed, the dynamics change. The Gazette publication triggers the bank freeze, other creditors may pile on, and the court hearing imposes a hard deadline you cannot move.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Winding-Up Petition Court Hearing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the petition reaches the hearing without being resolved, a judge decides the outcome. The hearing takes place at the Companies Court (part of the High Court) or at the relevant District Registry.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Possible outcome</th><th>What it means</th></tr></thead>
+<tbody>
+<tr><td>Winding-up order</td><td>The court orders compulsory liquidation. The Official Receiver is appointed. The company ceases as a going concern.</td></tr>
+<tr><td>Dismissal</td><td>The court dismisses the petition. Usually granted where the debt is genuinely disputed on substantial grounds or the petitioner has acted improperly.</td></tr>
+<tr><td>Adjournment</td><td>The court postpones the hearing, typically to allow a payment or completed negotiation. Adjournments are not automatic; the judge needs a credible reason.</td></tr>
+<tr><td>Stay of proceedings</td><td>The court pauses the petition where the company is pursuing a formal rescue route such as a CVA or administration.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>For the court to dismiss, adjourn, or stay the petition, you (or legal representation) need to appear and present evidence. Filing a defence at the last minute is rarely enough. The court expects you to have engaged with the petitioner and to have a credible proposal. Where directors do not attend or oppose the hearing, the winding-up order is almost always granted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Directors Should Avoid After a Winding-Up Petition Is Filed</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>What to avoid</th><th>Why it backfires</th></tr></thead>
+<tbody>
+<tr><td>Paying some creditors but not others</td><td>Preferential payments made when the company is insolvent can be clawed back under section 239 IA 1986 and may produce personal liability.</td></tr>
+<tr><td>Moving or hiding company assets</td><td>Transferring assets to connected parties is a criminal offence and surfaces in the Official Receiver's investigation.</td></tr>
+<tr><td>Continuing to trade on credit</td><td>Incurring new debt when you know the company cannot pay is wrongful trading territory under section 214 IA 1986.</td></tr>
+<tr><td>Ignoring the petition</td><td>The court process continues whether or not you engage. Silence almost guarantees a winding-up order.</td></tr>
+<tr><td>Taking advice from online forums</td><td>Insolvency law is technical and case-specific. Generic forum advice is often wrong and narrows your real options.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>The single most damaging thing you can do is delay. Every day between receiving the petition and taking professional advice is a day where the position deteriorates and your options narrow.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a Winding-Up Petition Means for Bank Accounts, Employees, and Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Bank Accounts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most UK banks monitor the London Gazette for winding-up petitions. When the company's name appears, the bank typically freezes the account within 24 hours. Wages, direct debits, supplier payments, and HMRC payments all stop. A validation order under section 127 IA 1986 can authorise specific essential payments, but you need to apply to the court before the freeze takes effect.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Employees</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the company enters compulsory liquidation, employees are automatically dismissed. They become preferential creditors for unpaid wages (up to £800 each), holiday pay, and notice pay under Schedule 6 of the Insolvency Act 1986. Statutory redundancy is paid through the Redundancy Payments Service, not from company funds. The statutory weekly cap is £751 from 6 April 2026.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In a director-led CVL, the same statutory protections apply but the timing and communication with staff are under your control rather than the Official Receiver's.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Directors</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A compulsory winding-up triggers a mandatory investigation by the Official Receiver into the conduct of every director in the period leading up to insolvency. Personal liability and disqualification are both possible outcomes. In a director-led CVL, the investigation is handled by the appointed insolvency practitioner and is typically less confrontational, though no less rigorous on the substance.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The difference in outcome between compulsory and voluntary liquidation for directors is significant. That difference is the core reason to act before the petition hearing. Our <a href="/liquidation/">liquidation</a> overview sets out a full comparison of the routes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When to Get Professional Help With a Winding-Up Petition</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>Statutory demand received:</strong> call a licensed insolvency practitioner this week. The 21-day window offers room, but the cleanest outcomes come from early engagement.</li>
+<li><strong>Winding-up petition filed:</strong> call a licensed IP today. Not tomorrow. The bank freeze, the hearing date, and the Gazette advertisement create a countdown that does not pause for paperwork.</li>
+<li><strong>Petition from HMRC:</strong> the same urgency applies, but HMRC petitions follow a specific pattern. We cover this separately in our HMRC winding-up petition guide.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>A licensed IP can assess whether your company can be saved, whether the petition can be challenged, and whether a CVL is the right route for you. We can also apply for a validation order if the bank account is at risk, and represent your company at the court hearing if needed. Free initial advice is standard across the insolvency profession; you do not pay upfront to understand your options.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Related Guides</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><a href="/liquidation/compulsory-liquidation/">Compulsory Liquidation</a>: what happens once the winding-up order is granted.</li>
+<li><a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">Dealing With an HMRC Winding-Up Petition</a>: HMRC-specific tactics.</li>
+<li><a href="/liquidation/creditors-voluntary-liquidation/">Creditors' Voluntary Liquidation</a>: the director-led alternative if the company is insolvent.</li>
+<li><a href="/company-administration/">Company Administration</a>: the rescue route with its own statutory moratorium.</li>
+<li><a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a>: trading out of insolvency through a creditor-approved repayment plan.</li>
+<li><a href="/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/">Statutory Demands</a>: the precursor stage where you still have 21 days to act.</li>
+<li><a href="/insolvency/insolvency-test/">30-Second Insolvency Test</a>: confirm where your company stands before responding.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions About Winding-Up Petitions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"7687-wup-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a winding-up petition be stopped after it has been filed?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A petition can be stopped by paying the debt in full plus the petitioner's costs, by successfully disputing the debt on substantial grounds, or by the petitioning creditor agreeing to withdraw following a negotiation.</p>
+<p>The company can also ask the court to dismiss or adjourn the petition at the hearing. Once a winding-up order has been granted, however, it is extremely difficult to reverse.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow quickly will the bank freeze the company account after a petition?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Most major UK banks freeze company accounts within 24 hours of the winding-up petition appearing in the London Gazette. Some banks act within minutes through automated Gazette monitoring.</p>
+<p>The freeze is not a legal requirement but a risk-management decision by the bank. Once the account is frozen, a validation order from the court is needed to authorise specific payments under section 127 IA 1986.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is a validation order and how is one obtained?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A validation order is a court order under section 127 of the Insolvency Act 1986 that authorises the company to make specific payments from its bank account despite the petition being in place. Without one, any payment made after the petition date can be voided.</p>
+<p>The application is made to the court with evidence of which payments are essential (wages, rent, key suppliers). A licensed insolvency practitioner or solicitor can prepare and file the application.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between a statutory demand and a winding-up petition?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A statutory demand is a formal written notice requiring payment of a debt within 21 days. It is not a court application.</p>
+<p>A winding-up petition is the next step: a formal application to the court to force the company into compulsory liquidation. The statutory demand is the warning. The petition is the action. Once a statutory demand is served, the company has 21 days to pay, negotiate, or dispute before a petition can be filed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I still trade after a winding-up petition has been filed?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Technically, the company is not yet in liquidation and trading is not automatically prohibited. Two risks make continued trading dangerous: the bank freeze triggered by the Gazette notice may make it physically impossible to trade, and any new debts incurred after the petition date increase your personal exposure to wrongful trading claims if the company is ultimately wound up.</p>
+<p>Take professional advice before continuing to trade post-petition.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to directors in a compulsory liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The Official Receiver conducts a mandatory investigation into the conduct of every director in the period leading up to insolvency. Wrongful trading, fraudulent trading, preference payments, and transactions at undervalue are all in scope.</p>
+<p>Findings can produce personal liability for company debts and disqualification for up to 15 years under section 6 of the Company Directors Disqualification Act 1986. The investigation is more formal and less collaborative than the equivalent process in a director-led CVL.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs a CVL better than compulsory liquidation for directors?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In most cases, yes. A CVL lets directors choose their own licensed IP, retain more influence over how assets are realised, and go through a less confrontational investigation process.</p>
+<p>The investigation still happens, but the appointed IP runs it rather than the Official Receiver. Directors who move to a CVL before a winding-up order is granted typically face less personal exposure than those who are forced into compulsory liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC withdraw a winding-up petition?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>HMRC can agree to withdraw a petition if the full debt (including costs and interest) is paid, or if a credible Time to Pay arrangement is agreed. HMRC is generally less willing to negotiate post-petition than at the statutory demand stage.</p>
+<p>The earlier you engage, the more likely a negotiated outcome. Our detailed guide on HMRC winding-up petitions covers the specific tactics.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Insolvency Act 1986 (sections 122 to 124, 127, 214, 239, and Schedule 6), the Insolvency (England and Wales) Rules 2016 (procedural rules for petitions), the Company Directors Disqualification Act 1986 (sections 6 and 7), and Employment Rights Act 1996 (Part XII RPS claims). Court fees and the £2,600 deposit reflect the current Companies Court schedule.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network. Last reviewed May 2026.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 122 (grounds for winding up), 123 (insolvency tests), 124 (who may petition), 127 (validation orders for payments after petition), 214 (wrongful trading), 239 (preferences), and Schedule 6 (preferential debts)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; procedural rules for winding-up petitions, advertising requirements, and the Companies Court</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; sections 6 and 7 governing disqualification orders following compulsory liquidation</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/court-fees-what-they-are"><strong>Companies Court fees</strong> &mdash; £343 court fee plus £2,600 petition deposit for a creditor's winding-up petition</a> - gov.uk</li>
+<li><a href="https://www.thegazette.co.uk"><strong>The London Gazette</strong> &mdash; official advertisement of insolvency notices including winding-up petitions and orders</a> - thegazette.co.uk</li>
+<li><a href="https://www.gov.uk/government/collections/insolvency-service-official-statistics"><strong>Insolvency Service: Company Insolvency Statistics</strong> &mdash; monthly data on compulsory and voluntary liquidations</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; verify a liquidator's licence and regulatory body before instructing</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

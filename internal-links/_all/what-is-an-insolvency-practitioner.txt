@@ -1,0 +1,301 @@
+<!-- TITLE: Insolvency Practitioner Explained: Role, Duties &amp; How They Help UK Directors -->
+<!-- POST ID: 8358 / TYPE: pages / AUTHOR: 34 / FM: 50320 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/insolvency/what-is-an-insolvency-practitioner/ -->
+
+<!-- POST ID: 8358 / TYPE: pages / AUTHOR: 34 / FM: 50320 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/insolvency/what-is-an-insolvency-practitioner/ -->
+
+<!-- wp:paragraph -->
+<p>It is eleven o'clock on a Tuesday night, and you are typing "how to find an insolvency practitioner" into Google because a statutory demand landed on the doormat at five.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Your accountant has suggested you need "an IP", but has not explained what one is, what they do, what they charge, or how you are supposed to find the right one. This page answers those four questions in the order directors usually ask them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>An insolvency practitioner (IP) is a licensed professional authorised under section 390 of the Insolvency Act 1986 to take formal appointments over insolvent companies and individuals. The statutory licence is the thing that distinguishes an IP from an accountant or a "company doctor". Without it, you cannot be a liquidator, an administrator, a CVA supervisor, or a trustee in bankruptcy in the UK.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We take instructions from directors every week who have been told by a third party (often an intermediary with no licence) that they "do not really need an IP for this". They always do.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The procedures that actually protect a director, whether a CVA, an administration, or a creditors' voluntary liquidation, all require a licensed IP to take the appointment. The non-licensed adviser can sit next to them; they cannot do the work.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Is an Insolvency Practitioner Under UK Law?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 390 of the Insolvency Act 1986 defines who can act as an IP. The person must be an individual (not a firm), authorised by a Recognised Professional Body (RPB), and have passed the Joint Insolvency Examination Board (JIEB) examinations. The RPBs are the five approved bodies: ICAEW, IPA, ACCA, ICAS, and Chartered Accountants Ireland (CAI).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The licensing requirement does three things. It sets a minimum technical bar via the JIEB. It subjects the IP to ongoing regulation by an RPB, including periodic inspection of case files. And it gives creditors a route to complain if conduct falls below standards, through the Insolvency Service's Complaints Gateway.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You can verify any IP's licence on the public Insolvency Service register. If the person you are dealing with is not on it, they are not an IP. That check takes thirty seconds and it is worth doing before you send any document, because an unlicensed appointment is void and creates risk for you and the estate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Does an Insolvency Practitioner Actually Do?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>An IP's role changes with the procedure. The headline distinction to keep in mind is that the IP's duties in a formal appointment are owed to creditors as a whole, not to the director who instructed them. That is a point many first-time clients find counter-intuitive and we make it explicit at the outset.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Liquidator (CVL or compulsory liquidation, Part IV IA 1986).</strong> Takes control of the company, realises its assets, investigates director conduct under section 212 misfeasance, sections 213 and 214 fraudulent and wrongful trading, and the avoidance provisions in sections 238, 239, and 245. Distributes proceeds to creditors and dissolves the company.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Administrator (Schedule B1 IA 1986).</strong> Takes over management to rescue the company as a going concern, achieve a better result for creditors than liquidation, or realise property for distribution. Benefits from a statutory moratorium against creditor enforcement.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Nominee and then supervisor (CVA, Part I IA 1986).</strong> Drafts the proposal to creditors, chairs the meeting at which 75% by value must approve, and then supervises delivery of the arrangement over typically three to five years.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Trustee in bankruptcy (Parts IX–XI IA 1986).</strong> Takes over the bankrupt's assets, investigates their financial history, and distributes proceeds to creditors.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Monitor (Part A1 moratorium, inserted by CIGA 2020).</strong> Oversees a standalone moratorium while the directors remain in day-to-day control.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Receiver.</strong> Fixed-charge receivership under the Law of Property Act 1925 sections 101 to 109 over specific secured property (common in property-lending contexts). Administrative receivership under pre-2003 floating charges is now rare.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Before a formal appointment, most directors meet an IP in an advisory capacity. In that pre-appointment meeting, we look at the same data set a liquidator would: management accounts, aged debtors and creditors, cash-flow forecast, HMRC position, bank facility terms. The goal is to identify which procedure fits the facts and which exposures need managing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Duties of an Insolvency Practitioner</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>An IP in office is bound by three overlapping regimes: the Insolvency Act 1986 itself, the Insolvency (England and Wales) Rules 2016, and the Statements of Insolvency Practice (SIPs) issued by the Joint Insolvency Committee. The SIPs are the practical rulebook we work to day-to-day.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Duty to creditors.</strong> The primary statutory duty. Once appointed, the IP acts for the creditor body, not the company or the director. Conflicts between the two are resolved in favour of creditors.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Duty to investigate.</strong> Every CVL and compulsory liquidation requires the IP to file a D-report under the Company Directors Disqualification Act 1986 section 7A on director conduct. That is a statutory duty and is not optional.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Duty of independence.</strong> SIP 1 requires us to disclose any prior relationship with the company and to decline the appointment where independence is compromised.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Duty of transparency on fees.</strong> SIP 9 governs fee disclosure, requires creditor approval of remuneration, and mandates narrative and numerical reporting on how fees were incurred.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The counter-intuitive one for directors is the duty to investigate. The same IP who walked you through the liquidation decision will, after appointment, write a report on your conduct to the Insolvency Service. That is not hostile; it is the statutory role. A good IP tells you in the first meeting what that report is likely to say and why.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Insolvency Practitioner Fees Work</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>IP fees usually take one of three forms, and which applies depends on the procedure and the creditor committee (if one is formed).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Fixed fee.</strong> Common for small-company creditors' voluntary liquidations where the asset position is straightforward. A typical range for a small CVL is £3,000 to £6,000 plus disbursements and VAT.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Time cost.</strong> Charged per hour at tiered rates by grade of staff (partner, manager, senior, assistant). Used in administration, larger CVLs, and any case where the work scope is uncertain at the outset. Approved by the creditor committee or by resolution of creditors under the 2016 Rules.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Percentage of realisations.</strong> A fixed percentage of asset recoveries. Sometimes used in trading administrations, more common in fixed-charge receiverships. The creditor committee approves the percentage.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>In a creditors' voluntary liquidation where the company has limited assets, the director's family will often fund the IP's fee out of personal resources. That is the norm, not an indignity; the alternative is a compulsory winding-up by the creditor, which is slower, more expensive in total cost, and more public.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>SIP 9 requires detailed fee disclosure at every stage. If an IP cannot or will not give you a written fee estimate in the pre-appointment meeting, that is a signal to talk to a different IP.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Find and Choose a Licensed Insolvency Practitioner</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There are roughly 1,500 licensed IPs in the UK, and another thousand or so unlicensed "insolvency advisers" and lead-generation firms that sell introductions. The practical distinction matters because only a licensed IP can take an appointment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Check the Insolvency Service register.</strong> The public search tool at <a href="https://www.gov.uk/find-an-insolvency-practitioner">gov.uk/find-an-insolvency-practitioner</a> lists every licensed IP by RPB. If the name is not there, they are not an IP.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Ask which RPB licenses them.</strong> A legitimate IP will answer in a sentence: "I'm licensed through the IPA" or "ICAEW". Hesitation is a flag.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Ask to see a fee estimate in writing before any appointment.</strong> SIP 9 requires it. An IP who cannot produce one has not run the file through their own pricing.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Ask about their relationship with your introducer.</strong> Some lead-generation firms take a substantial referral fee from the IP they introduce you to. That cost comes out of the estate, which is your creditors' money. SIP 1 requires disclosure.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>A director sitting with three competing quotes on the same insolvency file will usually see a narrow spread on fee once the scope is the same. Large differences are more often driven by scope (is the IP also running the investigation, the advertising of creditors, the realisation of book debts?) than by pure rate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When You Should Contact an Insolvency Practitioner</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Directors wait too long. That is the single most consistent pattern we see. The average director who rings us has been aware of the problem for four to six months before the call. By the time the conversation happens, the options that were available at month one have narrowed considerably.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The practical trigger points that should prompt an IP call, ideally a free preliminary one, are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>A statutory demand under section 123(1)(a) has been served and 21 days are running.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>HMRC have escalated to a field-force visit or a seven-day letter.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Two or more consecutive quarters of losses with no visible route back to profit.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A winding-up petition has been threatened or presented.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The bank has moved the relationship to the recoveries team, or the factor has cut the advance rate.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>You have recognised two or more of the warning signs covered in our guide to <a href="https://companydebt.com/insolvency/what-are-the-warning-signs-of-an-insolvent-company/">the warning signs of insolvency</a>.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Early engagement widens the menu. Later engagement narrows it. Our note on <a href="https://companydebt.com/insolvency/insolvency-test/">the statutory insolvency test</a> sets out how an IP applies section 123 to your actual figures during that first conversation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Your Next Step on Appointing an Insolvency Practitioner</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The verdict splits directors cleanly. If you have read this page because something has already landed on the doormat, a statutory demand, a winding-up petition, a called PG, a seven-day HMRC letter, the decision is not whether to speak to a licensed IP. It is whether you speak to one this week or next. Delay has already narrowed your options once; another fortnight will narrow them again.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are reading because the numbers are drifting but nothing formal has landed, the decision is different. A pre-insolvency advisory call is cheap, often free, and the IP's view on whether the company can be traded through under section 214 is worth far more than a second opinion from a non-specialist accountant. The file you build with an IP at this stage is the file that protects you later.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Call Company Debt free on 0800 074 6757 for a confidential review with one of our licensed insolvency practitioners. We will confirm the licence, walk through which procedure fits the facts, give you a written fee estimate against SIP 9, and tell you honestly whether a formal appointment is needed or whether the position is fixable informally. Nothing is charged until you instruct us.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Insolvency Practitioners</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"8358-ip-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is an insolvency practitioner in the UK?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A person authorised under section 390 of the Insolvency Act 1986 to take formal appointments over insolvent companies and individuals. The licence is issued by one of five Recognised Professional Bodies (ICAEW, IPA, ACCA, ICAS, CAI) after the individual has passed the JIEB examinations. Only a licensed IP can act as a liquidator, administrator, CVA supervisor, or trustee in bankruptcy.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much does an insolvency practitioner cost?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>For a small-company creditors' voluntary liquidation, typical fees are £3,000 to £6,000 plus disbursements and VAT. Larger cases, administrations, and CVAs are usually charged on a time-cost basis at tiered hourly rates, approved by the creditor committee or by resolution of creditors under the 2016 Rules. SIP 9 requires the IP to give a written fee estimate before appointment.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes an insolvency practitioner act for me or for the creditors?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In formal appointment, for creditors. The Insolvency Act 1986 and the SIPs are clear that the IP's primary duty is to the creditor body, not to the director who invited them in. In a pre-appointment advisory meeting the relationship is different, the IP is advising you directly, but that shifts on appointment. A good IP makes the distinction explicit in the first meeting.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I choose my own insolvency practitioner?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In a creditors' voluntary liquidation (CVL), a CVA, or a director-initiated administration, yes. In a compulsory winding-up following a petition, the Official Receiver is initially appointed and creditors may later replace them with a private-sector IP by resolution. In bankruptcy, the Official Receiver is initially appointed and can be replaced on creditors' application.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow do I check an insolvency practitioner's licence?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Use the public register at gov.uk/find-an-insolvency-practitioner. Enter the name or firm. The register lists every licensed IP in the UK by Recognised Professional Body. If the person is not on the register, they are not licensed to take appointments, whatever they call themselves.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens after I appoint an insolvency practitioner?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In a CVL, the IP convenes a creditors' decision procedure, takes appointment as liquidator, writes to creditors and HMRC, secures the company's assets and records, and investigates director conduct under CDDA 1986 section 7A. Trading ceases. In administration, trading can continue under the administrator's management while the statutory moratorium protects the company from creditor enforcement.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan an insolvency practitioner help me save my company?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, where the underlying business is viable. A CVA compromises historic unsecured debt over three to five years while you stay in control. Administration can restructure the business through a pre-pack sale. The Part A1 moratorium buys breathing space while a rescue plan is finalised. The earlier the IP is involved, the more of these routes remain open.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Insolvency Act 1986 (sections 212, 213, 214, 238, 239, 245, 390, Schedule B1, Parts I, IV and A1), the Insolvency (England and Wales) Rules 2016, the Company Directors Disqualification Act 1986, and the Law of Property Act 1925.</p>
+<p>SIP numbers refer to the Statements of Insolvency Practice issued by the Joint Insolvency Committee. Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/390"><strong>Insolvency Act 1986, section 390</strong> &mdash; the IP authorisation regime that defines who can act as a licensed insolvency practitioner</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, sections 212 to 214</strong> &mdash; misfeasance, fraudulent and wrongful trading liability that the IP investigates as part of the conduct review</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; the procedural framework governing IP appointments, decision procedures and reporting</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/section/7A"><strong>Company Directors Disqualification Act 1986, section 7A</strong> &mdash; the framework for disqualification undertakings the IP can recommend</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/Geo5/15-16/20/contents"><strong>Law of Property Act 1925, sections 101 to 109</strong> &mdash; the statutory framework for LPA receivers, a related fixed-charge appointment role</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; the official public register used to verify a practitioner's licence</a> - gov.uk</li>
+<li><a href="https://www.icaew.com/regulation/insolvency/insolvency-resources/sips"><strong>Joint Insolvency Committee &mdash; Statements of Insolvency Practice (SIPs)</strong>: the cross-RPB practice statements that bind every licensed IP</a> - icaew.com</li>
+</ul>
+</aside>
+<!-- /wp:html -->

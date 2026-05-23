@@ -1,0 +1,1928 @@
+{
+ "articles-insights-hub": {
+  "id": 77694,
+  "type": "post",
+  "path": "/business-insolvency/articles-insights-hub/",
+  "title": "Articles &amp; Insights Hub"
+ },
+ "managing-debt-related-stress": {
+  "id": 67898,
+  "type": "post",
+  "path": "/articles/managing-debt-related-stress/",
+  "title": "Where to Get Help for Debt-Related Stress"
+ },
+ "debt-charities-for-consumers": {
+  "id": 67892,
+  "type": "post",
+  "path": "/articles/debt-charities-for-consumers/",
+  "title": "The Best Debt Charities in the UK"
+ },
+ "35-of-charities-fear-insolvency-due-to-cost-of-living-crisis": {
+  "id": 57661,
+  "type": "post",
+  "path": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+  "title": "35% of Charities Fear Insolvency Due to Cost of Living Crisis"
+ },
+ "insolvency-rescue-fish-chip-sector": {
+  "id": 55751,
+  "type": "post",
+  "path": "/sectors/insolvency-rescue-fish-chip-sector/",
+  "title": "Insolvency &#038; Rescue Solutions for the Fish &#038; Chip Sector"
+ },
+ "insolvency-rescue-solutions-for-garden-centers": {
+  "id": 52222,
+  "type": "post",
+  "path": "/sectors/insolvency-rescue-solutions-for-garden-centers/",
+  "title": "Insolvency &#038; Rescue Solutions for Garden Centers"
+ },
+ "creditors": {
+  "id": 51087,
+  "type": "post",
+  "path": "/services-to/creditors/",
+  "title": "Insolvency Support for Creditors"
+ },
+ "asset-based-and-other-lenders": {
+  "id": 50894,
+  "type": "post",
+  "path": "/services-to/asset-based-and-other-lenders/",
+  "title": "Insolvency Support for Lenders"
+ },
+ "banks": {
+  "id": 50889,
+  "type": "post",
+  "path": "/services-to/banks/",
+  "title": "Insolvency Support for Banks"
+ },
+ "solicitors": {
+  "id": 50825,
+  "type": "post",
+  "path": "/services-to/solicitors/",
+  "title": "Insolvency Support for Solicitors"
+ },
+ "accountants": {
+  "id": 50710,
+  "type": "post",
+  "path": "/services-to/accountants/",
+  "title": "Insolvency Support for Accountants"
+ },
+ "property": {
+  "id": 49810,
+  "type": "post",
+  "path": "/sectors/property/",
+  "title": "Insolvency &#038; Rescue Solutions for the Property Sector"
+ },
+ "manufacturing": {
+  "id": 49831,
+  "type": "post",
+  "path": "/sectors/manufacturing/",
+  "title": "Insolvency &#038; Rescue Solutions for Manufacturing"
+ },
+ "professional-services": {
+  "id": 49820,
+  "type": "post",
+  "path": "/sectors/professional-services/",
+  "title": "Insolvency &#038; Rescue Solutions for Professional Services Businesses"
+ },
+ "leisure": {
+  "id": 49839,
+  "type": "post",
+  "path": "/sectors/leisure/",
+  "title": "Insolvency &#038; Rescue Solutions for Leisure Businesses"
+ },
+ "dry-cleaning-laundry": {
+  "id": 49849,
+  "type": "post",
+  "path": "/sectors/dry-cleaning-laundry/",
+  "title": "Insolvency &#038; Rescue Solutions for Laundry and Dry Cleaning Providers"
+ },
+ "hotels": {
+  "id": 49856,
+  "type": "post",
+  "path": "/sectors/hotels/",
+  "title": "Insolvency &#038; Rescue Solutions for Hotels"
+ },
+ "haulage": {
+  "id": 49866,
+  "type": "post",
+  "path": "/sectors/haulage/",
+  "title": "Insolvency &#038; Rescue Solutions for Haulage Companies"
+ },
+ "gyms": {
+  "id": 49873,
+  "type": "post",
+  "path": "/sectors/gyms/",
+  "title": "Insolvency &#038; Rescue Solutions for Gyms"
+ },
+ "events": {
+  "id": 49880,
+  "type": "post",
+  "path": "/sectors/events/",
+  "title": "Insolvency &#038; Rescue Solutions for Event Management Businesses"
+ },
+ "entertainment": {
+  "id": 49890,
+  "type": "post",
+  "path": "/sectors/entertainment/",
+  "title": "Insolvency &#038; Rescue Solutions for Entertainment Businesses"
+ },
+ "energy": {
+  "id": 49898,
+  "type": "post",
+  "path": "/sectors/energy/",
+  "title": "Insolvency &#038; Rescue Solutions for Energy Providers"
+ },
+ "schools": {
+  "id": 49906,
+  "type": "post",
+  "path": "/sectors/schools/",
+  "title": "Insolvency &#038; Rescue Solutions for Schools"
+ },
+ "travel": {
+  "id": 49699,
+  "type": "post",
+  "path": "/sectors/travel/",
+  "title": "Insolvency &#038; Rescue Solutions for the Travel Sector"
+ },
+ "taxi-companies": {
+  "id": 49706,
+  "type": "post",
+  "path": "/sectors/taxi-companies/",
+  "title": "Insolvency &#038; Rescue Solutions for Taxi Companies"
+ },
+ "retail": {
+  "id": 49717,
+  "type": "post",
+  "path": "/sectors/retail/",
+  "title": "Insolvency &#038; Rescue Solutions for Retail Businesses"
+ },
+ "restaurants": {
+  "id": 49727,
+  "type": "post",
+  "path": "/sectors/restaurants/",
+  "title": "Insolvency &#038; Rescue Solutions for Restaurants"
+ },
+ "recruitment": {
+  "id": 49739,
+  "type": "post",
+  "path": "/sectors/recruitment/",
+  "title": "Insolvency &#038; Rescue Solutions for Recruitment Consultancies"
+ },
+ "construction": {
+  "id": 49778,
+  "type": "post",
+  "path": "/sectors/construction/",
+  "title": "Insolvency &#038; Rescue Solutions for the Construction Sector"
+ },
+ "cleaning-contractors": {
+  "id": 49767,
+  "type": "post",
+  "path": "/sectors/cleaning-contractors/",
+  "title": "Insolvency &#038; Rescue Solutions for the Cleaning Sector"
+ },
+ "childcare": {
+  "id": 49694,
+  "type": "post",
+  "path": "/sectors/childcare/",
+  "title": "Insolvency &#038; Rescue Solutions for the Childcare Sector"
+ },
+ "charity": {
+  "id": 49550,
+  "type": "post",
+  "path": "/sectors/charity/",
+  "title": "Insolvency &#038; Rescue Solutions for the Charity and Non-Profit Sector"
+ },
+ "automotive": {
+  "id": 48758,
+  "type": "post",
+  "path": "/sectors/automotive/",
+  "title": "Insolvency &#038; Rescue Solutions for the Automotive Sector"
+ },
+ "124-pints-to-save-the-pub": {
+  "id": 45670,
+  "type": "post",
+  "path": "/articles/124-pints-to-save-the-pub/",
+  "title": "124 Pints per Adult Required to Save the British Pub"
+ },
+ "carehomes": {
+  "id": 49488,
+  "type": "post",
+  "path": "/sectors/carehomes/",
+  "title": "Insolvency &#038; Rescue Solutions for the Care Home Sector"
+ },
+ "can-heathrow-survive-covid-19": {
+  "id": 44691,
+  "type": "post",
+  "path": "/articles/can-heathrow-survive-covid-19/",
+  "title": "Could Heathrow be at Risk of Collapse?"
+ },
+ "chinese-takeaway": {
+  "id": 47451,
+  "type": "post",
+  "path": "/case-studies/chinese-takeaway/",
+  "title": "Chinese Takeaway Case Study (Creditors\u2019 Voluntary Liquidation)"
+ },
+ "the-orla-kiely-fashion-brand-shuts-up-shop": {
+  "id": 23214,
+  "type": "post",
+  "path": "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+  "title": "The Orla Kiely Fashion Brand Shuts Up Shop"
+ },
+ "pub-closures-in-the-uk": {
+  "id": 24589,
+  "type": "post",
+  "path": "/articles/pub-closures-in-the-uk/",
+  "title": "Pub Closures: What&#8217;s Behind the Decline of British Pubs?"
+ },
+ "how-will-carillions-insolvency-effect-its-supply-chain": {
+  "id": 20594,
+  "type": "post",
+  "path": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+  "title": "What are the Likely Effects of Carillion&#8217;s Insolvency on its Supply Chain?"
+ },
+ "paradise-papers": {
+  "id": 20346,
+  "type": "post",
+  "path": "/articles/paradise-papers/",
+  "title": "What are the Paradise Papers and who are Named in the Scandal?"
+ },
+ "tescos-rated-worst-payer-uk-small-businesses": {
+  "id": 13520,
+  "type": "post",
+  "path": "/articles/tescos-rated-worst-payer-uk-small-businesses/",
+  "title": "Tesco&#8217;s Rated the Worst Payer for the UK&#8217;s small Businesses"
+ },
+ "cookie-policy": {
+  "id": 79808,
+  "type": "page",
+  "path": "/cookie-policy/",
+  "title": "Cookie Policy"
+ },
+ "can-a-supplier-force-my-company-into-liquidation": {
+  "id": 79615,
+  "type": "page",
+  "path": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+  "title": "Can a Supplier Force My Company Into Liquidation?"
+ },
+ "what-happens-if-a-creditor-takes-me-to-court": {
+  "id": 79606,
+  "type": "page",
+  "path": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+  "title": "What Happens If a Creditor Takes Me to Court?"
+ },
+ "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement": {
+  "id": 79596,
+  "type": "page",
+  "path": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+  "title": "What Happens If HMRC Rejects Your Time to Pay Arrangement?"
+ },
+ "what-happens-if-you-ignore-hmrc-letters": {
+  "id": 79588,
+  "type": "page",
+  "path": "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+  "title": "What Happens If You Ignore HMRC Letters?"
+ },
+ "can-hmrc-shut-down-my-business": {
+  "id": 79580,
+  "type": "page",
+  "path": "/hmrc/can-hmrc-shut-down-my-business/",
+  "title": "Can HMRC Shut Down My Business?"
+ },
+ "what-happens-if-hmrc-sends-bailiffs-to-a-business": {
+  "id": 79571,
+  "type": "page",
+  "path": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+  "title": "What Happens If HMRC Sends Bailiffs to a Business?"
+ },
+ "what-happens-if-hmrc-freezes-your-business-bank-account": {
+  "id": 79563,
+  "type": "page",
+  "path": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+  "title": "What Happens If HMRC Freezes Your Business Bank Account?"
+ },
+ "can-directors-pay-themselves-before-liquidation": {
+  "id": 79553,
+  "type": "page",
+  "path": "/liquidation/can-directors-pay-themselves-before-liquidation/",
+  "title": "Can Directors Pay Themselves Before Liquidation?"
+ },
+ "what-happens-if-a-director-transfers-assets-before-insolvency": {
+  "id": 79545,
+  "type": "page",
+  "path": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+  "title": "What Happens If a Director Transfers Assets Before Insolvency?"
+ },
+ "can-a-director-be-sued-personally-by-creditors": {
+  "id": 79537,
+  "type": "page",
+  "path": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+  "title": "Can a Director Be Sued Personally by Creditors?"
+ },
+ "what-happens-if-a-director-hides-company-assets": {
+  "id": 79529,
+  "type": "page",
+  "path": "/liquidation/what-happens-if-a-director-hides-company-assets/",
+  "title": "What Happens If a Director Hides Company Assets?"
+ },
+ "can-directors-go-to-prison-for-company-debt": {
+  "id": 79515,
+  "type": "page",
+  "path": "/liquidation/can-directors-go-to-prison-for-company-debt/",
+  "title": "Can Directors Go to Prison for Company Debt?"
+ },
+ "what-happens-if-i-stop-paying-company-debts": {
+  "id": 79507,
+  "type": "page",
+  "path": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+  "title": "What Happens If I Stop Paying Company Debts?"
+ },
+ "pay-hmrc-or-suppliers-first": {
+  "id": 79498,
+  "type": "page",
+  "path": "/hmrc/pay-hmrc-or-suppliers-first/",
+  "title": "Should I Pay HMRC or Suppliers First?"
+ },
+ "seek-insolvency-advice-before-missing-payments": {
+  "id": 79489,
+  "type": "page",
+  "path": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+  "title": "Should I Seek Insolvency Advice Before Missing Payments?"
+ },
+ "when-should-a-director-stop-trading": {
+  "id": 79480,
+  "type": "page",
+  "path": "/liquidation/when-should-a-director-stop-trading/",
+  "title": "When Should a Director Stop Trading?"
+ },
+ "should-i-close-my-company-or-try-to-save-it": {
+  "id": 79472,
+  "type": "page",
+  "path": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+  "title": "Should I Close My Company or Try to Save It?"
+ },
+ "insolvency-myths-debunked": {
+  "id": 79463,
+  "type": "page",
+  "path": "/liquidation/insolvency-myths-debunked/",
+  "title": "Common Insolvency Myths Debunked"
+ },
+ "insolvency-vs-bankruptcy": {
+  "id": 79455,
+  "type": "page",
+  "path": "/liquidation/insolvency-vs-bankruptcy/",
+  "title": "UK Insolvency vs Bankruptcy: What\u2019s the Difference?"
+ },
+ "list-of-liquidation-documents": {
+  "id": 79445,
+  "type": "page",
+  "path": "/liquidation/list-of-liquidation-documents/",
+  "title": "List of Documents You\u2019ll Need for Liquidation"
+ },
+ "directors-responsibilities-after-a-company-is-struck-off": {
+  "id": 79436,
+  "type": "page",
+  "path": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+  "title": "Director\u2019s Responsibilities After a Company Is Struck Off"
+ },
+ "insolvency-checklist": {
+  "id": 79423,
+  "type": "page",
+  "path": "/liquidation/insolvency-checklist/",
+  "title": "Checklist: What to Do When Insolvency Is Likely"
+ },
+ "uk-insolvency-flowchart": {
+  "id": 79412,
+  "type": "page",
+  "path": "/liquidation/uk-insolvency-flowchart/",
+  "title": "UK Insolvency Flowchart for Company Directors"
+ },
+ "uk-insolvency-glossary": {
+  "id": 79404,
+  "type": "page",
+  "path": "/liquidation/uk-insolvency-glossary/",
+  "title": "Glossary of UK Insolvency Terms"
+ },
+ "director-conduct-review": {
+  "id": 79396,
+  "type": "page",
+  "path": "/liquidation/director-conduct-review/",
+  "title": "Director Conduct Review: Common Mistakes to Avoid"
+ },
+ "use-a-cva-to-close-a-company": {
+  "id": 79387,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+  "title": "Can I Use a CVA to Close a Company?"
+ },
+ "business-bank-account-in-liquidation": {
+  "id": 79379,
+  "type": "page",
+  "path": "/liquidation/business-bank-account-in-liquidation/",
+  "title": "What Happens to a Business Bank Account in Liquidation?"
+ },
+ "director-guarantees-in-a-cva": {
+  "id": 79369,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+  "title": "What Happens to Director Guarantees in a CVA?"
+ },
+ "ccj-when-going-insolvent": {
+  "id": 79360,
+  "type": "page",
+  "path": "/liquidation/ccj-when-going-insolvent/",
+  "title": "What If I Have a CCJ When Going Insolvent?"
+ },
+ "can-i-choose-my-liquidator": {
+  "id": 79351,
+  "type": "page",
+  "path": "/liquidation/can-i-choose-my-liquidator/",
+  "title": "Can I Choose My Liquidator or Does HMRC Appoint One?"
+ },
+ "hmrc-as-a-creditor-in-liquidation": {
+  "id": 79342,
+  "type": "page",
+  "path": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+  "title": "HMRC as a Creditor in Liquidation: What to Expect"
+ },
+ "what-happens-if-a-cva-fails-mid-term": {
+  "id": 79332,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+  "title": "What Happens if a CVA Fails Mid-Term?"
+ },
+ "winding-up-petition-vs-compulsory-liquidation": {
+  "id": 79322,
+  "type": "page",
+  "path": "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+  "title": "Winding-Up Petition vs Compulsory Liquidation: Key Differences"
+ },
+ "light-touch-administration": {
+  "id": 79313,
+  "type": "page",
+  "path": "/company-administration/light-touch-administration/",
+  "title": "Light-Touch Administration: What it Means and How it Works"
+ },
+ "cva-vs-strike-off-vs-liquidation": {
+  "id": 79304,
+  "type": "page",
+  "path": "/liquidation/cva-vs-strike-off-vs-liquidation/",
+  "title": "CVA vs Strike-Off vs Liquidation: A UK Director\u2019s Decision Guide"
+ },
+ "company-voluntary-arrangement-vs-administration-which-to-choose": {
+  "id": 79295,
+  "type": "page",
+  "path": "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/",
+  "title": "Company Voluntary Arrangement vs Administration: Which to Choose?"
+ },
+ "liquidating-a-group-company-or-holding-company-in-the-uk": {
+  "id": 79285,
+  "type": "page",
+  "path": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+  "title": "Liquidating a Group Company or Holding Company in the UK"
+ },
+ "can-you-liquidate-to-avoid-paying-suppliers": {
+  "id": 79276,
+  "type": "page",
+  "path": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+  "title": "Can You Liquidate to Avoid Paying Suppliers?"
+ },
+ "can-i-liquidate-a-dormant-company": {
+  "id": 79266,
+  "type": "page",
+  "path": "/liquidation/can-i-liquidate-a-dormant-company/",
+  "title": "Can I Liquidate a Dormant Company?"
+ },
+ "liquidating-a-company-with-no-assets-or-bank-account-uk": {
+  "id": 79256,
+  "type": "page",
+  "path": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+  "title": "Liquidating a Company with No Assets or Bank Account (UK)"
+ },
+ "can-i-liquidate-my-company-with-a-bounce-back-loan": {
+  "id": 79246,
+  "type": "page",
+  "path": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+  "title": "Can I Liquidate My Company with a Bounce Back Loan?"
+ },
+ "can-i-start-a-new-company-after-liquidating-my-old-one": {
+  "id": 79236,
+  "type": "page",
+  "path": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+  "title": "Can I Start a New Company After Liquidating My Old One?"
+ },
+ "whats-the-risk-of-being-disqualified-as-a-director": {
+  "id": 78835,
+  "type": "page",
+  "path": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+  "title": "What\u2019s the Risk of Being Disqualified as a Director?"
+ },
+ "voluntary-liquidation": {
+  "id": 78851,
+  "type": "page",
+  "path": "/liquidation/voluntary-liquidation/",
+  "title": "Voluntary Liquidation: The One Decision That Changes The Outcome For Everyone"
+ },
+ "paying-staff-but-not-hmrc-before-liquidation": {
+  "id": 78825,
+  "type": "page",
+  "path": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+  "title": "What If I Pay Staff but Not HMRC Before Liquidation?"
+ },
+ "redundancy-payments-for-directors-in-an-mvl": {
+  "id": 78812,
+  "type": "page",
+  "path": "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+  "title": "Redundancy Payments for Directors in an MVL"
+ },
+ "what-happens-if-a-director-resigns-before-liquidation": {
+  "id": 78797,
+  "type": "page",
+  "path": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+  "title": "What Happens if a Director Resigns Before Liquidation?"
+ },
+ "can-i-be-sued-after-my-company-is-dissolved": {
+  "id": 78781,
+  "type": "page",
+  "path": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+  "title": "Can I Be Sued After My Company Is Dissolved?"
+ },
+ "liquidating-a-charity-or-non-profit": {
+  "id": 78771,
+  "type": "page",
+  "path": "/liquidation/liquidating-a-charity-or-non-profit/",
+  "title": "Liquidating a Charity or Non-Profit: What Trustees Need to Know"
+ },
+ "liquidating-a-limited-liability-partnership": {
+  "id": 78756,
+  "type": "page",
+  "path": "/liquidation/liquidating-a-limited-liability-partnership/",
+  "title": "Liquidating a Limited Liability Partnership (LLP): A Clear Guide to UK Insolvency Procedures"
+ },
+ "company-restoration-after-liquidation": {
+  "id": 78707,
+  "type": "page",
+  "path": "/liquidation/company-restoration-after-liquidation/",
+  "title": "Company Restoration After Liquidation: When and How Dissolved Companies Can Be Restored"
+ },
+ "liquidation-deadlines-and-time-limits": {
+  "id": 78690,
+  "type": "page",
+  "path": "/liquidation/liquidation-deadlines-and-time-limits/",
+  "title": "Liquidation Deadlines and Time Limits: Key Dates Every Director and Creditor Should Know"
+ },
+ "liquidators-powers-and-duties": {
+  "id": 78673,
+  "type": "page",
+  "path": "/liquidation/liquidators-powers-and-duties/",
+  "title": "Liquidator\u2019s Powers and Duties: A Complete UK Guide"
+ },
+ "how-to-challenge-a-liquidators-decisions-or-fees": {
+  "id": 78654,
+  "type": "page",
+  "path": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+  "title": "How to Challenge a Liquidator&#8217;s Decisions or Fees"
+ },
+ "creditor-meetings-in-liquidation": {
+  "id": 78635,
+  "type": "page",
+  "path": "/liquidation/creditor-meetings-in-liquidation/",
+  "title": "Creditor Meetings in Liquidation: Rights, Procedures and What to Expect"
+ },
+ "how-to-prove-your-debt-in-company-liquidation": {
+  "id": 78613,
+  "type": "page",
+  "path": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+  "title": "How to Prove Your Debt in Company Liquidation: A Creditor\u2019s Guide"
+ },
+ "company-vehicles-and-equipment-in-liquidation": {
+  "id": 78596,
+  "type": "page",
+  "path": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+  "title": "Company Vehicles and Equipment in Liquidation: What Happens to Physical Assets"
+ },
+ "intellectual-property-and-trading-assets-in-liquidation": {
+  "id": 78578,
+  "type": "page",
+  "path": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+  "title": "Intellectual Property and Trading Assets in Liquidation: Valuation and Disposal"
+ },
+ "company-property-and-real-estate-in-liquidation": {
+  "id": 78560,
+  "type": "page",
+  "path": "/liquidation/company-property-and-real-estate-in-liquidation/",
+  "title": "Company Property and Real Estate in Liquidation: What Happens and How It\u2019s Sold"
+ },
+ "leases-and-contracts-in-liquidation": {
+  "id": 78191,
+  "type": "page",
+  "path": "/liquidation/leases-and-contracts-in-liquidation/",
+  "title": "Leases and Contracts in Liquidation: What Happens to Agreements When a Company Winds Up"
+ },
+ "company-pensions-and-liquidation": {
+  "id": 78163,
+  "type": "page",
+  "path": "/liquidation/company-pensions-and-liquidation/",
+  "title": "Company Pensions and Liquidation: What Happens to Employee Retirement Funds in the UK"
+ },
+ "directors-conduct-report-2": {
+  "id": 78129,
+  "type": "page",
+  "path": "/liquidation/directors-conduct-report-2/",
+  "title": "The Director\u2019s Conduct Report in Liquidation: What It Is &amp; Why It Matters"
+ },
+ "how-to-choose-the-right-insolvency-procedure": {
+  "id": 78102,
+  "type": "page",
+  "path": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+  "title": "How to Choose the Right Insolvency Procedure: A UK Director\u2019s Decision Guide"
+ },
+ "voluntary-vs-compulsory-liquidation": {
+  "id": 77916,
+  "type": "page",
+  "path": "/liquidation/voluntary-vs-compulsory-liquidation/",
+  "title": "Voluntary vs Compulsory Liquidation: What\u2019s the Difference and Why It Matters"
+ },
+ "liquidation-vs-dissolution-strike-off": {
+  "id": 77883,
+  "type": "page",
+  "path": "/liquidation/liquidation-vs-dissolution-strike-off/",
+  "title": "Liquidation vs Dissolution (Strike Off): Choosing the Right Route to Close Your UK Company"
+ },
+ "how-to-prepare-for-company-liquidation": {
+  "id": 77814,
+  "type": "page",
+  "path": "/liquidation/how-to-prepare-for-company-liquidation/",
+  "title": "How to Prepare for Company Liquidation: A Director\u2019s Step-by-Step Checklist"
+ },
+ "cant-afford-to-liquidate": {
+  "id": 77960,
+  "type": "page",
+  "path": "/liquidation/cant-afford-to-liquidate/",
+  "title": "Can\u2019t Afford to Liquidate: Options When Your Company Has No Funds for Insolvency Fees"
+ },
+ "which-creditors-get-paid-first": {
+  "id": 77739,
+  "type": "page",
+  "path": "/liquidation/which-creditors-get-paid-first/",
+  "title": "Who Gets Paid First in Liquidation? A Complete Guide to Creditor Priority in the UK"
+ },
+ "insolvency-news-commentary": {
+  "id": 77693,
+  "type": "page",
+  "path": "/insolvency-news-commentary/",
+  "title": "Insolvency News &amp; Commentary"
+ },
+ "debt-charities-uk": {
+  "id": 77684,
+  "type": "page",
+  "path": "/debt-charities-uk/",
+  "title": "Debt Charities in the UK"
+ },
+ "mental-health-debt-stress-support": {
+  "id": 77681,
+  "type": "page",
+  "path": "/mental-health-debt-stress-support/",
+  "title": "Mental Health &amp; Debt Stress Support"
+ },
+ "sector-specific-insolvency": {
+  "id": 77401,
+  "type": "page",
+  "path": "/sector-specific-insolvency/",
+  "title": "Sector-Specific Insolvency"
+ },
+ "uk-insolvency-statistics": {
+  "id": 77399,
+  "type": "page",
+  "path": "/uk-insolvency-statistics/",
+  "title": "UK Company Insolvency Statistics: April 2026 Update"
+ },
+ "director-protection-hub": {
+  "id": 77396,
+  "type": "page",
+  "path": "/director-protection-hub/",
+  "title": "Director Protection Hub"
+ },
+ "company-rescue-recovery-hub": {
+  "id": 77372,
+  "type": "page",
+  "path": "/company-rescue-recovery-hub/",
+  "title": "Company Rescue &amp; Recovery Hub"
+ },
+ "guides-resources-hub": {
+  "id": 77339,
+  "type": "page",
+  "path": "/guides-resources-hub/",
+  "title": "Guides &amp; Resources Hub"
+ },
+ "hmrc-debt-enforcement-hub": {
+  "id": 77205,
+  "type": "page",
+  "path": "/hmrc/hmrc-debt-enforcement-hub/",
+  "title": "HMRC Debt &amp; Enforcement Hub"
+ },
+ "company-strike-off-and-dissolution": {
+  "id": 77278,
+  "type": "page",
+  "path": "/liquidation/company-strike-off-and-dissolution/",
+  "title": "Company Strike Off and Dissolution Explained: UK Process, Requirements &amp; Alternatives"
+ },
+ "sector-insolvency-hub": {
+  "id": 77248,
+  "type": "page",
+  "path": "/sector-insolvency-hub/",
+  "title": "Sector Insolvency Hub"
+ },
+ "charity-non-profit-insolvency": {
+  "id": 77218,
+  "type": "page",
+  "path": "/charity-non-profit-insolvency/",
+  "title": "Charity &amp; Non-Profit Insolvency in the UK: Duties, Risks &amp; Recovery Options"
+ },
+ "hospitality-restaurant-insolvency": {
+  "id": 77216,
+  "type": "page",
+  "path": "/hospitality-restaurant-insolvency/",
+  "title": "Hospitality &amp; Restaurant Insolvency in the UK: Causes, Risks &amp; Rescue Options"
+ },
+ "manufacturing-insolvency": {
+  "id": 77207,
+  "type": "page",
+  "path": "/manufacturing-insolvency/",
+  "title": "Manufacturing Insolvency in the UK: Causes, Risks &amp; Solutions for Directors"
+ },
+ "care-home-insolvency": {
+  "id": 77186,
+  "type": "page",
+  "path": "/care-home-insolvency/",
+  "title": "Care Home Insolvency in the UK: Causes, Risks &amp; Solutions for Owners and Directors"
+ },
+ "energy-provider-insolvency": {
+  "id": 77181,
+  "type": "page",
+  "path": "/energy-provider-insolvency/",
+  "title": "Energy Provider Insolvency in the UK: Causes, Ofgem\u2019s Role &amp; Options for Directors"
+ },
+ "professional-services-insolvency": {
+  "id": 77175,
+  "type": "page",
+  "path": "/professional-services-insolvency/",
+  "title": "Professional Services Insolvency in the UK: Duties, Risks &amp; Solutions for Firms"
+ },
+ "hmrc-enforcement-action": {
+  "id": 77162,
+  "type": "page",
+  "path": "/hmrc/hmrc-enforcement-action/",
+  "title": "HMRC Enforcement Action"
+ },
+ "transport-haulage-insolvency": {
+  "id": 77161,
+  "type": "page",
+  "path": "/transport-haulage-insolvency/",
+  "title": "Transport &amp; Haulage Insolvency in the UK: Causes, Risks &amp; Solutions for Operators"
+ },
+ "construction-insolvency": {
+  "id": 77157,
+  "type": "page",
+  "path": "/construction-insolvency/",
+  "title": "Construction Insolvency in the UK: Causes, Warning Signs &amp; Rescue Options"
+ },
+ "debt-creditor-pressure-hub": {
+  "id": 77146,
+  "type": "page",
+  "path": "/debt-creditor-pressure-hub/",
+  "title": "Debt &amp; Creditor Pressure Hub"
+ },
+ "bailiffs-high-court-enforcement-officers": {
+  "id": 77097,
+  "type": "page",
+  "path": "/liquidation/bailiffs-high-court-enforcement-officers/",
+  "title": "Bailiffs &amp; High Court Enforcement Officers: A UK Business Guide to Rights, Risks &amp; Next Steps"
+ },
+ "hmrc-penalties-investigations": {
+  "id": 76920,
+  "type": "page",
+  "path": "/hmrc/hmrc-penalties-investigations/",
+  "title": "HMRC Penalties &amp; Investigations"
+ },
+ "am-i-solvent": {
+  "id": 76904,
+  "type": "page",
+  "path": "/liquidation/am-i-solvent/",
+  "title": "Am I Solvent? Solvency Tests Explained for UK Businesses"
+ },
+ "prize-draw-terms-conditions": {
+  "id": 76843,
+  "type": "page",
+  "path": "/prize-draw-terms-conditions/",
+  "title": "Prize Draw Terms &#038; Conditions"
+ },
+ "insolvency-advice-for-directors": {
+  "id": 76323,
+  "type": "page",
+  "path": "/advice/insolvency-advice-for-directors/",
+  "title": "Insolvency Advice for Directors: Key Considerations"
+ },
+ "overdrawn-directors-loan-accounts": {
+  "id": 75111,
+  "type": "page",
+  "path": "/advice/overdrawn-directors-loan-accounts/",
+  "title": "Overdrawn Directors&#8217; Loan Accounts"
+ },
+ "secured-vs-unsecured-creditors": {
+  "id": 74891,
+  "type": "page",
+  "path": "/insolvency/secured-vs-unsecured-creditors/",
+  "title": "Secured vs Unsecured Creditors"
+ },
+ "notice-of-intention-to-appoint-administrators": {
+  "id": 74439,
+  "type": "page",
+  "path": "/company-administration/notice-of-intention-to-appoint-administrators/",
+  "title": "What is a Notice of Intention (NOI) to Appoint Administrators?"
+ },
+ "when-a-cva-fails": {
+  "id": 74390,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+  "title": "What Happens if a Company Voluntary Arrangement (CVA) Fails?"
+ },
+ "when-employers-cant-afford-redundancy-payments": {
+  "id": 74382,
+  "type": "page",
+  "path": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+  "title": "What if an Employer Can&#8217;t Afford Redundancy Payments?"
+ },
+ "cant-pay-a-company-mortgage": {
+  "id": 74372,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+  "title": "Can\u2019t Pay a Limited Company Mortgage? Risks, Director Liability &amp; Solutions Explained"
+ },
+ "challenge-a-statutory-demand": {
+  "id": 74264,
+  "type": "page",
+  "path": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+  "title": "Setting Aside a Statutory Demand Against a Company"
+ },
+ "alternatives-to-company-liquidation": {
+  "id": 73778,
+  "type": "page",
+  "path": "/liquidation/alternatives-to-company-liquidation/",
+  "title": "Alternatives to Company Liquidation: Rescue and Recovery Options for UK Businesses"
+ },
+ "directors-duties-to-creditors": {
+  "id": 71514,
+  "type": "page",
+  "path": "/advice/directors-duties-to-creditors/",
+  "title": "What are a Directors\u2019 Duties to Creditors in the UK?"
+ },
+ "preferential-payments-during-insolvency": {
+  "id": 70501,
+  "type": "page",
+  "path": "/insolvency/preferential-payments-during-insolvency/",
+  "title": "What Are Preferential Payments? A UK Director\u2019s Guide Under the Insolvency Act 1986"
+ },
+ "company-is-having-financial-difficulties": {
+  "id": 68736,
+  "type": "page",
+  "path": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+  "title": "What To Do if Your Company is Having Financial Difficulties: Legal Duties &amp; Solutions"
+ },
+ "insolvent-company-investigations": {
+  "id": 68387,
+  "type": "page",
+  "path": "/insolvency/insolvent-company-investigations/",
+  "title": "Insolvency Investigations Explained: Process, Risks &amp; What UK Directors Should Expect"
+ },
+ "advantages-and-disadvantages": {
+  "id": 68356,
+  "type": "page",
+  "path": "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+  "title": "Advantages &amp; Disadvantages of a Pre-Pack Administration"
+ },
+ "get-free-business-debt-advice": {
+  "id": 68221,
+  "type": "page",
+  "path": "/advice/get-free-business-debt-advice/",
+  "title": "How to Get Free Business Debt Advice"
+ },
+ "what-is-a-directors-responsibility-for-accountancy-errors": {
+  "id": 68216,
+  "type": "page",
+  "path": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+  "title": "What is a Director&#8217;s Responsibility for Accountancy Errors?"
+ },
+ "are-directors-personally-liable-for-company-debts": {
+  "id": 68207,
+  "type": "page",
+  "path": "/advice/are-directors-personally-liable-for-company-debts/",
+  "title": "Are Directors Personally Liable for Company Debts?"
+ },
+ "what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest": {
+  "id": 68211,
+  "type": "page",
+  "path": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+  "title": "What are a Company Director\u2019s Duties to Avoid and Disclose Conflicts of Interest"
+ },
+ "preventing-company-director-disputes": {
+  "id": 68192,
+  "type": "page",
+  "path": "/advice/preventing-company-director-disputes/",
+  "title": "Company Director Disputes"
+ },
+ "how-to-legally-take-money-out-of-a-limited-company": {
+  "id": 68189,
+  "type": "page",
+  "path": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+  "title": "How to Legally Take Money out of a Limited Company"
+ },
+ "funding-options-for-smes-in-the-uk": {
+  "id": 68183,
+  "type": "page",
+  "path": "/advice/funding-options-for-smes-in-the-uk/",
+  "title": "Funding Options for SMEs in the UK"
+ },
+ "directors-personal-guarantees": {
+  "id": 68180,
+  "type": "page",
+  "path": "/advice/directors-personal-guarantees/",
+  "title": "A Guide to Directors&#8217; Personal Guarantees"
+ },
+ "advice": {
+  "id": 68153,
+  "type": "page",
+  "path": "/advice/",
+  "title": "Directors&#8217; Advice"
+ },
+ "creditor-negotiations": {
+  "id": 68134,
+  "type": "page",
+  "path": "/insolvency/creditor-negotiations/",
+  "title": "Creditor Negotiations: A UK Director&#8217;s Tactical Playbook"
+ },
+ "business-recovery-services": {
+  "id": 68130,
+  "type": "page",
+  "path": "/insolvency/business-recovery-services/",
+  "title": "Business Recovery Services"
+ },
+ "what-are-the-warning-signs-of-an-insolvent-company": {
+  "id": 68123,
+  "type": "page",
+  "path": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+  "title": "What are the Warning Signs of an Insolvent Company?"
+ },
+ "can-you-sell-your-insolvent-company": {
+  "id": 68120,
+  "type": "page",
+  "path": "/insolvency/can-you-sell-your-insolvent-company/",
+  "title": "Can you Sell Your Insolvent Business?"
+ },
+ "how-to-save-a-struggling-business": {
+  "id": 68117,
+  "type": "page",
+  "path": "/insolvency/how-to-save-a-struggling-business/",
+  "title": "How to Save a Struggling Business?"
+ },
+ "rescue-your-business-from-insolvency": {
+  "id": 68115,
+  "type": "page",
+  "path": "/insolvency/rescue-your-business-from-insolvency/",
+  "title": "Can You Rescue a Business from Insolvency?"
+ },
+ "what-to-do-about-customer-insolvency": {
+  "id": 68111,
+  "type": "page",
+  "path": "/insolvency/what-to-do-about-customer-insolvency/",
+  "title": "Customer Insolvency in the UK: What to Do When a Client Can\u2019t Pay"
+ },
+ "how-to-reduce-insolvency-risk": {
+  "id": 68108,
+  "type": "page",
+  "path": "/insolvency/how-to-reduce-insolvency-risk/",
+  "title": "How to Reduce Insolvency Risk"
+ },
+ "dealing-with-creditor-pressure": {
+  "id": 68101,
+  "type": "page",
+  "path": "/insolvency/dealing-with-creditor-pressure/",
+  "title": "Creditor Pressure: A UK Director\u2019s Guide to Legal Risks, Debt Demands &amp; Solutions"
+ },
+ "county-court-judgements": {
+  "id": 68076,
+  "type": "page",
+  "path": "/county-court-judgements/",
+  "title": "County Court Judgments (CCJs): A UK Business Owner&#8217;s Guide to Risks &amp; Solutions"
+ },
+ "what-is-a-statutory-demand-against-a-company": {
+  "id": 67962,
+  "type": "page",
+  "path": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+  "title": "Statutory Demands: A UK Director\u2019s Guide to Deadlines, Risks &amp; Next Steps"
+ },
+ "cant-afford-to-pay-suppliers-what-are-the-options": {
+  "id": 67960,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+  "title": "Can&#8217;t Pay Suppliers? Risks, Consequences and Options for UK Company Directors"
+ },
+ "why-debt-is-not-always-a-bad-thing-for-your-business": {
+  "id": 67957,
+  "type": "page",
+  "path": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+  "title": "Understanding Good Debt vs Bad Debt"
+ },
+ "accelerated-payment-notices-apn": {
+  "id": 67828,
+  "type": "page",
+  "path": "/hmrc/accelerated-payment-notices-apn/",
+  "title": "Accelerated Payment Notices (APNs)"
+ },
+ "hmrc": {
+  "id": 67809,
+  "type": "page",
+  "path": "/hmrc/",
+  "title": "Help with HMRC Pressure"
+ },
+ "transactions-at-undervalue": {
+  "id": 67757,
+  "type": "page",
+  "path": "/insolvency/transactions-at-undervalue/",
+  "title": "What Are Transactions at Undervalue? Definition, Examples, and Consequences (UK Insolvency Act 1986)"
+ },
+ "antecedent-transactions": {
+  "id": 67747,
+  "type": "page",
+  "path": "/insolvency/antecedent-transactions/",
+  "title": "Antecedent Transactions in Corporate Insolvency"
+ },
+ "pros-and-cons": {
+  "id": 67535,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+  "title": "What are the Advantages and Disadvantages of a CVA?"
+ },
+ "can-a-director-be-made-bankrupt-if-a-business-fails": {
+  "id": 67505,
+  "type": "page",
+  "path": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+  "title": "Can a Director be Made Bankrupt?"
+ },
+ "dealing-with-an-hmrc-winding-up-petition": {
+  "id": 67438,
+  "type": "page",
+  "path": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+  "title": "HMRC Winding Up Petitions: A UK Director\u2019s Guide to Risks, Consequences &amp; Solutions"
+ },
+ "what-is-a-winding-up-order": {
+  "id": 67370,
+  "type": "page",
+  "path": "/winding-up-petitions/what-is-a-winding-up-order/",
+  "title": "What is a Winding up Order, and Can it be Stopped?"
+ },
+ "what-is-a-pre-pack-administration": {
+  "id": 66834,
+  "type": "page",
+  "path": "/what-is-a-pre-pack-administration/",
+  "title": "Pre-Pack Administration"
+ },
+ "what-is-wrongful-trading": {
+  "id": 66786,
+  "type": "page",
+  "path": "/insolvency/what-is-wrongful-trading/",
+  "title": "What Is Wrongful Trading? UK Law, Risks, and Penalties for Company Directors"
+ },
+ "closing-a-limited-company": {
+  "id": 65614,
+  "type": "page",
+  "path": "/closing-a-limited-company/",
+  "title": "How to Close a Limited Company in the UK: Options, Duties &amp; Step-by-Step Guide"
+ },
+ "directors-disqualification": {
+  "id": 65593,
+  "type": "page",
+  "path": "/advice/directors-disqualification/",
+  "title": "Director Disqualification"
+ },
+ "company-administration": {
+  "id": 65483,
+  "type": "page",
+  "path": "/company-administration/",
+  "title": "What is Company Administration?"
+ },
+ "what-happens-after-company-liquidation": {
+  "id": 65238,
+  "type": "page",
+  "path": "/liquidation/what-happens-after-company-liquidation/",
+  "title": "What Happens After Company Liquidation in the UK? Assets, Debts, and Director Duties Explained"
+ },
+ "cant-pay-business-energy": {
+  "id": 58601,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-pay-business-energy/",
+  "title": "Can\u2019t Pay Business Energy Bills? Risks, Consequences &amp; Solutions for UK Companies"
+ },
+ "stressed-directors-guide": {
+  "id": 57942,
+  "type": "page",
+  "path": "/stressed-directors-guide/",
+  "title": "Download Our Free &#8216;Stressed Directors Guide&#8217; Now"
+ },
+ "contact-us": {
+  "id": 57472,
+  "type": "page",
+  "path": "/contact-us/",
+  "title": "Contact"
+ },
+ "writing-off-a-directors-loan-account": {
+  "id": 55381,
+  "type": "page",
+  "path": "/advice/writing-off-a-directors-loan-account/",
+  "title": "Can I Write Off an Overdrawn Director&#8217;s Loan Account?"
+ },
+ "home-2022": {
+  "id": 55052,
+  "type": "page",
+  "path": "/",
+  "title": "Company Debt Ltd Homepage"
+ },
+ "quick-quote": {
+  "id": 54552,
+  "type": "page",
+  "path": "/quick-quote/",
+  "title": "Express Quote"
+ },
+ "express-liquidation": {
+  "id": 54064,
+  "type": "page",
+  "path": "/express-liquidation/",
+  "title": "Simple Liquidation"
+ },
+ "insolvency-calculator": {
+  "id": 53942,
+  "type": "page",
+  "path": "/insolvency-calculator/",
+  "title": "Take our 30 Second Insolvency Test"
+ },
+ "can-i-lose-my-house-with-a-bounce-back-loan": {
+  "id": 53625,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+  "title": "Can I Lose My House with a Bounce Back Loan? A UK Director\u2019s Guide to Personal Liability"
+ },
+ "write-off-my-debt": {
+  "id": 53183,
+  "type": "page",
+  "path": "/sample-letters/write-off-my-debt/",
+  "title": "Write off my debt &#8211; Template Letter"
+ },
+ "cease-trading-template": {
+  "id": 53187,
+  "type": "page",
+  "path": "/sample-letters/cease-trading-template/",
+  "title": "Cease Trading &#8211; Template Letter"
+ },
+ "sample-letters": {
+  "id": 53253,
+  "type": "page",
+  "path": "/sample-letters/",
+  "title": "Sample Creditor Letters"
+ },
+ "tell-debt-collector-to-stop-contacting-you": {
+  "id": 53243,
+  "type": "page",
+  "path": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+  "title": "Tell Debt Collector to Stop Contacting You &#8211; Template Letter"
+ },
+ "i-need-more-information-about-this-debt": {
+  "id": 53185,
+  "type": "page",
+  "path": "/sample-letters/i-need-more-information-about-this-debt/",
+  "title": "I Need More Information About this Debt &#8211; Template Letter"
+ },
+ "request-a-reduced-monthly-payment": {
+  "id": 53174,
+  "type": "page",
+  "path": "/sample-letters/request-a-reduced-monthly-payment/",
+  "title": "Request a Reduced Monthly Payment &#8211; Template Letter"
+ },
+ "i-cannot-afford-to-repay-my-debt": {
+  "id": 53166,
+  "type": "page",
+  "path": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+  "title": "I Cannot Afford to Repay my Debt &#8211; Template Letter"
+ },
+ "hold-action-on-my-account": {
+  "id": 53158,
+  "type": "page",
+  "path": "/sample-letters/hold-action-on-my-account/",
+  "title": "Hold Action on my Account While I Get Advice &#8211; Template Letter"
+ },
+ "i-have-no-knowledge-of-this-debt": {
+  "id": 53159,
+  "type": "page",
+  "path": "/sample-letters/i-have-no-knowledge-of-this-debt/",
+  "title": "I Have No Knowledge of this Debt Template Letter"
+ },
+ "find-a-liquidator-near-me": {
+  "id": 52808,
+  "type": "page",
+  "path": "/insolvency/find-a-liquidator-near-me/",
+  "title": "Find an Insolvency Practitioner Near Me: UK Directors\u2019 Guide"
+ },
+ "what-is-the-companies-act-2006": {
+  "id": 52771,
+  "type": "page",
+  "path": "/advice/what-is-the-companies-act-2006/",
+  "title": "The Companies Act 2006: A Guide"
+ },
+ "cant-pay-coronavirus-business-interruption-loan-cbils": {
+  "id": 50819,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+  "title": "Can\u2019t Repay a CBILS Loan? Options and Advice for UK Company Directors"
+ },
+ "personal-liability-for-cbils-loans": {
+  "id": 50629,
+  "type": "page",
+  "path": "/advice/personal-liability-for-cbils-loans/",
+  "title": "Director Liability for CBILS Loans: What UK Company Directors Need to Know"
+ },
+ "accreditations": {
+  "id": 49665,
+  "type": "page",
+  "path": "/accreditations/",
+  "title": "Accreditations"
+ },
+ "creditors-meeting": {
+  "id": 49618,
+  "type": "page",
+  "path": "/insolvency/creditors-meeting/",
+  "title": "Guide to Creditors&#8217; Meetings in Insolvency"
+ },
+ "charge-out-rates": {
+  "id": 49072,
+  "type": "page",
+  "path": "/charge-out-rates/",
+  "title": "Charge Out Rates"
+ },
+ "useful-publications": {
+  "id": 49058,
+  "type": "page",
+  "path": "/useful-publications/",
+  "title": "Useful Publications"
+ },
+ "legal": {
+  "id": 49042,
+  "type": "page",
+  "path": "/legal/",
+  "title": "Legal"
+ },
+ "complaints-procedure": {
+  "id": 49024,
+  "type": "page",
+  "path": "/complaints-procedure/",
+  "title": "Company Debt Complaints Procedure"
+ },
+ "creditors-guides-to-insolvency-practitioners-fees": {
+  "id": 48170,
+  "type": "page",
+  "path": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+  "title": "Creditors\u2019 Guides to Insolvency Practitioners\u2019 Fees"
+ },
+ "insolvency-act-1986": {
+  "id": 47772,
+  "type": "page",
+  "path": "/insolvency/insolvency-act-1986/",
+  "title": "What is the Insolvency Act 1986?"
+ },
+ "what-is-the-insolvency-service": {
+  "id": 47550,
+  "type": "page",
+  "path": "/insolvency/what-is-the-insolvency-service/",
+  "title": "Insolvency Service Explained: Role, Powers &amp; What UK Directors Need to Know"
+ },
+ "creditors-voluntary-liquidation": {
+  "id": 7674,
+  "type": "page",
+  "path": "/liquidation/creditors-voluntary-liquidation/",
+  "title": "Creditors\u2019 Voluntary Liquidation (CVL): A Practical Guide for UK Directors"
+ },
+ "what-is-a-creditor": {
+  "id": 46674,
+  "type": "page",
+  "path": "/insolvency/what-is-a-creditor/",
+  "title": "Understanding Creditors in UK Insolvency: Types, Rights &amp; Director Duties"
+ },
+ "bounce-back-loan-fraud": {
+  "id": 46579,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+  "title": "Bounce Back Loan Fraud &amp; Misuse: What UK Company Directors Need to Know"
+ },
+ "what-happens-to-directors-in-liquidation": {
+  "id": 46222,
+  "type": "page",
+  "path": "/liquidation/what-happens-to-directors-in-liquidation/",
+  "title": "What Happens to Directors in Liquidation? Duties, Risks, and Liabilities in the UK"
+ },
+ "content-usage-guidelines": {
+  "id": 45771,
+  "type": "page",
+  "path": "/content-usage-guidelines/",
+  "title": "Editorial Policy &#038; Content Usage Guidelines"
+ },
+ "cant-pay-staff-wages": {
+  "id": 44055,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-pay-staff-wages/",
+  "title": "Can\u2019t Pay Staff Wages? Legal Duties, Risks &amp; Solutions for UK Directors"
+ },
+ "cant-afford-to-repay-business-loan": {
+  "id": 43917,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+  "title": "Can\u2019t Pay Business Loans? Legal Risks, Director Liability &amp; Solutions Explained"
+ },
+ "bounce-back-loan-support-hub": {
+  "id": 43758,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/",
+  "title": "Bounce Back Loan &amp; CBILS Support Hub"
+ },
+ "dissolving-a-company-with-bounce-back-loan": {
+  "id": 43745,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+  "title": "Can I Dissolve a Company with a Bounce Back Loan? UK Rules for Directors Explained"
+ },
+ "what-happens-if-i-default": {
+  "id": 43675,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+  "title": "Can&#8217;t Repay Your Bounce Back Loan? A UK Director&#8217;s Guide to Risks &amp; Solutions"
+ },
+ "directors-liability-for-bounce-back-loans": {
+  "id": 43580,
+  "type": "page",
+  "path": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+  "title": "Personal Liability for Bounce Back Loans: What UK Company Directors Need to Know"
+ },
+ "unenforceable-personal-guarantee": {
+  "id": 43522,
+  "type": "page",
+  "path": "/advice/unenforceable-personal-guarantee/",
+  "title": "What is an Unenforceable Personal Guarantee?"
+ },
+ "what-happens-if-a-company-cannot-pay-its-debts": {
+  "id": 42739,
+  "type": "page",
+  "path": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+  "title": "What Happens if a Company Cannot Pay Its Debts? UK Insolvency Guide for Directors"
+ },
+ "can-personal-assets-of-directors-be-seized-from-a-ltd-company": {
+  "id": 41082,
+  "type": "page",
+  "path": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+  "title": "Can Personal Assets of Directors be Seized from a Ltd Company?"
+ },
+ "what-is-a-high-court-writ": {
+  "id": 39500,
+  "type": "page",
+  "path": "/insolvency/what-is-a-high-court-writ/",
+  "title": "High Court Writs Explained: A UK Business Guide to Enforcement, Risks &amp; Next Steps"
+ },
+ "losing-house-if-company-goes-bust": {
+  "id": 38597,
+  "type": "page",
+  "path": "/advice/losing-house-if-company-goes-bust/",
+  "title": "If my Limited Company Goes Bust Will I Lose my House?"
+ },
+ "cant-pay-a-commercial-lease-or-rent": {
+  "id": 31237,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+  "title": "Can\u2019t Pay Commercial Rent or Lease? Legal Risks &amp; Solutions for UK Businesses"
+ },
+ "business-restructuring": {
+  "id": 31199,
+  "type": "page",
+  "path": "/advice/business-restructuring/",
+  "title": "Business Restructuring: A Comprehensive Guide for UK Business Onwers"
+ },
+ "lpa-receivership": {
+  "id": 29543,
+  "type": "page",
+  "path": "/insolvency/lpa-receivership/",
+  "title": "LPA Receivership Explained: A UK Guide for Company Directors and Property Owners"
+ },
+ "corporation-tax-penalties": {
+  "id": 28761,
+  "type": "page",
+  "path": "/hmrc/corporation-tax-penalties/",
+  "title": "What are HMRC&#8217;s Corporation Tax Penalties?"
+ },
+ "personally-liabilty-of-company-secretary": {
+  "id": 28545,
+  "type": "page",
+  "path": "/insolvency/personally-liabilty-of-company-secretary/",
+  "title": "Can a Company Secretary be Held Personally Liable for Debts?"
+ },
+ "personal-liability-spouses-business-debts": {
+  "id": 28526,
+  "type": "page",
+  "path": "/insolvency/personal-liability-spouses-business-debts/",
+  "title": "Am I Liable for My Spouse&#8217;s Business Debts?"
+ },
+ "biggest-struggles-for-small-business-owners": {
+  "id": 26902,
+  "type": "page",
+  "path": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+  "title": "Top 9 Challenges for Small Business Owners"
+ },
+ "stop-or-avoid-insolvency": {
+  "id": 26888,
+  "type": "page",
+  "path": "/insolvency/stop-or-avoid-insolvency/",
+  "title": "How Can I Stop or Avoid Insolvency?"
+ },
+ "cant-pay-business-rates": {
+  "id": 26347,
+  "type": "page",
+  "path": "/company-cash-flow-problems/cant-pay-business-rates/",
+  "title": "Can\u2019t Pay Business Rates? Legal Consequences &amp; Solutions for UK Companies"
+ },
+ "misfeasance": {
+  "id": 26298,
+  "type": "page",
+  "path": "/advice/misfeasance/",
+  "title": "What Is Misfeasance? A UK Director\u2019s Guide to Duties, Risks, and Claims"
+ },
+ "cease-trading": {
+  "id": 26279,
+  "type": "page",
+  "path": "/insolvency/cease-trading/",
+  "title": "What Does It Mean When a Company Has Ceased Trading? UK Guide for Directors"
+ },
+ "debt-management-guide": {
+  "id": 26234,
+  "type": "page",
+  "path": "/advice/debt-management-guide/",
+  "title": "How to Manage Business Debt"
+ },
+ "business-debt-advice": {
+  "id": 26218,
+  "type": "page",
+  "path": "/business-debt-advice/",
+  "title": "Get Free Business Debt Advice"
+ },
+ "company-cash-flow-problems": {
+  "id": 26139,
+  "type": "page",
+  "path": "/company-cash-flow-problems/",
+  "title": "Cash Flow Problems: Causes, Warning Signs &amp; Solutions for UK Businesses"
+ },
+ "validation-order": {
+  "id": 25310,
+  "type": "page",
+  "path": "/insolvency/validation-order/",
+  "title": "Validation Orders Explained: How to Keep Trading After a Winding-Up Petition"
+ },
+ "personal-guarantee-insurance": {
+  "id": 24780,
+  "type": "page",
+  "path": "/advice/personal-guarantee-insurance/",
+  "title": "Personal Guarantee Insurance (PGI)"
+ },
+ "time-to-pay-hmrc": {
+  "id": 8414,
+  "type": "page",
+  "path": "/hmrc/time-to-pay-hmrc/",
+  "title": "Time to Pay Arrangements (TTP)"
+ },
+ "feedback": {
+  "id": 24801,
+  "type": "page",
+  "path": "/feedback/",
+  "title": "Feedback"
+ },
+ "what-are-fixed-and-floating-charges": {
+  "id": 24760,
+  "type": "page",
+  "path": "/advice/what-are-fixed-and-floating-charges/",
+  "title": "Fixed and Floating Charges Explained for UK Company Directors"
+ },
+ "what-is-a-freezing-order-or-injunction": {
+  "id": 24434,
+  "type": "page",
+  "path": "/insolvency/what-is-a-freezing-order-or-injunction/",
+  "title": "Freezing Orders &amp; Injunctions Explained: A UK Director\u2019s Guide to Risks &amp; Responses"
+ },
+ "what-are-the-duties-and-responsibilities-of-a-company-director": {
+  "id": 24402,
+  "type": "page",
+  "path": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+  "title": "Directors\u2019 Duties &amp; Responsibilities"
+ },
+ "winding-up-petitions": {
+  "id": 7687,
+  "type": "page",
+  "path": "/winding-up-petitions/",
+  "title": "Winding Up Petitions: A UK Guide for Creditors and Debtors"
+ },
+ "can-we-trade-out-of-insolvency": {
+  "id": 24080,
+  "type": "page",
+  "path": "/insolvency/can-we-trade-out-of-insolvency/",
+  "title": "Can we Trade Out of Insolvency?"
+ },
+ "insolvency": {
+  "id": 17686,
+  "type": "page",
+  "path": "/insolvency/",
+  "title": "Company Insolvency: What Directors Need to Know"
+ },
+ "accessibility": {
+  "id": 24032,
+  "type": "page",
+  "path": "/accessibility/",
+  "title": "Accessibility"
+ },
+ "cant-pay-vat": {
+  "id": 9443,
+  "type": "page",
+  "path": "/hmrc/cant-pay-vat/",
+  "title": "What Happens if I Can&#8217;t Pay the VAT?"
+ },
+ "how-much-does-liquidation-cost": {
+  "id": 23698,
+  "type": "page",
+  "path": "/liquidation/how-much-does-liquidation-cost/",
+  "title": "How Much Does Company Liquidation Cost in the UK? Fees and Funding Explained"
+ },
+ "case-studies-hub": {
+  "id": 23471,
+  "type": "page",
+  "path": "/case-studies-hub/",
+  "title": "Case Studies"
+ },
+ "meet-the-team": {
+  "id": 23017,
+  "type": "page",
+  "path": "/meet-the-team/",
+  "title": "Meet the team"
+ },
+ "privacy-policy": {
+  "id": 22899,
+  "type": "page",
+  "path": "/privacy-policy/",
+  "title": "Privacy Policy"
+ },
+ "the-risks-of-signing-a-personal-guarantee": {
+  "id": 22785,
+  "type": "page",
+  "path": "/advice/the-risks-of-signing-a-personal-guarantee/",
+  "title": "What are the Risks of Signing a Personal Guarantee?"
+ },
+ "limited-company-bankruptcy": {
+  "id": 22554,
+  "type": "page",
+  "path": "/insolvency/limited-company-bankruptcy/",
+  "title": "Company Bankruptcy Explained: UK Insolvency Procedures and Director Options"
+ },
+ "insolvent-company-owes-me-money": {
+  "id": 22277,
+  "type": "page",
+  "path": "/insolvency/insolvent-company-owes-me-money/",
+  "title": "What to Do When an Insolvent Company Owes You Money: UK Creditor Guide"
+ },
+ "liquidation-hub": {
+  "id": 22075,
+  "type": "page",
+  "path": "/liquidation/liquidation-hub/",
+  "title": "Insolvency &amp; Liquidation Hub"
+ },
+ "shareholders-liable-company-debts": {
+  "id": 21122,
+  "type": "page",
+  "path": "/insolvency/shareholders-liable-company-debts/",
+  "title": "Are Shareholders Liable for Company Debts?"
+ },
+ "what-is-limited-liability": {
+  "id": 21011,
+  "type": "page",
+  "path": "/advice/what-is-limited-liability/",
+  "title": "Limited Liability Explained"
+ },
+ "liquidation": {
+  "id": 7669,
+  "type": "page",
+  "path": "/liquidation/",
+  "title": "What is Company Liquidation?"
+ },
+ "can-director-criminal-record": {
+  "id": 20681,
+  "type": "page",
+  "path": "/advice/can-director-criminal-record/",
+  "title": "Can a Director have a Criminal Record?"
+ },
+ "partnership-voluntary-arrangements": {
+  "id": 20435,
+  "type": "page",
+  "path": "/company-rescue-solutions/partnership-voluntary-arrangements/",
+  "title": "Partnership Voluntary Arrangements"
+ },
+ "vs-liquidation": {
+  "id": 20428,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+  "title": "Company Voluntary Arrangement vs. Liquidation"
+ },
+ "making-employees-redundant-cva": {
+  "id": 20380,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+  "title": "Making Employees Redundant in a Company Voluntary Arrangement (CVA)"
+ },
+ "retail-industry-insolvency-trends": {
+  "id": 20268,
+  "type": "page",
+  "path": "/insolvency/retail-industry-insolvency-trends/",
+  "title": "Retail Insolvency in the UK: Causes, Warning Signs &amp; Solutions for Struggling Businesses"
+ },
+ "timeline": {
+  "id": 17568,
+  "type": "page",
+  "path": "/liquidation/timeline/",
+  "title": "How Long Does It Take to Liquidate a Company in the UK? Timelines Explained"
+ },
+ "what-is-an-individual-voluntary-arrangement": {
+  "id": 16662,
+  "type": "page",
+  "path": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+  "title": "Individual Voluntary Arrangement (IVA) Explained: UK Debt Solution Guide"
+ },
+ "hmrc-offices-contact-guide": {
+  "id": 16565,
+  "type": "page",
+  "path": "/hmrc/hmrc-offices-contact-guide/",
+  "title": "HMRC Contact Guide for UK Businesses: Offices, Numbers &amp; How to Deal with Tax Arrears"
+ },
+ "hmrc-follower-notice": {
+  "id": 16353,
+  "type": "page",
+  "path": "/hmrc/hmrc-follower-notice/",
+  "title": "HMRC Follower Notices"
+ },
+ "vs-administrative-receivership": {
+  "id": 16106,
+  "type": "page",
+  "path": "/company-administration/vs-administrative-receivership/",
+  "title": "How to Compare Administration and Administrative Receivership"
+ },
+ "check-if-a-company-is-insolvent": {
+  "id": 15203,
+  "type": "page",
+  "path": "/insolvency/check-if-a-company-is-insolvent/",
+  "title": "How to Check If a Company is Insolvent?"
+ },
+ "vs-cva": {
+  "id": 15141,
+  "type": "page",
+  "path": "/company-administration/vs-cva/",
+  "title": "CVA vs Administration"
+ },
+ "problems-paying-corporation-tax-hmrc": {
+  "id": 8408,
+  "type": "page",
+  "path": "/hmrc/problems-paying-corporation-tax-hmrc/",
+  "title": "Can&#8217;t Pay Corporation Tax: What are the Options?"
+ },
+ "members-voluntary-liquidation": {
+  "id": 7676,
+  "type": "page",
+  "path": "/liquidation/members-voluntary-liquidation/",
+  "title": "Members\u2019 Voluntary Liquidation (MVL) Explained"
+ },
+ "what-happens-to-employees": {
+  "id": 15010,
+  "type": "page",
+  "path": "/liquidation/what-happens-to-employees/",
+  "title": "What Happens to Employees in Liquidation? Redundancy Rights and Payments in the UK"
+ },
+ "director-redundancy": {
+  "id": 14914,
+  "type": "page",
+  "path": "/director-redundancy/",
+  "title": "Director Redundancy Pay Guide (UK): Eligibility, Entitlements &amp; How to Claim"
+ },
+ "vat-penalties": {
+  "id": 14912,
+  "type": "page",
+  "path": "/hmrc/vat-penalties/",
+  "title": "VAT Penalties"
+ },
+ "tax-penalties": {
+  "id": 14775,
+  "type": "page",
+  "path": "/hmrc/tax-penalties/",
+  "title": "HMRC Tax Penalties"
+ },
+ "cookie-policy-company-debt": {
+  "id": 14672,
+  "type": "page",
+  "path": "/cookie-policy-company-debt/",
+  "title": "Cookie Policy"
+ },
+ "hmrcs-ir35-investigations-different": {
+  "id": 14619,
+  "type": "page",
+  "path": "/advice/hmrcs-ir35-investigations-different/",
+  "title": "What Happens in an HMRC IR35 Investigation?"
+ },
+ "hmrc-criminal-investigations": {
+  "id": 14460,
+  "type": "page",
+  "path": "/hmrc/hmrc-criminal-investigations/",
+  "title": "HMRC Criminal Investigations"
+ },
+ "hmrc-fraud-investigations": {
+  "id": 14158,
+  "type": "page",
+  "path": "/hmrc/hmrc-fraud-investigations/",
+  "title": "HMRC Fraud Investigations"
+ },
+ "complaints": {
+  "id": 13936,
+  "type": "page",
+  "path": "/complaints/",
+  "title": "Complaints"
+ },
+ "preferential-non-preferential-creditors": {
+  "id": 13766,
+  "type": "page",
+  "path": "/insolvency/preferential-non-preferential-creditors/",
+  "title": "What is a Preferential and Non-Preferential Creditor?"
+ },
+ "frozen-bank-account": {
+  "id": 11788,
+  "type": "page",
+  "path": "/advice/frozen-bank-account/",
+  "title": "My Company Bank Account is Frozen: What Can We Do?"
+ },
+ "insolvency-test": {
+  "id": 13600,
+  "type": "page",
+  "path": "/insolvency/insolvency-test/",
+  "title": "What Is the Corporate Insolvency Test? A UK Director\u2019s Guide Under the Insolvency Act 1986"
+ },
+ "statement-of-affairs": {
+  "id": 13513,
+  "type": "page",
+  "path": "/insolvency/statement-of-affairs/",
+  "title": "What Is a Statement of Affairs? UK Insolvency Guide for Company Directors"
+ },
+ "careers": {
+  "id": 13469,
+  "type": "page",
+  "path": "/careers/",
+  "title": "Careers at Company Debt"
+ },
+ "about-us": {
+  "id": 13065,
+  "type": "page",
+  "path": "/about-us/",
+  "title": "About Us"
+ },
+ "understanding-hmrc-debt-collection": {
+  "id": 13029,
+  "type": "page",
+  "path": "/hmrc/understanding-hmrc-debt-collection/",
+  "title": "HMRC&#8217;s Debt Collection Process"
+ },
+ "what-can-hmrc-bailiffs-take": {
+  "id": 12979,
+  "type": "page",
+  "path": "/hmrc/what-can-hmrc-bailiffs-take/",
+  "title": "HMRC Bailiffs"
+ },
+ "controlled-goods-agreement": {
+  "id": 12958,
+  "type": "page",
+  "path": "/hmrc/controlled-goods-agreement/",
+  "title": "What is a Controlled Goods Agreement Letter From HMRC?"
+ },
+ "what-is-an-insolvency-practitioner": {
+  "id": 8358,
+  "type": "page",
+  "path": "/insolvency/what-is-an-insolvency-practitioner/",
+  "title": "Insolvency Practitioner Explained: Role, Duties &amp; How They Help UK Directors"
+ },
+ "notice-of-enforcement": {
+  "id": 11644,
+  "type": "page",
+  "path": "/hmrc/notice-of-enforcement/",
+  "title": "HMRC Notice of Enforcement"
+ },
+ "joint-and-several-liability-for-unpaid-vat": {
+  "id": 11516,
+  "type": "page",
+  "path": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+  "title": "Joint and Several Liability for Unpaid VAT"
+ },
+ "hmrc-tax-investigations": {
+  "id": 11384,
+  "type": "page",
+  "path": "/hmrc/hmrc-tax-investigations/",
+  "title": "HMRC Tax Investigations"
+ },
+ "security-bonds": {
+  "id": 11229,
+  "type": "page",
+  "path": "/hmrc/security-bonds/",
+  "title": "HMRC Security Bonds: What do Directors Need to Know?"
+ },
+ "what-are-phoenix-companies": {
+  "id": 11228,
+  "type": "page",
+  "path": "/advice/what-are-phoenix-companies/",
+  "title": "What is a Phoenix Company and are They Legal?"
+ },
+ "hmrc-compliance-checks": {
+  "id": 11193,
+  "type": "page",
+  "path": "/hmrc/hmrc-compliance-checks/",
+  "title": "HMRC Compliance Checks"
+ },
+ "distraint-order-notice": {
+  "id": 10930,
+  "type": "page",
+  "path": "/hmrc/distraint-order-notice/",
+  "title": "Distraint Orders: What You Need to Know"
+ },
+ "security-bond-notices": {
+  "id": 10564,
+  "type": "page",
+  "path": "/hmrc/security-bond-notices/",
+  "title": "HMRC Security Bonds"
+ },
+ "personal-liability-notices": {
+  "id": 10562,
+  "type": "page",
+  "path": "/hmrc/personal-liability-notices/",
+  "title": "Personal Liability Notices (PLNs): Understanding Your Personal Risk"
+ },
+ "terms-conditions": {
+  "id": 9874,
+  "type": "page",
+  "path": "/terms-conditions/",
+  "title": "Terms and Conditions"
+ },
+ "site-map": {
+  "id": 9715,
+  "type": "page",
+  "path": "/site-map/",
+  "title": "Site Map"
+ },
+ "receivership-mean-business": {
+  "id": 9702,
+  "type": "page",
+  "path": "/receivership-mean-business/",
+  "title": "Receivership"
+ },
+ "pre-packs": {
+  "id": 8396,
+  "type": "page",
+  "path": "/company-rescue-solutions/pre-packs/",
+  "title": "What is a Pre-Pack Administration?"
+ },
+ "hmrc-threatening-letters": {
+  "id": 8350,
+  "type": "page",
+  "path": "/hmrc/hmrc-threatening-letters/",
+  "title": "HMRC Threatening Letters"
+ },
+ "cant-pay-paye": {
+  "id": 8324,
+  "type": "page",
+  "path": "/hmrc/cant-pay-paye/",
+  "title": "A Guide to PAYE Arrears"
+ },
+ "company-voluntary-arrangement": {
+  "id": 7685,
+  "type": "page",
+  "path": "/company-rescue-solutions/company-voluntary-arrangement/",
+  "title": "Company Voluntary Arrangements (CVA)"
+ },
+ "compulsory-liquidation": {
+  "id": 7680,
+  "type": "page",
+  "path": "/liquidation/compulsory-liquidation/",
+  "title": "Compulsory Liquidation in the UK"
+ },
+ "company-rescue-solutions": {
+  "id": 7665,
+  "type": "page",
+  "path": "/company-rescue-solutions/",
+  "title": "Company Rescue Solutions Overview"
+ }
+}

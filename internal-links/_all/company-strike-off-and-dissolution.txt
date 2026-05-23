@@ -1,0 +1,381 @@
+<!-- wp:paragraph -->
+<p>Striking off a company costs £10. Liquidation costs thousands. That price gap is why directors searching for a way out land here first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But strike-off only works cleanly when your company has no debts, no outstanding HMRC liabilities, and no creditors who might object. If any of those apply, the £10 filing fee is not your real cost.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The real cost is what happens six months later when HMRC objects, restores the company to the register, and you are back where you started with additional penalties attached. We see this play out every week.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Strike-Off Is the Right Route for Your Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Strike-off (formally called voluntary dissolution) suits companies that have genuinely finished trading and have nothing left to settle. We tell directors it works for you when:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>No outstanding debts to any creditor, including HMRC, suppliers, landlords, and lenders</li>
+<li>No active or threatened legal proceedings against the company</li>
+<li>No trading activity in the last three months</li>
+<li>No name change in the last three months</li>
+<li>Not currently subject to a Company Voluntary Arrangement or in administration</li>
+<li>No assets above £25,000 (the capital distribution limit before requiring a formal distribution process)</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If all of those conditions hold for your company, strike-off is straightforward, inexpensive, and the correct route. The process involves filing a DS01 form, notifying the right parties, and waiting for Companies House to dissolve the company after the statutory notice period.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The typical director we see this work for: a contractor whose limited company is no longer needed, a side project that never gained traction, or a dormant company that has fulfilled all its obligations. No drama, no creditors, no loose ends.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Strike-Off Is the Wrong Route</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is where the £10 exit becomes expensive in our experience. Strike-off is not a debt elimination tool. Using it to walk away from debts does not make them disappear. They follow a different path, and that path usually leads back to you personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Your company owes money to HMRC.</strong> HMRC monitors the Gazette for strike-off notices. If your company has unpaid Corporation Tax, VAT, or PAYE, HMRC will object and the dissolution is suspended. This is not a theoretical risk. In our caseload, HMRC objections are the single most common reason strike-off applications fail.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>There is an outstanding Bounce Back Loan.</strong> The BBL lender will be notified via the Gazette notice. Lenders routinely object to these applications. Even if the objection is delayed and the company dissolves, the lender can apply to have the company restored to the register for up to six years. The loan does not vanish.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Creditors are chasing payment.</strong> Any creditor who spots the Gazette notice can file an objection with Companies House. A single objection halts the process. Worse, attempting to dissolve a company to avoid paying creditors can be treated as misconduct and may result in director disqualification proceedings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>The company has employees.</strong> Strike-off does not trigger redundancy through the National Insurance Fund. If your employees are owed wages or redundancy pay, dissolving the company without a formal insolvency process leaves them without the statutory protections they are entitled to. This has consequences for you, too.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>The company has significant assets.</strong> Any assets remaining when the company is dissolved pass to the Crown as bona vacantia. Bank balances, property, equipment, intellectual property: all of it. Reclaiming those assets requires applying to restore the company, which costs far more than distributing assets properly would have.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Strike Off a Company: Step by Step</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company qualifies (no debts, no disputes, no loose ends), here is the process we walk directors through.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>1. Board resolution.</strong> A majority of directors must agree to apply for strike-off. This is a formal board resolution. A sole director makes the resolution alone but still needs to document it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>2. File form DS01 with Companies House.</strong> The DS01 is the application to strike off and dissolve the company. It must be signed by a majority of directors. The filing fee is £10 online or £44 by post. The Companies House WebFiling service is faster and cheaper.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>3. Notify all interested parties within seven days.</strong> Within seven days of submitting the DS01, you must send a copy to everyone who could be affected. The law is specific about who must be notified:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>All shareholders (members) who did not sign the application</li>
+<li>All directors who did not sign the application</li>
+<li>Any creditors (including HMRC, banks, suppliers, and pension trustees)</li>
+<li>Any employees or former employees with outstanding claims</li>
+<li>Any managers or trustees of employee pension funds</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This notification step is a legal requirement under section 1006 of the Companies Act 2006, not a suggestion. Failure to notify is a criminal offence and is liable on summary conviction to a fine. The obligation is personal to each director who signed the application.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>4. Companies House publishes a Gazette notice.</strong> Once the DS01 is accepted, Companies House publishes a first Gazette notice in The Gazette. This starts a two-month objection window. Any creditor, shareholder, or interested party can object during this period.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>5. If no objections, the company is dissolved.</strong> If nobody objects within two months, Companies House publishes a second notice confirming that the company has been struck off the register and dissolved. The company ceases to exist as a legal entity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Documents and Approvals You Need to Strike Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>DS01 form:</strong> signed by a majority of directors. Available on the Companies House website.</li>
+<li><strong>Board resolution:</strong> documented agreement from the directors to apply for strike-off.</li>
+<li><strong>Up-to-date accounts filed with Companies House:</strong> outstanding confirmation statements or accounts can delay or block your application.</li>
+<li><strong>Final Corporation Tax return:</strong> HMRC must be notified that the company has ceased trading, and the final CT600 filed within 12 months of the last accounting period end date.</li>
+<li><strong>VAT deregistration:</strong> if your company is VAT registered, deregistration must happen before or alongside the strike-off application.</li>
+<li><strong>PAYE scheme closure:</strong> if your company runs a payroll, the PAYE scheme must be closed with HMRC.</li>
+<li><strong>Notification letters:</strong> copies of the DS01 sent to all required parties within seven days.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Missing any of these creates grounds for HMRC to object. In our caseload, we see unfiled accounts and an open VAT registration as the two most common triggers our directors hit.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Long Strike-Off Takes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>From filing the DS01 to final dissolution, the minimum timeline is approximately three months.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table>
+<thead>
+<tr><th>Stage</th><th>Timing</th></tr>
+</thead>
+<tbody>
+<tr><td>DS01 processing by Companies House</td><td>Typically 2 to 4 weeks</td></tr>
+<tr><td>First Gazette notice published</td><td>Starts the two-month objection window</td></tr>
+<tr><td>Two-month objection period</td><td>8 weeks minimum (statutory)</td></tr>
+<tr><td>Second Gazette notice and dissolution</td><td>Usually 1 to 2 weeks after the objection period closes</td></tr>
+</tbody>
+</table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>In practice, allow three to four months with no complications. If HMRC objects (because of unfiled returns, outstanding tax, or an open VAT registration), the process stalls until the issue is resolved.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We regularly speak to directors who have spent six months or longer going back and forth with HMRC before the strike-off can proceed. If speed matters and your company has debts, <a href="/liquidation/creditors-voluntary-liquidation/">a Creditors' Voluntary Liquidation</a> (CVL) can resolve everything in a more structured timeline with a licensed insolvency practitioner managing creditor communications.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Worth knowing: HMRC has up to 20 years to apply to restore a dissolved company under sections 1000 to 1003 of the Companies Act 2006 if unpaid Corporation Tax, VAT, or PAYE liabilities exist. Other creditors have six years under section 1029. A company you dissolve today with outstanding tax debts can be brought back to life in 2046.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Strike-Off Actually Costs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The headline cost is £10 for the online DS01 filing. That is the Companies House fee and nothing more. But the actual cost of closing your company via strike-off depends on what state the company is in.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Clean company, no debts, all filings current:</strong> £10 (the DS01 fee). This is the genuine cost for a straightforward dissolution.</li>
+<li><strong>Outstanding accounts or tax returns:</strong> accountant fees to prepare and file these before strike-off can proceed. Budget £300 to £1,000 plus depending on how far behind the filings are.</li>
+<li><strong>Informal creditor settlements:</strong> if settlements with creditors are needed before applying, the cost depends entirely on what is owed.</li>
+<li><strong>Getting it wrong:</strong> if HMRC restores the company, you face the original debt plus penalties, plus the cost of the restoration application (court fees start at £280 for a third-party application), plus professional fees to deal with the aftermath.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The £10 figure only applies to the filing. If your company has any complications at all, the total cost of achieving a clean strike-off is higher. And if strike-off fails because debts were unresolved, the eventual cost of formal <a href="/liquidation/">liquidation</a> plus the wasted time and penalties will be significantly more than going straight to a CVL.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens to Debts, Assets, and Bank Accounts at Strike-Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the section that matters most if you are considering strike-off to escape debts. It does not work the way the £10 fee suggests.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Debts.</strong> Company debts are not written off by dissolution. If your company is dissolved while debts remain outstanding, creditors have the right to apply for the company's restoration to the register. HMRC can do this for up to 20 years. Other creditors can apply within six years. Once restored, the company exists again, the debts are still owed, and you are in a worse position than before.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Personal guarantees survive dissolution entirely. If you personally guaranteed a Bounce Back Loan, a commercial lease, or a supplier account, you remain liable after the company is dissolved. The creditor pursues you directly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Assets.</strong> Any assets owned by your company at the time of dissolution become bona vacantia, meaning they pass to the Crown. This includes bank account balances, property, vehicles, intellectual property, and any debts owed to the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If assets above £25,000 were distributed to shareholders before dissolution without following the proper Members' Voluntary Liquidation process, this may be treated as an income distribution rather than a capital distribution. The tax difference is substantial.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Bank accounts.</strong> Banks typically freeze the company account once the first Gazette notice is published. Any remaining balance passes to the Crown as bona vacantia after dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Accessing those funds afterwards requires an application to the Treasury Solicitor (or the relevant Crown body in Scotland or Northern Ireland) or an application to restore the company. Both processes involve cost and delay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Risks of Getting Strike-Off Wrong</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Directors who use strike-off to sidestep debts face a specific set of risks. These are not hypothetical, and we see all of them play out.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>HMRC restoration.</strong> HMRC can apply to restore a dissolved company to the register if tax is owed. Once restored, all tax debts, interest, and penalties are live again. We see HMRC use this power routinely, particularly for VAT and Corporation Tax debts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Personal liability.</strong> If you caused the company to dispose of assets or make payments to avoid creditors before strike-off, that behaviour can be investigated. Under the Insolvency Act, transactions at an undervalue and preferences made in the lead-up to insolvency can be challenged. You can be held personally liable for losses caused to creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Director disqualification.</strong> Attempting to dissolve a company to avoid debts is a factor the Insolvency Service considers in disqualification proceedings. A disqualification order prevents you from acting as a director for 2 to 15 years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Bounce Back Loan investigations.</strong> The government has funded dedicated investigation resources for BBL fraud and misuse. Dissolving a company with an outstanding BBL without following a formal insolvency process attracts scrutiny. A licensed insolvency practitioner handling a CVL provides a structured, transparent process that demonstrates you dealt with the loan properly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Creditor restoration.</strong> Any creditor owed money can apply to the court to restore the company within six years of dissolution. You have no control over this. The creditor bears the application cost, but if successful, the company is restored and the debts are enforceable again.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Strike-Off When the Company Has Employees</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company has employees at the time of strike-off, those employees lose access to statutory redundancy protections that would otherwise be available through a formal insolvency process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In a CVL, employees are made redundant by the liquidator and can claim statutory redundancy pay, unpaid wages, holiday pay, and notice pay from the National Insurance Fund (the Redundancy Payments Service). These claims are processed relatively quickly, and in many cases the redundancy payments are substantial enough to offset a significant portion of the liquidation costs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In a strike-off, none of that applies. There is no formal insolvency event, so the Redundancy Payments Service has no basis to pay out. Your employees are left to pursue their claims directly against you, which is more expensive and less certain for everyone involved.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If your company has employees and cannot pay what it owes them, strike-off is the wrong route. A CVL protects the employees and, through the redundancy offset, can reduce the net cost of liquidation significantly. We see this offset make a material difference in the majority of our cases where directors on PAYE are involved.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Alternatives: When Liquidation Is the Better Route</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company has debts it cannot pay, the correct formal process is a Creditors' Voluntary Liquidation (CVL). This is the route designed for insolvent companies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A CVL costs more than £10. Typical fees range from £3,000 to £6,000 plus depending on the complexity of the case. That headline figure deters directors from looking further. But the comparison is misleading for three reasons.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Redundancy offset.</strong> If your company has employees (including working directors on PAYE), the statutory redundancy pay claimed through the National Insurance Fund can offset a large portion of the liquidation cost. In some cases, the redundancy payment exceeds the liquidation fee. This is the single most important factor that directors researching strike-off tend to miss.</li>
+<li><strong>Debt resolution is final.</strong> A CVL formally deals with all creditors. Once the liquidation is complete, there is no six-year window for creditors to restore the company. The company is dissolved, the debts are handled, and you move on without looking over your shoulder.</li>
+<li><strong>Director protection.</strong> Acting responsibly by placing an insolvent company into formal liquidation demonstrates that you took your duties seriously. It is the opposite of the behaviour that triggers disqualification proceedings. Directors who take proper advice and follow the formal process are treated very differently from directors who tried to dissolve the company quietly.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Strike-off is the right route for solvent companies with nothing left to settle. For companies with debts, a CVL is not the expensive alternative. It is the route that actually resolves the situation. Our guide to <a href="/liquidation/liquidation-vs-dissolution-strike-off/">the difference between liquidation and strike off</a> sets the two routes side by side.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Not sure whether your company is insolvent? Use the free <a href="/insolvency/insolvency-test/">insolvency test</a> to check the position before deciding on a route. Or compare all your options for <a href="/closing-a-limited-company/">closing a limited company</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Company Strike-Off and Dissolution</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"4d2a8f6c-9b75-4c81-b6de-a3e1f4c8d502","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I strike off a company with debts?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The DS01 form can be filed, but any creditor (including HMRC) can object and halt the process. Even if the company is dissolved with debts outstanding, creditors can apply to restore it to the register for up to six years (HMRC for up to 20 years). Strike-off does not eliminate debts. If your company is insolvent, a CVL is the formal route for dealing with those debts properly.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much does it cost to strike off a company?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The Companies House filing fee is £10 online (£44 by post). That is the direct cost. If there are outstanding accounts, tax returns, or a VAT registration to close, the total cost will include accountant fees to resolve those. For a clean company with no loose ends, £10 is the genuine total.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does company strike-off take?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Minimum three months from filing the DS01 to dissolution. Companies House processing takes 2 to 4 weeks, then there is a mandatory two-month Gazette notice period. If HMRC or a creditor objects, the timeline extends until the issue is resolved, which can take six months or longer.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to a Bounce Back Loan if the company is struck off?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The loan does not disappear. The lender can object to the strike-off, or apply to restore the company to the register after dissolution. If the director personally guaranteed the loan (which is not standard for BBLs but applies to some), the creditor can pursue the guarantor directly. Using a CVL to deal with a BBL provides a formal, transparent resolution that a strike-off does not.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan HMRC object to strike-off?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, and they do so frequently. HMRC monitors Gazette notices and objects if the company has outstanding Corporation Tax, VAT, PAYE, or unfiled returns. An HMRC objection suspends the dissolution until the tax position is cleared. This is the most common reason strike-off applications fail.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to the company bank account after strike-off?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Banks typically freeze the account when the Gazette notice is published. Any remaining balance passes to the Crown as bona vacantia after dissolution. Recovering funds requires an application to the Treasury Solicitor or an application to restore the company, both of which involve cost, paperwork, and delay.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a struck-off company be restored?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A company can be restored to the register through an administrative restoration (by the former directors) or a court order (by a creditor, shareholder, or other interested party). Creditors have six years. HMRC has up to 20 years. Once restored, the company exists again as if it had never been dissolved, and all debts are enforceable.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I still need to file accounts and tax returns during strike-off?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Until the company is formally dissolved, your filing obligations continue. A final set of accounts must be filed with Companies House and a final Corporation Tax return with HMRC. Outstanding filings are one of the most common triggers for HMRC objections.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":8,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is bona vacantia?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Bona vacantia means "ownerless goods." When a company is dissolved, any assets it still owns pass to the Crown. This includes bank balances, property, vehicles, intellectual property, and debts owed to the company. The Treasury Solicitor manages bona vacantia assets in England and Wales. Recovering assets from the Crown is possible but involves a formal application process and is not guaranteed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":9,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs strike-off the same as liquidation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Strike-off is an administrative process for closing a solvent company that has stopped trading. Liquidation is a formal insolvency process managed by a licensed insolvency practitioner. Liquidation deals with creditors, investigates director conduct, and protects employees. Strike-off does none of these things. If your company has debts, liquidation is the route.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Companies Act 2006 (sections 1000 to 1003 on strike-off, section 1006 on notification duties, section 1012 on bona vacantia, section 1029 on restoration), the Insolvency Act 1986 (preference and undervalue transactions), the Company Directors Disqualification Act 1986, and Insolvency Service guidance current as of May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; sections 1000 to 1003 on voluntary and involuntary strike-off, section 1006 on creditor notification duties, section 1012 on bona vacantia, section 1029 on court-ordered restoration</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/strike-off-your-company-from-companies-register"><strong>Companies House &mdash; Strike off your company from the register (DS01)</strong>: official guidance, fees, and the DS01 form</a> - gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; the framework for Creditors' Voluntary Liquidation, transactions at undervalue (section 238) and preferences (section 239)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; framework for director disqualification including misuse of dissolution</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/bona-vacantia"><strong>Bona Vacantia Division, Government Legal Department</strong> &mdash; administering Crown ownership of dissolved-company assets in England and Wales</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; guidance on dissolved-company investigations and director disqualification</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; verify a practitioner's licence before instructing</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

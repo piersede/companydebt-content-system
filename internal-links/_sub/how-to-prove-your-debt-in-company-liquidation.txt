@@ -1,0 +1,224 @@
+<!-- wp:paragraph -->
+<p>If a company that owes you money has gone into liquidation, the first thing you need to do is prove your debt. Without a formal proof of debt, you do not exist in the liquidation. You cannot vote, you cannot receive a dividend, and you have no standing to challenge anything the liquidator does.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The form itself is simple, but the mistakes creditors make on it are not. We see proofs rejected every week because the amount is wrong, the supporting evidence is missing, or the creditor has included interest or costs that are not legally due.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We adjudicate proofs of debt on every case we handle, so the patterns below come from cases we have actually run, not from generic templates.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer on How to Prove Your Debt in Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To prove your debt in a UK liquidation, you submit a formal proof of debt (Form 4.25 or the liquidator's own version) to the liquidator, setting out the amount owed, the basis of the claim, and supporting evidence.</p>
+<p>The liquidator adjudicates the proof, which means they check whether the debt is valid, the amount is correct, and the evidence supports the claim. If accepted, the proof entitles the creditor to vote at creditors' meetings and receive a share of any dividend the estate distributes. If rejected, you can appeal to the court.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The key deadline is the last date for proving, which the liquidator sets before any distribution. Missing the deadline does not bar a late filing, but the creditor will not share in any dividend that has already been declared. File early, file accurately, and attach the evidence. Everything else follows from that. How much you eventually recover depends on <a href="/liquidation/which-creditors-get-paid-first/">the order creditors are paid</a>, since unsecured proofs sit behind secured and preferential claims.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a Proof of Debt Must Contain in a Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A valid proof of debt under the Insolvency (England and Wales) Rules 2016 must include:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>The creditor's name, address, and contact details.</strong></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>The total amount claimed.</strong> This should be the amount owed at the date of the winding-up resolution (for a CVL) or the date of the winding-up order (for compulsory), including any contractual interest accrued to that date.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>The basis of the claim.</strong> A brief description of why the money is owed: unpaid invoices, goods supplied, services rendered, loan, rent, damages, etc.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Details of any security held.</strong> If the creditor holds security over company assets (a charge, lien, or retention of title clause), it must be disclosed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Supporting documents.</strong> Invoices, statements, contracts, delivery notes, correspondence, court judgments, or any other evidence that substantiates the claim.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>A signed declaration of truth.</strong> The creditor (or an authorised representative) must sign the proof confirming the information is accurate.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:group {"className":"cd-process-steps"} -->
+<div class="wp-block-group cd-process-steps">
+<!-- wp:list {"ordered":true} -->
+<ol><li>Obtain the proof of debt form from the liquidator (or use Form 4.25)</li><li>Enter the debt amount at the date of the winding-up resolution or order — not the current balance</li><li>State the basis of the claim clearly: unpaid invoices, loan, rent, goods supplied</li><li>Disclose any security you hold over company assets, including retention of title clauses</li><li>Attach supporting evidence: invoices, contracts, delivery notes, statements, correspondence</li><li>Sign the declaration of truth and return the completed form to the liquidator before the deadline</li></ol>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the Liquidator Adjudicates Your Proof of Debt</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The liquidator reviews every proof of debt before allowing the creditor to vote or receive a dividend.</p>
+<p>Adjudication is not a rubber stamp. The liquidator checks the amount against the company's own records (purchase ledger, bank statements, contracts), verifies the supporting evidence, and may reduce or reject the proof if the amount is disputed, unsupported, or includes items that are not legally provable. Our guide to <a href="/liquidation/liquidators-powers-and-duties/">what a liquidator does</a> sets out the wider role behind this adjudication.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Common reasons for reduction or rejection include: claiming interest that is not contractually due, including VAT that was not charged on the original invoice, claiming consequential losses that are not provable in a liquidation (lost profits, future business opportunities), and filing a proof for a debt that the company disputes.</p>
+<p>If a proof is reduced, the liquidator will write with the reasons. If it is rejected entirely, the creditor has 21 days to appeal to the court under Rule 14.8 of the Insolvency Rules 2016.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+<p class="cd-key-takeaway__label">Key Takeaway</p>
+<!-- wp:paragraph --><p>If your proof of debt is rejected, you have 21 days to appeal to the court under Rule 14.8 of the Insolvency (England and Wales) Rules 2016. Miss that window and the rejection stands. If you receive a rejection notice, take advice immediately. Do not let the deadline pass while you consider your position.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Evidence to Attach to Your Proof of Debt</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The stronger your evidence, the smoother the adjudication. Attach:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Copies of unpaid invoices (not just a statement summary)</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The original contract or purchase order, if available</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Delivery notes or proof of service</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Any correspondence acknowledging the debt (emails from the company confirming the balance)</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Court judgments, if you obtained one before the liquidation</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Statement of account showing the running balance</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Do not attach voluminous paperwork that is not directly relevant. The liquidator is adjudicating hundreds of proofs across multiple cases. A clean proof with clear invoices and a simple statement is processed faster than a box file of every email ever sent to the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Voting Rights and Why Your Proof of Debt Matters Beyond Dividends</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Filing a proof of debt is not just about getting paid.</p>
+<p>It also gives you the right to vote at the creditors' decision procedure, which determines who is appointed as liquidator and how the case is run. Voting is by value of debt, not by number of creditors. If you are owed a significant amount, your vote carries weight. See our guide on <a href="/liquidation/creditor-meetings-in-liquidation/">creditor meetings in liquidation</a> for how voting works in practice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You can also use your standing as a proved creditor to request information from the liquidator, attend creditors' meetings, join the liquidation committee (if one is formed), and challenge the liquidator's fees or decisions. Without a proof, you have none of these rights. See our guide on challenging a liquidator's fees for the specific process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Mistakes Creditors Make Proving Debt in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Filing for the wrong amount.</strong> The provable amount is the debt at the date of liquidation, not the current balance including post-liquidation interest or penalties. Over-claiming leads to rejection or reduction.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Not filing at all.</strong> Some creditors assume the liquidator will contact them. The liquidator sends a notice, but it is the creditor's responsibility to file. If you do not file, you get nothing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Filing late.</strong> Late proofs are accepted, but you miss any dividend that has already been declared. File within the deadline the liquidator sets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Including disputed amounts without explanation.</strong> If part of the debt is disputed by the company, note the dispute in your proof and explain your position. The liquidator will adjudicate, but a bare claim with no acknowledgement of the dispute looks sloppy and may be rejected.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Not disclosing retention of title.</strong> If you have an RoT clause, you should be claiming the goods back, not proving for the debt. Filing a proof of debt when you could be reclaiming stock is a strategic error. See our guide on company vehicles and equipment in liquidation for how RoT works.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002drisk-warning"} -->
+<div class="wp-block-group cd-callout cd-callout--risk-warning">
+<p class="cd-callout__label">Risk Warning</p>
+<!-- wp:paragraph --><p>Missing the liquidator's last date for proving means you will not share in any dividend already declared.</p>
+<p>Late proofs only participate in future distributions, which may not exist. Under Rule 14.24 of the Insolvency (England and Wales) Rules 2016, a creditor who fails to prove before the final distribution receives nothing from that distribution. File as early as possible once you receive notice of the liquidation.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on How to Prove Your Debt in Company Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78613-prove-debt-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I have to file a proof of debt to get paid?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Without a formal proof of debt, you cannot receive any dividend from the liquidation. The liquidator will send you a notice and a blank form, but it is your responsibility to complete and return it with supporting evidence.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat if the company disputes the debt?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>File your proof anyway and explain the basis of your claim clearly. The liquidator will adjudicate, which means they will review both sides and decide whether the debt is provable. If the dispute is genuine and substantial, the liquidator may reject the proof, and you can appeal to the court within 21 days.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I claim interest on the debt?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only if interest was contractually due at the date of liquidation. Statutory interest under the Late Payment of Commercial Debts Act 1998 can also be claimed if it was accruing before the liquidation date. Post-liquidation interest is only payable in a solvent liquidation (MVL) where all debts have been paid in full.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much will I actually recover?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In the average insolvent liquidation, unsecured creditors recover between 0p and 20p in the pound. Many receive nothing at all after the liquidator's fees, preferential claims, and any secured creditors are paid. The exact figure depends on the company's assets and the total claims against the estate.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I file a proof late?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, but you will miss any dividend that has already been declared before your proof was filed. Late proofs are accepted for future distributions. File as early as possible to protect your position.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK creditors filing a proof of debt against a company that has entered liquidation.</p>
+<p>We have drawn on the Insolvency (England and Wales) Rules 2016 (Part 14 on proofs of debt, Rule 14.8 on appeals against rejection, Rule 14.24 on participation in distributions), the Insolvency Act 1986, the Late Payment of Commercial Debts (Interest) Act 1998, and current Insolvency Service guidance for creditors.</p>
+<p>Where we describe how proof-of-debt adjudication plays out operationally, including the typical reasons proofs are rejected, the strategic mistake of filing a proof when a retention-of-title claim would recover more, and the 21-day appeal window that catches creditors out, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer creditors to licensed insolvency practitioners and litigation solicitors where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; Part 14 sets the proof of debt procedure, liquidator adjudication, rejection notices, and the 21-day creditor appeal window</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; statutory basis for admitting creditor claims, set-off, preferential status under Schedule 6, and dividend distribution in liquidation</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance for creditors on submitting proofs, dealing with the liquidator, and understanding dividend prospects</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->
