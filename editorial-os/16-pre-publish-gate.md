@@ -314,6 +314,15 @@ These are hard rules. No article may be published or pushed to staging unless ev
 
 See `10-evidence-governance.md` §12 for the full information gain framework.
 
+**Enforcement:** `scripts/info_gain_audit.py` walks every `<h2>` in the article and produces a markdown template that the operator must fill in with at least one info-gain element (or a `no-info-gain: <reason>` opt-out, max 2 per article, intended only for genuinely structural sections like Related Guides nav). Bernstein blocks the `review_notes_complete` checkpoint until the filled template passes the audit's `--check` mode. The pass summary is appended to the checkpoint note for persistence in state.json. To run:
+
+```
+node editorial-os/bernstein.js info-gain-template <page-id-or-slug>   # emits template
+# operator fills in editorial-os/bernstein-state/<page>/runs/info-gain-audit.md
+node editorial-os/bernstein.js checkpoint-complete <page> review_notes_complete --note "..."
+# Bernstein runs scripts/info_gain_audit.py --check internally; refuses to advance on fail.
+```
+
 ---
 
 ## Check 13: Commercial software article quality [Tier 2 + Tier 3] (applies to reviews, comparisons, alternatives, roundups)

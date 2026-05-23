@@ -11,7 +11,22 @@
 
 global $post;
 
-if ( $post && ( get_field( 'enable_related_articles', $post->ID ) || ! metadata_exists( 'post', $post->ID, 'enable_related_articles' ) ) ) {
+// 2026-05-19: suppress related-articles section on category archives and on
+// posts/pages using the Single Post Full Width template (templates/content-single-post-full-width.php).
+// All other templates (take-the-test, post-default single.php, post-sectors, etc.)
+// continue to follow the enable_related_articles ACF field logic below.
+// 2026-05-20: related-articles section disabled site-wide.
+// Backend (template-part, JS, CSS) intact -- re-enable by removing this single
+// reassignment so the conditional below applies again.
+$cd_disable_related = true;
+/* original conditional kept for reference:
+$cd_disable_related = (
+    is_category()
+    || is_page_template( 'templates/content-single-post-full-width.php' )
+);
+*/
+
+if ( ! $cd_disable_related && $post && ( get_field( 'enable_related_articles', $post->ID ) || ! metadata_exists( 'post', $post->ID, 'enable_related_articles' ) ) ) {
     get_template_part( '/template-parts/related-articles/related-articles' );
 }
 ?>
@@ -72,7 +87,7 @@ if ( $post && ( get_field( 'enable_related_articles', $post->ID ) || ! metadata_
                     <?php dynamic_sidebar( 'footer-section-4-sidebar' ); ?>
                 </div>
                 <div class="col-12">
-                    <div class="footer_disclaimer"><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms and Conditions</a> | <a href="/cookie-policy/">Cookie Policy</a> | <a href="/sitemap_index.xml">Site Map</a><br><br><?php the_field( 'disclaimer', 'option' ); ?></div>
+                    <div class="footer_disclaimer"><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-conditions/">Terms and Conditions</a> | <a href="/cookie-policy/">Cookie Policy</a> | <a href="/site-map/">Site Map</a><br><br><?php the_field( 'disclaimer', 'option' ); ?></div>
                 </div>
             </div>
         </div>

@@ -187,7 +187,18 @@ def _strip_sources_section(body: str) -> str:
     Em dashes are acceptable inside the Sources & References list (citation
     format). Strip that section before counting em dashes elsewhere so the
     mechanical check reflects the canonical rule.
+
+    Recognises both the legacy `<h2>Sources & References</h2>` form and the
+    canonical `<aside class="cd-sources">` / `<aside class="sources-block">` form.
     """
+    # Canonical aside form
+    for cls in ("cd-sources", "sources-block"):
+        m = re.search(
+            rf'<aside\s+class=["\']{cls}["\']', body, re.I,
+        )
+        if m:
+            return body[: m.start()]
+    # Legacy H2 form
     m = re.search(r"<h2[^>]*>\s*Sources\s*&amp;\s*References\s*</h2>", body, re.I)
     if not m:
         m = re.search(r"<h2[^>]*>\s*Sources\s*&\s*References\s*</h2>", body, re.I)
@@ -537,6 +548,11 @@ def check_sources(body: str) -> CheckResult:
           (a) an <a href="..."> link, OR
           (b) an explicit opt-out marker: <!-- no-url: <reason> -->
         per editorial-os/10-evidence-governance.md §7b "Source link requirement".
+      - The anchor on each <li> must NOT be a suffix-only domain link.
+        Anti-pattern: '<li>Citation title plain text - <a>legislation.gov.uk</a></li>'
+        where the descriptive citation is unclickable and only the trailing
+        domain is the link. Citation titles must be the clickable element
+        (or the entire <li> contents must be wrapped in the anchor).
     """
     label_re = re.compile(
         r"(?:<h[2-6][^>]*>|<(?:strong|b|p|div|span|aside|footer)[^>]*>)\s*"
@@ -595,6 +611,48 @@ def check_sources(body: str) -> CheckResult:
             name="Sources & References block present",
             passed=False,
             detail=f"{len(no_link)} source bullet(s) without a link or no-url opt-out: {sample}",
+        )
+
+    # Anti-pattern: suffix-only anchor.
+    # Form: '<li>Citation title plain text - <a href="...">legislation.gov.uk</a></li>'
+    # The descriptive citation is unclickable; only the trailing domain is the link.
+    # Detect: substantial plain text outside anchors AND every anchor text matches a
+    # bare-hostname pattern (no spaces, dot-separated).
+    domain_only_re = re.compile(r"^(www\.)?[a-z0-9-]+(\.[a-z0-9-]+){1,3}$", re.I)
+    suffix_only: list[str] = []
+    for li in li_blocks:
+        # Extract anchor texts
+        anchor_texts = [
+            re.sub(r"<[^>]+>", "", a).strip()
+            for a in re.findall(r"<a\s[^>]*>(.*?)</a>", li, re.DOTALL | re.I)
+        ]
+        if not anchor_texts:
+            continue  # no-anchor case already failed above
+        # Skip opt-outs
+        if re.search(r"<!--\s*no-url\b[^>]*-->", li, re.I):
+            continue
+        # Plain text outside any anchor
+        masked = re.sub(r"<a\s[^>]*>.*?</a>", "", li, flags=re.DOTALL | re.I)
+        plain_outside = re.sub(r"<[^>]+>", "", masked).strip()
+        # Strip cosmetic separators ("- ", " : ", ".") from the count
+        plain_compact = re.sub(r"[-:.\s]+", "", plain_outside)
+        if (
+            len(plain_compact) > 20
+            and all(domain_only_re.match(at) for at in anchor_texts)
+        ):
+            text = re.sub(r"<[^>]+>", "", li).strip()
+            suffix_only.append(text[:70])
+
+    if suffix_only:
+        sample = "; ".join(suffix_only[:3])
+        return CheckResult(
+            id="18", tier="T2",
+            name="Sources & References block present",
+            passed=False,
+            detail=(
+                f"{len(suffix_only)} source bullet(s) use suffix-only anchor "
+                f"(citation title is plain text, only domain is linked): {sample}"
+            ),
         )
 
     return CheckResult(
@@ -762,6 +820,21 @@ def check_block_comment_json_no_raw_html(raw_html: str) -> CheckResult:
     # Match block-comment markers with JSON attributes
     block_re = re.compile(r"<!--\s*wp:[\w/-]+\s+(\{[^}]*\})\s*-->", re.DOTALL)
     offenders: list[str] = []
+    # Detect malformed Unicode escapes — common breakage pattern is a writer dropping
+    # the leading backslash, leaving "u003cstrong" instead of "<strong". The literal
+    # text then renders on the page as "u003c..." in the FAQ panel title.
+    malformed_escape_re = re.compile(r"(?<!\\)u003[ce]", re.I)
+    # Detect HTML-entity-encoded block markers: `&lt;!-- wp:... --&gt;` or
+    # `&lt;!-- wp:... /--&gt;`. WordPress never sees these as Gutenberg blocks because
+    # the parser only recognises raw `<!--` delimiters; the JSON renders as literal
+    # text on the page (seen 2026-05-11 on directors-duties-to-creditors CTA).
+    encoded_marker_re = re.compile(r"&lt;!--\s*wp:[\w/-]+", re.IGNORECASE)
+    encoded_count = len(encoded_marker_re.findall(raw_html))
+    if encoded_count:
+        offenders.append(
+            f"{encoded_count} HTML-entity-encoded block marker(s) found (&lt;!-- wp:... --&gt;) — "
+            "Gutenberg parser will not recognise these; JSON will render as literal text"
+        )
     for m in block_re.finditer(raw_html):
         json_blob = m.group(1)
         # Find string values: "key":"value"  -- look for raw < or > inside the value
@@ -770,14 +843,16 @@ def check_block_comment_json_no_raw_html(raw_html: str) -> CheckResult:
             key = sm.group(1)
             value = sm.group(2)
             if "<" in value or ">" in value:
-                offenders.append(f"{key}: {value[:60]}")
+                offenders.append(f"{key}: raw HTML — {value[:60]}")
+            elif malformed_escape_re.search(value):
+                offenders.append(f"{key}: malformed unicode escape (literal 'u003c'/'u003e' without leading backslash) — {value[:60]}")
     if offenders:
         sample = "; ".join(offenders[:3])
         return CheckResult(
             id="22", tier="T1",
             name="Block-comment JSON attrs use \\u003c-escapes for HTML",
             passed=False,
-            detail=f"{len(offenders)} attr(s) with raw HTML in JSON: {sample}",
+            detail=f"{len(offenders)} attr(s) malformed: {sample}",
         )
     return CheckResult(
         id="22", tier="T1",
@@ -949,6 +1024,12 @@ def main() -> int:
     ap.add_argument("--slug", help="Limit to files whose name contains this substring")
     ap.add_argument("--json", help="Write JSON report to this path")
     ap.add_argument("--quiet", action="store_true", help="Summary only")
+    ap.add_argument(
+        "--gate-format",
+        action="store_true",
+        help="Emit 'HARD FAIL: <check> - <detail>' lines per failure for "
+             "Bernstein gate consumption (in addition to normal output).",
+    )
     args = ap.parse_args()
 
     drafts_dir = Path(args.drafts)
@@ -968,6 +1049,15 @@ def main() -> int:
     if not args.quiet:
         for a in audits:
             print_report(a)
+
+    # Gate-format output: emit a HARD FAIL line per failed check so Bernstein's
+    # parseHardFails() regex (HARD FAIL: <check> - <detail>) picks them up.
+    if args.gate_format:
+        for a in audits:
+            for check in a.checks:
+                if not check.passed:
+                    detail = check.detail or "(no detail)"
+                    print(f"HARD FAIL: {check.id}. {check.name} - {detail}")
 
     print("=" * 80)
     print("SUMMARY")
