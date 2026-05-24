@@ -74,7 +74,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>HMRC is significantly more likely to agree if you are up to date on PAYE, Corporation Tax, and current VAT returns. If you are behind on everything, TTP becomes harder to negotiate.</p>
+<p>HMRC is significantly more likely to agree if you are up to date on PAYE, <a href="/hmrc/problems-paying-corporation-tax-hmrc/">Corporation Tax</a>, and current VAT returns. If you are behind on everything, TTP becomes harder to negotiate.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

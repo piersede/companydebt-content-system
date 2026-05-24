@@ -23,7 +23,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>An MVL is a form of <a href="/liquidation/">voluntary liquidation</a> for solvent companies. It allows directors to wind up a company that can pay all its debts in full (including interest) within 12 months, and distribute the remaining assets to shareholders.</p>
+<p>An MVL is a form of <a href="/liquidation/creditors-voluntary-liquidation/">voluntary liquidation</a> for solvent companies. It allows directors to wind up a company that can pay all its debts in full (including interest) within 12 months, and distribute the remaining assets to shareholders.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

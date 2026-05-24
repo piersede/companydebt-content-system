@@ -3,7 +3,7 @@
 <!-- LINK: https://comdebstage.wpengine.com/insolvency-news-commentary/ -->
 
 <!-- wp:paragraph -->
-<p>UK company insolvencies are running at their highest sustained level since the early 2000s. The <a href="https://companydebt.com/insolvency/what-is-the-insolvency-service/">Insolvency Service</a>'s quarterly statistics for Q1 2024 recorded 5,209 company insolvencies, of which roughly 88% were Creditors' Voluntary Liquidations.</p>
+<p>UK company insolvencies are running at their highest sustained level since the early 2000s. The <a href="/insolvency/what-is-the-insolvency-service/">Insolvency Service</a>'s quarterly statistics for Q1 2024 recorded 5,209 company insolvencies, of which roughly 88% were Creditors' Voluntary Liquidations.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Behind that headline figure sit four trends that change how you should think about your own position. HMRC's reinstatement as a secondary preferential creditor in December 2020 has shrunk floating-charge recoveries. The Supreme Court's <em>BTI v Sequana</em> decision in 2022 pushed the creditor-duty threshold earlier than it used to be.</p>
@@ -42,7 +42,7 @@
 <p><strong>Volume:</strong> Q1 2024 recorded 5,209 company insolvencies; the highest quarterly figure since 2003. The 12-month rolling rate sits at approximately 20,000 company insolvencies per year, materially above the pre-pandemic baseline of 14,000-15,000.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>Procedure split:</strong> <a href="https://companydebt.com/liquidation/creditors-voluntary-liquidation/">CVL</a> remains the dominant route at approximately 88% of all company insolvencies. Administrations make up roughly 6%, compulsory liquidations around 5%, and CVAs the remaining 1%.</p>
+<p><strong>Procedure split:</strong> <a href="/liquidation/creditors-voluntary-liquidation/">CVL</a> remains the dominant route at approximately 88% of all company insolvencies. Administrations make up roughly 6%, compulsory liquidations around 5%, and CVAs the remaining 1%.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>The CVA share has fallen since 2020; partly because HMRC's secondary preferential status makes the 75% by value approval threshold harder to reach, and partly because the Restructuring Plan under Part 26A CA 2006 has absorbed some of the complex restructuring volume.</p>
@@ -88,7 +88,7 @@
 <p>Three regulatory layers shape the current framework:</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>CIGA 2020.</strong> The Corporate Insolvency and Governance Act 2020 introduced Part A1 of the <a href="https://companydebt.com/insolvency/insolvency-act-1986/">Insolvency Act 1986</a> (standalone moratorium) and Part 26A of the Companies Act 2006 (Restructuring Plan with cross-class cram-down).</p>
+<p><strong>CIGA 2020.</strong> The Corporate Insolvency and Governance Act 2020 introduced Part A1 of the <a href="/insolvency/insolvency-act-1986/">Insolvency Act 1986</a> (standalone moratorium) and Part 26A of the Companies Act 2006 (Restructuring Plan with cross-class cram-down).</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>The standalone moratorium gives 20 business days breathing space (extendable) under monitor (licensed IP) supervision. The Restructuring Plan absorbs complex SME/mid-market restructurings that would previously have gone through Scheme of Arrangement or administration.</p>
@@ -193,7 +193,7 @@
 
 <!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhere can we find sector-specific insolvency commentary?\u003c/strong\u003e"} -->
 <!-- wp:paragraph -->
-<p>R3 (Association of <a href="https://companydebt.com/insolvency/business-recovery-services/">Business Recovery</a> Professionals), the Insolvency Lawyers' Association, and Practical Law Insolvency module publish practitioner-focused analysis. Trade press (CN+, Insolvency Today) covers UK practice. ICAEW + IPA publish regulatory updates affecting IPs and the procedures they run.</p>
+<p>R3 (Association of <a href="/insolvency/business-recovery-services/">Business Recovery</a> Professionals), the Insolvency Lawyers' Association, and Practical Law Insolvency module publish practitioner-focused analysis. Trade press (CN+, Insolvency Today) covers UK practice. ICAEW + IPA publish regulatory updates affecting IPs and the procedures they run.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:ub/content-toggle-panel-block -->
 

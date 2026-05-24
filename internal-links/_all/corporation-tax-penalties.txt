@@ -283,7 +283,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Where your company cannot pay the underlying tax and accumulating penalties, HMRC can refuse a standard Time to Pay arrangement.</p>
+<p>Where your company <a href="/hmrc/problems-paying-corporation-tax-hmrc/">cannot pay the underlying Corporation Tax</a> and accumulating penalties, HMRC can refuse a standard Time to Pay arrangement.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

@@ -1,5 +1,5 @@
 <!-- wp:paragraph -->
-<p>The corporate insolvency test lives in section 123 of the <a href="https://companydebt.com/insolvency/insolvency-act-1986/">Insolvency Act 1986</a>. It asks a deceptively simple question: is the company "unable to pay its debts"? The answer changes almost everything about your position as a director.</p>
+<p>The corporate insolvency test lives in section 123 of the <a href="/insolvency/insolvency-act-1986/">Insolvency Act 1986</a>. It asks a deceptively simple question: is the company "unable to pay its debts"? The answer changes almost everything about your position as a director.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -32,7 +32,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>Creditors can petition</strong>. A creditor owed more than £750 with an unpaid statutory demand after 21 days can present a <a href="https://companydebt.com/winding-up-petitions/">winding-up petition</a>. HMRC and factoring companies are the most common petitioners.</li>
+<li><strong>Creditors can petition</strong>. A creditor owed more than £750 with an unpaid statutory demand after 21 days can present a <a href="/winding-up-petitions/">winding-up petition</a>. HMRC and factoring companies are the most common petitioners.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -130,7 +130,7 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><strong>Section 123(1)(a), unpaid statutory demand</strong>. A creditor owed more than £750 serves a statutory demand. If 21 days pass without payment, security, or a court-recognised compromise, the test is met. See our guide to the <a href="https://companydebt.com/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/">statutory demand</a>.</li>
+<li><strong>Section 123(1)(a), unpaid statutory demand</strong>. A creditor owed more than £750 serves a statutory demand. If 21 days pass without payment, security, or a court-recognised compromise, the test is met. See our guide to the <a href="/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/">statutory demand</a>.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->

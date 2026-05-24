@@ -11,7 +11,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Unlike Corporation Tax, where the debt is the company's own tax liability, PAYE is money you collected from your employees and were supposed to pass to HMRC. The distinction matters legally and practically: HMRC can issue personal liability notices to directors for unpaid PAYE, and it is a preferential debt in insolvency.</p>
+<p>Unlike <a href="/hmrc/problems-paying-corporation-tax-hmrc/">Corporation Tax</a>, where the debt is the company's own tax liability, PAYE is money you collected from your employees and were supposed to pass to HMRC. The distinction matters legally and practically: HMRC can issue personal liability notices to directors for unpaid PAYE, and it is a preferential debt in insolvency.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

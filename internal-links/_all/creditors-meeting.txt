@@ -31,7 +31,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>The chair of the meeting is almost always a licensed <a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">insolvency practitioner</a> nominated by the company. And, in the background, HMRC often sits as the largest single creditor and frequently sets the tone of the vote.</p>
+<p>The chair of the meeting is almost always a licensed <a href="/insolvency/what-is-an-insolvency-practitioner/">insolvency practitioner</a> nominated by the company. And, in the background, HMRC often sits as the largest single creditor and frequently sets the tone of the vote.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -55,7 +55,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>If you have not yet chosen who to nominate, see our guide on <a href="https://companydebt.com/insolvency/find-a-liquidator-near-me/">finding a liquidator near you</a> for how to instruct an IP rather than how the meeting itself runs.</p>
+<p>If you have not yet chosen who to nominate, see our guide on <a href="/insolvency/find-a-liquidator-near-me/">finding a liquidator near you</a> for how to instruct an IP rather than how the meeting itself runs.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -95,11 +95,11 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The most common trigger is a <a href="https://companydebt.com/cvl-creditors-voluntary-liquidation/">Creditors’ Voluntary Liquidation</a>. Under section 100 of the Insolvency Act 1986, once shareholders pass the winding-up resolution, a creditors’ decision must be sought to confirm the liquidator.</p>
+<p>The most common trigger is a <a href="/liquidation/creditors-voluntary-liquidation/">Creditors’ Voluntary Liquidation</a>. Under section 100 of the Insolvency Act 1986, once shareholders pass the winding-up resolution, a creditors’ decision must be sought to confirm the liquidator.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Meetings also arise in <a href="https://companydebt.com/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangements</a>, where creditors vote on the proposal, and at intervals during a liquidation if the IP needs sanction for a particular step.</p>
+<p>Meetings also arise in <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangements</a>, where creditors vote on the proposal, and at intervals during a liquidation if the IP needs sanction for a particular step.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -143,7 +143,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Creditors who believe the decision was procedurally flawed can apply to court within 28 days of the relevant decision under rule 15.35 of the 2016 Rules. Complaints about the conduct of the IP go to the practitioner’s authorising body, normally the IPA, ICAEW, or another <a href="https://companydebt.com/insolvency/insolvent-company-investigations/">Recognised Professional Body</a>.</p>
+<p>Creditors who believe the decision was procedurally flawed can apply to court within 28 days of the relevant decision under rule 15.35 of the 2016 Rules. Complaints about the conduct of the IP go to the practitioner’s authorising body, normally the IPA, ICAEW, or another <a href="/insolvency/insolvent-company-investigations/">Recognised Professional Body</a>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -219,7 +219,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Pull a schedule of payments to connected parties, repayments of <a href="https://companydebt.com/insolvency/preferential-non-preferential-creditors/">director loan accounts</a>, transfers of assets, and any payments made when a key creditor was already chasing.</p>
+<p>Pull a schedule of payments to connected parties, repayments of <a href="/insolvency/preferential-non-preferential-creditors/">director loan accounts</a>, transfers of assets, and any payments made when a key creditor was already chasing.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -235,7 +235,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>They will tell you whether your nominee is likely to be acceptable to that particular creditor base, and whether your draft Statement of Affairs reads as straightforward or as something that will provoke <a href="https://companydebt.com/insolvency/dealing-with-creditor-pressure/">creditor pushback</a>.</p>
+<p>They will tell you whether your nominee is likely to be acceptable to that particular creditor base, and whether your draft Statement of Affairs reads as straightforward or as something that will provoke <a href="/insolvency/dealing-with-creditor-pressure/">creditor pushback</a>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -244,19 +244,19 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/find-a-liquidator-near-me/">Find a Liquidator Near Me</a>: choosing which IP to instruct, national vs local.</li>
+<li><a href="/insolvency/find-a-liquidator-near-me/">Find a Liquidator Near Me</a>: choosing which IP to instruct, national vs local.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/cvl-creditors-voluntary-liquidation/">Creditors’ Voluntary Liquidation</a>: the procedure the meeting usually sits inside.</li>
+<li><a href="/liquidation/creditors-voluntary-liquidation/">Creditors’ Voluntary Liquidation</a>: the procedure the meeting usually sits inside.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a>: where the 75% vote rule applies instead.</li>
+<li><a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a>: where the 75% vote rule applies instead.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/preferential-non-preferential-creditors/">Preferential and Non-Preferential Creditors</a>: who ranks where in the distribution.</li>
+<li><a href="/insolvency/preferential-non-preferential-creditors/">Preferential and Non-Preferential Creditors</a>: who ranks where in the distribution.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 

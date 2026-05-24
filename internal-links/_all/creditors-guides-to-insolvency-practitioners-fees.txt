@@ -166,7 +166,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The fee resolution is a separate vote at the <a href="https://companydebt.com/insolvency/creditors-meeting/">creditors’ decision procedure</a>, taken alongside the appointment resolution. It passes on a simple majority in value of the unsecured creditors voting. The chair, normally the IP, admits or rejects claims for voting purposes and records the result on the chairperson’s report.</p>
+<p>The fee resolution is a separate vote at the <a href="/insolvency/creditors-meeting/">creditors’ decision procedure</a>, taken alongside the appointment resolution. It passes on a simple majority in value of the unsecured creditors voting. The chair, normally the IP, admits or rejects claims for voting purposes and records the result on the chairperson’s report.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -282,7 +282,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>See our note on <a href="https://companydebt.com/insolvent-company-owes-me-money/">recovering from an insolvent company</a> for the wider playbook on creditor coordination.</p>
+<p>See our note on <a href="/insolvency/insolvent-company-owes-me-money/">recovering from an insolvent company</a> for the wider playbook on creditor coordination.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -323,19 +323,19 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/creditors-meeting/">Guide to Creditors’ Meetings in Insolvency</a>: the decision procedure where the fee resolution is voted on.</li>
+<li><a href="/insolvency/creditors-meeting/">Guide to Creditors’ Meetings in Insolvency</a>: the decision procedure where the fee resolution is voted on.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/find-a-liquidator-near-me/">Find a Liquidator Near Me</a>: how creditors and directors choose which IP to instruct in the first place.</li>
+<li><a href="/insolvency/find-a-liquidator-near-me/">Find a Liquidator Near Me</a>: how creditors and directors choose which IP to instruct in the first place.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">What Is an Insolvency Practitioner?</a>: the role and regulation of the office-holder whose fees you are scrutinising.</li>
+<li><a href="/insolvency/what-is-an-insolvency-practitioner/">What Is an Insolvency Practitioner?</a>: the role and regulation of the office-holder whose fees you are scrutinising.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="https://companydebt.com/insolvency/preferential-non-preferential-creditors/">Preferential and Non-Preferential Creditors</a>: where unsecured creditors sit in the distribution after fees and disbursements come out.</li>
+<li><a href="/insolvency/preferential-non-preferential-creditors/">Preferential and Non-Preferential Creditors</a>: where unsecured creditors sit in the distribution after fees and disbursements come out.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 

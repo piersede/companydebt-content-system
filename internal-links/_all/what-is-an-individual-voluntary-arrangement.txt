@@ -3,10 +3,10 @@
 <!-- LINK: https://comdebstage.wpengine.com/insolvency/what-is-an-individual-voluntary-arrangement/ -->
 
 <!-- wp:paragraph -->
-<p>An IVA is the procedure most people reach for when they have real income, real personal debt, and need to keep their name off the <a href="https://companydebt.com/insolvency/limited-company-bankruptcy/">bankruptcy</a> register.</p>
+<p>An IVA is the procedure most people reach for when they have real income, real personal debt, and need to keep their name off the <a href="/insolvency/limited-company-bankruptcy/">bankruptcy</a> register.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>It's a court-recognised compromise between a debtor and unsecured creditors, supervised by a <a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">licensed insolvency practitioner</a>, and it sits in a different part of the <a href="https://companydebt.com/insolvency/insolvency-act-1986/">Insolvency Act 1986</a> to anything that liquidates a company.</p>
+<p>It's a court-recognised compromise between a debtor and unsecured creditors, supervised by a <a href="/insolvency/what-is-an-insolvency-practitioner/">licensed insolvency practitioner</a>, and it sits in a different part of the <a href="/insolvency/insolvency-act-1986/">Insolvency Act 1986</a> to anything that liquidates a company.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>That confusion costs directors money: company directors with personal debts often look up IVAs and assume their company can use one. It cannot.</p>
@@ -23,7 +23,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>An IVA is governed by Part VIII of the Insolvency Act 1986 (sections 252-263G). It is a formal, court-recognised arrangement between an individual debtor and their unsecured creditors, supervised by a <a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">licensed insolvency practitioner</a>. The IP acts first as nominee while we draft the proposal, then as supervisor once creditors approve it.</p>
+<p>An IVA is governed by Part VIII of the Insolvency Act 1986 (sections 252-263G). It is a formal, court-recognised arrangement between an individual debtor and their unsecured creditors, supervised by a <a href="/insolvency/what-is-an-insolvency-practitioner/">licensed insolvency practitioner</a>. The IP acts first as nominee while we draft the proposal, then as supervisor once creditors approve it.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>The unsecured debts brought into the arrangement typically settle at 30-50p in the pound over a 5-year contribution term. Secured debts; your mortgage, asset finance, hire-purchase agreements; sit outside the IVA and continue under their own contracts. So do student loans, child maintenance, criminal fines and family-court arrears.</p>
@@ -98,7 +98,7 @@
 </ol>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
-<p>Failure during the 5-year term, typically two consecutive missed payments, triggers a supervisor's certificate of breach. Under s.276 IA 1986, the supervisor can petition for the debtor's <a href="https://companydebt.com/insolvency/limited-company-bankruptcy/">bankruptcy</a>, which the court grants on the IVA failure alone.</p>
+<p>Failure during the 5-year term, typically two consecutive missed payments, triggers a supervisor's certificate of breach. Under s.276 IA 1986, the supervisor can petition for the debtor's <a href="/insolvency/limited-company-bankruptcy/">bankruptcy</a>, which the court grants on the IVA failure alone.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>We rarely see directors warned about this fallback before they sign up. Missing payments on an IVA is not a soft default — it is the route into Part IX bankruptcy.</p>

@@ -241,7 +241,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>For procedure mechanics, see the <a href="/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/">CVA versus liquidation</a> comparison and the <a href="/what-is-a-pre-pack-administration/">pre-pack administration</a> guide.</p>
+<p>For procedure mechanics, see the <a href="/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/">CVA versus liquidation</a> comparison and the <a href="/company-rescue-solutions/pre-packs/">pre-pack administration</a> guide.</p>
 
 <p>The procedure choice is downstream of the personal exposure profile, and the spokes set out the trade-offs cleanly.</p>
 <!-- /wp:paragraph -->

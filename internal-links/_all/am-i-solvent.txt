@@ -203,7 +203,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Where the company is insolvent and the directors decide to close it themselves, the next step is deciding between the two <a href="/liquidation/">voluntary liquidation routes</a>, which depend on whether the company is solvent or insolvent.</p>
+<p>Where the company is insolvent and the directors decide to close it themselves, the next step is deciding between the two <a href="/liquidation/creditors-voluntary-liquidation/">voluntary liquidation routes</a>, which depend on whether the company is solvent or insolvent.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

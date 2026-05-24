@@ -58,7 +58,7 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><strong>Company Voluntary Arrangement, Part I (sections 1–7B)</strong>. A proposal to creditors to compromise unsecured debts on agreed terms, approved by 75% in value. Directors stay in control. Used where the business is viable but the historic debt is not. See our guide to the <a href="https://companydebt.com/insolvency/what-is-a-company-voluntary-arrangement/">CVA</a>.</li>
+<li><strong>Company Voluntary Arrangement, Part I (sections 1–7B)</strong>. A proposal to creditors to compromise unsecured debts on agreed terms, approved by 75% in value. Directors stay in control. Used where the business is viable but the historic debt is not. See our guide to the <a href="/company-rescue-solutions/company-voluntary-arrangement/">CVA</a>.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -105,7 +105,7 @@
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>If you are wondering whether your company is insolvent, this is where to start. Our detailed <a href="https://companydebt.com/insolvency/insolvency-test/">insolvency test guide</a> walks through each limb with worked examples. We also run through these limbs directly with directors on the first call, because knowing which test your company fails shapes what we recommend.</p>
+<p>If you are wondering whether your company is insolvent, this is where to start. Our detailed <a href="/insolvency/insolvency-test/">insolvency test guide</a> walks through each limb with worked examples. We also run through these limbs directly with directors on the first call, because knowing which test your company fails shapes what we recommend.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -135,7 +135,7 @@
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>You also sit inside the broader Companies Act 2006 duty regime and the <em>BTI v Sequana</em> [2022] Supreme Court framework, which confirmed that once insolvency is likely, directors must have regard to creditor interests. The Insolvency Act sections bite only on insolvency, but the duty shift starts earlier. Our guide to <a href="https://companydebt.com/advice/are-directors-personally-liable-for-company-debts/">director personal liability</a> walks through the overlap.</p>
+<p>You also sit inside the broader Companies Act 2006 duty regime and the <em>BTI v Sequana</em> [2022] Supreme Court framework, which confirmed that once insolvency is likely, directors must have regard to creditor interests. The Insolvency Act sections bite only on insolvency, but the duty shift starts earlier. Our guide to <a href="/advice/are-directors-personally-liable-for-company-debts/">director personal liability</a> walks through the overlap.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -236,7 +236,7 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><strong>Individual Voluntary Arrangement, Part VIII</strong>. Personal equivalent of the CVA. Compromises unsecured personal debt over (usually) five years. Used by directors whose PGs have been called. See our <a href="https://companydebt.com/insolvency/what-is-an-individual-voluntary-arrangement/">IVA guide</a>.</li>
+<li><strong>Individual Voluntary Arrangement, Part VIII</strong>. Personal equivalent of the CVA. Compromises unsecured personal debt over (usually) five years. Used by directors whose PGs have been called. See our <a href="/insolvency/what-is-an-individual-voluntary-arrangement/">IVA guide</a>.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->

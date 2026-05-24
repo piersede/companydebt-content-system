@@ -283,7 +283,7 @@
 
 <!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I wind up the LLP voluntarily if some members disagree?\u003c/strong\u003e"} -->
 <!-- wp:paragraph {"placeholder":"Panel content"} -->
-<p>It depends on your members' agreement. If the agreement requires a unanimous vote to wind up, a single dissenting member can block a <a href="/liquidation/">voluntary liquidation</a>. If there is no agreement, the default LLP Regulations require a majority.</p>
+<p>It depends on your members' agreement. If the agreement requires a unanimous vote to wind up, a single dissenting member can block a <a href="/liquidation/creditors-voluntary-liquidation/">voluntary liquidation</a>. If there is no agreement, the default LLP Regulations require a majority.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Where members cannot agree, it may be necessary for the remaining members to petition the court for a just and equitable winding up, which adds cost and complexity but is available as a remedy under section 122(1)(g) of the Insolvency Act 1986.</p>

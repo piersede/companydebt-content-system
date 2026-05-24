@@ -6,7 +6,7 @@
 <p>HMRC's role in any company insolvency changed materially on 1 December 2020. Most directors we see going through liquidation still operate on the pre-2020 understanding, and it costs them money in the distribution and the conduct review. Our main guide explains <a href="/liquidation/">going through liquidation</a> step by step if you need the wider process first.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>The Finance Act 2020 restored HMRC's secondary <a href="https://companydebt.com/insolvency/preferential-non-preferential-creditors/">preferential creditor</a> status for "trust taxes"; VAT, PAYE, employee NIC, and CIS withholdings; which means HMRC now collects ahead of the bank's floating charge and well ahead of trade suppliers. This is not a tweak.</p>
+<p>The Finance Act 2020 restored HMRC's secondary <a href="/insolvency/preferential-non-preferential-creditors/">preferential creditor</a> status for "trust taxes"; VAT, PAYE, employee NIC, and CIS withholdings; which means HMRC now collects ahead of the bank's floating charge and well ahead of trade suppliers. This is not a tweak.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>It changed the distribution outcome on most insolvent SME estates and made HMRC's vote at any CVA or creditor decision procedure the swing vote on whether a rescue procedure can fly.</p>
@@ -172,7 +172,7 @@
 <li><strong>Taking Control of Goods (TCoG)</strong> under Sch 12 TCEA 2007: enforcement agent visits, fee waterfall of £75 + £190 + 7.5% + £495 + 7.5% + £525 + 7.5%; typical £10k debt adds £1,500-2,500</li>
 <li><strong>Direct Recovery of Debts</strong> under FA No.2 2015 Part 2: HMRC can take £5,000+ direct from bank accounts WITHOUT court order, after notice + hardship review</li>
 <li><strong>HMRC Security Bond</strong> under s.71 VATA 1994 + reg.97N PAYE Regs: cash deposit demand for future taxes where HMRC sees viability risk; criminal under s.72 VATA 1994 to trade without it once demanded</li>
-<li><strong><a href="https://companydebt.com/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">Winding-up petition</a></strong> under s.122(1)(f) IA 1986: £280 court fee + £1,200 advertising deposit</li>
+<li><strong><a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">Winding-up petition</a></strong> under s.122(1)(f) IA 1986: £280 court fee + £1,200 advertising deposit</li>
 </ul>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
@@ -187,7 +187,7 @@
 <p>Company tax debt does NOT become director debt by default; but three specific routes can crystallise it personally:</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong><a href="https://companydebt.com/hmrc/personal-liability-notices/">Personal Liability Notice</a> (PLN)</strong> under:</p>
+<p><strong><a href="/hmrc/personal-liability-notices/">Personal Liability Notice</a> (PLN)</strong> under:</p>
 <!-- /wp:paragraph -->
 <!-- wp:list -->
 <ul class="wp-block-list">
@@ -220,7 +220,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading"><a href="https://companydebt.com/hmrc/time-to-pay-hmrc/">Time to Pay</a>: HMRC's First Preference</h2>
+<h2 class="wp-block-heading"><a href="/hmrc/time-to-pay-hmrc/">Time to Pay</a>: HMRC's First Preference</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

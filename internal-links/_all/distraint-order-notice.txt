@@ -74,7 +74,7 @@
 <p><strong>Stage 1: Notice of Enforcement (NOE).</strong> HMRC's enforcement agent sends the NOE; typically by post to the registered office. The notice gives 7 clear days before any visit. Compliance fee of £75 + VAT crystallises immediately. This is the cheapest stage to resolve the issue.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>Stage 2: First visit.</strong> Agent attends business premises. Peaceful entry only at this stage; but business premises (unlike dwellings) allow forced entry on the second visit under Schedule 12 paras 19-20. The agent identifies goods, lists them, and offers a <a href="https://companydebt.com/hmrc/controlled-goods-agreement/">Controlled Goods Agreement</a> (CGA).</p>
+<p><strong>Stage 2: First visit.</strong> Agent attends business premises. Peaceful entry only at this stage; but business premises (unlike dwellings) allow forced entry on the second visit under Schedule 12 paras 19-20. The agent identifies goods, lists them, and offers a <a href="/hmrc/controlled-goods-agreement/">Controlled Goods Agreement</a> (CGA).</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p><strong>Stage 3: Controlled Goods Agreement OR removal.</strong> Under r.13 of the Taking Control of Goods Regulations 2013 and Schedule 12 para 13 TCEA 2007, a CGA is a written agreement allowing the debtor to keep using the goods while the agent retains legal possession. CGA gives 7+ days to settle or arrange TTP.</p>
@@ -132,9 +132,9 @@
 <ol class="wp-block-list">
 <li><strong>Verify the debt.</strong> Check the HMRC reference number against your Business Tax Account. Confirm the amount is correct and that the underlying assessment is valid.</li>
 <li><strong>Pay in full if possible.</strong> The cheapest option; £75 Compliance fee only, no further escalation.</li>
-<li><strong>Call BPSS within 24 hours</strong> on 0300 200 3835 to negotiate <a href="https://companydebt.com/hmrc/time-to-pay-hmrc/">Time to Pay</a>. BPSS handles proactive cannot-pay cases; their authority is up to 12 months TTP on the call, longer with manager approval. This routes the case off the enforcement track.</li>
-<li><strong>Don't call <a href="https://companydebt.com/hmrc/understanding-hmrc-debt-collection/">HMRC Debt Management</a></strong> (0300 200 3887) instead. Debt Management handles enforcement-track cases, and calling them at NOE stage reinforces the enforcement framing.</li>
-<li><strong>If amount is unmanageable</strong>, instruct an <a href="https://companydebt.com/insolvency/what-is-an-insolvency-practitioner/">insolvency practitioner</a> within 48 hours. The IP diagnostic call is free industry-wide; cheapest insurance against escalation.</li>
+<li><strong>Call BPSS within 24 hours</strong> on 0300 200 3835 to negotiate <a href="/hmrc/time-to-pay-hmrc/">Time to Pay</a>. BPSS handles proactive cannot-pay cases; their authority is up to 12 months TTP on the call, longer with manager approval. This routes the case off the enforcement track.</li>
+<li><strong>Don't call <a href="/hmrc/understanding-hmrc-debt-collection/">HMRC Debt Management</a></strong> (0300 200 3887) instead. Debt Management handles enforcement-track cases, and calling them at NOE stage reinforces the enforcement framing.</li>
+<li><strong>If amount is unmanageable</strong>, instruct an <a href="/insolvency/what-is-an-insolvency-practitioner/">insolvency practitioner</a> within 48 hours. The IP diagnostic call is free industry-wide; cheapest insurance against escalation.</li>
 </ol>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
