@@ -5747,6 +5747,51 @@ body.page-template-content-page-custom_archive .hub-box-content ul li,
 body.page-template-content-page-custom_archive .hub-box-content ul li a {
   font-size: 18px !important;
 }
+/* Hub page -- individual page cards (one card per spoke page) */
+.cd-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 8px 0 32px;
+}
+@media (max-width: 1037px) {
+  .cd-hub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .cd-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+a.cd-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: #F7F9FC;
+  border: 1px solid rgba(0, 40, 86, 0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+a.cd-hub-card:hover {
+  border-color: rgba(0, 40, 86, 0.22);
+  box-shadow: 0 3px 14px rgba(0, 40, 86, 0.08);
+  text-decoration: none;
+}
+.cd-hub-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #00205B;
+  line-height: 1.35;
+}
+.cd-hub-card__desc {
+  font-size: 13px;
+  color: #5a6a7e;
+  line-height: 1.4;
+}
+
 body.page-template-content-full-width-page h1 {
   font-size: 48px !important;
   line-height: 56px !important;
