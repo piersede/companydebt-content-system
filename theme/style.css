@@ -9279,3 +9279,65 @@ body.page-template-take-the-test-template .cd-sources li.cd-source--noref > span
   color: #002856 !important;
   margin-bottom: 4px !important;
 }
+
+/* footer-author rhythm: bump position->pills visual gap to match name->position -- 20260522-105944 */
+body.page-template-take-the-test-template .section-footer-author .footer-author-position {
+  margin: 0 0 22px 0 !important;
+}
+
+/* take-the-test h3->paragraph: +10px (was 12, now 22) -- 20260522-110427 */
+body.page-template-take-the-test-template h3 {
+  margin-bottom: 22px !important;
+}
+
+/* ==========================================================================
+   Methodology & Disclosure redesign v2 -- LAB on /liquidation/ (page-id-7669).
+   Title outside the box, body paragraphs collectively boxed via side-borders
+   continuous across rows and top/bottom borders + radii on first/last p only.
+   -- 20260522-111617
+   ========================================================================== */
+body.page-id-7669 .cd-methodology {
+  margin: 48px 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+body.page-id-7669 .main-content p.cd-methodology__label {
+  font-family: Arial, sans-serif !important;
+  font-size: 24px !important;
+  line-height: 29px !important;
+  font-weight: 600 !important;
+  color: #1F3C5A !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  letter-spacing: normal !important;
+}
+body.page-id-7669 .main-content p.cd-methodology__label strong {
+  font-weight: inherit !important;
+  color: inherit !important;
+  font-size: inherit !important;
+}
+/* Body paragraphs: side borders + side padding continuous, top/bottom only on first/last. */
+body.page-id-7669 .cd-methodology p:not(.cd-methodology__label) {
+  background: #f4f7fe !important;
+  border-left: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-right: 1px solid rgba(0, 40, 86, 0.08) !important;
+  padding: 0 24px !important;
+  margin: 0 !important;
+}
+body.page-id-7669 .cd-methodology__label + p:not(.cd-methodology__label) {
+  padding-top: 28px !important;
+  border-top: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+body.page-id-7669 .cd-methodology p:not(.cd-methodology__label) + p:not(.cd-methodology__label) {
+  padding-top: 12px !important;
+}
+body.page-id-7669 .cd-methodology p:not(.cd-methodology__label):last-child {
+  padding-bottom: 27px !important;
+  border-bottom: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
