@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-5 footer-cta-block-media">
-				<?php echo wp_get_attachment_image( 79834, 'full', false, array( 'class' => 'footer-cta-image', 'alt' => 'Speak to our team using the contact form', 'loading' => 'lazy' ) ); ?>
+				<?php echo wp_get_attachment_image( 79835, 'full', false, array( 'class' => 'footer-cta-image', 'alt' => 'Speak to our team using the contact form', 'loading' => 'lazy' ) ); ?>
 			</div>
 		</div>
 	</div>
