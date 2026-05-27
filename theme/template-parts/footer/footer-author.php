@@ -68,17 +68,6 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 				</a>
 			</div>
 		</div>
-		<div class="footer-author-reviewed-strip">
-			<div class="footer-author-last-reviewed">
-				<span class="footer-author-last-reviewed-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-				</span>
-				<span class="footer-author-last-reviewed-text">
-					<span class="footer-author-last-reviewed-line">Last reviewed: <?php echo esc_html( get_the_modified_date( 'F Y' ) ); ?></span>
-					<span class="footer-author-last-reviewed-note">We update guidance regularly to reflect changes in UK insolvency law.</span>
-				</span>
-			</div>
-		</div>
 	</div>
 </section>
 <script>
