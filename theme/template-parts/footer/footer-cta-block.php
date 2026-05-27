@@ -6,11 +6,7 @@
 				<h2 class="footer-cta-title">Get in Touch Today</h2>
 				<?php the_field( 'default_cta_content', 'option' ); ?>
 				<div class="footer-cta-action-row"><a class="footer-cta-button" href="/contact-us/" target="_blank" rel="noopener">Speak to an Expert</a><span class="footer-cta-divider" aria-hidden="true">|</span><a class="footer-cta-phone" href="tel:08000746757">0800 074 6757</a></div>
-			</div>
-			<div class="col-12 col-md-5 footer-cta-block-media">
-				<?php echo wp_get_attachment_image( 79832, 'full', false, array( 'class' => 'footer-cta-image', 'alt' => 'Speak to our team using the contact form', 'loading' => 'lazy' ) ); ?>
-			</div>
-			<div class="col-12 footer-cta-block-trust-row"><div class="footer-cta-trust">
+				<div class="footer-cta-trust">
 					<div class="footer-cta-trust__item">
 						<span class="footer-cta-trust__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
 						<div class="footer-cta-trust__text">
@@ -33,6 +29,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="col-12 col-md-5 footer-cta-block-media">
+				<?php echo wp_get_attachment_image( 79832, 'full', false, array( 'class' => 'footer-cta-image', 'alt' => 'Speak to our team using the contact form', 'loading' => 'lazy' ) ); ?>
 			</div>
 		</div>
 	</div>
