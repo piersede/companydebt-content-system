@@ -15,7 +15,7 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 			<div class="col-auto col-author-content">
 				<div class="footer-author-eyebrow">
 					<svg class="footer-author-eyebrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-					<span>Expertly Reviewed By</span>
+					<span>Expertly reviewed by</span>
 				</div>
 				<div class="footer-author-name"><?php echo esc_html( $author_fullname ); ?></div>
 				<div class="footer-author-position"><?php echo trim( get_field('professional_position',  'user_'. $author_id ) ); ?></div>
