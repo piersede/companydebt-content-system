@@ -11,21 +11,18 @@
 						<span class="footer-cta-trust__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
 						<div class="footer-cta-trust__text">
 							<div class="footer-cta-trust__title">100% Confidential</div>
-							<div class="footer-cta-trust__caption">Your enquiry is 100% confidential.</div>
 						</div>
 					</div>
 					<div class="footer-cta-trust__item">
 						<span class="footer-cta-trust__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
 						<div class="footer-cta-trust__text">
-							<div class="footer-cta-trust__title">Experts on the Line</div>
-							<div class="footer-cta-trust__caption">No call centres. Real experts.</div>
+							<div class="footer-cta-trust__title">Real Experts</div>
 						</div>
 					</div>
 					<div class="footer-cta-trust__item">
 						<span class="footer-cta-trust__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
 						<div class="footer-cta-trust__text">
 							<div class="footer-cta-trust__title">Same-Day Support</div>
-							<div class="footer-cta-trust__caption">During working hours.</div>
 						</div>
 					</div>
 				</div>
