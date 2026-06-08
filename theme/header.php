@@ -62,6 +62,26 @@
 	<!-- End Google Tag Manager -->
 
 	<?php wp_head(); ?>
+
+	<!-- Set v2 feature flags before <body> renders to prevent FOUC. -->
+	<script id="cd-v2-flags-early">
+	(function(){
+	  var d = document.documentElement;
+	  d.setAttribute('data-toc-sidebar','on');
+	  d.setAttribute('data-sticky-nav','on');
+	  d.setAttribute('data-reviewsio-hidden','on');
+	  d.setAttribute('data-insolvency-v2','on');
+	  d.setAttribute('data-licensed-v2','on');
+	  d.setAttribute('data-topnav-v2','on');
+	  // Experiment: narrower sidebar on take-the-test template (desktop only).
+	  // Remove this one line to instantly revert the experiment.
+	  d.setAttribute('data-narrow-sidebar','on');
+	  // Footer v2 — sitewide redesign (logo swap, hide tagline + Contact Us
+	  // title, relocate policy links as pills, restyle widget titles + items,
+	  // top divider on disclaimer). Remove to instantly revert.
+	  d.setAttribute('data-footer-v2','on');
+	})();
+	</script>
 </head>
 
 <body <?php body_class(); ?>>

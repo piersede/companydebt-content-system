@@ -233,7 +233,12 @@
   }
 
   function transformSources() {
-    if (!document.body.classList.contains("page-template-take-the-test-template") && !document.body.classList.contains("postid-47451")) return;
+    /* Gate on the shared design-system class (cd-ttt-design) — was originally
+     * `page-template-take-the-test-template` only, now broadened so the
+     * sources transformation also fires on single posts on the default
+     * post template. The postid-47451 carve-out stays for the one specific
+     * page that uses this restyling outside the design system. */
+    if (!document.body.classList.contains("cd-ttt-design") && !document.body.classList.contains("postid-47451")) return;
     document.querySelectorAll(".cd-sources").forEach(transformAside);
   }
 
