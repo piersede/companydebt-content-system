@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any
 
 from . import display_formats, prompts
-from .core import require_key, resolve_page
+from .core import gemini_client, read_run_meta, require_key
 from .corpus import latest_run
 from .ledger import ARTICLE_STATUSES, Nugget, load_jsonl
 
@@ -43,11 +43,12 @@ def _scrub(text: str) -> str:
     return (text or "").replace("—", ", ").replace("--", ", ")
 
 
-def _gemini_recommend(prompt: str, model: str, *, attempts: int = 4) -> str:
+def _gemini_recommend(prompt: str, model: str, *, attempts: int = 3) -> str:
     from google import genai
     from google.genai import errors as genai_errors
 
-    client = genai.Client(api_key=require_key("GEMINI_API_KEY"))
+    client = gemini_client()
+    # Fail fast on 5xx: short backoff so a throttled Gemini does not hang the run.
     last: Exception | None = None
     for i in range(attempts):
         try:
@@ -55,7 +56,7 @@ def _gemini_recommend(prompt: str, model: str, *, attempts: int = 4) -> str:
             return getattr(resp, "text", "") or ""
         except genai_errors.ServerError as exc:
             last = exc
-            time.sleep(min(2 ** i * 5, 40))
+            time.sleep(min(2 ** i * 3, 12))
     raise last if last else RuntimeError("gemini recommend call failed")
 
 
@@ -183,8 +184,15 @@ def _render_markdown(keyword: str, run_id: str,
                     f"- **[{n.priority}] {n.category}{card}** "
                     f"`{n.recommended_display_format}`")
                 lines.append(f"  - Fact: {_scrub(n.detail)}")
+                if n.cannibalisation_risk:
+                    lines.append(
+                        f"  - **[CANNIBALISATION RISK]** another of our pages "
+                        f"already covers this: {n.cannibal_owner_url} . Do NOT "
+                        f"duplicate it here; instead link to that page so it "
+                        f"stays the single source we get quoted for.")
                 if n.recommended_action:
-                    lines.append(f"  - Edit: {_scrub(n.recommended_action)}")
+                    verb = "Link" if n.cannibalisation_risk else "Edit"
+                    lines.append(f"  - {verb}: {_scrub(n.recommended_action)}")
                 if n.editorial_note:
                     lines.append(f"  - Note: {_scrub(n.editorial_note)}")
                 if n.article_status and n.article_status != "missing":
@@ -239,13 +247,15 @@ def _render_markdown(keyword: str, run_id: str,
 
 def recommend_edits(slug: str, *, model: str = "gemini-2.5-flash",
                     run_dir: Path | None = None,
-                    ledger_path: Path | None = None) -> tuple[Path, dict[str, int]]:
+                    ledger_path: Path | None = None,
+                    cannibal_max_live: int | None = 20) -> tuple[Path, dict[str, int]]:
     """Generate ``reports/06-recommended-edits.md`` from the verified ledger.
 
     Returns (report_path, counts)."""
-    cfg = resolve_page(slug)
-    keyword = cfg.get("title", slug).split(":")[0].strip()
     run = run_dir or latest_run(slug)
+    meta = read_run_meta(run)
+    keyword = meta.get("keyword") or slug.replace("__", " ").replace("-", " ")
+    target_url = meta.get("url", "")
     path = ledger_path or (run / "processed" / "verified-ledger.jsonl")
     if not path.exists():
         raise RuntimeError(
@@ -254,6 +264,14 @@ def recommend_edits(slug: str, *, model: str = "gemini-2.5-flash",
     nuggets = load_jsonl(path)
     publishable = [n for n in nuggets if n.is_publishable]
     needs_verify = [n for n in nuggets if not n.is_publishable]
+
+    # Anti-cannibalisation: before recommending we ADD a fact, check that another
+    # of our own pages does not already own it (which would split citation
+    # authority). Only meaningful when we know the page's own URL.
+    if target_url and publishable:
+        from .cannibal import check_cannibalisation
+        check_cannibalisation(publishable, target_url, model=model,
+                              max_live=cannibal_max_live)
 
     _enrich_recommendations(publishable, model=model)
 
@@ -265,5 +283,6 @@ def recommend_edits(slug: str, *, model: str = "gemini-2.5-flash",
         "total": len(nuggets),
         "publishable": len(publishable),
         "needs_verification": len(needs_verify),
+        "cannibalisation_risk": sum(1 for n in publishable if n.cannibalisation_risk),
     }
     return out, counts

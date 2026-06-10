@@ -1,0 +1,653 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:43:02 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=9398",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director considering a Creditors Voluntary Liquidation (CVL), understanding the costs and payment responsibilities is crucial. CVL is the relevant insolvency route when a company is insolvent and cannot pay its debts, and the directors choose to close it voluntarily. This process is governed by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016.\n\n### How Much Does Creditors Voluntary Liquidation Cost?\n\nThe typical cost of a Creditors Voluntary Liquidation in the UK generally ranges from **£3,000 to £8,000 plus VAT**. However, this is a guideline, and the actual cost can vary significantly depending on several factors:\n\n*   **Company Size and Complexity:** Larger companies with more complex financial arrangements, numerous creditors, or extensive assets and liabilities will typically incur higher fees due to the increased work required by the Insolvency Practitioner (IP).\n*   **Number of Creditors:** A higher number of creditors necessitates more time for communication, managing disputes, and processing claims, which can increase costs.\n*   **Asset Realisation:** The effort involved in valuing and selling company assets (e.g., property, stock, equipment) directly impacts costs. If there are high-value assets requiring specialist valuation, the fees may increase.\n*   **Insolvency Practitioner (IP) Fees:** The IP's fees depend on the work involved, the type of liquidation, and the assets or liabilities present. These fees are generally split into two stages:\n    *   **Pre-appointment fees:** These cover the IP's work in assisting directors to prepare the necessary paperwork, notify creditors, and convene meetings to place the company into liquidation. This fee usually ranges from £3,000 to £8,000.\n    *   **Post-appointment fees (Liquidator's fees):** These cover the work carried out by the liquidator during the CVL process, from the creditors' meeting until the case's closure. This fee is only payable from asset realisations. The basis of this fee must be fixed and can be a percentage of realised assets, based on time spent, or a set amount.\n*   **Other Costs and Disbursements:** In addition to IP fees, other potential costs include:\n    *   **Staff redundancy payments:** These are handled by the IP.\n    *   **Unpaid taxes:** HMRC is treated as a creditor for any unpaid Corporation Tax, VAT, or PAYE.\n    *   **Legal and accounting support:** May be necessary for disputes over assets or debts.\n    *   **Advertising in The Gazette:** Statutory notices must be published, typically costing around £100 plus VAT per advert.\n    *   **Statutory bond:** The IP must take out a bond to protect creditors, the cost of which varies depending on the nature and extent of company assets.\n\n### Who Pays for Creditors Voluntary Liquidation?\n\nThe cost of a Creditors Voluntary Liquidation is primarily covered by the **insolvent company's remaining assets**. The appointed liquidator will sell these assets and use the proceeds to:\n\n1.  Pay for the liquidation process (including the IP's fees).\n2.  Settle preferential and secured debts (such as staff wages or HMRC).\n3.  Distribute any remaining funds to unsecured creditors.\n\nIt is important to note that the liquidator's fees are paid before unsecured creditors receive any funds.\n\nIf the company's assets are insufficient to cover the liquidation costs, there are other potential sources of payment:\n\n*   **Directors' Redundancy Entitlement:** Many directors who were on the company payroll may be eligible for redundancy pay, notice pay, unpaid wages, and holiday pay. This is a government-backed scheme, and while these payments are made to directors personally and cannot directly fund the CVL upfront, the funds can often cover most or all of the liquidation costs, especially the pre-appointment fees. Eligibility typically requires working over 16 hours per week and being employed for at least two years.\n*   **Directors' Personal Contributions:** If the company has no assets and the director is ineligible for redundancy pay, directors may need to make personal contributions to cover the liquidation costs, particularly the fixed pre-appointment fees. Some insolvency firms may offer payment plans to spread the cost.\n*   **Occasional Creditor Contributions:** In rare circumstances, creditors may contribute to the costs.\n\nDirectors are encouraged to seek advice from a licensed insolvency practitioner early, as delaying action can worsen the situation and potentially increase costs and personal liability. Maintaining accurate financial records and cooperating with the liquidator can also help streamline the process and reduce expenses.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cartwheelinternational.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8-7DB4G1lDbUIrn7xfaqEWbx3w0_hQKVvxas9dX99N9LXJ4raNd54o2sx8bosxv1zHUT3oXVeUPLwlOObZzDTJb5uU_3B4HF3hCU-PfmHzhBK5KSalV8ov1x7m0pSS3BorTxEoXgO8jkqX4X-grko2QJzLUyfGlKntTUnRzd4j4BNe2zBY0nEH7jIMi30Fdq8fa634b60"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "economy-ni.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFITVMmbuiYXJfLwKMZyVDJ-3tjd9dFM_WoOCQ-RvnL3ijZYmNe1bBm-BgR3HLH9xGpA_f98KFIv9gJr8vA1kOOIiub6Y56CP9O6gN_XCStbjZ5Ro-M0n8ElYpazflL06cGVhpvqGZJ2crVEAHLmCKFY0WkHE5EwQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mooreks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHowqDrhhNH4DPlMAH7QbcQb40qCi0VrA5OkGvPlnAYewiKQPxP59X6lR7DUNYh5g0pzuTleRah8u4XNGXR3OObImaUhfzE62M_9oI00oc_0tdyrxOxPeBiB7z1ft4jHg0XATRAGr6uqdhIwTXYzCjdfr4Eezp8sbr3k6sxqC0Ma89X77Y7TdaAEocEjeQaSD6Zb9ev6O-wUk6fz-8qlKFvMS6ijz8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r3.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9ixOBfZOVVSLUE4JC5yZcxs_qGmlZfrW1We0HT2_j4hHDNLqoUokTsW4DMNJvZcOODA78eZahZRuKfnbIBx5TiVUK5ZOGLkxb8U373lvSbXFbo4Yzf4Q8W9WSq7vi-ijNmTcdFVGw0-z9FxnpVqZo-NFT-57MQSd-XRf6DISdiAEUgAblryL9TjJhg1P6O9pv3sWJPn8C8dx0RxbB_lS4ZgBlXw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "greenfieldrecovery.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-sATKavyqZ1GJ3g718kXfd5MIeLqUQ_uWV5sobYXCizSq3FJ9hA-7DuxDkPcDWN371B-n9NfUHz_hDv5fNFXVHHlGJl_vfBOIMQDgK-PnBWYdOnq7bi-bisqQ8wMylaavc86xUOMsN4IDmxUurrfIgZPdGOF8jFwgP_GJL86Ijn4PCQX179TG8HcpR9nk"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "myerson.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKvPfWmGjPdcXLvhHi0T-wpp-69toG2ucO5X5HDrHcBLNPSDuNlfCU5X2IZ8VtOd_gipIvoH_2sNOCNBwNfdIvJ1D3mG3C35EA8Op0KxYDoTlhdyh2D303YKlsccxtJDRr-BXSxLy3MqwV02oDLsaE5Rfw8kLVg32HSZEdtFERbrYLX8vM1GvQL9H4PHYZCHHdTcXQMDup0iJWGA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfyBcIq1OYIPoQsfTMlkyqlR3sD2KPJ6_1tUpB6azQgLtdRegPsQGx45kGb8dOgAP71awDsuWlkbvB9KurMasA27yjavshMwNv_nb4tCVJPmOGJ0Zl_j0VsIqKEgMXAslnngLpR3aiHVvy_7SlBjkKVedI-PbYepCW1zJmq2mqHLECxzK_MbvDf5ra4BhDzNbFHTva"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgRN85aFHOpRcgmuQu6S4g2JCObXyk0wwm99BAFzDmO8Fa9VPy2CrnNBXy_jBbScknMpzpBvtIsPKmAqIFu5r3mTZrNVSH2d2IangD59oYPMbrxYGrsfv0zVmOr45wvqxsCdS6EwcSmZjMl1Gw4U6W3w1wLQehQReNBVGYnZJMztXIDLyszo7qa22krtS1fkhCbhK_nJOFgcAxB4whpuATeeFpgOxA-XI="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "reddit.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSjjAF2ZiqwjrzWaZoa3TtYLZRmc9eIus9CQzeDt-T069nWblH1n7O_uWGRgVj3q-cp2n5JcpGDDY9x-Rj8FK6DZ-DG5vUZ7iTP269mw_ZjARNbYvlOVDrlPy9uInqgMW218QShDmMUt3Anf10u_rAt6cdzj1fIoTkA1Vo01sPlY7YwYYzqFcEvNESOFTKOlikWA0BIKx5g-Bpf-ZOuJjGlQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLaFWFue0QEXEdIF4tlqQc_ch3Rh3a_ys0X73lBCz7WqAxhXuxPDsSFQ8cSe7kuZAnLe_A1e-OzC4syFtEZ6MwfY-kO0ef_EulJUc4oX3qluvCsK2XqvgR01ACbP4D4VEJRiZicmdEvohT7_2i9U_nEhR4XjH4URcerMYYeQRgt32lI5CifPg7MHhWOBASxB2hOvLD9ovf8ew1QmXI57cxLGvKNA8QmhtDnSHf"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "directorfirst.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK70W47QgpwHf1cB-p4ca7W4yk8VX8bOoJzhD0gLXDB9KKgP6ugjyEaSgUWKqBxfkmi3-8l7p2q1Neq5eWyAP43KVx1GHES8t9BYWY2mpK-6djK9xW_f3BjCvOFPrPvNr0carSr711TgRX"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "oliverelliot.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIzd8YopPpaYq38eLPO3KZ9dwnpniHYCXpwu4k9UPaDvYOt_GogAi77ZHgGBMX-7vonfYWKDn7ERdojyaIFcXBz-ArbJQN1gKaIs2yL5IhiBAx0IxStZfbvl5oWNghQrZ2QwaFUig7FPAkm6kPUuqtc4hCBz7tvuQgcHed9sPl7LIBTkgHZSNtcSBJUB8iLXSA-3nirogR-fTQLn-c"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "kirks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKFSnG6zbMfMFSy6H1nCfA9gFObgVBi0TRhFvjx5zaPWwXS9h5BHxqvur6dGTkmdWIgZwcsX40PFa2F5q2IaiWRS7SbIWluxSxyzMW2O2I38UI3n9cjRpTDTXMd8wTKNeHXcs9e4qhpX96pBBSuUMXbz_kIC85OVl_wArDAP5nZ0ufQUyo9JVIVG7Nt0L7CtFFuN75jn6sTmsWgs1NZVNC1zYA3uHV5jAQ"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4nOkeJIjocdG7M7EZtorbWts29zrSGjIaYfq_GmeWL53T43n79YDTcL8F1_YBbLfYEsKfJq1xdodJwZy4lJXi-Js8dlBYLFc5QFf3o0fw33OzcoHuTh86exyx68U332AEXeK8rU95HFqoMIPB57Z_dXdDkvsNiKYyFpVf4LtFLSIrTFn6PQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCH9Io46fsECYLwiKKMo2tgo8fqtKKb7djyy1y0mhiAtt9a8NRfEnIXQOVNGGTQzm3MVALHAISpI-WZVKeRZKgHORTk1WYQ09WcvnYQmpjLDSOCEkOPzrpLvQfDge-o5jH9kBo_yr8EkrJmH7zOvgplCTpqrqS9_iSAh-9UYzisRLsByh5AuV2LiD-_9-7I4ViuftdU59e"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mcalisterco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFE7Iz01aD5cnoD6mvqGG8t44DUUCGso2U4SqvIiySYnamhfGXioRyf9BDmynyElt1cln2U3a4Lm1jxLWJGzIq-zgK5PQ3YuByZZxuiqhtm65mPPTASNGjDVjEEGp_E-HLnCqc6GoBZsqUIW7tchODtQh9-rPnL9RkgdGBr"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "babr.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPmHBmwPS1IbIP-U_6k7sp9ZTnF068eoZOC4pnzxHINba-UeUVtV7dScGC2KSNuESkZ0p5RemiZnFyA1_95h9DJwKP0HTrVmyIUWEv5jlOFxP4e8fFsK8_p5epDTz9OdaR452SW7_3U3NHn2Wxs6AipS94wa7tn-k4i7k7gFHICJdYs_JiRraqr4a8M9kQhVQ30fjPCrsJDw4d_vCFu6E="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 144,
+              "end_index": 284,
+              "part_index": null,
+              "text": "CVL is the relevant insolvency route when a company is insolvent and cannot pay its debts, and the directors choose to close it voluntarily."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5,
+              3
+            ],
+            "segment": {
+              "start_index": 285,
+              "end_index": 387,
+              "part_index": null,
+              "text": "This process is governed by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 446,
+              "end_index": 564,
+              "part_index": null,
+              "text": "The typical cost of a Creditors Voluntary Liquidation in the UK generally ranges from **£3,000 to £8,000 plus VAT**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              8,
+              7,
+              9
+            ],
+            "segment": {
+              "start_index": 565,
+              "end_index": 666,
+              "part_index": null,
+              "text": "However, this is a guideline, and the actual cost can vary significantly depending on several factors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              10
+            ],
+            "segment": {
+              "start_index": 669,
+              "end_index": 925,
+              "part_index": null,
+              "text": "*   **Company Size and Complexity:** Larger companies with more complex financial arrangements, numerous creditors, or extensive assets and liabilities will typically incur higher fees due to the increased work required by the Insolvency Practitioner (IP)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              10
+            ],
+            "segment": {
+              "start_index": 926,
+              "end_index": 1093,
+              "part_index": null,
+              "text": "*   **Number of Creditors:** A higher number of creditors necessitates more time for communication, managing disputes, and processing claims, which can increase costs."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7
+            ],
+            "segment": {
+              "start_index": 1238,
+              "end_index": 1323,
+              "part_index": null,
+              "text": "If there are high-value assets requiring specialist valuation, the fees may increase."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 1324,
+              "end_index": 1473,
+              "part_index": null,
+              "text": "*   **Insolvency Practitioner (IP) Fees:** The IP's fees depend on the work involved, the type of liquidation, and the assets or liabilities present."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 1719,
+              "end_index": 1767,
+              "part_index": null,
+              "text": "This fee usually ranges from £3,000 to £8,000."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              7
+            ],
+            "segment": {
+              "start_index": 1952,
+              "end_index": 2001,
+              "part_index": null,
+              "text": "This fee is only payable from asset realisations."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4
+            ],
+            "segment": {
+              "start_index": 2002,
+              "end_index": 2119,
+              "part_index": null,
+              "text": "The basis of this fee must be fixed and can be a percentage of realised assets, based on time spent, or a set amount."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2120,
+              "end_index": 2281,
+              "part_index": null,
+              "text": "*   **Other Costs and Disbursements:** In addition to IP fees, other potential costs include:\n    *   **Staff redundancy payments:** These are handled by the IP."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2286,
+              "end_index": 2383,
+              "part_index": null,
+              "text": "*   **Unpaid taxes:** HMRC is treated as a creditor for any unpaid Corporation Tax, VAT, or PAYE."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2388,
+              "end_index": 2477,
+              "part_index": null,
+              "text": "*   **Legal and accounting support:** May be necessary for disputes over assets or debts."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              11,
+              12
+            ],
+            "segment": {
+              "start_index": 2482,
+              "end_index": 2606,
+              "part_index": null,
+              "text": "*   **Advertising in The Gazette:** Statutory notices must be published, typically costing around £100 plus VAT per advert."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              11
+            ],
+            "segment": {
+              "start_index": 2611,
+              "end_index": 2763,
+              "part_index": null,
+              "text": "*   **Statutory bond:** The IP must take out a bond to protect creditors, the cost of which varies depending on the nature and extent of company assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              13,
+              14,
+              15
+            ],
+            "segment": {
+              "start_index": 2816,
+              "end_index": 2931,
+              "part_index": null,
+              "text": "The cost of a Creditors Voluntary Liquidation is primarily covered by the **insolvent company's remaining assets**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 3010,
+              "end_index": 3068,
+              "part_index": null,
+              "text": "Pay for the liquidation process (including the IP's fees)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              16
+            ],
+            "segment": {
+              "start_index": 3073,
+              "end_index": 3141,
+              "part_index": null,
+              "text": "Settle preferential and secured debts (such as staff wages or HMRC)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              16
+            ],
+            "segment": {
+              "start_index": 3146,
+              "end_index": 3200,
+              "part_index": null,
+              "text": "Distribute any remaining funds to unsecured creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 3202,
+              "end_index": 3307,
+              "part_index": null,
+              "text": "It is important to note that the liquidator's fees are paid before unsecured creditors receive any funds."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              13
+            ],
+            "segment": {
+              "start_index": 3429,
+              "end_index": 3597,
+              "part_index": null,
+              "text": "*   **Directors' Redundancy Entitlement:** Many directors who were on the company payroll may be eligible for redundancy pay, notice pay, unpaid wages, and holiday pay."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              13
+            ],
+            "segment": {
+              "start_index": 3598,
+              "end_index": 3834,
+              "part_index": null,
+              "text": "This is a government-backed scheme, and while these payments are made to directors personally and cannot directly fund the CVL upfront, the funds can often cover most or all of the liquidation costs, especially the pre-appointment fees."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 3835,
+              "end_index": 3939,
+              "part_index": null,
+              "text": "Eligibility typically requires working over 16 hours per week and being employed for at least two years."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              6,
+              13,
+              7
+            ],
+            "segment": {
+              "start_index": 3940,
+              "end_index": 4189,
+              "part_index": null,
+              "text": "*   **Directors' Personal Contributions:** If the company has no assets and the director is ineligible for redundancy pay, directors may need to make personal contributions to cover the liquidation costs, particularly the fixed pre-appointment fees."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 4190,
+              "end_index": 4255,
+              "part_index": null,
+              "text": "Some insolvency firms may offer payment plans to spread the cost."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 4256,
+              "end_index": 4360,
+              "part_index": null,
+              "text": "*   **Occasional Creditor Contributions:** In rare circumstances, creditors may contribute to the costs."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              2
+            ],
+            "segment": {
+              "start_index": 4362,
+              "end_index": 4547,
+              "part_index": null,
+              "text": "Directors are encouraged to seek advice from a licensed insolvency practitioner early, as delaying action can worsen the situation and potentially increase costs and personal liability."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7
+            ],
+            "segment": {
+              "start_index": 4548,
+              "end_index": 4680,
+              "part_index": null,
+              "text": "Maintaining accurate financial records and cooperating with the liquidator can also help streamline the process and reduce expenses."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnByuNH-VY3hX8-w2SbqSk4r5jCYD3YTrNHeKVFKoYWEjCpkuCf3zkijpG_5ayDZpI4wsTFDxmS6zeLO6DVPuQ938pnxUkOvDtRbaWCtUxOIZYD5e1gKagbd7F8NROEOmC7E2vCOR76W6_h_a4sOs8O4drMOsWNFa-5lvizX_KBXPBiFX2icnFpoX5kiuJuN86M7vK6kiGqZwjBGH8nr4zWthCoGNjEsVV2FqrDwtptwInWvXeaU6BlFfmxRC1\">factors affecting creditors voluntary liquidation costs UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMPNGzftw7cXvtWZXgie2lWgWPhKPukc0oZnp4ZT_9g4Bpf33WbEwN_g6wKdB7yCuf6Y7hgK2hNk5ivEWb3lj3Mjxu-pQgV-897FeFdCIsh9hZPF9F8NT5f31TPqRSVIM9ZPOcUNARxcATbW55vQKUvDFkZzTOYqOPn-Wb0WGSr-OIRSZDjDxJKdY4iQfOtxet9hQobyRGRtDJ-wPunPggPOE_bayIyue41QmwFhOjxY8F\">who pays for creditors voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDI__PHijcQqvCJ8AF81DaXNPOCaptOFtJM0VUqu3uZdPkq_WTSa3YDe58POcsTVklDW_SZP7vX9au-AuYDyb5oBv8Se7NzjGAf-VPGPEi_nxh0X0xhdxOC9-9Pic6vOBlvSuOqS8N9sQUANkeWNWglrHRg5ecJv8lbAmRmLcxKFyfzW50ayv5ndCfPoKI-nC8n0bhkCdjxU_gpD9Kosk3OBtzgR0OEcrOPw==\">creditors voluntary liquidation cost UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFPHFzPEpZOh1wK7pVolRUuzYz98iT3wvImcO50iZSHCrSO7sQX4V-HPARRIBQIIHMNLy0sCS3RtxE917MUDZHjinrArPOlqWWrnvnbK3y2qh90Mc927LMre4R0sNDY5AqpwpWl0WIOTrydsg_FaD2PlJWXKcYRxiIX1GyGpFaFj2oBS00pZEh3i5ZNuuw8y02nHhWKgE6uJk=\">average cost of CVL UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9CkrJa5tlKD0Pq25PAfL8NeQsHiVexRuR1qrQRMM-zvG0PQdQbZTmTyzLvfGMPYNIJOApnSPw6t6z4XVTaFZC9d8XyHPqHFQACwK7N5zMURhNQAbQxWW6gt50WflMf1jSSt8lgk7NG_pskAj4nLksthW9ipKH9iq3PZyC6QdfoUUWYhRQ62WgnYXyvneuefgn-xfLtes8omUx7CwXc6NIDCAYP-mUS13nW2OrEGY5HjccdPtmxHY=\">insolvency rules creditors voluntary liquidation UK</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "creditors voluntary liquidation cost UK",
+          "who pays for creditors voluntary liquidation UK",
+          "average cost of CVL UK",
+          "factors affecting creditors voluntary liquidation costs UK",
+          "insolvency rules creditors voluntary liquidation UK"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "LbApaqLqHaa1nsEPqezlmA0",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1027,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 89,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 89
+      }
+    ],
+    "thoughts_token_count": 340,
+    "tool_use_prompt_token_count": 297,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 297
+      }
+    ],
+    "total_token_count": 1753,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from .core import RunContext, require_key, write_raw
+from .core import RunContext, gemini_client, require_key, write_raw
 
 # Defaults are conservative/broadly-available; override via CLI flags.
 DEFAULT_OPENAI_MODEL = "gpt-4o"
@@ -137,7 +137,7 @@ def capture_gemini(ctx: RunContext, prompt: str, label: str, *,
     from google import genai
     from google.genai import types
 
-    client = genai.Client(api_key=require_key("GEMINI_API_KEY"))
+    client = gemini_client()
     resp = client.models.generate_content(
         model=model,
         contents=prompt,

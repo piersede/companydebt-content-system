@@ -1,0 +1,196 @@
+{
+  "web_search_queries": [
+    "UK company director liquidation options",
+    "when is liquidation the right option UK",
+    "alternatives to liquidation UK companies",
+    "Company Voluntary Arrangement CVA UK director",
+    "company administration process UK",
+    "restructuring plan Corporate Insolvency and Governance Act 2020 UK",
+    "moratorium Corporate Insolvency and Governance Act 2020 UK",
+    "Insolvency Act 1986 UK official source",
+    "Statement of Insolvency Practice SIP 2 UK",
+    "Statement of Insolvency Practice SIP 3.1 UK",
+    "Statement of Insolvency Practice SIP 6 UK",
+    "Statement of Insolvency Practice SIP 7 UK",
+    "Statement of Insolvency Practice SIP 13 UK"
+  ],
+  "grounding_chunks": [
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzVVUhZrdT6si0axcEfttll_T3qFfBJbXC-UIp7TTHCW7f_hN1ACAhDt35KIVp28QtB5GCblRfxMtDT-V2Mf83W3GL5Ml57gVkHRtw7FA_isVtb0vwxdz5gr5xy_x_jzkNnLEjqmC6BJbwSc2kj8hDj_WdLTuQTz39qCD7j8JpEpNMnSM7",
+      "title": "wikipedia.org"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2ur9IbtsE5hgBM0AZL2eVE3xVXvOLlZniehCzlBZaVngi9h7Er9_FgYdvZ_MlpV0piGCOYPirWHvnxd--GxMRZnGvkPKJqgOyhGcYzglMC265Vqn0SOIi7EcXpBgDtkrkwkhCD6lgifoo",
+      "title": "legislation.gov.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESf6Ga66UBpb1Dn2t2f9CQXhqTFgcPyHaLEP0V2bPE3Nzarahtys7DLPTGZ76p9WZHo2nHUAJ8YZ-zlD-ZHpPGRGgENGCFjC3ivsUNQiLrJhkwiYNx-6YUx85su7gLY1C1sgE5vAmjz-DOk3c=",
+      "title": "wikipedia.org"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIgQsJdQGQDYnoBle0YKnI-gNrcFFTgAkrODnKxbvcIujFFDXtPqxHzWZS-cgTTKCJ0PX9UbZYcl_F_4dZnH0Lm-tZCTE7ec_6sPfw0A0Z6Ek4nLixm55F5YF8_kjLvguM9lq7CCqp4RJP-Gkodg==",
+      "title": "summitlawllp.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbhfXWZpWU5UeA0SXIsebyMouYCm2Rj0y7J--ZHZlO48nM6gdMKecRpDwM_PZsvjUrUjVC76GMPQQPMUfWzlFlkUkzjGaPUcrSpkgs6lJJ2rby_wiNs5cHM5d6GXF5I107EaL2x_ahVakwzVp6yawIAb1-0nFVVJhAWJluyRTIF8pXNt6XdGjCpulRvo7ICaDHltgk5aRnS5sZ7MM=",
+      "title": "oliverelliot.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOCfMNymG_FJHha8k3Kc2qdZnAdsmigwBrLZIbIgQ7ywKcv40lv0baAESMP9Lr84VWUnyxkmi6XtoifFwvH8jCBx2IR49wvo3S-s_xGmPenu7st4Dqg_MpblSBuTFZhkKou0J4Tlhb32IG5zEE6GyDQfx2ZbEr4iwOXjBapL1XHrRzXkwPzlqaPJP7av0LRA==",
+      "title": "wilsonfield.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLPVmxPw6ggUgBVE_dDxiRXjhCJldvXPSGlzimKZlJoV337Fb7lisAUobge2mcFqTfQnVaY57zoRYFe0aVgPt8Kmy4Qwt7bju1KScK6AQcB8eSDDdtR9CzKb8FFFYBEg9Vb2s1uXTl3SyAlJK6JdvuQtEf6uf80v_G",
+      "title": "andersonbrookes.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUSggIEx7HWpvTW42m54KX9ZJ7j7S0ztPaSp6eoGAwT0ufaKB4JhTmNI3Q3Qcb60I2SXJ3_KPkYFQX4EEiOc7hK5l4h9lFeLt8Xw9EtBm9NusHGSM8T2vWMOx6a_Ib5Y40BxH_BBXP8R5oCtHjOIIMXuHalak_2BLelWhXE_BLWPeV5eyT_PIz9p1zUXhZRt4Fyfb9bwvfLhwW00J0T1W4yOTEDnHRkUdA",
+      "title": "oliverelliot.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbh14zf_9lDbok0BhXcnNzh040Xw6l476Q9823Sosa68McfBzfDFilCSUhiqMWXTcG_3p4XMDaGyiSgeg_-w6g4BUVVwHjDtspJGkYrK-6bvuRWzltGIpqAqPqq9nYv2mdqJmEuWmlArxwarOa4b5Er1_4S-Uq_HONcH7n4rWBxJToUuzLiIqnyYJbdV1SrE78zbW9stYpaEYYTEEo9G-_4DGksMcPMZ9TaIjYmcKY3rJXcmkKW_A=",
+      "title": "companyclosure.org.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnAQeU42b-4QoiRPmTZD1gPyKbL67G00x8hv5nxCl4ZZKoA3TL8HUipO9qK1zWmish6Hcaz818BwN94ewj3o0ehl12xpxqN74tFTW0yvQQEKdSIYmtJ_A6K6Ydp0_4v_FD0C4KBJXBK-X03PhyeiX60St8u2deNre2fEUZ8YundLoJ7TQ3VcV-RDNKdERqDPh_SO2tSxEkOgyn6g==",
+      "title": "campbell-crossley-davis.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnTNydwGf6p425hL2cgZ3Hps88VmaBHcOoy936wvbSwlv8s-WHdQdLisib_VWLDrZisdv77Y5o3_PsFA_xART9wgMC3euE6q0flWN-8PBHpBvjeWbSrm-ezeCjHx7m3_ucpCk7GtZDraevPz2BSnBc5YjPKL_JNoA=",
+      "title": "clarkebell.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaaFKPLG09wZB-PcFqFPbWuQR2oWEKOQ5t7qGCHbKZsWSXCA2rE4bFZ3WsTt2lXnbu-sPDmPgXUUQzgCegn-7jWhOy93Wyegbeo0a7VWRxb1zs2PhtnBBdeesWPZ_lyajP2iH0_IDUW_Skeeq57acReSF5bfzsEPJv8WI=",
+      "title": "insolvencydirect.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTl2_rOrRlMrBkMS50h_oCOcPBMZKTbzxU54gs3SPXWsgZBkl52sSMiM_C-8X-V2Byw0iw84W3r9EPTO81T_4n2yg3FU0HRTQ_5VlEzziOfrxQlSEt-qOIiOB8Ge3HXoIvWeGiJJ2z6WjjxfJMmaY=",
+      "title": "thegazette.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEocjfx_ZmEtWz-7Mg0fnSuaDqSKn1lztdn-eHZYYP64tOL4jXZyrNvQjDrGhoNZ8Jqw-bU1RPSYfMQJnTm86q9Zbqo1EHq3BAQLRGz3nMnmC5QBR_SXa85erFZCbktksI25eH9lqeHq0fgfQ-ckpwevJO5nG-zASewQ-uY3MMchfekeceTHgwd80w2_FXupXNI10uCkUDND1fokfwRFuiM4am5",
+      "title": "ukadministrators.org.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAhvCnWcWYdXw06F8k40rxkmgLSjS-EMavCsy7_9hRiKqWRUzsGUeHRp_vU0w4LzB4cS2dfOJU5YsEnE7z7g2RSwraXCpJxnnluO-9n1WaFnjYRdLJrYaprEKlx4yDiSjf_-1D1CQLvQG6xTARWwUqxoLmoVdVhITvm3bYanRahLKeAA==",
+      "title": "fasimms.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnpgqbLNA-ZeBOBvDLvjoHZ4OIq3NxlueXN4MP4SfZ_y5ygxR4S58vT1T05JOIlImq8T93uxzrxvoQiEBXc9AwAL7mfWFO4MoOAO_QhmhUKewE5K4ubADA88cqRIGuexZm-7aAH-TlQfzkyaoN6vmRR6uYE8-TcL6Ultx9Xqk=",
+      "title": "www.gov.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3c6BC_JekWLZOUw_t8SmdipX8-jbxAuL2ZA1bs9F0lfZxq8SWRS3GP0rIe8SEFj9ikwQmHVO5yZi6SG3RLIadX0PGWvWz0huwPzgPS7Y_nvc_hqUY4h5PQCk5zVqu4VWMRHlu3wEb_Cgc5nfNWf7JyT0_l59ldnt-4-6p",
+      "title": "nibusinessinfo.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj0qS03Ru59SeYE0CR8YqITwfGSYuY3_kawMMVxcNZvR49TZWaSwEB0rBvTxIscKLwItKCRjRhg18bD70t5S1yWSo6ISJLRYqEZ1xWj0dwiCv7q1SkRh5wjbB_Nl4xR1BCJxXYCzumTA38xKpp-6YAy5QegULCp0D8Jaw9fqlsf8Dq_9fuhwAzROOvYQjyLGUeXE3gjethJlS0IQ==",
+      "title": "realbusinessrescue.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHco-_rbsgQ1oVQw8kb1-7PKwsztB7NokYbmYfM94x3IzGhWhIj2iiGWKvhssMBe1bsh7ue2ClUm3wrkpqelVqj4NLFHWEYMROlJa9mq16WBnxtxjtG0RyZb5O4o2Pze2sQ9VVEGdt-OfpVi9ZpiKIrQHIxamOBK9pV",
+      "title": "economy-ni.gov.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkJM4abV82L7tehDafbFBc9ZrckEN9-9KnJBoy9FcZ22iRbcZSV8qozsR3XYndpZytgjK9QVbW51S8owSCHIYVKyCuryX_L-iadn4YdchDP26_gI_j1drzAUmp-bE3UmTsQYdT0gy8gc6OBK8SywbS_OnSs2KSmhVE_JG8YN2icb_zTBmxvci3vQ==",
+      "title": "insolvency-practitioners.org.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHyduDSuho6cefa5jTForvE1umtATgRgngLe2gDTXoXjVY0iD1WwCI2cYYERCvR-f57spulxb4wufpH_bRY1Byd2cf2eEsk3B48Sp5mp2O_9C0Ypuvq1UQ9UqBsNkvJEw97Mpd_veKC15h5CTFD7ueDBq-kRaw1RkRL7144SL0BD2OO-BiN4OeVDBGDz34ZgwYW9qjDFk=",
+      "title": "azets.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrhh0DdJrTnozLNeU8T7QM_xh_lQBtv9cR3gGLu4WuixHAsPkYDYfqLoC6ggbki6AOQorZ0s9wIIB1pjnrqFsIYTpvL2s1Er_av1nJjSmZHr3mKnLx5utA1PA3CECC5WKJAx3FQa1hoVPy2wA410yo3rL-u-3iBdMTDYJrXg==",
+      "title": "wikipedia.org"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo4-QPdKJMHEaac0BN3fGljTIBOMyQlOZrSvuJ9SDIGQFGnThCNjsgCs0nMqeQmiRPIhcAXHsDSiG2UEydkHZ6WSuWH8OiYmASGW1b8X1bjXB13tjDfzbhrtYKUQZFGDsMiRO7pZir-FOXyeodXN_36NwCfNNTiafYDQGWEADdpTOTk7NHYYrJUEIOq1MQEdiuXwAFY9XVy1hVegkdWxuIsOKoT055qYWzYG9t1wTRfof8bQ4oDWrljKV15oUiC6X-R8Ip0_4=",
+      "title": "r3.org.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzs_Vihw9jk7QF3jOwBWw3rxp-WlVCcymEsCArXQE5zfEaQeMcg_4i6Iya-k5uOr4upiKQGBaU8WtbB-v311xl5yxp_RDKrxGzChhYpQGm43tkKeHNR9RAJhldltosh56lkqDdd-QJJ5G7GVbGP96D1-5c-1mj3TdDkpBiJvch",
+      "title": "franciswilksandjones.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfyyTX0Or7xcZ_ytTDrKZZ3nrEg0IUGTBgVvPlSoLZCEZAGvP8xNIjWUM7O-7MujvaBLxJNGpERSl4CPL12eCm-uB5G44B2LeBI45PAKXgZFhFAa-Eyye8WHbp7QmriyzCzAwDnw52Tw==",
+      "title": "administration.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1k2nnBPinUiIdOlFkhZmYCFQjEqOSnrGNTq40r5y4sqs7DaTGLRGA5VfNKT0e09eShbWdXYI7KDGIdqtVzTk3EiNBpGll72mJcFcALQICC1G_DBLhGq3lT54gwsYDfw3fezkMlH4ibf4ga7Orm8GSKbIYE03cyznaMkjqFfOujjt7qechMtxfLNNi2RUComrhkVyg7qJwrS8q_ycwsGmrJTNVVjgBozm-09MQ",
+      "title": "begbies-traynorgroup.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT9zj90oxmadQvGde4l25ZjisAxVJ1lyfrD8QE6XTrsKURC90SK0oc2HFMJu8d-iYF44cEQXv6kw34qLhR50XrRXWHdwqyLyO26NTmbqnGr0GWRc4JexEpbNuDzI4aKBerawej5aCjFsghOlxxdx6Rcd2giyqThHbysKBKpZ3iDsAfYKBllb-s_RtyEEOzIkyzdN9eXpQm5lUybcYo0oZrH-G1Sw13Qg==",
+      "title": "www.gov.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBhpdjoFFPdArN6w_CtpAVa5zYZK2mreTkHN72YRIlydxV0RMgWJdnbM_asA6Avgo29mZroueVDN8Ms0WD7XIZWLlgBJaC3BC6zyY-Y4UobwehvBV5vCCsJzTkhr91FxvQTOBvY5pEtZcUp02zDZp4s8OLdsjEdt8plsZGtJ_sIQygkx_7JT4sN-b8Shiz",
+      "title": "economy-ni.gov.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGytZo026r8s5ThrtwFUIQXc46837z2ZTDKHvmikvHzOiNpuVAVgQMzd_t3bCrnXNHx9ANJhZYJfdjt0_3u8f-8xP4QUIqcBOIC7KQ2-eCDGvcdY_Q8yP9mGjGCVpiY7b2TvwA272hkkqNZlmH4a1Y8Ei3Zbl_FqYqS3JvtpuznK5FGkEFd8g==",
+      "title": "mooreks.co.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF92fJTxm-vPROhiRvv8ULDg3wy_YIAMw8iG8dimFm9tL_z6d5_E8c71yodd_CxRG0wVTXPWH17mmEsrYfwI-AKPS9LnJusoS6h4S-m9gbGzF8wx95_amNfI_nod1kHc7V-V-CXNRPLZgNkyeeQA8VE8so2Tcu_hm4lTOD8AI7ZPMuD03x5hhfzVchS6NWo9dWCCY1_-aByFdVT0LEt",
+      "title": "dlapiper.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBVdByysR7E-FAqagS640nG96hRxBwaSKj8PMrzIek0LuqF6GVzuKtyVBlYFA-3haaHhqcOP0ldhmz9bof_T2n76GrMcK5q652_eZ-GPR5faX1rnFE4BdUn8c5Q8C6y0CoGNiVaHJLMDDJW5rbMMghs9Him-nMuLrLvsEOiAx0fjdsBphamJGNaCMV-nqzkBDjo3ZvRkikDpShXPZt1rHa",
+      "title": "dechert.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKKM0jgbrJYwZitJcVSv4sA1AFMH0T3-ZDMRLmdf23SKqGRT1njV9qU0v6_52xpbElLAW1uQLri3HS7cSFWx8Dvld2COoxJ1eL-NU5m-eIl8g2QUsdOdplNbyBLp_RvUbagJ9BjK1zT7HjG3QYnxocepam5kgPMxwUQeRdr5M=",
+      "title": "ibanet.org"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYRHuYUWhDN3D3Mfm1mIarpqYJh8ql_Py9A7TfZtQ7NQbBbInJKv1EysrnQvy-EOhgGMf4VGaiWNT7Hh8M9zriWPH87_KFrlM6jQthS4Acsm2Sm898QEQXODyOZOnmS_2oduiQmYIb8IMeF34--zKVI-lpDxjCmXpWYyOzEK4tp6Vuf0LfTk4q7im7NKno",
+      "title": "irwinmitchell.com"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7U6mjYXodmJEO-c5T01AktQVFFXDMxW1wWDgMOwN7gj2iQSjJoPPVJYRtLrvaTYEEeCnTvUZYa7P01ahhPnnaLs4ltMyhQisNvkwpheLIu82ViMPzef3vhkCDvJM3EDNWyA2qLQPxuVh18_hXPYggCL5s_u0H8bUfxuq2",
+      "title": "parliament.uk"
+    },
+    {
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIsFCj__IVJSqVAHogGT2H4Rn20kvU3T3M87w9QCuyy6_HxIbNljCmAGAfUPEjcdNB4fPlpMTygJh4X4wnturKM-u-qFAsPvN34tSpjIG0TKtxDMVSVBJijH1mZ_5bhaS0b3918Vb6TjAzbR_oTuKNSIpbaPOwlUdV6MwvDFscNs4GdpdnmOXTMREGZhOKOSXfFmbQPpMwEbyMgbH4L3P5zw==",
+      "title": "antonybatty.com"
+    }
+  ],
+  "cited_uris": [
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzVVUhZrdT6si0axcEfttll_T3qFfBJbXC-UIp7TTHCW7f_hN1ACAhDt35KIVp28QtB5GCblRfxMtDT-V2Mf83W3GL5Ml57gVkHRtw7FA_isVtb0vwxdz5gr5xy_x_jzkNnLEjqmC6BJbwSc2kj8hDj_WdLTuQTz39qCD7j8JpEpNMnSM7",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2ur9IbtsE5hgBM0AZL2eVE3xVXvOLlZniehCzlBZaVngi9h7Er9_FgYdvZ_MlpV0piGCOYPirWHvnxd--GxMRZnGvkPKJqgOyhGcYzglMC265Vqn0SOIi7EcXpBgDtkrkwkhCD6lgifoo",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESf6Ga66UBpb1Dn2t2f9CQXhqTFgcPyHaLEP0V2bPE3Nzarahtys7DLPTGZ76p9WZHo2nHUAJ8YZ-zlD-ZHpPGRGgENGCFjC3ivsUNQiLrJhkwiYNx-6YUx85su7gLY1C1sgE5vAmjz-DOk3c=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIgQsJdQGQDYnoBle0YKnI-gNrcFFTgAkrODnKxbvcIujFFDXtPqxHzWZS-cgTTKCJ0PX9UbZYcl_F_4dZnH0Lm-tZCTE7ec_6sPfw0A0Z6Ek4nLixm55F5YF8_kjLvguM9lq7CCqp4RJP-Gkodg==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbhfXWZpWU5UeA0SXIsebyMouYCm2Rj0y7J--ZHZlO48nM6gdMKecRpDwM_PZsvjUrUjVC76GMPQQPMUfWzlFlkUkzjGaPUcrSpkgs6lJJ2rby_wiNs5cHM5d6GXF5I107EaL2x_ahVakwzVp6yawIAb1-0nFVVJhAWJluyRTIF8pXNt6XdGjCpulRvo7ICaDHltgk5aRnS5sZ7MM=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOCfMNymG_FJHha8k3Kc2qdZnAdsmigwBrLZIbIgQ7ywKcv40lv0baAESMP9Lr84VWUnyxkmi6XtoifFwvH8jCBx2IR49wvo3S-s_xGmPenu7st4Dqg_MpblSBuTFZhkKou0J4Tlhb32IG5zEE6GyDQfx2ZbEr4iwOXjBapL1XHrRzXkwPzlqaPJP7av0LRA==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLPVmxPw6ggUgBVE_dDxiRXjhCJldvXPSGlzimKZlJoV337Fb7lisAUobge2mcFqTfQnVaY57zoRYFe0aVgPt8Kmy4Qwt7bju1KScK6AQcB8eSDDdtR9CzKb8FFFYBEg9Vb2s1uXTl3SyAlJK6JdvuQtEf6uf80v_G",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUSggIEx7HWpvTW42m54KX9ZJ7j7S0ztPaSp6eoGAwT0ufaKB4JhTmNI3Q3Qcb60I2SXJ3_KPkYFQX4EEiOc7hK5l4h9lFeLt8Xw9EtBm9NusHGSM8T2vWMOx6a_Ib5Y40BxH_BBXP8R5oCtHjOIIMXuHalak_2BLelWhXE_BLWPeV5eyT_PIz9p1zUXhZRt4Fyfb9bwvfLhwW00J0T1W4yOTEDnHRkUdA",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbh14zf_9lDbok0BhXcnNzh040Xw6l476Q9823Sosa68McfBzfDFilCSUhiqMWXTcG_3p4XMDaGyiSgeg_-w6g4BUVVwHjDtspJGkYrK-6bvuRWzltGIpqAqPqq9nYv2mdqJmEuWmlArxwarOa4b5Er1_4S-Uq_HONcH7n4rWBxJToUuzLiIqnyYJbdV1SrE78zbW9stYpaEYYTEEo9G-_4DGksMcPMZ9TaIjYmcKY3rJXcmkKW_A=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnAQeU42b-4QoiRPmTZD1gPyKbL67G00x8hv5nxCl4ZZKoA3TL8HUipO9qK1zWmish6Hcaz818BwN94ewj3o0ehl12xpxqN74tFTW0yvQQEKdSIYmtJ_A6K6Ydp0_4v_FD0C4KBJXBK-X03PhyeiX60St8u2deNre2fEUZ8YundLoJ7TQ3VcV-RDNKdERqDPh_SO2tSxEkOgyn6g==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnTNydwGf6p425hL2cgZ3Hps88VmaBHcOoy936wvbSwlv8s-WHdQdLisib_VWLDrZisdv77Y5o3_PsFA_xART9wgMC3euE6q0flWN-8PBHpBvjeWbSrm-ezeCjHx7m3_ucpCk7GtZDraevPz2BSnBc5YjPKL_JNoA=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaaFKPLG09wZB-PcFqFPbWuQR2oWEKOQ5t7qGCHbKZsWSXCA2rE4bFZ3WsTt2lXnbu-sPDmPgXUUQzgCegn-7jWhOy93Wyegbeo0a7VWRxb1zs2PhtnBBdeesWPZ_lyajP2iH0_IDUW_Skeeq57acReSF5bfzsEPJv8WI=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTl2_rOrRlMrBkMS50h_oCOcPBMZKTbzxU54gs3SPXWsgZBkl52sSMiM_C-8X-V2Byw0iw84W3r9EPTO81T_4n2yg3FU0HRTQ_5VlEzziOfrxQlSEt-qOIiOB8Ge3HXoIvWeGiJJ2z6WjjxfJMmaY=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEocjfx_ZmEtWz-7Mg0fnSuaDqSKn1lztdn-eHZYYP64tOL4jXZyrNvQjDrGhoNZ8Jqw-bU1RPSYfMQJnTm86q9Zbqo1EHq3BAQLRGz3nMnmC5QBR_SXa85erFZCbktksI25eH9lqeHq0fgfQ-ckpwevJO5nG-zASewQ-uY3MMchfekeceTHgwd80w2_FXupXNI10uCkUDND1fokfwRFuiM4am5",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAhvCnWcWYdXw06F8k40rxkmgLSjS-EMavCsy7_9hRiKqWRUzsGUeHRp_vU0w4LzB4cS2dfOJU5YsEnE7z7g2RSwraXCpJxnnluO-9n1WaFnjYRdLJrYaprEKlx4yDiSjf_-1D1CQLvQG6xTARWwUqxoLmoVdVhITvm3bYanRahLKeAA==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnpgqbLNA-ZeBOBvDLvjoHZ4OIq3NxlueXN4MP4SfZ_y5ygxR4S58vT1T05JOIlImq8T93uxzrxvoQiEBXc9AwAL7mfWFO4MoOAO_QhmhUKewE5K4ubADA88cqRIGuexZm-7aAH-TlQfzkyaoN6vmRR6uYE8-TcL6Ultx9Xqk=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3c6BC_JekWLZOUw_t8SmdipX8-jbxAuL2ZA1bs9F0lfZxq8SWRS3GP0rIe8SEFj9ikwQmHVO5yZi6SG3RLIadX0PGWvWz0huwPzgPS7Y_nvc_hqUY4h5PQCk5zVqu4VWMRHlu3wEb_Cgc5nfNWf7JyT0_l59ldnt-4-6p",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj0qS03Ru59SeYE0CR8YqITwfGSYuY3_kawMMVxcNZvR49TZWaSwEB0rBvTxIscKLwItKCRjRhg18bD70t5S1yWSo6ISJLRYqEZ1xWj0dwiCv7q1SkRh5wjbB_Nl4xR1BCJxXYCzumTA38xKpp-6YAy5QegULCp0D8Jaw9fqlsf8Dq_9fuhwAzROOvYQjyLGUeXE3gjethJlS0IQ==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHco-_rbsgQ1oVQw8kb1-7PKwsztB7NokYbmYfM94x3IzGhWhIj2iiGWKvhssMBe1bsh7ue2ClUm3wrkpqelVqj4NLFHWEYMROlJa9mq16WBnxtxjtG0RyZb5O4o2Pze2sQ9VVEGdt-OfpVi9ZpiKIrQHIxamOBK9pV",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkJM4abV82L7tehDafbFBc9ZrckEN9-9KnJBoy9FcZ22iRbcZSV8qozsR3XYndpZytgjK9QVbW51S8owSCHIYVKyCuryX_L-iadn4YdchDP26_gI_j1drzAUmp-bE3UmTsQYdT0gy8gc6OBK8SywbS_OnSs2KSmhVE_JG8YN2icb_zTBmxvci3vQ==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHyduDSuho6cefa5jTForvE1umtATgRgngLe2gDTXoXjVY0iD1WwCI2cYYERCvR-f57spulxb4wufpH_bRY1Byd2cf2eEsk3B48Sp5mp2O_9C0Ypuvq1UQ9UqBsNkvJEw97Mpd_veKC15h5CTFD7ueDBq-kRaw1RkRL7144SL0BD2OO-BiN4OeVDBGDz34ZgwYW9qjDFk=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrhh0DdJrTnozLNeU8T7QM_xh_lQBtv9cR3gGLu4WuixHAsPkYDYfqLoC6ggbki6AOQorZ0s9wIIB1pjnrqFsIYTpvL2s1Er_av1nJjSmZHr3mKnLx5utA1PA3CECC5WKJAx3FQa1hoVPy2wA410yo3rL-u-3iBdMTDYJrXg==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo4-QPdKJMHEaac0BN3fGljTIBOMyQlOZrSvuJ9SDIGQFGnThCNjsgCs0nMqeQmiRPIhcAXHsDSiG2UEydkHZ6WSuWH8OiYmASGW1b8X1bjXB13tjDfzbhrtYKUQZFGDsMiRO7pZir-FOXyeodXN_36NwCfNNTiafYDQGWEADdpTOTk7NHYYrJUEIOq1MQEdiuXwAFY9XVy1hVegkdWxuIsOKoT055qYWzYG9t1wTRfof8bQ4oDWrljKV15oUiC6X-R8Ip0_4=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzs_Vihw9jk7QF3jOwBWw3rxp-WlVCcymEsCArXQE5zfEaQeMcg_4i6Iya-k5uOr4upiKQGBaU8WtbB-v311xl5yxp_RDKrxGzChhYpQGm43tkKeHNR9RAJhldltosh56lkqDdd-QJJ5G7GVbGP96D1-5c-1mj3TdDkpBiJvch",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfyyTX0Or7xcZ_ytTDrKZZ3nrEg0IUGTBgVvPlSoLZCEZAGvP8xNIjWUM7O-7MujvaBLxJNGpERSl4CPL12eCm-uB5G44B2LeBI45PAKXgZFhFAa-Eyye8WHbp7QmriyzCzAwDnw52Tw==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1k2nnBPinUiIdOlFkhZmYCFQjEqOSnrGNTq40r5y4sqs7DaTGLRGA5VfNKT0e09eShbWdXYI7KDGIdqtVzTk3EiNBpGll72mJcFcALQICC1G_DBLhGq3lT54gwsYDfw3fezkMlH4ibf4ga7Orm8GSKbIYE03cyznaMkjqFfOujjt7qechMtxfLNNi2RUComrhkVyg7qJwrS8q_ycwsGmrJTNVVjgBozm-09MQ",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT9zj90oxmadQvGde4l25ZjisAxVJ1lyfrD8QE6XTrsKURC90SK0oc2HFMJu8d-iYF44cEQXv6kw34qLhR50XrRXWHdwqyLyO26NTmbqnGr0GWRc4JexEpbNuDzI4aKBerawej5aCjFsghOlxxdx6Rcd2giyqThHbysKBKpZ3iDsAfYKBllb-s_RtyEEOzIkyzdN9eXpQm5lUybcYo0oZrH-G1Sw13Qg==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBhpdjoFFPdArN6w_CtpAVa5zYZK2mreTkHN72YRIlydxV0RMgWJdnbM_asA6Avgo29mZroueVDN8Ms0WD7XIZWLlgBJaC3BC6zyY-Y4UobwehvBV5vCCsJzTkhr91FxvQTOBvY5pEtZcUp02zDZp4s8OLdsjEdt8plsZGtJ_sIQygkx_7JT4sN-b8Shiz",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGytZo026r8s5ThrtwFUIQXc46837z2ZTDKHvmikvHzOiNpuVAVgQMzd_t3bCrnXNHx9ANJhZYJfdjt0_3u8f-8xP4QUIqcBOIC7KQ2-eCDGvcdY_Q8yP9mGjGCVpiY7b2TvwA272hkkqNZlmH4a1Y8Ei3Zbl_FqYqS3JvtpuznK5FGkEFd8g==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF92fJTxm-vPROhiRvv8ULDg3wy_YIAMw8iG8dimFm9tL_z6d5_E8c71yodd_CxRG0wVTXPWH17mmEsrYfwI-AKPS9LnJusoS6h4S-m9gbGzF8wx95_amNfI_nod1kHc7V-V-CXNRPLZgNkyeeQA8VE8so2Tcu_hm4lTOD8AI7ZPMuD03x5hhfzVchS6NWo9dWCCY1_-aByFdVT0LEt",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBVdByysR7E-FAqagS640nG96hRxBwaSKj8PMrzIek0LuqF6GVzuKtyVBlYFA-3haaHhqcOP0ldhmz9bof_T2n76GrMcK5q652_eZ-GPR5faX1rnFE4BdUn8c5Q8C6y0CoGNiVaHJLMDDJW5rbMMghs9Him-nMuLrLvsEOiAx0fjdsBphamJGNaCMV-nqzkBDjo3ZvRkikDpShXPZt1rHa",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKKM0jgbrJYwZitJcVSv4sA1AFMH0T3-ZDMRLmdf23SKqGRT1njV9qU0v6_52xpbElLAW1uQLri3HS7cSFWx8Dvld2COoxJ1eL-NU5m-eIl8g2QUsdOdplNbyBLp_RvUbagJ9BjK1zT7HjG3QYnxocepam5kgPMxwUQeRdr5M=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYRHuYUWhDN3D3Mfm1mIarpqYJh8ql_Py9A7TfZtQ7NQbBbInJKv1EysrnQvy-EOhgGMf4VGaiWNT7Hh8M9zriWPH87_KFrlM6jQthS4Acsm2Sm898QEQXODyOZOnmS_2oduiQmYIb8IMeF34--zKVI-lpDxjCmXpWYyOzEK4tp6Vuf0LfTk4q7im7NKno",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7U6mjYXodmJEO-c5T01AktQVFFXDMxW1wWDgMOwN7gj2iQSjJoPPVJYRtLrvaTYEEeCnTvUZYa7P01ahhPnnaLs4ltMyhQisNvkwpheLIu82ViMPzef3vhkCDvJM3EDNWyA2qLQPxuVh18_hXPYggCL5s_u0H8bUfxuq2",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIsFCj__IVJSqVAHogGT2H4Rn20kvU3T3M87w9QCuyy6_HxIbNljCmAGAfUPEjcdNB4fPlpMTygJh4X4wnturKM-u-qFAsPvN34tSpjIG0TKtxDMVSVBJijH1mZ_5bhaS0b3918Vb6TjAzbR_oTuKNSIpbaPOwlUdV6MwvDFscNs4GdpdnmOXTMREGZhOKOSXfFmbQPpMwEbyMgbH4L3P5zw=="
+  ]
+}

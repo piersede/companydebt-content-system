@@ -1,0 +1,25 @@
+For a UK company director facing the inability of their company to pay its debts, a Creditors' Voluntary Liquidation (CVL) is a formal, director-led insolvency route to wind up the business in an orderly manner. This process is governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016.
+
+To be eligible for a CVL, the company must be insolvent, meaning it is either unable to pay its debts when they fall due (cash flow test) or its liabilities exceed the value of its assets (balance sheet test). Directors have a legal duty to act in the best interests of creditors once insolvency is recognised.
+
+### Steps Involved in Creditors' Voluntary Liquidation (CVL)
+
+The CVL process follows a structured path:
+
+1.  **Initial Consultation with an Insolvency Practitioner (IP):** The first step involves directors seeking advice from a licensed insolvency practitioner. The IP will assess the company's financial position, confirm insolvency, and determine if a CVL is the most appropriate option. This confidential discussion also covers potential costs, responsibilities, and next steps.
+2.  **Directors' Board Meeting:** If a CVL is confirmed, the company's directors will hold a board meeting to formally resolve to place the company into liquidation and to appoint the chosen IP as the proposed liquidator. They also resolve to convene a general meeting of shareholders and a decision procedure for creditors. The IP will then prepare necessary documentation, including a Statement of Affairs outlining the company's assets, liabilities, and overall financial position.
+3.  **Shareholder Resolution:** Shareholders must pass a special resolution to wind up the company. This requires a 75% majority vote. Shareholders are typically given 14 days' notice for this meeting, though this can be shortened to 7 days if 90% of shareholders agree. The resolution also formally appoints the liquidator.
+4.  **Creditors' Decision Procedure:** Creditors are given at least 7 days' notice of the proposed liquidation and provided with the Statement of Affairs. Under the Insolvency (England and Wales) Rules 2016, a physical meeting of creditors is largely replaced by decision procedures, such as "deemed consent" or virtual meetings. A physical meeting is only held if requested by 10% of creditors by value or number, or by 10 individual creditors. The purpose is for creditors to formally approve the CVL and the appointment of the liquidator, or to nominate a different liquidator. If creditors nominate a different liquidator, their nomination usually overrides that of the shareholders.
+5.  **Formal Appointment of Liquidator and Commencement of Liquidation:** The company officially enters liquidation, and the appointed IP takes control of the company's affairs, assets, and bank accounts. Directors' powers over the company cease at this point. The liquidator then notifies Companies House and advertises the appointment in The Gazette.
+6.  **Realisation and Distribution of Assets:** The liquidator's primary responsibility is to secure and sell the company's assets to maximise returns for creditors. Proceeds are distributed to creditors according to the statutory order of priority.
+7.  **Investigation into Directors' Conduct:** The liquidator is legally required to carry out a review of the directors' conduct for the three years leading up to the liquidation and submit a report to the Insolvency Service. This is a standard part of every CVL and is not optional.
+8.  **Ongoing Reporting and Final Closure:** The liquidator provides regular updates to creditors. Once all assets are realised, claims resolved, and funds distributed, the liquidator prepares a final account of the winding-up. A final meeting of members (and creditors, if applicable) is held. Within one week of the final meeting, a return of the meeting and final account are filed with the Registrar of Companies. The company is then struck off the register and dissolved three months later.
+
+### How Long Does it Take?
+
+The duration of a Creditors' Voluntary Liquidation can vary significantly based on the complexity of the company's affairs, the number of creditors, and the nature of asset sales.
+
+*   **Pre-Liquidation Phase (Initial Steps):** The initial process to officially place the company into liquidation can be actioned relatively quickly, often within **1 to 4 weeks**. Some firms can initiate the process in as little as 8 days.
+*   **Formal (Post-Liquidation) Phase:** Once the liquidator is appointed, the full liquidation process typically spans between **6 to 18 months**. However, in more complex cases, it can take **12 to 24 months or even longer** to complete all stages, including asset realisation, creditor claims, and final reporting. Directors' involvement is generally most significant during the early stages, typically within the first three months.
+
+While there is no fixed legal time limit for the entire process, the initial appointment stage provides immediate structure and relief from creditor pressure.

@@ -91,6 +91,20 @@ def require_key(name: str) -> str:
     return value
 
 
+def gemini_client(*, timeout_ms: int = 120_000):
+    """A google-genai client with a HARD request timeout. Without one, a stuck
+    connection (not a 503, which raises) hangs the whole run forever — which is
+    exactly what stalled a batch for half an hour. 120s is generous for a
+    grounded search call yet still fails rather than hanging."""
+    from google import genai
+    from google.genai import types
+
+    return genai.Client(
+        api_key=require_key("GEMINI_API_KEY"),
+        http_options=types.HttpOptions(timeout=timeout_ms),
+    )
+
+
 def available_engines() -> list[str]:
     """Capture engines whose API keys are present, in a stable order. Lets
     capture default to only what this repo is configured for — e.g. the Company
@@ -142,7 +156,10 @@ def _resolve_via_build_page(slug: str) -> dict[str, Any] | None:
         return None
     try:
         cfg = loader(slug)
-    except Exception:
+    except (Exception, SystemExit):
+        # build_page.load_page_config calls sys.exit() (raising SystemExit, which
+        # is NOT an Exception) for slugs missing from PAGE_REGISTRY. Sitemap-keyed
+        # pages are never in that registry, so swallow it and fall through.
         return None
     return cfg if isinstance(cfg, dict) else None
 
@@ -186,13 +203,17 @@ def derive_keyword(cfg: dict[str, Any]) -> str:
 @dataclass
 class RunContext:
     """A single immutable audit run. Each run is a new timestamped folder;
-    prior runs are never overwritten. ``latest`` is a soft pointer file."""
+    prior runs are never overwritten. ``latest`` is a soft pointer file.
+
+    ``slug`` is the storage key (the sitemap path-key, e.g. ``advice__misfeasance``)
+    and ``url`` is the live page the run audits."""
 
     slug: str
     keyword: str
     cfg: dict[str, Any]
     run_id: str
-    root: Path  # research/<slug>/_answer_audit/runs/<run_id>/
+    root: Path  # research/<key>/_answer_audit/runs/<run_id>/
+    url: str = ""
     source_index: list[dict[str, Any]] = field(default_factory=list)
 
     @property
@@ -229,6 +250,64 @@ def new_run(slug: str, *, dry_run: bool = False) -> RunContext:
         for d in ctx.for_dirs():
             d.mkdir(parents=True, exist_ok=True)
     return ctx
+
+
+def new_run_for_target(target: str, *, dry_run: bool = False) -> RunContext:
+    """Create a run for a LIVE sitemap page (the audit's real entrypoint).
+
+    Resolves ``target`` (url | path | bare slug) against the cached sitemap,
+    snapshots the live HTML once (saved as ``raw/our-page.html`` so capture and
+    extract reuse the same bytes), derives the keyword from the page itself, and
+    writes ``run-meta.json``. No local PAGE_CONFIG or page build involved.
+    """
+    from . import sitemap  # local import: sitemap imports core.RESEARCH_DIR
+
+    ref = sitemap.resolve_target(target)
+    run_id = _utc_stamp()
+    root = RESEARCH_DIR / ref.key / "_answer_audit" / "runs" / run_id
+    # Keyword = the page's path slug, de-hyphenated. This is consistently
+    # query-shaped on this site ("misfeasance", "directors disqualification",
+    # "losing house if company goes bust") and so slots cleanly into the
+    # templated use-case probes — unlike the verbose SEO <h1> title, which would
+    # produce ungrammatical questions.
+    keyword = ref.path.strip("/").split("/")[-1].replace("-", " ")
+    ctx = RunContext(slug=ref.key, keyword=keyword, cfg={}, run_id=run_id,
+                     root=root, url=ref.url)
+    if dry_run:
+        return ctx
+    for d in ctx.for_dirs():
+        d.mkdir(parents=True, exist_ok=True)
+
+    html = sitemap.fetch_page_html(ref.url)
+    (ctx.raw_dir / "our-page.html").write_text(html, encoding="utf-8")
+    write_run_meta(ctx, page_title=sitemap.extract_title(html))
+    return ctx
+
+
+def write_run_meta(ctx: RunContext, *, page_title: str = "") -> Path:
+    """Persist the run's identity so downstream stages need no PAGE_CONFIG."""
+    meta = {
+        "key": ctx.slug,
+        "url": ctx.url,
+        "keyword": ctx.keyword,
+        "page_title": page_title,  # reference only; not used as the query
+        "run_id": ctx.run_id,
+        "captured_at": datetime.now(timezone.utc).isoformat(),
+    }
+    path = ctx.root / "run-meta.json"
+    path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+    return path
+
+
+def read_run_meta(run_dir: Path) -> dict[str, Any]:
+    """Read a run's run-meta.json; {} if absent (legacy slug-based runs)."""
+    path = run_dir / "run-meta.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 
 def _sha256(text: str) -> str:

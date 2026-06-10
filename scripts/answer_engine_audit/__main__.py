@@ -1,11 +1,14 @@
 """CLI for the Answer-Engine Coverage Audit System.
 
-Pilot subcommand:
-    capture   Capture raw answer-engine witnesses (OpenAI + Gemini) for a page.
+The audit's unit of work is a LIVE companydebt.com page resolved from the
+sitemap (not a local PAGE_CONFIG). A target may be given as a full URL, a path,
+or a bare last-segment slug.
 
 Examples:
-    python -m scripts.answer_engine_audit capture --page liquidation --dry-run
-    python -m scripts.answer_engine_audit audit --page liquidation
+    python -m scripts.answer_engine_audit sitemap            # list auditable pages
+    python -m scripts.answer_engine_audit capture  --target /advice/misfeasance/
+    python -m scripts.answer_engine_audit audit    --target misfeasance
+    python -m scripts.answer_engine_audit audit    --all --limit 10
 """
 
 from __future__ import annotations
@@ -17,16 +20,9 @@ from typing import Any
 
 from . import prompts
 from .core import (
-    RunContext, available_engines, derive_keyword, new_run, resolve_page,
+    RunContext, available_engines, new_run_for_target, read_run_meta,
     write_source_index,
 )
-
-
-def _resolve_use_cases(cfg: dict[str, Any], keyword: str) -> list[str]:
-    val = cfg.get("priority_questions")
-    if isinstance(val, list) and val:
-        return [str(q) for q in val]
-    return prompts.default_use_cases(keyword)
 
 
 def build_prompt_set(keyword: str, use_cases: list[str]) -> list[tuple[str, str]]:
@@ -40,38 +36,83 @@ def build_prompt_set(keyword: str, use_cases: list[str]) -> list[tuple[str, str]
     return pset
 
 
+def _resolve_engines(spec: str) -> list[str]:
+    if (spec or "auto").strip().lower() == "auto":
+        return available_engines()
+    return [e.strip() for e in spec.split(",") if e.strip()]
+
+
+def _target_key(target: str) -> str:
+    """Storage key for a target, via the sitemap. Lets extract/verify/recommend
+    find the latest run without re-fetching the page."""
+    from . import sitemap
+    return sitemap.resolve_target(target).key
+
+
+# --------------------------------------------------------------------------
+# sitemap
+# --------------------------------------------------------------------------
+
+def cmd_sitemap(args: argparse.Namespace) -> int:
+    from . import sitemap
+
+    data = sitemap.load_urls(force=args.refresh)
+    c = data["counts"]
+    print(f"Sitemap: {sitemap.BASE}  (fetched {data['fetched_at']})")
+    print(f"  auditable: {c['auditable']}   skipped: {c['skipped']}   "
+          f"total in content sitemaps: {c['total']}")
+    if args.skipped:
+        by_reason: dict[str, int] = {}
+        for s in data["skipped"]:
+            by_reason[s["reason"]] = by_reason.get(s["reason"], 0) + 1
+        print("\nSkipped by reason:")
+        for reason, n in sorted(by_reason.items(), key=lambda kv: -kv[1]):
+            print(f"  {n:>4}  {reason}")
+    print("\nAuditable pages:")
+    refs = [sitemap._ref(u) for u in data["auditable"]]
+    for r in sorted(refs, key=lambda r: r.path)[: args.limit or None]:
+        print(f"  {r.path}")
+    if args.limit and len(refs) > args.limit:
+        print(f"  ... ({len(refs) - args.limit} more; raise --limit to see all)")
+    return 0
+
+
+# --------------------------------------------------------------------------
+# capture
+# --------------------------------------------------------------------------
+
 def cmd_capture(args: argparse.Namespace) -> int:
-    cfg = resolve_page(args.page)
-    keyword = args.keyword or derive_keyword(cfg)
-    use_cases = _resolve_use_cases(cfg, keyword)
-    pset = build_prompt_set(keyword, use_cases)
-    if (args.engines or "auto").strip().lower() == "auto":
-        engines = available_engines()
-        if not engines:
-            print("  ! no API keys found (OPENAI_API_KEY / GEMINI_API_KEY); "
-                  "nothing to capture", file=sys.stderr)
-            return 1
-    else:
-        engines = [e.strip() for e in args.engines.split(",") if e.strip()]
+    engines = _resolve_engines(args.engines)
+    if not engines:
+        print("  ! no API keys found (OPENAI_API_KEY / GEMINI_API_KEY); "
+              "nothing to capture", file=sys.stderr)
+        return 1
 
     if args.dry_run:
+        ctx = new_run_for_target(args.target, dry_run=True)
+        use_cases = prompts.default_use_cases(ctx.keyword)
+        pset = build_prompt_set(ctx.keyword, use_cases)
         print("DRY RUN - no API calls, no files written.")
-        print(f"  page:      {args.page}  (wp_page_id={cfg.get('wp_page_id')})")
-        print(f"  keyword:   {keyword}")
+        print(f"  target:    {args.target}")
+        print(f"  url:       {ctx.url}")
+        print(f"  key:       {ctx.slug}")
+        print(f"  keyword:   {ctx.keyword}  (from path slug)")
         print(f"  engines:   {', '.join(engines)}")
         print(f"  prompts:   {len(pset)} x {len(engines)} engine(s) "
               f"= {len(pset) * len(engines)} captures")
-        print(f"  output:    research/{args.page}/_answer_audit/runs/<timestamp>/")
-        print()
         for label, prompt in pset:
-            first = prompt.strip().splitlines()
-            headline = next((ln for ln in first if ln and not ln.startswith("You are")), first[0])
+            lines = prompt.strip().splitlines()
+            headline = next((ln for ln in lines if ln and not ln.startswith("You are")), lines[0])
             print(f"    - {label}: {headline.strip()[:90]}")
         return 0
 
-    ctx: RunContext = new_run(args.page)
+    ctx: RunContext = new_run_for_target(args.target)
     print(f"Run {ctx.run_id} -> {ctx.root}")
-    summary: list[dict[str, Any]] = []
+    print(f"  url: {ctx.url}")
+    print(f"  keyword: {ctx.keyword}")
+    use_cases = prompts.default_use_cases(ctx.keyword)
+    pset = build_prompt_set(ctx.keyword, use_cases)
+
     for label, prompt in pset:
         for engine in engines:
             try:
@@ -84,7 +125,6 @@ def cmd_capture(args: argparse.Namespace) -> int:
                 else:
                     print(f"  ! unknown engine '{engine}', skipping", file=sys.stderr)
                     continue
-                summary.append(res)
                 print(f"  ok  {engine:7} {label:24} "
                       f"{res.get('text_chars', 0):>6} chars, "
                       f"{res.get('sources', 0)} sources")
@@ -94,19 +134,30 @@ def cmd_capture(args: argparse.Namespace) -> int:
                 (ctx.logs_dir / "warnings.log").open("a", encoding="utf-8").write(
                     f"{engine}\t{label}\t{type(exc).__name__}: {exc}\n")
 
+    # Consolidate "our page" from the live snapshot taken in new_run_for_target.
+    from .corpus import consolidate_our_page
+    live = ctx.raw_dir / "our-page.html"
+    if live.exists():
+        consolidate_our_page(ctx.root, live)
+
     index_path = write_source_index(ctx)
     print(f"\nWitnesses captured: {len(ctx.source_index)}")
     print(f"Source index: {index_path}")
     return 0
 
 
+# --------------------------------------------------------------------------
+# extract / verify / recommend
+# --------------------------------------------------------------------------
+
 def cmd_extract(args: argparse.Namespace) -> int:
     from .corpus import latest_run
     from .extract import extract_nuggets
 
-    run = latest_run(args.page)
-    print(f"Extracting coverage delta for {args.page} (run {run.name}, model {args.gemini_model})")
-    nuggets, path = extract_nuggets(args.page, model=args.gemini_model, run_dir=run)
+    key = _target_key(args.target)
+    run = latest_run(key)
+    print(f"Extracting coverage delta for {key} (run {run.name}, model {args.gemini_model})")
+    nuggets, path = extract_nuggets(key, model=args.gemini_model, run_dir=run)
 
     needs = sum(1 for n in nuggets if n.needs_primary_verification)
     print(f"  nuggets (genuinely absent): {len(nuggets)}  "
@@ -120,7 +171,7 @@ def cmd_extract(args: argparse.Namespace) -> int:
     return 0
 
 
-def _run_verify(page: str, run: Path, *, ttl_days: int, model: str,
+def _run_verify(key: str, run: Path, *, ttl_days: int, model: str,
                 nuggets_path: Path | None = None, max_live: int | None = None) -> int:
     """Shared verify body used by both `verify` and `audit`."""
     from .ledger import load_jsonl, save_csv, save_jsonl
@@ -134,10 +185,10 @@ def _run_verify(page: str, run: Path, *, ttl_days: int, model: str,
         return 2
 
     nuggets = load_jsonl(path)
-    domains = provider_domains(page)
+    domains = provider_domains(key)
     cache = VerificationCache()
     budget = f", max-live {max_live}" if max_live is not None else ""
-    print(f"Verifying {len(nuggets)} nugget(s) for {page} "
+    print(f"Verifying {len(nuggets)} nugget(s) for {key} "
           f"(cache: {cache.stats().get('total', 0)} entries, ttl {ttl_days}d{budget})")
 
     def _progress(n, source):
@@ -159,8 +210,9 @@ def _run_verify(page: str, run: Path, *, ttl_days: int, model: str,
 def cmd_verify(args: argparse.Namespace) -> int:
     from .corpus import latest_run
 
-    run = latest_run(args.page)
-    return _run_verify(args.page, run, ttl_days=args.ttl_days, model=args.gemini_model,
+    key = _target_key(args.target)
+    run = latest_run(key)
+    return _run_verify(key, run, ttl_days=args.ttl_days, model=args.gemini_model,
                        nuggets_path=Path(args.nuggets) if args.nuggets else None,
                        max_live=args.max_live)
 
@@ -169,9 +221,10 @@ def cmd_recommend(args: argparse.Namespace) -> int:
     from .corpus import latest_run
     from .recommend import recommend_edits
 
-    run = latest_run(args.page)
-    print(f"Generating recommendations for {args.page} (run {run.name})")
-    out, counts = recommend_edits(args.page, model=args.gemini_model, run_dir=run)
+    key = _target_key(args.target)
+    run = latest_run(key)
+    print(f"Generating recommendations for {key} (run {run.name})")
+    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run)
     print(f"  total nuggets:        {counts['total']}")
     print(f"  verified -> edits:    {counts['publishable']}")
     print(f"  needs verification:   {counts['needs_verification']}")
@@ -179,23 +232,26 @@ def cmd_recommend(args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_audit(args: argparse.Namespace) -> int:
-    """Orchestrate capture -> consolidate -> extract -> verify -> recommend.
+# --------------------------------------------------------------------------
+# audit (single page, or --all over the sitemap in batches)
+# --------------------------------------------------------------------------
 
-    Stops at the recommendations report. NEVER edits a page: apply-to-live stays
-    human-reviewed (Bernstein patch, staging only)."""
+def _audit_one(target: str, args: argparse.Namespace) -> int:
+    """Full pipeline for ONE live page. Stops at the recommendations report;
+    NEVER edits a page (apply-to-live stays human, Bernstein patch, staging)."""
     from datetime import datetime, timezone
 
     from .corpus import consolidate_our_page, consolidate_witnesses, latest_run
-    from .core import RESEARCH_DIR
     from .extract import extract_nuggets
     from .recommend import recommend_edits
+
+    key = _target_key(target)
 
     # 1. Decide whether to re-capture.
     reuse = args.skip_capture
     if args.incremental and not reuse:
         try:
-            prev = latest_run(args.page)
+            prev = latest_run(key)
             stamp = datetime.strptime(prev.name, "%Y-%m-%dT%H-%M-%SZ").replace(tzinfo=timezone.utc)
             age_h = (datetime.now(timezone.utc) - stamp).total_seconds() / 3600
             if age_h <= args.ttl_hours:
@@ -207,7 +263,7 @@ def cmd_audit(args: argparse.Namespace) -> int:
 
     if reuse:
         try:
-            run = latest_run(args.page)
+            run = latest_run(key)
         except Exception as exc:
             print(f"No capture run to reuse ({exc}). Run `capture` first or drop "
                   f"--skip-capture.", file=sys.stderr)
@@ -215,42 +271,79 @@ def cmd_audit(args: argparse.Namespace) -> int:
         print(f"Reusing capture run {run.name}")
     else:
         rc = cmd_capture(argparse.Namespace(
-            page=args.page, keyword=None, engines=args.engines,
-            openai_model=args.openai_model, gemini_model=args.gemini_model, dry_run=False))
+            target=target, engines=args.engines, openai_model=args.openai_model,
+            gemini_model=args.gemini_model, dry_run=False))
         if rc != 0:
             return rc
-        run = latest_run(args.page)
+        run = latest_run(key)
 
-    # 2. Consolidate (idempotent; rebuild witnesses if missing).
+    # 2. Consolidate (idempotent).
     if not (run / "processed" / "witnesses.md").exists():
         consolidate_witnesses(run)
     our_page = run / "processed" / "our-page.txt"
-    if not our_page.exists():
-        article_html = RESEARCH_DIR / args.page / f"{args.page}.html"
-        if article_html.exists():
-            consolidate_our_page(run, article_html)
+    live_html = run / "raw" / "our-page.html"
+    if not our_page.exists() and live_html.exists():
+        consolidate_our_page(run, live_html)
 
     # 3. Extract delta.
     print("\n== extract ==")
-    nuggets, _ = extract_nuggets(args.page, model=args.gemini_model, run_dir=run)
+    nuggets, _ = extract_nuggets(key, model=args.gemini_model, run_dir=run)
     print(f"  {len(nuggets)} nugget(s) absent from our page")
 
     # 4. Verify (budget-guarded at the bottleneck).
     print("\n== verify ==")
-    rc = _run_verify(args.page, run, ttl_days=args.ttl_days, model=args.gemini_model,
+    rc = _run_verify(key, run, ttl_days=args.ttl_days, model=args.gemini_model,
                      max_live=args.max_verifications)
     if rc != 0:
         return rc
 
     # 5. Recommend (stops here; never edits the page).
     print("\n== recommend ==")
-    out, counts = recommend_edits(args.page, model=args.gemini_model, run_dir=run)
-    print(f"\nDONE. {counts['publishable']} verified recommendation(s), "
-          f"{counts['needs_verification']} parked for human verification.")
+    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run)
+    print(f"\nDONE {key}. {counts['publishable']} verified recommendation(s), "
+          f"{counts['needs_verification']} parked for human verification, "
+          f"{counts.get('cannibalisation_risk', 0)} flagged as cannibalisation risk.")
     print(f"Review: {out}")
-    print("This tool stops at recommendations. Apply-to-live stays human "
-          "(Bernstein patch --humanise-note, staging only).")
     return 0
+
+
+def cmd_audit(args: argparse.Namespace) -> int:
+    if args.all:
+        from . import sitemap
+        refs = sorted(sitemap.auditable_refs(), key=lambda r: r.path)
+        if args.limit:
+            refs = refs[: args.limit]
+        total = len(refs)
+        print(f"Auditing {total} live page(s) in batches of {args.batch_size}. "
+              f"Apply-to-live stays human (Bernstein patch, staging only).")
+        ok = fail = 0
+        for i, ref in enumerate(refs, 1):
+            print(f"\n========== [{i}/{total}] {ref.path} ==========")
+            try:
+                rc = _audit_one(ref.url, args)
+            except Exception as exc:  # one bad page must not stop the sweep
+                print(f"  FAIL {ref.path}: {type(exc).__name__}: {exc}", file=sys.stderr)
+                rc = 1
+            ok += rc == 0
+            fail += rc != 0
+            if args.batch_size and i % args.batch_size == 0 and i < total:
+                print(f"\n--- batch boundary ({i}/{total}); verification cache "
+                      f"warmed, continuing ---")
+        print(f"\nSweep complete: {ok} ok, {fail} failed, {total} total.")
+        return 0 if fail == 0 else 1
+
+    if not args.target:
+        print("Pass --target <url|path|slug> or --all.", file=sys.stderr)
+        return 2
+    return _audit_one(args.target, args)
+
+
+# --------------------------------------------------------------------------
+# argument parsing
+# --------------------------------------------------------------------------
+
+def _add_target(p: argparse.ArgumentParser) -> None:
+    p.add_argument("--target", help="live page: full URL, path (/advice/x/), or bare slug")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -258,9 +351,14 @@ def main(argv: list[str] | None = None) -> int:
                                      description="Answer-Engine Coverage Audit System")
     sub = parser.add_subparsers(dest="command", required=True)
 
+    sm = sub.add_parser("sitemap", help="List auditable pages from the live sitemap")
+    sm.add_argument("--refresh", action="store_true", help="force a live re-fetch of the sitemap")
+    sm.add_argument("--skipped", action="store_true", help="show counts of excluded pages by reason")
+    sm.add_argument("--limit", type=int, default=0, help="cap how many paths are printed (0 = all)")
+    sm.set_defaults(func=cmd_sitemap)
+
     cap = sub.add_parser("capture", help="Capture raw answer-engine witnesses")
-    cap.add_argument("--page", required=True, help="page slug (matches PAGE_CONFIG['slug'])")
-    cap.add_argument("--keyword", help="override the target query (defaults to title head)")
+    _add_target(cap)
     cap.add_argument("--engines", default="auto",
                      help="comma list (openai,gemini) or 'auto' = engines with keys present")
     cap.add_argument("--openai-model", default="gpt-4o")
@@ -270,13 +368,13 @@ def main(argv: list[str] | None = None) -> int:
     cap.set_defaults(func=cmd_capture)
 
     ext = sub.add_parser("extract", help="Extract the coverage delta (nuggets we lack)")
-    ext.add_argument("--page", required=True, help="page slug")
+    _add_target(ext)
     ext.add_argument("--gemini-model", default="gemini-2.5-flash",
                      help="cheaper model for the delta pass")
     ext.set_defaults(func=cmd_extract)
 
-    ver = sub.add_parser("verify", help="Verify nuggets against provider sites (uses cache)")
-    ver.add_argument("--page", required=True, help="page slug")
+    ver = sub.add_parser("verify", help="Verify nuggets against authoritative sources (uses cache)")
+    _add_target(ver)
     ver.add_argument("--nuggets", help="path to nuggets JSONL (default: latest run's processed/nuggets.jsonl)")
     ver.add_argument("--ttl-days", type=int, default=90, help="cache freshness window")
     ver.add_argument("--max-live", type=int, default=None,
@@ -285,12 +383,16 @@ def main(argv: list[str] | None = None) -> int:
     ver.set_defaults(func=cmd_verify)
 
     rec = sub.add_parser("recommend", help="Turn the verified ledger into 06-recommended-edits.md")
-    rec.add_argument("--page", required=True, help="page slug")
+    _add_target(rec)
     rec.add_argument("--gemini-model", default="gemini-2.5-flash")
     rec.set_defaults(func=cmd_recommend)
 
     aud = sub.add_parser("audit", help="Full pipeline: capture -> extract -> verify -> recommend")
-    aud.add_argument("--page", required=True, help="page slug")
+    _add_target(aud)
+    aud.add_argument("--all", action="store_true", help="audit every auditable sitemap page (batched)")
+    aud.add_argument("--limit", type=int, default=0, help="with --all, cap how many pages to process")
+    aud.add_argument("--batch-size", type=int, default=10,
+                     help="with --all, pages per batch (cache warms between batches)")
     aud.add_argument("--skip-capture", action="store_true",
                      help="reuse the latest capture run instead of re-capturing")
     aud.add_argument("--incremental", action="store_true",
@@ -306,7 +408,21 @@ def main(argv: list[str] | None = None) -> int:
     aud.set_defaults(func=cmd_audit)
 
     args = parser.parse_args(argv)
-    return args.func(args)
+    try:
+        return args.func(args)
+    except RuntimeError as exc:  # resolution / setup errors: clean message, no traceback
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    except KeyboardInterrupt:
+        print("\ninterrupted", file=sys.stderr)
+        return 130
+    except Exception as exc:  # API 5xx (e.g. Gemini high-demand) and the like
+        name = type(exc).__name__
+        hint = ""
+        if "503" in str(exc) or "UNAVAILABLE" in str(exc):
+            hint = "  (model overloaded; this is transient: retry off-peak or batch fewer pages)"
+        print(f"error: {name}: {exc}{hint}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

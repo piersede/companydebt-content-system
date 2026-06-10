@@ -1,0 +1,290 @@
+```json
+[
+ {
+  "detail": "Wrongful trading involves a dual test: an objective standard (what a reasonably diligent person in that role would have known) and a subjective standard (what the director actually knew).",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Wrongful Trading",
+  "card_name": "Section 214, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Helps directors understand the specific criteria used by courts to assess wrongful trading liability."
+ },
+ {
+  "detail": "Wrongful trading is a civil, not a criminal, offence.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Wrongful Trading",
+  "card_name": "Section 214, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies the legal nature of wrongful trading, distinguishing it from criminal acts."
+ },
+ {
+  "detail": "If a director is found to have a 'desire to prefer' a specific creditor, they could face personal liability for preferential payments.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Preferential Payments",
+  "card_name": "Section 239, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a crucial legal nuance for directors regarding the intent behind preferential payments that can trigger personal liability."
+ },
+ {
+  "detail": "Attempts to retrospectively reclassify overdrawn director's loan account drawings as salary or dividends after insolvency are usually scrutinised and often rejected by courts.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Director's Loan Account",
+  "card_name": "Overdrawn Director's Loan Account",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Warns directors against post-insolvency attempts to re-characterise drawings to avoid DLA repayment, highlighting a common pitfall."
+ },
+ {
+  "detail": "Creditors can apply to restore an improperly struck-off company to the register, even up to 20 years later.",
+  "category": "Risks / Pitfalls",
+  "provider": "Voluntary Strike-Off / Dissolution",
+  "card_name": "Companies Act 2006",
+  "value": "20 years",
+  "mentioned_by": ["gemini · risk"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors of the extended period during which an improperly dissolved company can be reinstated, increasing the long-term risk of misuse."
+ },
+ {
+  "detail": "The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 specifically extended the Insolvency Service's powers to investigate directors of dissolved companies, even retrospectively.",
+  "category": "Legal / Regulatory",
+  "provider": "Voluntary Strike-Off / Dissolution",
+  "card_name": "Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021",
+  "value": "",
+  "mentioned_by": ["gemini · risk"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights a specific piece of legislation that increases director accountability for dissolved companies, particularly relevant for historical conduct."
+ },
+ {
+  "detail": "A company must have ceased trading for at least three months to use voluntary strike-off.",
+  "category": "Eligibility / Criteria",
+  "provider": "Voluntary Strike-Off",
+  "card_name": "Companies Act 2006",
+  "value": "three months",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a clear eligibility criterion for directors considering voluntary strike-off."
+ },
+ {
+  "detail": "Directors remain responsible for company affairs and liable for any outstanding debts until dissolution via strike-off.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Voluntary Strike-Off",
+  "card_name": "Companies Act 2006",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies ongoing director responsibility during the strike-off process, even if the company has ceased trading."
+ },
+ {
+  "detail": "Breaching Section 216 of the Insolvency Act 1986 (reusing a prohibited company name) is a criminal offence, punishable by imprisonment and/or a fine.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Phoenix Companies",
+  "card_name": "Section 216, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Emphasises the severe, criminal consequences for directors who improperly reuse company names after liquidation."
+ },
+ {
+  "detail": "Under Section 217 of the Insolvency Act 1986, directors who breach Section 216 (reusing a prohibited company name) can be made personally liable for all debts of the new company incurred while using the prohibited name.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Phoenix Companies",
+  "card_name": "Section 217, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides the specific legal basis for personal liability arising from the misuse of company names."
+ },
+ {
+  "detail": "The Insolvency Service can bring disqualification proceedings against directors if unfit conduct is identified.",
+  "category": "Legal / Regulatory",
+  "provider": "Director Disqualification",
+  "card_name": "Company Directors Disqualification Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights the active role of the Insolvency Service in pursuing disqualification."
+ },
+ {
+  "detail": "HMRC can issue a Personal Liability Notice (PLN) if a director's failure to ensure the company pays its tax debts was due to the director's fraud or neglect.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "HMRC",
+  "card_name": "Personal Liability Notice (PLN)",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Details the specific grounds (fraud or neglect) that allow HMRC to bypass limited liability and impose personal tax debt on directors."
+ },
+ {
+  "detail": "Personal Liability Notices (PLNs) can be issued for unpaid PAYE, National Insurance contributions, VAT penalties, and Construction Industry Scheme (CIS) deductions.",
+  "category": "Creditor / HMRC Treatment",
+  "provider": "HMRC",
+  "card_name": "Personal Liability Notice (PLN)",
+  "value": "",
+  "mentioned_by": ["gemini · risk", "gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Specifies the types of tax liabilities for which directors can face personal responsibility through a PLN."
+ },
+ {
+  "detail": "Failure to cooperate fully with an appointed liquidator can lead to a warrant for arrest.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "General",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "present_but_weak",
+  "why_it_matters": "Underlines the serious consequences of non-cooperation beyond just court proceedings or examinations."
+ },
+ {
+  "detail": "A report on directors' conduct is submitted to the Secretary of State (Insolvency Service) within three months of the insolvency.",
+  "category": "Timeline / Duration",
+  "provider": "General",
+  "card_name": "",
+  "value": "three months",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a specific timeline for the liquidator's conduct report, indicating when directors can expect their actions to be reviewed."
+ },
+ {
+  "detail": "Fraudulent trading involves carrying on the company's business with the intent to defraud creditors or for any other fraudulent purpose, requiring proof of actual dishonesty and real moral blame.",
+  "category": "Definition / Terminology",
+  "provider": "Fraudulent Trading",
+  "card_name": "Section 213, Insolvency Act 1986; Section 993, Companies Act 2006",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a clear definition and criteria for fraudulent trading, which carries severe penalties."
+ },
+ {
+  "detail": "Fraudulent trading is both a civil and a criminal offence, leading to unlimited personal financial contributions, criminal charges, imprisonment for up to 10 years, and disqualification as a director.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Fraudulent Trading",
+  "card_name": "Section 213, Insolvency Act 1986; Section 993, Companies Act 2006",
+  "value": "up to 10 years",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Outlines the severe, dual nature of penalties for fraudulent trading, including criminal sanctions."
+ },
+ {
+  "detail": "Misfeasance claims can be brought against a director for misuse of company assets, unlawful dividends or excessive remuneration, preferential payments, or neglect of creditor interests when insolvency is probable.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Misfeasance",
+  "card_name": "Section 212, Insolvency Act 1986",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Gives concrete examples of actions that could lead to misfeasance claims, helping directors understand their duties."
+ },
+ {
+  "detail": "There is a time limit of six years for bringing a misfeasance claim against a director, starting from the date of the misfeasance or breach of duty.",
+  "category": "Timeline / Duration",
+  "provider": "Misfeasance",
+  "card_name": "Section 212, Insolvency Act 1986",
+  "value": "6 years",
+  "mentioned_by": ["gemini · usecase-3"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides directors with information on the statutory limitations period for misfeasance claims."
+ },
+ {
+  "detail": "For a Members' Voluntary Liquidation (MVL), the company must be able to repay all its debts and liabilities, with interest, in full within 12 months.",
+  "category": "Eligibility / Criteria",
+  "provider": "Members' Voluntary Liquidation (MVL)",
+  "card_name": "",
+  "value": "12 months",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies a key financial condition and timeline for a company to qualify for an MVL."
+ },
+ {
+  "detail": "For a Members' Voluntary Liquidation (MVL), the Declaration of Solvency must be signed no more than five weeks before the shareholders' meeting.",
+  "category": "Timeline / Duration",
+  "provider": "Members' Voluntary Liquidation (MVL)",
+  "card_name": "Declaration of Solvency",
+  "value": "five weeks",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a specific procedural timeline for directors initiating an MVL."
+ },
+ {
+  "detail": "Members' Voluntary Liquidations (MVLs) are often cost-effective for businesses with retained profits exceeding £25,000, due to potential Capital Gains Tax rates and Business Asset Disposal Relief (BADR).",
+  "category": "Cost / Fees",
+  "provider": "Members' Voluntary Liquidation (MVL)",
+  "card_name": "Business Asset Disposal Relief (BADR)",
+  "value": "£25,000",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Offers a financial threshold for when an MVL becomes particularly advantageous for directors from a tax planning perspective."
+ },
+ {
+  "detail": "A Creditors' Voluntary Liquidation (CVL) is appropriate for an insolvent company that cannot pay its debts as they fall due (cash flow insolvency) or where its liabilities exceed its assets (balance sheet insolvency).",
+  "category": "Definition / Terminology",
+  "provider": "Creditors' Voluntary Liquidation (CVL)",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a more detailed and nuanced definition of insolvency types relevant to a CVL."
+ },
+ {
+  "detail": "Choosing a Creditors' Voluntary Liquidation (CVL) allows directors more control over the process and demonstrates responsible action, potentially mitigating personal liability, compared to compulsory liquidation.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Creditors' Voluntary Liquidation (CVL)",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights a key benefit for directors choosing a CVL proactively, particularly concerning personal liability."
+ },
+ {
+  "detail": "A Company Voluntary Arrangement (CVA) resolution is invalid if more than half of the total value of unconnected creditors (those not related to the company) vote against it.",
+  "category": "Process / Steps",
+  "provider": "Company Voluntary Arrangement (CVA)",
+  "card_name": "",
+  "value": "more than half",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors of a critical voting mechanism that allows unconnected creditors to veto a proposed CVA, even if the 75% threshold is met."
+ },
+ {
+  "detail": "Informal arrangements with creditors, such as 'Time-to-Pay' arrangements with HMRC, are not legally binding and can be cancelled by either party at any time.",
+  "category": "Risks / Pitfalls",
+  "provider": "Informal Arrangements with Creditors",
+  "card_name": "Time-to-Pay (TTP)",
+  "value": "",
+  "mentioned_by": ["gemini · usecase-4"],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies the non-binding nature of informal arrangements, highlighting the inherent risk and uncertainty for directors."
+ }
+]
+```

@@ -30,8 +30,8 @@ import time
 from pathlib import Path
 from typing import Any
 
-from . import display_formats
-from .core import REPO_ROOT, require_key, resolve_page
+from . import display_formats, sitemap
+from .core import REPO_ROOT, gemini_client, read_run_meta, require_key
 from .corpus import consolidate_our_page, consolidate_witnesses, latest_run
 from .ledger import ARTICLE_STATUSES, Nugget, save_jsonl
 
@@ -52,12 +52,17 @@ _MUST_VERIFY_CATEGORIES = {
 
 # Hard-claim signals in the detail text itself. Any hit forces primary
 # verification even for a softly-categorised nugget (e.g. a "Process" step that
-# names a statutory deadline or a director-liability threshold).
+# names a statutory deadline, a voting threshold or a director-liability test).
+# Note the word-form thresholds (half/majority/two-thirds...) and voting terms:
+# the CVA voting-rule false-pass slipped through because the threshold was
+# written in words, not digits or "%".
 _FIGURE_SIGNALS = re.compile(
     r"(%|£|\bs\.?\s?\d|section\s\d|\bact\b|\brule\b|\bregulation\b|"
     r"\bday(?:s)?\b|\bweek(?:s)?\b|\bmonth(?:s)?\b|\byear(?:s)?\b|"
     r"liabl|disqualif|wrongful|fraudulent|misfeasance|preferential|"
-    r"penalt|threshold|hmrc|guarantee|\bmust\b|require|\d)",
+    r"penalt|threshold|hmrc|guarantee|\bmust\b|require|\d|"
+    r"\bhalf\b|\bmajority\b|\bquorum\b|\bunanim|two[- ]thirds|three[- ]quarters|"
+    r"\bvote(?:s|d)?\b|\bresolution\b|\bapprov|\bqualif|\beligib)",
     re.I,
 )
 
@@ -231,13 +236,14 @@ def _to_nugget(idx: int, raw: dict[str, Any]) -> Nugget | None:
     )
 
 
-def _gemini_delta(prompt: str, model: str, *, attempts: int = 4) -> str:
+def _gemini_delta(prompt: str, model: str, *, attempts: int = 5) -> str:
     from google import genai
     from google.genai import errors as genai_errors
 
-    client = genai.Client(api_key=require_key("GEMINI_API_KEY"))
+    client = gemini_client()
     # No search tool: this is a constrained reading/reasoning pass over the text
     # we supply, not a live lookup. Grounding belongs to the verify stage.
+    # Fail fast on 5xx: short backoff so a throttled Gemini does not hang the run.
     last: Exception | None = None
     for i in range(attempts):
         try:
@@ -245,7 +251,7 @@ def _gemini_delta(prompt: str, model: str, *, attempts: int = 4) -> str:
             return getattr(resp, "text", "") or ""
         except genai_errors.ServerError as exc:  # 5xx high-demand spikes are transient
             last = exc
-            time.sleep(min(2 ** i * 5, 40))
+            time.sleep(min(2 ** i * 3, 12))
     raise last if last else RuntimeError("gemini delta call failed")
 
 
@@ -256,24 +262,28 @@ def extract_nuggets(slug: str, *, model: str = "gemini-2.5-flash",
     Returns (nuggets, path). Uses the latest capture run unless ``run_dir`` is
     given. Rebuilds witnesses.md / our-page.txt from the run if either is absent.
     """
-    cfg = resolve_page(slug)
-    keyword = cfg.get("title", slug).split(":")[0].strip()
     run = run_dir or latest_run(slug)
+    meta = read_run_meta(run)
+    keyword = meta.get("keyword") or slug.replace("__", " ").replace("-", " ")
 
     witnesses_path = run / "processed" / "witnesses.md"
     if not witnesses_path.exists():
         consolidate_witnesses(run)
     witnesses = witnesses_path.read_text(encoding="utf-8")
 
+    # "Our page" is the live snapshot taken at capture time (raw/our-page.html).
+    live_html_path = run / "raw" / "our-page.html"
     our_page_path = run / "processed" / "our-page.txt"
-    if not our_page_path.exists():
-        # Fall back to a built/cached article HTML if we have one to consolidate.
-        article_html = REPO_ROOT / "research" / slug / f"{slug}.html"
-        if article_html.exists():
-            consolidate_our_page(run, article_html)
+    if not our_page_path.exists() and live_html_path.exists():
+        consolidate_our_page(run, live_html_path)
     our_prose = our_page_path.read_text(encoding="utf-8") if our_page_path.exists() else ""
 
-    our_jsonld = _page_jsonld(slug)
+    # JSON-LD from the REAL rendered page (the already-covered guard). Falls back
+    # to a local build only for legacy slug-based runs with no live snapshot.
+    if live_html_path.exists():
+        our_jsonld = sitemap.extract_jsonld(live_html_path.read_text(encoding="utf-8"))
+    else:
+        our_jsonld = _page_jsonld(slug)
 
     prompt = EXTRACT_DELTA.format(
         keyword=keyword,

@@ -10,6 +10,7 @@ See operational learning: `editorial-os/25-operational-learning-loop.md` (2026-0
 
 | Stage | Status |
 |---|---|
+| Resolution (which pages exist) | **Automated** (`sitemap.py`) — live Yoast sitemap, ~588 auditable pages; no PAGE_CONFIG needed |
 | Capture (OpenAI + Gemini, provenance, immutable runs) | **Automated** (`capture` CLI) |
 | Consolidate witnesses + our page | **Automated** (`corpus.py`) |
 | Extract delta (nuggets we lack) | **Automated** (`extract.py` + `extract` CLI) — Gemini flash delta pass; already-covered guard checks page prose AND built JSON-LD |
@@ -21,26 +22,46 @@ See operational learning: `editorial-os/25-operational-learning-loop.md` (2026-0
 
 ## Target CLI
 
+The unit of work is a LIVE companydebt.com page resolved from the sitemap, not a
+local PAGE_CONFIG. `--target` accepts a full URL, a path (`/advice/x/`), or a bare
+last-segment slug.
+
 ```
-python -m scripts.answer_engine_audit audit --page <slug>     # full pipeline -> reports
-                                     capture  --page <slug>     # (exists)
-                                     extract  --page <slug>     # witnesses -> nuggets-we-lack
-                                     verify   --page <slug>     # nuggets -> verified ledger (+cache)
-                                     recommend --page <slug>    # verified -> 06-recommended-edits.md
-                                     report   --page <slug>     # regenerate reports from processed data
+python -m scripts.answer_engine_audit sitemap                       # list auditable pages
+                                     capture   --target <url|path|slug>
+                                     extract   --target <url|path|slug>
+                                     verify    --target <url|path|slug>
+                                     recommend --target <url|path|slug>
+                                     audit     --target <url|path|slug>   # full pipeline -> reports
+                                     audit     --all [--limit N] [--batch-size N]
 ```
 
-`audit` runs extract -> verify -> recommend and stops, emitting
+`audit` runs capture -> extract -> verify -> recommend and stops, emitting
 `reports/06-recommended-edits.md` for human review. It never edits the page.
+`audit --all` sweeps every auditable sitemap page in batches.
 
 ## Stage designs
 
-### Auto-derive inputs from the page config
-Remove the hand-passed flags. From `PAGE_CONFIG`:
-- keyword: title head (already in `core.derive_keyword`).
-- providers: from `card_ids` -> card JSON `short_name`/`bank`.
-- sub-intent queries: from each card's `fit_label` / the "best for" sections, plus `priority_questions` if present.
-- diff target ("our page"): build the page (or fetch the live URL) and run `corpus.consolidate_our_page`.
+### Sitemap-driven resolution (live, not PAGE_CONFIG)
+Pages resolve from the live Yoast sitemap via `sitemap.py`, not from a local
+`PAGE_CONFIG` or `PAGE_REGISTRY`. This is what makes ~588 published pages
+auditable instead of the 2 that had hand-written configs.
+- enumeration: `sitemap_index.xml` -> `page-sitemap.xml` + `post-sitemap.xml`,
+  filtered to substantive guidance. Landing pages (`/sectors/`, `/services-to/`),
+  news (`/articles/`) and utility/legal/tool pages are excluded (constants in
+  `sitemap.py`). The URL list is cached with a TTL.
+- keyword: the page's path slug, de-hyphenated (consistently query-shaped on this
+  site; slots cleanly into the templated use-case probes). The verbose SEO `<h1>`
+  title is kept in `run-meta.json` as reference only.
+- providers / domains: none for insolvency pages -> `provider_domains` returns
+  `{}` and verification relies on the authoritative UK sources in `VERIFY_PROMPT`.
+- diff target ("our page"): the LIVE page HTML, fetched once per run and snapshotted
+  to `raw/our-page.html`. Prose -> `corpus.consolidate_our_page`; the already-covered
+  guard reads JSON-LD straight from that real rendered HTML (`sitemap.extract_jsonld`),
+  not a local build.
+- WHY live, not staging: an AEO/citation audit must compare against exactly what
+  the answer engines crawl. The usual "staging only" rule is deliberately inverted
+  for THIS read-only tool; it still never writes to the live site.
 
 ### Extract (delta)
 - Single constrained model pass (cheaper model, e.g. Gemini flash) over `witnesses.md` + `our-page.txt` + the page's JSON-LD, emitting structured nuggets (schema in `display_formats`/ledger).

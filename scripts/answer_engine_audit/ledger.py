@@ -53,6 +53,10 @@ class Nugget:
     verify_date: str = ""                         # ISO date the claim was confirmed
     evidence_tier: str = ""                       # how it was confirmed
     notes: str = ""
+    # anti-cannibalisation: is this fact already owned by ANOTHER of our pages?
+    # If so, adding it here would split our own citation authority — link instead.
+    cannibalisation_risk: bool = False
+    cannibal_owner_url: str = ""                   # the existing page that owns the fact
 
     def __post_init__(self) -> None:
         if self.article_status not in ARTICLE_STATUSES:

@@ -1,0 +1,594 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:55:53 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=14215",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director, a Company Voluntary Arrangement (CVA) is a formal insolvency procedure governed by Part I of the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016, with the Companies Act 2006 also relevant to directors' duties. It enables a company in financial difficulties to reach a legally binding agreement with its creditors to repay its debts over a set period, often allowing the business to continue trading and avoid liquidation.\n\n**Steps Involved in a Company Voluntary Arrangement:**\n\n1.  **Initial Assessment and Insolvency Practitioner (IP) Appointment:** The process begins with the company's directors consulting with a licensed insolvency practitioner (IP). The IP, known as the \"nominee\" at this stage, assesses the company's financial situation to determine if a CVA is a viable solution, considering factors such as the business's potential for turnaround and its ability to generate sufficient cash flow for repayments.\n2.  **Drafting the Proposal:** The directors, often working closely with the nominee, prepare a formal CVA proposal. This comprehensive document outlines how debts will be repaid, including a detailed repayment schedule, a statement of the company's affairs (assets, liabilities, and creditors), and an explanation of the circumstances that led to financial distress.\n3.  **Circulation to Creditors:** The prepared proposal is then circulated to all creditors, providing them with time to review and raise queries. Statutory insolvency rules require at least 14 days' notice before a decision meeting, though a longer period, such as three weeks, is often allowed, particularly for major creditors like HMRC, to ensure adequate consideration.\n4.  **Creditor and Shareholder Decision Procedure:** A decision meeting, which can be held virtually, is convened where creditors vote on whether to accept or reject the CVA proposal.\n    *   **Creditor Approval Threshold:** For the CVA to be approved, at least 75% (by value) of the creditors who respond must vote in favour. However, a critical safeguard exists: the resolution will be invalid if more than 50% (by value) of all unconnected creditors whose claims are admitted for voting vote against it.\n    *   **Shareholder Approval Threshold:** Separately, the company's shareholders can approve the proposal by a simple majority in value of those voting.\n    *   **Creditor Priority:** If there is a divergence between the creditors' and shareholders' decisions, the creditors' decision will prevail, subject to any court order.\n    *   Once approved, the CVA becomes legally binding on all unsecured creditors who were entitled to vote, regardless of how they voted. Secured and preferential creditors are not bound by the CVA unless they explicitly agree to its terms.\n5.  **Implementation and Supervision:** Upon approval, the CVA takes effect immediately. The nominee transitions into the role of \"supervisor,\" overseeing the arrangement's implementation, monitoring payments, and ensuring the company adheres to the agreed terms and financial performance. Crucially, the existing management generally remains in control of the company's day-to-day operations throughout the CVA.\n6.  **Completion:** The company makes scheduled payments to creditors through the supervisor over the agreed period. If the company successfully meets all its obligations, the CVA is completed, any remaining unsecured debts are written off, and the supervisor issues a CVA completion certificate.\n\n**How Long Does it Take?**\n\nThe timeline for a CVA can be broadly divided into two phases:\n\n1.  **Preparation and Approval Phase:** The initial stages, from the directors consulting an IP to the CVA proposal being approved by creditors and shareholders, typically take around **six to eight weeks**.\n    *   Drafting and distributing the proposal can take approximately four weeks. The IP is generally required to work out the arrangement within one month of their appointment.\n    *   Creditors are then given a notice period of at least 14 days to consider the proposal before the decision meeting, with some preferring up to three weeks.\n2.  **Duration of the CVA Itself:** Once approved, the CVA usually runs for a period of **three to five years**. The exact duration is influenced by factors such as the company's debt level, its capacity to generate cash flow, and the specific repayment terms negotiated with creditors. In exceptional, unforeseen circumstances, it may be possible to negotiate an extension of up to two years.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "thomsonreuters.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyO8tvUhWb_VWNwEUKqtpPCn_SymL8nhpvFspgI9LAEwttGWo_0Xf7HkDdPzimvFU4UuRddBGsLwRKYKmwAK3s740zxK6x7-XvbC_gStlFzW8B_j0t18oDtk8s5wIq6ht7j6bmtrJqBn5OTpEMTCWL9jZs-oox3nVsvLwYW72navXDsl0juKjXoRAvfGzhMxKsBDOqum_f2rNkvR8d4Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ashurst.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrdhf-jY8LL5q3D1kL5TPB6PY7Fjw7Cr4J1OQ2I3zJCT21on3iE5q5l2nxggNTYhXwFEyganbmiH0jd40dFiSXid2jmiCgdgWizkjn01VHAEoiW75unNSyYb-JMPUb3QDi0qtal6prXFFVMc2hQrw2IN0jQuArZbIk061l0Ibr5bN-sAfSUlTAQbe9D5-gQmzsiUbVDqqCcxtrenQob49X7wKCFFUeJC-SY_Rm"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbhODaE8sAE7SwQKBbqQav6sZL5FDR2rEgOXni6DrRow5VBFXIakiI79SKarBe7WimfA1IhlhEWlG3aDj7TjVEEsAm56CbUgBGGvE0XK0DYNx7I3dGzhc8SXndJe-zJCynlJicI7m7bavlXwpbZ8e9KwADM-QBDsKXP5SH2FhhcCCQ9p-7C09GK7o="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parliament.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRY4twsUJIZcmQanGcXiBccKGIeg1hIKkwjXZhV1tHVK8qzHC3m66_Hb0GkeBkmEbF8M-4VILhG39DXXg2pReJaKPuPAV4gGb-qkpHCVxPg1lJa9i-ZcOadwuVBNHTi50fTFoViVqMILxa3YxSy3dmljTxZ2DpRxhhSFd0sCEeIPnFH3o="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mcalisterco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhqoK7sp1H3O5XErXSsBoncJMmDjNE8e1jLRR6GNXSz8aC1CPBNmNIx2nqJSVgE2at3awDyRKmtTq9NIBaopCDeUtsiUSUPonX1WsHlR879OkhLFVIs9aFEThn1ope2I4rU8w7ye5DdYIQeQWdeWj0196UzzVsKrTzL0_LmiAefctIASNIkBeu_lc88yU="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8fXbKcEhrdYG5fPh2GeaeEgazCHAtI_JvZkp0JOwxggUwmHQdzLlSv_DmJMPkfTIhKNx7ovSQ7fD2NInOBBQPC5R36if8ip0chyHTpQk2hysJO119yv5LdpGevoQUhbXKZeXkZL_fnwy4DQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Zp53mx926FqzdLEoShNahw_f2nxUJvVX0YkbhFNkm0LwqvgHULPq0HJaJNcu_IZvB7drXrNwkqlU4NePnlNatBJ2_xAnvXgtn4fRAYJcIbqyaNXsYM4vsNxcNjk3mSp0NIzkr8s3Y_x87WUi0BwzpCOI5CI1zghWGrCgnA2xLuNbfHmo6nCj2w=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF40rPJcLXuuV5gwhvgxjrVm1Qfcf0pUqyqGSl6vgFq_aRYtPnLltQ79y0ngF-WSGPDEtMVQcIu_oRIrYZSlBXZpKwYjwrvfs8rffj9aNZCc1QAlA7vrqpx2Gnwn2tg-ZWwbPFFUGUp_4wfMnsG1J1yAe2rjVQC4ANN2WpiTR2NmXu-o-Ho9DEwrnNo4QjVhEKoTGX0SAmnFnJ4MhnhHB18eWUt_gcJUuvfn3qsRJMU"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2woSsuGAlxnwTJx4xfoZcfYe-ezsen48XHrv-shoyQDG-UiwccsZhTk21RkTJQzHdk-DB85O3Oen77WSjvFPDQsZMeoKCCgElMhO0dcgx8UO5zjSIeJivGz9nZG0IvQKXXQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hlca.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnj42waQ24d0cjAUgfYef5Hv6MQBx8iKRuun4McTDrfnb9LCGRtul0z1ob72e7AjqI_0tUzFQlwWRgQLQjC82Cc3osbmd9EUXfxkObH6PaCeQMuaxWIHBEshZjrvb2_0bOAjwKMrcHGf8Ym58ScrGJ0YBzLbA3YRd3BOzQaJqarJ67gh7pgJYxcIbJMV1HwfAF3AAn1AWF"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "turpinbainsolvency.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8dUflvJXzyQWYTEYY0O76mRtxyQ74oGzq5-q4r3h-gLfGQNU_tyiGt5UXIDHugPIuOZctDBP3OQwgKvf8O63vYiehQprnMVKecNHJU56yPU2pQzzM88J5FwgquWPIGa2pU76Ejo9Pljnpn5HUzoQOchYGWVwe-9S0ldnbZg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarionsolicitors.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0DbdFuPWLpSvRqk_WH6OiKp-RRTShaq7lGOnX1Yo_ugivdHtlutHER4WEru0POobgJcKoNyHOh8BIZiBnf1zogJJMVgqaFEps0hGVX5ODMI27ButPNgUsbV8gzSq56FfAspw32h_8zyeD5OJHvC0rUtWnP4nusLY1GAGqg7i5g48AcmmeAyyj7_j_8ueXSeksxszg9UwlGzRB_xQ5vZ8bUgn208xKSJ3XVv3stLJCB370nebrqZ92nrnmKxc1rXXnIwcWiK29HPcMxCYsc5JY3A=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "irwin-insolvency.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTXVBrJYoOHmmTT9b2g4O58zy3iIcNId6_IWIh9IQCAZsIMpfFPszOpA2irKcReatGVp-PbyGVKFH96Eh2qmnBESIAjbjV2nVttkyJ0iF-nYEZYK6zpETldx-E-qBU15z_UDTHDc8zwV8="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": null,
+              "end_index": 257,
+              "part_index": null,
+              "text": "For a UK company director, a Company Voluntary Arrangement (CVA) is a formal insolvency procedure governed by Part I of the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016, with the Companies Act 2006 also relevant to directors' duties"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 259,
+              "end_index": 469,
+              "part_index": null,
+              "text": "It enables a company in financial difficulties to reach a legally binding agreement with its creditors to repay its debts over a set period, often allowing the business to continue trading and avoid liquidation"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 532,
+              "end_index": 704,
+              "part_index": null,
+              "text": "**Initial Assessment and Insolvency Practitioner (IP) Appointment:** The process begins with the company's directors consulting with a licensed insolvency practitioner (IP)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              1,
+              8,
+              9,
+              10
+            ],
+            "segment": {
+              "start_index": 706,
+              "end_index": 970,
+              "part_index": null,
+              "text": "The IP, known as the \"nominee\" at this stage, assesses the company's financial situation to determine if a CVA is a viable solution, considering factors such as the business's potential for turnaround and its ability to generate sufficient cash flow for repayments"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              1,
+              4,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 976,
+              "end_index": 1087,
+              "part_index": null,
+              "text": "**Drafting the Proposal:** The directors, often working closely with the nominee, prepare a formal CVA proposal"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              1,
+              8
+            ],
+            "segment": {
+              "start_index": 1089,
+              "end_index": 1338,
+              "part_index": null,
+              "text": "This comprehensive document outlines how debts will be repaid, including a detailed repayment schedule, a statement of the company's affairs (assets, liabilities, and creditors), and an explanation of the circumstances that led to financial distress"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              4
+            ],
+            "segment": {
+              "start_index": 1344,
+              "end_index": 1485,
+              "part_index": null,
+              "text": "**Circulation to Creditors:** The prepared proposal is then circulated to all creditors, providing them with time to review and raise queries"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              4
+            ],
+            "segment": {
+              "start_index": 1487,
+              "end_index": 1713,
+              "part_index": null,
+              "text": "Statutory insolvency rules require at least 14 days' notice before a decision meeting, though a longer period, such as three weeks, is often allowed, particularly for major creditors like HMRC, to ensure adequate consideration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7
+            ],
+            "segment": {
+              "start_index": 1719,
+              "end_index": 1897,
+              "part_index": null,
+              "text": "**Creditor and Shareholder Decision Procedure:** A decision meeting, which can be held virtually, is convened where creditors vote on whether to accept or reject the CVA proposal"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              4,
+              11,
+              5,
+              12
+            ],
+            "segment": {
+              "start_index": 1903,
+              "end_index": 2040,
+              "part_index": null,
+              "text": "*   **Creditor Approval Threshold:** For the CVA to be approved, at least 75% (by value) of the creditors who respond must vote in favour"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2
+            ],
+            "segment": {
+              "start_index": 2042,
+              "end_index": 2220,
+              "part_index": null,
+              "text": "However, a critical safeguard exists: the resolution will be invalid if more than 50% (by value) of all unconnected creditors whose claims are admitted for voting vote against it"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              12
+            ],
+            "segment": {
+              "start_index": 2226,
+              "end_index": 2375,
+              "part_index": null,
+              "text": "*   **Shareholder Approval Threshold:** Separately, the company's shareholders can approve the proposal by a simple majority in value of those voting"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 2381,
+              "end_index": 2549,
+              "part_index": null,
+              "text": "*   **Creditor Priority:** If there is a divergence between the creditors' and shareholders' decisions, the creditors' decision will prevail, subject to any court order"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2,
+              11
+            ],
+            "segment": {
+              "start_index": 2555,
+              "end_index": 2688,
+              "part_index": null,
+              "text": "*   Once approved, the CVA becomes legally binding on all unsecured creditors who were entitled to vote, regardless of how they voted"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              4
+            ],
+            "segment": {
+              "start_index": 2690,
+              "end_index": 2791,
+              "part_index": null,
+              "text": "Secured and preferential creditors are not bound by the CVA unless they explicitly agree to its terms"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8
+            ],
+            "segment": {
+              "start_index": 2797,
+              "end_index": 2880,
+              "part_index": null,
+              "text": "**Implementation and Supervision:** Upon approval, the CVA takes effect immediately"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              1,
+              3,
+              8
+            ],
+            "segment": {
+              "start_index": 2882,
+              "end_index": 3081,
+              "part_index": null,
+              "text": "The nominee transitions into the role of \"supervisor,\" overseeing the arrangement's implementation, monitoring payments, and ensuring the company adheres to the agreed terms and financial performance"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              3,
+              11,
+              10
+            ],
+            "segment": {
+              "start_index": 3083,
+              "end_index": 3204,
+              "part_index": null,
+              "text": "Crucially, the existing management generally remains in control of the company's day-to-day operations throughout the CVA"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              12
+            ],
+            "segment": {
+              "start_index": 3323,
+              "end_index": 3501,
+              "part_index": null,
+              "text": "If the company successfully meets all its obligations, the CVA is completed, any remaining unsecured debts are written off, and the supervisor issues a CVA completion certificate"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 3600,
+              "end_index": 3802,
+              "part_index": null,
+              "text": "**Preparation and Approval Phase:** The initial stages, from the directors consulting an IP to the CVA proposal being approved by creditors and shareholders, typically take around **six to eight weeks**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 3808,
+              "end_index": 3884,
+              "part_index": null,
+              "text": "*   Drafting and distributing the proposal can take approximately four weeks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 3886,
+              "end_index": 3980,
+              "part_index": null,
+              "text": "The IP is generally required to work out the arrangement within one month of their appointment"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              4
+            ],
+            "segment": {
+              "start_index": 3986,
+              "end_index": 4143,
+              "part_index": null,
+              "text": "*   Creditors are then given a notice period of at least 14 days to consider the proposal before the decision meeting, with some preferring up to three weeks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              2,
+              3,
+              4,
+              12,
+              6
+            ],
+            "segment": {
+              "start_index": 4149,
+              "end_index": 4256,
+              "part_index": null,
+              "text": "**Duration of the CVA Itself:** Once approved, the CVA usually runs for a period of **three to five years**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 4258,
+              "end_index": 4430,
+              "part_index": null,
+              "text": "The exact duration is influenced by factors such as the company's debt level, its capacity to generate cash flow, and the specific repayment terms negotiated with creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 4432,
+              "end_index": 4537,
+              "part_index": null,
+              "text": "In exceptional, unforeseen circumstances, it may be possible to negotiate an extension of up to two years"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt70nZoPIAfC0m1ti37ncU2yqFa1PXTSbvbB5Arlc1fEQuKzmO8L9Rd1zzJvldMH0XZrGptrlwJxU_cxGJCCD-n0SdxlG3PmePOe06lH4ffYY9ORbr-vXI-6KYYeLmu00uutZuLZpYRsT8LXZZBbNfrTIOjSl9k2pVigQeoMCz9lBfw_IxnJbOR-Pz9rDNIVd6heZabj7u5If2EyLRupzbFud2Pft0FknT9gk=\">company voluntary arrangement UK timeline</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLYs1h2YOxrPzE4d5fiJCGaUKiGtcKWCRbOOZqZfIa4ufEPqbBbJCLidIgSSA4XgRNQNHIiLRvzgnhZhvRaE971Ay5hhEaeOO7ya-D73d2bQX1Gg8MP-PHjLaltah-g0uJ03aZ-kLtOof9XtqLCbCRn4xefzBQTJftD9FtBIQ1qjwM8oVsbSLyKM8d36vdjSsR3_-WlVWbr_m-SRgL6Ns0K0lCSBZdf7k=\">company voluntary arrangement UK steps</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjNOVGRQI53Qjrk1T-Eq7mHi39XWumPEKOY0xt0zeZQoB_QAjYgBNeMo0xwMIRQMg0u_b6204-nbt35VUk3PPkY43sOIjQ4dpXQ2AsDAsNRKudOD6IpPBhJYjI7B1wmpANJj7S38LkFjS3UZDvOqz6ODF0pECF-0RZ2JAQG-HVaX4t7XWUarSxfwe3qDM3Y6zEjxy_ijKdBFgTz8T4z9jN3v58foe7nMUmmUIRP2efdRA3JQ==\">insolvency act 1986 company voluntary arrangement</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyQH305bVoKu1tAbwF3DcixHMcFoH_-54DyRH4wBsGwy_1PzSK1L5sPTj_ePoT48mycYFB0vAkZvJ_1fRunkJqCt-FTyMeV60baDCGUmlkWeEAGrI5oqGERCSv13ZoYAWmG-pFo-yLWVTai4AOKuK9VuZtnU5wlGbNhyJZOXOsSJrkmfeAVw2IgrIwLlb61QrUCIFU_KK6BKEVhXM6K-1TyPX9BvIJd05n5D1Vv0lygmuBRwD5Z7Pwqg==\">company voluntary arrangement rules and regulations UK</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "company voluntary arrangement UK steps",
+          "company voluntary arrangement UK timeline",
+          "insolvency act 1986 company voluntary arrangement",
+          "company voluntary arrangement rules and regulations UK"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "KrMpapHyNIyivdIPvL-k-Qo",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 969,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 92,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 92
+      }
+    ],
+    "thoughts_token_count": 1336,
+    "tool_use_prompt_token_count": 392,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 392
+      }
+    ],
+    "total_token_count": 2789,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

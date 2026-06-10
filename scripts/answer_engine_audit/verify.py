@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from .core import CARDS_DIR, REPO_ROOT, RunContext, require_key, resolve_page
+from .core import CARDS_DIR, REPO_ROOT, RunContext, gemini_client, require_key, resolve_page
 from .ledger import Nugget
 from .verify_cache import DEFAULT_TTL_DAYS, VerificationCache
 
@@ -72,7 +72,13 @@ def provider_domains(slug: str) -> dict[str, str]:
     Service / legislation) as defined in VERIFY_PROMPT. The map is only a hint:
     when a domain is present it is offered as a preferred source, not the sole
     authority."""
-    cfg = resolve_page(slug)
+    try:
+        cfg = resolve_page(slug)
+    except Exception:
+        # Sitemap-resolved pages have no local PAGE_CONFIG (and no provider
+        # cards); verification relies wholly on the authoritative UK sources in
+        # VERIFY_PROMPT, the correct default for insolvency.
+        return {}
     ids = list(cfg.get("card_ids", [])) + list(cfg.get("separate_card_ids", []))
     out: dict[str, str] = {}
     for cid in ids:
@@ -93,6 +99,18 @@ def provider_domains(slug: str) -> dict[str, str]:
     return out
 
 
+def _sanitise_source_url(url: str) -> str:
+    """Drop Google grounding-redirect links. Gemini sometimes returns a
+    vertexaisearch.cloud.google.com/grounding-api-redirect/... tracking URL
+    instead of the real source. Those are useless as published citations, so we
+    blank them — the fact stays verified (the quote is real), but the report then
+    asks for the provider's primary source rather than printing a junk link."""
+    u = (url or "").strip()
+    if "vertexaisearch.cloud.google.com" in u or "grounding-api-redirect" in u:
+        return ""
+    return u
+
+
 def _parse_verdict(text: str) -> dict[str, Any] | None:
     m = re.search(r"\{.*\}", text, re.S)
     if not m:
@@ -103,6 +121,7 @@ def _parse_verdict(text: str) -> dict[str, Any] | None:
         return None
     if obj.get("verification_status") not in _VALID:
         return None
+    obj["verified_source_url"] = _sanitise_source_url(obj.get("verified_source_url", ""))
     return obj
 
 
@@ -113,7 +132,7 @@ def verify_one(provider: str, claim: str, domain: str, *,
     from google import genai
     from google.genai import types
 
-    client = genai.Client(api_key=require_key("GEMINI_API_KEY"))
+    client = gemini_client()
     preferred = (f"Prefer this official source if it is relevant: {domain}\n"
                  if domain else "")
     prompt = VERIFY_PROMPT.format(entity=provider or "this topic", claim=claim,

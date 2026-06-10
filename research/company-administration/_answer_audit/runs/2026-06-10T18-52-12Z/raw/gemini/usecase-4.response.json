@@ -1,0 +1,734 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:53:22 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=17232",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "Company administration is a formal insolvency procedure in the UK designed to rescue financially distressed companies or achieve a better outcome for creditors than liquidation. It is primarily governed by the **Insolvency Act 1986 (Schedule B1)**, with detailed procedures outlined in the **Insolvency Rules 1986**.\n\n### When Company Administration is the Right Option\n\nCompany administration is typically the right option for UK company directors in the following scenarios:\n\n*   **Fundamentally Viable Business with Cash-Flow Issues:** When the company is experiencing severe cash-flow pressures and is technically insolvent (unable to pay debts as they fall due or liabilities exceed assets), but the underlying business is still viable and has intrinsic value.\n*   **Seeking Rescue and Restructuring:** The primary objective of administration is to rescue the company as a going concern through financial and operational restructuring.\n*   **Protecting from Creditor Action:** It provides a statutory \"breathing space\" or moratorium, freeing the company from most creditor enforcement actions (such as winding-up petitions or legal proceedings) while a rescue plan is formulated. This moratorium comes into effect immediately upon filing a Notice of Intention to Appoint, offering 10 business days of protection, and then continues once the administrator is appointed.\n*   **Maximising Creditor Returns:** If rescuing the company as a going concern isn't possible, administration aims to achieve a better result for the company's creditors as a whole than would likely be achieved through a direct liquidation.\n*   **Realising Assets for Secured Creditors:** In some cases, if rescue isn't feasible, the objective may be to realise property to make a distribution to one or more secured or preferential creditors.\n*   **Creditor Disagreement on CVA:** If creditors are unlikely to agree to a Company Voluntary Arrangement (CVA) or it's not feasible within the required timeframe.\n*   **Proactive Action:** Early action when warning signs of insolvency appear (e.g., persistent cash flow problems, increasing arrears with HMRC, threats of legal action) can significantly improve the chances of saving the business.\n\n**Key Timelines and Figures for Administration:**\n\n*   **Moratorium:** An initial automatic moratorium lasts for 10 business days upon filing a Notice of Intention to Appoint, providing protection from most legal actions. This protection continues once the administration officially begins.\n*   **Administrator's Proposals:** An appointed administrator (a licensed insolvency practitioner) has **8 weeks** to submit detailed proposals to the company's creditors.\n*   **Creditors' Meeting:** An initial decision procedure to approve these proposals must be held within **10 weeks** of the company entering administration, with creditors typically given at least **14 days' notice**.\n*   **Duration:** Administration is generally intended to last no longer than **12 months**. However, it can be extended for a further 12 months with the consent of creditors, or indefinitely by the Court, especially for large or complex cases.\n*   **Costs:** Administration costs can be high, making it more suitable for larger companies where the potential benefits of rescue or enhanced creditor returns justify the expense.\n\n### Alternatives to Company Administration\n\nIf administration is not deemed the most suitable path, UK company directors have several alternative insolvency and restructuring routes:\n\n1.  **Company Voluntary Arrangement (CVA)**:\n    *   **Governing Rule:** Part 1 of the Insolvency Act 1986 and Insolvency Rules 1986.\n    *   **Description:** A CVA is a legally binding agreement between an insolvent company and its creditors to repay debts over an agreed period, typically **three to five years**. The company continues to trade under the control of its directors.\n    *   **Justification:** Suitable for viable businesses facing temporary financial difficulties that can realistically meet reduced or deferred payments. It requires creditor approval.\n\n2.  **Creditors' Voluntary Liquidation (CVL)**:\n    *   **Governing Rule:** Part 4 of the Insolvency Act 1986 and Insolvency Rules 1986.\n    *   **Description:** This is a director-initiated process to formally wind up an insolvent company. A licensed insolvency practitioner is appointed as liquidator to realise assets and distribute proceeds to creditors.\n    *   **Justification:** Appropriate when there is no realistic prospect of rescuing the business, and the directors wish to close the company in an orderly manner to minimise their personal risk. It can also be an exit route from administration if rescue fails.\n    *   **Timeline:** Liquidation costs tend to be lower than administration.\n\n3.  **Compulsory Liquidation (Winding-Up by the Court)**:\n    *   **Governing Rule:** Part 4 of the Insolvency Act 1986 and Insolvency Rules 1986.\n    *   **Description:** This occurs when a creditor (or sometimes directors) applies to the court for a winding-up order, leading to the appointment of an Official Receiver and then potentially a liquidator to cease operations and distribute assets.\n    *   **Justification:** Often a last resort, particularly for creditors who have exhausted other recovery options. It is generally a slower process.\n\n4.  **Corporate Insolvency and Governance Act 2020 (CIGA) Moratorium (Standalone Moratorium)**:\n    *   **Governing Rule:** Part A1 of the Insolvency Act 1986, introduced by CIGA 2020.\n    *   **Description:** This is a standalone \"breathing space\" procedure for viable companies in financial distress, allowing them to pursue a rescue or restructuring plan without formal insolvency proceedings. A monitor (licensed insolvency practitioner) oversees the company.\n    *   **Justification:** Provides an initial **20 business days** of protection from creditor action, extendable with consent, allowing directors to retain control of the business while developing a rescue plan. The company must continue to pay debts falling due during the moratorium, but not those due before.\n\n5.  **Informal Arrangements / Debt Restructuring**:\n    *   **Description:** Direct negotiations with individual creditors or groups of creditors to agree on revised payment plans, debt write-offs, or other modifications to existing debt obligations.\n    *   **Justification:** A flexible and lower-cost option for companies that might not be able to afford formal insolvency proceedings or where the financial difficulties are less severe. However, these arrangements are not legally binding on all creditors unless formally documented and approved by all parties.\n\n6.  **Members' Voluntary Liquidation (MVL)**:\n    *   **Governing Rule:** Insolvency Act 1986 and Companies Act 2006.\n    *   **Description:** This is a formal process for closing a *solvent* company (one that can pay all its debts, usually within 12 months). Assets are realised, debts paid, and remaining surplus distributed to shareholders.\n    *   **Justification:** Not an alternative to administration for an insolvent company, but relevant for directors looking to close a debt-free or solvent company efficiently, for example, upon retirement or completion of its purpose.\n\nDirectors must prioritise creditors' interests once a company is considered insolvent. Seeking early professional advice from a licensed insolvency practitioner is crucial to determine the most appropriate route and avoid potential wrongful trading liability.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companyclosure.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyc-VT8C_q4LWS-z1Uki-1j0MTS973umpPNWgujAWgtQ-_rwffMnXSaLUdAM5J5lNPSaYdNbWtSVHeOrA-87lwBiyFA5XiNOQfTacRtIMJNqveN83rw7XnvwD5vMgYjgBGACZW-YQxwPLEdR4Ksiokc7niZNZ9ruHcxv9o_AyuPX8ezrWohFcu_-G-AKKoUJflk66EAjmfoHzYtH7TMS-W90biDn381S_88teFXzFwb3FTgAsemv8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parliament.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_s7FXbBVHrh1wJu69RZlSsFUTxFHKN399lqQhTUoesprrLK1dKJ4Xr3j1gXMpnHTQgW6n2ROCcJkWWpY5EELFiCdjK6ebV3Hf83J_Fvx5u7vDV1TkAi7wgM-l5zLyuI003_TQ20IOVzVVfNayASzs9ltJ0dNk9JHSI3at-C9DaB08dCSZdw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mw-w.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHOw2-catSvWoU9SUU2bkbwwsPSn3cvs8n8uxGr8U8_K6iDuRmgMr9RD5FTN3ZRoJ7KHFVR5c4z3nlhWtBGekuksgXyT2T6R8FgMr_0AcvCVN6ceZajCMQTz9WlQl9WOdCHhNNNMDY0dhshBs-LbgkYY_5"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpoHMvP9uvHeL5NKOmfAzThvB815JxKOV7nfnc6Uh_6mkW4KxP6ovBkZdQCWHPu2K1KX_-8CybXhkeaYQorY085DBZLo4LxOtiovkxY5OrINmDmKolQx8UL2gKvQJnB7LFC7y7rmPLxrKbL3VZ3UsaSSof4Nnd"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wikipedia.org",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdovJjBix6ddZ_tNRX3MKDNHMdx6sUEGCVW4LMgdKxhOzSu213kFYsf351kjg7ok21X2TNDRK2H5a917Jk0xEdB8mgk13D3-0KreBu5GMb95L_yQ5cHPOQeZVvUUcAwxf3Ncud7kkYeKt5DMY="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "summitlawllp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4w_qq0LeoYrlmYeZ8pXPIh-1yzJ4JtsbhC2Mu64TTyqq1A6KHMLuMT5lx4GjTjmwLH0Gei40SBm8z8znAn3AZL8_jff4bbupxj9Q1img9r13CzvQhzYju5FtoctVxKwzOievNxCiF3eKrDbHtRg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "franciswilksandjones.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoZ_pEQrco2A0GkUmdAHhU5LLSjqYOq7AdBGbcKI5OV2V5mM_uZknRgQgNQ_Qg301XbJHoaArL6BBL3Ph689Gs9krTo8YiAgx2Hqp0-EhBHP0ycZZNJ2Yiw7I4s6Q4os_ZdLIWzuoFmYF2C623zRcTbADk7oJwxmBMnZFWfaBt"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "blog.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmJJ-jh818b6lq9s-Jex33q16XEHr-LkDiSH3ce80s2wNXIsXY_nvf5SyfM1VAzUCjrmRwSe8f8S7mwFzVe1_xHYIWLsl916cCmHEdYsN9vW4NcY8T8xouR3hBfQczcV9gVA_OnWZXZ0L5_XoTu6BMFjylUyMVJxd-sPg02fiavER34yr6261I8Eb5TWCJ7TcZiw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businessrescueexpert.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-V6_MTpw_2_0w5yp4BMbYNtAECfq7YS3qUZg1aEKbOqIZDXstz1f9KlVPPXui-PxO1Gbive5g6jbt2jpcmcBLjWAzeXf_eXJLmTTcczcOdZtCHw8q6TR-PJk7jDVJwhlXjjCyE-hRix1gadQrppPLKlJUMZk5K2OVnLp6y0AQKXo9SkdMoAHwdJbLYU-E74zjvxGfPjWRbN6swe2_"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ukliquidators.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkMa5uF1UoDmApjGSUR8k5CYpV_xGXpUot857g20NQhpLA6NKYF4pwIJLgWzi3iK3NvzkRBaGv727fVaaVGyEcvqpUSQM1u1D6aMzPdl5avhSs_ZzTN1TTvrTd6ydc-w0Biu5j56fABcDA_BQN9nKDCa9LMjuozvxFyqxSictmxklzbQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mcalisterco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEq411bKwbwBuVVlhGp_hrX2n8XNqeGqI8RRIio7-yXDAUpoz9RSZSUJmEsc6Lwf0CjPGmnaipXMto0WlBCAlhUepD08Ji-hx9mg4EyjnVFvzzfLaRm65mhNEHUxfBI5h418vanun0odCPAUlYEvKS17LFSv-amLsI1Y5Qt-MBdkoR7lO8mTbjNl_-3hNXFwIrt"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pwc.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEs9X2OECNJyX_OleBvjCRvX7JaEXOuQ-NOjf1JkgMrfIpKu878N9i5B7v5qMDy-sP66mHJIBcihyP_0F8kWvF0nGsEyvYhXNbmsj5F0568fa2KHiaIFtuiPLnoyg_1zDor4pwSJ4-BYFhwhFeRL779_VmN"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "theinsolvencyexperts.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcMLGA9cGaf-lnmCY6nBw_duzZv5Oxc4z6gGTgVsgBiq8PtAAAzHinw19DWXy3pTA9AqcYLGS7l4DQ3p8uCw8cysRg5W_NL2eBNS2WIVyv_KnS-Qp-KwE_bPSDIbJ2sZi3EviN1CsGnABdJjsyWdmMECQ5ssRdh2Nk"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEJQ1YV3NBi5mrKB2JkiT24_bYzRRtXre2SmdXaT29vtleLpIN116Tp0l0E5vPp0nOwz5XD4A8nCSXZks8Vm3pcIzOVICrcxoLWKMc5FGSfcRNUd5J_FNw8Yr3HiQNRmd9gD-sCKRWqcyaoveqQg0u-nl7HLpp0iShexg2EO3AkGz9DA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5AMf0SoLnWUW-L0bvbojdcCoUFxyRvzWcgm2G-bmddnUcf1B81jqHPg_QI1-jfRzSHFbmQ5M6eGrHYX2m1mBvgIH8be6pd1YoOdH5LATRiDr8tvo8O6R57-0tH0EklKrmfTr8q8CNgf-JvO-q5HLo_RwZt2pm3kzvZcLhGokium65"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "administration.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFEbtOkFuyVgpxJSPkyRyi6z81tLq9Wqnwl_75wBu1vasNghFiDnoWzo0uLzQxIIPJL8Hg1gPQb7T27dETT2cMd-toDIwGwXfl7yJfs1gG6wRqPDThjshPt8V4PjXb6qpNGHEHw7RIFDPlJOyusC2wrwNgv40mpsoungjxnrQhJonT3_b3SS90xyHbbWhxd63GEviG4mj3z1bP"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ballardbusinessrecovery.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPkNXiDqhYkWRYqHGwp--GYmYcvaP04OzBvW_0Aqq4d1rtu5smlfNfZ-KdQEO5TxsLHONEL87sr0S7w8iJo6o9xQhfFy26rB9d1dMgN9GZsNdo_Dc5-hpoCsjeAuV2moT6eRhwQ-EHFYQG3k4MOxO5ExJzEQnMiKiokbRM6Nn_tmq9__wEU54lxKf4xD5lV4w1DPKrwJmYTHdL8mDIAQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDMsql2A936h2JIfz4mdqu94xkGmObmcFziel7Cq-8LQTZ6B5HXZFBC8Uh1q_cc1T3kk0Fjuk6pQN2aoNvGpNO69-N09Arp43o3dcMFWZkDiXjmzmWPCZeLSyRPvwWtStQIsyX_lPjI7ZRHNxrYbUq_ahj6suTEPbpNjCH9nOdhyGAudZY0i8NF9LwkO-2_FauUtyRuRiFqPEHKQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "fasimms.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgqnyfHgUzCEko-wnh8f5nv6MM9rTnfTX_aDzWSD7kcUYGhQffk4oHrWqChHkn3vF3bFF1syRtwH5voXCmd6eyfkxdK8n162VMxMiJs1c8tiRY2izVvmO8CEtosQxBhqy3P6K-tqI1FcnjrFicS_A9LEBgkuRvAUE0VioyswjkXJiLBw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "insolvencyandlaw.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-3KSvYTv9prf0AyeAwhK_7rMnL2ksVl7rpQ93-3D17ruxAeugLb_GqKhZPi-4W5KePqkTyt1dT9UQpsIpawAsHTXt-KMo0imcg9JW8NfLdpmcOLl5Oj3btYYkiNSTSBO2-hX2xeD-jCuwaT9vnyY47ALUBGREXSp65dgiqe3yvX9qPBMSwQ=="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 178,
+              "end_index": 316,
+              "part_index": null,
+              "text": "It is primarily governed by the **Insolvency Act 1986 (Schedule B1)**, with detailed procedures outlined in the **Insolvency Rules 1986**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8,
+              9,
+              10,
+              1,
+              11,
+              12
+            ],
+            "segment": {
+              "start_index": 478,
+              "end_index": 765,
+              "part_index": null,
+              "text": "*   **Fundamentally Viable Business with Cash-Flow Issues:** When the company is experiencing severe cash-flow pressures and is technically insolvent (unable to pay debts as they fall due or liabilities exceed assets), but the underlying business is still viable and has intrinsic value."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              9,
+              5,
+              12
+            ],
+            "segment": {
+              "start_index": 766,
+              "end_index": 940,
+              "part_index": null,
+              "text": "*   **Seeking Rescue and Restructuring:** The primary objective of administration is to rescue the company as a going concern through financial and operational restructuring."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8,
+              1,
+              6,
+              13
+            ],
+            "segment": {
+              "start_index": 1185,
+              "end_index": 1373,
+              "part_index": null,
+              "text": "This moratorium comes into effect immediately upon filing a Notice of Intention to Appoint, offering 10 business days of protection, and then continues once the administrator is appointed."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              9,
+              5
+            ],
+            "segment": {
+              "start_index": 1374,
+              "end_index": 1615,
+              "part_index": null,
+              "text": "*   **Maximising Creditor Returns:** If rescuing the company as a going concern isn't possible, administration aims to achieve a better result for the company's creditors as a whole than would likely be achieved through a direct liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              9,
+              5
+            ],
+            "segment": {
+              "start_index": 1616,
+              "end_index": 1818,
+              "part_index": null,
+              "text": "*   **Realising Assets for Secured Creditors:** In some cases, if rescue isn't feasible, the objective may be to realise property to make a distribution to one or more secured or preferential creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7
+            ],
+            "segment": {
+              "start_index": 1819,
+              "end_index": 1984,
+              "part_index": null,
+              "text": "*   **Creditor Disagreement on CVA:** If creditors are unlikely to agree to a Company Voluntary Arrangement (CVA) or it's not feasible within the required timeframe."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8
+            ],
+            "segment": {
+              "start_index": 1985,
+              "end_index": 2218,
+              "part_index": null,
+              "text": "*   **Proactive Action:** Early action when warning signs of insolvency appear (e.g., persistent cash flow problems, increasing arrears with HMRC, threats of legal action) can significantly improve the chances of saving the business."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              13
+            ],
+            "segment": {
+              "start_index": 2442,
+              "end_index": 2510,
+              "part_index": null,
+              "text": "This protection continues once the administration officially begins."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              13,
+              14
+            ],
+            "segment": {
+              "start_index": 2511,
+              "end_index": 2682,
+              "part_index": null,
+              "text": "*   **Administrator's Proposals:** An appointed administrator (a licensed insolvency practitioner) has **8 weeks** to submit detailed proposals to the company's creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              13,
+              14
+            ],
+            "segment": {
+              "start_index": 2683,
+              "end_index": 2901,
+              "part_index": null,
+              "text": "*   **Creditors' Meeting:** An initial decision procedure to approve these proposals must be held within **10 weeks** of the company entering administration, with creditors typically given at least **14 days' notice**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              12,
+              13,
+              14
+            ],
+            "segment": {
+              "start_index": 2995,
+              "end_index": 3146,
+              "part_index": null,
+              "text": "However, it can be extended for a further 12 months with the consent of creditors, or indefinitely by the Court, especially for large or complex cases."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              10
+            ],
+            "segment": {
+              "start_index": 3147,
+              "end_index": 3329,
+              "part_index": null,
+              "text": "*   **Costs:** Administration costs can be high, making it more suitable for larger companies where the potential benefits of rescue or enhanced creditor returns justify the expense."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              4
+            ],
+            "segment": {
+              "start_index": 3519,
+              "end_index": 3648,
+              "part_index": null,
+              "text": "**Company Voluntary Arrangement (CVA)**:\n    *   **Governing Rule:** Part 1 of the Insolvency Act 1986 and Insolvency Rules 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16,
+              15,
+              17,
+              18
+            ],
+            "segment": {
+              "start_index": 3831,
+              "end_index": 3897,
+              "part_index": null,
+              "text": "The company continues to trade under the control of its directors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16,
+              17
+            ],
+            "segment": {
+              "start_index": 4054,
+              "end_index": 4084,
+              "part_index": null,
+              "text": "It requires creditor approval."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              4
+            ],
+            "segment": {
+              "start_index": 4090,
+              "end_index": 4222,
+              "part_index": null,
+              "text": "**Creditors' Voluntary Liquidation (CVL)**:\n    *   **Governing Rule:** Part 4 of the Insolvency Act 1986 and Insolvency Rules 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9,
+              15,
+              18
+            ],
+            "segment": {
+              "start_index": 4327,
+              "end_index": 4444,
+              "part_index": null,
+              "text": "A licensed insolvency practitioner is appointed as liquidator to realise assets and distribute proceeds to creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9
+            ],
+            "segment": {
+              "start_index": 4644,
+              "end_index": 4709,
+              "part_index": null,
+              "text": "It can also be an exit route from administration if rescue fails."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 4714,
+              "end_index": 4787,
+              "part_index": null,
+              "text": "*   **Timeline:** Liquidation costs tend to be lower than administration."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              4
+            ],
+            "segment": {
+              "start_index": 4793,
+              "end_index": 4935,
+              "part_index": null,
+              "text": "**Compulsory Liquidation (Winding-Up by the Court)**:\n    *   **Governing Rule:** Part 4 of the Insolvency Act 1986 and Insolvency Rules 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 4940,
+              "end_index": 5186,
+              "part_index": null,
+              "text": "*   **Description:** This occurs when a creditor (or sometimes directors) applies to the court for a winding-up order, leading to the appointment of an Official Receiver and then potentially a liquidator to cease operations and distribute assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 5305,
+              "end_index": 5338,
+              "part_index": null,
+              "text": "It is generally a slower process."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              4
+            ],
+            "segment": {
+              "start_index": 5344,
+              "end_index": 5524,
+              "part_index": null,
+              "text": "**Corporate Insolvency and Governance Act 2020 (CIGA) Moratorium (Standalone Moratorium)**:\n    *   **Governing Rule:** Part A1 of the Insolvency Act 1986, introduced by CIGA 2020."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              19
+            ],
+            "segment": {
+              "start_index": 5737,
+              "end_index": 5803,
+              "part_index": null,
+              "text": "A monitor (licensed insolvency practitioner) oversees the company."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 6018,
+              "end_index": 6117,
+              "part_index": null,
+              "text": "The company must continue to pay debts falling due during the moratorium, but not those due before."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16,
+              17
+            ],
+            "segment": {
+              "start_index": 6123,
+              "end_index": 6369,
+              "part_index": null,
+              "text": "**Informal Arrangements / Debt Restructuring**:\n    *   **Description:** Direct negotiations with individual creditors or groups of creditors to agree on revised payment plans, debt write-offs, or other modifications to existing debt obligations."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16
+            ],
+            "segment": {
+              "start_index": 6560,
+              "end_index": 6684,
+              "part_index": null,
+              "text": "However, these arrangements are not legally binding on all creditors unless formally documented and approved by all parties."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 6690,
+              "end_index": 6803,
+              "part_index": null,
+              "text": "**Members' Voluntary Liquidation (MVL)**:\n    *   **Governing Rule:** Insolvency Act 1986 and Companies Act 2006."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 6946,
+              "end_index": 7029,
+              "part_index": null,
+              "text": "Assets are realised, debts paid, and remaining surplus distributed to shareholders."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 7034,
+              "end_index": 7266,
+              "part_index": null,
+              "text": "*   **Justification:** Not an alternative to administration for an insolvent company, but relevant for directors looking to close a debt-free or solvent company efficiently, for example, upon retirement or completion of its purpose."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              18,
+              11,
+              5
+            ],
+            "segment": {
+              "start_index": 7355,
+              "end_index": 7527,
+              "part_index": null,
+              "text": "Seeking early professional advice from a licensed insolvency practitioner is crucial to determine the most appropriate route and avoid potential wrongful trading liability."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt1NFI_iGvGhCehRZ_ZrvHL10lpAESk1BEaO72rXA_5JWLlx0jZVSPh09HGzzEsNfmDZZruyU9UwtGVOChUq9WwN-fMunHgEMmluv-socwiBx6JKsp9TJ-TvLGqx9HoyCkDEnbVub3skJi4lQTmxAgf_fIhi_3bg9nZt8-vySHoW-jveu8vGKRPWUqbeMV-Il81b9ZrJYZg59ILCgfDeMcGmeKL3RYKtG0MLtEB7Ju5UNEcmUBTDs1J38JR9NE\">alternatives to company administration UK company director</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Z5yfPib6LEYSCThgDgraZwn373QHMcv5Vu2lzUPnZH1KBnY5hODXxhOfkjSir9vZotTYU-UlF1ZdDj9umYZljcerzfgrgLaKPtQbJWYLc4qzNYoOqvPKioij_v6y51wJ9rjox1rwVEs_MzGjQ6fvKB3H_THUqXMYS5Lcpid2CqUt2ZixJc_6kAnlaYkOtYavD7gCAe6_WUdZ-b9IMLD29N_R-23BvYC_MI2FZa9RzvGET0PUOA==\">when is company administration the right option UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNQ4kFe8IhAk27yK8jv9wLKSEOIj03_f10jEBhAHMaEqlufvy3Pdwfz7HEYkwTFhV6O12ItnJ3iq0YfwY3LbtL5nfdDTSUxNeq9JWCrUb1mO8Wq-FRd268SV_cvXrw8d6rBk8V-1cx0srGmXIechn-Owy0SnXIaLrHvq72Jsq5vHdVgTjPt7wQb9rq8Du8WrUkkZmIyu83cphkPwZPLljLw8A2gdnQ7qCFbJiIH27kf2PXGoXr-9w1Go7nwtc6WGlx\">governing rules company administration UK Insolvency Act 1986</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsQ_EnsonQ7YevhelXKb4DnTYlXZh38JJhgSWg1vZFcQB_Fy1Z206UpWNkH5KCC1UZogTyPP1qCLUgiIdBnLRaFOlovaJVGpL_Xm3ZiP5dVpXXn6eOWzsYeGry2E547aPjR3kyhrddeb1eKqmgN8GlZMf6EoXAMaMTT-7etHtQMe9SY4PaDWyQ_jBg0doH_aBoJDde8CHQMwFaNEf5GFKq8ycXZ8N3ZBZPfdxy\">official sources for UK insolvency routes</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf4F9hs2BldAKPy9Sxzs9SMl2RpFoJWi2Z8a8JuG8_C4t_JHjRJwlckVD8cKbSncvPHgqdJ19QNWjE2R75Q8XOuXyOWufGmJmGcoUN1HiN6b0u4TZOUzVHumnPqboHlJWz9xIYcF_TYXc5kWsZdzvq2FHoYUoOmjFjB_WI5krOEtycVNZ9wR6r7dJ6liaNN8xp4kDMi0L0rkVrgfzhHO_yAFHJ0B5o4MHlH93CvvH8MIlu-d3en_xKn58=\">thresholds and timelines for company administration UK</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "when is company administration the right option UK",
+          "alternatives to company administration UK company director",
+          "governing rules company administration UK Insolvency Act 1986",
+          "thresholds and timelines for company administration UK",
+          "official sources for UK insolvency routes"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "kbIpauryKrD_vdIPwbmfyQY",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1606,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 88,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 88
+      }
+    ],
+    "thoughts_token_count": 1430,
+    "tool_use_prompt_token_count": 292,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 292
+      }
+    ],
+    "total_token_count": 3416,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

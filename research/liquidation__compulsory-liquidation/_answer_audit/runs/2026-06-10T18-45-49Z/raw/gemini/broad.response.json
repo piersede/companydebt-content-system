@@ -1,0 +1,1309 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:46:12 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=19931",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "Compulsory liquidation, also known as a court-ordered winding-up, is a serious legal procedure in the UK where a company's assets are realised and distributed to its creditors under court supervision. Unlike a Creditors' Voluntary Liquidation (CVL) where directors initiate the process, compulsory liquidation is typically enforced by a creditor and removes control from the directors.\n\n### Who Can Start Compulsory Liquidation and Grounds\n\nA compulsory liquidation usually begins when a creditor files a winding-up petition with the court, alleging that the company cannot pay its debts. While creditors are the most common petitioners, the company itself, its directors, or a shareholder can also present a petition in certain circumstances. HMRC is a frequent petitioning creditor for unpaid taxes.\n\nThe primary legal ground for a winding-up order is that the company is \"unable to pay its debts\" as defined by Section 123 of the Insolvency Act 1986. This is typically evidenced by:\n*   Failure to pay an undisputed debt of £750 or more within 21 days of a statutory demand being served on the company.\n*   An unpaid judgment debt.\n*   Clear evidence of the company's insolvency.\n\nOther grounds for compulsory winding up, as per Section 122(1) of the Insolvency Act 1986, include the company passing a special resolution for winding up by the court, or the court deeming it \"just and equitable\" for the company to be wound up.\n\n### The Process and Order of Events\n\nThe compulsory liquidation process is court-led and generally follows these steps:\n1.  **Statutory Demand (Optional but common)**: A creditor usually issues a formal statutory demand for an undisputed debt of £750 or more, giving the company 21 days to pay.\n2.  **Winding-Up Petition Filed**: If the debt remains unpaid, the creditor presents a winding-up petition to the court (often the High Court in London or a designated County Court). A court fee (currently around £343) and a deposit to the Official Receiver (currently £2,600) must be paid.\n3.  **Petition Served**: The petition is formally served on the company, usually at its registered office.\n4.  **London Gazette Advertisement**: The petitioning creditor must advertise the petition in The London Gazette. This step is crucial as banks will typically freeze the company's accounts upon advertisement, and other creditors become aware. Directors usually have a narrow window (around 7 business days pre-advertisement) to respond or seek an injunction to stop the advertisement.\n5.  **Court Hearing**: A court hearing is scheduled where a judge will decide whether to grant a winding-up order. The court has the power to dismiss, adjourn, or make an interim order.\n6.  **Winding-Up Order Granted**: If the court grants the order, the company immediately enters compulsory liquidation.\n7.  **Official Receiver Appointed**: Upon the winding-up order being made, the Official Receiver (OR), a civil servant and officer of the High Court working for The Insolvency Service, is automatically appointed as liquidator.\n8.  **Control Transfer**: Directors immediately lose control and management of the company's affairs and assets. Their powers cease, and they are automatically dismissed.\n9.  **Investigation and Asset Realisation**: The OR (or an appointed private Insolvency Practitioner) secures the company's assets, notifies creditors, and begins an investigation into the company's affairs and the conduct of its directors.\n10. **Distribution to Creditors**: Once assets are realised, funds are distributed to creditors according to a statutory hierarchy.\n11. **Dissolution**: After the liquidation is complete, the liquidator sends a final account to creditors and files it with the court and Companies House. The company is then automatically dissolved, typically three months later, ceasing to exist.\n\n### Eligibility/Criteria\n\nA company is eligible for compulsory liquidation primarily if it is unable to pay its debts. This is typically proven by a debt of at least £750 that is due and undisputed, and the company's failure to pay it after a formal demand.\n\n### Typical Cost and Who Pays\n\nCompulsory liquidation is an expensive process, but generally, the costs are borne by the petitioning creditor initially, with the Official Receiver's or liquidator's fees coming from the company's assets.\n*   **Court Fee**: Around £343.\n*   **Official Receiver's Deposit**: £2,600 (as of current information).\n*   **Petitioning Creditor's Legal Fees**: Typically range from £1,500 to £4,000, which they pay themselves.\n*   **Liquidator's Fees**: These are drawn from the company's asset realisations. Directors typically do not pay these fees personally unless they have given guarantees or face specific claims.\n\n### Realistic Timelines\n\nThe timeline for a compulsory liquidation can vary significantly depending on the complexity of the case.\n*   **Petition Stage**: From serving a statutory demand to a winding-up order can be around 6-10 weeks for an undefended petition, though court lists and adjournments can cause delays.\n*   **Liquidation Stage**: The entire process from the winding-up order to dissolution typically takes 12-24 months or more, especially if there are disputes, missing records, or assets to recover. Complex cases can take longer.\n\n### Director's Personal Exposure\n\nOnce a company is in compulsory liquidation, directors are subject to investigation by the Official Receiver (or appointed liquidator). This investigation reviews the company's affairs and director conduct leading up to insolvency. Directors have a duty to cooperate fully with the liquidator and provide all requested books and records.\n\nKey areas of personal exposure for directors include:\n\n1.  **Personal Guarantees (PGs)**: If you have given personal guarantees for company debts (e.g., to banks, landlords, or suppliers), these will likely be called upon by the creditors in liquidation.\n2.  **Overdrawn Director's Loan Account (DLA)**: If your Director's Loan Account is overdrawn, you will be personally liable to repay this money to the company's assets.\n3.  **Wrongful Trading (Insolvency Act 1986, s. 214)**: A liquidator can bring a claim if the company continued to trade when you, as a director, knew or ought to have known there was no reasonable prospect of avoiding insolvent liquidation, and you failed to take every step to minimise potential loss to creditors. The court can order you to contribute personally to the company's assets. This is a civil liability.\n4.  **Fraudulent Trading (Insolvency Act 1986, s. 213)**: This is a more serious offence, both civil and criminal. It applies if any business of the company has been carried on \"with intent to defraud creditors of the company or creditors of any other person, or for any fraudulent purpose\". Directors (and even third parties) found knowingly party to such conduct can be made personally liable to contribute to the company's assets.\n5.  **Misfeasance (Insolvency Act 1986, s. 212)**: A liquidator (or even a creditor with court leave) can apply to the court if a director has misapplied or retained company money or property, or been guilty of any misfeasance or breach of fiduciary or other duty in relation to the company. This can include unlawful dividends, preferential payments to connected parties, or misapplying company assets. The court can order repayment or compensation. Directors' general duties are set out in Sections 171-177 of the Companies Act 2006, which include duties to act within powers, promote the success of the company, exercise independent judgment, and exercise reasonable care, skill and diligence. When a company is insolvent or nearing insolvency, the director's duty to promote the success of the company shifts to acting in the best interests of the creditors.\n6.  **Director Disqualification (Company Directors Disqualification Act 1986)**: The Official Receiver or liquidator must report on the conduct of all directors to The Insolvency Service's Directors Disqualification Unit. If serious misconduct is suspected, The Insolvency Service may apply to have the director disqualified from acting as a director for up to 15 years.\n\n### How Creditors and HMRC are Treated\n\nIn a compulsory liquidation, funds realised from assets are distributed to creditors in a strict statutory order of priority:\n1.  **Secured Creditors (Fixed Charge)**: Holders of fixed charges (e.g., on specific property) are paid first from the sale of those assets.\n2.  **Costs and Expenses of Liquidation**: This includes the fees of the liquidator and other costs incurred during the process.\n3.  **Preferential Creditors**: This category primarily includes certain employee claims (e.g., outstanding wages, holiday pay) and, crucially, a portion of HMRC debts (for certain taxes like VAT and PAYE, classified as secondary preferential).\n4.  **Secured Creditors (Floating Charge)**: Holders of floating charges are paid next, from the remaining unencumbered assets.\n5.  **Unsecured Creditors**: This is the largest group, including most trade creditors, suppliers, and a significant portion of HMRC's remaining claims. Unsecured creditors often receive little to no return.\n6.  **Shareholders**: Shareholders are typically the last to receive any funds, only if there is a surplus after all creditors have been paid in full, which is rare in insolvent liquidations.\n\n### Consequences Afterwards\n\n*   **Company Dissolution**: The company ceases to exist once dissolved and is removed from the Companies House register.\n*   **Director Reputation and Future**: Directors who have been involved in a company that went into insolvent liquidation may face reputational damage. They will also be banned for 5 years from forming, managing or promoting any business with the same or a similar name to their liquidated company, subject to certain exceptions. As mentioned, disqualification proceedings can lead to a ban from acting as a director for a significant period.\n*   **Personal Financial Impact**: Beyond potential personal guarantees, wrongful trading, fraudulent trading, or misfeasance claims, any personal liabilities established during the liquidation process will have a direct financial impact on the individual director.\n\nIt is crucial for any director facing potential compulsory liquidation to seek immediate professional advice from a licensed insolvency practitioner or insolvency solicitor. Early engagement can often preserve more options and help mitigate personal exposure.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "economy-ni.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGz1sugxvIZnNnTwFbiKq-mdGsGT0_sqOVrWPgMieJgRlTB4z_JhAXsWoyrMAsNtEBaftltkboxAUVtWefiBA6qJWWXWbXXdql1NrklfJksLapIEHMwLXcnLZ06OzowO8RPu5dy9Qq5yGzwNxkKmSXMtSruuAbFyw="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "myerson.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-L2cu_sTyvio_vjlgroCDrHpDj24lQWwJeJ7_6jPbq2yOrLJnowJptgAaspJLUszfeMwq1Nc2mjqqbd_yyQGTco-w_IkvGNQAqhv0Gdi5danFnkRZv22XAnB3koDDGp2Me55pLwHtobAdCCLb5Sqz0D3wZtGrTgpuBbXjfllerVMobfdWqiLWhVEdX0YLSIl95rB7BD3KUFvMH6zHsyGySHnCcXBxqA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "harperjames.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLlzK8gnOsF_-suuViB0Z4VTH6x_AInX607OgTIdZLuFueDckKBqVKtl_mKxeObVaka1EqY8X1wm53LgzvvuDdANUlRvIZHfz6ieZ7rA_GiV2vU1-vAqcX1vFZ2fROoQbrRA8dt57OJphQ95KiAK6H_r6jiA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "lexlaw.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzT4qB4QIdxNL8TRQ8k8utkJ5kI4g08T12FYRVcqSAAVtdeTFLoJkdVj8oavwKs5lIrsOKl6o9ZrSKd8kPXJyHgQJYd3G0v23dCvX7wWxdv-iZ83_3y1rf_WBiv5-TbbLNWwSWpGHurhrpXdVtwMjLJCV13DBRK_uWAunporPmg04jV65AwD6lJUKqt_JARkKjoyV_UMEyECEYqSqslUuUATLQQDMi4Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "franciswilksandjones.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBYQ-xmKx0pKGsW1Ep82zBHSTHXzMqg1mz2MrlmkRIWccZKoLFbM3dBXeWYFu0lliAO5Y4LdJRDEU0UT1OOuJu5KNkPBWIFQzadbaqeUf3aumkxOK_vyOJLliF1EM5YY0e8TfrkK6Sa3-AORhBiiBjLWvEWlWQtqGN55vlwpxUf-93bW8sFw8dQwAEGt3BpjPdLFS3"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidation.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5WIuOngSVXhPQwufRrT_Tyn4Par-3lZ_JIjVC0ChgFbpl4c51JVYeuufk5vgU1_mHC0BNIJAuGLavQOLozpnE5RfOx18wp5VNiZapXOVZDGEbKUYCT6iIimGEXuUEHgb8JeUXrMB2TZaTdTQmvgAPGdvtcpA="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUsVR2h6D_7_763iFu76mCmcxZk1pXz9PHLmMvxIfDQywn8DuH97_X9bTohNWCRkq0kLeAMI3iKaMEr06S58oFMqB3Zi_ZkP5pnt-nuzDu1eJZ5msrjSW3SG8WASHe0T1gMrB9klJQOOHJ9MYKe-IrZO6HdxEif8XTURIUjrFeKhB6I--qDw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidation.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBuMZoD8Xi19eS8vR1MFH8co4wN3S8gNDGMPQfjRPszWEWpUNDhgT-UWe7UZ-kxHxmsY_8HH3vutywx7PaJCRrs5FQuoG39d5CzMS0e6DLF6PFzCUxAbKf75ygQB_2EGLZr7YJhRQZjSaj7wTszy1Nhh12EFPTr1-BSSC9Hrr9yyI="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clough-willis.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOOeYGLVBZikVijzAz-9lYhJR_l9b1co951SpmPBzAKXS01Qu_XKhmFVydDE4Gl1qZI0V5d9pYIYQlpeYdrVWvIEivFkUN76gJPnbZbxeDy7BAwq5D98mEzapCn73aC4atyTEyUAFlVKKKaZdQF9qUT9p3lLRKfHYf19182V8eHkesvVk="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECNIvckKCrYRIRvkotBD8_hMUEwTFHQv-TeUAmCLrqgnDzxJb7hnx02OUKBNEniqS8K97Ispf4lCMykicgC1e_yOS5f3ruUnbWzXJcvm3FEtniRcF5YC2fjXIZVf7RUi4HeoSJw4gRZ1iEOZenAcvO_HPHIfAQby0DqHu3TN0ghRqXo8MpEvaajl2LPAHOdXKpmqiGz_P5R3LJImxwO0S-YMT7j_UfGlYfYBaum6H2vJdbCyiuCWsprgj1DrFH0xeM"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "lexlaw.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNUzdswuYaeVRsp1YMODH1n-cKgHwGPmDZT3VKuI4QASfvoQUgTc3T7PLEF-nzGh1aEEyBo9Fa-T0YpGKtL3Y7zfJhxlQHu8flFIiVhP0pl50njOBynnfH9AaaFSzXFUnvNvhxBcQSzj2NMMsG0x4HDSgmoscENKx1HuIvr_86irsvRB53F_MfBw6rdRnW"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIGpliruNkZwz9mjnenjwPZoXEZ2NJcqKhXT1d3cFvPOYWkbR9iVYBut7uozrVWsbgxfF0XTeGTStKQTYQ6dg627W-J3m0qIOmXp-IaAT78qa4h7O5FmSzeDf8sON2y2P50iq7kFR5mT52Nx4fIQJgDcjd9BvgPhmiUlGijt40y1hoclPVEOqosTh_uaRs_irv7Gxn"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companydebt.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRMjG2BXlPgpWaQCiJEhcLj2e640eaAS7SUP52gxHC7qNEDqFsQzu6vknXjcy4jhN8M7W9hthN6SGIAnuxv29RfCDKsezEpqFzAg2XwFIxGYuys3hBFJq7pn5FpISZwHchMKSPmcTOohUSJt_cIUtgyOBhHPbyNzi7cvMU_by3RMKT"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cartwheelinternational.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGofxL1MycUHZ14v5mTdlHtP-YzJkQ26SaC_QzUmp3_jCquYIJu9VzO2ltRZL5f3ZCzoI55gYBjFh2FDlPjuNEzmYwbBgA3MQYnqMFBOY1Sc1ROAM7V0h2LaP9RFQK7gGaOM_pB6kVxOoudlitOW1jlqYMtezqAo8p0l68jny4CtL6Gndq4PJE3q6V84E2J7In5fUwzie9x"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "begbies-traynorgroup.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHec6hnWY70f3wrqLutLI-iDfOXOflzWTrZv3UQ8JRBEouUQ7Is9GiFBLyebyK7oRxK296v85HbigpAWY2kndgg9kjBrLbBSJVW_C_uNVSzK0hKQIfFkDstqDVSN4zOR6KUNHgn-q-28N1plssDKDA1wG4cvxTJ_DazAmxdZP1yiQ_58l06CnLfFr_oLfMt5depb3duTmlhYVbthzsj"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pkf-l.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAd6muqQubBc-b8JSuoiOcNGE6N5_98KTHex9ehI6a5b66YcloGlrbvT96sL1pk9LcXHyQd6uJz8BlyCbBaCTTNG7VXfaFdnuEo-M_-KF953hTpjFGXClHa7YJO1zYFC_Jjq61ofUDFSZdWESiM9mwuISusEqPX04wk2NISfYDmjuabQMQrq9Yz2ydg0BZ_eDLycskO1A="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ukliquidators.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV2o0eowv2fKcR7Mf1Kw2sI66ooBYa02tGQs-6zA0NdlrIZgNcedXTN7_tDkdhXn_sBrKoKve9POA5oOgpFIkhwfW0PqFNycwlkPWUfYSC4p_n29iC2cRFd98zw0pwUXQXfE_mdx37MJ6uhQ1kOXblev45LsWqhwu6cWqap7SLVwiRcc_YnR5_bHwOIA4Fb9MQHc-gCZQ2-eT955z851q6QXUPn7BrOA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENwfvgT2z2e4t24KKdIxQHMAF5TawBgdxTwTQ1ysPIprMetMbPyennuaDgzCm-wcMm3DoJ6bs9tLOQwPy7KGhcZWZsr7Zky0yI8b6XcNqD3JFRbt2b2Y-0aXYadky1_kRJjpOBdujRxXv-EeNFdC0kQygAjcoVMQ0GQwoaDATsSb1n5Y1CUzjxYH77XvkpVxSA3s8ZGHeb"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3oIrbXzE3WZ2GTRBBInf6Yxfrv0KEF_UpSGTWCTcR2DNE5WXo3Ls9Iy32a3Hq7jL372WrOSrMYBIEPyCb48hf5ervI1T-KBrHBTsVhP5SCvQVIOroNmCKmbIGeQQ2tLgIOag5uQDFubPkt9qQ7Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidation.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELqdVyRzHJBVwIMVZieccEpnZwZ2Fbl2eELwzdzpAf9t46aqYgyzlPsPZjZBjiCLYbc_kSw0WQ7F6k-vTOn2a0cTDpzP1I9bg0H1v9wxJ4Sq7ibEiwMyVtnkVQWOdpm2aujBQJqeSiqYJJo-ieHp-AjfySjhyDyAmTeJmJg4gqhCMh0B__"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnPcS0dmHpg0aHbvE3ao7ss8m9v5shrzvmxtoQ60DHbZP4k4v6PrSqbRLkajRy6xfaOAiwgjLBlECAHFUxmDK_CBSyCC251bI78_t7cxJTl0aSxgiY2oyNp9z8v5V91T8qiYrpQ60CBx8h3pLVSj44SPge7sb_8Gg02HVCU0LpSbBhUuU="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "edwincoe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6p-FpznaeOczumV04fxj3I4NJRuiHQIDX6BPZIjb4U88aw9k8UrJWP6ZZl7hDSpqIk-_Fk8-cKpNllM_3VNKuUrIkQr1uNcbBVOgIbUZmR_Y0JEeBs4Y2YgkfqUJjxqu5j2MWCvL5FEzBtJqGiD0lRDVaKx_qP5HKfTuJzD6jwws_"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqk5TblZabMgT7u2dPkrYO5ve3C-fakUlIGWrBBNo5rCMbEzoq_FvQziLO9-WbHJrc0eFw8D5iby6EnnLlWyLn3FEAhq2osWgy38ZRNgrTw4rEM9fjhWcsm-YBAEHZ_wq3jSPZgPdDw-jSZ-Dz4441JwNu"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wikipedia.org",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyEGNQRu63W43YZ_3DvsGNw6zeVK806T3zgI8bkVN_Ll8MN_u0ZCK3XRF9pC3ocXGhfH81NOGMQhusXS7zgq_rqRFjxKWDY0YF2MgEKzLR-WpGLmh4GbbcAJAT6t1GaNaz0DpgpszQ6qY="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clfi.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKOTMwSuwBzxjFKJcnXwdMbv9W0n-54pQnUHdhtYQkHA_pnSyv2Ga9ZLRetPZcJFhkXdCBiVpdB1azIHSjbOXnrsQt1fgcegT2wr2YaEjhoSdzUPoVC06IrxP3Eyt9KcVGC_-HrzRoAGqozEKVf_jvJ3jx4mV4rX2OQJYGOuTw"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "rsmuk.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW2_vpuNiLMrjeXCvLdeFPANE3wJJwu9C1ah5LMhgXkactT9VWLTIJWb1go4ccCU0wMKucGp2e6ePytyMayAlNdJfNlWlUPYmNUpuBCb4C2_8AFf310ZoUxQOAljeAIutJvR4DWBQgY0gUmVxOA0p2GKpi"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsuX1N1WLj1E_0NftLE9H8PjfWUC3YW6cPIxj8iZgOlfjE561EBDEWLx9ccAkJx5SCq_rGyTbjTDQD3CmUBGDnX09ZLl00bYZ-qaQ9-_RbADhFVelLcCDgeLfY-2XCUM9K2a1-OxXqv0OeW-a495GRSwcjuEYXNuU4HDLfOhzL5XKr6eq9Der44r0izV2NrXyvwntLpgCy8Za-KH2U"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "open.edu",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlSOWxKz0ofmmDb4DZTi5T7Za8idhzs-t6sIKrBvoEYtke0Y1iSvgDX082rgZn-61ClOzpRXdGYvwwQNigXtrJUPx9C5l-HuN28pQdnm33Qj9-0_865gvCYfY3rE0L6SrZI9oC4SKulZnC9C2oSDMECXBK8DvVHGTZx3BU60wYUV_xtcVl-yXUlUFLxN_kiraxqJoTDu91uvelG5yB0mrVTds="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgFSwFG4P40AnoLSBF4EVIcvlcmmbenMwm3dqU3YXUqI8QHm7pDtM5G9QOH0AzxZ94p3qg4xKq-gUPoeNTDvPkjpccoYfPd5VP8UGsdeqme1tGmpxFhGWB1EvAQ8vUaSuDk0rBKZCDCnFUN5J0cRy-DpGx"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "griffin.law",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi19HuHJrKjouG-WPltVmhRx73gTGiDutBGy6lVfZftrsiOACx7rln7cyf-Fsice9QfnsziUH4KZ4DtA2UNBJzNyDdeX2mYEwioBhwsFaUf-7NRHlBVnl5jwbwhu7AV755cHyG9Ok7nx8n2ehsUXlA34pYJP7SKotw"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mayerbrown.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAPeZMPjSue1N6EAN_4tkQ_38_PIWah1sgNerSQ08LNRx0iNcJcYCxNbbmbmT2ZpHCWJ59lweJagwhchF-quxRirAAAdtF3pdfYUzkRLwyCMcRCaOa53WtCu378WeC3i4mH2aNBlYxA5EPM5z-I4VDuaci7CPKUp1ZzLgQ-wUgjQDOcrtQCnXGtOddBlsCFifskHZIQkft7DJkMcbJ2zlZMdiebD8DeScSjaconwUvPKqQFVZ4VjEAn6m50aljJ4FzKq5wUjmPPSFVOMzBO_C4sxLwbjZMTx00P6i-qMn_HU_28g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ts-p.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbQlsh1D6KKaFGgfxo86kXURL4B7rz1mywhuD392z5ReOchEssuaTiCVp7likB2ydafF-CkmxCokIIwfblNxi6FNBntO04vwlsLp0k08VUJDQY1JipEj5fRwxjk8i6WKWhwYcC8K6I6rjKkpEUxww28ic4xoPE_xfofngHBmLgVJziHjt6WVoVD92J"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "franciswilksandjones.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXsscGZP4OpyoEcHU_9hUMlVStIZw2MNWB1nznDmUmUCfJmJhFBhtqIzYnC36iybcenVY4fOT8Tz9SQk27knblj3uZMDK0Ep-pqvoW0e3p1s4InrEyoA29w4ESkhUYL3ZQvP_OQTAR3Mr7mIcqmHaJaSYcOM91v4MlyMvCeZPjQNwaZiLyrupfZfHuy74m2nRGKfz7Kc0bow=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "brodies.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAOUxcCXKEIZiNoIAUgMlq2HRkcuXRlhdUmHNET5a3grjXwUO4te06i6h0-Ow7OJTdklUM7xMRRFW-sQnVEWnEfm89OYBrUbjJNUZOrMtBQyMm-Do8DL4joK9SVJdM2beLl3Je4HJUTmpAb2FmdUBVCWcoCzUDG9YRSHBC_6VOpxWVl1NjnW3t0QQ2qLLq3B5tmY6zJjxSyuE0fv63gZ46Rr9KcNfBRKV40F9UUv7D3ItEf_0="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhcuAN99PddIEiZ8nmwDFkES85Ps2phsnG3D49Jydl2eTVJZ79OEiDLk2y3872_oXgMLxBxfLoYnZ0eNjLuMgQW-Ky1khZr3P5COdKXiXUjtI6IE7uBW2vfKZYPRNK-3HeSVWByvSC0GciB-FCYv77tITx"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cgi.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYFee2DfmYL-4iL44t3ascoC31kKOriipprMTK3z-Ifzf5q-sO9NhJGIkhlRK2bc7KiKb3KTobamQOAgr9KJUNcnWboc_q8SU5liRbeQG4SsZhCr7OKhBVne66-BC7X8idChykgQrOFxUg0BONoykGrgLlPEdbsbTN3vh8ZBnPtH6a7KIM2HKNqJOS2UoNKAWPTk1wtmziOOyAyp4dpFtW7vNEjI8BpGnw5xM="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ignition.law",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi_TAmDtI_W13ru9Cvr6fgJHcPCct6q8eJW9xJwFZPkhQTLOgUH4XvXpoXZiXf5pUe213_9tlp1CFYEWyUjssvCa4MPe9fTm2PHTxvAXWwzQFHnz0efUcve_nGLZwtOZzY"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hcrlaw.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_bxreHjpQKFNsuNOT76U5MNb4RNX83i7pYztnRjnQz7Qx1UUZawQqtnIpFO1n-Ie7TwiAfFanPVo-3zpnT9le6iXM_XeRolXleTtKiQayGvo3hX8VrOwtqr3yjdNdNGFLc0VUwsB6BbshySkcFlxcLWlYXz0TfaDI__joA0s_DrVYtRgWau9nbyws_OireKXVYgUfL8e-NzCX"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "professionaldirectorsassociation.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvKiJo-5uczliAOr7ZtU6GQQUj4GKUO0fpNqltouUbxJHUPObU0jbORuI0b0N6tAh7W1t3YvmSamK3zh-vsGpQe3AaO-BWhrXgdNjQJTu9bzaVr6Qt_z0e7OuXXPk1fGEddaZFfDKqMLOUNYffhKzUCw84sT25xEobVkikrhGMZXE92-oKRz8QFR0="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0R_FQZ8laEy1lFzot4aWZ5yLeSTKTmEXI7YP8noKIxj371vRT7Ubrp_6rVFSezHq-7fd2J0qwBc9aHH6aFWTtjyYfH-50VSEFI-fDrVQhsrneAUgCa5e87dJjPdlv0kOzD3_JExHm_3vGJMIbfjI="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYonsvpw0boITNX-GFJjAO2J84QMPBDhGHIVjwnEroFO9uZLvmXz23hK8UBNI-epp8gxJki87qfW-GRPtJp27_nsFi1MzeuodEg9HM8NsayN_wSXSJfTFnyfGM85YIVn0Py2Is_XCxwAAVKegxEvaf-Qsplg8ddbYaMo6YkDu3B_wq4nEnzsnfDT1n1sezW_Tw_hs8eZiEyTYdv_tGnIwUoPIReOVEguqR-pClV1lNvO0aye9o4y08fur0CwIXHpGayA=="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 201,
+              "end_index": 385,
+              "part_index": null,
+              "text": "Unlike a Creditors' Voluntary Liquidation (CVL) where directors initiate the process, compulsory liquidation is typically enforced by a creditor and removes control from the directors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              4,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 441,
+              "end_index": 588,
+              "part_index": null,
+              "text": "A compulsory liquidation usually begins when a creditor files a winding-up petition with the court, alleging that the company cannot pay its debts."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 589,
+              "end_index": 743,
+              "part_index": null,
+              "text": "While creditors are the most common petitioners, the company itself, its directors, or a shareholder can also present a petition in certain circumstances."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              7,
+              3
+            ],
+            "segment": {
+              "start_index": 744,
+              "end_index": 801,
+              "part_index": null,
+              "text": "HMRC is a frequent petitioning creditor for unpaid taxes."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              4,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 803,
+              "end_index": 953,
+              "part_index": null,
+              "text": "The primary legal ground for a winding-up order is that the company is \"unable to pay its debts\" as defined by Section 123 of the Insolvency Act 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              4,
+              5,
+              3,
+              6,
+              10
+            ],
+            "segment": {
+              "start_index": 954,
+              "end_index": 1106,
+              "part_index": null,
+              "text": "This is typically evidenced by:\n*   Failure to pay an undisputed debt of £750 or more within 21 days of a statutory demand being served on the company."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4
+            ],
+            "segment": {
+              "start_index": 1107,
+              "end_index": 1135,
+              "part_index": null,
+              "text": "*   An unpaid judgment debt."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4
+            ],
+            "segment": {
+              "start_index": 1136,
+              "end_index": 1183,
+              "part_index": null,
+              "text": "*   Clear evidence of the company's insolvency."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 1185,
+              "end_index": 1430,
+              "part_index": null,
+              "text": "Other grounds for compulsory winding up, as per Section 122(1) of the Insolvency Act 1986, include the company passing a special resolution for winding up by the court, or the court deeming it \"just and equitable\" for the company to be wound up."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              4,
+              5,
+              3
+            ],
+            "segment": {
+              "start_index": 1556,
+              "end_index": 1727,
+              "part_index": null,
+              "text": "**Statutory Demand (Optional but common)**: A creditor usually issues a formal statutory demand for an undisputed debt of £750 or more, giving the company 21 days to pay."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              8,
+              11,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 1911,
+              "end_index": 2020,
+              "part_index": null,
+              "text": "A court fee (currently around £343) and a deposit to the Official Receiver (currently £2,600) must be paid."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              8,
+              3
+            ],
+            "segment": {
+              "start_index": 2025,
+              "end_index": 2127,
+              "part_index": null,
+              "text": "**Petition Served**: The petition is formally served on the company, usually at its registered office."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              8,
+              3,
+              10
+            ],
+            "segment": {
+              "start_index": 2242,
+              "end_index": 2370,
+              "part_index": null,
+              "text": "This step is crucial as banks will typically freeze the company's accounts upon advertisement, and other creditors become aware."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3
+            ],
+            "segment": {
+              "start_index": 2371,
+              "end_index": 2512,
+              "part_index": null,
+              "text": "Directors usually have a narrow window (around 7 business days pre-advertisement) to respond or seek an injunction to stop the advertisement."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              3
+            ],
+            "segment": {
+              "start_index": 2517,
+              "end_index": 2627,
+              "part_index": null,
+              "text": "**Court Hearing**: A court hearing is scheduled where a judge will decide whether to grant a winding-up order."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9
+            ],
+            "segment": {
+              "start_index": 2628,
+              "end_index": 2698,
+              "part_index": null,
+              "text": "The court has the power to dismiss, adjourn, or make an interim order."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              4,
+              5
+            ],
+            "segment": {
+              "start_index": 2703,
+              "end_index": 2818,
+              "part_index": null,
+              "text": "**Winding-Up Order Granted**: If the court grants the order, the company immediately enters compulsory liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              14,
+              7,
+              15,
+              16
+            ],
+            "segment": {
+              "start_index": 2823,
+              "end_index": 3045,
+              "part_index": null,
+              "text": "**Official Receiver Appointed**: Upon the winding-up order being made, the Official Receiver (OR), a civil servant and officer of the High Court working for The Insolvency Service, is automatically appointed as liquidator."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2,
+              7,
+              15,
+              5,
+              16,
+              3,
+              6
+            ],
+            "segment": {
+              "start_index": 3159,
+              "end_index": 3216,
+              "part_index": null,
+              "text": "Their powers cease, and they are automatically dismissed."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              14,
+              7,
+              15,
+              5
+            ],
+            "segment": {
+              "start_index": 3221,
+              "end_index": 3457,
+              "part_index": null,
+              "text": "**Investigation and Asset Realisation**: The OR (or an appointed private Insolvency Practitioner) secures the company's assets, notifies creditors, and begins an investigation into the company's affairs and the conduct of its directors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              14,
+              5
+            ],
+            "segment": {
+              "start_index": 3462,
+              "end_index": 3589,
+              "part_index": null,
+              "text": "**Distribution to Creditors**: Once assets are realised, funds are distributed to creditors according to a statutory hierarchy."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              5
+            ],
+            "segment": {
+              "start_index": 3745,
+              "end_index": 3837,
+              "part_index": null,
+              "text": "The company is then automatically dissolved, typically three months later, ceasing to exist."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 3865,
+              "end_index": 3957,
+              "part_index": null,
+              "text": "A company is eligible for compulsory liquidation primarily if it is unable to pay its debts."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 3958,
+              "end_index": 4097,
+              "part_index": null,
+              "text": "This is typically proven by a debt of at least £750 that is due and undisputed, and the company's failure to pay it after a formal demand."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11,
+              17,
+              12
+            ],
+            "segment": {
+              "start_index": 4130,
+              "end_index": 4335,
+              "part_index": null,
+              "text": "Compulsory liquidation is an expensive process, but generally, the costs are borne by the petitioning creditor initially, with the Official Receiver's or liquidator's fees coming from the company's assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11,
+              13
+            ],
+            "segment": {
+              "start_index": 4336,
+              "end_index": 4368,
+              "part_index": null,
+              "text": "*   **Court Fee**: Around £343."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 4369,
+              "end_index": 4442,
+              "part_index": null,
+              "text": "*   **Official Receiver's Deposit**: £2,600 (as of current information)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              17,
+              12
+            ],
+            "segment": {
+              "start_index": 4443,
+              "end_index": 4553,
+              "part_index": null,
+              "text": "*   **Petitioning Creditor's Legal Fees**: Typically range from £1,500 to £4,000, which they pay themselves."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11,
+              17,
+              12
+            ],
+            "segment": {
+              "start_index": 4636,
+              "end_index": 4747,
+              "part_index": null,
+              "text": "Directors typically do not pay these fees personally unless they have given guarantees or face specific claims."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18
+            ],
+            "segment": {
+              "start_index": 4774,
+              "end_index": 4879,
+              "part_index": null,
+              "text": "The timeline for a compulsory liquidation can vary significantly depending on the complexity of the case."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              10,
+              19
+            ],
+            "segment": {
+              "start_index": 4880,
+              "end_index": 5064,
+              "part_index": null,
+              "text": "*   **Petition Stage**: From serving a statutory demand to a winding-up order can be around 6-10 weeks for an undefended petition, though court lists and adjournments can cause delays."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18,
+              20,
+              19
+            ],
+            "segment": {
+              "start_index": 5065,
+              "end_index": 5262,
+              "part_index": null,
+              "text": "*   **Liquidation Stage**: The entire process from the winding-up order to dissolution typically takes 12-24 months or more, especially if there are disputes, missing records, or assets to recover."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18
+            ],
+            "segment": {
+              "start_index": 5263,
+              "end_index": 5293,
+              "part_index": null,
+              "text": "Complex cases can take longer."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              14,
+              7,
+              15
+            ],
+            "segment": {
+              "start_index": 5329,
+              "end_index": 5464,
+              "part_index": null,
+              "text": "Once a company is in compulsory liquidation, directors are subject to investigation by the Official Receiver (or appointed liquidator)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              7,
+              15
+            ],
+            "segment": {
+              "start_index": 5465,
+              "end_index": 5560,
+              "part_index": null,
+              "text": "This investigation reviews the company's affairs and director conduct leading up to insolvency."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              2,
+              16,
+              6
+            ],
+            "segment": {
+              "start_index": 5561,
+              "end_index": 5666,
+              "part_index": null,
+              "text": "Directors have a duty to cooperate fully with the liquidator and provide all requested books and records."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 5727,
+              "end_index": 5922,
+              "part_index": null,
+              "text": "**Personal Guarantees (PGs)**: If you have given personal guarantees for company debts (e.g., to banks, landlords, or suppliers), these will likely be called upon by the creditors in liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              21
+            ],
+            "segment": {
+              "start_index": 5927,
+              "end_index": 6092,
+              "part_index": null,
+              "text": "**Overdrawn Director's Loan Account (DLA)**: If your Director's Loan Account is overdrawn, you will be personally liable to repay this money to the company's assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            "segment": {
+              "start_index": 6141,
+              "end_index": 6409,
+              "part_index": null,
+              "text": "214)**: A liquidator can bring a claim if the company continued to trade when you, as a director, knew or ought to have known there was no reasonable prospect of avoiding insolvent liquidation, and you failed to take every step to minimise potential loss to creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              22,
+              24,
+              25
+            ],
+            "segment": {
+              "start_index": 6410,
+              "end_index": 6483,
+              "part_index": null,
+              "text": "The court can order you to contribute personally to the company's assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              23,
+              24,
+              26
+            ],
+            "segment": {
+              "start_index": 6484,
+              "end_index": 6510,
+              "part_index": null,
+              "text": "This is a civil liability."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              27,
+              28,
+              29,
+              30,
+              26
+            ],
+            "segment": {
+              "start_index": 6626,
+              "end_index": 6802,
+              "part_index": null,
+              "text": "It applies if any business of the company has been carried on \"with intent to defraud creditors of the company or creditors of any other person, or for any fraudulent purpose\"."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              28,
+              29,
+              30
+            ],
+            "segment": {
+              "start_index": 6803,
+              "end_index": 6944,
+              "part_index": null,
+              "text": "Directors (and even third parties) found knowingly party to such conduct can be made personally liable to contribute to the company's assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              21,
+              31,
+              32,
+              33,
+              34
+            ],
+            "segment": {
+              "start_index": 6988,
+              "end_index": 7236,
+              "part_index": null,
+              "text": "212)**: A liquidator (or even a creditor with court leave) can apply to the court if a director has misapplied or retained company money or property, or been guilty of any misfeasance or breach of fiduciary or other duty in relation to the company."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              21,
+              31
+            ],
+            "segment": {
+              "start_index": 7237,
+              "end_index": 7348,
+              "part_index": null,
+              "text": "This can include unlawful dividends, preferential payments to connected parties, or misapplying company assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              21,
+              31,
+              32,
+              34
+            ],
+            "segment": {
+              "start_index": 7349,
+              "end_index": 7395,
+              "part_index": null,
+              "text": "The court can order repayment or compensation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              35,
+              31,
+              36,
+              37,
+              38,
+              39
+            ],
+            "segment": {
+              "start_index": 7396,
+              "end_index": 7641,
+              "part_index": null,
+              "text": "Directors' general duties are set out in Sections 171-177 of the Companies Act 2006, which include duties to act within powers, promote the success of the company, exercise independent judgment, and exercise reasonable care, skill and diligence."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              25,
+              38
+            ],
+            "segment": {
+              "start_index": 7642,
+              "end_index": 7807,
+              "part_index": null,
+              "text": "When a company is insolvent or nearing insolvency, the director's duty to promote the success of the company shifts to acting in the best interests of the creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              23,
+              15
+            ],
+            "segment": {
+              "start_index": 7812,
+              "end_index": 8029,
+              "part_index": null,
+              "text": "**Director Disqualification (Company Directors Disqualification Act 1986)**: The Official Receiver or liquidator must report on the conduct of all directors to The Insolvency Service's Directors Disqualification Unit."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              31,
+              15
+            ],
+            "segment": {
+              "start_index": 8030,
+              "end_index": 8178,
+              "part_index": null,
+              "text": "If serious misconduct is suspected, The Insolvency Service may apply to have the director disqualified from acting as a director for up to 15 years."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16
+            ],
+            "segment": {
+              "start_index": 9143,
+              "end_index": 9197,
+              "part_index": null,
+              "text": "Unsecured creditors often receive little to no return."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 9202,
+              "end_index": 9389,
+              "part_index": null,
+              "text": "**Shareholders**: Shareholders are typically the last to receive any funds, only if there is a surplus after all creditors have been paid in full, which is rare in insolvent liquidations."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              5
+            ],
+            "segment": {
+              "start_index": 9420,
+              "end_index": 9541,
+              "part_index": null,
+              "text": "*   **Company Dissolution**: The company ceases to exist once dissolved and is removed from the Companies House register."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              40
+            ],
+            "segment": {
+              "start_index": 9695,
+              "end_index": 9872,
+              "part_index": null,
+              "text": "They will also be banned for 5 years from forming, managing or promoting any business with the same or a similar name to their liquidated company, subject to certain exceptions."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              15
+            ],
+            "segment": {
+              "start_index": 9873,
+              "end_index": 9985,
+              "part_index": null,
+              "text": "As mentioned, disqualification proceedings can lead to a ban from acting as a director for a significant period."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              23,
+              7,
+              3
+            ],
+            "segment": {
+              "start_index": 10427,
+              "end_index": 10512,
+              "part_index": null,
+              "text": "Early engagement can often preserve more options and help mitigate personal exposure."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuW3sp2pwn71RlrjkGM9ICzjF75ZfSpH1zRNJngaNTU4xHO1SY5_6J3K1H7QSwY0o8YaISMIbFsKN1Gki-ibwECNHv09Kt8Fw1UuhDTKsu_xKswP81nIrKVGvLymT6gOmdmz7M7li7Wch7qad-WfzXKbrJ_CTo34BRplExDu2v6PAe6cRjzLmwkQrPHPaeFLlN9raibvrR4dnfjE8LWj_tAQ==\">winding-up petition grounds UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpiJyJRKI7ddEJd198v9itM3P1ca09GR4Q4fu_Em6PWev2BFsnWjJe0Uh06K6zO6yDK-rGNxwS4tRyltTo-qH_4x3u07kMDxZHM6gFNFtU2i21UETGTsj0bD5VERl_iI8Gm6mk4FRdF0NeBVJLPigkYCpTbaaOdUVnjY9tyW2HH4jiQzmn64LYSIOutr5PJ6DbohxylPyl7wnf5Ew1gXYaxSahqFhFDX7jN1tNRTF1cbZCuQ==\">compulsory liquidation UK company director guide</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpRjHPStIeBggvLrnB06qgm5IgvBDLAoAK1Z7-qjP3ZjNeliFHnZr6peEY7Jufy5kkC9NsndChPhQpBvH_Oumpr_NEnv-NVKIisV8vCZ0clNY8MKOKD-DgUbmCIoyhQv_7k3gN4S9QSEyID630wZIgXlcbqwFayOu1s6iLEZQZDrpwcEUFwNT4vgx0dZEKiNsr_DHOcCAYsCgqxuVRubwsCMxbkiQbrJhN\">timeline for compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn130veQYbV4eQ6MWy_dsJjO1iOgfPXpX3Ub-0RVwf20G14aIWP8C1PL5XLYKfN3eOoyn73Uh6cy17QNW2KrYGQKxsKXo8BjSYKCw7CTkWD6KoZs9vv95NrN8mZgk-KpVjlOgbzto56Jx5bDsYrk8vf_5Qq9pm6Zj1tWVJ19PJMZL8lvxUEOMs7CsrK6sZi42DiQIBh0qf05OWVQayFZb21h5_0xVT6pebyUxmOGwL\">creditor hierarchy compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_1oibl2SGyjpQskascTy5SrZVHrDO7nZ4wr399E8A49jLOyPTiEaagArlJMor8v8LZxUw7qaoUWzjAJAfAdZf81r7vQESPoLYFrVWh6lnUrlLejf7cF-V_BkMfPz-5jh5Ec67k-4rO5uZlRw91zR3kykRq8kFqdyzXFOUjdHSCKi_akmvm_Z5T2OrJ2zloYAxOMepgFXpsxtZXUaci0kg0Q2CNaQpFivvKlh-10hWQSnDGw==\">Official Receiver role compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtNb1-WasMSjpD5srDhx5aH9lheq0rentk4Bt23DcjpSnHMGt36SXJxko4YQWvTRxaKXhbb5FqHTFZYcqsN0cXeolxZztyDzXUMjBEBYYKoZcOo2_UNiXvRHcky2WM-Z9lxvpOb0z6BPPFTTqDg3HryMaiiwRSo89HzUXSBnXRK_27frLiqEGL07TxNFjoAm2Lt4ZBE40AL-FPO2U-KjcCsA==\">Insolvency Act 1986 winding up</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxOQetfJH9N86b9ng8fy-mOvoQKZ-0JnpIRKG_EcgSNqJuNsLADcuoS9z2p7s0H9vbzBFPV8QBRvCeRg21mHDBvJ_e-p4AdEVG485B_EjOssmQTRGDoswtzBLvfHXvZ-5LreUREPh0EXrnwLrH9XcuGEGAkJJX7qatBnOhDZtTuOHroFKEYxrwtUGhGIyHSbJ-CJogH3r3-L_ewHPZ4Tf63gT2IiUK8MQ=\">misfeasance Insolvency Act 1986 s.212</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEa_wW8gnQYJNVpzZge97KfWrYGhMniQcn27p4aa14Zn89lzU6kA6nXpPhlkrV8bNLZJ2bHRYdevYfTpcy8hoha2VaZaEEL3kT7wv5i9qGVGsuKHnxFNAFu-8XGqINtcebp48-sGlaUOzq16EOklYLXm6Hzi6gax89qRVpTMX_3dDtKRV1mLLSMcV_a8IRvjSWTZC7CnmOM81Sq8JY8FtXiF8lYtP0Nw3EZDQSvK2B4\">fraudulent trading Insolvency Act 1986 s.213</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlQMpjs5E7r0-EPl4q7zTVy50spbAL4hnp_tUAyVKNzs9n0pT8JI_B-C6qRRAKBZuuDzZR0kkZZwlFIahA3dLeREsvBX8Jdht9Uz0slLsTgFhUYqWSf3i46auOeq6h9EUi1n58fs8UgtS4Kf-udavwZn-Uf9ANIWAMju_JuDpkXDe72icegJX8ByKIR3RUd23Fm9XpDp2fr8tCeOJUUIP1Y2P4IRCe7S0gpFL2gY-Ugq6lDv6MoPMFTm5b8kVz2IejKlpTz5n16wE=\">director disqualification Company Directors Disqualification Act 1986</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbybVvc8oEJtlRmNsEBtKihhLknTapC7AViIC21pZtHX6O2BzbwUcqNk-IB6GMkOarTOp3YjdZq8JTrM1cYg-TNXfgBu85PLIpl-wekYJP87Gohxnto588PRj-fAeRuHEGYtqIKSj0SArzDjQgoTIiwQHYRx_MEwC_ePaNSoic9h5VLkvcnx0_sL2M59hzfde0d5ZGvk0EY7P-BecVoZ-IskHgfhLCTQA_rM_kFw==\">wrongful trading Insolvency Act 1986 s.214</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi5yBDg39GyaT_lFQhmnqvCHSM2xhSytIQ4zsQG1ok22xuxOrej01R76mx8RiGc-wdu2RapMcaD6KnxvZAOSZqkit4HnQdju0fMaPtv37OvjdNCedpVRRnlDQ_MNjE5xaN4CiVvMupjQgAjqYxGjM8dBpboUyTvfYDn7Za_twOj-dvFrNH_139R-_DB2G0tOiqehvZRRlG9RiPbnhlJ0eTiQOl4Wf_Mw==\">process of compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOCJaDMmIo0SVdiu6wij21-xGhZQ0pvUgNFUSqIvuzsGUyk1AQrNXZHRV8b-HapPiPwrONmbr6b9HqtnOlsg4hlwg0FcMNWmtMPkQ46a2eKV1qsX9DvKJshWADZ0efryIAHeskM_tYVDceAFNfiHL-JH_-80QCadwogK6HLQJxDnbWfoJquOpES489PKyGBTdAI4GORZvClU4Hyi6VnR3bAf43X-gapB71mCqS3wPHepzCxk9eA0P7KA==\">director personal liability compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOvhANdEsNmdV56bDsADTE_cQg9r0NTfA2_pI3RchiL4ooRI1tlPC9N2qZ-1-O3AZ43fRauSv-tvvJGiiLLX_GFY-yum5jizEbeyYcuPmLTGhdVqqyA8gLBm1Pw9jBY4W2vMPiCqDg9PcRZ_ouM7sumlwak3as8Ejln9rvacoD2h8_r4MBumpKTy39dPj3aQK3GHA-K8tdITF5w5MnGkoY72x6v50=\">Companies Act 2006 director duties</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs8nfhdcwjB8AHsLWJALmKMKYa3McHMAGz1dTnsC1QQfg5dV5cJSsPA-TOyWoIh17CH9dfDCGqF7I59yl8NvMtkKZ_zuaXF12bBr8kgfP_WAGkR2ChWbEJoPAhXvSvXCQcWTaAwaloByvkiOZ9JwRQ7nrNU5iAXgy_g8BX0e69Yf7473gj_eM-oSbCr02AdvY7LbjPNOSJDUFJFIutjjcIuMVWHg==\">cost of compulsory liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGVxY3VqcM35aR4W8OcvtxD691zThencfMTSFSAIzJr70cTXt5XM-SKeM7cDnynWyY7fyj0TeL4t8oUqsmb373UewpynJ-VBaPrinWfHv_Q_TgaHo5cBDQcF1YhpU-Q_fe2gsgWFv9q40n88hs4HfA3NTL8SSelG56gCk-Ie_3y7U0MaUwyfhSbF107Y2MtuODYLO9l0ZEIr00oGH36FpQOWasM_Vly3VhJ1U=\">HMRC treatment compulsory liquidation UK</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "compulsory liquidation UK company director guide",
+          "winding-up petition grounds UK",
+          "process of compulsory liquidation UK",
+          "cost of compulsory liquidation UK",
+          "timeline for compulsory liquidation UK",
+          "director personal liability compulsory liquidation UK",
+          "wrongful trading Insolvency Act 1986 s.214",
+          "fraudulent trading Insolvency Act 1986 s.213",
+          "misfeasance Insolvency Act 1986 s.212",
+          "director disqualification Company Directors Disqualification Act 1986",
+          "creditor hierarchy compulsory liquidation UK",
+          "HMRC treatment compulsory liquidation UK",
+          "Official Receiver role compulsory liquidation UK",
+          "Insolvency Act 1986 winding up",
+          "Companies Act 2006 director duties"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "4LApasDIGJq8nsEPpJvUuQg",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 2418,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 326,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 326
+      }
+    ],
+    "thoughts_token_count": 473,
+    "tool_use_prompt_token_count": 971,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 971
+      }
+    ],
+    "total_token_count": 4188,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

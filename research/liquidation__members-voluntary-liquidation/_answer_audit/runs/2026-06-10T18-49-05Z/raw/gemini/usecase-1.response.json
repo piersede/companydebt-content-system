@@ -1,0 +1,841 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:50:13 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=19513",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director considering a Members' Voluntary Liquidation (MVL), this insolvency route is a formal process for winding up a *solvent* company that can pay all its debts within a specified timeframe. It offers a structured and often tax-efficient way to close a business.\n\n**Relevant Insolvency Route:**\nThe relevant insolvency route is a **Members' Voluntary Liquidation (MVL)**. This process is exclusively for companies that are solvent, meaning they are able to repay all their debts, including contingent liabilities and statutory interest, within 12 months from the date of the declaration of solvency.\n\n**Governing Rule or Official Source:**\nThe primary legislation governing MVLs in the UK is the **Insolvency Act 1986 (\"IA86\")**. The **Insolvency (England and Wales) Rules 2016** also provide detailed procedures. Key sections of the IA86 include Section 89 for the Declaration of Solvency and Section 84 for the resolution to wind up the company.\n\n**Steps Involved in Members' Voluntary Liquidation:**\n\nThe steps involved in an MVL typically follow this sequence:\n\n1.  **Director's Meeting and Assessment**\n    Directors convene a board meeting to review the company's financial position, assess its assets and liabilities, and determine that it is indeed solvent and can pay all debts within 12 months. They then agree to proceed with an MVL and to call a general meeting of shareholders.\n\n2.  **Declaration of Solvency**\n    A majority of the company's directors must sign a \"Declaration of Solvency\". This is a statutory document affirming their belief that the company can repay all its debts, including any future or contingent liabilities, with interest, within a period not exceeding 12 months from the date of the declaration. The declaration must include a statement of the company's assets and liabilities, its name and address, and the names and addresses of its directors. It must be sworn before a solicitor or notary public. This declaration must be made no more than five weeks before the resolution to wind up the company. Directors face serious consequences, including fines or imprisonment, for making a false declaration of solvency.\n\n3.  **Shareholders' General Meeting and Appointment of Liquidator**\n    A general meeting of shareholders (often an Extraordinary General Meeting) must be called within five weeks of the Declaration of Solvency being signed. At this meeting, shareholders pass a \"Special Resolution\" to wind up the company voluntarily and formally appoint a licensed insolvency practitioner (IP) to act as the liquidator. For the resolution to pass, a minimum of 75% of the shareholders (by value) must vote in favour. Upon the liquidator's appointment, the powers of the directors generally cease.\n\n4.  **Statutory Filings and Advertisements**\n    The resolution to wind up the company must be advertised in The Gazette (the official public record) within 14 days of being passed. Additionally, the signed Declaration of Solvency must be filed with Companies House within 15 days of the winding-up resolution. The appointed liquidator will also formally notify any known creditors.\n\n5.  **Liquidator's Administration**\n    The appointed liquidator takes control of the company's affairs. Their responsibilities include ceasing all trading operations, collecting and realising all company assets, settling all outstanding creditor claims (including any contingent liabilities), and undertaking all necessary administrative and legal paperwork, particularly with HMRC. A critical step is obtaining formal clearance from HMRC regarding PAYE, VAT, and Corporation Tax to ensure all financial matters are concluded.\n\n6.  **Distribution to Shareholders**\n    Once all debts and the costs of liquidation have been paid in full, any remaining surplus funds are distributed to the company's shareholders. In straightforward cases, shareholders may receive early distributions.\n\n7.  **Final Meeting and Company Dissolution**\n    After the company's affairs are fully wound up, the liquidator prepares a final account of the liquidation, detailing how it was conducted and how the company's property was disposed of. A final general meeting of the company is convened for the liquidator to present this account to the members and provide an explanation. Following this, the liquidator files the final report with Companies House. The company is then officially dissolved and removed from the Companies House Register, typically three months after this final report is filed.\n\n**How Long Does It Take?**\n\nThe full timeline for a Members' Voluntary Liquidation in the UK typically ranges from **six months to a year**. However, this duration can vary significantly based on the complexity of the business, the nature of its assets, and the efficiency of the asset realisation process.\n\n*   For companies with very simple assets and ownership structures, where all liabilities are already settled and all necessary paperwork is readily available, the process might be completed in as little as **three months**.\n*   More complex situations are generally expected to take **6-12 months**, and in some cases, even longer.\n\nSpecific elements within the timeline include:\n*   Preliminary preparations and financial assessment: 1-2 weeks.\n*   Declaration of Solvency: 1-2 weeks.\n*   Board meeting and shareholders' resolution: 1-2 weeks (including notice periods).\n*   Advertisement in The Gazette: within 14 days of the winding-up resolution.\n*   Filing Declaration of Solvency with Companies House: within 15 days of the winding-up resolution.\n*   Asset realisation and debt repayment by the liquidator: 2-4 months.\n*   Distribution to shareholders: 4-6 months.\n*   Clearance from HMRC: 6-9 months.\n*   Final report and company dissolution: The company is officially dissolved approximately three months after the final report is filed with Companies House.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdoZdaRum1wRK1PHoRpeaTvOfBHgsLPTk6SyY4ETk4fk6Qe9kCVFkq9Xoh8DKsGsZPdv4-KstaQksPqUuAs81QWsigyz8ZBYd-O8S6am2JxXm6SgMX1gJHNrAgKuTAo6f3cjwq1Ys4PJVolL8JKbkArStyxDMSg3zO1Ohex23_JMG5"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r-m-t.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtjvMA55ktRJoU0fHwj0gHfQ8dKcSOyTl8EMqwehAPJO5dMDq_28m5l1axrxb_-E54cqFwyWCzz0R8mNnvHpxjXMIrKpZrKSmQdCcdJGmMQaKUIU27855boFgFwF9CNllxIzxLaowB1POZMXJXSmQrd05GQatsCpBV12r60bk2TQc="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "thomsonreuters.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI7z3K4HpuvSFKzUf1_6xn4l3K3Whknc2441VWY0ylZgrc21Z_qdswzNctsjq_E-Jg4Q9jc9PAAiGi6fGNW7mth2PR-VWeW0T8uT1DouiZDqkNlNMej7km_EkhDxHMJp23PeAPlQFHYIix-6n6cua31OnAFu7KsLUNMmHXPERm9IHEftIMsSIl9KxqTK2ZCf-A1urrRgmwcfC7k8MaeBuR"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUOMrvslrgCjgJxWdDE5Im5SgU9eDMXZ6oma6y2pzaAlYDJKysKeFf2Ycl_aEIcNFd2RI1O2kCZMtcvkOFgw7dBGmRgeweEiw_OpbOLcrH2vDxPDsxQPFJdb_GbyHe4vBMMXUT_5a-lOjPVg3Qog0ee9sQHNRsJBWCmmC7R__UOxlQghvd7sp-5tP3BGPTJDmOCTH3Qoze8lj1mOTx91R6"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "edwincoe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAB_4q5WN5BkiKx_DKDqAxh_vXzRZZoVGt0HGeIlsHy-kmcbsBzz7AC8zQ50CJqxVszvxE01cVxjywOyrPEJOrMSPmN_OHjmsUZmIhGr7DCWDHh8a8D0fsy0OnVpRVV6y-dLPHf-Na3GcsAmdCz6FxXi5xmq7unlT89IX9E6RY_e1DBpJIHUMjwPuLoo-WJFVlfs5Z"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "myerson.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYq4yNu5aCvzqTVSoyeDT41s14daEfeGOmN31xm-6k36rwqY-XxhXaWGOCvqgI5FNDebETLWrB1McSUdk0b-XlqMeR2AQV5BhDkgU2yj3INIgrb7M8a-eKlAXYETMklP5F2N0nRVdoYvDd6mdNAH-iahTFMFulf8UdJ5F_4qX_3H7obrWncIj6qFdTmrRE00MsZk9-AfTXVw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pkf-l.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6OqcjRyo27AHANvz1SNdRfxCWmm247wWkgnHAm4FJidOIEhmlPMnd4ZGeHq8RrXw6qa0l0SzqHLvM-tpmj2XWoB45NvKTk_MZQqYI6RbSyFUeG1GbXDjgsiyCkxqVt1LNuVdx_zns2Fbpgd_B1_vbJtJuIYwCboCDDWuJpkXLp7VPo7oTrjqmPDEQYJqxK4X_O-_d708k-FQ3qdDXOrRrOQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "kpmg.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXvnLz36ooBPulkwkgS-oWXxRCZfiYqKoq5dnFfz2vQcZUlgpp656JoBhTMFZdyJLJ-bzzfWNbsiR8SxFFGD6gNcxecWK9s8tuwWDKbDoIvbYsbbcw39z3UjBJ-hO1IewbtL3uvu18kW77LClTxXXJRMuHk6wVqSowZ_TpxaMF4BvmH974CSqEBYtoXn_waE15j1PzG-Z6ERovh6Fb9AiDrIec91NGeww="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ukliquidators.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv0zELcrWRnuEPacPB3rPZOLZx-Gmfvxw4_FNReVE4AdklJ0L4ZqpHufJUzqo8XTBRSMCKxNvIQkh6RpWrjOgwOQphPgx6CgQu45JtGo9uH3vhnQLd_w-1GBYPaXLQ6ZSRxYtaQDeB5fnRcsxvP-e0jAHvS_Tur7mbnp9NV5SIsqS1ul413tj8HhcpfwatpQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "jdsupra.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENyuQh9lPnW5ZBBdsARjP6SHKM8J5zLlN1MRC9Gw12Ofvze4CQhsjHuxd_6R2Jc7Lu5u975HsUdrgl_VLGm1AA4f2beED2YnwKs-PYTRxIwfhjnpjUNE6tlJat4R6EGJb1F0lyY3wjcFe27w6uFS0iZqQMgEyxwrc_z6TgS5UDSX8PaiwN"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYnZsXCXtfxNrfvd7RRgQ7JV3sWH7uq9_CFmJRJPVBkJFhFL_OLLCXnjfwhGG91iWxPEq2-0KV2jXNSi2mlPWZrP4brN9P_AAXPzKxoeBxAA5VPYHsK-lR5wJA1x20R-pNzFjDbhojC8Tyl6PQU3LLLdGMNefEAn-JfWw="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDUNsBjkjzDdKWD64vJ74MV1J8jy3y7PpNNCcPxxapSa3UvHCKVywauIF2dBJwoRXi1bz5_hWD3CKXboZnvHSiDq4_c_i1tkC8mMLdCO9NsExlTrD4Uq51WYyQFMUfKcLQmI4APWWaRDj0BD_f20Vu7NmzYoCd6i92Oq3bCoTj7j0AD3n64HfPeBLK"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "menzies.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVRGr3zz0sreq3tsvc4AoG4hdhqMm6xl1mP85ra2Vs4m3SUJUoMr-fBPrKL3JWp88pEsEwbcpTu5ZhRL9im_-Yh0Aupb7ly3bHLVCrfsK_4-9TlhnqfuZC5sNWwPK_x75KlUvOf-iaID-S-DvSAaBlfCd62_9R4bBLMNeYgGtwbdiwZeuSzw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGedQPktvndKwKgbGVcKLrZ7aT5jKzn1MgF8m7JEn7Pf9Ci7Tw-03L-oob8cOS9Ujsfm8TVuLxia3X_pWPyffVRszeJA6SmF-8agEdO8A6lXBeTpTuQU0msYkSjWfWnlAwDpfwtBQuG3LiHDYqGZUrGBNKwNEWzyScQ9MP_tFYcPhOu"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "harperjames.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2dcqTvhoXz_odMUhS84igw2BGO8H5sG_cBCXl8nLSTspKaz03iwi573nzl8rheFEZyG1sVAXruXlTZf7AT4DWX9_6lf6QuNOBWQoy0VcpTA1FlBoRF4BqiGtWB2fDSXjh8EVmCD7_SZS8836Q82ghhT0BpHVW2Qa2fs180l9yMSIESoLz"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "rsm.global",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJAKq6KFw3ylGm16CmJ2ThFwVswyKlzuAMEZn1StqsxdJ1ovCJmOLUzdSnWnI4GOJ1gy3mfEC4m5hRUFFUcYleZZyEAFmBV7-nYAEc873fHUidJGOvzj3SDlo2R8UEloLajXiU0ZxKNImldI5gWDz2DsOEPl97G5yZbO-U04AqR1L7WI2f5WFmO4Y5WNqqd-x0sImiYzU56AfPu4f6iXk1W2rPDfxTAn0_rNfDUJ2AY5rruA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "theinsolvencyexperts.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5fqs7fwftA9jCN8kyTgLhgHPJGrleF5glRkqZptgAVJnnFeg-p_tthODazvzjMupw32Mdf5q2opb_n2dNy_yFGTMLb3i--N9op3l0KS8T4k3aa3FTffMdXBssB1ei-2_5auUTDkiDnOxi8uQ8Csmjjc7zfMdscXbl-a4HKxu78rlZtpHJjyIdpiiOSkMFdPu3JEMz"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 212,
+              "end_index": 282,
+              "part_index": null,
+              "text": "It offers a structured and often tax-efficient way to close a business"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              3,
+              4,
+              5,
+              9,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 393,
+              "end_index": 619,
+              "part_index": null,
+              "text": "This process is exclusively for companies that are solvent, meaning they are able to repay all their debts, including contingent liabilities and statutory interest, within 12 months from the date of the declaration of solvency"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              11,
+              3,
+              4,
+              5
+            ],
+            "segment": {
+              "start_index": 622,
+              "end_index": 749,
+              "part_index": null,
+              "text": "**Governing Rule or Official Source:**\nThe primary legislation governing MVLs in the UK is the **Insolvency Act 1986 (\"IA86\")**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 751,
+              "end_index": 833,
+              "part_index": null,
+              "text": "The **Insolvency (England and Wales) Rules 2016** also provide detailed procedures"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              4,
+              6
+            ],
+            "segment": {
+              "start_index": 835,
+              "end_index": 967,
+              "part_index": null,
+              "text": "Key sections of the IA86 include Section 89 for the Declaration of Solvency and Section 84 for the resolution to wind up the company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 1326,
+              "end_index": 1410,
+              "part_index": null,
+              "text": "They then agree to proceed with an MVL and to call a general meeting of shareholders"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              12,
+              2,
+              3,
+              5,
+              9,
+              6
+            ],
+            "segment": {
+              "start_index": 1417,
+              "end_index": 1524,
+              "part_index": null,
+              "text": "**Declaration of Solvency**\n    A majority of the company's directors must sign a \"Declaration of Solvency\""
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              3,
+              4,
+              5,
+              9,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 1526,
+              "end_index": 1755,
+              "part_index": null,
+              "text": "This is a statutory document affirming their belief that the company can repay all its debts, including any future or contingent liabilities, with interest, within a period not exceeding 12 months from the date of the declaration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              13
+            ],
+            "segment": {
+              "start_index": 1907,
+              "end_index": 1959,
+              "part_index": null,
+              "text": "It must be sworn before a solicitor or notary public"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              1
+            ],
+            "segment": {
+              "start_index": 1961,
+              "end_index": 2059,
+              "part_index": null,
+              "text": "This declaration must be made no more than five weeks before the resolution to wind up the company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              6
+            ],
+            "segment": {
+              "start_index": 2061,
+              "end_index": 2173,
+              "part_index": null,
+              "text": "Directors face serious consequences, including fines or imprisonment, for making a false declaration of solvency"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2180,
+              "end_index": 2399,
+              "part_index": null,
+              "text": "**Shareholders' General Meeting and Appointment of Liquidator**\n    A general meeting of shareholders (often an Extraordinary General Meeting) must be called within five weeks of the Declaration of Solvency being signed"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              1,
+              12,
+              2,
+              4,
+              5,
+              9,
+              6,
+              15
+            ],
+            "segment": {
+              "start_index": 2401,
+              "end_index": 2579,
+              "part_index": null,
+              "text": "At this meeting, shareholders pass a \"Special Resolution\" to wind up the company voluntarily and formally appoint a licensed insolvency practitioner (IP) to act as the liquidator"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              1,
+              12,
+              2,
+              4
+            ],
+            "segment": {
+              "start_index": 2581,
+              "end_index": 2676,
+              "part_index": null,
+              "text": "For the resolution to pass, a minimum of 75% of the shareholders (by value) must vote in favour"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              11,
+              9
+            ],
+            "segment": {
+              "start_index": 2678,
+              "end_index": 2756,
+              "part_index": null,
+              "text": "Upon the liquidator's appointment, the powers of the directors generally cease"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              11,
+              1,
+              16,
+              13,
+              14,
+              4,
+              6
+            ],
+            "segment": {
+              "start_index": 2763,
+              "end_index": 2939,
+              "part_index": null,
+              "text": "**Statutory Filings and Advertisements**\n    The resolution to wind up the company must be advertised in The Gazette (the official public record) within 14 days of being passed"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              16,
+              14
+            ],
+            "segment": {
+              "start_index": 2941,
+              "end_index": 3068,
+              "part_index": null,
+              "text": "Additionally, the signed Declaration of Solvency must be filed with Companies House within 15 days of the winding-up resolution"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              16,
+              14
+            ],
+            "segment": {
+              "start_index": 3070,
+              "end_index": 3140,
+              "part_index": null,
+              "text": "The appointed liquidator will also formally notify any known creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              1,
+              12,
+              13,
+              4,
+              6
+            ],
+            "segment": {
+              "start_index": 3248,
+              "end_index": 3525,
+              "part_index": null,
+              "text": "Their responsibilities include ceasing all trading operations, collecting and realising all company assets, settling all outstanding creditor claims (including any contingent liabilities), and undertaking all necessary administrative and legal paperwork, particularly with HMRC"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 3527,
+              "end_index": 3669,
+              "part_index": null,
+              "text": "A critical step is obtaining formal clearance from HMRC regarding PAYE, VAT, and Corporation Tax to ensure all financial matters are concluded"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              1,
+              12,
+              13,
+              4,
+              6
+            ],
+            "segment": {
+              "start_index": 3676,
+              "end_index": 3854,
+              "part_index": null,
+              "text": "**Distribution to Shareholders**\n    Once all debts and the costs of liquidation have been paid in full, any remaining surplus funds are distributed to the company's shareholders"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8
+            ],
+            "segment": {
+              "start_index": 3856,
+              "end_index": 3926,
+              "part_index": null,
+              "text": "In straightforward cases, shareholders may receive early distributions"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              11
+            ],
+            "segment": {
+              "start_index": 3933,
+              "end_index": 4164,
+              "part_index": null,
+              "text": "**Final Meeting and Company Dissolution**\n    After the company's affairs are fully wound up, the liquidator prepares a final account of the liquidation, detailing how it was conducted and how the company's property was disposed of"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11
+            ],
+            "segment": {
+              "start_index": 4166,
+              "end_index": 4301,
+              "part_index": null,
+              "text": "A final general meeting of the company is convened for the liquidator to present this account to the members and provide an explanation"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 4303,
+              "end_index": 4377,
+              "part_index": null,
+              "text": "Following this, the liquidator files the final report with Companies House"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              1,
+              16,
+              12,
+              13,
+              6
+            ],
+            "segment": {
+              "start_index": 4379,
+              "end_index": 4522,
+              "part_index": null,
+              "text": "The company is then officially dissolved and removed from the Companies House Register, typically three months after this final report is filed"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              16,
+              13,
+              3,
+              14,
+              5,
+              9,
+              7
+            ],
+            "segment": {
+              "start_index": 4553,
+              "end_index": 4664,
+              "part_index": null,
+              "text": "The full timeline for a Members' Voluntary Liquidation in the UK typically ranges from **six months to a year**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              3,
+              14
+            ],
+            "segment": {
+              "start_index": 4666,
+              "end_index": 4830,
+              "part_index": null,
+              "text": "However, this duration can vary significantly based on the complexity of the business, the nature of its assets, and the efficiency of the asset realisation process"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14
+            ],
+            "segment": {
+              "start_index": 4833,
+              "end_index": 5056,
+              "part_index": null,
+              "text": "*   For companies with very simple assets and ownership structures, where all liabilities are already settled and all necessary paperwork is readily available, the process might be completed in as little as **three months**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              7
+            ],
+            "segment": {
+              "start_index": 5058,
+              "end_index": 5164,
+              "part_index": null,
+              "text": "*   More complex situations are generally expected to take **6-12 months**, and in some cases, even longer"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5167,
+              "end_index": 5278,
+              "part_index": null,
+              "text": "Specific elements within the timeline include:\n*   Preliminary preparations and financial assessment: 1-2 weeks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5280,
+              "end_index": 5318,
+              "part_index": null,
+              "text": "*   Declaration of Solvency: 1-2 weeks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5320,
+              "end_index": 5404,
+              "part_index": null,
+              "text": "*   Board meeting and shareholders' resolution: 1-2 weeks (including notice periods)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              14,
+              4
+            ],
+            "segment": {
+              "start_index": 5406,
+              "end_index": 5483,
+              "part_index": null,
+              "text": "*   Advertisement in The Gazette: within 14 days of the winding-up resolution"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              14
+            ],
+            "segment": {
+              "start_index": 5485,
+              "end_index": 5585,
+              "part_index": null,
+              "text": "*   Filing Declaration of Solvency with Companies House: within 15 days of the winding-up resolution"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5587,
+              "end_index": 5657,
+              "part_index": null,
+              "text": "*   Asset realisation and debt repayment by the liquidator: 2-4 months"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5659,
+              "end_index": 5703,
+              "part_index": null,
+              "text": "*   Distribution to shareholders: 4-6 months"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              7
+            ],
+            "segment": {
+              "start_index": 5705,
+              "end_index": 5740,
+              "part_index": null,
+              "text": "*   Clearance from HMRC: 6-9 months"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 5742,
+              "end_index": 5899,
+              "part_index": null,
+              "text": "*   Final report and company dissolution: The company is officially dissolved approximately three months after the final report is filed with Companies House"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMj4CTUN6DDBrsjldgUvYlN0WYW30t75Iql96y62olvaovBSL8XPkoqLJIvDF-kGIQMpxfqtZEQ2suy0hGOrLHWHoJg5xDbLGHRH7ovVW-hNOrc9ZG8dlVexUGKbLUwx2mO6r7Cyh0irMJNwSsZBZLG1Sk95_hGOs-fqL8NYXSmrYSwK__N3pvl6epI7pjR90v_geWXZG6XjTsEtFgY5pY69e9uMk3bAJUmZ9kw0dg64c=\">members voluntary liquidation official sources</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCuBbJCzaTtCzqpZXgFNFtBLqtYlR9R17LSBCWoJd-oHLnnUbnyZ417moeptluwdTcEpjEM795Zd22jQ1err-9qGz8uGyanpELhdkmNgIZDeUtCeM8CKO6f1uvw31lVZKzQkxD_0AtbGAFkKaudSuLFT1OkFZUGDzMuf6QJMWNeJropruM-koSkmYBO68mEoOnqvcmEY1dqUpbKao9wkgHWDmmo3c3K75hapCDytx8r0njoWI=\">insolvency act 1986 members voluntary liquidation</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJCDjYDgPyIrNgCsTKAuoeaS_fjB5NtIJ6tuLGSLCfqaBHZoHYAIguIDMFA9gzEPFQUEid9jIaRUAT4olH0cAuOECdIeWYIz8uwhnEQ5Vt4hmOF1HXrawK192Sxi7S4XCmlScaxVvKAFI0a1IUnQwH_4n2DHyKNoFbGpWH_ATRbi3HY8RFODVRpLkqZ-qySfpeZJYNLST3FJnPFdomfTofhLgYecb-xEWA\">members voluntary liquidation UK steps</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8SSQ633ODHE4qcEWHHvAdDiaX8kpvtu1o9uj9chM-EnHfTDKS9fW12k5e2TU0puCFKRE_sucUz6IcsFgbqj9vyRJpf05zjAeoFQxndYZPSei-oszQvR5iubD9mToiuvdOYYX0EXKJTbhPAEoqv_P1Jwv45-_VAuwKJAMdkZx_yDRNLPOt0t9C1qyahArdYhj1d4SVxlEYoE2pbozwjOwFxIzResywSe0H5Hzq\">members voluntary liquidation UK timeline</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "members voluntary liquidation UK steps",
+          "members voluntary liquidation UK timeline",
+          "insolvency act 1986 members voluntary liquidation",
+          "members voluntary liquidation official sources"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "0rEpaqOqDruyvdIPz_6qkAs",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1261,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 92,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 92
+      }
+    ],
+    "thoughts_token_count": 2188,
+    "tool_use_prompt_token_count": 342,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 342
+      }
+    ],
+    "total_token_count": 3883,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}
