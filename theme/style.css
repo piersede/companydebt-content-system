@@ -11580,12 +11580,12 @@ html[data-toc-sidebar="on"] body.cd-ttt-design #primary {
   overflow-y: visible !important;
 }
 
-/* Hide the body-content TOC on initial paint so users don't see it flash
- * before footer.php's cd-toc-sidebar-move script relocates it to the sidebar.
- * Once moved, the .toc no longer lives under .col-8/.main-content, so this
- * selector stops matching and visibility reverts naturally inside the
- * .widget--cd-toc wrapper. Desktop + take-the-test + toc-sidebar flag only —
- * mobile and other templates keep the body TOC visible as before. */
+/* Desktop: hide the in-body TOC. The TOC is rendered server-side in TWO
+ * places (see functions.php cd_render_sidebar_toc + the .col-4 templates):
+ * an in-body copy (mobile) and a .widget--cd-toc sidebar copy (desktop).
+ * Here we hide the in-body copy on desktop so only the sidebar copy shows.
+ * Scoped to take-the-test design + the toc-sidebar flag; mobile and other
+ * templates keep the in-body TOC visible. */
 @media (min-width: 992px) {
   html[data-toc-sidebar="on"] body.cd-ttt-design .col-8 > .toc,
   html[data-toc-sidebar="on"] body.cd-ttt-design .main-content > .toc {
@@ -11666,14 +11666,12 @@ html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li.is-acti
   border-radius: 0 !important;
   box-shadow: inset 3px 0 0 #002856 !important;
 }
-/* Mobile / tablet (<992px): JS doesn't move the TOC, so this rule is just
-   defensive — if the move happened on a larger viewport and the user resized,
-   the sidebar copy stops sticking. */
+/* Mobile / tablet (<992px): the sidebar copy is hidden here. Stacked columns
+   would otherwise drop it to the bottom of the page as a duplicate; the in-body
+   copy (shown on mobile) sits near the top of the article where it belongs. */
 @media (max-width: 991px) {
   html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc {
-    position: static !important;
-    max-height: none !important;
-    overflow-y: visible !important;
+    display: none !important;
   }
 }
 

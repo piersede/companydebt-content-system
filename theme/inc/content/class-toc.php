@@ -98,7 +98,7 @@ class Toc {
 		for ( $i = 0; $i < $count; $i ++ ) {
 			$pattern     = '/<h' . $level[$i] . '([^>]*)>/';
 			$replacement = '<h' . $level[$i] . '$1 id="toc_' . $i . '">';
-			
+
 			//Add Toc Id to Header
 			$new_title = preg_replace( $pattern,
 				$replacement,
@@ -116,42 +116,47 @@ class Toc {
 
 
 	/**
-	 * Generates table of contents.
-	 * 
-	 * @param bool $is_widget_area If this will be rendered in widget area.
+	 * Generates the table of contents markup.
+	 *
+	 * All captured headings are H2 (the constructor only matches H2), so the
+	 * list is intentionally flat. Emits a semantic <nav> landmark with a valid
+	 * <ol> — earlier versions emitted a stray closing </li> before the first
+	 * <li> and used a non-semantic <div>, which produced invalid markup.
+	 *
+	 * @param bool $is_widget_area True when rendered in the sidebar widget area.
+	 *                             Controls the eyebrow label and a modifier
+	 *                             class, and suppresses the trailing first-H2
+	 *                             that the in-body variant re-emits.
 	 *
 	 * @return string
 	 */
 	public function getToc( $is_widget_area = false ) {
-		// $active  = ! wp_is_mobile() ? 'active' : '';
-		$active = '';
-		$dataToc = $this->getDataToc();
-		$toc     = '';
-		$toc     .= '<div class="toc">';
-		$toc     .= '<div class="toc__pill">Contents</div>';
-		foreach ( $dataToc as $item ) {
-			if ( $item['item_close'] ) {
-				$toc .= '</li>';
-			}
-			if ( $item['list_open'] ) {
-				$toc .= '<ol>';
-			}
-			if ( $item['item_open'] ) {
-				$toc .= '<li>';
-			}
-			if ( $item['text'] ) {
-				$toc .= '<a href="' . $item['href'] . '"' . ' class="toc__li"' . '>' . $item['text'] . '</a>';
-			}
-			if ( $item['list_close'] ) {
-				$toc .= '</ol>';
-			}
+		$count = (int) $this->count;
+		if ( $count < 1 ) {
+			// Nothing to list. In-body callers still expect the first H2 back.
+			return $is_widget_area ? '' : ( isset( $this->title[0] ) ? $this->title[0] : '' );
 		}
-		$toc .= '</div>';
+
+		$variant = $is_widget_area ? 'toc--sidebar' : 'toc--inline';
+		$pill    = $is_widget_area ? 'In this article' : 'Contents';
+
+		$toc  = '<nav class="toc ' . $variant . '" aria-label="Table of contents">';
+		$toc .= '<div class="toc__pill">' . $pill . '</div>';
+		$toc .= '<ol>';
+		for ( $i = 0; $i < $count; $i ++ ) {
+			$text = isset( $this->text[ $i ] ) ? trim( $this->text[ $i ] ) : '';
+			if ( '' === $text ) {
+				continue;
+			}
+			$toc .= '<li><a href="' . $this->getHref( $i ) . '" class="toc__li">' . $text . '</a></li>';
+		}
+		$toc .= '</ol>';
+		$toc .= '</nav>';
 
 		if ( ! $is_widget_area ) {
 			$toc .= $this->title[0];
 		}
-		
+
 		return $toc;
 	}
 
@@ -164,7 +169,7 @@ class Toc {
 	public function getPostTocInContent() {
 		$toc                        = $this->getToc();
 		$first_h2                   = $this->title[0];
-		
+
 		$content_with_toc           = str_replace( $first_h2,
 			$toc,
 			$this->content

@@ -81,6 +81,12 @@ $args['selected_sidebar'] = get_field( 'select_sidebar' );
                     <aside class="widget-area">
 	                    <?php dynamic_sidebar( 'sidebar-take-the-test' ); ?>
                     </aside>
+                    <?php
+                    // Sidebar TOC (desktop). Rendered server-side as a sibling of
+                    // .widget-area so it gets col-4 as its sticky context. Hidden
+                    // on mobile by style.css; the in-body copy covers <992px.
+                    if ( isset( $content ) ) { echo cd_render_sidebar_toc( $content ); }
+                    ?>
                 </div>
             </div>
         </div>

@@ -697,89 +697,56 @@ document.documentElement.setAttribute('data-insolvency-v2', 'on');
   } catch (e) {}
 })();
 </script>
-<script id="cd-toc-sidebar-move">
-/* Move the auto-TOC from the article body into the sidebar's last position
- * on take-the-test template pages, on desktop only (>=992px).
- * Stays in body on mobile/tablet (sidebar collapses below content there).
- * Wrapped in <div class="widget widget--cd-toc"> so existing widget styling +
- * spacing applies naturally. */
+<script id="cd-toc-scrollspy">
+/* Scroll-spy for the server-rendered sidebar TOC (.widget--cd-toc .toc).
+ * The TOC is placed in the sidebar by PHP now (no DOM move), so this only
+ * has to highlight the section currently being read. Throttled with rAF;
+ * passive listeners. No-op when no sidebar TOC is present. */
 (function(){
   try {
-    if (document.documentElement.dataset.tocSidebar !== 'on') return;
-    /* Gate on the shared design-system class. Originally this checked for
-     * `page-template-take-the-test-template` only — that class is now
-     * supplemented by `cd-ttt-design` (emitted by functions.php for both
-     * take-the-test page-template pages AND single posts on the default
-     * post template) so the TOC moves into the sidebar on /articles/ too. */
-    if (!document.body.classList.contains('cd-ttt-design')) return;
-    if (!window.matchMedia('(min-width: 992px)').matches) return;
-    function move(){
-      var toc = document.querySelector('.col-8 > .toc, .main-content > .toc');
-      var widgetArea = document.querySelector('.col-4 .widget-area, aside.widget-area');
-      if (!toc || !widgetArea) return;
-      if (toc.dataset.cdTocMoved === '1') return;
-      var col4 = widgetArea.parentElement;
-      var wrap = document.createElement('div');
-      wrap.className = 'widget widget--cd-toc';
-      wrap.appendChild(toc);
-      /* Append as sibling of widget-area, NOT inside it — gives the TOC col-4
-       * as its sticky context (full article-body height) instead of just the
-       * widget-area's small natural height. */
-      col4.appendChild(wrap);
-      /* Replace "Contents" with "IN THIS ARTICLE" */
-      var pill = toc.querySelector('.toc__pill');
-      if (pill) pill.textContent = 'IN THIS ARTICLE';
-      toc.dataset.cdTocMoved = '1';
-      /* Scroll-spy: marks the most-recently-scrolled-past heading as .is-active.
-       * Throttled with requestAnimationFrame for smooth performance. */
-      try {
-        var links = Array.from(toc.querySelectorAll('a[href^="#"]'));
-        var pairs = links.map(function(a){
-          var id = (a.getAttribute('href') || '').slice(1);
-          var target = id && document.getElementById(id);
-          return target ? { link: a, target: target } : null;
-        }).filter(Boolean);
-        if (pairs.length) {
-          var current = null;
-          function setActive(link){
-            if (link === current) return;
-            if (current) current.classList.remove('is-active');
-            if (link) link.classList.add('is-active');
-            current = link;
-          }
-          var THRESHOLD = 120; /* px from top of viewport — the "reading line" */
-          function updateActive(){
-            var found = null;
-            for (var i = 0; i < pairs.length; i++) {
-              var top = pairs[i].target.getBoundingClientRect().top;
-              if (top - THRESHOLD <= 0) found = pairs[i].link; else break;
-            }
-            /* Default to first item when nothing has been scrolled past yet
-             * (page top → above the first heading). Keeps a TOC item always
-             * active so the highlight strip never disappears. */
-            if (!found && pairs.length > 0) found = pairs[0].link;
-            setActive(found);
-          }
-          var ticking = false;
-          function onScroll(){
-            if (ticking) return;
-            ticking = true;
-            requestAnimationFrame(function(){ updateActive(); ticking = false; });
-          }
-          window.addEventListener('scroll', onScroll, { passive: true });
-          window.addEventListener('resize', onScroll);
-          updateActive();
+    function init(){
+      var toc = document.querySelector('.widget--cd-toc .toc') || document.querySelector('.toc');
+      if (!toc) return;
+      var links = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
+      var pairs = links.map(function(a){
+        var id = (a.getAttribute('href') || '').slice(1);
+        var target = id && document.getElementById(id);
+        return target ? { link: a, target: target } : null;
+      }).filter(Boolean);
+      if (!pairs.length) return;
+      var current = null;
+      function setActive(link){
+        if (link === current) return;
+        if (current) current.classList.remove('is-active');
+        if (link) link.classList.add('is-active');
+        current = link;
+      }
+      var THRESHOLD = 120; /* px from top of viewport -- the reading line */
+      function updateActive(){
+        var found = null;
+        for (var i = 0; i < pairs.length; i++) {
+          var top = pairs[i].target.getBoundingClientRect().top;
+          if (top - THRESHOLD <= 0) found = pairs[i].link; else break;
         }
-      } catch(e) { /* no-op */ }
+        if (!found && pairs.length > 0) found = pairs[0].link;
+        setActive(found);
+      }
+      var ticking = false;
+      function onScroll(){
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){ updateActive(); ticking = false; });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      updateActive();
     }
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', move);
+      document.addEventListener('DOMContentLoaded', init);
     } else {
-      move();
+      init();
     }
-  } catch (e) {
-    /* swallow — leaving TOC in body is a safe fallback */
-  }
+  } catch (e) { /* no-op */ }
 })();
 </script>
 <script id="cd-callout-summary-cards">

@@ -545,6 +545,70 @@ function toc_and_footnotes_in_content( $content ) {
 	return $content_footnotes->getPostFootnotesMarkup();
 }
 
+/**
+ * Server-side sidebar TOC for the take-the-test design system.
+ *
+ * Renders the same auto-TOC that toc_and_footnotes_in_content() injects into
+ * the article body, but wrapped in the .widget--cd-toc container the sidebar
+ * CSS targets (sticky + scroll-spy styling). Placing it server-side removes the
+ * old footer.php JS DOM-move: the sidebar TOC is now present at first paint and
+ * survives full-page caching. The body copy stays in place for mobile (<992px)
+ * and is hidden on desktop by style.css; this sidebar copy is hidden on mobile.
+ *
+ * Eligibility mirrors toc_and_footnotes_in_content() so the two copies never
+ * disagree about whether a TOC exists.
+ *
+ * @param string $content Rendered post content (post-the_content()).
+ * @return string Sidebar TOC HTML, or '' when not eligible / no headings.
+ */
+function cd_render_sidebar_toc( $content ) {
+	if ( is_front_page() || is_home() ) {
+		return '';
+	}
+
+	$is_eligible_post_default = is_singular( 'post' )
+		&& '' === get_page_template_slug()
+		&& ! in_category( 'sectors' )
+		&& ! in_category( 'services-to' );
+
+	$eligible = ( is_singular( 'post' ) && get_field( 'toc_enabled' ) )
+		|| ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) )
+		|| $is_eligible_post_default;
+
+	if ( ! $eligible ) {
+		return '';
+	}
+	if ( ! ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) ) {
+		return '';
+	}
+
+	$toc = new CD\Content\Toc( $content );
+	if ( (int) $toc->count < 1 ) {
+		return '';
+	}
+
+	$nav = $toc->getToc( true );
+	if ( '' === trim( $nav ) ) {
+		return '';
+	}
+
+	return '<div class="widget widget--cd-toc">' . $nav . '</div>';
+}
+
+/**
+ * Set the sticky-sidebar TOC flag on <html> server-side so the gating CSS
+ * (html[data-toc-sidebar="on"] ...) is active at first paint, eliminating the
+ * body-TOC flash that occurred when an inline footer script set it late. The
+ * CSS is further scoped to body.cd-ttt-design, so this attribute is inert on
+ * non-TOC pages. The footer flag script is kept as a JS fallback.
+ */
+add_filter( 'language_attributes', function( $output ) {
+	if ( false === strpos( $output, 'data-toc-sidebar' ) ) {
+		$output .= ' data-toc-sidebar="on"';
+	}
+	return $output;
+} );
+
 // add_action( 'the_content', function( $content ) {
 // 	if ( ! is_front_page() && ! is_home() && ( ( is_singular( 'post' ) && get_field( 'toc_enabled' ) ) || ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) ) ) ) {
 // 		if ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) {
