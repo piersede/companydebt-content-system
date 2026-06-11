@@ -39,6 +39,7 @@ PAGE_REGISTRY = {
     # Page-class routing for these slugs is in scripts/page_runtime_metadata.py
     # SLUG_PAGE_CLASS_OVERRIDES.
     'liquidation': 'cc_builder.data.pages.liquidation',
+    'members-voluntary-liquidation': 'cc_builder.data.pages.members_voluntary_liquidation',
     'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
 }
 

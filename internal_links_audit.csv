@@ -222,9 +222,6 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 79304,cva-vs-strike-off-vs-liquidation,page,https://comdebstage.wpengine.com/liquidation/cva-vs-strike-off-vs-liquidation/,/advice/directors-personal-guarantees/,200,,Personal guarantees
 79304,cva-vs-strike-off-vs-liquidation,page,https://comdebstage.wpengine.com/liquidation/cva-vs-strike-off-vs-liquidation/,/liquidation/how-much-does-liquidation-cost/,200,,liquidation costs
 79304,cva-vs-strike-off-vs-liquidation,page,https://comdebstage.wpengine.com/liquidation/cva-vs-strike-off-vs-liquidation/,/liquidation/am-i-solvent/,200,,am I solvent?
-79295,company-voluntary-arrangement-vs-administration-which-to-choose,page,https://comdebstage.wpengine.com/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/,/winding-up-petitions/,200,,winding-up petition
-79295,company-voluntary-arrangement-vs-administration-which-to-choose,page,https://comdebstage.wpengine.com/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/,/liquidation/how-much-does-liquidation-cost/,200,,liquidation costs
-79295,company-voluntary-arrangement-vs-administration-which-to-choose,page,https://comdebstage.wpengine.com/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/,https://www.companydebt.com/company-rescue-solutions/pre-packs/,200,,pre-pack administration
 79285,liquidating-a-group-company-or-holding-company-in-the-uk,page,https://comdebstage.wpengine.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/,/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/,200,,liquidating a company with no assets
 79285,liquidating-a-group-company-or-holding-company-in-the-uk,page,https://comdebstage.wpengine.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/,/liquidation/creditors-voluntary-liquidation/,200,,Creditors&#8217; Voluntary Liquidation
 79285,liquidating-a-group-company-or-holding-company-in-the-uk,page,https://comdebstage.wpengine.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/,/liquidation/members-voluntary-liquidation/,200,,Members&#8217; Voluntary Liquidation
@@ -256,14 +253,6 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 78835,whats-the-risk-of-being-disqualified-as-a-director,page,https://comdebstage.wpengine.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/,/liquidation/what-happens-to-directors-in-liquidation/,200,,how a director is affected by liquidation
 78835,whats-the-risk-of-being-disqualified-as-a-director,page,https://comdebstage.wpengine.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/,/liquidation/director-conduct-review/,200,,when a liquidator reviews what the directors did
 78835,whats-the-risk-of-being-disqualified-as-a-director,page,https://comdebstage.wpengine.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/,/liquidation/can-directors-go-to-prison-for-company-debt/,200,,criminal liability for directors
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,a Creditors&#8217; Voluntary Liquidation
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/voluntary-vs-compulsory-liquidation/,200,,voluntary vs compulsory liquidation
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/members-voluntary-liquidation/,200,,MVL
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/compulsory-liquidation/,200,,compulsory liquidation
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/winding-up-petitions/,200,,winding-up petition
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/when-should-a-director-stop-trading/,200,,when to stop trading
-78851,voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,/liquidation/,200,,liquidation
 78825,paying-staff-but-not-hmrc-before-liquidation,page,https://comdebstage.wpengine.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/,/liquidation/which-creditors-get-paid-first/,200,,the order creditors are paid
 78825,paying-staff-but-not-hmrc-before-liquidation,page,https://comdebstage.wpengine.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/,/hmrc/cant-pay-vat/,200,,VAT arrears
 78825,paying-staff-but-not-hmrc-before-liquidation,page,https://comdebstage.wpengine.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/,/liquidation/what-happens-to-employees/,200,,employee rights in liquidation
@@ -786,11 +775,14 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 65614,closing-a-limited-company,page,https://comdebstage.wpengine.com/closing-a-limited-company/,/liquidation/creditors-voluntary-liquidation/,200,,Creditors&#8217; Voluntary Liquidation
 65614,closing-a-limited-company,page,https://comdebstage.wpengine.com/closing-a-limited-company/,/liquidation/how-much-does-liquidation-cost/,200,,liquidation costs
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/creditors-voluntary-liquidation/,200,,creditors&#8217; voluntary liquidation
+65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/compulsory-liquidation/,200,,immediate liquidation
+65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/what-happens-to-directors-in-liquidation/,200,,personal exposure as a director
+65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/what-happens-to-employees/,200,,liquidation
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-rescue-solutions/company-voluntary-arrangement/,200,,CVA guide
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/creditors-voluntary-liquidation/,200,,CVL guide
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/compulsory-liquidation/,200,,Compulsory guide
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/debt-creditor-pressure-hub/,200,,Creditor pressure guide
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/winding-up-petitions/,200,,winding-up petition
+65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/insolvency/dealing-with-creditor-pressure/,200,,Creditor pressure guide
+65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/insolvency/insolvency-test/,200,,30-second insolvency test
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/,200,,Company Liquidation
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-rescue-solutions/company-voluntary-arrangement/,200,,Company Voluntary Arrangement
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/compulsory-liquidation/,200,,Compulsory Liquidation
@@ -798,11 +790,6 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/what-happens-to-directors-in-liquidation/,200,,What Happens to Directors During Liquidation
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/liquidation/what-happens-to-employees/,200,,What Happens to Employees in Liquidation
 65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/insolvency/insolvency-test/,200,,30-Second Insolvency Test
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,https://www.companydebt.com/company-administration/vs-cva/,200,,CVA vs Administration: which to choose
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-administration/light-touch-administration/,200,,Light touch administration
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-administration/notice-of-intention-to-appoint-administrators/,200,,Notice of intention to appoint administrators
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-administration/vs-administrative-receivership/,200,,Administration vs administrative receivership
-65483,company-administration,page,https://comdebstage.wpengine.com/company-administration/,/company-administration/vs-cva/,200,,Administration vs CVA
 65238,what-happens-after-company-liquidation,page,https://comdebstage.wpengine.com/liquidation/what-happens-after-company-liquidation/,/liquidation/,200,,formal company liquidation
 65238,what-happens-after-company-liquidation,page,https://comdebstage.wpengine.com/liquidation/what-happens-after-company-liquidation/,/liquidation/liquidation-hub/,200,,liquidation hub
 65238,what-happens-after-company-liquidation,page,https://comdebstage.wpengine.com/liquidation/what-happens-after-company-liquidation/,/liquidation/what-happens-to-directors-in-liquidation/,200,,a director&#8217;s position in liquidation
@@ -897,23 +884,21 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 47772,insolvency-act-1986,page,https://comdebstage.wpengine.com/insolvency/insolvency-act-1986/,/winding-up-petitions/,200,,winding-up petition
 47772,insolvency-act-1986,page,https://comdebstage.wpengine.com/insolvency/insolvency-act-1986/,/insolvency/what-is-an-individual-voluntary-arrangement/,200,,IVA guide
 47550,what-is-the-insolvency-service,page,https://comdebstage.wpengine.com/insolvency/what-is-the-insolvency-service/,/advice/losing-house-if-company-goes-bust/,200,,personal assets at risk
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/winding-up-petitions/,200,,winding-up petition
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/bounce-back-loan-support-hub/what-happens-if-i-default/,200,,Bounce Back Loan default
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/director-redundancy/,200,,director redundancy
+7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/insolvency/insolvency-test/,200,,30-second insolvency test
+7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/company-strike-off-and-dissolution/,200,,strike-off
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/compulsory-liquidation/,200,,Compulsory guide
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/company-rescue-solutions/company-voluntary-arrangement/,200,,CVA guide
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/company-administration/,200,,Administration guide
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/company-strike-off-and-dissolution/,200,,Strike-off guide
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/members-voluntary-liquidation/,200,,MVL guide
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/compulsory-liquidation/,200,,compulsory liquidation
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/how-much-does-liquidation-cost/,200,,liquidation costs
+7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/insolvency/insolvency-test/,200,,30-second insolvency test
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/,200,,Company Liquidation
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/compulsory-liquidation/,200,,Compulsory Liquidation
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/members-voluntary-liquidation/,200,,Members&#8217; Voluntary Liquidation
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/company-rescue-solutions/company-voluntary-arrangement/,200,,Company Voluntary Arrangement
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/company-administration/,200,,Company Administration
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/winding-up-petitions/,200,,Winding-Up Petitions
-7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/what-happens-to-employees/,200,,Employees in Liquidation
+7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/what-happens-to-employees/,200,,What Happens to Employees in Liquidation
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/liquidation/what-happens-to-directors-in-liquidation/,200,,What Happens to Directors During Liquidation
 7674,creditors-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,/insolvency/insolvency-test/,200,,30-Second Insolvency Test
 46674,what-is-a-creditor,page,https://comdebstage.wpengine.com/insolvency/what-is-a-creditor/,/liquidation/creditors-voluntary-liquidation/,200,,creditors&#8217; voluntary liquidation
@@ -1154,12 +1139,12 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 15203,check-if-a-company-is-insolvent,page,https://comdebstage.wpengine.com/insolvency/check-if-a-company-is-insolvent/,/hmrc/cant-pay-vat/,200,,unpaid VAT
 15203,check-if-a-company-is-insolvent,page,https://comdebstage.wpengine.com/insolvency/check-if-a-company-is-insolvent/,/hmrc/cant-pay-paye/,200,,PAYE arrears
 8408,problems-paying-corporation-tax-hmrc,page,https://comdebstage.wpengine.com/hmrc/problems-paying-corporation-tax-hmrc/,/winding-up-petitions/,200,,winding-up petition
-7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,voluntary liquidation
-7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,/liquidation/,200,,liquidation
-7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
-7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,/liquidation/how-much-does-liquidation-cost/,200,,how much liquidation costs
-7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,/liquidation/redundancy-payments-for-directors-in-an-mvl/,200,,redundancy for directors in a solvent liquidation
+7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,301,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,voluntary liquidation
+7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/liquidation/liquidation-vs-dissolution-strike-off/,200,,dissolution may be the simpler route
+7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,200,,CVL
+7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/liquidation/,200,,get a free MVL assessment
 7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/quick-quote/,200,,Get a Quote
+7676,members-voluntary-liquidation,page,https://comdebstage.wpengine.com/liquidation/members-voluntary-liquidation/,https://comdebstage.wpengine.com/liquidation/company-strike-off-and-dissolution/,200,,strike-off
 15010,what-happens-to-employees,page,https://comdebstage.wpengine.com/liquidation/what-happens-to-employees/,/liquidation/creditors-voluntary-liquidation/,200,,Creditors&#8217; Voluntary Liquidation
 15010,what-happens-to-employees,page,https://comdebstage.wpengine.com/liquidation/what-happens-to-employees/,/director-redundancy/,200,,redundancy payments for directors
 15010,what-happens-to-employees,page,https://comdebstage.wpengine.com/liquidation/what-happens-to-employees/,/liquidation/which-creditors-get-paid-first/,200,,the order of creditor priority
@@ -1353,7 +1338,6 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/transport-haulage-insolvency/,200,,"Transport &amp; Haulage Insolvency in the UK: Causes, Risks &amp; Solutions for Operators"
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/uk-insolvency-statistics/,200,,UK Company Insolvency Statistics: April 2026 Update
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/company-administration/,200,,What is Company Administration?
-9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/,301,https://comdebstage.wpengine.com/company-administration/vs-cva/,Company Voluntary Arrangement vs Administration: Which to Choose?
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/company-administration/vs-cva/,200,,CVA vs Administration
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/company-administration/vs-administrative-receivership/,200,,How to Compare Administration and Administrative Receivership
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/company-administration/light-touch-administration/,200,,Light-Touch Administration: What it Means and How it Works
@@ -1426,7 +1410,6 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/directors-conduct-report-2/,200,,The Director’s Conduct Report in Liquidation: What It Is &amp; Why It Matters
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/uk-insolvency-flowchart/,200,,UK Insolvency Flowchart for Company Directors
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/insolvency-vs-bankruptcy/,200,,UK Insolvency vs Bankruptcy: What’s the Difference?
-9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/voluntary-liquidation/,301,https://comdebstage.wpengine.com/liquidation/creditors-voluntary-liquidation/,Voluntary Liquidation: The One Decision That Changes The Outcome For Everyone
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/voluntary-vs-compulsory-liquidation/,200,,Voluntary vs Compulsory Liquidation: What’s the Difference and Why It Matters
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/what-happens-after-company-liquidation/,200,,"What Happens After Company Liquidation in the UK? Assets, Debts, and Director Duties Explained"
 9715,site-map,page,https://comdebstage.wpengine.com/site-map/,https://comdebstage.wpengine.com/liquidation/what-happens-if-a-creditor-takes-me-to-court/,200,,What Happens If a Creditor Takes Me to Court?
@@ -1543,22 +1526,24 @@ source_id,source_slug,source_type,source_url,target_url,target_status,redirect_t
 8350,hmrc-threatening-letters,page,https://comdebstage.wpengine.com/hmrc/hmrc-threatening-letters/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
 8324,cant-pay-paye,page,https://comdebstage.wpengine.com/hmrc/cant-pay-paye/,/hmrc/problems-paying-corporation-tax-hmrc/,200,,Corporation Tax
 8324,cant-pay-paye,page,https://comdebstage.wpengine.com/hmrc/cant-pay-paye/,/winding-up-petitions/,200,,winding-up petition
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/,200,,Director guarantees in a CVA
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/,200,,Making employees redundant in a CVA
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/,200,,CVA pros and cons
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/,200,,Using a CVA to close a company
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/,200,,CVA vs liquidation
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/,200,,What happens if a CVA fails mid-term
-7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/,200,,When a CVA fails
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/winding-up-petitions/,200,,winding-up petition
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,a creditors&#8217; voluntary liquidation
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/voluntary-vs-compulsory-liquidation/,200,,the difference between voluntary and compulsory liquidation
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/creditors-voluntary-liquidation/,200,,liquidation
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/compulsory-liquidation/,200,,liquidation
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/creditors-voluntary-liquidation/,200,,liquidation
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-administration/,200,,administration
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/what-happens-to-directors-in-liquidation/,200,,Insolvency Service
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/hmrc/time-to-pay-hmrc/,200,,TTP arrangements
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/company-administration/,200,,Administration
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/hmrc/time-to-pay-hmrc/,200,,TTP
+7685,company-voluntary-arrangement,page,https://comdebstage.wpengine.com/company-rescue-solutions/company-voluntary-arrangement/,/liquidation/,200,,"A free, confidential consultation"
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,creditors&#8217; voluntary liquidation (CVL)
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
 7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/winding-up-petitions/,200,,winding-up petition
 7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/insolvency/insolvency-test/,200,,insolvency test
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,Creditors&#8217; Voluntary Liquidation
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/,200,,liquidation of a limited company
-7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/,200,,company liquidation
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,CVL
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/insolvency/,200,,insolvency hub
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/,200,,liquidation options
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/liquidation/creditors-voluntary-liquidation/,200,,creditors&#8217; voluntary liquidation
+7680,compulsory-liquidation,page,https://comdebstage.wpengine.com/liquidation/compulsory-liquidation/,/winding-up-petitions/,200,,winding-up petitions
 7665,company-rescue-solutions,page,https://comdebstage.wpengine.com/company-rescue-solutions/,/company-rescue-solutions/company-voluntary-arrangement/,200,,company voluntary arrangement
 7665,company-rescue-solutions,page,https://comdebstage.wpengine.com/company-rescue-solutions/,/company-rescue-solutions/partnership-voluntary-arrangements/,200,,partnership voluntary arrangements
 7665,company-rescue-solutions,page,https://comdebstage.wpengine.com/company-rescue-solutions/,https://www.companydebt.com/company-rescue-solutions/pre-packs/,200,,Pre-pack administration
