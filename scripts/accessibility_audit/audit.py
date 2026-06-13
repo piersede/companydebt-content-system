@@ -226,17 +226,23 @@ def check_generic_links(soup: BeautifulSoup, report: Report):
 
 def check_missing_alt(soup: BeautifulSoup, report: Report):
     imgs = soup.find_all("img")
-    missing = [i for i in imgs if i.get("alt") is None or i.get("alt").strip() == ""]
+    # Flag only images with the alt attribute ABSENT. A present-but-empty
+    # alt="" is the valid, intentional marker for a decorative image (WCAG H67)
+    # and is NOT a violation — axe-core agrees. Conflating the two would force
+    # meaningless alt onto decorative chrome (logos backdrops, spacer graphics),
+    # which degrades the experience for the very agents/AT we're auditing for.
+    missing = [i for i in imgs if i.get("alt") is None]
     # images inside tables are the classic "pricing locked in an image" trap
     in_table = [i for i in missing if i.find_parent("table")]
     if missing:
         report.add(Finding(
             id="missing-alt",
             severity="serious" if in_table else "moderate",
-            title="Images without alt text",
-            detail=f"{len(missing)} of {len(imgs)} image(s) have no alt text"
-                   + (f"; {len(in_table)} sit inside a <table> (data/pricing locked in an image)." if in_table else "."),
-            remediation="Add descriptive alt text; never put pricing/specs only in an image.",
+            title="Images with no alt attribute",
+            detail=f"{len(missing)} of {len(imgs)} image(s) are missing the alt attribute entirely"
+                   + (f"; {len(in_table)} sit inside a <table> (data/pricing locked in an image)." if in_table else ".")
+                   + " (Decorative images should carry alt=\"\" — that is not flagged.)",
+            remediation='Add descriptive alt for informative images; alt="" for purely decorative ones.',
             count=len(missing),
         ))
 
@@ -391,8 +397,12 @@ def check_llms_txt(url: str, report: Report, basic_auth):
     from urllib.parse import urlsplit
     parts = urlsplit(url)
     auth = tuple(basic_auth.split(":", 1)) if basic_auth and ":" in basic_auth else None
+    # A browser-like UA: many WAFs (WP Engine, Cloudflare) 403 a bare
+    # requests/bot UA on static paths, which would falsely read as "missing".
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; AccessibilityAudit/1.0; +AI-agent-readability)"}
     try:
-        r = requests.get(f"{parts.scheme}://{parts.netloc}/llms.txt", auth=auth, timeout=15)
+        r = requests.get(f"{parts.scheme}://{parts.netloc}/llms.txt", auth=auth,
+                         headers=headers, timeout=15)
         ok = r.status_code == 200 and r.text.lstrip().startswith("#") and "text" in r.headers.get("content-type", "")
         report.notes.append(f"/llms.txt: {'present & valid' if ok else f'missing/invalid (HTTP {r.status_code})'}")
         if not ok:
