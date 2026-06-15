@@ -116,8 +116,10 @@ add_action( 'wp_head', function() {
         return;
     }
 
-    $page_url = home_url( '/uk-insolvency-statistics/' );
-    $modified = get_the_modified_date( 'Y-m-d', get_queried_object_id() );
+    $page_url  = home_url( '/uk-insolvency-statistics/' );
+    $modified  = get_the_modified_date( 'Y-m-d', get_queried_object_id() );
+    $published = get_the_date( 'Y-m-d', get_queried_object_id() );
+    $logo_url  = get_template_directory_uri() . '/assets/images/cd-logo-topnav-v3.png';
 
     $faq_items = array(
         array(
@@ -167,7 +169,7 @@ add_action( 'wp_head', function() {
                 'name'         => 'UK Company Insolvency Statistics: April 2026 Update',
                 'description'  => 'Latest UK company insolvency statistics — April 2026 figures from the Insolvency Service (published 19 May 2026). Monthly headline counts, the 12-month rolling rate, sector breakdown and UK-nations comparison.',
                 'dateModified' => $modified,
-                'datePublished'=> $modified,
+                'datePublished'=> $published,
                 'inLanguage'   => 'en-GB',
                 'publisher'    => array( '@id' => home_url( '/' ) . '#organization' ),
                 'about'        => array(
@@ -182,6 +184,10 @@ add_action( 'wp_head', function() {
                 '@id'   => home_url( '/' ) . '#organization',
                 'name'  => 'Company Debt',
                 'url'   => home_url( '/' ),
+                'logo'  => array(
+                    '@type' => 'ImageObject',
+                    'url'   => $logo_url,
+                ),
             ),
             array(
                 '@type'           => 'BreadcrumbList',
@@ -193,21 +199,17 @@ add_action( 'wp_head', function() {
             ),
             array(
                 '@type'                => 'Dataset',
-                'name'                 => 'UK Company Insolvency Statistics: April 2026',
+                'name'                 => 'UK Company Insolvency Statistics 2026',
                 'description'          => 'Monthly company insolvency statistics for the United Kingdom by procedure, sector and jurisdiction. April 2026 release published 19 May 2026 by the Insolvency Service. Includes headline counts (2,085 England and Wales) and the 12-month rolling rate (51.8 per 10,000).',
-                'creator'              => array(
-                    '@type' => 'GovernmentOrganization',
-                    'name'  => 'Insolvency Service',
-                    'url'   => 'https://www.gov.uk/government/organisations/insolvency-service',
-                ),
+                'url'                  => $page_url,
+                'creator'              => array( '@id' => home_url( '/' ) . '#organization' ),
                 'publisher'            => array( '@id' => home_url( '/' ) . '#organization' ),
                 'spatialCoverage'      => array( '@type' => 'Place', 'name' => 'United Kingdom' ),
                 'temporalCoverage'     => '2000-01/2026-04',
-                'datePublished'        => '2026-05-19',
+                'datePublished'        => $published,
                 'dateModified'         => $modified,
-                'isBasedOn'            => 'https://www.gov.uk/government/statistics/company-insolvencies-april-2026/commentary-company-insolvency-statistics-april-2026',
+                'isBasedOn'            => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
                 'measurementTechnique' => 'Administrative company insolvency records and Companies House register data.',
-                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'keywords'             => 'UK company insolvency, insolvency statistics, CVL statistics, compulsory liquidation, administration, insolvency rate, sector insolvency',
             ),
             array(
