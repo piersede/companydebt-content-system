@@ -166,6 +166,44 @@ def cmd_set_alt(s, url, img, alt, apply):
         print('  (dry run — pass --apply to write)')
 
 
+def cmd_add_class(s, url, contains, cls, apply):
+    """Add a CSS class to any <p> whose inner content contains `contains`.
+    Idempotent: skips paragraphs that already carry the class."""
+    res = resolve_post(s, url)
+    if not res:
+        print(f'NOT_FOUND on staging: {url}')
+        return
+    endpoint, pid, slug, link, raw = res
+    matched = 0
+    modified = 0
+
+    def repl(m):
+        nonlocal matched, modified
+        attrs, inner = m.group(1), m.group(2)
+        if contains not in inner:
+            return m.group(0)
+        matched += 1
+        cm = re.search(r'class=(["\'])(.*?)\1', attrs)
+        if cm:
+            classes = cm.group(2).split()
+            if cls in classes:
+                return m.group(0)  # already present — no-op
+            new_attrs = attrs[:cm.start()] + f'class="{(cm.group(2) + " " + cls).strip()}"' + attrs[cm.end():]
+        else:
+            new_attrs = attrs + f' class="{cls}"'
+        modified += 1
+        return f'<p{new_attrs}>{inner}</p>'
+
+    new_raw = re.sub(r'<p\b([^>]*)>(.*?)</p>', repl, raw, flags=re.DOTALL)
+    print(f'[{slug}] ({endpoint}/{pid}) contains~="{contains[:40]}"  matched={matched}  modified={modified}  class={cls}')
+    if modified and apply:
+        print(f'  PATCH {patch(s, endpoint, pid, new_raw)}')
+    elif modified:
+        print('  (dry run — pass --apply to write)')
+    elif matched:
+        print('  (already has class — no change)')
+
+
 def cmd_show(s, url):
     res = resolve_post(s, url)
     if not res:
@@ -187,6 +225,9 @@ def main():
     p = sub.add_parser('set-alt'); p.add_argument('--url', required=True)
     p.add_argument('--img', required=True); p.add_argument('--alt', required=True)
     p.add_argument('--apply', action='store_true')
+    p = sub.add_parser('add-class'); p.add_argument('--url', required=True)
+    p.add_argument('--contains', required=True); p.add_argument('--class', dest='cls', required=True)
+    p.add_argument('--apply', action='store_true')
     a = ap.parse_args()
 
     s = session()
@@ -196,6 +237,8 @@ def main():
         cmd_swap_link(s, a.url, a.old, a.new or None, a.apply)
     elif a.cmd == 'set-alt':
         cmd_set_alt(s, a.url, a.img, a.alt, a.apply)
+    elif a.cmd == 'add-class':
+        cmd_add_class(s, a.url, a.contains, a.cls, a.apply)
 
 
 if __name__ == '__main__':
