@@ -67,7 +67,6 @@ def hero_block(meta: dict, latest_total: int) -> str:
     return dedent(f"""\
     <section class="cd-hero cd-w-hero">
       <div class="cd-hero__copy">
-        <p class="cd-eyebrow"><span class="cd-eyebrow__pulse" aria-hidden="true"></span>Latest update · {meta['latest_month_label']}</p>
         <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
         <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was 2% higher than March 2026 and 3% higher than April 2025. This page tracks the headline figures, 12-month rolling rate and sector trends as each monthly release is published.</p>
         <dl class="cd-meta-grid">
@@ -225,7 +224,7 @@ def rate_block(charts: dict, latest_rate: float) -> str:
       </div>
       <div class="cd-rate-grid">
         <div class="cd-rate-text">
-          <p>In the 12 months to 30 April 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 193 companies entering insolvency.</p>
+          <p class="cd-section-intro">In the 12 months to 30 April 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 193 companies entering insolvency.</p>
           <p>The rate was slightly lower than the 52.5 per 10,000 recorded for the 12 months to April 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
           <div class="cd-callout-card">
             <div class="cd-callout-card__row">
@@ -367,7 +366,7 @@ def methodology_block() -> str:
           <p class="cd-eyebrow">Method</p>
           <h2>UK company insolvency statistics: methodology</h2>
         </div>
-        <p>Company insolvency data is sourced mainly from Companies House. Compulsory liquidation data for England and Wales comes from the Insolvency Service, and compulsory liquidation data for Northern Ireland comes from the Department for the Economy in Northern Ireland.</p>
+        <p class="cd-section-intro">Company insolvency data is sourced mainly from Companies House. Compulsory liquidation data for England and Wales comes from the Insolvency Service, and compulsory liquidation data for Northern Ireland comes from the Department for the Economy in Northern Ireland.</p>
         <p>The headline England and Wales figures use seasonally adjusted data where the Insolvency Service has identified seasonality. Scotland and Northern Ireland figures are shown on an unadjusted basis.</p>
         <p>The statistics count formal company insolvency procedures. They do not include members' voluntary liquidations, dissolutions or ordinary company closures.</p>
         <h3>Data limitations</h3>
@@ -1086,6 +1085,12 @@ DASHBOARD_CSS = """
   gap: 48px;
   align-items: start;
 }
+/* NOTE: live type scale is governed by the Customizer "Additional CSS"
+   (#wp-custom-css), which sets .cd-data-hub p { 14px !important } and
+   .cd-section-intro { 18px } and overrides the sizes below. Section lead
+   paragraphs MUST carry class="cd-section-intro" to read at 18px like every
+   other section; the rate + methodology leads do. Do not rely on the 17px
+   rule here for the deployed page. */
 .cd-data-hub .cd-rate-text p { font-size: 17px; line-height: 1.65; }
 .cd-data-hub .cd-rate-text__note {
   font-size: 13px;

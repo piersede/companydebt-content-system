@@ -102,9 +102,14 @@ body.page-template-data-hub-template .main-content .cd-data-hub .cd-source-note 
     line-height: 1.55;
     margin: 12px 0 0;
 }
-body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text p {
-    font-size: 14px;
-    line-height: 1.65;
+/* Rate + methodology are the only prose-heavy sections: their whole body reads
+   at the primary prose size (18px), not just the lead. !important + this
+   specificity is required to beat the Customizer's `.cd-data-hub p {14px !important}`.
+   The rate caption (.cd-rate-text__note) is excluded and stays small. */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text p:not(.cd-rate-text__note),
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-method-inner p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
 }
 /* Page-header (breadcrumbs + byline) shares the hero's 1240px container so
    all top elements align to the same left/right edges. */
@@ -146,6 +151,139 @@ body.page-template-data-hub-template .be-related-articles { display: none !impor
    provides its own CTA at the bottom and the form above the data is noise. */
 body.page-template-data-hub-template #after-breadcrumbs-area,
 body.page-template-data-hub-template .section-cd-gravity-form-widget { display: none !important; }
+
+/* ============================================================
+   2026-06-15 DESIGN REFINEMENT (Claude Design handoff) + layout pass.
+   PART A — type scale 12/15/19/24/30/48 + 4px spacing tokens + KPI grid
+            + aligned procedure cards + FAQ (from the exported design).
+   PART B — layout fixes (single content rail, reading-width cap, TOC)
+            from the earlier audit; the design didn't address alignment,
+            so these compose with it.
+   Every selector carries the body.page-template… .main-content prefix so
+   it wins over the Customizer "Additional CSS" (.cd-data-hub p {14px!}).
+   ============================================================ */
+body.page-template-data-hub-template .main-content .cd-data-hub {
+    --cd-read: 760px;
+    --cd-s1: 8px;  --cd-s2: 16px; --cd-s3: 24px;
+    --cd-s4: 40px; --cd-s5: 64px; --cd-s6: 96px;
+}
+
+/* ---- PART A · type scale ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-main-kpi__v { font-size: 48px !important; letter-spacing: -0.03em !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub h2 { font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard p.cd-procard__value,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__v,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__v { font-size: 24px !important; line-height: 1.1 !important; letter-spacing: -0.02em !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub h3 { font-size: 19px !important; line-height: 1.35 !important; font-weight: 650 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-lede,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero .cd-lede,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-intro,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text p:not(.cd-rate-text__note),
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-method-inner p { font-size: 19px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub p,
+body.page-template-data-hub-template .main-content .cd-data-hub td,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-cite-text,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-cite-card dl,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-main-kpi__k,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard p.cd-procard__note,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text__note,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-source-note,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-figcaption,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard__link { font-size: 15px !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub h3.cd-side-note__v { font-size: 15px !important; font-weight: 650 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-eyebrow,
+body.page-template-data-hub-template .main-content .cd-data-hub th,
+body.page-template-data-hub-template .main-content .cd-data-hub caption,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-table__caption,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__k,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__n,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__k,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__u,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-notes__title,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note--single .cd-side-note__k,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard h3.cd-procard__name,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-chart-controls__label,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-official-badge,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-meta-item span { font-size: 12px !important; }
+
+/* ---- PART A · spacing rhythm (4px base) ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section       { margin-top: var(--cd-s6) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-small { margin-top: var(--cd-s5) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-head  { margin-bottom: var(--cd-s4) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-eyebrow       { margin: 0 0 var(--cd-s2) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-intro { margin: var(--cd-s2) 0 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub p                 { margin: 0 0 var(--cd-s2) !important; line-height: 1.7 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-lede          { margin: 0 0 var(--cd-s4) !important; }
+
+/* ---- PART A · KPI / rate callout grid ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card { display: flex; flex-direction: column; gap: var(--cd-s2) !important; padding: var(--cd-s3) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__row { display: grid !important; grid-template-columns: 1fr auto max-content !important; align-items: baseline !important; gap: 0 var(--cd-s2) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__v { justify-self: end; text-align: right; margin: 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-callout-card__u { margin: 0 !important; font-weight: 500 !important; color: var(--cd-muted) !important; }
+
+/* ---- PART A · procedure cards ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard-grid { gap: var(--cd-s3) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard { padding: var(--cd-s3) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard h3.cd-procard__name { margin: 0 0 var(--cd-s2) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard p.cd-procard__value { margin: 0 0 var(--cd-s2) !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard p.cd-procard__note { margin: 0 0 var(--cd-s3) !important; line-height: 1.55 !important; min-height: calc(2 * 1.55 * 15px); }
+/* Real procard notes run longer than the design's 2-line sample, so the
+   min-height alone leaves CTAs drifting. Make cards equal-height flex columns
+   and pin the link to the bottom so all five CTAs share a baseline. */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard { display: flex !important; flex-direction: column !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-procard .cd-procard__link { margin-top: auto !important; }
+
+/* ---- PART A · per-stat internal rhythm (number→label 4px, label→note 2px) ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__v { margin: 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__k { margin: 4px 0 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-mini-kpi__n { margin: 2px 0 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-main-kpi__v { margin: 0 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-main-kpi__k { margin: 4px 0 0 !important; }
+
+/* ---- PART A · FAQ ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-faq__q { font-size: 19px !important; font-weight: 550 !important; line-height: 1.5 !important; padding: 22px 24px !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-faq__a { padding: 0 24px 22px !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-faq__a p { font-size: 15px !important; line-height: 1.7 !important; color: var(--cd-text-soft) !important; }
+@media (max-width: 720px) {
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-faq__q { font-size: 17px !important; padding: 18px 20px !important; }
+}
+
+/* ---- PART B · reading-width cap + single content rail + TOC ---- */
+body.page-template-data-hub-template .main-content .cd-data-hub h1,
+body.page-template-data-hub-template .main-content .cd-data-hub h2,
+body.page-template-data-hub-template .main-content .cd-data-hub h3:not(.cd-procard__name):not(.cd-side-notes__title),
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-lede,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-intro,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-rate-text p,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-method-inner p,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-method-inner li {
+    max-width: var(--cd-read) !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+body.page-template-data-hub-template .main-content .cd-data-hub h1 { line-height: 1.15 !important; }
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-w-wide > .cd-section-head,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-w-wide .cd-rate-grid,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-method-inner {
+    max-width: 1040px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-secnav {
+    padding-left: max(24px, calc((100vw - 1040px) / 2 + 24px)) !important;
+    padding-right: max(24px, calc((100vw - 1040px) / 2 + 24px)) !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    row-gap: 8px !important;
+}
+
+/* Hero matches the design: the "Latest update" eyebrow badge is removed from
+   the page content (build_insolvency_dashboard.py) and the byline is removed
+   from the page-header markup above — no CSS hiding needed. */
 </style>
 
 <main id="primary" class="site-main">
@@ -161,23 +299,7 @@ body.page-template-data-hub-template .section-cd-gravity-form-widget { display: 
                     }
                     ?>
 
-                    <?php
-                    // Compact byline: author name + last reviewed date only.
-                    $_hero_author_id = get_the_author_meta('ID');
-                    if ( $_hero_author_id ) {
-                        $_hero_author_name = get_the_author_meta('display_name', $_hero_author_id);
-                        if ( $_hero_author_name ) {
-                            ?>
-                            <p class="data-hub-byline">
-                                <span class="data-hub-byline__date">Reviewed <?php echo get_the_modified_date('j F Y'); ?></span>
-                                <span class="data-hub-byline__sep" aria-hidden="true">·</span>
-                                <span class="data-hub-byline__by">By</span>
-                                <span class="data-hub-byline__name"><?php echo esc_html($_hero_author_name); ?></span>
-                            </p>
-                            <?php
-                        }
-                    }
-                    ?>
+                    <?php // Byline intentionally omitted — the hero matches the data-hub design (no byline). ?>
                 </div>
 
                 <div class="col-12 main-content data-hub-content">
@@ -196,7 +318,7 @@ body.page-template-data-hub-template .section-cd-gravity-form-widget { display: 
 
 <?php
 // The footer-author and footer-cta blocks are intentionally omitted — the
-// dashboard byline at the top establishes attribution, and the dashboard
-// provides its own final-CTA inline (.cd-final-cta).
+// dashboard provides its own final-CTA inline (.cd-final-cta). Author
+// attribution is carried by the page's schema, not a visible byline.
 get_template_part( '/template-parts/content', 'accreditation' );
 get_footer();
