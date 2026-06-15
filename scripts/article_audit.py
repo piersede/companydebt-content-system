@@ -13,9 +13,9 @@ Source of truth:
   - editorial-os/14-failure-modes-and-recovery.md §16  (AI fingerprints)
 
 Emits per article:
-  - Detailed pass/fail on each of the 24 scorable items
+  - Detailed pass/fail on each of the 25 scorable items
   - A binary GATE verdict (PASS / FAIL) driven by the canonical hard-fail list
-  - A /24 score suitable for the Monday "Post Score" column
+  - A /25 score suitable for the Monday "Post Score" column
 
 Tier 3 editorial checks (information gain per section, authored authority,
 evaluative bite, concrete scenes) are NOT automated here — the script prints
@@ -923,6 +923,52 @@ def check_paragraph_length(body: str) -> CheckResult:
     )
 
 
+def check_h3_density_per_h2(body: str) -> CheckResult:
+    """
+    editorial-os/28-htag-semantic-framework.md + runtime-packs/writer-core.md
+    (Heading discipline) — soft backstop to the writing-time judgement.
+
+    H3s are earned by semantic coherence, not count. Keep them when they are
+    clear, logical subheadings that each genuinely subdivide the parent H2
+    (parallel parts of one coherent topic). Demote to bold labels / bullets /
+    a table when they are merely a list, or drift onto a subject separate from
+    the H2's core.
+
+    3+ H3s under one H2 is only a TRIGGER to apply that test, not a verdict.
+    SOFT signal only — it does not block the gate; it flags the sections where
+    the judgement (and file 28's Heading Promotion test) should be applied.
+    """
+    heads = re.findall(r"<(h2|h3)\b[^>]*>(.*?)</\1>", body, re.I | re.S)
+    offenders: list[str] = []
+    current_h2: str | None = None
+    h3_count = 0
+    for tag, inner in heads:
+        if tag.lower() == "h2":
+            if current_h2 is not None and h3_count >= 3:
+                offenders.append(f"{h3_count} under “{current_h2[:48]}”")
+            current_h2 = re.sub(r"<[^>]+>", "", inner).strip()
+            h3_count = 0
+        else:
+            h3_count += 1
+    if current_h2 is not None and h3_count >= 3:
+        offenders.append(f"{h3_count} under “{current_h2[:48]}”")
+
+    if offenders:
+        return CheckResult(
+            id="25", tier="T2",
+            name="3+ H3s under one H2 — confirm they are coherent subheadings",
+            passed=False,
+            detail=f"{len(offenders)} section(s): {'; '.join(offenders[:3])} — keep only if these are clear, logical subheadings of the H2; demote if merely a list or off the H2's core subject (file 28)",
+            hard_fail=False,  # soft: surfaces as a warning, never blocks the gate.
+        )
+    return CheckResult(
+        id="25", tier="T2",
+        name="No H2 over-structured with 3+ H3s",
+        passed=True,
+        hard_fail=False,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Runner.
 # ---------------------------------------------------------------------------
@@ -970,6 +1016,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_block_comment_json_no_raw_html(raw),
         check_no_strong_in_auto_bolded_table_cells(body),
         check_table_cell_brevity(body),
+        check_h3_density_per_h2(body),
     ]
     return audit
 

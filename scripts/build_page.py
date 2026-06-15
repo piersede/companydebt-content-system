@@ -41,6 +41,7 @@ PAGE_REGISTRY = {
     'liquidation': 'cc_builder.data.pages.liquidation',
     'members-voluntary-liquidation': 'cc_builder.data.pages.members_voluntary_liquidation',
     'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
+    'cant-pay-vat': 'cc_builder.data.pages.cant_pay_vat',
 }
 
 

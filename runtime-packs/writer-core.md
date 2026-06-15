@@ -87,6 +87,18 @@ Do not let the article become bloodless, over-balanced, or taxonomic.
 - Use italics sparingly.
 - Format like a human web editor, not polished AI output.
 
+## Heading discipline
+
+Headings are earned, not defaulted. The test is semantic coherence, not count.
+
+- For each H2, choose the section format *before* writing any H3 (no H3s / bold-label bullets / table / checklist / link cards). Default to the lightest format that carries the content.
+- **Keep H3s** when they are clear, logical, semantically related subheadings that each genuinely subdivide the parent H2 — parallel parts of one coherent topic (distinct steps of a process, distinct options, distinct consequences). There the H3s carry real navigational and search value.
+- **Demote** to bold labels, bullets, a table, or links when the "H3s" are really just a list, or drift onto a subject separate from the H2's core. Demote too if a bold inline label or table row would carry the point equally well, or if the topic has its own dedicated page (cannibalisation — reference and link instead).
+- A count of 3+ H3s under one H2 is only a *trigger* to apply this test, never a verdict on its own.
+- Full test and per-page-type H3 budgets live in `editorial-os/28-htag-semantic-framework.md` (Heading Promotion test, H3 Demotion list, section-format decision tree).
+
+**Flag it at the point of writing.** When a cluster of H3s reads as a list or a tangent rather than coherent subheadings of its H2, point it out to the human as you write and offer the lighter format (bold labels, bullets, or a table) instead of waiting to be asked.
+
 ## Information gain
 
 Every article should contain genuinely useful material the reader would not get from a generic competitor page. Prioritise:
