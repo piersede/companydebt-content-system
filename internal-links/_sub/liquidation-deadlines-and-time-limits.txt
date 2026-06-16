@@ -1,0 +1,231 @@
+<!-- TITLE: Liquidation Deadlines and Time Limits: Key Dates Every Director and Creditor Should Know -->
+<!-- POST ID: 78690 / TYPE: pages / AUTHOR: 34 / FM: 78692 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/liquidation-deadlines-and-time-limits/ -->
+
+<p>Liquidation runs on statutory deadlines, and most of them are not negotiable. Miss one and you face personal liability, regulatory action, or a creditor who moves before you are ready.</p>
+
+
+
+<p>Directors going through liquidation for the first time rarely understand how compressed the timetable actually is. The gap between a winding-up resolution and the first creditor meeting can be as little as a few working days. Our overview of <a href="/liquidation/">how company liquidation works</a> sets out the wider process these deadlines sit within.</p>
+
+
+
+<p>Filing deadlines with Companies House and the Insolvency Service are fixed by law. The liquidator's reporting obligations start immediately, and late compliance is treated as a conduct issue, not an administrative oversight.</p>
+
+
+
+<p>We see directors arrive at the diagnostic call assuming they have weeks to get organised. Most of the time, they have days. Our guide to <a href="/liquidation/how-to-prepare-for-company-liquidation/">preparing for liquidation</a> covers the steps to take before the clock starts running.</p>
+
+
+
+<h2 class="wp-block-heading">Quick Answer on Liquidation Deadlines and Time Limits</h2>
+
+
+
+<p>In a Creditors' Voluntary Liquidation, the critical early deadlines cluster in the first 14 days. You must pass the winding-up resolution, notify creditors, deliver a statement of affairs, and hold (or initiate) a decision procedure.</p>
+
+
+
+<p>In a compulsory liquidation, you do not control the timetable at all: the court sets the date and the Official Receiver takes over from day one.</p>
+
+
+
+<p>If you are still weeks away from acting, the most important deadline is the one not written in any statute: the point at which you knew, or should have known, that insolvent liquidation was unavoidable.</p>
+
+
+
+<p>Every day of trading beyond that point increases your personal exposure to a wrongful trading claim. That is the deadline that matters most, and it has probably already started running.</p>
+
+
+
+<h2 class="wp-block-heading">CVL Liquidation Deadlines: The Voluntary Liquidation Timeline</h2>
+
+
+
+<p>A Creditors' Voluntary Liquidation follows a tightly sequenced set of statutory deadlines. We see directors underestimate this: the process does not drift along at your pace. Once you pass the resolution, the clock is running and the obligations are personal.</p>
+
+
+
+<p><strong>Day 0: Winding-up resolution.</strong> The shareholders pass a special resolution (75% majority) to wind up the company voluntarily. This is the formal start date and every subsequent deadline is measured from it.</p>
+
+
+
+<p><strong>Within 14 days: Notice to creditors.</strong> You must give notice of the resolution to all known creditors and invite them to a decision procedure. The notice must include a copy of the statement of affairs or tell creditors where they can inspect it.</p>
+
+
+
+<p>Missing this window is a breach of your obligations under the Insolvency Act 1986. We find directors who miss this deadline almost always missed it because they underestimated how fast 14 days passes when you are also dealing with staff, suppliers, and your own anxiety.</p>
+
+
+
+<p><strong>Within 14 days: Statement of affairs.</strong> The directors must deliver a statement of affairs to the liquidator, verified by a statement of truth. This document lists every asset, every liability, every creditor, and every secured charge. It is not an estimate. It is a sworn statement, and inaccuracies can result in personal consequences.</p>
+
+
+
+<p><strong>Within 14 days: Decision procedure.</strong> Creditors must be given the opportunity to appoint their own liquidator. This can be done by virtual meeting, correspondence, or deemed consent. If creditors do not respond within the decision period, the directors' nominated liquidator is confirmed. Our liquidation documents checklist covers exactly what you need before this stage.</p>
+
+
+
+<p><strong>Within 15 days of appointment: Notice to Companies House.</strong> The liquidator must file notice of their appointment at Companies House using Form 600. Late filing is a compliance failure that goes on the liquidator's record and reflects on the conduct of the liquidation.</p>
+
+
+
+<p><strong>Within 28 days of appointment: Notice to creditors and contributories.</strong> The liquidator must send formal notice of their appointment to all creditors and contributories of the company.</p>
+
+
+
+<h2 class="wp-block-heading">Compulsory Liquidation Deadlines: The Court-Driven Timeline</h2>
+
+
+
+<p>In compulsory liquidation, we need to be clear: the timetable is not yours to set. A creditor petitions the court, the court fixes a hearing date, and if the petition succeeds, the winding-up order takes effect immediately. Your involvement shifts from decision-maker to respondent.</p>
+
+
+
+<p><strong>21 days before hearing: Service of petition.</strong> The petitioning creditor must serve the petition on the company at its registered office at least 21 days before the hearing date. This is your notice period. If you receive a winding-up petition, you have a limited window to pay the debt, reach a settlement, or prepare to oppose the petition in court.</p>
+
+
+
+<p><strong>7 business days after service: Advertisement.</strong> The petition must be advertised in the London Gazette at least 7 business days after service on the company and at least 7 business days before the hearing. This is not optional.</p>
+
+
+
+<p>Once the petition is gazetted, your bank will almost certainly freeze the company's accounts. We speak to directors every week who did not realise this was coming. The freeze happens automatically because banks monitor the Gazette, and it can happen within hours of publication.</p>
+
+
+
+<p><strong>Hearing date: Winding-up order.</strong> If the court grants the order, the Official Receiver becomes the liquidator. The date of the winding-up order is the date from which all subsequent deadlines are calculated. Any disposition of company property after this date is void unless the court approves it.</p>
+
+
+
+<p><strong>Within 21 days of the order: Statement of affairs.</strong> You must submit a verified statement of affairs to the Official Receiver within 21 days. Failure to do so without reasonable excuse is a criminal offence. The Official Receiver can apply to the court to compel compliance, and non-cooperation is treated as a serious conduct matter in any subsequent disqualification proceedings.</p>
+
+
+
+<h2 class="wp-block-heading">Post-Liquidation Deadlines: From Appointment to Dissolution</h2>
+
+
+
+<p>Once the liquidator is in place, the process moves through asset realisation, investigation, distribution, and final reporting. We outline the key post-appointment deadlines below, and our guide to <a href="/liquidation/timeline/">the stages of a liquidation</a> sets out how long each phase typically takes.</p>
+
+
+
+<p><strong>Annual progress reports.</strong> The liquidator must file progress reports with creditors and Companies House at least annually. These reports detail what assets have been realised, what distributions have been made, and what work remains.</p>
+
+
+
+<p><strong>Final meeting and dissolution.</strong> When the liquidator has completed their work, they must call a final meeting of creditors (CVL) or file a final report with the court (compulsory). After the final meeting, the company is dissolved automatically three months later.</p>
+
+
+
+<p>Our guide to what happens after liquidation explains the consequences that follow dissolution. The dissolution removes the company from the Companies House register permanently.</p>
+
+
+
+<p><strong>Creditor claims deadline.</strong> Creditors must submit proof of debt to participate in any distribution. There is no single statutory deadline for submitting claims, but the liquidator sets a deadline in writing, and claims submitted after distribution is made will not be paid.</p>
+
+
+
+<p>If you are a creditor, submit your proof of debt as early as possible. In our experience, late claims are the most common reason creditors miss out entirely. We regularly see creditors who assumed they had months to file, only to discover the liquidator declared a dividend while they were still gathering paperwork.</p>
+
+
+
+<h2 class="wp-block-heading">The Wrongful Trading Deadline: The One Not Written in Statute</h2>
+
+
+
+<p>Every statutory deadline listed above is measurable and documented. But the deadline that creates the most personal exposure for directors is the one with no fixed date: the moment when you knew, or ought to have known, that your company could not avoid insolvent liquidation.</p>
+
+
+
+<p>From that point, section 214 of the Insolvency Act 1986 requires you to take every step a reasonably diligent person would take to minimise the potential loss to creditors. If the liquidator concludes that you continued trading beyond that point without taking those steps, you face a wrongful trading claim and a potential personal contribution order.</p>
+
+
+
+<p>We cannot pinpoint the exact date that duty crystallised for your company. But if you are reading this page, the honest question is whether that date has already passed. If it has, acting now is better than acting next month, because the liquidator will look at the gap between the trigger date and the date you sought advice, and a shorter gap is always easier to defend.</p>
+
+
+
+<h2 class="wp-block-heading">Next Steps on Liquidation Deadlines</h2>
+
+
+
+<p>If you are approaching any of the deadlines described above, or if you suspect your company is already past the point where insolvent liquidation is probable, take advice from a licensed insolvency practitioner before the next deadline arrives.</p>
+
+
+
+<p>Company Debt connects directors with regulated practitioners who can assess your position confidentially and explain exactly which deadlines you are facing. We do not run the formal procedures ourselves; we do triage the route and get you to the right practitioner quickly.</p>
+
+
+
+<p>Do not wait for a creditor to set the timetable. Once a winding-up petition is served, you lose control of the timeline entirely. Acting while you still have a choice about the route gives you the best chance of managing your personal position and the company's affairs in an orderly way.</p>
+
+
+
+<h2 class="wp-block-heading">FAQs on Liquidation Deadlines and Time Limits</h2>
+
+
+<!-- wp:ub/content-toggle-block {"blockID":"78690-deadlines-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the first deadline after deciding to liquidate voluntarily?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Within 14 days of the winding-up resolution, you must notify creditors, deliver a statement of affairs to the liquidator, and initiate a decision procedure for creditors to confirm or replace the nominated liquidator. These obligations run concurrently, so you need to have the statement of affairs prepared before you pass the resolution.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I miss a filing deadline during liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Late filing is treated as a compliance failure and can be referenced in conduct reports. In compulsory liquidation, failure to submit the statement of affairs within 21 days without reasonable excuse is a criminal offence. In voluntary liquidation, late filings at Companies House can result in penalties and adverse findings in the liquidator's report to the Insolvency Service.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow quickly can a bank freeze my accounts after a winding-up petition?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Within hours. Once the petition is advertised in the London Gazette, banks that monitor the Gazette (which is most of them) will freeze the company's accounts as a precautionary measure. This can happen the same day the advertisement appears. Directors who do not anticipate this often find themselves unable to pay staff or cover essential costs, which accelerates the crisis.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I pay creditors selectively before liquidation starts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Paying one creditor ahead of others when the company is insolvent creates a preference under section 239 of the Insolvency Act 1986. The liquidator can claw back preferential payments made in the six months before liquidation (or two years if the creditor is a connected party, such as a director or family member).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If you are considering paying specific creditors before entering liquidation, take professional advice first.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs there a time limit on how long liquidation can last?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>There is no statutory maximum duration. Simple cases can complete within 12 months. Complex cases with disputed claims, ongoing investigations, or difficult-to-realise assets can take several years. The liquidator must file annual progress reports, and creditors can apply to the court if they believe the process is being unreasonably delayed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the deadline for creditors to submit claims?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>There is no single statutory deadline. The liquidator sets a "last date for proving" in writing when they intend to declare a dividend. Claims submitted after a distribution has been made will not be paid from that distribution. If you are a creditor, submit your proof of debt as early as possible to avoid missing out.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors and creditors navigating the statutory deadlines that govern voluntary and compulsory liquidation.</p>
+<p>We've drawn on the Insolvency Act 1986 (particularly sections 84 to 106 on voluntary winding up, sections 117 to 162 on compulsory winding up, section 214 on wrongful trading and section 239 on preferences), the Insolvency (England and Wales) Rules 2016 (SI 2016/1024), Companies House filing requirements, and current Insolvency Service procedural guidance for liquidators and Official Receivers.</p>
+<p>Where we describe how deadlines play out operationally, including the bank-freeze response to gazetted petitions, the way the 14-day CVL window typically gets misused, and the conduct-investigation consequences of late filings, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/part/IV"><strong>Insolvency Act 1986, sections 84 to 106 (voluntary winding up)</strong> &mdash; statutory basis for the CVL resolution, the 14-day creditor notice, and the statement-of-affairs deadlines covered on this page</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/part/IV/chapter/VI"><strong>Insolvency Act 1986, sections 117 to 162 (compulsory winding up)</strong> &mdash; court jurisdiction, the petition timetable, and the Official Receiver's role from the date of the winding-up order</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/214"><strong>Insolvency Act 1986, section 214 (wrongful trading)</strong> &mdash; the unwritten deadline directors care about most: the moment insolvent liquidation became unavoidable and personal exposure began</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/239"><strong>Insolvency Act 1986, section 239 (preferences)</strong> &mdash; six-month claw-back window for preferential payments, extended to two years where the recipient is a connected party</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016 (SI 2016/1024)</strong> &mdash; procedural detail behind the decision procedure, deemed consent, and the liquidator's reporting timetable</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service &mdash; guidance for liquidators and Official Receivers</strong> &mdash; conduct expectations the regulator applies when liquidators report on directors after appointment</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/companies-house"><strong>Companies House &mdash; filing requirements and Form 600</strong> &mdash; the appointment notice the liquidator must file post-CVL; late filing is treated as a conduct issue, not paperwork drift</a> - gov.uk</li>
+<li><a href="https://www.thegazette.co.uk/insolvency"><strong>The London Gazette &mdash; winding-up petition advertisement notices</strong> &mdash; mandatory advert at least seven business days after service and seven before the hearing; the trigger that usually freezes the company's bank account</a> - thegazette.co.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

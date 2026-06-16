@@ -68,3 +68,7 @@ If the article sounds generic, bloodless, over-balanced, or like AI simulating j
 - Do not bypass evidence rules, disclosure rules, or pre-publish gates.
 - Do not flatten unfairness, cost, or risk into neutral filler.
 - Do not treat token savings as success if output quality drops.
+
+## Site infrastructure rules
+
+- **Redirects**: all redirects live in the Quick Redirects plugin only (`wp-admin/admin.php?page=redirect-updates`). Never add redirects via the Redirection plugin, Yoast, .htaccess, or any other mechanism. The Redirection plugin is installed but intentionally deactivated — do not reactivate it.

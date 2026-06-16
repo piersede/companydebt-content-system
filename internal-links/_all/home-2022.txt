@@ -1,0 +1,185 @@
+<!-- wp:acf/hero-blue {"name":"acf/hero-blue","data":{"block_hero_blue_title":"Expert Advice. Affordable Help.\r\n","_block_hero_blue_title":"field_6388a680f4648","block_hero_blue_wysiwyg_left":"We provide clear, regulated advice to UK company directors. In one confidential call, we'll explain your options and help you take the right next step.\r\n\r\nIf rescue is possible, we’ll guide you through it. If not, we’ll close your company safely and minimise risk to you and your staff.\r\n\u003cdiv class=\u0022cd-hero-blue__cta-group\u0022\u003e\r\n\r\n\u003ca class=\u0022cd-hero-blue__cta\u0022 href=\u0022https://comdebstage.wpengine.com/contact-us/\u0022\u003eGet Help Now\u003c/a\u003e\r\n\u003cul class=\u0022cd-hero-trust\u0022\u003e\u003cli\u003e\u003csvg class=\u0022cd-hero-trust__icon\u0022 viewBox=\u00220 0 24 24\u0022 aria-hidden=\u0022true\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022\u003e\u003ccircle cx=\u002212\u0022 cy=\u002212\u0022 r=\u002211\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.5\u0022\u003e\u003c/circle\u003e\u003cpath d=\u0022M7 12.5l3.5 3.5L17 9\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.8\u0022 stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022\u003e\u003c/path\u003e\u003c/svg\u003e\u003cspan\u003e100% Free\u003c/span\u003e\u003c/li\u003e\u003cli\u003e\u003csvg class=\u0022cd-hero-trust__icon\u0022 viewBox=\u00220 0 24 24\u0022 aria-hidden=\u0022true\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022\u003e\u003ccircle cx=\u002212\u0022 cy=\u002212\u0022 r=\u002211\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.5\u0022\u003e\u003c/circle\u003e\u003cpath d=\u0022M7 12.5l3.5 3.5L17 9\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.8\u0022 stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022\u003e\u003c/path\u003e\u003c/svg\u003e\u003cspan\u003eConfidential\u003c/span\u003e\u003c/li\u003e\u003cli\u003e\u003csvg class=\u0022cd-hero-trust__icon\u0022 viewBox=\u00220 0 24 24\u0022 aria-hidden=\u0022true\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022\u003e\u003ccircle cx=\u002212\u0022 cy=\u002212\u0022 r=\u002211\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.5\u0022\u003e\u003c/circle\u003e\u003cpath d=\u0022M7 12.5l3.5 3.5L17 9\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 stroke-width=\u00221.8\u0022 stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022\u003e\u003c/path\u003e\u003c/svg\u003e\u003cspan\u003eNo Obligation\u003c/span\u003e\u003c/li\u003e\u003c/ul\u003e\r\n\u003c/div\u003e","_block_hero_blue_wysiwyg_left":"field_6388a6baf464a","block_hero_blue_image":"79769","_block_hero_blue_image":"field_6388a69df4649","block_hero_blue_padding_top":"80","_block_hero_blue_padding_top":"field_6388a6c9f464b","block_hero_blue_padding_bottom":"0","_block_hero_blue_padding_bottom":"field_6388a6d0f464c","block_hero_blue_add_class":"","_block_hero_blue_add_class":"field_6388a6dff464d","block_hero_blue":"","_block_hero_blue":"field_6388a66cf4647"},"align":"wide","mode":"edit"} /-->
+
+<!-- wp:heading {"textAlign":"center","level":2,"className":"cd-reviews-heading"} -->
+<h2 class="wp-block-heading has-text-align-center cd-reviews-heading">Trusted by Thousands of UK Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:acf/cd-reviews-widget {"name":"acf/cd-reviews-widget","mode":"preview"} /-->
+
+<!-- wp:cover {"customOverlayColor":"#09285d","isUserOverlayColor":true,"minHeight":90,"className":"home-blue__logos  home-blue__logos\u002d\u002dnews"} -->
+<div class="wp-block-cover home-blue__logos  home-blue__logos--news" style="min-height:90px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#09285d"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","className":"mb-0","fontSize":"large"} -->
+<p class="has-text-align-center mb-0 has-large-font-size"><img class="wp-image-55278" style="width: 71px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/bbc-3.png" alt="BBC Logo"> <img class="wp-image-55277" style="width: 114px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/guardian-3.png" alt="guardian"> <img class="wp-image-55276" style="width: 150px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/daily-express-3.png" alt="daily express"> <img class="wp-image-55275" style="width: 150px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/Financial-Times-3.png" alt="Financial Times"> <img class="wp-image-55274" style="width: 123px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/telegraph-3.png" alt="telegraph logo"> <img class="wp-image-55273" style="width: 82px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/fortune-3.png" alt="fortune logo"> <img class="wp-image-55272" style="width: 150px;" src="https://comdebstage.wpengine.com/wp-content/uploads/2022/04/investopedia-3.png" alt="investopedia logo"></p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:cover {"customOverlayColor":"#f8f9fd","isUserOverlayColor":true,"isDark":false} -->
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#f8f9fd"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"container home-blue cd-licensed-section"} -->
+<div class="wp-block-group container home-blue cd-licensed-section"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"55%"} -->
+<div class="wp-block-column" style="flex-basis:55%"><!-- wp:heading {"style":{"color":{"text":"#09285d"}}} -->
+<h2 class="wp-block-heading has-text-color" style="color:#09285d"><span class="orange-underline">Licensed &amp; Accredited</span> Insolvency Practitioners</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
+<p style="font-size:18px">All of our Insolvency Practitioners are fully authorised and regulated individuals who are qualified and licensed to advise on corporate insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
+<p style="font-size:18px">If your company is insolvent, our specialists will assess every available route. That includes business rescue and restructuring such as CVA, Administration, and Time to Pay, and winding up and insolvency advice such as CVL. We also deal with solvent business closures through MVLs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"18px"}}} -->
+<p style="font-size:18px">No matter your situation, you’ll receive clear, practical guidance that keeps you compliant with regulations and helps you avoid common risks such as wrongful trading, preferences, and transactions at undervalue.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"cd-licensed-cta"} -->
+<div class="wp-block-button cd-licensed-cta">Get in Touch</div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"45%","className":"cd-licensed-image"} -->
+<div class="wp-block-column cd-licensed-image" style="flex-basis:45%"><div class="cd-licensed-right"><!-- wp:image {"id":79770,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/liensed-section-photo.png" alt="Licensed insolvency practitioners" class="wp-image-79770"/></figure>
+<!-- /wp:image -->
+<div class="cd-licensed-accred-logos">
+<img src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/icas-logo-1.png" alt="ICAS">
+<img src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/tma-logo-1.png" alt="TMA">
+<img src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/ipa-logo-1.png" alt="IPA">
+</div></div></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:cover {"overlayColor":"white","isUserOverlayColor":true,"minHeight":300,"isDark":false,"align":"wide","className":"home-blue__why "} -->
+<div class="wp-block-cover alignwide is-light home-blue__why" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"className":"container home-blue__why home-blue","textColor":"black"} -->
+<div class="wp-block-columns container home-blue__why home-blue has-black-color has-text-color"><!-- wp:column {"verticalAlignment":"top","width":"60%"} -->
+<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:60%"><!-- wp:heading {"style":{"color":{"text":"#09285d"}}} -->
+<h2 class="wp-block-heading has-text-color" style="color:#09285d"><span class="orange-underline">Why Choose</span> Company Debt</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We are Insolvency Practitioners and liquidators with a team of small business advice specialists. We look at every practical way to help you manage financial and debt-related issues, avoid unnecessary closure, and limit your risks as a director. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>With offices in North London and a UK-wide reach, we can meet online, at our office, or visit your premises. Company Debt supports SMEs throughout the UK with hands-on insolvency and restructuring advice. <strong>We are practical, approachable and affordable.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Highly experienced team of Insolvency Experts handling company rescue and closure</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>We always explore rescue or turnaround options before recommending closure</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Specialists in advising Small and Medium-Sized Businesses</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Experts in HMRC and creditors negociation (VAT, PAYE, and Corporation Tax arrears)</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:image {"id":61291,"sizeSlug":"full","linkDestination":"none","align":"right"} -->
+<figure class="wp-block-image alignright size-full"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/12/cd-home-4.jpg" alt="Homepage Illustration" class="wp-image-61291"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
+<!-- /wp:cover -->
+
+
+<!-- wp:cover {"customOverlayColor":"#f8f9fd","isUserOverlayColor":true,"isDark":false} -->
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#f8f9fd"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"container home-blue h2-centered"} -->
+<div class="wp-block-group container home-blue h2-centered"><!-- wp:heading {"textAlign":"center","style":{"color":{"text":"#09285d"}}} -->
+<h2 class="wp-block-heading has-text-align-center has-text-color" style="color:#09285d">What We Can Help You With</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"18px"}}} -->
+<p class="has-text-align-center" style="font-size:18px">Our core expertise is helping limited company directors who face creditor pressure, cash flow problems, and debt-related issues. We offer practical and efficient methods of tackling debts through liquidation, administration, and other business rescue arrangements, with step by step guidance from a licensed practitioner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"className":"cd-help-cards"} -->
+<div class="wp-block-columns cd-help-cards"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3,"style":{"color":{"text":"#09285d"}}} -->
+<h3 class="wp-block-heading has-text-color" style="color:#09285d">HMRC and Tax Pressure</h3>
+<!-- /wp:heading -->
+<a class="cd-help-item cd-help-item-with-img" href="/hmrc/cant-pay-vat/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/vat.png" alt="VAT arrears"/><div class="cd-help-item-content"><span class="cd-help-item-title">VAT Arrears</span><span class="cd-help-item-desc">Practical steps to resolve outstanding VAT liabilities with HMRC.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/hmrc/cant-pay-paye/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/paye.png" alt="PAYE Arrears"/><div class="cd-help-item-content"><span class="cd-help-item-title">PAYE Arrears</span><span class="cd-help-item-desc">Expert help negotiating PAYE debts before enforcement action.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/hmrc/problems-paying-corporation-tax-hmrc/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/corporation-tax.png" alt="Corporation Tax Arrears"/><div class="cd-help-item-content"><span class="cd-help-item-title">Corporation Tax Arrears</span><span class="cd-help-item-desc">Structured plans to address overdue Corporation Tax payments.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/hmrc/time-to-pay-hmrc/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/time-to-pay.png" alt="Time to Pay Support"/><div class="cd-help-item-content"><span class="cd-help-item-title">Time to Pay Support</span><span class="cd-help-item-desc">We negotiate affordable repayment arrangements directly with HMRC.</span><span class="cd-help-item-link">Learn More</span></div></a></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3,"style":{"color":{"text":"#09285d"}}} -->
+<h3 class="wp-block-heading has-text-color" style="color:#09285d">Creditors and Cash Flow</h3>
+<!-- /wp:heading -->
+<a class="cd-help-item cd-help-item-with-img" href="/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/supplier-pressure.png" alt="Supplier Pressure"/><div class="cd-help-item-content"><span class="cd-help-item-title">Supplier Pressure</span><span class="cd-help-item-desc">Clear strategies to manage creditor demands and protect your business.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/liquidation/bailiffs-high-court-enforcement-officers/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/bailiffs.png" alt="Bailiffs and Enforcement"/><div class="cd-help-item-content"><span class="cd-help-item-title">Bailiffs and Enforcement</span><span class="cd-help-item-desc">Immediate advice when facing bailiff visits or court action.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/advice/directors-personal-guarantees/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/personal-guarantee.png" alt="Personal Guarantees"/><div class="cd-help-item-content"><span class="cd-help-item-title">Personal Guarantees</span><span class="cd-help-item-desc">Understand your exposure and options to limit personal liability.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/debt-creditor-pressure-hub/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/debt.png" alt="General Debt Pressure"/><div class="cd-help-item-content"><span class="cd-help-item-title">General Debt Pressure</span><span class="cd-help-item-desc">A full review of your debts with actionable next steps.</span><span class="cd-help-item-link">Learn More</span></div></a></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3,"style":{"color":{"text":"#09285d"}}} -->
+<h3 class="wp-block-heading has-text-color" style="color:#09285d">Rescue and Closure Options</h3>
+<!-- /wp:heading -->
+<a class="cd-help-item cd-help-item-with-img" href="/liquidation/creditors-voluntary-liquidation/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/cvl.png" alt="Company Liquidation (CVL)"/><div class="cd-help-item-content"><span class="cd-help-item-title">Company Liquidation (CVL)</span><span class="cd-help-item-desc">A regulated process to close your company and settle debts fairly.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/company-rescue-solutions/company-voluntary-arrangement/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/cva.png" alt="CVA"/><div class="cd-help-item-content"><span class="cd-help-item-title">CVA</span><span class="cd-help-item-desc">Restructure debts while continuing to trade and protect your business.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/company-administration/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/administration.png" alt="Administration"/><div class="cd-help-item-content"><span class="cd-help-item-title">Administration</span><span class="cd-help-item-desc">Court protection to rescue your business or achieve a better outcome.</span><span class="cd-help-item-link">Learn More</span></div></a>
+<a class="cd-help-item cd-help-item-with-img" href="/company-rescue-solutions/pre-packs/"><img class="cd-help-item-img" src="https://comdebstage.wpengine.com/wp-content/uploads/2026/04/pre-pack.png" alt="Pre-Pack Administration"/><div class="cd-help-item-content"><span class="cd-help-item-title">Pre-Pack Administration</span><span class="cd-help-item-desc">Sell viable parts of the business quickly to preserve jobs and value.</span><span class="cd-help-item-link">Learn More</span></div></a></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:group {"className":"container home-blue"} -->
+<div class="wp-block-group container home-blue"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">We Help Small &amp; Medium Businesses <span class="orange-underline">Just Like You</span></h2>
+<!-- /wp:heading -->
+
+<!-- wp:acf/show-sectors {"name":"acf/show-sectors","data":{"show_sectors_front_page_cd_show_sectors_front_page_cd":["49778","49717","49839","49727"],"_show_sectors_front_page_cd_show_sectors_front_page_cd":"field_6388a4ef14b86","show_sectors_front_page_cd_add_css":"","_show_sectors_front_page_cd_add_css":"field_6388a50814b87","show_sectors_front_page_cd":"","_show_sectors_front_page_cd":"field_6388a4d414b85"},"mode":"edit"} /-->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline">Browse All Sectors</div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:acf/columns-with-buttons {"name":"acf/columns-with-buttons","data":{"buttons_section_bcg_color":"rgb(250, 250, 250)","_buttons_section_bcg_color":"field_cols_buttons_bcg_color","buttons_section_button_bcg_color":"rgb(255,255,255)","_buttons_section_button_bcg_color":"field_cols_buttons_button_bcg_color","buttons_section_title_font_color":"#09285d","_buttons_section_title_font_color":"field_cols_buttons_title_font_color","buttons_section_button_font_color":"#000000","_buttons_section_button_font_color":"field_cols_buttons_font_color","buttons_section_title":"\u003cspan class=\u0022orange-underline\u0022\u003eYour Next\u003c/span\u003e Steps","_buttons_section_title":"field_cols_buttons_title","buttons_section_text_align":"center","_buttons_section_text_align":"field_cols_buttons_text_align","buttons_section_nr_cols":"3","_buttons_section_nr_cols":"field_cols_buttons_nr_of_cols","buttons_section_buttons_0_icon":55057,"_buttons_section_buttons_0_icon":"field_cols_buttons_icon","buttons_section_buttons_0_heading":"Free Directors Guide  ","_buttons_section_buttons_0_heading":"field_cols_buttons_heading","buttons_section_buttons_0_description":"Everything you need to know about the next steps to get your piece of mind back","_buttons_section_buttons_0_description":"field_cols_buttons_desc","buttons_section_buttons_0_link":"https://comdebstage.wpengine.com/stressed-directors-guide/","_buttons_section_buttons_0_link":"field_cols_buttons_link","buttons_section_buttons_1_icon":55063,"_buttons_section_buttons_1_icon":"field_cols_buttons_icon","buttons_section_buttons_1_heading":"Express Insolvency Test  ","_buttons_section_buttons_1_heading":"field_cols_buttons_heading","buttons_section_buttons_1_description":"Take 30 seconds to know your exact situation and get the right advice","_buttons_section_buttons_1_description":"field_cols_buttons_desc","buttons_section_buttons_1_link":"https://comdebstage.wpengine.com/insolvency-calculator/","_buttons_section_buttons_1_link":"field_cols_buttons_link","buttons_section_buttons_2_icon":55519,"_buttons_section_buttons_2_icon":"field_cols_buttons_icon","buttons_section_buttons_2_heading":"Contact Us Today  ","_buttons_section_buttons_2_heading":"field_cols_buttons_heading","buttons_section_buttons_2_description":"Free and confidential advice, just a click away","_buttons_section_buttons_2_description":"field_cols_buttons_desc","buttons_section_buttons_2_link":"https://comdebstage.wpengine.com/contact-us/","_buttons_section_buttons_2_link":"field_cols_buttons_link","buttons_section_buttons":3,"_buttons_section_buttons":"field_cols_buttonss","buttons_section_add_class":"grid-180-30-120  narrow-content  box-shadow","_buttons_section_add_class":"field_cols_buttons_add_class","buttons_section":"","_buttons_section":"block_columns_buttons"},"align":"wide","mode":"preview"} /-->
+
+<!-- wp:cover {"overlayColor":"white","isUserOverlayColor":true,"isDark":false,"align":"wide"} -->
+<div class="wp-block-cover alignwide is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"container home-blue home-blue__contact"} -->
+<div class="wp-block-group container home-blue home-blue__contact"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:heading {"style":{"color":{"text":"#09285d"}}} -->
+<h2 class="wp-block-heading has-text-color" style="color:#09285d">Contact Us Today</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Speak with one of the team in the London office and discover how we can resolve your situation quickly and safely. You will talk directly to a licensed Insolvency Practitioner who will listen, outline your options, and agree your next best step.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a class="big" href="tel:08000746757">0800 074 6757</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a class="big" href="mailto:info@companydebt.com">info@companydebt.com</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:gravityforms/form {"formId":"44","title":false,"description":false,"ajax":true} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->

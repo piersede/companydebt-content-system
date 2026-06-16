@@ -1,0 +1,41 @@
+			<section class="section-hub-boxes">
+			<div class="container">
+				<div class="row">
+					                            <div class="col-4">
+                                <div class="hub-box">
+										                                    <div class="hub-box-content">
+                                        <h3 class="box-heading"></h3>
+	                                    
+	                                                                                <ul>
+			                                                                                            <li>
+                                                            
+							                                    <a href="/uk-insolvency-statistics/">UK Insolvency Statistics</a>
+                                                        </li>
+				                                                                                            <li>
+                                                            
+							                                    <a href="/sector-specific-insolvency/">Sector-specific Insolvency</a>
+                                                        </li>
+				                                                                                            <li>
+                                                            
+							                                    <a href="/mental-health-debt-stress-support/">Mental Health &amp; Debt Stress Support</a>
+                                                        </li>
+				                                                                                            <li>
+                                                            
+							                                    <a href="/debt-charities-uk/">Debt Charities in the UK</a>
+                                                        </li>
+				                                                                                            <li>
+                                                            
+							                                    <a href="/insolvency-news-commentary/">Insolvency News &amp; Commentary</a>
+                                                        </li>
+				                                                                                </ul>
+		                                    	                                                                        </div>
+
+                                </div>
+                            </div>
+										</div>
+			</div>
+		</section>
+	
+<div class="editor-update-block">
+<p><em>This article was originally published in October 2025 and documents events as reported at the time. Company statuses, personnel titles, and figures may have changed since publication. It has been reviewed by the Company Debt editorial team in May 2026. If you are dealing with a similar situation now, speak to one of our advisers for current guidance.</em></p>
+</div>

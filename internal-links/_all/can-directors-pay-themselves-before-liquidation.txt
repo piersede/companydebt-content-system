@@ -1,0 +1,455 @@
+<!-- TITLE: Can Directors Pay Themselves Before Liquidation? -->
+<!-- POST ID: 79553 / TYPE: pages / AUTHOR: 34 / FM: 79556 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/can-directors-pay-themselves-before-liquidation/ -->
+
+<!-- wp:paragraph -->
+<p>If your company is drifting toward insolvency and you are asking whether you can still take a salary, a dividend, or clear down the director's loan, the honest answer is: sometimes yes, often no, and almost always under tighter scrutiny than most directors realise.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A payment that looked routine six months ago can still be unwound by a liquidator under sections 238, 239, 214 or 212 of the Insolvency Act 1986, and the money can be clawed back from you personally. We see this every week in our caseload, and the pattern is always the same: directors who documented nothing, and directors who did not realise their duties had shifted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows is the plain version. What you can legally pay yourself as the company enters the twilight zone, which payments attract the highest risk, and how a liquidator will look at what you did. It is written from our position as licensed insolvency practitioners at Company Debt, and reflects how we advise directors at first contact.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can still pay yourself a reasonable salary for work genuinely performed, and you can reclaim legitimate business expenses. Everything else gets harder the closer the company moves to insolvency.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Dividends can only be paid out of distributable profits, and a company with no distributable reserves cannot lawfully pay one. Repaying your director's loan account to yourself ahead of trade creditors is one of the fastest routes to a preference claim under section 239.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>And if the company is already cash-flow insolvent, any payment to you will be examined against the duty you owe to creditors under <em>BTI 2014 LLC v Sequana SA</em> [2022] UKSC 25.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In short: if the company can meet its liabilities, your normal remuneration is broadly safe. If it cannot, your duties shift, and the protection of the corporate veil narrows sharply. We tell directors to stop thinking of themselves as shareholders from that point on, and start thinking like stewards of the creditors' fund. Our guide to <a href="/liquidation/what-happens-to-directors-in-liquidation/">a director's position in liquidation</a> covers how that role plays out once a liquidator is appointed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why Twilight Zone Duties Bite Directors Hardest</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The "twilight zone" is the period where a company is insolvent or likely to become insolvent but has not yet entered a formal procedure. Under <em>BTI v Sequana</em>, the Supreme Court confirmed that the duty to consider the interests of creditors arises when insolvency is "probable", not just when it is inevitable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The moment you know the company cannot pay its debts as they fall due, or its liabilities exceed its assets on a balance-sheet basis under section 123 of the Insolvency Act 1986, your duties have moved. Every payment you authorise from that point will be read against those duties.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our experience is that directors rarely recognise the transition when they are in it. They see a bad month, a missed customer payment, a squeezed bank account, and they assume they can trade through. Sometimes they can.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But if the company later fails, the liquidator will not have the benefit of your optimism. They will have the bank statements, the filings, and the cashflow forecasts. They will ask whether a reasonable director in your position ought to have concluded that insolvency was probable. If the answer is yes, every director payment made after that date is on the table. Stepping down does not draw a line under this either, as our guide to <a href="/liquidation/what-happens-if-a-director-resigns-before-liquidation/">a director resigning before liquidation</a> explains.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-calloutu002du002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+<p class="cd-callout__label">Legal Exposure</p>
+<!-- wp:paragraph -->
+<p>Under section 214 of the Insolvency Act 1986, any director who continued to trade after the point at which they knew, or ought to have known, that insolvent liquidation was unavoidable can be ordered to contribute personally to the company's assets. The contribution is calculated on the net deficiency increase from that date to the formal insolvency appointment. There is no cap.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Under section 239, a director who repaid their own loan account or paid connected creditors ahead of HMRC or trade creditors within two years of insolvency faces personal clawback of the full amount preferentially received. Both provisions apply without requiring proof of dishonest intent.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Salary Directors Can Still Take</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A director taking a reasonable salary for work actually performed is usually on safe ground, even when the company is struggling. Salary is an expense of the business, not a distribution of profit, so the profit-reserves rules that govern dividends do not apply.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What the liquidator will test is whether the salary was (a) commercially reasonable for the role, (b) consistent with your historical pay pattern, and (c) processed through PAYE with proper tax and NIC deductions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where we see trouble is when directors suddenly increase their pay in the months before failure, or when they pay themselves a notional "salary" that was never run through payroll. Both patterns look like extraction to a liquidator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Both can be attacked as <a href="/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/">transactions at undervalue</a> under section 238 if the company received nothing equivalent in return. If your business is struggling and you need to take less, that usually helps your defence. If you need to take more to cover personal costs, you should be getting advice first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Dividends Directors Cannot Lawfully Pay</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Dividends are the area where we see the most director liability. The rule is simple and inflexible: a company can only declare a dividend out of distributable profits, meaning accumulated realised profits less accumulated realised losses.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is set out in Part 23 (sections 829 to 853) of the Companies Act 2006. If the company does not have the profits, any dividend declared is unlawful, and under section 847 the directors can be ordered to repay it personally if they knew or had reasonable grounds to believe the distribution was unlawful.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Two pitfalls recur in the cases we handle. First, directors rely on last year's signed accounts and assume the profits are still there, when in fact a loss-making year since has wiped them out. Interim dividends must be supported by interim accounts that show distributable reserves exist <em>at the date of payment</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Second, directors treat monthly dividends as a substitute for salary. This worked when the company was trading profitably. It stops working the moment profits evaporate, and the liquidator will reclassify each "dividend" as an unauthorised return of capital or a loan to the director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you have been taking regular dividends and your accountant cannot point to signed interim accounts confirming distributable reserves, you should assume those payments will be challenged if the company goes into creditors' voluntary liquidation or compulsory winding-up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We routinely see directors surprised by this. Our advice is always the same: stop taking dividends the moment the profit picture becomes uncertain, and switch to a documented salary instead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-calloutu002du002ddirectors-miss"} -->
+<div class="wp-block-group cd-callout cd-callout--directors-miss">
+<p class="cd-callout__label">What Most Directors Miss</p>
+<!-- wp:paragraph -->
+<p>Most directors assume that paying tax on a dividend means it was lawfully declared. It was not. Under section 847 of the Companies Act 2006, the tax status of a dividend in your hands is entirely separate from whether the company had distributable reserves at the date of payment.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A dividend drawn when no distributable reserves existed is an unlawful distribution regardless of what you paid to HMRC. You can be ordered to repay the full amount to the company, net of any tax credit you can recover.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Directors who took regular monthly dividends for years without maintaining interim accounts to confirm reserves are the ones who discover this on the day the liquidator's letter arrives.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Loan Account Repayments to Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the single most dangerous payment a director can make in the twilight zone. If you are owed money by the company (a credit balance on the director's loan account) and you decide to pay yourself back ahead of trade creditors or HMRC, you are almost certainly preferring yourself within the meaning of section 239.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The clawback window is two years for connected parties, which includes directors, and the liquidator does not have to prove you intended to prefer, only that the company was insolvent and you received more than you would have done in the liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The mirror problem is a debit balance. If you owe the company money, the liquidator will demand it back personally, together with the section 455 corporation tax charge HMRC applies to overdrawn director loans.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have seen directors blindsided by this on day one of a CVL, discovering that they owe the company tens of thousands of pounds they thought were "just paperwork." A debit DLA is not paperwork. It is a debt you owe the creditors, and the liquidator will pursue you for it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are approaching insolvency with a debit balance, get advice on how to address it before the process begins. More on the mechanics in our guide to the director's loan account in liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Expenses Directors Can Still Reclaim</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Reclaiming genuine business expenses remains legitimate even as the company heads toward insolvency, provided the expenses are real, documented, and incurred wholly and exclusively for business purposes. The test is the same one HMRC applies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What gets directors into trouble is the grey area: the family meal treated as client entertainment, the personal phone bill run through the company, the home office claim with no supporting calculation. These get reversed routinely when a liquidator goes through the expense claims.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our rule for directors in the twilight zone is simple: keep receipts for everything, stop any expense that would embarrass you in a liquidator's interview, and never backdate claims. A liquidator looking at a company in difficulty will focus on the six months before formal insolvency, and expense reimbursements to directors are one of the first categories they test.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Redundancy Claims Available to Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are an employee of the company as well as a director, which most owner-managers are, you may have a statutory claim for redundancy, unpaid wages, holiday pay, and notice pay when the company enters liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These are paid from the National Insurance Fund via the Insolvency Service, not from company assets, and they are a legitimate recovery for a director who has genuinely worked in the business. To qualify you need a contract of employment, PAYE records, and at least two years of continuous service. The average successful claim is in the region of £9,000 to £12,000.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We flag this because directors in financial distress often do not realise they may be entitled to anything at all. It is not "taking money from the company." It is a statutory employee entitlement that sits alongside the insolvency process. Our team handles redundancy claims as part of our CVL work, and in most cases the money comes through within six to eight weeks of appointment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Six Clawback Provisions Directors Should Know</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the liquidator believes a payment to you was improper, they have a toolkit of statutory provisions to reverse it and recover the money from you personally. Six matter most:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Section 238 (transactions at undervalue).</strong> Captures payments or asset transfers where the company received nothing, or less than market value, in the two years before insolvency.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Section 239 (preferences).</strong> Captures payments that put one creditor (including you) in a better position than they would have been in the liquidation. Two-year lookback for connected parties.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Section 214 (wrongful trading).</strong> If you continued to trade when you knew, or ought to have known, there was no reasonable prospect of avoiding insolvency, you can be ordered to contribute to the company's assets personally.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Section 212 (misfeasance).</strong> A summary remedy the liquidator can use against directors who have misapplied company money or breached fiduciary duty. Often used alongside section 214.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Sections 213 and 246ZA (fraudulent trading).</strong> Reserved for the worst cases, where the business was carried on with intent to defraud creditors. Carries both civil and criminal consequences.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Section 423 (transactions defrauding creditors).</strong> No time limit. Captures asset transfers made to put property beyond the reach of actual or future creditors.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our view is that directors do not need to memorise the statute. They need to understand the pattern: the closer the payment to the formal insolvency date, the more carefully it will be examined, and the higher the risk that it will be reversed and recovered from them personally. See our guide on <a href="/insolvency/what-is-wrongful-trading/">wrongful trading</a> for the director-liability side.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Timing Checkpoints Before Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The calendar matters more than most directors realise. We walk clients through four checkpoints:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Before insolvency is probable.</strong> Normal remuneration is broadly safe. Keep documentation, process through PAYE, and ensure dividends are supported by interim accounts showing distributable reserves.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Twilight zone (insolvency probable but not inevitable).</strong> Duty to creditors arises. Review every director payment. Stop dividends unless distributable reserves are certain. Document every decision in board minutes.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Insolvency inevitable.</strong> Stop all non-essential payments to directors. Take advice from a licensed insolvency practitioner before making any payment. Section 127 will apply from the petition date if the route is compulsory liquidation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>After formal insolvency begins.</strong> The insolvency practitioner controls the estate. Director authority ends. Any prior payments in the relevant lookback period are open to challenge.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our advice at checkpoint two is always the same: get a second opinion, in writing, from a licensed IP before you take anything. It costs you nothing, and it may save you tens of thousands in clawback later.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Patterns Liquidators Flag in Director Pay</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When we are appointed as liquidator, our investigation into director payments follows a consistent pattern. We pull the bank statements for the period the lookback allows, which is two years for connected-party transactions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We reconcile every director payment against payroll records, the loan account ledger, declared dividends, and supporting board minutes. We test the company's solvency at the date of each payment by reconstructing a rough balance sheet and cashflow position. And we compare the pattern of director payments with the pattern of creditor payments over the same window.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where the pattern is clean, the director walks away. Where directors were paid smoothly while HMRC and trade creditors were held off, we flag a preference. Where dividends were declared with no supporting interim accounts, we flag an unlawful distribution. Where salary spiked in the final months, we flag a transaction at undervalue.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Then we write to the director setting out the findings and giving them an opportunity to respond before we pursue recovery. A well-advised director can often settle these claims for a fraction of the face value, but only if they have the records to prove their case.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Myths Directors Bring to First Calls</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>"It's my company, I can pay myself what I like."</em> Only while the company is solvent. The moment insolvency becomes probable, your duties shift and your freedom narrows. This is the clearest effect of <em>BTI v Sequana</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"I already paid tax on the dividend, so it's mine."</em> The tax status of the dividend in your hands is separate from whether it was lawfully declared. If the company had no distributable reserves, the dividend is unlawful and you can be ordered to repay it regardless of your personal tax position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"I'll just repay my director's loan before anyone notices."</em> The liquidator will notice. Bank statements show everything, and the section 239 lookback for connected parties is two years. Clearing a credit DLA in the run-up to insolvency is one of the most attackable payments a director can make.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"Expenses don't matter, they're only small."</em> They matter because they signal intent. A pattern of personal costs run through the company in the months before failure tells the liquidator more about director conduct than any single large payment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Checklist Before You Pay Yourself</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Can the company pay its other debts as they fall due? If not, insolvency is probable and your duties have shifted.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Is the payment salary, and is it reasonable for the role you perform?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If it is a dividend, do you hold signed interim accounts at the payment date showing distributable reserves?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If it is a DLA repayment, are you being paid ahead of trade creditors or HMRC? If so, stop.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If it is an expense reimbursement, is the expense documented, receipted, and genuinely business-related?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Have you documented the decision in a board minute? If not, do it now.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Have you taken advice from a licensed insolvency practitioner? If insolvency is probable, you should.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:group {"className":"cd-do-dont"} -->
+<div class="wp-block-group cd-do-dont">
+<div class="cd-do-dont__do">
+<p class="cd-do-dont__label">Do</p>
+<!-- wp:list --><ul><li>Continue a reasonable salary processed through PAYE for work you are actually performing</li><li>Maintain signed interim accounts before each dividend to confirm distributable reserves exist at the payment date</li><li>Document every director payment decision in contemporaneous board minutes</li><li>Get written advice from a licensed IP the moment insolvency becomes probable</li><li>Keep receipts for all expense claims and apply the business-purpose test honestly</li></ul><!-- /wp:list -->
+</div>
+<div class="cd-do-dont__dont">
+<p class="cd-do-dont__label">Don't</p>
+<!-- wp:list --><ul><li>Increase your salary or take a backdated pay rise in the months before formal insolvency</li><li>Declare dividends when you cannot produce interim accounts showing the profits exist</li><li>Repay a credit director's loan account while HMRC arrears or trade creditor debts are outstanding</li><li>Run personal expenses through the company and rely on them going unnoticed in a liquidator review</li><li>Assume that paying income tax on a dividend confirms it was lawfully declared</li></ul><!-- /wp:list -->
+</div>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:ub/call-to-action-block {"blockID":"a1b2c3d4-79553-pre-faq","ub_call_to_action_headline_text":"\u003cstrong\u003eGet a Quick and Easy Liquidation Quote\u003c/strong\u003e","ub_cta_content_text":"Talk to a licensed IP before you take another payment\u003cbr\u003e\u003cstrong\u003e\u003cbr\u003e✓ 100% Confidential | ✓ No Obligation | ✓ Licensed and Regulated Advice\u003c/strong\u003e","ub_cta_button_text":"Get a Quote","headColor":"#002856","contentFontSize":17,"buttonColor":"#ff6600","buttonTextColor":"#ffffff","buttonWidth":300,"ctaBackgroundColor":"#e7f6fd","ctaBorderColor":"#ffffff","url":"https://comdebstage.wpengine.com/quick-quote/","padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}} /-->
+
+<!-- wp:html -->
+<h2 class="wp-block-heading">FAQs on Director Pay Before Liquidation</h2>
+
+<div class="wp-block-ub-content-toggle wp-block-ub-content-toggle-block" id="ub-content-toggle-block-faq-79553" data-mobilecollapse="false" data-desktopcollapse="true" data-preventcollapse="false" data-showonlyone="false">
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-0">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-0-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>Can I take a salary right up until the company enters liquidation?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-0-faq-79553">
+<p>Yes, provided it is reasonable for the work you perform, run through PAYE, and consistent with your historical pay pattern. Salary is a trading expense, not a distribution, so it is not subject to the distributable-reserves rule. What a liquidator will challenge is a sudden increase in pay in the final months, or a "salary" that was never actually processed through payroll.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-1">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-1-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>Can I still take a dividend if I am worried about insolvency?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-1-faq-79553">
+<p>Only if you hold interim accounts at the date of payment showing the company has distributable profits. A company without distributable reserves cannot lawfully declare a dividend, and under section 847 of the Companies Act 2006 directors who knew or ought to have known the distribution was unlawful can be ordered to repay it personally.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-2">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-2-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>Is repaying my director's loan before liquidation a preference?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-2-faq-79553">
+<p>Almost certainly, if the company is already insolvent and you are being paid ahead of trade creditors or HMRC. Section 239 of the Insolvency Act 1986 allows the liquidator to unwind the payment and recover it from you personally. The lookback period for connected parties, including directors, is two years.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-3">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-3-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>What happens if my director's loan account is overdrawn?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-3-faq-79553">
+<p>A debit balance on your loan account is a debt you owe the company. In liquidation, the liquidator will demand it back personally, and HMRC will apply a section 455 corporation tax charge. If you have a debit DLA and the company is approaching insolvency, take advice before the formal process begins so you understand your options for repayment, settlement, or restructuring.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-4">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-4-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>Can I claim redundancy as a director?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-4-faq-79553">
+<p>Yes, if you are also an employee of the company under a contract of employment, you are on PAYE, and you have at least two years of continuous service. Redundancy pay, unpaid wages, holiday pay, and notice pay are paid from the National Insurance Fund via the Insolvency Service, not from company assets. The average successful director redundancy claim is £9,000 to £12,000.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-5">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-5-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>What is the twilight zone and when does it start?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-5-faq-79553">
+<p>It is the period where a company is insolvent or likely to become insolvent but has not yet entered a formal procedure. Under <em>BTI v Sequana</em>, directors' duties shift toward creditors when insolvency becomes "probable", not just inevitable. The moment you know the company cannot meet its debts as they fall due, your freedom to pay yourself narrows.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-6">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-6-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>How far back can a liquidator look at payments I took?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-6-faq-79553">
+<p>For preferences under section 239, the lookback is six months for third parties and two years for connected parties (which includes directors). For transactions at undervalue under section 238, the lookback is two years. For transactions defrauding creditors under section 423, there is no time limit. Wrongful trading and misfeasance are judged on conduct, not on a fixed window.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-7">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-7-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>What should I do if I have already taken a payment I am worried about?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-7-faq-79553">
+<p>Get advice from a licensed insolvency practitioner before the company enters any formal procedure. In many cases, a director who engages early can structure the liquidation in a way that manages the clawback risk. A Creditors' Voluntary Liquidation started on your terms gives you more control than a compulsory winding-up driven by a creditor.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-79553-8">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-8-faq-79553">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-79553" style="color: #000000"><strong>Are director expenses still claimable while the company is insolvent?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-8-faq-79553">
+<p>Yes, provided the expenses are genuine, documented, receipted, and incurred wholly and exclusively for business purposes. The same rules HMRC applies for tax deductibility apply here. Our rule for directors in difficulty: keep receipts for everything, stop any expense that would embarrass you in a liquidator's interview, and never backdate claims.</p>
+	</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"faq-asset-loader-79553","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>Company Debt is a firm of licensed insolvency practitioners regulated by the Insolvency Practitioners Association. If you instruct us, we act as your IP and our fees are paid from company assets or director funding. This page is written from that position and is not independent legal advice.</p>
+<p>Statutory references in this guide are to the Insolvency Act 1986 (sections 123, 212, 213, 214, 238, 239, 246ZA, and 423) and the Companies Act 2006 (sections 829 to 853 on distributions). The case law reference is to <em>BTI 2014 LLC v Sequana SA</em> [2022] UKSC 25.</p>
+<p>All references are current for England and Wales as of April 2026. Scottish and Northern Irish equivalents are broadly parallel but use different court procedures. This is general information for UK company directors and is not a substitute for case-specific advice. Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986 (sections 123, 212, 213, 214, 238, 239, 246ZA, 423)</strong> &mdash; statutory tests for misfeasance, wrongful trading, preferences, transactions at undervalue and the clawback powers liquidators use against director payments</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006 (Part 23, sections 829&ndash;853, section 847)</strong> &mdash; rules on distributable profits, unlawful dividends and the personal recovery duty when reserves do not support a payment</a> - legislation.gov.uk</li>
+<li><a href="https://www.supremecourt.uk/cases/uksc-2019-0046.html"><strong>BTI 2014 LLC v Sequana SA [2022] UKSC 25</strong> &mdash; Supreme Court ruling on when directors' duty shifts to consider creditors as insolvency approaches</a> - supremecourt.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; conduct reports, director redundancy claims via RPS and official guidance on liquidator investigations</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/directors-loans"><strong>HMRC guidance on directors' loans and section 455 charge</strong> &mdash; tax treatment of overdrawn director loan accounts and the 33.75% s455 charge that applies if unpaid nine months after year-end</a> - gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; framework under which improper payments before liquidation can lead to 2&ndash;15 year disqualification</a> - legislation.gov.uk</li>
+<li><a href="https://insolvency-practitioners.org.uk/"><strong>Insolvency Practitioners Association</strong> &mdash; regulator and licence-holder search to verify the liquidator reviewing your conduct and payments</a> - insolvency-practitioners.org.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

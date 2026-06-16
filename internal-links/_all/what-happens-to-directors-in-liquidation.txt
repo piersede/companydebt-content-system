@@ -1,0 +1,266 @@
+<!-- TITLE: What Happens to Directors in Liquidation? Duties, Risks, and Liabilities in the UK -->
+<!-- POST ID: 46222 / TYPE: pages / AUTHOR: 34 / FM: 70117 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/what-happens-to-directors-in-liquidation/ -->
+
+<!-- wp:paragraph -->
+<p>When a company enters liquidation, the directors do not walk away. You cooperate with the liquidator, answer questions about every significant financial decision you made, and wait while the Insolvency Service decides whether your conduct was fit or unfit.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That process can take months after the company has been dissolved.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We work with directors going through this every week. The most common mistake is assuming that liquidation is something that happens to the company whilst you watch from the sidelines. It is not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The liquidator's investigation is focused on you: what you knew, when you knew it, what you did about it, and whether your decisions were reasonable given the information available at the time. If you acted properly, the process protects you. That is the deal. If you did not, the consequences are personal and can last for years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This page explains what happens to directors during and after UK <a href="/liquidation/">company liquidation</a>, what the liquidator investigates, what personal liabilities you may face, and how to protect your position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: What Happens to Directors in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>During liquidation, you must cooperate with the liquidator, provide all records and information they request, and attend for examination if required.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>After liquidation, you may face wrongful trading claims, misfeasance claims, personal guarantee enforcement, and director disqualification proceedings. The Insolvency Service has up to three years after the conduct report to commence disqualification action. Your personal assets are only at risk if you gave guarantees, have overdrawn loan accounts, or are subject to a court contribution order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell every director: the outcome depends far more on what you did before liquidation than on what you do during it. If you acted responsibly, sought advice at the right time, and kept proper records, the investigation is manageable. If you traded while insolvent, made preferential payments, or failed to maintain records, the investigation will find it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Duties During Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>From the moment the liquidator is appointed, your executive authority over the company ends. You cannot make payments, sign contracts, or take decisions on behalf of the company. But your obligations as a director are replaced by a different set of duties: the duty to cooperate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Section 235 of the Insolvency Act 1986</strong> requires you to give the liquidator all information about the company's affairs that they reasonably require, attend on the liquidator at reasonable times, and deliver up all property and documents in your possession that belong to the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is not a request. Failure to comply is a criminal offence and will be treated as a serious conduct issue in any disqualification assessment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, you will be asked to provide bank statements, board minutes, financial records, creditor and debtor lists, details of any asset transfers, and explanations for specific payment decisions. The liquidator may also interview you formally, and we advise having a solicitor present at any formal interview. You are entitled to legal representation, and you should use it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We find that the directors who come through the process best are the ones who prepared their records before the liquidator was appointed. A complete document pack handed over on day one signals cooperation and reduces the cost and duration of the investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We recommend using our liquidation documents checklist to prepare before the process starts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Conduct Investigation Into Directors in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In every compulsory liquidation and most CVLs, the liquidator files a conduct report with the Insolvency Service assessing how the directors ran the company. The report covers:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>When the company became insolvent and when the directors became (or should have become) aware.</li>
+<li>Whether the directors continued to trade beyond the point where insolvent liquidation was unavoidable.</li>
+<li>Whether any transactions were made at undervalue or amounted to preferences.</li>
+<li>Whether the directors maintained adequate accounting records.</li>
+<li>Whether statutory filings (accounts, confirmation statements) were up to date.</li>
+<li>Whether the directors cooperated with the liquidator.</li>
+<li>Whether Crown debts (PAYE, VAT, NICs) were paid or allowed to accumulate.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We are honest about what drives a negative conduct report: it is rarely one dramatic event. It is usually a pattern of small failures: late filing, poor records, gradual accumulation of Crown debts, continued trading after the tipping point, and selective creditor payments. The liquidator assembles the pattern, and the Insolvency Service decides whether it crosses the threshold of unfitness. Our guide to <a href="/liquidation/director-conduct-review/">the liquidator's review of director conduct</a> explains how that report is built and what it examines.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Wrongful Trading: The Main Personal Risk for Directors in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 214 of the Insolvency Act is the provision that keeps directors awake at night, and rightly so.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If the liquidator concludes that you continued to trade when you knew, or should have known, that there was no reasonable prospect of avoiding insolvent liquidation, and you did not take every step a reasonably diligent person would take to minimise the potential loss to creditors, the court can order you to contribute personally to the company's assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The contribution order is calculated based on the increase in the company's net deficiency between the date you should have acted and the date the company actually entered liquidation. If the company's debts increased by £50,000 during that period, you may be ordered to pay £50,000 from your personal funds.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors who assume wrongful trading claims are rare. They are not. The liquidator assesses every <a href="/liquidation/creditors-voluntary-liquidation/">CVL</a> and compulsory liquidation for potential wrongful trading. The claims that proceed to court tend to be the larger cases, but many are settled by negotiation before reaching a hearing. The threat alone creates significant pressure on your personal position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>There is no cap on a section 214 contribution, and there is no requirement for the liquidator to prove dishonest intent. The standard is objective: what a reasonably diligent director in the same circumstances would have known and done.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Other Personal Liabilities for Directors in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Personal guarantees.</strong> Any guarantee you gave to a bank, landlord, or supplier survives the company's liquidation. The creditor can pursue you personally for the guaranteed amount. We see directors who forgot about guarantees they signed years ago discover them during liquidation when the creditor makes a claim. Check every loan agreement, lease, and credit facility for guarantee clauses.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Overdrawn director's loan account.</strong> If your current account with the company is overdrawn, the liquidator will demand repayment. This is an asset of the company, and the liquidator has a duty to recover it. If you cannot repay, the liquidator can pursue the claim through the courts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>HMRC personal liability notices.</strong> HMRC can issue personal liability notices to directors for unpaid PAYE, employee NICs, and in some cases VAT. These are personal debts that survive the company's liquidation and can be enforced against your personal assets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Misfeasance claims (section 212).</strong> If you breached your fiduciary duties as a director, the liquidator can bring a misfeasance claim to recover losses caused by the breach. This covers a wide range of conduct, from paying yourself excessive remuneration to authorising transactions that were not in the company's or creditors' interests.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Disqualification Following Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the Insolvency Service concludes that your conduct was unfit, they can seek a disqualification order under the Company Directors Disqualification Act 1986. Orders range from 2 to 15 years. During the disqualification period, you cannot:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Act as a director of any company.</li>
+<li>Promote, form, or manage any company.</li>
+<li>Be a member of an LLP.</li>
+<li>Act as an insolvency practitioner.</li>
+<li>Act as a receiver or manager of a company's property.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Breaching a disqualification order is a criminal offence and makes you personally liable for all debts incurred by the company during the period of breach.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We advise every director who receives a disqualification warning from the Insolvency Service to seek specialist legal advice immediately. Many cases are resolved through a disqualification undertaking (a voluntary agreement that avoids court proceedings), and the length of the disqualification can often be negotiated.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You need a solicitor who specialises in this area. General commercial solicitors do not have the specific expertise required.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Insolvency Service has three years from the date of the company's insolvency to commence disqualification proceedings, not three years from the liquidation appointment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, the liquidator typically files the conduct report within 6 to 12 months. The Service usually decides within approximately 90 days of receiving it. A formal investigation letter may arrive 6 to 18 months after the liquidation date.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most decisions are made within 12 to 18 months of the report being filed, but the three-year statutory window means you can receive a disqualification notice more than two years after the company was wound up. Directors who assume the process is over because they have heard nothing within twelve months of liquidation may be wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Directors Can Protect Themselves During Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We advise directors to take these steps, ideally before liquidation starts:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Seek professional advice early.</strong> The single most important thing you can do for your personal position is demonstrate that you recognised the problem and sought advice from a licensed insolvency practitioner before the situation became critical. The date you first took advice is one of the key data points in the conduct report. Our guide on whether to close or save your company is a good starting point.</li>
+<li><strong>Keep proper records.</strong> Board minutes, financial accounts, bank statements, and a clear record of decision-making. If you do not have formal board minutes, start keeping them now. The liquidator will use your records to reconstruct the timeline.</li>
+<li><strong>Stop trading if the company is insolvent.</strong> This is the hardest advice to hear, but it is the most important. Every day of trading beyond the tipping point increases your wrongful trading exposure. Our guide on when to stop trading explains the precise threshold.</li>
+<li><strong>Cooperate fully with the liquidator.</strong> Answer every question, provide every document, attend every meeting. Non-cooperation is the fastest way to turn a manageable situation into a disqualification case.</li>
+<li><strong>Get independent legal advice on your personal position.</strong> This is separate from the insolvency advice. You need a solicitor who can assess your exposure to wrongful trading, personal guarantees, and disqualification, and who can represent you if the Insolvency Service takes action.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Company Debt connects directors with licensed insolvency practitioners and specialist advisers. If your company is in financial difficulty, expert liquidation advice gives you the best chance of managing both the company's closure and your personal position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on What Happens to Directors in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"7d2c8a91-3e74-4f63-bd85-c1f4a2e8d70e","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eWill I lose my house if my company is liquidated?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Your house is only at risk if you gave a personal guarantee secured against it, if a court orders a personal contribution through a wrongful trading claim that you cannot pay from other assets, or if you are made bankrupt as a result of personal debts arising from the liquidation. Limited liability protects your personal assets unless one of these exceptions applies.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I be a director of another company during liquidation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, unless you are subject to a disqualification order or undertaking, or unless the new company uses a prohibited name under section 216 of the Insolvency Act. Being a director of a company in liquidation does not automatically prevent you from holding other directorships. But if you are subsequently disqualified, all directorships are affected.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does the investigation into directors take?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The liquidator typically files the conduct report within 6 to 12 months of appointment. The Insolvency Service then has up to three years from the report date to commence disqualification proceedings. In practice, most decisions are made within 12 to 18 months of the report being filed. The uncertainty during this period is one of the most stressful aspects of liquidation for directors.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between wrongful trading and fraudulent trading?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Wrongful trading (section 214) is a civil claim. It requires showing you continued trading when you should have known insolvent liquidation was unavoidable. Fraudulent trading (section 213) is both civil and criminal. It requires intent to defraud creditors. Most director liability cases involve wrongful trading, not fraud.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I negotiate a disqualification undertaking instead of going to court?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A disqualification undertaking is a voluntary agreement where you accept disqualification for an agreed period without court proceedings. Most disqualification cases are resolved this way. It avoids the cost and publicity of a hearing, and the period can often be negotiated shorter than the court might impose. Use a specialist solicitor.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes resigning as director before liquidation protect me?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Resignation does not eliminate liability for conduct during your time in office. Wrongful trading, preferences, misfeasance, personal guarantees and section 216 prohibited-name issues all survive a resignation. The liquidator can investigate former directors for the same period, and the Insolvency Service can disqualify a former director on the same grounds.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Insolvency Act 1986 (sections 212 to 214, 216, 235 to 236), the Company Directors Disqualification Act 1986 (sections 6 to 8 and 7A on undertakings), the Social Security Administration Act 1992 (Personal Liability Notices), and Insolvency Service guidance.</p>
+<p>Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, sections 212 to 214</strong> &mdash; misfeasance, fraudulent trading and wrongful trading liability for directors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/235"><strong>Insolvency Act 1986, sections 235 and 236</strong> &mdash; the director's statutory duty to cooperate with the officeholder and the court's information-request power</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/216"><strong>Insolvency Act 1986, section 216</strong> &mdash; restrictions on the use of an insolvent company's name by former directors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986, sections 6 to 8 and 7A</strong> &mdash; the framework for disqualification on grounds of unfit conduct and disqualification undertakings</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1992/5/section/121C"><strong>Social Security Administration Act 1992, section 121C</strong> &mdash; HMRC's power to issue Personal Liability Notices for unpaid NICs</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; published guidance on conduct reporting, disqualification criteria, and undertaking negotiations</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; verify a practitioner's licence before instructing</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

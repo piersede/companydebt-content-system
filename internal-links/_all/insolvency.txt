@@ -1,0 +1,299 @@
+<!-- wp:paragraph -->
+<p>Facing potential insolvency can be daunting for UK company directors, with serious legal and personal implications. When a company begins to struggle financially, swift and informed action becomes critical. Ignoring creditor pressure or delaying decisions can significantly increase risks, including personal liability and regulatory consequences.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors must understand when insolvency arises, how their duties change as financial distress deepens, and which lawful options are available. This guide explains the core insolvency tests, director duties, and formal procedures, helping you make informed decisions to protect both the company and your own position.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":67521,"sizeSlug":"full","linkDestination":"media"} -->
+<figure class="wp-block-image size-full"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2024/02/A-Guide-to-Insolvency.png" alt="What is Insolvency?" class="wp-image-67521" /></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Understanding Company Insolvency</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Under UK law, company insolvency is assessed primarily by reference to section 123 of the Insolvency Act 1986. Insolvency is not a single event but a financial state that can be identified using two statutory tests: the <strong>cash-flow test</strong> and the <strong>balance-sheet test</strong>. Satisfying either test can indicate insolvency for legal purposes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where a company is insolvent, or approaching insolvency, directors must pay close attention to their statutory and fiduciary duties, particularly where creditor interests become increasingly relevant.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">The Cash-Flow Test</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The cash-flow test considers whether a company is able to pay its debts as they fall due. This includes both current liabilities and debts that are due in the reasonably near future. A persistent inability to meet payment obligations—such as rent, taxes, or supplier invoices—can indicate insolvency under this test.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This assessment focuses on the company’s real ability to meet obligations in practice, rather than temporary cash shortages alone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">The Balance-Sheet Test</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The balance-sheet test examines whether the value of a company’s assets is less than the amount of its liabilities, taking into account contingent and prospective liabilities. These may include guarantees, ongoing litigation risks, or future contractual commitments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This test provides a broader view of financial health by assessing whether the company’s overall obligations outweigh its available resources.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Meeting either test may indicate insolvency, requiring directors to act with heightened care and to consider appropriate steps to minimise potential losses to creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Key Signs and Risks of Insolvency</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Early recognition of insolvency warning signs is essential. Common indicators include mounting creditor pressure, overdue tax liabilities, persistent cash-flow shortfalls, and difficulty meeting routine financial commitments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Continuing to trade during financial distress can expose directors to serious risks. In particular, directors may face allegations of <strong>wrongful trading</strong> if, before the start of an insolvent liquidation, they knew or ought to have concluded that there was no reasonable prospect of avoiding insolvent liquidation and failed to take every step to minimise losses to creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>More serious misconduct, such as deliberately deceiving creditors, can result in <strong>fraudulent trading</strong>, which carries both civil and criminal consequences.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Once insolvency is suspected, directors must act with care and should consider seeking advice from a licensed insolvency practitioner. Early professional guidance can expand available options and reduce personal exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Overview of Formal Insolvency Procedures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>UK insolvency law provides several formal procedures designed to address financial distress, depending on whether rescue or orderly closure is achievable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Administration</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Administration aims to rescue the company as a going concern, achieve a better result for creditors than liquidation, or realise property to make distributions to secured or preferential creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>An insolvency practitioner is appointed as administrator and assumes control of the company’s affairs. A statutory moratorium applies, restricting most creditor enforcement actions unless the administrator consents or the court grants permission. Directors remain in office but their powers are significantly limited.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Creditors’ Voluntary Liquidation (CVL)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A CVL is used when an insolvent company cannot continue trading. Shareholders must pass a special resolution (at least 75% by value) to wind up the company voluntarily. A licensed insolvency practitioner is appointed as liquidator and takes control of the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors’ powers cease, and the liquidator investigates company affairs and director conduct before realising assets for creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Compulsory Liquidation</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Compulsory liquidation occurs when the court orders a company to be wound up, most commonly following a creditor’s winding-up petition. The Official Receiver initially acts as liquidator and may later be replaced by an insolvency practitioner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The process involves investigation of company affairs, realisation of assets, and distribution to creditors in accordance with statutory priorities.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Company Voluntary Arrangement (CVA)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A CVA allows an insolvent but viable company to reach a binding agreement with creditors to repay debts over time. The proposal must be approved by at least 75% (by value) of creditors voting, and more than 50% (by value) of unconnected creditors who vote.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors usually remain in control, subject to supervision by an insolvency practitioner acting as supervisor.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Moratorium</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Introduced under the Corporate Insolvency and Governance Act 2020, a moratorium provides temporary protection from creditor action while rescue options are explored. An insolvency practitioner acts as monitor, overseeing the process while directors retain day-to-day control.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The moratorium is obtained by filing prescribed documents with the court and meeting statutory eligibility criteria.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Receivership</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Receivership typically involves appointing a receiver over specific charged assets, usually under a fixed charge. Administrative receivership (covering all or substantially all assets under a floating charge) is now largely restricted to floating charges created before September 2003, subject to limited exceptions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A receiver’s primary duty is to the appointing secured creditor, not to the company as a whole.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Directors’ Duties and Potential Liabilities</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>As financial distress deepens, directors must increasingly consider creditor interests when making decisions. Failure to do so can result in personal liability, particularly in wrongful trading claims.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors may also face disqualification under the Company Directors Disqualification Act 1986 if their conduct is found to make them unfit to manage a company. Investigations are typically carried out by the liquidator, administrator, or the Official Receiver, often involving the <strong>Insolvency Service</strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cooperation with office-holders, maintaining proper records, and seeking early professional advice can help mitigate risks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical Steps to Take if You Suspect Insolvency</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If insolvency is a concern, prompt and measured action is essential:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Seek Professional Advice - </strong>Contact a licensed insolvency practitioner as early as possible for case-specific guidance.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Avoid Worsening Creditor Losses -</strong> Carefully review ongoing trading decisions to ensure they do not increase losses to creditors.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Review Financial Information -</strong> Prepare up-to-date accounts, cash-flow forecasts, and a full list of liabilities.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Maintain Transparency -</strong> Communicate responsibly with stakeholders while avoiding preferential treatment of particular creditors.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>These steps can help protect both the company and directors while lawful options are assessed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings and Mistakes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A common misconception is that insolvency automatically ends the business. In reality, procedures such as administration or CVAs may allow viable operations to continue.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Another misunderstanding is that directors are automatically disqualified when a company becomes insolvent. Disqualification only follows where misconduct or unfitness is established through the statutory process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Serious mistakes include delaying advice, poor record-keeping, and preferring certain creditors. These actions can significantly increase personal exposure and worsen outcomes for all parties.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"ad72d72a-9841-4163-91ab-e143072fdaf1","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003e1) What if I cannot afford to pay for an insolvency practitioner?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Many insolvency practitioners offer an initial consultation at no cost. While the <strong>Insolvency Service</strong> provides general information about insolvency processes, it cannot give legal or financial advice on individual cases.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e2) Can directors continue trading when the company is insolvent?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Insolvency alone does not automatically prohibit trading. However, directors risk wrongful trading liability if they continue when there is no reasonable prospect of avoiding insolvent liquidation and fail to take every step to minimise creditor losses.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e3) What happens if a creditor has already petitioned for winding up?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The court will determine whether to make a winding-up order. Directors should seek immediate professional advice and act carefully, as asset dispositions after petition presentation may be void.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e4) Does insolvency affect my personal credit score?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Company insolvency does not directly affect a director’s personal credit record. However, personal guarantees or other personal liabilities may have credit consequences.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e5) Will HMRC support a CVA if I owe taxes?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>HMRC may vote in favour of a CVA where it considers the proposal viable and compliant, but approval depends on the specific facts and creditor voting outcomes.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e6) Can the business still operate under administration?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. An administrator may continue trading where this supports the statutory objectives, such as business rescue or sale as a going concern.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e7) Do employees automatically lose their jobs in insolvency?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Outcomes vary by procedure. Some jobs may be preserved in administration, while liquidation often leads to redundancies.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e8) What is the role of the Official Receiver in compulsory liquidation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The Official Receiver initially acts as liquidator, investigating company affairs and director conduct and managing asset realisation.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":8,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e9) How does company insolvency differ in Northern Ireland or Scotland?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Core insolvency law is UK-wide, but procedural rules and institutions differ. Local guidance should always be consulted.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":9,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e10) Does seeking advice early help avoid formal insolvency?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Early advice can identify rescue or restructuring options before creditor action escalates.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":10,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e11) Will I lose my directorship once insolvency proceedings begin?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Directors often lose control of management in administration or liquidation but do not automatically lose their status unless disqualified.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":11,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003e12) Are there government schemes to help pay redundancy?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Where an employer is insolvent, employees may claim statutory payments through the Redundancy Payments Service.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Next Steps</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company is experiencing financial distress, engaging a licensed insolvency practitioner without delay is critical. Early professional advice can help identify rescue options, manage risks, and ensure compliance with UK insolvency law. Whether restructuring is possible or an orderly wind-down is required, timely action is essential to protect both the company and your position as a director.</p>
+<!-- /wp:paragraph -->

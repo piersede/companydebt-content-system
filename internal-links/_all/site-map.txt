@@ -1,0 +1,7 @@
+<!-- wp:shortcode -->
+<p>[wp_sitemap_page only="page"]</p>
+<!-- /wp:shortcode -->
+
+<!-- wp:shortcode -->
+<p>[wp_sitemap_page only="post"]</p>
+<!-- /wp:shortcode -->

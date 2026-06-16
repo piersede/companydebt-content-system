@@ -1,0 +1,297 @@
+<!-- wp:paragraph -->
+<p>A Time to Pay arrangement is an instalment plan with HMRC that lets you spread an overdue tax bill over 6 to 12 months. It is the single most effective tool for managing HMRC debt, and the single most wasted opportunity when directors leave it too late to call.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We facilitate TTP conversations between directors and HMRC every week, and the pattern in our caseload is consistent. Directors who call before the deadline, or within a few weeks of missing it, get arrangements agreed in a single phone call.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors who call six months late, after statutory demands have been served and field officers instructed, face a much harder negotiation with a much lower success rate from our experience. The tool is the same. The timing changes everything.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The director who calls on a Tuesday morning while the VAT is still only a fortnight late tends to come off the phone with an agreement and a payment schedule. The one who calls after the bailiff letter has arrived is starting from much further back.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<aside class="cd-callout cd-callout--summary">
+<p class="cd-callout__label"><strong>Time to Pay at a Glance</strong></p>
+<p><strong>What it is:</strong> a binding instalment plan agreed with HMRC for an overdue tax debt, typically 6 to 12 months long.</p>
+<p><strong>Who calls:</strong> the director or their accountant calls HMRC's Business Payment Support Service on 0300 200 3835.</p>
+<p><strong>What it does:</strong> suspends enforcement, freezes most penalties, and binds HMRC to the agreed schedule for the duration.</p>
+<p><strong>Cost:</strong> interest continues to accrue at Bank of England base rate plus 4% throughout the arrangement.</p>
+<p><strong>Director priority:</strong> call early, propose a specific monthly figure you can actually pay, and meet every current tax obligation during the TTP. Missing one collapses the lot.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: How HMRC Time to Pay Works</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Call HMRC's Business Payment Support Service on 0300 200 3835. Tell them you cannot pay your tax bill in full. Propose a specific monthly repayment schedule, typically 6 to 12 months. If HMRC agrees, enforcement is suspended, late-payment penalties may be frozen, and you repay the debt in instalments while continuing to meet current tax obligations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Interest continues to accrue on the outstanding balance at the HMRC late-payment rate (Bank of England base rate plus 4%, since 6 April 2025). If you miss a payment or fall behind on current obligations, HMRC can terminate the arrangement and resume enforcement immediately.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Which Tax Debts Qualify for HMRC Time to Pay?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>TTP is available for all HMRC business tax debts. The five most common are below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>VAT:</strong> quarterly or monthly returns. The most common TTP debt by volume.</li>
+<li><strong>PAYE and employee NICs:</strong> monthly payroll deductions. HMRC treats these as money you collected on its behalf and negotiates least flexibly.</li>
+<li><strong>Corporation Tax:</strong> annual company tax. HMRC is more flexible here because the debt is the company's own.</li>
+<li><strong>CIS deductions:</strong> Construction Industry Scheme payments.</li>
+<li><strong>Self Assessment:</strong> personal tax for directors paid through SA.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>HMRC treats different tax types with different urgency, and the reason matters when you decide which TTP to ask for first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>PAYE and employee NICs are pursued hardest because HMRC treats these as money the company collected from employees and held as a fiduciary, not as a company debt. VAT sits in the middle for similar reasons: collected from customers and remitted on. Corporation Tax is the most flexible because the debt is the company's own.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you owe more than one tax type, request the TTP for Corporation Tax first while you sort current PAYE and VAT, not the other way round.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Negotiate an HMRC Time to Pay Arrangement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Before You Call HMRC</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li>Know exactly what you owe. Check your Business Tax Account at tax.service.gov.uk; the balance updates daily.</li>
+<li>Prepare a breakdown of your company's monthly income and expenses. The HMRC adviser will ask for this.</li>
+<li>Have a realistic repayment proposal ready. Not what you hope to pay. What you can guarantee.</li>
+<li>Make sure your tax returns are filed up to date. HMRC will not agree a TTP while returns are outstanding; the adviser cannot calculate the total debt without them. If you cannot pay the tax shown on the return, file the return anyway and call about the TTP straight after. Filing first is what unlocks the conversation.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">On the Call With HMRC</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li>Be honest about why you cannot pay. HMRC hears every excuse. Honesty builds credibility.</li>
+<li>Propose a specific monthly amount and duration. "I can pay £3,000 per month for 10 months" lands better than "I need help."</li>
+<li>Confirm you can meet current obligations during the TTP. This is non-negotiable. If you cannot pay the old debt and keep up with new liabilities, TTP is not viable.</li>
+<li>Ask for the agreement in writing. HMRC will send a confirmation letter. Keep it.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The call typically takes 20 to 30 minutes. The adviser has authority to agree arrangements up to 12 months on the spot. Longer terms or larger debts may be referred to a manager, which adds a few days.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens If HMRC Rejects Your Time to Pay Application</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>HMRC rejects TTP when they conclude the business is not viable, the proposed repayment is unrealistic, or you have a history of broken arrangements. We see rejections most commonly in the four situations below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Reason for rejection</th><th>What it usually means</th></tr></thead>
+<tbody>
+<tr><td>Director called too late</td><td>Enforcement has already started; HMRC has lost confidence in the company's ability to pay.</td></tr>
+<tr><td>Multiple tax types overdue</td><td>The arrears across VAT, PAYE, and CT together suggest the business is structurally insolvent, not cash-strapped.</td></tr>
+<tr><td>Previous TTP broken</td><td>HMRC's system records every prior arrangement. A broken TTP is treated as a credibility problem.</td></tr>
+<tr><td>Numbers do not support the proposal</td><td>The income and expenses breakdown shows the company cannot sustain the proposed repayments.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>A rejection narrows the options in a specific order. The cheapest move is to propose revised terms straight back: a lower monthly amount, a longer period, or both.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The next step is to engage a licensed insolvency practitioner to make the call, because HMRC sometimes responds differently to a regulated firm putting forward a documented assessment of viability. The third move is a formal restructuring like a CVA, which binds HMRC to a creditor-approved repayment plan through the 75% vote.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If none of those work and HMRC proceeds to enforcement, the next step is typically a statutory demand followed by a winding-up petition under section 124 of the Insolvency Act 1986. At that point the question shifts from how to pay the tax to whether to close or save the company, and the calendar is no longer yours.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens During the Time to Pay Period</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>What stops</th><th>What carries on</th></tr></thead>
+<tbody>
+<tr><td>Enforcement is suspended: no statutory demands, no field officers, no winding-up petitions for the agreed debt.</td><td>Interest accrues on the outstanding balance at base rate plus 4% throughout.</td></tr>
+<tr><td>Most late-payment penalties freeze for the duration.</td><td>You must make every TTP payment on time. Miss one and HMRC can terminate.</td></tr>
+<tr><td>HMRC will not chase the debt outside the agreed schedule.</td><td>You must meet current tax obligations: this quarter's VAT, this month's PAYE, this year's CT all paid on time.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>The current-obligations requirement is where most TTPs collapse. A director negotiates a TTP for last year's VAT, then misses this quarter's VAT because the repayments consumed the cash that was supposed to cover the new bill. The TTP terminates and the total debt is now larger than it was at the start.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We stress-test the numbers before we let a director sign. Can the business fund the TTP repayments and meet current obligations from forecast cash? If the answer is no, the TTP is a displacement exercise, not a solution, and the company needs a different conversation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Time to Pay vs Other HMRC Debt Options</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<table class="cd-table">
+<thead><tr><th>Option</th><th>Best used when</th><th>Limit</th></tr></thead>
+<tbody>
+<tr>
+<td>Time to Pay</td>
+<td>Single or limited HMRC debt, business is otherwise viable, called early.</td>
+<td>Only covers HMRC. Will not solve a broader creditor problem.</td>
+</tr>
+<tr>
+<td>Informal creditor negotiation</td>
+<td>You have other creditors beyond HMRC who are open to instalments.</td>
+<td>Not legally binding. A single creditor can withdraw and force the issue.</td>
+</tr>
+<tr>
+<td>Company Voluntary Arrangement</td>
+<td>Multiple creditors including HMRC; business viable with restructured debt.</td>
+<td>Requires 75% creditor vote; HMRC's vote often decisive. Failure ends in liquidation.</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>HMRC has filed a winding-up petition or business needs the statutory moratorium.</td>
+<td>Heavier process; administrator takes control; outcome depends on saleable value.</td>
+</tr>
+<tr>
+<td>Creditors' Voluntary Liquidation</td>
+<td>HMRC debt is unmanageable and the business cannot be rescued.</td>
+<td>Closes the company; preserves IP choice and timing if you act before petition.</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What You Should Do Right Now About HMRC Time to Pay</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you owe HMRC any tax and cannot pay by the deadline, call 0300 200 3835 today. Not tomorrow. The acceptance rate drops measurably with every week of delay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>Call before the deadline:</strong> highest success rate. HMRC treats this as the company managing its position responsibly.</li>
+<li><strong>Call within 30 days of the deadline:</strong> still strong. The debt is recent, the file clean.</li>
+<li><strong>Call after 3 months:</strong> noticeably harder. Penalties have applied; HMRC's system flags the case.</li>
+<li><strong>Call after a statutory demand:</strong> hardest of all. The case is on HMRC's enforcement track and a TTP usually requires professional representation to be considered.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you have already been rejected, or if the debt is too large for TTP, Company Debt connects directors with licensed insolvency practitioners who can negotiate with HMRC on your behalf or advise on alternative routes. Take our 30-second insolvency test first if you are not sure where the company actually stands. The cases that go badly are rarely the ones where the director called too soon.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Related Guides</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><a href="/hmrc/">HMRC Tax Debt Hub</a>: overview of the HMRC debt-collection process and the routes available at each stage.</li>
+<li><a href="/hmrc/cant-pay-vat/">Cannot Pay VAT</a>: VAT-specific TTP guidance and risks.</li>
+<li><a href="/hmrc/cant-pay-paye/">Cannot Pay PAYE</a>: why HMRC negotiates least flexibly on payroll deductions.</li>
+<li><a href="/hmrc/problems-paying-corporation-tax-hmrc/">Problems Paying Corporation Tax</a>: CT-specific TTP and rescue options.</li>
+<li><a href="/winding-up-petitions/">Winding-Up Petitions</a>: what happens if HMRC moves to enforcement.</li>
+<li><a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a>: the route when TTP alone cannot solve the creditor picture.</li>
+<li><a href="/insolvency/insolvency-test/">30-Second Insolvency Test</a>: confirm where your company actually stands before negotiating.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions About HMRC Time to Pay Arrangements</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"8414-ttp-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long can an HMRC Time to Pay arrangement last?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Typically 6 to 12 months. HMRC advisers can agree arrangements up to 12 months on the call. Longer terms are possible for larger debts but require manager approval and stronger evidence of viability.</p>
+<p>The shorter the arrangement, the more likely HMRC is to agree. A 6-month TTP signals confidence in the business; a 24-month TTP usually signals the business needs more than a payment plan.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes Time to Pay stop penalties and interest?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Interest continues to accrue throughout the TTP at the HMRC late-payment rate, which has been Bank of England base rate plus 4% since 6 April 2025.</p>
+<p>Late-payment penalties may be frozen while the TTP is active, depending on the tax type and your compliance history. The TTP stops enforcement action but does not eliminate the cost of being late.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I get a second Time to Pay if my first one failed?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Possible, but significantly harder. HMRC's system records broken arrangements and the adviser will see the history. You will need to explain why the first arrangement failed and demonstrate that circumstances have changed.</p>
+<p>A second TTP with professional representation (an IP or tax adviser making the call) sometimes carries more weight than a director calling alone, particularly if the first failure was procedural rather than viability-driven.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I need an accountant or IP to negotiate a Time to Pay?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. You can call 0300 200 3835 yourself. For straightforward arrangements (single tax type, realistic repayment, first-time TTP), the call is simple.</p>
+<p>For complex situations (multiple tax types, large debts, previous broken arrangements, or an active statutory demand), professional representation can improve the outcome. The IP makes the same call, but with the credibility of a regulated firm and a documented assessment of the company's viability.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWill HMRC accept a Time to Pay if I have a personal guarantee on the debt?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>HMRC tax debts do not normally involve personal guarantees in the way bank debt does. The relevant personal-liability mechanisms for HMRC are Personal Liability Notices (under the Social Security Administration Act 1992 for unpaid NIC) and Joint and Several Liability Notices (under Finance Act 2020 for tax-avoidance and certain insolvency cases).</p>
+<p>A TTP is a company-level arrangement and does not change personal liability under those notices. If a Personal Liability Notice has been issued or is threatened, the conversation needs to cover both the company TTP and the personal exposure separately.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory and procedural references draw on HMRC's Business Payment Support Service guidance, HMRC's late-payment interest framework (base rate plus 4% from 6 April 2025), the Insolvency Act 1986 (s.124 winding-up petition as the enforcement endpoint), and Finance Act 2020 (Joint and Several Liability Notices).</p>
+<p>Practical observations on TTP acceptance reflect cases handled by our practice and partner IP network.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner and may receive a fee where you engage another practitioner through our network. Last reviewed May 2026.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.gov.uk/difficulties-paying-hmrc"><strong>HMRC: Pay your tax bill in instalments</strong> &mdash; official guidance on the Business Payment Support Service and TTP eligibility</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/publications/rates-and-allowances-hmrc-interest-rates-for-late-and-early-payments"><strong>HMRC interest rates for late and early payments</strong> &mdash; current late-payment rate of Bank of England base rate plus 4% since 6 April 2025</a> - gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; s.124 (winding-up petition presented by HMRC as creditor), Schedule 6 (preferential debts including reinstated Crown preference for VAT, PAYE, employee NIC, CIS, student-loan deductions)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2020/14/contents"><strong>Finance Act 2020</strong> &mdash; Joint and Several Liability Notices and Crown preference reinstatement (1 December 2020)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1992/5/contents"><strong>Social Security Administration Act 1992</strong> &mdash; section 121C (Personal Liability Notices for unpaid NIC)</a> - legislation.gov.uk</li>
+<li><a href="https://www.tax.service.gov.uk"><strong>HMRC Business Tax Account</strong> &mdash; check current balance, file returns, request TTP</a> - tax.service.gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; verify a liquidator's licence before instructing</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

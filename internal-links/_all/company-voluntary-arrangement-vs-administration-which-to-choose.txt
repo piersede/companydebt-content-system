@@ -1,0 +1,162 @@
+<!-- wp:paragraph -->
+<p>Administration gives you court protection from creditors. A CVA lets you restructure your debts while you keep trading. They solve different problems, and choosing the wrong one wastes money and time you do not have.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors treat these as interchangeable rescue options. They are not. Administration is a defensive tool: it stops creditor action immediately, appoints a professional to manage the company's affairs, and buys time under a statutory moratorium.</p>
+<p>A CVA is a negotiating tool: it proposes a deal to your creditors, and if 75% by value agree, everyone is bound by the terms. The choice between them depends on how severe the pressure is right now, whether the business is viable long-term, and how much control you are willing to give up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: Company Voluntary Arrangement vs Administration: Which Route?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":true} -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th></th><th>Administration</th><th>CVA</th></tr></thead><tbody><tr><td>What it does</td><td>Court protection + professional management</td><td>Binding creditor repayment agreement</td></tr><tr><td>Creditor enforcement</td><td>Automatic moratorium stops all enforcement</td><td>Bound creditors cannot enforce; unbound creditors still can</td></tr><tr><td>Director control</td><td>Administrator runs the company</td><td>You keep running the company, supervised by an IP</td></tr><tr><td>Cost</td><td>£15,000+ (administrator fees)</td><td>£5,000–£10,000 (nominee + supervisor fees)</td></tr><tr><td>Timeline</td><td>Typically 12 months maximum</td><td>3–5 year repayment plan</td></tr><tr><td>Best when</td><td>Creditor pressure is intense, petition imminent, business has value worth protecting</td><td>Business is viable, specific debt problem, creditors willing to negotiate</td></tr><tr><td>Outcome if it fails</td><td>Usually transitions to liquidation</td><td>Terminates; company enters CVL or compulsory liquidation</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Administration Beats a Company Voluntary Arrangement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Administration is the right tool when you need creditor enforcement to stop immediately. The moment the administrator is appointed, an automatic moratorium prevents all legal proceedings, winding-up petitions, bailiff action, and creditor enforcement against the company. No other insolvency process provides this level of immediate protection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We advise administration when:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>A winding-up petition has been filed or is imminent and you need to stop it</li>
+<li>The business has significant value as a going concern that would be destroyed by rushed liquidation</li>
+<li>You need time to arrange a sale of the business to a buyer who will preserve jobs and contracts</li>
+<li>Multiple creditors are escalating simultaneously and informal negotiation has failed</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The trade-off is control. The administrator runs the company, not you.</p>
+<p>Your authority as a director is effectively suspended. The administrator decides whether to continue trading, which contracts to honour, and whether to sell the business or transition to liquidation. We see directors enter administration expecting to retain influence. In practice, you cooperate with the administrator and answer their questions. You do not direct the process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Administration is also expensive. Administrator fees typically start at £15,000 and can run much higher for complex cases. These fees rank as an expense of the administration and are paid from the company's assets before any creditor distribution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When a Company Voluntary Arrangement Beats Administration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A CVA is the right tool when the business is fundamentally viable but has a debt problem it cannot resolve through normal trading. The CVA proposes a deal: creditors agree to accept a reduced payment (typically pence in the pound or a structured repayment over 3-5 years), and in return the company continues trading and the creditors receive more than they would in liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We advise a CVA when:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>The underlying business generates enough cash to fund monthly repayments and cover current obligations</li>
+<li>The debt problem is specific and identifiable, such as HMRC arrears, a disputed supplier bill, or a lease obligation</li>
+<li>Creditors are likely to accept the proposal (the business has a credible future and the CVA offers better returns than liquidation)</li>
+<li>You want to retain control of the company and continue trading under your own management</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The advantage over administration is that you keep control. A licensed insolvency practitioner acts as nominee (to assess the proposal) and then as supervisor (to monitor compliance), but the day-to-day running of the company stays with you. The cost is lower, the process is less invasive, and the company continues as a going concern throughout.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The risk is that CVAs fail if the repayment plan was too ambitious or the business was not as viable as the proposal assumed.</p>
+<p>We have seen companies enter CVAs, struggle to meet the monthly payments for 18 months, and then terminate the arrangement and enter liquidation with higher total debts than when they started. A CVA only works if the numbers are honest and the business can genuinely sustain the repayments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Cost and Speed: Company Voluntary Arrangement vs Administration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Administration</strong> costs from £15,000 upwards, takes effect immediately on appointment, and typically runs for a maximum of 12 months (extendable with court or creditor approval). The company either emerges from administration, is sold, or transitions to liquidation. We find that most administrations resolve within 6-12 months.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>A CVA</strong> costs £5,000-£10,000 in nominee and supervisor fees, plus the ongoing repayments to creditors over the term of the arrangement.</p>
+<p>The proposal takes 4-8 weeks to prepare and put to creditors. If approved, the repayment plan runs for 3-5 years. We see the total cost to the company (fees plus repayments) as significantly higher than administration in absolute terms, but spread over years rather than concentrated upfront.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell directors: the cost comparison is not just about fees. Administration costs more upfront but resolves faster. A CVA costs less upfront but commits you to years of repayments. If the business cannot sustain those repayments, the CVA fails and you end up in liquidation anyway, having paid the CVA fees on top of the eventual liquidation costs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Company Voluntary Arrangement vs Administration: The Verdict</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Creditor pressure is intense and immediate (petition filed, bailiffs instructed):</strong> Administration. The moratorium stops everything. A CVA proposal takes weeks to prepare and does not provide automatic protection.</li>
+<li><strong>Business is viable with a manageable debt restructure:</strong> CVA. You keep control, the cost is lower, and the business continues trading normally.</li>
+<li><strong>You need to sell the business quickly:</strong> Administration. The administrator can conduct a sale under the statutory framework with legal protection for the buyer.</li>
+<li><strong>Creditors are willing to negotiate but need a binding framework:</strong> CVA. It provides the structure and enforceability that informal negotiation lacks.</li>
+<li><strong>The business model is broken and debts are structural:</strong> Neither. Liquidation is the right answer.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you are not sure which route fits, Company Debt connects directors with licensed insolvency practitioners who can assess both options against your actual numbers. A free, confidential consultation will tell you which rescue route is realistic for your company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Company Voluntary Arrangement vs Administration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79295-cva-vs-admin-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I enter a CVA while a winding-up petition is active?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A CVA does not automatically stay a winding-up petition. You would need to apply to the court separately to adjourn the petition while the CVA is being proposed. Administration provides automatic protection against petitions. If a petition is already filed, administration is usually the safer route.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a company go from administration into a CVA?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. One of the exit routes from administration is a CVA. The administrator can propose a CVA to creditors as a way of returning the company to the directors' control with a structured repayment plan. This is relatively common and combines the immediate protection of administration with the long-term restructuring of a CVA.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I lose control of my company in administration?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. The administrator takes control of the company's affairs. Your authority as a director is effectively suspended. You cooperate with the administrator and provide information, but you do not make commercial decisions. In a CVA, you retain control under the supervision of the nominee/supervisor.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if a CVA fails?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>If the company fails to meet the CVA terms (typically missing consecutive monthly payments), the supervisor terminates the arrangement. Creditors are released from the CVA terms and can enforce their original claims in full. The company usually enters liquidation at that point, with higher total debts than before the CVA started.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors weighing a Company Voluntary Arrangement against administration as the rescue route for a financially distressed company.</p>
+<p>We have drawn on the Insolvency Act 1986 (Part I on CVAs, Part II and Schedule B1 on administration including the moratorium and out-of-court appointment), the Insolvency (England and Wales) Rules 2016, the Statement of Insolvency Practice 3.2 (CVAs) and SIP 16 (pre-pack administrations), and current Insolvency Service guidance on rescue procedure outcomes.</p>
+<p>Where we describe how the choice between administration and a CVA plays out operationally, including the cost differential, the speed at which the moratorium bites, and the conduct-report consequences of choosing the wrong rescue route, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/part/I"><strong>Insolvency Act 1986, Part I (Company Voluntary Arrangements)</strong> &mdash; statutory basis for the CVA proposal, nominee&rsquo;s report, and the 75% by-value creditor approval threshold that binds dissenting creditors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/schedule/B1"><strong>Insolvency Act 1986, Part II and Schedule B1 (Administration)</strong> &mdash; governs the administration appointment, the automatic moratorium halting enforcement, and the administrator&rsquo;s statutory objectives</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; procedural rules for CVA meetings, administration filings, and creditor voting mechanics referenced throughout this comparison</a> - legislation.gov.uk</li>
+<li><a href="https://www.r3.org.uk/technical-library/england-wales/sips/"><strong>Statement of Insolvency Practice 3.2 (Company Voluntary Arrangements)</strong> &mdash; professional standard governing how licensed insolvency practitioners assess CVA viability and draft proposals to creditors</a> - r3.org.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on CVA supervision, administration outcomes, and reported success rates underpinning the cost and viability judgements in this article</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

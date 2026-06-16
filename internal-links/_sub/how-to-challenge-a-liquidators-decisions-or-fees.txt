@@ -1,0 +1,374 @@
+<!-- wp:paragraph -->
+<p>When a company goes into liquidation, trade creditors are often left waiting for months with little information and less influence. You submitted your invoice, proved your debt, and now a liquidator is making decisions about asset sales, fee levels, and distribution timing that directly affect whether you recover anything at all.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If those decisions feel wrong, or if the fees being charged seem disproportionate to the work actually done, you do have legal options. But challenging a liquidator is not like raising a complaint with a supplier. It requires specific procedural steps, tight deadlines, and a realistic view of what the court can and will do for an unsecured creditor.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows: the legal basis for challenging liquidator fees and decisions, the practical steps involved, and the honest limitations of the process. We handle liquidations daily and set fees on every case we administer, so we know both sides of this equation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="cd-on-this-page">
+  <p class="cd-on-this-page__label">On This Page</p>
+  <nav>
+    <ul>
+      <li><a href="#how-fees-are-set">How Liquidator Fees Are Set</a></li>
+      <li><a href="#legal-basis">The Legal Basis for Challenging Fees</a></li>
+      <li><a href="#when-challenge-has-prospects">When a Fee Challenge Has Real Prospects</a></li>
+      <li><a href="#step-by-step">How to Challenge: Step by Step</a></li>
+      <li><a href="#court-process">The Court Process</a></li>
+      <li><a href="#practical-reality">The Practical Reality</a></li>
+      <li><a href="#common-mistakes">Common Mistakes</a></li>
+    </ul>
+  </nav>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: Can You Challenge a Liquidator?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes. Creditors can challenge a liquidator's remuneration under Rule 18.34 of the Insolvency (England and Wales) Rules 2016 by applying to the court. You can also challenge specific decisions or conduct under Section 168(5) of the Insolvency Act 1986, which allows any person aggrieved by an act or decision of a liquidator to apply for court review.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The right exists. In our experience, using it effectively is harder. Court applications cost money, require evidence, and the burden sits with you to show the fees are excessive or the decision was wrong. Most creditors who succeed do so by building a coalition of other creditors rather than acting alone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="how-fees-are-set" class="wp-block-heading">How Liquidator Fees Are Set in the First Place</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Understanding how fees get approved makes it easier to spot where a challenge has teeth. There are three bases on which a liquidator's remuneration can be fixed:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Time costs</strong>: an hourly rate multiplied by the time recorded on the case. This is the most common basis and the one most frequently challenged.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Percentage of realisations</strong>: a percentage of the assets realised (sold or collected). More common in asset-heavy cases.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Fixed fee</strong>: a flat amount agreed with creditors. Rare in practice, but increasingly used in simple creditors' voluntary liquidations.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>In a CVL, fees are approved by the creditors' committee if one exists, or by a resolution of creditors at a creditor meeting. If creditors do not vote or engage, the liquidator can apply to court for fee approval, and in practice many do.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is where the friction starts. The majority of trade creditors never attend meetings, never vote on fee resolutions, and only realise the fees were high when they receive a final distribution that is far less than expected. By then, the fees have already been drawn. We see this pattern on most cases.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="legal-basis" class="wp-block-heading">The Legal Basis for Challenging Fees</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In our experience, two main routes exist, and they serve different purposes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Rule 18.34: Application to Court on Remuneration</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Under Rule 18.34 of the Insolvency (England and Wales) Rules 2016, any creditor (or group of creditors holding at least 25% in value of the creditors) can apply to the court if they consider the remuneration charged is excessive. The court can order the liquidator to repay the excess.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is the primary tool for fee challenges. But the 25% threshold is not a hard barrier for individual creditors. The court has discretion to hear applications from a single creditor with a genuine grievance, though judges tend to take grouped applications more seriously.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Section 168(5): Challenge to Acts or Decisions</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 168(5) of the Insolvency Act 1986 lets any person aggrieved by a liquidator's act, omission, or decision apply to the court. This covers broader territory than fees alone. Selling assets at undervalue, failing to investigate director misconduct, distributing funds improperly, refusing to adjudicate your proof of debt: all of these can fall under s.168(5). Our guide to <a href="/liquidation/liquidators-powers-and-duties/">what a liquidator does</a> sets out the duties a challenge is measured against.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The test is whether the liquidator acted unreasonably. Not whether you disagree with the decision, but whether no reasonable office-holder would have made that choice on the information available.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+<p class="cd-key-takeaway__label">Key Takeaway</p>
+<!-- wp:paragraph --><p>Two separate legal routes apply: Rule 18.34 of the Insolvency Rules 2016 targets excessive fees specifically; Section 168(5) of the Insolvency Act 1986 covers any unreasonable act or decision. Fee challenges require showing disproportionate charges, not just disagreement. Decision challenges require showing no reasonable office-holder would have acted that way.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 id="when-challenge-has-prospects" class="wp-block-heading">When a Fee Challenge Has Real Prospects</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We should be clear: not every case of high fees is a case of excessive fees. Liquidation is administrative work with professional obligations, and some cases genuinely are complicated. The question is proportionality.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Challenges tend to succeed where:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>The time costs are disproportionate to the assets recovered. If a liquidator has billed £40,000 in fees on a case with £55,000 in total realisations and no complex litigation, that ratio will attract scrutiny.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Junior staff time has been charged at senior rates without justification.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Work has been duplicated or stretched across unnecessary reporting periods.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The fee estimate given at appointment has been exceeded with no explanation to creditors.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Creditors were not given a proper opportunity to approve or scrutinise fees, including insufficient fee narratives in progress reports.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Courts look at Statement of Insolvency Practice 9 (SIP 9), which sets the professional standard for how fees should be disclosed and justified. If the liquidator has not provided a clear breakdown of time, category of work, and grade of staff, that is a procedural failure the court will note.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002drisk-warning"} -->
+<div class="wp-block-group cd-callout cd-callout--risk-warning">
+<p class="cd-callout__label">Risk Warning</p>
+<!-- wp:paragraph --><p>There is no fixed statutory deadline for challenging liquidator fees under Rule 18.34, but courts expect creditors to act promptly, raising concerns within 28 days of receiving a progress report disclosing the fees.</p>
+<p>Challenging fees after the liquidation has closed and the company dissolved is significantly harder, and courts will note that you had earlier opportunities to object and did not use them. Waiting until the final distribution to complain will weaken your position materially.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 id="step-by-step" class="wp-block-heading">How to Challenge a Liquidator's Decision: Step by Step</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before you involve the court, there are steps that cost nothing and sometimes produce results.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">1. Request Full Fee Information</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Write to the liquidator requesting a detailed breakdown of fees drawn and fees estimated. Under SIP 9 and the Insolvency Rules, you are entitled to a narrative explaining what work was done, by whom, at what hourly rate, and how long it took. If the liquidator has not provided this in their progress reports already, that itself is a problem.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You should also request copies of the fee approval resolution. If fees were approved at a meeting you did not attend, ask for the minutes, the voting record, and the fee narrative that was circulated. If no narrative was circulated, record that fact.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">2. Organise Other Creditors</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A single unsecured creditor with a £3,000 claim challenging fees of £60,000 is unlikely to succeed on economics alone, even if the complaint is legitimate. The court application will cost you legal fees, and there is no guarantee of recovering them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you can organise other creditors to join the application, the economics improve and the court pays more attention. Contact other creditors listed in the Statement of Affairs or progress reports. You do not need 25% by value to apply, but reaching that threshold strengthens the position considerably.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3. Raise a Formal Complaint with the Liquidator</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>All licensed insolvency practitioners must have a complaints procedure. Use it. Set out your concerns in writing, referencing specific fee categories, time periods, or decisions. This creates a paper trail and gives the liquidator a chance to respond before you escalate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some liquidators will negotiate at this stage. A fee reduction agreed voluntarily avoids the cost and uncertainty of court.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4. Complain to the Regulatory Body</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the complaint does not resolve matters, you can escalate to the liquidator's Recognised Professional Body. The main ones are the Insolvency Practitioners Association (IPA), the Institute of Chartered Accountants in England and Wales (ICAEW), and the Insolvency Service acting as a regulatory authority. These bodies can investigate conduct, order fee reductions, and discipline practitioners.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Regulatory complaints are free to make. We have seen them produce meaningful outcomes. They take time, often six months or longer, but the results including fee refunds and formal sanctions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5. Apply to Court</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If earlier steps fail, you can issue a formal application under Rule 18.34 (for fees) or Section 168(5) (for decisions). This is made to the court that has jurisdiction over the liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="court-process" class="wp-block-heading">The Court Process for Challenging Liquidator Fees</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Court applications are made by filing a witness statement setting out the grounds, supported by evidence. You will need to show what fees have been drawn, what work was done, and why you say the amount is excessive or the decision was wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The court has wide powers. We have seen courts use them. It can reduce fees, change the basis of remuneration, order the liquidator to repay amounts already drawn, and give directions on future conduct. In extreme cases, it can remove the liquidator entirely under Section 108 of the Insolvency Act.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Expect a hearing four to eight weeks after filing, depending on the court. Costs vary widely. A simple fee challenge in the county court might cost £2,000 to £5,000 in legal fees if you use a solicitor. Complex cases in the High Court run much higher. There is no automatic costs protection: if you lose, you may be ordered to pay the liquidator's costs of defending the application.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That costs risk is the single biggest deterrent. It is also the reason that building a creditor group matters. Splitting costs across five creditors makes the economics viable in a way that one creditor bearing the full risk often does not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="practical-reality" class="wp-block-heading">The Practical Reality of Challenging a Liquidator</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We should be candid about how this plays out in practice, because the legal rights on paper and the practical experience diverge.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Picture this: you are a trade supplier owed £12,000. The company you supplied went into liquidation eight months ago.</p>
+<p>The first progress report arrives and shows the liquidator has drawn £35,000 in fees from realisations of £48,000. Your estimated dividend is 3p in the pound, meaning roughly £360 before deductions. The fees look high, but you have no benchmark for what liquidation work actually costs, and no way to know whether 120 hours of time at £350 per hour is reasonable for this particular case.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That information asymmetry is the core problem. Liquidators know what their time costs. Creditors do not. SIP 9 was supposed to fix this by requiring transparent fee narratives, but compliance varies. Some firms produce detailed, category-by-category breakdowns. Others provide a single total with a generic description that tells you nothing useful.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Then there is the timing problem. You need to have proved your debt in the liquidation to have standing as a creditor. If you have not submitted a proof of debt form, you may struggle to bring a challenge at all. This catches some creditors out: they assumed they were automatically included because the company owed them money, but the process requires formal proof.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Finally, consider what a successful challenge actually delivers. If the court reduces fees by £10,000, that money goes back into the pot for all unsecured creditors, not just you. Your share of that £10,000 might be a few hundred pounds, depending on your proportion of the total unsecured claims. You bore the legal costs and effort. Every other creditor benefits.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This free-rider problem explains why fee challenges are relatively rare compared to the number of creditors who are unhappy with the fees charged. The rational economic choice for a single creditor is often to accept the outcome, however unfair it feels.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="common-mistakes" class="wp-block-heading">Common Mistakes When Challenging a Liquidator</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Having handled creditor challenges from our practitioner side, these are the errors that derail them:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Challenging too late.</strong> Waiting until the final distribution to raise fee concerns gives the liquidator a strong argument that creditors had the opportunity to object earlier and chose not to. Raise issues when progress reports arrive, not after the case closes.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Confusing high fees with excessive fees.</strong> A liquidation involving property sales, director investigations, and contested creditor claims will legitimately cost more than a simple asset-free winding up. The test is proportionality, not absolute amount.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Not attending creditor meetings.</strong> If you had the chance to vote against the fee resolution and did not attend or vote, the court will note that. It does not bar your claim, but it weakens it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Attacking the liquidator personally rather than the fees.</strong> Courts respond to evidence of excessive or disproportionate charges. They do not respond to generalised complaints about the liquidator being unhelpful or uncommunicative, unless those failings directly caused financial loss.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Underestimating the costs of a court application.</strong> A creditor who spends £4,000 challenging fees to recover an additional £300 in dividend has won the legal argument and lost the financial one. Do the arithmetic before filing.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What About Compulsory Liquidations?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In a compulsory liquidation (where the court ordered the winding up), the Official Receiver initially acts as liquidator.</p>
+<p>The Official Receiver's fees are set by a statutory scale and are not open to the same type of challenge. If a private-sector insolvency practitioner is subsequently appointed as liquidator, their fees follow the same rules as in a CVL and can be challenged under Rule 18.34.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Creditors in compulsory liquidations have the additional option of requesting a meeting to appoint a liquidator of their choice, replacing the Official Receiver with a practitioner they have vetted on fees and approach. This is proactive fee control rather than reactive challenge, and it is underused. Our guide on <a href="/liquidation/can-i-choose-my-liquidator/">choosing your liquidator</a> explains how much say creditors and directors have over who is appointed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Challenging a Liquidator's Decisions or Fees</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78654-challenge-liquidator-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a single creditor challenge a liquidator's fees?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. While Rule 18.34 refers to creditors holding 25% or more in value, the court has discretion to hear applications from individual creditors with a genuine grievance. In practice, a single creditor with a small claim faces an uphill economic argument because the costs of the application may exceed the benefit. Joining with other creditors strengthens both the legal and financial position.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs there a time limit for challenging liquidator fees?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>There is no fixed statutory deadline, but the court expects creditors to act promptly. Challenging fees years after they were drawn, or after the liquidation has closed and the company dissolved, is significantly harder. The strongest position is to raise concerns within 28 days of receiving a progress report that discloses the fees.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if the court agrees the fees are excessive?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The court can order the liquidator to repay the excess into the estate. It can also change the basis of remuneration going forward, for example switching from time costs to a fixed fee or percentage basis. The repaid amount benefits all unsecured creditors proportionally, not just the creditor who brought the challenge.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I complain about a liquidator without going to court?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Every licensed insolvency practitioner must have a complaints procedure, and their Recognised Professional Body (such as the IPA, ICAEW, or ACCA) will investigate complaints about conduct and fees. You can also complain to the Insolvency Service's Complaints Gateway. These routes are free and can result in fee reductions, formal warnings, or disciplinary action against the practitioner.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I need a solicitor to challenge a liquidator?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Not for regulatory complaints, which you can make directly to the practitioner's professional body.</p>
+<p>For court applications, you can represent yourself as a litigant in person, but the procedure involves witness statements, court forms, and potentially a contested hearing. Most creditors who pursue court challenges use a solicitor with insolvency experience. Legal costs for a simple fee challenge typically range from £2,000 to £5,000.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I have a liquidator removed from the case?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, but it is rare. Under Section 108 of the Insolvency Act 1986, the court can remove a liquidator on cause shown. Creditors holding more than 25% in value can also requisition a meeting to vote on replacing the liquidator. Removal is usually reserved for serious misconduct or conflicts of interest, not disagreements over fee levels alone.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK creditors who want to challenge a liquidator's fees or decisions in a CVL or compulsory liquidation.</p>
+<p>We have drawn on the Insolvency Act 1986 (section 168(5) on creditor applications challenging the liquidator's acts or decisions) and the Insolvency (England and Wales) Rules 2016 (Rule 18.34 on excessive remuneration challenges, Part 18 on remuneration generally), Statement of Insolvency Practice 9 (SIP 9) on remuneration and disclosure, and current Insolvency Service and IPA guidance.</p>
+<p>Where we describe how challenges play out operationally, including the cost-benefit calculation creditors run before applying to court and the typical adjustments liquidators make in response to a properly structured creditor objection, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We are licensed insolvency practitioners; we administer liquidations as well as advise creditors. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/168"><strong>Insolvency Act 1986, Section 168</strong> &mdash; supplementary powers including the right of any person aggrieved by a liquidator's act or decision to apply to court for review</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/108"><strong>Insolvency Act 1986, Section 108</strong> &mdash; court power to remove a liquidator and appoint a replacement on application by creditors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; Part 18 governs liquidator remuneration; Rule 18.34 sets out the creditor route to challenge fees as excessive</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; complaints gateway for misconduct concerns about a liquidator and guidance for unsecured creditors weighing a challenge</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

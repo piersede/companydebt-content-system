@@ -1,0 +1,257 @@
+<!-- wp:paragraph -->
+<p>Three months after the liquidator is appointed, a confidential document lands on a desk at the Insolvency Service. It is called the D-report, and it contains a detailed assessment of your conduct as a director for the entire period the company traded.</p>
+<p>You never see it. Your creditors never see it. But it is the single document that determines whether the Insolvency Service opens an investigation into you personally, or closes the file and moves on. One director we worked with described the process as "being graded on an exam you didn't know you were sitting." That is not far off.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows: what the D-report actually contains, how the liquidator writes it, the specific checklist they work through, and the practical steps you can take so the report reflects your conduct honestly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The D-report is a mandatory, confidential document that the liquidator files with the Insolvency Service on every director of every liquidated company, under Section 7A of the Company Directors Disqualification Act 1986. There is no threshold, no exemption, and no discretion. The report is filed whether the liquidator has concerns about your conduct or not.</p>
+<p>The Insolvency Service then reviews it, and in the majority of cases, closes the file with no further action. Where it does not close the file, the consequences range from a formal investigation to a disqualification undertaking or court order. For the full investigation and sanctions process, see our companion guide on <a href="/liquidation/director-conduct-review/">director conduct review</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For directors, the practical message is: the D-report is not optional and it is not triggered by bad behaviour. It is filed on everyone. The question is not whether it will be written, but what it will say. Your ability to influence that depends on your records, your cooperation, and the decisions you made in the months before liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the D-Report Actually Contains</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The D-report follows a structured format based on Schedule 1 to the Company Directors Disqualification Act 1986. The liquidator works through the schedule item by item, assessing your conduct against each heading. The main areas covered are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Compliance with filing obligations.</strong> Did you file accounts at Companies House on time? Were corporation tax, VAT, and PAYE returns submitted? Late or missing filings are noted and scored.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Adequacy of accounting records.</strong> Could the liquidator reconstruct the company's financial position from the records you kept? Missing bank statements, absent board minutes, and incomplete ledgers all flag here.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Circumstances of insolvency.</strong> When did the company become insolvent? Did the directors recognise it at the time? What decisions were made after insolvency became probable? The liquidator reconstructs the timeline from the bank statements and filings.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Transactions requiring investigation.</strong> Any payments to connected parties (yourself, family, related companies), any asset transfers at undervalue, any preferences (paying one creditor ahead of others when insolvent). These are examined against Sections 238 and 239 of the Insolvency Act 1986.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Trading while insolvent.</strong> Did the company continue to take credit, accept deposits, or incur liabilities after the point where insolvency was probable? This is the wrongful trading territory under Section 214.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Cooperation with the liquidator.</strong> Did you attend meetings, answer questions, provide documents? The liquidator notes your level of cooperation explicitly, and the Insolvency Service treats non-cooperation as a standalone red flag.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The report is not a prosecution brief. It is an assessment. The liquidator states what they found, what they could not verify, and whether the conduct appears "unfit" within the meaning of the Act. The Insolvency Service then decides whether to take it further.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the Liquidator Writes the Report</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The liquidator starts writing the D-report from the day of appointment. The raw materials are: the company's bank statements (usually going back two to three years), the accounting records you hand over, the Statement of Affairs you prepared at the start of the CVL, HMRC's internal records (which the liquidator can request), and any answers you provide during the interview process.</p>
+<p>Most of the report is factual: dates, figures, transaction patterns, filing history. The evaluative section comes at the end, where the liquidator states their overall assessment of conduct.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>One thing directors consistently underestimate is how much the bank statements reveal. Every payment to yourself, every director's loan withdrawal, every connected-party transaction, every supplier payment that was made while HMRC was being held off, all of these appear on the statements and all of them go into the report.</p>
+<p>We tell directors that the bank statements are the D-report. Everything else is commentary. One case we handled: a director who believed his conduct was clean discovered that the liquidator had mapped 14 months of director's loan withdrawals against the same 14 months of unpaid PAYE. The pattern told the story without the liquidator needing to add a word.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-process-steps"} -->
+<div class="wp-block-group cd-process-steps">
+<!-- wp:list {"ordered":true} -->
+<ol><li>Liquidator appointed — D-report clock starts immediately</li><li>Bank statements, records, and Statement of Affairs reviewed</li><li>HMRC internal records requested and cross-referenced</li><li>Director interviewed; cooperation level recorded</li><li>Schedule 1 checklist assessed item by item</li><li>Initial D-report filed with the Insolvency Service within three months of appointment</li></ol>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Report Is Filed on Every Director, Not Just Problem Ones</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the point most articles miss.</p>
+<p>The D-report is not triggered by misconduct. It is filed on every director who served in the 12 months before liquidation, regardless of conduct. A director who ran the company perfectly, cooperated fully, and kept immaculate records still gets a D-report filed. In that case, the report will say exactly that, and the file will be closed. The purpose is screening, not prosecution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The practical consequence is that directors who cooperate and keep good records benefit from the system.</p>
+<p>Their report reads well, the file closes quietly, and they never hear about it again. Directors who were evasive, destroyed records, or made questionable payments find that the report reads badly, and the Insolvency Service calls. The D-report is the filter. Your conduct before liquidation determines which side of the filter you land on.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Supplementary Reports and the Three-Month Window</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The initial D-report must be filed within three months of the liquidator's appointment. But the process does not end there.</p>
+<p>If the liquidator discovers additional information after the initial report, for example during the asset-recovery phase or when HMRC provides its internal records, a supplementary report can be filed at any time during the liquidation. Supplementary reports are less common but tend to carry more weight because they are filed specifically when something new and concerning has come to light.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell directors that the three-month window is the critical period for cooperation.</p>
+<p>Answer every question, provide every document, and be honest about the timeline. If the initial report is clean and comprehensive, a supplementary report is unlikely. If the initial report flags gaps because you did not cooperate, the supplementary report fills those gaps with whatever the liquidator finds independently, and the tone is usually less sympathetic.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002drisk-warning"} -->
+<div class="wp-block-group cd-callout cd-callout--risk-warning">
+<p class="cd-callout__label">Risk Warning</p>
+<!-- wp:paragraph --><p>The initial D-report must be filed within three months of the liquidator's appointment under Section 7A of the Company Directors Disqualification Act 1986.</p>
+<p>If you fail to cooperate during this window, the liquidator files the report with the gaps noted. The Insolvency Service then treats those gaps as a standalone conduct issue, and a supplementary report, filed later when evidence is gathered independently, carries significantly more weight than issues disclosed upfront.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Red Flags That Appear in D-Reports</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>From our caseload, the patterns that appear most often and draw the most attention from the Insolvency Service are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Director payments continuing while HMRC arrears mount.</strong> The bank statements show salary, dividends, or loan repayments to the director at the same time as VAT and PAYE are unpaid. This is the single most common red flag.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Missing records.</strong> If the liquidator cannot reconstruct the company's position because records are missing or destroyed, the Service infers the worst. One director we advised had deleted the company's email archive "to tidy up" before handing the laptop over. The liquidator noted the deletion in the report, and it became the central issue in the subsequent investigation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Late recognition of insolvency.</strong> The bank statements show the company was cash-flow insolvent for months before the directors took advice. The longer the gap between insolvency becoming probable and the directors acting, the worse the report reads.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Connected-party transactions.</strong> Any payment to yourself, family, or a related company in the two years before insolvency will be examined. If the payment looks like a preference or a transaction at undervalue, it goes into the report with a recommendation for further investigation.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Prepare for the D-Report</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You cannot stop the D-report from being filed. But you can influence what it says. The moves are the same ones we give every director at the first consultation:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Preserve every record.</strong> Bank statements, invoices, board minutes, tax returns, contracts, emails. The act of preservation is the single strongest thing you can do. See our guide on <a href="/liquidation/can-directors-pay-themselves-before-liquidation/">director payments before liquidation</a> for what to stop doing from the point insolvency becomes probable.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Cooperate fully with the liquidator from day one.</strong> Answer every question honestly. Attend every meeting. Provide every document. Cooperation is recorded in the report and is one of the strongest mitigating factors the Insolvency Service considers.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Document your decisions in board minutes.</strong> If you made a decision to keep trading because you believed a deal would close, or a customer would pay, or a refinance would complete, write it down with the date and the reasoning. Board minutes showing good-faith decision-making are the best defence against a wrongful-trading allegation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Take advice before the liquidator is appointed.</strong> A licensed IP can tell you within an hour whether your conduct profile carries risk and what to do about it before the report is written.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+<p class="cd-key-takeaway__label">Key Takeaway</p>
+<!-- wp:paragraph --><p>Your conduct profile is set before the liquidator arrives, not after. Directors who preserve records, keep board minutes, and cooperate fully almost always see their file closed with no further action. The D-report is not a trap. It is a filter, and clean records are how you pass through it cleanly.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings We Hear</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>"The D-report is only filed if the liquidator thinks I did something wrong."</strong> No. It is filed on every director of every liquidated company. The report may say your conduct was exemplary. It is still filed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I can ask to see the report."</strong> No. The D-report is confidential between the liquidator and the Insolvency Service. You cannot request a copy, and it cannot be disclosed to creditors or other parties.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"If I cooperate, the report will be fine."</strong> Cooperation helps, but it does not override what the bank statements show. A cooperative director whose accounts reveal a pattern of preferences will still have that pattern noted in the report. Cooperation is a mitigating factor, not an eraser.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"The report is the same as a disqualification."</strong> No. The report is the first step. Disqualification is a separate decision made by the Insolvency Service after reviewing the report. Most reports result in no further action.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on the Director's Conduct Report in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78129-conduct-report-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eIs the D-report the same as a disqualification?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The D-report is a factual assessment filed by the liquidator. Disqualification is a separate decision made by the Insolvency Service after reviewing the report. Most D-reports result in no further action. The report is the screening tool, not the punishment.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I see what the liquidator wrote about me?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The D-report is confidential between the liquidator and the Insolvency Service. Directors cannot request a copy. If the Service opens formal proceedings, some of the evidence may emerge during the process, but the report itself stays confidential.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is Schedule 1 of the CDDA 1986?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Schedule 1 is the statutory checklist the liquidator uses to assess director conduct. It covers filing compliance, record-keeping, circumstances of insolvency, transactions at undervalue, preferences, wrongful trading, and personal benefit derived at the expense of creditors. The liquidator works through each item and records their findings.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the liquidator file a second report later?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A supplementary D-report can be filed at any time during the liquidation if the liquidator discovers new information. This sometimes happens when HMRC provides its internal records or when asset investigations reveal previously unknown transactions. Supplementary reports tend to carry more weight because they are filed for a specific reason.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the single most important thing I can do to prepare?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Preserve your records and cooperate fully with the liquidator. Missing records are the most common trigger for further investigation, and non-cooperation is recorded as a standalone red flag. Directors who keep clean records and answer every question honestly almost always see their file closed with no further action.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes the report cover all directors or just the main one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>All directors who served in the 12 months before liquidation, plus any shadow directors (people who acted as directors without formal appointment). Each director gets their own section in the report. Your exposure is based on your actual role, not your formal title.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors whose company has entered liquidation and want to understand the confidential conduct report (D-report) that the liquidator must file with the Insolvency Service.</p>
+<p>We have drawn on the Company Directors Disqualification Act 1986 (particularly section 7A on the duty to file conduct returns and Schedule 1 on the matters to be considered), the Insolvency Act 1986 (sections 214, 238 and 239 on wrongful trading, transactions at undervalue, and preferences), and current Insolvency Service guidance on director conduct reporting.</p>
+<p>Where we describe how the D-report is written operationally, including the Schedule 1 checklist, the three-month filing window, and the Insolvency Service's typical response when the file closes versus when it escalates, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; section 7A obliges liquidators to file a conduct report on every director; section 6 and Schedule 1 set the matters the Insolvency Service weighs</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 214 (wrongful trading), 238 (transactions at undervalue), and 239 (preferences) frame the conduct issues flagged in the D-report</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on the conduct review process, disqualification undertakings, and how submitted reports are assessed</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

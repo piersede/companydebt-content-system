@@ -1,0 +1,205 @@
+<!-- wp:paragraph -->
+<p>Transferring company assets before insolvency is one of the first things the liquidator investigates, and one of the easiest things to reverse. If you moved an asset to yourself, a family member, or a connected company at below market value, the liquidator can apply to the court to claw it back.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see this pattern regularly. A director transfers the company van to their spouse. Another sells equipment to a new company they control for a fraction of its value. A third pays off their personal loan account from company funds weeks before the CVL.</p>
+<p>Each of these is a transaction the liquidator will trace, challenge, and in most cases recover. The Insolvency Act 1986 gives the liquidator a two-year lookback window for transactions at undervalue and connected-party preferences, and for fraud there is no time limit at all.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+  <p class="cd-callout__label">Legal Exposure</p>
+  <p class="cd-callout__title">Transactions at Undervalue and Connected-Party Preferences Are Reversible Without Proof of Dishonesty</p>
+  <!-- wp:paragraph -->
+  <p>Section 238 of the Insolvency Act 1986 allows the liquidator to reverse any transaction where the company received significantly less than market value within two years of the onset of insolvency, no dishonesty required.</p>
+  <p>Section 239 allows reversal of preferential payments to connected parties within the same two-year window, with the desire to prefer presumed. For deliberate concealment or fraudulent disposal of assets, sections 206-208 create criminal offences carrying up to 7 years' imprisonment, with no time limit on prosecution.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: What Happens to Pre-Insolvency Asset Transfers?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The liquidator can reverse any transaction at undervalue (section 238) made in the two years before insolvency, and any preference to a connected party (section 239) made in the same period. The court can order the recipient to return the asset or pay its market value to the liquidation estate.</p>
+<p>You do not need to have acted dishonestly. The test is whether the company received significantly less than the asset was worth at the time of the transfer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If the transfer was designed to put assets beyond the reach of creditors, the consequences go further. Deliberate concealment is a criminal offence under section 206 of the Insolvency Act, carrying up to seven years' imprisonment.</p>
+<p>We are direct about this: the difference between a careless transfer and a criminal one is intent, and the liquidator will form a view on which side of that line your transaction falls. Our guide on <a href="/liquidation/what-happens-if-a-director-hides-company-assets/">concealing company assets</a> covers the separate, more serious territory of deliberately keeping assets from the liquidator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Transactions at Undervalue: Section 238 Explained</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A transaction at undervalue occurs when the company transfers an asset for significantly less than it is worth, or makes a gift, within the two years before the onset of insolvency. The liquidator can apply to the court to reverse the transaction and recover the difference.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Common examples we see:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Selling a company vehicle worth £25,000 to a family member for £5,000</li>
+<li>Transferring intellectual property or a customer database to a new company for no consideration</li>
+<li>Writing off a debt owed by a connected party</li>
+<li>Selling trading stock to a new company at a steep discount</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The court does not need to find that you acted dishonestly. The test is objective: was the consideration significantly less than the value of the asset? If yes, the transaction can be reversed.</p>
+<p>The only defence is that the company entered the transaction in good faith, for the purpose of carrying on its business, and at the time there were reasonable grounds for believing it would benefit the company. In practice, transferring assets to family members or new companies you control rarely meets this defence.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Preferences to Connected Parties: Section 239 Explained</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A preference occurs when the company does something that puts a creditor in a better position than they would have been in if the company had gone straight into liquidation.</p>
+<p>For connected parties (you, your spouse, family members, other companies you control), the lookback period is two years and the desire to prefer is presumed. You do not need to prove it. The liquidator just needs to show the payment was made.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see these preferences most commonly:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Repaying your own overdrawn director's loan account</li>
+<li>Paying a family member's invoice ahead of trade creditors</li>
+<li>Settling a debt owed to another company you own</li>
+<li>Making a lump-sum payment to your spouse for "consultancy services" that were never formally contracted</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For unconnected creditors, the lookback period is six months and the liquidator must prove that the company was influenced by a desire to prefer. For connected parties, that desire is assumed. The burden of proof shifts to you to show the payment was made in the ordinary course of business.</p>
+<p>We have sat with directors who genuinely believed their loan repayment was legitimate. The liquidator disagreed, the court agreed with the liquidator, and the director paid the money back plus costs. Our guide on <a href="/liquidation/can-directors-pay-themselves-before-liquidation/">director payments before liquidation</a> covers when taking money out ahead of creditors becomes a preference.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dtimeline-reality"} -->
+<div class="wp-block-group cd-callout cd-callout--timeline-reality">
+  <p class="cd-callout__label">Timeline Reality</p>
+  <p class="cd-callout__title">The Lookback Window Is Two Years for Connected Parties: Six Months Is Not a Safe Harbour</p>
+  <!-- wp:paragraph -->
+  <p>Directors often assume that payments made more than six months before liquidation are outside the liquidator's reach. They are not. For connected parties (spouses, family members, companies you control), the lookback period under sections 238 and 239 of the Insolvency Act 1986 extends to two years. A director's loan repayment made 18 months before the CVL is still vulnerable.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>For transactions involving deliberate fraud under sections 206–208, there is no time limit. The six-month window applies only to unconnected creditors.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the Liquidator Investigates and How</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The liquidator traces every significant transaction in the two years before insolvency. The primary tools are bank statements, company accounts, and Companies House filings. They look for:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Payments to connected parties that are larger than normal or occur in unusual patterns</li>
+<li>Asset disposals where the sale price is below market value</li>
+<li>Changes to the creditor priority order caused by selective payments</li>
+<li>New charges registered against company assets in the months before insolvency</li>
+<li>Director's loan account movements, particularly repayments</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Under section 235, the liquidator can compel you to provide documents, attend interviews, and explain every transaction. Non-cooperation is a criminal offence. We advise complete honesty. The liquidator will find the transactions anyway. Explaining them voluntarily is better than being caught concealing them. How you respond feeds directly into <a href="/liquidation/director-conduct-review/">the liquidator's review of director conduct</a>, which shapes any disqualification recommendation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Personal Consequences for Directors Who Transfer Assets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The consequences depend on the nature of the transfer:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Civil recovery:</strong> The court reverses the transaction and orders the recipient (or you) to repay the value to the estate</li>
+<li><strong>Director disqualification:</strong> Asset stripping and connected-party preferences are serious conduct matters. Disqualification periods for these typically fall in the 6-10 year range</li>
+<li><strong>Criminal prosecution:</strong> If the transfer was designed to defraud creditors, sections 206-211 of the Insolvency Act create criminal offences carrying up to seven years' imprisonment</li>
+<li><strong>Wrongful trading:</strong> If you transferred assets while the company was insolvent and continued trading, the wrongful trading claim adds to the civil recovery</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What to Do If You Have Already Transferred Assets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you have made transfers that you now recognise may be vulnerable, voluntary disclosure to the liquidator or your insolvency practitioner is significantly better than waiting to be caught. A director who says "I transferred the van six months ago and I now understand that was wrong" is in a different position from one whose bank statements reveal a transfer they never mentioned.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Take independent legal advice immediately. A solicitor specialising in insolvency can assess your exposure, advise on voluntary disclosure, and help you manage the recovery process. Company Debt connects directors with licensed insolvency practitioners who can advise on your position. A confidential conversation now is the first step toward limiting the damage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on What Happens If a Director Transfers Assets Before Insolvency</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79545-director-transfers-assets-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow far back can the liquidator look at asset transfers?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Two years for transactions at undervalue and connected-party preferences. Six months for unconnected-party preferences. For fraud or deliberate concealment, there is no time limit. The liquidator examines bank statements and transaction records for the full two-year lookback as standard practice.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the liquidator recover assets from my spouse?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Your spouse is a connected party. Transfers to connected parties in the two years before insolvency are presumed to be preferences, and the court can order the asset returned or its value paid to the estate. Your spouse does not need to have known the company was insolvent for the transfer to be reversed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat if I sold the asset at what I thought was market value?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>If you can demonstrate that the sale was at genuine market value with an independent valuation, it is unlikely to be challenged as a transaction at undervalue. The key is evidence: a professional valuation, an arm's-length marketing process, and documentation of the sale terms. Informal valuations or "what I thought it was worth" are not sufficient.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I transfer assets to protect them from creditors?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Transferring company assets to put them beyond the reach of creditors is exactly what sections 238, 239, and 206 of the Insolvency Act are designed to prevent. The liquidator will reverse the transfer, you may face disqualification, and in serious cases the Insolvency Service can refer the matter for criminal prosecution.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors who have moved company assets in the months before a likely liquidation, or who fear that past transfers will surface in the liquidator's investigation.</p>
+<p>We have drawn on the Insolvency Act 1986: section 238 (transactions at undervalue), section 239 (preferences), section 240 (the relevant time and the two-year and six-month lookback windows), section 241 (the orders the court can make under sections 238 and 239), section 423 (transactions defrauding creditors, with no time limit on challenge), and section 214 (wrongful trading).</p>
+<p>We have also drawn on the Company Directors Disqualification Act 1986 on unfit-conduct findings, and current Insolvency Service guidance on conduct reports filed by liquidators against directors who have stripped, preferred, or concealed assets.</p>
+<p>Where we describe how the liquidator traces transfers operationally, the speed with which connected-party recoveries are pursued, and the conduct-report consequences that flow into disqualification proceedings, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/238"><strong>Insolvency Act 1986, section 238</strong> &mdash; transactions at undervalue: the liquidator's primary tool for clawing back assets sold or gifted below market value within two years of insolvency</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/239"><strong>Insolvency Act 1986, section 239</strong> &mdash; preferences: reverses payments or asset transfers that put a connected party in a better position than other creditors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/240"><strong>Insolvency Act 1986, section 240</strong> &mdash; defines the relevant time window: two years for connected-party transactions, six months for unconnected preferences</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/241"><strong>Insolvency Act 1986, section 241</strong> &mdash; sets out the court orders available to unwind a transaction, including revesting assets and ordering repayment</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/423"><strong>Insolvency Act 1986, section 423</strong> &mdash; transactions defrauding creditors: no time limit, applies where the purpose was to put assets beyond creditors' reach</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/214"><strong>Insolvency Act 1986, section 214</strong> &mdash; wrongful trading: personal liability for directors who continued trading when insolvency was unavoidable</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; the framework under which asset-stripping conduct triggers disqualification orders of two to fifteen years</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; investigates director conduct after liquidation and brings disqualification proceedings where misconduct is found</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

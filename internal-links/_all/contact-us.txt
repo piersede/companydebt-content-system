@@ -1,0 +1,29 @@
+<!-- wp:columns {"className":"flex-column-reverse-mobile"} -->
+<div class="wp-block-columns flex-column-reverse-mobile"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>For new business enquiries, drop us an&nbsp;<a href="mailto:info@companydebt.com" style="color:#ff6600">email</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#002856"}}} -->
+<p class="has-text-color" style="color:#002856"><strong>Company Debt Ltd, Level 18, 40 Bank Street, London, England, E14 5NR, United Kingdom.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#002856"}}} -->
+<p class="has-text-color" style="color:#002856"><strong>Tel: <a href="tel:08000746757" style="text-decoration:none">0800 074 6757</a></strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9914.420253969749!2d-0.16344423840087685!3d51.59380123001717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a18d7855555%3A0x76b7662c0aa23e3d!2sCompany%20Debt!5e0!3m2!1sen!2smk!4v1656588684393!5m2!1sen!2smk" width="510" height="300" style="border:0; max-width:100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:cover {"customOverlayColor":"#f6f8fa","isUserOverlayColor":true,"isDark":false,"className":"fields-white contact-us"} -->
+<div class="wp-block-cover is-light fields-white contact-us"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#f6f8fa"></span><div class="wp-block-cover__inner-container"><!-- wp:gravityforms/form {"formId":"29","title":false} /--></div></div>
+<!-- /wp:cover --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->

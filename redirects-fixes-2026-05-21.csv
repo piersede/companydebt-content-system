@@ -1,0 +1,12 @@
+source url,target url,redirect code,description
+/insolvency/trading-while-insolvent/,/insolvency/what-is-wrongful-trading/,301,Fix absolute URL — was targeting production domain; now relative
+/insolvency-test/,/insolvency/insolvency-test/,301,Fix absolute URL — was targeting production domain; now relative
+/news/clothing-retailer-usc-close-30-unfashionable-stores/,/liquidation/,301,Fix broken chain — was pointing to /articles/ URL which is now 410
+/news/clothing-retailer-usc-close-30-unfashionable-stores,/liquidation/,301,Fix broken chain — no-trailing-slash variant
+/news/clothing-retailer-usc-close-30-unfashionable-stores/?nonamp=1,/liquidation/,301,Fix broken chain — nonamp variant
+/news/clothing-retailer-usc-close-30-unfashionable-stores?nonamp=1,/liquidation/,301,Fix broken chain — nonamp no-trailing-slash variant
+/news/hmrc-news/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/,/hmrc/,301,Fix broken chain — was pointing to /articles/ URL which is now 410
+/news/hmrc-news/lengthy-disqualifications-for-four-directors-involved-in-vat-fraud/?nonamp=1,/hmrc/,301,Fix broken chain — nonamp variant
+/news/common-causes-of-construction-insolvency/,/insolvency/,301,Fix 2-hop chain — was /news/ -> /articles/ -> /insolvency/; now direct
+/news/common-causes-of-construction-insolvency/?nonamp=1,/insolvency/,301,Fix 2-hop chain — nonamp variant
+/news/common-causes-of-construction-insolvency?nonamp=1,/insolvency/,301,Fix 2-hop chain — nonamp no-trailing-slash variant

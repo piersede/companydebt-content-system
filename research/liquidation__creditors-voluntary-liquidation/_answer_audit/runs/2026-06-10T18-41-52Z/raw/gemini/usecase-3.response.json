@@ -1,0 +1,652 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:43:16 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=13448",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director, a Creditors Voluntary Liquidation (CVL) triggers significant consequences, including potential personal liabilities and restrictions on future business activities. This insolvency route, governed primarily by the **Insolvency Act 1986** and the **Company Directors Disqualification Act 1986 (CDDA)**, necessitates careful adherence to legal duties.\n\nHere are the key consequences:\n\n### 1. Loss of Control and Duty Shift\n\nUpon entering CVL, directors immediately lose control of the company, with the appointed licensed insolvency practitioner (the liquidator) assuming full authority over the company's affairs. Directors are legally obliged to cooperate fully with the liquidator, providing all company records, financial information, and assistance during the process. Failure to comply can result in legal penalties.\n\nCrucially, once a company becomes insolvent or insolvency is likely, a director's primary duty shifts from acting in the best interests of the company and its shareholders to acting primarily in the interests of its creditors.\n\n### 2. Mandatory Investigation of Director Conduct\n\nThe liquidator is legally required to conduct a thorough investigation into the conduct of the company's directors in the period leading up to the liquidation. This investigation scrutinises actions for any potential misconduct, negligence, or breach of duties.\n\n### 3. Personal Liability for Company Debts\n\nWhile the limited liability structure typically protects directors from personal responsibility for company debts, certain circumstances can lead to personal liability during a CVL:\n\n*   **Personal Guarantees:** Directors remain personally liable for any company debts for which they provided a personal guarantee (e.g., for loans or leases). Creditors can pursue directors individually for repayment, which may impact personal finances and credit ratings.\n*   **Wrongful Trading:** This occurs if directors continued to trade the company when they knew, or ought to have concluded, that there was no reasonable prospect of avoiding insolvent liquidation, thereby increasing losses for creditors. If found guilty under **Section 214 of the Insolvency Act 1986**, directors can be held personally liable for the losses incurred by creditors from the point they should have ceased trading. Wrongful trading is a civil offence.\n*   **Fraudulent Trading:** This is a more serious, criminal offence under the **Insolvency Act 1986** and **Companies Act 2006**, involving deliberately deceiving creditors or customers. Directors found guilty of fraudulent trading can face severe penalties, including personal liability for company debts, fines, and even a prison sentence of up to 10 years.\n*   **Overdrawn Director's Loan Account:** If a director has taken more money from the company than they are entitled to (e.g., salary, dividends), creating an overdrawn director's loan account, this becomes an asset of the company in liquidation and must be repaid by the director.\n*   **Breach of Fiduciary Duties:** Directors have fiduciary duties to the company, which, when insolvent, shift primarily to the creditors. Breaches such as misusing company assets, paying unlawful dividends, or making preferential payments to certain creditors over others can lead to personal liability.\n*   **Failure to Maintain Proper Accounting Records:** Serious failures in record-keeping can also be a ground for personal liability or disqualification.\n*   **HMRC Liabilities:** The Finance Act 2020 introduced Joint and Several Liability Notices (JLNs) allowing HMRC to make directors jointly and severally liable for certain tax debts, especially in cases of repeated insolvencies (phoenixism). Personal Liability Notices (PLNs) can also be issued for unpaid PAYE, National Insurance, or Construction Industry Scheme deductions if the director intentionally or recklessly failed to ensure payment.\n\n### 4. Director Disqualification\n\nIf the liquidator's investigation uncovers evidence of \"unfit conduct,\" they must report this to the Insolvency Service. This can lead to disqualification proceedings under the **Company Directors Disqualification Act 1986 (CDDA)**.\n\n*   **Disqualification Period:** Directors can be disqualified from acting as a company director (or being involved in its formation, promotion, or management) for a period of **2 to 15 years**, depending on the severity of the misconduct.\n*   **Consequences of Disqualification:** A disqualified individual cannot be a director of any company registered in the UK, act as a receiver, or be involved in the management of a company, directly or indirectly. Breaching a disqualification order can result in criminal penalties (including imprisonment) and personal liability for company debts incurred during that period.\n*   **Compensation Orders:** The Insolvency Service can also seek compensation orders under Section 15A of the CDDA, requiring a disqualified director to pay compensation for losses to creditors resulting from their misconduct.\n*   **Timeline:** Disqualification proceedings under the CDDA usually must be commenced against the director within **three years** of the date of the formal insolvency of the company.\n\n### 5. Restrictions on Re-using Company Names (\"Phoenixing\")\n\nDirectors of a company that has undergone a CVL are generally prohibited for **five years** from forming, managing, or promoting any business with the same or a similar name to the liquidated company. This is regulated by the Insolvency Act 1986 to prevent \"phoenixing\" where directors deliberately wind up a company to avoid debts and then immediately restart a similar business with a new entity. Exceptions apply, such as obtaining court permission or purchasing the business from the liquidator with proper notice.\n\n### 6. Other Considerations\n\n*   **Redundancy:** If directors were employees of the company and paid via PAYE, they may be able to claim redundancy payments from the government, provided they meet the criteria.\n*   **Public Record:** The director's name will be listed in public records related to the insolvency, which may affect their ability to secure future directorships or loans.\n*   **Personal Credit Rating:** Generally, a company liquidation does not directly impact a director's personal credit rating unless personal guarantees are called upon or personal insolvency (e.g., bankruptcy) is pursued.\n\nTo mitigate these risks, it is crucial for directors to seek professional advice from a licensed insolvency practitioner as soon as their company faces financial distress. Early action and adherence to legal responsibilities are key to ensuring the best possible outcome for directors in a CVL.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfTOx7qB5k0Ajao6Nky6SNftKyJQSGxVtjdSZceqAzrbFIobl7h1YBvOASe__oJXzx9DxUO0BjwJCxCaznAFI6UHO-Gzhr7cUKE-BGfW5hlaudgHm63UQb9JEwQDWZ-K03uCRMPvpIcBmgVqMo7e4YF864ydhfVTLQNljDXTST1_xVzA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAaKOUosnGhIZhDcH3-fViCrIlIZWQEB7ondIttZjXAvIlnEppk_By2c-YHeLASh21PgsxR-XaCmvjmdtLUUASBHbv3FDNKX1J9Yw8BLDPExsxen1JbYM95Un9tg1l2c6vHX0aEBZEqOYXuijGqxcD4gJcHQC-OgbeFs_ijLRcv7vUEaDbU7cnOL9c_a377A=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "economy-ni.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEn98b-egOoRcGR0bzNMX63HNjXvWpqqt2_h8RcywpiuqQVQxbxMrZ9eySQrCTNuiJE3_CLwgWHrUaLxE_OSvplHf4XI5lMXXx4NknANfRyewAunBV49unrlFwM8nnC-dNPGQaOvbEQ7vFOwHARXDf4qOPbWapUA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidationcentre.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxCsI10J73USgkk_rjlrTpXrglzk3m95gim5yD53AQJSMVWB28MRoNBzKB-UdjIsvSbYi56IaoQo-cW6_IP99ieHS_7mWfC0TmHjclshqbYDM91ib7LokTTJLVwZGrUBn9JopCBNPZdNpxGvvUYB-FCqQyIVe1iitw_pZrxqbJGFWTv7ESWUgeARtpdbKj"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "crowe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVEqvHmLAZrT43tCvoqUutpeBUFHxbpsHqIBW_Y7ONBTW086X5Q1EQ5qUpxod2sPoUfd_m5-RP3BN6zhkcC3KNotSmZbmYNWJJlTJ1EeVVX10TIraiiyLRPmLC9yUFQRUcvrhhsecIq4wyqtIYY_ytHFY6yeM="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "begbies-traynorgroup.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8bBk2a7XGFcqXFY1ZsPxkMWKhAyGfQSKsVKpkyF97SgOAkPkrtmBJaiF5kX2Hq-jeMCMpI-kVyma5eVlHLE_Hg_LBvP8PWmuOjMTVcQpayBeyPQYZrq4igcn7NU6iVn9kt7STGy9Y_OV9Z84VVCq0jQsaO89n6QxcVpRzaINd-cB1gIiSU0Jij1AvhwIRDBFhLmKBjR5pOOwbczFX2lSy7YFJvGln2BE_ehsO"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT3dUxNw5GcTMgiY1Mg4mnTVhnCMVE0EfV1CRZ8Ae0CN30igsVihZ4IXGuDuCOzT2R8S90lHG622TAuoAWyK79_3cXkcq0gMAYCXx5iJXX3MdzgyWQOBfqINhrciYk-dmO0ilFikyvY0zDuEewggejw884ACR-lE4_zQi8uuGf2vLGC3vbNxUAJpmqwV9P"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wilsonfield.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-L4wZeDEkACGgbn-0KogNwV-8xp84_w6ooi3lS82pIbiebvT4snQNraIeAdqSzwyNnjEWKuCHlwEgBG_E3C2i_ZejXVzJFA1xIzMZzsF3DjCE757VRksR7_PaVuuk3HxEdVp7ntTV3muMYDhP436jcCah_WV8vhf6C7sSmUF3mzMB9Qmv3KQB_3MczUmGVQFmFC_j82RDgZQnEy5v1t-Naul_kFP2rqWwaYKhMcH2tg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "babr.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXAT4H7tXR3l1dV1_PKVl_yPYkQKjt-eHAZCqAhoaaCYIGvkWG4UwT9nVDbICDj4gbNWvc3cRiL7zj9KpwBkerfARtZDUv9UAndBiSH0aPX5XzA2T11oKSZhCP2N_fC-bpAHzM7rSbzU2-kPU4tLXmYomK-PVW5QpKl9qt6GMXNiC-PrmqFEQ="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "lexlaw.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEY6HmCB0S9RJk2DZOhWVLHJv4EhgQgBPC3zcd9Kq-L6JqWizqNuXLDfMJ5NmW_ho7Nft7qen5-4yXM82ilb4GUGOzdmJG4VM_0Vxs5mN3lQA78y5uPtdbOdPvJTEmjPZaNuY9_ZXx2yJvDM78bCMaJdzARZcp1EThHcYQxfKs0yC8K1ZnKHGJhd2PwMqOWr_dJd_KKn347qPdO-WuYGd0hCXeMdSb_w=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidation.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLARl_L_Vi9v2KmvlT1_WGixuz4zrCaGs0leSTo_Xqv3XODTpC9-z7pJb_BuaR1odGssNyDRhRTJjzpimD-wlcJismHvjq1oE_nFctHXx0_vv-fzgEbmJsLRqShieVvN0MEW1KNp4KlIAQMt2rdYgXG6-JuazvtRtsHE0i20MuzQE_ACRjBp_dPSJxag=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGolx-7dIeAgj2qJ4ro3wUy3LlM6XSBePWtsFmo2NtYf44D0EgDHS_grBnS55Fcz0eAs8lAMLp3FBfQKDZjub1oL-E77T9vNT_Ccevfv-tmL87JRAAxGwiymjnBVqCkhUX_YPZJyWW7oWfOiwNn9JLgkrR86J7SpDfMGUnMiA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "taylor-rose.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV0tZSIaIOnBzx7TRuXSTupyUIErdqLDmuyaUrgrXV2CtZdU6JL_kI0kfQ4f4vWV62rZyNIozxSgPddcPcLKRaCsVQZQe83p5KtGTAzLdiiDcjNNvUgKYpWImuxshYxWoNgmaJyd0U5Wu9dv1kJ1UaU2WPt2CllpszOsSEEWURic4="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "begbies-traynorgroup.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFunHI19PKmfi6tTE465cZhl7A2V7g2_9UywmglwnqW-NM9PQwhswSYyg808XQhy0sf1tAwa9pB4w0sc0bxNKO4irgqWxKHpOfwh4nSMDPZfHoi0nDJ1eWsGG7grmG_C7TPGXS8kEwxL32gkIn9JX_HTM7hcAKaCbCOdt7yBZd2woNkeeJ4NVnfZjhBFmbCjUpEIpcd5N0zzcW2rcWdEG8BKQ0MBukfcT-1SmFpdcs1awrL6zSczIE="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wikipedia.org",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUhKNvRqza4Mp2PPC_abRzgecxdiSq96YBpbtUAIDaWopiiMC0etNOSgNfUawvalt3F_ssRHvC2zyR23WbOUTUizHVxvmSUWysYgGvMYDRVsia6KJTzKRGC5MY1BPIPcVzCVBSKaF6fPg="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "summitlawllp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAPUdswLjxnQI_U9mYp-penXD23hEdg38eWgQcxlcR8q6cvwYsjY44pDrC0C9nt60X011cHxxsxofbg535qERLdaMJbZdeQ7W7-UmKs_jmmVONtbNAvmaNW4KGKrPg3sJHqt_jsh7_mXINmzdpSRgJTg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "goodwinlaw.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyq-KMyFMG3r5l49FrtBZIfgIlciQHAiM8__Iotrm57WEhN8w5VoR8RjIONbxVmY2Ry8E-Bl4pXCuK1bY-_SEpSyUJah-w1VjvsMX_Sz2C0Kgv4lpf0mNiNJy9Kw5PXzk7oD13OvE4pQonSaYEYxpNbKU4ITQodAoWZjR-PtQxB72YLD9cBatn7VfO4zIEti_Xo2ijrPNJB_6h44-VsJGcp9dv_X_0txoK"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "weightmans.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz_xCoWGkkAU4F_ZVLAr357WYCu8d4hA64jMta8f_scgPygolkmOvjdTKkIqLzYVS4vl-Acf0ShrIfTgMlp_T0Uw5810v51uhZz4vQ71GZF7QKC43unHyHvEb8a53Pey3YfO_hYqDmYmlILLXQ5d8SEusgWjOg5yUx"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAXwIChGTCEuuJcw-bpYjIPMBJD2ZUmke3gbgFp7Aow1qkxVat6beTxJpOXlkz_7IAsBg9wwZ4Tjoi7bhd9yDn79Ypnc2_juvoFRaGUuStK1LbsEFEjx-rxkB-tpahW5HxyzUve6nSCDiuQiE5mqzoYaRGNnnVuQFwXSeUs5M="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "capitallaw.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjn5ZION0ruP3VzCZxG7Rcqo5f7O1zL0y0SjI8t2ODEXo_m9NxoRnPD9xeUE_HRoBQcqo9z85XF16Eyq_xouMWysPCKF3OHjt9tVIaJxH6CdlTpA8tSy9MPmnHyIRJ_FqXvZKpvkvqXTeoBjRWL5HeAzAZj47tMGQTsxtb_No31sbV9gJ0axGWKWkrEni0iSTVeItB"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtlZT4ZnOwX-tQGTX3fH7r6GNX7R5SRJ0QS-yZU91hS60j5Ve1_Wm-Egr5f9NvLgOxuDjJkqAOzOHyO7WiNO8OYygUzkynXnlJJ0kEjxR90_z2C2Q7EaBo1PCB21m3lV36P4zcWLG6ha9Mu4OjV95tJCgFtS6PBS0CfN75nSyBOb6jXlZfWbaxYwYylU6I10spxdfzj_mPoO35RZY6sa-Jbp2JAStOgNIvNFQLGalrBSHnETvuzskF59hfSIHjdOvJRUlonRSn1OyfajgfgcyVQ3scmpMCcqXpGdTm29XzPYYRKlH3taTH"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ndandp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8rRX3fVLN9GFnPUyaL6-VeJ7L-ZJpVrXpOQP6o1RG2ScoH57Hxc2zQFkwhidat8cEmaPZo_84Ff4naTP5Stx33suIAIwJvzRmsVK6_doBlEMAyXPY"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjm5CaFDiZENPwkZTj8vi9_5GzCEPmny025h9TSElVBFPKbVl_9-OAHmzNu8fMtWQAWpPk0EgO_XhjBxwD1M8nGSfEg9nA3Z_NtFq4b52YtOppvKjvihIFMYRrE8zmWdytpQ390n81vl1gMfs7d3TgP29zIYUbrbuQoKOEz2Z4QCLL220wbNDVZcBoD3lMGDWTZ3JzCenGzbTp"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mcalisterco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ5cfzAvyAmMfH2SQwWuJgAWwcr-Wr3a6dZuw1Z5M_g3fpigZIT3x55fqHPj67SstcmKVucLi0wVEDhfoB1o_MOFDvs8StkeJlq2pAEICDcE1FpGkGH0a06b2QxBsJRmFuKfxQmQDUm8QUx5umYGYJjirbYojbde5AbznL"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 798,
+              "end_index": 846,
+              "part_index": null,
+              "text": "Failure to comply can result in legal penalties."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5
+            ],
+            "segment": {
+              "start_index": 848,
+              "end_index": 1074,
+              "part_index": null,
+              "text": "Crucially, once a company becomes insolvent or insolvency is likely, a director's primary duty shifts from acting in the best interests of the company and its shareholders to acting primarily in the interests of its creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              6,
+              1,
+              7,
+              8,
+              5
+            ],
+            "segment": {
+              "start_index": 1288,
+              "end_index": 1389,
+              "part_index": null,
+              "text": "This investigation scrutinises actions for any potential misconduct, negligence, or breach of duties."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              6,
+              9,
+              10,
+              5,
+              11,
+              12
+            ],
+            "segment": {
+              "start_index": 1779,
+              "end_index": 1892,
+              "part_index": null,
+              "text": "Creditors can pursue directors individually for repayment, which may impact personal finances and credit ratings."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              1,
+              7,
+              10,
+              4,
+              13,
+              3,
+              5,
+              14,
+              15,
+              11,
+              12,
+              16
+            ],
+            "segment": {
+              "start_index": 2324,
+              "end_index": 2360,
+              "part_index": null,
+              "text": "Wrongful trading is a civil offence."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              7,
+              13,
+              3
+            ],
+            "segment": {
+              "start_index": 2549,
+              "end_index": 2721,
+              "part_index": null,
+              "text": "Directors found guilty of fraudulent trading can face severe penalties, including personal liability for company debts, fines, and even a prison sentence of up to 10 years."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              5,
+              11
+            ],
+            "segment": {
+              "start_index": 2722,
+              "end_index": 3004,
+              "part_index": null,
+              "text": "*   **Overdrawn Director's Loan Account:** If a director has taken more money from the company than they are entitled to (e.g., salary, dividends), creating an overdrawn director's loan account, this becomes an asset of the company in liquidation and must be repaid by the director."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 3146,
+              "end_index": 3311,
+              "part_index": null,
+              "text": "Breaches such as misusing company assets, paying unlawful dividends, or making preferential payments to certain creditors over others can lead to personal liability."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 3312,
+              "end_index": 3466,
+              "part_index": null,
+              "text": "*   **Failure to Maintain Proper Accounting Records:** Serious failures in record-keeping can also be a ground for personal liability or disqualification."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 3711,
+              "end_index": 3913,
+              "part_index": null,
+              "text": "Personal Liability Notices (PLNs) can also be issued for unpaid PAYE, National Insurance, or Construction Industry Scheme deductions if the director intentionally or recklessly failed to ensure payment."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            "segment": {
+              "start_index": 4070,
+              "end_index": 4181,
+              "part_index": null,
+              "text": "This can lead to disqualification proceedings under the **Company Directors Disqualification Act 1986 (CDDA)**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              1,
+              7,
+              17,
+              18,
+              19,
+              20,
+              21,
+              5,
+              15,
+              11
+            ],
+            "segment": {
+              "start_index": 4183,
+              "end_index": 4422,
+              "part_index": null,
+              "text": "*   **Disqualification Period:** Directors can be disqualified from acting as a company director (or being involved in its formation, promotion, or management) for a period of **2 to 15 years**, depending on the severity of the misconduct."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              17,
+              19,
+              20
+            ],
+            "segment": {
+              "start_index": 4639,
+              "end_index": 4801,
+              "part_index": null,
+              "text": "Breaching a disqualification order can result in criminal penalties (including imprisonment) and personal liability for company debts incurred during that period."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              17
+            ],
+            "segment": {
+              "start_index": 4802,
+              "end_index": 5029,
+              "part_index": null,
+              "text": "*   **Compensation Orders:** The Insolvency Service can also seek compensation orders under Section 15A of the CDDA, requiring a disqualified director to pay compensation for losses to creditors resulting from their misconduct."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              21
+            ],
+            "segment": {
+              "start_index": 5030,
+              "end_index": 5214,
+              "part_index": null,
+              "text": "*   **Timeline:** Disqualification proceedings under the CDDA usually must be commenced against the director within **three years** of the date of the formal insolvency of the company."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              18,
+              22
+            ],
+            "segment": {
+              "start_index": 5677,
+              "end_index": 5796,
+              "part_index": null,
+              "text": "Exceptions apply, such as obtaining court permission or purchasing the business from the liquidator with proper notice."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7
+            ],
+            "segment": {
+              "start_index": 5827,
+              "end_index": 6008,
+              "part_index": null,
+              "text": "*   **Redundancy:** If directors were employees of the company and paid via PAYE, they may be able to claim redundancy payments from the government, provided they meet the criteria."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 6009,
+              "end_index": 6183,
+              "part_index": null,
+              "text": "*   **Public Record:** The director's name will be listed in public records related to the insolvency, which may affect their ability to secure future directorships or loans."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10
+            ],
+            "segment": {
+              "start_index": 6184,
+              "end_index": 6406,
+              "part_index": null,
+              "text": "*   **Personal Credit Rating:** Generally, a company liquidation does not directly impact a director's personal credit rating unless personal guarantees are called upon or personal insolvency (e.g., bankruptcy) is pursued."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8,
+              23,
+              10,
+              3,
+              5
+            ],
+            "segment": {
+              "start_index": 6408,
+              "end_index": 6579,
+              "part_index": null,
+              "text": "To mitigate these risks, it is crucial for directors to seek professional advice from a licensed insolvency practitioner as soon as their company faces financial distress."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              10
+            ],
+            "segment": {
+              "start_index": 6580,
+              "end_index": 6702,
+              "part_index": null,
+              "text": "Early action and adherence to legal responsibilities are key to ensuring the best possible outcome for directors in a CVL."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAdETQB3oq2P2Rj3GJeC51f5XTFD7Xbj4JoEcBN00o7VpUrA-94NMRMR875nqe0JWcgeCmXvgkYb_kKTbo1tOmhlogGV11ZVO7ICop5ti5k9gBXxJGRlsi1W514DD5aSL0x1UJZdUejIkuNBeXBFIgHU903rUdaQN9bphbfY32Z1384xiwftyshCoF9rQuJQHlt2KQ88EgasrttnHJ19wFAna0RZLXW0Z0kpekQOEMmQ==\">insolvency act 1986 director disqualification</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLI7qYRGYjgLqXyO_BirCMg_BVNvecfghujz0IVhKeFBGFxeDUj5ECbyU60kzkIJAISFSjORFatLIP65kghoBPdlJc0OXHGUDBL6a0qBe17jvfbBUgr5LBKr2L2-ylzGu9fIJbgCxrxzxBzc4h68sTx1hbfotZKDlvE7s7_mrNZ7W9VbQyUcB7tZEFwUGlK0hmh138H62mo1cMWFCyS8EKjnu9Q9Jk5KK_m9KcPM4mXvfHyNd5i_RHrdvKvnYXGBMPgCNBXb5Z\">personal liability for directors creditors voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbQ-ZHHLfGBDsH7uX52sXmic9uKVQaNgB-e_RoMY-TdXf1GYoEvve6TJ7hHSQoLjehZqDKdrhGd4PtWbFP9z5uie1vo_4Vg7mGGESAE1CSp55YCDmB8Mgh7eEIQr2i2VW4Mc7thsTFe77dNnAsACyQliLFwe45k47sjayB74nnCNqiBhV0f0GDNQvIOfPc0ny09ETneFCzTvYhc-tZXSYM4_GEFeBSnT5zG_dXhl21xlYSOeaKVeTMq53cE8q2L-O2npzsCbjbH5g=\">consequences for company directors creditors voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa54X1iZHgE4CuU2x6XfXAf5F02OeQctdeITQVuXI33KHVl537OXjc-a_M5ymD_eAvjG65UUzHkgF8eX22XC-nt63SSPX69Rq--1qFeZ1X2nH9bE55JXirRUkQatbwfd_T1DKp4mSn_YvuAwbAwtDk6ScQzE8a-6xBPj06cGvasOU8MTMhCQTw0d4u4whMAWs2QdpCXj09qRAVl_oMMjUeeKKVqQ==\">wrongful trading UK Companies Act</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnF_WdLcMQdLzY44KsZcpNCElT-lnNjIQ-RHG0Ds4i_sPXd0djq_OKFgX6ku1JgrknwEG2zxAb5hcxuZrPZniqFO4UpUDn3Q8um57z2Gbz8XOCpfx8prxsDCe3egL8UPwwVKUmE2zB8uzJbEkMY7QqMHMhRGQtmq2qg2vhoNVRIMTC24k8Rj3P2QJ2Wb3Yu932zRRGyXfbyItbaf1EAueXIP4fedXzzbQ5AWRpcu3YCoLarVPqwQ==\">creditors voluntary liquidation UK director duties</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "consequences for company directors creditors voluntary liquidation UK",
+          "personal liability for directors creditors voluntary liquidation UK",
+          "wrongful trading UK Companies Act",
+          "insolvency act 1986 director disqualification",
+          "creditors voluntary liquidation UK director duties"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "N7Apaq7JG8H_nsEP6_a8oAw",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1381,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 92,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 92
+      }
+    ],
+    "thoughts_token_count": 775,
+    "tool_use_prompt_token_count": 283,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 283
+      }
+    ],
+    "total_token_count": 2531,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

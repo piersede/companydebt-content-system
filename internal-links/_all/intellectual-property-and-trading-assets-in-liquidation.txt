@@ -1,0 +1,302 @@
+<!-- TITLE: Intellectual Property and Trading Assets in Liquidation: Valuation and Disposal -->
+<!-- POST ID: 78578 / TYPE: pages / AUTHOR: 34 / FM: 78580 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/intellectual-property-and-trading-assets-in-liquidation/ -->
+
+<!-- wp:paragraph -->
+<p>Most SME directors we see discover three things about their company's intellectual property during liquidation. First, you own less of it personally than you thought: IP created in the course of employment belongs to the employer by default under s.39 of the Patents Act 1977 and s.11 of the CDPA 1988.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Second, your IP is worth materially less at forced sale than the book value or the balance-sheet figure suggested. Third, if you transfer customer data to a new venture without the right legal basis, you breach GDPR and expose yourself (now an ex-director) to ICO enforcement.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Below, we walk through what the <a href="/insolvency/what-is-an-insolvency-practitioner/">liquidator</a> does with your company IP and trading assets, how the valuation problem works in practice, the GDPR / Data Protection Act 2018 framework around customer data transfer, and the director-duty exposure routes that survive liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The "IP I created is mine" assumption is the misunderstanding that converts a CVL into a wider <a href="/advice/misfeasance/">misfeasance</a> investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer on IP and Trading Assets in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Company IP and trading assets vest in the liquidator on appointment under section 143 of the <a href="/insolvency/insolvency-act-1986/">Insolvency Act 1986</a>, with operative sections varying by procedure:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>MVL</strong>: s.91 IA 1986</li>
+<li><strong>CVL</strong>: s.103 IA 1986</li>
+<li><strong>Compulsory liquidation</strong>: s.144 IA 1986</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>What vests: trademarks, patents, copyrights, registered designs, customer database, brand goodwill, domain names, social media accounts, software licences, hardware, contracts, supplier relationships, know-how. Our guide to <a href="/liquidation/leases-and-contracts-in-liquidation/">leases and contracts in liquidation</a> covers how the liquidator handles ongoing agreements and the s.178 disclaimer power.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The valuation problem is real. IP is highly subjective; auction realisations typically come in at 10-30% of book value (where book value exists at all), and often well below that for technology-specific IP without an obvious acquirer. GDPR adds operational complexity to customer-data transfer that did not exist before 2018.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Counts as Intellectual Property and Trading Assets in the Insolvency Estate</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The full inventory:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Registered IP</strong> (verifiable on public registers):</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Trademarks</strong> under the Trade Marks Act 1994; UK + international filings</li>
+<li><strong>Patents</strong> under the Patents Act 1977; UK + EPO + national filings</li>
+<li><strong>Registered designs</strong> under the Registered Designs Act 1949</li>
+<li><strong>EU IPRs</strong>; UK-registered post-Brexit via UK IPO comparable rights</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>Unregistered IP</strong> (no public register, ownership evidence-dependent):</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Copyright</strong> under the Copyright, Designs and Patents Act 1988; software, content, marketing materials, training docs, business plans</li>
+<li><strong>Database rights</strong> under CDPA 1988; customer lists, supplier lists, transaction records</li>
+<li><strong>Trade secrets + know-how</strong>; proprietary processes, supplier contacts, pricing methodology</li>
+<li><strong>Goodwill + brand reputation</strong>; most valuable for established businesses, hardest to value</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>Trading assets</strong>:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Customer lists + transaction history</li>
+<li>Supplier contacts + payment terms</li>
+<li>Active contracts (subject to s.178 IA 1986 disclaimer option for onerous contracts)</li>
+<li>Domain names + email accounts</li>
+<li>Social media accounts + follower bases</li>
+<li>Software licences + SaaS subscriptions</li>
+<li>Hardware + plant + machinery</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The liquidator inventories all of this in the Statement of Affairs (Form 4.19 for CVL) and during the first 7 days post-appointment. You must cooperate under s.235 IA 1986, including handing over registration credentials, software passwords, customer database access, and supplier contact details. Physical trading assets are realised separately; our guide to <a href="/liquidation/company-vehicles-and-equipment-in-liquidation/">vehicles and equipment in a liquidation</a> covers how hardware, plant and machinery are valued and sold.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Valuation Problem for Intellectual Property and Trading Assets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three valuation approaches apply to your IP, and they typically produce very different numbers:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Cost basis</strong>: book value of your IP per accounts. For most SMEs this is zero or near-zero (IP development costs were expensed rather than capitalised). For tech businesses with capitalised development costs, it may run to £hundreds of thousands but reflects historic cost, not realisable value.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Market basis</strong>; what comparable IP has sold for. Limited utility for SME-specific IP; usable for trademarks (where domain + trademark packages have recent sale comparables) and standard software licences (where second-hand market exists).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Income basis</strong>; DCF on projected royalty stream from licensing the IP. Sophisticated approach for valuable patents or established trademarks; rarely worth the analytical effort for SME-level IP.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The "market value vs forced-sale value" gap is the practical problem. Going-concern valuation of a brand might run to £200,000; same brand in a CVL auction context realises £20,000-£60,000. The gap reflects:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Loss of operational momentum on liquidation announcement</li>
+<li>Lack of management warranty to support the sale</li>
+<li>Limited time for marketing the IP to potential buyers</li>
+<li>Buyer risk discount for unknown encumbrances + IP disputes</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Specialist IP valuers exist (CenterPoint IP, Inngot, ipPragmatics typically £2,000-£10,000 instruction fee) and are usually instructed where IP is estimated above £50,000 value. For lower-value IP, the liquidator's own valuation + open marketing through standard auction channels is the typical route.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the Liquidator Sells Intellectual Property and Trading Assets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three sale routes:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Open marketing</strong> under r.10.42 of the Insolvency Rules 2016; the "best price reasonably obtainable" standard. Implemented through:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Industry trade publications + sector-specific newsletters</li>
+<li>Online auction houses (specialist insolvency platforms: BPI Auctions, John Pye, GA Group)</li>
+<li>Specialist IP brokers (where IP value is material)</li>
+<li>Public Gazette advertisement + the Insolvency Service Register listing</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>Targeted approach</strong>; direct approach to identified potential buyers:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Direct competitors in the sector</li>
+<li>Former major customers (often interested in continuing supply relationships)</li>
+<li>Management buyout team (if management has funding + appetite)</li>
+<li>Suppliers seeking forward integration</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>Pre-pack sale</strong> under Sch B1 IA 1986 + SIP 16; pre-arranged sale completed on appointment. Requires:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>SIP 16 disclosure of marketing exercise + valuations + connected-party identity + alternatives considered</li>
+<li>For connected-party sales (typically the existing management team): mandatory evaluator's report under the 2021 Regulations (Administration (Restrictions on Disposal etc. to Connected Persons) Regulations 2021), OR creditor approval as alternative</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>In our practice, pre-pack preserves going-concern value better than auction sale. We see forced-sale realisations of 10-30% of book value at auction; pre-pack can capture 50-80% of going-concern value if the trade-buyer identifies a clean continuation. The trade-off is connected-party scrutiny + SIP 16 disclosure obligations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">GDPR and the Customer Data Transfer Problem for Trading Assets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>GDPR + the Data Protection Act 2018 changed the customer-data transfer landscape after 2018. Pre-2018 the customer list was a tradeable asset; post-2018 it is a regulated asset that can only transfer with proper legal basis.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The framework:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Article 6 GDPR; lawful basis for processing.</strong> Customer data transfer to a purchaser requires one of: consent, contract, legal obligation, vital interests, public task, or legitimate interests. For typical asset-sale scenarios, "legitimate interests" with appropriate balancing test is the most practical basis.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Article 14 GDPR; information to data subjects.</strong> Where personal data is obtained from another source (i.e. the seller, not the data subject), the recipient must provide privacy notice updates within a reasonable period and at the latest within one month.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>ICO Code on Direct Marketing.</strong> Marketing communications post-transfer require either fresh consent (under PECR for electronic marketing) or reliance on a legitimate-interests-balancing-test for B2B contacts. B2C consumer-marketing lists typically need fresh consent to be usable for marketing.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>The "cleansed customer list" technique:</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>B2B contact details + transaction history: can transfer under legitimate interests with balancing test + privacy notice update</li>
+<li>B2B marketing communications: legitimate interests usually sufficient under PECR for corporate subscriber recipients</li>
+<li>B2C contact + transaction details: can transfer under legitimate interests for contract-fulfilment purposes</li>
+<li>B2C marketing communications: typically require fresh consent</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Practical implication: a customer database may be valuable to a purchaser as a contact list, but its marketing value depends on the consent records the seller can transfer. Where consent records are missing or incomplete, the purchaser may pay for the contact-list value but discount the marketing-list value substantially.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Duties Around Intellectual Property and Trading Assets in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>As a director, you face three categories of duty after liquidation appointment:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Cooperation under s.235 IA 1986.</strong> Provide IP registers (trademark + patent + design registration records), software licences + login credentials, customer databases + access methods, supplier contracts + contact details, domain registrations + DNS access.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The 7-day window after appointment is the standard timeline; failure to cooperate is contempt of court + Schedule 1 CDDA 1986 conduct factor.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Section 236 IA 1986 examination.</strong> Where IP / asset disposal pre-liquidation looks suspect, the liquidator can summon directors under oath for private examination. Common triggers: undocumented transfer to connected party, sale at suspected undervalue, IP migration to new venture in the months before liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Continued-use prohibition.</strong> If you use company IP after liquidation (for example, continuing to use the company trademark, customer database, or proprietary software in a new venture), you are committing misappropriation.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Section 212 IA 1986 misfeasance claim available to liquidator + section 214 IA 1986 wrongful trading evidence where the new venture was set up during the wrongful-trading window. Section 216 IA 1986 prohibited names rule + section 218 IA 1986 phoenix offence may also engage.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The cleanest path we recommend is to liquidate the company first, then bid for the IP at the open marketing exercise (or via SIP 16 pre-pack). The IP becomes your new venture's lawful property; phoenix exposure and misfeasance exposure are closed off. Our guide to <a href="/liquidation/">the company liquidation process</a> sets out how that route works from start to finish.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings About IP and Trading Assets in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In our practice, three misconceptions catch directors regularly:</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>"I created the IP myself, so it's mine."</strong> False for the majority of IP. Section 39 of the Patents Act 1977 vests employee inventions made in the course of normal duties in the employer. Section 11 of the CDPA 1988 vests copyright in works created in the course of employment in the employer.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Unless your employment contract explicitly assigns IP back to you (rare for directors of owner-managed companies), the IP belongs to the company.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>"My customer relationships transfer with me to a new venture."</strong> False as a matter of company-asset ownership. Your customer database is a company asset under s.143 IA 1986, and database rights under CDPA 1988 vest in the database compiler (your company).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Taking customer details to a new venture without buying them from the liquidator is misappropriation and potentially trade-secret theft under the Trade Secrets (Enforcement, etc.) Regulations 2018.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>"I can let my new company use the trademark."</strong> False on multiple grounds. Section 216 IA 1986 prohibits use of the same or similar name for 5 years after insolvent liquidation (with limited exceptions under r.22.4-22.7 Insolvency Rules 2016). Section 218 IA 1986 makes phoenix-pattern offences criminal.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Trade Marks Act 1994 infringement runs alongside; and the liquidator will pursue both routes to recover value for the estate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Intellectual Property and Trading Assets in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"78578-faq-block","theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"titleColor":"#000000","hasFAQSchema":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWho owns company IP after liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>The liquidator, who acts as office-holder of the company under s.143 IA 1986. The IP can be sold to a third party (or back to former management through pre-pack) but cannot lawfully be used by anyone else without consent of the liquidator.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow is IP valued in liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Three approaches: cost (book value, often zero for SMEs), market (comparable sales, limited for sector-specific IP), income (DCF on royalty stream, rarely worth the analysis at SME level). Forced-sale realisations typically 10-30% of book value at auction; pre-pack sales can capture 50-80% of going-concern value.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I transfer customer data to a new company under GDPR?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Only with lawful basis under Article 6 GDPR + appropriate privacy notice updates under Article 14. Marketing data typically requires fresh consent or strict legitimate-interests balancing. The "cleansed customer list" approach (contact + transaction history without marketing consent) is the common operational compromise.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I keep using the company website + domain name after liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>No; these are company trading assets that vest in the liquidator. They can be purchased from the liquidator (at auction or via pre-pack) but cannot be used without that consent. Continued use exposes directors to s.212 misfeasance + s.214 wrongful trading + potential s.216 phoenix offence.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#ffffff","collapsed":true,"collapsedOnMobile":true,"hasFAQSchema":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to existing supplier + customer contracts?\u003c/strong\u003e"} -->
+<!-- wp:paragraph -->
+<p>Contracts survive liquidation but the liquidator can disclaim onerous contracts under s.178 IA 1986 within 12 months of appointment. Counterparties have 14 days under s.178(5) to require the liquidator to elect to retain or disclaim.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Useful contracts (customer contracts with payment due, supplier contracts on favourable terms) are typically assigned with the trade in a pre-pack.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors of insolvent companies who own intellectual property, customer data, brand value, or other intangible trading assets that the liquidator must realise.</p>
+<p>We have drawn on the Insolvency Act 1986 (sections 216 on prohibited names, 238 on transactions at undervalue, and 436 on the definition of property), the Trade Marks Act 1994 on assignment of registered marks, the UK GDPR and Data Protection Act 2018, and current Information Commissioner's Office and Insolvency Service guidance on connected-party sales and data transfers.</p>
+<p>Where we describe how IP and trading assets actually realise in liquidation, including the valuation gap between director expectations and auction recovery, the rapid evaporation of goodwill once trading stops, and the connected-party purchase route, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents" target="_blank" rel="noopener"><strong>Insolvency Act 1986</strong> &mdash; sections 216 (prohibited names), 238 (transactions at undervalue) and 436 (definition of property) governing IP and asset realisation in liquidation</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1994/26/contents" target="_blank" rel="noopener"><strong>Trade Marks Act 1994</strong> &mdash; statutory framework for assignment and transfer of registered trademarks on insolvency sale</a> - legislation.gov.uk</li>
+<li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener"><strong>ICO UK GDPR guidance</strong> &mdash; lawful-basis rules and legitimate-interest assessments for customer data transfers in insolvency scenarios</a> - ico.org.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service" target="_blank" rel="noopener"><strong>The Insolvency Service</strong> &mdash; official guidance on asset realisation, valuation duties and connected-party (pre-pack) sales scrutiny</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

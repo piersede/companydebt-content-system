@@ -1,0 +1,677 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:42:52 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=15233",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director facing the inability of their company to pay its debts, a Creditors' Voluntary Liquidation (CVL) is a formal, director-led insolvency route to wind up the business in an orderly manner. This process is governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016.\n\nTo be eligible for a CVL, the company must be insolvent, meaning it is either unable to pay its debts when they fall due (cash flow test) or its liabilities exceed the value of its assets (balance sheet test). Directors have a legal duty to act in the best interests of creditors once insolvency is recognised.\n\n### Steps Involved in Creditors' Voluntary Liquidation (CVL)\n\nThe CVL process follows a structured path:\n\n1.  **Initial Consultation with an Insolvency Practitioner (IP):** The first step involves directors seeking advice from a licensed insolvency practitioner. The IP will assess the company's financial position, confirm insolvency, and determine if a CVL is the most appropriate option. This confidential discussion also covers potential costs, responsibilities, and next steps.\n2.  **Directors' Board Meeting:** If a CVL is confirmed, the company's directors will hold a board meeting to formally resolve to place the company into liquidation and to appoint the chosen IP as the proposed liquidator. They also resolve to convene a general meeting of shareholders and a decision procedure for creditors. The IP will then prepare necessary documentation, including a Statement of Affairs outlining the company's assets, liabilities, and overall financial position.\n3.  **Shareholder Resolution:** Shareholders must pass a special resolution to wind up the company. This requires a 75% majority vote. Shareholders are typically given 14 days' notice for this meeting, though this can be shortened to 7 days if 90% of shareholders agree. The resolution also formally appoints the liquidator.\n4.  **Creditors' Decision Procedure:** Creditors are given at least 7 days' notice of the proposed liquidation and provided with the Statement of Affairs. Under the Insolvency (England and Wales) Rules 2016, a physical meeting of creditors is largely replaced by decision procedures, such as \"deemed consent\" or virtual meetings. A physical meeting is only held if requested by 10% of creditors by value or number, or by 10 individual creditors. The purpose is for creditors to formally approve the CVL and the appointment of the liquidator, or to nominate a different liquidator. If creditors nominate a different liquidator, their nomination usually overrides that of the shareholders.\n5.  **Formal Appointment of Liquidator and Commencement of Liquidation:** The company officially enters liquidation, and the appointed IP takes control of the company's affairs, assets, and bank accounts. Directors' powers over the company cease at this point. The liquidator then notifies Companies House and advertises the appointment in The Gazette.\n6.  **Realisation and Distribution of Assets:** The liquidator's primary responsibility is to secure and sell the company's assets to maximise returns for creditors. Proceeds are distributed to creditors according to the statutory order of priority.\n7.  **Investigation into Directors' Conduct:** The liquidator is legally required to carry out a review of the directors' conduct for the three years leading up to the liquidation and submit a report to the Insolvency Service. This is a standard part of every CVL and is not optional.\n8.  **Ongoing Reporting and Final Closure:** The liquidator provides regular updates to creditors. Once all assets are realised, claims resolved, and funds distributed, the liquidator prepares a final account of the winding-up. A final meeting of members (and creditors, if applicable) is held. Within one week of the final meeting, a return of the meeting and final account are filed with the Registrar of Companies. The company is then struck off the register and dissolved three months later.\n\n### How Long Does it Take?\n\nThe duration of a Creditors' Voluntary Liquidation can vary significantly based on the complexity of the company's affairs, the number of creditors, and the nature of asset sales.\n\n*   **Pre-Liquidation Phase (Initial Steps):** The initial process to officially place the company into liquidation can be actioned relatively quickly, often within **1 to 4 weeks**. Some firms can initiate the process in as little as 8 days.\n*   **Formal (Post-Liquidation) Phase:** Once the liquidator is appointed, the full liquidation process typically spans between **6 to 18 months**. However, in more complex cases, it can take **12 to 24 months or even longer** to complete all stages, including asset realisation, creditor claims, and final reporting. Directors' involvement is generally most significant during the early stages, typically within the first three months.\n\nWhile there is no fixed legal time limit for the entire process, the initial appointment stage provides immediate structure and relief from creditor pressure.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "insolvency-online.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBqPqkQiSQQlkQSPmDezo86SNdoi_TMyjmfmKSctP33jQrAm6BLpCnXC-LzrEIoZw_NXSiXE2zGL82aUKwiSD64IqWniilIMrW4dmkUIk41tfrm8zMEJgEBvVtIiI9wAYWsW6SJr3zloGS49Dqj6qlYWkZ-55MmcimQQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgyYrrC6N8vuoO09c--uZMQFncxAruNBaPktPwI8QbvApNm49yk2JUK-F9P4dOiPBh6XzULHLpekwA8woGu_Coh9K_g5GxZgKDciOTuLbo4Z1OTXej8yGddCupVSpYWTYTQgHO9xXqlsft8HUDFn-0YKiJAGUPxNQOUsocDViX4ETDr5NFN5lDkxO7OLoGEA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsN4d3R64Iv8Qe7Vv8YoUwGqAhJWeWwh5VDBG5vfXFDQs_wgkdV_qFhpa6QcyBf0xgCV12_co_-Gh4hAJRu64QPyQ5sm6j_cvztRGfWV-gfryF7S73A5jKE76dQFPXPnifV1xxb1riyOQ0lCs5pge5bI0m7S5h-9GoPY3N7H-sKltGHHJ5kxSTn_pZ6b4ULQZW8MFl1DXnKk0Txoe7S6F9Emi-_0ZA3tfYU5yuzmRaIYn9Mu2p4OULUA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hudsonweir.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk5Vdm7Cdu1emn3kR2M6satsz_dnJpTaIYuT7o50-ZYzq68_98goro4sJK987DwZqtuZUz8YDA-IhTHfr4mOai2nblsg1ks348YieFIdd5y4o-c59Tf-NDm-RE4GJTYuK_igHJl4zAfjnzO5bgeHZ83gcJjgYLvNiwwH35-A=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "rkllp.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGusKpunj3sJ3zAhBeJ4-CV-miDcyaGf8PGcegbwEWBoKLXLaEfohInF1kTb9k7hwih0j7MymSALVNSgFvWb3j4mz1HBZBlweqwpcSR2owq1kHHbmLvFFPlMWRG-1PyFBOfqdch3yYEp51KLOJQMEXndBa6v10JFPpRzFCEUJcUSkXNmmM="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r3.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKdifQxbgHQoix5squ4dNsLSJ4mt_Nih4B4lXKog-6rc_gSwEFrBg1rlbuNqXfGqosJ6PIhyHu2H0PRVAPpqWlv4UolPN5SBGTlbXa-G7i8s778FNXLkpNa_dJ25e_cwmYhl-SIAIG9VrRxf3VOiBQRDoi-kWLXkk83vAjwHtfFJDM4g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyah8iHaKiKdVVYlo2GirucypAgAvZo5QeoFv-c64uyc0Vctp3qDZEOkOwO90A47VdvOfJJCjJChkdBBNl4XQJGCZvleBOuLKJZoL1vvOV8typIbsgRpqVOakknqP30k8MNJg7kOvp5SBZrQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3WGvzJ5_ptIhXdijJ2xx1BxFfTlfp-6lTqog55KBeLR5Y9WRtczhFQBuEjq7VVcSKxRNI5AORElYc3JsNkTIiDaI5jujNBd-pne3MOLp3VeCXnyEIzymP6m_SEnx3TOMQQ0ioXhjxoCM-4SKl2tNN"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pkf-l.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqHBAcT6SywLDTSvUPeQ7jlh0O18HelaR5TOVhoL6-KF6BzwUdyr2NMQWw2GnfPCPjcQm3ZUZFPhFlUzZvdOQAwbylwoTaQ5g61Nbx1iYoQteqf7d1WdI3v4vVubZc2iX_5ofv1lOE4vr7xDtN2Eh8fJzjYgBPgrRzu1CfMNyQqWxcn7Eif4nnBf8foCJNDX8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "babr.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf0i2phn10lBAJEIQ_9IgffR29JpO-mwbpw41nw-q6qFIy4b520OLpjDzpuXOZ723hO2s_TjfdkrpNnlJPZOrWPN3rgt6LfNdXFGCQZBcs8bawX0UYXAQS7CQYvmwPfSOeO-uMPZY1cHFVigDTzue-W52Q259r7Kj7w8HEREvTQswk-FtloRQ="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0aedWYorU1k4WzcZk4CC6SDX1ehLXXBeRy8oJmwWJ3NT9KXCM88CgrKO1eGYn4uKTxro9lqhU8MvS0wkDlZ0lhndreWnfIhL8rQu2YOf5wR1so2lZioT59DM7ILWpv2V6eKYCmws-qlKXbnt8BgUFg1PJgD5gPnWeNMB_8fSj6pBbFBPAhQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "insolvencydirect.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeGChvWdTF8YzU4llbOTxyjzGSuAGJ-a-1KmTD9f9keXNizsYVdBCE2ruR4gN6k0PuHus_aprCY732Z_C8Fxp8ETaQcVfyhRNenWH1Yo43SP2k4M991bq0wKauMmvbXn0pJsIO2CPEk7-5HXebKanbaXonKJEOvA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ-ivWx6wdkJqcoIvbJ6kxkqU2h6c41mTc5ZZSwmBEgg8XxDpHTiX1ZrEqcM-tXDa90mtS6-ckLh3M1yK8poQ58DWnMfi74I3BzuohVa_bZyQt33M56ACz6iqFQ9WCrN0swUlSh2xUWRW-J-bN0Hoztnp1trMA6Py1W4H58wACHii-fOm4S1ZGTPjUfvMRJD8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyJkyVvNxIhYvDExHPA9_NymDIfZbpIAMUV0UtOgjzBgpJkmktW3dT1UMw93Y4Up1shBr131lCwKNSGSBBJuQt0LxDYib4LB-CPbkjyyHNuK4OoMSTpAwlnM_T-2kvvLZAboyhQeKKXKwqXvVZhoQWqVXTEGa53uxPJc1P-D_YOO-fxOU="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parkerwalsh.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3niWFh2MNavB0QpPjrfFjQWMsJQ0wxBvRKK1MAotT6M7QTj_Q-gd6zYYyikD9qn4HYIRbGnhar3J53tgk0KR6JryabRE1U4x58jOv7FxLUozD9Ftgw-PXq5od9tOJPQzcsCysApQ7QCRG2YMi_2uGBO5aHgoJ6WISbn9jnvl0k_XDQbnPtJw-4Cu3ggnFyOUkXirl2KBhIdQ8QBFmmA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "bridgenewland.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6CKFnxbe5DekCAbT-MZqsyMtEMXd6Nx_e4SCIMiqAYq1vdQrPg4HjGS3M83h54jUPnW2KdsisPiB_DXWcQMfA75brNwmn81B5RzPwB6f4KJs2Z8Xg7CdAbNzn8Atxkg2HuTiOIacbO9RXZY4fbGnxz2xLtbLyQULs2jK3QcfVJBlSjZ_OsUz8ECRm8RXytI0bSFyt3sp9c9KV3GS6vcRs3qGhVf5x5XSyiBZ2aQXRQ05t8JcJjA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ukliquidators.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5skvPgU8ujxJKXr22F-e3Wc_p2QA2dmjMX7IUsq8Kypjls1K6kUPiHOz363VM0_NIdIff3W2IJuWn_9fui-IaaLbZc0leRSRXYA5hctQPfmFwUQb7-K64LbOdAYy8T-Q8z1afa0guF79gdOcllENpKbhYWglrnhTpaW2hGEa0r7flwmFaccdh42w_xgHcJHifcy_aa48nCXKXfyc="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "economy-ni.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWK6S84mhApgxJn3FxdM7Qa1SD2VjRTwC-QnTtaG_LoB7ADOFrDAh_NwIV4xsVjGXUuJpu2KQ-jPJIydqQtiAJ6CsBYOCtc02p-78w1yeg1xH11vSy4Vfpn0Z3-6gcF3pkHIlZ6e7rzqAqAw0ZrVSSuWg8I1cGgA=="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 212,
+              "end_index": 324,
+              "part_index": null,
+              "text": "This process is governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              2,
+              8
+            ],
+            "segment": {
+              "start_index": 326,
+              "end_index": 535,
+              "part_index": null,
+              "text": "To be eligible for a CVL, the company must be insolvent, meaning it is either unable to pay its debts when they fall due (cash flow test) or its liabilities exceed the value of its assets (balance sheet test)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              9,
+              8
+            ],
+            "segment": {
+              "start_index": 536,
+              "end_index": 636,
+              "part_index": null,
+              "text": "Directors have a legal duty to act in the best interests of creditors once insolvency is recognised."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              7,
+              9,
+              11
+            ],
+            "segment": {
+              "start_index": 1029,
+              "end_index": 1120,
+              "part_index": null,
+              "text": "This confidential discussion also covers potential costs, responsibilities, and next steps."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              10,
+              1,
+              9
+            ],
+            "segment": {
+              "start_index": 1343,
+              "end_index": 1445,
+              "part_index": null,
+              "text": "They also resolve to convene a general meeting of shareholders and a decision procedure for creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              7,
+              1,
+              8
+            ],
+            "segment": {
+              "start_index": 1446,
+              "end_index": 1605,
+              "part_index": null,
+              "text": "The IP will then prepare necessary documentation, including a Statement of Affairs outlining the company's assets, liabilities, and overall financial position."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              7,
+              1,
+              9,
+              2
+            ],
+            "segment": {
+              "start_index": 1706,
+              "end_index": 1740,
+              "part_index": null,
+              "text": "This requires a 75% majority vote."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              13
+            ],
+            "segment": {
+              "start_index": 1741,
+              "end_index": 1876,
+              "part_index": null,
+              "text": "Shareholders are typically given 14 days' notice for this meeting, though this can be shortened to 7 days if 90% of shareholders agree."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14
+            ],
+            "segment": {
+              "start_index": 1877,
+              "end_index": 1930,
+              "part_index": null,
+              "text": "The resolution also formally appoints the liquidator."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10
+            ],
+            "segment": {
+              "start_index": 1935,
+              "end_index": 2085,
+              "part_index": null,
+              "text": "**Creditors' Decision Procedure:** Creditors are given at least 7 days' notice of the proposed liquidation and provided with the Statement of Affairs."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              10,
+              7,
+              16,
+              4
+            ],
+            "segment": {
+              "start_index": 2086,
+              "end_index": 2260,
+              "part_index": null,
+              "text": "Under the Insolvency (England and Wales) Rules 2016, a physical meeting of creditors is largely replaced by decision procedures, such as \"deemed consent\" or virtual meetings."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10
+            ],
+            "segment": {
+              "start_index": 2261,
+              "end_index": 2376,
+              "part_index": null,
+              "text": "A physical meeting is only held if requested by 10% of creditors by value or number, or by 10 individual creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              15,
+              7,
+              8,
+              17
+            ],
+            "segment": {
+              "start_index": 2377,
+              "end_index": 2511,
+              "part_index": null,
+              "text": "The purpose is for creditors to formally approve the CVL and the appointment of the liquidator, or to nominate a different liquidator."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              17
+            ],
+            "segment": {
+              "start_index": 2512,
+              "end_index": 2618,
+              "part_index": null,
+              "text": "If creditors nominate a different liquidator, their nomination usually overrides that of the shareholders."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              7,
+              16
+            ],
+            "segment": {
+              "start_index": 2824,
+              "end_index": 2879,
+              "part_index": null,
+              "text": "Directors' powers over the company cease at this point."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              13
+            ],
+            "segment": {
+              "start_index": 2880,
+              "end_index": 2971,
+              "part_index": null,
+              "text": "The liquidator then notifies Companies House and advertises the appointment in The Gazette."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              15,
+              9,
+              2,
+              8,
+              14
+            ],
+            "segment": {
+              "start_index": 2976,
+              "end_index": 3137,
+              "part_index": null,
+              "text": "**Realisation and Distribution of Assets:** The liquidator's primary responsibility is to secure and sell the company's assets to maximise returns for creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              14
+            ],
+            "segment": {
+              "start_index": 3138,
+              "end_index": 3221,
+              "part_index": null,
+              "text": "Proceeds are distributed to creditors according to the statutory order of priority."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              9,
+              2,
+              14,
+              16
+            ],
+            "segment": {
+              "start_index": 3449,
+              "end_index": 3506,
+              "part_index": null,
+              "text": "This is a standard part of every CVL and is not optional."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 3735,
+              "end_index": 3801,
+              "part_index": null,
+              "text": "A final meeting of members (and creditors, if applicable) is held."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              10,
+              7,
+              11
+            ],
+            "segment": {
+              "start_index": 3925,
+              "end_index": 4002,
+              "part_index": null,
+              "text": "The company is then struck off the register and dissolved three months later."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 4032,
+              "end_index": 4211,
+              "part_index": null,
+              "text": "The duration of a Creditors' Voluntary Liquidation can vary significantly based on the complexity of the company's affairs, the number of creditors, and the nature of asset sales."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              10,
+              14,
+              11
+            ],
+            "segment": {
+              "start_index": 4213,
+              "end_index": 4395,
+              "part_index": null,
+              "text": "*   **Pre-Liquidation Phase (Initial Steps):** The initial process to officially place the company into liquidation can be actioned relatively quickly, often within **1 to 4 weeks**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 4396,
+              "end_index": 4455,
+              "part_index": null,
+              "text": "Some firms can initiate the process in as little as 8 days."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 4456,
+              "end_index": 4603,
+              "part_index": null,
+              "text": "*   **Formal (Post-Liquidation) Phase:** Once the liquidator is appointed, the full liquidation process typically spans between **6 to 18 months**."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              10,
+              13,
+              11
+            ],
+            "segment": {
+              "start_index": 4604,
+              "end_index": 4773,
+              "part_index": null,
+              "text": "However, in more complex cases, it can take **12 to 24 months or even longer** to complete all stages, including asset realisation, creditor claims, and final reporting."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              16
+            ],
+            "segment": {
+              "start_index": 4774,
+              "end_index": 4892,
+              "part_index": null,
+              "text": "Directors' involvement is generally most significant during the early stages, typically within the first three months."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11
+            ],
+            "segment": {
+              "start_index": 4894,
+              "end_index": 5052,
+              "part_index": null,
+              "text": "While there is no fixed legal time limit for the entire process, the initial appointment stage provides immediate structure and relief from creditor pressure."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOWEJYwkNZCN59mWGFmSJrxko9B7UXBD8A6OHRPnA8wzPngDiNYAw6zhakvbdhLLhWnB-r0qFE_OascjCXqke5zd6hpRxYk0itXt56wybex_wQ8f3KJFFXQX9ras7MSPkvDsAGyhMzgUpZcGmJu3ls17pa8nVydL9DHRq7KscCb4YWOtiDxTj6z_87hMmvQZxcGWsT73K0F2UNvvi173xB0v5RiLIrj5qn_sViZSXVJzWPVu7DwQM=\">Insolvency Act 1986 Creditors Voluntary Liquidation</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlfkqMDmztVrnBV_fju4Hx0thWwXKOg2eT3lHEMQYnq6Gqhursc-qCqpgPgP5pt2wcRrEMdmLNzaKXhdNxBMgTXfUyADgz8t5P8d8WImSvWYrNIzHS_Zhfx_BFslUpQxB63xwJCQhIvLnaf3DHaRO_OiYZDtaJF8vh0xoG1HYFSfU28Y81yOcFsEq3N8hMDdzkaCPZhsg2GNV9aRAWErxIOf0fq5rgWcz9XTefALW-Fc8UrINodRoy\">steps involved in creditors voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHcm_TDNIlGo0NlXM9fufbsjX-1TRqkGcB-RNrx2A183-6ELkE4fEAQ6stwK1xGQINNOFFxoKJvu5uUaeXp2FfBb9pW_rfiBFwlOyvDkN6G4CkHQtvhGfxIWP-UjY1KD7B3bxq9AOi-9hb-0XTQM8a__klTUaNCf5HrOj2yvYt7XqAXWjWzcATZicxU8KMztRGQzpFlYFTOdEnbbLcXxons-vOA7-m4lD063tcyI_gRBqy\">timeline for creditors voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOR-jo-A9IdwUpN91BIRHBbM1axJgvIbT5a7mET2vmxSmgudJeCFn5i-9V3hdSk4gbS8WgmUHYvh-vq7FQuFfHPG9qdu4fc_jdbSPICIbfU4n_QsfXd7-aKaBAfwf2nK24iy7nOnpK79RZ6rMWAgspnRK7Rdv5c3IE0aCqaiMjrmKdfVcWKXgaI6u-NAL508xVRkbXmYsUM9hfDZz7NnvVqr8=\">CVL process UK company director</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlNLhVoCFhqIG4BjWOvVsYyaEJx4ks8uc4RdCJj4oOsC4neO2yr0G5te4Sup2D2gk1MPkjVohRRURgGg3niC7LvrGP0-NHEv3f8VAyQUu2RY0glogWPPw_TTdnwKGDGx16H4ujTgyUXKcGYA0ZowRI15KDS_YAtR15sM1mdJweCsJJK9e33rjnZX6aW9_73W07eK11K0JrczqR8fm7wYb8p1dBYOrjQ5y1flQyXlcH1hroyvzHQUk3gLKObN8Qgfi98biaddITRmE2gMBs\">Insolvency (England and Wales) Rules 2016 creditors voluntary liquidation</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "steps involved in creditors voluntary liquidation UK",
+          "timeline for creditors voluntary liquidation UK",
+          "Insolvency Act 1986 Creditors Voluntary Liquidation",
+          "Insolvency (England and Wales) Rules 2016 creditors voluntary liquidation",
+          "CVL process UK company director"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "HbApapfXLKW8vdIPn7HX6AY",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1108,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 92,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 92
+      }
+    ],
+    "thoughts_token_count": 1324,
+    "tool_use_prompt_token_count": 437,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 437
+      }
+    ],
+    "total_token_count": 2961,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

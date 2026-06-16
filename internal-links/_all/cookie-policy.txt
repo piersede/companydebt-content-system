@@ -1,0 +1,80 @@
+<!-- wp:paragraph -->
+<p>This Cookie Policy explains how Company Debt Ltd ("we", "us", "our") uses cookies and similar technologies on our website at www.companydebt.com. It should be read alongside our Privacy Policy, which sets out how we handle personal data more broadly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>What cookies are</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work, or work more efficiently, and to provide information to site owners.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Categories of cookies we use</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Strictly necessary cookies</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These cookies are essential for the site to function. They enable core features such as page navigation, secure access to enquiry forms, and remembering preferences you set during a visit. The site will not work properly without them, and you cannot opt out of them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Performance and analytics cookies</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We use analytics tools, including Google Analytics, to understand how visitors find and use the site. These cookies collect aggregated data about page visits, time on page, and traffic sources. They help us improve our content and identify pages that need work. The information is collected in a way that does not directly identify individual users.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Functional cookies</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Some pages embed third-party content (for example, video players or maps) which may set their own cookies. We do not control these cookies directly. Disabling them may degrade the related content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>How to control cookies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can control cookies through your browser settings. Most browsers let you block all cookies, block third-party cookies only, or delete cookies that have already been set. The following links explain how to manage cookies in major browsers:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><a href="https://support.google.com/chrome/answer/95647" rel="noopener" target="_blank">Google Chrome</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" rel="noopener" target="_blank">Mozilla Firefox</a></li>
+<li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" rel="noopener" target="_blank">Apple Safari</a></li>
+<li><a href="https://support.microsoft.com/en-gb/help/4027947" rel="noopener" target="_blank">Microsoft Edge</a></li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Blocking cookies entirely may stop parts of this site from working as intended.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Changes to this policy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We may update this Cookie Policy from time to time. The latest version will always be available on this page. Material changes will be reflected in the date below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>Last updated: April 2026.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Contact</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you have questions about this Cookie Policy or how we handle data, contact us via the contact page or by email at <a href="mailto:info@companydebt.com">info@companydebt.com</a>.</p>
+<!-- /wp:paragraph -->

@@ -1,0 +1,292 @@
+<!-- POST ID: 79436 / TYPE: pages / AUTHOR: 34 / FM: 79440 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/ -->
+
+<!-- wp:paragraph -->
+<p>Most directors think strike-off draws a line under everything. The company is gone from the register, the bank account is closed, the letterhead goes in the bin, and the worry ends.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That mental model worked until 2021. Then Parliament passed the Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act, and the line stopped being a line.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Today, the Insolvency Service can investigate a dissolved company and pursue you personally for years after the strike-off, without ever needing to restore the company first. If you struck off a company in the last six years and you assumed that was the end of the matter, you are not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors of Struck-Off Companies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Strike-off ends the company's separate legal existence. It does not end your personal exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors of dissolved companies still owe duties around record-keeping (six years minimum under the Companies Act 2006), still face personal liability on any guarantees they signed, still face HMRC investigation for unpaid tax, and since 2021 can be investigated and disqualified by the Insolvency Service even though the company itself is gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The phrase "I dissolved the company so I can't be touched" is one of the most expensive misunderstandings we hear on first calls.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are reading this because you struck off a company and a letter has just landed from HMRC, the Insolvency Service, or a solicitor representing a creditor, do not write back without taking advice. The first response is the one that gets used against you later. Treat the letter as the start of an investigation, not a routine query.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Liability After Your Company Is Struck Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The legal effect of strike-off is set out in sections 1000 to 1002 of the Companies Act 2006. Once the <a href="/liquidation/company-strike-off-and-dissolution/">dissolution</a> notice is published in the Gazette and the two-month notice period passes without objection, the company is removed from the register and ceases to exist as a separate legal person.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Any company assets vest in the Crown as bona vacantia. Any company-level claims against third parties die with the company. From the company's point of view, the slate is wiped.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The director's slate is not wiped. Three things survive intact and a fourth was added in 2021.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>Any personal guarantees you gave to lenders, landlords, or suppliers (the company's dissolution has no effect on guarantees because they are personal contracts between you and the creditor).</li>
+<li>Any director's loan account balance you owed to the company at the date of dissolution. HMRC can pursue this through bona vacantia or restoration.</li>
+<li>Any conduct-based claim a liquidator or the Insolvency Service might bring against you for the period before the company was dissolved.</li>
+<li>The 2021 addition: a new power for the Insolvency Service to investigate dissolved companies directly. We come back to that below.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Six-Year Record-Keeping Trap Most Directors Walk Into</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 388 of the Companies Act 2006 requires every company to keep adequate accounting records for at least six years from the date they are made. The obligation does not stop when the company dissolves.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The director who was responsible for the records at the date of dissolution remains personally responsible for keeping them for the full six-year window, and failing to do so is a criminal offence punishable by fines or, in extreme cases, imprisonment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most directors clear out the office, scrap the filing cabinet, and delete the email archive within a few weeks of dissolution. We see this almost weekly in our caseload, and it is the reason why so many post-dissolution investigations end badly for the director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>One case we handled: a director dissolved a small consultancy in 2021, gave the laptop to his son for university, and shredded three years of paper invoices to clear his garage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In 2024 HMRC opened a VAT enquiry on a 2020 quarter and asked for the records. He had nothing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The investigation moved from "give us the paperwork" to "explain why you destroyed it" within two letters, and the eventual settlement included a deliberate-behaviour penalty he could have avoided by keeping the records in a box at the back of the loft. The cost of the box is nothing. The cost of not having the box was eye-watering.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Practical move: if you have struck off a company in the last six years, find every record you have, put them in a labelled box, and keep them. Bank statements, sales invoices, purchase invoices, payroll records, VAT returns, corporation tax returns, board minutes. Cloud copies of email archives are fine.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The act of preserving the records is one of the strongest protections a former director has against any later investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Personal Asset Risk From the 2021 Dissolved Companies Act</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 was Parliament's response to a specific abuse pattern. Directors were using strike-off as a quick way to walk away from companies that had taken Bounce Back Loans or other COVID-era support, knowing the Insolvency Service could not investigate a dissolved company without first paying to restore it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Act closed that loophole. Since 15 December 2021, the Insolvency Service has had the power to investigate a dissolved company and seek a director disqualification under the Company Directors Disqualification Act 1986 directly, with no need to restore the company first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The practical consequences for directors are significant. Disqualification under the CDDA can run from two to fifteen years, prevents you from acting as a director of any UK limited company during that period, and is publicly recorded on the Companies House register where any future business partner, lender, or customer can find it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Beyond disqualification, the Insolvency Service can also seek compensation orders against directors for losses caused to creditors of the dissolved company, and these orders can attach to your personal assets through the courts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The investigations we see most often under the 2021 Act target three patterns: dissolved companies with unpaid Bounce Back Loans, dissolved companies with significant HMRC arrears at the date of dissolution, and dissolved companies where the director moved assets out before strike-off.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If any of those describe your situation, expect a letter at some point. The investigation can come three years after dissolution, sometimes longer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Creditors and HMRC Can Restore Your Company to Sue It</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even outside the 2021 Act, creditors and HMRC have a second route to your dissolved company: restoration. Under section 1029 of the Companies Act 2006, any creditor can apply to the court to restore a dissolved company to the register for the purpose of pursuing a claim against it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Once restored, the company is treated in law as if it had never dissolved, and the creditor can sue it like any other live company. The restoration window is six years from dissolution for most creditors, extending to twenty years where the underlying claim is for a personal injury (including latent injuries like asbestos-related disease).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The catch is that restoration also revives the directors. Once the company is restored, the former directors are automatically reinstated to office (unless the court specifies otherwise) and become liable for everything the live company is liable for, including the original creditor claim plus all the back-tax, penalties, and interest that accumulated during the dissolved period. Our guide on <a href="/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/">claims after a company is dissolved</a> covers how this exposure works in practice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have seen cases where a creditor restored a company over a £20,000 invoice and the resulting back-tax stack made the restored company instantly insolvent, forcing it into a fresh Creditors' Voluntary Liquidation with the original director in the hot seat for the new investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For the deeper mechanics of restoration see our guide to company restoration after liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Disqualification, Misfeasance, and the Investigation Path</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The two main personal liability routes after dissolution are disqualification under the Company Directors Disqualification Act 1986 and misfeasance claims under section 212 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Disqualification is a regulatory penalty that bars you from being a director. Misfeasance is a civil claim that asks you to put your hand in your pocket and pay back specific sums to the company estate. The two can run in parallel, and both can apply to conduct that took place before the company was dissolved. A misfeasance claim is typically brought by a liquidator, so it tends to arise where a company has gone through <a href="/liquidation/">company liquidation</a> rather than a simple strike-off.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Common triggers for both routes: paying yourself dividends when the company had no distributable reserves, repaying your director's loan account ahead of HMRC, transferring assets to a family member or a connected company at undervalue, continuing to take credit when you knew the company could not pay, and "cleaning up" the books before dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Insolvency Service is increasingly using data-matching against HMRC records to identify these patterns automatically, and the investigation usually starts with a section 235 letter asking you to provide all records and explain specific transactions. That letter is the moment to take advice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>See our guide on wrongful trading for the broader director-conduct framework that applies in the run-up to dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical Steps to Mitigate Your Personal Risk After Strike-Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you struck off a company in the last six years, the practical moves break down by urgency:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Find and preserve every record.</strong> Bank statements, sales and purchase invoices, payroll, VAT and CT returns, board minutes, contracts. Box them or back them up to a cloud account you can access. The act of preservation is your single best protection.</li>
+<li><strong>List your personal guarantees.</strong> Find every guarantee you signed for a company facility (overdraft, leases, supplier accounts, credit cards). These survive the dissolution and you remain personally liable. Knowing the universe of guarantees is the first step to managing them.</li>
+<li><strong>Check your director's loan account position at dissolution.</strong> If you owed the company money at strike-off, that debt vested in the Crown as bona vacantia. HMRC can apply a section 455 corporation tax charge and pursue you personally. Get clear on the number now.</li>
+<li><strong>Identify any Bounce Back Loan exposure.</strong> If the company took a BBL and dissolved without repaying, the 2021 Act gives the Insolvency Service direct authority to investigate. Be ready.</li>
+<li><strong>If a letter has already arrived, take advice immediately.</strong> Do not write back without specialist input. The first response sets the tone of the entire investigation.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings We Hear About Strike-Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>"The company is dissolved, so the debts are gone."</em> The company-level debts are extinguished, but personal guarantees survive, HMRC can still pursue unpaid tax, and the Insolvency Service can still investigate. Three of the four ways you can be hurt are still live.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"They have to restore the company before they can come after me."</em> Not since December 2021. The Dissolved Companies Act gave the Insolvency Service the power to investigate and seek disqualification directly, without restoration. This is the single most-missed change in director-facing content on the internet.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"It has been three years, I am safe now."</em> The investigation window is six years for most claims, twenty years for personal injury. Three years is well within the active risk period.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"I do not need the records anymore because the company is gone."</em> Section 388 of the Companies Act 2006 says the opposite. You must keep them for six years after they were made, and failure is a criminal offence. The cost of a labelled box is much smaller than the cost of explaining to HMRC why you do not have records.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you have struck off a company in the last six years and you are worried about personal exposure, or if a letter has arrived from HMRC, the Insolvency Service, or a solicitor representing a creditor, call us on 0800 074 6757 for free initial advice. The first conversation will tell you whether the worry is real and what to do next.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Director Responsibilities After Strike-Off</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"6e1b8c75-3d29-4f64-bc91-d8a4f2c1e607","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long must I keep company records after dissolution?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Six years from the date the records were made, under section 388 of the Companies Act 2006. The obligation falls on the director who was responsible for the records at the time, and it survives dissolution. Failure is a criminal offence. We tell every director to box the records and keep them in a loft or a cupboard for at least the full six years.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the Insolvency Service investigate me after my company is dissolved?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, since the 2021 Dissolved Companies Act came into force in December 2021. The Insolvency Service can investigate a dissolved company and seek a director disqualification directly, without restoring the company. Compensation orders against personal assets are also available. The investigation can come years after dissolution.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo my personal guarantees disappear when the company is struck off?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Personal guarantees are contracts between you and the creditor (usually a bank, landlord, or supplier). The company's dissolution has no legal effect on those contracts. The creditor can pursue you personally for the full guaranteed amount at any time after the dissolution. We routinely see directors caught by guarantees they had forgotten about.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to an overdrawn director's loan account at dissolution?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The debt you owed the company vests in the Crown as bona vacantia and HMRC takes an interest in it. They can apply the section 455 corporation tax charge to overdrawn director loans and pursue you personally. The debt does not disappear with dissolution.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a creditor really restore my company years later?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, under section 1029 of the Companies Act 2006. Any creditor with a potential claim can apply to the court to restore the company within six years of dissolution (twenty years for personal injury claims). Once restored, the company is treated as if it had never dissolved, and you are usually reinstated automatically as a director.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eA letter just arrived from HMRC about a dissolved company. What do I do?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Take advice before you respond. Do not assume it is a routine query. HMRC investigations into dissolved companies often start with a polite request and escalate quickly. Your first response sets the tone for everything that follows, and any incorrect or defensive statement gets used against you later. Call us on 0800 074 6757 and we will help you frame the response.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes dissolution protect me from a Bounce Back Loan investigation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The 2021 Dissolved Companies Act was specifically designed to close the dissolution loophole on BBLs. The Insolvency Service can investigate a dissolved company that took a Bounce Back Loan and pursue the director personally for misuse of the funds, even years later. Striking off a BBL company is one of the highest-risk patterns the Insolvency Service is monitoring.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long after dissolution am I actually safe?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Six years for the bulk of investigation and creditor restoration risk. Twenty years for personal injury claims. The record-keeping obligation under section 388 also runs for six years from when each record was made. Personal guarantees remain enforceable until they are formally settled or written off by the creditor.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Companies Act 2006 (sections 388, 1000 to 1002, 1012 and 1029), the Company Directors Disqualification Act 1986, the Insolvency Act 1986 (sections 212 and 235), and the Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021.</p>
+<p>All references are current for England and Wales as of May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/section/388"><strong>Companies Act 2006, section 388</strong> &mdash; the six-year record-keeping obligation and the criminal offence for failure</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006, sections 1000 to 1002</strong> &mdash; the strike-off framework, Gazette notice requirements, and dissolution procedure</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/section/1012"><strong>Companies Act 2006, section 1012</strong> &mdash; bona vacantia, the vesting of dissolved-company assets in the Crown</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/section/1029"><strong>Companies Act 2006, section 1029</strong> &mdash; court-ordered restoration of a dissolved company by a creditor or other interested party</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; the framework for director disqualification (2 to 15 years) and compensation orders</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, sections 212 and 235</strong> &mdash; misfeasance liability and the officeholder's information-request power</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2021/34/contents"><strong>Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021</strong> &mdash; direct Insolvency Service powers over dissolved-company directors from 15 December 2021</a> - legislation.gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

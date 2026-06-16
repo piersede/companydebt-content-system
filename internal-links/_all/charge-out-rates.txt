@@ -1,0 +1,15 @@
+<!-- wp:paragraph -->
+<p>Company Debt charge out rates from 1st April 2016 – 31st August 2019</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"style":{"color":{"background":"#f3f4f5"}},"className":"is-style-regular"} -->
+<figure class="wp-block-table is-style-regular"><table class="has-background" style="background-color:#f3f4f5"><tbody><tr><td></td><td class="has-text-align-left" data-align="left"><strong>Hourly Rate (£)</strong></td></tr><tr><td>Director</td><td class="has-text-align-left" data-align="left">475</td></tr><tr><td>Manager</td><td class="has-text-align-left" data-align="left">240-290</td></tr><tr><td>Administrator</td><td class="has-text-align-left" data-align="left">170-230</td></tr><tr><td>Support</td><td class="has-text-align-left" data-align="left">60-160</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Company Debt charge out rates from 1st September 2019</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"style":{"color":{"background":"#f3f4f5"}},"className":"is-style-regular"} -->
+<figure class="wp-block-table is-style-regular"><table class="has-background" style="background-color:#f3f4f5"><tbody><tr><td></td><td><strong>Hourly Rate (£)</strong></td></tr><tr><td>Director</td><td>750</td></tr><tr><td>Manager</td><td>315-550</td></tr><tr><td>Administrator</td><td>275-310</td></tr><tr><td>Support</td><td>175-260</td></tr></tbody></table></figure>
+<!-- /wp:table -->

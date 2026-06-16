@@ -1,0 +1,197 @@
+<!-- wp:paragraph -->
+<p>A personal guarantee means you agreed to pay the company's debt from your own money if the company cannot.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is the single most common way directors of limited companies end up personally liable after insolvency, and the one most directors underestimate until the creditor calls it in.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We work with directors facing guarantee calls every week. The pattern is always the same: the guarantee was signed years ago, often as a condition of a bank loan, a commercial lease, or a trade credit facility. The director barely remembers the terms.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Then the company enters liquidation, the creditor writes off what the company cannot pay, and a letter arrives demanding the balance from the director personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have seen directors lose their homes over guarantees they forgot they signed. We have also seen directors negotiate guarantees down by 40 to 50% because they engaged early and honestly. The outcome depends almost entirely on when you act.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: How Directors' Personal Guarantees Work</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A personal guarantee is a contractual promise by you, as an individual, to pay a company debt if the company defaults. It is separate from the company's obligation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Limited liability protects you from the company's debts, but a guarantee is your debt: you created it when you signed. The guarantee survives the company's liquidation, dissolution, and any other insolvency process. The creditor can pursue you for the guaranteed amount regardless of what happens to the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If the guarantee is secured against your property (a charge registered at the Land Registry), the creditor can seek a charging order and ultimately force a sale. If it is unsecured, the creditor can obtain a county court judgement and enforce through bailiffs, attachment of earnings, or bankruptcy proceedings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When Directors' Personal Guarantees Are Required</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We see personal guarantees required in four common situations:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Bank loans and overdrafts.</strong> Almost every SME lending facility requires a director guarantee. The bank lends to the company but wants recourse to the director if the company fails. The guarantee may be limited (capped at a percentage of the facility) or unlimited (you guarantee the full amount).</li>
+<li><strong>Commercial leases.</strong> Landlords of commercial property frequently require a director guarantee for the full term of the lease. If the company enters liquidation and the lease has years remaining, the landlord can claim the full outstanding rent from you personally.</li>
+<li><strong>Trade credit.</strong> Suppliers who extend credit to small companies sometimes require a director guarantee, particularly if the company is new or has a limited trading history.</li>
+<li><strong>CBILS and government-backed loans.</strong> During COVID, Bounce Back Loans were government-guaranteed with no personal guarantee required. But CBILS loans above £250,000 could include personal guarantees. We see directors who assumed all government-backed loans were guarantee-free. Not all were.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens to Directors' Personal Guarantees in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When the company enters liquidation, the guarantee does not end. The creditor submits a claim in the liquidation for the full debt. Whatever dividend the liquidation produces reduces the amount owed under the guarantee (the creditor cannot recover more than the total debt).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The shortfall, the gap between what the liquidation pays and the total debt, falls on you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors who assumed the liquidation would pay enough to clear the guarantee. In most insolvent liquidations, unsecured creditors receive between 0p and 5p in the pound. If you guaranteed a £100,000 facility and the liquidation pays 3p, the creditor recovers £3,000 from the liquidation and comes to you for the remaining £97,000.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The timing of the claim varies. Some creditors call in guarantees immediately when the company enters insolvency. Others wait until the liquidation has concluded and the dividend is known. We advise directors not to wait for the claim. Contact the creditor proactively and begin negotiation before they send the demand letter.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Can You Negotiate a Personal Guarantee Down?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes. We see guarantees negotiated down regularly, particularly when the director engages early, demonstrates their financial position honestly, and makes a credible offer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Creditors accept reduced settlements for three reasons: (1) enforcing a guarantee through the courts costs money and takes time, (2) if the director has limited assets, enforcing in full may not recover significantly more than a negotiated settlement, and (3) making the director bankrupt may yield less than a voluntary payment because bankruptcy costs reduce the available estate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have seen bank guarantees settled at 30 to 50% of face value when the director provided a full financial disclosure and made a lump-sum offer. We have also seen creditors refuse any discount when they believed the director had assets they were not disclosing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Honesty and transparency are essential. If you try to hide assets during a guarantee negotiation, the creditor will discover them and the negotiation will collapse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Can a Personal Guarantee Be Challenged or Set Aside?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In limited circumstances:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Undue influence.</strong> If you were pressured into signing the guarantee by someone in a position of power (a co-director, a spouse, the bank), it may be voidable. This is rare and requires evidence.</li>
+<li><strong>Misrepresentation.</strong> If the creditor misled you about the terms, the extent of the guarantee, or material facts about the transaction, the guarantee may be challengeable.</li>
+<li><strong>Material variation.</strong> If the creditor significantly changed the underlying facility (increased the loan, extended the term, changed the borrower) without your consent, the guarantee may be discharged. We have seen this succeed where the bank increased the facility after the guarantee was signed.</li>
+<li><strong>Procedural defect.</strong> If the guarantee was not properly executed (not signed as a deed when required, not witnessed), it may be unenforceable. Our guide on <a href="/advice/unenforceable-personal-guarantee/">unenforceable personal guarantees</a> covers the technical grounds.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We advise directors to have any potential defence assessed by a solicitor before conceding the guarantee. If there is a genuine defence, it strengthens your negotiating position even if you ultimately settle.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Protect Yourself from Personal Guarantee Exposure</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Audit your guarantee position now.</strong> Pull out every loan agreement, lease, and credit facility. Check the guarantee clauses. Know what you guaranteed, to whom, for how much, and whether it is secured against your property.</li>
+<li><strong>Negotiate guarantees down at the point of signing.</strong> Banks expect negotiation. Ask for a cap, a time limit, or a reducing balance. We see directors who accept the first draft without question. Do not.</li>
+<li><strong>Consider personal guarantee insurance.</strong> PGI covers the guarantee exposure for a premium. It is not cheap, but for large facilities it can be worth the cost.</li>
+<li><strong>If the company is approaching insolvency, engage with guarantee creditors early.</strong> The earlier you negotiate, the more options you have. Waiting until the demand letter arrives puts you on the back foot.</li>
+<li><strong>Take personal legal advice.</strong> A solicitor specialising in director liability can assess your guarantee exposure, identify potential defences, and negotiate on your behalf.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Company Debt connects directors with licensed insolvency practitioners and personal liability specialists. A confidential consultation will map your guarantee exposure and explain your options.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Directors' Personal Guarantees</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"5d2c9a73-4e85-4f62-b9d8-c1f4a2e8d70c","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes a personal guarantee survive company liquidation?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. The guarantee is your personal obligation, separate from the company. It survives liquidation, dissolution, and any other insolvency process. The creditor can pursue you for the guaranteed amount regardless of what happens to the company.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I negotiate a personal guarantee down?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Creditors often accept reduced settlements, particularly if you engage early, disclose your financial position honestly, and make a credible lump-sum offer. We have seen guarantees settled at 30 to 50% of face value. The key is acting before enforcement, not after.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I lose my house because of a personal guarantee?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>If the guarantee is secured against your property (a charge registered at the Land Registry), the creditor can seek a court order to force a sale. If the guarantee is unsecured, the creditor must first obtain a CCJ, then apply for a charging order. Either way, your home can be at risk. Check your guarantee terms and take advice early.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eAre all bank loans personally guaranteed?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Most SME lending facilities require a personal guarantee, but the terms vary. Some guarantees are capped at a percentage. Some are limited in time. Some are unlimited. The guarantee terms are in the facility agreement, not in the loan offer letter. Read the full agreement and negotiate the terms before signing.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDid Bounce Back Loans require a personal guarantee?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Bounce Back Loans were 100% government-backed and explicitly prohibited personal guarantees. CBILS loans up to £250,000 also could not require a guarantee, but CBILS loans above £250,000 could include one. Check the loan documentation: the lender's recovery letter is not the same as the original facility agreement.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I cannot pay the guarantee?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The creditor's options narrow to enforcement: a CCJ followed by bailiffs or attachment of earnings, a charging order against your property, or a bankruptcy petition. An IVA or formal bankruptcy may be the right route at that point. Our <a href="/advice/can-a-director-be-made-bankrupt-if-a-business-fails/">director-bankruptcy guide</a> covers the personal-insolvency mechanics.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>References draw on contract-law principles governing personal guarantees, undue influence, and misrepresentation, the Insolvency Act 1986 (the interaction of personal guarantees with company liquidation and director bankruptcy), the Land Registration Act 2002 on secured charges over property, and HM Land Registry guidance on charging orders. Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; the interaction of personal guarantees with corporate liquidation, including how dividends are credited against the guaranteed debt</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, Parts VIII to XI</strong> &mdash; the personal-insolvency framework (IVA and bankruptcy) that applies when guarantees cannot be paid</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2002/9/contents"><strong>Land Registration Act 2002</strong> &mdash; the framework for registering secured charges over residential and commercial property</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1979/53/contents"><strong>Charging Orders Act 1979</strong> &mdash; how a creditor turns a CCJ into a charge over the debtor's property after enforcement</a> - legislation.gov.uk</li>
+<li><a href="https://www.bailii.org/uk/cases/UKHL/2001/44.html"><strong>Royal Bank of Scotland v Etridge (No 2)</strong> [2001] UKHL 44 &mdash; the leading House of Lords authority on undue influence in spousal and director guarantees</a> - bailii.org</li>
+<li><a href="https://www.gov.uk/government/publications/charging-orders"><strong>HM Land Registry &mdash; Practice Guide 76: Charging Orders</strong>: official guidance on registering and enforcing charging orders</a> - gov.uk</li>
+<li><a href="https://www.british-business-bank.co.uk/"><strong>British Business Bank &mdash; Bounce Back Loan Scheme</strong>: official confirmation that BBLs were 100% government-backed without personal guarantees</a> - british-business-bank.co.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

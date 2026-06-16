@@ -1,0 +1,331 @@
+<!-- wp:paragraph -->
+<p>Every director of every liquidated company gets investigated. That is not a warning; it is a statutory fact. The liquidator files a confidential report on your conduct to the Insolvency Service within three months of appointment, and the Service has 90 days to decide whether to take it further.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most directors never hear about it because the report raises nothing actionable and the file is closed quietly. The ones who do hear about it usually find out via a letter that lands on a Tuesday morning and ruins the rest of the week.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>One director we worked with described the envelope as "the one that made my hands shake before I opened it." The contents were a request for records going back three years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows is the statutory mechanism behind the D-report, the conduct patterns that turn a routine review into a live investigation, the sanctions the Insolvency Service can impose, and the practical moves that protect you before the liquidator is appointed and during the process itself. Written from our position as licensed insolvency practitioners at Company Debt.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In every UK liquidation, the liquidator is required by law to file a report on director conduct (the "D-report") with the Insolvency Service under Section 7A of the Company Directors Disqualification Act 1986. There is no discretion: the report is filed on every director of every liquidated company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Insolvency Service then reviews the report and decides within approximately 90 days whether to investigate further, seek a disqualification, or close the file. In the majority of straightforward cases, the file is closed with no further action.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where it is not closed, the most common outcome is a disqualification undertaking, where the director agrees to be banned for a period of 2 to 15 years without a court hearing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For directors, the practical message is: the D-report is coming whether you cooperate or not. Your best protection is clean conduct in the months before liquidation, honest records, and full cooperation with the liquidator from day one. See our guide to <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> for the full CVL process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Directors who are evasive, selective with records, or defensive about specific transactions are the ones who turn a routine report into an active investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Understanding Director Conduct Review Liability</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The D-report is not a prosecution. It is an information-gathering step. The liquidator reviews the company's books, bank statements, tax filings, and board minutes, interviews the directors (formally or informally), and writes a confidential assessment of whether the directors' conduct was "unfit" as defined by the CDDA 1986. The conduct review sits within the wider process of <a href="/liquidation/">how company liquidation works</a>, which the liquidator runs alongside it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The report covers a specific list of matters set out in Schedule 1 to the Act, including: compliance with filing obligations, the keeping of proper accounting records, the circumstances in which the company became insolvent, any transactions at undervalue or preferences, any wrongful or fraudulent trading, and any personal benefit the directors derived at the expense of creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The report is confidential. Creditors do not see it. Other directors do not see it. It goes to the Insolvency Service and stays there unless the Service decides to act on it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our experience is that the confidentiality cuts both ways: directors cannot challenge what is in the report because they never see it, but the report also cannot be used against them in any other context unless the Service opens formal proceedings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+<p class="cd-callout__label">Legal Exposure</p>
+<!-- wp:paragraph -->
+<p>Under Section 6 of the Company Directors Disqualification Act 1986, a court must disqualify a director if it is satisfied that their conduct makes them unfit to be concerned in the management of a company, and the minimum period is two years. There is no judicial discretion to impose a lesser sanction once unfitness is established.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Since the Small Business, Enterprise and Employment Act 2015 (Section 110), a disqualification can be accompanied by a compensation order requiring the director to pay a specified sum to creditors personally, calculated on the loss caused by the unfit conduct. A compensation undertaking or order attaches to personal assets and is enforceable through the courts.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the D-Report Can Lead to Personal Consequences</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the Insolvency Service decides the D-report raises concerns, the next step is a formal investigation. An investigator contacts the director (usually by letter, sometimes by phone) and asks for records, explanations, and a formal interview. The investigation focuses on the specific concerns flagged in the D-report, which typically fall into one of five patterns:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Trading while insolvent.</strong> Continuing to take credit, incur liabilities, or accept customer deposits when the director knew or ought to have known the company could not avoid insolvency. This is the most common trigger.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preferring connected creditors.</strong> Paying yourself, family members, or connected companies ahead of trade creditors or HMRC in the months before liquidation. The classic pattern is a director clearing their loan account while HMRC arrears mount.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Transactions at undervalue.</strong> Selling company assets to yourself or a connected party for less than market value, or giving assets away, in the two years before insolvency.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Failure to keep proper records.</strong> Missing or destroyed accounting records, no board minutes, incomplete tax filings. This is the trigger that catches directors who thought they were "clean" but cannot prove it because the evidence is gone.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>HMRC non-compliance.</strong> Persistent failure to file VAT returns, PAYE submissions, or corporation tax returns. HMRC flags this to the liquidator as a matter of routine, and it goes straight into the D-report.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We tell directors that the investigation is not personal. It is procedural. The Insolvency Service is applying a checklist, not pursuing a vendetta. But the procedural nature does not make the consequences less real.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A disqualification undertaking of five years means five years during which you cannot be a director, cannot take part in the management of any UK limited company, and cannot act as an insolvency practitioner or a receiver. Your name goes on the public register at Companies House. Our guide to <a href="/liquidation/whats-the-risk-of-being-disqualified-as-a-director/">the risk of director disqualification</a> sets out how likely an outcome this is and what drives it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Investigation Process Step by Step</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Liquidator files the D-report.</strong> Within three months of appointment, the liquidator submits the confidential report to the Insolvency Service covering every director who served in the 12 months before liquidation.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Insolvency Service reviews.</strong> The Service has approximately 90 days to decide whether the report warrants further investigation. If not, the file is closed and you never hear about it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Investigation opens.</strong> If the Service decides to investigate, you receive a letter asking for records, explanations, and often a formal interview. This is the letter that directors describe as the one that "changed the atmosphere."</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Decision to proceed.</strong> After investigation, the Service decides whether to seek a disqualification. If yes, they offer a disqualification undertaking first (a voluntary agreement to be banned for a set period). Over 90% of disqualifications are resolved by undertaking, not by court order.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Court proceedings (if no undertaking).</strong> If the director refuses to sign an undertaking, the Service applies to the court for a disqualification order. The court sets the period (2 to 15 years) based on the seriousness of the conduct.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Compensation order (if applicable).</strong> Since the Small Business, Enterprise and Employment Act 2015, the court can attach a compensation order to a disqualification, requiring the director to pay money to creditors personally. This is the mechanism that turns a regulatory ban into a financial penalty.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dtimeline-reality"} -->
+<div class="wp-block-group cd-callout cd-callout--timeline-reality">
+<p class="cd-callout__label">Timeline Reality</p>
+<!-- wp:paragraph -->
+<p>The Insolvency Service has three years from the date of the company's insolvency to commence disqualification proceedings, not three years from the D-report filing.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>In practice, the liquidator files the D-report within three months of appointment, the Service reviews it within approximately 90 days, and a formal investigation letter typically arrives within six to twelve months of the liquidation date.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>If you have not heard from the Service within 18 months of liquidation, the file has almost certainly been closed. But the three-year statutory window means a director can receive a disqualification notice more than two years after the company was wound up, long after most directors have stopped thinking about it.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Disqualification Undertakings vs Court Orders</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>More than 90% of disqualifications are by undertaking, not by court order. An undertaking is a voluntary agreement between the director and the Secretary of State: the director agrees to be disqualified for a set period, and in return the Service does not bring court proceedings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is cheaper and faster for both sides, but directors should understand what they are signing. An undertaking has exactly the same legal effect as a court order. It goes on the public register. It bars you from acting as a director. And it cannot be appealed or withdrawn once signed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The catch is that signing an undertaking means giving up your right to contest the allegations in court. One director we advised was offered a three-year undertaking for conduct that, in our view, was borderline. He signed because his solicitor told him "it's just an undertaking, not a court order."</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Three years later he was still explaining to banks and business partners why his name appeared on the disqualification register. The label does a lot less heavy lifting than directors expect. An undertaking is a disqualification. Call it what it is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Can a Director Be Disqualified for Conduct Before Liquidation?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes. The D-report covers the entire period of the company's trading, with particular focus on the 12 months before liquidation (the period where the duty to creditors was likely operative under <em>BTI v Sequana</em>). But the investigation can look further back.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Transactions at undervalue under Section 238 have a two-year lookback for connected parties. Preferences under Section 239 have a two-year lookback. Fraudulent trading under Section 213 has no time limit. The D-report captures whatever the liquidator finds in the records, and the records usually go back years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors assume that "the old stuff doesn't count." It counts if the liquidator finds it. A dividend declared three years ago from non-existent distributable reserves, a director's loan account that was overdrawn for five years, a connected-party lease at above-market rent, all of these appear in the bank statements and all of them go into the report.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>See our guides on <a href="/insolvency/what-is-wrongful-trading/">wrongful trading</a> and director payments before liquidation for the detailed frameworks the liquidator applies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002ddirectors-miss"} -->
+<div class="wp-block-group cd-callout cd-callout--directors-miss">
+<p class="cd-callout__label">What Most Directors Miss</p>
+<!-- wp:paragraph -->
+<p>Directors consistently underestimate the reach of the D-report into the company's historical records. The liquidator is not limited to the 12 months before liquidation. That is the focus period, not the limit. Bank statements, dividend vouchers, loan account transactions, and board minutes going back three, four, or five years are all within scope.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A director who took unlawful dividends in year two of the company's life, long before financial difficulties became visible, can still find those transactions in the D-report filed in year seven.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Missing records make this worse: the Insolvency Service routinely infers the worst when documentation is absent, and "we didn't keep minutes" is not a defence; it is itself an act of unfitness under Schedule 1 of the CDDA 1986.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Next Steps: Mitigating Your Personal Risk</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If your company is heading into liquidation or already in the process, your conduct report is either being written or has already been filed. For the wider picture of <a href="/liquidation/what-happens-to-directors-in-liquidation/">where directors stand in liquidation</a>, read our main guide. The moves that protect you are straightforward but non-negotiable:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Cooperate fully with the liquidator.</strong> Answer every question honestly. Provide every document requested. The liquidator is not your enemy, but they will note in the D-report whether you cooperated, and the Insolvency Service treats non-cooperation as a red flag.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preserve every record.</strong> Bank statements, invoices, board minutes, tax returns, contracts, emails. Missing records are the single most common trigger for further investigation, because the Insolvency Service infers the worst when documentation is absent.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Stop all non-essential director payments from the moment insolvency is probable.</strong> No dividends, no loan repayments to yourself, no personal expenses through the company. Every payment after that date is examined under a microscope.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Document your decision-making.</strong> Board minutes recording why you made specific decisions in the twilight zone are the strongest evidence that you acted in good faith. Directors who documented nothing have nothing to point to.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Take advice before the liquidator is appointed, not after the investigation letter arrives.</strong> A licensed IP can tell you within an hour whether your conduct profile carries risk and what to do about it.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings We Hear</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>"The liquidator decides whether I get disqualified."</strong> No. The liquidator writes the report. The Insolvency Service decides whether to investigate and whether to seek a disqualification. These are different people with different roles.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"If the liquidator likes me, the report will be fine."</strong> The D-report is a factual document, not a character reference. The liquidator is required to report what they find in the records, regardless of personal rapport. A friendly liquidator who discovers a pattern of preferences will still report them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"An undertaking is less serious than a court order."</strong> It has exactly the same legal effect. Same register entry, same ban period, same restrictions. The only difference is that you agreed to it voluntarily instead of being ordered by a judge. It is not "less serious." It is the same thing without the court costs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I was not the main decision-maker, so the report won't cover me."</strong> The D-report covers every director who served in the 12 months before liquidation. Shadow directors (people who acted as directors without being formally appointed) can also be included. Your formal title does not determine your exposure; your actual role does.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Director Conduct Reviews and Disqualification</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79396-conduct-review-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes every director get a conduct report filed on them?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. The liquidator is required by law to file a D-report on every director who served in the 12 months before liquidation. There is no discretion. The report goes to the Insolvency Service regardless of whether the liquidator has concerns about conduct. In most cases, the Service reviews it and closes the file with no further action.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does the Insolvency Service take to decide?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Approximately 90 days from receiving the D-report. This is an operational guideline, not a statutory deadline, so it can vary. If you have not heard anything within six months of the liquidator's appointment, the file has very likely been closed. The Service does not write to directors to confirm closure.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I see the D-report?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The D-report is confidential between the liquidator and the Insolvency Service. Directors cannot request a copy, and creditors cannot see it. If the Service opens formal proceedings, the evidence underlying the report may emerge during the process, but the report itself remains confidential.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is a compensation order and can it be attached to my disqualification?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Since the Small Business, Enterprise and Employment Act 2015, the court can attach a compensation order to a disqualification, requiring the director to pay money to the company's creditors personally. The amount is based on the loss caused by the director's unfit conduct. This turns a regulatory ban into a financial penalty and can attach to your personal assets through the courts.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eShould I sign a disqualification undertaking if offered?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Take advice before signing anything. An undertaking has exactly the same legal effect as a court order but you give up your right to contest the allegations.</p>
+<p>In some cases the offered period is fair and contesting would be more expensive than accepting. In others, the conduct is borderline and a court might reach a different view. We assess each case individually and advise honestly whether to sign or fight.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the most common trigger for further investigation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Trading while knowingly insolvent and preferring connected creditors. In our caseload, the pattern that draws the most attention is directors who continued paying themselves (dividends, loan repayments, expenses) while HMRC arrears and trade creditor debts were mounting. The bank statements tell the whole story, and the liquidator includes them in the D-report.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I be a director again after disqualification?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, once the disqualification period expires. The ban is for a fixed term (2 to 15 years) and ends automatically. You do not need to apply for reinstatement.</p>
+<p>However, the disqualification remains on the public register permanently as a historical record, and any future business partner, bank, or insurer can see it. During the ban, you can apply to the court for permission to act as a director of a specific company in exceptional circumstances, but this is rarely granted.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>Company Debt is a firm of licensed insolvency practitioners regulated by the Insolvency Practitioners Association. If you instruct us, we act as your IP and our fees are paid from company assets or director funding. This page is written from that position and is not independent legal advice.</p>
+<p>The statutory references in this guide are to the Company Directors Disqualification Act 1986 (Sections 6, 7A, 8ZA, and Schedule 1), the Insolvency Act 1986 (Sections 212, 213, 214, 238, and 239), and the Small Business, Enterprise and Employment Act 2015 (Section 110, introducing compensation orders).</p>
+<p>The 90-day review period is an operational guideline of the Insolvency Service, not a statutory deadline. All references are current for England and Wales as of April 2026.</p>
+<p>If your company is heading into liquidation or you have received a letter from the Insolvency Service about director conduct, call us on 0800 074 6757 for free initial advice. The first conversation will tell you whether the concern is real and what to do next.</p>
+<p><em>Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</em></p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; sections 6, 7A, 8ZA and Schedule 1 set the unfit-conduct test, the D-report duty, and the 2&ndash;15 year disqualification range</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 212 (misfeasance), 213 (fraudulent trading), 214 (wrongful trading), 238 (transactions at undervalue) and 239 (preferences) drive the liquidator's conduct findings</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2015/26/contents"><strong>Small Business, Enterprise and Employment Act 2015</strong> &mdash; section 110 introduced compensation orders, allowing the court to make a disqualified director personally pay creditors</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; the agency that receives every D-report, decides within roughly 90 days whether to investigate, and negotiates disqualification undertakings</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/search-the-register-of-disqualified-company-directors"><strong>Register of Disqualified Directors</strong> &mdash; the public Companies House register listing every live disqualification order and undertaking, searchable by name</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

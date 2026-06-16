@@ -1,0 +1,282 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 13:08:55 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=21645",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "As a UK company director, understanding misfeasance is crucial, especially when your company faces financial difficulties. Misfeasance refers to a director’s breach of their duties, leading to a loss for the company, and it's a claim often pursued by an insolvency practitioner (IP) when a company enters a formal insolvency procedure.\n\n### What is Misfeasance?\n\nIn the context of UK company law, misfeasance specifically refers to a breach of trust or duty by an officer of the company, such as a director, which causes a loss to the company's assets. It isn't merely an error of judgment but rather an improper exercise of power or performance of duties. The claim usually arises under Section 212 of the Insolvency Act 1986 (IA 1986).\n\nDirectors owe various duties to their company, primarily governed by the Companies Act 2006 (CA 2006). These include:\n*   Acting within their powers (Section 171 CA 2006).\n*   Promoting the success of the company for the benefit of its members as a whole (Section 172 CA 2006).\n*   Exercising independent judgment (Section 173 CA 2006).\n*   Exercising reasonable care, skill, and diligence (Section 174 CA 2006).\n*   Avoiding conflicts of interest (Section 175 CA 2006).\n*   Not accepting benefits from third parties (Section 176 CA 2006).\n*   Declaring any interest in a proposed transaction or arrangement with the company (Section 177 CA 2006).\n\nWhen a company becomes insolvent or is bordering on insolvency, the duty to promote the success of the company shifts, and directors must consider the interests of the company's creditors. A breach of these duties that results in a quantifiable loss to the company can lead to a misfeasance claim.\n\nExamples of acts that might constitute misfeasance include:\n*   Authorising excessive or unjustified payments to themselves or connected parties.\n*   Selling company assets at an undervalue.\n*   Allowing the company to trade recklessly without any reasonable prospect of avoiding insolvency, even if not meeting the higher bar for wrongful trading.\n*   Misusing company funds for personal benefit.\n*   Preferring one creditor over others without a legitimate business reason, especially when insolvency is foreseeable.\n\n### Who Can Bring a Misfeasance Claim?\n\nA misfeasance claim can be brought by the company's office holder during a formal insolvency procedure. This typically includes:\n*   A liquidator (in Creditors' Voluntary Liquidation or Compulsory Liquidation).\n*   An administrator.\n*   The Official Receiver (initially in Compulsory Liquidation).\n\nThe purpose of a misfeasance claim is to recover funds for the benefit of the general body of creditors.\n\n### The Misfeasance Claim Process\n\n1.  **Investigation:** Upon appointment, the liquidator or administrator will investigate the company's affairs, including the conduct of its directors. They will review financial records, bank statements, minutes, and other relevant documents to identify potential breaches of duty and losses to the company.\n2.  **Report to The Insolvency Service:** In both Creditors' Voluntary Liquidation (CVL) and Compulsory Liquidation, the liquidator must submit a report on the conduct of all directors to The Insolvency Service. This report highlights any matters that indicate unfitness to act as a director, which can include instances of misfeasance.\n3.  **Demand for Repayment/Compensation:** If the office holder identifies a valid misfeasance claim, they will typically issue a demand to the director(s) for repayment of the misapplied funds or compensation for the loss caused to the company.\n4.  **Negotiation and Legal Action:** If a settlement cannot be reached, the office holder may initiate legal proceedings in court to recover the funds. This is done under Section 212 of the Insolvency Act 1986.\n\n### Consequences for Directors\n\nIf a misfeasance claim is successful, the director(s) may be ordered by the court to:\n*   Repay or restore money or property that was misapplied.\n*   Contribute to the company's assets by way of compensation for the breach of duty.\n\nBeyond financial liability, a finding of misfeasance can also lead to:\n*   **Director Disqualification:** The Insolvency Service may apply to the court for a disqualification order against the director under the Company Directors Disqualification Act 1986 (CDDA 1986). The period of disqualification can range from 2 to 15 years, during which the individual cannot act as a director of any company, or be involved in the formation, management, or promotion of a company.\n*   **Reputational Damage:** A successful claim or disqualification can severely damage a director's professional reputation.\n\n### Related Director Liabilities in Insolvency\n\nMisfeasance is one of several personal liabilities directors may face during insolvency. Others include:\n\n1.  **Wrongful Trading (Section 214, Insolvency Act 1986):**\n    *   **Definition:** This occurs when a director knew or *should have concluded* that there was no reasonable prospect of the company avoiding insolvency, but continued to trade, causing further loss to creditors. It applies from the \"point of no return.\"\n    *   **Process:** The liquidator or administrator investigates and can ask the court to declare that the director is personally liable to contribute to the company's assets.\n    *   **Consequence:** Directors can be held personally liable for the increase in net deficiency of the company's assets from the date they should have ceased trading.\n    *   **Distinction from Misfeasance:** Misfeasance focuses on specific breaches of duty (e.g., specific payments), while wrongful trading relates to the *decision to continue trading* when the company was clearly doomed.\n\n2.  **Fraudulent Trading (Section 213, Insolvency Act 1986):**\n    *   **Definition:** This is a more serious offense, involving carrying on the business of the company with intent to defraud creditors or for any fraudulent purpose.\n    *   **Process:** Can be pursued by the office holder civilly or lead to criminal prosecution by the Serious Fraud Office or the Department for Business and Trade (DBT).\n    *   **Consequence:** Directors can be held personally liable without limit for all or part of the company's debts. Criminal conviction can lead to imprisonment and/or fines.\n    *   **Distinction:** Requires a higher burden of proof (intent to defraud) than wrongful trading or misfeasance.\n\n3.  **Overdrawn Director's Loan Account (DLA):**\n    *   **Definition:** If a director has taken more money out of the company (e.g., as drawings, expenses, or undocumented loans) than they have put in (e.g., as salary, dividends, or expenses owed to them), their DLA is overdrawn.\n    *   **Process:** The liquidator will demand repayment of the overdrawn balance as it represents an asset of the company.\n    *   **Consequence:** The director is personally liable to repay the full overdrawn amount to the company.\n\n4.  **Personal Guarantees:**\n    *   **Definition:** Directors often provide personal guarantees to secure company debts, particularly with banks, landlords, or key suppliers.\n    *   **Process:** If the company enters insolvency and cannot pay the guaranteed debt, the creditor will pursue the director directly under the terms of the personal guarantee.\n    *   **Consequence:** The director is personally liable for the guaranteed amount, irrespective of their conduct.\n\n### Insolvency Routes and Misfeasance Claims\n\nMisfeasance claims can arise in various insolvency procedures:\n\n1.  **Creditors' Voluntary Liquidation (CVL):**\n    *   **Process:** Initiated by the directors when the company is insolvent. Directors resolve to wind up the company, and shareholders agree. An IP is appointed as liquidator.\n    *   **Relevance to Misfeasance:** The liquidator has a duty to investigate the directors' conduct and the company's affairs. Any identified misfeasance claims will be pursued to recover funds for creditors. Directors have a duty to cooperate with the liquidator.\n    *   **Typical Cost:** Director pays for the liquidation if company assets are insufficient. Costs vary from £5,000 to £20,000+ depending on complexity.\n    *   **Timeline:** Often quicker than compulsory liquidation, with investigations beginning immediately upon appointment.\n\n2.  **Compulsory Liquidation (Winding-up Petition):**\n    *   **Process:** Usually initiated by a creditor (often HMRC) petitioning the court to wind up the company because it cannot pay its debts. The Official Receiver (a civil servant) is initially appointed as liquidator, who may then appoint a private sector IP.\n    *   **Relevance to Misfeasance:** The Official Receiver and any subsequent liquidator will rigorously investigate the directors' conduct, company assets, and liabilities. Misfeasance claims are a common outcome of these investigations.\n    *   **Typical Cost:** The petitioning creditor often pays court fees and a deposit, which is usually reimbursed from company assets. The costs of the liquidation are typically met from company assets.\n    *   **Timeline:** Can be lengthy, with court proceedings for the petition taking months, followed by investigations that can last for years.\n\n3.  **Administration:**\n    *   **Process:** Aims to rescue the company as a going concern, achieve a better result for creditors than liquidation, or realise property to make a distribution to secured or preferential creditors. An IP is appointed as administrator.\n    *   **Relevance to Misfeasance:** While the primary goal is rescue or a better outcome, administrators also investigate director conduct. If the administration ultimately leads to liquidation (which is common), any misfeasance claims identified during administration will be passed to the liquidator to pursue.\n    *   **Timeline:** Initial period is usually 12 months, extendable by court or creditor consent.\n\n4.  **Company Voluntary Arrangement (CVA):**\n    *   **Process:** A legally binding agreement between a company and its creditors to repay debts over a period, typically avoiding liquidation. Directors propose the arrangement, supervised by an IP (the nominee/supervisor).\n    *   **Relevance to Misfeasance:** Misfeasance claims are less directly pursued *within* a CVA, as the focus is on ongoing trading and debt repayment. However, if the CVA fails and the company enters liquidation, the directors' conduct leading up to the CVA might be scrutinised for misfeasance or other breaches.\n\n### Mitigation and Seeking Advice\n\nTo minimise your exposure as a director:\n*   **Act Early:** Seek professional insolvency advice as soon as financial difficulties emerge.\n*   **Document Decisions:** Ensure all significant decisions, especially those concerning company finances, are properly documented in board minutes, reflecting due consideration of directors' duties and the company's financial position.\n*   **Prioritise Creditors:** When insolvency is probable, ensure that all actions are taken in the best interests of the company's creditors as a whole.\n*   **Professional Advice:** Engage an experienced solicitor and/or licensed insolvency practitioner immediately to guide you through your duties and options. This demonstrates you are taking reasonable steps to understand and fulfil your obligations.\n\nUnderstanding misfeasance and related liabilities is critical for UK directors. Early engagement with insolvency professionals can help you navigate these complex situations and potentially mitigate personal risk.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": null,
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 659,
+              "end_index": 738,
+              "part_index": null,
+              "text": "The claim usually arises under Section 212 of the Insolvency Act 1986 (IA 1986)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 1390,
+              "end_index": 1577,
+              "part_index": null,
+              "text": "When a company becomes insolvent or is bordering on insolvency, the duty to promote the success of the company shifts, and directors must consider the interests of the company's creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 1880,
+              "end_index": 2036,
+              "part_index": null,
+              "text": "*   Allowing the company to trade recklessly without any reasonable prospect of avoiding insolvency, even if not meeting the higher bar for wrongful trading"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2353,
+              "end_index": 2458,
+              "part_index": null,
+              "text": "This typically includes:\n*   A liquidator (in Creditors' Voluntary Liquidation or Compulsory Liquidation)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2460,
+              "end_index": 2480,
+              "part_index": null,
+              "text": "*   An administrator"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2482,
+              "end_index": 2545,
+              "part_index": null,
+              "text": "*   The Official Receiver (initially in Compulsory Liquidation)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 2842,
+              "end_index": 2997,
+              "part_index": null,
+              "text": "They will review financial records, bank statements, minutes, and other relevant documents to identify potential breaches of duty and losses to the company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2
+            ],
+            "segment": {
+              "start_index": 3211,
+              "end_index": 3334,
+              "part_index": null,
+              "text": "This report highlights any matters that indicate unfitness to act as a director, which can include instances of misfeasance"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 3340,
+              "end_index": 3580,
+              "part_index": null,
+              "text": "**Demand for Repayment/Compensation:** If the office holder identifies a valid misfeasance claim, they will typically issue a demand to the director(s) for repayment of the misapplied funds or compensation for the loss caused to the company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 3735,
+              "end_index": 3792,
+              "part_index": null,
+              "text": "This is done under Section 212 of the Insolvency Act 1986"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 3827,
+              "end_index": 3971,
+              "part_index": null,
+              "text": "If a misfeasance claim is successful, the director(s) may be ordered by the court to:\n*   Repay or restore money or property that was misapplied"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 3973,
+              "end_index": 4057,
+              "part_index": null,
+              "text": "*   Contribute to the company's assets by way of compensation for the breach of duty"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2
+            ],
+            "segment": {
+              "start_index": 4060,
+              "end_index": 4327,
+              "part_index": null,
+              "text": "Beyond financial liability, a finding of misfeasance can also lead to:\n*   **Director Disqualification:** The Insolvency Service may apply to the court for a disqualification order against the director under the Company Directors Disqualification Act 1986 (CDDA 1986)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2
+            ],
+            "segment": {
+              "start_index": 4329,
+              "end_index": 4529,
+              "part_index": null,
+              "text": "The period of disqualification can range from 2 to 15 years, during which the individual cannot act as a director of any company, or be involved in the formation, management, or promotion of a company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 4816,
+              "end_index": 5088,
+              "part_index": null,
+              "text": "**Wrongful Trading (Section 214, Insolvency Act 1986):**\n    *   **Definition:** This occurs when a director knew or *should have concluded* that there was no reasonable prospect of the company avoiding insolvency, but continued to trade, causing further loss to creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1
+            ],
+            "segment": {
+              "start_index": 5709,
+              "end_index": 5936,
+              "part_index": null,
+              "text": "**Fraudulent Trading (Section 213, Insolvency Act 1986):**\n    *   **Definition:** This is a more serious offense, involving carrying on the business of the company with intent to defraud creditors or for any fraudulent purpose"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": null,
+        "web_search_queries": null,
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "0WEpatv2Nc-EkdUPirHKqQ0",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 2497,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 343,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 343
+      }
+    ],
+    "thoughts_token_count": 1198,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 4038,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

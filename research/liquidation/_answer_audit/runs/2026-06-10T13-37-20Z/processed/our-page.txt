@@ -1,0 +1,555 @@
+Company Liquidation: What UK Directors Need to Know
+
+ Skip to content
+
+Free Director Helpline
+
+0800 074 6757
+
+ Free Directors Helpline:
+ 0800 074 6757
+
+Company Closure
+
+Company Liquidation
+
+Creditors’ Voluntary Liquidation (CVL)
+
+Members’ Voluntary Liquidation
+
+Company Strike Off and Dissolution
+
+Closing a Limited Company
+
+Winding Up Petition
+
+Compulsory Liquidation
+
+Company Rescue
+
+Company Voluntary Arrangements
+
+What is Company Administration?
+
+Pre Pack Administration
+
+Tax Debt
+
+Time to Pay Arrangements
+
+Can’t Pay VAT
+
+Can’t Pay Corporation Tax
+
+Can’t Pay PAYE
+
+Advice
+
+What is Company Insolvency?
+
+Are Directors Personally Liable For Company Debts?
+
+What Happens to a Director During Liquidation?
+
+Can’t Repay a Bounce Back Loan
+
+Can’t Pay Suppliers
+
+What Happens When a Company Goes Bankrupt?
+
+Insolvency Advice
+
+About Us
+
+Our Team
+
+Contact our Team Today
+
+ 0800 074 6757
+
+Home › Liquidation 
+What is Company Liquidation?
+
+Chris Andersen
+
+Licensed Insolvency Practitioner 
+
+ Reviewed on 26/05/2026
+
+ 18min read
+
+Reviewed by 
+
+ Chris Andersen 
+
+Reviewed by Chris Andersen
+
+Chris became an Insolvency Practitioner in 2014 and is currently regulated by the IPA.
+
+He is experienced in contentious insolvency with excellent analytical skills and strong knowledge of both general and technical insolvency matters.
+
+ Meet Our Experts
+
+26th May 2026
+
+Company liquidation is the formal legal process for closing a UK limited company, selling its assets, paying creditors in the legal order of priority, and removing the company from the register at Companies House. It applies to solvent companies winding up cleanly and to insolvent companies that cannot pay their debts as they fall due. The route differs depending on who starts the process and why.
+
+For most directors who land here, the abstract definition is not what matters. The real question is whether to start the process voluntarily or wait for HMRC or another creditor to force it through the court. The voluntary route preserves your choice of liquidator, your timing, and a more defensible conduct position. The compulsory route gives up all three.
+
+We speak to directors in this position every week. The ones who come through cleanest are usually those who pick up the phone before a creditor picks up theirs.
+
+Company Liquidation at a Glance
+
+Meaning: the legal closure of a limited company by a licensed insolvency practitioner who realises assets, pays creditors in priority order, and dissolves the company.
+
+Used when: the company cannot pay its debts as they fall due, the directors and shareholders choose to close a solvent company tax-efficiently, or a creditor forces closure through the court.
+
+Who runs it: a licensed insolvency practitioner, regulated by the IPA, ICAEW, ICAS, or the Insolvency Service. The directors lose control of the company on the day of appointment.
+
+Director priority: stop preferential payments, preserve records, take advice before moving any company money, cooperate with the liquidator. Voluntary action almost always produces a cleaner conduct outcome than waiting for a creditor petition.
+
+Contents
+What Is Company Liquidation?
+Types of Company Liquidation
+When Should a Company Go Into Liquidation?
+How Company Liquidation Works
+What Should Directors Do During Company Liquidation?
+Company Liquidation Costs and Timelines
+What Happens After Company Liquidation?
+Company Liquidation vs Other Closure Options
+Related Guides
+Frequently Asked Questions About Company Liquidation
+What Is Company Liquidation?
+
+Company Liquidation Meaning
+
+Liquidation is the legal closure of a limited company under the Insolvency Act 1986, with the procedural mechanics in the Insolvency (England and Wales) Rules 2016. Once the resolution is passed or the court order made, the directors stop running the company and a licensed insolvency practitioner takes over as liquidator.
+
+The liquidator owes duties to the body of creditors as a whole, not to the directors who appointed them.
+
+The order in which creditors are paid follows Schedule 6 of the Act: secured creditors with fixed charges first, then liquidator’s costs, preferential creditors (employees up to £800 per person, plus HMRC for VAT, PAYE, employee NIC, CIS and student-loan deductions since 1 December 2020), floating-charge holders subject to the prescribed-part carve-out, then unsecured creditors.
+
+What Happens When a Company Is Liquidated
+
+The board’s authority ends on appointment day. The liquidator collects in the company’s assets, investigates the conduct of the directors in the period leading up to insolvency, distributes proceeds in the legal order, and applies to Companies House to dissolve the company.
+
+The legal entity ceases to exist roughly three months after the final filing. Anything still done in the company’s name after appointment carries personal risk for the director who does it. In our caseload, this is the period where directors most often trip themselves up by trying to “tidy” a final supplier payment or wrap up a customer invoice.
+
+The liquidator’s powers are wide. Section 235 IA 1986 lets them demand books, records, and explanations from you and from former employees. Sections 236 and 237 give them a route to court-ordered private examinations on oath where you stonewall.
+
+They can also sue former directors for misfeasance, wrongful trading, preferences, and transactions at undervalue. Cooperation is not optional, and failure to deliver up records is itself an offence under section 208.
+
+Types of Company Liquidation
+
+UK law recognises three statutory liquidation routes. Which one fits you depends on whether your company is solvent and on who initiates the process.
+
+If you are solvent and want to extract retained profit tax-efficiently, you are looking at row three. If you are insolvent and a creditor has not yet petitioned, you have a choice between rows one and two, but in our experience the voluntary route is almost always cheaper for you.
+
+TypeUsed whenWho starts itWho controls the processRelated guide
+
+Creditors’ Voluntary Liquidation (CVL)
+The company is insolvent and the directors choose to close voluntarily before a creditor forces the issue.
+The directors, with shareholder resolution.
+An IP chosen by the directors and approved (or replaced) by creditors.
+CVL guide
+
+Compulsory Liquidation
+A creditor (most often HMRC) petitions the court to wind up an insolvent company.
+A creditor, via a winding-up petition.
+The Official Receiver initially, sometimes replaced by a private IP.
+Compulsory liquidation guide
+
+Members’ Voluntary Liquidation (MVL)
+The company is solvent and shareholders want a tax-efficient closure (commonly using Business Asset Disposal Relief).
+The directors and shareholders, with a sworn declaration of solvency.
+An IP appointed by the shareholders.
+MVL guide
+
+Most directors who land on this page are looking at a CVL, which is also the route most companies entering liquidation each month in England and Wales take. From our own caseload, the voluntary route is generally cheaper and produces a cleaner conduct report than waiting for a creditor petition.
+
+When Should a Company Go Into Liquidation?
+
+Liquidation is the right route when there is no realistic prospect of trading out and continuing to trade would expose the directors to personal-liability claims. Four practical triggers tell you the voluntary window is open and narrowing:
+
+Cannot pay debts as they fall due. The cash flow gap cannot be closed by a Time to Pay arrangement, the lender will not extend, and the customer book will not pay fast enough.
+
+No realistic rescue route. The options other than liquidation, such as a CVA, refinance, or sale, have been considered and ruled out, or the timeline for any rescue would expire before the next major creditor demand.
+
+Creditor legal action is likely. A statutory demand has expired, HMRC has issued a 7-day warning letter, or a winding-up petition has been threatened.
+
+Continuing to trade may worsen creditor losses. Once a reasonably diligent director would have concluded that insolvent liquidation cannot be avoided, every new credit purchase becomes a section 214 wrongful-trading candidate.
+
+If two or more of those triggers apply to you, the right call is usually to instruct a licensed insolvency practitioner the same week. The voluntary route preserves your choice of IP, your timing, and a more defensible position when your conduct report is filed.
+
+We see two patterns in the calls we take. The director who calls in October after their accountant flags a missed VAT return rarely faces personal exposure. The director who calls in March after the winding-up petition has landed is usually too late to choose the route, the IP, or the conduct narrative.
+
+If you are not yet under formal pressure but the position is clearly insolvent, take our 30-second insolvency test first to confirm where your company actually stands. Make no further preferential payments before you have had advice from us or another regulated firm. The cases that go badly are rarely the ones where the director acted too soon.
+
+How Company Liquidation Works
+
+Appointing a Licensed Insolvency Practitioner
+
+You instruct a licensed IP, who issues a Letter of Engagement and starts work on the Statement of Affairs with you. Shareholders pass a winding-up resolution; in practice we convene this on the same day as the creditors’ decision.
+
+Creditors then receive 7 business days’ notice and either approve the proposed IP by deemed consent or, if a creditor (typically HMRC) requires it, attend a virtual meeting to vote. Creditors can replace the proposed IP at this stage but in our experience rarely do unless concerns about independence have already been raised.
+
+Preparing the Statement of Affairs
+
+You prepare and swear a Statement of Affairs listing every asset, every creditor, and every contingent liability. Understating assets or omitting creditors is a criminal offence under section 210 IA 1986, so you sign with the IP knowing the document is going on the public record.
+
+The IP cross-checks against bank statements, VAT returns, and HMRC records, and discrepancies surface fast.
+
+We ask for the full picture from the start: management accounts, board minutes, payroll, BBL and CBILS paperwork, director loan ledger, leases, and personal-guarantee documents. If you cannot find a record, say so in writing. A noted gap looks better in the conduct report than a silent one.
+
+Selling Assets and Paying Creditors
+
+The liquidator realises the company’s assets through sale, debt collection, or transfer, and distributes the proceeds in the order set by Schedule 6 of the Insolvency Act.
+
+In practice this means stock cleared at trade price, plant and vehicles sold by an auctioneer the IP appoints, and the customer ledger chased by the IP’s recovery team. You stop being the person who decides what something is worth.
+
+Most unsecured creditors recover little or nothing in a typical insolvent liquidation. Trade suppliers usually get a small dividend if any. Personal-guarantee creditors switch their focus to the director once the company estate is exhausted, which is the point at which the bank that financed the warehouse fit-out three years earlier rings the home phone.
+
+Closing the Company
+
+Once asset realisation and creditor distribution are complete, the liquidator files a final report and applies to Companies House for dissolution. The company is struck from the register roughly three months after that filing.
+
+Bank accounts close, VAT and PAYE registrations end, and any remaining contracts terminate. Any uncollected assets pass to the Crown as bona vacantia. A typical CVL runs 12 to 18 months from instruction to dissolution in our experience.
+
+What Should Directors Do During Company Liquidation?
+
+Most directors who initiate liquidation voluntarily and cooperate fully receive a clean conduct report and walk out of the process with no personal restriction. The disqualification orders we see almost always involve one of four conduct triggers: trading on after the position was clearly hopeless, BBL misuse, unrecorded director-loan repayments, or active concealment of assets or transactions.
+
+The five practical duties below are what the liquidator looks for evidence of:
+
+Director dutyWhy it matters
+
+Stop selective or preferential payments
+Section 239 IA 1986 lets the liquidator claw back payments that put a creditor ahead of liquidation order. Lookback: 6 months arm’s-length, 2 years connected. Paying family is the textbook trigger.
+
+Prepare accurate company records
+Management accounts, board minutes, payroll, tax workings, director loan ledger, BBL paperwork. Missing or inconsistent records look worse than the underlying gap.
+
+Complete the Statement of Affairs
+A sworn declaration of every asset and creditor. Understating or omitting either is a criminal offence under section 210 IA 1986.
+
+Cooperate with the liquidator
+Statutory duty under section 235 IA 1986: hand over books, records, and explanations on request. Failure to deliver up records is an offence under section 208.
+
+Take advice before using company money
+Once insolvency is suspected, every new payment or asset transfer carries personal risk. The dangerous payment is usually the quiet one to a connected party, not the noisy one to a major creditor.
+
+Company Liquidation Costs and Timelines
+
+Voluntary liquidation is cheaper than compulsory liquidation because the directors set the pace, choose the IP, and avoid the £343 court fee plus £2,600 Official Receiver deposit a creditor petition triggers.
+
+The figures below reflect cases we handle directly. Complex cases with disputed assets, employee claims, or ongoing litigation sit above this range, and we price each case from the Statement of Affairs work. Our full guide to the cost of liquidating a company breaks down what each fee covers and where the hidden costs sit.
+
+The fee is not the cost of closing a company. It is the cost of closing one cleanly enough that nobody has to come back to it.
+
+ItemTypical figureNotes
+
+Typical CVL fee£4,000 to £6,000 + VATLower end for single-director, no employees, no leases. Upper end for trading companies with debtors and staff.
+
+Compulsory liquidation court costs£343 court fee + £2,600 depositBorne by the petitioning creditor, then charged to the eventual estate.
+
+Director redundancy claimUp to the full CVL fee in many casesStatutory weekly cap £751 from 6 April 2026. Funded by the Redundancy Payments Service, not company cash.
+
+Time from instruction to liquidation start2 to 4 weeksFaster where HMRC pressure is active.
+
+Time to dissolution (full process)12 to 18 monthsLonger where disputed asset realisations or director-conduct investigations continue.
+
+What Happens After Company Liquidation?
+
+What Happens to Company Debts
+
+The company’s debts end with the company. Once dissolution completes, unpaid debts are written off as far as the company entity is concerned.
+
+The exception that catches most directors out is personal guarantees: a guarantee you signed survives liquidation, and the lender will pursue you for the personal debt next. HMRC debts that became personal liabilities through a Personal Liability Notice or a Joint and Several Liability Notice also survive.
+
+What Happens to Employees
+
+Employees are dismissed on the day the IP is appointed (or shortly after) and become preferential creditors for unpaid wages up to £800 per person under Schedule 6, plus accrued holiday pay and pension contributions. The dismissal letters are issued the same morning. For most directors we work with, this is the part of the process that genuinely keeps them up the night before.
+
+Employees claim statutory redundancy, unpaid wages, and notice pay through the government’s Redundancy Payments Service. Director-employees with a genuine employment contract claim through the same route, and that claim commonly funds the entire CVL fee. The paperwork is dull; the sums are real.
+
+What Happens to Directors
+
+For most directors the outcome is closure. Personal credit is unaffected unless you signed a guarantee, the company stays closed, and a new venture is open. Three constraints follow you out of liquidation, though, and each one tends to surface weeks rather than years after the company estate closes. Our full guide to a director’s position in liquidation covers what the liquidator investigates and the personal liabilities to plan for.
+
+The first is personal guarantees. A guarantee you signed survives liquidation, and the lender will pursue you for the personal debt next. That call typically lands within weeks of the company estate closing, and it is the moment most directors realise that the closure of the company is not the end of the matter for them personally.
+
+The second is section 216 of the Insolvency Act 1986: you cannot use the same or a confusingly similar company name for 5 years without court permission. A near-identical brand or trading name counts. This is the rule that catches the director who incorporates “Acme Trading 2 Ltd” without checking, and a section 216 breach carries personal liability for the new company’s debts.
+
+The third is any disqualification order. Section 6 of the Company Directors Disqualification Act 1986 sets a 2 to 15 year range. The Insolvency Service decides the length on the back of the liquidator’s conduct report, with longer periods reserved for active concealment, BBL misuse, unrecorded director-loan repayments, or trading well past the point of viability.
+
+Plan for the constraint before you start the process, not after.
+
+What Happens to Creditors
+
+The Schedule 6 priority order set out earlier determines who gets paid in what order. The honest summary is that most unsecured creditors recover little or nothing in a typical insolvent liquidation. Trade creditors typically receive a small dividend if any, and the supplier whose invoice is six months old is usually the one who feels the loss most sharply.
+
+Secured creditors and HMRC tend to do materially better. Personal-guarantee creditors switch to pursuing the director once the company estate is exhausted, and that is when the closure stops being a company matter and becomes a personal one.
+
+Company Liquidation vs Other Closure Options
+
+Liquidation is one of several routes you have to close or restructure a UK limited company. The right route for you depends on whether your company is solvent, on whether your business is viable, and on whether your creditors are likely to take action. The table below maps the choice.
+
+The wrong route is rarely catastrophic on day one. It is what produces the call we take eighteen months later from the director whose strike-off has been objected to and whose company is back on the register.
+
+RouteBest used whenWhat happensMain director considerationRelated guide
+
+Liquidation (CVL)
+Insolvent with no realistic recovery; voluntary action available.
+IP closes the company, realises assets, distributes to creditors, dissolves the entity.
+Conduct report; preserves IP choice and timing.
+CVL guide
+
+Strike-Off
+Solvent, no creditors, no material assets.
+£33 application; company struck off the register after 2 months if uncontested.
+Any creditor (HMRC included) can object and restore the company; expensive if used wrongly.
+Strike-off guide
+
+Administration
+The business is viable but needs protection from creditors to be restructured or sold.
+Administrator takes control, business continues to trade where possible, sale or rescue follows.
+Statutory moratorium pauses creditor action; outcome depends on saleable value.
+Administration guide
+
+Company Voluntary Arrangement (CVA)
+Insolvent but viable; cash flow gap repayable over 3 to 5 years.
+Creditors vote on a proposal to repay an agreed proportion of debts over time. 75% creditor majority binds the rest.
+Director keeps running the company under supervision; failure ends in liquidation.
+CVA guide
+
+Members’ Voluntary Liquidation (MVL)
+Solvent with retained profit; tax-efficient distribution wanted.
+IP closes the company; reserves distributed under capital-gains treatment with potential Business Asset Disposal Relief.
+Requires a sworn declaration of solvency; mis-declaration carries personal penalties.
+MVL guide
+
+A warning about unregulated advice. The Insolvency Service and R3, the insolvency trade body, have raised concerns about unregulated firms targeting distressed directors with promises to “write off” debt or avoid liquidation for large upfront fees. Only a licensed insolvency practitioner can legally act as liquidator. Verify the IP’s licence on the gov.uk register before paying anyone.
+
+Related Guides
+
+Creditors’ Voluntary Liquidation: the voluntary route for insolvent companies. Process, costs, director protection.
+
+Compulsory Liquidation: what happens once a creditor petitions the court to wind up your company.
+
+Members’ Voluntary Liquidation: tax-efficient closure for solvent companies with retained profit.
+
+Company Strike-Off and Dissolution: when £33 strike-off is the right route, and when it goes wrong.
+
+Company Voluntary Arrangement: trading out of insolvency through a creditor-approved repayment plan.
+
+Winding-Up Petitions: how to defend or respond to a creditor’s petition to wind up your company.
+
+Company Insolvency: the legal definition, the tests, and what counts as the moment of insolvency.
+
+30-Second Insolvency Test: take the test if you are not sure where the company actually stands.
+
+Frequently Asked Questions About Company Liquidation
+
+Can I liquidate my company without an insolvency practitioner?
+
+No. CVLs, MVLs, and compulsory liquidations all require a licensed insolvency practitioner to act as liquidator. The IP is regulated by a recognised professional body (IPA, ICAEW, ICAS, or the Insolvency Service) and has legal duties to creditors and the Insolvency Service.
+
+If anyone offers to liquidate your company without being a licensed IP, walk away. Verify the licence on the gov.uk register before paying anyone.
+
+What is the difference between liquidation and dissolution?
+
+Dissolution is the final removal of a company from the Companies House register. It happens at the end of liquidation, and it can also happen via voluntary strike-off (the £33 route) for solvent companies with no creditors. Liquidation is the formal process that realises assets and pays creditors; dissolution is the closing administrative step.
+
+If a company has unpaid debts, strike-off-then-dissolution is rarely safe: any creditor can object and restore the company to the register, and HMRC routinely does so. Liquidation is the proper closure route when debts exist.
+
+How long does liquidation take?
+
+From instruction to the liquidation actually starting, 2 to 4 weeks for a CVL. From start to dissolution, 12 to 18 months for a straightforward case. Cases with disputed assets, employee claims, ongoing litigation, or director-conduct investigations can extend well beyond that.
+
+The director’s active involvement is heaviest in the first 4 weeks (instruction, Statement of Affairs, creditor decision), then drops off as the IP runs the formal work.
+
+Will liquidation automatically disqualify me as a director?
+
+No. Liquidation triggers a conduct review, not an automatic ban. The liquidator reports to the Insolvency Service, who decide whether to pursue disqualification under the Company Directors Disqualification Act 1986. Where the director acted responsibly, kept records, and cooperated, disqualification is unlikely.
+
+Where it does follow, periods range from 2 to 15 years depending on severity. The order is published, so plan for the reputational layer separately from the legal one.
+
+Can I start another company after liquidation?
+
+Yes, unless you have been disqualified. Section 216 IA 1986 restricts using the same or a confusingly similar company name for 5 years without court permission. The trap most directors fall into is a near-identical brand or trading name, which counts. Get advice on the name (and any director-loan or BBL exposure carrying over) before you incorporate the new entity.
+
+What if the company has no money to pay for liquidation?
+
+The director funds the CVL, almost always from a personal redundancy claim. Statutory redundancy, unpaid wages, and holiday pay are paid by the government’s Redundancy Payments Service to qualifying directors who held a genuine employment contract. The weekly statutory cap is £751 from 6 April 2026.
+
+Where no funding source exists and no creditor will petition, the company can sit dormant until Companies House strikes it off, but the debt and any personal-liability exposure do not go away on their own.
+
+Can a liquidator challenge transactions made before liquidation?
+
+Yes. Preference payments under section 239 IA 1986 can be reversed if made within 6 months of liquidation (2 years for connected parties such as family members or related companies) and the creditor was put in a better position than they would have been in liquidation.
+
+Transactions at undervalue under section 238 cover gifts and below-market sales within 2 years. The liquidator can apply to court to unwind both. Get advice before any transfer if liquidation is on the table.
+
+Methodology and Disclosure
+
+This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.
+
+Statutory references draw on the Insolvency Act 1986, the Company Directors Disqualification Act 1986, and the Insolvency (England and Wales) Rules 2016. Cost ranges reflect cases handled directly by our practice and vary with case complexity.
+
+Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner and are paid from company assets or director funding (commonly the statutory redundancy claim). Last reviewed April 2026.
+
+Sources & References
+
+Insolvency Act 1986 — primary legislation governing UK corporate insolvency, including sections 122, 208, 210, 214, 216, 235–237, 238, 239, and Schedule 6 – legislation.gov.uk
+
+Company Directors Disqualification Act 1986 — framework for conduct review and disqualification orders following liquidation – legislation.gov.uk
+
+Insolvency (England and Wales) Rules 2016 — procedural rules for CVL appointment, deemed-consent decisions, and statement-of-affairs requirements – legislation.gov.uk
+
+Insolvency Service: Company Insolvency Statistics — monthly data on CVLs, compulsory liquidations, administrations, and CVAs in England and Wales – gov.uk
+
+HMRC: Time to Pay Arrangements — guidance on negotiating payment plans for tax debts before petition stage – gov.uk
+
+Find an Insolvency Practitioner (gov.uk register) — verify a liquidator’s licence and regulatory body before instructing – gov.uk
+
+Statutory weekly redundancy pay cap — £751 from 6 April 2026, applied to redundancy and unpaid wages claims via the Redundancy Payments Service – gov.uk
+
+Chris Andersen
+
+Licensed Insolvency Practitioner 
+
+ Reviewed on 26/05/2026 
+
+ Read our 9 reviews 
+
+Free Download
+
+Stressed Directors Guide
+
+Practical steps for cash flow, creditor threats, and closure
+
+Download the Guide
+
+100% Free · Regularly Updated
+
+Licensed and accredited by
+
+30-Second Test
+
+Free Insolvency Test
+
+Answer a few quick questions to get instant clarity, next steps, and free expert advice
+
+ Take the Free Test
+
+Takes 30 Seconds · No Signup Required
+
+ Expertly reviewed by
+
+Chris Andersen
+
+Licensed Insolvency Practitioner
+
+ 20+ Years Experience 
+
+ Licensed and Regulated 
+
+ Insolvency Specialist 
+
+ Email Chris
+
+ Chris’ LinkedIn Profile
+
+ Give us a Call
+
+Need confidential advice?
+
+Get in Touch Today
+
+If you need help understanding the best way forward for your company, use our live chat during working hours or get in touch via our contact form.
+
+We’ve helped thousands of directors navigate difficult financial situations.
+
+0800 074 6757
+Mon-Fri8AM - 8PM
+
+ 100% Confidential
+
+ Real Experts
+
+ Same-Day Support
+
+Name*
+
+Email*
+
+Phone*
+
+Message
+
+Company Debt is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. By clicking submit, you consent to the Company Debt privacy policy.
+CAPTCHA
+
+Phone
+
+This field is for validation purposes and should be left unchanged.
+
+Δ
+
+ Licensed & Accredited Insolvency Practitioners 
+
+ Read more
+
+Business Recovery, Made Easy
+
+Contact Us
+
+0800 074 6757
+
+info@companydebt.com
+
+Company Debt Ltd, Level 18, 40 Bank Street, London, E14 5NR
+
+Company Closure
+
+Company Liquidation
+
+Creditors' Voluntary Liquidation (CVL)
+
+Members' Voluntary Liquidation
+
+Company Strike Off and Dissolution
+
+Closing a Limited Company
+
+Winding Up Petition
+
+Compulsory Liquidation
+
+UK Insolvency Statistics 
+
+Company Rescue
+
+Company Voluntary Arrangements
+
+What is Company Administration?
+
+Pre Pack Administration 
+
+Tax Debt
+
+Time to Pay Arrangements
+
+Can't Pay VAT
+
+Can't Pay Corporation Tax
+
+Can't Pay PAYE 
+
+Privacy Policy | Terms and Conditions | Cookie Policy | Site Map
+
+Company Debt 2025. All Rights Reserved. Company Debt is a trading name of Company Debt Ltd, which is a company that is registered in England & Wales under company number 06352368. The registered office is Company Debt Ltd, Level 18, 40 Bank Street, London, England, E14 5NR, United Kingdom.
+
+Company Debt Ltd is affiliated with AABRS Limited, a firm of Insolvency Practitioners.
+
+AABRS Limited: Christopher Andersen (IP No. 16070), Mark Newton (IP No. 9732) and Alan Bradstock (IP No. 5956) are licensed to act in the UK as Insolvency Practitioners by the Insolvency Practitioners Association. Nicola Meadows (IP No. 9184) is licensed to act in the UK as an Insolvency Practitioner by the Institute of Chartered Accountants in England and Wales. Insolvency Practitioners are bound by the Insolvency Code of Ethics when carrying out all professional work relating to an insolvency appointment. When acting as Receiver, Administrative Receiver or Administrator they act as agent only, without personal liability.

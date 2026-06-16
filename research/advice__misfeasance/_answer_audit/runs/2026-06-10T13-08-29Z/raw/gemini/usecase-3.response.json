@@ -1,0 +1,735 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 13:09:44 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=16978",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "For a UK company director, misfeasance refers to the improper performance of a lawful act or duty, or a breach of fiduciary duties owed to a company, especially when the business is or may be insolvent. It involves actions such as misapplying company assets, money, or authority, or failing to comply with legal duties. It's crucial to understand that misfeasance is a civil claim, not a criminal offence, though severe cases can have criminal implications.\n\nThe duties of a UK company director, enshrined in the Companies Act 2006 (CA 2006), include acting within powers, promoting the company's success, exercising independent judgment, exercising reasonable care, skill and diligence, avoiding conflicts of interest, not accepting benefits from third parties, and declaring interests in proposed transactions. A breach of these duties can lead to a misfeasance claim.\n\n**Consequences for Company Directors of Misfeasance:**\n\nThe consequences for directors found guilty of misfeasance can be severe and include significant personal liability:\n\n1.  **Personal Financial Liability:** Directors can be held personally liable for any losses incurred by the company or its creditors as a result of their misfeasance. A court may order a director to:\n    *   Restore property or assets to the company.\n    *   Repay misapplied money or funds to the company, often with interest.\n    *   Compensate the company for losses caused by the breach of duty.\n    In extreme cases, this personal liability can lead to the loss of all personal assets through bankruptcy. Examples of actions that may lead to personal financial liability include preferential payments to certain creditors, transactions at an undervalue, misusing company assets for personal benefit, or taking excessive salaries when the company is in financial distress.\n\n2.  **Director Disqualification:** Directors can be disqualified from acting as a limited company director for a period ranging from **2 to 15 years**. Misfeasance is considered \"unfit conduct\" under the Company Directors Disqualification Act 1986 (CDDA 1986). The office-holder (liquidator or administrator) is legally required to submit a report to the Secretary of State regarding instances of misfeasance, which can initiate disqualification proceedings.\n\n3.  **Criminal Liability:** While misfeasance itself is a civil matter, in serious cases, particularly those involving elements of fraud, theft, or false accounting, directors could face criminal prosecution.\n\n4.  **Professional and Reputational Damage:** A finding of misfeasance can lead to diminished future employability, especially at senior levels, and potentially the loss of professional qualifications or memberships.\n\n**Relevant Insolvency Route(s) and Governing Rules:**\n\nMisfeasance claims predominantly arise when a company enters **liquidation** or **administration**. The appointed insolvency practitioner (liquidator or administrator) is legally obliged to investigate the director's actions leading up to the insolvency. Claims can also be brought by creditors, a contributory to the company's capital, or the Official Receiver.\n\nThe primary legal basis for misfeasance claims against directors is **Section 212 of the Insolvency Act 1986 (IA 1986)**. This provision grants the court the power to examine the conduct of directors and compel them to account for misapplied money or property, or to contribute to the company's assets as compensation for the misfeasance or breach. The **Companies Act 2006** also holds directors personally liable for losses to creditors in misfeasance cases, and the duties outlined in **Sections 171 to 177 of the CA 2006** define the standard of conduct expected from directors.\n\n**Figures, Thresholds, and Timelines:**\n\n*   **Disqualification Period:** If found unfit, a director can be disqualified for **2 to 15 years**.\n*   **Limitation Period for Misfeasance Claims:** Generally, misfeasance proceedings must be issued within **six years** of the relevant conduct. However, different limitation rules may apply for breaches of trust or fiduciary obligations, and in cases where a director unlawfully transfers property to a company they control, there might be **no limitation period**. The six-year period can run from the date of the conduct or from when the company entered an insolvency process.\n*   **Disqualification Proceedings Timeline:** Disqualification proceedings must be issued within **three years** of the company being placed into liquidation or administration.\n\nDirectors are expected to be aware of their company's financial position at all times. Being unaware or acting as a non-executive or part-time director is generally not a defence against a misfeasance claim. Early professional advice is crucial if financial difficulties arise or misfeasance allegations are made.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "begbies-traynorgroup.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6LLHsP7V-Ts7SAsFIi9IWl5tsbFS9L7KjvF3BPG408LMSUsx5oNffppygsZitVOpl9CnuFw2LtyJT2SWdweZe4iWOLZ7et9Ii8K1uF2DrDLT6wT-7vGhHqvFlRTTHFaTr4UPwacKxxZXAJog800LIlnC1B-od4fh2ko599qjslQ5h1n-XmB5W_RFx_mISuyMNOTHgDpugZRMJDk6RRVAkBJR_B55HMYGWCUYOIyjd6d0="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "franciswilksandjones.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOsTrVuUwZ-fbY100PlwuNLTQOehXTNldYJwkvl9Hj1_E4-K246cQ9l_z_XY9MVvC5ThaHwKDWtkQNVxvyG0ZpafGQizdWNwC6ftj1_mDtAyGBBKJyldcxaLn4QWxRzogZC7KygweN2QhkMNqDVkDuvOzzRc4Yv9QbWgjxGIprnyyn7mBrRRP8i2GgJAt8CYkB76Jz0eCA"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "taylor-rose.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH9cOQpfWL32nVxqr3wBqLJfjb46O1qYc5pJpH9W2Dso0jfVeeNJiyHpbsWCcZIX-qjHJKFTooN_1RDFnnglEwkeo7Zk02Z_e1uZ__MJRso3FiVszGyu6vO6VkYHZGVVwevQVCr3Z15r0="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "liquidationcentre.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF27v4MO1L4TLN1vfAv4eLwCfwQ528PhWcrBiiqDLUgjtlRKd-aIGwRytKlWAoTimc9uCNy8PoHW8SOZ_5Yuu6XFIpz7TYuZozu9ppAsoPLwV-jstqmiuWlXy7GkQy_FDiSZBPa0DZEvZpaMFXcTMn06DEs0G9STJTu"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "summitlawllp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0yXyYaXcabCr8_fdypfT2UVeeCU8UTlx084zY4mXveVTcDknS3LbdVrmBCU07xfyHBIiSrnHbOu_eZd4ctATJ5fqthL77T2VyZQ6hUXoKRGpwE8ORiKkWC9h7ORN98X5guzpEIqUjC8bIxqVwgp2LiIJfHg3E"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "isadoregoldman.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfh7HhpU5poibau5NPYWOzc7FJ_YCuM-zm3jhamOz63nPjkAxoWV9UFNap2gSxSeTsfVEP9lpPlajX_RFDdiGvD1NCLbIhzUso_Zb_ZARd0aPMwDlrf9Fbff8J56HyEs2xxK4yMV9tWw3GOkXQpVwJmJ505Mse4w97tUuk4ZT-gWOSS-pefisnpvp4jBgLeYVZwPlBZzlBmMMhw4GyavhCiA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "bankruptcy-solicitors.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgnWHkDx6TDZTNJKG31duhlS8oWdIKaqcqF_fB9RnbZZDBnobO0rCOMLw04EH9pOhbcMfEvmSVSZC1l8R0piSvK5xo4ikr6xxbz3w-Lo75aIoxsE0SJIJQ1NdT2HrVVG4JAPFjZj4GLQVGnJB7IRL2deeem9tEQy2_5jgM_g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "frostgroup.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4Ph4QRsvpD306JMlxLN5jc36N8TNGDZNAbD8VxczrU9RmN85w1GkNPqZ3AV0sql84kuRf7GOM5tqD57fH9q6Vec-LgbfmHYUBu_FWkM30X4PuTrE9ZFWBH79dgy2HIu5aQN_iGyxFmEloZJk6i8GydibhxwEP6vPFVw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ndandp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjY1w-hg3gL9frpqM-tAOiS-qbPOcYpGUTFYzIt3CTl6fQIjOHfmwMO65lF6M8VuICv2pePytNF2ymjuwApy4T-nQMfyPeuz-3R1NARtAWVTz9r0Gi9Ic3gSWBFoQScdQ9MrfmbdNv2FBkl_Xixyb9bNgllA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ts-p.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh4P_vmv62RM6adSyzZJQMgJrQfnVQsUUe0vbkjCyrMlEF2yqqnF9tvfqlnwTWoHMQTVLHTsajn7OBfPYPROfGyFLod1YpJ5d8gZ4ILd7xjX1txl-0Q9NnbwQHo8WsI5AAaAVdkbaYfJg1RtrJ_1mGq6MkEa6Fhv5lQP4Pfjss8PujKbZ4xR6zKnc="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "shoosmiths.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKUbjwzk5j-sexR8j4bKaM955j6IGr5wmU27sjady1DbNNrLnAYOesvbazIVI6HiCUzFeZCuaydDEK4S5rpYcYJYZACdQWjhSG4GJt8sqH0f7sYuq7qOonaQmYP-jTpL0Sz1xwrzzmHhv2FOmh-VMmbGtb9838SzLlogdk0HNGNzYecx2IVnCMlu0BIWTfwjhP5g9bWpkKWxI="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "insolvency-practitioners.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfwI8c3NwpV6fEX2oGHYAAQZMYxlr1EIS9E5mQDWLRKRhgWTPBll4lFKm8BuevNjrboMp7Qzu1tuvU59biiYcyrMlGxkhBU0d_ukmHEs3GNHPDgs0VnjcnrwSF0A2mOgEmmD_DjRGMxLsZvuo74m4okp8wRUZH4ttLeujsd_qITFSpsCnkbwWMPnk="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "juliandobson.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfJZJ0YCYPCPZOqdCK4NRm4YPPZwa9TPKKxNE_CMy3tRaRF_FlPKKU2PJDR2P6DKoae28z1rzSRP3dghsDjaMlSfWPaMa8B97WOAySywJ_y7B0ARrSHTGD7Vda002LD4tKrDSZYXnH6idtGxKKrSFcxFVW1ouQNb9QSMocHJx0I6Z1TZUAADNw"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "danbro.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3OIx-oFj7i3LNra2fxwYSVI0rawdwyfRZjI6i4ts75gsiGU_WTfgKewkJ6vUEGTQjjsthV7NhhWbdlQ1x8CADAevr0jYjDK-cfW9YshzBprykpmX6qnc8nh2rKPJCKR5-biRKfjh2J0hp9S_hppJiaYVD557HyuCa6XOXU48GXX4aUvQ="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1bW6XmBsiqyEfyE3muQScAS2sLl6lnFx97TXU28Np87vGbx8YCZEcGYtUgKhYcq_1UE0ldv6GZcFV1MMlNMGZgo5pD8jI6w0UvF9RqoiwN0ESJB7U8Xo79W39aT7ZSnWAQZJxpBxb4y3yvqIQvTPwf_64CUQJXsq_JWol7jO9jCPxn_2hKsDFlEJPPgm-KpSxnoM="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "edwincoe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWddJ2K_NT1khyF6i9nQOVJb2iQIj-6S8KiFAEJ-yJVC6VjmPVCDMv2bB_jsAXoKNGt-EkD_9Hsg8WUggKqXH0UTVyLY-B2MCnbGqenohc_3bzntummGE3J_AOWn9Q7kwt3Ldp1W0kGQkSQtO9t28JVsyUAgIzwEoPunXkkC7txE4="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "harperjames.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMgMScXa5rzwneNHq6LJ_aP0j7v6aqK7FvTQCOeCoDUMT8Q0eM7oLR8YhBGaCYwVxVwK_UPLAcwibza0fM2hB3MNriuboWbaX8HZhS03FMpKheTx_vIotAisPn4eCErUvHxYJeh9keZ3OwhcKZVec="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "higgsllp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIgBD4lStEJiAfqi5brpP0wQSpju02RqlO5QbDJEFNnGiwSrKLOynDIjSDJguWU8DHo-ZMcpoW_7yNqAwKSkQbsmEgxQZzSvxHwgEbseiAnFZaGGDNf5_cvL_cp1okuijnhjQntZ1BzVdYTbBSwpEHbAeO6HKQ3wyF5p86ORwmKpFpYm8SbbsAG5DnDc_03tYobUJfHw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "grantsaw.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsI4cglFcPO1hd1SUnVd1hKbXQCNGnofCeUctQDUQ34xWrIN-gC9_6QIEQJ5YBaK-vgD-yTxjP3JY20ODi7R-OoQMJKwaPkGHU08ISyVJ8ZCqxiPJcGC5D9UyYi0scW5e4b5Y="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ndandp.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZex-4lYZqbmb601h3wbg3mz5Dw5pMWyvbt6aVgiOBUFDsMfpFKbmTCny6Kf_MtLG-Fv8bkr0tIPgXAHU8f90pSS8EwfXiLer2dY2B0oeuvPNfbzbBdxkzTwffquIa_O9qw5Duhzlg2qAz8M530yl2G8jhJXDz1QKg2F10hc8IJvZ5rkEaUvhhdeyQ5RfpCRo="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hoganlovells.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3KGbq_1uarKL1o334km6P-rqAPHDTRcIR2lvP8WxwysX0A2Y7r7iIiDdvoPXWd4CXCmFlENj5AjoZ9vQ1YNxkDIS37fFsocIKRpGdueB9ePCKbXcOwbPUXuPByYobQv-nPudeVXIcEvtQhS4l-k05I-WBYUKG5jQPV7XqCVv9ZwnV_axEAqLFqTFk46DZ3Mw5n_z9oDUHMxnP8AlBzQKu1241YA=="
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "segment": {
+              "start_index": 203,
+              "end_index": 318,
+              "part_index": null,
+              "text": "It involves actions such as misapplying company assets, money, or authority, or failing to comply with legal duties"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              8
+            ],
+            "segment": {
+              "start_index": 320,
+              "end_index": 456,
+              "part_index": null,
+              "text": "It's crucial to understand that misfeasance is a civil claim, not a criminal offence, though severe cases can have criminal implications"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9
+            ],
+            "segment": {
+              "start_index": 459,
+              "end_index": 811,
+              "part_index": null,
+              "text": "The duties of a UK company director, enshrined in the Companies Act 2006 (CA 2006), include acting within powers, promoting the company's success, exercising independent judgment, exercising reasonable care, skill and diligence, avoiding conflicts of interest, not accepting benefits from third parties, and declaring interests in proposed transactions"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              2,
+              5,
+              8,
+              10,
+              11,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 1050,
+              "end_index": 1212,
+              "part_index": null,
+              "text": "**Personal Financial Liability:** Directors can be held personally liable for any losses incurred by the company or its creditors as a result of their misfeasance"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              14,
+              9,
+              5
+            ],
+            "segment": {
+              "start_index": 1214,
+              "end_index": 1296,
+              "part_index": null,
+              "text": "A court may order a director to:\n    *   Restore property or assets to the company"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              14,
+              15,
+              9,
+              5,
+              8,
+              12
+            ],
+            "segment": {
+              "start_index": 1302,
+              "end_index": 1373,
+              "part_index": null,
+              "text": "*   Repay misapplied money or funds to the company, often with interest"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              15,
+              9,
+              8
+            ],
+            "segment": {
+              "start_index": 1379,
+              "end_index": 1445,
+              "part_index": null,
+              "text": "*   Compensate the company for losses caused by the breach of duty"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              13
+            ],
+            "segment": {
+              "start_index": 1451,
+              "end_index": 1555,
+              "part_index": null,
+              "text": "In extreme cases, this personal liability can lead to the loss of all personal assets through bankruptcy"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              2,
+              3,
+              14,
+              9,
+              5,
+              10,
+              13
+            ],
+            "segment": {
+              "start_index": 1557,
+              "end_index": 1822,
+              "part_index": null,
+              "text": "Examples of actions that may lead to personal financial liability include preferential payments to certain creditors, transactions at an undervalue, misusing company assets for personal benefit, or taking excessive salaries when the company is in financial distress"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              2,
+              14,
+              16,
+              9,
+              5,
+              17
+            ],
+            "segment": {
+              "start_index": 1829,
+              "end_index": 1975,
+              "part_index": null,
+              "text": "**Director Disqualification:** Directors can be disqualified from acting as a limited company director for a period ranging from **2 to 15 years**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              16,
+              17
+            ],
+            "segment": {
+              "start_index": 1977,
+              "end_index": 2084,
+              "part_index": null,
+              "text": "Misfeasance is considered \"unfit conduct\" under the Company Directors Disqualification Act 1986 (CDDA 1986)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              3
+            ],
+            "segment": {
+              "start_index": 2086,
+              "end_index": 2282,
+              "part_index": null,
+              "text": "The office-holder (liquidator or administrator) is legally required to submit a report to the Secretary of State regarding instances of misfeasance, which can initiate disqualification proceedings"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              8
+            ],
+            "segment": {
+              "start_index": 2289,
+              "end_index": 2492,
+              "part_index": null,
+              "text": "**Criminal Liability:** While misfeasance itself is a civil matter, in serious cases, particularly those involving elements of fraud, theft, or false accounting, directors could face criminal prosecution"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2
+            ],
+            "segment": {
+              "start_index": 2499,
+              "end_index": 2710,
+              "part_index": null,
+              "text": "**Professional and Reputational Damage:** A finding of misfeasance can lead to diminished future employability, especially at senior levels, and potentially the loss of professional qualifications or memberships"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              14,
+              4,
+              9,
+              6,
+              17
+            ],
+            "segment": {
+              "start_index": 2768,
+              "end_index": 2866,
+              "part_index": null,
+              "text": "Misfeasance claims predominantly arise when a company enters **liquidation** or **administration**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              3
+            ],
+            "segment": {
+              "start_index": 2868,
+              "end_index": 3021,
+              "part_index": null,
+              "text": "The appointed insolvency practitioner (liquidator or administrator) is legally obliged to investigate the director's actions leading up to the insolvency"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              3,
+              14,
+              18,
+              15,
+              9,
+              6
+            ],
+            "segment": {
+              "start_index": 3023,
+              "end_index": 3129,
+              "part_index": null,
+              "text": "Claims can also be brought by creditors, a contributory to the company's capital, or the Official Receiver"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2,
+              15,
+              9,
+              6,
+              7,
+              8,
+              19
+            ],
+            "segment": {
+              "start_index": 3132,
+              "end_index": 3252,
+              "part_index": null,
+              "text": "The primary legal basis for misfeasance claims against directors is **Section 212 of the Insolvency Act 1986 (IA 1986)**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              9,
+              8
+            ],
+            "segment": {
+              "start_index": 3254,
+              "end_index": 3479,
+              "part_index": null,
+              "text": "This provision grants the court the power to examine the conduct of directors and compel them to account for misapplied money or property, or to contribute to the company's assets as compensation for the misfeasance or breach"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 3481,
+              "end_index": 3591,
+              "part_index": null,
+              "text": "The **Companies Act 2006** also holds directors personally liable for losses to creditors in misfeasance cases"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9
+            ],
+            "segment": {
+              "start_index": 3591,
+              "end_index": 3713,
+              "part_index": null,
+              "text": ", and the duties outlined in **Sections 171 to 177 of the CA 2006** define the standard of conduct expected from directors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              2,
+              16,
+              9,
+              5,
+              17
+            ],
+            "segment": {
+              "start_index": 3757,
+              "end_index": 3858,
+              "part_index": null,
+              "text": "*   **Disqualification Period:** If found unfit, a director can be disqualified for **2 to 15 years**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              18
+            ],
+            "segment": {
+              "start_index": 3860,
+              "end_index": 4004,
+              "part_index": null,
+              "text": "*   **Limitation Period for Misfeasance Claims:** Generally, misfeasance proceedings must be issued within **six years** of the relevant conduct"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              18,
+              19,
+              20
+            ],
+            "segment": {
+              "start_index": 4006,
+              "end_index": 4226,
+              "part_index": null,
+              "text": "However, different limitation rules may apply for breaches of trust or fiduciary obligations, and in cases where a director unlawfully transfers property to a company they control, there might be **no limitation period**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16
+            ],
+            "segment": {
+              "start_index": 4228,
+              "end_index": 4339,
+              "part_index": null,
+              "text": "The six-year period can run from the date of the conduct or from when the company entered an insolvency process"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              17
+            ],
+            "segment": {
+              "start_index": 4341,
+              "end_index": 4517,
+              "part_index": null,
+              "text": "*   **Disqualification Proceedings Timeline:** Disqualification proceedings must be issued within **three years** of the company being placed into liquidation or administration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 4607,
+              "end_index": 4726,
+              "part_index": null,
+              "text": "Being unaware or acting as a non-executive or part-time director is generally not a defence against a misfeasance claim"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18,
+              10,
+              13
+            ],
+            "segment": {
+              "start_index": 4728,
+              "end_index": 4832,
+              "part_index": null,
+              "text": "Early professional advice is crucial if financial difficulties arise or misfeasance allegations are made"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-8nFhAVTksZM7zIFECjPR7WiK9Mbpx66gSrTUMepX-mr6yVA4J4g2aRbO7EIExjzaug2QnFtGel9yY-eLbGU7PB6oYym5rZjZZJY0Cs9upyysYIcrreWKXtrAEKmZYWVQAIY2fQLj_qDenToPs9q8nHQJcTQZrC5wSsqC_qZ8xq7tK74Qw772j7rUenE3UN3NcxsbdceQauJESdpIDTSdQqYXoIgWDA==\">time limits for misfeasance claims UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ8QHryow_I9FM5ohaXmhsPRNxVtCLYnEtesjMCpFdXeb9wN6LqSicz8v7E0f97mnQpCgFvWkYt_jRSP3t3A-JFvXpXH6rZLdWjYGiNCaKFWmti1Uum0BUnLfcw7yaRd1FNOPRUvgIsGyFOyd-wYfNYh20MmHOaBqvip3UqPoqReXulboy4bLL87xA5nuOUmIamO2Rj-_nAsVwWXexGz5YKL8nRmoYaKZ9\">what is misfeasance UK company director</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-wEaNVqBuimF953i7bH4Ig45RHcYz-Fhfhrf-19_GJ3Qs-smWzeOxUU-YJdmDQxch5c9INyV52hs_rSGc5JQW6eXB2P4zAESGzJD9t_SmOqbCUuIK-UfGiqj9tcHERISkOUCYEps814000MoPGPVC5ResjlzYh6buMsNbKRgP_sqyCxeEOTDknEiAFOMIVSQRvBGRBte56N8Mcb4L9LAa6Uceb7x3uxOGPYytjffsx7XB6shpZbuzYEoKnPnuVHXXg10lGqc9\">misfeasance consequences for UK company directors personal liability</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8sg4gl3LLLITsYaamdb-X8qUFQk6QXaYfaswaviQG_eJ7IJASZm-vhiNebaaFyBGYB3unh00iMWwgPkCrFgh3r-GNfFnhMMgtaQzxOkGxhC2vESaxQfmMejTBFA7P8ZZyFk-xu2DyaRlPxkPvx5qnN7A7HWLcWYVL0uId4y2ZMbPQFM-mMN8pTt9NjtoDTBre2XDwBxqIoG9-jHQCLUYZC_s7PenYYqAI\">insolvency act 1986 misfeasance section</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgrgWllAFklRTlX_rVkltJSqUBo_zE8BkY0vI6zAgNJY1hfYkuT5NGDMyDDAdauIt9RU5J0i5mLiHY6t8bks0uwKuJtWrXRX8R3bcZHcyCISsBOvb7cUVALXvOeJE-iZiq_mTGJhZ3nzVdNKZ6ORVX2gSjD_nMfg74w27gEDMJJAHiO2Rgf_hqouVnN0GBypovhWIgVc0Db5XqXyCh6KxVuEGAHU5-sUqjFSqqwl8=\">disqualification of directors misfeasance UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbLkU1zkD9SVjXEbwuyE6daAk8c6owhC3ziY1DskdbkOKKnGvHavgBSRLyhX7iU2v7vSmCeqrrMAqicgPKjf8gG_PJtCTC-M8JeOcs3cDd5HhoGYKfpsXEj6aAsu6kxAaHeteYZKHBShSEBWulqbwqtTfp3jG1Xkz8ca3wGyiR_9mI-7ycpnHKyTBYgY-QocuS8HT1dNOkl1A5CDk1ddrW3HFgYkn_l26GVdH_b9eewaw=\">personal liability for misfeasance UK directors</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "misfeasance consequences for UK company directors personal liability",
+          "what is misfeasance UK company director",
+          "insolvency act 1986 misfeasance section",
+          "time limits for misfeasance claims UK",
+          "disqualification of directors misfeasance UK",
+          "personal liability for misfeasance UK directors"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "CGIpat78A-Tpxs0PuvLLyA0",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1062,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 124,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 124
+      }
+    ],
+    "thoughts_token_count": 1410,
+    "tool_use_prompt_token_count": 424,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 424
+      }
+    ],
+    "total_token_count": 3020,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

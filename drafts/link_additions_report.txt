@@ -1,0 +1,932 @@
+# Internal Link Additions Report
+CSV: C:\Users\piers\Downloads\company-debt_20-may-2026_link-opportunities_2026-05-21_09-30-37.csv
+Mode: LIVE
+
+## Summary
+  Inserted:                150
+  Skipped (no draft):      582
+  Skipped (dup target):    70
+  Skipped (ctx not found): 148
+  Skipped (kw missing):    36
+
+## Pages without a draft file
+  https://www.companydebt.com/about-us/  (slug=about-us)
+  https://www.companydebt.com/advice/are-directors-personally-liable-for-company-debts/  (slug=are-directors-personally-liable-for-company-debts)
+  https://www.companydebt.com/advice/business-restructuring/  (slug=business-restructuring)
+  https://www.companydebt.com/advice/can-a-director-be-made-bankrupt-if-a-business-fails/  (slug=can-a-director-be-made-bankrupt-if-a-business-fails)
+  https://www.companydebt.com/advice/can-director-criminal-record/  (slug=can-director-criminal-record)
+  https://www.companydebt.com/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/  (slug=can-personal-assets-of-directors-be-seized-from-a-ltd-company)
+  https://www.companydebt.com/advice/debt-management-guide/  (slug=debt-management-guide)
+  https://www.companydebt.com/advice/directors-disqualification/  (slug=directors-disqualification)
+  https://www.companydebt.com/advice/directors-duties-to-creditors/  (slug=directors-duties-to-creditors)
+  https://www.companydebt.com/advice/directors-personal-guarantees/  (slug=directors-personal-guarantees)
+  https://www.companydebt.com/advice/frozen-bank-account/  (slug=frozen-bank-account)
+  https://www.companydebt.com/advice/get-free-business-debt-advice/  (slug=get-free-business-debt-advice)
+  https://www.companydebt.com/advice/losing-house-if-company-goes-bust/  (slug=losing-house-if-company-goes-bust)
+  https://www.companydebt.com/advice/misfeasance/  (slug=misfeasance)
+  https://www.companydebt.com/advice/overdrawn-directors-loan-accounts/  (slug=overdrawn-directors-loan-accounts)
+  https://www.companydebt.com/advice/personal-guarantee-insurance/  (slug=personal-guarantee-insurance)
+  https://www.companydebt.com/advice/preventing-company-director-disputes/  (slug=preventing-company-director-disputes)
+  https://www.companydebt.com/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/  (slug=what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest)
+  https://www.companydebt.com/advice/what-are-fixed-and-floating-charges/  (slug=what-are-fixed-and-floating-charges)
+  https://www.companydebt.com/advice/what-are-phoenix-companies/  (slug=what-are-phoenix-companies)
+  https://www.companydebt.com/advice/what-are-the-duties-and-responsibilities-of-a-company-director/  (slug=what-are-the-duties-and-responsibilities-of-a-company-director)
+  https://www.companydebt.com/advice/what-is-a-directors-responsibility-for-accountancy-errors/  (slug=what-is-a-directors-responsibility-for-accountancy-errors)
+  https://www.companydebt.com/advice/what-is-the-companies-act-2006/  (slug=what-is-the-companies-act-2006)
+  https://www.companydebt.com/articles/debt-charities-for-consumers/  (slug=debt-charities-for-consumers)
+  https://www.companydebt.com/articles/how-will-carillions-insolvency-effect-its-supply-chain/  (slug=how-will-carillions-insolvency-effect-its-supply-chain)
+  https://www.companydebt.com/articles/the-orla-kiely-fashion-brand-shuts-up-shop/  (slug=the-orla-kiely-fashion-brand-shuts-up-shop)
+  https://www.companydebt.com/case-studies/  (slug=case-studies)
+  https://www.companydebt.com/closing-a-limited-company/  (slug=closing-a-limited-company)
+  https://www.companydebt.com/company-administration/  (slug=company-administration)
+  https://www.companydebt.com/company-administration/light-touch-administration/  (slug=light-touch-administration)
+  https://www.companydebt.com/company-administration/notice-of-intention-to-appoint-administrators/  (slug=notice-of-intention-to-appoint-administrators)
+  https://www.companydebt.com/company-administration/vs-administrative-receivership/  (slug=vs-administrative-receivership)
+  https://www.companydebt.com/company-administration/vs-cva/  (slug=vs-cva)
+  https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/  (slug=company-voluntary-arrangement)
+  https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/  (slug=what-happens-if-a-cva-fails-mid-term)
+  https://www.companydebt.com/county-court-judgements/  (slug=county-court-judgements)
+  https://www.companydebt.com/debt-charities-uk/  (slug=debt-charities-uk)
+  https://www.companydebt.com/hmrc/cant-pay-paye/  (slug=cant-pay-paye)
+  https://www.companydebt.com/hmrc/cant-pay-vat/  (slug=cant-pay-vat)
+  https://www.companydebt.com/hmrc/hmrc-offices-contact-guide/  (slug=hmrc-offices-contact-guide)
+  https://www.companydebt.com/hmrc/problems-paying-corporation-tax-hmrc/  (slug=problems-paying-corporation-tax-hmrc)
+  https://www.companydebt.com/hmrc/time-to-pay-hmrc/  (slug=time-to-pay-hmrc)
+  https://www.companydebt.com/insolvency/  (slug=insolvency)
+  https://www.companydebt.com/insolvency/can-we-trade-out-of-insolvency/  (slug=can-we-trade-out-of-insolvency)
+  https://www.companydebt.com/insolvency/can-you-sell-your-insolvent-company/  (slug=can-you-sell-your-insolvent-company)
+  https://www.companydebt.com/insolvency/check-if-a-company-is-insolvent/  (slug=check-if-a-company-is-insolvent)
+  https://www.companydebt.com/insolvency/limited-company-bankruptcy/  (slug=limited-company-bankruptcy)
+  https://www.companydebt.com/insolvency/personal-liability-spouses-business-debts/  (slug=personal-liability-spouses-business-debts)
+  https://www.companydebt.com/insolvency/shareholders-liable-company-debts/  (slug=shareholders-liable-company-debts)
+  https://www.companydebt.com/insolvency/statement-of-affairs/  (slug=statement-of-affairs)
+  https://www.companydebt.com/insolvency/stop-or-avoid-insolvency/  (slug=stop-or-avoid-insolvency)
+  https://www.companydebt.com/insolvency/transactions-at-undervalue/  (slug=transactions-at-undervalue)
+  https://www.companydebt.com/insolvency/validation-order/  (slug=validation-order)
+  https://www.companydebt.com/insolvency/what-are-the-warning-signs-of-an-insolvent-company/  (slug=what-are-the-warning-signs-of-an-insolvent-company)
+  https://www.companydebt.com/insolvency/what-is-a-creditor/  (slug=what-is-a-creditor)
+  https://www.companydebt.com/insolvency/what-is-an-insolvency-practitioner/  (slug=what-is-an-insolvency-practitioner)
+  https://www.companydebt.com/insolvency/what-is-the-insolvency-service/  (slug=what-is-the-insolvency-service)
+  https://www.companydebt.com/insolvency/what-is-wrongful-trading/  (slug=what-is-wrongful-trading)
+  https://www.companydebt.com/liquidation/  (slug=liquidation)
+  https://www.companydebt.com/liquidation/alternatives-to-company-liquidation/  (slug=alternatives-to-company-liquidation)
+  https://www.companydebt.com/liquidation/am-i-solvent/  (slug=am-i-solvent)
+  https://www.companydebt.com/liquidation/bailiffs-high-court-enforcement-officers/  (slug=bailiffs-high-court-enforcement-officers)
+  https://www.companydebt.com/liquidation/business-bank-account-in-liquidation/  (slug=business-bank-account-in-liquidation)
+  https://www.companydebt.com/liquidation/can-a-director-be-sued-personally-by-creditors/  (slug=can-a-director-be-sued-personally-by-creditors)
+  https://www.companydebt.com/liquidation/can-a-supplier-force-my-company-into-liquidation/  (slug=can-a-supplier-force-my-company-into-liquidation)
+  https://www.companydebt.com/liquidation/can-directors-go-to-prison-for-company-debt/  (slug=can-directors-go-to-prison-for-company-debt)
+  https://www.companydebt.com/liquidation/can-directors-pay-themselves-before-liquidation/  (slug=can-directors-pay-themselves-before-liquidation)
+  https://www.companydebt.com/liquidation/can-i-choose-my-liquidator/  (slug=can-i-choose-my-liquidator)
+  https://www.companydebt.com/liquidation/can-i-liquidate-a-dormant-company/  (slug=can-i-liquidate-a-dormant-company)
+  https://www.companydebt.com/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/  (slug=can-i-liquidate-my-company-with-a-bounce-back-loan)
+  https://www.companydebt.com/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/  (slug=can-i-start-a-new-company-after-liquidating-my-old-one)
+  https://www.companydebt.com/liquidation/can-you-liquidate-to-avoid-paying-suppliers/  (slug=can-you-liquidate-to-avoid-paying-suppliers)
+  https://www.companydebt.com/liquidation/cant-afford-to-liquidate/  (slug=cant-afford-to-liquidate)
+  https://www.companydebt.com/liquidation/ccj-when-going-insolvent/  (slug=ccj-when-going-insolvent)
+  https://www.companydebt.com/liquidation/company-pensions-and-liquidation/  (slug=company-pensions-and-liquidation)
+  https://www.companydebt.com/liquidation/company-property-and-real-estate-in-liquidation/  (slug=company-property-and-real-estate-in-liquidation)
+  https://www.companydebt.com/liquidation/company-restoration-after-liquidation/  (slug=company-restoration-after-liquidation)
+  https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/  (slug=company-strike-off-and-dissolution)
+  https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/  (slug=can-i-be-sued-after-my-company-is-dissolved)
+  https://www.companydebt.com/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/  (slug=directors-responsibilities-after-a-company-is-struck-off)
+  https://www.companydebt.com/liquidation/company-vehicles-and-equipment-in-liquidation/  (slug=company-vehicles-and-equipment-in-liquidation)
+  https://www.companydebt.com/liquidation/compulsory-liquidation/  (slug=compulsory-liquidation)
+  https://www.companydebt.com/liquidation/creditor-meetings-in-liquidation/  (slug=creditor-meetings-in-liquidation)
+  https://www.companydebt.com/liquidation/creditors-voluntary-liquidation/  (slug=creditors-voluntary-liquidation)
+  https://www.companydebt.com/liquidation/cva-vs-strike-off-vs-liquidation/  (slug=cva-vs-strike-off-vs-liquidation)
+  https://www.companydebt.com/liquidation/director-conduct-review/  (slug=director-conduct-review)
+  https://www.companydebt.com/liquidation/directors-conduct-report-2/  (slug=directors-conduct-report-2)
+  https://www.companydebt.com/liquidation/hmrc-as-a-creditor-in-liquidation/  (slug=hmrc-as-a-creditor-in-liquidation)
+  https://www.companydebt.com/liquidation/how-much-does-liquidation-cost/  (slug=how-much-does-liquidation-cost)
+  https://www.companydebt.com/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/  (slug=how-to-challenge-a-liquidators-decisions-or-fees)
+  https://www.companydebt.com/liquidation/how-to-choose-the-right-insolvency-procedure/  (slug=how-to-choose-the-right-insolvency-procedure)
+  https://www.companydebt.com/liquidation/how-to-prepare-for-company-liquidation/  (slug=how-to-prepare-for-company-liquidation)
+  https://www.companydebt.com/liquidation/how-to-prove-your-debt-in-company-liquidation/  (slug=how-to-prove-your-debt-in-company-liquidation)
+  https://www.companydebt.com/liquidation/insolvency-checklist/  (slug=insolvency-checklist)
+  https://www.companydebt.com/liquidation/insolvency-myths-debunked/  (slug=insolvency-myths-debunked)
+  https://www.companydebt.com/liquidation/insolvency-vs-bankruptcy/  (slug=insolvency-vs-bankruptcy)
+  https://www.companydebt.com/liquidation/intellectual-property-and-trading-assets-in-liquidation/  (slug=intellectual-property-and-trading-assets-in-liquidation)
+  https://www.companydebt.com/liquidation/leases-and-contracts-in-liquidation/  (slug=leases-and-contracts-in-liquidation)
+  https://www.companydebt.com/liquidation/liquidating-a-charity-or-non-profit/  (slug=liquidating-a-charity-or-non-profit)
+  https://www.companydebt.com/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/  (slug=liquidating-a-company-with-no-assets-or-bank-account-uk)
+  https://www.companydebt.com/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/  (slug=liquidating-a-group-company-or-holding-company-in-the-uk)
+  https://www.companydebt.com/liquidation/liquidating-a-limited-liability-partnership/  (slug=liquidating-a-limited-liability-partnership)
+  https://www.companydebt.com/liquidation/liquidation-deadlines-and-time-limits/  (slug=liquidation-deadlines-and-time-limits)
+  https://www.companydebt.com/liquidation/liquidation-vs-dissolution-strike-off/  (slug=liquidation-vs-dissolution-strike-off)
+  https://www.companydebt.com/liquidation/liquidators-powers-and-duties/  (slug=liquidators-powers-and-duties)
+  https://www.companydebt.com/liquidation/list-of-liquidation-documents/  (slug=list-of-liquidation-documents)
+  https://www.companydebt.com/liquidation/members-voluntary-liquidation/  (slug=members-voluntary-liquidation)
+  https://www.companydebt.com/liquidation/paying-staff-but-not-hmrc-before-liquidation/  (slug=paying-staff-but-not-hmrc-before-liquidation)
+  https://www.companydebt.com/liquidation/redundancy-payments-for-directors-in-an-mvl/  (slug=redundancy-payments-for-directors-in-an-mvl)
+  https://www.companydebt.com/liquidation/seek-insolvency-advice-before-missing-payments/  (slug=seek-insolvency-advice-before-missing-payments)
+  https://www.companydebt.com/liquidation/should-i-close-my-company-or-try-to-save-it/  (slug=should-i-close-my-company-or-try-to-save-it)
+  https://www.companydebt.com/liquidation/timeline/  (slug=timeline)
+  https://www.companydebt.com/liquidation/uk-insolvency-flowchart/  (slug=uk-insolvency-flowchart)
+  https://www.companydebt.com/liquidation/uk-insolvency-glossary/  (slug=uk-insolvency-glossary)
+  https://www.companydebt.com/liquidation/voluntary-liquidation/  (slug=voluntary-liquidation)
+  https://www.companydebt.com/liquidation/voluntary-vs-compulsory-liquidation/  (slug=voluntary-vs-compulsory-liquidation)
+  https://www.companydebt.com/liquidation/what-happens-after-company-liquidation/  (slug=what-happens-after-company-liquidation)
+  https://www.companydebt.com/liquidation/what-happens-if-a-creditor-takes-me-to-court/  (slug=what-happens-if-a-creditor-takes-me-to-court)
+  https://www.companydebt.com/liquidation/what-happens-if-a-director-hides-company-assets/  (slug=what-happens-if-a-director-hides-company-assets)
+  https://www.companydebt.com/liquidation/what-happens-if-a-director-resigns-before-liquidation/  (slug=what-happens-if-a-director-resigns-before-liquidation)
+  https://www.companydebt.com/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/  (slug=what-happens-if-a-director-transfers-assets-before-insolvency)
+  https://www.companydebt.com/liquidation/what-happens-if-i-stop-paying-company-debts/  (slug=what-happens-if-i-stop-paying-company-debts)
+  https://www.companydebt.com/liquidation/what-happens-to-directors-in-liquidation/  (slug=what-happens-to-directors-in-liquidation)
+  https://www.companydebt.com/liquidation/what-happens-to-employees/  (slug=what-happens-to-employees)
+  https://www.companydebt.com/liquidation/whats-the-risk-of-being-disqualified-as-a-director/  (slug=whats-the-risk-of-being-disqualified-as-a-director)
+  https://www.companydebt.com/liquidation/when-should-a-director-stop-trading/  (slug=when-should-a-director-stop-trading)
+  https://www.companydebt.com/liquidation/which-creditors-get-paid-first/  (slug=which-creditors-get-paid-first)
+  https://www.companydebt.com/liquidation/winding-up-petition-vs-compulsory-liquidation/  (slug=winding-up-petition-vs-compulsory-liquidation)
+  https://www.companydebt.com/receivership-mean-business/  (slug=receivership-mean-business)
+  https://www.companydebt.com/sample-letters/  (slug=sample-letters)
+  https://www.companydebt.com/sectors/automotive/  (slug=automotive)
+  https://www.companydebt.com/sectors/carehomes/  (slug=carehomes)
+  https://www.companydebt.com/sectors/charity/  (slug=charity)
+  https://www.companydebt.com/sectors/insolvency-rescue-fish-chip-sector/  (slug=insolvency-rescue-fish-chip-sector)
+  https://www.companydebt.com/sectors/insolvency-rescue-solutions-for-garden-centers/  (slug=insolvency-rescue-solutions-for-garden-centers)
+  https://www.companydebt.com/sectors/restaurants/  (slug=restaurants)
+  https://www.companydebt.com/services-to/asset-based-and-other-lenders/  (slug=asset-based-and-other-lenders)
+  https://www.companydebt.com/services-to/banks/  (slug=banks)
+  https://www.companydebt.com/services-to/creditors/  (slug=creditors)
+  https://www.companydebt.com/services-to/solicitors/  (slug=solicitors)
+  https://www.companydebt.com/testimonials/page/11/  (slug=11)
+  https://www.companydebt.com/what-is-a-pre-pack-administration/  (slug=what-is-a-pre-pack-administration)
+  https://www.companydebt.com/what-is-a-pre-pack-administration/advantages-and-disadvantages/  (slug=advantages-and-disadvantages)
+  https://www.companydebt.com/winding-up-petitions/  (slug=winding-up-petitions)
+
+## Per-page detail
+
+### https://www.companydebt.com/advice/how-to-legally-take-money-out-of-a-limited-company/
+    68189_how-to-legally-take-money-out-of-a-limited-company.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/advice/insolvency-advice-for-directors/
+    76323_insolvency-advice-for-directors.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/advice/the-risks-of-signing-a-personal-guarantee/
+    22785_the-risks-of-signing-a-personal-guarantee.html
+  INSERTED   [personal guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  SKIP(dup)  [guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+
+### https://www.companydebt.com/advice/unenforceable-personal-guarantee/
+    43522_unenforceable-personal-guarantee.html
+  INSERTED   [guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  SKIP(dup)  [personal guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [unenforceable personal guarantee] → https://www.companydebt.com/advice/unenforceable-personal-guarantee/#toc_3
+  SKIP(kw?)  [unenforceable personal guarantee] → https://www.companydebt.com/advice/unenforceable-personal-guarantee/#toc_1
+  SKIP(kw?)  [unenforceable personal guarantee] → https://www.companydebt.com/advice/unenforceable-personal-guarantee/#toc_0
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/advice/what-is-limited-liability/
+    21011_what-is-limited-liability.html
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/advice/writing-off-a-directors-loan-account/
+    55381_writing-off-a-directors-loan-account.html
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/bounce-back-loan-support-hub/bounce-back-loan-fraud/
+    46579_bounce-back-loan-fraud.html
+  INSERTED   [ceased trading] → https://www.companydebt.com/insolvency/cease-trading/
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/
+    53625_can-i-lose-my-house-with-a-bounce-back-loan.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/
+    43580_directors-liability-for-bounce-back-loans.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/
+    43745_dissolving-a-company-with-bounce-back-loan.html
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/bounce-back-loan-support-hub/what-happens-if-i-default/
+    43675_what-happens-if-i-default.html
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/care-home-insolvency/
+    77186_care-home-insolvency.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/charity-non-profit-insolvency/
+    77218_charity-non-profit-insolvency.html
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/company-cash-flow-problems/
+    26139_company-cash-flow-problems.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/company-cash-flow-problems/biggest-struggles-for-small-business-owners/
+    26902_biggest-struggles-for-small-business-owners.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/
+    67960_cant-afford-to-pay-suppliers-what-are-the-options.html
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-afford-to-repay-business-loan/
+    43917_cant-afford-to-repay-business-loan.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/
+    31237_cant-pay-a-commercial-lease-or-rent.html
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-pay-a-company-mortgage/
+    74372_cant-pay-a-company-mortgage.html
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-pay-business-energy/
+    58601_cant-pay-business-energy.html
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-pay-business-rates/
+    26347_cant-pay-business-rates.html
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-cash-flow-problems/cant-pay-staff-wages/
+    44055_cant-pay-staff-wages.html
+  INSERTED   [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(kw?)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+
+### https://www.companydebt.com/company-cash-flow-problems/challenge-a-statutory-demand/
+    74264_challenge-a-statutory-demand.html
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/company-cash-flow-problems/company-is-having-financial-difficulties/
+    68736_company-is-having-financial-difficulties.html
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/
+    67962_what-is-a-statutory-demand-against-a-company.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/
+    74382_when-employers-cant-afford-redundancy-payments.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(kw?)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+
+### https://www.companydebt.com/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/
+    67957_why-debt-is-not-always-a-bad-thing-for-your-business.html
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-rescue-recovery-hub/
+    77372_company-rescue-recovery-hub.html
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [phoenix company] → https://www.companydebt.com/advice/what-are-phoenix-companies/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/company-rescue-solutions/
+    7665_company-rescue-solutions.html
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/
+    79369_director-guarantees-in-a-cva.html
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  SKIP(dup)  [personal guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/
+    20380_making-employees-redundant-cva.html
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/
+    67535_pros-and-cons.html
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/
+    79387_use-a-cva-to-close-a-company.html
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [ceased trading] → https://www.companydebt.com/insolvency/cease-trading/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/
+    20428_vs-liquidation.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+
+### https://www.companydebt.com/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/
+    74390_when-a-cva-fails.html
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(ctx)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/company-rescue-solutions/partnership-voluntary-arrangements/
+    20435_partnership-voluntary-arrangements.html
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/construction-insolvency/
+    77157_construction-insolvency.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/debt-creditor-pressure-hub/
+    77146_debt-creditor-pressure-hub.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/director-protection-hub/
+    77396_director-protection-hub.html
+  INSERTED   [personal guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  SKIP(dup)  [guarantee insurance] → https://www.companydebt.com/advice/personal-guarantee-insurance/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(kw?)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(kw?)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/energy-provider-insolvency/
+    77181_energy-provider-insolvency.html
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/hmrc/
+    67809_hmrc.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/hmrc/accelerated-payment-notices-apn/
+    67828_accelerated-payment-notices-apn.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/can-hmrc-shut-down-my-business/
+    79580_can-hmrc-shut-down-my-business.html
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/controlled-goods-agreement/
+    12958_controlled-goods-agreement.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/distraint-order-notice/
+    10930_distraint-order-notice.html
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/hmrc/hmrc-compliance-checks/
+    11193_hmrc-compliance-checks.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/hmrc-debt-enforcement-hub/
+    77205_hmrc-debt-enforcement-hub.html
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/hmrc/hmrc-enforcement-action/
+    77162_hmrc-enforcement-action.html
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/hmrc/hmrc-threatening-letters/
+    8350_hmrc-threatening-letters.html
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/hmrc/joint-and-several-liability-for-unpaid-vat/
+    11516_joint-and-several-liability-for-unpaid-vat.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/hmrc/notice-of-enforcement/
+    11644_notice-of-enforcement.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/hmrc/pay-hmrc-or-suppliers-first/
+    79498_pay-hmrc-or-suppliers-first.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(kw?)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+
+### https://www.companydebt.com/hmrc/personal-liability-notices/
+    10562_personal-liability-notices.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/tax-penalties/
+    14775_tax-penalties.html
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/hmrc/understanding-hmrc-debt-collection/
+    13029_understanding-hmrc-debt-collection.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/
+    79563_what-happens-if-hmrc-freezes-your-business-bank-account.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/
+    79596_what-happens-if-hmrc-rejects-your-time-to-pay-arrangement.html
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/
+    79571_what-happens-if-hmrc-sends-bailiffs-to-a-business.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hmrc/what-happens-if-you-ignore-hmrc-letters/
+    79588_what-happens-if-you-ignore-hmrc-letters.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/hospitality-restaurant-insolvency/
+    77216_hospitality-restaurant-insolvency.html
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/insolvency-news-commentary/
+    77693_insolvency-news-commentary.html
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [uk insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_0
+  SKIP(ctx)  [insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_1
+  SKIP(ctx)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [uk insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_1
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_0
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/antecedent-transactions/
+    67747_antecedent-transactions.html
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+
+### https://www.companydebt.com/insolvency/business-recovery-services/
+    68130_business-recovery-services.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/insolvency/cease-trading/
+    26279_cease-trading.html
+  SKIP(kw?)  [what does ceased trading mean] → https://www.companydebt.com/insolvency/cease-trading/#toc_0
+  SKIP(kw?)  [what does ceased trading mean] → https://www.companydebt.com/insolvency/cease-trading/#toc_1
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/creditor-negotiations/
+    68134_creditor-negotiations.html
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/creditors-meeting/
+    49618_creditors-meeting.html
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/insolvency/dealing-with-creditor-pressure/
+    68101_dealing-with-creditor-pressure.html
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/insolvency/find-a-liquidator-near-me/
+    52808_find-a-liquidator-near-me.html
+  INSERTED   [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/how-to-reduce-insolvency-risk/
+    68108_how-to-reduce-insolvency-risk.html
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/how-to-save-a-struggling-business/
+    68117_how-to-save-a-struggling-business.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/insolvency/insolvency-act-1986/
+    47772_insolvency-act-1986.html
+  SKIP(kw?)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/insolvency/insolvency-test/
+    13600_insolvency-test.html
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/insolvency/insolvent-company-investigations/
+    68387_insolvent-company-investigations.html
+  SKIP(ctx)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/insolvency/insolvent-company-owes-me-money/
+    22277_insolvent-company-owes-me-money.html
+  SKIP(ctx)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/insolvency/lpa-receivership/
+    29543_lpa-receivership.html
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/insolvency/personally-liabilty-of-company-secretary/
+    28545_personally-liabilty-of-company-secretary.html
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+    13766_preferential-non-preferential-creditors.html
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+    70501_preferential-payments-during-insolvency.html
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/rescue-your-business-from-insolvency/
+    68115_rescue-your-business-from-insolvency.html
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/insolvency/retail-industry-insolvency-trends/
+    20268_retail-industry-insolvency-trends.html
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+    74891_secured-vs-unsecured-creditors.html
+  SKIP(ctx)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+
+### https://www.companydebt.com/insolvency/what-happens-if-a-company-cannot-pay-its-debts/
+    42739_what-happens-if-a-company-cannot-pay-its-debts.html
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  INSERTED   [phoenix company] → https://www.companydebt.com/advice/what-are-phoenix-companies/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/insolvency/what-is-a-freezing-order-or-injunction/
+    24434_what-is-a-freezing-order-or-injunction.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/what-is-a-high-court-writ/
+    39500_what-is-a-high-court-writ.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(kw?)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/insolvency/what-is-an-individual-voluntary-arrangement/
+    16662_what-is-an-individual-voluntary-arrangement.html
+  SKIP(kw?)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(kw?)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/insolvency/what-to-do-about-customer-insolvency/
+    68111_what-to-do-about-customer-insolvency.html
+  SKIP(kw?)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-payments-during-insolvency/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [preferential creditors] → https://www.companydebt.com/insolvency/preferential-non-preferential-creditors/
+
+### https://www.companydebt.com/manufacturing-insolvency/
+    77207_manufacturing-insolvency.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+
+### https://www.companydebt.com/mental-health-debt-stress-support/
+    77681_mental-health-debt-stress-support.html
+  SKIP(ctx)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+
+### https://www.companydebt.com/professional-services-insolvency/
+    77175_professional-services-insolvency.html
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [corporate insolvencies] → https://www.companydebt.com/uk-insolvency-statistics/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+
+### https://www.companydebt.com/sample-letters/cease-trading-template/
+    53187_cease-trading-template.html
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [ceased trading] → https://www.companydebt.com/insolvency/cease-trading/
+  SKIP(dup)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+
+### https://www.companydebt.com/sample-letters/hold-action-on-my-account/
+    53158_hold-action-on-my-account.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sample-letters/i-cannot-afford-to-repay-my-debt/
+    53166_i-cannot-afford-to-repay-my-debt.html
+  SKIP(ctx)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sample-letters/i-have-no-knowledge-of-this-debt/
+    53159_i-have-no-knowledge-of-this-debt.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sample-letters/i-need-more-information-about-this-debt/
+    53185_i-need-more-information-about-this-debt.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sample-letters/request-a-reduced-monthly-payment/
+    53174_request-a-reduced-monthly-payment.html
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(kw?)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sample-letters/write-off-my-debt/
+    53183_write-off-my-debt.html
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+
+### https://www.companydebt.com/sector-specific-insolvency/
+    77401_sector-specific-insolvency.html
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+
+### https://www.companydebt.com/transport-haulage-insolvency/
+    77161_transport-haulage-insolvency.html
+  SKIP(ctx)  [misfeasance] → https://www.companydebt.com/advice/misfeasance/
+  SKIP(ctx)  [limited liability] → https://www.companydebt.com/advice/what-is-limited-liability/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/uk-insolvency-statistics/
+    77399_uk-insolvency-statistics.html
+  SKIP(ctx)  [insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_1
+  SKIP(ctx)  [uk insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_0
+  SKIP(ctx)  [companies act 2006] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(dup)  [companies act] → https://www.companydebt.com/advice/what-is-the-companies-act-2006/
+  SKIP(ctx)  [the insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(dup)  [insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_0
+  SKIP(dup)  [uk insolvency statistics] → https://www.companydebt.com/uk-insolvency-statistics/#toc_1
+  SKIP(dup)  [insolvency service] → https://www.companydebt.com/insolvency/what-is-the-insolvency-service/
+  SKIP(ctx)  [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  SKIP(ctx)  [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+### https://www.companydebt.com/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/
+    67438_dealing-with-an-hmrc-winding-up-petition.html
+  INSERTED   [unsecured creditors] → https://www.companydebt.com/insolvency/secured-vs-unsecured-creditors/
+  INSERTED   [creditors] → https://www.companydebt.com/insolvency/what-is-a-creditor/
+  INSERTED   [insolvency act 1986] → https://www.companydebt.com/insolvency/insolvency-act-1986/
+
+## Slugs to publish
+  how-to-legally-take-money-out-of-a-limited-company
+  insolvency-advice-for-directors
+  the-risks-of-signing-a-personal-guarantee
+  unenforceable-personal-guarantee
+  what-is-limited-liability
+  writing-off-a-directors-loan-account
+  bounce-back-loan-fraud
+  can-i-lose-my-house-with-a-bounce-back-loan
+  directors-liability-for-bounce-back-loans
+  dissolving-a-company-with-bounce-back-loan
+  what-happens-if-i-default
+  care-home-insolvency
+  company-cash-flow-problems
+  biggest-struggles-for-small-business-owners
+  cant-afford-to-pay-suppliers-what-are-the-options
+  cant-afford-to-repay-business-loan
+  cant-pay-a-company-mortgage
+  cant-pay-business-energy
+  cant-pay-business-rates
+  cant-pay-staff-wages
+  challenge-a-statutory-demand
+  company-is-having-financial-difficulties
+  what-is-a-statutory-demand-against-a-company
+  when-employers-cant-afford-redundancy-payments
+  why-debt-is-not-always-a-bad-thing-for-your-business
+  company-rescue-recovery-hub
+  company-rescue-solutions
+  debt-creditor-pressure-hub
+  director-protection-hub
+  hmrc
+  accelerated-payment-notices-apn
+  can-hmrc-shut-down-my-business
+  controlled-goods-agreement
+  hmrc-compliance-checks
+  hmrc-debt-enforcement-hub
+  hmrc-enforcement-action
+  hmrc-threatening-letters
+  joint-and-several-liability-for-unpaid-vat
+  notice-of-enforcement
+  pay-hmrc-or-suppliers-first
+  personal-liability-notices
+  tax-penalties
+  understanding-hmrc-debt-collection
+  what-happens-if-hmrc-freezes-your-business-bank-account
+  what-happens-if-hmrc-rejects-your-time-to-pay-arrangement
+  what-happens-if-hmrc-sends-bailiffs-to-a-business
+  what-happens-if-you-ignore-hmrc-letters
+  hospitality-restaurant-insolvency
+  antecedent-transactions
+  cease-trading
+  creditor-negotiations
+  creditors-meeting
+  dealing-with-creditor-pressure
+  find-a-liquidator-near-me
+  how-to-reduce-insolvency-risk
+  insolvency-act-1986
+  insolvency-test
+  personally-liabilty-of-company-secretary
+  rescue-your-business-from-insolvency
+  retail-industry-insolvency-trends
+  what-happens-if-a-company-cannot-pay-its-debts
+  what-is-a-freezing-order-or-injunction
+  what-is-a-high-court-writ
+  what-to-do-about-customer-insolvency
+  manufacturing-insolvency
+  request-a-reduced-monthly-payment
+  sector-specific-insolvency
+  dealing-with-an-hmrc-winding-up-petition

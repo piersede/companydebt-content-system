@@ -445,13 +445,27 @@ function runQualityCheck(pageOrId) {
     ? pageOrId
     : (findRegistryItemSafe(pageOrId) || { page_id: pageOrId });
 
-  // WP-post mode: gate via scripts/article_audit.py against drafts/<post_id>_<slug>.html.
-  if (page.mode === 'wp_post') {
+  // Draft-based pages are gated by scripts/article_audit.py against
+  // drafts/<wpId>_<slug>.html — the checker that reads the real article body.
+  // This covers WP-post mode AND editorial insolvency page types (definition,
+  // data_reference, process_guide, hub), whose content lives in the draft file,
+  // not the slim page config. The legacy quality_check.py reads prose from the
+  // config and so falsely passes those pages (it sees only the title).
+  const EDITORIAL_DRAFT_TYPES = new Set(['definition', 'data_reference', 'process_guide', 'hub']);
+  let pageType = page.page_type;
+  let wpId = page.wp_post_id || page.wp_page_id;
+  try {
+    const rt = resolveRuntimeContext(page, 'draft');
+    pageType = pageType || rt.page_type;
+    wpId = wpId || rt.wp_page_id || rt.wp_post_id;
+  } catch (_e) { /* fall through with whatever the page object already has */ }
+
+  if ((page.mode === 'wp_post' || EDITORIAL_DRAFT_TYPES.has(pageType)) && wpId) {
     const result = spawnPython(
       [
         path.join('scripts', 'article_audit.py'),
         '--drafts', 'drafts',
-        '--slug', String(page.wp_post_id),
+        '--slug', String(wpId),
         '--gate-format',
       ],
       { timeout: 240000 },
@@ -465,7 +479,7 @@ function runQualityCheck(pageOrId) {
     return { exitCode, output };
   }
 
-  // cc_builder mode (legacy): scripts/quality_check.py.
+  // cc_builder mode (legacy assembler pages): scripts/quality_check.py.
   const result = spawnPython([path.join('scripts', 'quality_check.py'), '--page', String(page.page_id)], { timeout: 240000 });
   if (result.error && ['ENOENT', 'EPERM'].includes(result.error.code)) {
     return { exitCode: 1, output: 'No Python runtime found. Set PYTHON_BIN or install a Python executable on PATH.' };

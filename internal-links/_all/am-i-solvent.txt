@@ -1,0 +1,338 @@
+<!-- TITLE: Am I Solvent? Solvency Tests Explained for UK Businesses -->
+<!-- POST ID: 76904 / TYPE: pages / AUTHOR: 34 / FM: 70140 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/liquidation/am-i-solvent/ -->
+
+<!-- wp:paragraph -->
+<p>Two statutory tests decide whether a UK limited company is solvent. Fail either one and you're insolvent in the eyes of the law. That shifts what you're allowed to do next. It also changes what you could be held personally liable for if you don't change course.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The cash-flow test asks whether you can pay your debts as they fall due. The balance-sheet test asks whether your liabilities exceed your assets once contingent and prospective debts are counted in. Both come from Section 123 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows sets out how to run each test properly, where directors most often get them wrong, and what to do the same day if either one fails. It does not cover sole trader or partnership insolvency, where the tests work differently. For the broader context around closing, rescuing, or restructuring a UK limited company, see our <a href="/liquidation/">liquidation hub</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Two things worth knowing before you start:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>You only need to fail one test to be insolvent. Plenty of companies are cash-flow insolvent but balance-sheet solvent, or the reverse. Both matter.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Courts apply these tests retrospectively. If something goes wrong later, a liquidator will look back at what you knew and when. The test you run today is the evidence trail that protects you.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:group {"className":"cd-orientation-block"} -->
+<div class="wp-block-group cd-orientation-block">
+  <p class="cd-orientation-block__label">Who This Page Is For</p>
+  <!-- wp:list -->
+  <ul>
+    <li>Directors of UK limited companies worried their business may not be able to pay its debts</li>
+    <li>Directors who have received a warning from HMRC, a supplier, or their bank and want to understand their legal position</li>
+    <li>Directors reviewing management accounts that show a deteriorating net asset position</li>
+  </ul>
+  <!-- /wp:list -->
+  <p><strong>Not for:</strong> Sole traders, partnerships, or LLPs. The solvency tests work differently for those structures and are not covered here.</p>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Quick answer if you're in a hurry</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Here's what we tell directors calling us today:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>If the cash-flow test fails:</strong> stop incurring new credit, stop preferential payments, document the position, and speak to a licensed IP this week.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>If the balance-sheet test fails:</strong> the same stops apply. You also need to assess whether there's a credible recovery path, because the test asks about the point of no return, not a single snapshot.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>If both fail, or you're not sure:</strong> call 0800 074 6757. We will walk you through the position and tell you whether the voluntary window is still open.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Cash-Flow Test: Can You Pay Your Debts as They Fall Due?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The cash-flow test sits in Section 123(1)(e) of the Insolvency Act 1986. The statutory wording is simple: a company is insolvent if it "is unable to pay its debts as they fall due."</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>"As they fall due" is the part most directors get wrong, and we spend a lot of first calls pulling directors out of the common misreading. The test isn't about your bank balance today. It's about whether you can meet each obligation on the date it becomes payable, over a realistic horizon.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here's what that means in practice. Look at the next 13 weeks. List every committed outflow: PAYE, VAT, supplier invoices on their agreed terms, rent, payroll, loan repayments, and any tax deadlines.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Then list your expected inflows: realistic sales cash, collected receivables with proper aging applied (not the debtor who owes you £40,000 from 2023), and any committed facility drawdowns.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If at any point in that 13-week window the cumulative position goes negative, you're cash-flow insolvent from that point onwards. It doesn't matter that the bank account is positive today.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Where this goes wrong in practice: directors treat their oldest receivables as cash. They build forecasts assuming HMRC will accept a Time to Pay plan they haven't actually agreed. They count overdraft headroom that the bank is quietly reviewing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Each of these is the kind of mistake a liquidator will flag later. We see it most often when cash forecasts are built in a hurry and never stress-tested against a single missed HMRC deadline.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Balance-Sheet Test: Do Your Liabilities Exceed Your Assets?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The balance-sheet test sits in Section 123(2) of the Insolvency Act 1986. The wording is "the value of the company's assets is less than the amount of its liabilities, taking into account its contingent and prospective liabilities."</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The "contingent and prospective" part is what most directors ignore. We see this constantly: a director shows us management accounts that look fine, and we ask about the dilapidations on the lease. Or the BBL that hasn't started repaying. Or the lawsuit that's working its way through.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Each of those is a contingent or prospective liability that has to be counted on the balance-sheet test, even if it isn't on the management accounts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In <em>BNY Corporate Trustee Services Ltd v Eurosail-UK 2007-3BL Plc</em> [2013] UKSC 28, the Supreme Court refined how this test is applied. The question is not just a snapshot comparison of assets and liabilities at a moment in time. It is whether the company has reached the point where it cannot reasonably be expected to meet its liabilities as they fall due.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That sets a higher bar than mechanical balance-sheet arithmetic. A negative net asset position is not, on its own, conclusive proof of insolvency under this test. But it is a strong indicator, and it requires you to evidence why you believe the company can still meet its liabilities.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What to actually do: take your last management accounts. Add in every contingent liability you would tell an honest valuer about. Remove any asset that depends on the business continuing to trade (goodwill, work in progress that requires more spend to bill out, debtor balances older than 90 days without firm payment plans).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Compare. If liabilities materially exceed assets and the trading position offers no clear path back, the balance-sheet test has likely failed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why These Tests Matter: The Director Duty Shift</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reason both tests matter is that they trigger a shift in directors' duties, and that shift is where personal liability begins.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Under <em>BTI 2014 LLC v Sequana SA</em> [2022] UKSC 25, the Supreme Court confirmed that when directors know or ought to know that a company is insolvent or that insolvent liquidation or administration is probable, the duty under Section 172 of the Companies Act 2006 shifts toward considering the interests of creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is not a future risk. It applies the moment either test fails. From that point, decisions that benefit shareholders or directors at the expense of creditors are vulnerable to challenge.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The most common consequences are wrongful trading liability under Section 214 (you continued trading after the point of no return and creditor losses got worse), preferences under Section 239 (you paid one creditor ahead of others), and misfeasance under Section 212 (you breached a duty owed to the company).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>All three are personal claims. All three can result in you having to repay money to the liquidator out of your own assets. The tests aren't theoretical, and getting them wrong has direct financial consequences.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Warning Signs That Mean You Should Run the Solvency Tests Today</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You should run both tests, formally, when any of these signals appear:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>HMRC has rejected a Time to Pay request</strong>, issued a personal liability notice, or moved to enforcement.</li>
+<li><strong>A statutory demand for £750 or more has been served</strong> and not paid within 21 days. This is itself one of the statutory tests for insolvency under Section 123(1)(a).</li>
+<li><strong>A judgment has been entered and execution attempted unsuccessfully.</strong> Section 123(1)(b) treats this as proof of insolvency.</li>
+<li><strong>Suppliers are putting you on stop or pro forma terms.</strong> Trade-credit data flows fast through B2B credit-reporting agencies.</li>
+<li><strong>Your bank facility is being reviewed, reduced, or non-renewed.</strong> Banks rarely tell you everything they know about your file.</li>
+<li><strong>You're paying staff or HMRC late on a recurring basis.</strong> This is a cash-flow test failure showing up in real time.</li>
+<li><strong>A contingent liability has crystallised or moved closer to crystallising.</strong> Pending litigation, an HMRC enquiry, a dilapidations notice on a lease.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If any of these are present, the tests aren't optional. Running them and documenting the result is part of your defence file. This is also the point to <a href="/liquidation/seek-insolvency-advice-before-missing-payments/">take advice before missing payments</a>, while the voluntary options are still open to you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What to Do If Either Solvency Test Fails</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If either test fails, here's the order of operations we walk directors through:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-process-steps"} -->
+<div class="wp-block-group cd-process-steps">
+  <!-- wp:list {"ordered":true} -->
+  <ol class="cd-process-steps__list">
+    <li class="cd-process-steps__item">Stop making any preferential payments. That includes paying yourself or other directors any amounts beyond ordinary salary, paying connected suppliers ahead of HMRC, or settling overdrawn director's loan accounts.</li>
+    <li class="cd-process-steps__item">Stop incurring credit you have no realistic prospect of repaying. Continuing to take supplier credit, customer deposits, or HMRC liabilities you cannot pay is the structural ingredient of a wrongful trading claim.</li>
+    <li class="cd-process-steps__item">Document the position. Save the cash-flow forecast, the balance-sheet calculation, the warning signs, and the date you became aware. This becomes the contemporaneous record of what you knew and when.</li>
+    <li class="cd-process-steps__item">Take licensed insolvency advice within days, not weeks. The IP identifies which route fits your situation (CVA, administration, or CVL) based on whether the business has a viable future and what creditors are likely to accept.</li>
+    <li class="cd-process-steps__item">You instruct the IP, the chosen process begins, and the date of first advice is documented. That date becomes the cornerstone of your conduct defence if the liquidator investigates later.</li>
+  </ol>
+  <!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens If You Ignore Solvency Test Failures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Where the company is insolvent and the directors decide to close it themselves, the next step is deciding between the two <a href="/liquidation/creditors-voluntary-liquidation/">voluntary liquidation routes</a>, which depend on whether the company is solvent or insolvent.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The single most common pattern we see is directors who ran the tests, found them failing, and kept going. Six months later the company enters compulsory liquidation, the Official Receiver investigates, and the directors face a wrongful trading claim covering the period between the test failure and the liquidation date.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The contribution order is calculated as the increase in the deficiency to creditors during that period. We have seen orders of £20,000, £200,000, and (in a recent case across our network) £1.4 million. The amount is whatever the court considers fair.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Disqualification proceedings under the Company Directors Disqualification Act 1986 typically run alongside. A 5-to-15 year ban from acting as a director is the standard outcome for unfit conduct findings.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>None of this is theoretical. It is what happens when the tests are run and ignored. The same tests run, documented, and acted on protect you. Run, documented, and ignored, they become the evidence used against you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:ub/call-to-action-block {"blockID":"a1b2c3d4-76904-pre-faq","ub_call_to_action_headline_text":"\u003cstrong\u003eGet a Quick and Easy Liquidation Quote\u003c/strong\u003e","ub_cta_content_text":"Talk to a licensed IP about your solvency position before the duty shift bites\u003cbr\u003e\u003cstrong\u003e\u003cbr\u003e✓ 100% Confidential | ✓ No Obligation | ✓ Licensed and Regulated Advice\u003c/strong\u003e","ub_cta_button_text":"Get a Quote","headColor":"#002856","contentFontSize":17,"buttonColor":"#ff6600","buttonTextColor":"#ffffff","buttonWidth":300,"ctaBackgroundColor":"#e7f6fd","ctaBorderColor":"#ffffff","url":"https://comdebstage.wpengine.com/quick-quote/","padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}} /-->
+
+<!-- wp:html -->
+<h2 class="wp-block-heading">FAQs on UK Business Solvency Tests</h2>
+
+<div class="wp-block-ub-content-toggle wp-block-ub-content-toggle-block" id="ub-content-toggle-block-faq-76904" data-mobilecollapse="false" data-desktopcollapse="true" data-preventcollapse="false" data-showonlyone="false">
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-0">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-0-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>What's the legal definition of insolvency in the UK?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-0-faq-76904">
+<p>Section 123 of the Insolvency Act 1986 sets out four ways a company can be found insolvent: an unpaid statutory demand for £750 or more, an unsatisfied execution of a judgment, inability to pay debts as they fall due, or liabilities exceeding assets including contingent and prospective liabilities. You only need to fall within one for the company to be legally insolvent.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-1">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-1-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>Can I be solvent on one test and insolvent on the other?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-1-faq-76904">
+<p>Yes, and it's common. A business with strong long-term contracts but a short-term cash shortage can be balance-sheet solvent but cash-flow insolvent. A business with healthy cash but a significant contingent liability can be the reverse. Either situation makes the company legally insolvent. You don't have to fail both tests.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-2">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-2-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>How does a court decide if we were insolvent at a particular date?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-2-faq-76904">
+<p>A court, usually in the context of wrongful trading or misfeasance proceedings, looks at the evidence available to the directors at the relevant time. That means board minutes, management accounts, cash-flow forecasts, creditor correspondence, and any professional advice received. The documentation is your contemporaneous evidence of what you knew and when.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-3">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-3-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>When did our duty to creditors actually change?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-3-faq-76904">
+<p>Under <em>BTI v Sequana</em> [2022] UKSC 25, the duty to consider creditors' interests arises when the directors know or ought to know that the company is insolvent, bordering on insolvency, or that insolvent liquidation or administration is probable. The duty doesn't wait for certainty. "Probable" is the threshold.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-4">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-4-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>Do contingent and prospective liabilities count on the balance-sheet test?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-4-faq-76904">
+<p>Yes, and this is where directors most often go wrong. Section 123(2) explicitly requires contingent and prospective liabilities to be included.</p>
+<p>The Supreme Court in <em>Eurosail</em> held that the balance-sheet test asks whether the company has reached the point where it cannot reasonably be expected to meet its liabilities. Pending litigation, future lease obligations, dilapidations, BBL repayments that haven't started, and similar items all need to be counted.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-5">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-5-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>How often should we run these tests?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-5-faq-76904">
+<p>Monthly is the minimum during any period of financial stress. Quarterly is acceptable when the business is stable. The tests should be run more often if any warning signs are present: missed payments, supplier withdrawals, HMRC pressure, facility changes. The point isn't the frequency. It's that running them creates the evidence trail that protects you.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-6">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-6-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>What if I think we're insolvent but our accountant says we're fine?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-6-faq-76904">
+<p>Accountants and insolvency practitioners apply different tests. An accountant may be looking at going-concern assumptions for audit purposes, which is a different question from the statutory insolvency tests. If there's any disagreement, get an opinion from a licensed IP. The cost of a one-hour consultation is tiny compared to the cost of getting this wrong.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-7">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-7-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>Can I be personally liable even if I didn't realise we were insolvent?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-7-faq-76904">
+<p>Yes. The test in Section 214 isn't just what you actually knew, but what a reasonably diligent director in your position should have known. Ignorance isn't a defence if the warning signs were there and you didn't act on them. The documentation matters: if you can show you were monitoring the position and took advice when it deteriorated, you have a defence.</p>
+	</div>
+</div>
+<div class="wp-block-ub-content-toggle-accordion" style="border-color: #f1f1f1" id="ub-content-toggle-panel-block-faq-76904-8">
+	<div class="wp-block-ub-content-toggle-accordion-title-wrap" style="background-color: #f1f1f1" aria-controls="ub-content-toggle-panel-8-faq-76904">
+		<p class="wp-block-ub-content-toggle-accordion-title ub-content-toggle-title-faq-76904" style="color: #000000"><strong>Does insolvency always mean liquidation?</strong></p>
+		<div class="wp-block-ub-content-toggle-accordion-toggle-wrap right" style="color: #000000"><span class="wp-block-ub-content-toggle-accordion-state-indicator wp-block-ub-chevron-down"></span></div>
+	</div>
+	<div role="region" aria-expanded="false" class="wp-block-ub-content-toggle-accordion-content-wrap ub-hide" id="ub-content-toggle-panel-8-faq-76904">
+<p>No. A company that fails one or both tests has formal options: a Company Voluntary Arrangement may allow it to restructure debts and continue trading; administration may rescue the underlying business; a pre-pack can preserve value by selling quickly out of administration. Liquidation is one of several routes.</p>
+	</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"faq-asset-loader-76904","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>Company Debt is a firm of licensed insolvency practitioners regulated by the Insolvency Practitioners Association. If you instruct us, we act as your IP and are paid either from company assets or from director funding. This page is written from that position and isn't independent legal advice.</p>
+<p>The statutory tests described here come directly from Section 123 of the Insolvency Act 1986. The case law references are to <em>BNY Corporate Trustee Services v Eurosail-UK 2007-3BL PLC</em> [2013] UKSC 28 and <em>BTI 2014 LLC v Sequana SA</em> [2022] UKSC 25, both Supreme Court decisions on how the tests apply in practice.</p>
+<p>This article is general guidance for UK limited companies. Last reviewed by Chris Andersen, Licensed Insolvency Practitioner (IPA regulated), April 2026.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; Section 123 sets the statutory cash-flow and balance-sheet tests; Section 214 imposes wrongful trading liability once directors knew or ought to have known insolvent liquidation was unavoidable</a> - legislation.gov.uk</li>
+<li><a href="https://www.supremecourt.uk/cases/uksc-2019-0046.html"><strong>BTI 2014 LLC v Sequana SA [2022] UKSC 25</strong> &mdash; Supreme Court ruling on when the directors' duty shifts to consider creditor interests as insolvency approaches</a> - supremecourt.uk</li>
+<li><a href="https://www.supremecourt.uk/cases/uksc-2011-0199.html"><strong>BNY Corporate Trustee Services v Eurosail [2013] UKSC 28</strong> &mdash; leading authority defining the balance-sheet test as a "point of no return" rather than a single snapshot</a> - supremecourt.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; codifies directors' general duties under sections 171&ndash;177, including the duty to promote the company's success that pivots toward creditors on insolvency</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/guidance/insolvency-and-the-directors-of-a-limited-company"><strong>Insolvency Service: guidance for directors</strong> &mdash; official explanation of director responsibilities, conduct review, and reporting obligations once a company becomes insolvent</a> - gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; framework under which directors of insolvent companies face conduct review and potential disqualification of two to fifteen years</a> - legislation.gov.uk</li>
+<li><a href="https://insolvency-practitioners.org.uk/"><strong>Insolvency Practitioners Association</strong> &mdash; recognised professional body and public register for verifying that an IP holds a current licence before instructing</a> - insolvency-practitioners.org.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

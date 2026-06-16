@@ -1,0 +1,1607 @@
+{
+  "/business-insolvency/articles-insights-hub/": {
+    "id": 77694,
+    "slug": "articles-insights-hub",
+    "type": "post"
+  },
+  "/articles/managing-debt-related-stress/": {
+    "id": 67898,
+    "slug": "managing-debt-related-stress",
+    "type": "post"
+  },
+  "/articles/debt-charities-for-consumers/": {
+    "id": 67892,
+    "slug": "debt-charities-for-consumers",
+    "type": "post"
+  },
+  "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/": {
+    "id": 57661,
+    "slug": "35-of-charities-fear-insolvency-due-to-cost-of-living-crisis",
+    "type": "post"
+  },
+  "/sectors/insolvency-rescue-fish-chip-sector/": {
+    "id": 55751,
+    "slug": "insolvency-rescue-fish-chip-sector",
+    "type": "post"
+  },
+  "/sectors/insolvency-rescue-solutions-for-garden-centers/": {
+    "id": 52222,
+    "slug": "insolvency-rescue-solutions-for-garden-centers",
+    "type": "post"
+  },
+  "/services-to/creditors/": {
+    "id": 51087,
+    "slug": "creditors",
+    "type": "post"
+  },
+  "/services-to/asset-based-and-other-lenders/": {
+    "id": 50894,
+    "slug": "asset-based-and-other-lenders",
+    "type": "post"
+  },
+  "/services-to/banks/": {
+    "id": 50889,
+    "slug": "banks",
+    "type": "post"
+  },
+  "/services-to/solicitors/": {
+    "id": 50825,
+    "slug": "solicitors",
+    "type": "post"
+  },
+  "/services-to/accountants/": {
+    "id": 50710,
+    "slug": "accountants",
+    "type": "post"
+  },
+  "/sectors/property/": {
+    "id": 49810,
+    "slug": "property",
+    "type": "post"
+  },
+  "/sectors/manufacturing/": {
+    "id": 49831,
+    "slug": "manufacturing",
+    "type": "post"
+  },
+  "/sectors/professional-services/": {
+    "id": 49820,
+    "slug": "professional-services",
+    "type": "post"
+  },
+  "/sectors/leisure/": {
+    "id": 49839,
+    "slug": "leisure",
+    "type": "post"
+  },
+  "/sectors/dry-cleaning-laundry/": {
+    "id": 49849,
+    "slug": "dry-cleaning-laundry",
+    "type": "post"
+  },
+  "/sectors/hotels/": {
+    "id": 49856,
+    "slug": "hotels",
+    "type": "post"
+  },
+  "/sectors/haulage/": {
+    "id": 49866,
+    "slug": "haulage",
+    "type": "post"
+  },
+  "/sectors/gyms/": {
+    "id": 49873,
+    "slug": "gyms",
+    "type": "post"
+  },
+  "/sectors/events/": {
+    "id": 49880,
+    "slug": "events",
+    "type": "post"
+  },
+  "/sectors/entertainment/": {
+    "id": 49890,
+    "slug": "entertainment",
+    "type": "post"
+  },
+  "/sectors/energy/": {
+    "id": 49898,
+    "slug": "energy",
+    "type": "post"
+  },
+  "/sectors/schools/": {
+    "id": 49906,
+    "slug": "schools",
+    "type": "post"
+  },
+  "/sectors/travel/": {
+    "id": 49699,
+    "slug": "travel",
+    "type": "post"
+  },
+  "/sectors/taxi-companies/": {
+    "id": 49706,
+    "slug": "taxi-companies",
+    "type": "post"
+  },
+  "/sectors/retail/": {
+    "id": 49717,
+    "slug": "retail",
+    "type": "post"
+  },
+  "/sectors/restaurants/": {
+    "id": 49727,
+    "slug": "restaurants",
+    "type": "post"
+  },
+  "/sectors/recruitment/": {
+    "id": 49739,
+    "slug": "recruitment",
+    "type": "post"
+  },
+  "/sectors/construction/": {
+    "id": 49778,
+    "slug": "construction",
+    "type": "post"
+  },
+  "/sectors/cleaning-contractors/": {
+    "id": 49767,
+    "slug": "cleaning-contractors",
+    "type": "post"
+  },
+  "/sectors/childcare/": {
+    "id": 49694,
+    "slug": "childcare",
+    "type": "post"
+  },
+  "/sectors/charity/": {
+    "id": 49550,
+    "slug": "charity",
+    "type": "post"
+  },
+  "/sectors/automotive/": {
+    "id": 48758,
+    "slug": "automotive",
+    "type": "post"
+  },
+  "/articles/124-pints-to-save-the-pub/": {
+    "id": 45670,
+    "slug": "124-pints-to-save-the-pub",
+    "type": "post"
+  },
+  "/sectors/carehomes/": {
+    "id": 49488,
+    "slug": "carehomes",
+    "type": "post"
+  },
+  "/articles/can-heathrow-survive-covid-19/": {
+    "id": 44691,
+    "slug": "can-heathrow-survive-covid-19",
+    "type": "post"
+  },
+  "/case-studies/chinese-takeaway/": {
+    "id": 47451,
+    "slug": "chinese-takeaway",
+    "type": "post"
+  },
+  "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/": {
+    "id": 23214,
+    "slug": "the-orla-kiely-fashion-brand-shuts-up-shop",
+    "type": "post"
+  },
+  "/articles/pub-closures-in-the-uk/": {
+    "id": 24589,
+    "slug": "pub-closures-in-the-uk",
+    "type": "post"
+  },
+  "/articles/how-will-carillions-insolvency-effect-its-supply-chain/": {
+    "id": 20594,
+    "slug": "how-will-carillions-insolvency-effect-its-supply-chain",
+    "type": "post"
+  },
+  "/articles/paradise-papers/": {
+    "id": 20346,
+    "slug": "paradise-papers",
+    "type": "post"
+  },
+  "/articles/tescos-rated-worst-payer-uk-small-businesses/": {
+    "id": 13520,
+    "slug": "tescos-rated-worst-payer-uk-small-businesses",
+    "type": "post"
+  },
+  "/cookie-policy/": {
+    "id": 79808,
+    "slug": "cookie-policy",
+    "type": "page"
+  },
+  "/liquidation/can-a-supplier-force-my-company-into-liquidation/": {
+    "id": 79615,
+    "slug": "can-a-supplier-force-my-company-into-liquidation",
+    "type": "page"
+  },
+  "/liquidation/what-happens-if-a-creditor-takes-me-to-court/": {
+    "id": 79606,
+    "slug": "what-happens-if-a-creditor-takes-me-to-court",
+    "type": "page"
+  },
+  "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/": {
+    "id": 79596,
+    "slug": "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement",
+    "type": "page"
+  },
+  "/hmrc/what-happens-if-you-ignore-hmrc-letters/": {
+    "id": 79588,
+    "slug": "what-happens-if-you-ignore-hmrc-letters",
+    "type": "page"
+  },
+  "/hmrc/can-hmrc-shut-down-my-business/": {
+    "id": 79580,
+    "slug": "can-hmrc-shut-down-my-business",
+    "type": "page"
+  },
+  "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/": {
+    "id": 79571,
+    "slug": "what-happens-if-hmrc-sends-bailiffs-to-a-business",
+    "type": "page"
+  },
+  "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/": {
+    "id": 79563,
+    "slug": "what-happens-if-hmrc-freezes-your-business-bank-account",
+    "type": "page"
+  },
+  "/liquidation/can-directors-pay-themselves-before-liquidation/": {
+    "id": 79553,
+    "slug": "can-directors-pay-themselves-before-liquidation",
+    "type": "page"
+  },
+  "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/": {
+    "id": 79545,
+    "slug": "what-happens-if-a-director-transfers-assets-before-insolvency",
+    "type": "page"
+  },
+  "/liquidation/can-a-director-be-sued-personally-by-creditors/": {
+    "id": 79537,
+    "slug": "can-a-director-be-sued-personally-by-creditors",
+    "type": "page"
+  },
+  "/liquidation/what-happens-if-a-director-hides-company-assets/": {
+    "id": 79529,
+    "slug": "what-happens-if-a-director-hides-company-assets",
+    "type": "page"
+  },
+  "/liquidation/can-directors-go-to-prison-for-company-debt/": {
+    "id": 79515,
+    "slug": "can-directors-go-to-prison-for-company-debt",
+    "type": "page"
+  },
+  "/liquidation/what-happens-if-i-stop-paying-company-debts/": {
+    "id": 79507,
+    "slug": "what-happens-if-i-stop-paying-company-debts",
+    "type": "page"
+  },
+  "/hmrc/pay-hmrc-or-suppliers-first/": {
+    "id": 79498,
+    "slug": "pay-hmrc-or-suppliers-first",
+    "type": "page"
+  },
+  "/liquidation/seek-insolvency-advice-before-missing-payments/": {
+    "id": 79489,
+    "slug": "seek-insolvency-advice-before-missing-payments",
+    "type": "page"
+  },
+  "/liquidation/when-should-a-director-stop-trading/": {
+    "id": 79480,
+    "slug": "when-should-a-director-stop-trading",
+    "type": "page"
+  },
+  "/liquidation/should-i-close-my-company-or-try-to-save-it/": {
+    "id": 79472,
+    "slug": "should-i-close-my-company-or-try-to-save-it",
+    "type": "page"
+  },
+  "/liquidation/insolvency-myths-debunked/": {
+    "id": 79463,
+    "slug": "insolvency-myths-debunked",
+    "type": "page"
+  },
+  "/liquidation/insolvency-vs-bankruptcy/": {
+    "id": 79455,
+    "slug": "insolvency-vs-bankruptcy",
+    "type": "page"
+  },
+  "/liquidation/list-of-liquidation-documents/": {
+    "id": 79445,
+    "slug": "list-of-liquidation-documents",
+    "type": "page"
+  },
+  "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/": {
+    "id": 79436,
+    "slug": "directors-responsibilities-after-a-company-is-struck-off",
+    "type": "page"
+  },
+  "/liquidation/insolvency-checklist/": {
+    "id": 79423,
+    "slug": "insolvency-checklist",
+    "type": "page"
+  },
+  "/liquidation/uk-insolvency-flowchart/": {
+    "id": 79412,
+    "slug": "uk-insolvency-flowchart",
+    "type": "page"
+  },
+  "/liquidation/uk-insolvency-glossary/": {
+    "id": 79404,
+    "slug": "uk-insolvency-glossary",
+    "type": "page"
+  },
+  "/liquidation/director-conduct-review/": {
+    "id": 79396,
+    "slug": "director-conduct-review",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/": {
+    "id": 79387,
+    "slug": "use-a-cva-to-close-a-company",
+    "type": "page"
+  },
+  "/liquidation/business-bank-account-in-liquidation/": {
+    "id": 79379,
+    "slug": "business-bank-account-in-liquidation",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/": {
+    "id": 79369,
+    "slug": "director-guarantees-in-a-cva",
+    "type": "page"
+  },
+  "/liquidation/ccj-when-going-insolvent/": {
+    "id": 79360,
+    "slug": "ccj-when-going-insolvent",
+    "type": "page"
+  },
+  "/liquidation/can-i-choose-my-liquidator/": {
+    "id": 79351,
+    "slug": "can-i-choose-my-liquidator",
+    "type": "page"
+  },
+  "/liquidation/hmrc-as-a-creditor-in-liquidation/": {
+    "id": 79342,
+    "slug": "hmrc-as-a-creditor-in-liquidation",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/": {
+    "id": 79332,
+    "slug": "what-happens-if-a-cva-fails-mid-term",
+    "type": "page"
+  },
+  "/liquidation/winding-up-petition-vs-compulsory-liquidation/": {
+    "id": 79322,
+    "slug": "winding-up-petition-vs-compulsory-liquidation",
+    "type": "page"
+  },
+  "/company-administration/light-touch-administration/": {
+    "id": 79313,
+    "slug": "light-touch-administration",
+    "type": "page"
+  },
+  "/liquidation/cva-vs-strike-off-vs-liquidation/": {
+    "id": 79304,
+    "slug": "cva-vs-strike-off-vs-liquidation",
+    "type": "page"
+  },
+  "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/": {
+    "id": 79295,
+    "slug": "company-voluntary-arrangement-vs-administration-which-to-choose",
+    "type": "page"
+  },
+  "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/": {
+    "id": 79285,
+    "slug": "liquidating-a-group-company-or-holding-company-in-the-uk",
+    "type": "page"
+  },
+  "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/": {
+    "id": 79276,
+    "slug": "can-you-liquidate-to-avoid-paying-suppliers",
+    "type": "page"
+  },
+  "/liquidation/can-i-liquidate-a-dormant-company/": {
+    "id": 79266,
+    "slug": "can-i-liquidate-a-dormant-company",
+    "type": "page"
+  },
+  "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/": {
+    "id": 79256,
+    "slug": "liquidating-a-company-with-no-assets-or-bank-account-uk",
+    "type": "page"
+  },
+  "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/": {
+    "id": 79246,
+    "slug": "can-i-liquidate-my-company-with-a-bounce-back-loan",
+    "type": "page"
+  },
+  "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/": {
+    "id": 79236,
+    "slug": "can-i-start-a-new-company-after-liquidating-my-old-one",
+    "type": "page"
+  },
+  "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/": {
+    "id": 78835,
+    "slug": "whats-the-risk-of-being-disqualified-as-a-director",
+    "type": "page"
+  },
+  "/liquidation/voluntary-liquidation/": {
+    "id": 78851,
+    "slug": "voluntary-liquidation",
+    "type": "page"
+  },
+  "/liquidation/paying-staff-but-not-hmrc-before-liquidation/": {
+    "id": 78825,
+    "slug": "paying-staff-but-not-hmrc-before-liquidation",
+    "type": "page"
+  },
+  "/liquidation/redundancy-payments-for-directors-in-an-mvl/": {
+    "id": 78812,
+    "slug": "redundancy-payments-for-directors-in-an-mvl",
+    "type": "page"
+  },
+  "/liquidation/what-happens-if-a-director-resigns-before-liquidation/": {
+    "id": 78797,
+    "slug": "what-happens-if-a-director-resigns-before-liquidation",
+    "type": "page"
+  },
+  "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/": {
+    "id": 78781,
+    "slug": "can-i-be-sued-after-my-company-is-dissolved",
+    "type": "page"
+  },
+  "/liquidation/liquidating-a-charity-or-non-profit/": {
+    "id": 78771,
+    "slug": "liquidating-a-charity-or-non-profit",
+    "type": "page"
+  },
+  "/liquidation/liquidating-a-limited-liability-partnership/": {
+    "id": 78756,
+    "slug": "liquidating-a-limited-liability-partnership",
+    "type": "page"
+  },
+  "/liquidation/company-restoration-after-liquidation/": {
+    "id": 78707,
+    "slug": "company-restoration-after-liquidation",
+    "type": "page"
+  },
+  "/liquidation/liquidation-deadlines-and-time-limits/": {
+    "id": 78690,
+    "slug": "liquidation-deadlines-and-time-limits",
+    "type": "page"
+  },
+  "/liquidation/liquidators-powers-and-duties/": {
+    "id": 78673,
+    "slug": "liquidators-powers-and-duties",
+    "type": "page"
+  },
+  "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/": {
+    "id": 78654,
+    "slug": "how-to-challenge-a-liquidators-decisions-or-fees",
+    "type": "page"
+  },
+  "/liquidation/creditor-meetings-in-liquidation/": {
+    "id": 78635,
+    "slug": "creditor-meetings-in-liquidation",
+    "type": "page"
+  },
+  "/liquidation/how-to-prove-your-debt-in-company-liquidation/": {
+    "id": 78613,
+    "slug": "how-to-prove-your-debt-in-company-liquidation",
+    "type": "page"
+  },
+  "/liquidation/company-vehicles-and-equipment-in-liquidation/": {
+    "id": 78596,
+    "slug": "company-vehicles-and-equipment-in-liquidation",
+    "type": "page"
+  },
+  "/liquidation/intellectual-property-and-trading-assets-in-liquidation/": {
+    "id": 78578,
+    "slug": "intellectual-property-and-trading-assets-in-liquidation",
+    "type": "page"
+  },
+  "/liquidation/company-property-and-real-estate-in-liquidation/": {
+    "id": 78560,
+    "slug": "company-property-and-real-estate-in-liquidation",
+    "type": "page"
+  },
+  "/liquidation/leases-and-contracts-in-liquidation/": {
+    "id": 78191,
+    "slug": "leases-and-contracts-in-liquidation",
+    "type": "page"
+  },
+  "/liquidation/company-pensions-and-liquidation/": {
+    "id": 78163,
+    "slug": "company-pensions-and-liquidation",
+    "type": "page"
+  },
+  "/liquidation/directors-conduct-report-2/": {
+    "id": 78129,
+    "slug": "directors-conduct-report-2",
+    "type": "page"
+  },
+  "/liquidation/how-to-choose-the-right-insolvency-procedure/": {
+    "id": 78102,
+    "slug": "how-to-choose-the-right-insolvency-procedure",
+    "type": "page"
+  },
+  "/liquidation/voluntary-vs-compulsory-liquidation/": {
+    "id": 77916,
+    "slug": "voluntary-vs-compulsory-liquidation",
+    "type": "page"
+  },
+  "/liquidation/liquidation-vs-dissolution-strike-off/": {
+    "id": 77883,
+    "slug": "liquidation-vs-dissolution-strike-off",
+    "type": "page"
+  },
+  "/liquidation/how-to-prepare-for-company-liquidation/": {
+    "id": 77814,
+    "slug": "how-to-prepare-for-company-liquidation",
+    "type": "page"
+  },
+  "/liquidation/cant-afford-to-liquidate/": {
+    "id": 77960,
+    "slug": "cant-afford-to-liquidate",
+    "type": "page"
+  },
+  "/liquidation/which-creditors-get-paid-first/": {
+    "id": 77739,
+    "slug": "which-creditors-get-paid-first",
+    "type": "page"
+  },
+  "/insolvency-news-commentary/": {
+    "id": 77693,
+    "slug": "insolvency-news-commentary",
+    "type": "page"
+  },
+  "/debt-charities-uk/": {
+    "id": 77684,
+    "slug": "debt-charities-uk",
+    "type": "page"
+  },
+  "/mental-health-debt-stress-support/": {
+    "id": 77681,
+    "slug": "mental-health-debt-stress-support",
+    "type": "page"
+  },
+  "/sector-specific-insolvency/": {
+    "id": 77401,
+    "slug": "sector-specific-insolvency",
+    "type": "page"
+  },
+  "/uk-insolvency-statistics/": {
+    "id": 77399,
+    "slug": "uk-insolvency-statistics",
+    "type": "page"
+  },
+  "/director-protection-hub/": {
+    "id": 77396,
+    "slug": "director-protection-hub",
+    "type": "page"
+  },
+  "/company-rescue-recovery-hub/": {
+    "id": 77372,
+    "slug": "company-rescue-recovery-hub",
+    "type": "page"
+  },
+  "/guides-resources-hub/": {
+    "id": 77339,
+    "slug": "guides-resources-hub",
+    "type": "page"
+  },
+  "/hmrc/hmrc-debt-enforcement-hub/": {
+    "id": 77205,
+    "slug": "hmrc-debt-enforcement-hub",
+    "type": "page"
+  },
+  "/liquidation/company-strike-off-and-dissolution/": {
+    "id": 77278,
+    "slug": "company-strike-off-and-dissolution",
+    "type": "page"
+  },
+  "/sector-insolvency-hub/": {
+    "id": 77248,
+    "slug": "sector-insolvency-hub",
+    "type": "page"
+  },
+  "/charity-non-profit-insolvency/": {
+    "id": 77218,
+    "slug": "charity-non-profit-insolvency",
+    "type": "page"
+  },
+  "/hospitality-restaurant-insolvency/": {
+    "id": 77216,
+    "slug": "hospitality-restaurant-insolvency",
+    "type": "page"
+  },
+  "/manufacturing-insolvency/": {
+    "id": 77207,
+    "slug": "manufacturing-insolvency",
+    "type": "page"
+  },
+  "/care-home-insolvency/": {
+    "id": 77186,
+    "slug": "care-home-insolvency",
+    "type": "page"
+  },
+  "/energy-provider-insolvency/": {
+    "id": 77181,
+    "slug": "energy-provider-insolvency",
+    "type": "page"
+  },
+  "/professional-services-insolvency/": {
+    "id": 77175,
+    "slug": "professional-services-insolvency",
+    "type": "page"
+  },
+  "/hmrc/hmrc-enforcement-action/": {
+    "id": 77162,
+    "slug": "hmrc-enforcement-action",
+    "type": "page"
+  },
+  "/transport-haulage-insolvency/": {
+    "id": 77161,
+    "slug": "transport-haulage-insolvency",
+    "type": "page"
+  },
+  "/construction-insolvency/": {
+    "id": 77157,
+    "slug": "construction-insolvency",
+    "type": "page"
+  },
+  "/debt-creditor-pressure-hub/": {
+    "id": 77146,
+    "slug": "debt-creditor-pressure-hub",
+    "type": "page"
+  },
+  "/liquidation/bailiffs-high-court-enforcement-officers/": {
+    "id": 77097,
+    "slug": "bailiffs-high-court-enforcement-officers",
+    "type": "page"
+  },
+  "/hmrc/hmrc-penalties-investigations/": {
+    "id": 76920,
+    "slug": "hmrc-penalties-investigations",
+    "type": "page"
+  },
+  "/liquidation/am-i-solvent/": {
+    "id": 76904,
+    "slug": "am-i-solvent",
+    "type": "page"
+  },
+  "/prize-draw-terms-conditions/": {
+    "id": 76843,
+    "slug": "prize-draw-terms-conditions",
+    "type": "page"
+  },
+  "/advice/insolvency-advice-for-directors/": {
+    "id": 76323,
+    "slug": "insolvency-advice-for-directors",
+    "type": "page"
+  },
+  "/advice/overdrawn-directors-loan-accounts/": {
+    "id": 75111,
+    "slug": "overdrawn-directors-loan-accounts",
+    "type": "page"
+  },
+  "/insolvency/secured-vs-unsecured-creditors/": {
+    "id": 74891,
+    "slug": "secured-vs-unsecured-creditors",
+    "type": "page"
+  },
+  "/company-administration/notice-of-intention-to-appoint-administrators/": {
+    "id": 74439,
+    "slug": "notice-of-intention-to-appoint-administrators",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/": {
+    "id": 74390,
+    "slug": "when-a-cva-fails",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/": {
+    "id": 74382,
+    "slug": "when-employers-cant-afford-redundancy-payments",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-pay-a-company-mortgage/": {
+    "id": 74372,
+    "slug": "cant-pay-a-company-mortgage",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/challenge-a-statutory-demand/": {
+    "id": 74264,
+    "slug": "challenge-a-statutory-demand",
+    "type": "page"
+  },
+  "/liquidation/alternatives-to-company-liquidation/": {
+    "id": 73778,
+    "slug": "alternatives-to-company-liquidation",
+    "type": "page"
+  },
+  "/advice/directors-duties-to-creditors/": {
+    "id": 71514,
+    "slug": "directors-duties-to-creditors",
+    "type": "page"
+  },
+  "/insolvency/preferential-payments-during-insolvency/": {
+    "id": 70501,
+    "slug": "preferential-payments-during-insolvency",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/company-is-having-financial-difficulties/": {
+    "id": 68736,
+    "slug": "company-is-having-financial-difficulties",
+    "type": "page"
+  },
+  "/insolvency/insolvent-company-investigations/": {
+    "id": 68387,
+    "slug": "insolvent-company-investigations",
+    "type": "page"
+  },
+  "/what-is-a-pre-pack-administration/advantages-and-disadvantages/": {
+    "id": 68356,
+    "slug": "advantages-and-disadvantages",
+    "type": "page"
+  },
+  "/advice/get-free-business-debt-advice/": {
+    "id": 68221,
+    "slug": "get-free-business-debt-advice",
+    "type": "page"
+  },
+  "/advice/what-is-a-directors-responsibility-for-accountancy-errors/": {
+    "id": 68216,
+    "slug": "what-is-a-directors-responsibility-for-accountancy-errors",
+    "type": "page"
+  },
+  "/advice/are-directors-personally-liable-for-company-debts/": {
+    "id": 68207,
+    "slug": "are-directors-personally-liable-for-company-debts",
+    "type": "page"
+  },
+  "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/": {
+    "id": 68211,
+    "slug": "what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest",
+    "type": "page"
+  },
+  "/advice/preventing-company-director-disputes/": {
+    "id": 68192,
+    "slug": "preventing-company-director-disputes",
+    "type": "page"
+  },
+  "/advice/how-to-legally-take-money-out-of-a-limited-company/": {
+    "id": 68189,
+    "slug": "how-to-legally-take-money-out-of-a-limited-company",
+    "type": "page"
+  },
+  "/advice/funding-options-for-smes-in-the-uk/": {
+    "id": 68183,
+    "slug": "funding-options-for-smes-in-the-uk",
+    "type": "page"
+  },
+  "/advice/directors-personal-guarantees/": {
+    "id": 68180,
+    "slug": "directors-personal-guarantees",
+    "type": "page"
+  },
+  "/advice/": {
+    "id": 68153,
+    "slug": "advice",
+    "type": "page"
+  },
+  "/insolvency/creditor-negotiations/": {
+    "id": 68134,
+    "slug": "creditor-negotiations",
+    "type": "page"
+  },
+  "/insolvency/business-recovery-services/": {
+    "id": 68130,
+    "slug": "business-recovery-services",
+    "type": "page"
+  },
+  "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/": {
+    "id": 68123,
+    "slug": "what-are-the-warning-signs-of-an-insolvent-company",
+    "type": "page"
+  },
+  "/insolvency/can-you-sell-your-insolvent-company/": {
+    "id": 68120,
+    "slug": "can-you-sell-your-insolvent-company",
+    "type": "page"
+  },
+  "/insolvency/how-to-save-a-struggling-business/": {
+    "id": 68117,
+    "slug": "how-to-save-a-struggling-business",
+    "type": "page"
+  },
+  "/insolvency/rescue-your-business-from-insolvency/": {
+    "id": 68115,
+    "slug": "rescue-your-business-from-insolvency",
+    "type": "page"
+  },
+  "/insolvency/what-to-do-about-customer-insolvency/": {
+    "id": 68111,
+    "slug": "what-to-do-about-customer-insolvency",
+    "type": "page"
+  },
+  "/insolvency/how-to-reduce-insolvency-risk/": {
+    "id": 68108,
+    "slug": "how-to-reduce-insolvency-risk",
+    "type": "page"
+  },
+  "/insolvency/dealing-with-creditor-pressure/": {
+    "id": 68101,
+    "slug": "dealing-with-creditor-pressure",
+    "type": "page"
+  },
+  "/county-court-judgements/": {
+    "id": 68076,
+    "slug": "county-court-judgements",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/": {
+    "id": 67962,
+    "slug": "what-is-a-statutory-demand-against-a-company",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/": {
+    "id": 67960,
+    "slug": "cant-afford-to-pay-suppliers-what-are-the-options",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/": {
+    "id": 67957,
+    "slug": "why-debt-is-not-always-a-bad-thing-for-your-business",
+    "type": "page"
+  },
+  "/hmrc/accelerated-payment-notices-apn/": {
+    "id": 67828,
+    "slug": "accelerated-payment-notices-apn",
+    "type": "page"
+  },
+  "/hmrc/": {
+    "id": 67809,
+    "slug": "hmrc",
+    "type": "page"
+  },
+  "/insolvency/transactions-at-undervalue/": {
+    "id": 67757,
+    "slug": "transactions-at-undervalue",
+    "type": "page"
+  },
+  "/insolvency/antecedent-transactions/": {
+    "id": 67747,
+    "slug": "antecedent-transactions",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/": {
+    "id": 67535,
+    "slug": "pros-and-cons",
+    "type": "page"
+  },
+  "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/": {
+    "id": 67505,
+    "slug": "can-a-director-be-made-bankrupt-if-a-business-fails",
+    "type": "page"
+  },
+  "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/": {
+    "id": 67438,
+    "slug": "dealing-with-an-hmrc-winding-up-petition",
+    "type": "page"
+  },
+  "/winding-up-petitions/what-is-a-winding-up-order/": {
+    "id": 67370,
+    "slug": "what-is-a-winding-up-order",
+    "type": "page"
+  },
+  "/what-is-a-pre-pack-administration/": {
+    "id": 66834,
+    "slug": "what-is-a-pre-pack-administration",
+    "type": "page"
+  },
+  "/insolvency/what-is-wrongful-trading/": {
+    "id": 66786,
+    "slug": "what-is-wrongful-trading",
+    "type": "page"
+  },
+  "/closing-a-limited-company/": {
+    "id": 65614,
+    "slug": "closing-a-limited-company",
+    "type": "page"
+  },
+  "/advice/directors-disqualification/": {
+    "id": 65593,
+    "slug": "directors-disqualification",
+    "type": "page"
+  },
+  "/company-administration/": {
+    "id": 65483,
+    "slug": "company-administration",
+    "type": "page"
+  },
+  "/liquidation/what-happens-after-company-liquidation/": {
+    "id": 65238,
+    "slug": "what-happens-after-company-liquidation",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-pay-business-energy/": {
+    "id": 58601,
+    "slug": "cant-pay-business-energy",
+    "type": "page"
+  },
+  "/stressed-directors-guide/": {
+    "id": 57942,
+    "slug": "stressed-directors-guide",
+    "type": "page"
+  },
+  "/contact-us/": {
+    "id": 57472,
+    "slug": "contact-us",
+    "type": "page"
+  },
+  "/advice/writing-off-a-directors-loan-account/": {
+    "id": 55381,
+    "slug": "writing-off-a-directors-loan-account",
+    "type": "page"
+  },
+  "/": {
+    "id": 55052,
+    "slug": "home-2022",
+    "type": "page"
+  },
+  "/quick-quote/": {
+    "id": 54552,
+    "slug": "quick-quote",
+    "type": "page"
+  },
+  "/express-liquidation/": {
+    "id": 54064,
+    "slug": "express-liquidation",
+    "type": "page"
+  },
+  "/insolvency-calculator/": {
+    "id": 53942,
+    "slug": "insolvency-calculator",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/": {
+    "id": 53625,
+    "slug": "can-i-lose-my-house-with-a-bounce-back-loan",
+    "type": "page"
+  },
+  "/sample-letters/write-off-my-debt/": {
+    "id": 53183,
+    "slug": "write-off-my-debt",
+    "type": "page"
+  },
+  "/sample-letters/cease-trading-template/": {
+    "id": 53187,
+    "slug": "cease-trading-template",
+    "type": "page"
+  },
+  "/sample-letters/": {
+    "id": 53253,
+    "slug": "sample-letters",
+    "type": "page"
+  },
+  "/sample-letters/tell-debt-collector-to-stop-contacting-you/": {
+    "id": 53243,
+    "slug": "tell-debt-collector-to-stop-contacting-you",
+    "type": "page"
+  },
+  "/sample-letters/i-need-more-information-about-this-debt/": {
+    "id": 53185,
+    "slug": "i-need-more-information-about-this-debt",
+    "type": "page"
+  },
+  "/sample-letters/request-a-reduced-monthly-payment/": {
+    "id": 53174,
+    "slug": "request-a-reduced-monthly-payment",
+    "type": "page"
+  },
+  "/sample-letters/i-cannot-afford-to-repay-my-debt/": {
+    "id": 53166,
+    "slug": "i-cannot-afford-to-repay-my-debt",
+    "type": "page"
+  },
+  "/sample-letters/hold-action-on-my-account/": {
+    "id": 53158,
+    "slug": "hold-action-on-my-account",
+    "type": "page"
+  },
+  "/sample-letters/i-have-no-knowledge-of-this-debt/": {
+    "id": 53159,
+    "slug": "i-have-no-knowledge-of-this-debt",
+    "type": "page"
+  },
+  "/insolvency/find-a-liquidator-near-me/": {
+    "id": 52808,
+    "slug": "find-a-liquidator-near-me",
+    "type": "page"
+  },
+  "/advice/what-is-the-companies-act-2006/": {
+    "id": 52771,
+    "slug": "what-is-the-companies-act-2006",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/": {
+    "id": 50819,
+    "slug": "cant-pay-coronavirus-business-interruption-loan-cbils",
+    "type": "page"
+  },
+  "/advice/personal-liability-for-cbils-loans/": {
+    "id": 50629,
+    "slug": "personal-liability-for-cbils-loans",
+    "type": "page"
+  },
+  "/accreditations/": {
+    "id": 49665,
+    "slug": "accreditations",
+    "type": "page"
+  },
+  "/insolvency/creditors-meeting/": {
+    "id": 49618,
+    "slug": "creditors-meeting",
+    "type": "page"
+  },
+  "/charge-out-rates/": {
+    "id": 49072,
+    "slug": "charge-out-rates",
+    "type": "page"
+  },
+  "/useful-publications/": {
+    "id": 49058,
+    "slug": "useful-publications",
+    "type": "page"
+  },
+  "/legal/": {
+    "id": 49042,
+    "slug": "legal",
+    "type": "page"
+  },
+  "/complaints-procedure/": {
+    "id": 49024,
+    "slug": "complaints-procedure",
+    "type": "page"
+  },
+  "/insolvency/creditors-guides-to-insolvency-practitioners-fees/": {
+    "id": 48170,
+    "slug": "creditors-guides-to-insolvency-practitioners-fees",
+    "type": "page"
+  },
+  "/insolvency/insolvency-act-1986/": {
+    "id": 47772,
+    "slug": "insolvency-act-1986",
+    "type": "page"
+  },
+  "/insolvency/what-is-the-insolvency-service/": {
+    "id": 47550,
+    "slug": "what-is-the-insolvency-service",
+    "type": "page"
+  },
+  "/liquidation/creditors-voluntary-liquidation/": {
+    "id": 7674,
+    "slug": "creditors-voluntary-liquidation",
+    "type": "page"
+  },
+  "/insolvency/what-is-a-creditor/": {
+    "id": 46674,
+    "slug": "what-is-a-creditor",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/bounce-back-loan-fraud/": {
+    "id": 46579,
+    "slug": "bounce-back-loan-fraud",
+    "type": "page"
+  },
+  "/liquidation/what-happens-to-directors-in-liquidation/": {
+    "id": 46222,
+    "slug": "what-happens-to-directors-in-liquidation",
+    "type": "page"
+  },
+  "/content-usage-guidelines/": {
+    "id": 45771,
+    "slug": "content-usage-guidelines",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-pay-staff-wages/": {
+    "id": 44055,
+    "slug": "cant-pay-staff-wages",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-afford-to-repay-business-loan/": {
+    "id": 43917,
+    "slug": "cant-afford-to-repay-business-loan",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/": {
+    "id": 43758,
+    "slug": "bounce-back-loan-support-hub",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/": {
+    "id": 43745,
+    "slug": "dissolving-a-company-with-bounce-back-loan",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/what-happens-if-i-default/": {
+    "id": 43675,
+    "slug": "what-happens-if-i-default",
+    "type": "page"
+  },
+  "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/": {
+    "id": 43580,
+    "slug": "directors-liability-for-bounce-back-loans",
+    "type": "page"
+  },
+  "/advice/unenforceable-personal-guarantee/": {
+    "id": 43522,
+    "slug": "unenforceable-personal-guarantee",
+    "type": "page"
+  },
+  "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/": {
+    "id": 42739,
+    "slug": "what-happens-if-a-company-cannot-pay-its-debts",
+    "type": "page"
+  },
+  "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/": {
+    "id": 41082,
+    "slug": "can-personal-assets-of-directors-be-seized-from-a-ltd-company",
+    "type": "page"
+  },
+  "/insolvency/what-is-a-high-court-writ/": {
+    "id": 39500,
+    "slug": "what-is-a-high-court-writ",
+    "type": "page"
+  },
+  "/advice/losing-house-if-company-goes-bust/": {
+    "id": 38597,
+    "slug": "losing-house-if-company-goes-bust",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/": {
+    "id": 31237,
+    "slug": "cant-pay-a-commercial-lease-or-rent",
+    "type": "page"
+  },
+  "/advice/business-restructuring/": {
+    "id": 31199,
+    "slug": "business-restructuring",
+    "type": "page"
+  },
+  "/insolvency/lpa-receivership/": {
+    "id": 29543,
+    "slug": "lpa-receivership",
+    "type": "page"
+  },
+  "/hmrc/corporation-tax-penalties/": {
+    "id": 28761,
+    "slug": "corporation-tax-penalties",
+    "type": "page"
+  },
+  "/insolvency/personally-liabilty-of-company-secretary/": {
+    "id": 28545,
+    "slug": "personally-liabilty-of-company-secretary",
+    "type": "page"
+  },
+  "/insolvency/personal-liability-spouses-business-debts/": {
+    "id": 28526,
+    "slug": "personal-liability-spouses-business-debts",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/": {
+    "id": 26902,
+    "slug": "biggest-struggles-for-small-business-owners",
+    "type": "page"
+  },
+  "/insolvency/stop-or-avoid-insolvency/": {
+    "id": 26888,
+    "slug": "stop-or-avoid-insolvency",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/cant-pay-business-rates/": {
+    "id": 26347,
+    "slug": "cant-pay-business-rates",
+    "type": "page"
+  },
+  "/advice/misfeasance/": {
+    "id": 26298,
+    "slug": "misfeasance",
+    "type": "page"
+  },
+  "/insolvency/cease-trading/": {
+    "id": 26279,
+    "slug": "cease-trading",
+    "type": "page"
+  },
+  "/advice/debt-management-guide/": {
+    "id": 26234,
+    "slug": "debt-management-guide",
+    "type": "page"
+  },
+  "/business-debt-advice/": {
+    "id": 26218,
+    "slug": "business-debt-advice",
+    "type": "page"
+  },
+  "/company-cash-flow-problems/": {
+    "id": 26139,
+    "slug": "company-cash-flow-problems",
+    "type": "page"
+  },
+  "/insolvency/validation-order/": {
+    "id": 25310,
+    "slug": "validation-order",
+    "type": "page"
+  },
+  "/advice/personal-guarantee-insurance/": {
+    "id": 24780,
+    "slug": "personal-guarantee-insurance",
+    "type": "page"
+  },
+  "/hmrc/time-to-pay-hmrc/": {
+    "id": 8414,
+    "slug": "time-to-pay-hmrc",
+    "type": "page"
+  },
+  "/feedback/": {
+    "id": 24801,
+    "slug": "feedback",
+    "type": "page"
+  },
+  "/advice/what-are-fixed-and-floating-charges/": {
+    "id": 24760,
+    "slug": "what-are-fixed-and-floating-charges",
+    "type": "page"
+  },
+  "/insolvency/what-is-a-freezing-order-or-injunction/": {
+    "id": 24434,
+    "slug": "what-is-a-freezing-order-or-injunction",
+    "type": "page"
+  },
+  "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/": {
+    "id": 24402,
+    "slug": "what-are-the-duties-and-responsibilities-of-a-company-director",
+    "type": "page"
+  },
+  "/winding-up-petitions/": {
+    "id": 7687,
+    "slug": "winding-up-petitions",
+    "type": "page"
+  },
+  "/insolvency/can-we-trade-out-of-insolvency/": {
+    "id": 24080,
+    "slug": "can-we-trade-out-of-insolvency",
+    "type": "page"
+  },
+  "/insolvency/": {
+    "id": 17686,
+    "slug": "insolvency",
+    "type": "page"
+  },
+  "/accessibility/": {
+    "id": 24032,
+    "slug": "accessibility",
+    "type": "page"
+  },
+  "/hmrc/cant-pay-vat/": {
+    "id": 9443,
+    "slug": "cant-pay-vat",
+    "type": "page"
+  },
+  "/liquidation/how-much-does-liquidation-cost/": {
+    "id": 23698,
+    "slug": "how-much-does-liquidation-cost",
+    "type": "page"
+  },
+  "/case-studies-hub/": {
+    "id": 23471,
+    "slug": "case-studies-hub",
+    "type": "page"
+  },
+  "/meet-the-team/": {
+    "id": 23017,
+    "slug": "meet-the-team",
+    "type": "page"
+  },
+  "/privacy-policy/": {
+    "id": 22899,
+    "slug": "privacy-policy",
+    "type": "page"
+  },
+  "/advice/the-risks-of-signing-a-personal-guarantee/": {
+    "id": 22785,
+    "slug": "the-risks-of-signing-a-personal-guarantee",
+    "type": "page"
+  },
+  "/insolvency/limited-company-bankruptcy/": {
+    "id": 22554,
+    "slug": "limited-company-bankruptcy",
+    "type": "page"
+  },
+  "/insolvency/insolvent-company-owes-me-money/": {
+    "id": 22277,
+    "slug": "insolvent-company-owes-me-money",
+    "type": "page"
+  },
+  "/liquidation/liquidation-hub/": {
+    "id": 22075,
+    "slug": "liquidation-hub",
+    "type": "page"
+  },
+  "/insolvency/shareholders-liable-company-debts/": {
+    "id": 21122,
+    "slug": "shareholders-liable-company-debts",
+    "type": "page"
+  },
+  "/advice/what-is-limited-liability/": {
+    "id": 21011,
+    "slug": "what-is-limited-liability",
+    "type": "page"
+  },
+  "/liquidation/": {
+    "id": 7669,
+    "slug": "liquidation",
+    "type": "page"
+  },
+  "/advice/can-director-criminal-record/": {
+    "id": 20681,
+    "slug": "can-director-criminal-record",
+    "type": "page"
+  },
+  "/company-rescue-solutions/partnership-voluntary-arrangements/": {
+    "id": 20435,
+    "slug": "partnership-voluntary-arrangements",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/": {
+    "id": 20428,
+    "slug": "vs-liquidation",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/": {
+    "id": 20380,
+    "slug": "making-employees-redundant-cva",
+    "type": "page"
+  },
+  "/insolvency/retail-industry-insolvency-trends/": {
+    "id": 20268,
+    "slug": "retail-industry-insolvency-trends",
+    "type": "page"
+  },
+  "/liquidation/timeline/": {
+    "id": 17568,
+    "slug": "timeline",
+    "type": "page"
+  },
+  "/insolvency/what-is-an-individual-voluntary-arrangement/": {
+    "id": 16662,
+    "slug": "what-is-an-individual-voluntary-arrangement",
+    "type": "page"
+  },
+  "/hmrc/hmrc-offices-contact-guide/": {
+    "id": 16565,
+    "slug": "hmrc-offices-contact-guide",
+    "type": "page"
+  },
+  "/hmrc/hmrc-follower-notice/": {
+    "id": 16353,
+    "slug": "hmrc-follower-notice",
+    "type": "page"
+  },
+  "/company-administration/vs-administrative-receivership/": {
+    "id": 16106,
+    "slug": "vs-administrative-receivership",
+    "type": "page"
+  },
+  "/insolvency/check-if-a-company-is-insolvent/": {
+    "id": 15203,
+    "slug": "check-if-a-company-is-insolvent",
+    "type": "page"
+  },
+  "/company-administration/vs-cva/": {
+    "id": 15141,
+    "slug": "vs-cva",
+    "type": "page"
+  },
+  "/hmrc/problems-paying-corporation-tax-hmrc/": {
+    "id": 8408,
+    "slug": "problems-paying-corporation-tax-hmrc",
+    "type": "page"
+  },
+  "/liquidation/members-voluntary-liquidation/": {
+    "id": 7676,
+    "slug": "members-voluntary-liquidation",
+    "type": "page"
+  },
+  "/liquidation/what-happens-to-employees/": {
+    "id": 15010,
+    "slug": "what-happens-to-employees",
+    "type": "page"
+  },
+  "/director-redundancy/": {
+    "id": 14914,
+    "slug": "director-redundancy",
+    "type": "page"
+  },
+  "/hmrc/vat-penalties/": {
+    "id": 14912,
+    "slug": "vat-penalties",
+    "type": "page"
+  },
+  "/hmrc/tax-penalties/": {
+    "id": 14775,
+    "slug": "tax-penalties",
+    "type": "page"
+  },
+  "/cookie-policy-company-debt/": {
+    "id": 14672,
+    "slug": "cookie-policy-company-debt",
+    "type": "page"
+  },
+  "/advice/hmrcs-ir35-investigations-different/": {
+    "id": 14619,
+    "slug": "hmrcs-ir35-investigations-different",
+    "type": "page"
+  },
+  "/hmrc/hmrc-criminal-investigations/": {
+    "id": 14460,
+    "slug": "hmrc-criminal-investigations",
+    "type": "page"
+  },
+  "/hmrc/hmrc-fraud-investigations/": {
+    "id": 14158,
+    "slug": "hmrc-fraud-investigations",
+    "type": "page"
+  },
+  "/complaints/": {
+    "id": 13936,
+    "slug": "complaints",
+    "type": "page"
+  },
+  "/insolvency/preferential-non-preferential-creditors/": {
+    "id": 13766,
+    "slug": "preferential-non-preferential-creditors",
+    "type": "page"
+  },
+  "/advice/frozen-bank-account/": {
+    "id": 11788,
+    "slug": "frozen-bank-account",
+    "type": "page"
+  },
+  "/insolvency/insolvency-test/": {
+    "id": 13600,
+    "slug": "insolvency-test",
+    "type": "page"
+  },
+  "/insolvency/statement-of-affairs/": {
+    "id": 13513,
+    "slug": "statement-of-affairs",
+    "type": "page"
+  },
+  "/careers/": {
+    "id": 13469,
+    "slug": "careers",
+    "type": "page"
+  },
+  "/about-us/": {
+    "id": 13065,
+    "slug": "about-us",
+    "type": "page"
+  },
+  "/hmrc/understanding-hmrc-debt-collection/": {
+    "id": 13029,
+    "slug": "understanding-hmrc-debt-collection",
+    "type": "page"
+  },
+  "/hmrc/what-can-hmrc-bailiffs-take/": {
+    "id": 12979,
+    "slug": "what-can-hmrc-bailiffs-take",
+    "type": "page"
+  },
+  "/hmrc/controlled-goods-agreement/": {
+    "id": 12958,
+    "slug": "controlled-goods-agreement",
+    "type": "page"
+  },
+  "/insolvency/what-is-an-insolvency-practitioner/": {
+    "id": 8358,
+    "slug": "what-is-an-insolvency-practitioner",
+    "type": "page"
+  },
+  "/hmrc/notice-of-enforcement/": {
+    "id": 11644,
+    "slug": "notice-of-enforcement",
+    "type": "page"
+  },
+  "/hmrc/joint-and-several-liability-for-unpaid-vat/": {
+    "id": 11516,
+    "slug": "joint-and-several-liability-for-unpaid-vat",
+    "type": "page"
+  },
+  "/hmrc/hmrc-tax-investigations/": {
+    "id": 11384,
+    "slug": "hmrc-tax-investigations",
+    "type": "page"
+  },
+  "/hmrc/security-bonds/": {
+    "id": 11229,
+    "slug": "security-bonds",
+    "type": "page"
+  },
+  "/advice/what-are-phoenix-companies/": {
+    "id": 11228,
+    "slug": "what-are-phoenix-companies",
+    "type": "page"
+  },
+  "/hmrc/hmrc-compliance-checks/": {
+    "id": 11193,
+    "slug": "hmrc-compliance-checks",
+    "type": "page"
+  },
+  "/hmrc/distraint-order-notice/": {
+    "id": 10930,
+    "slug": "distraint-order-notice",
+    "type": "page"
+  },
+  "/hmrc/security-bond-notices/": {
+    "id": 10564,
+    "slug": "security-bond-notices",
+    "type": "page"
+  },
+  "/hmrc/personal-liability-notices/": {
+    "id": 10562,
+    "slug": "personal-liability-notices",
+    "type": "page"
+  },
+  "/terms-conditions/": {
+    "id": 9874,
+    "slug": "terms-conditions",
+    "type": "page"
+  },
+  "/site-map/": {
+    "id": 9715,
+    "slug": "site-map",
+    "type": "page"
+  },
+  "/receivership-mean-business/": {
+    "id": 9702,
+    "slug": "receivership-mean-business",
+    "type": "page"
+  },
+  "/company-rescue-solutions/pre-packs/": {
+    "id": 8396,
+    "slug": "pre-packs",
+    "type": "page"
+  },
+  "/hmrc/hmrc-threatening-letters/": {
+    "id": 8350,
+    "slug": "hmrc-threatening-letters",
+    "type": "page"
+  },
+  "/hmrc/cant-pay-paye/": {
+    "id": 8324,
+    "slug": "cant-pay-paye",
+    "type": "page"
+  },
+  "/company-rescue-solutions/company-voluntary-arrangement/": {
+    "id": 7685,
+    "slug": "company-voluntary-arrangement",
+    "type": "page"
+  },
+  "/liquidation/compulsory-liquidation/": {
+    "id": 7680,
+    "slug": "compulsory-liquidation",
+    "type": "page"
+  },
+  "/company-rescue-solutions/": {
+    "id": 7665,
+    "slug": "company-rescue-solutions",
+    "type": "page"
+  }
+}

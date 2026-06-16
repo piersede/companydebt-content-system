@@ -1,0 +1,788 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:50:48 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=22547",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "Members' Voluntary Liquidation (MVL) is a formal process for closing a solvent company in the UK, offering a structured and tax-efficient pathway for directors and shareholders. This route is primarily governed by the Insolvency Act 1986 (IA86) and the Insolvency (England and Wales) Rules 2016 (IR16).\n\n### When is Members' Voluntary Liquidation the Right Option?\n\nMVL is the appropriate choice when a company is **solvent**, meaning it can pay all its debts, including interest at the official rate, in full within a specified period, which must not exceed 12 months from the commencement of the winding up.\n\nKey indicators that MVL may be the right option for a UK company director include:\n*   **Solvency:** The company must be able to repay all its liabilities within 12 months. This is a fundamental requirement, and a false declaration of solvency is a criminal offence.\n*   **Cessation of Trade:** The company is no longer needed, has ceased trading, or its specific purpose has been met. This could be due to the director's retirement, a decision to step down from a family business, or a desire to no longer run the business.\n*   **Restructuring or Sale:** MVL can be used as part of a group restructuring, a corporate demerger, or following the sale of a company's trade and assets.\n*   **Tax Efficiency:** MVL allows for the distribution of accumulated profits as capital to shareholders, which is typically taxed at lower Capital Gains Tax (CGT) rates rather than higher Income Tax rates applicable to dividends. This is often particularly cost-effective for companies with retained profits exceeding £25,000. Shareholders may also qualify for Business Asset Disposal Relief (BADR), which can reduce the effective CGT rate. It's crucial to be aware of the \"anti-phoenix\" Tax Targeted Anti-Avoidance Rule (TAAR), which can re-categorise capital distributions as dividends if the business owner liquidates a company and starts a similar trade within two years with a main purpose of avoiding income tax.\n*   **Formal Closure and Peace of Mind:** MVL provides a formal and legally robust method to close the company, bringing its affairs to a definitive end. The appointment of a licensed insolvency practitioner (liquidator) reduces the risk of future litigation and personal liability for directors.\n\n**MVL Process & Thresholds:**\n1.  **Directors' Board Meeting:** A majority of directors must agree to liquidate and then make a statutory Declaration of Solvency. This declaration must state that the directors have made a full inquiry into the company's affairs and believe it can pay its debts with interest within a specified period not exceeding 12 months. It must also include a statement of assets and liabilities and be sworn before a solicitor or notary public.\n2.  **Shareholder Resolution:** A general meeting of shareholders must be called no more than five weeks after the Declaration of Solvency is made. At this meeting, shareholders must pass a special resolution (requiring at least 75% of the company's members to agree) to wind up the company and appoint a licensed insolvency practitioner as liquidator.\n3.  **Appointment of Liquidator:** Once appointed, the liquidator (a licensed insolvency practitioner) takes charge of winding up the company's affairs, realising assets, paying creditors, and distributing any surplus funds to shareholders.\n4.  **Public Notice:** The resolution for voluntary winding up must be advertised in The Gazette within 14 days.\n5.  **Timelines:** The MVL process typically takes between 6 to 12 months to complete, although it can take longer depending on complexity and tax clearances.\n\n### Alternatives to Members' Voluntary Liquidation\n\nFor UK company directors, alternatives to MVL depend crucially on the company's financial health (solvency or insolvency) and the desired outcome.\n\n**For Solvent Companies:**\n\n1.  **Voluntary Strike-off and Dissolution:**\n    *   **Description:** This is a simpler, less formal, and generally less expensive method of closing a company by applying to Companies House to have it removed from the register.\n    *   **Governing Source:** Companies Act 2006.\n    *   **When appropriate:** It may be suitable for dormant companies with minimal or no assets, no ongoing liabilities, and no intention to trade in the future.\n    *   **Thresholds/Timelines:** Directors file a DS01 form with Companies House (costing £8 online or £44 by post). The company must not have traded or sold stock in the last three months, changed its name, or been threatened with liquidation.\n    *   **Disadvantages:** It offers limited protection for directors; if liabilities are overlooked, directors could face personal liability, and the company can be restored to the register for several years after dissolution. Any undistributed assets at the time of dissolution could pass to the Crown (bona vacantia). It's generally not recommended for companies with significant assets or complex liabilities.\n\n**For Insolvent Companies (unable to pay debts as they fall due):**\n\nThese routes are governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016.\n\n1.  **Creditors' Voluntary Liquidation (CVL):**\n    *   **Description:** This is a formal insolvency process initiated by the shareholders of an *insolvent* company. It allows directors to voluntarily liquidate their company while fulfilling their obligations to creditors.\n    *   **When appropriate:** When directors conclude there's no reasonable prospect of the business recovering and wish to close it in an orderly, transparent manner, managing creditor expectations and reducing personal legal risks.\n    *   **Distinction from MVL:** The key difference is the company's insolvency; in a CVL, there are insufficient assets to pay creditors in full. If a company becomes insolvent during an MVL, it must convert to a CVL.\n\n2.  **Compulsory Liquidation (Winding Up by Court):**\n    *   **Description:** This is a court-ordered process, typically initiated by a creditor who petitions the court to wind up an insolvent company.\n    *   **When appropriate:** Often seen as the \"worst type\" of liquidation, as directors lose control, and the process is driven by external parties.\n\n3.  **Company Voluntary Arrangement (CVA):**\n    *   **Description:** A CVA is a legally binding agreement between an insolvent company and its creditors, allowing the company to propose a repayment plan for its debts over an agreed period, typically to avoid liquidation.\n    *   **When appropriate:** For companies with a viable core business model that are struggling with debt but wish to continue trading. If approved by creditors (holding more than 75% of the debts), it protects the company from further creditor action.\n\n4.  **Administration:**\n    *   **Description:** This process involves the appointment of an administrator (a licensed insolvency practitioner) to manage the company's affairs with the primary objective of rescuing the company as a going concern, or achieving a better outcome for creditors than liquidation.\n    *   **When appropriate:** For companies facing financial difficulties that may be salvageable through restructuring or sale, or where more time is needed to consider options while protected from creditor action.\n\n5.  **Administrative Receivership:**\n    *   **Description:** An administrative receiver, who must be an insolvency practitioner, is appointed by a secured creditor (under a debenture) to recover money for that specific creditor.\n    *   **When appropriate:** When a company has granted a debenture giving a creditor a charge over its assets, and that creditor seeks to enforce their security.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "edwincoe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGO5eRagbsA_mB7le0qs3npD1y1p7IFawznhscRJ66Iu3I3iFmILndpndDy5WBa-UfE0BBs1-mzHYUBrAbn2BgyLsHfElqJLMZvdNN3-h9AcfrZ6ykp4sTokbA8cQiqyCTpWjLgZYcRFIeF69zw7MbxVgcCersji0jf3mX9GNuw2A4WwnbZhwyrZVa7TjRBdA_5Shr2"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "myerson.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4hOyiYC_Gf_7ZbFxeYTQy6x6Nn7MJ5rcgDt6RktbyBwi__frLQ6cGw2LjSsTpeTMrORcTEv2BQVgN2nZqMi_00h5N0hFRrV3iB0aLwCXc6pjuqHWMMjPG8q-gb_5Sa93nph22RWD6tuqvWA7nEXuOWW39ibqmvjyMWsBWzyZvPVvm8n7dc4GAcblRqcQFbSFzpB7dqw4rTg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hcrlaw.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX_QcmqCePLo7dO15asKb239UE8OuA5gIJvWE4hj9R63BvvYRpjyE1clavoXXD4FHUs1cbYjJAPt8BBQfr2ZXdKQv2BWSeqAg7kZ7uMYsQOKr9yfgyYc6_A7HUj-jCgaj-C_7bUvthA9bp8z75tWzBQhmjCByL3U-mLoUJlmJk9FBpqt573S0-ZWTov9UMtN-ZE_IAAIYnX5AFhI7rdeE="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "legislation.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOcfJvgjnh7W9OnUIii9qWUdvamra3-7F_S42YTU7lPawUfabRESu2R3g5Sx2oLebafu3GF4Vcap3MTy4r5nySIcc2DMWJH-4piOKoIiaeuHf1FL3FknokNQ-kUXYB_Gm7O-wgwL0l9j-k2eCHqjo="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "economy-ni.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3n_nznHTQzbyIMuu1IJ5Z5lGYOTkeFp_rhw02269suN5CxHh9EW2NJZXNACGfe4MzpKF26-jCvXoQo59A2ywX2VWgNgjUC4fEBJGpBdqIzKMo7MvLNdB0zjpv8o1KS32sEcULneQVq9JtvnlhS3uV5GcF0tb9-g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKRD_f_vXUldNsmZBeshf2mz80BTYApaFld-z1knHBNTGYtw0fvg-kkCSBZNccNh34U3aUGh6oSGa3jP4KdBvzUBFGTe1wVm8udYONL4w7XZNwDUi9KKLn4C6MtpenRcN_vHlBVgaZT2cR1fVb_HG7RGHievEOCQUSxtk0gweUqAyq"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1i6FrrKf62Dv1wleeCrNetsC0wDOTArl4PO8lf6lScpK3V1p8ht7OIvjIYLUOJeP_p--3Q9DA48LAoZtaCWPhJubFqjIezNOzVvaSMSK8wb1hyH_Lss0GHi4Zmz3a6MUVAnKG6PZXPY8Qon3FdW-vX812zQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "kirks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi2tXg311LoljYeBJAHPDbYU9PbbbBt3R9wncI5tKU5slwPRvlHnjL1O3q8ETF-RF2SQ-d37JX3jBsKhN9CD--GbC_knhUeYpS_-GTiPrG0WngUCreBdM_Bh_fVHj9-ghLvRDR7X3e3Bon3ZoOpXTb1lHOVk-GRbwPRuVca4b5ZXuLFudukLrDbY2THoqI-XlKLmYrH7zw-J8TdE1cEz6jfNDSPg6omg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "griffinandking.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEecRHaPTFmX8h20vCEJ88jkbsCZVUqNi6OjjVAJwsBneI5twf1KjJkKvadfQP5GrmEClc2-jSF4WLVN7QiO2r2-w0OeILHL_jufQ4x9WPZb24RnIPg3NQCIz6z47CBW4vxhFS-_IgPIvNI3Cg4B1nVv6go2ExK"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "youtube.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJsRWhFFAzntdMn16lLX9s73s7qmR7kuJNsjn2-CW12mffJFQQEneQ0gm85I7fzn-cMq27JYDYffU-R2J2yhH9tdUrNvbPgShL_rnMRj9peKMK-X1dvfAnL7Oy0w3rtxDpKT9EIlg="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "purnells.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAGk7XRw5G6wtUTZRAE6v9EIOUZWq_qZ8n-tS14N1wDbWrW37KbXjfl8-fQf1Sp91WOPPiyQXXwA0hZaqStI-_IMMsjzmtBm1uw4dFqtPXAOS5lPmt38yggSHz558Y6dQNwjRacADMWsLvD8x4YSKc5L2yNal7QPpHrJ7krmuuPJyOwV-otgh1MRdeJF5rBp6N8Gpg4_Mfq5thkpU9vctVVM2CdIksy8Qsmcw="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hlca.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaQcPNJK_yWHQSQWegywHrUGSHdqUxE3uXfKhlQeRh0Pg4gqJySCr59odHk4wfWH39CyuooRy3WgaweWNkEeLReFke4J-UPkwKB_I3tq-NZPqyPepAt8FIPoruEh1cOANxSsc_46JPdpKdiwU4R6pDp3fgQcBEEVCcLYbOcS0kVVMkr9U="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "thomsonreuters.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh0NSWNdJbbPh3uPO_FcbXdCMDPOf2i_797U65pZ6aFvvDf16AOixsEcXFuXMeD7Tw5VXXJ5h0MKxFWm3jHDy0RSrzASIkm0hrkMycvyM96iVPlwq5wR-XBiYmDyvj6XdM6TD1LVgw85E6KEfivowFbp88VvEjtjSQmrMKJP46vZmSO8fxWWXx4QRBw_RRWuPQ0-gZ2ZgFQMuqZ7EvCFsy"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "crowe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfAhRiqf4VNj6i_SdUtx9oLBYdGem4KLB9xn2F_FfrLkq7Hqu8ZsO4UDFVjsELq788XMpO2dFtAnQ8Hqv72h7DQPef3sXQBt5mnaYhHllRFKvXY25C0H4f2HudUO-qySIqXixqiyERrKm217DnWE7IjUl8cR0FNe7-Ko0IkQR7zg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ipd-uk.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbcC8_ieK_nI9NJGYF9WdybeP_4oXrJno5So4zRgwRfNITH8SOrCbOg1sJOG8jEikaJvl40Aay3Wyhd1wunUlcs2MTpTj1FIbN3BB2o_f2Y5Ylrf_W0G2BU11qFWyX97CZpwE5LNVNemikwNQ1P-sx5e1M2ITwL80dg-tj0t7A"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarkebell.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3p3r_L8GWw0y5ZIPDL0l0tvurOx4RS68PgzYvBMXs3IJglffAAcE4vDZM0ym8ELjMk4dzJIQmcxvcFjG4ccPfxEN4uZdKW5V1k1NYokhxuwtlI6n9yI3TbPoXLF6XF4Z_ipwSGQxazAgqYB1Y7uRROY09hb2CFfsjFtC6YtNn_tI="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "maples.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpgFgPAS5LgY00pK7qZlC0YsYqaVGRfXExwufgksjF_2FIrL54MuWplCyX5xy4Fa3dpJ88W4Q-dblWBiyyn_saOBlFidP3Wy77XL4xlgBwxPtcyMcqqh6FknMnwTpK19xt4PKst9Qd_xMWBvfNoObtzYo03X5iQW4EH2HFM5EQMQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mooreks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfZJGAyVvJi5aUM49iPiWiN9lIubh1EWE7l5TInASC38CyMQv4d6USRxx--YjBuGFLQ41VQjbFCed-3Xb5AZDa9v8BUtwlpwzkyg_pSN48l4mZxtP9Lgsy497qf0IVzweOyv7dgrzPaAq3hoe564KHs22RBtlhH48amscuu_RP42JRQ2hgSfMFndA="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nibusinessinfo.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKHGLMR6Ikb4cKIwDdrG98B101dWSGBzM4CA2SuhlElDAZEdBi_834Wh9zcxMtnM8hIoDgFFMkQngS-2Ylvwpw44Bag-091ot-OiGTGPlLdWRCMQTncseDgVbA4D0qH2PxbxlT6BX915qs7kGALaeXqH3Ll5U7b6P1-x5L"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 178,
+              "end_index": 302,
+              "part_index": null,
+              "text": "This route is primarily governed by the Insolvency Act 1986 (IA86) and the Insolvency (England and Wales) Rules 2016 (IR16)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5,
+              0,
+              6,
+              1,
+              7,
+              8,
+              9,
+              10,
+              3
+            ],
+            "segment": {
+              "start_index": 366,
+              "end_index": 609,
+              "part_index": null,
+              "text": "MVL is the appropriate choice when a company is **solvent**, meaning it can pay all its debts, including interest at the official rate, in full within a specified period, which must not exceed 12 months from the commencement of the winding up."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              6,
+              7,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 784,
+              "end_index": 877,
+              "part_index": null,
+              "text": "This is a fundamental requirement, and a false declaration of solvency is a criminal offence."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              11,
+              8
+            ],
+            "segment": {
+              "start_index": 997,
+              "end_index": 1135,
+              "part_index": null,
+              "text": "This could be due to the director's retirement, a decision to step down from a family business, or a desire to no longer run the business."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              8,
+              10
+            ],
+            "segment": {
+              "start_index": 1136,
+              "end_index": 1293,
+              "part_index": null,
+              "text": "*   **Restructuring or Sale:** MVL can be used as part of a group restructuring, a corporate demerger, or following the sale of a company's trade and assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              6,
+              7,
+              9
+            ],
+            "segment": {
+              "start_index": 1294,
+              "end_index": 1525,
+              "part_index": null,
+              "text": "*   **Tax Efficiency:** MVL allows for the distribution of accumulated profits as capital to shareholders, which is typically taxed at lower Capital Gains Tax (CGT) rates rather than higher Income Tax rates applicable to dividends."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              14,
+              8,
+              9
+            ],
+            "segment": {
+              "start_index": 1526,
+              "end_index": 1623,
+              "part_index": null,
+              "text": "This is often particularly cost-effective for companies with retained profits exceeding £25,000."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 1624,
+              "end_index": 1737,
+              "part_index": null,
+              "text": "Shareholders may also qualify for Business Asset Disposal Relief (BADR), which can reduce the effective CGT rate."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13
+            ],
+            "segment": {
+              "start_index": 1738,
+              "end_index": 2015,
+              "part_index": null,
+              "text": "It's crucial to be aware of the \"anti-phoenix\" Tax Targeted Anti-Avoidance Rule (TAAR), which can re-categorise capital distributions as dividends if the business owner liquidates a company and starts a similar trade within two years with a main purpose of avoiding income tax."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              0,
+              1,
+              7,
+              8
+            ],
+            "segment": {
+              "start_index": 2170,
+              "end_index": 2312,
+              "part_index": null,
+              "text": "The appointment of a licensed insolvency practitioner (liquidator) reduces the risk of future litigation and personal liability for directors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              6,
+              1,
+              7,
+              3
+            ],
+            "segment": {
+              "start_index": 2348,
+              "end_index": 2476,
+              "part_index": null,
+              "text": "**Directors' Board Meeting:** A majority of directors must agree to liquidate and then make a statutory Declaration of Solvency."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              6,
+              7,
+              3
+            ],
+            "segment": {
+              "start_index": 2674,
+              "end_index": 2782,
+              "part_index": null,
+              "text": "It must also include a statement of assets and liabilities and be sworn before a solicitor or notary public."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              5,
+              0,
+              12,
+              1,
+              8
+            ],
+            "segment": {
+              "start_index": 2931,
+              "end_index": 3135,
+              "part_index": null,
+              "text": "At this meeting, shareholders must pass a special resolution (requiring at least 75% of the company's members to agree) to wind up the company and appoint a licensed insolvency practitioner as liquidator."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              0,
+              6,
+              1,
+              7,
+              8
+            ],
+            "segment": {
+              "start_index": 3140,
+              "end_index": 3376,
+              "part_index": null,
+              "text": "**Appointment of Liquidator:** Once appointed, the liquidator (a licensed insolvency practitioner) takes charge of winding up the company's affairs, realising assets, paying creditors, and distributing any surplus funds to shareholders."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              0
+            ],
+            "segment": {
+              "start_index": 3381,
+              "end_index": 3489,
+              "part_index": null,
+              "text": "**Public Notice:** The resolution for voluntary winding up must be advertised in The Gazette within 14 days."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2,
+              11
+            ],
+            "segment": {
+              "start_index": 3494,
+              "end_index": 3648,
+              "part_index": null,
+              "text": "**Timelines:** The MVL process typically takes between 6 to 12 months to complete, although it can take longer depending on complexity and tax clearances."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              15,
+              16,
+              17,
+              2,
+              11
+            ],
+            "segment": {
+              "start_index": 3882,
+              "end_index": 4106,
+              "part_index": null,
+              "text": "**Voluntary Strike-off and Dissolution:**\n    *   **Description:** This is a simpler, less formal, and generally less expensive method of closing a company by applying to Companies House to have it removed from the register."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16,
+              2,
+              11,
+              8
+            ],
+            "segment": {
+              "start_index": 4161,
+              "end_index": 4319,
+              "part_index": null,
+              "text": "*   **When appropriate:** It may be suitable for dormant companies with minimal or no assets, no ongoing liabilities, and no intention to trade in the future."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              15
+            ],
+            "segment": {
+              "start_index": 4324,
+              "end_index": 4439,
+              "part_index": null,
+              "text": "*   **Thresholds/Timelines:** Directors file a DS01 form with Companies House (costing £8 online or £44 by post)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              11
+            ],
+            "segment": {
+              "start_index": 4440,
+              "end_index": 4567,
+              "part_index": null,
+              "text": "The company must not have traded or sold stock in the last three months, changed its name, or been threatened with liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              16,
+              2,
+              11
+            ],
+            "segment": {
+              "start_index": 4796,
+              "end_index": 4888,
+              "part_index": null,
+              "text": "Any undistributed assets at the time of dissolution could pass to the Crown (bona vacantia)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2
+            ],
+            "segment": {
+              "start_index": 4889,
+              "end_index": 4981,
+              "part_index": null,
+              "text": "It's generally not recommended for companies with significant assets or complex liabilities."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              3
+            ],
+            "segment": {
+              "start_index": 5052,
+              "end_index": 5165,
+              "part_index": null,
+              "text": "These routes are governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              15,
+              10
+            ],
+            "segment": {
+              "start_index": 5333,
+              "end_index": 5440,
+              "part_index": null,
+              "text": "It allows directors to voluntarily liquidate their company while fulfilling their obligations to creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              10
+            ],
+            "segment": {
+              "start_index": 5445,
+              "end_index": 5674,
+              "part_index": null,
+              "text": "*   **When appropriate:** When directors conclude there's no reasonable prospect of the business recovering and wish to close it in an orderly, transparent manner, managing creditor expectations and reducing personal legal risks."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              10
+            ],
+            "segment": {
+              "start_index": 5679,
+              "end_index": 5822,
+              "part_index": null,
+              "text": "*   **Distinction from MVL:** The key difference is the company's insolvency; in a CVL, there are insufficient assets to pay creditors in full."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 5823,
+              "end_index": 5894,
+              "part_index": null,
+              "text": "If a company becomes insolvent during an MVL, it must convert to a CVL."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 5900,
+              "end_index": 6098,
+              "part_index": null,
+              "text": "**Compulsory Liquidation (Winding Up by Court):**\n    *   **Description:** This is a court-ordered process, typically initiated by a creditor who petitions the court to wind up an insolvent company."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 6103,
+              "end_index": 6249,
+              "part_index": null,
+              "text": "*   **When appropriate:** Often seen as the \"worst type\" of liquidation, as directors lose control, and the process is driven by external parties."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              18
+            ],
+            "segment": {
+              "start_index": 6255,
+              "end_index": 6523,
+              "part_index": null,
+              "text": "**Company Voluntary Arrangement (CVA):**\n    *   **Description:** A CVA is a legally binding agreement between an insolvent company and its creditors, allowing the company to propose a repayment plan for its debts over an agreed period, typically to avoid liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              18
+            ],
+            "segment": {
+              "start_index": 6662,
+              "end_index": 6778,
+              "part_index": null,
+              "text": "If approved by creditors (holding more than 75% of the debts), it protects the company from further creditor action."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              18
+            ],
+            "segment": {
+              "start_index": 6784,
+              "end_index": 7088,
+              "part_index": null,
+              "text": "**Administration:**\n    *   **Description:** This process involves the appointment of an administrator (a licensed insolvency practitioner) to manage the company's affairs with the primary objective of rescuing the company as a going concern, or achieving a better outcome for creditors than liquidation."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 7093,
+              "end_index": 7304,
+              "part_index": null,
+              "text": "*   **When appropriate:** For companies facing financial difficulties that may be salvageable through restructuring or sale, or where more time is needed to consider options while protected from creditor action."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18
+            ],
+            "segment": {
+              "start_index": 7310,
+              "end_index": 7535,
+              "part_index": null,
+              "text": "**Administrative Receivership:**\n    *   **Description:** An administrative receiver, who must be an insolvency practitioner, is appointed by a secured creditor (under a debenture) to recover money for that specific creditor."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18
+            ],
+            "segment": {
+              "start_index": 7540,
+              "end_index": 7699,
+              "part_index": null,
+              "text": "*   **When appropriate:** When a company has granted a debenture giving a creditor a charge over its assets, and that creditor seeks to enforce their security."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDNPvknSo5LKTZewPEpboHFprpTUhuhMZafRxfjKZCL0J4gPJrcCjCfFY9dNKEQVrWAjRJUPDqzd_Wt8iNTdxAQghiTRZxw3_kQbnWVDaTGhzRl1Kcu8DTq3izLRvA5am2YT2xVfW-zjcxSLZXsg1zpn6gt6E9xTmEKESu__QaO-gsNbmvHpsT_guy9_bkN3y1JaaRG387QqNiAFlzqGftHUScORGur5C563Gmtm1Ehu4W8vk=\">insolvency act 1986 members voluntary liquidation</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjkW7RW1nT-pyiYUsgZGmZVelP4i3v-qMfz0BAxGyA0iyqbmrLaIfh-LRjCzZ2enGW2CKU3snPAoEsvqB1rU0rv67141AXtneCiEhgDz5nqXxuCnO6y10iJeEX8Df3JZWJ29uGTx5z6F285CeXAa7I0X3mTJQQfzE7rxinxP35s8lTNNTs51OwYo1i-AApewj-ETa9Qcq7gJDDGMvbqsrr6IjfMCBptCvkU9IYG3c=\">members voluntary liquidation conditions uk</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnSv2yt7PHRAJM8PAAE0JLSJuP3Q0v-eiuQB4kfRPwHdhaTHUdDnrYL1uE0oRSlqrzmBm5dg5OjvZELzAC3V6iYiH1KMW83FwftZMRJJK9Vk0oy6JA0EToywEZIcJA3YQ2W-Dh9DZOiQx3kjkuhyx16PkJ5MLE4f19TwSd0_SZcV2tw0jLVLflF1tbiEcjPSZR5_iRAS1MC1NAcPJP9ORaRw-5YBkl8-V4RpA9JWB4WWY4yHVovPo1CiElYwo=\">when is members voluntary liquidation the right option uk</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYeUDTaSYM1cbesVCduzHocDS0ZFnjdCLvh8vYl1w4xqOM5gOHlQNnU_WPoTJqRX3q9xee31k9jAno8rB1Z_7V9Rbn2xenPISJ00GWbummKVxROZt6cjBHrS0HcKzqXFfVHKw24UxaEiMONvCHxq9GHQBd6mMaQ8YP50kqtEfiONh7WTFB_NbIVAt4gCixbOu825neLIF2aWXp68eoYxDIfl5ET3fyhNRHxvcBvyJrMF8d5A==\">alternatives to members voluntary liquidation uk</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqbLyb9YyZZOHP4N4ZyZUPeE3PJZSaPmuNzbnpoUOfY2oIurL7LU5h8ArZ8ngJ_Xlt456dly1Q0IXj_DJNQUEtDLt8y96nzrw2g4HFMkxtj_ikSB4rf_m08dMW51qCq7FE5Fm6y403No5bpemLxl5VZdXcZJmt4jf3E4m9rdBZHEv4MPOu0XHxpJwMIurFqQunlb_0mhu7h0LxARwQ4uRSEzwe5udh52oS1iuWzMMGBwXj8gn_HOg=\">insolvency rules 2016 members voluntary liquidation</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_7mCv0zQOhRIjdtd5FaJoV8Nvtjp-LZ6Y5jXI0VwBZyUF7QSeVqQu2DJmgpD2GZsdad-PyMwiBkoXpBDH-nsr0ggm23a-X1JLrzs5gyxLG09ZQ2zZJXOjVUgxRcW93TSiY19Uo6zGmcS86pylM2JC7WzYcGqywxbwTSK5RtowpZKPkMp3vepl-RCw3lQcgiLuHuepyH-Fk7RDmXXaOPSEqK7ErEtH2Ys82aG7yW8NdF0=\">strike off vs members voluntary liquidation uk</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "when is members voluntary liquidation the right option uk",
+          "alternatives to members voluntary liquidation uk",
+          "members voluntary liquidation conditions uk",
+          "insolvency act 1986 members voluntary liquidation",
+          "insolvency rules 2016 members voluntary liquidation",
+          "strike off vs members voluntary liquidation uk"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "8bEpau6iN43OxN8Pt6iYyAY",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1703,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 90,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 90
+      }
+    ],
+    "thoughts_token_count": 1896,
+    "tool_use_prompt_token_count": 537,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 537
+      }
+    ],
+    "total_token_count": 4226,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

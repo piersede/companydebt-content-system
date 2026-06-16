@@ -1,0 +1,223 @@
+<!-- wp:paragraph -->
+<p>Welcome to CompanyDebt.com. By using this website you agree to be bound by the terms and conditions that are set out below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Access to the Website and Content</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Information provided on CompanyDebt.com is not intended to be viewed as a recommendation to buy the products or services featured.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt endeavours to allow uninterrupted access to CompanyDebt.com but access to the website may be terminated, restricted or suspended at any time.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt is not responsible for the content on other websites to which CompanyDebt.com links.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Intellectual Property</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>All of the material contained on CompanyDebt.com including text, images, underlying source code and software (including applets) belongs to Company Debt and the providers of such information. None of this material can be redistributed or reproduced without written consent from Company Debt. However, a single copy of the content can be printed or downloaded for offline viewing as long as it is in a non-commercial capacity.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Any company or product names included on this website may be the registered trademarks or trademarks of their respective owners.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Exclusions of liability</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Company Debt works hard to ensure the data on CompanyDebt.com is accurate and that any omissions or errors that are identified are corrected at the earliest opportunity. Any information on the website submitted by third parties is not verified, monitored or endorsed by Company Debt. Therefore, you should be aware that such information could be out of date, incomplete or inaccurate.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Company Debt disclaims all representations and warranties (express or implied) to the extent permitted by applicable law as to the accuracy of information contained on CompanyDebt.com. Company Debt does accept liability for omissions or errors on the website or guarantee it will be fault free.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Any liability Company Debt might have for losses or claims arising from an inability to access CompanyDebt.com or from the use of the website is excluded to the fullest extent permissible by law. Company Debt will not be liable for any revenue, profit, goodwill, business, opportunity, anticipated saving or other indirect or consequential loss of any kind arising from the use of CompanyDebt.com, apart from where the liability cannot be excluded by law</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt does not give any warranty that CompanyDebt.com is free of viruses or anything else that may have a harmful effect on technology.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Exclusion of Liability for Suppliers’ Goods and Services</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Company Debt does not accept liability for any goods or services you may obtain following the use of CompanyDebt.com. You should always satisfy yourself that you wish to purchase services before contracting with the organisation. The standard terms and conditions that apply should be provided to you by the organisation in an engagement letter. You should check you agree with those terms and conditions before ordering any goods or services.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt does not accept liability for any goods or services which are not stated to be provided by Company Debt Limited and are provided by third parties over which we have no control. &nbsp;Those suppliers will have their own standard terms and conditions which you should check before placing an order.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Data Protection</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Company Debt is committed to protecting your privacy. Company Debt will collect and use information supplied by you and other users to improve the website and personalise your experience when you visit CompanyDebt.com. Company Debt may also use your information to inform you about features you might be interested in and changes to our services. Your personal information will not be traded, sold or rented to third-parties.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt follows strict security procedures in the disclosure and storage of information as outlined in our privacy policy.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>You may access and edit your personal information at any time.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Cookies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Cookies are small text files that contain information about you that allows us to identify that you have used the CompanyDebt.com website before. &nbsp;Cookies do not contain personal information about users.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Services provided via the website such as videos or embedded content from third-parties may also place cookies on your device. You can read more about our use of cookies in our privacy policy.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Termination</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Company Debt may terminate your access to CompanyDebt.com and the services it provides by giving you three days’ written notice.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>All exclusions, indemnities and disclaimers will survive termination of your access to CompanyDebt.com for any reason.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">General</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>If any provision included in these terms and conditions is deemed invalid, unlawful or unenforceable, it shall be deemed served and the enforceability of the remaining provisions will not be affected.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Company Debt may modify the terms and conditions by publishing modified terms on this website. This can be done at any time. Any modifications will take effect 3 days after they are posted.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Governing Law</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>&nbsp;These terms are to be governed by and construed in accordance with English Law.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>&nbsp;Any disputes will be subject to the jurisdiction of English courts.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Links Disclaimer</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>CompanyDebt.com may include links to websites that are not owned or managed by Company Debt Limited. We are not responsible for the privacy of data collected by those sites and have no control or exercise any responsibility regarding the accuracy of the content provided. The inclusion of a link should not be considered to be an implied or express endorsement of the content, information, products or services the third party provides.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Privacy Statement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We do not collect personal information about CompanyDebt.com users other than that facilitated by ‘cookies’.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Order Forms</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Users have to provide their name and delivery address as well as financial information and contact details. This information is used to fulfil customer orders and for billing purposes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Log Files</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We use the IP addresses of users to administer the site, analyse trends, gather broad demographic information and track a user’s movement.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Google Analytics</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>CompanyDebt.com uses Google Analytics, which places cookies on your computer. This helps us analyse the behaviour of users on the website. This information is sent to and stored by Google. Google may also transfer this data to third parties to process the information on its behalf or where it is required to do so by law. You can refuse the use of cookies by changing the settings on your browser, although this may limit the functionality of CompanyDebt.com.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Surveys and Contests</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Occasionally, CompanyDebt.com may ask for information from users in the form of surveys or contests. Your participation is always completely voluntary and you can choose whether to provide the personal information we may ask for. Typically, the information requested includes contact details and demographic information. Contact information will be used to notify winners and award prizes. Other information will be used for monitoring purposes or to improve the functionality of CompanyDebt.com.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Security</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We take every possible precaution in our attempt to protect the data of those who use CompanyDebt.com. Sensitive information entered via CompanyDebt.com will be protected online and offline. That includes the use of SSL to encrypt sensitive information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Correcting and Updating Personal Information</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If any of your personal information changes or you wish to no longer use our service, we endeavour to make changes as quickly as possible. You are entitled to request a copy of any personal data Company Debt Limited holds about you. To do so, please write to: Company Debt Ltd, Level 18, 40 Bank Street, London, England, E14 5NR, United Kingdom.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Data Protection Act allows a small charge to be made to cover the administrative costs associated with responding to the request. We apply a reasonable charge of £10 for supplying the relevant information. We reply to all requests within 20 days.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Notices and Disclaimers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These disclaimers also extend the above terms and conditions to our webmasters.</p>
+<!-- /wp:paragraph -->

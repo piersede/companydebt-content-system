@@ -1,0 +1,549 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:52:37 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=9620",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "In the UK, company administration is a formal insolvency procedure governed primarily by the Insolvency Act 1986. Its objective is to rescue the company as a going concern, achieve a better result for creditors than in a winding-up, or realise property to make a distribution to secured or preferential creditors.\n\n**Cost of Company Administration**\n\nThe cost of company administration is highly variable, depending on the complexity, size, and nature of the company, as well as the assets and liabilities involved and the duration of the administration.\n\n*   **Initial Costs:** Initial administration costs typically range from £10,000 to £15,000.\n*   **Pre-administration Fees:** For smaller administrations, pre-administration fees can be between £5,000 and £10,000, which may be higher in pre-pack administrations due to increased preparatory work.\n*   **Total Fees:** For complex cases involving business sales, extensive asset realisations, or lengthy administration periods, total fees can easily exceed £20,000.\n*   **Fee Basis:** Insolvency Practitioners (IPs) typically charge in one of three ways:\n    *   **Time-cost basis:** This is common in more complex cases. Hourly rates for IPs can range from £100 to £300, while staff charge-out rates vary from £115 to £525 per hour, depending on experience and qualifications. Time is usually charged in 6-minute units.\n    *   **Fixed fee arrangements:** These may be used for simpler aspects of the administration.\n    *   **Percentage of realisations:** In some cases, fees may be calculated as a percentage of funds recovered from asset sales, typically ranging from 3% to 15% of assets realised, though higher percentages may apply for specialist or challenging recoveries.\n*   **Other Costs:** Beyond the Administrator's fees, other professional fees and disbursements include agents' valuation fees and legal fees. Legal fees might increase in contested administrations or if a live business is sold, requiring a sale and purchase agreement.\n\n**Governing Rules and Transparency:**\nThe fee structures for insolvency practitioners must comply with the **Statement of Insolvency Practice 9 (SIP 9)**, which governs the remuneration of insolvency practitioners to ensure transparency and fairness in fee arrangements. SIP 9 mandates that all payments from an estate should be fair, reasonable, and proportionate to the insolvency appointment. Insolvency practitioners are required to provide detailed fee estimates and obtain appropriate approvals before commencing work. Creditors have a right to request further information about fees and expenses and can challenge them if they believe they are excessive.\n\n**Who Pays for Company Administration**\n\nThe administrator's fees and other costs of the administration are primarily paid out of the company's assets. These costs are paid before any distributions are made to creditors, including floating charge holders and unsecured creditors. This is why creditors have a direct interest in the level of these costs.\n\nIn circumstances where the company lacks sufficient assets to cover the insolvency costs, directors may, in some cases, choose to personally fund basic insolvency procedures. This is done to ensure proper company closure and to avoid potential issues such as director disqualification or personal liability under the Company Directors Disqualification Act 1986. Additionally, one or more creditors might provide funding to the administrator to facilitate the appointment, particularly before assets are realised. Any pre-administration costs, if not fixed with the directors beforehand, may also require approval by creditors.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parliament.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJEoIyVySA5VDMYFwfYADYY9O9yWjtv-AV2-AswruvOeedd7XVQ-TAm_Uwo-sbqJZKPbmqsddvodv2ZplBxjifCOimm1EbfPn-F6tSuea-3O7BXoA0SZjIoS7bAEjemSW1nktdHJg-GHG8_t-ut_NZfaX57Y6mEqPoUg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parliament.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEunsWEmZYKb5NZvr6ozm-TnEaUBojhkFVeWN_csvvFmEcLlOGqdTPknYr-VgGzu77k34a90Rt-0gLVCIrcNxULWKEAAvkearU9lPBw9f3Tz7XR7geeQ34DJHNpfUoSKJMsqPegeE1cU-Jn-GN3yRc5QLpzZJ0jIuE-PVFoE7BD1q0ggU3U"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pwc.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6tGVqgZb5bxYc2SGbkBVzjEjKN_VcJeGq2cON0csaizUoegZWbhPXv87dIONeNAtPd6ZJb_awzjtecdT1vNweGyidusCgbTUhBTMKdW6UP8chLMWVQ4PypYuyn1y6XACELQZnpjem"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cullenco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc5D0ckETsO6pRdP_kN33-uxfxFQF5stVVRlrqxzEJ9xI4UYB4uCkVn2siqZCZWpahrKZ7ewzU3nNchPyWQgo4R9E1HNwlVqiiYgHIV9lOlnn9pdD6D8mp444wRtv0zDd6MQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wilsonfield.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFQ0Uvt8IoVZvpQg4bOsJR_q5rAodfvAVcYilh9uUzMS1lbXqJqmtmSl32IlNoDLOobhs6zFB32DH0HLmaLEIYDURXUE6eF5Q15gsixKmOYeNi0j-08e6TgZxsWg9cLS_EPhdkMyEzh1DnO5cgY95Hj3ECDtHbfXQ_IoY8nnMKGb6z4x9G_iT8z5g-o7s_p_oCHI_nMAmDzkF1"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbbFyeMvFNOZVVfj_uq372Gm3ueFLW25Xmb3cg4KBBGekdIp9exRSfEcMhH4qtL9q-VJh91y_cM1JADaxWCfhHwsrKp1j12jNGMF8nMUnizw9Q5aVDrBIxwFRiDAYPKh1CgDaxGbl046lpzW8cAkMioml2y3ID4QZiowDWkGB87zHg94ENhztQhR_M5pH27YaDGe0ivDxVbakBgE5Nswkc34nQ5g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "administration.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgpRzBzpKjs1Kg_z3n3xKCltHsR1W5S8XXe6Lei1kw4jN-mEVur9JR05suZ52cy3NvYXv_Y1J3WEWeyPNESkqyyOZgsfa1_elDQo3unMjdC0YAF_IVaHNoaZ66xvZO9AP9Jh7kYsV0UC6qBNGZL46dJJMHkow8Vy1e9f5sN4DJpLgDXqGduQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "jeremyknight.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJhUiA6Ct4gHWqhdwjZPhMyfPe5ym5rFf48M8uFxxGQdKghEvXZNpqXl_gicb-T0H7cx5XwBzuN9xvvLyb3jAOxhnOF9rKlClbjU4iKoZPficPEujRbGNn8E5KnV4_Gq5iueezzajNz5jJdHw="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ukliquidators.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWflcTNZGUKxa5BF9Tn1KMuMVADLX05HZupfbUoVpD1NAv9uge9FRFIteOwNNOvCVzJ0mg3h0tRrR0GDmxey3mQoue1nwwt_Omn5ScMqrnu54HeLUQnqe94gRwgVf9yQWG76tXZMqCgP0WLjjIm8447igNKbZBHvA_Drj_SxtIgFmgQZEIlMEkX6jdF9-vnehO"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "insolvency-practitioners.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdDl-aLdz_u9X-1lbdYuuxswCXLqUemU6SVBpLHBeomz6L0BAkDlLrV-T30O8Df51XiKWge2Vdf68L5RoXxf3xWdr3TWV3LESv6SNNebNS9PNCru3Lne1yd97LQt7q6dEWMRmzkQRvQvglkKGZM_dyZB-SwCGAS1h4xxtU8ZDK"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "icaew.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTmW3Pt-OhcvpYlqH4AgSpRaZzpLIHJoHRdgagTCvZbvwg6wijc9BMaXQtEesJqze0WlWeh0hcSTjfW0ROzUW4VBYtwTSrd-utM70ibPbVbi7P0jSckK0219PNAKNFyMNuoRiYfZwtmuM7OS2LmXGhJYHJLrebkRoISGv0S3wQJSUx6fq0wZOE5kfw358lWnODS8KFzdgWKx-yzhV2j5g8eLovGItcEITc3qPjAiaCQZo9_icrwpikXfDxFwMlx-dfyboVxT4iOUveXLS05nXH4IefQ-1ADbAtJT2q1Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r3.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPn2qOC3Ki8WBF4GAI9boV847d0BXzEtCKHyhS0Cavu9jlHFZHg_h9ZHeFKFp4KZJjB9M3hjLPnVQiChZRd_ym_kb_WqGmSdH8UmLo6-Hlm2lsnU4hyMrD4TwGpBUMSVFO0TnyYwR2_HuubDk5dXexHH_VErK1VFcl5whvH-Qnbpiu8ay1BaKwyu82L03iWexbhe_3LUTatptC8J1fXDlS9dQ="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "maxwelldavies.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsno0Z5A-XORh782W1_THtG_WXlnjEtw6Qa7-lWUFh7HhGIo99Bng76LiDkioAwXVyY-J5O1tri2i4T4T7dNCPcw96te81ldzof7hq1Y68vQX5Bq8-0EaCciHSSaRN701u-nT0xZTcEna7441waoDWoCGiR39hkJAHyGyhpkLCdHNe-RclXNbHtcfNzLC8"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCdZZt8qcDy0q56Obic5WrT3dINH3o7R5J0NkVXyxIvWU7ryAwWYz0yACx1rxYDulZoSPL8b8r8MREpqCQJ0_wdElaYWr5_nx5W2tDFk4i2XaoJSndbgWj6B9OzpI5muUoMlC-WKhZwQ_sfz3EcATSeQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "bridgewood.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE389H194k4EssWhkqxx0x_eyKnePeN7B-dV6XyQAj966CLwmfeiOlzF263Pezg9-BEh8nJZOMHWbEwY9QdQ_TOBHnkIAuvAF7OZG77ueQmAXz00H8WcypCpHpQeWSSqA_1nG4GaTr3YQCScrT0tllahxnSRI-QsRsZ"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ashurst.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsuDdJVLLhpAd3a4a3o-3qz_qid5ufuyB7Cqh2FUwCLqdEU4cy3Cx7fPbJgPvRQvkfTiXJaNNzios_5AA_w-ih8bM8KrBEtsaehEPHjNQo9G5sD0ALcP8D3_OqvkWZgQ-rPPBbijKqmVp2wAiEUosMftURPltHnwAZTtcb-p0CZo_O_dc_FnDRd4ynYM9_Kg0kuTaRB9L0nwctefqr1842TyS4m5mSISmW4lpIszjEzFb8NG_nv2-b9ewmNdB0Ocxzxhdk"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1
+            ],
+            "segment": {
+              "start_index": null,
+              "end_index": 113,
+              "part_index": null,
+              "text": "In the UK, company administration is a formal insolvency procedure governed primarily by the Insolvency Act 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 114,
+              "end_index": 313,
+              "part_index": null,
+              "text": "Its objective is to rescue the company as a going concern, achieve a better result for creditors than in a winding-up, or realise property to make a distribution to secured or preferential creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4
+            ],
+            "segment": {
+              "start_index": 351,
+              "end_index": 554,
+              "part_index": null,
+              "text": "The cost of company administration is highly variable, depending on the complexity, size, and nature of the company, as well as the assets and liabilities involved and the duration of the administration."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 556,
+              "end_index": 650,
+              "part_index": null,
+              "text": "*   **Initial Costs:** Initial administration costs typically range from £10,000 to £15,000."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 651,
+              "end_index": 856,
+              "part_index": null,
+              "text": "*   **Pre-administration Fees:** For smaller administrations, pre-administration fees can be between £5,000 and £10,000, which may be higher in pre-pack administrations due to increased preparatory work."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 857,
+              "end_index": 1024,
+              "part_index": null,
+              "text": "*   **Total Fees:** For complex cases involving business sales, extensive asset realisations, or lengthy administration periods, total fees can easily exceed £20,000."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              8
+            ],
+            "segment": {
+              "start_index": 1181,
+              "end_index": 1340,
+              "part_index": null,
+              "text": "Hourly rates for IPs can range from £100 to £300, while staff charge-out rates vary from £115 to £525 per hour, depending on experience and qualifications."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7
+            ],
+            "segment": {
+              "start_index": 1341,
+              "end_index": 1383,
+              "part_index": null,
+              "text": "Time is usually charged in 6-minute units."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8
+            ],
+            "segment": {
+              "start_index": 1388,
+              "end_index": 1480,
+              "part_index": null,
+              "text": "*   **Fixed fee arrangements:** These may be used for simpler aspects of the administration."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              8
+            ],
+            "segment": {
+              "start_index": 1485,
+              "end_index": 1742,
+              "part_index": null,
+              "text": "*   **Percentage of realisations:** In some cases, fees may be calculated as a percentage of funds recovered from asset sales, typically ranging from 3% to 15% of assets realised, though higher percentages may apply for specialist or challenging recoveries."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 1743,
+              "end_index": 1885,
+              "part_index": null,
+              "text": "*   **Other Costs:** Beyond the Administrator's fees, other professional fees and disbursements include agents' valuation fees and legal fees."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 1886,
+              "end_index": 2012,
+              "part_index": null,
+              "text": "Legal fees might increase in contested administrations or if a live business is sold, requiring a sale and purchase agreement."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              7,
+              9,
+              10,
+              11
+            ],
+            "segment": {
+              "start_index": 2014,
+              "end_index": 2284,
+              "part_index": null,
+              "text": "**Governing Rules and Transparency:**\nThe fee structures for insolvency practitioners must comply with the **Statement of Insolvency Practice 9 (SIP 9)**, which governs the remuneration of insolvency practitioners to ensure transparency and fairness in fee arrangements."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9,
+              10,
+              11
+            ],
+            "segment": {
+              "start_index": 2285,
+              "end_index": 2409,
+              "part_index": null,
+              "text": "SIP 9 mandates that all payments from an estate should be fair, reasonable, and proportionate to the insolvency appointment."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 2410,
+              "end_index": 2538,
+              "part_index": null,
+              "text": "Insolvency practitioners are required to provide detailed fee estimates and obtain appropriate approvals before commencing work."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              3
+            ],
+            "segment": {
+              "start_index": 2539,
+              "end_index": 2675,
+              "part_index": null,
+              "text": "Creditors have a right to request further information about fees and expenses and can challenge them if they believe they are excessive."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              13,
+              2,
+              12,
+              14,
+              3,
+              0
+            ],
+            "segment": {
+              "start_index": 2718,
+              "end_index": 2828,
+              "part_index": null,
+              "text": "The administrator's fees and other costs of the administration are primarily paid out of the company's assets."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              15
+            ],
+            "segment": {
+              "start_index": 2829,
+              "end_index": 2956,
+              "part_index": null,
+              "text": "These costs are paid before any distributions are made to creditors, including floating charge holders and unsecured creditors."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              12,
+              14,
+              3
+            ],
+            "segment": {
+              "start_index": 2957,
+              "end_index": 3030,
+              "part_index": null,
+              "text": "This is why creditors have a direct interest in the level of these costs."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5
+            ],
+            "segment": {
+              "start_index": 3207,
+              "end_index": 3393,
+              "part_index": null,
+              "text": "This is done to ensure proper company closure and to avoid potential issues such as director disqualification or personal liability under the Company Directors Disqualification Act 1986."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15
+            ],
+            "segment": {
+              "start_index": 3394,
+              "end_index": 3544,
+              "part_index": null,
+              "text": "Additionally, one or more creditors might provide funding to the administrator to facilitate the appointment, particularly before assets are realised."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 3545,
+              "end_index": 3658,
+              "part_index": null,
+              "text": "Any pre-administration costs, if not fixed with the directors beforehand, may also require approval by creditors."
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNvpgQ4ZRh1zS7qIDTdTH1xNapMN2-wtft9v2ARQBQnWSzaKX38ttqdkNe8UBQxukz-jIz3zoLfPI1SuH00SmVUEoYXildoF1PBwYKYvj-MKzKyRXVQf48Fn8hYNEDYdx_kiU25FlVfP9LC26VpoFGJ24VBa1OEXVWnUVIv0WUwZfZ_kaBFA8E_426fNWgLJjlm8j7j_Pr9w7xIddxPhjKn7a1uGsmzKo=\">who pays for company administration UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr591ZBWw_LMi7Zq-7oLLp76nU2OnpgywaWDo_Zoaw8UiYZJNdTnoqbAMkBdBdJ1OoMOXmy9KCB51yZ2K1zYhP51O2I9k1iE2sHM-lD2MRjlQZwp2UUySfSuKCyqyFuY7Ssj-oH-bhT7xgcChzkVEWgbjdx5olrzGIrABpvY5L-FBKnrZNUWlLCBvYUj8H0FDoWJ_hhlXmSqM5vRfKdTnWber_\">cost of company administration UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzxg2pyGFMS-ENZmzdH0-hpoXASUORAN2MexYq0OfXGiVQWxPFqzDTFuu2D2LQEvYROiUyPx6wD5zVcutlVSg4UFH9jl7tsOIDwFNX6oxujg2h_D9Ks_L_UmQejZVba_1OAeD8j4ffyFV2DhEqtWbNDS461xK4pVv66Z2alXNPbL6v-5P6PtXFvU90Yw-w1Y7-Kdtoy4_zDRjajHlcOBX7\">company administration fees UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpfxqFT2PhGqVQtfgJy-Mi25OgTSYzH9Ql29_YZTC5OqC76PmFW-nAJJhoIltItyvtlom4mDUQgPX8CYLJ0cO6HPPC5Dw4b5mTZy-kafEsPIs_TTM7jv7KUd7qU26B8-8cFqAI5k-0xiHmxI0FRe9KnXdSB9UWJD12l5ty7QPQ_HpxGbjNeIFAYq1mfxobNX-UxxpEHLGgUKOqRTlrgoGTUkXhS82kgB900aA8fFgAkE0j\">Statement of Insolvency Practice 9 (SIP 9) costs</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH05xDctkpQfxGP-gI4M9RUk7hP_suTvRDXtDZCwB5XffxLsiOhVZC7lY-7m8V9Vw7_4z44KJBVyscM9SRN2Dv3dUlX_0i7JfEwqPvi2XViY5TO4y973xb9P0FovnFj8p3MlG0Obk3jHxRqHBybIcRyu-Zi1rgGWtYLDWSLzYvoR9ItgjcJVRyklkkaZsioVJxUYo5ZvtWSHLsdyUd_aF6N77dwU8PdkyA4JvKNf_4Pym9A\">Insolvency Act 1986 company administration costs</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "cost of company administration UK",
+          "who pays for company administration UK",
+          "company administration fees UK",
+          "Insolvency Act 1986 company administration costs",
+          "Statement of Insolvency Practice 9 (SIP 9) costs"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "bLIpat_ZF8X_vdIPoMfzgA0",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 788,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 87,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 87
+      }
+    ],
+    "thoughts_token_count": 608,
+    "tool_use_prompt_token_count": 260,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 260
+      }
+    ],
+    "total_token_count": 1743,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

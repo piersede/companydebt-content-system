@@ -1,0 +1,298 @@
+<!-- TITLE: What Is a Statement of Affairs? UK Insolvency Guide for Company Directors -->
+<!-- POST ID: 13513 / TYPE: pages / AUTHOR: 34 / FM: 70121 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/insolvency/statement-of-affairs/ -->
+
+<!-- wp:paragraph -->
+<p>Fourteen days into the creditors' voluntary liquidation process, a blank Statement of Affairs form lands on your desk. You are asked to list every asset, every creditor, and every contingent liability, including the ones you had quietly stopped mentioning in your head eighteen months ago when the cash ran thin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The document is verified by a statement of truth you sign personally. A liquidator will cross-check it against the bank statements, the sales ledger, and the supplier accounts you handed over the week before. Errors of omission are the most frequent trigger for a section 210 Insolvency Act 1986 investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Below, we set out what the Statement of Affairs actually contains, the statutory deadlines, the consequences of a false declaration, and the practical discipline we ask clients to bring to it. Done properly, it takes a week of careful work. Done badly, it sits in the officeholder's file as evidence for a disqualification referral.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a Statement of Affairs Is</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A Statement of Affairs is a sworn statutory document listing a company's assets, liabilities, and creditors as at a specific date, prepared by the directors in the context of an insolvency process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is not a balance sheet. A balance sheet is historic and records assets at carrying value. A Statement of Affairs records assets at estimated realisable value, the figure the liquidator or administrator is likely to recover in the market conditions actually facing the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The form is prescribed by the Insolvency (England and Wales) Rules 2016, and the content requirements are non-negotiable: secured creditors, preferential creditors, floating-charge creditors, unsecured creditors, and the statutory order of distribution under Schedule 6 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When a Statement of Affairs Is Required</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Statement of Affairs appears at different points depending on the insolvency route. You need to know which deadline applies to your situation:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Compulsory liquidation</strong>, within 21 days of the winding-up order under section 131 of the Insolvency Act 1986, delivered to the Official Receiver. Extensions are granted sparingly.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Creditors' voluntary liquidation (CVL)</strong>, submitted to the decision procedure of creditors under section 99 of the Insolvency Act 1986. The directors sign it before the decision date and it is put before creditors at that point.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Administration</strong>, the administrator may require one under paragraph 47 of Schedule B1 of the Insolvency Act 1986, usually within 11 days of the requirement being served.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Administrative receivership</strong>, within 21 days of the receiver's appointment, under section 47 of the Insolvency Act 1986.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The 21-day window in compulsory liquidation is the tightest. Directors often receive the winding-up order the same week the company has effectively stopped trading, and the records are already fragmented. Getting the records in order at the front end saves days of reconstruction at the back end.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a Statement of Affairs Must Contain</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The prescribed content of the Statement of Affairs, under the Insolvency Rules 2016, covers four pillars:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Assets</strong>, listed with their estimated realisable value, not their book value. Cash at bank. Trade debtors, with an estimate of collectability. Stock, at likely auction or break-up value. Fixed assets, at forced-sale valuation. Intangible assets, including goodwill, IP, and customer lists.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Secured creditors</strong>, the holder of any fixed or floating charge, the nature of the security, the amount outstanding, and the estimated value of the security. Typically banks, asset financiers, and invoice finance providers.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preferential creditors</strong>, mainly employees (wages capped at £800 per person for the four months prior to insolvency, plus holiday pay), and, from 1 December 2020 under the Finance Act 2020, HMRC for VAT, PAYE, employee NIC, CIS deductions, and student-loan deductions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Unsecured creditors</strong>, trade suppliers, HMRC for Corporation Tax and penalties, landlords for outstanding rent, tax advisers, professional fees, and any contingent liabilities such as guarantees and disputed claims.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Contingent creditors are the category most often under-declared. A landlord with nine years left on a lease is a creditor to the extent of the guaranteed shortfall. A product-liability claimant on an unresolved claim is a creditor. An HMRC enquiry not yet resolved is a creditor at the estimated exposure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Leave them off the form, and the liquidator will either find them or a creditor will turn up later claiming against your estate, holding a contract you forgot.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Who Prepares and Signs the Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The directors prepare and sign the Statement of Affairs personally. The licensed insolvency practitioner or Official Receiver assists with the structure and form, but the statutory responsibility is yours as director.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Statement is verified by a statement of truth. You are certifying, on pain of criminal penalty, that the information is true to the best of your knowledge and belief. That language matters.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>"To the best of your knowledge" does not let you off the hook for things you ought reasonably to have known. In CVL cases we take on, the directors who run into difficulty are those who signed without reconstructing the full creditor ledger, trusting their memory. A weekend of cross-referencing bank statements, supplier statements, and the sales ledger avoids most of it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Consequences of a False or Omitted Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 210 of the Insolvency Act 1986 creates the offence of "fraud in anticipation of winding-up", and related provisions criminalise false statements and material omissions in the Statement of Affairs itself. The offences are triable either way, with prison terms up to seven years on indictment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The offences that bite in practice:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Material omission of an asset</strong>, particularly debtor balances, cash held in a second bank account, or director's loan account balances owed to the company.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Under-stating a creditor</strong>, typically HMRC liabilities or connected-party debts the director would prefer not to foreground.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Over-stating secured status</strong>, dressing up an unsecured creditor (a spouse's loan, a friend's investment) as secured in the hope of pushing them up the waterfall.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Concealed disposals</strong>, assets transferred out of the company in the weeks before the Statement was prepared and not disclosed.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Civil consequences run alongside the criminal ones. The Insolvency Service may use the same evidence for a directors' disqualification application under the Company Directors Disqualification Act 1986. The liquidator may pursue misfeasance under section 212 Insolvency Act 1986 or wrongful trading under section 214.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How the Liquidator Will Cross-Check Your Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The officeholder does not take your Statement on trust. They cross-check it against records you will have already handed over:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Bank statements for the last two to three years</strong>, against the assets and creditors listed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Companies House filings</strong>, against declared charge-holders and the register of charges.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>HMRC records</strong>, against declared tax liabilities. HMRC will provide the liquidator with a proof of debt whether or not you have listed them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Sales and purchase ledgers</strong>, against the debtors and creditors you have listed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Your own statutory books</strong>, minutes, contracts, and director's loan account records.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>A liquidator does not read your minutes to find what was decided. They read them to find what was not decided: the valuations you did not commission, the creditors you did not mention in the months before the Statement date. That is the lens on your Statement of Affairs as well.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical Preparation Discipline for Your Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Statement of Affairs that passes first time shares a consistent preparation pattern. In the CVL files we handle, directors who do the following avoid nearly all the common traps:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Start with a full bank statement reconciliation</strong> covering the 12 months before the Statement date. Every inflow ties to a debtor or a disposal; every outflow ties to a creditor or a preference.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Request HMRC account statements</strong> for Corporation Tax, VAT, and PAYE. Do not rely on your bookkeeper's last-filed figures.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>List contingent liabilities explicitly</strong>, even where you dispute them. A disputed HMRC enquiry is a creditor at the estimated exposure, not zero.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Disclose the director's loan account balance</strong> both ways, what the company owes you, and what you owe the company. An overdrawn director's loan is an asset of the estate that the liquidator will pursue.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Flag the borderline items</strong>, the vehicle you use personally but whose V5 is in the company's name, the office fit-out paid for from your own account.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Your goal is not a short Statement. It is a complete one. An over-inclusive Statement triggers a five-minute query. An under-inclusive one triggers a three-year investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Your Next Step on a Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The real problem is never the form. It is the material you have to put into the form. Two groups read this page, and your first call is different in each case.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>If you are in the early days of a CVL or winding-up order</strong>, call a licensed insolvency practitioner this week. The Statement is due inside 21 days. Any transactions you are worried about, preference payments, director's loan movements, connected-party dealings, need to be disclosed properly, not suppressed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>If a petition has been presented but no order yet</strong>, you are still in the zone of insolvency. Stop moving assets. Start reconstructing the creditor ledger now. The Statement you will sign four weeks from now will be easier if the work is done in advance.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our licensed IPs can prepare the Statement of Affairs alongside you, flag the borderline items before they become criminal-offence territory, and handle the officeholder correspondence. Call us free on 0800 074 6757 for confidential advice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on the Statement of Affairs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"13513-soa-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the deadline for filing a Statement of Affairs in compulsory liquidation?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>21 days from the date of the winding-up order, under section 131 of the Insolvency Act 1986. Delivered to the Official Receiver. Extensions are granted on application but only for documented reasons, such as records held by a third party or severe illness.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is the difference between a Statement of Affairs and a balance sheet?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A balance sheet records assets at historic carrying value under accounting standards. A Statement of Affairs records assets at estimated realisable value, the likely recovery in the market actually facing the company. A vehicle carried at £18,000 in the accounts may appear on the Statement at £7,000 forced-sale value.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I miss a creditor off my Statement of Affairs?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>If the omission is genuine and discovered quickly, an amended Statement can usually be filed. If the omission was material and the liquidator finds evidence you knew about the creditor, it becomes potentially a section 210 Insolvency Act 1986 offence, "fraud in anticipation of winding-up", and supports a disqualification report under the Company Directors Disqualification Act 1986.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I need to list contingent creditors?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. Contingent creditors, including landlords for future rent shortfalls, product-liability claimants, unresolved HMRC enquiries, personal guarantees called on, must be listed at the estimated exposure. Omitting them because you dispute the claim is a material omission.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I amend a Statement of Affairs after I have signed it?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, through the officeholder. An amended Statement can be filed with the Official Receiver or liquidator. Amendments prompted by the director's own review are treated more favourably than amendments forced after the officeholder finds a discrepancy.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWho can help me prepare a Statement of Affairs?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>A licensed insolvency practitioner for the content and compliance side, an accountant or bookkeeper for the underlying records, and a solicitor if any of the entries touch on potentially criminal conduct such as preference payments or asset disposals. The signature remains yours, but the preparation can be shared.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by our editorial team and reviewed by our licensed insolvency practitioners. We reflect UK insolvency law as at the last-reviewed date.</p>
+<p>Statutory references are drawn from the Insolvency Act 1986 (sections 99, 131, 210, 212, 214, and Schedule 6), the Insolvency (England and Wales) Rules 2016, the Finance Act 2020 (Crown preference), and the Company Directors Disqualification Act 1986.</p>
+<p>Company Debt is an insolvency advisory firm. Where a Statement of Affairs needs to be prepared alongside a CVL or administration we act as the licensed officeholder under separate engagement. Our 0800 number is a free confidential consultation, not a transaction.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, sections 99, 131, 210, 212, 214, Schedule 6</strong> &mdash; statutory basis for the Statement of Affairs, directors' duty to deliver it, false declaration offences, and the order of distribution</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; prescribed form, content requirements, and deadlines for delivering the Statement of Affairs in CVL, compulsory liquidation, and administration</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2020/14/contents"><strong>Finance Act 2020 (Crown preference reinstatement)</strong> &mdash; restores HMRC's secondary preferential status for VAT, PAYE, and NICs, affecting the preferential creditor ranking shown in the Statement of Affairs</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; framework under which a defective or misleading Statement of Affairs can support a disqualification referral following the liquidator's conduct report</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>Insolvency Service</strong> &mdash; official guidance for directors on cooperation duties, statement-of-affairs obligations, and the consequences of inaccurate disclosure during liquidation</a> - gov.uk</li>
+<li><a href="https://insolvency-practitioners.org.uk/"><strong>Insolvency Practitioners Association &mdash; regulator and IP search</strong> &mdash; verify the licence and regulatory body of the liquidator or administrator receiving your Statement of Affairs</a> - insolvency-practitioners.org.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/section/172"><strong>Companies Act 2006 section 172 (directors' duties when insolvency probable)</strong> &mdash; the creditor-interest duty that shapes how directors must value assets and disclose liabilities once insolvency becomes likely</a> - legislation.gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

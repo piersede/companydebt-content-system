@@ -1,0 +1,300 @@
+<!-- wp:paragraph -->
+<p>The day a dissolution notice clears at Companies House, most directors exhale. The thinking goes: the company is gone, so the lawsuit threats go with it. That is half right.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The dissolved company itself cannot be sued because it no longer exists in law. But the people who used to run it can be sued, the company can be brought back to life by a creditor specifically to be sued, and any personal guarantees signed years earlier are completely unaffected.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We have lost count of the directors who came to us a year after dissolution holding a solicitor's letter and asking how this is even possible. The phone call is always the same: a long pause, then "but I dissolved the company". The dissolution does a lot less work than they thought.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors Sued After Dissolution</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes, you can still be sued after your company is dissolved, through one of three routes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>First, on any personal guarantee you signed. The dissolution has no effect on guarantees, full stop.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Second, by a creditor who restores the company under section 1029 of the Companies Act 2006 specifically to bring a claim against it (within six years, or twenty for personal injury).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Third, since December 2021, by the Insolvency Service investigating you directly under the Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021, with no need to restore the company first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The dissolved company itself cannot be sued because it no longer has legal personality. That is the only protection dissolution actually gives you, and it is procedural rather than substantive. If a claimant is determined to come after you, the routes are still open. Take the threat seriously and take advice early.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Director Liability After Dissolution: What the Corporate Veil Actually Covers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When a company is dissolved, section 1012 of the Companies Act 2006 vests its remaining assets in the Crown as bona vacantia, and the company itself ceases to exist as a separate legal person. From that moment, the company cannot be sued, cannot sue, cannot be a party to any legal proceedings, and cannot hold property. In law it is gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The director's personal exposure is a different question. The corporate veil that protected you while the company was alive only protected you from claims against the company itself.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It never protected you from your own personal contracts (guarantees), your own conduct as a director (fiduciary duties, wrongful trading, fraud), or from the regulator's interest in your fitness to act as a director. Each of those routes exists independently of the company's legal status, which is why dissolution does not close them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some obligations also continue after the company is removed from the register. Our guide on <a href="/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/">a director's responsibilities after strike off</a> sets out the duties that survive dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Personal Guarantees Survive Dissolution</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The single most common post-dissolution lawsuit we see is the personal guarantee claim. Personal guarantees are personal contracts between the director and a creditor (usually a bank, a landlord, a finance house, or a major supplier).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>They are not contracts between the company and the creditor, even though they are signed in connection with company borrowing. Because they are personal, they are completely unaffected by what happens to the company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>One case we handled: a director dissolved a small marketing agency in 2022 after winding the business down quietly. He had completely forgotten about a £50,000 personal guarantee he signed in 2018 to secure an office lease, on the basis that the lease ran to 2024.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In late 2023 the landlord wrote to him personally for £18,000 in unpaid rent and dilapidations from the dissolved company. He was sitting in the kitchen of his new flat when the letter landed. By that point he had a new salaried job and no obvious way to pay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The dissolution made no difference whatsoever. The guarantee was personal, the lease was still alive, and the landlord did not need to restore the company to enforce. He had been stung by a piece of small print he signed in 2018 and forgotten about. Six years on from signing, he is paying off the debt from his salary at his new job.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The practical message is simple: find every personal guarantee you have ever signed, even guarantees that look settled or expired. Bank overdrafts, lease agreements, supplier accounts, asset finance, credit cards, government schemes (especially Bounce Back Loan-related guarantees if any were given).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Make a list. Knowing the universe of guarantees is the first step to managing the post-dissolution risk.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Restoration: How a Creditor Can Bring the Dissolved Company Back to Sue It</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The second route is restoration. Under section 1029 of the Companies Act 2006, any person with a potential claim against the company can apply to the court to restore the company to the register.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That includes a creditor with an unpaid invoice, an employee with a personal injury claim, or a landlord with a dilapidations claim. Once restored, the company is treated in law as if it had never been dissolved, and the claimant can sue it like any live company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The window for most claims is six years from dissolution. The window extends to twenty years where the underlying claim is for personal injury, including latent injuries that surface decades after the original exposure (asbestos-related illness, industrial deafness, occupational disease).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is the trap that catches former manufacturing directors most often: they dissolved a company in the 1990s assuming the liability was gone, and an employee diagnosed with mesothelioma in 2024 restores the company to bring a claim. The court will usually grant restoration where the purpose is a bona fide personal injury claim.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The procedural step gives directors something they often miss: time. Restoration takes eight to sixteen weeks from the application landing to the order being granted, and the claimant has to do all the work and bear the cost.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That gap is the moment to take advice, gather records, and prepare a defence to the underlying claim. See our guide to company restoration after liquidation for the deeper mechanics.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Direct Investigation by the Insolvency Service Under the 2021 Act</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The third route is the newest and the most overlooked. Until December 2021, the Insolvency Service had to restore a dissolved company before it could investigate director conduct or seek a disqualification.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Restoration was expensive, slow, and often uneconomic for a company with no assets, which is why the dissolution loophole worked for so long. The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 closed it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In effect, a director of a dissolved company can now face the same conduct scrutiny as a director whose company went through a formal process. Our guide on <a href="/liquidation/what-happens-to-directors-in-liquidation/">what happens to directors in liquidation</a> covers that scrutiny in full.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Since 15 December 2021, the Insolvency Service has had direct authority to investigate dissolved companies and pursue disqualification proceedings against former directors, with no need to restore the company first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Act also gave the courts power to order compensation against disqualified directors, which means a successful disqualification proceeding can attach to your personal assets through a compensation order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Insolvency Service is targeting three patterns most aggressively: dissolved companies with unpaid Bounce Back Loans, dissolved companies with significant HMRC arrears at the date of strike-off, and dissolved companies where the director moved cash or assets out before dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If any of those describes your situation, expect the investigation to surface eventually. We have seen letters arriving three years after dissolution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens to Dissolved Company Assets and Bona Vacantia</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Anything the company owned at the moment of dissolution passes to the Crown as bona vacantia under section 1012. In England and Wales (outside Cornwall and Lancaster), bona vacantia is administered by the Bona Vacantia Division of the Government Legal Department.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In the Duchies of Cornwall and Lancaster, the relevant Duchy holds the assets. The Crown can keep, sell, or release these assets at its discretion.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For directors, the relevance is mostly indirect: if there were assets in the company at dissolution and a creditor restores the company to recover them, the bona vacantia process has to be unwound first, which adds time and complexity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Restored companies sometimes find their old assets have already been sold by the Crown and the proceeds held in a separate account, which the restored company can then claim. Other times the assets are simply gone. We tell directors that any cash, property, vehicles, or stock left in a company at dissolution is at serious risk of being lost to the Crown.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Steps to Take if a Dissolution Letter Has Already Arrived</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are reading this because a solicitor's letter, an HMRC enquiry, or an Insolvency Service notice has just landed about a dissolved company, the first move is the same regardless of the source: do not respond on instinct.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The first response sets the tone of the entire matter, and any defensive, evasive, or factually incorrect statement will be quoted back at you for years. Take 24 to 48 hours, find every record you have, and call a licensed insolvency practitioner before you write back.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our standard checklist:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Identify the source.</strong> Is the letter from a private creditor, HMRC, the Insolvency Service, or a court? Each requires a different response strategy.</li>
+<li><strong>Identify the claim.</strong> Is it a personal guarantee enforcement, a restoration application, a section 235 information request, or a disqualification notice? The claim type determines the timeframe and the stakes.</li>
+<li><strong>Find the records.</strong> Bank statements, sales invoices, purchase invoices, payroll, board minutes, contracts. The earlier you locate them, the stronger your position.</li>
+<li><strong>Take advice before responding.</strong> Once you reply, you have committed to a position. Get specialist input on what to say and what to leave out.</li>
+<li><strong>Do not panic-pay.</strong> Some directors try to settle the claim immediately to make it go away. This often works against you, because settling without taking advice can be treated as an admission, and the claimant may come back for more.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For the broader framework on director duties before and after dissolution see our guide on wrongful trading and our companion piece on company restoration after liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Misunderstandings About Dissolution and Lawsuits</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>"The company is dissolved, so I am safe."</em> The company is gone but three personal-exposure routes are still live: personal guarantees, creditor restoration, and direct Insolvency Service investigation under the 2021 Act. "Safe" is the wrong word entirely. It feels safe. It is not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"They have to restore the company first, so they will not bother."</em> Two problems with this. First, restoration is achievable for the right amount of money and the right legal team, especially when the underlying claim is large. Second, since 2021 the Insolvency Service does not need to restore at all.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"It has been three years, the limitation period has expired."</em> Limitation periods on most contract claims are six years, on personal injury six years (twenty for latent injuries), and on fraud-based claims often longer or with no fixed end. Three years is well inside the active risk window for almost every claim type.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>"My personal guarantee was for the company, so it died with the company."</em> Personal guarantees are personal contracts. The company's status has no legal effect on them. The lender can pursue you personally without ever touching the dissolved company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If a letter has just arrived about a dissolved company, or you are worried about a guarantee or potential investigation, call us on 0800 074 6757 for free initial advice. The first conversation will tell you whether the worry is real and what to do next.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Being Sued After Dissolution</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"5e9c1d4a-3b88-4f12-9e8a-b4c2a7e1f001","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a creditor sue my dissolved company directly?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No, not while it is dissolved. The dissolved company has no legal personality and cannot be a party to proceedings. The creditor would have to apply to the court to restore the company under section 1029 of the Companies Act 2006 first. Restoration takes eight to sixteen weeks and costs the creditor several thousand pounds in legal fees.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eAm I personally liable on a guarantee after dissolution?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, completely. Personal guarantees are personal contracts between you and the creditor. The dissolution of the company has no legal effect on them. The creditor can sue you personally for the guaranteed amount, plus interest and costs, at any time within the contractual limitation period. We see this as the single most common post-dissolution claim.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the Insolvency Service investigate me without restoring the company?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, since the Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 came into force in December 2021. The Insolvency Service can now investigate a dissolved company directly and seek a disqualification order against the former directors, with no need to restore the company. Compensation orders against your personal assets are also available.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long after dissolution can I be sued?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>For most contract claims, six years from the date of dissolution. For personal injury claims, six years extending to twenty years for latent injuries (such as asbestos-related disease that surfaces decades later). For fraud-based claims, longer or sometimes with no fixed end. Personal guarantees follow the limitation period in the original contract.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat if my old company gets restored without my knowledge?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Restoration applications are usually served on former directors, but exceptions exist. If you discover the company has been restored, you are usually reinstated as a director automatically, and you become liable for the back-tax, penalties, and filing obligations that accrued during the dissolved period. Take advice immediately.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes dissolution wipe out my Bounce Back Loan exposure?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The 2021 Dissolved Companies Act was specifically designed to close this loophole. The Insolvency Service can investigate a dissolved company that took a BBL and pursue the director personally for misuse, even years later. <a href="/liquidation/company-strike-off-and-dissolution/">Striking off a company</a> that took a Bounce Back Loan is one of the highest-risk patterns the regulator is currently watching.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eA solicitor's letter just arrived about a dissolved company. What now?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Do not respond on instinct. Take 24 to 48 hours, find your records, and call a licensed insolvency practitioner. The first response sets the tone of the entire matter, and incorrect or defensive statements get quoted back for years. Most situations are more manageable than they look, but only if the response is professionally framed from the start.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":7,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I be made bankrupt over a dissolved company's debts?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only if the underlying claim is against you personally. The most common route is a personal guarantee enforcement that escalates to bankruptcy proceedings when you cannot pay. The dissolved company's debts cannot make you bankrupt directly, but personal guarantees, compensation orders following disqualification, and successful misfeasance claims all can.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Companies Act 2006 (sections 1000, 1012 and 1029 governing strike-off, bona vacantia and court restoration), the Company Directors Disqualification Act 1986, the Insolvency Act 1986 (sections 212 and 235), the Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021, and the Limitation Act 1980.</p>
+<p>All references are current for England and Wales as of May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006</strong> &mdash; particularly sections 1000 (strike-off), 1012 (bona vacantia), and 1029 (court restoration)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; the framework for director disqualification and compensation orders</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2021/34/contents"><strong>Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021</strong> &mdash; granting the Insolvency Service direct investigation powers over dissolved companies from 15 December 2021</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1980/58/contents"><strong>Limitation Act 1980</strong> &mdash; setting out limitation periods for contract, tort, and personal injury claims (including the 20-year window for latent injury)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 212 (misfeasance) and 235 (officeholder information requests)</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on dissolved-company investigations and director disqualification</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/bona-vacantia"><strong>Bona Vacantia Division, Government Legal Department</strong> &mdash; administering Crown ownership of dissolved-company assets in England and Wales</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

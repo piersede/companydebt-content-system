@@ -1,0 +1,208 @@
+<!-- TITLE: My Company Bank Account is Frozen: What Can We Do? -->
+<!-- POST ID: 11788 / TYPE: pages / AUTHOR: 34 / FM: 70135 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/advice/frozen-bank-account/ -->
+
+<!-- wp:paragraph -->
+<p>If your company's bank account has been frozen, the most likely cause is a winding-up petition advertised in the London Gazette.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Banks monitor the Gazette automatically, and the freeze happens within hours of publication. You cannot pay staff, cover rent, or fund any trading activity until the freeze is lifted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We speak to directors every week who discover their company bank account is frozen before they even know a petition has been filed. The freeze is not a warning. It is an event. One morning the account works. The next morning it does not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The bank does not call you first. They see the Gazette entry, freeze the account as a compliance measure under section 127 of the Insolvency Act 1986, and wait for you to contact them. We explain below what causes the freeze, what you can do about it, and how to keep the business alive while the account is locked.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: Why Your Company Bank Account Is Frozen</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The three most common causes are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>A winding-up petition has been advertised in the London Gazette.</strong> This is the most common cause. Section 127 of the Insolvency Act makes any disposition of company property after the commencement of winding up void unless the court approves it. Banks freeze accounts to avoid processing payments that might later be reversed.</li>
+<li><strong>HMRC has issued a third-party debt order (formerly garnishee order).</strong> HMRC can freeze the account and direct the bank to pay the frozen funds to HMRC to settle a tax debt.</li>
+<li><strong>The bank has exercised its right of set-off.</strong> If the company owes the bank money (an overdrawn facility, a loan in default), the bank can freeze and set off the credit balance against the debt.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We tell directors: determine the cause before you do anything else. The cause determines the remedy. A Gazette freeze requires a validation order. An HMRC order requires negotiation with HMRC. A bank set-off requires negotiation with the bank. The wrong remedy wastes time you do not have.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frozen Bank Account from a Winding-Up Petition: The Most Common Cause</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When a creditor files a winding-up petition, the petition is advertised in the London Gazette at least 7 business days after service on the company and at least 7 business days before the hearing. Banks subscribe to Gazette monitoring services. The moment your company's name appears, the bank freezes the account automatically.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The legal basis is section 127 of the Insolvency Act 1986: any disposition of company property made after the commencement of winding up is void unless the court orders otherwise. The "commencement" relates back to the date of the petition, not the date of the winding-up order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This means payments made after the petition was filed can be reversed, so the bank freezes everything to protect itself from liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see directors who did not know the petition existed until the account froze. The petition was served at the company's registered office (which may be an accountant's address or a virtual office), the director did not see it, and the first they knew was when the bank card was declined at a supplier.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What You Can Do Immediately About a Frozen Bank Account</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 1: Find out why the account is frozen.</strong> Call the bank. Ask specifically whether the freeze is due to a Gazette entry, a third-party debt order, or a bank-initiated set-off. The answer determines everything that follows.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 2: If it is a Gazette freeze, check the London Gazette.</strong> Search for your company name at thegazette.co.uk. The petition notice will show the petitioning creditor, the amount claimed, and the hearing date.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 3: Pay the petition debt.</strong> If you can pay the full amount owed to the petitioning creditor (including their legal costs), the petition is dismissed, the Gazette notice becomes academic, and the bank lifts the freeze.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is the fastest resolution. We see directors who borrow from personal savings, family, or a connected company to pay the petition debt and release the account.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 4: If you cannot pay, apply for a validation order.</strong> Under section 127, the court can approve specific transactions that would otherwise be void. A validation order allows the bank to process specific payments (wages, essential suppliers, rent) while the petition is pending. The application must show that the payments are in the ordinary course of business and benefit the company's creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 5: If the company is insolvent, consider a CVL.</strong> Initiating a voluntary liquidation before the court hearing converts the process from creditor-driven to director-initiated. The bank may release the account to the liquidator, who can then make necessary payments.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to Apply for a Validation Order to Unfreeze a Bank Account</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A validation order is a court application under section 127 asking the court to approve specific payments from the frozen account. You need:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li>A witness statement explaining which payments you need to make and why they benefit the company's creditors (for example, paying staff to complete a contract that generates revenue for the estate).</li>
+<li>Evidence that the company is trading profitably or that the payments preserve value.</li>
+<li>A list of the specific payments, amounts, and recipients.</li>
+<li>Legal representation (a solicitor files the application).</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We find that courts grant validation orders readily when the payments are genuinely in the ordinary course and benefit creditors. Wages for current employees, essential utilities, and payments to suppliers who are needed to complete revenue-generating contracts are typically approved. Payments to the director, connected parties, or discretionary expenses are typically refused.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A validation order takes 3 to 7 days from application to hearing. During that time, the account remains frozen. We advise directors to apply immediately. Do not wait to see if the petition is dismissed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frozen Bank Account from an HMRC Third-Party Debt Order</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If HMRC has obtained a third-party debt order (also called a direct recovery of debts order for debts over £1,000), the bank freezes the amount specified in the order and pays it to HMRC. The remaining balance (if any) stays available.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see this when HMRC has exhausted other enforcement options: demand letters, statutory demands, and enforcement agents have all failed, and HMRC goes directly to the bank. If you receive an HMRC debt order, contact HMRC's Debt Management team immediately to negotiate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In some cases, the order can be varied or a Time to Pay arrangement can replace it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What to Do About a Frozen Bank Account Right Now</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Call the bank.</strong> Identify the cause of the freeze.</li>
+<li><strong>If Gazette freeze: check the Gazette</strong> and identify the petitioning creditor and hearing date.</li>
+<li><strong>Pay the petition debt if you can.</strong> Fastest resolution.</li>
+<li><strong>If you cannot pay, apply for a validation order.</strong> You need a solicitor for this.</li>
+<li><strong>Speak to a licensed insolvency practitioner immediately.</strong> The freeze means the company is in a critical position. Company Debt connects directors with IPs who handle frozen account emergencies. A confidential call now will clarify your options before the hearing date arrives.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on a Frozen Company Bank Account</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"6c2d8a91-3e74-4f63-bd85-c1f4a2e8d70d","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow quickly does a bank freeze an account after a winding-up petition?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Within hours of the petition being advertised in the London Gazette. Banks monitor the Gazette automatically. The freeze is immediate and happens without prior notice to you.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I open a new bank account if my current one is frozen?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>In theory, yes. In practice, most banks check the Gazette before opening accounts and will refuse. Even if you succeed, any payments into or out of the new account after the petition date are subject to section 127 and may be void. A validation order covering the new account is essential.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does a validation order take?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Typically 3 to 7 days from application to court hearing. The application must be supported by a witness statement, evidence that the payments benefit creditors, and a list of specific transactions. A solicitor files the application. Courts grant validation orders readily for ordinary-course payments.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWill paying the petition debt unfreeze my account?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. If you pay the full petition debt plus the creditor's legal costs, the petitioner must apply to dismiss the petition. Once dismissed, the Gazette entry is superseded and the bank lifts the freeze. This is the fastest way to restore access to the account.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the bank freeze my personal account if I am a director?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Section 127 only attaches to the company's property, so the company's account is the one frozen. Your personal account is separate unless the bank has set-off rights against you (typically because you signed a personal guarantee). A guarantee call can result in a CCJ and subsequent personal account enforcement, but that is a separate process.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to direct debits while the company account is frozen?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Direct debits, standing orders and card payments are blocked. Suppliers will see failed payments and may suspend services. Payroll fails. A validation order is the only route that lets specific payments resume before the petition hearing.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Insolvency Act 1986 (section 127 on void dispositions, section 124 on winding-up petitions), the Insolvency (England and Wales) Rules 2016, the Tribunals, Courts and Enforcement Act 2007 (third-party debt orders), and HMRC published guidance on Direct Recovery of Debts. Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/127"><strong>Insolvency Act 1986, section 127</strong> &mdash; void dispositions of company property after presentation of a winding-up petition, the legal hook banks rely on to freeze the account</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/124"><strong>Insolvency Act 1986, section 124</strong> &mdash; presentation of a winding-up petition and the categories of person entitled to petition</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; procedural framework for the petition hearing and validation-order applications</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2007/15/schedule/12"><strong>Tribunals, Courts and Enforcement Act 2007, Schedule 12</strong> &mdash; the Taking Control of Goods regime, related to the wider HMRC enforcement chain that can lead to a third-party debt order</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/2015/33/contents"><strong>Finance (No. 2) Act 2015, Part 2</strong> &mdash; HMRC's Direct Recovery of Debts powers over taxpayer bank accounts</a> - legislation.gov.uk</li>
+<li><a href="https://www.thegazette.co.uk/"><strong>The London Gazette</strong> &mdash; the official public record where winding-up petitions are advertised and which banks monitor</a> - thegazette.co.uk</li>
+<li><a href="https://www.gov.uk/difficulties-paying-hmrc"><strong>HMRC &mdash; If you cannot pay your tax bill on time</strong> &mdash; official Time to Pay route on 0300 200 3835, which can replace a third-party debt order</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

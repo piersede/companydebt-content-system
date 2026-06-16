@@ -1,0 +1,31 @@
+<!-- TITLE: [Hub Page Title] -->
+<!-- POST ID: XXXX / TYPE: pages / AUTHOR: 34 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/[slug]/ -->
+<!--
+  HOW TO BUILD THE HUB-BOX BLOCK
+  ================================
+  1. Edit the sections list in scripts/build_hub_box.py or call hub_box_block() directly.
+  2. Run: python -c "from scripts.build_hub_box import hub_box_block; ..."
+  3. Paste the output in place of the <!-- wp:acf/hub-box ... /--> block below.
+
+  TEMPLATE PATTERN
+  ================
+  - One short intro paragraph (2–4 sentences, problem-first).
+  - One hub-box block with 3–5 themed card sections.
+  - Each card: clear thematic heading + 5–10 linked pages.
+  - No long prose after the cards — the cards ARE the page.
+-->
+
+<article>
+<!-- wp:paragraph -->
+<p>[One sentence naming the problem this hub addresses and who it is for. One sentence on what the hub contains. One sentence on what to do next — pick a card or read the guide that matches your situation.]</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">[Hub Name] Guides</h2>
+<!-- /wp:heading -->
+
+<!-- PASTE HUB-BOX BLOCK HERE — generate with scripts/build_hub_box.py -->
+<!-- wp:acf/hub-box {"name":"acf/hub-box","data":{},"mode":"edit"} /-->
+
+</article>

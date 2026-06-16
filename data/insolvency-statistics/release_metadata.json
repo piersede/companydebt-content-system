@@ -1,0 +1,65 @@
+{
+  "latest_month": "2026-04",
+  "latest_month_label": "April 2026",
+  "publication_date": "19 May 2026",
+  "next_release_date": "19 June 2026",
+  "source_label": "Insolvency Service / Companies House",
+  "status": "Accredited official statistics",
+  "data_window_start": "2000-01",
+  "page_generated": "2026-05-20",
+  "latest_figures_table": {
+    "latest_month_label": "2026-04",
+    "prior_month_label": "2026-03",
+    "prior_year_label": "2025-04",
+    "rows": [
+      {
+        "procedure": "Total company insolvencies",
+        "latest": 2085,
+        "prior_month": 2037,
+        "prior_year": 2028,
+        "month_change_pct": 2,
+        "year_change_pct": 3
+      },
+      {
+        "procedure": "Compulsory liquidations",
+        "latest": 371,
+        "prior_month": 312,
+        "prior_year": 363,
+        "month_change_pct": 19,
+        "year_change_pct": 2
+      },
+      {
+        "procedure": "Creditors' voluntary liquidations",
+        "latest": 1510,
+        "prior_month": 1472,
+        "prior_year": 1537,
+        "month_change_pct": 3,
+        "year_change_pct": -2
+      },
+      {
+        "procedure": "Administrations",
+        "latest": 183,
+        "prior_month": 233,
+        "prior_year": 103,
+        "month_change_pct": -21,
+        "year_change_pct": 78
+      },
+      {
+        "procedure": "CVAs",
+        "latest": 20,
+        "prior_month": 20,
+        "prior_year": 24,
+        "month_change_pct": 0,
+        "year_change_pct": -17
+      },
+      {
+        "procedure": "Receivership appointments",
+        "latest": 1,
+        "prior_month": 0,
+        "prior_year": 1,
+        "month_change_pct": null,
+        "year_change_pct": null
+      }
+    ]
+  }
+}

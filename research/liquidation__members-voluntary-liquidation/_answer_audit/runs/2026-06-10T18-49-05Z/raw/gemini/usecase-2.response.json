@@ -1,0 +1,571 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:50:23 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=8676",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "In the UK, a Members' Voluntary Liquidation (MVL) is a formal insolvency route for solvent companies wishing to close down in a tax-efficient manner and distribute remaining assets to shareholders. The process is governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016.\n\n### How Much Does Members' Voluntary Liquidation Cost?\n\nThe cost of a Members' Voluntary Liquidation in the UK can vary significantly based on the complexity of the company's affairs.\n\n*   **For straightforward cases**, where the company's only asset is cash at the bank and all liabilities have been settled, costs can start from approximately **£995 + VAT and expenses**. Other sources indicate a range of **£1,000 to £3,000 + VAT** for simple MVLs.\n*   **For more complex MVLs**, where there are physical assets to realise, outstanding liabilities to pay, or assets to be distributed in specie, fees generally range from **£1,995 to £6,000 + VAT and expenses**. Some sources suggest a typical range of £1,500–£4,000 or even up to £6,000 plus VAT depending on complexity.\n\n**Factors influencing the cost include:**\n*   **Complexity of assets:** Realising physical assets or dealing with non-cash assets increases the workload.\n*   **Number of directors and shareholders**.\n*   **Outstanding liabilities:** Whether there are other liabilities to resolve or if cessation accounts have not yet been filed.\n*   **Tax claims:** Cases involving HMRC tax or VAT refund claims may incur higher fees.\n*   **Property transfers:** If the company owns freehold property that needs to be transferred as a distribution in specie, additional charges may apply, along with potential solicitor fees for the transfer.\n\n**MVL fees are typically comprised of:**\n*   **The Liquidator's professional fees:** This covers all the work and duties carried out by the licensed insolvency practitioner. The remuneration can be fixed as a percentage of assets realised or distributed, by reference to the time properly given by the Liquidator and their staff, or as a set amount, or a combination of these.\n*   **Disbursements:** These are third-party costs that the Liquidator pays on behalf of the company and recharges. They are an unavoidable part of the MVL process and include:\n    *   **Statutory advertising:** A series of notices (typically four) must be placed in the London Gazette to advertise the company's liquidation.\n    *   **Liquidator's insurance bond:** This provides protection for the company's funds during the MVL and varies based on the level of assets held.\n    *   Other minor expenses, such as search fees.\n\n### Who Pays for Members' Voluntary Liquidation?\n\nThe costs of a Members' Voluntary Liquidation are paid **out of the company's assets**, not by the directors personally. The Liquidator's fees and other expenses are settled before the remaining assets are distributed to the shareholders.\n\nDirectors must make a Declaration of Solvency, affirming their belief that the company can pay all its debts, plus interest, in full within a maximum of 12 months. This commitment ensures that creditors are paid, and the remaining funds are then used to cover the liquidation costs and subsequently distributed to members.\n\nIt is important for company directors to note that while the company pays for the MVL, the tax efficiencies often associated with this route, such as Business Asset Disposal Relief (formerly Entrepreneurs' Relief), can mean that the overall financial outcome for shareholders is more favourable compared to other closure methods.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wilsonfield.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFosndOI6p_Wb254yo5qa7gXF08RIuObpJ8wNUMKVIj8tHXxNwzrj0BZiXFWDfY4vUo7scwFjUn4GLMaISZFLNtyvQV-xqk9gHIahHkqebBHz9pu4KJqXulCgrytESdnbuLTaS1eB9CATxHvt4l4L1fsoD_-CtHwhex5YpMQFyw6VWT8Q1YaY6TnelKg2CO5d4VIVJSScqtnU2GD8WpknSXjg="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "businesshelpline.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExilJmeJjz93rg93FO64qDhh6WPQc016tGd3tdUBRMK3UFyfVdgd5eBK47UKvpqrp1DzGGAxNmrOA0EuD3UdUfwveErkX6IOGYbIu4191jkucdMfpyFBjoPVbxkbiy-Hc-iSkQDN20qsIM3QqNOWntoAjHJxsmqx05KDJjG6_rAYOz8Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNURNSOt-0Q-L8Wm0q3Nr_3baAU2EoBXVk8zTGUf8ZEeKMkstLVvrNzb4UJtEoAmPnYLo173LOdgqbrWg47H4U2uGumAvH_9bf2mEQF_DXMqlZVltUlb0JPMORqnkDZPF3aHawjr40dNhwt9BpmoBhI3vcrUL6JxIIFb2dcREyWthq75m9kPBfpQ0x1WoHI2WnAdMUK3-U6cRaGJGXCe0wss2UNkEhA9_HLhCTk0bVm1UF"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "edwincoe.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5wBzWWIX_nuyuwVoLilqyA4Uz6Ibfmv2bsVYcRnAvenXsbzKaTVs9vQe6JjZv9VpcqYKR8F4qGwvY1p2gM_RCqIh8smM4LnwyMS24BPwei_bWmpFEAKj0TdbvBGf_g8upOcrgR1V0orsmDcnx_osvSUQwRrCG9_pb7T1Mqg6FY26W36qTuixTSNDbQ8JQHn1uV0o3"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "briuk.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMkMCVd468NwR4ZQoEzBpMWAfNv2RfvSmuXn2B58xymAziwJGPVeGJ-Ttv60vndliuyjCvKLi6_-yxU20GK5hz4vN6ObVSW_5dXihJKk_CpQEOCtu3kMaN8Lu4f93B2_C3R1Fj8gHMGYkY7tT1h2KIcqa42zVZM_F6WtZ8xkbkiVORCeDY4J5q"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mw-w.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbKDf-xeO_118VV6hllu8-emzHLowmYazVXPSARByPz6ELuxRhO1FOXOwKmDpSY1Nm0MFVD6YPKa5r0O6JDa9mophj3gFa7i1rfc_fXQ-EnTRGiNhV-1XcSuamHEe3DUe0dT4HaPKhQQjmPnW96fMtnXpR9YIA9WUCR1XJzEb8oPuzk0ojEMGRGKf-TrfNwczjBA8c6sk6oztzbw0KiHpI2QzrZw7pMaXCW0FXMbrkdUWmwyQS1pFjNsbKkJDk"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "frostgroup.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElDLNwXTjrUk9Jvy9D8BNQdPs6uJiEIolN5sCd9MkDyKrYgelCbukMR3PxiTO0vHKtkflCG2EBh3TwhDzUZh4wPh-BbpWviEs6OptNpYectLEYj5Ppa2jHUIsYaUmxGAx9QgstLzjLLQIecgPIuaim9BQM0a3m9gLlsz69-8s="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "oliverelliot.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCkOy77vULCprpsLLd_WdQujUmryrA2-xbVYnwJxWhfpiECZ2oMgmavp0KxOv5G5jPAgs16nGm9YZDJKra_3il63sYJQLwsvHe0ktseCmY3Pqk9ib9ND2G8Lx8CZscU6GpBmdt7fKGRdALX-RZG6sz8e_Qit473ccStuUsRX_oiBpiqsos0vYEPntXu3RV3sQNYXclHi6FaM-j5kmr"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "realbusinessrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSYkKv8rOFCSEdWBheTeLEJkTmW_IX-v_za8fPDAJfJSTT-cqFvJ6J__qSgoLtj3Vnp92gSlQkHLktodI5OAWdgWfax9GwUSEyrp2k7Qg3Q0l_AidYhrGKJo_b3F4zperIoWSl7I30lBSp0ZVPkvMmDFsr7QivTwNnjbTohrrRRZVlNpaYpyKtw5mYw1qEkq1sYiyHKE73"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cartwheelinternational.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvHUJKxBS1HN-nSKb_gB6d6396P3tucBAfKUVAZp4v0jNUeY5qu6JkvLQI466y8W4Edb_09JTy5hxSuFoumSmX72hJddU0tQKelMSa9_Lo3PJy2Qqqjry8oHcgn49mLF_UhoNSLv6sQNE_MpLrIFK5ApAz5jOlwCI9YgNtDsAGCu07_jCkENl8JdjUpnxAvZFLllKEEAUU"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "kirks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCMyFcwmB4D6Xc8PGM4YR1khAgvIdFuD8P0Bj3ARYpOm7bb0qU-K0K6KEtIr4LRi4B0zxtTiZcjgtqJytiqNZ6DB-njdiyrfTSj9UpiU8xE4PqkeaQXJjgRSLLp1Ket6Rg_crvpmg4mKOzic6_qTfz-7ytobaMwbOmr7HEGPgVhfCwQgWOlBncsMJW9V29b9IEvb5pV7T2c_09n9dCLucSEMBITvGpeQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "begbies-traynorgroup.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAbpqLnlwOhVtUvdwCW1TPbD9eVNHp-YlkS6BKmHARUQRkUqaUj7g8TNgMBBJX2YMwS2s4oolNMFHzmy5jN93D_cv9u0OlmJC3bfe3I0J-Z9jTs9gdLovqhiqjt-CNWvtfSmC601ff2BP7GjUH5z7cqSQkw3OdcVMOeTtVGXuzoDba3QdgM_ApkmPGszPmAbREZeA1rBlzSFzpE-qU57NZX05JzZVyTbcnNnLb8XWg1OB7yx2mxQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "krecr.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsdG15jw0iRQevq-sd7WeyXimxGdQTfzvgzD886yhLrJVz7vmsJ5SJWrOQbvPqEla7jKzQCfVgUhVAvpOdDb3fE6tebIBEzEgcCnvjsRWwt__M2dtIx0YuO0JbOx33nwiG_gUIZOv_lLKn3duBevSp8X-UAKVupR9m0GalE-cc5HneT4CofdmmwoL-HjqSwBfF1TpHfg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "connectinsolvency.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAbMhgF_tKfQGukahB98MpXatMgN8MJFH7wsa-Wynk1-10g3sFLBjc33dmdFxn4A_G2c3j8Hy3zmlUGxQF1tqYSxodPw0zyEUSbR2VoTLuESb_AWZqKgfi68n1nVepQF7Oba8nD0dE0oiFCoSYZ8UGL6CUCQueIpTpU7W8mJcvZ3ic_E4oS7VgfA2AXAH6AldBRuEUpWtPQljKMFVCG5eWFQF8yV4hkg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r-m-t.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECo0J2u-qs74FJiZUdKmsS4YK7pPzsFBdpnLroqvi9NTUT2N8BbbIZ_nJbWf9snKoIEVzXjp_-HBOYT33GNJctrswuIfaM8Kn6nujPmEHr-BzsJg4ku6RK28teTAG6kUGukEYS7Ci0vDF_CGKZAoMvnwvR8W5JXE0zYlZIudHHn9c="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7NAmI3Fftw-Ab_Va2yxUlTJ751aBCOiVoY1KccTU4zQhNJfgp1L7x-9jFaAiMn4gV2PuG7Rj4S8rbipkwXJyrwEWqginoA61gsGRMq-SZB8arQ8klruA38TdnCF48mxg59d_CLN0DNFAxnAPpRJB5oJ3FzocqMEgEpdnTm6NBaZn2F7atfKWi6InNjzK3IK8yGuS5"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": null,
+              "end_index": 196,
+              "part_index": null,
+              "text": "In the UK, a Members' Voluntary Liquidation (MVL) is a formal insolvency route for solvent companies wishing to close down in a tax-efficient manner and distribute remaining assets to shareholders"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              4,
+              5,
+              2,
+              3
+            ],
+            "segment": {
+              "start_index": 198,
+              "end_index": 308,
+              "part_index": null,
+              "text": "The process is governed primarily by the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 496,
+              "end_index": 684,
+              "part_index": null,
+              "text": "*   **For straightforward cases**, where the company's only asset is cash at the bank and all liabilities have been settled, costs can start from approximately **£995 + VAT and expenses**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 686,
+              "end_index": 764,
+              "part_index": null,
+              "text": "Other sources indicate a range of **£1,000 to £3,000 + VAT** for simple MVLs"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              6,
+              8,
+              2
+            ],
+            "segment": {
+              "start_index": 766,
+              "end_index": 979,
+              "part_index": null,
+              "text": "*   **For more complex MVLs**, where there are physical assets to realise, outstanding liabilities to pay, or assets to be distributed in specie, fees generally range from **£1,995 to £6,000 + VAT and expenses**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9,
+              8,
+              2
+            ],
+            "segment": {
+              "start_index": 981,
+              "end_index": 1093,
+              "part_index": null,
+              "text": "Some sources suggest a typical range of £1,500–£4,000 or even up to £6,000 plus VAT depending on complexity"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              6
+            ],
+            "segment": {
+              "start_index": 1096,
+              "end_index": 1248,
+              "part_index": null,
+              "text": "**Factors influencing the cost include:**\n*   **Complexity of assets:** Realising physical assets or dealing with non-cash assets increases the workload"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              8
+            ],
+            "segment": {
+              "start_index": 1250,
+              "end_index": 1294,
+              "part_index": null,
+              "text": "*   **Number of directors and shareholders**"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6
+            ],
+            "segment": {
+              "start_index": 1296,
+              "end_index": 1424,
+              "part_index": null,
+              "text": "*   **Outstanding liabilities:** Whether there are other liabilities to resolve or if cessation accounts have not yet been filed"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0
+            ],
+            "segment": {
+              "start_index": 1426,
+              "end_index": 1513,
+              "part_index": null,
+              "text": "*   **Tax claims:** Cases involving HMRC tax or VAT refund claims may incur higher fees"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10
+            ],
+            "segment": {
+              "start_index": 1515,
+              "end_index": 1721,
+              "part_index": null,
+              "text": "*   **Property transfers:** If the company owns freehold property that needs to be transferred as a distribution in specie, additional charges may apply, along with potential solicitor fees for the transfer"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              6,
+              11
+            ],
+            "segment": {
+              "start_index": 1724,
+              "end_index": 1896,
+              "part_index": null,
+              "text": "**MVL fees are typically comprised of:**\n*   **The Liquidator's professional fees:** This covers all the work and duties carried out by the licensed insolvency practitioner"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 1898,
+              "end_index": 2099,
+              "part_index": null,
+              "text": "The remuneration can be fixed as a percentage of assets realised or distributed, by reference to the time properly given by the Liquidator and their staff, or as a set amount, or a combination of these"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              6,
+              7,
+              11,
+              14
+            ],
+            "segment": {
+              "start_index": 2217,
+              "end_index": 2276,
+              "part_index": null,
+              "text": "They are an unavoidable part of the MVL process and include"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              7,
+              10,
+              11,
+              14
+            ],
+            "segment": {
+              "start_index": 2276,
+              "end_index": 2425,
+              "part_index": null,
+              "text": ":\n    *   **Statutory advertising:** A series of notices (typically four) must be placed in the London Gazette to advertise the company's liquidation"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              7,
+              11
+            ],
+            "segment": {
+              "start_index": 2431,
+              "end_index": 2576,
+              "part_index": null,
+              "text": "*   **Liquidator's insurance bond:** This provides protection for the company's funds during the MVL and varies based on the level of assets held"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              11
+            ],
+            "segment": {
+              "start_index": 2582,
+              "end_index": 2627,
+              "part_index": null,
+              "text": "*   Other minor expenses, such as search fees"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              4,
+              5,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 2680,
+              "end_index": 2799,
+              "part_index": null,
+              "text": "The costs of a Members' Voluntary Liquidation are paid **out of the company's assets**, not by the directors personally"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              4,
+              5,
+              2
+            ],
+            "segment": {
+              "start_index": 2801,
+              "end_index": 2917,
+              "part_index": null,
+              "text": "The Liquidator's fees and other expenses are settled before the remaining assets are distributed to the shareholders"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              10,
+              3
+            ],
+            "segment": {
+              "start_index": 2920,
+              "end_index": 3082,
+              "part_index": null,
+              "text": "Directors must make a Declaration of Solvency, affirming their belief that the company can pay all its debts, plus interest, in full within a maximum of 12 months"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4,
+              5,
+              12,
+              13
+            ],
+            "segment": {
+              "start_index": 3084,
+              "end_index": 3241,
+              "part_index": null,
+              "text": "This commitment ensures that creditors are paid, and the remaining funds are then used to cover the liquidation costs and subsequently distributed to members"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              9,
+              8,
+              2
+            ],
+            "segment": {
+              "start_index": 3244,
+              "end_index": 3572,
+              "part_index": null,
+              "text": "It is important for company directors to note that while the company pays for the MVL, the tax efficiencies often associated with this route, such as Business Asset Disposal Relief (formerly Entrepreneurs' Relief), can mean that the overall financial outcome for shareholders is more favourable compared to other closure methods"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErNhvthGvVYbMRnFvGuoi5GEZIsNf0dxLFfhr4g5p9P5qdRruj-vgNfCIjr4pqtOt4Kb28XRAsQ6NFx-wLiR0pu3A2KUj_e0hPFryUMZ6Ez5kEjwatRaAyInoA3noYw2ODOBjqR69C7ye73igZ4AIgCjs5HyoGHA6xBWQnk9QKmlDg8Y2tiTmK-3T3HV5tOcTkgve-Ooau-PWLJRhSb3j_LIrTFUBIqwrgJdawHGkcSg==\">who pays for members voluntary liquidation UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAlgdYpbH7mSdOpP7h3tlYrpTbBiSiXURfMWFLsLecYM7uthbr7mlqNsBYl1vLoEkIq7QzsxLm1VHIUQ_Q9fJl9fury3bS4h7VLwr-lf6L7lF-aZpiFYXFGC1QvfMXnjujobFQ7TlsdVah9wdxEOlDxV1r85eq6xmiibnD_ShISKKkhat15uA9ybkQYi1XEBsCrX1nfpvjd5OfzJ7u0U6T9u55TlPm87o=\">members voluntary liquidation cost UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKqedCtVlw4FFzff3l0XlAjN1YJeOw_BdaBbYfUTuTlNXqyzQGmxLP2d_L--q8qsemzYtnUGVGAKhwihPZ1sPWb41B27_oDUqZX0bom1vBmlMcyT8MwbG7riYI7Htns117lGAXTzicXLr0TmipOVazmPI_fJb9kQ70oMc5TeAoExxuSvyvjWsN2OjGPBj7\">MVL fees UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOXLtIDfuw0HPYOP8Lp6JeKhje9-M_nFfS-F4TPtl9_bgME4cvWkofwRcYn6TmHhoEfBFO0iwfhWA1WEdkJzLWwMaZNQ81eU1HSfKOtXlgGXJP2FZWfEv2OiCN4Lpn82bKz2-SCkcLdDDMYYbeqjis-6kHO0WZyQ70QX7V5-5YvkiqvFJzKmFXZws6Kb-qfZg8duWaS3vDaOGFv-nz8C_85-XQkO40eccRhy4KARbW74gdhrMLLtpdyAtP63uvXHe-tmULs78gZQjENpiZLdMhhA==\">Insolvency (England and Wales) Rules 2016 members voluntary liquidation costs</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnL6AOFq29PvMgrwkQpxFMK84ASU3NwLXZqbtNNPFRaakeqhceBsgvuOi29CUM1EHWECDhsUo5Ur_df2uXYSjT_8IqReKmUu9bfO_mj6J3KUvIxNHSL9sy_fbCS0jCojmFoxEwLWUZA-3wtPSZFOr9Af2OTng2BVYGTvRKTJrrdy-JUs0dFSDASD5IL8S8gIahSqGDIazGt8mSN6vJdO7cj0Wb949fRKSAHp4sfoN8SyhFp_zWIA5Llvzo\">Insolvency Act 1986 members voluntary liquidation costs</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "members voluntary liquidation cost UK",
+          "who pays for members voluntary liquidation UK",
+          "MVL fees UK",
+          "Insolvency Act 1986 members voluntary liquidation costs",
+          "Insolvency (England and Wales) Rules 2016 members voluntary liquidation costs"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "5rEpavKjI4nvvdIP0sfMuQg",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 835,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 89,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 89
+      }
+    ],
+    "thoughts_token_count": 294,
+    "tool_use_prompt_token_count": 282,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 282
+      }
+    ],
+    "total_token_count": 1500,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

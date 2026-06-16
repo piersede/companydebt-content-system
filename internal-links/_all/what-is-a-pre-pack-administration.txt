@@ -1,0 +1,233 @@
+<!-- wp:paragraph -->
+<p>A pre-pack administration is a sale of the company's business that is arranged before the administrator is formally appointed and completed immediately afterwards. The business is sold as a going concern, often to the existing directors or a connected party, while the old company enters administration and is eventually liquidated.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We are direct about why this process is controversial: from the outside, it looks like the directors ran up debts, put the company into administration, bought the business back for a fraction of its value, and left creditors with nothing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In some cases, that is exactly what happened. In others, the pre-pack genuinely preserved jobs, customer contracts, and business value that would have been destroyed by a slow, public sale process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The difference between a legitimate pre-pack and an abusive one is transparency, valuation, and whether the administrator acted in creditors' interests. We explain all three below.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: How a Pre-Pack Administration Works</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The administrator is appointed. Within hours (sometimes minutes), the business is sold to a pre-arranged buyer under a sale agreement that was negotiated before the appointment. The buyer gets the assets, the contracts, your staff (via TUPE), and the trading name.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The old company is left as an empty shell that enters liquidation to distribute whatever proceeds the sale generated. Creditors of the old company receive the sale price, which is typically less than the face value of their debts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We find that most directors who search for "pre-pack administration" are either considering buying their own business back after insolvency, or they are a creditor who has just been told the business was sold before they had a chance to object. Both groups need to understand the rules, the safeguards, and where the process can go wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When a Pre-Pack Administration Is Used</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pre-packs are used when speed is essential to preserving value in your business. The scenarios you see most often:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>The business will lose key contracts or customers if there is a public administration.</strong> Some industries (construction, hospitality, professional services) lose contracts the moment insolvency is announced. A pre-pack completes the sale before the market finds out.</li>
+<li><strong>Employees would leave.</strong> Skilled staff who hear about administration often resign immediately. A pre-pack transfers them to the new owner under TUPE before they have reason to leave.</li>
+<li><strong>Perishable or time-sensitive assets.</strong> Stock that deteriorates, seasonal businesses, or companies with order books that expire if not fulfilled within days.</li>
+<li><strong>No viable buyer exists other than the directors.</strong> In many small companies, the only people willing to buy the business are the people already running it. An open-market sale would find no buyer, and the business would close.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We stress that pre-packs are not inherently abusive. They are a legitimate tool that preserves value when a traditional sale process would destroy it. But they require proper safeguards, and those safeguards exist because the potential for abuse is real.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Pre-Pack Sales to Connected Parties: The 2021 Rules</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Since June 2021, pre-pack sales to connected parties (directors, shareholders, or their associates) require either creditor approval or an independent evaluation by an "evaluator", a qualified professional who assesses whether the sale terms are reasonable. This was introduced by The Administration (Restrictions on Disposal etc. to Connected Persons) Regulations 2021.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, most connected-party pre-packs now go through the evaluator route because obtaining creditor approval before the sale defeats the purpose of the pre-pack (speed and confidentiality).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The evaluator reviews the valuation, the sale terms, and whether the administrator considered alternatives. Their report is filed with the Registrar of Companies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We advise directors considering a connected-party pre-pack: the evaluator will scrutinise the valuation closely. An independent professional valuation of the business and its assets is essential.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A valuation you produced yourself, or one that conveniently matches what you can afford to pay, will not survive scrutiny. We have seen pre-packs challenged and unwound where the valuation was not credible.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Happens to Creditors in a Pre-Pack Administration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Creditors of the old company receive whatever the sale generates, distributed through the statutory creditor priority order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, this means secured creditors recover from their charged assets, preferential creditors (employees, HMRC for certain taxes) receive their priority share, and unsecured creditors receive whatever is left, which is often nothing or pence in the pound.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The frustration for creditors is that the sale was agreed before they knew about it. By the time they receive the administrator's proposals (within 8 weeks of appointment), the sale has already completed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>They cannot object to the sale itself, only to the administrator's conduct. If the sale was at a proper valuation and the administrator followed the correct process, creditors have limited recourse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell creditors who have been affected by a pre-pack: check the administrator's Statement of Proposals (SIP 16 statement) carefully. It must explain why a pre-pack was chosen, what alternatives were considered, how the business was valued, and who the buyer is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If the statement is thin, the valuation is unsupported, or no alternatives were genuinely explored, the administrator's conduct can be challenged.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Pre-Pack Administration Costs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A pre-pack is still a full administration. The administrator's fees typically start at £15,000 and can exceed £30,000 depending on complexity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>On top of that, the buyer must fund the purchase price, legal fees for the sale agreement, and TUPE-related costs for transferring employees.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table>
+<thead>
+<tr><th>Cost component</th><th>Typical range</th></tr>
+</thead>
+<tbody>
+<tr><td>Administrator fees</td><td>£15,000 to £30,000+ depending on complexity</td></tr>
+<tr><td>Evaluator (connected-party only)</td><td>£2,000 to £5,000</td></tr>
+<tr><td>Independent business valuation</td><td>£2,500 to £7,500</td></tr>
+<tr><td>Legal fees (sale agreement, TUPE)</td><td>£3,000 to £10,000</td></tr>
+<tr><td>Total budget for a connected-party pre-pack</td><td>£25,000 to £40,000 plus the purchase price</td></tr>
+</tbody>
+</table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>This is not cheap, but it is significantly less than your business would lose if it closed and the assets were sold at auction.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Section 216: Trading Name Restrictions After a Pre-Pack</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the new company uses the same or a similar trading name as the old company, section 216 of the Insolvency Act 1986 applies. You must do one of the following:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Obtain court permission</strong> to use the prohibited name.</li>
+<li><strong>Comply with the "successor company" exception</strong> by giving notice to all creditors of the old company within 28 days.</li>
+<li><strong>Purchase the trading name as part of the business sale</strong> approved by the administrator. This is the route most pre-packs use.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Breaching section 216 is a criminal offence and makes you personally liable for all debts incurred by the new company during the breach. We have seen directors assume the pre-pack itself gives them automatic permission to use the old name. It does not. The section 216 requirements must be followed separately, and the administrator should confirm this is covered in the sale agreement.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Pre-Pack Administration: What to Do Next</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are considering a pre-pack, you need an insolvency practitioner who has handled them before. The process is technically complex, the regulatory requirements are strict, and a badly executed pre-pack will be challenged by creditors and scrutinised by the Insolvency Service.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Company Debt connects directors with licensed insolvency practitioners who handle pre-pack administrations. A confidential consultation will assess whether a pre-pack is viable for your business and what the realistic costs and timeline look like.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Pre-Pack Administration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"9c6e1d72-5a83-4f29-bd45-e8c1a2b7f304","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I buy my own company back through a pre-pack?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, but since June 2021 connected-party pre-packs require either creditor approval or an independent evaluation. You will need a professional valuation, and the evaluator must confirm the sale terms are reasonable. The purchase must be at a fair market value, not just what you can afford.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo creditors get a say in a pre-pack sale?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Not before the sale. The sale completes immediately on the administrator's appointment. Creditors receive the administrator's Statement of Proposals within 8 weeks, which explains the sale and the rationale. Creditors can challenge the administrator's conduct if the process was not properly followed, but they cannot reverse a completed sale.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens to employees in a pre-pack?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Employees transfer to the new owner under TUPE on their existing terms and conditions. Their continuity of service is preserved. This is one of the primary advantages of a pre-pack: jobs are saved that would otherwise be lost if the business closed. Employee rights in insolvency apply to those not transferred.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow much does a pre-pack administration cost?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Budget £25,000 to £40,000 total for a connected-party pre-pack: administrator fees (£15,000+), evaluator fee (£2,000 to £5,000), independent valuation, and legal fees. The exact cost depends on the complexity of the business and the number of assets being transferred.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does a pre-pack administration take?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The sale itself completes the same day the administrator is appointed. The full administration runs for up to 12 months while the residual estate is wound down. Most pre-pack sales close within 4 to 8 weeks of first instruction once the IP is engaged and the evaluator route is being used.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a pre-pack be challenged or unwound?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, in narrow circumstances. Creditors can challenge the administrator's conduct under paragraph 74 of Schedule B1, and the court can order remedies including compensation if the administrator acted unfairly. Unwinding a completed sale is rare in practice, but a poor SIP 16 statement or an unsupported valuation are real grounds for challenge.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory references draw on the Insolvency Act 1986 (Part II, Schedule B1 and section 216), the Administration (Restrictions on Disposal etc. to Connected Persons) Regulations 2021, SIP 16 (Statement of Insolvency Practice 16 on pre-packaged sales), and the TUPE Regulations 2006. Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; Part II and Schedule B1 (administration framework), and section 216 (restrictions on the use of insolvent company names)</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2021/427/contents/made"><strong>The Administration (Restrictions on Disposal etc. to Connected Persons) Regulations 2021</strong> &mdash; the connected-party evaluator route effective from 30 April 2021</a> - legislation.gov.uk</li>
+<li><a href="https://www.icaew.com/regulation/insolvency/insolvency-resources/sips"><strong>SIP 16: Pre-packaged Sales in Administrations</strong> &mdash; the Joint Insolvency Committee Statement of Insolvency Practice that governs administrator disclosure on pre-pack sales</a> - icaew.com</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2006/246/contents/made"><strong>Transfer of Undertakings (Protection of Employment) Regulations 2006</strong> &mdash; the TUPE framework that transfers employees to the buyer in a pre-pack</a> - legislation.gov.uk</li>
+<li><a href="https://www.prepackpool.co.uk/"><strong>Pre Pack Pool</strong> &mdash; the independent body that previously reviewed connected-party pre-packs voluntarily, now superseded by the statutory evaluator regime</a> - prepackpool.co.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on administration and pre-pack regulation</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/find-an-insolvency-practitioner"><strong>Find an Insolvency Practitioner (gov.uk register)</strong> &mdash; verify a practitioner's licence before instructing</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

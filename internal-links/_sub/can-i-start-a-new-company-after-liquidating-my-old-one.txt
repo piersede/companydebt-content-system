@@ -1,0 +1,303 @@
+<!-- wp:paragraph -->
+<p>If your old company has gone into liquidation and you are wondering whether you can incorporate a new one, the honest answer is yes, most directors can. But three legal hurdles sit in the way, and breaching any of them can expose you personally to every debt of the new company.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>We see directors trip over the prohibited-name rule every week in our caseload because nobody warned them at the point of incorporation. What follows: what you can and cannot do, and how to do it cleanly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is written from our position as licensed insolvency practitioners at Company Debt, and reflects the first-call advice we give directors who want to carry on trading after a liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002dlegal-exposure"} -->
+<div class="wp-block-group cd-callout cd-callout--legal-exposure">
+  <p class="cd-callout__label">Legal Exposure</p>
+  <p class="cd-callout__title">The Prohibited Name Rule Creates Personal Liability for All Debts of the New Company</p>
+  <!-- wp:paragraph -->
+  <p>Section 216 of the Insolvency Act 1986 makes it a criminal offence for a director of an insolvent company to be involved in a company trading under a 'prohibited name' (the liquidated company's name or a name so similar as to suggest an association) for five years after liquidation, without court permission or following one of three permitted exceptions in the Insolvency Rules.</p>
+<p>Section 217 provides the civil consequence: personal liability, jointly and severally with the new company, for all its debts incurred while the director was involved in breach of s.216. A director who incorporates a new company using a similar trading name and does not follow the exceptions becomes personally liable for every contract the new company enters.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<h2 class="wp-block-heading">Quick Answer on Starting a New Company After Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes, you can form a new company after liquidation, provided: (1) you have not been disqualified as a director, (2) you are not personally bankrupt, and (3) you do not reuse the old company's name or a name so similar that it could mislead creditors, without following the permitted exceptions under Section 216 of the Insolvency Act 1986.</p>
+<p>Clear those three hurdles and you can incorporate a new limited company at Companies House for £50 online, the same day.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our advice, though, is that "can you" is not the same as "should you." The liquidator of the old company still has a duty to investigate director conduct, and the new company will be scrutinised if there is any suggestion of asset-stripping, phoenix trading, or creditor harm.</p>
+<p>We tell directors to plan the transition carefully, document everything, and get professional advice before incorporating.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Does Liquidation Automatically Disqualify You From Starting a New Company?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>No. Liquidation on its own does not ban you from being a director. Disqualification is a separate process under the Company Directors Disqualification Act 1986, triggered only if the Insolvency Service decides your conduct as a director of the old company was "unfit." The liquidator files a report on every liquidated company covering director conduct, and the Secretary of State reviews it. Our guide to <a href="/liquidation/what-happens-to-directors-in-liquidation/">a director's position in liquidation</a> sets out what that review involves.</p>
+<p>Most directors receive no further action. The ones who do are typically those whose conduct showed a pattern: repeatedly failing to pay HMRC, trading while knowingly insolvent, withdrawing cash before failure, or keeping inadequate records.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Disqualification, if it happens, ranges from two to fifteen years. During that period you cannot act as a director, take part in management, or form a new company. You can trade as a sole trader, but the corporate route is closed. We tell directors that the best defence against disqualification is a clean, well-documented liquidation handled by a reputable insolvency practitioner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bankruptcy and Disqualification Restrictions on Starting a New Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There are four personal situations in which you are barred from acting as a director of a new company:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Undischarged bankruptcy.</strong> If you are personally bankrupt and have not yet been discharged, you cannot form or manage a limited company without the court's permission. Discharge usually happens automatically after twelve months.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong><a href="/liquidation/whats-the-risk-of-being-disqualified-as-a-director/">Director disqualification</a> order or undertaking.</strong> If you are disqualified under the CDDA 1986, you cannot act as a director for the period of the order (2 to 15 years).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Debt Relief Order (DRO).</strong> During a DRO, you cannot act as a director or be involved in the management of a company without court permission.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Section 216 prohibited name.</strong> Using the old company's name or a similar one in a new company within five years, without meeting one of the three statutory exceptions, is a criminal offence and makes you personally liable for the new company's debts.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We always check all four at the first consultation. If any of them apply, we address them before talking about the new company.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Section 216: The Five-Year Prohibited Name Rule for New Companies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 216 of the Insolvency Act 1986 is the rule that catches directors by surprise. If you were a director of a company at any point in the twelve months before it went into insolvent liquidation, you cannot, for the next five years, be involved in any business (as director, manager, or organiser) that uses:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>The exact name of the liquidated company, or</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A trading name the old company used, or</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Any name "so similar" to the old name that it suggests an association with the old company.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Breach Section 216 and you commit a criminal offence punishable by up to two years in prison and a fine. Worse, Section 217 makes you personally jointly and severally liable for all the debts of the new business for as long as you are involved in the prohibited name.</p>
+<p>The liability is unlimited. We see directors unknowingly breach this by using a similar brand or trading name because "the customers know us by that name." The law does not care about customer recognition. It cares about creditor protection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+
+<!-- wp:group {"className":"cd-callout cd-callout\u002d\u002ddirectors-miss"} -->
+<div class="wp-block-group cd-callout cd-callout--directors-miss">
+  <p class="cd-callout__label">What Most Directors Miss</p>
+  <p class="cd-callout__title">The 'Known Name' Exception Requires a Court Application, Not Just Prior Trading</p>
+  <!-- wp:paragraph -->
+  <p>Many directors assume that because the new company traded under a similar name before the old company's liquidation, the Section 216 prohibition does not apply.</p>
+<p>This is a misreading of the exception. Rule 22.4 of the Insolvency (England and Wales) Rules 2016 allows a director to use the same name if the new company gives notice to all creditors of the old company within 28 days of the liquidation.</p>
+  <!-- /wp:paragraph -->
+  <!-- wp:paragraph -->
+  <p>Rule 22.5 requires a court application for other permitted exceptions. Neither route is automatic. A director who simply incorporates a new company with a similar name and continues trading without following the formal exception process is in breach of s.216 from day one.</p>
+  <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<h2 class="wp-block-heading">Three Legal Routes to Reuse the Old Company Name in a New Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Section 216 provides three exceptions (known as "excepted cases" in the Insolvency Rules 2016) that let you legitimately reuse the old company's name or a similar one:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Rule 22.4, Buying the business from the liquidator.</strong> If the new company buys the whole or substantially the whole business and assets from the liquidator, and a notice is published in the London Gazette and sent to all known creditors within 28 days of the sale, you can reuse the name lawfully. This is the cleanest route and the one we recommend most often.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rule 22.6, Court permission.</strong> You can apply to the court for leave to use the name within seven days of the liquidation. The court will weigh whether use of the name is necessary and whether creditors are protected. This route is less common because it requires urgent legal action.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rule 22.7, Another existing company with the name.</strong> If the new business is an already-established company (not newly incorporated) that has used the name for at least twelve months before the liquidation, the name may continue to be used.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our team handles the Rule 22.4 route regularly. The critical steps are: agree the asset purchase with the liquidator at market value, publish the notice in the Gazette, and post the notice to every creditor on the old company's list. Miss the 28-day window and you lose the exception. We draft the notice for directors to ensure compliance.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Choosing a Safe New Company Name After Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are not using one of the Section 216 exceptions, the new company must have a genuinely different name. "Smith Construction Ltd" cannot become "Smith Construction Services Ltd" or "Smith Construction (2026) Ltd", those are "so similar" and would breach Section 216.</p>
+<p>We tell directors to pick a name that is distinct in both sound and meaning, and to run it past a licensed insolvency practitioner before incorporating. The cost of getting it wrong is unlimited personal liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Beyond the Section 216 test, your new name must also pass Companies House's availability check (Section 66 Companies Act 2006) and must not be identical or too similar to any existing registered company. Companies House will reject an identical name at incorporation, but they do not check Section 216 compliance. That is your responsibility.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Buying Assets from the Liquidator for Your New Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If there are assets in the old company you want to carry over (stock, equipment, goodwill, customer lists, domain names, vehicles), the clean route is to buy them from the liquidator at a fair market value.</p>
+<p>Independent valuations protect both you and the liquidator, and the sale must be properly documented. We help directors structure these purchases so they stand up to later scrutiny from creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What you cannot do is strip assets out of the old company before liquidation or have the old company "gift" them to the new one.</p>
+<p>These transfers are transactions at undervalue under Section 238 of the Insolvency Act 1986 and can be reversed by the liquidator for up to two years, with the director pursued personally. Our rule for directors is simple: if you want it in the new company, buy it through the liquidator at market price, documented.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Incorporating the New Company: Fees, Process, and Filing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Once the three hurdles are cleared, incorporating the new company is straightforward. You can do it online through Companies House for £50 (as of April 2026) and the company is usually registered within 24 hours. You will need:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>A new, Section 216-compliant company name</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>At least one director (you, or someone else if you are disqualified)</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A registered office address</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>At least one shareholder</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A SIC code describing the business activity</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>After incorporation you will need to register with HMRC for corporation tax within three months of starting to trade, and for VAT if turnover exceeds the threshold. A new business bank account will also be required, which can be harder to open after a recent liquidation. We walk directors through this process at the first call so there are no surprises.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Personal Liability and Hidden Risks When Starting a New Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Starting a new company does not extinguish personal liabilities from the old one.</p>
+<p>If you gave a personal guarantee to a bank, landlord, or supplier for the old company's debts, those guarantees survive the liquidation and the creditor can pursue you personally. A common mistake we see is directors assuming the liquidation "wipes the slate clean." It only wipes the company's slate. Your personal commitments remain.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>There is also a reputational risk. Some suppliers will not extend credit to a director whose previous company recently liquidated. You may need to pay pro-forma for the first six to twelve months, or find a guarantor. We tell directors to budget for this cashflow pressure rather than be caught out. For a deeper look at what a liquidator investigates, see our guide on wrongful trading.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Phoenix Trading vs Legitimate Continuation in a New Company</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The phrase "phoenix company" is thrown around loosely but has a specific meaning. A phoenix is not illegal per se.</p>
+<p>It describes a situation where a new company rises from the ashes of a liquidated one, often with the same directors and similar operations. Phoenix trading becomes illegal when it crosses into: breach of Section 216 on the name, transactions at undervalue on asset transfers, or fraudulent trading under Section 213 where the purpose was to defraud the old company's creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our view is that legitimate continuation is fine and often in creditors' best interests (a going-concern sale recovers more than a break-up).</p>
+<p>Phoenix trading becomes a problem when it is used to shed debts deliberately. If you are continuing a viable business, document it properly, buy the assets at market value, comply with Section 216, and you are on the right side of the law. If you are trying to walk away from debt, no amount of paperwork will protect you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Starting a New Company After Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79236-new-company-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow soon after liquidation can I start a new company?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Immediately, in most cases. There is no cooling-off period in law. As long as you are not disqualified, bankrupt, or breaching Section 216, you can incorporate the day after your old company enters liquidation. Most directors wait a few days to let the old company's affairs settle and to plan the transition properly.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I use a similar name if the new company is in a different sector?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. Section 216 applies regardless of sector. If the name is "so similar" it suggests association with the old company, the sector is irrelevant. The test is whether a reasonable person would think the new business is linked to the old one.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat happens if I breach Section 216?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Two consequences. First, you commit a criminal offence punishable by up to two years in prison and an unlimited fine. Second, under Section 217 you become personally jointly and severally liable for all the debts of the new company for as long as you are involved in the prohibited name. We have seen directors lose their homes over this.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan the new company take over staff from the old one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, through a TUPE transfer if the business is sold as a going concern. Employees transfer on their existing terms and the new company becomes responsible for their contracts, including continuity of employment. If the business is not sold as a going concern, employees are dismissed by the liquidator and can claim statutory redundancy from the Insolvency Service.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDo I need to tell Companies House the new company is connected to the old one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No formal disclosure is required at incorporation. However, if you buy the old business's assets under Rule 22.4, you must publish a notice in the London Gazette and send it to all creditors within 28 days. The liquidator's report will also identify you as the previous director, and the Insolvency Service can see the connection.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I transfer the old company's website and customer list to the new one?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only through a properly documented purchase from the liquidator at market value. Websites, domain names, customer lists, and goodwill are all assets of the old company. Transferring them without paying fair value is a transaction at undervalue and can be reversed under Section 238 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWill banks open a business account for my new company?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>It depends on the bank and your personal credit history. Some high street banks will decline if you were recently a director of a liquidated company. Challenger banks and neobanks are often more flexible. We recommend directors apply to several banks and be upfront about the previous liquidation.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors planning to incorporate a new limited company after the liquidation of an existing company they directed.</p>
+<p>We have drawn on the Insolvency Act 1986 (sections 213 on fraudulent trading, 216 on prohibited names, 217 on personal liability, 238 on transactions at undervalue, and 239 on preferences) and the Company Directors Disqualification Act 1986 (sections 6 to 8 on disqualification for unfit conduct).</p>
+<p>Further references run to the Insolvency (England and Wales) Rules 2016 (rules 22.4, 22.6 and 22.7 on the three permitted prohibited-name exceptions), and current Companies House and Insolvency Service guidance.</p>
+<p>Where we describe how the prohibited-name rule and director-conduct review actually play out operationally, including the typical traps directors hit at the incorporation stage and the way connected-party asset purchases are structured to avoid Section 216, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; sections 213 (fraudulent trading), 216 (prohibited names), 217 (personal liability for prohibited-name breaches), and 238 (transactions at undervalue) governing post-liquidation conduct</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; grounds and procedure for disqualification orders against directors of liquidated companies, including 2&ndash;15 year bans</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/uksi/2016/1024/contents"><strong>Insolvency (England and Wales) Rules 2016</strong> &mdash; Rules 22.4, 22.6, and 22.7 setting out the three statutory exceptions allowing reuse of a prohibited name</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/companies-house"><strong>Companies House</strong> &mdash; guidance on incorporating a new limited company, name availability checks, and director registration after liquidation</a> - gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; director conduct reports filed by liquidators and disqualification investigations following corporate insolvency</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

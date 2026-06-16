@@ -1,0 +1,240 @@
+<!-- wp:paragraph -->
+<p>If you are a director looking at an insolvent company and wondering whether you get to pick your own liquidator or whether HMRC chooses one for you, the answer depends almost entirely on who moves first. Act before a creditor files a winding-up petition and you can nominate a licensed insolvency practitioner you trust.</p>
+<p>Wait until after a petition is advertised and you lose that right altogether, with the Official Receiver or a court-appointed practitioner taking over. We see directors lose control of this every week in our caseload, simply because they left the conversation with us until it was too late.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What follows: who actually appoints the liquidator in each UK insolvency route, how directors and shareholders nominate one in a voluntary process, what happens when HMRC or another creditor petitions first, and the common mistakes we see on first calls.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Quick Answer for Directors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes, you can choose your liquidator, but only if you take action before a creditor forces the issue. In a Creditors' Voluntary Liquidation (CVL) or a Members' Voluntary Liquidation (MVL), the directors and shareholders nominate the insolvency practitioner, and the creditors can either accept that nomination or put forward their own.</p>
+<p>In a compulsory liquidation, once a petition has been filed, the Official Receiver steps in first and an independent liquidator is then appointed by creditors at a decision procedure, not by you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our advice is almost always the same: if the company is insolvent and a formal procedure is coming, start the conversation with a licensed IP while you still have the luxury of choice. Once a petition is advertised in the London Gazette, that choice has largely gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why Timing Decides Control</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The single most important factor in whether you get to choose the liquidator is the order of events. Once a creditor (including HMRC) serves a statutory demand that expires unpaid, or obtains a County Court Judgment it cannot enforce, they can file a winding-up petition under Section 122(1)(f) of the Insolvency Act 1986.</p>
+<p>From the moment that petition is filed, every decision you make is measured against the interests of the creditors, and Section 127 makes most dispositions of company property void from the petition date unless the court validates them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our experience is that directors who contact us while a statutory demand is still outstanding usually retain a lot of control.</p>
+<p>Directors who wait until the petition is advertised in the Gazette often lose it entirely, because by then the bank has frozen the account, trade insurance has been withdrawn, and the court is on the cusp of appointing the Official Receiver. Timing, not strategy, decides who runs your liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">UK Liquidation Routes and Who Appoints the Liquidator</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There are three formal liquidation routes for UK limited companies, and the appointment rules differ in each one:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Creditors' Voluntary Liquidation (CVL).</strong> Used when the company is insolvent and the directors decide to place it into liquidation voluntarily. Directors and shareholders nominate the liquidator, and creditors formally approve the appointment at a virtual decision procedure held within a few days of the resolution to wind up.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Members' Voluntary Liquidation (MVL).</strong> Used only when the company is solvent and the directors want to extract retained profits tax-efficiently. Shareholders choose the IP, and creditors are not involved because they are paid in full.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Compulsory Liquidation.</strong> Triggered by a creditor's winding-up petition. The Official Receiver is appointed initially, and creditors may then nominate a private-sector IP at a decision procedure. Directors have no formal vote in this process.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We walk every director through these three routes at the first call, because the answer to "can I choose my liquidator?" flips completely depending on which route you enter. More detail on the process in our guide to creditors' voluntary liquidation and our guide to compulsory liquidation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How Directors Nominate a Liquidator in a CVL</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In a CVL, the directors first agree that the company is insolvent and cannot continue trading. They then instruct a licensed insolvency practitioner to prepare the paperwork, including a Statement of Affairs showing the company's assets and liabilities.</p>
+<p>The shareholders pass a special resolution to wind up, which requires 75% approval by value. The IP you have instructed is then named as the proposed liquidator, and their appointment is formalised at a creditors' decision procedure held under Section 100 of the Insolvency Act 1986.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Creditors can, in principle, put forward a different nominee at that meeting. In practice, it is rare. Our experience is that if you have engaged a reputable IP early, kept creditors informed, and prepared an honest Statement of Affairs, the creditors almost always accept the director's nominee. The process moves quickly: from first instruction to appointment is usually two to three weeks. Our guide to <a href="/liquidation/liquidators-powers-and-duties/">what a liquidator does</a> explains the role they take on once appointed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-process-steps"} -->
+<div class="wp-block-group cd-process-steps">
+<!-- wp:list {"ordered":true} -->
+<ol><li>Directors agree the company is insolvent and instruct a licensed IP</li><li>IP prepares the Statement of Affairs</li><li>Shareholders pass special resolution to wind up (75% by value)</li><li>Creditors notified; decision procedure held within 14 days</li><li>Creditors formally confirm (or replace) the nominated liquidator</li><li>Liquidator appointed; investigation and asset realisation begins</li></ol>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When HMRC or Another Creditor Petitions First</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>HMRC is the single largest source of winding-up petitions in the UK, accounting for more than half of the petitions filed in most years.</p>
+<p>If HMRC (or any trade creditor) files a petition before you enter a voluntary procedure, the process shifts to compulsory liquidation and your right to nominate disappears. The Official Receiver takes control from the moment the court makes the winding-up order, usually within six to eight weeks of the petition being filed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>After the OR's initial investigation, creditors may hold a decision procedure to replace the Official Receiver with a private-sector insolvency practitioner.</p>
+<p>Creditors vote by value of debt. Directors do not get a vote, although they can attend and answer questions. We regularly see directors surprised to find that their preferred IP can still be appointed at this stage, but only if they take an active role in lobbying creditors, and only if the creditors are motivated to move.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Can Creditors Replace the Official Receiver?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes. Under Section 136 of the Insolvency Act 1986, creditors can nominate a private insolvency practitioner to replace the Official Receiver as liquidator.</p>
+<p>This usually happens when the creditors believe a private-sector IP will recover more assets, investigate misconduct more vigorously, or progress the case faster than the OR's office. The decision procedure requires a simple majority by value of the creditors who vote.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our view on this is pragmatic. If you are in compulsory liquidation and there is a reasonable prospect of creditor recoveries, creditors generally prefer a private IP because the OR's office is under-resourced for complex investigations.</p>
+<p>If the estate is small and straightforward, the OR usually sees the case through. We tell directors who want a say in the outcome to engage creditors early, even after the petition has been granted, because a well-briefed creditor body is still your best route to any control over who takes the case.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Costs, Investigations and Control: A Side-by-Side</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Directors often ask us whether a voluntary process is cheaper or more expensive than compulsory. The honest answer is that a CVL typically costs the company between £4,000 and £7,000 plus VAT for a straightforward case, paid from asset realisations or director funding. Our guide to <a href="/liquidation/how-much-does-liquidation-cost/">how much liquidation costs</a> breaks down the fees in more detail.</p>
+<p>A compulsory liquidation starts with a £2,600 petition deposit to the Insolvency Service, plus the petitioning creditor's legal costs, plus the Official Receiver's fees and the subsequent private IP's fees. Compulsory is almost always more expensive to the estate by the time all the costs are netted off.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The bigger difference, though, is control. In a CVL, you decide when the process begins, you decide who handles it, and you influence how the investigation into director conduct is conducted. In a compulsory liquidation, you decide none of those things. We tell directors that the cost gap matters less than the control gap.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"cd-key-takeaway"} -->
+<div class="wp-block-group cd-key-takeaway">
+<p class="cd-key-takeaway__label">Key Takeaway</p>
+<!-- wp:paragraph --><p>A CVL typically costs £4,000–£7,000 plus VAT. Compulsory liquidation almost always costs the estate more once petition deposits, creditor legal costs, and Official Receiver fees are added up. The real difference is not the money. It is that in a CVL you choose who handles your liquidation; in compulsory liquidation, you do not.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Alternatives to Liquidation Worth Considering</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before you commit to any liquidation route, we tell directors to rule out the three alternatives that may preserve more value for creditors (and avoid disqualification risks for directors). Our guide to <a href="/liquidation/how-to-choose-the-right-insolvency-procedure/">choosing the right insolvency procedure</a> walks through how these options compare:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Company Voluntary Arrangement (CVA).</strong> A legally binding agreement with creditors to repay debts over a fixed period, usually three to five years. Requires 75% creditor approval by value and allows the company to continue trading.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Administration.</strong> Places the company under the protection of a court-appointed administrator, with a statutory moratorium that halts any pending winding-up petition. Often used to sell the business as a going concern.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Informal creditor negotiation.</strong> Not a formal procedure, but sometimes useful when only one or two creditors are pressing and the underlying business is viable. We frequently help directors structure informal time-to-pay arrangements with HMRC before any petition is filed.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Missteps We See on First Calls</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>"I'll wait and see what HMRC does."</strong> By the time HMRC files the petition, your right to choose is already gone. We tell directors the correct question is: "If HMRC petitions, what will my position look like then?" Usually the honest answer is: worse.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I've been offered a cheap liquidation by an advisor."</strong> Any party promising to "handle" a liquidation for a flat fee below the market rate should be approached with caution. Only a licensed insolvency practitioner can act as liquidator. Unlicensed advisors sometimes charge fees, then introduce the case to an IP who may not be your first choice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I want to use an IP recommended by my accountant."</strong> Nothing wrong with that, provided the IP is genuinely licensed (check the <a href="https://www.gov.uk/government/organisations/insolvency-service">Insolvency Service</a> register), independent of the accountant's own fees, and has experience of your sector. Ask about fee structure and ongoing communication before you instruct anyone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>"I'll just stop trading and ignore the problem."</strong> Stopping trading without entering a formal procedure does not protect you. Creditors can still petition, the Official Receiver can still investigate, and your duties under Sections 214 and 212 of the Insolvency Act 1986 continue to run. Doing nothing is the worst option.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Choosing a Liquidator</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"79351-choose-liquidator-faqs","theme":"#f1f1f1","collapsed":true,"titleColor":"#000000"} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I still choose my liquidator if HMRC has sent a statutory demand?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. A statutory demand is a pre-petition step. You still have time to instruct a licensed IP and enter a CVL before HMRC files at court. Our advice is to move within the 21-day statutory-demand window so you keep control of the process.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes HMRC appoint its own liquidator?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No, HMRC does not appoint liquidators directly. If HMRC petitions and the court makes a winding-up order, the Official Receiver is appointed by the court, and creditors (including HMRC) then vote to confirm or replace the OR with a private-sector IP. HMRC has voting power as a creditor but does not select a named liquidator.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat if creditors reject the director's nominee in a CVL?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Creditors can nominate a different IP at the decision procedure, and if they do so by majority value, that IP is appointed. In our experience this is rare when directors have engaged a reputable IP early and kept creditors informed. If there is a dispute, the court has the final say.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan I change liquidators mid-process?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes, but it is unusual and requires creditor approval. Under the Insolvency Rules, creditors can remove and replace a liquidator at any decision procedure if a majority by value votes in favour. Directors do not have independent power to remove a liquidator once appointed.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow do I check an insolvency practitioner is licensed?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only a licensed insolvency practitioner can act as liquidator of a UK company. You can check the Insolvency Service register at gov.uk, or the licensing body (IPA, ICAEW, or ACCA) the practitioner is regulated by. Do not engage an unlicensed "insolvency advisor" to run your case.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eHow long does a CVL take from first call to appointment?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Typically two to three weeks for a straightforward case. We prepare the Statement of Affairs, convene the shareholders' meeting, and hold the creditors' decision procedure. More complex cases with disputed debts or asset valuations can take four to six weeks.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":6,"theme":"#f1f1f1","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat does a liquidator actually do?\u003c/strong\u003e"} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>The liquidator takes control of the company's assets, realises them for the benefit of creditors, investigates director conduct, pursues any clawback claims (preferences, transactions at undervalue, wrongful trading), distributes the proceeds, and ultimately dissolves the company. They also file statutory reports with Companies House and the Insolvency Service.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This guide is written by the Company Debt editorial team for UK directors trying to understand whether they can choose the liquidator who handles their company's wind-up.</p>
+<p>We have drawn on the Insolvency Act 1986 (sections 100 on CVL liquidator appointment, 122 and 127 on compulsory winding-up grounds and void post-petition dispositions, 136 on the Official Receiver's role, 212 on misfeasance, and 214 on wrongful trading), the Insolvency (England and Wales) Rules 2016, and current Insolvency Service and IPA guidance.</p>
+<p>Where we describe how the appointment process plays out operationally, including the timing window for nominating a CVL liquidator before a creditor petition forecloses the choice, and the typical creditor-replacement process when the Official Receiver is initially appointed, we draw on cases handled across our advisory referral network.</p>
+<p>Company Debt is a UK insolvency advisory firm. We refer directors to licensed insolvency practitioners where formal procedures are appropriate. Nothing on this page is a substitute for tailored legal or insolvency advice on your specific facts.</p>
+</aside>
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986</strong> &mdash; primary legislation behind director and creditor nominations, covering sections 100, 122, 127, 136, 212 and 214 on liquidator appointment, voidable dispositions and director conduct</a> - legislation.gov.uk</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; official guidance on the Official Receiver's role after a winding-up petition and the register of licensed insolvency practitioners directors can nominate</a> - gov.uk</li>
+<li><a href="https://ipa.uk.com/"><strong>Insolvency Practitioners Association</strong> &mdash; licensing and conduct body for many UK IPs, useful when vetting a liquidator before nomination or raising a complaint about appointment</a> - ipa.uk.com</li>
+<li><a href="https://www.thegazette.co.uk/"><strong>The London Gazette</strong> &mdash; official public record where winding-up petitions are advertised, the moment that typically ends a director's ability to choose their own liquidator</a> - thegazette.co.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->

@@ -1,0 +1,1255 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Wed, 10 Jun 2026 18:55:21 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=22443",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "As a UK company director facing financial difficulties, understanding your options is crucial. A Company Voluntary Arrangement (CVA) is a formal insolvency procedure designed to help a viable but struggling company restructure its debts and continue trading under the existing management. It is a legally binding agreement between your company and its unsecured creditors, overseen by a licensed insolvency practitioner (IP).\n\n### What is a Company Voluntary Arrangement (CVA) and What Distinguishes It?\n\nA CVA is a flexible debt restructuring tool under Part 1 of the Insolvency Act 1986. Unlike liquidation, which leads to the dissolution of the company, a CVA aims for business rescue and allows the company to continue operating. A key distinguishing feature is that directors retain control of the company, with the IP acting as a supervisor, rather than taking over management as in administration.\n\nA CVA allows your company to agree a composition or arrangement with its creditors to satisfy some, or all, of its debts over a fixed period. It can provide a \"breathing space\" from creditor enforcement action once approved. While there's no statutory requirement for the company to be insolvent to propose a CVA, it's typically used when there's at least a risk of insolvency.\n\n### The CVA Process and Its Order\n\nThe CVA process typically follows these steps:\n1.  **Initial Assessment and Appointment of Nominee:** You, as director(s), must seek advice from a licensed insolvency practitioner to determine if a CVA is appropriate. The board must support the decision to proceed. The IP will act as a 'nominee' to assess the company's financial position and the viability of continued operations.\n2.  **Drafting the Proposal and Statement of Affairs:** The directors, in conjunction with the nominee, prepare a formal proposal outlining how debts will be restructured and repaid, including a payment schedule. A statement of affairs detailing assets, liabilities, and creditors is also prepared. The proposal must demonstrate that the CVA offers a better return for creditors than liquidation.\n3.  **Nominee's Report to Court:** The nominee must provide a statement to the court confirming that, in their opinion, the CVA proposal has a \"reasonable prospect of being approved and implemented successfully\".\n4.  **Circulation to Creditors and Shareholders:** The proposal is sent to all known creditors and shareholders, who are given time to review and raise queries. Creditors are typically given at least 14 days' notice (HMRC often prefers 3 weeks) before the decision date.\n5.  **Creditor and Shareholder Voting:** A decision procedure (which can be a physical meeting, by correspondence, electronic voting, or a virtual meeting) is held where creditors vote on the proposal. For the CVA to be approved, at least 75% (by value) of creditors who vote must agree to the proposal. Crucially, no more than 50% (by value) of *unconnected* creditors may vote against it. Shareholders also vote (by simple majority), and if their decision differs from the creditors', the creditors' decision prevails, subject to any court order.\n6.  **Implementation and Supervision:** If approved, the CVA becomes legally binding on all unsecured creditors (even those who voted against it or didn't vote). The nominee then becomes the 'supervisor', monitoring the company's compliance with the CVA terms and distributing payments to creditors. The CVA is registered at Companies House.\n\n### Who Can Start It?\n\nA CVA is most commonly proposed by the company's directors. It can also be proposed by an administrator (if the company is in administration) or, more rarely, by a liquidator (if the company is in liquidation).\n\n### Eligibility/Criteria\n\nTo be eligible for a CVA, a company must be insolvent or likely to become insolvent. The business needs to be fundamentally sound with potential for future profitability and have a reliable income stream to fund the repayments. Directors must be committed to the rescue and prepared for necessary changes.\n\nSmall companies may be able to obtain an optional moratorium period, providing immediate legal protection from creditor action while the CVA proposal is being prepared and considered. Eligibility for a moratorium depends on certain criteria, such as having no more than 50 employees, balance sheet assets no greater than £5.1 million, and turnover no greater than £10.2 million.\n\n### Typical Cost and Who Pays\n\nThe costs associated with a CVA are primarily the fees of the insolvency practitioner (IP), who acts as both nominee and supervisor. These fees are usually paid from the company's cash flow as part of the arrangement, meaning directors generally do not need to fund them personally.\n\n*   **Nominee's Fee:** This covers the preparation of the proposal, creditor consultation, and initial setup. It typically ranges from £2,500 to £8,000.\n*   **Supervisor's Fee:** This is an ongoing fee for monitoring the CVA over its duration, usually charged as a percentage (10-15%) of the funds distributed to creditors or a fixed annual charge.\n\nOverall, the total cost of a CVA can vary significantly based on the size and complexity of the business, typically ranging from £20,000 to £50,000. It is generally less expensive than administration.\n\n### Realistic Timelines\n\nThe preparation and distribution of the CVA proposal can take several weeks, often around four weeks, depending on the complexity of the business. Creditors are then given a minimum of 14 days (with HMRC often preferring three weeks) to consider the proposal before voting. The entire process, from initial assessment to approval, usually takes between six to eight weeks.\n\nOnce approved, the CVA typically runs for a period of three to five years, during which the company makes the agreed repayments.\n\n### Director's Personal Exposure\n\nA significant advantage of a CVA is that directors generally retain control of the company and there is no automatic investigation into director conduct, unlike in a Creditors' Voluntary Liquidation (CVL). However, directors still have statutory duties under the Companies Act 2006 and the Insolvency Act 1986.\n\n*   **Personal Guarantees:** Any personal guarantees you have provided for company debts will generally *survive* the CVA and you could still be held personally liable for these. The CVA itself does not automatically release you from personal guarantees unless the creditors explicitly agree to this within the CVA terms, which is rare.\n*   **Overdrawn Director's Loan Account (DLA):** If your director's loan account is overdrawn, HMRC and other creditors will expect this to be repaid into the CVA 'pot' over the arrangement's term. Repaying these funds demonstrates commitment and fairness to creditors.\n*   **Wrongful or Fraudulent Trading:** While a CVA is a rescue mechanism, if directors continue to trade knowing the company has no reasonable prospect of avoiding insolvency (wrongful trading), or if they engage in fraudulent trading, they can face personal liability and disqualification. Seeking advice promptly can mitigate these risks.\n*   **Misfeasance and Disqualification:** The IP acting as supervisor has a duty to monitor the company's adherence to the CVA. If the CVA fails and the company subsequently enters liquidation, a full investigation into director conduct will typically occur, which could lead to claims of misfeasance or director disqualification for up to 15 years if misconduct is found.\n\n### How Creditors and HMRC are Treated\n\n*   **Unsecured Creditors:** Once approved, a CVA is legally binding on all unsecured creditors who were entitled to vote, even if they voted against the proposal or did not receive notice (provided they were entitled to be notified). This means they cannot take further enforcement action for included debts while the CVA is being adhered to.\n*   **Secured Creditors:** A CVA cannot bind secured creditors (e.g., banks with charges over assets) without their express consent. They generally retain their rights over any assets used as collateral.\n*   **Preferential Creditors (including HMRC):** Since December 2020, HMRC regained its status as a secondary preferential creditor for certain tax debts, specifically VAT and PAYE. This means HMRC ranks above floating charge holders and unsecured creditors for these specific debts. HMRC is generally willing to consider and accept a CVA proposal, provided it is reasonable, offers a better outcome than liquidation, demonstrates a clear plan for future tax compliance, and treats all creditors within the same class equally. HMRC has a dedicated Voluntary Arrangement Service (VAS) that scrutinises proposals to ensure they are \"fit, fair, and a better alternative to liquidation\". Non-payment of new PAYE and VAT liabilities during the drafting period can lead to HMRC rejecting the proposal.\n\n### Consequences Afterwards\n\n*   **Successful Completion:** If the CVA is successfully completed, the company will have repaid its unsecured debts according to the agreed terms. Any remaining unsecured debt included in the arrangement is written off, and the company receives a completion certificate from the supervisor. The company then emerges financially and operationally stronger.\n*   **Failure of CVA:** If the company fails to meet the agreed payment schedule or other terms of the CVA, the supervisor can terminate the arrangement. This typically leads to other formal insolvency procedures, most commonly liquidation or administration. If the CVA fails and leads to liquidation, a director conduct investigation will be triggered.\n\nIt is vital to engage with a licensed insolvency practitioner early to explore whether a CVA is the most appropriate solution for your company's specific circumstances. They can guide you through the complexities of the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016, and help you navigate the process with official bodies like The Insolvency Service and Companies House.",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": {
+        "image_search_queries": null,
+        "grounding_chunks": [
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdbpinbUhWdFQU6i8WRTa-m4-zHdpiazPcyHLsX_HTzQoSKtvo-Mn8n-AAOpMrb4nw-NAIETT-w1ndptjWoOkiG9OdQKXfwYoY6XuWF-I_AhGLFnDVrcIfrqje-5jopCsUdGzQYr7bTYEu4JPjWp4XSJDmMvnFgu9slIRPeuWeTUuhCzzAATAMrHqiCgRJaCZCobZ5OWiX9bc8H2bN6n-k"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "pwc.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw9QDRE46_ijfqW191L7-sRFZPn-jqowQ0Qm6utZvstKaPqQD0QzEQQQw5etuy9zynS3sxPbu-OQaj22tkVtKgBRAcBEEj00UiS048-0vn25D_aSX7G8_n76vFYZToozsL5uPagCeGkWkORl58CDqr6-Run6TvdQIxqUPkS16wGWMSck12F-CH8fhUkKeS52I-00AOoHYBIBzsJek="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "moore.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBOO04OR6hh9CsCLZOvGI2ApMU_EeLvvucInRG8GbJRMHiXDnou9OnnkiYhoZCszvXWlqte0Tw0Q0kRvZHw0-z8masFSTTTpYvcpjoT3bQsfikN6QqcgPeb3YDdXDuFMnvveCeLSqHRRofrfIK6LJW0AMt-K9ufi11alBfoaXdcizlpTBmump-oN3VJ4gbGhmnrhSPp_uRNiwa5ExoltuYJfJsLwDAznZ2AUTYgfLNiACbgUwVDQN5ttwStFGxlMEHUZrOIOO1IPFy881nZKs-R8m7rF-I_Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "r3.org.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG1-6ZQsWe_AiiGW06b5pk1xeqJikJYftOnrIJ98jr83YiFBT4VDiKTe5dij8ckRnvR54aUjtfgPUNbloriCiCXJD12P698fpek43t-FxBzuANYVY5WR-mzNvTzKwZJZTdzU95kjKMR_ylijxuqx54cc-Y3nas1K-jmVUC6mf13P4ITinb_KLP_IinTxG-WedPXhmwBBqXIBYyVxIPVHzi8w1CrgtWyQ1SzZwvI-QJJBjWwQTS9qF91w2PqCfO8wZHvpjth8GpeZie_WoqfSlr76aLR0w="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "dtmlegal.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFlAtsu22_-SPoVrXyzdhqsMST071u6uOLqX6VpDOPND3OXJ__IbSG6tlZL_HOs34ioeFKNUVeRNLZT4D5Rusof_GzfA9XtrUx5nTkaV-n1aYAtHNfgNP6j5v-hd2WDdLeridkoKBMqEqCjr_aqH_mbAxrO7rf3HVMl_zmZsbp64xVa0Ysaase9LZZja0ZvKSqA4GwVG06qZr9np0f4-Sqvbb7S_Y="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJpQ85eRKxqdyg8Cj-HjgXu1GI9PfcDxSST9UlFOmg_ylhQNOdQicG23vBbmhpKXi7k9ouwy7aySVuj5G-zFCuUtMOlYb4vLsxMRYTwVW18cAmz-8zfMB-44V7g5xL7HiTL3o569KFAVBZBY4r_R5rKMJ7umXpuZixNLrnTkLcKZvPxOBfdVYCjX1Ib8U="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hlca.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM55JG_qFdiZfSxAYwIsoP-Sh7_6whYsYDSgy_v9cDa58JYYb5_0uu65nl6YLPk7BghclOboKFyLesBAFzAQDGkvSQ2si4Y8ILdJEyE3PVsdP1t20UaYGlvEta68GF8WfKmBonqY-eLxlIdXXCLLHQyRTqshE3pwXtwqReos9i7uMftrDOkqYyM3gzDDYvNINq0d4JYkmq"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companydebt.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETaZpYsFf1HWzo4VfO5ga10Non7HtAcrKIjkaukqIg0vhHDXidMvE3b3HVduwO_k1DElu-x1TUu01LNm1GFFBnNzEy1zSIo5m3u911rFmH52Eos16tVhX8_UTYxvued9D8LekQV_hL0crLiohqbjcbRfpotg2KuNBCtCPgfi4_6O7q3ZkldiVh82VNYYU="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ashurst.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgWjavOz-vTb-i-ozH-Tq6V7u0IYAQaxh5gjyI5x2MKCUulb42Oc4MM8M4k6grHxrT37bE0Mft2Fce6mxaRNqXTN2quXCuL7zurB-oDO1aaBOWAgJBOa7SIP5XIHZW0v2PDlMNowrGakO2PpNpiNF7GnDg5UcjPHrePJWk20V40JppWCISTIrYTCNhQ3PLXy6W3DAK1gFXIARJ1mdqRSlqMY5DIiVw4G-SBgp6"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "stonesandco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG6XWmZbg_4CAdc4dnvnMOEBvkrtjQpnRQU9HrSwiGj-m3llbF1pxEhBY1o907Hh4waj0AuOXqkI5fqHCxq0vq3itbLZvBnAlBxqxLNF7M8oQauE3OPynVQxQruUjF2UYDVnGOLGkgQ1Ki9WdkeOXU6_CwvZbzKOGBU5BPuda9"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "andersonbrookes.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9FDKMRa118bwlHWQEcszv-_yXhkUUEQRR8ydnm-7XUdfwNhwF3g7mhXvWDaG4DaZaVkdZrStaTmK4MJrztBIEAp_16Lca4ZLx2gAosat12Ne_reHAZsAk9mg-C25O94twVbZkNd57XdjkaVvSqCWhktHgtBfxiq1S3fddhMN6T6EJ-Rux2svjl1s="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "windinguppetitionsolicitors.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_mIel_J87mbypR1CIRxNlu4Ou9HwV3-vqGQ_3hx0KU3zr9tQS7mfwpo5pqaIS3dpJvXO8PyU7H-CCT-kUMjJeR1wDo1iD7DQDJ_e5rBxmdawaSieP0JaBl-3P6ssbikenHoFq9tPJkb55cY47JzAMVkE8ll7OL6Yd5N8-kag4ewLgdILJV9uDPRlqSUG_9Kwbpg9wTZRTLaazfBquM_Temaj8_w=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companydebt.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY258COm9Lfgv8tgiKlmtLENN9dqp0opzU0v4OO28haa2HQRav0edDo5nqQK-pdZ0qnkr0Yjot9tEuRd_VG5Vznl7JZ-4A5nVJ1TyvAadXn5aGKKC771lpkZMfjQqyCl4iZhmLGvFPxg5SwNVuT1YvHwhA27wNGwfg6dm-Q-75HPyNhQ=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "chamberlain-co.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh9YByFh1NmN_E05fzgcCx4iAs0kLrn8sObbOyms88xTHxXiAE3ZbREqejTE_ueCA0PBYCRJCfaeLC9jgVlCQIXFZEOTKyNrLusKiSITk5bkLEvYPrFtbjKIL21pNxL-niAA0h350uxRfGc0DBpV_wb3RIwfr7NLhhTuBL61tcloGmpg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "irwin-insolvency.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkr8E4LANtTMup2z2xDJMR7DYUziby9XqeSK8_5Yq840F-lefpMczPbqKYiIpSjGF_8_ip6AmGWZrxKRhXNR86sQ2MEcVcRvfZ0mWFVRYS5IquF9ZX9Iz-fSTyQLKb9G5K5sbU19S33zS84UZ3S80iC6sd"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "tenable-business-support.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRa5xc5_QpUJEzmvRzhWD005LRUeGu94FCNvajcJRJNyWqxafxXnHP8-xfqLTk_mjfo4A2rybVPUxAtClvdyrxvXnBdj1gmR5ddkZVflgQAICsrVmtc2KU4Eg15UQmU4409vmpE2R3SSgrlw83tNq6nZtxLrP7o9n8zQDlY2VL2n4FIHFV-4Bb1i8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "chamberlain-co.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvyTk9nDQ_kCxmiyvyLcGJqB6E-OGoJcGdLMb3P6oLdL08Ge_NDQ9_uIgwySmPPzUbB7xtHcPCDx30ExDuCgPKFY00S_a7wZTLe3ZwpO9u9WFR68Epv2vrBBLgSejdokDC12SxzJrVFbRWRSybBvty0ZQvpFBlOELoLQBqcV-ktl6dmbpe5UkfrZJe"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "clarionsolicitors.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEikdZdNMT8M75wFqKlS8oGLQ3kT3yIEVCZvEQ8__F0s90hH4XpLNaPAYntNhQa7mRlPK69RAt_ug95n0NdYxaKF3t93WDuecUjvjp1RxvNPWgOUxZ0wxUe9qp8bNO6ydSED33V19sfG2j5FfFGk0OxE7Zd5pWkZPtBFgsrZ_5BNjz6SdLriApX-pIf4y70wpo7RFFEHC1mBps6S3DIHbp4dEbVl64-k0EbBVQiZlXxXbA6tPpMX060wsBgF1mBdqY9oT-QoXhA06bd01jkiU79ig=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl8GkD0AMfq_kOmZAqyI7vcgFJTJJcsZ11zbZbXMAnk7biCEdyXLRM70w_hOlP0w_Ree3m9AQYqAscLZvLnjeStyu3U-P6IX931KyuWcljBm0GMA8qTDqgaW5d9fx4ehCsvILDvf8IfzC6DVZ6XNLHQGMUJP-qlQ7FV1RYpre2pCbTXtAeKa8r0SRYQ_EDJwbS56aGX54tjEwg-sK4cml2duhFHjkXFuaMXmssEz-K"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "cms.law",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-Bm-yL0rVAysJNjWZXiOIoE6IyF6zKjY7HBOdipbxxNdnhyLQWpIodOe2oRffCKfQsCRYyuAlvQ_PiNx5rE5FlPct0XIvMtMyWHyqRjPYI2KXP-YzrpeX6Gl70L9uVp9uaVGs"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "creditfix.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIkALsZrOuZw9tHHQLmoS18s01JwdIvT7cfQ5bHB93vJbK-FryZq7NsODLcQZlhe8lyaHV9-GdJbugdmdgkQMc9qvWirw2IX9z4GPXQ-Pr0NqDJMATOhenRTp7aNbyZAF1XrwNz_PlnaIcJH3fKvqrYZm4qZcvbYyrpgC_A_Jdsb0binnh8FVJwFS6925-A7ePeI8SrZSEjvUGwJOE7-HKaPw="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMUFWkR3Hs8rJZyBNgNtn8r1NX5QolUteWcdZnxAjhZHU3zPyPegfIg3SEj2FN5JP1xoFEuQP3UqaS1F9urddHt9UJZf4fuv92HfQylsdx8MJbRFbCAh5RbXT-71baZ6Dbl64lGU2AatfndA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "irwin-insolvency.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEYVka3bPjiYK0bC8aFje8x-Rn7ciM0QMA9pCB_GMiuqmUcXsWcqPNruMdQVrWs1nyy9Pmn3KQdfcfrXC2vwqeexlYBJQuNvAWGAK044tQl3gYpKv_t1tSGFXCSaDKIwQ93dIOPgriKrY="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mcalisterco.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7tprw9KqnKoeByO-_WPVlzLOMJQmXPKmeIITc9inu2C-KzG3BAWFdKX-E1Z7S_3qKDBF20vVGg59cJoxk9I4qvDGOnMJixnvMuKRe0s3hgC4FuuLqPva4jLSpv46JEF6Kqh98HDx2ifshHMLMshbjkATMR_FGa6pOeJelb1EduMiW_k--IDULCh8cAeo="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ashfords.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYIZrYcZYUukSrbjBJF7F2kThUci1GyGp40C1lao8W4wINYuBRgqDLufEC0V6NhXUOOYAz-J6uPxpgPYmWRADiuCtg0-yAwSM_GQcb-Pd4WCKkUAMd6XPqI3_0cEoCAeQT4B5ya4ifxtkYTv6J8CofnFWbgFJdQe5MCMgNBP2H0AX9sgwPGCuV13ZpzkcbIKA3EAbyZuCdeL4E7JtYvtuRVr2-ZIhihOjWLTZNZUMMjA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "braileyhicks.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgxoVnZrOnQkcvU9VeU08kz-eLMxh3BhfBv7I_0aGKjFdWgCQCjUZkgYIJGqAxu-yIPs5F7GzZsfInNLlxwpC2soN4ZwPFWxUlfKn4CypN2TnJtQx2vROhXtL3XFi0jbwzO_fm_aXX35Z7B52LUihGG5fBEiygtlx4lAl-3v4eH223-A5CdG750F2IKQXNDIjY"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "www.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYIrwSaRRG9iVKx3f8kT7sNvC4hTTpkrmeYBNawwZ0IxfOazLShrKHmhljQrvJjgMW1SynpKOb7SBs9GIVLjFmdVFLOpbZim8u2tjA5fIMpOtKD9-XOBh1feke2bjTM148AHVxDtSKAdAyRsl08WT3W15rkcyxXuJembpaiFDddQpCawsg40tflnVBI4wKxMTWZzkeWmG-FfjM"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companyfocus.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx-8inWIjSP_80ThSX9tuMF1kh5XPlSNtcBnoRuDk8DNQVD-RnNYzFoCRP0zjk3Su9RuDdRN-XFaXzywdK6eSz28gdezZQz5mvae0a2XouDDp79qrObVl5vB_jh7ynPw_AUIF9Tg=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companyrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx2v76Ec9BK6IJiiqqHeYi-tFMauy6CBhv5Kqqx8pC9ic0gXhXyszVkwjywmxIEKqR1JliS2Dk9ZbOqIXuD_Xy7LH-q7BdmhR31s0R6UBhzwVpfqk4ecAm0wuWrDT2eVUQHZ_c9uteTp-IXmDuo5htjkN6Aqs7A4ECbiYpewm7f6TUmyWCpgAJVLT_Ww=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "parliament.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOdVh4wh50flEvVxZZVwT4FeJ7daYd36HsTKSyoqhMqjCzhA62ACXd7frXOrCAL0kNSMeNwgALEyEKrDG1i7sPnIRn8UL8MgMURApXTQ2MBSrnzXvD0fIw2ZTQwzHew8LWsM4l_qRdESGAhtk_yVEoA05FJ7Cuu2km2WE28zisCk9Hfi8="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "k2-partners.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFg-7HpPDrqARjPWkOxEFpblfmMRy8jLU6Clveet6XNYw3Os0AJ6lWkoqf0ySwsGmlJCYTJhZO1lQK9upXg4txk4Y0XY5XWGRzuTWYZeEpT1mzM8E1ceD8mmTkVQo-9a9gdPAVKl1icEQclVSHx5KRDGtXbWIO4MfvBjoROQIh"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wilsonfield.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsXS0ZryZloZ6IGeoaau7WThhBhentwK3DnP8feMwpTV6whnNoEvyf9gXVcTjhbXeN3mKxZ549o6_pE-3Xe4C_ZkHrMjWxG3iYMUHVWBDXo4Qb0VRDYIn21Yp5lxXL97RkVsxRy4lI29LKZZ2Khw8Y-b4KcPZL8Tj00QVFHycD2s0lAtrmGUr5bkhc7XV2PnlaSsu2dB_N3gOQiUpLiQuqhXuHEnI1IqoNVBXZyg0="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "nexuscorporatesolutions.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3Yf3_BhePp_xStjLnk16-ZaEKoQB85RIROtYM9lEFof4PaxAFtoHCVmEK2WbfTWy95_ADXL7hFOr4H9GpdnNhMH3KMW5G8qwn7Pc2ofxGfyzuFn3hPg-vuUNdIe2rWiKytkBCwJO6UhMifoEzZ8xdK8bzuMtS2Ylq61NQgVrJHgHgEDArCJaj4KiAqxsgt47bx_KluXLLIU-Ouiyd1M9kbWm9Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companydebt.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESc4NV59L6xmeGqHkNs7-tUtgIdzIBQeOBS9TxJsjnCFou5L1XcEOG2d3QhPqxrZmmpoPrZYEssgBz7WZNxuVAzNemsyBoShpJcE_KAFnfRAKJDvXe4P2-tNf_9TAfDKdOwv4JFGDlFV_nwH-IQlE4y3-k9Q=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "companyrescue.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXUBNLduaySSjwQR9czTaAqctO8do0cA9f2yOKW88KKQ5J8dEiZDyb6ayBaFwkwuopCjHGh-knWBLG6xWDgfuUSvHAePZmVUCOT66RpHLDPdk_ndjUrEJ2SkL1OnQ9S-Nic6zbfhuVzNWxMzHi6_qp4YdVx6GNGWR4uZxeRcocnh6irBCP955GoE8KDe2rfds="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "blaketurner.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_BQEAlU9nFvUht_CMuSM48WKjaUqEG4IbCf10dKAG19kjnsnY9_d-sqzPi4LEgDuGw73PYPZ04j_63KYhS1PWcozOnlTChIpb27Msa1crjr-Z3kgfy-R0MTxgmNrX288hloR-9SBUMq6wsQ44Yz0H5oo9uMEtDbv05g=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "ballardbusinessrecovery.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYYHctMmvn3uyDhzhd2oiGef5HV7Qp4yUqO6knEKplxBaaGpFOavOGtF3fCwsVvr2YjQSUjdraCK_jxJgZw59GkIW45F1aOb_uz9iydLfHi8nrMU1MF95XzwRMlljstubgfMgNILzm1-blridkMMP0F79an2JEAn1PBtKQya-bVw=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "hlca.co.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyc2exwLn80BpfQpSGOjzQ_7zf5Gybw51R_AuabPw2tiu7FiqE_V9pDDuOKEPawu-OJswMokJiVg8BApLiYQZ2WmI6NR82q20f3fV2_IRj2lHQP9yMg9DLHUzzH2U8tFd4wc9KY8VYSg-t1KmUwca_PN2ZQqMzjGfhuaJtQulzeTN80_87_vcOux6jabeZ"
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "mw-w.com",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-Ags5x9JkeemPL37RBQB1q5OOcHb6SToRZmtvTFSiBOaMkLUjMyPuVfqrcoedj2WefRKggvftuftcs_mJ8JoX5bG-mqi-oED_LGFzFgsOx4-U13Zy7P-xjXdcrb2usvnvCLkT34pIfID37zGv3JlsjKc-AWUcOMmQPEa9FGANJEVt7N5bwvzIj8NQ5n1LHsgXVK5-pys="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "wikipedia.org",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj_eFFrScl1Zb0k_hcOQERuHbuzmaP8sJbEmx5cjwfw7XNui79cui3VrrXd30S2nUNuQTl8QArGCL2gK1-mGf68KlaiXOWKt9wQjroZcHTHUmqfyGsO6Dwk6jx4tcmiCmgSLDlJDWMtEQ0hA=="
+            }
+          },
+          {
+            "image": null,
+            "maps": null,
+            "retrieved_context": null,
+            "web": {
+              "domain": null,
+              "title": "service.gov.uk",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLYdY6P580gMU3odM4Q_q7dYTXrwqbJlCFkzwde9THP-k5jVcSlCiBTM1W2daZ-4JK3i9d681Sws8gCxt_V5NLaMKQ8YAxRmkX0Pbcz2sojey4DnSURic24vl6cx-G6K6j27GQM3bKyeCUQXifGbuVrjnoT_bFJoFLj3n9iZspawUEJsGawmWo2a--_qDVxqIXqvmES_Loyi28niKSemFmhfpxRGXotea7IlBxpGk2jCNqwMv0ytQKFl-OEHC6fJcQ"
+            }
+          }
+        ],
+        "grounding_supports": [
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "segment": {
+              "start_index": 289,
+              "end_index": 425,
+              "part_index": null,
+              "text": "It is a legally binding agreement between your company and its unsecured creditors, overseen by a licensed insolvency practitioner (IP)."
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              3,
+              9,
+              10
+            ],
+            "segment": {
+              "start_index": 505,
+              "end_index": 588,
+              "part_index": null,
+              "text": "A CVA is a flexible debt restructuring tool under Part 1 of the Insolvency Act 1986"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              0,
+              11,
+              12,
+              4,
+              13,
+              6
+            ],
+            "segment": {
+              "start_index": 590,
+              "end_index": 732,
+              "part_index": null,
+              "text": "Unlike liquidation, which leads to the dissolution of the company, a CVA aims for business rescue and allows the company to continue operating"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              11,
+              14,
+              15,
+              16,
+              5,
+              10
+            ],
+            "segment": {
+              "start_index": 734,
+              "end_index": 903,
+              "part_index": null,
+              "text": "A key distinguishing feature is that directors retain control of the company, with the IP acting as a supervisor, rather than taking over management as in administration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              2,
+              4,
+              17,
+              6
+            ],
+            "segment": {
+              "start_index": 906,
+              "end_index": 1046,
+              "part_index": null,
+              "text": "A CVA allows your company to agree a composition or arrangement with its creditors to satisfy some, or all, of its debts over a fixed period"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              4,
+              17
+            ],
+            "segment": {
+              "start_index": 1048,
+              "end_index": 1129,
+              "part_index": null,
+              "text": "It can provide a \"breathing space\" from creditor enforcement action once approved"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              1,
+              10
+            ],
+            "segment": {
+              "start_index": 1131,
+              "end_index": 1282,
+              "part_index": null,
+              "text": "While there's no statutory requirement for the company to be insolvent to propose a CVA, it's typically used when there's at least a risk of insolvency"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              5,
+              6
+            ],
+            "segment": {
+              "start_index": 1538,
+              "end_index": 1584,
+              "part_index": null,
+              "text": "The board must support the decision to proceed"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              3,
+              18,
+              6
+            ],
+            "segment": {
+              "start_index": 1586,
+              "end_index": 1701,
+              "part_index": null,
+              "text": "The IP will act as a 'nominee' to assess the company's financial position and the viability of continued operations"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              2,
+              18,
+              6
+            ],
+            "segment": {
+              "start_index": 1916,
+              "end_index": 2000,
+              "part_index": null,
+              "text": "A statement of affairs detailing assets, liabilities, and creditors is also prepared"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2
+            ],
+            "segment": {
+              "start_index": 2002,
+              "end_index": 2098,
+              "part_index": null,
+              "text": "The proposal must demonstrate that the CVA offers a better return for creditors than liquidation"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              19,
+              3,
+              9,
+              7
+            ],
+            "segment": {
+              "start_index": 2104,
+              "end_index": 2311,
+              "part_index": null,
+              "text": "**Nominee's Report to Court:** The nominee must provide a statement to the court confirming that, in their opinion, the CVA proposal has a \"reasonable prospect of being approved and implemented successfully\""
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              20,
+              19,
+              21,
+              18,
+              22,
+              23
+            ],
+            "segment": {
+              "start_index": 2474,
+              "end_index": 2582,
+              "part_index": null,
+              "text": "Creditors are typically given at least 14 days' notice (HMRC often prefers 3 weeks) before the decision date"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              20,
+              24,
+              21,
+              18,
+              7
+            ],
+            "segment": {
+              "start_index": 2588,
+              "end_index": 2784,
+              "part_index": null,
+              "text": "**Creditor and Shareholder Voting:** A decision procedure (which can be a physical meeting, by correspondence, electronic voting, or a virtual meeting) is held where creditors vote on the proposal"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              1,
+              2,
+              20,
+              19,
+              3,
+              5,
+              10
+            ],
+            "segment": {
+              "start_index": 2888,
+              "end_index": 2973,
+              "part_index": null,
+              "text": "Crucially, no more than 50% (by value) of *unconnected* creditors may vote against it"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              19,
+              5
+            ],
+            "segment": {
+              "start_index": 2975,
+              "end_index": 3131,
+              "part_index": null,
+              "text": "Shareholders also vote (by simple majority), and if their decision differs from the creditors', the creditors' decision prevails, subject to any court order"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              19,
+              5,
+              9,
+              10,
+              7
+            ],
+            "segment": {
+              "start_index": 3137,
+              "end_index": 3293,
+              "part_index": null,
+              "text": "**Implementation and Supervision:** If approved, the CVA becomes legally binding on all unsecured creditors (even those who voted against it or didn't vote)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              16,
+              3,
+              18,
+              7
+            ],
+            "segment": {
+              "start_index": 3295,
+              "end_index": 3431,
+              "part_index": null,
+              "text": "The nominee then becomes the 'supervisor', monitoring the company's compliance with the CVA terms and distributing payments to creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2
+            ],
+            "segment": {
+              "start_index": 3433,
+              "end_index": 3473,
+              "part_index": null,
+              "text": "The CVA is registered at Companies House"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              3,
+              5,
+              9,
+              25
+            ],
+            "segment": {
+              "start_index": 3499,
+              "end_index": 3557,
+              "part_index": null,
+              "text": "A CVA is most commonly proposed by the company's directors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              9,
+              25,
+              26
+            ],
+            "segment": {
+              "start_index": 3559,
+              "end_index": 3708,
+              "part_index": null,
+              "text": "It can also be proposed by an administrator (if the company is in administration) or, more rarely, by a liquidator (if the company is in liquidation)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              27,
+              20,
+              28,
+              19,
+              10
+            ],
+            "segment": {
+              "start_index": 3737,
+              "end_index": 3820,
+              "part_index": null,
+              "text": "To be eligible for a CVA, a company must be insolvent or likely to become insolvent"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              28,
+              18,
+              6,
+              7,
+              23
+            ],
+            "segment": {
+              "start_index": 3822,
+              "end_index": 3963,
+              "part_index": null,
+              "text": "The business needs to be fundamentally sound with potential for future profitability and have a reliable income stream to fund the repayments"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              27,
+              28,
+              23
+            ],
+            "segment": {
+              "start_index": 3965,
+              "end_index": 4041,
+              "part_index": null,
+              "text": "Directors must be committed to the rescue and prepared for necessary changes"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              20,
+              9,
+              26,
+              29
+            ],
+            "segment": {
+              "start_index": 4228,
+              "end_index": 4423,
+              "part_index": null,
+              "text": "Eligibility for a moratorium depends on certain criteria, such as having no more than 50 employees, balance sheet assets no greater than £5.1 million, and turnover no greater than £10.2 million"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              30,
+              31
+            ],
+            "segment": {
+              "start_index": 4590,
+              "end_index": 4738,
+              "part_index": null,
+              "text": "These fees are usually paid from the company's cash flow as part of the arrangement, meaning directors generally do not need to fund them personally"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              32,
+              33,
+              7
+            ],
+            "segment": {
+              "start_index": 4851,
+              "end_index": 4894,
+              "part_index": null,
+              "text": "It typically ranges from £2,500 to £8,000"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              32,
+              7
+            ],
+            "segment": {
+              "start_index": 4896,
+              "end_index": 5090,
+              "part_index": null,
+              "text": "*   **Supervisor's Fee:** This is an ongoing fee for monitoring the CVA over its duration, usually charged as a percentage (10-15%) of the funds distributed to creditors or a fixed annual charge"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              33,
+              30
+            ],
+            "segment": {
+              "start_index": 5244,
+              "end_index": 5294,
+              "part_index": null,
+              "text": "It is generally less expensive than administration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18,
+              22
+            ],
+            "segment": {
+              "start_index": 5322,
+              "end_index": 5467,
+              "part_index": null,
+              "text": "The preparation and distribution of the CVA proposal can take several weeks, often around four weeks, depending on the complexity of the business"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              18,
+              22,
+              23
+            ],
+            "segment": {
+              "start_index": 5469,
+              "end_index": 5594,
+              "part_index": null,
+              "text": "Creditors are then given a minimum of 14 days (with HMRC often preferring three weeks) to consider the proposal before voting"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              22
+            ],
+            "segment": {
+              "start_index": 5596,
+              "end_index": 5693,
+              "part_index": null,
+              "text": "The entire process, from initial assessment to approval, usually takes between six to eight weeks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              15,
+              30,
+              18,
+              22
+            ],
+            "segment": {
+              "start_index": 5696,
+              "end_index": 5823,
+              "part_index": null,
+              "text": "Once approved, the CVA typically runs for a period of three to five years, during which the company makes the agreed repayments"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              12,
+              10
+            ],
+            "segment": {
+              "start_index": 5860,
+              "end_index": 6064,
+              "part_index": null,
+              "text": "A significant advantage of a CVA is that directors generally retain control of the company and there is no automatic investigation into director conduct, unlike in a Creditors' Voluntary Liquidation (CVL)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 6172,
+              "end_index": 6349,
+              "part_index": null,
+              "text": "*   **Personal Guarantees:** Any personal guarantees you have provided for company debts will generally *survive* the CVA and you could still be held personally liable for these"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              34
+            ],
+            "segment": {
+              "start_index": 6707,
+              "end_index": 6777,
+              "part_index": null,
+              "text": "Repaying these funds demonstrates commitment and fairness to creditors"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              4
+            ],
+            "segment": {
+              "start_index": 7071,
+              "end_index": 7119,
+              "part_index": null,
+              "text": "Seeking advice promptly can mitigate these risks"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              14,
+              12
+            ],
+            "segment": {
+              "start_index": 7249,
+              "end_index": 7492,
+              "part_index": null,
+              "text": "If the CVA fails and the company subsequently enters liquidation, a full investigation into director conduct will typically occur, which could lead to claims of misfeasance or director disqualification for up to 15 years if misconduct is found"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              19,
+              9,
+              10
+            ],
+            "segment": {
+              "start_index": 7535,
+              "end_index": 7768,
+              "part_index": null,
+              "text": "*   **Unsecured Creditors:** Once approved, a CVA is legally binding on all unsecured creditors who were entitled to vote, even if they voted against the proposal or did not receive notice (provided they were entitled to be notified)"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              2,
+              4,
+              31
+            ],
+            "segment": {
+              "start_index": 7770,
+              "end_index": 7877,
+              "part_index": null,
+              "text": "This means they cannot take further enforcement action for included debts while the CVA is being adhered to"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              19,
+              9,
+              10,
+              23
+            ],
+            "segment": {
+              "start_index": 7879,
+              "end_index": 8010,
+              "part_index": null,
+              "text": "*   **Secured Creditors:** A CVA cannot bind secured creditors (e.g., banks with charges over assets) without their express consent"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              35,
+              34
+            ],
+            "segment": {
+              "start_index": 8083,
+              "end_index": 8263,
+              "part_index": null,
+              "text": "*   **Preferential Creditors (including HMRC):** Since December 2020, HMRC regained its status as a secondary preferential creditor for certain tax debts, specifically VAT and PAYE"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              35
+            ],
+            "segment": {
+              "start_index": 8265,
+              "end_index": 8365,
+              "part_index": null,
+              "text": "This means HMRC ranks above floating charge holders and unsecured creditors for these specific debts"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              36,
+              35,
+              34,
+              37
+            ],
+            "segment": {
+              "start_index": 8367,
+              "end_index": 8608,
+              "part_index": null,
+              "text": "HMRC is generally willing to consider and accept a CVA proposal, provided it is reasonable, offers a better outcome than liquidation, demonstrates a clear plan for future tax compliance, and treats all creditors within the same class equally"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              34,
+              38
+            ],
+            "segment": {
+              "start_index": 8610,
+              "end_index": 8765,
+              "part_index": null,
+              "text": "HMRC has a dedicated Voluntary Arrangement Service (VAS) that scrutinises proposals to ensure they are \"fit, fair, and a better alternative to liquidation\""
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              34
+            ],
+            "segment": {
+              "start_index": 8767,
+              "end_index": 8877,
+              "part_index": null,
+              "text": "Non-payment of new PAYE and VAT liabilities during the drafting period can lead to HMRC rejecting the proposal"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              31,
+              22
+            ],
+            "segment": {
+              "start_index": 9058,
+              "end_index": 9200,
+              "part_index": null,
+              "text": "Any remaining unsecured debt included in the arrangement is written off, and the company receives a completion certificate from the supervisor"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              22
+            ],
+            "segment": {
+              "start_index": 9202,
+              "end_index": 9265,
+              "part_index": null,
+              "text": "The company then emerges financially and operationally stronger"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12,
+              16,
+              21,
+              23
+            ],
+            "segment": {
+              "start_index": 9421,
+              "end_index": 9524,
+              "part_index": null,
+              "text": "This typically leads to other formal insolvency procedures, most commonly liquidation or administration"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              12
+            ],
+            "segment": {
+              "start_index": 9526,
+              "end_index": 9619,
+              "part_index": null,
+              "text": "If the CVA fails and leads to liquidation, a director conduct investigation will be triggered"
+            }
+          },
+          {
+            "confidence_scores": null,
+            "grounding_chunk_indices": [
+              8,
+              0,
+              4,
+              39,
+              10,
+              26,
+              40
+            ],
+            "segment": {
+              "start_index": 9791,
+              "end_index": 10015,
+              "part_index": null,
+              "text": "They can guide you through the complexities of the Insolvency Act 1986 and the Insolvency (England and Wales) Rules 2016, and help you navigate the process with official bodies like The Insolvency Service and Companies House"
+            }
+          }
+        ],
+        "retrieval_metadata": null,
+        "search_entry_point": {
+          "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3fasEUKIpqGoWnu5FnwENwvRdPIHrzp5eyu-yTLDpPCg4DPu4-3OFojChnM8qndG89Og7SwORic1TjeLPCIrj4Mp-cL-3ICQRbqpNS8DP8xRCKWzlhC1226iarJoXtzt6Vjv0qNOqfBg1_uQ4JFaf67RnEgic3pJNF_y35UuM1YlP8brr0vdgPkGzBEslzFJyAhqNfXjPjZU=\">Insolvency Act 1986 CVA</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-d_2Knf9637Jl-1MNb2g4OWr3d7LqyGfVZ954N_k0yZ3RS_MSklOC5XPsMtnieNVJxzDgTV78GrLUNXNIDlWXlCx2bTLpeT-KpKplTbF_N1wcYcz9cVZqIcIkrV4VIk0aQyNi4JghCTjH40HzL9lkXxz8KZo3q37Vm8xbT55dSKoHyCZGT0RikOymQSWdbx3HWka4TThUERQHDPfjiXXSPqHinSc7rzweoA==\">cost of Company Voluntary Arrangement UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfo_KZA2cQkcZn7C-WDUYM16PHevZNsmJBQldlW9ZTSJES1R9jjdPjZQiPfo8oSaaUX5NR8zBRNFXFa9bNOE77z6L742lqLbQwP59zBBJ4Tppq9hfqSre4Rpr_4hBCioHG7ADDKGGoJvWohmJQ2ak4kwjOtuRxmOS0rpPsU2G4ahj1nfhJnApI9RwxLaCImJueyav4dSrxNw==\">eligibility for CVA UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExuJLE5TDbRco-fYRIQSHu4_UsUSSqImJjfZUP6ODGD827EP7LrYbXpYrpqgAqVwyZTO1Co8HQynziPpfYwT6GSIwDibs_V0WDz-Dxe8BBgX4uXLjcTWUK0T7_eNyMNggyHd1CTWQsrYkD4ds7vZdmJrwQ8tazR_AOY8tS0EU9MwnuHW2hqD46HKlBtPVBa3A0AtenTdYSY4sbPeEFtgniOYfWIxmLecof_ugcirFKnMk=\">Company Voluntary Arrangement UK director guide</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkZ1J6ZWHaqNvk63pkRFtMzse8a89AQMRhpeQOJSUv76xQ2BYWx0j1wXWmOKR7z_a-c3W-nT9IqQ1bpKCMvzXe6E-Jn8RFtQ10obixqO4G9sJ7obZgUOUi-fcLy1T-TDRPoN7FfRmjBvTsQAgyDHJhw6RVN13Cbhrecurwib5gWclzH7QYPZGs6KBzew564YE=\">CVA process UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMoapAL9jNQgwFmSaHNRXIYmKP_hkuw2uLkA05dAqnzjyaWJSdaZ79ac5ivTa4x8hlZvoW-ZZnKEXK4HM7saCDyXijB3eHghwkzVtq9Kmov4q1JQU8n1Hb-BpgrzAmIQ_QL8Ax5Rmt7i_dxzCZbC1_xXaQuqq6IwnwQ2Pn2Hc72_mEx9TvDC2lOVqm6wUXl1Nwh1HMdbLvqUIKQf5M5_Rs339lWTF5AlhmR_V5j3D6\">timeline for Company Voluntary Arrangement UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZtJ_LSZW-gcIyl8CjoNR_aux_PqbnNYfX2n2fZIyTJOA1utoKFIiPOXugt2CNlQvjTq-Z6Ff0skapv33kPPHCVSWQ7ZygaPdaqk5vznn03ZIkgNWvi7-uiNb5UpgHPjPmY6YrkIVXUXzplcKbdcFvvQFHieJLmkSALwaXG7LddueVX2JFGlzaCEfm1cbrcHsNuydpKUU4Rgi9_Jn34DGL8JtiSQvgF_w=\">director&#39;s personal liability CVA UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMZW_gNWMRyIl9bZaasjy2ATf0UrBHAO55E6wOI4UH3q19uOMpdt---gN8pgoeLyTjBHkyt3zp8WcrtRHPd7xdqj58E6oUeI1xQxXvhAs5cBhr3rD3wLxWVMN_2MU37JeBCYe7H8ne0aJm1fu83-OncVKDcOPxTEHeFnZ-ERK9bkNByxra4SrctHs0-QkGUb0rxe1v-f0aBpOI\">HMRC treatment in CVA UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYSpAgZYqzeiZFtlb1IMTGi8K-kcLQTB-cyOYPUiV16vahy7gkBevmUGK75bNxipFt3BMiAtLjfs8N6h6juExFfZewk6v_f3KcNATqh_ij-gXv_vv5NF_rM_k58pGTu5Bjx_BrGu6MzeR5rrXLtmXr1hUoeQ9ZLEW9ZhUeOto3m17DTct7pf-xnh1U8NCOVgBl-BMQbSX8Gpwr5g==\">Insolvency Rules 2016 CVA</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUonOF3lBlbFt7kw5kovFpBUNI36ILVtLLNVXSNwJfjA2UQ_jnlZU7yCXU3q39eBz2CFfIDNTPti-lbJa7olNNYRBj_GxvPIn9wZWaDnb8fm_BHXEV1fIooEEHGR3LxNHItkwD3f0_QLY-1LnMVPHFDzPseNOKF51zx1NRSSxJdegGBuTFFaRe6qZ_OqCfnULM9rJxly3n5aUVmvZj8EJE5gacyjlZvIn8tKJGYeM=\">difference between CVA and administration UK</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHXfRJX56gSceksL4o1gOIlIcKbYHTdBgCQh0kMeN93aU1T8fYurCKHfQe2JRAhAT10Fvncn_EX40i6HCsVNT9GAoBo5JJXyruiIacY1rtXrbbx06Jupv-uRyflr8r6TmM5rf6DAp7-FgXz2mZ_Mw0F1FOfHEZmZAlLAkPWVv0nqVhIcEzH5DT0OfKw4KKlMfOl6z57t2dPQ==\">Companies Act 2006 CVA</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkbAEu-4gKyGa8OoZH6ItuMU6esO45hLfaess8K4cRwtfpH_qWDYZsvw1LY_4yPXjczpGthYCbx2zpo6_h7NQJy0XGdakdonvs_Y25p_FEkn2swZINNrEhndx2AOMG8BXXGyX4OQik3c3yW9Bsn-xpqJPgaZsN_JxHoLOG_-Ze9PbxSs2j-xp9ZNSZNno5iMTZhe-eRlnz\">CVA vs liquidation UK</a>\n  </div>\n</div>\n",
+          "sdk_blob": null
+        },
+        "web_search_queries": [
+          "Company Voluntary Arrangement UK director guide",
+          "CVA process UK",
+          "eligibility for CVA UK",
+          "cost of Company Voluntary Arrangement UK",
+          "timeline for Company Voluntary Arrangement UK",
+          "director's personal liability CVA UK",
+          "HMRC treatment in CVA UK",
+          "Insolvency Act 1986 CVA",
+          "Companies Act 2006 CVA",
+          "Insolvency Rules 2016 CVA",
+          "difference between CVA and administration UK",
+          "CVA vs liquidation UK"
+        ],
+        "google_maps_widget_context_token": null,
+        "retrieval_queries": null,
+        "source_flagging_uris": null
+      },
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "ArMpaujALPLQvdIPsvyYmAY",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 2170,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 327,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 327
+      }
+    ],
+    "thoughts_token_count": 1243,
+    "tool_use_prompt_token_count": 614,
+    "tool_use_prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 614
+      }
+    ],
+    "total_token_count": 4354,
+    "traffic_type": null
+  },
+  "automatic_function_calling_history": [],
+  "parsed": null
+}

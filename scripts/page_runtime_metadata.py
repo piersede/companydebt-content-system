@@ -9,18 +9,6 @@ from datetime import date, datetime
 DATE_FORMATS = ("%d %B %Y", "%d %b %Y", "%B %Y", "%b %Y")
 
 SLUG_PAGE_CLASS_OVERRIDES = {
-    # ── Credit card section (original entries) ─────────────────────────────
-    "capital-on-tap-review": "entity_owner",
-    "funding-circle-review": "entity_owner",
-    "flexipay-review": "entity_owner",
-    "compare-barclaycard": "entity_modifier",
-    "compare-amex": "entity_modifier",
-    "capital-on-tap-vs-amex": "debt_solution_comparison",
-    "low-apr": "pricing_cost",
-    "interest-free": "pricing_cost",
-    "balance-transfer": "process_guide",
-    "guide-to-business-credit-cards": "process_guide",
-    "credit-cards-vs-charge-cards": "debt_solution_comparison",
 
     # ── Liquidation section ────────────────────────────────────────────────
     # entity_owner — canonical "what is X" type / hub pages
@@ -105,6 +93,10 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "voluntary-vs-compulsory-liquidation": "trigger",
     "seek-insolvency-advice-before-missing-payments": "trigger",
     "what-happens-if-i-stop-paying-company-debts": "trigger",
+    "cant-pay-vat": "trigger",
+
+    # data_reference — official statistics and data series pages
+    "uk-insolvency-statistics": "data_reference",
 }
 
 

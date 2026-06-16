@@ -1,0 +1,51 @@
+<!-- wp:heading -->
+<h2>Information Required by the Provision of Services Regulations 2009</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Complaints</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can view our full complaints procedure&nbsp;here.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Contact Details</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Company Debt Ltd<br>Langley House,<br>Park Road,<br>London N2 8EY<br>England &amp; Wales</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tel: 0800 074 6757</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Email: info@companydebt.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We are a limited company registered under number &nbsp;06352368.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Our VAT registration number is 124 7192 23</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Our Services</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We are licensed insolvency practitioners. You can access an overview of the services that we provide&nbsp;here.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Professional Indemnity Insurance</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We have professional indemnity insurance and are fully covered by Nexus Underwriting Ltd]. Their contact address is 150 Ledenhall Street, London, EC3V 4QT. This insurance governs advice provided in the territories of England &amp; Wales.</p>
+<!-- /wp:paragraph -->

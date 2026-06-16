@@ -1,0 +1,153 @@
+<!-- wp:acf/hero-landing {"name":"acf/hero-landing","data":{"block_hero_landing_title":"Close Down Your Company \u0026 Go Stress Free","_block_hero_landing_title":"hero_landing_title","block_hero_landing_wysiwyg_left":"\u003cul\u003e\r\n \t\u003cli\u003eSimple, fast and stress free experience\u003c/li\u003e\r\n \t\u003cli\u003ePrevent legal action today!\u003c/li\u003e\r\n \t\u003cli\u003eLiquidate for a low, fixed cost\u003c/li\u003e\r\n \t\u003cli\u003eWe've helped 1000’s of UK Directors\u003c/li\u003e\r\n \t\u003cli\u003eOur experts are fully Licensed \u0026amp; Regulated\u003c/li\u003e\r\n \t\u003cli\u003eClear communication every step of the way\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003ca class=\u0022button cdblk-hero-landing__button\u0022 href=\u0022/insolvency-calculator/\u0022\u003e30 Second Insolvency Test\u003c/a\u003e","_block_hero_landing_wysiwyg_left":"hero_landing_wysiwyg_left","block_hero_landing_wysiwyg_right":"[gravityform name=\u0022Book a Free Meeting\u0022 description=\u0022false\u0022 ajax=\u0022true\u0022]","_block_hero_landing_wysiwyg_right":"hero_landing_wysiwyg_right","block_hero_landing_bcg_image":54268,"_block_hero_landing_bcg_image":"hero_landing_bcg_image","block_hero_landing_logos_left_0_logo":53982,"_block_hero_landing_logos_left_0_logo":"hero_landing_logo","block_hero_landing_logos_left_1_logo":53986,"_block_hero_landing_logos_left_1_logo":"hero_landing_logo","block_hero_landing_logos_left_2_logo":53984,"_block_hero_landing_logos_left_2_logo":"hero_landing_logo","block_hero_landing_logos_left_3_logo":53989,"_block_hero_landing_logos_left_3_logo":"hero_landing_logo","block_hero_landing_logos_left_4_logo":53987,"_block_hero_landing_logos_left_4_logo":"hero_landing_logo","block_hero_landing_logos_left_5_logo":53983,"_block_hero_landing_logos_left_5_logo":"hero_landing_logo","block_hero_landing_logos_left_6_logo":53988,"_block_hero_landing_logos_left_6_logo":"hero_landing_logo","block_hero_landing_logos_left_7_logo":53985,"_block_hero_landing_logos_left_7_logo":"hero_landing_logo","block_hero_landing_logos_left":8,"_block_hero_landing_logos_left":"hero_landing_logos_left","block_hero_landing_logo_right":53978,"_block_hero_landing_logo_right":"hero_landing_logo_right","block_hero_landing_padding_top":"50","_block_hero_landing_padding_top":"hero_landing_padding_top","block_hero_landing_padding_bottom":"50","_block_hero_landing_padding_bottom":"hero_landing_padding_bottom","block_hero_landing_add_class":"","_block_hero_landing_add_class":"hero_landing_add_class","block_hero_landing":"","_block_hero_landing":"block_hero_landing"},"mode":"preview"} /-->
+
+<!-- wp:group {"className":"container landing__quote"} -->
+<div class="wp-block-group container landing__quote"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:paragraph -->
+<p>Here at Company Debt, we provide UK directors with <strong>straightforward </strong>and <strong>confidential </strong>business debt advice, and tailored insolvency solutions. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We help rescue and close companies <strong>all over the UK</strong> including London and the South East, Manchester, Liverpool, Birmingham and more. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you are struggling with business debt and you need advice from a leading debt company, <strong>contact our confidential insolvency helpline to arrange a free consultation today.</strong> We are fully licensed &amp; regulated.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:image {"align":"center","id":54243,"sizeSlug":"full","linkDestination":"none","style":{"color":[]},"className":"landing__quote-image"} -->
+<figure class="wp-block-image aligncenter size-full landing__quote-image"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/03/Quote_Alan-Bradstock-320.jpg" alt="" class="wp-image-54243"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#ff6600"}},"className":"landing__quote-image\u002d\u002dname"} -->
+<p class="has-text-align-center landing__quote-image--name has-text-color" style="color:#ff6600"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:acf/columns-with-buttons {"name":"acf/columns-with-buttons","data":{"buttons_section_bcg_color":"rgba(221, 221, 221, 0.2)","_buttons_section_bcg_color":"field_cols_buttons_bcg_color","buttons_section_button_bcg_color":"","_buttons_section_button_bcg_color":"field_cols_buttons_button_bcg_color","buttons_section_title_font_color":"#353535","_buttons_section_title_font_color":"field_cols_buttons_title_font_color","buttons_section_button_font_color":"#000000","_buttons_section_button_font_color":"field_cols_buttons_font_color","buttons_section_title":"","_buttons_section_title":"field_cols_buttons_title","buttons_section_text_align":"center","_buttons_section_text_align":"field_cols_buttons_text_align","buttons_section_nr_cols":"3","_buttons_section_nr_cols":"field_cols_buttons_nr_of_cols","buttons_section_buttons_0_icon":55025,"_buttons_section_buttons_0_icon":"field_cols_buttons_icon","buttons_section_buttons_0_heading":"Contact our friendly team","_buttons_section_buttons_0_heading":"field_cols_buttons_heading","buttons_section_buttons_0_description":"Our team is available by phone and\r\ne-mail to answer any question you might have about your financial situation","_buttons_section_buttons_0_description":"field_cols_buttons_desc","buttons_section_buttons_0_link":"","_buttons_section_buttons_0_link":"field_cols_buttons_link","buttons_section_buttons_1_icon":55024,"_buttons_section_buttons_1_icon":"field_cols_buttons_icon","buttons_section_buttons_1_heading":"Get immediate advice","_buttons_section_buttons_1_heading":"field_cols_buttons_heading","buttons_section_buttons_1_description":"Our consultations are entirely free and\r\nconfidential. We'll analyse your situation and provide the best possible solution.","_buttons_section_buttons_1_description":"field_cols_buttons_desc","buttons_section_buttons_1_link":"","_buttons_section_buttons_1_link":"field_cols_buttons_link","buttons_section_buttons_2_icon":55026,"_buttons_section_buttons_2_icon":"field_cols_buttons_icon","buttons_section_buttons_2_heading":"Get out of debt","_buttons_section_buttons_2_heading":"field_cols_buttons_heading","buttons_section_buttons_2_description":"Know the next steps and get your\r\npeace of mind back.","_buttons_section_buttons_2_description":"field_cols_buttons_desc","buttons_section_buttons_2_link":"","_buttons_section_buttons_2_link":"field_cols_buttons_link","buttons_section_buttons":3,"_buttons_section_buttons":"field_cols_buttonss","buttons_section_add_class":"","_buttons_section_add_class":"field_cols_buttons_add_class","buttons_section":"","_buttons_section":"block_columns_buttons"},"mode":"preview"} /-->
+
+<!-- wp:acf/columns-with-buttons {"name":"acf/columns-with-buttons","data":{"buttons_section_bcg_color":"#f8f8f8","_buttons_section_bcg_color":"field_6388b38ba06f4","buttons_section_button_bcg_color":"","_buttons_section_button_bcg_color":"field_6388b3afa06f5","buttons_section_title_font_color":"#0f0f0f","_buttons_section_title_font_color":"field_6388b3dda06f6","buttons_section_button_font_color":"#000000","_buttons_section_button_font_color":"field_6388b3eea06f7","buttons_section_title":"","_buttons_section_title":"field_6388b41da06f8","buttons_section_text_align":"center","_buttons_section_text_align":"field_6388b422a06f9","buttons_section_nr_cols":"3","_buttons_section_nr_cols":"field_6388b459a06fa","buttons_section_buttons_0_icon":55025,"_buttons_section_buttons_0_icon":"field_6388b4b9a06fc","buttons_section_buttons_0_heading":"Contact our friendly team","_buttons_section_buttons_0_heading":"field_6388b4eea06fd","buttons_section_buttons_0_description":"Our team is available by phone and\r\ne-mail to answer any question you might have about your financial situation","_buttons_section_buttons_0_description":"field_6388b4fda06fe","buttons_section_buttons_0_link":"","_buttons_section_buttons_0_link":"field_6388b50fa06ff","buttons_section_buttons_1_icon":55024,"_buttons_section_buttons_1_icon":"field_6388b4b9a06fc","buttons_section_buttons_1_heading":"Get immediate advice","_buttons_section_buttons_1_heading":"field_6388b4eea06fd","buttons_section_buttons_1_description":"Our consultations are entirely free and\r\nconfidential. We'll analyse your situation and provide the best possible solution.","_buttons_section_buttons_1_description":"field_6388b4fda06fe","buttons_section_buttons_1_link":"","_buttons_section_buttons_1_link":"field_6388b50fa06ff","buttons_section_buttons_2_icon":55026,"_buttons_section_buttons_2_icon":"field_6388b4b9a06fc","buttons_section_buttons_2_heading":"Get out of debt","_buttons_section_buttons_2_heading":"field_6388b4eea06fd","buttons_section_buttons_2_description":"Know the next steps and get your\r\npeace of mind back.","_buttons_section_buttons_2_description":"field_6388b4fda06fe","buttons_section_buttons_2_link":"","_buttons_section_buttons_2_link":"field_6388b50fa06ff","buttons_section_buttons":3,"_buttons_section_buttons":"field_6388b4b0a06fb","buttons_section_add_class":"","_buttons_section_add_class":"field_6388b52ea0700","buttons_section":"","_buttons_section":"field_6388b363703c6"},"mode":"edit"} /-->
+
+<!-- wp:acf/carousel-testimonials-landing {"name":"acf/carousel-testimonials-landing","data":{"block_carousel_testimonials_boxes_heading":"Advice You Can Trust","_block_carousel_testimonials_boxes_heading":"field_carousel_testimonials_boxes_heading","block_carousel_testimonials_boxes_background_color":"","_block_carousel_testimonials_boxes_background_color":"field_carousel_testimonials_boxes_bcg_color","block_carousel_testimonials_boxes_nr_of_posts":"6","_block_carousel_testimonials_boxes_nr_of_posts":"field_carousel_testimonials_boxes_nr_of_posts","block_carousel_testimonials_boxes_padding_top":"30","_block_carousel_testimonials_boxes_padding_top":"field_carousel_testimonials_boxes_padding_top","block_carousel_testimonials_boxes_padding_bottom":"","_block_carousel_testimonials_boxes_padding_bottom":"field_carousel_testimonials_boxes_padding_bottom","block_carousel_testimonials_boxes_add_class":"","_block_carousel_testimonials_boxes_add_class":"field_carousel_testimonials_boxes_add_class","block_carousel_testimonials_boxes":"","_block_carousel_testimonials_boxes":"block_carousel_testimonials_boxes"},"mode":"preview"} /-->
+
+<!-- wp:cover {"customOverlayColor":"#002856","minHeight":100,"className":"px-0 landing__cta"} -->
+<div class="wp-block-cover px-0 landing__cta" style="min-height:100px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#002856"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"px-0 landing__cta"} -->
+<div class="wp-block-group px-0 landing__cta"><!-- wp:columns {"className":"container mb-0"} -->
+<div class="wp-block-columns container mb-0"><!-- wp:column {"width":"100%","className":"mb-0"} -->
+<div class="wp-block-column mb-0" style="flex-basis:100%"><!-- wp:columns {"className":"mb-0"} -->
+<div class="wp-block-columns mb-0"><!-- wp:column {"verticalAlignment":"center","width":"70%","className":"mb-0"} -->
+<div class="wp-block-column is-vertically-aligned-center mb-0" style="flex-basis:70%"><!-- wp:paragraph {"className":"mb-0","fontSize":"medium"} -->
+<p class="mb-0 has-medium-font-size">For free and confidential advice on how to manage your financial difficulties, contact our experts today</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","orientation":"horizontal"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"color":{"background":"#ff6600"},"border":{"radius":"5px"},"typography":{"fontSize":"22px"}},"className":"landing__button\u002d\u002dorange mb-0"} -->
+<div class="wp-block-button has-custom-font-size landing__button--orange mb-0" style="font-size:22px"><a class="wp-block-button__link has-white-color has-text-color has-background wp-element-button" style="border-radius:5px;background-color:#ff6600"><strong>0800 074 6757</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:columns {"className":"landing__youtube container"} -->
+<div class="wp-block-columns landing__youtube container"><!-- wp:column {"verticalAlignment":"top"} -->
+<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"className":"landing__youtube-heading"} -->
+<h3 class="landing__youtube-heading">Our Experience Speaks For Itself</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Decades of experience helping directors</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Experienced mediators with HMRC </li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Entirely confidential service</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Advice tailored to your situation</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>1000's of satisfied clients</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:embed {"url":"https://youtu.be/cr3r4EB0tk0","type":"video","providerNameSlug":"youtube","responsive":true,"align":"center","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+<figure class="wp-block-embed aligncenter is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://youtu.be/cr3r4EB0tk0
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"center","id":54015,"sizeSlug":"thumbnail","linkDestination":"none"} -->
+<figure class="wp-block-image aligncenter size-thumbnail"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/02/accreditation-ipa-150x68.png" alt="" class="wp-image-54015"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"center","id":54016,"sizeSlug":"thumbnail","linkDestination":"none"} -->
+<figure class="wp-block-image aligncenter size-thumbnail"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/02/accreditation-tma-150x90.png" alt="" class="wp-image-54016"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:image {"align":"center","id":54018,"sizeSlug":"full","linkDestination":"none","className":"mb-0 pb-0 va-bottom"} -->
+<figure class="wp-block-image aligncenter size-full mb-0 pb-0 va-bottom"><img src="https://comdebstage.wpengine.com/wp-content/uploads/2022/02/London-Skyline-900-1.jpg" alt="" class="wp-image-54018"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:cover {"customOverlayColor":"#002856","className":"landing__footer-form"} -->
+<div class="wp-block-cover landing__footer-form"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#002856"></span><div class="wp-block-cover__inner-container"><!-- wp:group -->
+<div class="wp-block-group"><!-- wp:group {"className":"landing__form-block","layout":{"wideSize":"500px"}} -->
+<div class="wp-block-group landing__form-block"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="has-text-align-center" id="get-started-today"><strong>Get Started Today</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">And Get Your Peace of Mind Back</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gravityforms/form {"formId":"39","title":false,"description":false,"ajax":true} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"100%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:100%"></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
+<!-- /wp:cover -->

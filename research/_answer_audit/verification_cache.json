@@ -1,0 +1,1055 @@
+{
+  "wrongful trading::wrongful trading involves a dual test an objective standard what a reasonably diligent person in that role would have known and a subjective standard what the director actually knew .": {
+    "provider": "Wrongful Trading",
+    "claim": "Wrongful trading involves a dual test: an objective standard (what a reasonably diligent person in that role would have known) and a subjective standard (what the director actually knew).",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "wrongful trading::wrongful trading is a civil not a criminal offence.": {
+    "provider": "Wrongful Trading",
+    "claim": "Wrongful trading is a civil, not a criminal, offence.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "preferential payments::if a director is found to have a desire to prefer a specific creditor they could face personal liability for preferential payments.": {
+    "provider": "Preferential Payments",
+    "claim": "If a director is found to have a 'desire to prefer' a specific creditor, they could face personal liability for preferential payments.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "director's loan account::attempts to retrospectively reclassify overdrawn director s loan account drawings as salary or dividends after insolvency are usually scrutinised and often rejected by courts.": {
+    "provider": "Director's Loan Account",
+    "claim": "Attempts to retrospectively reclassify overdrawn director's loan account drawings as salary or dividends after insolvency are usually scrutinised and often rejected by courts.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "voluntary strike-off / dissolution::creditors can apply to restore an improperly struck off company to the register even up to 20 years later.": {
+    "provider": "Voluntary Strike-Off / Dissolution",
+    "claim": "Creditors can apply to restore an improperly struck-off company to the register, even up to 20 years later.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "voluntary strike-off / dissolution::the rating coronavirus and directors disqualification dissolved companies act 2021 specifically extended the insolvency service s powers to investigate directors of dissolved companies even retrospectively.": {
+    "provider": "Voluntary Strike-Off / Dissolution",
+    "claim": "The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 specifically extended the Insolvency Service's powers to investigate directors of dissolved companies, even retrospectively.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2021/34/notes/contents",
+    "verified_quote": "The provisions of the Act relating to director disqualification and compensation apply to companies dissolved on or after 10 December 2018.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "voluntary strike-off::a company must have ceased trading for at least three months to use voluntary strike off.": {
+    "provider": "Voluntary Strike-Off",
+    "claim": "A company must have ceased trading for at least three months to use voluntary strike-off.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/strike-off-your-limited-company-from-companies-register",
+    "verified_quote": "You cannot apply for strike off if, in the last 3 months, your company: has traded or carried on business; has changed its name; has made a disposal for value of property or rights that it held for the purpose of disposal for gain in the normal course of trading or carrying on business",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "voluntary strike-off::directors remain responsible for company affairs and liable for any outstanding debts until dissolution via strike off.": {
+    "provider": "Voluntary Strike-Off",
+    "claim": "Directors remain responsible for company affairs and liable for any outstanding debts until dissolution via strike-off.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "phoenix companies::breaching section 216 of the insolvency act 1986 reusing a prohibited company name is a criminal offence punishable by imprisonment and or a fine.": {
+    "provider": "Phoenix Companies",
+    "claim": "Breaching Section 216 of the Insolvency Act 1986 (reusing a prohibited company name) is a criminal offence, punishable by imprisonment and/or a fine.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/216",
+    "verified_quote": "If a person acts in contravention of this section, he is liable to imprisonment or a fine, or both.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "phoenix companies::under section 217 of the insolvency act 1986 directors who breach section 216 reusing a prohibited company name can be made personally liable for all debts of the new company incurred while using the prohibited name.": {
+    "provider": "Phoenix Companies",
+    "claim": "Under Section 217 of the Insolvency Act 1986, directors who breach Section 216 (reusing a prohibited company name) can be made personally liable for all debts of the new company incurred while using the prohibited name.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/217",
+    "verified_quote": "A person is personally responsible for all the relevant debts of a company if at any time— (a)in contravention of section 216, he is involved in the management of the company, or... For the purposes of this section the relevant debts of a company are— (a)in relation to a person who is personally responsible under paragraph (a) of subsection (1), such debts and other liabilities of the company as are incurred at a time when that person was involved in the management of the company...",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "director disqualification::the insolvency service can bring disqualification proceedings against directors if unfit conduct is identified.": {
+    "provider": "Director Disqualification",
+    "claim": "The Insolvency Service can bring disqualification proceedings against directors if unfit conduct is identified.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/company-directors-disqualification-act-1986-and-failed-companies/company-directors-disqualification-act-1986-and-failed-companies",
+    "verified_quote": "The Insolvency Service may bring proceedings on behalf of the Secretary of State if the alleged unfit conduct falls within its remit and it is instructed (authorised) to do so.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::hmrc can issue a personal liability notice pln if a director s failure to ensure the company pays its tax debts was due to the director s fraud or neglect.": {
+    "provider": "HMRC",
+    "claim": "HMRC can issue a Personal Liability Notice (PLN) if a director's failure to ensure the company pays its tax debts was due to the director's fraud or neglect.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/hmrc-internal-manuals/national-insurance-manual/nim12203",
+    "verified_quote": "A Personal Liability Notice (PLN) can be issued to any individual who was acting as an officer of the body corporate at the time of the failure to pay the National Insurance contributions due under statute, and where HMRC is of the opinion that the failure to pay was attributable to the fraud or neglect by that individual.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::a shareholders resolution for a creditors voluntary liquidation cvl typically requires 7 14 days notice though shorter notice is possible if 90% of shareholders agree.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "A Shareholders' Resolution for a Creditors' Voluntary Liquidation (CVL) typically requires 7-14 days' notice, though shorter notice is possible if 90% of shareholders agree.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1DduvhCcwzz1omk6xmnsdGmgHw5Y7VZatiacSACtrnVWM_kMoEWi2CmBqbS3sja-MZj4Ps7RpTaAw7CVqNrvfn3nIVbQxpk1N25f0n8ubma9ZrxNcPPjw1ZzmCHfX4dKVSOV3oaCRvzVjcVzpWypIds0_QrIUBZ9CUHg9ZUvt7o3-Zb7Tlv--2Qa-3PaNSv-TIola6nZA00r3kIed",
+    "verified_quote": "Although only 14 days' notice is required for a general meeting... Where members wish to call a company general meeting at short notice, the Companies Act 2006 requires this to be supported by members who represent not less than 90% of the total voting rights, or such higher percentage (not exceeding 95%) as may be specified in the articles) (s. 307).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::in a creditors voluntary liquidation cvl if the company lacks sufficient assets to cover the liquidation fees directors may have to personally cover the shortfall.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "In a Creditors' Voluntary Liquidation (CVL), if the company lacks sufficient assets to cover the liquidation fees, directors may have to personally cover the shortfall.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::creditors voluntary liquidation cvl costs are typically split into pre appointment often a fixed fee and post appointment stages with the latter regulated by the insolvency england and wales rules 2016.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Creditors' Voluntary Liquidation (CVL) costs are typically split into pre-appointment (often a fixed fee) and post-appointment stages, with the latter regulated by the Insolvency (England and Wales) Rules 2016.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::simpler creditors voluntary liquidation cvl cases with minimal assets and few creditors might complete in under 12 months while complex cases involving property disputed claims or hmrc enquiries can take two years or more.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Simpler Creditors' Voluntary Liquidation (CVL) cases with minimal assets and few creditors might complete in under 12 months, while complex cases involving property, disputed claims, or HMRC enquiries can take two years or more.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/cvl-research-report-for-the-insolvency-service",
+    "verified_quote": "The median length of time it took to complete a CVL was 712 days (or just under 2 years). The minimum length of time was 122 days, and the maximum was 2,460 days.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::in a compulsory liquidation the official receiver or charges a general fee of £6 000 set to increase to £7 200 from 9 january 2025 and an additional 15% of assets realised where they act as liquidator.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "In a compulsory liquidation, the Official Receiver (OR) charges a general fee of £6,000 (set to increase to £7,200 from 9 January 2025) and an additional 15% of assets realised where they act as liquidator.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/statistics/levels-of-statutory-fee-recovery-on-bankruptcies-and-compulsory-liquidations-201718-to-202122, https://www.legislation.gov.uk/uksi/2024/963/note/made",
+    "verified_quote": "Official receiver's general fee, £6,000. Source: The Insolvency Proceedings (Fees) Order 2016. When the Official Receiver realises assets on an insolvent's estate a fee equal to 15% of the chargeable receipts is paid to cover the cost of them acting as trustee. Article 2(3) also increases the official receiver's general fee, payable to the Secretary of State following the making of a bankruptcy order or winding-up order by the court, for certain costs not recovered out of the official receiver's administration fee (increased from £6,000 to £7,200).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::if a private insolvency practitioner is appointed to take over from the official receiver in a compulsory liquidation their additional fees typically range from £5 000 to £10 000.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "If a private Insolvency Practitioner is appointed to take over from the Official Receiver in a compulsory liquidation, their additional fees typically range from £5,000 to £10,000.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::the official receiver s fees in compulsory liquidations are set out in the insolvency proceedings fees order 2016.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "The Official Receiver's fees in compulsory liquidations are set out in the Insolvency Proceedings (Fees) Order 2016.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/statistics/levels-of-statutory-fee-recovery-on-bankruptcies-and-compulsory-liquidations-201718-to-202122",
+    "verified_quote": "Fee levels are set in legislation and for the period of this analysis were: [...] Source: The Insolvency Proceedings (Fees) Order 2016.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::complex compulsory liquidation cases can take 18 months to 3 years or even several years if there are disputes or missing records.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "Complex compulsory liquidation cases can take 18 months to 3 years, or even several years if there are disputes or missing records.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::members voluntary liquidation mvl is specifically governed by section 89 of the insolvency act 1986.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "Members' Voluntary Liquidation (MVL) is specifically governed by Section 89 of the Insolvency Act 1986.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::in a members voluntary liquidation mvl the declaration of solvency must be made no more than five weeks before the resolution to wind up the company.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "In a Members' Voluntary Liquidation (MVL), the Declaration of Solvency must be made no more than five weeks before the resolution to wind up the company.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::in a members voluntary liquidation mvl the shareholder resolution to wind up the company must be passed within five weeks of the declaration of solvency.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "In a Members' Voluntary Liquidation (MVL), the shareholder resolution to wind up the company must be passed within five weeks of the Declaration of Solvency.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/89",
+    "verified_quote": "Such a declaration by the directors has no effect for purposes of this Act unless— (a) it is made within the 5 weeks immediately preceding the date of the passing of the resolution for winding up, or on that date but before the passing of the resolution, and.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::in a members voluntary liquidation mvl the liquidator formally notifies known creditors within 28 days of the resolution to wind up the company.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "In a Members' Voluntary Liquidation (MVL), the liquidator formally notifies known creditors within 28 days of the resolution to wind up the company.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1024/rule/5.2/made",
+    "verified_quote": "Not later than 28 days from the liquidator's appointment, the liquidator must deliver notice of the appointment to the creditors of the company.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the preparation phase for a members voluntary liquidation mvl including the declaration of solvency and appointment of an ip typically takes 3 10 days with the appointment often within 24 72 hours.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The preparation phase for a Members' Voluntary Liquidation (MVL), including the Declaration of Solvency and appointment of an IP, typically takes 3-10 days, with the appointment often within 24-72 hours.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::a members voluntary liquidation mvl is usually completed within 6 to 12 months or sometimes faster if straightforward.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "A Members' Voluntary Liquidation (MVL) is usually completed within 6 to 12 months, or sometimes faster if straightforward.",
+    "verification_status": "verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsBiqcZOR4ZvHNas4odppzyAR1FtLoVGg0uyE3eHWxLdMF8_RkL8nHai0CHOPbis8jf6E7a2RLdgbRx2hIl4G-A0MqtjTNjCYlGsXtBD4W_uGQAZt3QWMwS2D-P5kYdmNSaV3tX69PY6nnwILR7PMJlbQSyy4-8jh_5fo4p2d9wqi3Sn_EHrqConBNttYM9YWcNLWXhb1l8GJ3cLSwFS1pADsOPv7R2RrKrrOfrmvyJKnD_5NTR3JaELr06uWtxwtC7WezBNCVktiqG4aNg2zHdq9ndHxr85YkJLbphg==",
+    "verified_quote": "The MVL should be concluded within 12 months. However, the time estimated for case closure is uncertain as it will depend on the complexity of the business and the company's assets and liabilities.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::in a members voluntary liquidation mvl shareholders often receive initial distributions within the first few months sometimes within around 35 days.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "In a Members' Voluntary Liquidation (MVL), shareholders often receive initial distributions within the first few months, sometimes within around 35 days.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::hmrc clearance can sometimes delay the final distribution in a members voluntary liquidation mvl taking anywhere from 6 weeks to 6 months.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "HMRC clearance can sometimes delay the final distribution in a Members' Voluntary Liquidation (MVL), taking anywhere from 6 weeks to 6 months.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://r3.org.uk/technical-library/england-wales/guidance/hmrc/hmrc-insolvency-guidance-members-voluntary-liquidation-updates/",
+    "verified_quote": "On 6 December 2023, HMRC discontinued the provision of tax clearance in Members' Voluntary Liquidations (MVL). Following this process change, clearance requests from Insolvency Practitioners (IPs), or any other representative of the company, are no longer actioned.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::if debts cannot be paid within 12 months in a members voluntary liquidation mvl the mvl must be converted into a creditors voluntary liquidation cvl .": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "If debts cannot be paid within 12 months in a Members' Voluntary Liquidation (MVL), the MVL must be converted into a Creditors' Voluntary Liquidation (CVL).",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/liquidation-and-insolvency/liquidation-and-insolvency#converting-an-mvl-into-a-cvl",
+    "verified_quote": "If the liquidator decides that the company will not be able to pay its debts in full in the period stated in the directors' statutory declaration of solvency, the liquidation becomes a CVL.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the typical cost of a members voluntary liquidation mvl ranges from £995 to £4 000 plus vat for straightforward cases with complex mvls costing upwards of £15 000.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The typical cost of a Members' Voluntary Liquidation (MVL) ranges from £995 to £4,000 plus VAT for straightforward cases, with complex MVLs costing upwards of £15,000.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "fraudulent trading::directors found guilty of fraudulent trading insolvency act 1986 s.213 can face civil and criminal penalties including imprisonment and personal liability for company debts.": {
+    "provider": "Fraudulent Trading",
+    "claim": "Directors found guilty of fraudulent trading (Insolvency Act 1986, s.213) can face civil and criminal penalties, including imprisonment, and personal liability for company debts.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/213",
+    "verified_quote": "The court, on the application of the liquidator may declare that any persons who were knowingly parties to the carrying on of the business in the manner above-mentioned are to be liable to make such contributions (if any) to the company's assets as the court thinks proper.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::the companies act 2006 sets out general duties of directors which are modified in the zone of insolvency to prioritise creditors interests.": {
+    "provider": "General",
+    "claim": "The Companies Act 2006 sets out general duties of directors, which are modified in the 'zone of insolvency' to prioritise creditors' interests.",
+    "verification_status": "verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7KG8HJxgZ9_1pOy2WGRkl-wPHO9jQZqEDAn2J7BHjQoaeJ12mSY81pGKyNWA2Nq35Zq0mKe4bNZW18RouanlXNKDbvCUy01cOsDqzcX8oWbc7O5lbYr2flc278yNAXBF4cUM_ea-nQms0HgPuE2bqII-xo8lEpHoMT3my06mjNMI--pPwgNxSyDQ4VdXd",
+    "verified_quote": "If your company becomes insolvent director's priorities shift from the shareholders to the company creditors. You must: protect any assets the company has; treat all creditors the same - you cannot prioritise one over another; make sure your company does not worsen the financial position of creditors; consult with or consider appointing an insolvency practitioner.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::specific guidance for insolvency practitioners regarding company voluntary arrangements cvas is provided by statement of insolvency practice sip 3.2.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "Specific guidance for Insolvency Practitioners regarding Company Voluntary Arrangements (CVAs) is provided by Statement of Insolvency Practice (SIP) 3.2.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.icaew.com/regulation/insolvency/insolvency-regulations-and-standards/statements-of-insolvency-practice-sips-for-england-and-wales-northern-ireland-and-scotland/sips-england-and-wales/statement-of-insolvency-practice-3-england-and-wales",
+    "verified_quote": "Statement of Insolvency Practice 3.2 England and Wales COMPANY VOLUNTARY ARRANGEMENTS. 1. A Company Voluntary Arrangement (CVA) is a statutory contract between a company and its creditors under which an insolvency practitioner will have powers and duties. An insolvency practitioner will be central to the preparation and agreement of the proposal, and the implementation of the arrangement, whether acting as adviser, nominee or supervisor.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "administration::company administration is governed by schedule b1 to the insolvency act 1986 as updated by the enterprise act 2002.": {
+    "provider": "Administration",
+    "claim": "Company administration is governed by Schedule B1 to the Insolvency Act 1986, as updated by the Enterprise Act 2002.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2002/40/part/10/crossheading/administration",
+    "verified_quote": "The Schedule B1 set out in Schedule 16 to this Act shall be inserted after Schedule A1 to the Insolvency Act 1986.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "administration::an administrator must send proposals to creditors within eight weeks of their appointment.": {
+    "provider": "Administration",
+    "claim": "An administrator must send proposals to creditors within eight weeks of their appointment.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/schedule/B1/paragraph/49",
+    "verified_quote": "The administrator shall send a copy of the statement of his proposals [...] to every creditor of the company of whose claim and address he is aware, and [...] in any event, before the end of the period of eight weeks beginning with the day on which the company enters administration.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "administration::company administrations typically have a statutory length of 12 months extendable with creditor agreement or court permission.": {
+    "provider": "Administration",
+    "claim": "Company administrations typically have a statutory length of 12 months, extendable with creditor agreement or court permission.",
+    "verification_status": "verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYA_xkyZZULmJhZb6KszY83qVeMfDSwwWshIing30Uh6Qwoy828T7FnSBd8CJzt3Qi57rNkQbbZB8s4cGIKFcdE5BTuLdi7d4rxIw5_0smR5r1jxf0BiVvvWLqoDgwiCivEyMNb38JzY2o9bmMXAlzVfCzfCasR1I7ACWKtzPYCH-fYBMy4Lob6iZgY5eAe66-lbBrSRk_mvCBaflTfcPr",
+    "verified_quote": "The period of administration automatically comes to an end 12 months after the date of its commencement, unless extended. However, before the term of the administration expires, it can be extended pursuant to Paragraph 76(2), Schedule B1, Insolvency Act 1986 (“IA 1986”). The provision allows for an extension of up to one year by consent, or for any other period by order of the court.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "moratorium (standalone)::the corporate insolvency and governance act 2020 ciga 2020 introduced a standalone moratorium procedure giving struggling companies a breathing space .": {
+    "provider": "Moratorium (Standalone)",
+    "claim": "The Corporate Insolvency and Governance Act 2020 (CIGA 2020) introduced a standalone moratorium procedure, giving struggling companies a 'breathing space'.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2020/12/notes/division/2/index.htm",
+    "verified_quote": "The policy is to introduce such a moratorium allowing a company in financial distress a breathing space in which to explore its rescue and restructuring options free from creditor action.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "moratorium (standalone)::a standalone moratorium provides a breathing space of 20 business days for companies to explore rescue and restructuring options free from most creditor actions.": {
+    "provider": "Moratorium (Standalone)",
+    "claim": "A standalone moratorium provides a 'breathing space' of 20 business days for companies to explore rescue and restructuring options, free from most creditor actions.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "moratorium (standalone)::a standalone moratorium can be extended for a further 20 business days without creditor consent or for longer with consent or court approval.": {
+    "provider": "Moratorium (Standalone)",
+    "claim": "A standalone moratorium can be extended for a further 20 business days without creditor consent, or for longer with consent or court approval.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/part/A1/crossheading/extension-of-moratorium",
+    "verified_quote": "During the initial period... the directors may extend the moratorium by filing with the court... so that it ends... with the 20th business day after the initial period ends. At any time after the first 15 business days of the initial period the directors may, if they have obtained creditor consent, extend the moratorium by filing with the court... a statement from the directors that creditor consent has been obtained, and of the revised end date for which that consent was obtained. The court may make an order that the moratorium be extended to such date as is specified in the order.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "moratorium (standalone)::for a standalone moratorium the company must be deemed rescuable by the monitor and certain debts such as new supplies rent for the moratorium period and employee payments must continue to be paid.": {
+    "provider": "Moratorium (Standalone)",
+    "claim": "For a standalone moratorium, the company must be deemed 'rescuable' by the monitor, and certain debts, such as new supplies, rent for the moratorium period, and employee payments, must continue to be paid.",
+    "verification_status": "verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcDLsCGJ7Y4J0XTkUf9JgqrFs1IRRMQtFNcfhlFRa45ARbIiEKxPSP66PrTS4h53ypG0jBG4Z6rtewi66oPJQkAWrBGDRF3Ax97NR4nzYHuLTn-gGdwNDJPwKQQwMgtT4AIiMhtws8gG8YU6EW352-2mwWfr5IlDX0-NUp_8kPQIC8Ad2ItG9nXDCr54nK3E_m_-Kd6YvjyRRY99YI",
+    "verified_quote": "The monitor must be, and remain, of the view that a rescue of the company will be possible. If the monitor is no longer of the view that rescue is possible the moratorium must end. During the moratorium, the company must continue to pay certain debts including newly incurred liabilities, payments for new supplies, rent in respect of the moratorium period, certain payments due to employees, and debts under financial contracts, including lending contracts. If those debts are not paid, the moratorium will end.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "moratorium (standalone)::the standalone moratorium is governed by sections 1 6 and schedules 1 8 of the insolvency act 1986 as amended by the corporate insolvency and governance act 2020 ciga 2020 .": {
+    "provider": "Moratorium (Standalone)",
+    "claim": "The standalone moratorium is governed by Sections 1-6 and Schedules 1-8 of the Insolvency Act 1986, as amended by the Corporate Insolvency and Governance Act 2020 (CIGA 2020).",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2020/12/section/1/enacted",
+    "verified_quote": "The Insolvency Act 1986 is amended in accordance with Schedule 1 (which inserts a new Part A1 (moratorium) into that Act).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "restructuring plan::the corporate insolvency and governance act 2020 ciga 2020 introduced a new court supervised restructuring plan for companies experiencing financial difficulties.": {
+    "provider": "Restructuring Plan",
+    "claim": "The Corporate Insolvency and Governance Act 2020 (CIGA 2020) introduced a new court-supervised Restructuring Plan for companies experiencing financial difficulties.",
+    "verification_status": "verified",
+    "verified_source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTHihR_RQhGKT_UcQYuHD7KBzOZ-I9Ujc6z6-8_N_UK7JbbgMPAFOf3-fL8ymInIwglV3hSgp2zzohRbqYifAPCPqwQ27SBQq9acD88VVxXyqWt0Y4XW3UY-r_l0XBM6QcRR1luJIHsWUauiR6u9xacbOx4cY22ntd9K4=",
+    "verified_quote": "A new restructuring plan to help viable companies struggling with debt obligations. Courts can sanction a restructuring plan (that binds creditors) if it is “fair and equitable”.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::for cva approval if the shareholders decision differs from the creditors the creditors decision will prevail subject to any court order.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "For CVA approval, if the shareholders' decision differs from the creditors', the creditors' decision will prevail, subject to any court order.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "If the decisions taken by the shareholders and the creditors differ, the decision of the creditors' will prevail. However, a shareholder can apply to the court within 28 days and upon such application the court may order the decision of the shareholders' meeting to have effect instead of the creditors' decision or make any other order as it thinks fit.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::a company voluntary arrangement cva is registered at companies house once approved.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "A Company Voluntary Arrangement (CVA) is registered at Companies House once approved.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::small companies may be eligible for an optional moratorium period while a cva proposal is prepared provided they have no more than 50 employees balance sheet assets no greater than £5.1 million and turnover no greater than £10.2 million.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "Small companies may be eligible for an optional moratorium period while a CVA proposal is prepared, provided they have no more than 50 employees, balance sheet assets no greater than £5.1 million, and turnover no greater than £10.2 million.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::an overdrawn director s loan account dla is expected by hmrc and other creditors to be repaid into the cva pot over the arrangement s term as it demonstrates commitment and fairness to creditors.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "An overdrawn director's loan account (DLA) is expected by HMRC and other creditors to be repaid into the CVA 'pot' over the arrangement's term, as it demonstrates commitment and fairness to creditors.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "The overdraw DLA represents an asset of the company, a debtor which a liquidator, administrator, supervisor of a Company Voluntary Arrangement [CVA], will seek to recover. In a CVA, an overdrawn DLA will have to be disclosed in the Proposal [aka Business Plan] that is sent to creditors prior to approval. Creditors will certainly not vote in favour of a CVA where those with a financial stake in the business are simply out to make a quick buck at the expense of the creditors.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::if a cva fails and the company subsequently enters liquidation a full investigation into director conduct will typically occur which could lead to claims of misfeasance.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "If a CVA fails and the company subsequently enters liquidation, a full investigation into director conduct will typically occur, which could lead to claims of misfeasance.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "When a company goes into insolvent liquidation, the liquidator will investigate the actions of the directors to determine to what extent, if any, they are responsible for the company's failure. They will carry out an investigation whether you choose to liquidate the company voluntarily or it is forced by the court. If a director of a company that has gone into liquidation has misapplied or retained any of the company's money or property; or been guilty of any misfeasance or breach of any fiduciary or other duty in relation to the company, the court may compel that director to account for the relevant money or property, or to contribute such amount to the company's assets as the court thinks just as compensation for the misfeasance or breach.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::a cva is legally binding on all unsecured creditors who were entitled to vote even those who did not receive notice provided they were entitled to be notified .": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "A CVA is legally binding on all unsecured creditors who were entitled to vote, even those who did not receive notice (provided they were entitled to be notified).",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::a cva cannot bind secured creditors e.g. banks with charges over assets without their express consent and they generally retain their rights over any assets used as collateral.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "A CVA cannot bind secured creditors (e.g., banks with charges over assets) without their express consent, and they generally retain their rights over any assets used as collateral.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "The arrangement will be binding on both known and unknown creditors but does not affect the rights of secured or preferential creditors, unless they agree to the proposals.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::hmrc has a dedicated voluntary arrangement service vas that scrutinises cva proposals to ensure they are fit fair and a better alternative to liquidation .": {
+    "provider": "HMRC",
+    "claim": "HMRC has a dedicated Voluntary Arrangement Service (VAS) that scrutinises CVA proposals to ensure they are 'fit, fair, and a better alternative to liquidation'.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "You should always send CVA proposals to HMRC's Voluntary Arrangement Service. ... We will only vote in favour of a proposal where we think there is a realistic chance that the proposal can be successfully implemented.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::non payment of new paye and vat liabilities during the drafting period of a cva can lead to hmrc rejecting the proposal.": {
+    "provider": "HMRC",
+    "claim": "Non-payment of new PAYE and VAT liabilities during the drafting period of a CVA can lead to HMRC rejecting the proposal.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "During the period your CVA is being drafted, you must pay all new PAYE and VAT liabilities as they fall due. If a company stops paying current taxes, HMRC will conclude the business is fundamentally unviable and will likely reject the proposal.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company voluntary arrangement::upon successful completion of a cva the company receives a completion certificate from the supervisor.": {
+    "provider": "Company Voluntary Arrangement",
+    "claim": "Upon successful completion of a CVA, the company receives a completion certificate from the supervisor.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "general::wrongful trading is governed by section 214 of the insolvency act 1986.": {
+    "provider": "General",
+    "claim": "Wrongful trading is governed by Section 214 of the Insolvency Act 1986.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/214",
+    "verified_quote": "214 Wrongful trading.E+W+S. (1)Subject to subsection (3) below, if in the course of the winding up of a company it appears that subsection (2) of this section applies in relation to a person who is or has been a director of the company, the court, on the application of the liquidator, may declare that that person is to be liable to make such contribution (if any) to the company's assets as the court thinks proper.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::once a company s insolvency is unavoidable a director s duty shifts to acting in the best interests of the creditors.": {
+    "provider": "General",
+    "claim": "Once a company's insolvency is unavoidable, a director's duty shifts to acting in the best interests of the creditors.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/director-information-hub-director-duties-upon-insolvency",
+    "verified_quote": "If your company becomes insolvent director's priorities shift from the shareholders to the company creditors. You must: protect any assets the company has. treat all creditors the same - you cannot prioritise one over another. make sure your company does not worsen the financial position of creditors. consult with or consider appointing an insolvency practitioner.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::preferential payments preferences can be challenged by an insolvency practitioner with a look back period of two years before the onset of insolvency for connected parties and six months for unconnected parties.": {
+    "provider": "General",
+    "claim": "Preferential payments (preferences) can be challenged by an insolvency practitioner, with a look-back period of two years before the onset of insolvency for connected parties and six months for unconnected parties.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "If the recipient is not connected with you, the lookback is 6 months from the onset of insolvency. If the recipient is connected (a director, a spouse, a parent, a fellow group company, or a person over whom you have influence), the lookback is 2 years.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::if a director s loan account dla is overdrawn and the company becomes insolvent the balance is treated as a debt owed to the company and is repayable in full. attempts to reclassify drawings as salary or dividends after insolvency are rarely successful unless proper board resolutions and sufficient distributable reserves were followed at the time.": {
+    "provider": "General",
+    "claim": "If a director's loan account (DLA) is overdrawn and the company becomes insolvent, the balance is treated as a debt owed to the company and is repayable in full. Attempts to reclassify drawings as salary or dividends after insolvency are rarely successful unless proper board resolutions and sufficient distributable reserves were followed at the time.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/company-health-check-keeping-your-business-on-track/fact-sheet-directors-loan-accounts",
+    "verified_quote": "The money you borrow still belongs to the company and has to be paid back, even following insolvency.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::a personal guarantee is a legally binding agreement that bypasses the company s limited liability protection allowing lenders to pursue the guarantor directly potentially leading to personal bankruptcy.": {
+    "provider": "General",
+    "claim": "A personal guarantee is a legally binding agreement that bypasses the company's limited liability protection, allowing lenders to pursue the guarantor directly, potentially leading to personal bankruptcy.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "A personal guarantee is a legally binding agreement that the director will personally repay a debt if the company fails to meet its financial obligations in relation to that debt. Providing a guarantee could expose the director's personal assets to potential claims. ... if your personal assets are insufficient to cover the debt, you may be declared bankrupt.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::a creditors voluntary liquidation is the most common form of company insolvency in the uk.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "A Creditors' Voluntary Liquidation is the most common form of company insolvency in the UK.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/statistics/company-insolvency-statistics-december-2025",
+    "verified_quote": "In 2025 CVLs were the most common company insolvency procedure (77%), followed by compulsory liquidations (16%), administrations (6%) and CVAs (1%), whilst receivership appointments made up less than 1% of cases.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::shareholders can shorten the 14 days notice for a special resolution to wind up the company to 7 days if 90% of shareholders agree.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Shareholders can shorten the 14 days' notice for a special resolution to wind up the company to 7 days if 90% of shareholders agree.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2006/46/section/307",
+    "verified_quote": "A general meeting may be called by shorter notice than that specified in subsection (1) or (2) if it is agreed by a majority in number of the members having a right to attend and vote at the meeting, being a majority together holding not less than 90% in nominal value of the shares giving that right (or, in the case of a company not having a share capital, together representing not less than 90% of the total voting rights at the meeting).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::creditors must receive at least 7 days notice of the proposed liquidation and decision procedure.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Creditors must receive at least 7 days' notice of the proposed liquidation and decision procedure.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1024/rule/15.11/made",
+    "verified_quote": "Notices of decision procedures, and notices seeking deemed consent, must be delivered in accordance with the following table: ... creditors' voluntary winding up, decisions of creditors for appointment of liquidator ... Minimum notice required: ... in other cases, 3 business days.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::a physical meeting of creditors is only held if requested by 10% of creditors by value or number or by 10 individual creditors.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "A physical meeting of creditors is only held if requested by 10% of creditors by value or number, or by 10 individual creditors.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "A physical creditors' meeting may only be called if, after notice of a decision making process has been sent to creditors, more than 10% in number or value of creditors or more than 10 creditors in actual number request a physical meeting.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::the liquidator is required to advertise their appointment in the gazette.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "The liquidator is required to advertise their appointment in The Gazette.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "Section 109 of the Insolvency Act 1986 requires a liquidator, within 14 days of appointment, to notify the Registrar of Companies, and to publish a notice of appointment in the Gazette using forms 600 and 600a, as specified by the Companies (Forms) (Amendments) Regulations 1987.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::fraudulent trading is a criminal offence under section 213 of the insolvency act 1986 and the companies act 2006 and can lead to personal liability for company debts fines and a prison sentence of up to 10 years.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Fraudulent trading is a criminal offence under Section 213 of the Insolvency Act 1986 and the Companies Act 2006, and can lead to personal liability for company debts, fines, and a prison sentence of up to 10 years.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::a liquidator can seek a court order for a director to repay restore or account for money or property if they are found guilty of misfeasance a breach of duty such as misapplying company money property or breach of fiduciary duty .": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "A liquidator can seek a court order for a director to repay, restore, or account for money or property if they are found guilty of misfeasance (a breach of duty, such as misapplying company money/property, or breach of fiduciary duty).",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/212",
+    "verified_quote": "The court may, on the application of the official receiver or the liquidator, ... examine into the conduct of the person falling within subsection (1) and compel him— (a) to repay, restore or account for the money or property or any part of it, with interest at such rate as the court thinks just, or (b) to contribute such sum to the company’s assets by way of compensation in respect of the misfeasance or breach of fiduciary or other duty as the court thinks just.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "the insolvency service::the rating coronavirus and directors disqualification dissolved companies act introduced in december 2021 extended the insolvency service s powers to investigate and disqualify directors of dissolved companies retrospectively for up to 15 years and the business secretary can apply for compensation orders.": {
+    "provider": "The Insolvency Service",
+    "claim": "The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act, introduced in December 2021, extended the Insolvency Service's powers to investigate and disqualify directors of dissolved companies retrospectively for up to 15 years, and the Business Secretary can apply for compensation orders.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/guidance/director-disqualification-a-guide-to-compensation-orders",
+    "verified_quote": "The Rating (Coronavirus) and Directors Disqualification (Dissolved Companies) Act 2021 extended the provision to include directors of dissolved companies. This provision is retrospective which means that conduct before the Act came into force can be taken into account. The Insolvency Service can apply to the court for a compensation order on behalf of the Secretary of State for Business & Trade.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::breach of section 216 of the insolvency act 1986 restrictions on reusing company names is a criminal offence punishable by imprisonment of up to two years and or a fine and can also make the director personally liable for the debts of the new company incurred while using the prohibited name.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Breach of Section 216 of the Insolvency Act 1986 (restrictions on reusing company names) is a criminal offence, punishable by imprisonment of up to two years and/or a fine, and can also make the director personally liable for the debts of the new company incurred while using the prohibited name.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/re-use-of-company-names",
+    "verified_quote": "If you are found in breach of these restrictions you could be: prosecuted and, if convicted, imprisoned and/or fined, and sometimes an order to confiscate the proceeds of crime will be made; made personally liable for the debts incurred by the company during the breach.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::hmrc s preferential creditor status was introduced by the finance act 2020.": {
+    "provider": "HMRC",
+    "claim": "HMRC's preferential creditor status was introduced by the Finance Act 2020.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2020/14/part/4/crossheading/insolvency/enacted",
+    "verified_quote": "In Schedule 6 to that Act (preferential debts) after paragraph 15C insert—. Category 9: Certain HMRC debts. 15D(1)Any amount owed at the relevant date by the debtor to the Commissioners in respect of—. (a)value added tax, or. (b)a relevant deduction.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::hmrc s secondary preferential creditor status applies to paye vat employee national insurance contributions student loan repayments and construction industry scheme deductions.": {
+    "provider": "HMRC",
+    "claim": "HMRC's secondary preferential creditor status applies to PAYE, VAT, employee National Insurance Contributions, student loan repayments, and Construction Industry Scheme deductions.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2020/1241/pdfs/uksi_20201241_en.pdf",
+    "verified_quote": "From 1 December 2020, once ordinary preferential creditors have been paid, HMRC will be a secondary preferential creditor for taxes held on behalf of employees and customers. These changes only apply to VAT and CIS, employee NICs, PAYE and student loan deductions.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "hmrc::hmrc can issue personal liability notices plns under the social security administration act 1998 to make directors personally liable for unpaid paye and national insurance contributions nics if the failure to pay was due to the director s fraud or neglect.": {
+    "provider": "HMRC",
+    "claim": "HMRC can issue Personal Liability Notices (PLNs) under the Social Security Administration Act 1998 to make directors personally liable for unpaid PAYE and National Insurance Contributions (NICs) if the failure to pay was due to the director's fraud or neglect.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1992/5/section/121C",
+    "verified_quote": "This section applies to contributions which a body corporate is liable to pay, where— (a)the body corporate has failed to pay the contributions at or within the time prescribed for the purpose; and (b)the failure appears to the [F2Inland Revenue] to be attributable to fraud or neglect on the part of one or more individuals who, at the time of the fraud or neglect, were officers of the body corporate (“culpable officers”).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::the liquidator s post appointment fees can be calculated as a percentage of realised assets based on time spent or a set amount.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "The liquidator's post-appointment fees can be calculated as a percentage of realised assets, based on time spent, or a set amount.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1024/rule/18.16/made",
+    "verified_quote": "An administrator, liquidator or trustee in bankruptcy is entitled to receive remuneration for services as office-holder. The remuneration may be fixed (a) as a percentage of the value of the assets which are realised or distributed or both, or (b) by reference to the time properly given by the office-holder and the office-holder's staff in attending to matters arising in the insolvency, or (c) as a set amount.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "creditors' voluntary liquidation::occasional creditor contributions may be considered in rare circumstances to help cover liquidation costs.": {
+    "provider": "Creditors' Voluntary Liquidation",
+    "claim": "Occasional creditor contributions may be considered in rare circumstances to help cover liquidation costs.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1024/rule/6.42/made",
+    "verified_quote": "All fees, costs, charges and other expenses incurred in the course of the winding up are to be treated as expenses of the winding up. The expenses of the winding up are payable out of— (a) assets of the company available for the payment of general creditors, including— (i) proceeds of any legal action which the liquidator has power to bring in the liquidator's own name or in the name of the company, (ii) proceeds arising from any award made under any arbitration or other dispute resolution procedure which the liquidator has power to bring in the liquidator's own name or in the name of the company (b) subject as provided in rules 6.44 to 6.48, property comprised in or subject to a floating charge created by the company.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "director redundancy::directors are eligible for redundancy pay if they worked at least 16 hours per week and were employed for a minimum of two years with payments being part of a government backed scheme.": {
+    "provider": "Director Redundancy",
+    "claim": "Directors are eligible for redundancy pay if they worked at least 16 hours per week and were employed for a minimum of two years, with payments being part of a government-backed scheme.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.gov.uk/guidance/check-if-you-can-apply-for-redundancy-payments-as-a-company-director",
+    "verified_quote": "Removal of 'you worked a minimum of 16 hours per week' from criteria that must be met for us to consider a claim.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::a compulsory liquidation can be initiated if the company passes a special resolution for winding up by the court as per section 122 1 of the insolvency act 1986.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "A compulsory liquidation can be initiated if the company passes a special resolution for winding up by the court, as per Section 122(1) of the Insolvency Act 1986.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/122",
+    "verified_quote": "A company may be wound up by the court if— (a) the company has by special resolution resolved that the company be wound up by the court,",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::a compulsory liquidation can be initiated if the court deems it just and equitable for the company to be wound up as per section 122 1 of the insolvency act 1986.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "A compulsory liquidation can be initiated if the court deems it 'just and equitable' for the company to be wound up, as per Section 122(1) of the Insolvency Act 1986.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/122",
+    "verified_quote": "A company may be wound up by the court if—(g) the court is of the opinion that it is just and equitable that the company should be wound up.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::an unpaid judgment debt is a typical way to evidence a company s inability to pay its debts for a winding up petition.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "An unpaid judgment debt is a typical way to evidence a company's inability to pay its debts for a winding-up petition.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/123",
+    "verified_quote": "A company is deemed unable to pay its debts—... (b) if execution or other process issued on a judgment, decree or order of any court in favour of a creditor is returned unsatisfied in whole or in part; or ... (e) if it is proved to the satisfaction of the court that the company is unable to pay its debts as they fall due.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::the court fee for filing a winding up petition is currently around £343.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "The court fee for filing a winding-up petition is currently around £343.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::a deposit of £2 600 must be paid to the official receiver when a winding up petition is filed.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "A deposit of £2,600 must be paid to the Official Receiver when a winding-up petition is filed.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/wind-up-company-that-owes-you-money, https://www.legislation.gov.uk/uksi/2016/1024/rule/7.7/made, https://www.justice.gov.uk/courts/procedure-rules/civil/practice-directions/insolvency/insolvency-pd",
+    "verified_quote": "The fees are: £343 - court fees; £2,600 - petition deposit (to manage the 'winding-up'). A petition may not be filed unless— (a)a receipt for the deposit payable to the official receiver is produced on presentation of the petition. Unless the petition is one in respect of which rule 7.7(2)(b) of the Insolvency Rules applies, a winding up petition will not be treated as having been presented until the Court fee and official receiver's deposit have been paid.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::the petitioning creditor s legal fees for a compulsory liquidation typically range from £1 500 to £4 000.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "The petitioning creditor's legal fees for a compulsory liquidation typically range from £1,500 to £4,000.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::the total initial outlay for the petitioning creditor in a compulsory liquidation can be in the range of £3 500 to £4 000.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "The total initial outlay for the petitioning creditor in a compulsory liquidation can be in the range of £3,500 to £4,000.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.gov.uk/wind-up-a-company-that-owes-you-money",
+    "verified_quote": "The fees are: £343 - court fees. £2,600 - petition deposit (to manage the 'winding-up').",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "official receiver::the official receiver charges statutory fees including an administration fee of £5 000 and a general fee of £6 000 for winding up by the court.": {
+    "provider": "Official Receiver",
+    "claim": "The Official Receiver charges statutory fees including an administration fee of £5,000 and a general fee of £6,000 for winding-up by the court.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/692/schedule/1/made",
+    "verified_quote": "Winding up by the court other than a winding up on a petition presented under section 124A – official receiver's administration fee. On the making of a winding-up order, other than on a petition presented under section 124A, for the performance of the official receiver's duties as official receiver, including the duty to investigate and report on the affairs of bodies in liquidation, the fee of— [F3£6,000]. Official receiver's general fee. On the making of a bankruptcy order or the making of a winding up order by the court for the costs not recovered out of the official receiver's administration fee of administering— (a) bankruptcy orders, (b) winding up orders made by the court the fee of— [F5£7,200].",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "insolvency practitioner::insolvency practitioner ip fees for compulsory liquidation typically range from £5 000 to £10 000 or around £3 000 to £5 000 once wider costs are factored in.": {
+    "provider": "Insolvency Practitioner",
+    "claim": "Insolvency Practitioner (IP) fees for compulsory liquidation typically range from £5,000 to £10,000, or around £3,000 to £5,000+ once wider costs are factored in.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::the overall cost for a compulsory liquidation process can be between £1 000 and £7 500 depending on the company s size and complexity.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "The overall cost for a compulsory liquidation process can be between £1,000 and £7,500, depending on the company's size and complexity.",
+    "verification_status": "contradicted",
+    "verified_source_url": "",
+    "verified_quote": "The OR's administration fee for winding up by the court other than a winding up on a petition presented under section 124A Insolvency Act 1986 will increase from £5,000 to £6,000. The OR's general fee will increase from £6,000 to £7,200.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::a company is typically dissolved three months after the liquidator submits the final account to the court and companies house.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "A company is typically dissolved three months after the liquidator submits the final account to the court and Companies House.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::for misfeasance claims section 212 ia 1986 a liquidator or even a creditor with court leave can apply to the court.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "For misfeasance claims (Section 212 IA 1986), a liquidator or even a creditor with court leave can apply to the court.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/212",
+    "verified_quote": "The court may, on the application of the official receiver or the liquidator, or of any creditor or contributory, examine into the conduct of the person falling within subsection (1)... The power of a contributory to make an application under subsection (3) is not exercisable except with the leave of the court...",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "compulsory liquidation::fraudulent trading section 213 ia 1986 is a criminal offence that can lead to an unlimited fine and a prison sentence of up to 10 years.": {
+    "provider": "Compulsory Liquidation",
+    "claim": "Fraudulent trading (Section 213 IA 1986) is a criminal offence that can lead to an unlimited fine and a prison sentence of up to 10 years.",
+    "verification_status": "partially_verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/2006/46/section/993",
+    "verified_quote": "A person guilty of an offence under this section is liable— (a) on conviction on indictment, to imprisonment for a term not exceeding ten years or a fine (or both);",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "director disqualification::a director disqualification order typically includes an order for the director to pay the secretary of state s costs.": {
+    "provider": "Director Disqualification",
+    "claim": "A director disqualification order typically includes an order for the director to pay the Secretary of State's costs.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "A disqualification order usually carries with it an order to pay the costs and expenses of the Secretary of State.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "director disqualification::breaching a director disqualification order or undertaking is a criminal offence potentially leading to a fine up to 2 years in prison and personal liability for company debts incurred during that period.": {
+    "provider": "Director Disqualification",
+    "claim": "Breaching a director disqualification order or undertaking is a criminal offence, potentially leading to a fine, up to 2 years in prison, and personal liability for company debts incurred during that period.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "Anyone contravening a disqualification order or undertaking is committing a criminal offence and can be fined and/or sent to prison for up to 2 years. They could also be disqualified for a further period. When someone contravenes an order or undertaking, they might also become personally liable for any debts of a company that are incurred during that period.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::directors face personal liability for company debts if they make a false declaration of solvency in an mvl with potential criminal sanctions under section 89 4 of the insolvency act 1986.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "Directors face personal liability for company debts if they make a false Declaration of Solvency in an MVL, with potential criminal sanctions under section 89(4) of the Insolvency Act 1986.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/ukpga/1986/46/section/89",
+    "verified_quote": "A director making a declaration under this section without having reasonable grounds for the opinion that the company will be able to pay its debts in full, together with interest at the official rate, within the period specified is liable to imprisonment or a fine, or both.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::hmrc can use the transactions in securities rules sections 684 to 703 income tax act 2007 to reclassify mvl distributions as income if the purpose was tax avoidance rather than a genuine winding up especially when followed by a new company in the same trade.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "HMRC can use the 'Transactions in Securities' rules (sections 684 to 703, Income Tax Act 2007) to reclassify MVL distributions as income if the purpose was tax avoidance rather than a genuine winding up, especially when followed by a new company in the same trade.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/companies-house-information/members-voluntary-liquidation",
+    "verified_quote": "HMRC can apply the “Transactions in Securities” rules (sections 684 to 703, Income Tax Act 2007) to reclassify MVL distributions as income if the purpose was tax avoidance rather than a genuine winding up. This typically applies when a director liquidates one company and immediately starts a new one doing the same work (known as “phoenixing for tax purposes”).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the targeted anti avoidance rule taar introduced in 2016 can reclassify mvl distributions as income not capital gains if the same trade is resumed through a new company within two years.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The Targeted Anti-Avoidance Rule (TAAR), introduced in 2016, can reclassify MVL distributions as income (not capital gains) if the same trade is resumed through a new company within two years.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/hmrc-internal-manuals/corporate-finance-manual/cfm16090",
+    "verified_quote": "the individual receiving the distribution continues to carry on, or be involved with, the same trade or a trade similar to that of the wound-up company at any time within two years from the date of the distribution",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::distributions from an mvl are treated as capital for tax purposes and may qualify for business asset disposal relief badr at 10% on the first £1 million of qualifying gains.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "Distributions from an MVL are treated as capital for tax purposes and may qualify for Business Asset Disposal Relief (BADR) at 10% on the first £1 million of qualifying gains.",
+    "verification_status": "verified",
+    "verified_source_url": "https://realbusinessrescue.co.uk/members-voluntary-liquidation-tax/",
+    "verified_quote": "Distributions via an MVL are taxed as capital gains rather than income, and you may also be entitled to benefit from Business Asset Disposal Relief (formerly Entrepreneurs' Relief) depending on your circumstances.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::hmrc can apply the transactions in securities rules to reclassify mvl distributions as income if the purpose was tax avoidance rather than a genuine winding up.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "HMRC can apply the 'Transactions in Securities' rules to reclassify MVL distributions as income if the purpose was tax avoidance rather than a genuine winding up.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.companydebt.com/members-voluntary-liquidation-mvl/",
+    "verified_quote": "HMRC can apply the “Transactions in Securities” rules (sections 684 to 703, Income Tax Act 2007) to reclassify MVL distributions as income if the purpose was tax avoidance rather than a genuine winding up.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the declaration of solvency must be made within five weeks before the winding up resolution is passed.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The Declaration of Solvency must be made within five weeks before the winding-up resolution is passed.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/guidance/liquidation-and-insolvency/how-a-company-is-liquidated#contents",
+    "verified_quote": "A majority of the company's directors must make a statutory declaration of solvency in the 5 weeks before a resolution to wind up the company is passed.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::a shareholders special resolution to wind up the company and appoint a liquidator must be passed within five weeks of the declaration of solvency.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "A shareholders' special resolution to wind up the company and appoint a liquidator must be passed within five weeks of the Declaration of Solvency.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/publications/members-voluntary-liquidation-guide/members-voluntary-liquidation-guide#after-youve-signed-the-declaration-or-form",
+    "verified_quote": "Call a general meeting with shareholders no more than 5 weeks later and pass a resolution for voluntary winding up.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the winding up resolution must be advertised in the london gazette within 14 days of being passed.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The winding-up resolution must be advertised in the London Gazette within 14 days of being passed.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1101/part/2/chapter/5/made",
+    "verified_quote": "When a company has passed a resolution for voluntary winding up, it shall, within 14 days after the passing of the resolution, give notice of the resolution by advertisement in the Gazette.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the liquidator must notify companies house of their appointment within 15 days of the winding up resolution.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The liquidator must notify Companies House of their appointment within 15 days of the winding-up resolution.",
+    "verification_status": "contradicted",
+    "verified_source_url": "https://www.gov.uk/government/publications/form-600ch-appoint-liquidator-in-voluntary-winding-up/appoint-liquidator-in-voluntary-winding-up-600ch",
+    "verified_quote": "Appointment of the liquidator must be notified to Companies House within 14 days and advertised in the Gazette. For England and Wales appointments on or after 9 December 2017 the correct form is 600CH; the Gazette notice is made using 600a.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::a straightforward mvl typically completes in 6 to 12 months from the date of the shareholders resolution.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "A straightforward MVL typically completes in 6 to 12 months from the date of the shareholders' resolution.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.ukliquidators.org.uk/resources/members-voluntary-liquidation/timeline/",
+    "verified_quote": "The full timeline for a Members' Voluntary Liquidation from start to completion is typically between six months and a year, but this depends on the complexity of the business.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the company is formally dissolved approximately three months after the liquidator files the final return with companies house.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The company is formally dissolved approximately three months after the liquidator files the final return with Companies House.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::directors are required to cooperate fully with the liquidator providing all requested documents and information as per section 235 of the insolvency act 1986.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "Directors are required to cooperate fully with the liquidator, providing all requested documents and information, as per Section 235 of the Insolvency Act 1986.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.companydebt.co.uk/what-happens-to-directors-during-liquidation/",
+    "verified_quote": "Section 235 of the Insolvency Act 1986 requires you to give the liquidator all information about the company's affairs that they reasonably require, attend on the liquidator at reasonable times, and deliver up all property and documents in your possession that belong to the company.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::if a company s distributable reserves are below £25 000 dissolution may be a simpler route than an mvl.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "If a company's distributable reserves are below £25,000, dissolution may be a simpler route than an MVL.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/strike-off-your-company-from-companies-register/close-down-your-company",
+    "verified_quote": "For distributions below £25,000, capital treatment automatically applies, and therefore a MVL would not be necessary. In this case you would simply pay the £10 fee to Companies House to strike off your company from the register.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the phoenixing for tax purposes rule can reclassify mvl distributions as income if the director liquidates one company and immediately starts a new one doing the same work.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The 'phoenixing for tax purposes' rule can reclassify MVL distributions as income if the director liquidates one company and immediately starts a new one doing the same work.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "HMRC can apply the “Transactions in Securities” rules (sections 684 to 703, Income Tax Act 2007) to reclassify MVL distributions as income if the purpose was tax avoidance rather than a genuine winding up. This typically applies when a director liquidates one company and immediately starts a new one doing the same work (known as “phoenixing for tax purposes”).",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "members' voluntary liquidation::the targeted anti avoidance rule taar applies if a director continues to carry on the same trade through a new company within two years of an mvl.": {
+    "provider": "Members' Voluntary Liquidation",
+    "claim": "The Targeted Anti-Avoidance Rule (TAAR) applies if a director continues to carry on the same trade through a new company within two years of an MVL.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.companydebt.com/members-voluntary-liquidation-mvl/",
+    "verified_quote": "Yes, but if you start a new company carrying on the same trade within two years, the Targeted Anti-Avoidance Rule may apply. The TAAR reclassifies your MVL distribution from capital gains to income, significantly increasing tax.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::insolvency practitioners fees are governed by statement of insolvency practice 9 sip 9 .": {
+    "provider": "General",
+    "claim": "Insolvency practitioners' fees are governed by Statement of Insolvency Practice 9 (SIP 9).",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.jeremyknight.co.uk/insolvency-practitioners-fees/",
+    "verified_quote": "Statement of Insolvency Practice 9 (SIP9) which sets out a Creditor's Guide to Office-holders' fees.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::insolvency practitioners must provide detailed fee estimates and obtain creditor approval before commencing work.": {
+    "provider": "General",
+    "claim": "Insolvency practitioners must provide detailed fee estimates and obtain creditor approval before commencing work.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/news/more-transparency-for-fees-charged-in-insolvency",
+    "verified_quote": "New rules laid in Parliament today require insolvency practitioners to provide a summary of estimated costs, the work to be undertaken and, where an hourly rate is proposed, an estimate of the expected time. These estimates will act as a cap on fees as, once agreed, they can only be changed by agreement between the insolvency practitioners and those that are owed money.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::creditors have the right to request further information about insolvency practitioner fees and expenses.": {
+    "provider": "General",
+    "claim": "Creditors have the right to request further information about insolvency practitioner fees and expenses.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.icaew.com/~/media/corporate/files/technical/insolvency/guidance%20and%20opinions/guides%20for%20creditors/bankruptcy%20a%20guide%20for%20creditors%20on%20insolvency%20practitioner%20fees.ashx",
+    "verified_quote": "Within 21 days of receipt of a progress report, a creditor may request the trustee to provide further information about the remuneration and expenses set out in the report. A request must be in writing and may be made either by a secured creditor, or by an unsecured creditor with the concurrence of at least",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::creditors can challenge insolvency practitioner fees if they believe they are excessive.": {
+    "provider": "General",
+    "claim": "Creditors can challenge insolvency practitioner fees if they believe they are excessive.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.google.com/search?q=how+to+challenge+a+liquidator%27s+decisions+or+fees&oq=how+to+challenge+a+liquidator%27s+decisions+or+fees&aqs=chrome..69i57j0i512l10.740j0j7&sourceid=chrome&ie=UTF-8# K",
+    "verified_quote": "Under Rule 18.34 of the Insolvency (England and Wales) Rules 2016, any creditor (or group of creditors holding at least 25% in value of the creditors) can apply to the court if they consider the remuneration charged is excessive.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company administration::pre administration fees can range from £5 000 to £10 000 for smaller administrations.": {
+    "provider": "Company Administration",
+    "claim": "Pre-administration fees can range from £5,000 to £10,000 for smaller administrations.",
+    "verification_status": "not_found",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "pre pack administration::pre administration fees may be higher in pre pack administrations due to increased preparatory work.": {
+    "provider": "Pre Pack Administration",
+    "claim": "Pre-administration fees may be higher in pre-pack administrations due to increased preparatory work.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "general::hourly rates for insolvency practitioners can range from £100 to £300.": {
+    "provider": "General",
+    "claim": "Hourly rates for insolvency practitioners can range from £100 to £300.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.gov.uk/government/news/more-transparency-for-fees-charged-in-insolvency",
+    "verified_quote": "The current average charge out rate for the profession is £375 per hour.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::staff charge out rates for insolvency practitioners vary from £115 to £525 per hour.": {
+    "provider": "General",
+    "claim": "Staff charge-out rates for insolvency practitioners vary from £115 to £525 per hour.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "The charge-out rates of staff within the firm range from £115-£160 for junior staff, £165-£215 for senior administrators, £215-£325 for managers and £415-£525 per hour for principal time, depending upon experience and qualifications and the degree of complexity and responsibility of the work carried out.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::time is usually charged in 6 minute units by insolvency practitioners.": {
+    "provider": "General",
+    "claim": "Time is usually charged in 6-minute units by insolvency practitioners.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.thegazette.co.uk/notice/3156323",
+    "verified_quote": "Time is charged in 6 minute units.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::fees calculated as a percentage of realisations typically range from 3% to 15% of assets realised.": {
+    "provider": "General",
+    "claim": "Fees calculated as a percentage of realisations typically range from 3% to 15% of assets realised.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "In certain circumstances, practitioners charge fees calculated as a percentage of funds recovered through asset realisations or debt collections, creating a performance-based fee structure that aligns practitioner incentives with creditor returns under English insolvency law. This methodology typically involves percentages ranging from 3% to 15% of assets realised, though complex cases involving specialist assets or challenging recovery situations may command higher percentages.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "general::higher percentages for fee calculation may apply for specialist or challenging asset recoveries.": {
+    "provider": "General",
+    "claim": "Higher percentages for fee calculation may apply for specialist or challenging asset recoveries.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "company administration::other professional fees and disbursements can include agents valuation fees and legal fees.": {
+    "provider": "Company Administration",
+    "claim": "Other professional fees and disbursements can include agents' valuation fees and legal fees.",
+    "verification_status": "verified",
+    "verified_source_url": "",
+    "verified_quote": "These may include, but are not limited to, legal and agents' fees, trading expenses and tax liabilities. When providing details of the expenses an office holder anticipates will, or are likely to be, incurred it is acceptable to provide a range, or repeat a range quoted by a third party (for instance for legal costs in litigation). Expenses should be disclosed. Disbursements. Disbursements are expenses met by and reimbursed to an office holder in connection with",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company administration::legal fees may increase in contested administrations or if a live business is sold requiring a sale and purchase agreement.": {
+    "provider": "Company Administration",
+    "claim": "Legal fees may increase in contested administrations or if a live business is sold requiring a sale and purchase agreement.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.legislation.gov.uk/uksi/2016/1024/part/3/chapter/1/rule/3.50",
+    "verified_quote": "All fees, costs, charges and other expenses incurred in the course of the administration are to be treated as expenses of the administration.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  },
+  "company administration::directors may personally fund basic insolvency procedures if the company lacks sufficient assets to cover costs.": {
+    "provider": "Company Administration",
+    "claim": "Directors may personally fund basic insolvency procedures if the company lacks sufficient assets to cover costs.",
+    "verification_status": "manual_review",
+    "verified_source_url": "",
+    "verified_quote": "",
+    "evidence_tier": "",
+    "verify_date": "2026-06-10"
+  },
+  "company administration::creditors might provide funding to the administrator particularly before assets are realised.": {
+    "provider": "Company Administration",
+    "claim": "Creditors might provide funding to the administrator, particularly before assets are realised.",
+    "verification_status": "verified",
+    "verified_source_url": "https://www.ashurst.com/en/news-and-insights/legal-briefings/an-overview-of-administration/",
+    "verified_quote": "One or more creditors may provide the administrator with funding prior to the realisation of the assets to ensure that an administrator will take the appointment.",
+    "evidence_tier": "grounded",
+    "verify_date": "2026-06-10"
+  }
+}

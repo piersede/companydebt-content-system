@@ -1,0 +1,461 @@
+```json
+[
+ {
+  "detail": "A Shareholders' Resolution for a Creditors' Voluntary Liquidation (CVL) typically requires 7-14 days' notice, though shorter notice is possible if 90% of shareholders agree.",
+  "category": "Process / Steps",
+  "provider": "Creditors' Voluntary Liquidation",
+  "card_name": "Shareholders' Resolution",
+  "value": "7-14 days",
+  "mentioned_by": [
+   "gemini · broad",
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors about the required notice period for initiating a CVL, or how to expedite it."
+ },
+ {
+  "detail": "In a Creditors' Voluntary Liquidation (CVL), if the company lacks sufficient assets to cover the liquidation fees, directors may have to personally cover the shortfall.",
+  "category": "Cost / Fees",
+  "provider": "Creditors' Voluntary Liquidation",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights a potential personal financial risk for directors in a CVL."
+ },
+ {
+  "detail": "Creditors' Voluntary Liquidation (CVL) costs are typically split into pre-appointment (often a fixed fee) and post-appointment stages, with the latter regulated by the Insolvency (England and Wales) Rules 2016.",
+  "category": "Cost / Fees",
+  "provider": "Creditors' Voluntary Liquidation",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides directors with a clearer understanding of how CVL fees are structured and regulated."
+ },
+ {
+  "detail": "Simpler Creditors' Voluntary Liquidation (CVL) cases with minimal assets and few creditors might complete in under 12 months, while complex cases involving property, disputed claims, or HMRC enquiries can take two years or more.",
+  "category": "Timeline / Duration",
+  "provider": "Creditors' Voluntary Liquidation",
+  "card_name": "",
+  "value": "under 12 months, two years or more",
+  "mentioned_by": [
+   "gemini · broad",
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Gives directors a more realistic expectation of the duration of a CVL based on complexity."
+ },
+ {
+  "detail": "In a compulsory liquidation, the Official Receiver (OR) charges a general fee of £6,000 (set to increase to £7,200 from 9 January 2025) and an additional 15% of assets realised where they act as liquidator.",
+  "category": "Cost / Fees",
+  "provider": "Compulsory Liquidation",
+  "card_name": "",
+  "value": "£6,000, £7,200, 15%",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides clarity on the significant fees charged by the Official Receiver in a compulsory liquidation, which can impact creditors' recoveries."
+ },
+ {
+  "detail": "If a private Insolvency Practitioner is appointed to take over from the Official Receiver in a compulsory liquidation, their additional fees typically range from £5,000 to £10,000.",
+  "category": "Cost / Fees",
+  "provider": "Compulsory Liquidation",
+  "card_name": "",
+  "value": "£5,000-£10,000",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Helps directors understand the potential costs of private liquidator involvement in a compulsory liquidation."
+ },
+ {
+  "detail": "The Official Receiver's fees in compulsory liquidations are set out in the Insolvency Proceedings (Fees) Order 2016.",
+  "category": "Legal / Regulatory",
+  "provider": "Compulsory Liquidation",
+  "card_name": "Insolvency Proceedings (Fees) Order 2016",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a specific legal reference for the Official Receiver's fees, enhancing regulatory understanding."
+ },
+ {
+  "detail": "Complex compulsory liquidation cases can take 18 months to 3 years, or even several years if there are disputes or missing records.",
+  "category": "Timeline / Duration",
+  "provider": "Compulsory Liquidation",
+  "card_name": "",
+  "value": "18 months to 3 years",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Gives directors a more precise understanding of the potential extended duration for complex compulsory liquidations."
+ },
+ {
+  "detail": "Members' Voluntary Liquidation (MVL) is specifically governed by Section 89 of the Insolvency Act 1986.",
+  "category": "Legal / Regulatory",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "Insolvency Act 1986, Section 89",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides specific statutory grounding for MVLs."
+ },
+ {
+  "detail": "In a Members' Voluntary Liquidation (MVL), the Declaration of Solvency must be made no more than five weeks before the resolution to wind up the company.",
+  "category": "Process / Steps",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "Declaration of Solvency",
+  "value": "five weeks",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Details a critical timeline requirement for the Declaration of Solvency in an MVL."
+ },
+ {
+  "detail": "In a Members' Voluntary Liquidation (MVL), the shareholder resolution to wind up the company must be passed within five weeks of the Declaration of Solvency.",
+  "category": "Process / Steps",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "Shareholder Resolution",
+  "value": "five weeks",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Specifies a critical timeline for passing the shareholder resolution relative to the Declaration of Solvency in an MVL."
+ },
+ {
+  "detail": "In a Members' Voluntary Liquidation (MVL), the liquidator formally notifies known creditors within 28 days of the resolution to wind up the company.",
+  "category": "Process / Steps",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "28 days",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors about the liquidator's obligation to notify creditors in an MVL."
+ },
+ {
+  "detail": "The preparation phase for a Members' Voluntary Liquidation (MVL), including the Declaration of Solvency and appointment of an IP, typically takes 3-10 days, with the appointment often within 24-72 hours.",
+  "category": "Timeline / Duration",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "3-10 days, 24-72 hours",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides directors with an expected timeframe for the initial stages of an MVL."
+ },
+ {
+  "detail": "A Members' Voluntary Liquidation (MVL) is usually completed within 6 to 12 months, or sometimes faster if straightforward.",
+  "category": "Timeline / Duration",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "6 to 12 months",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Gives directors a realistic timeline for the overall duration of an MVL."
+ },
+ {
+  "detail": "In a Members' Voluntary Liquidation (MVL), shareholders often receive initial distributions within the first few months, sometimes within around 35 days.",
+  "category": "Timeline / Duration",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "35 days",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights the potential for early distributions to shareholders in an MVL."
+ },
+ {
+  "detail": "HMRC clearance can sometimes delay the final distribution in a Members' Voluntary Liquidation (MVL), taking anywhere from 6 weeks to 6 months.",
+  "category": "Timeline / Duration",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "6 weeks to 6 months",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors about a common cause of delay for final distributions in an MVL."
+ },
+ {
+  "detail": "If debts cannot be paid within 12 months in a Members' Voluntary Liquidation (MVL), the MVL must be converted into a Creditors' Voluntary Liquidation (CVL).",
+  "category": "Risks / Pitfalls",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "12 months",
+  "mentioned_by": [
+   "gemini · usecase-1"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Warns directors about the consequences if the company's solvency for an MVL cannot be maintained."
+ },
+ {
+  "detail": "The typical cost of a Members' Voluntary Liquidation (MVL) ranges from £995 to £4,000 plus VAT for straightforward cases, with complex MVLs costing upwards of £15,000.",
+  "category": "Cost / Fees",
+  "provider": "Members' Voluntary Liquidation",
+  "card_name": "",
+  "value": "£995 to £4,000, £15,000",
+  "mentioned_by": [
+   "gemini · usecase-2"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides directors with expected cost ranges for an MVL, aiding financial planning."
+ },
+ {
+  "detail": "Directors found guilty of fraudulent trading (Insolvency Act 1986, s.213) can face civil and criminal penalties, including imprisonment, and personal liability for company debts.",
+  "category": "Director Liability / Personal Risk",
+  "provider": "Fraudulent Trading",
+  "card_name": "Insolvency Act 1986, s.213",
+  "value": "",
+  "mentioned_by": [
+   "gemini · broad"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights the severe consequences, including potential imprisonment, for directors involved in fraudulent trading."
+ },
+ {
+  "detail": "The Companies Act 2006 sets out general duties of directors, which are modified in the 'zone of insolvency' to prioritise creditors' interests.",
+  "category": "Legal / Regulatory",
+  "provider": "General",
+  "card_name": "Companies Act 2006",
+  "value": "",
+  "mentioned_by": [
+   "gemini · broad"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies the shift in directors' fiduciary duties when a company becomes insolvent or likely to become so."
+ },
+ {
+  "detail": "Specific guidance for Insolvency Practitioners regarding Company Voluntary Arrangements (CVAs) is provided by Statement of Insolvency Practice (SIP) 3.2.",
+  "category": "Legal / Regulatory",
+  "provider": "Company Voluntary Arrangement",
+  "card_name": "Statement of Insolvency Practice (SIP) 3.2",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides a specific regulatory reference for CVAs, enhancing professional understanding."
+ },
+ {
+  "detail": "Company administration is governed by Schedule B1 to the Insolvency Act 1986, as updated by the Enterprise Act 2002.",
+  "category": "Legal / Regulatory",
+  "provider": "Administration",
+  "card_name": "Enterprise Act 2002",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides directors with the specific legislative basis for administration, including the key update."
+ },
+ {
+  "detail": "An administrator must send proposals to creditors within eight weeks of their appointment.",
+  "category": "Process / Steps",
+  "provider": "Administration",
+  "card_name": "",
+  "value": "eight weeks",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors and creditors about the timeframe for formal proposals in an administration."
+ },
+ {
+  "detail": "Company administrations typically have a statutory length of 12 months, extendable with creditor agreement or court permission.",
+  "category": "Timeline / Duration",
+  "provider": "Administration",
+  "card_name": "",
+  "value": "12 months",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Gives directors a clear expectation of the typical duration of an administration."
+ },
+ {
+  "detail": "The Corporate Insolvency and Governance Act 2020 (CIGA 2020) introduced a standalone moratorium procedure, giving struggling companies a 'breathing space'.",
+  "category": "Alternatives / Options",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "Corporate Insolvency and Governance Act 2020 (CIGA 2020)",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Introduces a key, relatively new, restructuring tool available to directors."
+ },
+ {
+  "detail": "A standalone moratorium provides a 'breathing space' of 20 business days for companies to explore rescue and restructuring options, free from most creditor actions.",
+  "category": "Alternatives / Options",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "",
+  "value": "20 business days",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Details the initial duration and benefit of the standalone moratorium for struggling companies."
+ },
+ {
+  "detail": "A standalone moratorium can be extended for a further 20 business days without creditor consent, or for longer with consent or court approval.",
+  "category": "Timeline / Duration",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "",
+  "value": "20 business days",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Informs directors about the flexibility and potential for extending the moratorium period."
+ },
+ {
+  "detail": "During a standalone moratorium, directors remain in control of the company, but a licensed insolvency practitioner acts as a 'monitor'.",
+  "category": "Process / Steps",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies the roles of directors and the IP during a moratorium, highlighting continued director control."
+ },
+ {
+  "detail": "For a standalone moratorium, the company must be deemed 'rescuable' by the monitor, and certain debts, such as new supplies, rent for the moratorium period, and employee payments, must continue to be paid.",
+  "category": "Eligibility / Criteria",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Outlines key eligibility and ongoing obligations for companies seeking a moratorium."
+ },
+ {
+  "detail": "The standalone moratorium is governed by Sections 1-6 and Schedules 1-8 of the Insolvency Act 1986, as amended by the Corporate Insolvency and Governance Act 2020 (CIGA 2020).",
+  "category": "Legal / Regulatory",
+  "provider": "Moratorium (Standalone)",
+  "card_name": "Insolvency Act 1986, CIGA 2020",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides specific statutory grounding for the standalone moratorium."
+ },
+ {
+  "detail": "The Corporate Insolvency and Governance Act 2020 (CIGA 2020) introduced a new court-supervised Restructuring Plan for companies experiencing financial difficulties.",
+  "category": "Alternatives / Options",
+  "provider": "Restructuring Plan",
+  "card_name": "Corporate Insolvency and Governance Act 2020 (CIGA 2020)",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Introduces another key, relatively new, restructuring tool available to directors."
+ },
+ {
+  "detail": "A Restructuring Plan includes a powerful 'cross-class cram down' mechanism, allowing the court to impose a plan on dissenting classes of creditors.",
+  "category": "Legal / Regulatory",
+  "provider": "Restructuring Plan",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Highlights a critical feature of the Restructuring Plan that can overcome creditor opposition."
+ },
+ {
+  "detail": "The court can impose a Restructuring Plan on dissenting classes of creditors if it is deemed fair and equitable, and those creditors would be no worse off than in an alternative insolvency procedure.",
+  "category": "Legal / Regulatory",
+  "provider": "Restructuring Plan",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Details the conditions under which the 'cram down' mechanism can be applied in a Restructuring Plan."
+ },
+ {
+  "detail": "The Restructuring Plan is established in Part 26A of the Companies Act 2006 (as amended by CIGA 2020).",
+  "category": "Legal / Regulatory",
+  "provider": "Restructuring Plan",
+  "card_name": "Companies Act 2006, Part 26A",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Provides specific statutory grounding for the Restructuring Plan."
+ },
+ {
+  "detail": "Informal arrangements or negotiating with creditors have no specific statutory governance, but directors still owe duties under the Companies Act 2006 to act in the best interests of the company and its creditors.",
+  "category": "Legal / Regulatory",
+  "provider": "Informal Arrangements",
+  "card_name": "",
+  "value": "",
+  "mentioned_by": [
+   "gemini · usecase-4"
+  ],
+  "source_urls": [],
+  "article_status": "missing",
+  "why_it_matters": "Clarifies the legal context and director responsibilities when pursuing informal debt solutions."
+ }
+]
+```
