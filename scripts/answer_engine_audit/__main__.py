@@ -113,6 +113,27 @@ def cmd_capture(args: argparse.Namespace) -> int:
     use_cases = prompts.default_use_cases(ctx.keyword)
     pset = build_prompt_set(ctx.keyword, use_cases)
 
+    # Demand layer (opt-in): seed capture with real Ahrefs search demand so the
+    # engines are probed on what people actually search, not just the page's own
+    # framing. Never lets a demand hiccup kill the base capture.
+    demand_record = None
+    if getattr(args, "demand", False):
+        from . import demand as demand_mod
+        demand_seed = demand_mod.resolve_seed(ctx.cfg, ctx.keyword,
+                                              getattr(args, "demand_seed", None))
+        try:
+            demand_record = demand_mod.collect_demand(
+                demand_seed, country=getattr(args, "demand_country", "gb"),
+                min_volume=getattr(args, "demand_min_volume", 0),
+                top_n=getattr(args, "demand_top_n", 30),
+                model=args.gemini_model,
+                fixture=getattr(args, "demand_fixture", None))
+            pset += demand_mod.demand_prompt_set(demand_record, demand_seed)
+            print(f"  demand: seed '{demand_seed}' fetched {demand_record['fetched']}, "
+                  f"kept {demand_record['kept']} probe(s), dropped {demand_record['dropped']}")
+        except Exception as exc:  # never let demand kill the base capture
+            print(f"  demand skipped: {type(exc).__name__}: {exc}", file=sys.stderr)
+
     for label, prompt in pset:
         for engine in engines:
             try:
@@ -140,9 +161,58 @@ def cmd_capture(args: argparse.Namespace) -> int:
     if live.exists():
         consolidate_our_page(ctx.root, live)
 
+    if demand_record is not None:
+        import json as _json
+        (ctx.processed_dir / "demand.json").write_text(
+            _json.dumps(demand_record, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Demand record: {ctx.processed_dir / 'demand.json'}")
+
     index_path = write_source_index(ctx)
     print(f"\nWitnesses captured: {len(ctx.source_index)}")
     print(f"Source index: {index_path}")
+    return 0
+
+
+# --------------------------------------------------------------------------
+# demand (standalone preview: Ahrefs demand -> AI probes, no engine calls)
+# --------------------------------------------------------------------------
+
+def cmd_demand(args: argparse.Namespace) -> int:
+    """Preview the demand layer: Ahrefs matching terms -> filtered, volume-ranked
+    natural-language probes. No answer-engine calls; writes a JSON + CSV preview."""
+    import csv
+    import json as _json
+
+    from . import demand as demand_mod
+
+    ctx = new_run_for_target(args.target, dry_run=True)
+    seed = demand_mod.resolve_seed(ctx.cfg, ctx.keyword, args.demand_seed)
+    src = f"fixture {args.demand_fixture}" if args.demand_fixture else "Ahrefs API"
+    print(f"Demand preview for '{seed}' via {src} "
+          f"(country {args.demand_country}, top {args.demand_top_n}, "
+          f"min volume {args.demand_min_volume})")
+    record = demand_mod.collect_demand(
+        seed, country=args.demand_country, min_volume=args.demand_min_volume,
+        top_n=args.demand_top_n, model=args.gemini_model,
+        fixture=args.demand_fixture)
+    print(f"  fetched {record['fetched']}, kept {record['kept']}, "
+          f"dropped {record['dropped']}")
+    for row in record["rows"]:
+        print(f"    [{row['volume']:>6}] {row['intent']:13} {row['keyword']}")
+        print(f"             -> {row['probe']}")
+
+    outdir = ctx.root.parent  # research/<key>/_answer_audit/
+    outdir.mkdir(parents=True, exist_ok=True)
+    (outdir / "demand-latest.json").write_text(
+        _json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
+    csv_path = outdir / "demand-latest.csv"
+    with csv_path.open("w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["keyword", "volume", "intent", "probe"])
+        for row in record["rows"]:
+            w.writerow([row["keyword"], row["volume"], row["intent"], row["probe"]])
+    print(f"\n  JSON: {outdir / 'demand-latest.json'}")
+    print(f"  CSV:  {csv_path}")
     return 0
 
 
@@ -157,7 +227,9 @@ def cmd_extract(args: argparse.Namespace) -> int:
     key = _target_key(args.target)
     run = latest_run(key)
     print(f"Extracting coverage delta for {key} (run {run.name}, model {args.gemini_model})")
-    nuggets, path = extract_nuggets(key, model=args.gemini_model, run_dir=run)
+    nuggets, path = extract_nuggets(
+        key, model=args.gemini_model, run_dir=run,
+        concept_guard=not args.no_concept_guard, semantic_guard=args.semantic_guard)
 
     needs = sum(1 for n in nuggets if n.needs_primary_verification)
     print(f"  nuggets (genuinely absent): {len(nuggets)}  "
@@ -224,9 +296,12 @@ def cmd_recommend(args: argparse.Namespace) -> int:
     key = _target_key(args.target)
     run = latest_run(key)
     print(f"Generating recommendations for {key} (run {run.name})")
-    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run)
+    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run,
+                                  max_gaps=args.max_coverage_gaps)
     print(f"  total nuggets:        {counts['total']}")
     print(f"  verified -> edits:    {counts['publishable']}")
+    print(f"  apply list (capped):  {counts.get('headline', 0)}")
+    print(f"  appendix:             {counts.get('appendix', 0)}")
     print(f"  needs verification:   {counts['needs_verification']}")
     print(f"\nRecommendations: {out}")
     return 0
@@ -244,6 +319,7 @@ def _audit_one(target: str, args: argparse.Namespace) -> int:
     from .corpus import consolidate_our_page, consolidate_witnesses, latest_run
     from .extract import extract_nuggets
     from .recommend import recommend_edits
+    from .source_landscape import write_source_landscape
 
     key = _target_key(target)
 
@@ -272,7 +348,13 @@ def _audit_one(target: str, args: argparse.Namespace) -> int:
     else:
         rc = cmd_capture(argparse.Namespace(
             target=target, engines=args.engines, openai_model=args.openai_model,
-            gemini_model=args.gemini_model, dry_run=False))
+            gemini_model=args.gemini_model, dry_run=False,
+            demand=getattr(args, "demand", False),
+            demand_seed=getattr(args, "demand_seed", None),
+            demand_country=getattr(args, "demand_country", "gb"),
+            demand_top_n=getattr(args, "demand_top_n", 30),
+            demand_min_volume=getattr(args, "demand_min_volume", 0),
+            demand_fixture=getattr(args, "demand_fixture", None)))
         if rc != 0:
             return rc
         run = latest_run(key)
@@ -285,9 +367,23 @@ def _audit_one(target: str, args: argparse.Namespace) -> int:
     if not our_page.exists() and live_html.exists():
         consolidate_our_page(run, live_html)
 
+    # 2b. Source landscape (deterministic — WHO the engines cite for this query).
+    # This is the heart of the AEO/GEO design: before reading our page we read the
+    # citation landscape, so the extract stage can work query-first (close the gaps
+    # competitor domains win) instead of regressing to a flat fact-check.
+    print("\n== source landscape ==")
+    keyword = read_run_meta(run).get("keyword", "") or key.replace("__", " ").replace("-", " ")
+    land_path, land = write_source_landscape(key, keyword, run)
+    we = "cited" if land["we_cited"] else "NOT cited"
+    top = ", ".join(f"{d}({c})" for d, c in land["competitors"][:5]) or "none resolved"
+    print(f"  companydebt.com is {we} for this query; top cited: {top}")
+    print(f"  {land_path}")
+
     # 3. Extract delta.
     print("\n== extract ==")
-    nuggets, _ = extract_nuggets(key, model=args.gemini_model, run_dir=run)
+    nuggets, _ = extract_nuggets(
+        key, model=args.gemini_model, run_dir=run,
+        concept_guard=not args.no_concept_guard, semantic_guard=args.semantic_guard)
     print(f"  {len(nuggets)} nugget(s) absent from our page")
 
     # 4. Verify (budget-guarded at the bottleneck).
@@ -299,7 +395,8 @@ def _audit_one(target: str, args: argparse.Namespace) -> int:
 
     # 5. Recommend (stops here; never edits the page).
     print("\n== recommend ==")
-    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run)
+    out, counts = recommend_edits(key, model=args.gemini_model, run_dir=run,
+                                  max_gaps=args.max_coverage_gaps)
     print(f"\nDONE {key}. {counts['publishable']} verified recommendation(s), "
           f"{counts['needs_verification']} parked for human verification, "
           f"{counts.get('cannibalisation_risk', 0)} flagged as cannibalisation risk.")
@@ -346,6 +443,23 @@ def _add_target(p: argparse.ArgumentParser) -> None:
     p.add_argument("--target", help="live page: full URL, path (/advice/x/), or bare slug")
 
 
+def _add_demand_args(p: argparse.ArgumentParser, *, include_toggle: bool) -> None:
+    """Shared --demand-* flags. ``include_toggle`` adds the on/off --demand flag
+    (capture/audit); the standalone `demand` subcommand is always on."""
+    if include_toggle:
+        p.add_argument("--demand", action="store_true",
+                       help="seed capture with real Ahrefs search demand (Ahrefs API/fixture + Gemini)")
+    p.add_argument("--demand-seed",
+                   help="Ahrefs seed term (default: topic from page keyword / cfg['demand_seed'])")
+    p.add_argument("--demand-country", default="gb", help="Ahrefs country code (default gb)")
+    p.add_argument("--demand-top-n", type=int, default=30,
+                   help="max demand probes, volume-ranked (default 30)")
+    p.add_argument("--demand-min-volume", type=int, default=0,
+                   help="drop keywords below this monthly search volume")
+    p.add_argument("--demand-fixture",
+                   help="saved Ahrefs export (CSV or JSON) to use instead of the live API")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="answer_engine_audit",
                                      description="Answer-Engine Coverage Audit System")
@@ -365,12 +479,24 @@ def main(argv: list[str] | None = None) -> int:
     cap.add_argument("--gemini-model", default="gemini-2.5-flash")
     cap.add_argument("--dry-run", action="store_true",
                      help="print the capture plan without calling any API")
+    _add_demand_args(cap, include_toggle=True)
     cap.set_defaults(func=cmd_capture)
+
+    dem = sub.add_parser("demand",
+                         help="Preview Ahrefs demand -> AI probes (no engine calls)")
+    _add_target(dem)
+    dem.add_argument("--gemini-model", default="gemini-2.5-flash")
+    _add_demand_args(dem, include_toggle=False)
+    dem.set_defaults(func=cmd_demand)
 
     ext = sub.add_parser("extract", help="Extract the coverage delta (nuggets we lack)")
     _add_target(ext)
     ext.add_argument("--gemini-model", default="gemini-2.5-flash",
                      help="cheaper model for the delta pass")
+    ext.add_argument("--no-concept-guard", action="store_true",
+                     help="disable the deterministic already-covered concept guard")
+    ext.add_argument("--semantic-guard", action="store_true",
+                     help="add an opt-in Gemini-embedding already-covered pass (extra API calls)")
     ext.set_defaults(func=cmd_extract)
 
     ver = sub.add_parser("verify", help="Verify nuggets against authoritative sources (uses cache)")
@@ -385,6 +511,8 @@ def main(argv: list[str] | None = None) -> int:
     rec = sub.add_parser("recommend", help="Turn the verified ledger into 06-recommended-edits.md")
     _add_target(rec)
     rec.add_argument("--gemini-model", default="gemini-2.5-flash")
+    rec.add_argument("--max-coverage-gaps", type=int, default=10,
+                     help="cap on the section-1 apply list; the rest go to the appendix")
     rec.set_defaults(func=cmd_recommend)
 
     aud = sub.add_parser("audit", help="Full pipeline: capture -> extract -> verify -> recommend")
@@ -402,9 +530,16 @@ def main(argv: list[str] | None = None) -> int:
     aud.add_argument("--ttl-days", type=int, default=90, help="verification cache freshness window")
     aud.add_argument("--max-verifications", type=int, default=40,
                      help="per-run budget: max live grounded verify calls (rest parked)")
+    aud.add_argument("--max-coverage-gaps", type=int, default=10,
+                     help="cap on the section-1 apply list; the rest go to the appendix")
     aud.add_argument("--engines", default="auto", help="comma list (openai,gemini) or 'auto' = engines with keys present")
     aud.add_argument("--openai-model", default="gpt-4o")
     aud.add_argument("--gemini-model", default="gemini-2.5-flash")
+    aud.add_argument("--no-concept-guard", action="store_true",
+                     help="disable the deterministic already-covered concept guard")
+    aud.add_argument("--semantic-guard", action="store_true",
+                     help="add an opt-in Gemini-embedding already-covered pass (extra API calls)")
+    _add_demand_args(aud, include_toggle=True)
     aud.set_defaults(func=cmd_audit)
 
     args = parser.parse_args(argv)

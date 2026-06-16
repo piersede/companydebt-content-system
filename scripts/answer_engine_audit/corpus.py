@@ -11,7 +11,6 @@ point: the analysis reads prose + citations, not API envelopes.
 
 from __future__ import annotations
 
-import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -78,6 +77,8 @@ def latest_run(slug: str) -> Path:
 
 def consolidate_witnesses(run_dir: Path) -> str:
     """Build witnesses.md from every <label>.answer.md + its sources file."""
+    from .source_landscape import cited_domains_for_label
+
     raw = run_dir / "raw"
     blocks: list[str] = ["# Answer-engine witnesses\n"]
     for engine_dir in sorted(p for p in raw.iterdir() if p.is_dir()):
@@ -85,17 +86,14 @@ def consolidate_witnesses(run_dir: Path) -> str:
         for answer in sorted(engine_dir.glob("*.answer.md")):
             label = answer.stem.replace(".answer", "")
             text = answer.read_text(encoding="utf-8").strip()
-            # Cited URLs live in the sibling sources/grounding file.
-            urls: list[str] = []
-            for sib in (engine_dir / f"{label}.sources.json",
-                        engine_dir / f"{label}.grounding-metadata.json"):
-                if sib.exists():
-                    data = json.loads(sib.read_text(encoding="utf-8"))
-                    urls = data.get("source_urls") or data.get("cited_uris") or []
-                    break
+            # Show the READABLE cited domains, not raw envelopes. For Gemini the
+            # sibling grounding file holds only opaque vertexaisearch redirect
+            # URIs; source_landscape resolves the real domain from the chunk
+            # titles so competitor citations are actually visible here.
+            domains = cited_domains_for_label(engine_dir, label)
             blocks.append(f"\n## [{engine} · {label}]\n")
-            if urls:
-                blocks.append("**Cited sources:** " + ", ".join(urls) + "\n")
+            if domains:
+                blocks.append("**Cited sources:** " + ", ".join(domains) + "\n")
             blocks.append(text + "\n")
     out = run_dir / "processed" / "witnesses.md"
     out.parent.mkdir(parents=True, exist_ok=True)

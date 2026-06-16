@@ -38,6 +38,14 @@ DISPLAY_FORMATS: list[str] = [
 # these are sane starting points. The category keys are the closed vocabulary the
 # extractor must choose from (extract.ALLOWED_CATEGORIES derives from this dict).
 DEFAULT_FORMAT_BY_CATEGORY: dict[str, str] = {
+    # AEO/GEO coverage-angle categories (additive-first). These let the extractor
+    # tag a genuinely net-new ANGLE the engines answer that our page does not —
+    # not just a statutory/cost figure. recommend._COVERAGE_CATEGORIES ranks these
+    # (and the angle-like insolvency categories below) above raw figures.
+    "Coverage Gap": "top_summary_block",        # an answer the engines give that we omit wholesale
+    "Sub-Question": "faq",                       # a follow-up query we never address
+    "Framing / Positioning": "top_summary_block",  # when/for-whom a route really fits
+    # Insolvency-domain categories (the closed vocabulary the extractor chooses from):
     "Definition / Terminology": "definition_block",
     "Process / Steps": "process_steps",
     "Eligibility / Criteria": "comparison_table_column",

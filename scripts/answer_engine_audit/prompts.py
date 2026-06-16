@@ -75,13 +75,26 @@ State the rule or source behind each where you can.
 
 RECOMMEND_EDITS = """\
 You are turning a verified nugget ledger into precise editorial actions for an
-existing UK company-insolvency / company-debt guide. Do NOT rewrite the article.
-For each verified nugget, recommend the SMALLEST useful edit and tag it with a
-recommended_display_format from this list:
+existing UK company-insolvency / company-debt guide. The goal is AEO/GEO: make
+our page the most COMPREHENSIVE, citable answer so the engines cite us. Do NOT
+rewrite the article. For each verified nugget, recommend the SMALLEST useful edit
+and tag it with a recommended_display_format from this list:
 
 top_summary_block, definition_block, process_steps, comparison_table_cell,
 comparison_table_column, comparison_table_footnote, warning_callout,
 key_takeaways, faq, source_note, methodology_note, verification_needed_report
+
+HARD RULES (read before anything else):
+- DEEPEN-EXISTING beats add-new. If the topic is already on the page in ANY form
+  (a passing sentence, a table cell, an FAQ), recommend tightening or extending
+  that existing place; do NOT propose a new block. Only "missing" facts that the
+  page does not touch at all become new blocks.
+- NO duplication. Two nuggets that make the same underlying point get ONE
+  recommendation (give them the same cluster). Never recommend a fact the page,
+  or another recommendation in this batch, already states.
+- Additive-first. A sub-question, angle, process or framing the engines answer
+  that we lack is worth more than re-stating a figure we could verify in a values
+  run. Lead with the coverage gap, not the number.
 
 Rendering rules you MUST respect:
 - A statutory, cost, timeline or liability fact must carry its primary source
@@ -109,6 +122,43 @@ Keep every recommendation tied to a specific section. Do not parrot another
 site's phrasing; preserve our information gain. Be accurate before being
 comprehensive: this is YMYL content where a wrong statutory or liability claim is
 actively harmful, so prefer to under-claim and flag for verification.
+"""
+
+
+KEYWORD_TO_PROMPT = """\
+You are converting a terse SEO search keyword into the natural-language query a \
+real person would actually type or speak to an AI assistant like ChatGPT, Gemini, \
+or a voice assistant. Rewrite the keyword as a single conversational question or \
+request that preserves the exact search intent and intent type (informational, \
+commercial, transactional, or local). Phrase it the way someone would genuinely \
+ask out loud in a full sentence, not in keyword shorthand. Keep any brand, \
+product, or location named in the keyword, but do NOT invent specifics, \
+constraints, or details that aren't already implied. Do not answer the query. \
+Return only the rewritten prompt as plain text: no quotation marks, no preamble, \
+no explanation, no trailing punctuation beyond a question mark. Keyword: {keyword}
+"""
+
+# Batch form (same rules, one model call for N keywords) — cheaper and dodges
+# the flash 503-on-load problem one-call-per-keyword would invite.
+KEYWORD_TO_PROMPT_BATCH = """\
+You are converting terse SEO search keywords into the natural-language queries a \
+real person would actually type or speak to an AI assistant like ChatGPT, Gemini, \
+or a voice assistant.
+
+For EACH numbered keyword below, rewrite it as a single conversational question or \
+request that preserves the exact search intent and intent type (informational, \
+commercial, transactional, or local). Phrase it the way someone would genuinely \
+ask out loud in a full sentence, not in keyword shorthand. Keep any brand, \
+product, or location named in the keyword, but do NOT invent specifics, \
+constraints, or details that aren't already implied. Do not answer the queries.
+
+Return one rewritten query per line, each prefixed with its number exactly as \
+given (e.g. "3. ..."). No quotation marks, no preamble, no explanation, no \
+trailing punctuation beyond a question mark. Preserve the input order and \
+numbering exactly.
+
+Keywords:
+{numbered_keywords}
 """
 
 
