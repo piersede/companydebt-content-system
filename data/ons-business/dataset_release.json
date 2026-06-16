@@ -1,0 +1,36 @@
+{
+  "_about": "Release ledger for ONS/Nomis UK Business Counts (enterprises by SIC section).",
+  "_schema": [
+    "release_id",
+    "source_id",
+    "dataset_name",
+    "period_start",
+    "period_end",
+    "publication_date",
+    "source_files",
+    "is_provisional",
+    "status",
+    "notes"
+  ],
+  "releases": [
+    {
+      "release_id": "ons_business_counts_2025",
+      "source_id": "ons_business",
+      "dataset_name": "ONS UK Business Counts - enterprises by SIC section, 2025",
+      "period_start": "2025-01",
+      "period_end": "2025-12",
+      "publication_date": "2026-06-16",
+      "source_files": [
+        {
+          "endpoint": "https://www.nomisweb.co.uk/api/v01/dataset/NM_142_1.data.json",
+          "query": "geography=2092957697, all industries, time=2025",
+          "retrieved_at": "2026-06-16",
+          "note": "Detailed SIC pulled and rolled up to sections; no file artifact."
+        }
+      ],
+      "is_provisional": false,
+      "status": "current",
+      "notes": "Annual business population. Enterprises universe, not registered companies. Rolled-up sections validated against the official Total."
+    }
+  ]
+}

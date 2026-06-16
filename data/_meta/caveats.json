@@ -1,0 +1,15 @@
+{
+  "_about": "Reusable data caveats for the insolvency data hub. Pages reference caveats by id rather than re-wording them, so the disclaimers stay consistent and the methodology page can own the canonical text. British English. ASCII only.",
+  "caveats": {
+    "latest_provisional": "The latest monthly figures are provisional and are routinely revised when later releases are published.",
+    "sa_vs_nsa": "Seasonally adjusted and non-seasonally adjusted figures are not directly comparable and should not be mixed.",
+    "nations_sa_difference": "Scotland and Northern Ireland figures are not seasonally adjusted in the same way as England and Wales, so cross-nation comparisons should be made with care.",
+    "sector_lag": "Industry and sector data is published one month behind the headline figures.",
+    "sic_self_reported": "Industry is based on self-reported SIC codes, which can be inaccurate or out of date.",
+    "registered_office": "A company's registered office may not be where it actually traded, so regional figures are an approximation.",
+    "sector_volumes_not_rates": "These are volumes, not sector failure rates. Larger sectors hold more companies and so tend to record more insolvencies.",
+    "gazette_not_outcome": "Gazette notices are legal notices, not completed insolvency procedures. A petition may be dismissed, withdrawn or settled before any order is made.",
+    "dissolutions_not_insolvencies": "Dissolutions and strike-offs are ordinary company closures, not insolvencies, and must not be added to insolvency totals.",
+    "ons_denominator": "ONS business counts are a useful denominator but are not a perfect census of every small or unregistered business."
+  }
+}

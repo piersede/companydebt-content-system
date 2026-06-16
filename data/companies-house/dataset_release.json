@@ -1,0 +1,35 @@
+{
+  "_about": "Release ledger for Companies House register snapshots (population, incorporations, dissolutions) fetched via the advanced-search API.",
+  "_schema": [
+    "release_id",
+    "source_id",
+    "dataset_name",
+    "period_start",
+    "period_end",
+    "publication_date",
+    "source_files",
+    "is_provisional",
+    "status",
+    "notes"
+  ],
+  "releases": [
+    {
+      "release_id": "ch_flows_2026-05",
+      "source_id": "companies_house_register",
+      "dataset_name": "Companies House population and flows, 2026-05",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "publication_date": "2026-06-16",
+      "source_files": [
+        {
+          "endpoint": "https://api.company-information.service.gov.uk/advanced-search/companies",
+          "retrieved_at": "2026-06-16",
+          "note": "Counts read live from the register; no file artifact."
+        }
+      ],
+      "is_provisional": false,
+      "status": "current",
+      "notes": "Counts are live-register reads, not an official statistic. Dissolutions are mostly strike-offs, not insolvencies."
+    }
+  ]
+}

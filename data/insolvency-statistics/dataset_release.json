@@ -1,0 +1,35 @@
+{
+  "_about": "Release ledger for the Insolvency Service monthly company insolvency dataset. One entry per monthly release. NEVER delete a superseded release: set its status to 'superseded' and add the newer one. This is the audit trail behind the headline figures and the 'last updated / next release' labels on the page.",
+  "_schema": [
+    "release_id", "source_id", "dataset_name", "period_start", "period_end",
+    "publication_date", "retrieved_at", "source_files", "is_provisional",
+    "revision_of_release_id", "status", "notes"
+  ],
+  "releases": [
+    {
+      "release_id": "ins_monthly_2026-04",
+      "source_id": "insolvency_service_monthly",
+      "dataset_name": "Monthly company insolvency statistics, April 2026",
+      "period_start": "2000-01",
+      "period_end": "2026-04",
+      "publication_date": "2026-05-19",
+      "retrieved_at": "2026-05-20",
+      "source_files": [
+        {
+          "path": "data/insolvency-statistics/source_long_run_2026-04.csv",
+          "role": "long_run_monthly_series",
+          "sha256": "5A025BEE47C5CC2A6F0EDB262F3000CFDF225AF5DC820CB73FD2CB3DD69E72D5"
+        },
+        {
+          "path": "data/insolvency-statistics/source_data_tables_2026-04.xlsx",
+          "role": "monthly_data_tables",
+          "sha256": "003F51A1ACD24388E692A9283B6148664276C74BDAF563EA2090D97006221D61"
+        }
+      ],
+      "is_provisional": true,
+      "revision_of_release_id": null,
+      "status": "current",
+      "notes": "Headline England and Wales total 2,085 (seasonally adjusted). Latest month is provisional and subject to revision in later releases. Industry/sector window ends March 2026 (one-month lag). Next scheduled release: 2026-06-19."
+    }
+  ]
+}

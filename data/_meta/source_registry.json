@@ -1,0 +1,81 @@
+{
+  "_about": "Source registry for the Company Debt insolvency data hub. One entry per upstream data source. This is the documented backbone every figure on every data page must trace back to. Add a source here BEFORE a page cites it. ASCII only.",
+  "_schema": [
+    "source_id", "source_name", "publisher", "source_type", "source_url",
+    "format", "update_frequency", "licence", "authority_level", "status", "notes"
+  ],
+  "_authority_levels": {
+    "official": "Accredited or official statistics produced to the Code of Practice for Statistics.",
+    "administrative": "Administrative register data (counts of records), not a designated statistic.",
+    "legal_notice": "Statutory legal notices. Records an event was advertised, not a completed outcome.",
+    "survey": "Sample survey or modelled estimate, with sampling error.",
+    "enrichment": "Context only. Never presented as an insolvency figure."
+  },
+  "sources": [
+    {
+      "source_id": "insolvency_service_monthly",
+      "source_name": "Monthly company insolvency statistics",
+      "publisher": "The Insolvency Service",
+      "source_type": "official_statistics",
+      "source_url": "https://www.gov.uk/government/collections/insolvency-service-official-statistics",
+      "format": ["csv", "xlsx"],
+      "update_frequency": "monthly",
+      "licence": "Open Government Licence v3.0",
+      "authority_level": "official",
+      "status": "implemented",
+      "notes": "Statistical backbone of the hub. Long-run CSV plus monthly data tables (procedure, sector via Table_1c, nations via Table_4a-7). England and Wales headline series are seasonally adjusted; Scotland and Northern Ireland are not. Industry/sector data lags the headline month by one month. Latest release loaded: April 2026."
+    },
+    {
+      "source_id": "companies_house_register",
+      "source_name": "Companies House register statistics and snapshots",
+      "publisher": "Companies House",
+      "source_type": "administrative_register",
+      "source_url": "https://www.gov.uk/government/organisations/companies-house",
+      "format": ["csv", "api", "zip"],
+      "update_frequency": "monthly",
+      "licence": "Open Government Licence v3.0",
+      "authority_level": "administrative",
+      "status": "implemented",
+      "notes": "Company population, status, incorporations and dissolutions. Fetched via the advanced-search API (counts), which returns the active-company population (rate denominator) plus incorporations and dissolutions per month. Powers the dissolutions-vs-insolvencies page. Counts are live-register reads, not an official statistic. Dissolutions and strike-offs are NOT insolvencies and must never be combined into an insolvency total. Fetcher: scripts/datahub/sources/companies_house.py."
+    },
+    {
+      "source_id": "the_gazette_notices",
+      "source_name": "The Gazette insolvency notices",
+      "publisher": "The Gazette (TSO, on behalf of HMG)",
+      "source_type": "legal_notice",
+      "source_url": "https://www.thegazette.co.uk/insolvency",
+      "format": ["api", "atom", "html"],
+      "update_frequency": "daily",
+      "licence": "Open Government Licence / Gazette terms",
+      "authority_level": "legal_notice",
+      "status": "implemented",
+      "notes": "Early-warning legal-pressure layer: winding-up petitions (code 2450) and orders (2452), petition dismissals (2461), administrator and liquidator appointments, CVL resolutions. Read from the PUBLIC insolvency notice feed (no API key). Fetcher pages categorycode=24 for a month and tallies by type: scripts/datahub/sources/the_gazette.py. A notice records that an event was advertised on a date; it is not a completed insolvency outcome and a petition may be dismissed, withdrawn or settled. Never label Gazette counts as official Insolvency Service statistics."
+    },
+    {
+      "source_id": "ons_business",
+      "source_name": "ONS UK business: activity, size and location; business demography",
+      "publisher": "Office for National Statistics",
+      "source_type": "official_statistics",
+      "source_url": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation",
+      "format": ["xlsx", "csv"],
+      "update_frequency": "annual",
+      "licence": "Open Government Licence v3.0",
+      "authority_level": "official",
+      "status": "implemented",
+      "notes": "Sector and regional business population for denominators and context. Fetched from Nomis dataset NM_142_1 (UK Business Counts - enterprises) via scripts/datahub/sources/ons_business.py; detailed SIC rolled up to sections and validated against the official total. Enterprises universe (VAT/PAYE-registered businesses), a different base from Companies House registered companies, so it is sector context, not a precise company-insolvency denominator. Annual data; latest year 2025."
+    },
+    {
+      "source_id": "payment_practices",
+      "source_name": "Payment Practices and Performance reporting",
+      "publisher": "Department for Business and Trade",
+      "source_type": "administrative_register",
+      "source_url": "https://check-payment-practices.service.gov.uk/",
+      "format": ["csv"],
+      "update_frequency": "biannual_per_company",
+      "licence": "Open Government Licence v3.0",
+      "authority_level": "enrichment",
+      "status": "planned",
+      "notes": "Late-payment enrichment only. Provides context on payment stress in a sector. Must not be treated as, or blended into, formal insolvency data."
+    }
+  ]
+}

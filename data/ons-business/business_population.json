@@ -1,0 +1,117 @@
+{
+  "source_id": "ons_business",
+  "dataset": "NM_142_1",
+  "year": 2025,
+  "uk_total_enterprises": 2734615,
+  "rolled_section_total": 2734655,
+  "rollup_matches_total": true,
+  "unit": "enterprises",
+  "sections": [
+    {
+      "code": "M",
+      "label": "Professional services",
+      "count": 419570
+    },
+    {
+      "code": "G",
+      "label": "Wholesale and retail",
+      "count": 396505
+    },
+    {
+      "code": "F",
+      "label": "Construction",
+      "count": 384830
+    },
+    {
+      "code": "N",
+      "label": "Admin and support",
+      "count": 222055
+    },
+    {
+      "code": "J",
+      "label": "Information and communication",
+      "count": 187705
+    },
+    {
+      "code": "I",
+      "label": "Accommodation and food",
+      "count": 176690
+    },
+    {
+      "code": "A",
+      "label": "Agriculture, forestry and fishing",
+      "count": 140820
+    },
+    {
+      "code": "C",
+      "label": "Manufacturing",
+      "count": 130185
+    },
+    {
+      "code": "L",
+      "label": "Real estate",
+      "count": 122305
+    },
+    {
+      "code": "Q",
+      "label": "Health and social work",
+      "count": 117240
+    },
+    {
+      "code": "S",
+      "label": "Other services",
+      "count": 116100
+    },
+    {
+      "code": "H",
+      "label": "Transport and storage",
+      "count": 114390
+    },
+    {
+      "code": "R",
+      "label": "Arts and recreation",
+      "count": 75860
+    },
+    {
+      "code": "K",
+      "label": "Finance and insurance",
+      "count": 56485
+    },
+    {
+      "code": "P",
+      "label": "Education",
+      "count": 49095
+    },
+    {
+      "code": "E",
+      "label": "Water and waste",
+      "count": 8835
+    },
+    {
+      "code": "O",
+      "label": "Public administration",
+      "count": 7955
+    },
+    {
+      "code": "D",
+      "label": "Electricity and gas",
+      "count": 6860
+    },
+    {
+      "code": "B",
+      "label": "Mining and quarrying",
+      "count": 1165
+    },
+    {
+      "code": "U",
+      "label": "Extraterritorial",
+      "count": 5
+    }
+  ],
+  "rounding": "ONS rounds each cell to the nearest 5; section sums carry small rounding noise.",
+  "note": "Enterprises = VAT/PAYE-registered businesses (incl. sole traders and partnerships). A different universe from Companies House registered companies. Sector context only, not a precise company-insolvency denominator.",
+  "caveats": [
+    "ons_denominator",
+    "sector_volumes_not_rates"
+  ]
+}

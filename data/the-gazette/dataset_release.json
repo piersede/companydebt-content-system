@@ -1,0 +1,36 @@
+{
+  "_about": "Release ledger for The Gazette corporate-insolvency notice tallies.",
+  "_schema": [
+    "release_id",
+    "source_id",
+    "dataset_name",
+    "period_start",
+    "period_end",
+    "publication_date",
+    "source_files",
+    "is_provisional",
+    "status",
+    "notes"
+  ],
+  "releases": [
+    {
+      "release_id": "gazette_corp_2026-05",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2026-05",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "publication_date": "2026-06-16",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2026-05-01..2026-05-31",
+          "retrieved_at": "2026-06-16",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "current",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    }
+  ]
+}

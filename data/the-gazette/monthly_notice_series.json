@@ -1,0 +1,27 @@
+{
+  "_about": "Monthly corporate-insolvency notice counts from The Gazette, by type. Legal notices, not completed insolvency outcomes.",
+  "source_id": "the_gazette_notices",
+  "metric_labels": {
+    "winding_up_petitions": "Winding-up petitions",
+    "winding_up_petition_dismissals": "Winding-up petition dismissals",
+    "winding_up_orders": "Winding-up orders (compulsory liquidation)",
+    "administrator_appointments": "Administrator appointments",
+    "administration_orders": "Administration orders",
+    "liquidator_appointments": "Liquidator appointments",
+    "winding_up_resolutions_cvl": "Resolutions for winding-up (CVL)"
+  },
+  "months": {
+    "2026-05": {
+      "total_corporate_insolvency_notices": 6023,
+      "metrics": {
+        "winding_up_petitions": 482,
+        "winding_up_petition_dismissals": 25,
+        "winding_up_orders": 373,
+        "administrator_appointments": 138,
+        "administration_orders": 4,
+        "liquidator_appointments": 2031,
+        "winding_up_resolutions_cvl": 1868
+      }
+    }
+  }
+}
