@@ -42,9 +42,10 @@ PAGE_REGISTRY = {
     'members-voluntary-liquidation': 'cc_builder.data.pages.members_voluntary_liquidation',
     'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
     'cant-pay-vat': 'cc_builder.data.pages.cant_pay_vat',
+    'company-insolvency': 'cc_builder.data.pages.company_insolvency',
+    'winding-up-petition-tracker': 'cc_builder.data.pages.winding_up_petition_tracker',
+    'company-dissolutions-vs-insolvencies': 'cc_builder.data.pages.company_dissolutions_vs_insolvencies',
 }
-
-
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
     if slug not in PAGE_REGISTRY:

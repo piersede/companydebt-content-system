@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "data"
 DESIGN = ROOT / "design-handoff" / "winding-up-petition-tracker.html"
 PREVIEW_OUT = ROOT / "preview" / "winding-up-petition-tracker.html"
-DRAFT_OUT = ROOT / "drafts" / "pending_winding-up-petition-tracker.html"
+DRAFT_OUT = ROOT / "drafts" / "79847_winding-up-petition-tracker.html"
 
 THEME_ASSETS = "/wp-content/themes/company-debt-webpigment/assets/data-hub"
 HUB_URL = "/data/company-insolvency/"

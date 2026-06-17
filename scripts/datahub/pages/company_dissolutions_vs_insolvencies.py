@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "data"
 DESIGN = ROOT / "design-handoff" / "company-dissolutions-vs-insolvencies.html"
 PREVIEW_OUT = ROOT / "preview" / "company-dissolutions-vs-insolvencies.html"
-DRAFT_OUT = ROOT / "drafts" / "pending_company-dissolutions-vs-insolvencies.html"
+DRAFT_OUT = ROOT / "drafts" / "79848_company-dissolutions-vs-insolvencies.html"
 
 THEME_ASSETS = "/wp-content/themes/company-debt-webpigment/assets/data-hub"
 HUB_URL = "/data/company-insolvency/"
