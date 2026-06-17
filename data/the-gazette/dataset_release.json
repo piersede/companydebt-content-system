@@ -29,6 +29,443 @@
         }
       ],
       "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-06",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-06",
+      "period_start": "2024-06-01",
+      "period_end": "2024-06-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-06-01..2024-06-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-07",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-07",
+      "period_start": "2024-07-01",
+      "period_end": "2024-07-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-07-01..2024-07-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-08",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-08",
+      "period_start": "2024-08-01",
+      "period_end": "2024-08-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-08-01..2024-08-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-09",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-09",
+      "period_start": "2024-09-01",
+      "period_end": "2024-09-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-09-01..2024-09-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-10",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-10",
+      "period_start": "2024-10-01",
+      "period_end": "2024-10-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-10-01..2024-10-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-11",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-11",
+      "period_start": "2024-11-01",
+      "period_end": "2024-11-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-11-01..2024-11-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-01",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-01",
+      "period_start": "2025-01-01",
+      "period_end": "2025-01-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-01-01..2025-01-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2024-12",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2024-12",
+      "period_start": "2024-12-01",
+      "period_end": "2024-12-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2024-12-01..2024-12-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-02",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-02",
+      "period_start": "2025-02-01",
+      "period_end": "2025-02-28",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-02-01..2025-02-28",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-03",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-03",
+      "period_start": "2025-03-01",
+      "period_end": "2025-03-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-03-01..2025-03-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-04",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-04",
+      "period_start": "2025-04-01",
+      "period_end": "2025-04-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-04-01..2025-04-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-05",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-05",
+      "period_start": "2025-05-01",
+      "period_end": "2025-05-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-05-01..2025-05-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-06",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-06",
+      "period_start": "2025-06-01",
+      "period_end": "2025-06-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-06-01..2025-06-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-07",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-07",
+      "period_start": "2025-07-01",
+      "period_end": "2025-07-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-07-01..2025-07-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-08",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-08",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-08-01..2025-08-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-09",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-09",
+      "period_start": "2025-09-01",
+      "period_end": "2025-09-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-09-01..2025-09-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-10",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-10",
+      "period_start": "2025-10-01",
+      "period_end": "2025-10-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-10-01..2025-10-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-11",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-11",
+      "period_start": "2025-11-01",
+      "period_end": "2025-11-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-11-01..2025-11-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2025-12",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2025-12",
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2025-12-01..2025-12-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2026-01",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2026-01",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2026-01-01..2026-01-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2026-02",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2026-02",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2026-02-01..2026-02-28",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2026-03",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2026-03",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2026-03-01..2026-03-31",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
+      "status": "superseded",
+      "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
+    },
+    {
+      "release_id": "gazette_corp_2026-04",
+      "source_id": "the_gazette_notices",
+      "dataset_name": "The Gazette corporate insolvency notices, 2026-04",
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-30",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://www.thegazette.co.uk/insolvency/notice/data.json",
+          "query": "categorycode=24, 2026-04-01..2026-04-30",
+          "retrieved_at": "2026-06-17",
+          "note": "Counts tallied from the public insolvency notice feed; no file artifact."
+        }
+      ],
+      "is_provisional": true,
       "status": "current",
       "notes": "Legal notices advertised in the month, not completed insolvency outcomes. Late notices can lift a month after the fact."
     }

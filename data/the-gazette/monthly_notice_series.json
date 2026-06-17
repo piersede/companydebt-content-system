@@ -22,6 +22,282 @@
         "liquidator_appointments": 2031,
         "winding_up_resolutions_cvl": 1868
       }
+    },
+    "2024-06": {
+      "total_corporate_insolvency_notices": 7117,
+      "metrics": {
+        "winding_up_petitions": 553,
+        "winding_up_petition_dismissals": 14,
+        "winding_up_orders": 243,
+        "administrator_appointments": 134,
+        "administration_orders": 3,
+        "liquidator_appointments": 2372,
+        "winding_up_resolutions_cvl": 2265
+      }
+    },
+    "2024-07": {
+      "total_corporate_insolvency_notices": 8010,
+      "metrics": {
+        "winding_up_petitions": 367,
+        "winding_up_petition_dismissals": 13,
+        "winding_up_orders": 350,
+        "administrator_appointments": 166,
+        "administration_orders": 0,
+        "liquidator_appointments": 2725,
+        "winding_up_resolutions_cvl": 2609
+      }
+    },
+    "2024-08": {
+      "total_corporate_insolvency_notices": 7491,
+      "metrics": {
+        "winding_up_petitions": 502,
+        "winding_up_petition_dismissals": 14,
+        "winding_up_orders": 231,
+        "administrator_appointments": 115,
+        "administration_orders": 0,
+        "liquidator_appointments": 2568,
+        "winding_up_resolutions_cvl": 2435
+      }
+    },
+    "2024-09": {
+      "total_corporate_insolvency_notices": 7881,
+      "metrics": {
+        "winding_up_petitions": 403,
+        "winding_up_petition_dismissals": 10,
+        "winding_up_orders": 267,
+        "administrator_appointments": 161,
+        "administration_orders": 0,
+        "liquidator_appointments": 2631,
+        "winding_up_resolutions_cvl": 2548
+      }
+    },
+    "2024-10": {
+      "total_corporate_insolvency_notices": 13101,
+      "metrics": {
+        "winding_up_petitions": 410,
+        "winding_up_petition_dismissals": 21,
+        "winding_up_orders": 231,
+        "administrator_appointments": 124,
+        "administration_orders": 0,
+        "liquidator_appointments": 4492,
+        "winding_up_resolutions_cvl": 4352
+      }
+    },
+    "2024-11": {
+      "total_corporate_insolvency_notices": 8440,
+      "metrics": {
+        "winding_up_petitions": 652,
+        "winding_up_petition_dismissals": 18,
+        "winding_up_orders": 294,
+        "administrator_appointments": 128,
+        "administration_orders": 0,
+        "liquidator_appointments": 2749,
+        "winding_up_resolutions_cvl": 2627
+      }
+    },
+    "2025-01": {
+      "total_corporate_insolvency_notices": 5550,
+      "metrics": {
+        "winding_up_petitions": 764,
+        "winding_up_petition_dismissals": 15,
+        "winding_up_orders": 237,
+        "administrator_appointments": 112,
+        "administration_orders": 0,
+        "liquidator_appointments": 1660,
+        "winding_up_resolutions_cvl": 1522
+      }
+    },
+    "2024-12": {
+      "total_corporate_insolvency_notices": 7134,
+      "metrics": {
+        "winding_up_petitions": 321,
+        "winding_up_petition_dismissals": 24,
+        "winding_up_orders": 348,
+        "administrator_appointments": 145,
+        "administration_orders": 1,
+        "liquidator_appointments": 2499,
+        "winding_up_resolutions_cvl": 2362
+      }
+    },
+    "2025-02": {
+      "total_corporate_insolvency_notices": 7309,
+      "metrics": {
+        "winding_up_petitions": 475,
+        "winding_up_petition_dismissals": 22,
+        "winding_up_orders": 382,
+        "administrator_appointments": 131,
+        "administration_orders": 0,
+        "liquidator_appointments": 2429,
+        "winding_up_resolutions_cvl": 2330
+      }
+    },
+    "2025-03": {
+      "total_corporate_insolvency_notices": 10678,
+      "metrics": {
+        "winding_up_petitions": 619,
+        "winding_up_petition_dismissals": 18,
+        "winding_up_orders": 279,
+        "administrator_appointments": 165,
+        "administration_orders": 0,
+        "liquidator_appointments": 3587,
+        "winding_up_resolutions_cvl": 3439
+      }
+    },
+    "2025-04": {
+      "total_corporate_insolvency_notices": 9472,
+      "metrics": {
+        "winding_up_petitions": 561,
+        "winding_up_petition_dismissals": 19,
+        "winding_up_orders": 371,
+        "administrator_appointments": 127,
+        "administration_orders": 2,
+        "liquidator_appointments": 3188,
+        "winding_up_resolutions_cvl": 3053
+      }
+    },
+    "2025-05": {
+      "total_corporate_insolvency_notices": 6497,
+      "metrics": {
+        "winding_up_petitions": 723,
+        "winding_up_petition_dismissals": 25,
+        "winding_up_orders": 373,
+        "administrator_appointments": 132,
+        "administration_orders": 0,
+        "liquidator_appointments": 2108,
+        "winding_up_resolutions_cvl": 1952
+      }
+    },
+    "2025-06": {
+      "total_corporate_insolvency_notices": 6364,
+      "metrics": {
+        "winding_up_petitions": 553,
+        "winding_up_petition_dismissals": 19,
+        "winding_up_orders": 329,
+        "administrator_appointments": 116,
+        "administration_orders": 1,
+        "liquidator_appointments": 2145,
+        "winding_up_resolutions_cvl": 2012
+      }
+    },
+    "2025-07": {
+      "total_corporate_insolvency_notices": 6939,
+      "metrics": {
+        "winding_up_petitions": 528,
+        "winding_up_petition_dismissals": 38,
+        "winding_up_orders": 396,
+        "administrator_appointments": 164,
+        "administration_orders": 0,
+        "liquidator_appointments": 2340,
+        "winding_up_resolutions_cvl": 2152
+      }
+    },
+    "2025-08": {
+      "total_corporate_insolvency_notices": 6367,
+      "metrics": {
+        "winding_up_petitions": 591,
+        "winding_up_petition_dismissals": 15,
+        "winding_up_orders": 321,
+        "administrator_appointments": 128,
+        "administration_orders": 1,
+        "liquidator_appointments": 2144,
+        "winding_up_resolutions_cvl": 1980
+      }
+    },
+    "2025-09": {
+      "total_corporate_insolvency_notices": 6282,
+      "metrics": {
+        "winding_up_petitions": 548,
+        "winding_up_petition_dismissals": 22,
+        "winding_up_orders": 275,
+        "administrator_appointments": 128,
+        "administration_orders": 0,
+        "liquidator_appointments": 2118,
+        "winding_up_resolutions_cvl": 1962
+      }
+    },
+    "2025-10": {
+      "total_corporate_insolvency_notices": 7794,
+      "metrics": {
+        "winding_up_petitions": 718,
+        "winding_up_petition_dismissals": 20,
+        "winding_up_orders": 302,
+        "administrator_appointments": 133,
+        "administration_orders": 0,
+        "liquidator_appointments": 2590,
+        "winding_up_resolutions_cvl": 2393
+      }
+    },
+    "2025-11": {
+      "total_corporate_insolvency_notices": 6862,
+      "metrics": {
+        "winding_up_petitions": 525,
+        "winding_up_petition_dismissals": 31,
+        "winding_up_orders": 93,
+        "administrator_appointments": 146,
+        "administration_orders": 1,
+        "liquidator_appointments": 2356,
+        "winding_up_resolutions_cvl": 2227
+      }
+    },
+    "2025-12": {
+      "total_corporate_insolvency_notices": 7303,
+      "metrics": {
+        "winding_up_petitions": 276,
+        "winding_up_petition_dismissals": 20,
+        "winding_up_orders": 278,
+        "administrator_appointments": 149,
+        "administration_orders": 1,
+        "liquidator_appointments": 2592,
+        "winding_up_resolutions_cvl": 2482
+      }
+    },
+    "2026-01": {
+      "total_corporate_insolvency_notices": 5232,
+      "metrics": {
+        "winding_up_petitions": 702,
+        "winding_up_petition_dismissals": 18,
+        "winding_up_orders": 308,
+        "administrator_appointments": 138,
+        "administration_orders": 0,
+        "liquidator_appointments": 1511,
+        "winding_up_resolutions_cvl": 1421
+      }
+    },
+    "2026-02": {
+      "total_corporate_insolvency_notices": 7065,
+      "metrics": {
+        "winding_up_petitions": 475,
+        "winding_up_petition_dismissals": 30,
+        "winding_up_orders": 326,
+        "administrator_appointments": 150,
+        "administration_orders": 1,
+        "liquidator_appointments": 2312,
+        "winding_up_resolutions_cvl": 2181
+      }
+    },
+    "2026-03": {
+      "total_corporate_insolvency_notices": 10555,
+      "metrics": {
+        "winding_up_petitions": 542,
+        "winding_up_petition_dismissals": 18,
+        "winding_up_orders": 315,
+        "administrator_appointments": 376,
+        "administration_orders": 0,
+        "liquidator_appointments": 3583,
+        "winding_up_resolutions_cvl": 3414
+      }
+    },
+    "2026-04": {
+      "total_corporate_insolvency_notices": 8610,
+      "metrics": {
+        "winding_up_petitions": 770,
+        "winding_up_petition_dismissals": 26,
+        "winding_up_orders": 277,
+        "administrator_appointments": 141,
+        "administration_orders": 0,
+        "liquidator_appointments": 2832,
+        "winding_up_resolutions_cvl": 2691
+      }
     }
   }
 }
