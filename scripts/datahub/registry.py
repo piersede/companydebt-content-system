@@ -100,7 +100,7 @@ def validate_release_sources(dataset_dir: str, sources: dict[str, dict]) -> list
 
 
 # Datasets with a release ledger to check. Add new dataset dirs here.
-KNOWN_DATASETS = ("insolvency-statistics", "companies-house", "the-gazette", "ons-business")
+KNOWN_DATASETS = ("insolvency-statistics", "companies-house", "the-gazette", "ons-business", "payment-practices")
 
 
 def _self_check() -> int:

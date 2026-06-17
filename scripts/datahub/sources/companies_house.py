@@ -152,12 +152,14 @@ def _write_release(month: str, retrieved_at: str) -> None:
             ],
             "releases": [],
         }
+    rel_id = f"ch_flows_{month}"
+    doc["releases"] = [r for r in doc["releases"] if r.get("release_id") != rel_id]
     for rel in doc["releases"]:
         if rel.get("status") == "current":
             rel["status"] = "superseded"
     m_from, m_to = _month_bounds(month)
     doc["releases"].append({
-        "release_id": f"ch_flows_{month}",
+        "release_id": rel_id,
         "source_id": SOURCE_ID,
         "dataset_name": f"Companies House population and flows, {month}",
         "period_start": m_from,
@@ -175,20 +177,69 @@ def _write_release(month: str, retrieved_at: str) -> None:
     path.write_text(json.dumps(doc, indent=2), encoding="utf-8")
 
 
+def fetch_month_flows(client: CompaniesHouseClient, month: str) -> tuple[int, int]:
+    """Just the monthly flows (incorporations, dissolutions) for `month`."""
+    m_from, m_to = _month_bounds(month)
+    inc = client.count(incorporated_from=m_from, incorporated_to=m_to)
+    dis = client.count(company_status="dissolved", dissolved_from=m_from, dissolved_to=m_to)
+    return inc, dis
+
+
+def _merge_flows_series(month: str, incorporations: int, dissolutions: int) -> Path:
+    """Accumulate monthly flows into a trend series (one entry per month)."""
+    path = DATA_DIR / "monthly_flows_series.json"
+    if path.exists():
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    else:
+        doc = {
+            "_about": "Monthly Companies House flows by month: incorporations and dissolutions. Dissolutions are mostly ordinary strike-offs, NOT insolvencies (caveat dissolutions_not_insolvencies).",
+            "source_id": SOURCE_ID,
+            "months": {},
+        }
+    doc["months"][month] = {"incorporations": incorporations, "dissolutions": dissolutions}
+    path.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    return path
+
+
+def _recent_months(n: int) -> list[str]:
+    """The last n complete months as YYYY-MM, oldest first."""
+    first = date.today().replace(day=1)
+    months: list[str] = []
+    for _ in range(n):
+        last = first - timedelta(days=1)
+        months.append(f"{last.year}-{last.month:02d}")
+        first = last.replace(day=1)
+    return list(reversed(months))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Fetch Companies House population and monthly flows")
     ap.add_argument("--month", default=_prev_complete_month(), help="Month as YYYY-MM (default: previous complete month)")
+    ap.add_argument("--backfill", type=int, default=0, metavar="N",
+                    help="Backfill the last N complete months of flows into the trend series.")
     args = ap.parse_args()
 
     retrieved_at = date.today().isoformat()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-
     client = CompaniesHouseClient()
-    snapshot = fetch_flow_snapshot(client, args.month, retrieved_at)
 
+    if args.backfill:
+        months = _recent_months(args.backfill)
+        print(f"Backfilling Companies House flows for {len(months)} months: {months[0]} to {months[-1]}")
+        for m in months:
+            inc, dis = fetch_month_flows(client, m)
+            _merge_flows_series(m, inc, dis)
+            _write_release(m, retrieved_at)
+            print(f"  {m}: incorporations {inc:>7,}  dissolutions {dis:>7,}")
+        print(f"Wrote {DATA_DIR / 'monthly_flows_series.json'}")
+        return 0
+
+    snapshot = fetch_flow_snapshot(client, args.month, retrieved_at)
     out = DATA_DIR / "flow_snapshot.json"
     out.write_text(json.dumps(snapshot, indent=2), encoding="utf-8")
     _write_release(args.month, retrieved_at)
+    flows = {o["metric_key"]: o["value"] for o in snapshot["observations"]}
+    _merge_flows_series(args.month, flows.get("incorporations", 0), flows.get("dissolutions", 0))
 
     print(f"Wrote {out}")
     for o in snapshot["observations"]:

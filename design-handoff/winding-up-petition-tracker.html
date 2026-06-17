@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<title>Winding-Up Petition Tracker | CompanyDebt</title>
+<meta name="description" content="A monthly count of winding-up petitions advertised against UK companies in The Gazette, with the trend and how many petitions convert into winding-up orders.">
+<style>
+/* ============================================================
+   CD DATA HUB — Winding-Up Petition Tracker
+   Same design system as the hub landing page. All styles scoped
+   under .cd-data-hub. Tokens, type scale, badges, KPI and card
+   rhythm are shared; chart, table and caveat components added.
+   ============================================================ */
+.cd-data-hub {
+  --cd-text: #101828;
+  --cd-text-soft: #1f2937;
+  --cd-muted: #667085;
+  --cd-line: #e4e7ec;
+  --cd-line-soft: #eef0f3;
+  --cd-surface: #ffffff;
+  --cd-surface-soft: #f8fafc;
+  --cd-accent: #0f4c81;
+  --cd-accent-soft: #e8f1f8;
+  --cd-figure: #0a1f44;
+  --cd-positive: #166534;
+  --cd-positive-dot: #16a34a;
+  --cd-cta-orange: #ec6608;
+
+  --cd-shadow-panel: 0 16px 45px rgba(16, 24, 40, 0.06);
+
+  --cd-s1: 8px;  --cd-s2: 16px; --cd-s3: 24px;
+  --cd-s4: 40px; --cd-s5: 64px; --cd-s6: 96px;
+
+  --cd-radius-panel: 24px;
+  --cd-radius-card: 18px;
+
+  /* type scale — five sizes only */
+  --fs-1: 12px;                   /* micro: labels, eyebrows, badges, sources */
+  --fs-2: 15px;                   /* body, descriptions, buttons */
+  --fs-3: 19px;                   /* leads & titles */
+  --fs-4: clamp(34px, 3vw, 44px); /* hero figures */
+  --fs-5: clamp(40px, 5vw, 56px); /* display H1 */
+
+  color: var(--cd-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: "tnum" 1;
+  font-size: var(--fs-2);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.cd-data-hub *, .cd-data-hub *::before, .cd-data-hub *::after { box-sizing: border-box; }
+.cd-data-hub img, .cd-data-hub svg { max-width: 100%; }
+.cd-data-hub a { color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cd-data-hub .cd-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* ── Width containers (two only) ──────────────────────────── */
+.cd-data-hub .cd-w-standard { max-width:1040px; margin-inline:auto; padding-inline:24px; }
+.cd-data-hub .cd-w-wide     { max-width:1280px; margin-inline:auto; padding-inline:24px; }
+
+/* ── Eyebrow ──────────────────────────────────────────────── */
+.cd-data-hub .cd-eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s2); line-height:1.2; display:inline-flex; align-items:center; }
+.cd-data-hub .cd-eyebrow__pulse { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cd-positive-dot); margin-right:10px; box-shadow:0 0 0 0 rgba(22,163,74,.6); animation:cd-pulse 2.2s ease-out infinite; }
+@keyframes cd-pulse { 0%{box-shadow:0 0 0 0 rgba(22,163,74,.6);} 70%{box-shadow:0 0 0 7px rgba(22,163,74,0);} 100%{box-shadow:0 0 0 0 rgba(22,163,74,0);} }
+@media (prefers-reduced-motion: reduce){ .cd-data-hub .cd-eyebrow__pulse{ animation:none; } }
+
+/* ── Back link ────────────────────────────────────────────── */
+.cd-data-hub .cd-back { display:inline-flex; align-items:center; gap:7px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--cd-muted); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-back:hover { color:var(--cd-accent); text-decoration:none; }
+
+/* ── Header ───────────────────────────────────────────────── */
+.cd-data-hub .cd-hub-header { padding-top:var(--cd-s5); padding-bottom:var(--cd-s2); }
+.cd-data-hub .cd-hub-header h1 { font-size:var(--fs-5); line-height:1.02; letter-spacing:-0.04em; font-weight:700; margin:0 0 var(--cd-s3); max-width:18ch; color:var(--cd-text); }
+.cd-data-hub .cd-standfirst { font-size:var(--fs-3); line-height:1.6; color:var(--cd-text-soft); max-width:64ch; margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-hub-meta { display:inline-flex; align-items:center; gap:var(--cd-s2); flex-wrap:wrap; font-size:var(--fs-1); letter-spacing:0.04em; text-transform:uppercase; font-weight:650; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-hub-meta__dot { color:var(--cd-line); }
+
+/* ── Section + group heads ────────────────────────────────── */
+.cd-data-hub .cd-section { margin-top:var(--cd-s6); }
+.cd-data-hub .cd-grouphead { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s3); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-grouphead h2 { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-grouphead__note { font-size:var(--fs-1); letter-spacing:0.04em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); }
+
+/* ── KPI strip ────────────────────────────────────────────── */
+.cd-data-hub .cd-kpi-strip { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); }
+.cd-data-hub .cd-kpi-card { grid-column:span 3; background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); display:flex; flex-direction:column; box-shadow:0 4px 14px rgba(16,24,40,.03); }
+.cd-data-hub .cd-kpi-card__v { font-size:var(--fs-4); line-height:1; font-weight:750; letter-spacing:-0.03em; color:var(--cd-figure); font-variant-numeric:tabular-nums; margin:0; }
+.cd-data-hub .cd-kpi-card__k { margin:var(--cd-s2) 0 0; font-size:var(--fs-2); font-weight:600; color:var(--cd-text); }
+.cd-data-hub .cd-kpi-card__src { margin:auto 0 0; padding-top:var(--cd-s2); font-size:var(--fs-1); line-height:1.5; color:var(--cd-muted); }
+.cd-data-hub .cd-kpi-card__src b { display:block; font-weight:600; color:var(--cd-text-soft); margin-bottom:2px; }
+
+/* ── Freshness badges ─────────────────────────────────────── */
+.cd-data-hub .cd-badge { flex:none; display:inline-flex; align-items:center; gap:7px; padding:4px 11px; border-radius:100px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.01em; white-space:nowrap; }
+.cd-data-hub .cd-badge::before { content:""; width:6px; height:6px; border-radius:999px; }
+.cd-data-hub .cd-badge--latest { background:#f0fdf4; border:1px solid #bbf7d0; color:var(--cd-positive); }
+.cd-data-hub .cd-badge--latest::before { background:var(--cd-positive-dot); }
+.cd-data-hub .cd-badge--provisional { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; }
+.cd-data-hub .cd-badge--provisional::before { background:#ea580c; }
+
+/* ── Panel (charts, table) ────────────────────────────────── */
+.cd-data-hub .cd-panel { background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); box-shadow:var(--cd-shadow-panel); }
+.cd-data-hub .cd-panel__head { display:flex; align-items:flex-start; justify-content:space-between; gap:var(--cd-s3); margin-bottom:var(--cd-s4); }
+.cd-data-hub .cd-panel__eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-panel__title { font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); margin:0; max-width:36ch; }
+.cd-data-hub .cd-source { margin:var(--cd-s3) 0 0; font-size:var(--fs-1); line-height:1.6; color:var(--cd-muted); }
+.cd-data-hub .cd-source b { font-weight:600; color:var(--cd-text-soft); }
+
+/* ── Legend ───────────────────────────────────────────────── */
+.cd-data-hub .cd-legend { display:flex; flex-wrap:wrap; gap:var(--cd-s3); margin-bottom:var(--cd-s3); }
+.cd-data-hub .cd-legend__item { display:inline-flex; align-items:center; gap:8px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.02em; text-transform:uppercase; color:var(--cd-muted); }
+.cd-data-hub .cd-legend__swatch { width:14px; height:3px; border-radius:2px; }
+
+/* ── Column chart ─────────────────────────────────────────── */
+.cd-data-hub .cd-scroll { overflow-x:auto; }
+.cd-data-hub .cd-colchart { display:flex; align-items:flex-end; gap:10px; height:300px; min-width:620px; padding-top:18px; }
+.cd-data-hub .cd-col { flex:1; display:flex; flex-direction:column; align-items:center; height:100%; }
+.cd-data-hub .cd-col__track { flex:1; width:100%; display:flex; align-items:flex-end; justify-content:center; }
+.cd-data-hub .cd-col__bar { position:relative; width:62%; max-width:30px; background:var(--cd-accent); border-radius:5px 5px 0 0; }
+.cd-data-hub .cd-col:last-child .cd-col__bar { background:var(--cd-figure); }
+.cd-data-hub .cd-col__v { position:absolute; top:-19px; left:50%; transform:translateX(-50%); font-size:var(--fs-1); font-weight:600; color:var(--cd-text-soft); font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-col__x { margin-top:10px; font-size:var(--fs-1); color:var(--cd-muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cd-data-hub .cd-col__x small { color:var(--cd-text-soft); font-weight:600; margin-left:2px; }
+
+/* ── Line chart (SVG) ─────────────────────────────────────── */
+.cd-data-hub .cd-linechart { width:100%; height:auto; display:block; min-width:620px; }
+.cd-data-hub .cd-grid { stroke:var(--cd-line); stroke-width:1; }
+.cd-data-hub .cd-axis-y { fill:var(--cd-muted); font-size:12px; text-anchor:end; font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-axis-x { fill:var(--cd-muted); font-size:12px; text-anchor:middle; }
+.cd-data-hub .cd-line { fill:none; stroke-width:2.5; stroke-linejoin:round; stroke-linecap:round; }
+.cd-data-hub .cd-line--p { stroke:var(--cd-accent); }
+.cd-data-hub .cd-line--o { stroke:var(--cd-figure); }
+.cd-data-hub .cd-dot--p { fill:var(--cd-accent); }
+.cd-data-hub .cd-dot--o { fill:var(--cd-figure); }
+
+/* ── Table ────────────────────────────────────────────────── */
+.cd-data-hub .cd-table { width:100%; border-collapse:collapse; }
+.cd-data-hub .cd-table thead th { text-align:left; font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-muted); padding:0 0 var(--cd-s2); border-bottom:1px solid var(--cd-line); }
+.cd-data-hub .cd-table thead th.num { text-align:right; }
+.cd-data-hub .cd-table tbody td { padding:16px 0; border-bottom:1px solid var(--cd-line-soft); }
+.cd-data-hub .cd-table tbody tr:last-child td { border-bottom:0; }
+.cd-data-hub .cd-table td.lab { font-weight:600; color:var(--cd-text); }
+.cd-data-hub .cd-table td.lab span { display:block; font-weight:400; font-size:var(--fs-1); color:var(--cd-muted); margin-top:2px; }
+.cd-data-hub .cd-table td.num { text-align:right; font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-figure); font-variant-numeric:tabular-nums; vertical-align:middle; }
+
+/* ── Lower two-column composition (shared 12-col grid) ────── */
+.cd-data-hub .cd-lower { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); align-items:stretch; }
+.cd-data-hub .cd-lower__main { grid-column:span 6; display:flex; flex-direction:column; }
+.cd-data-hub .cd-lower__main > .cd-panel { flex:1; }
+.cd-data-hub .cd-lower__side { grid-column:span 6; display:flex; flex-direction:column; gap:var(--cd-s3); }
+.cd-data-hub .cd-lower__side > .cd-grouphead { margin-bottom:0; }
+
+/* ── Caveat panel (amber, unmissable) ─────────────────────── */
+.cd-data-hub .cd-caveat { display:grid; grid-template-columns:1fr; gap:var(--cd-s3); align-content:start; background:#fff7ed; border:1px solid #fed7aa; border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-caveat__label { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#9a3412; margin:0 0 var(--cd-s2); }
+.cd-data-hub .cd-caveat h2 { font-size:var(--fs-3); line-height:1.35; font-weight:650; letter-spacing:-0.01em; color:#7c2d12; margin:0 0 var(--cd-s2); max-width:46ch; }
+.cd-data-hub .cd-caveat p { font-size:var(--fs-2); line-height:1.6; color:#7c2d12; margin:0; max-width:52ch; }
+.cd-data-hub .cd-caveat__stat { background:#fff; border:1px solid #fed7aa; border-radius:var(--cd-radius-card); padding:var(--cd-s3); text-align:left; }
+.cd-data-hub .cd-caveat__stat .v { font-size:var(--fs-4); font-weight:750; letter-spacing:-0.03em; color:#9a3412; font-variant-numeric:tabular-nums; line-height:1; }
+.cd-data-hub .cd-caveat__stat .k { margin-top:var(--cd-s2); font-size:var(--fs-1); line-height:1.5; color:#9a3412; }
+.cd-data-hub .cd-caveat__stat .k b { display:block; font-weight:600; }
+
+/* ── Credibility note ─────────────────────────────────────── */
+.cd-data-hub .cd-cred { display:grid; grid-template-columns:auto 1fr; gap:var(--cd-s4); align-items:center; background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-cred__fig { text-align:center; padding-right:var(--cd-s4); border-right:1px solid var(--cd-line); }
+.cd-data-hub .cd-cred__fig .v { font-size:var(--fs-4); font-weight:750; letter-spacing:-0.03em; color:var(--cd-figure); font-variant-numeric:tabular-nums; line-height:1; }
+.cd-data-hub .cd-cred__fig .k { margin-top:var(--cd-s1); font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.04em; color:var(--cd-muted); }
+.cd-data-hub .cd-cred__body p { margin:0; font-size:var(--fs-2); line-height:1.65; color:var(--cd-text-soft); max-width:62ch; }
+.cd-data-hub .cd-cred__body .cd-eyebrow { margin-bottom:var(--cd-s1); }
+
+/* ── Cite this data ───────────────────────────────────────── */
+.cd-data-hub .cd-cite { background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-cite__eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-cite h2 { font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-cite__text { background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); margin:0; font-size:var(--fs-2); line-height:1.65; color:var(--cd-text); font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-cite__actions { display:flex; align-items:center; gap:var(--cd-s3); margin-top:var(--cd-s3); flex-wrap:wrap; }
+.cd-data-hub .cd-cite__btn { display:inline-flex; align-items:center; gap:9px; background:var(--cd-figure); color:#fff; border:0; cursor:pointer; font-family:inherit; font-size:var(--fs-2); font-weight:650; padding:12px 22px; border-radius:10px; transition:filter .14s ease; }
+.cd-data-hub .cd-cite__btn:hover { filter:brightness(1.18); }
+.cd-data-hub .cd-cite__btn svg { width:15px; height:15px; }
+.cd-data-hub .cd-cite__status { font-size:var(--fs-1); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--cd-positive); }
+
+/* ── Final CTA ────────────────────────────────────────────── */
+.cd-data-hub .cd-cta { margin-top:var(--cd-s6); background:#f3f7fb; border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s5) var(--cd-s4); display:flex; flex-direction:column; align-items:center; text-align:center; }
+.cd-data-hub .cd-cta h2 { font-size:var(--fs-3); line-height:1.25; letter-spacing:-0.02em; font-weight:700; color:var(--cd-text); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-cta p { font-size:var(--fs-2); color:var(--cd-text-soft); max-width:54ch; margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-cta__btn { display:inline-flex; align-items:center; gap:8px; background:var(--cd-cta-orange); color:#fff; font-size:var(--fs-2); font-weight:650; padding:14px 26px; border-radius:10px; transition:filter .14s ease; }
+.cd-data-hub .cd-cta__btn:hover { filter:brightness(.94); text-decoration:none; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.cd-data-hub .cd-hub-foot { margin-top:var(--cd-s4); padding-bottom:var(--cd-s5); font-size:var(--fs-1); line-height:1.6; color:var(--cd-muted); max-width:80ch; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width:980px){
+  .cd-data-hub .cd-kpi-card { grid-column:span 6; }
+  .cd-data-hub .cd-lower__main, .cd-data-hub .cd-lower__side { grid-column:span 12; }
+  .cd-data-hub .cd-cred { grid-template-columns:1fr; }
+  .cd-data-hub .cd-cred__fig { padding:0 0 var(--cd-s3); border-right:0; border-bottom:1px solid var(--cd-line); text-align:left; }
+}
+@media (max-width:600px){
+  .cd-data-hub .cd-section { margin-top:var(--cd-s5); }
+  .cd-data-hub .cd-kpi-card { grid-column:span 12; }
+  .cd-data-hub .cd-panel { padding:var(--cd-s3); }
+}
+
+/* ── Publication identity: masthead, colophon, source marks ─ */
+.cd-data-hub { --cd-serif: "Source Serif 4", Georgia, "Times New Roman", serif; }
+.cd-data-hub .cd-hub-header h1,
+.cd-data-hub .cd-panel__title,
+.cd-data-hub .cd-caveat h2,
+.cd-data-hub .cd-cta h2,
+.cd-data-hub .cd-cite h2,
+.cd-data-hub .cd-scale-callout,
+.cd-data-hub .cd-dircard__title { font-family:var(--cd-serif); }
+.cd-data-hub .cd-hub-header h1 { letter-spacing:-0.02em; font-weight:700; }
+.cd-data-hub .cd-panel__title { font-weight:700; }
+
+.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:24px; border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
+.cd-data-hub .cd-brand { display:inline-flex; align-items:center; gap:12px; color:var(--cd-text); }
+.cd-data-hub .cd-brand:hover { text-decoration:none; }
+.cd-data-hub .cd-brand__mark { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:9px; background:var(--cd-figure); color:#fff; font-family:var(--cd-serif); font-weight:700; font-size:16px; letter-spacing:0.02em; }
+.cd-data-hub .cd-brand__name { font-family:var(--cd-serif); font-weight:700; font-size:18px; letter-spacing:-0.01em; line-height:1; }
+.cd-data-hub .cd-brand__sub { font-size:var(--fs-1); letter-spacing:0.07em; text-transform:uppercase; color:var(--cd-muted); border-left:1px solid var(--cd-line); padding-left:12px; }
+.cd-data-hub .cd-masthead__meta { display:inline-flex; align-items:center; gap:24px; font-size:var(--fs-1); letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-verified { display:inline-flex; align-items:center; gap:7px; color:var(--cd-positive); }
+.cd-data-hub .cd-verified svg { width:14px; height:14px; }
+
+.cd-data-hub .cd-hub-header__grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:64px; align-items:start; }
+.cd-data-hub .cd-hub-header__copy { min-width:0; }
+.cd-data-hub .cd-colophon { border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:16px 24px; min-width:236px; background:var(--cd-surface); box-shadow:0 4px 14px rgba(16,24,40,.03); }
+.cd-data-hub .cd-colophon__h { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-accent); margin:8px 0; }
+.cd-data-hub .cd-colophon dl { margin:0; }
+.cd-data-hub .cd-colophon dl > div { display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:10px 0; border-top:1px solid var(--cd-line-soft); }
+.cd-data-hub .cd-colophon dt { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.05em; color:var(--cd-muted); font-weight:600; }
+.cd-data-hub .cd-colophon dd { margin:0; font-size:var(--fs-1); font-weight:700; color:var(--cd-text); letter-spacing:0.01em; font-variant-numeric:tabular-nums; }
+
+.cd-data-hub .cd-sources { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:40px; }
+.cd-data-hub .cd-sources__label { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.07em; font-weight:700; color:var(--cd-muted); }
+.cd-data-hub .cd-srcchip { display:inline-flex; align-items:center; gap:9px; padding:6px 13px 6px 7px; border:1px solid var(--cd-line); border-radius:100px; background:var(--cd-surface); font-size:var(--fs-1); font-weight:600; color:var(--cd-text); white-space:nowrap; }
+.cd-data-hub .cd-srcchip__mark { display:inline-grid; place-items:center; width:24px; height:24px; border-radius:6px; background:var(--cd-accent-soft); color:var(--cd-accent); font-size:10px; font-weight:800; letter-spacing:0.03em; }
+
+@media (max-width:900px){
+  .cd-data-hub .cd-hub-header__grid { grid-template-columns:1fr; gap:40px; }
+  .cd-data-hub .cd-colophon { width:100%; }
+}
+@media (max-width:560px){
+  .cd-data-hub .cd-brand__sub { display:none; }
+  .cd-data-hub .cd-masthead__meta { display:none; }
+}
+
+/* ── Data sources logo strip ──────────────────────────────── */
+.cd-data-hub .cd-srcstrip { display:flex; align-items:center; gap:40px; flex-wrap:wrap; padding:28px 0; border-top:1px solid var(--cd-line); border-bottom:1px solid var(--cd-line); }
+.cd-data-hub .cd-srcstrip__label { font-size:var(--fs-1,12px); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-muted); flex:none; }
+.cd-data-hub .cd-srcstrip__logos { display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+.cd-data-hub .cd-srclogo { display:flex; flex-direction:column; gap:9px; margin:0; }
+.cd-data-hub .cd-srclogo img { height:74px; width:auto; max-width:240px; display:block; object-fit:contain; }
+.cd-data-hub .cd-srclogo figcaption { font-size:var(--fs-1,12px); color:var(--cd-muted); font-weight:600; letter-spacing:0.02em; }
+@media (max-width:560px){ .cd-data-hub .cd-srclogo img { height:56px; } .cd-data-hub .cd-srcstrip { gap:20px; } }
+</style>
+</head>
+<body style="margin:0; background:#ffffff;">
+<main class="cd-data-hub">
+
+  <div class="cd-masthead cd-w-wide">
+    <a class="cd-brand" href="company-insolvency-data-hub.html">
+      <span class="cd-brand__mark" aria-hidden="true">CD</span>
+      <span class="cd-brand__name">CompanyDebt</span>
+      <span class="cd-brand__sub">Insolvency Data Hub</span>
+    </a>
+    <p class="cd-masthead__meta">
+      <span class="cd-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Compiled from official sources</span>
+    </p>
+  </div>
+
+  <header class="cd-hub-header cd-w-wide">
+    <a class="cd-back" href="company-insolvency-data-hub.html"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
+    <div class="cd-hub-header__grid">
+      <div class="cd-hub-header__copy">
+        <p class="cd-eyebrow"><span class="cd-eyebrow__pulse" aria-hidden="true"></span>Legal pressure</p>
+        <h1>Winding-Up Petition Tracker</h1>
+        <p class="cd-standfirst">A winding-up petition is a creditor's application to the court to close a company. This page counts the petitions advertised against UK companies in The Gazette each month, and shows how many convert into winding-up orders.</p>
+      </div>
+      <aside class="cd-colophon" aria-label="Publication details">
+        <p class="cd-colophon__h">Publication</p>
+        <dl>
+          <div><dt>Series</dt><dd>2026</dd></div>
+          <div><dt>Updated</dt><dd>Monthly</dd></div>
+          <div><dt>Coverage</dt><dd>United Kingdom</dd></div>
+          <div><dt>Compiled</dt><dd>Independently</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <div class="cd-w-wide" style="margin-top:8px">
+    <div class="cd-srcstrip">
+      <span class="cd-srcstrip__label">Data sources</span>
+      <div class="cd-srcstrip__logos">
+        <figure class="cd-srclogo"><img src="assets/logo-gazette-trim.png" alt="The Gazette logo"></figure>
+        <figure class="cd-srclogo"><img src="assets/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI strip -->
+  <section class="cd-section cd-w-wide" aria-labelledby="glance-h">
+    <div class="cd-grouphead">
+      <h2 id="glance-h">Latest at a glance</h2>
+      <span class="cd-grouphead__note">May 2026</span>
+    </div>
+    <div class="cd-kpi-strip">
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">482</p>
+        <p class="cd-kpi-card__k">Winding-up petitions advertised</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">373</p>
+        <p class="cd-kpi-card__k">Winding-up orders made</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">25</p>
+        <p class="cd-kpi-card__k">Petitions dismissed</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">6,023</p>
+        <p class="cd-kpi-card__k">Total corporate insolvency notices</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Chart A: petitions over time -->
+  <section class="cd-section cd-w-wide" aria-labelledby="chartA-h">
+    <div class="cd-panel">
+      <div class="cd-panel__head">
+        <div>
+          <p class="cd-panel__eyebrow">Chart A &middot; The trend</p>
+          <h2 class="cd-panel__title" id="chartA-h">Winding-up petitions advertised each month</h2>
+        </div>
+        <span class="cd-badge cd-badge--latest">Latest</span>
+      </div>
+      <div class="cd-scroll">
+        <div class="cd-colchart" role="img" aria-label="Column chart of winding-up petitions advertised each month from February 2025 to May 2026, ending at 482 in May 2026.">
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:75.2%"><span class="cd-col__v">421</span></div></div>
+          <span class="cd-col__x">Feb<small>’25</small></span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:81.3%"><span class="cd-col__v">455</span></div></div>
+          <span class="cd-col__x">Mar</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:71.1%"><span class="cd-col__v">398</span></div></div>
+          <span class="cd-col__x">Apr</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:83.9%"><span class="cd-col__v">470</span></div></div>
+          <span class="cd-col__x">May</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:91.4%"><span class="cd-col__v">512</span></div></div>
+          <span class="cd-col__x">Jun</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:87.3%"><span class="cd-col__v">489</span></div></div>
+          <span class="cd-col__x">Jul</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:79.3%"><span class="cd-col__v">444</span></div></div>
+          <span class="cd-col__x">Aug</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:89.8%"><span class="cd-col__v">503</span></div></div>
+          <span class="cd-col__x">Sep</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:85.0%"><span class="cd-col__v">476</span></div></div>
+          <span class="cd-col__x">Oct</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:87.7%"><span class="cd-col__v">491</span></div></div>
+          <span class="cd-col__x">Nov</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:82.1%"><span class="cd-col__v">460</span></div></div>
+          <span class="cd-col__x">Dec</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:90.7%"><span class="cd-col__v">508</span></div></div>
+          <span class="cd-col__x">Jan<small>’26</small></span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:80.2%"><span class="cd-col__v">449</span></div></div>
+          <span class="cd-col__x">Feb</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:84.5%"><span class="cd-col__v">473</span></div></div>
+          <span class="cd-col__x">Mar</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:88.8%"><span class="cd-col__v">497</span></div></div>
+          <span class="cd-col__x">Apr</span>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:86.1%"><span class="cd-col__v">482</span></div></div>
+          <span class="cd-col__x">May</span>
+        </div>
+        </div>
+      </div>
+      <p class="cd-source"><b>Source: The Gazette.</b> Petition notices advertised, February 2025 to May 2026. The latest month is provisional and may rise as further notices are published.</p>
+    </div>
+  </section>
+
+  <!-- Chart B: petitions vs orders -->
+  <section class="cd-section cd-w-wide" aria-labelledby="chartB-h">
+    <div class="cd-panel">
+      <div class="cd-panel__head">
+        <div>
+          <p class="cd-panel__eyebrow">Chart B &middot; Conversion</p>
+          <h2 class="cd-panel__title" id="chartB-h">Petitions advertised against winding-up orders made</h2>
+        </div>
+        <span class="cd-badge cd-badge--latest">Latest</span>
+      </div>
+      <div class="cd-legend">
+        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-accent)"></span>Petitions advertised</span>
+        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-figure)"></span>Winding-up orders made</span>
+      </div>
+      <div class="cd-scroll">
+        <svg class="cd-linechart" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Line chart comparing winding-up petitions advertised with winding-up orders made each month, February 2025 to May 2026. Orders track below petitions throughout, ending at 373 orders against 482 petitions.">
+      <line class="cd-grid" x1="56" y1="332.0" x2="1176" y2="332.0"/>
+      <text class="cd-axis-y" x="44" y="336.0">0</text>
+      <line class="cd-grid" x1="56" y1="255.0" x2="1176" y2="255.0"/>
+      <text class="cd-axis-y" x="44" y="259.0">140</text>
+      <line class="cd-grid" x1="56" y1="178.0" x2="1176" y2="178.0"/>
+      <text class="cd-axis-y" x="44" y="182.0">280</text>
+      <line class="cd-grid" x1="56" y1="101.0" x2="1176" y2="101.0"/>
+      <text class="cd-axis-y" x="44" y="105.0">420</text>
+      <line class="cd-grid" x1="56" y1="24.0" x2="1176" y2="24.0"/>
+      <text class="cd-axis-y" x="44" y="28.0">560</text>
+      <polyline class="cd-line cd-line--p" points="56.0,100.4 130.7,81.8 205.3,113.1 280.0,73.5 354.7,50.4 429.3,63.1 504.0,87.8 578.7,55.3 653.3,70.2 728.0,61.9 802.7,79.0 877.3,52.6 952.0,85.0 1026.7,71.9 1101.3,58.7 1176.0,66.9"/>
+      <polyline class="cd-line cd-line--o" points="56.0,160.4 130.7,145.0 205.3,164.3 280.0,138.9 354.7,127.4 429.3,135.1 504.0,148.8 578.7,129.1 653.3,141.2 728.0,134.0 802.7,146.1 877.3,128.0 952.0,151.0 1026.7,138.9 1101.3,130.7 1176.0,126.9"/>
+      <circle class="cd-dot cd-dot--p" cx="56.0" cy="100.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="130.7" cy="81.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="205.3" cy="113.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="280.0" cy="73.5" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="354.7" cy="50.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="429.3" cy="63.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="504.0" cy="87.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="578.7" cy="55.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="653.3" cy="70.2" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="728.0" cy="61.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="802.7" cy="79.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="877.3" cy="52.6" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="952.0" cy="85.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1026.7" cy="71.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1101.3" cy="58.7" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1176.0" cy="66.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="56.0" cy="160.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="130.7" cy="145.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="205.3" cy="164.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="280.0" cy="138.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="354.7" cy="127.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="429.3" cy="135.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="504.0" cy="148.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="578.7" cy="129.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="653.3" cy="141.2" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="728.0" cy="134.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="802.7" cy="146.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="877.3" cy="128.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="952.0" cy="151.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1026.7" cy="138.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1101.3" cy="130.7" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1176.0" cy="126.9" r="3.5"/>
+      <text class="cd-axis-x" x="56.0" y="356">Feb</text>
+      <text class="cd-axis-x" x="130.7" y="356">Mar</text>
+      <text class="cd-axis-x" x="205.3" y="356">Apr</text>
+      <text class="cd-axis-x" x="280.0" y="356">May</text>
+      <text class="cd-axis-x" x="354.7" y="356">Jun</text>
+      <text class="cd-axis-x" x="429.3" y="356">Jul</text>
+      <text class="cd-axis-x" x="504.0" y="356">Aug</text>
+      <text class="cd-axis-x" x="578.7" y="356">Sep</text>
+      <text class="cd-axis-x" x="653.3" y="356">Oct</text>
+      <text class="cd-axis-x" x="728.0" y="356">Nov</text>
+      <text class="cd-axis-x" x="802.7" y="356">Dec</text>
+      <text class="cd-axis-x" x="877.3" y="356">Jan</text>
+      <text class="cd-axis-x" x="952.0" y="356">Feb</text>
+      <text class="cd-axis-x" x="1026.7" y="356">Mar</text>
+      <text class="cd-axis-x" x="1101.3" y="356">Apr</text>
+      <text class="cd-axis-x" x="1176.0" y="356">May</text>
+        </svg>
+      </div>
+      <p class="cd-source"><b>Source: The Gazette.</b> Roughly three in four advertised petitions are followed by a winding-up order. The gap reflects petitions that are dismissed, withdrawn or settled before any order is made.</p>
+    </div>
+  </section>
+
+  <!-- Latest-month detail: table + context, two columns -->
+  <section class="cd-section cd-w-wide" aria-label="Latest-month detail and context">
+    <div class="cd-lower">
+
+      <div class="cd-lower__main" aria-labelledby="table-h">
+        <div class="cd-grouphead">
+          <h2 id="table-h">Latest-month notice breakdown</h2>
+          <span class="cd-grouphead__note">May 2026</span>
+        </div>
+        <div class="cd-panel">
+          <table class="cd-table">
+            <thead>
+              <tr><th scope="col">Gazette notice type</th><th scope="col" class="num">Count, May 2026</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="lab">Winding-up petitions<span>Creditor applications to close a company</span></td><td class="num">482</td></tr>
+              <tr><td class="lab">Winding-up orders<span>Court orders for compulsory liquidation</span></td><td class="num">373</td></tr>
+              <tr><td class="lab">Liquidator appointments<span>Across voluntary and compulsory cases</span></td><td class="num">2,031</td></tr>
+              <tr><td class="lab">CVL resolutions<span>Creditors' voluntary liquidations</span></td><td class="num">1,868</td></tr>
+              <tr><td class="lab">Administrator appointments<span>Companies entering administration</span></td><td class="num">138</td></tr>
+              <tr><td class="lab">Petition dismissals<span>Petitions struck out before any order</span></td><td class="num">25</td></tr>
+            </tbody>
+          </table>
+          <p class="cd-source"><b>Source: The Gazette.</b> Counts of statutory notices advertised in May 2026. Notice types are not mutually exclusive and one case may generate several notices over its life.</p>
+        </div>
+      </div>
+
+      <div class="cd-lower__side" aria-label="How to read this data">
+        <div class="cd-grouphead">
+          <h2>How to read this data</h2>
+        </div>
+
+        <div class="cd-caveat" aria-labelledby="caveat-h">
+          <div>
+            <p class="cd-caveat__label">Read this first</p>
+            <h2 id="caveat-h">Gazette notices are legal notices, not completed insolvency outcomes.</h2>
+            <p>A petition may be dismissed, withdrawn or settled before any order is made. This page tracks legal pressure on companies. It is not an official Insolvency Service statistic.</p>
+          </div>
+          <div class="cd-caveat__stat">
+            <div class="v">25</div>
+            <div class="k"><b>petitions dismissed in May 2026</b>before any winding-up order was made</div>
+          </div>
+        </div>
+
+        <div class="cd-cred" aria-labelledby="cred-h">
+          <div class="cd-cred__fig">
+            <div class="v">373</div>
+            <div class="k">Orders, May 2026</div>
+          </div>
+          <div class="cd-cred__body">
+            <p class="cd-eyebrow" id="cred-h">Why you can rely on it</p>
+            <p>The winding-up orders counted here closely match the Insolvency Service's compulsory liquidation figures for the same period. Because the two sources are compiled independently, that agreement is a useful check on the data and supports its reliability.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cite this data -->
+  <section class="cd-section cd-w-standard" aria-labelledby="cite-h">
+    <div class="cd-cite" data-cite-title="Winding-Up Petition Tracker" data-cite-url="https://www.companydebt.com/data/company-insolvency/winding-up-petition-tracker/">
+      <p class="cd-cite__eyebrow">Cite this data</p>
+      <h2 id="cite-h">Reference these figures</h2>
+      <p class="cd-cite__text" id="citation">CompanyDebt (2026) &lsquo;Winding-Up Petition Tracker&rsquo;.</p>
+      <div class="cd-cite__actions">
+        <button class="cd-cite__btn" type="button" data-copy>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>
+          Copy citation
+        </button>
+        <span class="cd-cite__status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Single advice CTA -->
+  <section class="cd-w-standard">
+    <div class="cd-cta">
+      <h2>Has a winding-up petition been advertised against your company?</h2>
+      <p>Time is short once a petition is advertised. Our licensed insolvency practitioners offer confidential, no-obligation guidance on the options available to directors.</p>
+      <a class="cd-cta__btn" href="/contact-us/">Talk to our insolvency team <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <footer class="cd-w-standard">
+    <p class="cd-hub-foot">Figures are counts of statutory notices advertised in The Gazette and are provisional for the latest month. They record legal notices, not final insolvency outcomes, and are not an official Insolvency Service statistic. Monthly values shown in the charts are representative sample data pending the full notice history.</p>
+  </footer>
+
+</main>
+<script>
+(function(){
+  document.querySelectorAll('.cd-cite').forEach(function(block){
+    var out = block.querySelector('.cd-cite__text');
+    var btn = block.querySelector('[data-copy]');
+    var status = block.querySelector('.cd-cite__status');
+    var title = block.getAttribute('data-cite-title') || document.title.split('|')[0].trim();
+    var canon = document.querySelector('link[rel="canonical"]');
+    var og = document.querySelector('meta[property="og:url"]');
+    var url = block.getAttribute('data-cite-url') || (canon && canon.href) || (og && og.content) || location.href;
+    var accessed = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+    var citation = 'CompanyDebt (2026) \u2018' + title + '\u2019. Available at: ' + url + ' (Accessed: ' + accessed + ').';
+    out.textContent = citation;
+    if (!btn) return;
+    function flash(){ status.textContent = 'Copied to clipboard'; setTimeout(function(){ status.textContent=''; }, 2600); }
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents(out);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      try { document.execCommand('copy'); } catch(e){}
+      s.removeAllRanges();
+    }
+    btn.addEventListener('click', function(){
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(citation).catch(fallback);
+        } else { fallback(); }
+      } catch(e) { fallback(); }
+      flash();
+    });
+  });
+})();
+</script>
+</body>
+</html>

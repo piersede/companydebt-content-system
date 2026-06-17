@@ -10,6 +10,9 @@
     "sector_volumes_not_rates": "These are volumes, not sector failure rates. Larger sectors hold more companies and so tend to record more insolvencies.",
     "gazette_not_outcome": "Gazette notices are legal notices, not completed insolvency procedures. A petition may be dismissed, withdrawn or settled before any order is made.",
     "dissolutions_not_insolvencies": "Dissolutions and strike-offs are ordinary company closures, not insolvencies, and must not be added to insolvency totals.",
-    "ons_denominator": "ONS business counts are a useful denominator but are not a perfect census of every small or unregistered business."
+    "ons_denominator": "ONS business counts are a useful denominator but are not a perfect census of every small or unregistered business.",
+    "payment_practices_enrichment": "Payment practices data is late-payment context only. It is not an insolvency statistic and must never be blended into, or presented as, insolvency figures.",
+    "payment_self_reported": "Payment performance figures are self-reported by large businesses under a statutory duty and are not independently audited, so individual reports can be inconsistent or contain data-entry errors.",
+    "payment_large_companies_only": "Only large UK companies and LLPs that meet the reporting thresholds must report, so these figures describe big-business payment behaviour, not the whole economy."
   }
 }

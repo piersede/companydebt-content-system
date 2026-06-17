@@ -37,6 +37,25 @@ FEED = "https://www.thegazette.co.uk/insolvency/notice/data.json"
 HEADERS = {"User-Agent": "CompanyDebt-DataHub/0.1 (insolvency statistics; +https://companydebt.com)"}
 SOURCE_ID = "the_gazette_notices"
 
+SESSION = requests.Session()
+SESSION.headers.update(HEADERS)
+
+
+def _get_json(params: dict, *, retries: int = 5) -> dict:
+    """GET the feed with backoff. The Gazette throttles sustained access, so a
+    plain request can fail mid-backfill; retry on errors and non-200s."""
+    last = None
+    for attempt in range(retries):
+        try:
+            r = SESSION.get(FEED, params=params, timeout=45)
+            if r.status_code == 200:
+                return r.json()
+            last = f"HTTP {r.status_code}"
+        except requests.RequestException as exc:
+            last = str(exc)
+        time.sleep(min(2 ** attempt, 30))
+    raise RuntimeError(f"Gazette feed failed after {retries} attempts: {last}")
+
 # Notice code -> named metric. Multiple codes map to one metric because the
 # three UK gazettes use different codes for the same procedure.
 CODE_TO_METRIC = {
@@ -98,9 +117,7 @@ def fetch_month(month: str, *, page_size: int = 100, pause: float = 0.3, max_pag
             "categorycode": "24", "results-page-size": page_size,
             "results-page": page, "sort-by": "latest-date",
         }
-        resp = requests.get(FEED, params=params, headers=HEADERS, timeout=40)
-        resp.raise_for_status()
-        j = resp.json()
+        j = _get_json(params)
         if total_reported is None:
             total_reported = int(j.get("f:total", 0))
         entries = j.get("entry") or []
@@ -199,25 +216,68 @@ def _write_release(month: str, result: dict, retrieved_at: str) -> None:
     path.write_text(json.dumps(doc, indent=2), encoding="utf-8")
 
 
+def _recent_months(n: int) -> list[str]:
+    """The last n complete months as YYYY-MM, oldest first."""
+    first = date.today().replace(day=1)
+    months: list[str] = []
+    for _ in range(n):
+        last = first - timedelta(days=1)
+        months.append(f"{last.year}-{last.month:02d}")
+        first = last.replace(day=1)
+    return list(reversed(months))
+
+
+def _run_one(month: str, retrieved_at: str, *, write_petitions: bool) -> dict:
+    print(f"Fetching The Gazette corporate insolvency notices for {month} ...")
+    result = fetch_month(month)
+    if write_petitions:
+        (DATA_DIR / "petitions_latest.json").write_text(
+            json.dumps({"month": month, "retrieved_at": retrieved_at,
+                        "count": len(result["petitions"]), "petitions": result["petitions"]}, indent=2),
+            encoding="utf-8",
+        )
+    _merge_series(month, result)
+    _write_release(month, result, retrieved_at)
+    m = result["metrics"]
+    print(f"  {month}: {result['total_corporate_insolvency_notices']:,} notices | "
+          f"petitions {m['winding_up_petitions']:,} | orders {m['winding_up_orders']:,}")
+    return result
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Tally The Gazette corporate insolvency notices for a month")
     ap.add_argument("--month", default=_prev_complete_month(), help="Month YYYY-MM (default: previous complete month)")
+    ap.add_argument("--backfill", type=int, default=0, metavar="N",
+                    help="Backfill the last N complete months into the monthly series (newest month also writes petitions_latest.json).")
+    ap.add_argument("--force", action="store_true",
+                    help="With --backfill, refetch months already present in the series instead of skipping them.")
     args = ap.parse_args()
 
     retrieved_at = date.today().isoformat()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    print(f"Fetching The Gazette corporate insolvency notices for {args.month} ...")
-    result = fetch_month(args.month)
+    if args.backfill:
+        months = _recent_months(args.backfill)
+        series_path = DATA_DIR / "monthly_notice_series.json"
+        existing = set()
+        if series_path.exists() and not args.force:
+            existing = set(json.loads(series_path.read_text(encoding="utf-8")).get("months", {}))
+        todo = [m for m in months if m not in existing]
+        print(f"Backfilling The Gazette: {len(todo)} of {len(months)} months to fetch "
+              f"({len(months) - len(todo)} already present), {months[0]} to {months[-1]}")
+        failed = []
+        for mth in todo:
+            try:
+                _run_one(mth, retrieved_at, write_petitions=(mth == months[-1]))
+            except Exception as exc:  # one bad month must not abort the rest
+                print(f"  {mth}: FAILED - {exc}")
+                failed.append(mth)
+        if failed:
+            print(f"Failed months (re-run the same command to retry just these): {failed}")
+        print(f"Wrote {series_path}")
+        return 0 if not failed else 1
 
-    (DATA_DIR / "petitions_latest.json").write_text(
-        json.dumps({"month": args.month, "retrieved_at": retrieved_at,
-                    "count": len(result["petitions"]), "petitions": result["petitions"]}, indent=2),
-        encoding="utf-8",
-    )
-    _merge_series(args.month, result)
-    _write_release(args.month, result, retrieved_at)
-
+    result = _run_one(args.month, retrieved_at, write_petitions=True)
     print(f"  Total corporate insolvency notices: {result['total_corporate_insolvency_notices']:,}")
     for key, label in METRIC_LABELS.items():
         print(f"  {label:42} {result['metrics'][key]:>7,}")

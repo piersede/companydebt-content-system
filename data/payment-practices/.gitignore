@@ -1,0 +1,4 @@
+# Raw bulk export (~100 MB, all reports since 2017). Re-downloadable via the
+# fetcher; keep it out of git. The compact summary + release ledger are the
+# committable products.
+*-prompt-payments.csv

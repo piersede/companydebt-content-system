@@ -1,0 +1,102 @@
+{
+  "_about": "Monthly Companies House flows by month: incorporations and dissolutions. Dissolutions are mostly ordinary strike-offs, NOT insolvencies (caveat dissolutions_not_insolvencies).",
+  "source_id": "companies_house_register",
+  "months": {
+    "2024-06": {
+      "incorporations": 61311,
+      "dissolutions": 48688
+    },
+    "2024-07": {
+      "incorporations": 64519,
+      "dissolutions": 67008
+    },
+    "2024-08": {
+      "incorporations": 63639,
+      "dissolutions": 49622
+    },
+    "2024-09": {
+      "incorporations": 65568,
+      "dissolutions": 54208
+    },
+    "2024-10": {
+      "incorporations": 71145,
+      "dissolutions": 71643
+    },
+    "2024-11": {
+      "incorporations": 61373,
+      "dissolutions": 50848
+    },
+    "2024-12": {
+      "incorporations": 50962,
+      "dissolutions": 80423
+    },
+    "2025-01": {
+      "incorporations": 69342,
+      "dissolutions": 61893
+    },
+    "2025-02": {
+      "incorporations": 67406,
+      "dissolutions": 66797
+    },
+    "2025-03": {
+      "incorporations": 76528,
+      "dissolutions": 61397
+    },
+    "2025-04": {
+      "incorporations": 72317,
+      "dissolutions": 81231
+    },
+    "2025-05": {
+      "incorporations": 69592,
+      "dissolutions": 55691
+    },
+    "2025-06": {
+      "incorporations": 69879,
+      "dissolutions": 48503
+    },
+    "2025-07": {
+      "incorporations": 73913,
+      "dissolutions": 90386
+    },
+    "2025-08": {
+      "incorporations": 67971,
+      "dissolutions": 61088
+    },
+    "2025-09": {
+      "incorporations": 76202,
+      "dissolutions": 83031
+    },
+    "2025-10": {
+      "incorporations": 75935,
+      "dissolutions": 52363
+    },
+    "2025-11": {
+      "incorporations": 59760,
+      "dissolutions": 56152
+    },
+    "2025-12": {
+      "incorporations": 51039,
+      "dissolutions": 68538
+    },
+    "2026-01": {
+      "incorporations": 71705,
+      "dissolutions": 59233
+    },
+    "2026-02": {
+      "incorporations": 60465,
+      "dissolutions": 62882
+    },
+    "2026-03": {
+      "incorporations": 74117,
+      "dissolutions": 69192
+    },
+    "2026-04": {
+      "incorporations": 67601,
+      "dissolutions": 55202
+    },
+    "2026-05": {
+      "incorporations": 62523,
+      "dissolutions": 59295
+    }
+  }
+}

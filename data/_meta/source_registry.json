@@ -74,8 +74,8 @@
       "update_frequency": "biannual_per_company",
       "licence": "Open Government Licence v3.0",
       "authority_level": "enrichment",
-      "status": "planned",
-      "notes": "Late-payment enrichment only. Provides context on payment stress in a sector. Must not be treated as, or blended into, formal insolvency data."
+      "status": "implemented",
+      "notes": "Late-payment ENRICHMENT only - context on payment stress, never an insolvency figure and must not be blended into insolvency data. Fetched from the public bulk export at https://check-payment-practices.service.gov.uk/export/csv/ (no API key); a single CSV of every statutory report since 2017. Fetcher scripts/datahub/sources/payment_practices.py stores the raw CSV and a compact headline summary (average days to pay, percentage paid late, percentage paid within 30/60 days) over a trailing window on report period-end date. Self-reported and unaudited (values are sanity-filtered); large companies and LLPs only; the export carries no sector field. See caveats payment_practices_enrichment, payment_self_reported, payment_large_companies_only."
     }
   ]
 }

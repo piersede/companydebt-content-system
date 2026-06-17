@@ -1,0 +1,53 @@
+{
+  "source_id": "payment_practices",
+  "is_enrichment_only": true,
+  "all_time_report_count": 110537,
+  "distinct_companies_all_time": 10126,
+  "basis": "latest report per company, restricted to the trailing window (no double-counting)",
+  "latest_period": {
+    "start": "2024-12-07",
+    "end": "2026-05-31"
+  },
+  "reporting_companies_in_window": 6882,
+  "window_days": 540,
+  "headline": {
+    "average_days_to_pay": {
+      "label": "Average days to pay an invoice",
+      "mean": 34.5,
+      "median": 31.0,
+      "n": 6350
+    },
+    "pct_invoices_paid_late": {
+      "label": "% of invoices not paid within agreed terms",
+      "mean": 22.0,
+      "median": 15.0,
+      "n": 6373
+    },
+    "pct_paid_within_30_days": {
+      "label": "% of invoices paid within 30 days",
+      "mean": 59.8,
+      "median": 64.0,
+      "n": 6353
+    },
+    "pct_paid_31_to_60_days": {
+      "label": "% of invoices paid in 31-60 days",
+      "mean": 28.3,
+      "median": 25.0,
+      "n": 6353
+    },
+    "pct_paid_later_than_60_days": {
+      "label": "% of invoices paid later than 60 days",
+      "mean": 11.9,
+      "median": 5.0,
+      "n": 6353
+    }
+  },
+  "sector_breakdown": null,
+  "sector_note": "The export carries no SIC/sector field; a sector split would need a Companies House join and is out of scope here.",
+  "note": "ENRICHMENT/CONTEXT ONLY. Self-reported large-company payment behaviour. Not an insolvency statistic and must never be blended into insolvency figures.",
+  "caveats": [
+    "payment_practices_enrichment",
+    "payment_self_reported",
+    "payment_large_companies_only"
+  ]
+}

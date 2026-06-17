@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "3333", "--directory", "C:\\Users\\piers\\Downloads\\companydebt-content-system\\preview"],
       "port": 3333
+    },
+    {
+      "name": "datahub-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8099", "--directory", "C:\\Users\\piers\\Projects\\Company Debt Content System\\preview"],
+      "port": 8099
     }
   ]
 }
