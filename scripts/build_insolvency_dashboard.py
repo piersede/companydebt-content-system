@@ -17,6 +17,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "insolvency-statistics"
 DRAFT_PATH = ROOT / "drafts" / "77399_uk-insolvency-statistics.html"
 
+# Logos for the masthead/source strip live in the active theme so they survive
+# content rewrites (KSES leaves <img> alone; the files are deployed via SFTP).
+THEME_ASSETS = "/wp-content/themes/company-debt-webpigment/assets/data-hub"
+
 WP_TEMPLATE = "templates/take-the-test-template.php"
 WP_POST_ID = 77399
 WP_TITLE = "UK Company Insolvency Statistics 2026"
@@ -97,7 +101,13 @@ def hero_block(meta: dict, latest_total: int) -> str:
         </div>
       </aside>
     </section>
+    """)
 
+
+def secnav_block() -> str:
+    """In-page section navigation. Sits below the source strip, above the
+    first section, matching the design order: masthead, hero, sources, nav."""
+    return dedent("""\
     <nav class="cd-secnav cd-w-wide" aria-label="Page sections">
       <a href="#figures">Latest figures</a>
       <a href="#monthly">Monthly trend</a>
@@ -110,6 +120,40 @@ def hero_block(meta: dict, latest_total: int) -> str:
       <a href="#source">Source</a>
       <a href="#faq">FAQ</a>
     </nav>
+    """)
+
+
+def masthead_block() -> str:
+    """Shared data-hub identity bar: CompanyDebt brand lockup + verified mark.
+    The brand links back to the hub landing page. Mirrors the masthead on the
+    new data pages so the whole hub reads as one product."""
+    return dedent("""\
+    <div class="cd-masthead cd-w-wide">
+      <a class="cd-brand" href="/data/company-insolvency/">
+        <span class="cd-brand__mark" aria-hidden="true">CD</span>
+        <span class="cd-brand__name">CompanyDebt</span>
+        <span class="cd-brand__sub">Insolvency Data Hub</span>
+      </a>
+      <p class="cd-masthead__meta">
+        <span class="cd-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Compiled from official sources</span>
+      </p>
+    </div>
+    """)
+
+
+def srcstrip_block() -> str:
+    """Data-sources logo strip. Logos are served from the theme (THEME_ASSETS)
+    so a content rewrite can never strip or relink them."""
+    return dedent(f"""\
+    <div class="cd-w-wide" style="margin-top:8px;margin-bottom:8px">
+      <div class="cd-srcstrip">
+        <span class="cd-srcstrip__label">Data sources</span>
+        <div class="cd-srcstrip__logos">
+          <figure class="cd-srclogo"><img src="{THEME_ASSETS}/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
+          <figure class="cd-srclogo"><img src="{THEME_ASSETS}/logo-companies-house-trim.png" alt="Companies House logo"></figure>
+        </div>
+      </div>
+    </div>
     """)
 
 
@@ -500,6 +544,7 @@ DASHBOARD_CSS = """
   --cd-cta-band: #f3f7fb;
   --cd-accent: #0f4c81;
   --cd-accent-soft: #e8f1f8;
+  --cd-figure: #0a1f44;
   --cd-positive: #166534;
   --cd-positive-dot: #16a34a;
   --cd-cta-orange: #ec6608;
@@ -522,6 +567,36 @@ DASHBOARD_CSS = """
 
 .cd-data-hub *, .cd-data-hub *::before, .cd-data-hub *::after { box-sizing: border-box; }
 .cd-data-hub img, .cd-data-hub svg { max-width: 100%; }
+
+/* ── Shared data-hub identity ─────────────────────────────────
+   Serif display face on headings, the brand masthead and the data-sources
+   logo strip. These match the new data pages so the hub reads as one product.
+   The serif uses !important so it wins over the WordPress Customizer "Additional
+   CSS" type scale (which sets sizes, not family) regardless of source order. */
+.cd-data-hub { --cd-serif: "Source Serif 4", Georgia, "Times New Roman", serif; }
+.cd-data-hub h1,
+.cd-data-hub .cd-hero h1,
+.cd-data-hub .cd-section-head h2,
+.cd-data-hub .cd-cta h2 { font-family: var(--cd-serif) !important; }
+
+.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:22px; padding-bottom:22px; margin-bottom:8px; border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
+.cd-data-hub .cd-brand { display:inline-flex; align-items:center; gap:12px; color:var(--cd-text); text-decoration:none; }
+.cd-data-hub .cd-brand:hover { text-decoration:none; }
+.cd-data-hub .cd-brand__mark { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:9px; background:var(--cd-figure); color:#fff; font-family:var(--cd-serif); font-weight:700; font-size:16px; letter-spacing:0.02em; }
+.cd-data-hub .cd-brand__name { font-family:var(--cd-serif); font-weight:700; font-size:18px; letter-spacing:-0.01em; line-height:1; color:var(--cd-text); }
+.cd-data-hub .cd-brand__sub { font-size:12px; letter-spacing:0.07em; text-transform:uppercase; color:var(--cd-muted); border-left:1px solid var(--cd-line); padding-left:12px; }
+.cd-data-hub .cd-masthead__meta { display:inline-flex; align-items:center; gap:24px; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-verified { display:inline-flex; align-items:center; gap:7px; color:var(--cd-positive); }
+.cd-data-hub .cd-verified svg { width:14px; height:14px; }
+@media (max-width:560px){ .cd-data-hub .cd-brand__sub, .cd-data-hub .cd-masthead__meta { display:none; } }
+
+.cd-data-hub .cd-srcstrip { display:flex; align-items:center; gap:40px; flex-wrap:wrap; padding:28px 0; border-top:1px solid var(--cd-line); border-bottom:1px solid var(--cd-line); }
+.cd-data-hub .cd-srcstrip__label { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-muted); flex:none; }
+.cd-data-hub .cd-srcstrip__logos { display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+.cd-data-hub .cd-srclogo { display:flex; flex-direction:column; gap:9px; margin:0; }
+.cd-data-hub .cd-srclogo img { height:74px; width:auto; max-width:240px; display:block; object-fit:contain; }
+.cd-data-hub .cd-srclogo figcaption { font-size:12px; color:var(--cd-muted); font-weight:600; letter-spacing:0.02em; }
+@media (max-width:560px){ .cd-data-hub .cd-srclogo img { height:56px; } .cd-data-hub .cd-srcstrip { gap:20px; } }
 
 /* ── Width containers ─────────────────────────────────────── */
 .cd-data-hub .cd-w-narrow,
@@ -1476,7 +1551,10 @@ def assemble_draft() -> str:
     body = "\n".join([
         f'<style>{DASHBOARD_CSS}</style>',
         '<div class="cd-data-hub">',
+        masthead_block(),
         hero_block(meta, latest_total),
+        srcstrip_block(),
+        secnav_block(),
         latest_figures_block(meta),
         monthly_chart_block(charts),
         longrun_block(charts),

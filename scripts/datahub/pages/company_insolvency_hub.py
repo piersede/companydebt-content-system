@@ -102,10 +102,13 @@ def inject_data(html: str, f: dict) -> str:
 def to_wordpress(html: str) -> str:
     """Rewrite asset/link paths to site paths and wrap as a wp:html draft."""
     html = html.replace('src="assets/', f'src="{THEME_ASSETS}/')
+    # URL structure: the hub lives at /data/company-insolvency/ and the two new
+    # data pages are nested beneath it (matches the design's cite URLs). The
+    # flagship stats page keeps its established top-level URL.
     for rel, site in {
         'href="uk-insolvency-statistics.html"': 'href="/uk-insolvency-statistics/"',
-        'href="winding-up-petition-tracker.html"': 'href="/winding-up-petition-tracker/"',
-        'href="company-dissolutions-vs-insolvencies.html"': 'href="/company-dissolutions-vs-insolvencies/"',
+        'href="winding-up-petition-tracker.html"': 'href="/data/company-insolvency/winding-up-petition-tracker/"',
+        'href="company-dissolutions-vs-insolvencies.html"': 'href="/data/company-insolvency/company-dissolutions-vs-insolvencies/"',
         'href="company-insolvency-data-hub.html"': 'href="/data/company-insolvency/"',
     }.items():
         html = html.replace(rel, site)

@@ -1,10 +1,13 @@
 <?php
 /**
  * Plugin Name: CD Insolvency Data Hub
- * Description: Injects dashboard JS (chart view tabs + copy-citation button) and JSON-LD
- *              Dataset schema for the /uk-insolvency-statistics/ data dashboard page.
- *              These are stripped from page content by KSES, so they live here.
- * Version:     1.0.0
+ * Description: Shared front-end for every insolvency data-hub page. Enqueues the
+ *              Source Serif 4 display face, injects the dashboard JS (chart view
+ *              tabs + copy-citation, both flagship and new-page styles + scroll
+ *              spy) and emits per-page JSON-LD (WebPage / Dataset / ItemList /
+ *              BreadcrumbList). All of this is stripped from page content by
+ *              KSES, so it lives here.
+ * Version:     2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,22 +15,53 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Return true on the UK insolvency statistics data hub page.
+ * Slugs of the data-hub pages this plugin drives. The hub itself is nested at
+ * /data/company-insolvency/ but WordPress stores only the leaf slug in
+ * post_name ('company-insolvency'); the two data pages are nested below it.
  */
-function cd_insolvency_hub_is_target_page() {
-    if ( ! is_page() ) {
-        return false;
-    }
-    $slug = get_post_field( 'post_name', get_queried_object_id() );
-    return $slug === 'uk-insolvency-statistics';
+function cd_datahub_known_slugs() {
+    return array(
+        'uk-insolvency-statistics',
+        'company-insolvency',
+        'winding-up-petition-tracker',
+        'company-dissolutions-vs-insolvencies',
+    );
 }
 
 /**
- * Dashboard JS: chart view tabs + copy-citation button.
- * Vanilla JS, no dependencies. Loaded only on the target page.
+ * Return the current data-hub slug, or '' if this is not a data-hub page.
+ */
+function cd_datahub_current_slug() {
+    if ( ! is_page() ) {
+        return '';
+    }
+    $slug = get_post_field( 'post_name', get_queried_object_id() );
+    return in_array( $slug, cd_datahub_known_slugs(), true ) ? $slug : '';
+}
+
+/**
+ * Source Serif 4 — the display face for headings and the brand lockup. The page
+ * CSS falls back to Georgia, so this only needs to load on the hub pages.
+ */
+add_action( 'wp_enqueue_scripts', function() {
+    if ( '' === cd_datahub_current_slug() ) {
+        return;
+    }
+    wp_enqueue_style(
+        'cd-source-serif-4',
+        'https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap',
+        array(),
+        null
+    );
+}, 5 );
+
+/**
+ * Dashboard JS: chart view tabs, both copy-citation styles and the nav
+ * scroll-spy. Every behaviour is feature-guarded, so the single block is safe on
+ * any data-hub page — it only wires up the elements that page actually has.
  */
 add_action( 'wp_footer', function() {
-    if ( ! cd_insolvency_hub_is_target_page() ) {
+    if ( '' === cd_datahub_current_slug() ) {
         return;
     }
     ?>
@@ -36,7 +70,7 @@ add_action( 'wp_footer', function() {
     var hub = document.querySelector('.cd-data-hub');
     if (!hub) { return; }
 
-    // Chart view tabs
+    // Chart view tabs (flagship dashboard only).
     var tabs  = hub.querySelectorAll('[data-cd-view]');
     var panes = hub.querySelectorAll('[data-cd-view-pane]');
     tabs.forEach(function(tab){
@@ -55,9 +89,8 @@ add_action( 'wp_footer', function() {
         });
     });
 
-    // Copy citation button
-    var btns = hub.querySelectorAll('[data-cd-copy]');
-    btns.forEach(function(btn){
+    // Copy citation — flagship style ([data-cd-copy] -> target element text).
+    hub.querySelectorAll('[data-cd-copy]').forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = document.querySelector(btn.getAttribute('data-cd-copy'));
             if (!target) { return; }
@@ -73,6 +106,37 @@ add_action( 'wp_footer', function() {
                     }, 1800);
                 });
             }
+        });
+    });
+
+    // Copy citation — new data-page style (.cd-cite block builds its own string).
+    hub.querySelectorAll('.cd-cite').forEach(function(block){
+        var out = block.querySelector('.cd-cite__text');
+        var btn = block.querySelector('[data-copy]');
+        var status = block.querySelector('.cd-cite__status');
+        if (!out) { return; }
+        var title = block.getAttribute('data-cite-title') || document.title.split('|')[0].trim();
+        var canon = document.querySelector('link[rel="canonical"]');
+        var og = document.querySelector('meta[property="og:url"]');
+        var url = block.getAttribute('data-cite-url') || (canon && canon.href) || (og && og.content) || location.href;
+        var accessed = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+        var citation = 'CompanyDebt (2026) ‘' + title + '’. Available at: ' + url + ' (Accessed: ' + accessed + ').';
+        out.textContent = citation;
+        if (!btn) { return; }
+        function flash(){ if (status) { status.textContent = 'Copied to clipboard'; setTimeout(function(){ status.textContent=''; }, 2600); } }
+        function fallback(){
+            var r = document.createRange(); r.selectNodeContents(out);
+            var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+            try { document.execCommand('copy'); } catch(e){}
+            s.removeAllRanges();
+        }
+        btn.addEventListener('click', function(){
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(citation).catch(fallback);
+                } else { fallback(); }
+            } catch(e) { fallback(); }
+            flash();
         });
     });
 
@@ -107,103 +171,123 @@ add_action( 'wp_footer', function() {
     <?php
 }, 50 );
 
+/* ------------------------------------------------------------------ *
+ *  JSON-LD per page. Emitted in <head> so structured-data parsers
+ *  find it. Headline figures are hard-coded (the data dir is not on
+ *  the server); refresh them when the page copy is refreshed.
+ * ------------------------------------------------------------------ */
+
 /**
- * JSON-LD: WebPage + Dataset + BreadcrumbList + Organization.
- * Emitted in <head> so Google's structured-data parsers find it.
+ * Shared Organization node, referenced by @id from each page graph.
  */
-add_action( 'wp_head', function() {
-    if ( ! cd_insolvency_hub_is_target_page() ) {
-        return;
-    }
-
-    $page_url  = home_url( '/uk-insolvency-statistics/' );
-    $modified  = get_the_modified_date( 'Y-m-d', get_queried_object_id() );
-    $published = get_the_date( 'Y-m-d', get_queried_object_id() );
-    $logo_url  = get_template_directory_uri() . '/assets/images/cd-logo-topnav-v3.png';
-
-    $faq_items = array(
-        array(
-            'q' => 'How many UK company insolvencies were there in April 2026?',
-            'a' => 'There were 2,085 registered company insolvencies in England and Wales in April 2026, on a seasonally adjusted basis. That was 2% higher than March 2026 and 3% higher than April 2025. Scotland recorded 107 insolvencies and Northern Ireland 40 in the same month.',
-        ),
-        array(
-            'q' => 'What is the current UK company insolvency rate?',
-            'a' => 'The 12-month rolling company insolvency rate for England and Wales was 51.8 per 10,000 active companies in the year to April 2026 — equal to one in 193 companies. The rate is slightly lower than the 52.5 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession.',
-        ),
-        array(
-            'q' => 'Which procedure accounts for the most UK company insolvencies?',
-            'a' => "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,510 CVLs in April 2026 — 72% of all company insolvencies for the month. Compulsory liquidations (371) and administrations (183) followed, with very small numbers of CVAs (20) and receiverships (1).",
-        ),
-        array(
-            'q' => 'Which UK sectors have the most company insolvencies?',
-            'a' => 'Across the 12 months to March 2026, construction (3,827, 16%), wholesale and retail (3,642, 16%), and accommodation and food services (3,295, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies.',
-        ),
-        array(
-            'q' => 'When is the next UK insolvency statistics release?',
-            'a' => 'The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 19 June 2026. This page is updated each month from the official release.',
-        ),
-        array(
-            'q' => 'Where does this UK insolvency data come from?',
-            'a' => 'Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them.',
+function cd_datahub_org_node() {
+    return array(
+        '@type' => 'Organization',
+        '@id'   => home_url( '/' ) . '#organization',
+        'name'  => 'Company Debt',
+        'url'   => home_url( '/' ),
+        'logo'  => array(
+            '@type' => 'ImageObject',
+            'url'   => get_template_directory_uri() . '/assets/images/cd-logo-topnav-v3.png',
         ),
     );
+}
 
-    $faq_main_entities = array();
-    foreach ( $faq_items as $item ) {
-        $faq_main_entities[] = array(
-            '@type'          => 'Question',
-            'name'           => $item['q'],
-            'acceptedAnswer' => array(
-                '@type' => 'Answer',
-                'text'  => $item['a'],
-            ),
+/**
+ * Breadcrumb node. $trail is an array of [name, url] pairs, in order.
+ */
+function cd_datahub_breadcrumb( $trail ) {
+    $items = array();
+    foreach ( $trail as $i => $crumb ) {
+        $items[] = array(
+            '@type'    => 'ListItem',
+            'position' => $i + 1,
+            'name'     => $crumb[0],
+            'item'     => $crumb[1],
         );
     }
+    return array(
+        '@type'           => 'BreadcrumbList',
+        'itemListElement' => $items,
+    );
+}
 
-    $schema = array(
-        '@context' => 'https://schema.org',
-        '@graph'   => array(
+/**
+ * Build the @graph for a given data-hub slug, or null to skip.
+ */
+function cd_datahub_schema_graph( $slug, $page_id ) {
+    $home      = home_url( '/' );
+    $org_ref   = array( '@id' => $home . '#organization' );
+    $published = get_the_date( 'Y-m-d', $page_id );
+    $modified  = get_the_modified_date( 'Y-m-d', $page_id );
+    $hub_url   = home_url( '/data/company-insolvency/' );
+
+    if ( 'uk-insolvency-statistics' === $slug ) {
+        $page_url  = home_url( '/uk-insolvency-statistics/' );
+        $faq_items = array(
             array(
-                '@type'        => 'WebPage',
-                '@id'          => $page_url . '#webpage',
-                'name'         => 'UK Company Insolvency Statistics: April 2026 Update',
-                'description'  => 'Latest UK company insolvency statistics — April 2026 figures from the Insolvency Service (published 19 May 2026). Monthly headline counts, the 12-month rolling rate, sector breakdown and UK-nations comparison.',
-                'dateModified' => $modified,
-                'datePublished'=> $published,
-                'inLanguage'   => 'en-GB',
-                'publisher'    => array( '@id' => home_url( '/' ) . '#organization' ),
-                'about'        => array(
+                'q' => 'How many UK company insolvencies were there in April 2026?',
+                'a' => 'There were 2,085 registered company insolvencies in England and Wales in April 2026, on a seasonally adjusted basis. That was 2% higher than March 2026 and 3% higher than April 2025. Scotland recorded 107 insolvencies and Northern Ireland 40 in the same month.',
+            ),
+            array(
+                'q' => 'What is the current UK company insolvency rate?',
+                'a' => 'The 12-month rolling company insolvency rate for England and Wales was 51.8 per 10,000 active companies in the year to April 2026 — equal to one in 193 companies. The rate is slightly lower than the 52.5 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession.',
+            ),
+            array(
+                'q' => 'Which procedure accounts for the most UK company insolvencies?',
+                'a' => "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,510 CVLs in April 2026 — 72% of all company insolvencies for the month. Compulsory liquidations (371) and administrations (183) followed, with very small numbers of CVAs (20) and receiverships (1).",
+            ),
+            array(
+                'q' => 'Which UK sectors have the most company insolvencies?',
+                'a' => 'Across the 12 months to March 2026, construction (3,827, 16%), wholesale and retail (3,642, 16%), and accommodation and food services (3,295, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies.',
+            ),
+            array(
+                'q' => 'When is the next UK insolvency statistics release?',
+                'a' => 'The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 19 June 2026. This page is updated each month from the official release.',
+            ),
+            array(
+                'q' => 'Where does this UK insolvency data come from?',
+                'a' => 'Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them.',
+            ),
+        );
+        $faq_main_entities = array();
+        foreach ( $faq_items as $item ) {
+            $faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
+        return array(
+            array(
+                '@type'         => 'WebPage',
+                '@id'           => $page_url . '#webpage',
+                'name'          => 'UK Company Insolvency Statistics: April 2026 Update',
+                'description'   => 'Latest UK company insolvency statistics — April 2026 figures from the Insolvency Service (published 19 May 2026). Monthly headline counts, the 12-month rolling rate, sector breakdown and UK-nations comparison.',
+                'dateModified'  => $modified,
+                'datePublished' => $published,
+                'inLanguage'    => 'en-GB',
+                'publisher'     => $org_ref,
+                'about'         => array(
                     array( '@type' => 'Thing', 'name' => 'UK company insolvency' ),
                     array( '@type' => 'Thing', 'name' => 'Creditors voluntary liquidation' ),
                     array( '@type' => 'Thing', 'name' => 'Compulsory liquidation' ),
                     array( '@type' => 'Thing', 'name' => 'Company administration' ),
                 ),
             ),
-            array(
-                '@type' => 'Organization',
-                '@id'   => home_url( '/' ) . '#organization',
-                'name'  => 'Company Debt',
-                'url'   => home_url( '/' ),
-                'logo'  => array(
-                    '@type' => 'ImageObject',
-                    'url'   => $logo_url,
-                ),
-            ),
-            array(
-                '@type'           => 'BreadcrumbList',
-                'itemListElement' => array(
-                    array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',                                                  'item' => home_url( '/' ) ),
-                    array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Insolvency',                                            'item' => home_url( '/insolvency/' ) ),
-                    array( '@type' => 'ListItem', 'position' => 3, 'name' => 'UK Company Insolvency Statistics: April 2026 Update',   'item' => $page_url ),
-                ),
-            ),
+            cd_datahub_org_node(),
+            cd_datahub_breadcrumb( array(
+                array( 'Home', $home ),
+                array( 'Insolvency', home_url( '/insolvency/' ) ),
+                array( 'UK Company Insolvency Statistics: April 2026 Update', $page_url ),
+            ) ),
             array(
                 '@type'                => 'Dataset',
                 'name'                 => 'UK Company Insolvency Statistics 2026',
                 'description'          => 'Monthly company insolvency statistics for the United Kingdom by procedure, sector and jurisdiction. April 2026 release published 19 May 2026 by the Insolvency Service. Includes headline counts (2,085 England and Wales) and the 12-month rolling rate (51.8 per 10,000).',
                 'url'                  => $page_url,
-                'creator'              => array( '@id' => home_url( '/' ) . '#organization' ),
-                'publisher'            => array( '@id' => home_url( '/' ) . '#organization' ),
+                'creator'              => $org_ref,
+                'publisher'            => $org_ref,
                 'spatialCoverage'      => array( '@type' => 'Place', 'name' => 'United Kingdom' ),
                 'temporalCoverage'     => '2000-01/2026-04',
                 'datePublished'        => $published,
@@ -217,9 +301,140 @@ add_action( 'wp_head', function() {
                 '@id'        => $page_url . '#faq',
                 'mainEntity' => $faq_main_entities,
             ),
-        ),
-    );
+        );
+    }
 
+    if ( 'company-insolvency' === $slug ) {
+        $page_url = $hub_url;
+        $cards = array(
+            array( 'UK Company Insolvency Statistics', home_url( '/uk-insolvency-statistics/' ) ),
+            array( 'Winding-Up Petition Tracker', home_url( '/data/company-insolvency/winding-up-petition-tracker/' ) ),
+            array( 'Company Dissolutions vs Insolvencies', home_url( '/data/company-insolvency/company-dissolutions-vs-insolvencies/' ) ),
+        );
+        $list_items = array();
+        foreach ( $cards as $i => $card ) {
+            $list_items[] = array(
+                '@type'    => 'ListItem',
+                'position' => $i + 1,
+                'name'     => $card[0],
+                'url'      => $card[1],
+            );
+        }
+        return array(
+            array(
+                '@type'         => 'WebPage',
+                '@id'           => $page_url . '#webpage',
+                'name'          => 'UK Company Insolvency Data',
+                'description'   => 'Official, citable UK company insolvency data for journalists, accountants, lenders and company directors. Latest headline figures and a directory of every CompanyDebt data page.',
+                'dateModified'  => $modified,
+                'datePublished' => $published,
+                'inLanguage'    => 'en-GB',
+                'publisher'     => $org_ref,
+            ),
+            cd_datahub_org_node(),
+            cd_datahub_breadcrumb( array(
+                array( 'Home', $home ),
+                array( 'UK Company Insolvency Data', $page_url ),
+            ) ),
+            array(
+                '@type'           => 'ItemList',
+                'name'            => 'CompanyDebt insolvency data pages',
+                'itemListElement' => $list_items,
+            ),
+        );
+    }
+
+    if ( 'winding-up-petition-tracker' === $slug ) {
+        $page_url = home_url( '/data/company-insolvency/winding-up-petition-tracker/' );
+        return array(
+            array(
+                '@type'         => 'WebPage',
+                '@id'           => $page_url . '#webpage',
+                'name'          => 'Winding-Up Petition Tracker',
+                'description'   => 'A monthly tracker of winding-up petitions advertised in The Gazette, with petition dismissals and winding-up orders for context. The early-warning view of corporate legal pressure in the UK.',
+                'dateModified'  => $modified,
+                'datePublished' => $published,
+                'inLanguage'    => 'en-GB',
+                'publisher'     => $org_ref,
+            ),
+            cd_datahub_org_node(),
+            cd_datahub_breadcrumb( array(
+                array( 'Home', $home ),
+                array( 'UK Company Insolvency Data', $hub_url ),
+                array( 'Winding-Up Petition Tracker', $page_url ),
+            ) ),
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Winding-Up Petition Notices',
+                'description'      => 'Monthly counts of winding-up petitions advertised in The Gazette, with petition dismissals and winding-up orders. Latest month (May 2026): 482 petitions advertised, 373 winding-up orders made, 25 petition dismissals. These are statutory notices, not official Insolvency Service statistics or final outcomes.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2025-02/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.thegazette.co.uk/',
+                'measurementTechnique' => 'Counts of statutory insolvency notices advertised in The Gazette.',
+                'keywords'        => 'winding-up petition, winding-up order, The Gazette, compulsory liquidation, corporate distress, UK',
+            ),
+        );
+    }
+
+    if ( 'company-dissolutions-vs-insolvencies' === $slug ) {
+        $page_url = home_url( '/data/company-insolvency/company-dissolutions-vs-insolvencies/' );
+        return array(
+            array(
+                '@type'         => 'WebPage',
+                '@id'           => $page_url . '#webpage',
+                'name'          => 'Company Dissolutions vs Insolvencies',
+                'description'   => 'How ordinary company closures compare with formal insolvency, shown with UK data. Most companies that close are dissolved solvent; they are not insolvent.',
+                'dateModified'  => $modified,
+                'datePublished' => $published,
+                'inLanguage'    => 'en-GB',
+                'publisher'     => $org_ref,
+            ),
+            cd_datahub_org_node(),
+            cd_datahub_breadcrumb( array(
+                array( 'Home', $home ),
+                array( 'UK Company Insolvency Data', $hub_url ),
+                array( 'Company Dissolutions vs Insolvencies', $page_url ),
+            ) ),
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Company Dissolutions, Incorporations and Insolvencies',
+                'description'      => 'Monthly UK company dissolutions and incorporations from Companies House, set against formal company insolvencies from the Insolvency Service. Latest month: 59,295 dissolutions and 62,523 incorporations (Companies House, May 2026) against 2,085 formal insolvencies (Insolvency Service, April 2026), or about 28 dissolutions for every insolvency.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'United Kingdom' ),
+                'temporalCoverage' => '2025-02/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/organisations/companies-house',
+                'measurementTechnique' => 'Companies House register flows and Insolvency Service administrative records.',
+                'keywords'        => 'company dissolution, company strike-off, incorporations, company insolvency, Companies House, UK',
+            ),
+        );
+    }
+
+    return null;
+}
+
+add_action( 'wp_head', function() {
+    $slug = cd_datahub_current_slug();
+    if ( '' === $slug ) {
+        return;
+    }
+    $page_id = get_queried_object_id();
+    $graph   = cd_datahub_schema_graph( $slug, $page_id );
+    if ( null === $graph ) {
+        return;
+    }
+    $schema = array(
+        '@context' => 'https://schema.org',
+        '@graph'   => $graph,
+    );
     echo '<script type="application/ld+json" id="cd-insolvency-hub-schema">' .
         wp_json_encode( $schema, JSON_UNESCAPED_SLASHES ) .
         '</script>' . "\n";
