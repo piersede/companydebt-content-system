@@ -144,6 +144,13 @@ def inject(html: str, c: dict) -> str:
 
 
 def to_wordpress(html: str) -> str:
+    # Demote the hero <header> and closing <footer> to <div>: the theme paints the
+    # bare <header>/<footer> elements navy (background:var(--c-blue-dark),
+    # position:sticky), which would put dark text on a dark band. As <div>s the
+    # design's own scoped styles apply.
+    html = html.replace('<header class="cd-hub-header cd-w-wide">',
+                        '<div class="cd-hub-header cd-w-wide">').replace('</header>', '</div>', 1)
+    html = re.sub(r'<footer\b', '<div', html, count=1).replace('</footer>', '</div>', 1)
     html = html.replace('src="assets/', f'src="{THEME_ASSETS}/')
     html = html.replace('href="company-insolvency-data-hub.html"', f'href="{HUB_URL}"')
     style = re.search(r"<style>.*?</style>", html, re.S)

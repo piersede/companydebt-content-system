@@ -99,8 +99,22 @@ def inject_data(html: str, f: dict) -> str:
     return html
 
 
+def _demote_landmarks(html: str) -> str:
+    """The theme paints the bare <header> and <footer> elements navy
+    (background:var(--c-blue-dark), position:sticky). The design uses
+    <header class="cd-hub-header"> for the hero and a <footer> for the closing
+    source note, so both would render dark text on a navy band. Demote them to
+    <div> so the theme's tag rules never apply and the design's own scoped
+    styles take over."""
+    html = html.replace('<header class="cd-hub-header cd-w-wide">',
+                        '<div class="cd-hub-header cd-w-wide">').replace('</header>', '</div>', 1)
+    html = re.sub(r'<footer\b', '<div', html, count=1).replace('</footer>', '</div>', 1)
+    return html
+
+
 def to_wordpress(html: str) -> str:
     """Rewrite asset/link paths to site paths and wrap as a wp:html draft."""
+    html = _demote_landmarks(html)
     html = html.replace('src="assets/', f'src="{THEME_ASSETS}/')
     # URL structure: the hub lives at /data/company-insolvency/ and the two new
     # data pages are nested beneath it (matches the design's cite URLs). The
