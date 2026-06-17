@@ -2,3 +2,7 @@
 # fetcher; keep it out of git. The compact summary + release ledger are the
 # committable products.
 *-prompt-payments.csv
+
+# SIC-code lookup cache, rebuilt and extended by the fetcher on each run.
+# Regenerable and churns every run, so keep it out of git.
+sic_cache.json
