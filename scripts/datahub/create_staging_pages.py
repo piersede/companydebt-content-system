@@ -2,10 +2,15 @@
 
 Creates the page hierarchy the nested URLs need and captures the WP page ids:
 
-    /data/                                  (slug: data,                parent: -)
-      /data/company-insolvency/             (slug: company-insolvency,  parent: data)        [Data Hub Template]
-        .../winding-up-petition-tracker/    (slug: winding-up-...,      parent: company-...) [Data Hub Template]
-        .../company-dissolutions-vs-insolvencies/                                            [Data Hub Template]
+    /data/                                  (slug: data,  parent: -)   [Data Hub Template]  <- the hub
+      /data/winding-up-petition-tracker/    (slug: winding-up-...,       parent: data)      [Data Hub Template]
+      /data/dissolutions-vs-insolvencies/   (slug: dissolutions-vs-...,  parent: data)      [Data Hub Template]
+      /data/payment-practices-late-payment/ (slug: payment-practices-..., parent: data)     [Data Hub Template]
+
+    NOTE: this reconciles a FRESH or already-flat tree. It cannot re-parent
+    children that still hang off the retired /data/company-insolvency/ page
+    (find_by_slug matches on the new parent) — that one-off move was done by
+    scripts/datahub/flatten_data_hub.py.
 
 Sets the page template, parent and SEO title/meta-description at creation time
 (the generic publisher does not touch those). Content is left minimal here; the
@@ -43,22 +48,12 @@ TEMPLATE = "templates/data-hub-template.php"
 # template (""=default), seo_title, meta_description, content.
 PAGES = [
     {
+        # The hub itself. /data/ carries the full data-hub dashboard; its
+        # content is pushed by build_page.py passthrough (drafts/79845_data.html),
+        # not set here.
         "slug": "data",
-        "title": "Data",
-        "parent": None,
-        "template": "",
-        "seo_title": "CompanyDebt Data",
-        "meta": "CompanyDebt's UK company data products: official, citable statistics on insolvency, dissolutions and corporate distress.",
-        "content": (
-            "<!-- wp:paragraph --><p>CompanyDebt publishes citable UK company data drawn from official "
-            "sources. Start with the "
-            "<a href=\"/data/company-insolvency/\">UK Company Insolvency Data hub</a>.</p><!-- /wp:paragraph -->"
-        ),
-    },
-    {
-        "slug": "company-insolvency",
         "title": "UK Company Insolvency Data and Statistics",
-        "parent": "data",
+        "parent": None,
         "template": TEMPLATE,
         "seo_title": "UK Company Insolvency Data and Statistics",
         "meta": "Official, citable UK company insolvency data for journalists, accountants, lenders and company directors. Latest headline figures and a directory of every data page.",
@@ -67,7 +62,7 @@ PAGES = [
     {
         "slug": "winding-up-petition-tracker",
         "title": "Winding-Up Petition Tracker (UK)",
-        "parent": "company-insolvency",
+        "parent": "data",
         "template": TEMPLATE,
         "seo_title": "Winding-Up Petition Tracker (UK)",
         "meta": "A monthly count of winding-up petitions advertised against UK companies in The Gazette, with the trend and how many petitions convert into winding-up orders.",
@@ -76,7 +71,7 @@ PAGES = [
     {
         "slug": "dissolutions-vs-insolvencies",
         "title": "Company Dissolutions vs Insolvencies (UK Data)",
-        "parent": "company-insolvency",
+        "parent": "data",
         "template": TEMPLATE,
         "seo_title": "Company Dissolutions vs Insolvencies (UK Data)",
         "meta": "Most UK company closures are ordinary, solvent strike-offs, not insolvencies. The latest dissolution, incorporation and formal insolvency figures, set on a shared scale.",
@@ -85,7 +80,7 @@ PAGES = [
     {
         "slug": "payment-practices-late-payment",
         "title": "Payment Practices & Late Payment (UK Data)",
-        "parent": "company-insolvency",
+        "parent": "data",
         "template": TEMPLATE,
         "seo_title": "UK Payment Practices & Late Payment Data",
         "meta": "How slowly large UK companies pay their suppliers, the share of invoices paid late, and which sectors are slowest. Enrichment context from statutory Payment Practices Reporting, not insolvency data.",

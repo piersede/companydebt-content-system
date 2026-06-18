@@ -97,7 +97,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
 
     # data_reference — official statistics and data series pages
     "uk-insolvency-statistics": "data_reference",
-    "company-insolvency": "data_reference",
+    "data": "data_reference",
     "winding-up-petition-tracker": "data_reference",
     "dissolutions-vs-insolvencies": "data_reference",
     "payment-practices-late-payment": "data_reference",

@@ -42,7 +42,9 @@ PAGE_REGISTRY = {
     'members-voluntary-liquidation': 'cc_builder.data.pages.members_voluntary_liquidation',
     'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
     'cant-pay-vat': 'cc_builder.data.pages.cant_pay_vat',
-    'company-insolvency': 'cc_builder.data.pages.company_insolvency',
+    # The insolvency data hub: lives at /data/ (page 79845, slug 'data').
+    # Module file keeps its company_insolvency.py name; the page slug is 'data'.
+    'data': 'cc_builder.data.pages.company_insolvency',
     'winding-up-petition-tracker': 'cc_builder.data.pages.winding_up_petition_tracker',
     'dissolutions-vs-insolvencies': 'cc_builder.data.pages.company_dissolutions_vs_insolvencies',
     'payment-practices-late-payment': 'cc_builder.data.pages.payment_practices_late_payment',
