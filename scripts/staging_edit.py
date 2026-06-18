@@ -204,6 +204,52 @@ def cmd_add_class(s, url, contains, cls, apply):
         print('  (already has class — no change)')
 
 
+def cmd_insert_after(s, url, anchor, block, apply):
+    """Insert a block of raw markup immediately after a unique anchor string.
+    Idempotent (skips if the block is already present) and refuses to run
+    unless the anchor matches exactly once, so it can never land twice."""
+    res = resolve_post(s, url)
+    if not res:
+        print(f'NOT_FOUND on staging: {url}')
+        return
+    endpoint, pid, slug, link, raw = res
+    if block.strip() and block.strip() in raw:
+        print(f'[{slug}] ({endpoint}/{pid}) block already present — no change')
+        return
+    n = raw.count(anchor)
+    if n != 1:
+        print(f'[{slug}] ({endpoint}/{pid}) anchor matches={n} (need exactly 1) — aborting')
+        return
+    idx = raw.find(anchor) + len(anchor)
+    new_raw = raw[:idx] + block + raw[idx:]
+    print(f'[{slug}] ({endpoint}/{pid}) anchor matched=1  inserting +{len(block)} chars')
+    if apply:
+        print(f'  PATCH {patch(s, endpoint, pid, new_raw)}')
+    else:
+        print('  (dry run — pass --apply to write)')
+
+
+def cmd_replace_text(s, url, old, new, apply):
+    """Replace a literal substring in the raw markup. Idempotent: if `old`
+    is gone but `new` is already present, reports done and makes no change."""
+    res = resolve_post(s, url)
+    if not res:
+        print(f'NOT_FOUND on staging: {url}')
+        return
+    endpoint, pid, slug, link, raw = res
+    n = raw.count(old)
+    if n == 0:
+        state = 'already applied' if (new and new in raw) else 'not found'
+        print(f'[{slug}] ({endpoint}/{pid}) old not present — {state}')
+        return
+    new_raw = raw.replace(old, new)
+    print(f'[{slug}] ({endpoint}/{pid}) replacing {n}x  "{old}" -> "{new}"')
+    if apply:
+        print(f'  PATCH {patch(s, endpoint, pid, new_raw)}')
+    else:
+        print('  (dry run — pass --apply to write)')
+
+
 def cmd_show(s, url):
     res = resolve_post(s, url)
     if not res:
@@ -228,6 +274,13 @@ def main():
     p = sub.add_parser('add-class'); p.add_argument('--url', required=True)
     p.add_argument('--contains', required=True); p.add_argument('--class', dest='cls', required=True)
     p.add_argument('--apply', action='store_true')
+    p = sub.add_parser('insert-after'); p.add_argument('--url', required=True)
+    p.add_argument('--anchor'); p.add_argument('--anchor-file', dest='anchor_file')
+    p.add_argument('--block'); p.add_argument('--block-file', dest='block_file')
+    p.add_argument('--apply', action='store_true')
+    p = sub.add_parser('replace-text'); p.add_argument('--url', required=True)
+    p.add_argument('--old', required=True); p.add_argument('--new', required=True)
+    p.add_argument('--apply', action='store_true')
     a = ap.parse_args()
 
     s = session()
@@ -239,6 +292,12 @@ def main():
         cmd_set_alt(s, a.url, a.img, a.alt, a.apply)
     elif a.cmd == 'add-class':
         cmd_add_class(s, a.url, a.contains, a.cls, a.apply)
+    elif a.cmd == 'insert-after':
+        anchor = open(a.anchor_file, encoding='utf-8').read() if a.anchor_file else (a.anchor or '')
+        block  = open(a.block_file,  encoding='utf-8').read() if a.block_file  else (a.block  or '')
+        cmd_insert_after(s, a.url, anchor, block, a.apply)
+    elif a.cmd == 'replace-text':
+        cmd_replace_text(s, a.url, a.old, a.new, a.apply)
 
 
 if __name__ == '__main__':
