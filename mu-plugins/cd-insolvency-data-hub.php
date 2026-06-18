@@ -24,7 +24,8 @@ function cd_datahub_known_slugs() {
         'uk-insolvency-statistics',
         'company-insolvency',
         'winding-up-petition-tracker',
-        'company-dissolutions-vs-insolvencies',
+        'dissolutions-vs-insolvencies',
+        'payment-practices-late-payment',
     );
 }
 
@@ -223,7 +224,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
     $hub_url   = home_url( '/data/company-insolvency/' );
 
     if ( 'uk-insolvency-statistics' === $slug ) {
-        $page_url  = home_url( '/uk-insolvency-statistics/' );
+        $page_url  = home_url( '/data/uk-insolvency-statistics/' );
         $faq_items = array(
             array(
                 'q' => 'How many UK company insolvencies were there in April 2026?',
@@ -307,9 +308,9 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
     if ( 'company-insolvency' === $slug ) {
         $page_url = $hub_url;
         $cards = array(
-            array( 'UK Company Insolvency Statistics', home_url( '/uk-insolvency-statistics/' ) ),
+            array( 'UK Company Insolvency Statistics', home_url( '/data/uk-insolvency-statistics/' ) ),
             array( 'Winding-Up Petition Tracker', home_url( '/data/company-insolvency/winding-up-petition-tracker/' ) ),
-            array( 'Company Dissolutions vs Insolvencies', home_url( '/data/company-insolvency/company-dissolutions-vs-insolvencies/' ) ),
+            array( 'Company Dissolutions vs Insolvencies', home_url( '/data/company-insolvency/dissolutions-vs-insolvencies/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -381,8 +382,8 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         );
     }
 
-    if ( 'company-dissolutions-vs-insolvencies' === $slug ) {
-        $page_url = home_url( '/data/company-insolvency/company-dissolutions-vs-insolvencies/' );
+    if ( 'dissolutions-vs-insolvencies' === $slug ) {
+        $page_url = home_url( '/data/company-insolvency/dissolutions-vs-insolvencies/' );
         return array(
             array(
                 '@type'         => 'WebPage',
@@ -414,6 +415,43 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'isBasedOn'       => 'https://www.gov.uk/government/organisations/companies-house',
                 'measurementTechnique' => 'Companies House register flows and Insolvency Service administrative records.',
                 'keywords'        => 'company dissolution, company strike-off, incorporations, company insolvency, Companies House, UK',
+            ),
+        );
+    }
+
+    if ( 'payment-practices-late-payment' === $slug ) {
+        $page_url = home_url( '/data/company-insolvency/payment-practices-late-payment/' );
+        return array(
+            array(
+                '@type'         => 'WebPage',
+                '@id'           => $page_url . '#webpage',
+                'name'          => 'Payment Practices & Late Payment',
+                'description'   => 'How quickly large UK companies pay their suppliers, the share of invoices paid late, and which sectors are slowest. Late-payment context, not an insolvency statistic.',
+                'dateModified'  => $modified,
+                'datePublished' => $published,
+                'inLanguage'    => 'en-GB',
+                'publisher'     => $org_ref,
+            ),
+            cd_datahub_org_node(),
+            cd_datahub_breadcrumb( array(
+                array( 'Home', $home ),
+                array( 'UK Company Insolvency Data', $hub_url ),
+                array( 'Payment Practices & Late Payment', $page_url ),
+            ) ),
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Business Payment Practices and Late Payment',
+                'description'      => 'Payment performance of large UK companies and LLPs under statutory Payment Practices Reporting (Department for Business and Trade). Most recent report per company to May 2026 (6,882 companies): average 34.5 days to pay an invoice, 22% of invoices paid later than agreed terms, 60% paid within 30 days. This is enrichment context on supplier cash-flow pressure; it is NOT an insolvency statistic and must not be combined with insolvency figures.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'United Kingdom' ),
+                'temporalCoverage' => '2024-12/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://check-payment-practices.service.gov.uk/',
+                'measurementTechnique' => 'Statutory Payment Practices and Performance reports; sector matched via Companies House primary SIC code.',
+                'keywords'        => 'payment practices, late payment, days to pay, supplier payment, Department for Business and Trade, UK',
             ),
         );
     }

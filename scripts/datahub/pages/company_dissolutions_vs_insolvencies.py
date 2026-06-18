@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "data"
 DESIGN = ROOT / "design-handoff" / "company-dissolutions-vs-insolvencies.html"
 PREVIEW_OUT = ROOT / "preview" / "company-dissolutions-vs-insolvencies.html"
-DRAFT_OUT = ROOT / "drafts" / "79848_company-dissolutions-vs-insolvencies.html"
+DRAFT_OUT = ROOT / "drafts" / "79848_dissolutions-vs-insolvencies.html"
 
 THEME_ASSETS = "/wp-content/themes/company-debt-webpigment/assets/data-hub"
 HUB_URL = "/data/company-insolvency/"
@@ -177,12 +177,19 @@ def to_wordpress(html: str) -> str:
                         '<div class="cd-hub-header cd-w-wide">').replace('</header>', '</div>', 1)
     html = re.sub(r'<footer\b', '<div', html, count=1).replace('</footer>', '</div>', 1)
     html = html.replace('src="assets/', f'src="{THEME_ASSETS}/')
-    html = html.replace('href="company-insolvency-data-hub.html"', f'href="{HUB_URL}"')
-    style = re.search(r"<style>.*?</style>", html, re.S)
+    for rel, site in {
+        'href="uk-insolvency-statistics.html"': 'href="/data/uk-insolvency-statistics/"',
+        'href="winding-up-petition-tracker.html"': 'href="/data/company-insolvency/winding-up-petition-tracker/"',
+        'href="company-dissolutions-vs-insolvencies.html"': 'href="/data/company-insolvency/dissolutions-vs-insolvencies/"',
+        'href="payment-practices-late-payment.html"': 'href="/data/company-insolvency/payment-practices-late-payment/"',
+        'href="company-insolvency-data-hub.html"': f'href="{HUB_URL}"',
+    }.items():
+        html = html.replace(rel, site)
+    styles = re.findall(r"<style[^>]*>.*?</style>", html, re.S)
     main = re.search(r'<main class="cd-data-hub">.*?</main>', html, re.S)
-    if not style or not main:
+    if not styles or not main:
         raise SystemExit("Could not extract <style> and <main>.")
-    return "<!-- wp:html -->\n" + "\n".join([SENTINEL, style.group(0), main.group(0)]) + "\n<!-- /wp:html -->\n"
+    return "<!-- wp:html -->\n" + "\n".join([SENTINEL, *styles, main.group(0)]) + "\n<!-- /wp:html -->\n"
 
 
 def main() -> int:

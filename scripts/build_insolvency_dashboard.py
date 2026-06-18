@@ -25,7 +25,7 @@ WP_TEMPLATE = "templates/take-the-test-template.php"
 WP_POST_ID = 77399
 WP_TITLE = "UK Company Insolvency Statistics 2026"
 WP_SLUG = "uk-insolvency-statistics"
-STAGING_LINK = "https://comdebstage.wpengine.com/uk-insolvency-statistics/"
+STAGING_LINK = "https://comdebstage.wpengine.com/data/uk-insolvency-statistics/"
 META_DESCRIPTION = (
     "Monthly UK company insolvency statistics using Insolvency Service and Companies House "
     "data. Track CVLs, compulsory liquidations, administrations, insolvency rates and sector trends."
@@ -124,9 +124,10 @@ def secnav_block() -> str:
 
 
 def masthead_block() -> str:
-    """Shared data-hub identity bar: CompanyDebt brand lockup + verified mark.
-    The brand links back to the hub landing page. Mirrors the masthead on the
-    new data pages so the whole hub reads as one product."""
+    """Shared data-hub identity bar: CompanyDebt brand lockup + inter-page nav.
+    The brand links back to the hub landing page; the nav is the shared data-hub
+    menu (this is the Insolvency Statistics tab). Mirrors the masthead on the
+    sibling data pages so the whole hub reads as one product with one menu."""
     return dedent("""\
     <div class="cd-masthead cd-w-wide">
       <a class="cd-brand" href="/data/company-insolvency/">
@@ -134,9 +135,7 @@ def masthead_block() -> str:
         <span class="cd-brand__name">CompanyDebt</span>
         <span class="cd-brand__sub">Insolvency Data Hub</span>
       </a>
-      <p class="cd-masthead__meta">
-        <span class="cd-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Compiled from official sources</span>
-      </p>
+      <nav class="cd-mastnav" aria-label="Data hub pages"><a href="/data/uk-insolvency-statistics/" aria-current="page">Insolvency Statistics</a><a href="/data/company-insolvency/winding-up-petition-tracker/">Petition Tracker</a><a href="/data/company-insolvency/dissolutions-vs-insolvencies/">Dissolutions</a><a href="/data/company-insolvency/payment-practices-late-payment/">Late Payment</a></nav>
     </div>
     """)
 
@@ -589,6 +588,11 @@ DASHBOARD_CSS = """
 .cd-data-hub .cd-verified { display:inline-flex; align-items:center; gap:7px; color:var(--cd-positive); }
 .cd-data-hub .cd-verified svg { width:14px; height:14px; }
 @media (max-width:560px){ .cd-data-hub .cd-brand__sub, .cd-data-hub .cd-masthead__meta { display:none; } }
+.cd-data-hub .cd-mastnav { display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.cd-data-hub .cd-mastnav a { font-size:13px; font-weight:600; letter-spacing:.01em; color:var(--cd-text-soft); padding:7px 12px; border-radius:8px; white-space:nowrap; text-decoration:none; }
+.cd-data-hub .cd-mastnav a:hover { background:var(--cd-surface-soft); color:var(--cd-accent); text-decoration:none; }
+.cd-data-hub .cd-mastnav a[aria-current="page"] { color:var(--cd-accent); background:var(--cd-accent-soft); }
+@media (max-width:640px){ .cd-data-hub .cd-mastnav a { font-size:12px; padding:6px 9px; } }
 
 .cd-data-hub .cd-srcstrip { display:flex; align-items:center; gap:40px; flex-wrap:wrap; padding:28px 0; border-top:1px solid var(--cd-line); border-bottom:1px solid var(--cd-line); }
 .cd-data-hub .cd-srcstrip__label { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-muted); flex:none; }

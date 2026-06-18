@@ -99,7 +99,8 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "uk-insolvency-statistics": "data_reference",
     "company-insolvency": "data_reference",
     "winding-up-petition-tracker": "data_reference",
-    "company-dissolutions-vs-insolvencies": "data_reference",
+    "dissolutions-vs-insolvencies": "data_reference",
+    "payment-practices-late-payment": "data_reference",
 }
 
 

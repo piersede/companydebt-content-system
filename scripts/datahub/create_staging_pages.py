@@ -74,12 +74,21 @@ PAGES = [
         "content": "",
     },
     {
-        "slug": "company-dissolutions-vs-insolvencies",
+        "slug": "dissolutions-vs-insolvencies",
         "title": "Company Dissolutions vs Insolvencies (UK Data)",
         "parent": "company-insolvency",
         "template": TEMPLATE,
         "seo_title": "Company Dissolutions vs Insolvencies (UK Data)",
         "meta": "Most UK company closures are ordinary, solvent strike-offs, not insolvencies. The latest dissolution, incorporation and formal insolvency figures, set on a shared scale.",
+        "content": "",
+    },
+    {
+        "slug": "payment-practices-late-payment",
+        "title": "Payment Practices & Late Payment (UK Data)",
+        "parent": "company-insolvency",
+        "template": TEMPLATE,
+        "seo_title": "UK Payment Practices & Late Payment Data",
+        "meta": "How slowly large UK companies pay their suppliers, the share of invoices paid late, and which sectors are slowest. Enrichment context from statutory Payment Practices Reporting, not insolvency data.",
         "content": "",
     },
 ]

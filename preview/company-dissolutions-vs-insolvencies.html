@@ -62,7 +62,7 @@
 
 /* ── Width containers (two only) ──────────────────────────── */
 .cd-data-hub .cd-w-standard { max-width:1040px; margin-inline:auto; padding-inline:24px; }
-.cd-data-hub .cd-w-wide     { max-width:1280px; margin-inline:auto; padding-inline:24px; }
+.cd-data-hub .cd-w-wide     { max-width:1040px; margin-inline:auto; padding-inline:24px; }
 
 /* ── Eyebrow ──────────────────────────────────────────────── */
 .cd-data-hub .cd-eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s2); line-height:1.2; display:inline-flex; align-items:center; }
@@ -282,27 +282,33 @@
 .cd-data-hub .cd-srclogo figcaption { font-size:var(--fs-1,12px); color:var(--cd-muted); font-weight:600; letter-spacing:0.02em; }
 @media (max-width:560px){ .cd-data-hub .cd-srclogo img { height:56px; } .cd-data-hub .cd-srcstrip { gap:20px; } }
 </style>
+<style id="cd-mastnav-css">
+.cd-data-hub .cd-mastnav { display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.cd-data-hub .cd-mastnav a { font-size:13px; font-weight:600; letter-spacing:.01em; color:var(--cd-text-soft); padding:7px 12px; border-radius:8px; white-space:nowrap; }
+.cd-data-hub .cd-mastnav a:hover { background:var(--cd-surface-soft); color:var(--cd-accent); text-decoration:none; }
+.cd-data-hub .cd-mastnav a[aria-current="page"] { color:var(--cd-accent); background:var(--cd-accent-soft); }
+.cd-data-hub .cd-masthead__meta { margin-left:auto; }
+@media (max-width:1120px){ .cd-data-hub .cd-masthead__meta { display:none; } }
+@media (max-width:640px){ .cd-data-hub .cd-mastnav a { font-size:12px; padding:6px 9px; } }
+</style>
 </head>
 <body style="margin:0; background:#ffffff;">
 
 <main class="cd-data-hub">
 
   <div class="cd-masthead cd-w-wide">
-    <a class="cd-brand" href="company-insolvency-data-hub.html">
+    <a class="cd-brand" href="/">
       <span class="cd-brand__mark" aria-hidden="true">CD</span>
       <span class="cd-brand__name">CompanyDebt</span>
       <span class="cd-brand__sub">Insolvency Data Hub</span>
     </a>
-    <p class="cd-masthead__meta">
-      <span class="cd-verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Compiled from official sources</span>
-    </p>
+    <nav class="cd-mastnav" aria-label="Data hub pages"><a href="uk-insolvency-statistics.html">Insolvency Statistics</a><a href="winding-up-petition-tracker.html">Petition Tracker</a><a href="company-dissolutions-vs-insolvencies.html" aria-current="page">Dissolutions</a><a href="payment-practices-late-payment.html">Late Payment</a></nav>
   </div>
 
   <header class="cd-hub-header cd-w-wide">
     <a class="cd-back" href="company-insolvency-data-hub.html"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
     <div class="cd-hub-header__grid">
       <div class="cd-hub-header__copy">
-        <p class="cd-eyebrow"><span class="cd-eyebrow__pulse" aria-hidden="true"></span>Company population</p>
         <h1>Company Dissolutions vs Insolvencies</h1>
         <p class="cd-standfirst">Most companies that leave the register each month close in an ordinary, solvent way. They are struck off, not made insolvent. This page sets ordinary company closures against formal insolvencies, so the two are not confused.</p>
       </div>

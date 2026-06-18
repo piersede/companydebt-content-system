@@ -31,6 +31,27 @@
         }
       ],
       "is_provisional": true,
+      "status": "superseded",
+      "notes": "ENRICHMENT ONLY: self-reported large-company payment performance, not an insolvency statistic. Rolling export with no fixed publication period; period bounds are the trailing summary window, not a national reporting period."
+    },
+    {
+      "release_id": "payment_practices_2026-06-17",
+      "source_id": "payment_practices",
+      "dataset_name": "UK payment practices export, pulled 2026-06-17",
+      "period_start": "2024-12-07",
+      "period_end": "2026-05-31",
+      "publication_date": "2026-06-17",
+      "source_files": [
+        {
+          "endpoint": "https://check-payment-practices.service.gov.uk/export/csv/",
+          "filename": "2026-06-16-1350-prompt-payments.csv",
+          "sha256": "7631cb95be96fa16b827d065e163c360a842a3b4d2dfdd6b4cae9a081e14a68e",
+          "bytes": 98231564,
+          "retrieved_at": "2026-06-17",
+          "note": "Full bulk export (all reports since 2017); headline summary is a trailing window on period-end date."
+        }
+      ],
+      "is_provisional": true,
       "status": "current",
       "notes": "ENRICHMENT ONLY: self-reported large-company payment performance, not an insolvency statistic. Rolling export with no fixed publication period; period bounds are the trailing summary window, not a national reporting period."
     }

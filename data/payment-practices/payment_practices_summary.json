@@ -42,12 +42,188 @@
       "n": 6353
     }
   },
-  "sector_breakdown": null,
-  "sector_note": "The export carries no SIC/sector field; a sector split would need a Companies House join and is out of scope here.",
+  "sector_breakdown": [
+    {
+      "code": "C",
+      "label": "Manufacturing",
+      "companies": 1058,
+      "average_days_to_pay_mean": 47.4,
+      "pct_invoices_paid_late_mean": 28.9,
+      "pct_paid_within_30_days_mean": 36.6
+    },
+    {
+      "code": "G",
+      "label": "Wholesale and retail",
+      "companies": 874,
+      "average_days_to_pay_mean": 38.5,
+      "pct_invoices_paid_late_mean": 23.7,
+      "pct_paid_within_30_days_mean": 48.5
+    },
+    {
+      "code": "K",
+      "label": "Finance and insurance",
+      "companies": 839,
+      "average_days_to_pay_mean": 24.3,
+      "pct_invoices_paid_late_mean": 17.9,
+      "pct_paid_within_30_days_mean": 79.7
+    },
+    {
+      "code": "N",
+      "label": "Admin and support",
+      "companies": 660,
+      "average_days_to_pay_mean": 29.9,
+      "pct_invoices_paid_late_mean": 19.7,
+      "pct_paid_within_30_days_mean": 67.3
+    },
+    {
+      "code": "M",
+      "label": "Professional services",
+      "companies": 614,
+      "average_days_to_pay_mean": 34.5,
+      "pct_invoices_paid_late_mean": 22.2,
+      "pct_paid_within_30_days_mean": 64.0
+    },
+    {
+      "code": "J",
+      "label": "Information and communication",
+      "companies": 515,
+      "average_days_to_pay_mean": 33.6,
+      "pct_invoices_paid_late_mean": 22.8,
+      "pct_paid_within_30_days_mean": 66.7
+    },
+    {
+      "code": "F",
+      "label": "Construction",
+      "companies": 413,
+      "average_days_to_pay_mean": 34.7,
+      "pct_invoices_paid_late_mean": 18.6,
+      "pct_paid_within_30_days_mean": 53.7
+    },
+    {
+      "code": "P",
+      "label": "Education",
+      "companies": 307,
+      "average_days_to_pay_mean": 24.8,
+      "pct_invoices_paid_late_mean": 19.3,
+      "pct_paid_within_30_days_mean": 79.0
+    },
+    {
+      "code": "H",
+      "label": "Transport and storage",
+      "companies": 272,
+      "average_days_to_pay_mean": 34.4,
+      "pct_invoices_paid_late_mean": 19.9,
+      "pct_paid_within_30_days_mean": 55.5
+    },
+    {
+      "code": "I",
+      "label": "Accommodation and food",
+      "companies": 202,
+      "average_days_to_pay_mean": 33.7,
+      "pct_invoices_paid_late_mean": 18.3,
+      "pct_paid_within_30_days_mean": 55.8
+    },
+    {
+      "code": "D",
+      "label": "Electricity and gas",
+      "companies": 177,
+      "average_days_to_pay_mean": 27.6,
+      "pct_invoices_paid_late_mean": 16.6,
+      "pct_paid_within_30_days_mean": 74.2
+    },
+    {
+      "code": "Q",
+      "label": "Health and social work",
+      "companies": 147,
+      "average_days_to_pay_mean": 29.1,
+      "pct_invoices_paid_late_mean": 17.2,
+      "pct_paid_within_30_days_mean": 71.0
+    },
+    {
+      "code": "S",
+      "label": "Other services",
+      "companies": 127,
+      "average_days_to_pay_mean": 34.5,
+      "pct_invoices_paid_late_mean": 21.1,
+      "pct_paid_within_30_days_mean": 63.2
+    },
+    {
+      "code": "B",
+      "label": "Mining and quarrying",
+      "companies": 121,
+      "average_days_to_pay_mean": 34.9,
+      "pct_invoices_paid_late_mean": 20.3,
+      "pct_paid_within_30_days_mean": 60.4
+    },
+    {
+      "code": "R",
+      "label": "Arts and recreation",
+      "companies": 91,
+      "average_days_to_pay_mean": 31.7,
+      "pct_invoices_paid_late_mean": 21.4,
+      "pct_paid_within_30_days_mean": 64.3
+    },
+    {
+      "code": "L",
+      "label": "Real estate",
+      "companies": 83,
+      "average_days_to_pay_mean": 30.1,
+      "pct_invoices_paid_late_mean": 23.9,
+      "pct_paid_within_30_days_mean": 73.1
+    },
+    {
+      "code": "E",
+      "label": "Water and waste",
+      "companies": 72,
+      "average_days_to_pay_mean": 35.6,
+      "pct_invoices_paid_late_mean": 23.8,
+      "pct_paid_within_30_days_mean": 54.0
+    },
+    {
+      "code": "A",
+      "label": "Agriculture, forestry and fishing",
+      "companies": 38,
+      "average_days_to_pay_mean": 33.5,
+      "pct_invoices_paid_late_mean": 21.6,
+      "pct_paid_within_30_days_mean": 58.8
+    },
+    {
+      "code": "O",
+      "label": "Public administration",
+      "companies": 18,
+      "average_days_to_pay_mean": 29.4,
+      "pct_invoices_paid_late_mean": 23.1,
+      "pct_paid_within_30_days_mean": 68.3
+    },
+    {
+      "code": "U",
+      "label": "Extraterritorial",
+      "companies": 5,
+      "average_days_to_pay_mean": 48.0,
+      "pct_invoices_paid_late_mean": 8.0,
+      "pct_paid_within_30_days_mean": 5.0
+    },
+    {
+      "code": "T",
+      "label": "Households as employers",
+      "companies": 1,
+      "average_days_to_pay_mean": 35.0,
+      "pct_invoices_paid_late_mean": 3.0,
+      "pct_paid_within_30_days_mean": 52.0
+    }
+  ],
+  "sector_note": "Payment behaviour by SIC section, joined from Companies House (primary SIC). Sector context only, never a sector insolvency rate.",
   "note": "ENRICHMENT/CONTEXT ONLY. Self-reported large-company payment behaviour. Not an insolvency statistic and must never be blended into insolvency figures.",
   "caveats": [
     "payment_practices_enrichment",
     "payment_self_reported",
     "payment_large_companies_only"
-  ]
+  ],
+  "sector_coverage": {
+    "companies_in_window": 6882,
+    "with_company_number": 6882,
+    "sic_resolved": 6634,
+    "sic_unknown": 248,
+    "note": "Primary (first) SIC code only; companies with no resolvable SIC are excluded from the sector split. Sector figures are payment behaviour, never insolvency rates."
+  }
 }

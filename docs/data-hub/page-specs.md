@@ -86,6 +86,44 @@ SEO: title "Company Dissolutions vs Insolvencies (UK Data)"; targets "company cl
 
 ---
 
+## 4. UK Business Payment Practices (ENRICHMENT ONLY)
+
+- URL: `/data/business-payment-practices/` (nested under the `/data/` parent, like the hub).
+- HARD RULE: this is late-payment ENRICHMENT/CONTEXT, NOT insolvency data. It must be visually and editorially separated from insolvency figures - never a KPI next to insolvency counts, never implied as a failure rate. Frame as the cash-flow-pressure context layer that sits alongside the insolvency data.
+- Search reality (Ahrefs, gb, Jun 2026): low volume, but low difficulty and on-topic. Winnable terms: "payment practices reporting" (700, KD 3), "prompt payment code" (500, KD 1), "late payment of commercial debts" (400, KD 15), "supplier payment times" (30). The high-volume "late payment" terms are tax-penalty / credit-score intent (different, covered elsewhere) - do NOT chase them. Value of this page = citation/answer-engine asset (unique 6,882-company dataset) + low-KD captures + internal-link glue to cash-flow / cant-pay-suppliers / insolvency hub.
+- Data: data/payment-practices/payment_practices_summary.json (built by scripts/datahub/sources/payment_practices.py --with-sectors). Window 2024-12-07 to 2026-05-31; latest report per company (no double-counting); 6,882 reporting companies; SIC resolved for 6,634 via Companies House.
+
+Headline figures (means; medians in brackets where the skew matters):
+- Average days to pay: 34.5 days (median 31).
+- Invoices NOT paid within agreed terms: 22.0% (median 15%) - right-skewed; a tail of very-late payers pulls the mean up. Show both.
+- Invoices paid within 30 days: 59.8%; 31-60 days: 28.3%; later than 60 days: 11.9% (median 5%).
+
+Sector (SIC section, by company count; slowest payers first matters most):
+- Manufacturing: 1,058 cos, 47.4 days, 28.9% late (SLOWEST).
+- Wholesale and retail: 874, 38.5 days, 23.7% late.
+- Finance and insurance: 839, 24.3 days, 17.9% late (FASTEST of the big sectors).
+- Admin and support: 660, 29.9 days, 19.7% late.
+- Professional services: 614, 34.5 days, 22.2% late.
+- Information and communication: 515, 33.6 days, 22.8% late.
+- Construction: 413, 34.7 days, 18.6% late.
+- Education: 307, 24.8 days, 19.3% late.
+- (full table: 21 SIC sections in the summary JSON; sections with <30 companies e.g. Households/Extraterritorial should be dropped or grouped as "Other" - too thin to be reliable.)
+
+Structure:
+- H1: UK Business Payment Practices. Sub: how long large UK companies take to pay suppliers, and which sectors pay slowest.
+- Intro (2-3 lines): what statutory payment-practices reporting is (large companies report twice a year), what this page shows, that it is payment context, NOT insolvency data.
+- KPI strip (4): average days to pay (34.5), % invoices paid late (22%), % paid within 30 days (59.8%), companies in dataset (6,882). Source + window label.
+- Chart A: the three payment-speed bands (within 30 / 31-60 / 60+ days) as one stacked/segmented bar.
+- Chart B (the star): horizontal bar chart ranking SIC sectors by average days to pay (or % late) - manufacturing top. + full sortable table of sections (companies, avg days, % late, % within 30).
+- Explainer: "What counts as late, and the Prompt Payment Code" - plain lines (captures prompt-payment-code / commercial-debts intent). Late = not within agreed terms; statutory interest on late commercial debts exists.
+- "Why this matters" bridge: slow payment up the chain drains supplier cash flow; sustained late payment is a distress signal. Careful: context, not causation; link out (once each) to cash-flow problems / cant-afford-to-pay-suppliers / the insolvency hub.
+- Caveats (prominent block): `payment_practices_enrichment` (FRONT AND CENTRE), `payment_self_reported`, `payment_large_companies_only`. State means are right-skewed; sector = primary SIC only.
+- One advice CTA.
+
+SEO: title "UK Business Payment Practices: How Long Companies Take to Pay (Data)"; meta on average payment times + slowest sectors. Schema: WebPage + Dataset + Table + BreadcrumbList. Page class: `data_reference` (passthrough draft + CD-NO-AUTOEDIT guard + mu-plugin for schema/JS).
+
+---
+
 ## Cross-cutting (all pages)
 - Journalist features: latest-figure block, "last updated / next release" dates, copy-citation button, source line on every chart/table, short quotable summary lines.
 - Persistent URLs (update monthly, do not mint a new URL per month).

@@ -120,18 +120,19 @@ def to_wordpress(html: str) -> str:
     # data pages are nested beneath it (matches the design's cite URLs). The
     # flagship stats page keeps its established top-level URL.
     for rel, site in {
-        'href="uk-insolvency-statistics.html"': 'href="/uk-insolvency-statistics/"',
+        'href="uk-insolvency-statistics.html"': 'href="/data/uk-insolvency-statistics/"',
         'href="winding-up-petition-tracker.html"': 'href="/data/company-insolvency/winding-up-petition-tracker/"',
-        'href="company-dissolutions-vs-insolvencies.html"': 'href="/data/company-insolvency/company-dissolutions-vs-insolvencies/"',
+        'href="company-dissolutions-vs-insolvencies.html"': 'href="/data/company-insolvency/dissolutions-vs-insolvencies/"',
+        'href="payment-practices-late-payment.html"': 'href="/data/company-insolvency/payment-practices-late-payment/"',
         'href="company-insolvency-data-hub.html"': 'href="/data/company-insolvency/"',
     }.items():
         html = html.replace(rel, site)
 
-    style = re.search(r"<style>.*?</style>", html, re.S)
+    styles = re.findall(r"<style[^>]*>.*?</style>", html, re.S)
     main = re.search(r'<main class="cd-data-hub">.*?</main>', html, re.S)
-    if not style or not main:
+    if not styles or not main:
         raise SystemExit("Could not extract <style> and <main> from the design.")
-    body = "\n".join([SENTINEL, style.group(0), main.group(0)])
+    body = "\n".join([SENTINEL, *styles, main.group(0)])
     return "<!-- wp:html -->\n" + body + "\n<!-- /wp:html -->\n"
 
 

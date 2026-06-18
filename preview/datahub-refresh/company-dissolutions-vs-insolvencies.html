@@ -6,8 +6,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
-<title>Winding-Up Petition Tracker | CompanyDebt</title>
-<meta name="description" content="A monthly count of winding-up petitions advertised against UK companies in The Gazette, with the trend and how many petitions convert into winding-up orders.">
+<title>Company Dissolutions vs Insolvencies | CompanyDebt</title>
+<meta name="description" content="Most UK company closures are ordinary, solvent strike-offs, not insolvencies. The latest dissolution, incorporation and formal insolvency figures, set on a shared scale.">
 <style>
 /* ============================================================
    CD DATA HUB — Winding-Up Petition Tracker
@@ -44,6 +44,8 @@
   --fs-3: 19px;                   /* leads & titles */
   --fs-4: clamp(34px, 3vw, 44px); /* hero figures */
   --fs-5: clamp(40px, 5vw, 56px); /* display H1 */
+
+  --cd-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 
   color: var(--cd-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -205,44 +207,65 @@
   .cd-data-hub .cd-panel { padding:var(--cd-s3); }
 }
 
+/* ── Scale comparison bars ────────────────────────────────── */
+.cd-data-hub .cd-scalebar { display:flex; flex-direction:column; gap:var(--cd-s4); }
+.cd-data-hub .cd-scalebar__head { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s2); margin-bottom:var(--cd-s2); flex-wrap:wrap; }
+.cd-data-hub .cd-scalebar__k { font-size:var(--fs-2); font-weight:650; color:var(--cd-text); }
+.cd-data-hub .cd-scalebar__src { font-size:var(--fs-1); color:var(--cd-muted); }
+.cd-data-hub .cd-scalebar__track { background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:9px; height:60px; display:flex; align-items:stretch; }
+.cd-data-hub .cd-scalebar__fill { height:100%; border-radius:8px; display:flex; align-items:center; position:relative; min-width:3px; }
+.cd-data-hub .cd-scalebar__fill--diss { background:#cdddee; }
+.cd-data-hub .cd-scalebar__fill--ins { background:var(--cd-accent); }
+.cd-data-hub .cd-scalebar__v { font-size:var(--fs-3); font-weight:700; color:var(--cd-figure); font-variant-numeric:tabular-nums; padding:0 var(--cd-s3); white-space:nowrap; }
+.cd-data-hub .cd-scalebar__v--out { position:absolute; left:100%; margin-left:14px; color:var(--cd-accent); padding:0; }
+.cd-data-hub .cd-scale-callout { margin:var(--cd-s4) 0 0; font-size:var(--fs-3); line-height:1.45; font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); max-width:60ch; }
+.cd-data-hub .cd-scale-callout b { color:var(--cd-accent); }
+
+/* ── Reason cards ─────────────────────────────────────────── */
+.cd-data-hub .cd-section-lead { font-size:var(--fs-3); line-height:1.6; color:var(--cd-text-soft); max-width:72ch; margin:0 0 var(--cd-s4); }
+.cd-data-hub .cd-reasons { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); }
+.cd-data-hub .cd-reason { grid-column:span 4; background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); }
+.cd-data-hub .cd-reason__n { font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s2); }
+.cd-data-hub .cd-reason__t { font-size:var(--fs-2); font-weight:650; color:var(--cd-text); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-reason__d { font-size:var(--fs-2); line-height:1.6; color:var(--cd-text-soft); margin:0; }
+@media (max-width:980px){ .cd-data-hub .cd-reason { grid-column:span 12; } }
+
 /* ── Publication identity: masthead, colophon, source marks ─ */
-.cd-data-hub { --cd-serif: "Source Serif 4", Georgia, "Times New Roman", serif; }
 .cd-data-hub .cd-hub-header h1,
 .cd-data-hub .cd-panel__title,
 .cd-data-hub .cd-caveat h2,
 .cd-data-hub .cd-cta h2,
 .cd-data-hub .cd-cite h2,
-.cd-data-hub .cd-scale-callout,
-.cd-data-hub .cd-dircard__title { font-family:var(--cd-serif); }
+.cd-data-hub .cd-scale-callout { font-family:var(--cd-serif); }
 .cd-data-hub .cd-hub-header h1 { letter-spacing:-0.02em; font-weight:700; }
 .cd-data-hub .cd-panel__title { font-weight:700; }
 
-.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:24px; border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
+.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:var(--cd-s3); padding-top:var(--cd-s3); padding-bottom:var(--cd-s3); border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
 .cd-data-hub .cd-brand { display:inline-flex; align-items:center; gap:12px; color:var(--cd-text); }
 .cd-data-hub .cd-brand:hover { text-decoration:none; }
 .cd-data-hub .cd-brand__mark { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:9px; background:var(--cd-figure); color:#fff; font-family:var(--cd-serif); font-weight:700; font-size:16px; letter-spacing:0.02em; }
 .cd-data-hub .cd-brand__name { font-family:var(--cd-serif); font-weight:700; font-size:18px; letter-spacing:-0.01em; line-height:1; }
 .cd-data-hub .cd-brand__sub { font-size:var(--fs-1); letter-spacing:0.07em; text-transform:uppercase; color:var(--cd-muted); border-left:1px solid var(--cd-line); padding-left:12px; }
-.cd-data-hub .cd-masthead__meta { display:inline-flex; align-items:center; gap:24px; font-size:var(--fs-1); letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-masthead__meta { display:inline-flex; align-items:center; gap:var(--cd-s3); font-size:var(--fs-1); letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); margin:0; }
 .cd-data-hub .cd-verified { display:inline-flex; align-items:center; gap:7px; color:var(--cd-positive); }
 .cd-data-hub .cd-verified svg { width:14px; height:14px; }
 
-.cd-data-hub .cd-hub-header__grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:64px; align-items:start; }
+.cd-data-hub .cd-hub-header__grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:var(--cd-s5); align-items:start; }
 .cd-data-hub .cd-hub-header__copy { min-width:0; }
-.cd-data-hub .cd-colophon { border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:16px 24px; min-width:236px; background:var(--cd-surface); box-shadow:0 4px 14px rgba(16,24,40,.03); }
-.cd-data-hub .cd-colophon__h { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-accent); margin:8px 0; }
+.cd-data-hub .cd-colophon { border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s2) var(--cd-s3); min-width:236px; background:var(--cd-surface); box-shadow:0 4px 14px rgba(16,24,40,.03); }
+.cd-data-hub .cd-colophon__h { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-accent); margin:var(--cd-s1) 0; }
 .cd-data-hub .cd-colophon dl { margin:0; }
-.cd-data-hub .cd-colophon dl > div { display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:10px 0; border-top:1px solid var(--cd-line-soft); }
+.cd-data-hub .cd-colophon dl > div { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s2); padding:10px 0; border-top:1px solid var(--cd-line-soft); }
 .cd-data-hub .cd-colophon dt { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.05em; color:var(--cd-muted); font-weight:600; }
 .cd-data-hub .cd-colophon dd { margin:0; font-size:var(--fs-1); font-weight:700; color:var(--cd-text); letter-spacing:0.01em; font-variant-numeric:tabular-nums; }
 
-.cd-data-hub .cd-sources { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:40px; }
+.cd-data-hub .cd-sources { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:var(--cd-s4); }
 .cd-data-hub .cd-sources__label { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.07em; font-weight:700; color:var(--cd-muted); }
 .cd-data-hub .cd-srcchip { display:inline-flex; align-items:center; gap:9px; padding:6px 13px 6px 7px; border:1px solid var(--cd-line); border-radius:100px; background:var(--cd-surface); font-size:var(--fs-1); font-weight:600; color:var(--cd-text); white-space:nowrap; }
 .cd-data-hub .cd-srcchip__mark { display:inline-grid; place-items:center; width:24px; height:24px; border-radius:6px; background:var(--cd-accent-soft); color:var(--cd-accent); font-size:10px; font-weight:800; letter-spacing:0.03em; }
 
 @media (max-width:900px){
-  .cd-data-hub .cd-hub-header__grid { grid-template-columns:1fr; gap:40px; }
+  .cd-data-hub .cd-hub-header__grid { grid-template-columns:1fr; gap:var(--cd-s4); }
   .cd-data-hub .cd-colophon { width:100%; }
 }
 @media (max-width:560px){
@@ -270,6 +293,7 @@
 </style>
 </head>
 <body style="margin:0; background:#ffffff;">
+
 <main class="cd-data-hub">
 
   <div class="cd-masthead cd-w-wide">
@@ -278,15 +302,15 @@
       <span class="cd-brand__name">CompanyDebt</span>
       <span class="cd-brand__sub">Insolvency Data Hub</span>
     </a>
-    <nav class="cd-mastnav" aria-label="Data hub pages"><a href="uk-insolvency-statistics.html">Insolvency Statistics</a><a href="winding-up-petition-tracker.html" aria-current="page">Petition Tracker</a><a href="company-dissolutions-vs-insolvencies.html">Dissolutions</a><a href="payment-practices-late-payment.html">Late Payment</a></nav>
+    <nav class="cd-mastnav" aria-label="Data hub pages"><a href="uk-insolvency-statistics.html">Insolvency Statistics</a><a href="winding-up-petition-tracker.html">Petition Tracker</a><a href="company-dissolutions-vs-insolvencies.html" aria-current="page">Dissolutions</a><a href="payment-practices-late-payment.html">Late Payment</a></nav>
   </div>
 
   <header class="cd-hub-header cd-w-wide">
     <a class="cd-back" href="company-insolvency-data-hub.html"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
     <div class="cd-hub-header__grid">
       <div class="cd-hub-header__copy">
-        <h1>Winding-Up Petition Tracker</h1>
-        <p class="cd-standfirst">A winding-up petition is a creditor's application to the court to close a company. This page counts the petitions advertised against UK companies in The Gazette each month, and shows how many convert into winding-up orders.</p>
+        <h1>Company Dissolutions vs Insolvencies</h1>
+        <p class="cd-standfirst">Most companies that leave the register each month close in an ordinary, solvent way. They are struck off, not made insolvent. This page sets ordinary company closures against formal insolvencies, so the two are not confused.</p>
       </div>
       <aside class="cd-colophon" aria-label="Publication details">
         <p class="cd-colophon__h">Publication</p>
@@ -304,8 +328,8 @@
     <div class="cd-srcstrip">
       <span class="cd-srcstrip__label">Data sources</span>
       <div class="cd-srcstrip__logos">
-        <figure class="cd-srclogo"><img src="assets/logo-gazette-trim.png" alt="The Gazette logo"></figure>
-        <figure class="cd-srclogo"><img src="assets/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
+        <figure class="cd-srclogo"><img src="/wp-content/themes/company-debt-webpigment/assets/data-hub/logo-companies-house-trim.png" alt="Companies House logo"></figure>
+        <figure class="cd-srclogo"><img src="/wp-content/themes/company-debt-webpigment/assets/data-hub/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
       </div>
     </div>
   </div>
@@ -314,261 +338,184 @@
   <section class="cd-section cd-w-wide" aria-labelledby="glance-h">
     <div class="cd-grouphead">
       <h2 id="glance-h">Latest at a glance</h2>
-      <span class="cd-grouphead__note">May 2026</span>
+      <span class="cd-grouphead__note">Latest monthly data</span>
     </div>
     <div class="cd-kpi-strip">
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">482</p>
-        <p class="cd-kpi-card__k">Winding-up petitions advertised</p>
-        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+        <p class="cd-kpi-card__v">59,295</p>
+        <p class="cd-kpi-card__k">Company dissolutions</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>Companies House</p>
       </article>
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">373</p>
-        <p class="cd-kpi-card__k">Winding-up orders made</p>
-        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+        <p class="cd-kpi-card__v">2,085</p>
+        <p class="cd-kpi-card__k">Formal company insolvencies</p>
+        <p class="cd-kpi-card__src"><b>England and Wales, April 2026</b>Insolvency Service</p>
       </article>
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">25</p>
-        <p class="cd-kpi-card__k">Petitions dismissed</p>
-        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+        <p class="cd-kpi-card__v">28:1</p>
+        <p class="cd-kpi-card__k">Dissolutions for every formal insolvency</p>
+        <p class="cd-kpi-card__src"><b>Approximate ratio</b>Companies House / Insolvency Service</p>
       </article>
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">6,023</p>
-        <p class="cd-kpi-card__k">Total corporate insolvency notices</p>
-        <p class="cd-kpi-card__src"><b>May 2026</b>The Gazette</p>
+        <p class="cd-kpi-card__v">62,523</p>
+        <p class="cd-kpi-card__k">New company incorporations</p>
+        <p class="cd-kpi-card__src"><b>May 2026</b>Companies House</p>
       </article>
     </div>
   </section>
 
-  <!-- Chart A: petitions over time -->
+  <!-- Chart A: incorporations vs dissolutions -->
   <section class="cd-section cd-w-wide" aria-labelledby="chartA-h">
     <div class="cd-panel">
       <div class="cd-panel__head">
         <div>
-          <p class="cd-panel__eyebrow">Chart A &middot; The trend</p>
-          <h2 class="cd-panel__title" id="chartA-h">Winding-up petitions advertised each month</h2>
-        </div>
-        <span class="cd-badge cd-badge--latest">Latest</span>
-      </div>
-      <div class="cd-scroll">
-        <div class="cd-colchart" role="img" aria-label="Column chart of winding-up petitions advertised each month from February 2025 to May 2026, ending at 482 in May 2026.">
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:52.8%"><span class="cd-col__v">475</span></div></div>
-          <span class="cd-col__x">Feb<small>&rsquo;25</small></span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:68.8%"><span class="cd-col__v">619</span></div></div>
-          <span class="cd-col__x">Mar</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:62.3%"><span class="cd-col__v">561</span></div></div>
-          <span class="cd-col__x">Apr</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:80.3%"><span class="cd-col__v">723</span></div></div>
-          <span class="cd-col__x">May</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:61.4%"><span class="cd-col__v">553</span></div></div>
-          <span class="cd-col__x">Jun</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:58.7%"><span class="cd-col__v">528</span></div></div>
-          <span class="cd-col__x">Jul</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:65.7%"><span class="cd-col__v">591</span></div></div>
-          <span class="cd-col__x">Aug</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:60.9%"><span class="cd-col__v">548</span></div></div>
-          <span class="cd-col__x">Sep</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:79.8%"><span class="cd-col__v">718</span></div></div>
-          <span class="cd-col__x">Oct</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:58.3%"><span class="cd-col__v">525</span></div></div>
-          <span class="cd-col__x">Nov</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:30.7%"><span class="cd-col__v">276</span></div></div>
-          <span class="cd-col__x">Dec</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:78.0%"><span class="cd-col__v">702</span></div></div>
-          <span class="cd-col__x">Jan<small>&rsquo;26</small></span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:52.8%"><span class="cd-col__v">475</span></div></div>
-          <span class="cd-col__x">Feb</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:60.2%"><span class="cd-col__v">542</span></div></div>
-          <span class="cd-col__x">Mar</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:85.6%"><span class="cd-col__v">770</span></div></div>
-          <span class="cd-col__x">Apr</span>
-        </div>
-        <div class="cd-col">
-          <div class="cd-col__track"><div class="cd-col__bar" style="height:53.6%"><span class="cd-col__v">482</span></div></div>
-          <span class="cd-col__x">May</span>
-        </div>
-        </div>
-      </div>
-      <p class="cd-source"><b>Source: The Gazette.</b> Petition notices advertised, February 2025 to May 2026. The latest month is provisional and may rise as further notices are published.</p>
-    </div>
-  </section>
-
-  <!-- Chart B: petitions vs orders -->
-  <section class="cd-section cd-w-wide" aria-labelledby="chartB-h">
-    <div class="cd-panel">
-      <div class="cd-panel__head">
-        <div>
-          <p class="cd-panel__eyebrow">Chart B &middot; Conversion</p>
-          <h2 class="cd-panel__title" id="chartB-h">Petitions advertised against winding-up orders made</h2>
+          <p class="cd-panel__eyebrow">Chart A &middot; Formation and closure</p>
+          <h2 class="cd-panel__title" id="chartA-h">New incorporations against company dissolutions</h2>
         </div>
         <span class="cd-badge cd-badge--latest">Latest</span>
       </div>
       <div class="cd-legend">
-        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-accent)"></span>Petitions advertised</span>
-        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-figure)"></span>Winding-up orders made</span>
+        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-accent)"></span>Incorporations</span>
+        <span class="cd-legend__item"><span class="cd-legend__swatch" style="background:var(--cd-figure)"></span>Dissolutions</span>
       </div>
       <div class="cd-scroll">
-        <svg class="cd-linechart" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Line chart comparing winding-up petitions advertised with winding-up orders made each month, February 2025 to May 2026. Orders track below petitions throughout, ending at 373 orders against 482 petitions.">
-      <line class="cd-grid" x1="56" y1="332.0" x2="1176" y2="332.0"/>
-      <text class="cd-axis-y" x="44" y="336.0">0</text>
-      <line class="cd-grid" x1="56" y1="255.0" x2="1176" y2="255.0"/>
-      <text class="cd-axis-y" x="44" y="259.0">225</text>
-      <line class="cd-grid" x1="56" y1="178.0" x2="1176" y2="178.0"/>
-      <text class="cd-axis-y" x="44" y="182.0">450</text>
-      <line class="cd-grid" x1="56" y1="101.0" x2="1176" y2="101.0"/>
-      <text class="cd-axis-y" x="44" y="105.0">675</text>
-      <line class="cd-grid" x1="56" y1="24.0" x2="1176" y2="24.0"/>
-      <text class="cd-axis-y" x="44" y="28.0">900</text>
-      <polyline class="cd-line cd-line--p" points="56.0,169.4 130.7,120.2 205.3,140.0 280.0,84.6 354.7,142.8 429.3,151.3 504.0,129.7 578.7,144.5 653.3,86.3 728.0,152.3 802.7,237.5 877.3,91.8 952.0,169.4 1026.7,146.5 1101.3,68.5 1176.0,167.0"/>
-      <polyline class="cd-line cd-line--o" points="56.0,201.3 130.7,236.5 205.3,205.0 280.0,204.4 354.7,219.4 429.3,196.5 504.0,222.1 578.7,237.9 653.3,228.6 728.0,300.2 802.7,236.9 877.3,226.6 952.0,220.4 1026.7,224.2 1101.3,237.2 1176.0,204.4"/>
-      <circle class="cd-dot cd-dot--p" cx="56.0" cy="169.4" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="130.7" cy="120.2" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="205.3" cy="140.0" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="280.0" cy="84.6" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="354.7" cy="142.8" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="429.3" cy="151.3" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="504.0" cy="129.7" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="578.7" cy="144.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="653.3" cy="86.3" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="728.0" cy="152.3" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="802.7" cy="237.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="877.3" cy="91.8" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="952.0" cy="169.4" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="1026.7" cy="146.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="1101.3" cy="68.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--p" cx="1176.0" cy="167.0" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="56.0" cy="201.3" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="130.7" cy="236.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="205.3" cy="205.0" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="280.0" cy="204.4" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="354.7" cy="219.4" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="429.3" cy="196.5" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="504.0" cy="222.1" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="578.7" cy="237.9" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="653.3" cy="228.6" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="728.0" cy="300.2" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="802.7" cy="236.9" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="877.3" cy="226.6" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="952.0" cy="220.4" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="1026.7" cy="224.2" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="1101.3" cy="237.2" r="3.5"/>
-      <circle class="cd-dot cd-dot--o" cx="1176.0" cy="204.4" r="3.5"/>
-      <text class="cd-axis-x" x="56.0" y="356">Feb</text>
-      <text class="cd-axis-x" x="130.7" y="356">Mar</text>
-      <text class="cd-axis-x" x="205.3" y="356">Apr</text>
-      <text class="cd-axis-x" x="280.0" y="356">May</text>
-      <text class="cd-axis-x" x="354.7" y="356">Jun</text>
-      <text class="cd-axis-x" x="429.3" y="356">Jul</text>
-      <text class="cd-axis-x" x="504.0" y="356">Aug</text>
-      <text class="cd-axis-x" x="578.7" y="356">Sep</text>
-      <text class="cd-axis-x" x="653.3" y="356">Oct</text>
-      <text class="cd-axis-x" x="728.0" y="356">Nov</text>
-      <text class="cd-axis-x" x="802.7" y="356">Dec</text>
-      <text class="cd-axis-x" x="877.3" y="356">Jan</text>
-      <text class="cd-axis-x" x="952.0" y="356">Feb</text>
-      <text class="cd-axis-x" x="1026.7" y="356">Mar</text>
-      <text class="cd-axis-x" x="1101.3" y="356">Apr</text>
+        <svg class="cd-linechart" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Line chart comparing new company incorporations with company dissolutions each month, February 2025 to May 2026. Both fluctuate between roughly 48,000 and 90,000 a month; incorporations are usually the higher line, but dissolutions spike above them in some months.">
+      <line class="cd-grid" x1="60" y1="332.0" x2="1176" y2="332.0"/>
+      <text class="cd-axis-y" x="48" y="336.0">0</text>
+      <line class="cd-grid" x1="60" y1="255.0" x2="1176" y2="255.0"/>
+      <text class="cd-axis-y" x="48" y="259.0">25k</text>
+      <line class="cd-grid" x1="60" y1="178.0" x2="1176" y2="178.0"/>
+      <text class="cd-axis-y" x="48" y="182.0">50k</text>
+      <line class="cd-grid" x1="60" y1="101.0" x2="1176" y2="101.0"/>
+      <text class="cd-axis-y" x="48" y="105.0">75k</text>
+      <line class="cd-grid" x1="60" y1="24.0" x2="1176" y2="24.0"/>
+      <text class="cd-axis-y" x="48" y="28.0">100k</text>
+      <polyline class="cd-line cd-line--p" points="60.0,124.4 134.4,96.3 208.8,109.3 283.2,117.7 357.6,116.8 432.0,104.3 506.4,122.6 580.8,97.3 655.2,98.1 729.6,147.9 804.0,174.8 878.4,111.1 952.8,145.8 1027.2,103.7 1101.6,123.8 1176.0,139.4"/>
+      <polyline class="cd-line cd-line--o" points="60.0,126.3 134.4,142.9 208.8,81.8 283.2,160.5 357.6,182.6 432.0,53.6 506.4,143.8 580.8,76.3 655.2,170.7 729.6,159.1 804.0,120.9 878.4,149.6 952.8,138.3 1027.2,118.9 1101.6,162.0 1176.0,149.4"/>
+      <circle class="cd-dot cd-dot--p" cx="60.0" cy="124.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="134.4" cy="96.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="208.8" cy="109.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="283.2" cy="117.7" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="357.6" cy="116.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="432.0" cy="104.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="506.4" cy="122.6" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="580.8" cy="97.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="655.2" cy="98.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="729.6" cy="147.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="804.0" cy="174.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="878.4" cy="111.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="952.8" cy="145.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1027.2" cy="103.7" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1101.6" cy="123.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--p" cx="1176.0" cy="139.4" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="60.0" cy="126.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="134.4" cy="142.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="208.8" cy="81.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="283.2" cy="160.5" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="357.6" cy="182.6" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="432.0" cy="53.6" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="506.4" cy="143.8" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="580.8" cy="76.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="655.2" cy="170.7" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="729.6" cy="159.1" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="804.0" cy="120.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="878.4" cy="149.6" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="952.8" cy="138.3" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1027.2" cy="118.9" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1101.6" cy="162.0" r="3.5"/>
+      <circle class="cd-dot cd-dot--o" cx="1176.0" cy="149.4" r="3.5"/>
+      <text class="cd-axis-x" x="60.0" y="356">Feb</text>
+      <text class="cd-axis-x" x="134.4" y="356">Mar</text>
+      <text class="cd-axis-x" x="208.8" y="356">Apr</text>
+      <text class="cd-axis-x" x="283.2" y="356">May</text>
+      <text class="cd-axis-x" x="357.6" y="356">Jun</text>
+      <text class="cd-axis-x" x="432.0" y="356">Jul</text>
+      <text class="cd-axis-x" x="506.4" y="356">Aug</text>
+      <text class="cd-axis-x" x="580.8" y="356">Sep</text>
+      <text class="cd-axis-x" x="655.2" y="356">Oct</text>
+      <text class="cd-axis-x" x="729.6" y="356">Nov</text>
+      <text class="cd-axis-x" x="804.0" y="356">Dec</text>
+      <text class="cd-axis-x" x="878.4" y="356">Jan</text>
+      <text class="cd-axis-x" x="952.8" y="356">Feb</text>
+      <text class="cd-axis-x" x="1027.2" y="356">Mar</text>
+      <text class="cd-axis-x" x="1101.6" y="356">Apr</text>
       <text class="cd-axis-x" x="1176.0" y="356">May</text>
         </svg>
       </div>
-      <p class="cd-source"><b>Source: The Gazette.</b> Roughly three in four advertised petitions are followed by a winding-up order. The gap reflects petitions that are dismissed, withdrawn or settled before any order is made.</p>
+      <p class="cd-source"><b>Source: Companies House.</b> Monthly incorporations and dissolutions, February 2025 to May 2026. Dissolutions include ordinary, solvent strike-offs and are not a measure of insolvency.</p>
     </div>
   </section>
 
-  <!-- Latest-month detail: table + context, two columns -->
-  <section class="cd-section cd-w-wide" aria-label="Latest-month detail and context">
-    <div class="cd-lower">
-
-      <div class="cd-lower__main" aria-labelledby="table-h">
-        <div class="cd-grouphead">
-          <h2 id="table-h">Latest-month notice breakdown</h2>
-          <span class="cd-grouphead__note">May 2026</span>
+  <!-- Chart B: scale comparison (centrepiece) -->
+  <section class="cd-section cd-w-wide" aria-labelledby="chartB-h">
+    <div class="cd-panel">
+      <div class="cd-panel__head">
+        <div>
+          <p class="cd-panel__eyebrow">Chart B &middot; The scale gap</p>
+          <h2 class="cd-panel__title" id="chartB-h">Dissolutions set against formal insolvencies, same scale</h2>
         </div>
-        <div class="cd-panel">
-          <table class="cd-table">
-            <thead>
-              <tr><th scope="col">Gazette notice type</th><th scope="col" class="num">Count, May 2026</th></tr>
-            </thead>
-            <tbody>
-              <tr><td class="lab">Winding-up petitions<span>Creditor applications to close a company</span></td><td class="num">482</td></tr>
-              <tr><td class="lab">Winding-up orders<span>Court orders for compulsory liquidation</span></td><td class="num">373</td></tr>
-              <tr><td class="lab">Liquidator appointments<span>Across voluntary and compulsory cases</span></td><td class="num">2,031</td></tr>
-              <tr><td class="lab">CVL resolutions<span>Creditors' voluntary liquidations</span></td><td class="num">1,868</td></tr>
-              <tr><td class="lab">Administrator appointments<span>Companies entering administration</span></td><td class="num">138</td></tr>
-              <tr><td class="lab">Petition dismissals<span>Petitions struck out before any order</span></td><td class="num">25</td></tr>
-            </tbody>
-          </table>
-          <p class="cd-source"><b>Source: The Gazette.</b> Counts of statutory notices advertised in May 2026. Notice types are not mutually exclusive and one case may generate several notices over its life.</p>
+        <span class="cd-badge cd-badge--latest">Latest</span>
+      </div>
+      <div class="cd-scalebar" role="img" aria-label="Scale comparison: 59,295 company dissolutions in May 2026 against 2,085 formal insolvencies in April 2026. On the same scale the insolvencies are a thin sliver, about 3.5 per cent of the dissolutions figure.">
+        <div class="cd-scalebar__row">
+          <div class="cd-scalebar__head"><span class="cd-scalebar__k">Company dissolutions</span><span class="cd-scalebar__src">Companies House, May 2026</span></div>
+          <div class="cd-scalebar__track"><div class="cd-scalebar__fill cd-scalebar__fill--diss" style="width:100%"><span class="cd-scalebar__v">59,295</span></div></div>
+        </div>
+        <div class="cd-scalebar__row">
+          <div class="cd-scalebar__head"><span class="cd-scalebar__k">Formal company insolvencies</span><span class="cd-scalebar__src">Insolvency Service, April 2026</span></div>
+          <div class="cd-scalebar__track"><div class="cd-scalebar__fill cd-scalebar__fill--ins" style="width:3.52%"><span class="cd-scalebar__v cd-scalebar__v--out">2,085</span></div></div>
         </div>
       </div>
+      <p class="cd-scale-callout">For every formal insolvency, about <b>28 companies</b> were dissolved through ordinary, solvent closure. The two measures are counted by different bodies and must not be added together.</p>
+      <p class="cd-source"><b>Sources: Companies House and the Insolvency Service.</b> Dissolutions cover the United Kingdom register. Formal insolvencies cover England and Wales. The figures are shown on a shared scale for comparison only.</p>
+    </div>
+  </section>
 
-      <div class="cd-lower__side" aria-label="How to read this data">
-        <div class="cd-grouphead">
-          <h2>How to read this data</h2>
-        </div>
-
-        <div class="cd-caveat" aria-labelledby="caveat-h">
-          <div>
-            <p class="cd-caveat__label">Read this first</p>
-            <h2 id="caveat-h">Gazette notices are legal notices, not completed insolvency outcomes.</h2>
-            <p>A petition may be dismissed, withdrawn or settled before any order is made. This page tracks legal pressure on companies. It is not an official Insolvency Service statistic.</p>
-          </div>
-          <div class="cd-caveat__stat">
-            <div class="v">25</div>
-            <div class="k"><b>petitions dismissed in May 2026</b>before any winding-up order was made</div>
-          </div>
-        </div>
-
-        <div class="cd-cred" aria-labelledby="cred-h">
-          <div class="cd-cred__fig">
-            <div class="v">373</div>
-            <div class="k">Orders, May 2026</div>
-          </div>
-          <div class="cd-cred__body">
-            <p class="cd-eyebrow" id="cred-h">Why you can rely on it</p>
-            <p>The winding-up orders counted here closely match the Insolvency Service's compulsory liquidation figures for the same period. Because the two sources are compiled independently, that agreement is a useful check on the data and supports its reliability.</p>
-          </div>
-        </div>
+  <!-- Why most closures are not insolvencies -->
+  <section class="cd-section cd-w-wide" aria-labelledby="why-h">
+    <div class="cd-grouphead"><h2 id="why-h">Why most company closures are not insolvencies</h2></div>
+    <p class="cd-section-lead">A dissolution simply means a company has been removed from the Companies House register. In most cases that happens because a solvent business has stopped trading, not because it has failed or owes money to creditors.</p>
+    <div class="cd-reasons">
+      <div class="cd-reason">
+        <p class="cd-reason__n">01</p>
+        <h3 class="cd-reason__t">Voluntary strike-off</h3>
+        <p class="cd-reason__d">A solvent company asks Companies House to remove it from the register, usually because it has stopped trading and has no outstanding debts.</p>
       </div>
+      <div class="cd-reason">
+        <p class="cd-reason__n">02</p>
+        <h3 class="cd-reason__t">Dormant and non-trading companies</h3>
+        <p class="cd-reason__d">Many closures are companies that never traded or have been dormant for years, with no creditors and nothing to recover.</p>
+      </div>
+      <div class="cd-reason">
+        <p class="cd-reason__n">03</p>
+        <h3 class="cd-reason__t">Members' voluntary liquidation</h3>
+        <p class="cd-reason__d">A solvent company is wound up and pays its creditors in full, often for tax planning or to close a group company.</p>
+      </div>
+    </div>
+    <p class="cd-source">Of the 59,295 dissolutions recorded in May 2026, only a small fraction involved insolvency. The 2,085 formal insolvencies in April 2026 are counted separately by the Insolvency Service. Source: Companies House and the Insolvency Service.</p>
+  </section>
 
+  <!-- Caveat -->
+  <section class="cd-section cd-w-standard" aria-labelledby="caveat-h">
+    <div class="cd-caveat">
+      <div>
+        <p class="cd-caveat__label">Read this first</p>
+        <h2 id="caveat-h">Dissolutions and strike-offs are ordinary company closures, not insolvencies.</h2>
+        <p>They must not be added to insolvency totals. A dissolution removes a company from the register. An insolvency is a formal procedure for a company that cannot pay its debts. This is not the same as insolvency.</p>
+      </div>
+      <div class="cd-caveat__stat">
+        <div class="v">3.5%</div>
+        <div class="k"><b>the size of formal insolvencies</b>set against dissolutions on the same scale</div>
+      </div>
     </div>
   </section>
 
   <!-- Cite this data -->
   <section class="cd-section cd-w-standard" aria-labelledby="cite-h">
-    <div class="cd-cite" data-cite-title="Winding-Up Petition Tracker" data-cite-url="https://www.companydebt.com/data/company-insolvency/winding-up-petition-tracker/">
+    <div class="cd-cite" data-cite-title="Company Dissolutions vs Insolvencies" data-cite-url="https://www.companydebt.com/data/company-insolvency/dissolutions-vs-insolvencies/">
       <p class="cd-cite__eyebrow">Cite this data</p>
       <h2 id="cite-h">Reference these figures</h2>
-      <p class="cd-cite__text" id="citation">CompanyDebt (2026) &lsquo;Winding-Up Petition Tracker&rsquo;.</p>
+      <p class="cd-cite__text" id="citation">CompanyDebt (2026) &lsquo;Company Dissolutions vs Insolvencies&rsquo;.</p>
       <div class="cd-cite__actions">
         <button class="cd-cite__btn" type="button" data-copy>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>
@@ -582,14 +529,14 @@
   <!-- Single advice CTA -->
   <section class="cd-w-standard">
     <div class="cd-cta">
-      <h2>Has a winding-up petition been advertised against your company?</h2>
-      <p>Time is short once a petition is advertised. Our licensed insolvency practitioners offer confidential, no-obligation guidance on the options available to directors.</p>
+      <h2>Not sure whether closure or insolvency is the right route?</h2>
+      <p>If a company cannot pay its debts, a strike-off is not the answer. Our licensed insolvency practitioners offer confidential, no-obligation guidance on the right option.</p>
       <a class="cd-cta__btn" href="/contact-us/">Talk to our insolvency team <span aria-hidden="true">&rarr;</span></a>
     </div>
   </section>
 
   <footer class="cd-w-standard">
-    <p class="cd-hub-foot">Figures are counts of statutory notices advertised in The Gazette and are provisional for the latest month. They record legal notices, not final insolvency outcomes, and are not an official Insolvency Service statistic.</p>
+    <p class="cd-hub-foot">Dissolution and incorporation figures are drawn from Companies House register data for the United Kingdom. Formal insolvency figures are from the Insolvency Service and cover England and Wales. Dissolutions are ordinary company closures and are not a measure of insolvency. The chart series covers the 16 months to May 2026.</p>
   </footer>
 
 </main>

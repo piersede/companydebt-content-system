@@ -6,7 +6,7 @@ slug (data_reference) sits in scripts/page_runtime_metadata.py.
 """
 
 PAGE_CONFIG = {
-    'slug': 'company-dissolutions-vs-insolvencies',
+    'slug': 'dissolutions-vs-insolvencies',
     'page_type': 'data_reference',
     'wp_page_id': 79848,
     'title': 'Company Dissolutions vs Insolvencies (UK Data)',
