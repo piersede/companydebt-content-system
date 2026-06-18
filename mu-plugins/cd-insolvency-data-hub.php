@@ -7,7 +7,7 @@
  *              spy) and emits per-page JSON-LD (WebPage / Dataset / ItemList /
  *              BreadcrumbList). All of this is stripped from page content by
  *              KSES, so it lives here.
- * Version:     2.1.0
+ * Version:     2.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -305,6 +305,12 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Administrations',
                     'Insolvency rate per 10,000 active companies',
                 ),
+                'distribution'         => array(
+                    '@type'          => 'DataDownload',
+                    'name'           => 'UK company insolvency monthly series (CSV)',
+                    'encodingFormat' => 'text/csv',
+                    'contentUrl'     => home_url( '/wp-content/themes/company-debt-webpigment/assets/data-hub/downloads/uk-company-insolvency-statistics.csv' ),
+                ),
             ),
             array(
                 '@type'      => 'FAQPage',
@@ -394,6 +400,12 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Winding-up orders made',
                     'Petition dismissals',
                 ),
+                'distribution'         => array(
+                    '@type'          => 'DataDownload',
+                    'name'           => 'UK winding-up petition notices monthly series (CSV)',
+                    'encodingFormat' => 'text/csv',
+                    'contentUrl'     => home_url( '/wp-content/themes/company-debt-webpigment/assets/data-hub/downloads/uk-winding-up-petition-notices.csv' ),
+                ),
             ),
         );
     }
@@ -438,6 +450,12 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Company incorporations',
                     'Company insolvencies',
                 ),
+                'distribution'         => array(
+                    '@type'          => 'DataDownload',
+                    'name'           => 'UK dissolutions, incorporations and insolvencies monthly series (CSV)',
+                    'encodingFormat' => 'text/csv',
+                    'contentUrl'     => home_url( '/wp-content/themes/company-debt-webpigment/assets/data-hub/downloads/uk-company-dissolutions-vs-insolvencies.csv' ),
+                ),
             ),
         );
     }
@@ -481,6 +499,12 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Average days to pay an invoice',
                     'Share of invoices paid later than agreed terms',
                     'Share of invoices paid within 30 days',
+                ),
+                'distribution'         => array(
+                    '@type'          => 'DataDownload',
+                    'name'           => 'UK business payment practices by sector (CSV)',
+                    'encodingFormat' => 'text/csv',
+                    'contentUrl'     => home_url( '/wp-content/themes/company-debt-webpigment/assets/data-hub/downloads/uk-payment-practices-by-sector.csv' ),
                 ),
             ),
         );
