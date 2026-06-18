@@ -20,7 +20,7 @@ Latest figures available (as built):
 
 ## 1. Insolvency data hub (landing page)
 
-- URL: `/data/company-insolvency/`
+- URL: `/data/` (the hub lives at `/data/` itself; every data page sits flat beneath it as `/data/<slug>/`. The old nested `/data/company-insolvency/*` URLs 301 to the flat ones.)
 - Search intent: the entry point and directory for all CompanyDebt insolvency data. Not an article; a data product index.
 - Data: pulls one or two headline figures from each live source for the "at a glance" strip; otherwise links out.
 
