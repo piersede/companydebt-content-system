@@ -284,6 +284,47 @@ body.page-template-data-hub-template .main-content .cd-data-hub .cd-secnav {
 /* Hero matches the design: the "Latest update" eyebrow badge is removed from
    the page content (build_insolvency_dashboard.py) and the byline is removed
    from the page-header markup above — no CSS hiding needed. */
+
+/* ---- Shared text smoothing (cross-page consistency) ----
+   The four sibling pages declare `-webkit-font-smoothing: antialiased` on
+   .cd-data-hub; the flagship (uk-insolvency-statistics) omits it. Without it the
+   browser uses default (subpixel) smoothing, which renders the SAME font-weight
+   visibly heavier — so the flagship's masthead menu read as "bolder" than the
+   others. Declare it here for every data-hub page so glyph rendering is uniform
+   regardless of which page's inline CSS does or doesn't set it. */
+body.page-template-data-hub-template .main-content .cd-data-hub,
+body.page-template-data-hub-template .main-content .cd-data-hub * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Shared masthead rail (cross-page consistency) ----
+   The .cd-masthead is the shared, persistent cross-page nav. It must resolve to
+   the IDENTICAL 1040px centred rail on every data-hub page so it never shifts when
+   navigating between them. The flagship (uk-insolvency-statistics) defines
+   .cd-w-wide as a full-bleed 100vw band, so without this pin its masthead snaps to
+   full width (measured: box -8→2552) and jumps ~144px vs the 1040 siblings. Pin
+   ONLY the masthead here — the hero is aligned in the page's own CSS
+   (build_insolvency_dashboard.py: .cd-w-hero spans the heading rail to the wide
+   rail so the H1 sits under the logo). Do NOT add .cd-w-hero to this rule: forcing
+   it to a centred 1040 rail cramps the hero's two-column grid. */
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-masthead,
+body.page-template-data-hub-template .main-content .cd-data-hub .cd-masthead.cd-w-wide {
+    width: auto !important;
+    max-width: 1040px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+@media (max-width: 700px) {
+    body.page-template-data-hub-template .main-content .cd-data-hub .cd-masthead,
+    body.page-template-data-hub-template .main-content .cd-data-hub .cd-masthead.cd-w-wide {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
 </style>
 
 <main id="primary" class="site-main">

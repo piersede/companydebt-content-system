@@ -7,7 +7,7 @@
  *              spy) and emits per-page JSON-LD (WebPage / Dataset / ItemList /
  *              BreadcrumbList). All of this is stripped from page content by
  *              KSES, so it lives here.
- * Version:     2.0.0
+ * Version:     2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Slugs of the data-hub pages this plugin drives. The hub itself is nested at
- * /data/company-insolvency/ but WordPress stores only the leaf slug in
- * post_name ('company-insolvency'); the two data pages are nested below it.
+ * Slugs of the data-hub pages this plugin drives. The hub itself is /data/
+ * (post_name 'data'); every data page sits directly beneath it as
+ * /data/<slug>/.
  */
 function cd_datahub_known_slugs() {
     return array(
         'uk-insolvency-statistics',
-        'company-insolvency',
+        'data',
         'winding-up-petition-tracker',
         'dissolutions-vs-insolvencies',
         'payment-practices-late-payment',
@@ -221,7 +221,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
     $org_ref   = array( '@id' => $home . '#organization' );
     $published = get_the_date( 'Y-m-d', $page_id );
     $modified  = get_the_modified_date( 'Y-m-d', $page_id );
-    $hub_url   = home_url( '/data/company-insolvency/' );
+    $hub_url   = home_url( '/data/' );
 
     if ( 'uk-insolvency-statistics' === $slug ) {
         $page_url  = home_url( '/data/uk-insolvency-statistics/' );
@@ -296,6 +296,15 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'isBasedOn'            => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
                 'measurementTechnique' => 'Administrative company insolvency records and Companies House register data.',
                 'keywords'             => 'UK company insolvency, insolvency statistics, CVL statistics, compulsory liquidation, administration, insolvency rate, sector insolvency',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Company insolvencies (monthly count)',
+                    'Creditors voluntary liquidations (CVL)',
+                    'Compulsory liquidations',
+                    'Administrations',
+                    'Insolvency rate per 10,000 active companies',
+                ),
             ),
             array(
                 '@type'      => 'FAQPage',
@@ -305,12 +314,12 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         );
     }
 
-    if ( 'company-insolvency' === $slug ) {
+    if ( 'data' === $slug ) {
         $page_url = $hub_url;
         $cards = array(
             array( 'UK Company Insolvency Statistics', home_url( '/data/uk-insolvency-statistics/' ) ),
-            array( 'Winding-Up Petition Tracker', home_url( '/data/company-insolvency/winding-up-petition-tracker/' ) ),
-            array( 'Company Dissolutions vs Insolvencies', home_url( '/data/company-insolvency/dissolutions-vs-insolvencies/' ) ),
+            array( 'Winding-Up Petition Tracker', home_url( '/data/winding-up-petition-tracker/' ) ),
+            array( 'Company Dissolutions vs Insolvencies', home_url( '/data/dissolutions-vs-insolvencies/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -346,7 +355,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
     }
 
     if ( 'winding-up-petition-tracker' === $slug ) {
-        $page_url = home_url( '/data/company-insolvency/winding-up-petition-tracker/' );
+        $page_url = home_url( '/data/winding-up-petition-tracker/' );
         return array(
             array(
                 '@type'         => 'WebPage',
@@ -378,12 +387,19 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'isBasedOn'       => 'https://www.thegazette.co.uk/',
                 'measurementTechnique' => 'Counts of statutory insolvency notices advertised in The Gazette.',
                 'keywords'        => 'winding-up petition, winding-up order, The Gazette, compulsory liquidation, corporate distress, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Winding-up petitions advertised',
+                    'Winding-up orders made',
+                    'Petition dismissals',
+                ),
             ),
         );
     }
 
     if ( 'dissolutions-vs-insolvencies' === $slug ) {
-        $page_url = home_url( '/data/company-insolvency/dissolutions-vs-insolvencies/' );
+        $page_url = home_url( '/data/dissolutions-vs-insolvencies/' );
         return array(
             array(
                 '@type'         => 'WebPage',
@@ -415,12 +431,19 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'isBasedOn'       => 'https://www.gov.uk/government/organisations/companies-house',
                 'measurementTechnique' => 'Companies House register flows and Insolvency Service administrative records.',
                 'keywords'        => 'company dissolution, company strike-off, incorporations, company insolvency, Companies House, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Company dissolutions',
+                    'Company incorporations',
+                    'Company insolvencies',
+                ),
             ),
         );
     }
 
     if ( 'payment-practices-late-payment' === $slug ) {
-        $page_url = home_url( '/data/company-insolvency/payment-practices-late-payment/' );
+        $page_url = home_url( '/data/payment-practices-late-payment/' );
         return array(
             array(
                 '@type'         => 'WebPage',
@@ -452,6 +475,13 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'isBasedOn'       => 'https://check-payment-practices.service.gov.uk/',
                 'measurementTechnique' => 'Statutory Payment Practices and Performance reports; sector matched via Companies House primary SIC code.',
                 'keywords'        => 'payment practices, late payment, days to pay, supplier payment, Department for Business and Trade, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Average days to pay an invoice',
+                    'Share of invoices paid later than agreed terms',
+                    'Share of invoices paid within 30 days',
+                ),
             ),
         );
     }

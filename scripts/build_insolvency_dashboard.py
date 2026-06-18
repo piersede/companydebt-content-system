@@ -69,7 +69,9 @@ def hero_block(meta: dict, latest_total: int) -> str:
     Both sit inside the shared cd-w-hero container so they align with the
     breadcrumb/byline rendered by the PHP template."""
     return dedent(f"""\
-    <section class="cd-hero cd-w-hero">
+    <section class="cd-w-hero">
+      <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
+      <div class="cd-hero">
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
         <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was 2% higher than March 2026 and 3% higher than April 2025. This page tracks the headline figures, 12-month rolling rate and sector trends as each monthly release is published.</p>
@@ -100,6 +102,7 @@ def hero_block(meta: dict, latest_total: int) -> str:
           <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">51.8</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 193 companies</span></div>
         </div>
       </aside>
+      </div>
     </section>
     """)
 
@@ -130,12 +133,12 @@ def masthead_block() -> str:
     sibling data pages so the whole hub reads as one product with one menu."""
     return dedent("""\
     <div class="cd-masthead cd-w-wide">
-      <a class="cd-brand" href="/data/company-insolvency/">
+      <a class="cd-brand" href="/data/">
         <span class="cd-brand__mark" aria-hidden="true">CD</span>
         <span class="cd-brand__name">CompanyDebt</span>
         <span class="cd-brand__sub">Insolvency Data Hub</span>
       </a>
-      <nav class="cd-mastnav" aria-label="Data hub pages"><a href="/data/uk-insolvency-statistics/" aria-current="page">Insolvency Statistics</a><a href="/data/company-insolvency/winding-up-petition-tracker/">Petition Tracker</a><a href="/data/company-insolvency/dissolutions-vs-insolvencies/">Dissolutions</a><a href="/data/company-insolvency/payment-practices-late-payment/">Late Payment</a></nav>
+      <nav class="cd-mastnav" aria-label="Data hub pages"><a href="/data/uk-insolvency-statistics/" aria-current="page">Insolvency Statistics</a><a href="/data/winding-up-petition-tracker/">Petition Tracker</a><a href="/data/dissolutions-vs-insolvencies/">Dissolutions</a><a href="/data/payment-practices-late-payment/">Late Payment</a></nav>
     </div>
     """)
 
@@ -559,9 +562,17 @@ DASHBOARD_CSS = """
   --cd-radius-hero: 22px;
 
   color: var(--cd-text);
+  /* The system-UI sans stack, identical to the sibling data pages. Without this
+     the page inherited the theme's Arial, which is wider/heavier than Segoe UI
+     (Windows) or San Francisco (macOS) — that, NOT font-smoothing, is what made
+     this page's nav and breadcrumb read "bolder" than the others. Headings still
+     override to the serif via --cd-serif. */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-feature-settings: "tnum" 1, "ss01" 1;
   font-size: 14px;
   line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cd-data-hub *, .cd-data-hub *::before, .cd-data-hub *::after { box-sizing: border-box; }
@@ -578,7 +589,10 @@ DASHBOARD_CSS = """
 .cd-data-hub .cd-section-head h2,
 .cd-data-hub .cd-cta h2 { font-family: var(--cd-serif) !important; }
 
-.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:22px; padding-bottom:22px; margin-bottom:8px; border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
+/* padding 24/24 + margin-bottom:0 match the sibling pages' masthead exactly, so
+   the menu bar is the same height on every page and the hero's own padding-top
+   sets the gap below it (see .cd-w-hero). */
+.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:24px; margin-bottom:0; border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
 .cd-data-hub .cd-brand { display:inline-flex; align-items:center; gap:12px; color:var(--cd-text); text-decoration:none; }
 .cd-data-hub .cd-brand:hover { text-decoration:none; }
 .cd-data-hub .cd-brand__mark { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:9px; background:var(--cd-figure); color:#fff; font-family:var(--cd-serif); font-weight:700; font-size:16px; letter-spacing:0.02em; }
@@ -636,8 +650,7 @@ DASHBOARD_CSS = """
 /* ── Spacing rhythm ───────────────────────────────────────── */
 .cd-data-hub .cd-section { margin-top: var(--cd-space-section); }
 .cd-data-hub .cd-section-small { margin-top: var(--cd-space-section-small); }
-.cd-data-hub > .cd-section:first-child,
-.cd-data-hub > section.cd-hero { margin-top: 24px; }
+.cd-data-hub > .cd-section:first-child { margin-top: 24px; }
 
 /* ── Typography (5-size scale on 8px grid) ────────────────── */
 .cd-data-hub h1 {
@@ -739,11 +752,28 @@ DASHBOARD_CSS = """
   .cd-data-hub .cd-section-head--inline { grid-template-columns: 1fr; align-items: start; }
 }
 
-/* ── Hero (shared 1240px container with page-header) ──────── */
+/* ── Hero — spans the heading rail (left) to the wide rail (right) ── */
 .cd-data-hub .cd-w-hero {
-  max-width: 1240px;
-  margin-inline: auto;
-  padding-inline: 32px;
+  /* The hero straddles the page's two rails so it stays consistent with both:
+       LEFT  edge = the 1040 heading rail's content edge (= the brand logo and the
+                    section headings), so the H1 lines up under the logo.
+       RIGHT edge = the 1280 wide-content rail (= the chart/data sections below),
+                    so the hero's KPI panel lines up with those blocks.
+     Left inset  = 50vw - 520 + 24 (centre a 1040 rail, then its 24px padding).
+     Right inset = 50vw - 640 (identical to .cd-w-wide, the wide rail).
+     This keeps the H1 aligned with the logo AND gives the two-column grid room
+     to breathe (a centred 1040 rail left only ~470px for the text column once the
+     440px panel + 88px gap are taken out). */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: max(24px, calc(50vw - 496px));
+  padding-right: max(24px, calc(50vw - 640px));
+  /* 64px matches the sibling wrapper (.cd-hub-header) so the back-link sits the
+     same distance below the masthead on every page. */
+  padding-top: 64px;
+  box-sizing: border-box;
 }
 .cd-data-hub .cd-hero {
   display: grid;
@@ -753,6 +783,22 @@ DASHBOARD_CSS = """
   padding-bottom: 48px;
   margin-top: 0;
 }
+/* Back-link to the hub — matches the sibling data pages (.cd-back). It sits in
+   the .cd-w-hero wrapper ABOVE the .cd-hero grid (not inside it), so the grid's
+   column gap can't push it off the H1; its own 24px bottom margin sets the gap.
+   This mirrors the siblings' .cd-hub-header > .cd-back structure. */
+.cd-data-hub .cd-w-hero > .cd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cd-muted);
+  margin: 0 0 24px;
+}
+.cd-data-hub .cd-w-hero > .cd-back:hover { color: var(--cd-accent); text-decoration: none; }
 .cd-data-hub .cd-hero__copy {
   max-width: 680px;
   padding-right: 0;
@@ -932,11 +978,16 @@ DASHBOARD_CSS = """
   font-weight: 400;
 }
 
-/* Subtle divider line right after the hero */
+/* Subtle divider line right after the hero — same rails as .cd-w-hero so the
+   line starts under the logo/H1 and ends at the wide-content right edge. */
 .cd-data-hub .cd-hero-divider {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding-inline: 32px;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: max(24px, calc(50vw - 496px));
+  padding-right: max(24px, calc(50vw - 640px));
+  box-sizing: border-box;
 }
 .cd-data-hub .cd-hero-divider::after {
   content: "";
