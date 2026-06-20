@@ -325,6 +325,15 @@ body.page-template-data-hub-template .main-content .cd-data-hub .cd-masthead.cd-
         padding-right: 16px !important;
     }
 }
+
+/* ---- Data hub owns its own menu ----
+   The data hub carries its own masthead (.cd-masthead with .cd-mastnav) as its
+   navigation, so the theme global site header is suppressed on this template.
+   Scoped to this template only; the rest of the site keeps the normal header. */
+body.page-template-data-hub-template #masthead.site-header { display: none !important; }
+/* No WP breadcrumb above the data-hub masthead: the design puts the masthead
+   at the very top (sibling pages use the in-page back-link instead). */
+body.page-template-data-hub-template .page-header { display: none !important; }
 </style>
 
 <main id="primary" class="site-main">

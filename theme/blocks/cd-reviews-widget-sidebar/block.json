@@ -1,0 +1,16 @@
+{
+    "name": "acf/cd-reviews-widget-sidebar",
+    "title": "Reviews Widget Sidebar",
+    "description": "Reviews Widget Sidebar.",
+    "style": [ "file:./cd-reviews-widget-sidebar.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["widget", "reviews", "rating", "sidebar"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cd-reviews-widget-sidebar.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

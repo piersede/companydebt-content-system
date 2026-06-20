@@ -1,0 +1,115 @@
+body .section-cd-gravity-form-widget {
+	box-shadow: 0px 9px 25px 0px #71717140;
+	width: 100%;
+	padding: 45px 25px;
+	border-radius: 10px;
+	background: #FBFBFB;
+	border: none;
+	margin: 30px 0;
+
+}
+
+@media (min-width: 768px) {
+	body .section-cd-gravity-form-widget {
+		margin: 0 0;
+	}
+}
+
+@media (min-width: 1236px) {
+	body .section-cd-gravity-form-widget {
+		width: 370px;
+	}
+}
+
+section.section-cd-gravity-form-widget.gf-widget h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 24px;
+	color: var(--c-blue-dark);
+}
+
+section.section-cd-gravity-form-widget.gf-widget input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+section.section-cd-gravity-form-widget.gf-widget textarea {
+	border-radius: 5px;
+    line-height: 1;
+    margin-top: 0px;
+    border: 1px solid #B8BED5 !important;
+    color: #959595;
+    font-size: 15px !important;
+    padding: 4px 6px !important;
+    background: #fff !important;
+}
+section.section-cd-gravity-form-widget.gf-widget input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	height: 38px !important;
+}
+
+body .section-cd-gravity-form-widget h3 strong {
+	font-weight: 700;
+	display: block;
+}
+
+body .section-cd-gravity-form-widget h3:after {
+	content: '';
+	width: 200px;
+	height: 5px;
+	background-color: var(--c-orange);
+	margin: 28px 0;
+	display: block;
+}
+
+body .section-cd-gravity-form-widget .cd-gravity-form-desc li {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+	color: var(--c-blue-dark);
+	margin-bottom: 28px;
+}
+
+body .section-cd-gravity-form-widget ::placeholder {
+	color: #959595 !important;
+}
+
+body .section-cd-gravity-form-widget input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), body .section-cd-gravity-form-widget textarea, body .section-cd-gravity-form-widget body option, body .section-cd-gravity-form-widget body select {
+	border-radius: 5px;
+	line-height: 1;
+	margin-top: 0px;
+	border: 1px solid #B8BED5 !important;
+	color: #959595;
+	font-size: 15px !important;
+	padding: 4px 6px !important;
+	background: #fff !important;
+}
+
+body .section-cd-gravity-form-widget input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) ::placeholder, body .section-cd-gravity-form-widget textarea ::placeholder, body .section-cd-gravity-form-widget body option ::placeholder, body .section-cd-gravity-form-widget body select ::placeholder {
+	color: #959595 !important;
+}
+
+body .section-cd-gravity-form-widget .gform_footer input[type=submit] {
+	width: 100%;
+	color: #fff;
+	padding: 12px;
+	border-radius: 5px !important;
+	font-size: 18px;
+	height: 50px !important;
+	margin-bottom: 0;
+}
+
+body .section-cd-gravity-form-widget .gform_footer input[type=submit]:hover {
+	background: var(--c-blue-dark);
+}
+
+body .section-cd-gravity-form-widget .contact_disclaimer {
+	display: none !important;
+	bottom: 20px;
+	color: #002856;
+	color: var(--c-blue-dark);
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+}
+
+/*# sourceMappingURL=cd-gravity-form-with-title-and-bulletins-widget.css.map */

@@ -1,0 +1,16 @@
+{
+    "name": "acf/cd-liquidation-cost-cta",
+    "title": "Liquidation Cost CTA",
+    "description": "A call-to-action block with title, description, and button.",
+    "style": [ "file:./cd-liquidation-cost-cta.css" ],
+    "category": "formatting",
+    "icon": "money-alt",
+    "keywords": ["cta", "quote", "cost", "cd"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cd-liquidation-cost-cta.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

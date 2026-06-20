@@ -1,0 +1,16 @@
+{
+    "name": "acf/cd-gravity-form-with-title-and-bulletins-widget",
+    "title": "CD Gravity Form with Title and Bulletins",
+    "description": "CD Gravity Form with Title and Bulletins Widget.",
+    "style": [ "file:./cd-gravity-form-with-title-and-bulletins-widget.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["widget", "cd"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cd-gravity-form-with-title-and-bulletins-widget.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "landing-blank-hero.css",
+	"sources": [
+		"../../assets/sass/public/gutenberg-blocks/landing-blank-hero.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACI,2BADuB,CACvB,0BAA0B,CAAC;CACzB,WAAW,EAAE,IAAI;CACjB,KAAK,EAAE,IAAI;CACX,UAAU,EAAE,MAAM;CASnB;;AAbL,AAKM,2BALqB,CACvB,0BAA0B,CAIxB,wBAAwB,CAAC;CACvB,SAAS,EAAE,IAAI;CACf,KAAK,EAAE,IAAI;CACZ;;AARP,AASM,2BATqB,CACvB,0BAA0B,CAQxB,yBAAyB,CAAC;CACxB,KAAK,EAAE,IAAI;CAEZ"
+}

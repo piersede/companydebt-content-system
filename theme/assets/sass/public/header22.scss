@@ -1,0 +1,33 @@
+header {
+    background: #fff;
+    .header-22 {
+        display: flex;
+        align-items: center;
+        display: flex;
+        height: 75pt;
+        justify-content: space-between;
+        padding: 0 0;
+        @media all and (min-width: 1160px) {
+            padding: 0 15px;
+        }
+        .logo-link {
+            line-height: 1px;
+        }
+        .header__cta {
+            display: none;
+            @media all and (min-width: 1024px) {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+            .header__cta-letters, .header__cta-number {
+                font-size: 23px;
+                font-weight: 600;
+                color: #000;
+            }
+            .header__cta-number {
+                color: #fc0676;
+            }
+        }
+    }
+}

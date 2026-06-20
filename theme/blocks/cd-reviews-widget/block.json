@@ -1,0 +1,17 @@
+{
+    "name": "acf/cd-reviews-widget",
+    "title": "Reviews Widget",
+    "description": "Reviews Widget.",
+    "style": [ "file:./cd-reviews-widget.css" ],
+    "script": "cd-reviews-widget",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["widget", "reviews", "rating"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cd-reviews-widget.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

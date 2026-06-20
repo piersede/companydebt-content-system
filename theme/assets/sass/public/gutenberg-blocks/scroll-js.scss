@@ -1,0 +1,25 @@
+.js-scroll {
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+	opacity: 1;
+}
+
+.scrolled.fade-in-right {
+	animation: fade-in-right 400ms ease-in-out both;
+}
+
+@keyframes fade-in-right {
+	0% {
+		-webkit-transform: translateX(-75px);
+		transform: translateX(-75px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

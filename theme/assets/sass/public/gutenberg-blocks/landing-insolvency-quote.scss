@@ -1,0 +1,64 @@
+.section-block-landing-insolvency-quote {
+  padding: 45px 0 100px 0px;
+  .insolvency-quote-section-title {
+    text-align: center;
+  }
+
+  .quote-inner {
+    background: #fff;
+    border-bottom: 1pc solid #f60;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    display: flex;
+    max-width: 1030px;
+    position: relative;
+    margin-top: 150px;
+    padding: 60px 30px 0 30px;
+    @media all and (min-width: 992px) {
+      padding: 30px 30px 0 30px;
+      margin: 0 auto 0 auto;
+    }
+
+    &:before {
+      content: url("assets/images/landing-quotes.png");
+      left: 20px;
+      position: absolute;
+      top: -40px;
+    }
+
+    .col-10 {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+
+    .col-2 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+    .quote-photo {
+      position: absolute;
+      top: -75pt;
+      height: auto;
+      right: calc(50vw - 75pt);
+      width: 150px;
+
+      @media all and (min-width: 992px) {
+        right: -15px;
+      }
+    }
+    .quote-rating {
+      bottom: 20px;
+      position: absolute;
+      right: 30px;
+      display: none;
+      @media all and (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+}

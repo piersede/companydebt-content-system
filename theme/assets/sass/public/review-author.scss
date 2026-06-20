@@ -1,0 +1,135 @@
+.content-author-rev, .content-author {
+  padding: 17px 0 34px;
+  .col-4 {
+    padding: 0 15px;
+    line-height: 1;
+    flex: 0 0 25%;
+    max-width: 25%;
+
+
+  }
+  .col-auto {
+    padding: 0;
+  }
+  .col-8 {
+    padding: 0 0;
+    flex: 0 0 75%;
+    max-width: 75%;
+
+  }
+  .content-author-avatar {
+    img {
+      width: 55px;
+      height: 55px;
+      margin-right: 10px;
+      @media all and (min-width: 992px) {
+        width: 75px;
+        height: 75px;
+        margin-right: 20px;
+      }
+    }
+  }
+  .content-author-desc {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 300;
+    .reviewed-author {
+      display: flex;
+    }
+    a {
+      color: #f60;
+      text-decoration: underline;
+    }
+
+    .link-author {
+      position: relative;
+      cursor: pointer;
+      margin-left: 4px;
+      font-weight: 700;
+      &:hover {
+        .author-bio-tooltip {
+          display: block;
+        }
+      }
+    }
+    .author-bio {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+      margin: 10px 0;
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        margin: 10px 0;
+      }
+    }
+
+    .reviewby {
+      position: relative;
+      cursor: pointer;
+      .review-by-tooltip {
+        font-size: 16px;
+      }
+      &:hover {
+        .review-by-tooltip {
+          display: block;
+        }
+      }
+    }
+
+    .review-by-tooltip {
+      a {
+        color: #f60;
+        text-decoration: underline;
+      }
+    }
+  }
+  .tooltip-review {
+    position: absolute;
+    background: #fff;
+    width: 345px;
+    padding: 20px;
+    box-shadow: 10px 5px 68px rgba(50, 51, 51, .4);
+    display: none;
+    z-index: 9999999;
+    border-radius: 9px;
+    left: -160px;
+    @media screen and (min-width: 992px) {
+      width: 455px;
+      left: 0;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 60%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent white transparent;
+      @media screen and (min-width: 992px) {
+        left: 20%;
+      }
+    }
+  }
+  .social-media {
+    display: flex;
+    img {
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .content-icon {
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.content-author-rev {
+  display: flex;
+}

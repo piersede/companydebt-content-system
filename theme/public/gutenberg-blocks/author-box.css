@@ -1,0 +1,14 @@
+.content-author .reviewed-by {
+	font-size: 16px;
+	color: #002856;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.content-author .author-position, .content-author .date {
+	font-size: 13px;
+	line-height: 1.3;
+	padding: 5px 0;
+}
+
+/*# sourceMappingURL=author-box.css.map */

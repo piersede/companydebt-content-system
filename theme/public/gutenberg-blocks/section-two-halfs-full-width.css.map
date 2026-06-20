@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "section-two-halfs-full-width.css",
+	"sources": [
+		"../../assets/sass/public/gutenberg-blocks/section-two-halfs-full-width.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACE,6BAD2B,CAC3B,MAAM,CAAC;CACL,OAAO,EAAE,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAA,UAAU;CAEpC"
+}

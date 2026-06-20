@@ -380,7 +380,12 @@ function company_debt_webpigment_scripts() {
 	}
 
 	if ( is_archive() || is_search() ) {
-		wp_enqueue_style( 'company-debt-webpigment-arcihive', get_template_directory_uri() . '/public/archive.css', array(), _S_VERSION );
+		/* filemtime() instead of _S_VERSION so every edit to archive.css auto
+		 * busts the browser cache — the file is iterated on more frequently
+		 * than the theme constant gets bumped. -- 20260603 */
+		$arch_css = get_template_directory() . '/public/archive.css';
+		$arch_ver = file_exists( $arch_css ) ? (string) filemtime( $arch_css ) : _S_VERSION;
+		wp_enqueue_style( 'company-debt-webpigment-arcihive', get_template_directory_uri() . '/public/archive.css', array(), $arch_ver );
 	}
 
 	if ( is_page_template( 'templates/design-22-v1.php' ) ) {
@@ -510,16 +515,104 @@ function footnotes_in_content( $content ) {
 }
 
 function toc_and_footnotes_in_content( $content ) {
-	if ( ! is_front_page() && ! is_home() && ( ( is_singular( 'post' ) && get_field( 'toc_enabled' ) ) || ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) ) ) ) {
+	/* Determine whether the current view should have a TOC injected into its
+	 * body. Three paths qualify:
+	 *   1. Single post with the legacy `toc_enabled` ACF field set (kept for
+	 *      backward compatibility with posts that explicitly opted in).
+	 *   2. Single page using the default page template OR the take-the-test
+	 *      page template.
+	 *   3. Single post using the default post template — i.e. anything that
+	 *      now gets the cd-ttt-design body class, EXCLUDING posts on the
+	 *      post-sectors template (they have their own combined section and
+	 *      shouldn't grow an in-body TOC). Added 20260606 so /articles/*
+	 *      posts get the same TOC sidebar behaviour as take-the-test pages. */
+	$is_eligible_post_default = is_singular( 'post' )
+		&& '' === get_page_template_slug()
+		&& ! in_category( 'sectors' )
+		&& ! in_category( 'services-to' );
+	if ( ! is_front_page() && ! is_home() && (
+		( is_singular( 'post' ) && get_field( 'toc_enabled' ) )
+		|| ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) )
+		|| $is_eligible_post_default
+	) ) {
 		if ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) {
 			$toc = new CD\Content\Toc( $content );
 			$content = $toc->getPostTocInContent();
 		}
 	}
-	
+
 	$content_footnotes = new CD\Content\Footnotes( $content );
 	return $content_footnotes->getPostFootnotesMarkup();
 }
+
+/**
+ * Server-side sidebar TOC for the take-the-test design system.
+ *
+ * Renders the same auto-TOC that toc_and_footnotes_in_content() injects into
+ * the article body, but wrapped in the .widget--cd-toc container the sidebar
+ * CSS targets (sticky + scroll-spy styling). Placing it server-side removes the
+ * old footer.php JS DOM-move: the sidebar TOC is now present at first paint and
+ * survives full-page caching. The body copy stays in place for mobile (<992px)
+ * and is hidden on desktop by style.css; this sidebar copy is hidden on mobile.
+ *
+ * Eligibility mirrors toc_and_footnotes_in_content() so the two copies never
+ * disagree about whether a TOC exists.
+ *
+ * @param string $content Rendered post content (post-the_content()).
+ * @return string Sidebar TOC HTML, or '' when not eligible / no headings.
+ */
+function cd_render_sidebar_toc( $content ) {
+	if ( is_front_page() || is_home() ) {
+		return '';
+	}
+
+	$is_eligible_post_default = is_singular( 'post' )
+		&& '' === get_page_template_slug()
+		&& ! in_category( 'sectors' )
+		&& ! in_category( 'services-to' );
+
+	$eligible = ( is_singular( 'post' ) && get_field( 'toc_enabled' ) )
+		|| ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) )
+		|| $is_eligible_post_default;
+
+	if ( ! $eligible ) {
+		return '';
+	}
+	if ( ! ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) ) {
+		return '';
+	}
+
+	$toc = new CD\Content\Toc( $content );
+	if ( (int) $toc->count < 1 ) {
+		return '';
+	}
+
+	$nav = $toc->getToc( true );
+	if ( '' === trim( $nav ) ) {
+		return '';
+	}
+
+	return '<div class="widget widget--cd-toc">' . $nav . '</div>';
+}
+
+/**
+ * Set the sticky-sidebar TOC flag on <html> server-side so the gating CSS
+ * (html[data-toc-sidebar="on"] ...) is active at first paint, eliminating the
+ * body-TOC flash that occurred when an inline footer script set it late. The
+ * CSS is further scoped to body.cd-ttt-design, so this attribute is inert on
+ * non-TOC pages. The footer flag script is kept as a JS fallback.
+ */
+add_filter( 'language_attributes', function( $output ) {
+	if ( false === strpos( $output, 'data-toc-sidebar' ) ) {
+		$output .= ' data-toc-sidebar="on"';
+	}
+	// data-sticky-nav + data-licensed-v2 were briefly set here so their flag-gated
+	// CSS applied at first paint. Retired 2026-06-20: both CSS blocks were
+	// de-flagged (made unconditional) in style.css, so the attributes are no
+	// longer needed server-side. data-insolvency-v2 likewise retired -- that
+	// widget is now server-rendered (mu-plugins/cd-rocket-flicker-fix.php).
+	return $output;
+} );
 
 // add_action( 'the_content', function( $content ) {
 // 	if ( ! is_front_page() && ! is_home() && ( ( is_singular( 'post' ) && get_field( 'toc_enabled' ) ) || ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) ) ) ) {
@@ -865,6 +958,11 @@ add_filter( "gform_submit_button_44", function( $button, $form ) {
     return str_replace( "Submit", "Get in Touch", $button );
 }, 10, 2 );
 
+// Change Gravity Forms submit button text for footer CTA form (form 29)
+add_filter( "gform_submit_button_29", function( $button, $form ) {
+    return str_replace( "Submit", "Get in Touch", $button );
+}, 10, 2 );
+
 
 // Hide section sidebar menus and empty blocks from the take-the-test sidebar
 // Only approved widgets should render: author, reviews, stressed guide, licensed, free insolvency, reviews.io
@@ -930,14 +1028,93 @@ add_filter( 'wpseo_sitemap_entry', function( $entry, $type, $post ) {
 
 
 /**
- * Breadcrumb separator: replace default '/' with raquo '»' on take-the-test
- * template only. Filter the Yoast SEO breadcrumb separator output.
+ * Hub template card titles: promote <span class="cd-hub-card__title"> to <h4>
+ * on hub_with_buttons pages so card titles are semantically headings (better
+ * accessibility + SEO) and pick up the take-the-test h4 typography. Filter
+ * the rendered post content rather than editing each page's database content,
+ * so the change applies to every existing + future hub page automatically.
+ */
+add_filter( 'the_content', function( $content ) {
+    if ( is_page_template( 'templates/content-page-hub_with_buttons.php' ) ) {
+        $content = preg_replace(
+            '#<span(\s+class="[^"]*cd-hub-card__title[^"]*"[^>]*)>(.*?)</span>#s',
+            '<h4$1>$2</h4>',
+            $content
+        );
+    }
+    return $content;
+}, 20 );
+
+
+/**
+ * Breadcrumb separator: replace default '/' with raquo '›' on templates that
+ * use the v2 hero (take-the-test + content-page-hub_with_buttons). Filter the
+ * Yoast SEO breadcrumb separator output.
  */
 add_filter( 'wpseo_breadcrumb_separator', function( $separator ) {
-    if ( is_page_template( 'templates/take-the-test-template.php' ) ) {
+    if ( is_page_template( 'templates/take-the-test-template.php' )
+      || is_page_template( 'templates/content-page-hub_with_buttons.php' )
+      || is_page_template( 'templates/content-meet-the-team.php' )
+      || is_page_template( 'templates/content-full-width-page.php' )
+      || is_page_template( 'templates/about-us.php' )
+      || is_archive()
+      || ( is_singular( 'post' ) && ( in_category( 'sectors' ) || in_category( 'services-to' ) ) )
+      || ( is_singular( 'post' )
+           && ! in_category( 'sectors' )
+           && ! in_category( 'services-to' ) ) ) {
         return '<span class="bc-sep">&#8250;</span>';
     }
     return $separator;
+} );
+
+/**
+ * Inject a `category-sectors` body class on single posts that use the
+ * post-sectors template — that's both /sectors/* posts (in the 'sectors'
+ * category) AND /services-to/* posts (in the 'services-to' category).
+ * WP only emits category-<slug> classes on category archive views, not on
+ * single-post views, so we mint the class manually for CSS targeting.
+ *
+ * The class name reflects the original /sectors/ rollout; we deliberately
+ * re-use it for /services-to/ posts rather than introduce a parallel class
+ * because the 200+ existing CSS rules apply identically to both URL
+ * families (same template, same sections, same desired treatment). A
+ * matching class is also added so PHP/JS can branch on either category.
+ */
+add_filter( 'body_class', function( $classes ) {
+    if ( is_singular( 'post' ) && ( in_category( 'sectors' ) || in_category( 'services-to' ) ) ) {
+        $classes[] = 'category-sectors';
+    }
+    return $classes;
+} );
+
+/**
+ * Inject a `cd-ttt-design` body class on every page/post that uses the
+ * take-the-test design system. That originally meant only pages using the
+ * `take-the-test-template.php` page template — but as of 20260606 we
+ * deploy the same hero + h-tag + sidebar + footer treatment to single
+ * posts using the default post template (`single.php` → `content.php`),
+ * which serve /articles/* and friends.
+ *
+ * Posts using the post-sectors template are EXCLUDED (they get
+ * `category-sectors` instead — see the filter above) so their custom
+ * services-to / sectors styling stays distinct.
+ *
+ * The 377 selectors in style.css that target this design system live on
+ * `body.cd-ttt-design` (formerly `body.page-template-take-the-test-template`)
+ * — the rename consolidates the design system into a single named scope
+ * shared by both URL families.
+ */
+add_filter( 'body_class', function( $classes ) {
+    if ( is_page_template( 'templates/take-the-test-template.php' ) ) {
+        $classes[] = 'cd-ttt-design';
+    } elseif ( is_singular( 'post' )
+               && ! in_category( 'sectors' )
+               && ! in_category( 'services-to' ) ) {
+        /* Single posts NOT on the post-sectors template — these use
+         * single.php + template-parts/content.php (post-template-default). */
+        $classes[] = 'cd-ttt-design';
+    }
+    return $classes;
 } );
 
 

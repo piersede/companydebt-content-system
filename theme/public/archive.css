@@ -1,0 +1,73 @@
+.site-archive .articles-list, .search-page .articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .site-archive .articles-list article, .search-page .articles-list article {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 0 15px 30px 15px;
+    padding: 0 15px 30px 15px; }
+    @media all and (min-width: 768px) {
+      .site-archive .articles-list article, .search-page .articles-list article {
+        flex: 0 0 50%; } }
+    @media all and (min-width: 992px) {
+      .site-archive .articles-list article, .search-page .articles-list article {
+        flex: 0 0 33.333%; } }
+    .site-archive .articles-list article img, .search-page .articles-list article img {
+      font-family: "object-fit:cover";
+      object-fit: cover;
+      width: 100%;
+      max-height: 219px; }
+    .site-archive .articles-list article .read-more-btn, .search-page .articles-list article .read-more-btn {
+      color: #f60;
+      font-weight: bold;
+      width: fit-content;
+      font-size: 15.3px;
+      margin: 30px 0 20px;
+      position: relative;
+      display: inline-block; }
+      /* Orange slide-in underline on Read More disabled — clashes with
+         the navy card chrome on the new archive design (20260603).
+         Bar suppressed via content:none so :after generates no box. */
+      .site-archive .articles-list article .read-more-btn:after, .search-page .articles-list article .read-more-btn:after {
+        content: none; }
+    .site-archive .articles-list article h3, .search-page .articles-list article h3 {
+      margin: 13px 0 18px;
+      overflow: hidden; }
+    .site-archive .articles-list article .post-excerpt, .search-page .articles-list article .post-excerpt {
+      color: #444;
+      font-size: 15.3px;
+      line-height: 21px;
+      overflow: hidden; }
+    .site-archive .articles-list article a, .search-page .articles-list article a {
+      text-decoration: none; }
+      /* Orange h3 + slide-in underline on hover both disabled — the
+         new card chrome handles hover via box-shadow + transform on the
+         article itself, no per-element colour shifts (20260603). */
+
+.site-archive .nav-links, .search-page .nav-links {
+  padding: 45px 0 110px; }
+  .site-archive .nav-links .page-numbers, .search-page .nav-links .page-numbers {
+    color: #4f4f4f;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.42px;
+    padding-right: 30px;
+    text-decoration: none; }
+    .site-archive .nav-links .page-numbers.current, .search-page .nav-links .page-numbers.current {
+      position: relative; }
+      .site-archive .nav-links .page-numbers.current:after, .search-page .nav-links .page-numbers.current:after {
+        background: #f60;
+        bottom: -50%;
+        content: "";
+        height: 5px;
+        left: -5px;
+        position: absolute;
+        width: auto;
+        width: 20px; }
+  .site-archive .nav-links .next, .site-archive .nav-links .prev, .site-archive .nav-links .screen-reader-text, .search-page .nav-links .next, .search-page .nav-links .prev, .search-page .nav-links .screen-reader-text {
+    display: none; }
+
+.site-archive .pagination, .search-page .pagination {
+  border-top: 1px solid var(--c-border); }

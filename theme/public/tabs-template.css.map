@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "tabs-template.css",
+	"sources": [
+		"../assets/sass/public/tabs-template.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,cAAc,CAAC;CACX,QAAQ,EAAE,QAAQ;CAkBrB;;AAnBD,AAGI,cAHU,CAGV,YAAY,CAAC;CACT,MAAM,EAAE,KAAK;CACb,iBAAiB,EAAE,SAAS;CAC5B,eAAe,EAAE,OAAO;CACxB,mBAAmB,EAAE,QAAQ;CAC7B,UAAU,EAAE,UAAU;CAQzB;;AAhBL,AAUQ,cAVM,CAGV,YAAY,CAOR,EAAE,CAAC;CACC,KAAK,EAAE,MAAM;CACb,UAAU,EAAE,UAAU;CACtB,OAAO,EAAE,gBAAgB;CACzB,MAAM,EAAE,MAAM;CACjB"
+}

@@ -1,0 +1,137 @@
+.redun_calc__form_wrapper.gform_wrapper{
+    background:var(--c-blue-light);
+    border:1px solid transparent;
+    border-radius:5px;
+    justify-content:space-between;
+    margin:50px 0;
+    padding:40px 15px 150px;
+    position:relative
+}
+@media (min-width:992px){
+    .redun_calc__form_wrapper.gform_wrapper{
+        padding:40px 70px 75pt
+    }
+}
+.redun_calc__form_wrapper .gf_progressbar_wrapper .gf_progressbar_title{
+    text-align:right
+}
+.redun_calc__form_wrapper .gf_progressbar_wrapper .gf_progressbar{
+    display:none
+}
+.redun_calc__form_wrapper .gform_next_button{
+    min-width:150px
+}
+.gform_wrapper.redun_calc__form_wrapper .gform_next_button:hover{
+    background:var(--c-button-primary-hover)
+}
+.gform_wrapper.redun_calc__form_wrapper .gform_previous_button:hover{
+    text-decoration:underline
+}
+.redun_calc__form_wrapper.gform_wrapper span.gform_description{
+    margin-bottom:0;
+    padding-top:0
+}
+.gform_wrapper form .gfield_html.gfield_no_follows_desc.redun_calc__html_description{
+    font-size:var(--fs-p);
+    font-style:italic;
+    line-height:22px!important;
+    padding:20px 0
+}
+.redun_calc__form_wrapper .gform_body{
+    padding:20px 0
+}
+@media only screen and (min-width:641px){
+    .gform_wrapper.redun_calc__form_wrapper .top_label .gfield_label,.gform_wrapper.redun_calc__form_wrapper .top_label li.gfield.gf_left_half:before,.gform_wrapper.redun_calc__form_wrapper legend.gfield_label{
+        content:none!important
+    }
+}
+.redun_calc__form_wrapper form{
+    position:relative
+}
+.redun_calc__html_disclaimer{
+    bottom:-75pt;
+    font-size:var(--fs-bread);
+    line-height:1pc!important;
+    position:absolute
+}
+@media (min-width:992px){
+    .redun_calc__html_disclaimer{
+        bottom:-50px
+    }
+}
+.redun_calc__form_wrapper.gform_wrapper.redun_calc__form_wrapper .top_label .gfield_label{
+    font-size:var(--fs-bread);
+    font-weight:400
+}
+.redun_calc__form_wrapper.gform_wrapper .gform_page_footer{
+    border-top:1px solid var(--c-border);
+    margin-top:30px;
+    padding-bottom:0;
+    position:relative;
+    text-align:center
+}
+@media (min-width:992px){
+    .redun_calc__form_wrapper.gform_wrapper .gform_page_footer{
+        text-align:right
+    }
+}
+.redun_calc__form_wrapper.gform_wrapper .gform_page:not(#gform_page_2_1) .gform_page_footer:after{
+    bottom:-50px;
+    color:var(--c-black);
+    font-weight:500;
+    left:37%;
+    padding:0;
+    position:absolute
+}
+.redun_calc__form_wrapper.gform_wrapper .gform_page_footer .gform_previous_button,.redun_calc__form_wrapper.gform_wrapper .gform_page_footer .gform_previous_button:focus,.redun_calc__form_wrapper.gform_wrapper .gform_page_footer .gform_previous_button:hover{
+    background-color:transparent!important;
+    left:40%;
+    outline-style:none!important
+}
+.redun_calc .builder-row--two-halfs{
+    flex-direction:column
+}
+.redun_calc .content__left,.redun_calc .content__right{
+    width:auto
+}
+@media (min-width:1024px){
+    .redun_calc .builder-row--two-halfs{
+        flex-direction:row
+    }
+    .redun_calc .content__left{
+        min-width:430px;
+        padding-right:15px
+    }
+    .redun_calc .content__left,.redun_calc .content__right{
+        width:50%
+    }
+}
+@media (min-width:80em){
+    .redun_calc .content__left{
+        padding:70px 70px 70px 0
+    }
+}
+.redun_calc__form_wrapper .gform_required_legend,.redun_calc__form_wrapper .gform_title,.redun_calc__form_wrapper .gform_title:after{
+    display:none
+}
+.redun_calc__top{
+    align-items:center;
+    display:flex;
+    padding-bottom:25px
+}
+.redun_calc__text{
+    padding-left:25px
+}
+.redun_calc__title{
+    line-height:1.1
+}
+.redun_calc__supertitle{
+    color:var(--c-orange);
+    font-size:var(--fs-bread);
+    font-weight:var(--fw-bold);
+    text-transform:uppercase
+}
+.redun_calc__directors label,.redun_calc__email_3 label,.redun_calc__email label,.redun_calc__phone label,.redun_calc__radio legend,.redun_calc__wage label{
+    padding-top:10px!important
+}
+ 

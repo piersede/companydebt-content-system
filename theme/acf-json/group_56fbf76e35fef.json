@@ -1,0 +1,155 @@
+{
+    "key": "group_56fbf76e35fef",
+    "title": "Related Pages",
+    "fields": [
+        {
+            "key": "field_5adeea5e98230",
+            "label": "Topical Content from Hub page",
+            "name": "topical_from_hub",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5adeeae698231",
+            "label": "Hub Page Id",
+            "name": "hub_page_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5adeea5e98230",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591043262f096",
+            "label": "Topical Content Heading",
+            "name": "topical_content_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Change the heading of the related pages element on the bottom",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5adeea5e98230",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Topical Content",
+            "placeholder": "Topical Content",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58ee213f5564d",
+            "label": "Topically Related Articles",
+            "name": "related_pages_list",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Choose this so they will appear below the content",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5adeea5e98230",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5adeea5e98230",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/content-page-custom_archive.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669297759
+}

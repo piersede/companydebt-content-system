@@ -1,0 +1,36 @@
+.page-footer-accreditation {
+    background: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+
+    .heading {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .logos {
+        list-style: none;
+        margin: 30px auto;
+        padding: 0 0;
+        display: flex;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media all and (min-width: 1280px) {
+            margin: 5pc auto;
+            width: 60%;
+        }
+
+        .logo {
+            margin: 15px;
+        }
+    }
+
+    .accreditation-button {
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .15), 0 -2px 4px rgba(0, 0, 0, .15);
+        font-weight: 700;
+        padding: 15px 75pt;
+        text-decoration: none;
+    }
+}

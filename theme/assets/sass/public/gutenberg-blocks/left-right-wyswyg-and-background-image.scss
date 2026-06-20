@@ -1,0 +1,43 @@
+.section-left-right-wyswyg-and-background-image {
+  .img {
+    height: 250px;
+    object-fit: cover;
+    @media all and (min-width: 992px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @media all and (min-width: 992px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .col-6-content {
+    padding: 30px 15px;
+    @media all and (min-width: 992px) {
+      padding: 70px 0 70px 50px;
+      margin-left: 50%;
+    }
+  }
+
+  &.left-wyswyg {
+    .col-6-content{
+      @media all and (min-width: 992px) {
+        padding: 70px 70px 70px 0px;
+        margin-left: 0%;
+      }
+    }
+
+    .img {
+      right: 0;
+      left: auto;
+
+    }
+  }
+}

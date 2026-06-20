@@ -1,0 +1,56 @@
+.section-block-landing-insolvency-timeline {
+
+  &:before {
+    background:  #002856;
+    content: "";
+    height: calc(100% - 30px);
+    left: 21px;
+    position: absolute;
+    top: 15px;
+    width: 3px;
+    @media all and (min-width: 768px) {
+      left: 45px;
+    }
+    @media all and (min-width:1024px) {
+      left: 20px;
+    }
+  }
+  .timeline-item {
+    align-items: center;
+    display: flex;
+    padding-bottom: 40px;
+    .timeline-number {
+      font-size: 26px;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+      line-height: 1;
+      &:after {
+        background: #fff;
+        border: 3px solid #002856;
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        left: -12px;
+        position: absolute;
+        top: -6px;
+        width: 40px;
+        z-index: -1;
+
+      }
+    }
+    .timeline-item-content {
+      padding-left: 30px;
+      .timeline-item-heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #002856;
+      }
+      .timeline-item-description {
+        font-size: 20px;
+        color: #002856;
+      }
+    }
+
+  }
+}

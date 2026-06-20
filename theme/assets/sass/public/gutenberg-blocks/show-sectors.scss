@@ -1,0 +1,74 @@
+.section-sectors {
+  .posts {
+    .col-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 15px;
+
+      @media all and (min-width: 768px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @media all and (min-width: 1024px) {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+    .sector-post {
+      border-radius: 5px;
+      height: 160px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      a {
+        position: relative;
+        min-height: 160px;
+        text-decoration: none;
+        .post {
+          position: relative;
+          transform: scale(1);
+          transition: all .5s ease;
+          height: 160px;
+          &:before {
+            background: rgba(0,0,0,.4);
+            bottom: 0;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+
+          h3 {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 700;
+            position: absolute;
+            text-align: center;
+            text-transform: uppercase;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 3;
+            margin: 0 0;
+          }
+        }
+      }
+
+
+      &:hover {
+        .post {
+          transform: scale(1.2);
+          transition: all .5s ease;
+        }
+      }
+    }
+
+
+  }
+}

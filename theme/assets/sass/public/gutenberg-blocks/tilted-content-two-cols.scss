@@ -1,0 +1,125 @@
+.section-tilted-content-two-cols {
+  padding: 55px 0;
+  @media all and (min-width: 767px) {
+    padding: 5pc 0;
+  }
+  .tilted-content-supertitle {
+    color: #f60;
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-top: 8px;
+    @media all and (min-width: 767px) {
+      padding-top: 0px;
+    }
+  }
+
+  .tilted-content-heading {
+    color: #002856;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 20px;
+    @media all and (min-width: 768px) {
+      font-size: 38px;
+      line-height: 42px;
+      padding-bottom: 35px;
+      padding-top: 8px;
+    }
+    @media all and (min-width: 992px) {
+      padding-bottom: 40px;
+      padding-top: 0px;
+    }
+  }
+
+  .tilted-content-excerpt {
+    border-left: 8px solid #f60;
+    font-size: 17px;
+    color: #002856;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    @media all and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 2pc;
+    }
+  }
+
+  .tilted-content-subheading{
+    color: #002856;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2pc;
+    padding-bottom: 30px;
+
+    @media all and (min-width: 992px) {
+      padding-left: 75pt;
+    }
+  }
+
+  .tilted-content-content {
+    column-count: 1;
+    grid-column-gap: 80px;
+    -moz-column-gap: 80px;
+    column-gap: 80px;
+    line-height: 24px;
+    padding-left: 0;
+    font-size: 17px;
+    @media all and (min-width: 768px) {
+      column-count: 2;
+    }
+    @media all and (min-width: 992px) {
+      padding-left: 100px;
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  &.excerpt-width-60-perc {
+    .tilted-content-excerpt {
+      width: auto;
+      @media all and (min-width: 992px) {
+        width: 61%;
+      }
+    }
+  }
+
+  &.excerpt-width-82-perc {
+    .tilted-content-excerpt {
+      width: auto;
+      @media all and (min-width: 992px) {
+        width: 82%;
+      }
+    }
+  }
+
+  &.heading-width-65-perc  {
+    .tilted-content-heading {
+      width: auto;
+      @media all and (min-width: 992px) {
+        width: 65%;
+      }
+
+    }
+  }
+
+  &.heading-width-50-perc {
+    .tilted-content-heading {
+      width: auto;
+      @media all and (min-width: 992px) {
+        width: 50%;
+      }
+    }
+  }
+
+}

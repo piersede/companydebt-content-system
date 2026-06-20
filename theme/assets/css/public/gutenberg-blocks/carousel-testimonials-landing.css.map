@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "carousel-testimonials-landing.css",
+	"sources": [
+		"../../../sass/public/gutenberg-blocks/carousel-testimonials-landing.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAEE,sCAFoC,CAEpC,6BAA6B,CAAC;CAC5B,QAAQ,EAAE,QAAQ;CAClB,UAAU,EAAE,MAAM;CAClB,aAAa,EAAE,GAAG;CAClB,cAAc,EAAE,CAAC;CAUlB;;AAhBH,AAOI,sCAPkC,CAEpC,6BAA6B,AAK1B,MAAM,CAAC;CACN,gBAAgB,EAAE,IAAI;CACtB,MAAM,EAAE,KAAK;CACb,OAAO,EAAE,EAAE;CACX,MAAM,EAAE,GAAG;CACX,IAAI,EAAE,GAAG;CACT,QAAQ,EAAE,QAAQ;CAClB,KAAK,EAAE,GAAG;CACX"
+}

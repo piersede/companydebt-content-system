@@ -1,0 +1,52 @@
+.section-block-landing-insolvency-accordion {
+  padding: 50px 0;
+  color: #fff;
+  .container {
+    margin: auto;
+    max-width: 700px;
+  }
+  .insolvency-accordion-section-title {
+    text-align: center;
+    color: #fff;
+  }
+  .accordion-item {
+    border-bottom: 1px solid #8fa8be;
+    grid-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    cursor: pointer;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .accordion-item-header {
+      align-items: center;
+      display: flex;
+      position: relative;
+      .accordion-title-img{
+        display: flex;
+        align-items: center;
+        picture {
+          display: flex;
+          align-items: center;
+        }
+      }
+      img {
+        padding-right: 10px;
+        max-width: 40px;
+        height: auto;
+      }
+      .accordion-title {
+        color: #fff;
+      }
+    }
+    .accordion-description {
+      padding-left: 55px;
+      p{
+        color: #fff;
+      }
+      &.closed {
+        display: none;
+      }
+    }
+  }
+}

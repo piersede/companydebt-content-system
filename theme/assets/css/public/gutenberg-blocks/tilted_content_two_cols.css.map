@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "tilted_content_two_cols.css",
+	"sources": [
+		"../../../sass/public/gutenberg-blocks/tilted_content_two_cols.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,EAAE,CAAC;CACD,KAAK,EAAE,GAAG;CACX"
+}

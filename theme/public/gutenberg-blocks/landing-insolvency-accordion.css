@@ -1,0 +1,64 @@
+.section-block-landing-insolvency-accordion {
+	padding: 50px 0;
+	color: #fff;
+}
+
+.section-block-landing-insolvency-accordion .container {
+	margin: auto;
+	max-width: 700px;
+}
+
+.section-block-landing-insolvency-accordion .insolvency-accordion-section-title {
+	text-align: center;
+	color: #fff;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item {
+	border-bottom: 1px solid #8fa8be;
+	grid-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+	cursor: pointer;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-item-header {
+	align-items: center;
+	display: flex;
+	position: relative;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-item-header .accordion-title-img {
+	display: flex;
+	align-items: center;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-item-header .accordion-title-img picture {
+	display: flex;
+	align-items: center;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-item-header img {
+	padding-right: 10px;
+	max-width: 40px;
+	height: auto;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-item-header .accordion-title {
+	color: #fff;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-description {
+	padding-left: 55px;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-description p {
+	color: #fff;
+}
+
+.section-block-landing-insolvency-accordion .accordion-item .accordion-description.closed {
+	display: none;
+}
+
+/*# sourceMappingURL=landing-insolvency-accordion.css.map */

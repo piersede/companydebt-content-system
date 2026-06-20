@@ -1,0 +1,73 @@
+.section-hub-boxes .row {
+  justify-content: space-between; }
+  .section-hub-boxes .row:after {
+    content: "";
+    width: calc(33% - 20px); }
+
+.section-hub-boxes .col-4 {
+  flex: 100%;
+  max-width: 100%;
+  border: 1px solid #002856;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  padding: 0; }
+  @media all and (min-width: 768px) {
+    .section-hub-boxes .col-4 {
+      flex: calc(50% - 20px);
+      max-width: calc(50% - 20px); } }
+  @media all and (min-width: 992px) {
+    .section-hub-boxes .col-4 {
+      flex: calc(33% - 18px);
+      max-width: calc(33% - 18px); } }
+  .section-hub-boxes .col-4 .hub-box {
+    height: 100%;
+    color: var(--c-font-dark); }
+    .section-hub-boxes .col-4 .hub-box .hub-box-content {
+      padding: 30px; }
+      .section-hub-boxes .col-4 .hub-box .hub-box-content ul {
+        margin-top: 5px;
+        padding-left: 20px; }
+        .section-hub-boxes .col-4 .hub-box .hub-box-content ul li {
+          padding: 5px 0; }
+  .section-hub-boxes .col-4 .bg-image {
+    position: relative;
+    height: 120px; }
+    .section-hub-boxes .col-4 .bg-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block !important; }
+  .section-hub-boxes .col-4 .box-icon {
+    max-width: 70px; }
+  .section-hub-boxes .col-4 a:hover .read-more-btn, .section-hub-boxes .col-4 a:hover .box-heading, .section-hub-boxes .col-4 a:hover .box-content {
+    color: #f60; }
+  .section-hub-boxes .col-4 .box-heading {
+    font-weight: 700;
+    color: #002856;
+    margin-top: 0;
+    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 15px; }
+  .section-hub-boxes .col-4 .box-content {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+    line-height: 27px; }
+  .section-hub-boxes .col-4 .read-more-btn {
+    font-size: 15.3px;
+    font-weight: 700;
+    position: relative;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+    color: #002856; }
+    .section-hub-boxes .col-4 .read-more-btn:after {
+      background: #f60;
+      bottom: -8px;
+      content: "";
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%; }

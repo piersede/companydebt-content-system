@@ -1,0 +1,73 @@
+.section-bottom-line {
+	background-color: #e7f6fd;
+	border-left: 8px solid;
+	margin-bottom: 40px;
+	margin-top: 25px;
+	padding: 20px 25px;
+}
+
+.section-bottom-line .col-auto {
+	max-width: 100%;
+}
+
+.section-bottom-line .bottom-line-heading {
+	font-size: 17px;
+	font-weight: 700;
+	color: #002856;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+@media all and (min-width: 768px) {
+	.section-bottom-line .bottom-line-heading {
+		padding-bottom: 10px;
+		text-align: left;
+	}
+}
+
+.section-bottom-line .bottom-line-content {
+	text-align: center;
+}
+
+@media all and (min-width: 768px) {
+	.section-bottom-line .bottom-line-content {
+		display: flex;
+		padding: 0 15px;
+		align-items: center;
+		text-align: unset;
+	}
+}
+
+.section-bottom-line .bottom-line-content .bottom-line-img {
+	height: auto;
+	margin-bottom: 20px;
+	width: 70px;
+}
+
+@media all and (min-width: 768px) {
+	.section-bottom-line .bottom-line-content .bottom-line-img {
+		margin-right: 20px;
+		margin-bottom: 0;
+	}
+}
+
+.section-bottom-line .bottom-line-description {
+	text-align: left;
+}
+
+.section-bottom-line .bottom-line-description p {
+	font-size: 17px;
+	color: #002856;
+	font-weight: 400;
+	line-height: 28px;
+	margin-top: 0;
+}
+
+.section-bottom-line .bottom-line-description p a {
+	color: #f60;
+	font-weight: 700;
+}
+
+/*# sourceMappingURL=bottom-line.css.map */

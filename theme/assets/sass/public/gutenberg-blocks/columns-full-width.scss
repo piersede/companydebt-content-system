@@ -1,0 +1,55 @@
+.section-columns-full-width {
+  padding: 15px 0 35px;
+  margin-top: 30px;
+  @media all and (min-width: 768px) {
+    padding: 35px 0 45px;
+  }
+  h3 {
+    color: unset;
+  }
+  .section-supertitle {
+    color: var(--c-site-main);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .description {
+    width: 70%;
+    letter-spacing: -.21px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    @media all and (min-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .boxes {
+    justify-content: center;
+
+    .col-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 15px;
+
+      @media all and (min-width: 768px) {
+        flex: 0 0 20%;
+        max-width: 20%;
+      }
+    }
+
+    .box {
+      text-align: center;
+      .box-description {
+        font-size: var(--fs-bread);
+        font-weight: var(--fw-bold);
+        line-height: 18px;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+}

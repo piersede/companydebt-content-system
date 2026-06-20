@@ -1,0 +1,259 @@
+.section-landing-insolvency-hero {
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero {
+		padding-bottom: 50px;
+	}
+}
+
+.section-landing-insolvency-hero .row {
+	justify-content: space-between;
+}
+
+.section-landing-insolvency-hero .hero-page-title {
+	color: #fff;
+	margin-bottom: 50px;
+	margin-top: 48px;
+	position: relative;
+}
+
+.section-landing-insolvency-hero .hero-page-title:after {
+	background: #f60;
+	bottom: -15px;
+	content: "";
+	height: 5px;
+	left: 0;
+	position: absolute;
+	width: 65%;
+}
+
+.section-landing-insolvency-hero .hero-description p {
+	font-size: 20px;
+	color: #fff;
+}
+
+.section-landing-insolvency-hero .logos {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-landing-insolvency-hero .hero-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-landing-insolvency-hero .hero-header .logo-right {
+	display: none;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .hero-header .logo-right {
+		display: block;
+		max-width: 150px;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .hero-header .logo-right {
+		margin-right: 45px;
+	}
+}
+
+.section-landing-insolvency-hero .col-5 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .col-5 {
+		flex: 0 0 48%;
+		max-width: 48%;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .col-5 {
+		flex: 0 0 39.5%;
+		max-width: 39.5%;
+	}
+}
+
+.section-landing-insolvency-hero .col-7 {
+	flex: 0 0 100%;
+	max-width: 100%;
+	position: relative;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .col-7 {
+		flex: 0 0 48%;
+		max-width: 48%;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .col-7 {
+		flex: 0 0 52%;
+		max-width: 52%;
+	}
+}
+
+.section-landing-insolvency-hero .shape-img {
+	display: none;
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .shape-img {
+		display: block;
+		position: absolute;
+		object-fit: cover;
+		top: 150px;
+		z-index: -1;
+	}
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper {
+	background: #fff;
+	border-radius: 5px;
+	padding: 20px 40px 0 40px;
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .sliders-form-wrapper {
+		margin: 45px;
+	}
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .quiz__content {
+	padding: 0px 0;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .slider__title {
+	align-items: center;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .quiz__amount {
+	-ms-grid-row-align: center;
+	align-self: center;
+	font-weight: var(--fw-bold);
+	border: none;
+	font-size: 16px;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .noUi-target {
+	margin: 0 0 10px;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .gform_wrapper.quiz-form_wrapper .gform_footer input.button {
+	background: linear-gradient(90deg, #0f4197 0, #113b82);
+	width: 100%;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .quiz__tab-heading {
+	font-size: var(--fs-h4);
+	font-weight: var(--fw-bold);
+	padding-bottom: 10px;
+	padding-top: 15px;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .quiz__amount-heading {
+	font-size: var(--fs-p);
+	font-weight: var(--fw-light);
+	text-transform: uppercase;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .quiz__amount {
+	align-self: center;
+	font-weight: var(--fw-bold);
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .slider__title {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0px;
+	padding-top: 5px;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper .slider {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper form {
+	padding-top: 20px;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper form input {
+	background: #f6f8fa;
+	border: 1px solid #8fa8be;
+	border-radius: 5px;
+	color: #002856;
+	font-size: 15.3px !important;
+	font-weight: var(--fw-regular);
+	line-height: 1;
+	padding: 10px 17px !important;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.section-landing-insolvency-hero .sliders-form-wrapper form .button {
+	color: #fff;
+}
+
+.section-floater .col-12 {
+	position: relative;
+}
+
+.section-floater .col-12 .floater-inner {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: space-around;
+	margin-right: 45px;
+	padding: 25px 0;
+	position: relative;
+	flex-wrap: wrap;
+	top: -75px;
+	width: 100%;
+}
+
+@media all and (min-width: 992px) {
+	.section-floater .col-12 .floater-inner {
+		top: -60px;
+		width: calc(100% - 45px);
+	}
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item {
+	align-items: center;
+	display: flex;
+	padding: 5px 0;
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item img {
+	padding: 3px 9px 0;
+	max-width: 53px;
+}
+
+@media all and (min-width: 992px) {
+	.section-floater .col-12 .floater-inner .float-feature-item img {
+		max-width: auto;
+	}
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item p {
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+@media all and (min-width: 992px) {
+	.section-floater .col-12 .floater-inner .float-feature-item p {
+		max-width: 130px;
+	}
+}
+
+/*# sourceMappingURL=landing-insolvency-hero.css.map */

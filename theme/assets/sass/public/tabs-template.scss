@@ -1,0 +1,20 @@
+.tabs-template {
+    position: relative;
+
+    .tabs-header {
+        height: 345px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 100%;
+        box-sizing: border-box;
+
+        h1 {
+            width: 1260px;
+            box-sizing: border-box;
+            padding: 96px 15px 0 15px;
+            margin: 0 auto;
+        }
+    }
+
+
+}

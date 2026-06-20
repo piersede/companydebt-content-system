@@ -1,0 +1,31 @@
+.wysiwyg p {
+	margin-bottom: 16px;
+}
+
+.wysiwyg .orange {
+	color: #f60;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+
+.wysiwyg .big {
+	color: #002856;
+	font-size: 26px;
+	font-weight: 700;
+	padding-left: 13px;
+	padding-top: 15px;
+	position: relative;
+	text-decoration: none;
+}
+
+.wysiwyg .big:before {
+	background-color: #f60;
+	content: "";
+	height: 26px;
+	left: 0;
+	position: absolute;
+	width: 7px;
+}
+
+/*# sourceMappingURL=wysiwyg.css.map */

@@ -1,0 +1,95 @@
+body .section-cd-gravity-form-widget {
+  box-shadow: 0px 9px 25px 0px #71717140;
+  width: 100%;
+  padding: 45px 25px;
+  border-radius: 10px;
+  background: #FBFBFB;
+  border: none;
+  @media (min-width: 1236px) {
+    width: 370px;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--c-blue-dark);
+
+    strong {
+      font-weight: 700;
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      width: 200px;
+      height: 5px;
+      background-color: var(--c-orange);
+      margin: 28px 0;
+      display: block;
+    }
+
+  }
+  .cd-gravity-form-desc {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--c-blue-dark);
+    margin-bottom: 28px;
+  }
+
+
+
+
+
+
+    ::placeholder {
+      color: #959595!important;
+    }
+
+    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea, body option, body select {
+      border-radius: 5px;
+      line-height: 1;
+      margin-top: 0px;
+      border: .8px solid #959595!important;
+      color: #959595;
+      font-size: 15px!important;
+      padding: 6.5px 17px!important;
+      background: #FBFBFB;
+
+      ::placeholder {
+        color: #959595!important;
+      }
+    }
+
+  .gform_footer {
+    input[type=submit] {
+      width: 100%;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px!important;
+      font-size: 18px;
+      height: 50px!important;
+      margin-bottom: 0;
+      &:hover {
+        background: var(--c-blue-dark);
+      }
+    }
+  }
+
+  .contact_disclaimer {
+    bottom: 20px;
+    color: #002856;
+    color: var(--c-blue-dark);
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+  }
+
+  }
+
+

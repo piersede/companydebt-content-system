@@ -6,7 +6,7 @@ $author_fullname = get_the_author_meta('display_name');
 $_li_url = trim( (string) get_field( 'linkedin', 'user_'. $author_id ) );
 $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $author_fullname, ' ' );
 ?>
-<section class="section-footer-author">
+<section class="section-footer-author" aria-label="About the author">
 	<div class="container">
 		<div class="row">
 			<div class="col-auto">
@@ -15,7 +15,7 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 			<div class="col-auto col-author-content">
 				<div class="footer-author-eyebrow">
 					<svg class="footer-author-eyebrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-					<span>Expertly Reviewed By</span>
+					<span>Expertly reviewed by</span>
 				</div>
 				<div class="footer-author-name"><?php echo esc_html( $author_fullname ); ?></div>
 				<div class="footer-author-position"><?php echo trim( get_field('professional_position',  'user_'. $author_id ) ); ?></div>
@@ -57,7 +57,7 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 					</span>
 				</a>
 				<?php endif; ?>
-				<a class="footer-author-action" href="tel:08000746757" aria-label="Call 0800 074 6757">
+				<a class="footer-author-action" href="tel:08000746757" aria-label="Give us a Call: 0800 074 6757">
 					<span class="footer-author-action-icon">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"/></svg>
 					</span>
@@ -66,17 +66,6 @@ $_first_name_for_label = $author_first_name ? $author_first_name : strtok( $auth
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 					</span>
 				</a>
-			</div>
-		</div>
-		<div class="footer-author-reviewed-strip">
-			<div class="footer-author-last-reviewed">
-				<span class="footer-author-last-reviewed-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-				</span>
-				<span class="footer-author-last-reviewed-text">
-					<span class="footer-author-last-reviewed-line">Last reviewed: <?php echo esc_html( get_the_modified_date( 'F Y' ) ); ?></span>
-					<span class="footer-author-last-reviewed-note">We update guidance regularly to reflect changes in UK insolvency law.</span>
-				</span>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,29 @@
+.section-columns-buttons {
+  padding: 50px 0; }
+  .section-columns-buttons .row .section-title {
+    text-align: center;
+    line-height: 1.7; }
+  .section-columns-buttons .row .box-wrapper {
+    padding: 0 15px; }
+    .section-columns-buttons .row .box-wrapper a {
+      text-decoration: none; }
+      .section-columns-buttons .row .box-wrapper a .box {
+        padding: 30px;
+        margin: 15px 0;
+        border-radius: 10px;
+        display: grid; }
+        .section-columns-buttons .row .box-wrapper a .box .box-heading {
+          font-size: 20px;
+          font-weight: bold; }
+        .section-columns-buttons .row .box-wrapper a .box .box-img {
+          margin-bottom: 15px; }
+        .section-columns-buttons .row .box-wrapper a .box.center {
+          text-align: center; }
+  .section-columns-buttons.box-shadow .box {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 -2px 4px rgba(0, 0, 0, 0.15); }
+    .section-columns-buttons.box-shadow .box:hover {
+      filter: drop-shadow(2px 4px 6px #000);
+      transition: all .3s ease; }
+  .section-columns-buttons.grid-180-30-120 .box {
+    display: grid;
+    grid-template-rows: 180px 30px 90px; }

@@ -1,0 +1,61 @@
+// Colors
+$primary-color: #002856;
+
+$secondary-color: #f60;
+
+$text-color: #444;
+
+$light-color: #fff;
+
+
+// Fonts
+
+$primary-font: 'Lato', sans-serif;
+
+:root {
+  --c-black: #000;
+  --c-blue-dark: #002856;
+  --c-blue-medium: #98b0c5;
+  --c-blue-light: #e7f6fd;
+  --c-grey-dark: #4f4f4f;
+  --c-font-dark: #444;
+  --c-orange: #f60;
+  --c-white: #fff;
+  --c-link: var(--c-orange);
+  --c-bcg-third: #f6f8fa;
+  --c-border: #8fa8be;
+  --c-slider: #ededf5;
+  --c-bcg-header-top: var(--c-blue-dark);
+  --c-font-header-top: var(--c-white);
+  --c-font: var(--c-blue-dark);
+  --c-bcg-block: var(--c-blue-light);
+  --c-button-primary-bcg: var(--c-link);
+  --c-button-primary-text: var(--c-white);
+  --c-button-primary-hover: var(--c-blue-medium);
+  --c-box-bcg: var(--c-white);
+  --c-box-bcg-hover: var(--c-blue-dark);
+  --c-box-text: var(--c-blue-dark);
+  --c-box-text-hover: var(--c-white);
+  --c-bcg-footer: var(--c-blue-dark);
+  --c-font-footer: var(--c-white);
+  --c-font-footer-heading: var(--c-link);
+  --c-font-footer-hover: var(--c-blue-medium);
+  --c-footer-tagline: var(--c-blue-medium);
+  --c-reading-time: var(--c-link);
+  --ff-main: lato,sans-serif;
+  --fs-h1: 38px;
+  --fs-h2: 30px;
+  --fs-h3: 26px;
+  --fs-h4: 20px;
+  --fs-h5: 18px;
+  --fs-p: 17px;
+  --fs-nav: 15.3px;
+  --fs-bread: 14.5px;
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+  --container-width: 1260px;
+  --site-width: 1260px
+}

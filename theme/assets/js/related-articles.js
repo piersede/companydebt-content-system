@@ -145,6 +145,7 @@
     if (a) {
       a.setAttribute("target", "_blank");
       a.setAttribute("rel", "noopener");
+      a.style.setProperty("color", "#5f6976", "important"); /* a11y: contrast >=4.5:1 */
       Array.from(a.childNodes).forEach(function (node) {
         if (node.nodeType !== 3) return;
         let txt = node.textContent.replace(/^\s*[—–\-]\s+/, "").trim();
@@ -152,6 +153,7 @@
         txt = txt.charAt(0).toUpperCase() + txt.slice(1);
         const span = document.createElement("span");
         span.className = "cd-source-desc";
+      span.style.setProperty("color", "#5f6976", "important");
         span.textContent = txt;
         node.replaceWith(span);
       });
@@ -162,9 +164,12 @@
       if (!txt) { node.remove(); return; }
       const span = document.createElement("span");
       span.className = "cd-source-domain";
+      span.style.setProperty("color", "#5f6976", "important");
       span.textContent = txt;
       node.replaceWith(span);
     });
+    li.querySelectorAll("strong").forEach(function (s) { s.style.setProperty("color", "#5f6976", "important"); });
+    li.style.setProperty("opacity", "1", "important"); /* a11y: drop decorative collapsed-fade so preview cards keep >=4.5:1 contrast */
     li.dataset.cdTransformed = "1";
   }
 
@@ -233,7 +238,12 @@
   }
 
   function transformSources() {
-    if (!document.body.classList.contains("page-template-take-the-test-template") && !document.body.classList.contains("postid-47451")) return;
+    /* Gate on the shared design-system class (cd-ttt-design) — was originally
+     * `page-template-take-the-test-template` only, now broadened so the
+     * sources transformation also fires on single posts on the default
+     * post template. The postid-47451 carve-out stays for the one specific
+     * page that uses this restyling outside the design system. */
+    if (!document.body.classList.contains("cd-ttt-design") && !document.body.classList.contains("postid-47451")) return;
     document.querySelectorAll(".cd-sources").forEach(transformAside);
   }
 

@@ -1,0 +1,121 @@
+.section-landing-insolvency-hero .hero-page-title {
+	color: #fff;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.section-landing-insolvency-hero .hero-page-title:after {
+	background: #f60;
+	bottom: -15px;
+	content: "";
+	height: 5px;
+	left: 0;
+	position: absolute;
+	width: 65%;
+}
+
+.section-landing-insolvency-hero .hero-description p {
+	font-size: 20px;
+	color: #fff;
+}
+
+.section-landing-insolvency-hero .logos {
+	display: flex;
+}
+
+.section-landing-insolvency-hero .hero-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-landing-insolvency-hero .hero-header .logo-right {
+	display: none;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .hero-header .logo-right {
+		display: block;
+		max-width: 100px;
+	}
+}
+
+.section-landing-insolvency-hero .col-5 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .col-5 {
+		flex: 0 0 48%;
+		max-width: 48%;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .col-5 {
+		flex: 0 0 38%;
+		max-width: 38%;
+	}
+}
+
+.section-landing-insolvency-hero .col-7 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+@media all and (min-width: 768px) {
+	.section-landing-insolvency-hero .col-7 {
+		flex: 0 0 48%;
+		max-width: 48%;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.section-landing-insolvency-hero .col-7 {
+		flex: 0 0 52%;
+		max-width: 52%;
+	}
+}
+
+.section-floater .col-12 {
+	position: relative;
+}
+
+.section-floater .col-12 .floater-inner {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: space-around;
+	margin-right: 45px;
+	padding: 25px 0;
+	position: absolute;
+	flex-wrap: wrap;
+	top: -40px;
+	width: 100%;
+}
+
+@media all and (min-width: 992px) {
+	.section-floater .col-12 .floater-inner {
+		top: -60px;
+		width: calc(100% - 45px);
+	}
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item {
+	align-items: center;
+	display: flex;
+	padding: 5px 0;
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item img {
+	padding: 3px 9px 0;
+}
+
+.section-floater .col-12 .floater-inner .float-feature-item p {
+	margin-bottom: 0;
+	max-width: 130px;
+	font-weight: 700;
+}
+
+/*# sourceMappingURL=landing-insolvency-hero.css.map */

@@ -1,0 +1,27 @@
+header {
+  background: #fff; }
+  header .header-22 {
+    display: flex;
+    align-items: center;
+    display: flex;
+    height: 75pt;
+    justify-content: space-between;
+    padding: 0 0; }
+    @media all and (min-width: 1160px) {
+      header .header-22 {
+        padding: 0 15px; } }
+    header .header-22 .logo-link {
+      line-height: 1px; }
+    header .header-22 .header__cta {
+      display: none; }
+      @media all and (min-width: 1024px) {
+        header .header-22 .header__cta {
+          display: flex;
+          align-items: center;
+          text-decoration: none; } }
+      header .header-22 .header__cta .header__cta-letters, header .header-22 .header__cta .header__cta-number {
+        font-size: 23px;
+        font-weight: 600;
+        color: #000; }
+      header .header-22 .header__cta .header__cta-number {
+        color: #fc0676; }

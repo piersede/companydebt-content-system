@@ -1,0 +1,18 @@
+.section-carousel-testimonials-landing .testimonial-carousel-heading {
+	position: relative;
+	text-align: center;
+	margin-bottom: 8px;
+	padding-bottom: 0;
+}
+
+.section-carousel-testimonials-landing .testimonial-carousel-heading:after {
+	background-color: #f60;
+	bottom: -15px;
+	content: "";
+	height: 4px;
+	left: 40%;
+	position: absolute;
+	width: 20%;
+}
+
+/*# sourceMappingURL=carousel-testimonials-landing.css.map */

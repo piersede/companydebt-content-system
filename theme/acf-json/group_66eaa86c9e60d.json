@@ -1,0 +1,181 @@
+{
+    "key": "group_66eaa86c9e60d",
+    "title": "Reviews",
+    "fields": [
+        {
+            "key": "field_66eab6bf321b2",
+            "label": "Reviews Link",
+            "name": "reviews_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_66eaa86c85e63",
+            "label": "Reviews",
+            "name": "cd_reviews",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "table",
+            "pagination": 1,
+            "rows_per_page": 15,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_66eaa89d85e64",
+                    "label": "Review By",
+                    "name": "review_by",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66eaa86c85e63"
+                },
+                {
+                    "key": "field_66eaa8b085e65",
+                    "label": "Review",
+                    "name": "review",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_66eaa86c85e63"
+                },
+                {
+                    "key": "field_66eaa8b785e66",
+                    "label": "Rating",
+                    "name": "rating",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": 5,
+                    "min": 1,
+                    "max": 5,
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "step": "0.01",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66eaa86c85e63"
+                },
+                {
+                    "key": "field_66eaa8cf85e67",
+                    "label": "Verified Customer",
+                    "name": "verified_customer",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_66eaa86c85e63"
+                },
+                {
+                    "key": "field_66eaa8e285e68",
+                    "label": "Date Of Review",
+                    "name": "date_of_review",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "display_format": "d\/m\/Y",
+                    "return_format": "Ymd",
+                    "first_day": 1,
+                    "allow_in_bindings": 1,
+                    "parent_repeater": "field_66eaa86c85e63"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1726660209
+}

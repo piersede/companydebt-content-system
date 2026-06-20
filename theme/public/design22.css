@@ -1,0 +1,130 @@
+.page-template-design-22-v1 * {
+  font-family: 'Inter', sans-serif; }
+
+.page-template-design-22-v1 p {
+  color: #000; }
+
+.page-template-design-22-v1 header {
+  position: unset; }
+
+.page-template-design-22-v1 .site-main .main-content > p:first-of-type {
+  font-weight: 400; }
+
+.page-template-design-22-v1 .container {
+  max-width: 1130px; }
+
+.page-template-design-22-v1 .page-header {
+  align-items: center;
+  background-position: 100%;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  position: relative;
+  width: 100%; }
+  .page-template-design-22-v1 .page-header img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    font-family: "object-fit:cover";
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; }
+  .page-template-design-22-v1 .page-header .page-title {
+    color: var(--c-white);
+    width: 100%; }
+
+.page-template-design-22-v1 .section-design-22-content {
+  padding-top: 50px; }
+  .page-template-design-22-v1 .section-design-22-content .main-content > p:first-of-type {
+    font-weight: 400; }
+  .page-template-design-22-v1 .section-design-22-content .main-content ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 25px; }
+    .page-template-design-22-v1 .section-design-22-content .main-content ul li {
+      position: relative; }
+      .page-template-design-22-v1 .section-design-22-content .main-content ul li:before {
+        background-image: url("../assets/images/red-cycle-checkmark.jpeg");
+        background-size: cover;
+        content: "";
+        height: 20px;
+        left: -25px;
+        position: absolute;
+        top: 4px;
+        width: 20px; }
+  .page-template-design-22-v1 .section-design-22-content .row.space-between {
+    justify-content: space-between; }
+  .page-template-design-22-v1 .section-design-22-content .col-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px; }
+    @media all and (min-width: 1024px) {
+      .page-template-design-22-v1 .section-design-22-content .col-8 {
+        flex: 0 0 62%;
+        max-width: 62%; } }
+  .page-template-design-22-v1 .section-design-22-content .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px; }
+    @media all and (min-width: 1024px) {
+      .page-template-design-22-v1 .section-design-22-content .col-4 {
+        flex: 0 0 31.9%;
+        max-width: 31.9%; } }
+
+.page-template-design-22-v1 footer {
+  background: var(--c-bcg-footer);
+  color: var(--c-font-footer); }
+
+.page-template-design-22-v1 p {
+  margin-top: 17px !important;
+  line-height: 25px !important;
+  font-weight: 300; }
+  .page-template-design-22-v1 p:first-of-type {
+    font-weight: 300 !important;
+    line-height: 25px !important; }
+
+.page-template-design-22-v1 h1 {
+  font-size: 2pc;
+  text-align: center;
+  margin: 0 0; }
+  @media all and (min-width: 1024px) {
+    .page-template-design-22-v1 h1 {
+      font-size: 38px;
+      text-align: left; } }
+
+.page-template-design-22-v1 h2 {
+  font-size: 26px; }
+
+.page-template-design-22-v1 h3 {
+  font-size: 18.7px; }
+
+.page-template-design-22-v1 h1, .page-template-design-22-v1 h2, .page-template-design-22-v1 h3, .page-template-design-22-v1 h4 {
+  color: var(--c-blue);
+  font-weight: 600;
+  line-height: 1.2; }
+
+.page-template-design-22-v1 .section-cd-gravity-form-widget {
+  border: 1px solid rgba(0, 0, 0, 0.19); }
+  .page-template-design-22-v1 .section-cd-gravity-form-widget ul li {
+    font-size: 16px;
+    font-weight: 300; }
+    .page-template-design-22-v1 .section-cd-gravity-form-widget ul li:before {
+      height: 9px !important;
+      width: 13px !important;
+      background-image: url("../assets/images/red-checkmark.jpeg") !important; }
+  .page-template-design-22-v1 .section-cd-gravity-form-widget .gform_wrapper .gform_footer input.button, .page-template-design-22-v1 .section-cd-gravity-form-widget .gform_wrapper .gform_footer input[type=submit] {
+    background-color: #fc0676 !important; }
+    .page-template-design-22-v1 .section-cd-gravity-form-widget .gform_wrapper .gform_footer input.button:hover, .page-template-design-22-v1 .section-cd-gravity-form-widget .gform_wrapper .gform_footer input[type=submit]:hover {
+      background: var(--c-blue-dark) !important; }
+  .page-template-design-22-v1 .section-cd-gravity-form-widget input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .page-template-design-22-v1 .section-cd-gravity-form-widget body .widget__gf .gform_wrapper textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: #fff;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25);
+    color: #002856; }
+  .page-template-design-22-v1 .section-cd-gravity-form-widget ::placeholder {
+    color: #8fa8be !important; }

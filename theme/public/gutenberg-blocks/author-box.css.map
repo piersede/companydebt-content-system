@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "author-box.css",
+	"sources": [
+		"../../assets/sass/public/gutenberg-blocks/author-box.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACE,eADa,CACb,YAAY,CAAC;CACX,SAAS,EAAE,IAAI;CACf,KAAK,EAAE,OAAO;CACd,WAAW,EAAE,GAAG;CAChB,WAAW,EAAE,GAAG;CACjB;;AANH,AAOE,eAPa,CAOb,gBAAgB,EAPlB,eAAe,CAOK,KAAK,CAAC;CACtB,SAAS,EAAE,IAAI;CACf,WAAW,EAAE,GAAG;CAEhB,OAAO,EAAE,KAAK;CACf"
+}
