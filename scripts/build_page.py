@@ -48,6 +48,11 @@ PAGE_REGISTRY = {
     'winding-up-petition-tracker': 'cc_builder.data.pages.winding_up_petition_tracker',
     'dissolutions-vs-insolvencies': 'cc_builder.data.pages.company_dissolutions_vs_insolvencies',
     'payment-practices-late-payment': 'cc_builder.data.pages.payment_practices_late_payment',
+    'cvl-statistics': 'cc_builder.data.pages.cvl_statistics',
+    'compulsory-liquidation-statistics': 'cc_builder.data.pages.compulsory_liquidation_statistics',
+    'administration-statistics': 'cc_builder.data.pages.administration_statistics',
+    'company-insolvencies-by-sector': 'cc_builder.data.pages.company_insolvencies_by_sector',
+    'construction-insolvency-statistics': 'cc_builder.data.pages.construction_insolvency_statistics',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""

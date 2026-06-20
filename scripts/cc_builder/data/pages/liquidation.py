@@ -13,6 +13,6 @@ PAGE_CONFIG = {
     'slug': 'liquidation',
     'page_type': 'definition',
     'wp_page_id': 7669,
-    'title': 'What Is Company Liquidation?',
+    'title': 'Company Liquidation: Process, Costs and Director Advice',
     'verification_date': '15 April 2026',
 }

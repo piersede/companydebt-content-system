@@ -101,6 +101,11 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "winding-up-petition-tracker": "data_reference",
     "dissolutions-vs-insolvencies": "data_reference",
     "payment-practices-late-payment": "data_reference",
+    "cvl-statistics": "data_reference",
+    "compulsory-liquidation-statistics": "data_reference",
+    "administration-statistics": "data_reference",
+    "company-insolvencies-by-sector": "data_reference",
+    "construction-insolvency-statistics": "data_reference",
 }
 
 

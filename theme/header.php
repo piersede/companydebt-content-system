@@ -16,17 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-27555004-1" id="cd-ga-script"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-
-		gtag('js', new Date());
-		gtag('config', 'UA-27555004-1');
-	</script>
+	<!-- Universal Analytics (UA-27555004-1) removed 2026-06-19 - property sunset by Google in July 2023, collected nothing. GA4 (G-P39KJ34V6G) is served via GTM. -->
 
 	<!--     Google Tag Manager-->
 	<script>(function (w, d, s, l, i) {

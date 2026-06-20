@@ -1474,6 +1474,105 @@ The H-tag framework defines **architecture** (where the section sits) and **sema
 
 ---
 
+## Registered page templates
+
+Page-specific H-tag specifications registered here are the canonical structure for that individual page. They take precedence over the general family templates above for the named slug. They are not overrides — they are the binding spec for that page.
+
+---
+
+### /liquidation/ — Company Liquidation master page
+
+**Slug:** `liquidation` | **WP ID:** 7669 | **Registered:** 2026-06-19
+
+**Title:** Company Liquidation: Process, Costs and Director Advice
+
+```
+H1: Company Liquidation: Process, Costs and Director Advice
+
+Intro (no H2 before it):
+  P1: Define company liquidation.
+  P2: Voluntary vs forced — the director choice.
+  P3: Practical reassurance / speak to us before a petition lands.
+  CTA button: Speak to a Licensed Insolvency Practitioner
+  Secondary CTA: Take the 30-second insolvency test
+
+H2: Company Liquidation at a Glance
+  → Two-column key facts table. No H3s.
+  → Rows: Meaning / Main routes / Used for / Who runs it / Typical CVL cost / Typical timeline / Director priority
+
+H2: What Is Company Liquidation?
+  → No H3s. Use bold inline labels:
+    "Company liquidation meaning" — definition paragraph
+    "In plain English" — plain-language summary
+    "What changes on appointment" — 4 bullets:
+      Directors lose control of company decisions.
+      The liquidator takes over assets, records and creditor communication.
+      Company money and assets must not be moved without advice.
+      The company is eventually dissolved after the final filings.
+
+H2: Types of Company Liquidation
+  → Comparison table. No H3s.
+  → Columns: Type / Used When / Who Starts It / Who Controls It / Best Next Guide
+  → Rows: CVL / Compulsory Liquidation / MVL
+  → "Most directors need a CVL" info callout below table.
+
+H2: When Should a Company Go Into Liquidation?
+  → Bold-led bullets only. No H3s.
+  → 4 triggers: Cannot pay debts / No realistic rescue route / Creditor legal action likely / Continuing to trade may worsen creditor losses
+  → Warning callout below: "If two or more of these apply, speak to a licensed insolvency practitioner before making further payments or taking new credit."
+
+H2: Company Liquidation Process
+  → Numbered step cards. No H3s.
+  → Step 1: Appoint a Licensed Insolvency Practitioner
+  → Step 2: Prepare the Statement of Affairs
+  → Step 3: Sell Assets and Pay Creditors
+  → Step 4: Close and Dissolve the Company
+
+H2: What Directors Should Do During Company Liquidation
+  → Table. No H3s.
+  → Columns: Director Action / Why It Matters / Risk If Ignored
+  → Rows: Stop selective payments / Preserve records / Complete Statement of Affairs / Cooperate with liquidator / Take advice before using company money
+  → Fraudulent trading warning callout below table.
+
+H2: Company Liquidation Costs and Timelines
+  → Table. No H3s.
+  → Columns: Item / Typical Figure / Notes
+  → Rows: Typical CVL fee / Compulsory liquidation court costs / Official Receiver fee / Director redundancy claim / Time to start / Time to dissolution
+
+H2: What Happens After Company Liquidation?
+  → Four-card grid. No H3s.
+  → Cards: Company debts / Employees / Directors / Creditors
+
+H2: Company Liquidation vs Other Closure Options
+  → Comparison table. No H3s.
+  → Columns: Route / Best Used When / What Happens / Director Consideration
+  → Rows: CVL / Strike-off / Administration / CVA / MVL
+  → Unregulated advice warning callout below table.
+
+H2: Related Company Liquidation Guides
+  → wp:list block. No H3s. 6 links only:
+    Creditors' Voluntary Liquidation
+    Compulsory Liquidation
+    Members' Voluntary Liquidation
+    Company Strike-Off and Dissolution
+    Company Voluntary Arrangement
+    Winding-Up Petitions
+
+H2: FAQs About Company Liquidation
+  → FAQ accordion. Final H2.
+  → 8 FAQs:
+    Can I liquidate my company myself?
+    How much does company liquidation cost?
+    How long does company liquidation take?
+    What is the difference between liquidation and dissolution?
+    Can I start another company after liquidation?
+    What happens to company debts after liquidation?
+    Can I liquidate a company with no money?
+    Will liquidation affect me personally?
+```
+
+---
+
 ## Backfill on existing rewrites
 
 Articles already rewritten under earlier H-tag rubrics will be reassessed against this framework on the user's instruction. The audit will check:
