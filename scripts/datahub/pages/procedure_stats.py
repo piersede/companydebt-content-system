@@ -126,9 +126,9 @@ PROCEDURES = {
                        "liquidation. The company gains protection from creditor action "
                        "while a plan is put in place."),
         "trend_intro": ("Administration volumes are small and can swing sharply on a "
-                        "single event. Around 200 connected real estate companies "
-                        "entered administration in March and April 2026, which lifted "
-                        "recent figures well above the underlying trend."),
+                        "single event. A cluster of more than 70 connected real estate "
+                        "companies lifted the April 2026 figure; May fell back as that "
+                        "cluster passed. Read short-term moves with care."),
         "notes": [
             "Monthly administration volumes are small, so a single cluster of "
             "connected companies can move the figure sharply. Read month-to-month "

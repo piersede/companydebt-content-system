@@ -248,12 +248,12 @@ def parse_nations(xlsx_path: Path) -> dict:
 
 
 def build_release_metadata(months: list[str]) -> dict:
-    """Release metadata. Hard-coded values match April 2026 release."""
+    """Release metadata. Hard-coded values match May 2026 release."""
     return {
         "latest_month": months[-1] if months else None,
-        "latest_month_label": "April 2026",
-        "publication_date": "19 May 2026",
-        "next_release_date": "19 June 2026",
+        "latest_month_label": "May 2026",
+        "publication_date": "19 June 2026",
+        "next_release_date": "17 July 2026",
         "source_label": "Insolvency Service / Companies House",
         "status": "Accredited official statistics",
         "data_window_start": months[0] if months else None,
@@ -301,8 +301,8 @@ def build_latest_figures_table(long_run: dict) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Parse Insolvency Service data into JSON")
-    parser.add_argument("--csv", default=str(DATA_DIR / "source_long_run_2026-04.csv"))
-    parser.add_argument("--xlsx", default=str(DATA_DIR / "source_data_tables_2026-04.xlsx"))
+    parser.add_argument("--csv", default=str(DATA_DIR / "source_long_run_2026-05.csv"))
+    parser.add_argument("--xlsx", default=str(DATA_DIR / "source_data_tables_2026-05.xlsx"))
     parser.add_argument("--out-dir", default=str(DATA_DIR))
     args = parser.parse_args()
 

@@ -159,7 +159,7 @@ def inject(html: str, c: dict) -> str:
     html = _sub(html, 'Of the 59,296 dissolutions recorded in May 2026',
                 f'Of the {c["dissolutions"]:,} dissolutions recorded in {c["ch_period"]}')
     html = _sub(html, '2,085 formal insolvencies in April 2026',
-                f'{c["insolvencies"]:,} formal insolvencies in {c["ins_period"]}')
+                f'{c["insolvencies"]:,} formal insolvencies in {c["ins_period"]}', count=0)
     # Chart A source window
     html = _sub(html, 'February 2025 to May 2026', c["window"], count=0)
     # Chart A SVG
