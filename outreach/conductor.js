@@ -174,12 +174,20 @@ async function source() {
   if (!csvPath) { U.err('usage: conductor source <ahrefs-backlinks.csv> [--commit]'); return; }
   const rows = parseCsv(fs.readFileSync(csvPath, 'utf8'));
   const header = rows.shift().map((h) => h.trim().toLowerCase());
-  const col = (...names) => header.findIndex((h) => names.some((n) => h.includes(n)));
-  const iRef = col('referring page url', 'referring page', 'source url', 'url from');
-  const iTarget = col('target url', 'url to', 'target');
+  // Prefer an exact header match, then fall back to a substring match, so a loose name like
+  // "referring page" can't hijack "referring page title" ahead of "referring page url".
+  const col = (...names) => {
+    for (const n of names) { const i = header.findIndex((h) => h === n); if (i >= 0) return i; }
+    for (const n of names) { const i = header.findIndex((h) => h.includes(n)); if (i >= 0) return i; }
+    return -1;
+  };
+  const iRef = col('referring page url', 'source url', 'url from', 'referring url');
+  const iTarget = col('target url', 'url to');
   const iDR = col('domain rating', 'dr');
-  const iTitle = col('title', 'page title', 'anchor');
+  const iTitle = col('referring page title', 'page title', 'title');
+  const iPageType = col('page type');
   if (iRef < 0) { U.err('could not find a "Referring page URL" column'); U.dim('headers: ' + header.join(' | ')); return; }
+  const articlesOnly = flag('--articles-only');
 
   let existing = new Set();
   try { (await monday.allItems(config)).forEach((it) => { if (it.articleUrl) existing.add(it.articleUrl.trim()); }); }
@@ -195,25 +203,39 @@ async function source() {
     if (own.some((o) => host === o || host.endsWith('.' + o))) continue;
     if (config.suppression.domains.some((d) => host === d || host.endsWith('.' + d))) continue;
     if (!Number.isNaN(dr) && dr < config.minDR) continue;
+    if (articlesOnly && iPageType >= 0 && !(r[iPageType] || '').toLowerCase().includes('article')) continue;
     if (seen.has(ref) || existing.has(ref)) continue;
     seen.add(ref);
     candidates.push({ ref, target: iTarget >= 0 ? (r[iTarget] || '').trim() : '', title: iTitle >= 0 ? (r[iTitle] || '').trim() : '', dr });
   }
 
-  U.info(`\nSource: ${candidates.length} new candidate(s) after DR>=${config.minDR}, own-site, suppression + dedup filters.`);
-  candidates.slice(0, 50).forEach((c) => U.log(`  DR${Number.isNaN(c.dr) ? '?' : c.dr}  ${c.ref}  ${U.C.dim}→ cites ${c.target || '?'}${U.C.reset}`));
+  // strongest first, so --one-per-domain and --limit keep the best
+  candidates.sort((a, b) => (Number(b.dr) || 0) - (Number(a.dr) || 0));
+  if (flag('--one-per-domain')) {
+    const byHost = new Set(); const dedup = [];
+    for (const c of candidates) { const h = U.hostOf(c.ref); if (byHost.has(h)) continue; byHost.add(h); dedup.push(c); }
+    candidates.length = 0; candidates.push(...dedup);
+  }
+  const lim = parseInt(opt('--limit', '0'), 10);
+  if (lim > 0 && candidates.length > lim) candidates.length = lim;
+
+  U.info(`\nSource: ${candidates.length} new candidate(s) after DR>=${config.minDR}, own-site, suppression + dedup${flag('--one-per-domain') ? ', one-per-domain' : ''}${lim > 0 ? `, capped ${lim}` : ''}.`);
+  candidates.slice(0, 40).forEach((c) => U.log(`  DR${Number.isNaN(c.dr) ? '?' : c.dr}  ${c.ref}  ${U.C.dim}→ cites ${c.target || '?'}${U.C.reset}`));
+  if (candidates.length > 40) U.dim(`  ... and ${candidates.length - 40} more`);
   if (!commit) { U.dim('\n(dry-run — pass --commit to create board rows)'); return; }
 
-  let created = 0;
+  let created = 0, failed = 0;
   for (const c of candidates) {
     const cv = {};
     if (config.monday.cols.articleUrl) cv[config.monday.cols.articleUrl] = { url: c.ref, text: c.ref };
     if (config.monday.cols.citedSource && c.target) cv[config.monday.cols.citedSource] = c.target;
     if (config.monday.cols.status) cv[config.monday.cols.status] = { label: config.monday.status.queue };
     try { await monday.createItem(config, c.title || c.ref, cv); created++; }
-    catch (e) { U.err(`  create failed for ${c.ref}: ${e.message}`); }
+    catch (e) { failed++; U.err(`  create failed for ${c.ref}: ${e.message}`); await U.sleep(1500); }
+    await U.sleep(220); // throttle under Monday's mutation rate limit on bulk loads
+    if (created && created % 100 === 0) U.dim(`  ...${created} created`);
   }
-  U.ok(`Created ${created} row(s) in "${config.monday.status.queue}".`);
+  U.ok(`Created ${created} row(s) in "${config.monday.status.queue}"${failed ? ` (${failed} failed — re-run to retry, board-dedup skips existing)` : ''}.`);
 }
 
 // ---------- RETRY / REJECT ----------
