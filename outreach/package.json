@@ -1,0 +1,19 @@
+{
+  "name": "companydebt-outreach",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CompanyDebt citation-gap outreach conductor (auto-draft, human-send). Rebuilt from the BusinessExpert outreach spec, Phase 1 = STATS_HUB_ONLY.",
+  "type": "commonjs",
+  "bin": {
+    "conductor": "./conductor.js"
+  },
+  "scripts": {
+    "scan": "node conductor.js scan",
+    "scan:process": "node conductor.js scan --process",
+    "source": "node conductor.js source",
+    "selftest": "node conductor.js selftest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

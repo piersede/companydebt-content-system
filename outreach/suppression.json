@@ -1,0 +1,8 @@
+{
+  "_comment": "Anyone here is skipped before drafting. Add opt-out replies (email) and whole domains we must never contact. Matched case-insensitively; a bare domain blocks every address at it.",
+  "emails": [],
+  "domains": [
+    "companydebt.com",
+    "comdebstage.wpengine.com"
+  ]
+}
