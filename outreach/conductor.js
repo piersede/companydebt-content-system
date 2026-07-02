@@ -77,7 +77,7 @@ async function scan() {
     if (!m.gap || m.confidence < config.matchThreshold) { await route(item, 'defunct', `weak fit (conf ${m.confidence})`, 'weak_fit', { write, tally }); continue; }
 
     // 3) contact (board email first, else enrich)
-    let contact = item.email ? { email: item.email, name: item.name, verified: true } : null;
+    let contact = item.email ? { email: item.email, name: item.emailName || '', verified: true } : null;
     if (!contact) {
       const host = U.hostOf(articleUrl);
       const enr = config.hunter.apiKey ? await findContact(config, { domain: host }) : { ok: false, reason: 'no HUNTER_API_KEY' };

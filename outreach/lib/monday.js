@@ -32,12 +32,19 @@ function mapItem(config, raw) {
   for (const cv of raw.column_values || []) cols[cv.id] = { text: cv.text, value: cv.value };
   const C = config.monday.cols;
   const get = (id) => (id && cols[id] ? cols[id].text : '');
+  // Email columns store {email, text} in value JSON; text renders as "Name - email".
+  let email = '', emailName = '';
+  if (C.email && cols[C.email]) {
+    try { const v = JSON.parse(cols[C.email].value); email = v?.email || ''; emailName = v?.text || ''; } catch { /* fall back */ }
+    if (!email) email = ((cols[C.email].text || '').match(/\S+@\S+/) || [''])[0];
+  }
   return {
     id: raw.id,
     name: raw.name,
     raw: cols,
     status: get(C.status),
-    email: get(C.email),
+    email,
+    emailName,
     articleUrl: get(C.articleUrl),
     assetUrl: get(C.assetUrl),
     citedSource: get(C.citedSource),
