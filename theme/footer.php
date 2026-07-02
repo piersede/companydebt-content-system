@@ -670,7 +670,7 @@ document.documentElement.setAttribute('data-insolvency-v2', 'on');
       w.innerHTML =
         '<div class="cd-itest">' +
           '<div class="cd-itest__eyebrow">30-SECOND TEST</div>' +
-          '<h3 class="cd-itest__headline">Is Your Company Insolvent?</h3>' +
+          '<div class="cd-itest__headline">Is Your Company Insolvent?</div>' +
           '<p class="cd-itest__subhead">Answer 5 quick questions and get an instant assessment.</p>' +
           '<div class="cd-itest__mockup" role="img" aria-label="Insolvency test preview"></div>' +
           '<ul class="cd-itest__benefits">' +
@@ -779,6 +779,109 @@ document.documentElement.setAttribute('data-insolvency-v2', 'on');
     }
   } catch (e) {
     /* swallow — leaving TOC in body is a safe fallback */
+  }
+})();
+</script>
+<script id="cd-ub-cta-pills">
+/* Transform the Ultimate Blocks "Call to Action" trust line into pills with
+ * check icons. The trust line is buried as plain text inside a <strong> in
+ * the block's content paragraph, in the format
+ *   "✓ Label A | ✓ Label B | ✓ Label C"
+ * We find the <strong>, split on " | ", strip leading checkmarks, wrap each
+ * segment in a styled pill with an SVG checkmark, and replace the <strong>
+ * in place. Idempotent (data-cd-cta-transformed flag) + defensive (skips
+ * blocks that don't match the expected pattern). Pairs with the
+ * .ub_call_to_action sitewide CSS overrides in style.css. */
+(function(){
+  function buildPill(label) {
+    var pill = document.createElement('span');
+    pill.className = 'ub_cta_trust-pill';
+    var svgNS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2.4');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('width', '14');
+    svg.setAttribute('height', '14');
+    svg.setAttribute('aria-hidden', 'true');
+    var poly = document.createElementNS(svgNS, 'polyline');
+    poly.setAttribute('points', '20 6 9 17 4 12');
+    svg.appendChild(poly);
+    pill.appendChild(svg);
+    var txt = document.createElement('span');
+    txt.textContent = label;
+    pill.appendChild(txt);
+    return pill;
+  }
+  function transformBlock(block) {
+    if (block.dataset.cdCtaTransformed === '1') return;
+    var contentP = block.querySelector('.ub_cta_content_text');
+    if (!contentP) return;
+    var strong = contentP.querySelector('strong');
+    if (!strong) return;
+    var raw = (strong.textContent || '').trim();
+    if (raw.indexOf('|') === -1) return; /* Not the trust-line format */
+    var parts = raw.split('|')
+                   .map(function(p){ return p.trim().replace(/^[✓✔✅]\s*/, ''); })
+                   .filter(Boolean);
+    if (parts.length < 2) return;
+    /* Site-wide trust-label normalisation — kept here as a single source of
+     * truth so we don't have to edit 26 individual posts to rename a pill. */
+    var RELABEL = {
+      'Licensed and Regulated Advice': 'Licensed & Regulated'
+    };
+    parts = parts.map(function(p){ return RELABEL[p] || p; });
+    /* 1) Strip the <strong> + adjacent <br>s/whitespace from the content
+     *    paragraph — the trust line moves out into its own column. */
+    var prev = strong.previousSibling;
+    while (prev && (prev.nodeName === 'BR' || (prev.nodeType === 3 && /^\s*$/.test(prev.nodeValue)))) {
+      var pToRemove = prev;
+      prev = prev.previousSibling;
+      pToRemove.parentNode.removeChild(pToRemove);
+    }
+    var next = strong.nextSibling;
+    while (next && (next.nodeName === 'BR' || (next.nodeType === 3 && /^\s*$/.test(next.nodeValue)))) {
+      var nToRemove = next;
+      next = next.nextSibling;
+      nToRemove.parentNode.removeChild(nToRemove);
+    }
+    strong.parentNode.removeChild(strong);
+    /* 2) Wrap the three existing left-side blocks (headline, content,
+     *    button) in a single .ub_cta_left-col wrapper. This lets the
+     *    outer container use a clean two-child flex layout: left wrapper
+     *    + trust column, vertically centred against each other. Solves
+     *    the "right column is taller than left and the grid spreads the
+     *    left column items" issue by collapsing the left side into one
+     *    natural-height flex column. */
+    var headline = block.querySelector(':scope > .ub_call_to_action_headline');
+    var content  = block.querySelector(':scope > .ub_call_to_action_content');
+    var button   = block.querySelector(':scope > .ub_call_to_action_button');
+    if (headline && content && button) {
+      var leftCol = document.createElement('div');
+      leftCol.className = 'ub_cta_left-col';
+      /* Insert the wrapper at the headline's position then move siblings in. */
+      block.insertBefore(leftCol, headline);
+      leftCol.appendChild(headline);
+      leftCol.appendChild(content);
+      leftCol.appendChild(button);
+    }
+    /* 3) Append the trust column as the second direct child of the block. */
+    var col = document.createElement('div');
+    col.className = 'ub_cta_trust-row';
+    parts.forEach(function(label){ col.appendChild(buildPill(label)); });
+    block.appendChild(col);
+    block.dataset.cdCtaTransformed = '1';
+  }
+  function run() {
+    document.querySelectorAll('.ub_call_to_action').forEach(transformBlock);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
   }
 })();
 </script>

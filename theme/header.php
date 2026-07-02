@@ -15,6 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>/* Mark JS-enabled so FOUC-suppressing CSS rules can gate on it. */
+	document.documentElement.classList.add('cd-js');</script>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-27555004-1" id="cd-ga-script"></script>
 	<script>

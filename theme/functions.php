@@ -545,6 +545,75 @@ function toc_and_footnotes_in_content( $content ) {
 	return $content_footnotes->getPostFootnotesMarkup();
 }
 
+/**
+ * Server-side sidebar TOC for the take-the-test design system.
+ *
+ * Renders the same auto-TOC that toc_and_footnotes_in_content() injects into
+ * the article body, but wrapped in the .widget--cd-toc container the sidebar
+ * CSS targets (sticky + scroll-spy styling). Placing it server-side removes the
+ * old footer.php JS DOM-move: the sidebar TOC is now present at first paint and
+ * survives full-page caching. The body copy stays in place for mobile (<992px)
+ * and is hidden on desktop by style.css; this sidebar copy is hidden on mobile.
+ *
+ * Eligibility mirrors toc_and_footnotes_in_content() so the two copies never
+ * disagree about whether a TOC exists.
+ *
+ * @param string $content Rendered post content (post-the_content()).
+ * @return string Sidebar TOC HTML, or '' when not eligible / no headings.
+ */
+function cd_render_sidebar_toc( $content ) {
+	if ( is_front_page() || is_home() ) {
+		return '';
+	}
+
+	$is_eligible_post_default = is_singular( 'post' )
+		&& '' === get_page_template_slug()
+		&& ! in_category( 'sectors' )
+		&& ! in_category( 'services-to' );
+
+	$eligible = ( is_singular( 'post' ) && get_field( 'toc_enabled' ) )
+		|| ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) )
+		|| $is_eligible_post_default;
+
+	if ( ! $eligible ) {
+		return '';
+	}
+	if ( ! ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) ) {
+		return '';
+	}
+
+	$toc = new CD\Content\Toc( $content );
+	if ( (int) $toc->count < 1 ) {
+		return '';
+	}
+
+	$nav = $toc->getToc( true );
+	if ( '' === trim( $nav ) ) {
+		return '';
+	}
+
+	return '<div class="widget widget--cd-toc">' . $nav . '</div>';
+}
+
+/**
+ * Set the sticky-sidebar TOC flag on <html> server-side so the gating CSS
+ * (html[data-toc-sidebar="on"] ...) is active at first paint, eliminating the
+ * body-TOC flash that occurred when an inline footer script set it late. The
+ * CSS is further scoped to body.cd-ttt-design, so this attribute is inert on
+ * non-TOC pages. The footer flag script is kept as a JS fallback.
+ */
+add_filter( 'language_attributes', function( $output ) {
+	if ( false === strpos( $output, 'data-toc-sidebar' ) ) {
+		$output .= ' data-toc-sidebar="on"';
+	}
+	// data-sticky-nav + data-licensed-v2 were briefly set here so their flag-gated
+	// CSS applied at first paint. Retired 2026-06-20: both CSS blocks were
+	// de-flagged (made unconditional) in style.css, so the attributes are no
+	// longer needed server-side. data-insolvency-v2 likewise retired -- that
+	// widget is now server-rendered (mu-plugins/cd-rocket-flicker-fix.php).
+	return $output;
+} );
+
 // add_action( 'the_content', function( $content ) {
 // 	if ( ! is_front_page() && ! is_home() && ( ( is_singular( 'post' ) && get_field( 'toc_enabled' ) ) || ( is_singular( 'page' ) && ( '' === get_page_template_slug() || 'templates/take-the-test-template.php' === get_page_template_slug() ) ) ) ) {
 // 		if ( get_field( 'enable_toc', get_the_ID() ) || ! metadata_exists( 'post', get_the_ID(), 'enable_toc' ) ) {
@@ -879,6 +948,7 @@ add_filter( 'wp_schema_pro_schema_article', function( $schema, $data, $post ) {
 	return $schema;
 }, 10, 3 );
 
+
 // Change Gravity Forms submit button text for sidebar callback form
 add_filter( "gform_submit_button_41", function( $button, $form ) {
     return str_replace( "Submit", "Request a callback", $button );
@@ -1068,3 +1138,118 @@ function cd_reading_time_minutes( $post = null ) {
     $minutes = (int) ceil( $words / 220 );
     return max( 1, $minutes );
 }
+
+
+
+/**
+ * Schema JSON-LD post-processor (added 2026-07-02).
+ *
+ * Fixes two Ahrefs-flagged schema.org validation errors across ~375 pages:
+ *   1) Article `dateModified` emitted with an invalid timezone marker
+ *      (`+0000` no-colon variant, or no tz at all). Normalise to the
+ *      canonical ISO 8601 form ending in `+HH:MM`.
+ *   2) `FinancialService` node emitted with `image:[]` (empty). LocalBusiness
+ *      subtypes require at least one image or Google marks the graph invalid.
+ *      Inject the sitewide branded fallback (same asset used for og:image).
+ *
+ * Uses output buffering rather than Schema Pro's filter hooks because those
+ * hooks don't fire on our pages — Schema Pro's generated markup is emitted
+ * via a code path that appears to bypass apply_filters() (likely via a cached
+ * blob per post). Buffering the HTML is idempotent and covers all emitters,
+ * including plugins we don't control. Delete the add_action() below to revert.
+ */
+add_action( 'template_redirect', function() {
+    if ( is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+        return;
+    }
+    ob_start( function( $html ) {
+        if ( ! is_string( $html ) || strpos( $html, 'application/ld+json' ) === false ) {
+            return $html;
+        }
+
+        // 1a) Coerce `+0000` (no colon) to `+00:00`.
+        $html = preg_replace(
+            '/("date(?:Modified|Published)":"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})\+0000"/',
+            '$1+00:00"',
+            $html
+        );
+
+        // 1b) Add missing tz on datePublished/dateModified inside JSON-LD.
+        // Only touch dates that lack `Z`, `+HH:MM` or `-HH:MM` suffix.
+        // Use WP's gmt_offset to compute the correct offset.
+        $tz = get_option( 'gmt_offset' );
+        $sign = $tz >= 0 ? '+' : '-';
+        $abs  = abs( $tz );
+        $hh   = str_pad( (string) intval( $abs ), 2, '0', STR_PAD_LEFT );
+        $mm   = str_pad( (string) intval( ( $abs - intval( $abs ) ) * 60 ), 2, '0', STR_PAD_LEFT );
+        $suffix = $sign . $hh . ':' . $mm;
+        $html = preg_replace_callback(
+            '/("date(?:Modified|Published)":"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})"/',
+            function( $m ) use ( $suffix ) { return $m[1] . $suffix . '"'; },
+            $html
+        );
+
+        // 2) Inject default image on empty FinancialService images.
+        $img = esc_url_raw( home_url( '/wp-content/uploads/2026/07/companydebt-default-og.jpg' ) );
+        $img_j = wp_json_encode( $img, JSON_UNESCAPED_SLASHES );
+        $html = str_replace(
+            '"@type":"FinancialService","name":"Company Debt Ltd","image":[]',
+            '"@type":"FinancialService","name":"Company Debt Ltd","image":' . $img_j,
+            $html
+        );
+
+        // 3) og:image fallback — inject a branded default only if the page
+        //    emits ZERO og:image tags. Covers pages where the featured image
+        //    is unset AND Yoast cannot auto-detect one from content. Duplicate-
+        //    proof: skipped whenever any og:image already exists (from featured
+        //    image, Yoast meta, or Yoast's first-image-in-content auto-detect).
+        if ( strpos( $html, 'property="og:image"' ) === false && strpos( $html, "property='og:image'" ) === false ) {
+            $og_tag = '<meta property="og:image" content="' . esc_url( $img ) . '" />' . "
+";
+            // Insert before </head> if present; else prepend.
+            $head_close = strpos( $html, '</head>' );
+            if ( $head_close !== false ) {
+                $html = substr( $html, 0, $head_close ) . $og_tag . substr( $html, $head_close );
+            }
+        }
+
+        return $html;
+    } );
+}, 0 );
+
+/**
+ * Testimonial meta description + title length caps (added 2026-07-02).
+ *
+ * Ahrefs flagged 69 individual /testimonials/* pages with meta descriptions
+ * 200-215 chars (Google truncates at ~155-160) and 48 titles ~77 chars
+ * (Google truncates around 60). Both come from Yoast's default templates
+ * appending fixed tail text to the quote excerpt and the post title.
+ *
+ * Instead of editing 69 pages one by one, cap both at their display limits
+ * for the `testimonial` post type. Word-boundary trim + ellipsis so the cut
+ * still reads cleanly. Delete both add_filter() lines to revert.
+ */
+add_filter( 'wpseo_metadesc', function( $desc ) {
+    if ( 'testimonial' !== get_post_type() ) {
+        return $desc;
+    }
+    if ( ! is_string( $desc ) || mb_strlen( $desc ) <= 155 ) {
+        return $desc;
+    }
+    $trimmed = mb_substr( $desc, 0, 152 );
+    // Trim trailing partial word.
+    $trimmed = preg_replace( '/\s+\S*$/u', '', $trimmed );
+    return rtrim( $trimmed, ",.;:!?—- \t\n" ) . '…';
+}, 20 );
+
+add_filter( 'wpseo_title', function( $title ) {
+    if ( 'testimonial' !== get_post_type() ) {
+        return $title;
+    }
+    if ( ! is_string( $title ) || mb_strlen( $title ) <= 60 ) {
+        return $title;
+    }
+    $trimmed = mb_substr( $title, 0, 57 );
+    $trimmed = preg_replace( '/\s+\S*$/u', '', $trimmed );
+    return rtrim( $trimmed, ",.;:!?—- \t\n" ) . '…';
+}, 20 );
