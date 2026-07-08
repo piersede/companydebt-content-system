@@ -11,7 +11,7 @@ ABSOLUTELY NO TEMPLATING OF ANY KIND. This is the first and hardest rule. Every 
 
 THE OPENER VARIES PER ARTICLE. Open with a specific, genuine reaction to what THIS piece actually argues or cites. A fixed opener is itself a template element and is banned. Do not start with stock lines ("I came across your article", "I hope this finds you well", "Great piece on...", "handy resource", "no agenda").
 
-WHO YOU ARE, BEFORE THE PITCH. In plain, human sentences, say who you are and that Company Debt maintains a UK company-insolvency statistics tracker. Do not use marketing prose.
+WHO WE ARE, BEFORE THE PITCH. In plain, human sentences, establish that you work with Company Debt and that Company Debt maintains a UK company-insolvency statistics tracker. Keep it institutional ("at Company Debt we keep a monthly tracker of the official UK insolvency figures"). Do NOT state a personal name, and do NOT claim to personally be a licensed insolvency practitioner. The sender's own email signature carries their name and title. No marketing prose.
 
 ANCHOR ON THE EXACT CITATION, NOT THE TOPIC. Name the specific figure or source the piece cites for a specific point, and offer our fresher / more current / more granular UK cut of THAT point. Never "your article is about insolvency". You are offering a better source for one specific claim.
 
@@ -25,21 +25,17 @@ REGULATED REGISTER (hard boundaries). You must not give or imply debt or insolve
 
 STYLE. Warm, direct, UK English, calm authority, no hype. NO EM DASHES OR EN DASHES anywhere, including number ranges (use "to"). No marketing opt-out footer. Research and address the named recipient personally. Only cite figures you are explicitly given; do not invent, round, or restate numbers.
 
-SIGN-OFF LAYOUT. End with a short closing line on its OWN line (vary the wording every time: "Best regards," / "Kind regards," / "Many thanks," / "All the best," etc.), then the sender's name on its own line directly below, then the sender's job title and "Company Debt" on the line below the name. Three separate lines, like:
-  Kind regards,
-  [sender name]
-  [job title], Company Debt
-Never put the name on the same line as the closing.
+SIGN-OFF. End with a single short, varied closing line only ("Best regards," / "Kind regards," / "Many thanks," / "All the best," etc.). Do NOT add any name, job title, or company after it, and do NOT write a signature block. The sender applies their own email signature on send, so any manual sign-off would duplicate it. The email body ends at that closing line.
 
 OUTPUT FORMAT. Return exactly:
 Subject: <a specific, non-generic subject line>
 <blank line>
-<the email body, ending with the sign-off layout above>`;
+<the email body, ending with a single closing line and NO name/title/signature>`;
 
 function buildUserMsg(config, { asset, article, match, contact }) {
   const figs = asset.approvedFigures.map((f) => `- ${f.label}: ${f.value}${f.note ? ` (${f.note})` : ''}`).join('\n');
   const lines = [];
-  lines.push(`SENDER (sign the email as this person, using the sign-off layout): ${config.sender.name || '[SENDER NAME NOT SET]'}, ${config.sender.role}, ${config.sender.org}.`);
+  lines.push(`SENDER: an email from someone at Company Debt. Their name and title come from their own email signature, so do NOT write any name, personal job title, or signature block in the body.`);
   lines.push('');
   lines.push(`RECIPIENT: ${contact.name || 'the writer'}${contact.position ? `, ${contact.position}` : ''} at ${article.publication || match.competitor || (article.url || '')}.`);
   lines.push('');
@@ -57,7 +53,7 @@ function buildUserMsg(config, { asset, article, match, contact }) {
     ? `Include our page URL (${asset.url}) plainly in the body.`
     : `Do NOT paste the URL; offer to send the page if useful.`);
   lines.push('');
-  lines.push(`Write the email now. Remember: no templating, vary everything, anchor on the specific citation above, official-not-exclusive, no link ask, no dashes.`);
+  lines.push(`Write the email now. Remember: no templating, vary everything, anchor on the specific citation above, official-not-exclusive, no link ask, no dashes, and NO name/title/signature block (the signature is added on send).`);
   return lines.join('\n');
 }
 
