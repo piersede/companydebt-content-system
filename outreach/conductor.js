@@ -55,6 +55,7 @@ async function scan() {
 
   U.info(`${items.length} item(s) in "${statusLabel}".`);
   let drafted = 0;
+  const draftedContacts = new Set(); // one draft per contact email per run
 
   for (const item of items) {
     U.log('');
@@ -91,8 +92,12 @@ async function scan() {
       G.contactConfidenceGate(contact, config.genericInboxLocalparts)].find((c) => !c.pass);
     if (cg) { await route(item, 'research', cg.reason, cg.category, { write, tally }); continue; }
 
+    // per-contact dedup: never draft the same person twice in one run (sister titles, repeat authors)
+    const cemail = (contact.email || '').toLowerCase();
+    if (draftedContacts.has(cemail)) { U.warn(`  → skipped: ${contact.email} already drafted this run (stays queued for next run)`); continue; }
+
     // 4) draft
-    if (!process_) { U.ok('  would draft (dry-run)'); continue; }
+    if (!process_) { draftedContacts.add(cemail); U.ok('  would draft (dry-run)'); continue; }
     const article = { title: sc.title, url: articleUrl, publication: U.hostOf(articleUrl) };
     const d = await draft(config, { asset: m.asset, article, match: m, contact });
     if (!d.ok) { U.warn(`  draft skipped: ${d.reason}`); continue; }
@@ -108,6 +113,7 @@ async function scan() {
 
     store.pushFingerprint(gateRes.fingerprint);
     store.setStage(item.id, 'drafted', { subject: d.subject, to: contact.email });
+    draftedContacts.add(cemail);
     drafted++;
 
     if (write) {
