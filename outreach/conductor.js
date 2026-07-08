@@ -66,14 +66,26 @@ async function scan() {
     const articleUrl = item.articleUrl || item.raw?.link?.text;
     if (!articleUrl) { await route(item, 'research', 'no article URL on the row', 'not_enough_citation_context', { write, tally }); continue; }
 
-    // 1) scrape
+    // 1) scrape (with a free fallback to the Ahrefs-captured cited sentence)
+    const storedCtx = config.citedContext[articleUrl] || config.citedContext[articleUrl.replace(/\/$/, '')] || '';
     const sc = await scrape(articleUrl, config);
-    if (!sc.ok && sc.blocked) { await route(item, 'blocked', `page blocked: ${sc.error}`, null, { write, tally }); continue; }
-    if (!sc.ok) { await route(item, 'research', `scrape failed: ${sc.error}`, 'not_enough_citation_context', { write, tally }); continue; }
+    let title, text, citedContext, competitorLinks;
+    if (sc.ok) {
+      ({ title, text, competitorLinks } = sc);
+      citedContext = sc.citedContext || storedCtx;
+    } else if (sc.blocked && storedCtx) {
+      // page blocked but Ahrefs gave us the cited sentence — draft from that instead of halting
+      title = item.name; text = storedCtx; citedContext = storedCtx; competitorLinks = [];
+      U.dim(`  (page blocked; using Ahrefs cited context)`);
+    } else if (sc.blocked) {
+      await route(item, 'blocked', `page blocked: ${sc.error}`, null, { write, tally }); continue;
+    } else {
+      await route(item, 'research', `scrape failed: ${sc.error}`, 'not_enough_citation_context', { write, tally }); continue;
+    }
 
     // 2) match on the specific cited stat
-    const competitorUrl = item.citedSource || sc.competitorLinks[0] || '';
-    const m = matchCandidate({ title: sc.title, text: sc.text, articleUrl, citedContext: sc.citedContext, competitorUrl }, config.catalogue.assets[0], config.competitors);
+    const competitorUrl = item.citedSource || (competitorLinks && competitorLinks[0]) || '';
+    const m = matchCandidate({ title, text, articleUrl, citedContext, competitorUrl }, config.catalogue.assets[0], config.competitors);
     U.dim(`  match: conf ${m.confidence}  gap ${m.gap || 'none'}  ${m.reasons[0] || ''}`);
     if (!m.gap || m.confidence < config.matchThreshold) { await route(item, 'defunct', `weak fit (conf ${m.confidence})`, 'weak_fit', { write, tally }); continue; }
 
@@ -98,7 +110,7 @@ async function scan() {
 
     // 4) draft
     if (!process_) { draftedContacts.add(cemail); U.ok('  would draft (dry-run)'); continue; }
-    const article = { title: sc.title, url: articleUrl, publication: U.hostOf(articleUrl) };
+    const article = { title, url: articleUrl, publication: U.hostOf(articleUrl) };
     const d = await draft(config, { asset: m.asset, article, match: m, contact });
     if (!d.ok) { U.warn(`  draft skipped: ${d.reason}`); continue; }
 

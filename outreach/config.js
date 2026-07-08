@@ -11,6 +11,10 @@ const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const catalogue = readJson(path.join(ROOT, 'companydebt-asset-catalogue.json'));
 const competitors = readJson(path.join(ROOT, 'competitors.json'));
 const suppression = readJson(path.join(ROOT, 'suppression.json'));
+// Cited sentence per article URL, captured from the Ahrefs "Left/Anchor/Right context" columns.
+// Free fallback so blocked/thin pages still have the citation to anchor a draft on.
+let citedContextMap = {};
+try { citedContextMap = readJson(path.join(ROOT, 'cited-context.json')); } catch { /* optional */ }
 
 const env = process.env;
 const int = (v, d) => (v === undefined || v === '' ? d : parseInt(v, 10));
@@ -124,6 +128,7 @@ const config = {
   catalogue,
   competitors,
   suppression,
+  citedContext: citedContextMap,
 };
 
 module.exports = config;
