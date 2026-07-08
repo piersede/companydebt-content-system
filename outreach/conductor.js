@@ -10,6 +10,7 @@ const { scrape } = require('./lib/scraper');
 const { matchCandidate } = require('./lib/match');
 const { findContact } = require('./lib/enrich');
 const { createDraft } = require('./lib/graph');
+const { writeEml } = require('./lib/eml');
 const { draft } = require('./lib/claude');
 const G = require('./lib/gates');
 
@@ -129,8 +130,14 @@ async function scan() {
     drafted++;
 
     if (write) {
-      const gr = await createDraft(config, { to: contact.email, subject: d.subject, body: d.body, name: contact.name });
-      const note = `Outreach draft (${config.sender.name || 'sender'}):\n\nTo: ${contact.email}\nSubject: ${d.subject}\n\n${d.body}\n\n[Outlook: ${gr.ok ? 'drafted ' + (gr.webLink || gr.id) : 'not created — ' + gr.reason}]`;
+      // .eml draft (open-and-send in Outlook, no cloud). Graph only if it's actually configured.
+      const emlPath = writeEml(config.outboxDir, { id: item.id, to: contact.email, name: contact.name, subject: d.subject, body: d.body });
+      let outlook = `Draft file: ${emlPath}`;
+      if (config.graph.clientId) {
+        const gr = await createDraft(config, { to: contact.email, subject: d.subject, body: d.body, name: contact.name });
+        outlook += gr.ok ? `\nOutlook: drafted ${gr.webLink || gr.id}` : `\nOutlook: ${gr.reason}`;
+      }
+      const note = `Outreach draft (${config.sender.name || 'sender'}):\n\nTo: ${contact.email}\nSubject: ${d.subject}\n\n${d.body}\n\n[${outlook}]`;
       await monday.addUpdate(config, item.id, note);
       if (config.monday.cols.email) await monday.setSimple(config, item.id, config.monday.cols.email, contact.email);
       if (config.monday.cols.assetUrl) await monday.setSimple(config, item.id, config.monday.cols.assetUrl, m.asset.url);

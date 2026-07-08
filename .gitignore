@@ -30,5 +30,6 @@ _page_*.html
 
 # Outreach conductor runtime state + secrets
 outreach/state/
+outreach/outbox/
 outreach/node_modules/
 outreach/.graphcache.json

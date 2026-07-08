@@ -23,6 +23,7 @@ const bool = (v, d) => (v === undefined || v === '' ? d : /^(1|true|yes|on)$/i.t
 const config = {
   root: ROOT,
   stateDir: path.join(ROOT, 'state'),
+  outboxDir: path.join(ROOT, 'outbox'), // .eml drafts land here for one-click open-and-send in Outlook
 
   // ---- phase / behaviour ----
   phase: catalogue.phase || 1,
