@@ -1,0 +1,210 @@
+<!-- TITLE: Are Shareholders Liable for Company Debts? -->
+<!-- POST ID: 21122 / TYPE: pages / AUTHOR: 34 / FM: 70546 / TEMPLATE: templates/take-the-test-template.php -->
+<!-- LINK: https://comdebstage.wpengine.com/insolvency/shareholders-liable-company-debts/ -->
+
+<article>
+
+<!-- wp:paragraph -->
+<p>Shareholders of a UK limited company are not liable for the company's debts beyond the value of their shares. That is the entire point of limited liability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But the protection is not absolute, and there are specific situations where a shareholder who is also a director, a guarantor, or a participant in fraud can be pursued personally.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We see this question most often from owner-directors who are both the shareholder and the director of the same company. For them, the distinction between shareholder liability and <a href="/advice/are-directors-personally-liable-for-company-debts/">director liability</a> matters, because the routes to personal exposure are different.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>As a shareholder, your maximum loss is the amount you paid (or agreed to pay) for your shares. As a director, your exposure extends to wrongful trading claims, personal guarantees, overdrawn loan accounts, and HMRC personal liability notices. Most of the personal risk comes from the director role, not the shareholder role.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Quick Answer: Are Shareholders Liable for Company Debts?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>No, not beyond the value of their shares. A shareholder who paid £1 for one ordinary share has a maximum liability of £1. If the shares are fully paid, the shareholder has no further liability to the company's creditors.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This principle was established in <em>Salomon v A Salomon &amp; Co Ltd</em> [1897] and is the foundation of UK company law.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The exceptions are narrow but real:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<li><strong>Unpaid share capital.</strong> If you subscribed for shares but did not pay the full nominal value, the liquidator can call up the unpaid amount.</li>
+<li><strong>Personal guarantees.</strong> If you guaranteed company debts in your capacity as shareholder (or more commonly, as director-shareholder), the guarantee creates a personal liability separate from the shares.</li>
+<li><strong>Piercing the corporate veil.</strong> In extremely rare cases, the court can disregard the company's separate legal personality and hold shareholders personally liable. This requires evidence that the company was used as a sham or facade to evade an existing legal obligation.</li>
+<li><strong>Fraudulent or wrongful trading.</strong> If you are also a director or shadow director, sections 213 and 214 of the Insolvency Act apply to you in your director capacity, not your shareholder capacity.</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Shareholder vs Director Distinction for Liability</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In most small UK companies, the same person is both the sole shareholder and the sole director. This makes the distinction feel academic. But it is not. The routes to personal liability are completely different.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":true} -->
+<figure class="wp-block-table"><table class="has-fixed-layout">
+<thead>
+<tr><th></th><th>As Shareholder</th><th>As Director</th></tr>
+</thead>
+<tbody>
+<tr><td>Maximum liability</td><td>Value of shares (usually £1 to £100)</td><td>Unlimited if wrongful or fraudulent trading is proven</td></tr>
+<tr><td>Personal guarantees</td><td>Only if you signed one</td><td>Commonly required by banks and landlords</td></tr>
+<tr><td>Wrongful trading</td><td>Does not apply to shareholders</td><td>Section 214 applies to directors</td></tr>
+<tr><td>HMRC personal liability</td><td>Does not apply to shareholders</td><td>PLNs for PAYE and employee NICs apply to directors</td></tr>
+<tr><td>Disqualification</td><td>Does not apply to shareholders</td><td>2 to 15 year ban under CDDA 1986</td></tr>
+<tr><td>Overdrawn loan account</td><td>Not a shareholder issue</td><td>Liquidator pursues the director</td></tr>
+</tbody>
+</table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>We tell director-shareholders: your risk comes from the director hat, not the shareholder hat. If you are worried about personal liability, the questions to ask are about your <a href="/liquidation/what-happens-to-directors-in-liquidation/">conduct as a director</a>, your guarantee position, and your loan account balance, not about your shareholding.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Unpaid Share Capital: The One Shareholder Liability That Exists</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you subscribed for shares at a nominal value but did not pay in full, the liquidator can make a "call" on the unpaid capital. For example, if you hold 100 shares with a nominal value of £1 each but only paid 50p per share, the liquidator can demand the remaining £50.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In practice, this is rare in small companies where shares are typically issued at £1 nominal and fully paid. It is more common in larger companies or older companies where shares were issued at higher nominal values with only partial payment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We mention it because directors sometimes structure share capital in ways they do not fully understand, and the liquidator will check whether shares are fully paid as part of the standard investigation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Piercing the Corporate Veil: When Limited Liability Fails Shareholders</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Piercing the corporate veil means the court disregards the company's separate legal personality and treats the company's debts as the shareholder's personal debts. This is the scenario that directors fear most, and it is also the rarest.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>English courts are extremely reluctant to pierce the veil. The leading case, <em>Prest v Petrodel Resources Ltd</em> [2013], confirmed that veil-piercing is only available where the company was used as a device or facade to conceal the true facts and thereby evade or frustrate an existing legal obligation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Simply running a company badly, making poor decisions, or even being the sole shareholder and director does not meet this threshold.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We are direct about this because we see directors who panic about veil-piercing when their actual risk lies elsewhere. If your company traded legitimately, kept proper records, and was not used as a sham, veil-piercing is not your problem.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Your problem, if any, is likely to be wrongful trading, personal guarantees, or an overdrawn loan account, all of which arise from your director role, not your shareholder role.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Shareholders Receive in Liquidation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shareholders sit at the bottom of the <a href="/liquidation/which-creditors-get-paid-first/">creditor priority order</a>. They receive a distribution only after every creditor has been paid in full, including interest.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In an insolvent liquidation, shareholders receive nothing. In a solvent <a href="/liquidation/members-voluntary-liquidation/">MVL</a>, shareholders receive the surplus after all debts are paid, which is the entire point of the process.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We tell shareholders: if the company is insolvent, your shares are worthless. Your financial exposure as a shareholder is the value you paid for the shares. Your larger exposure, if any, comes from your other roles (director, guarantor, loan account holder).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Shareholders Should Do if the Company Is in Difficulty</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<li><strong>Separate your shareholder position from your director position.</strong> Understand which liabilities come from which role.</li>
+<li><strong>Audit your personal guarantees.</strong> These are your biggest personal exposure, and they arise from your relationship with creditors, not from your shareholding.</li>
+<li><strong>Check your director's loan account.</strong> If overdrawn, the liquidator will pursue you as a director, not as a shareholder.</li>
+<li><strong>Seek advice early.</strong> A licensed insolvency practitioner can assess both the company's position and your personal exposure. <a href="/liquidation/">A confidential consultation</a> will clarify where you stand.</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">FAQs on Shareholder Liability for Company Debts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:ub/content-toggle-block {"blockID":"7c4f1d83-2a6e-4b95-be72-c8d3a1f9e504","theme":"#f8f8f8","titleColor":"#000000","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:ub/content-toggle-panel-block {"theme":"#f8f8f8","titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan creditors come after me as a shareholder?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Not for the company's debts. Your liability as a shareholder is limited to the value of your shares. Creditors can only pursue you personally if you gave a personal guarantee, if the court pierces the corporate veil (extremely rare), or if you are also a director and face director-specific liabilities like wrongful trading.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":1,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eWhat is piercing the corporate veil?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>It is a court action that disregards the company's separate legal personality and holds shareholders personally liable for company debts. English courts only do this where the company was used as a sham or facade to evade an existing legal obligation. It is extremely rare and does not apply to companies that traded legitimately, even if they traded poorly.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":2,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eAm I liable for unpaid share capital?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Yes. If you subscribed for shares but did not pay the full nominal value, the liquidator can call up the unpaid amount. For most small companies with £1 fully paid shares, this is not an issue. Check your share certificates and the company's allotment records to confirm your shares are fully paid.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":3,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eDoes being a sole shareholder increase my liability?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>No. The Salomon principle confirms that even a one-person company is a separate legal entity. Being the sole shareholder does not increase your liability or make veil-piercing more likely. Your additional risk as a sole shareholder-director comes from the director role, not the shareholding.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":4,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan a shareholder be made bankrupt over a company debt?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Only if the underlying claim is against the shareholder personally. Personal guarantee enforcement, an unpaid call on share capital, or a court order following a successful veil-piercing can all be enforced through bankruptcy proceedings. The company's debts on their own cannot make the shareholder bankrupt.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+
+<!-- wp:ub/content-toggle-panel-block {"index":5,"theme":"#f8f8f8","collapsed":true,"titleColor":"#000000","panelTitle":"\u003cstrong\u003eCan shareholders lose more than they invested?\u003c/strong\u003e","toggleIcon":"plus","showOnlyOne":true} -->
+<!-- wp:paragraph {"placeholder":"Panel content"} -->
+<p>Generally, no. The maximum financial loss for a fully paid shareholder is the amount paid for the shares. The exceptions are unpaid share capital (you can be called for the unpaid balance) and any separate personal contracts (guarantees, loan account balances) that exist outside your shareholding.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:ub/content-toggle-panel-block -->
+<!-- /wp:ub/content-toggle-block -->
+
+<!-- wp:html -->
+<aside class="cd-methodology">
+<p class="cd-methodology__label"><strong>Methodology and Disclosure</strong></p>
+<p>This page is written by the Company Debt editorial team and reviewed by Chris Andersen, a licensed insolvency practitioner regulated by the Insolvency Practitioners Association.</p>
+<p>Statutory and case-law references draw on the Companies Act 2006 (sections 3 and 74), the Insolvency Act 1986 (sections 74, 213 and 214), the Company Directors Disqualification Act 1986, <em>Salomon v A Salomon &amp; Co Ltd</em> [1897] AC 22, and <em>Prest v Petrodel Resources Ltd</em> [2013] UKSC 34. Last reviewed May 2026.</p>
+<p>Company Debt is a commercial insolvency practice. We are not independent of the process described on this page. If you instruct us, we act as your insolvency practitioner. We may also receive a fee where you engage another practitioner through our network.</p>
+</aside>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<aside class="cd-sources">
+<p class="cd-sources__label"><strong>Sources &amp; References</strong></p>
+<ul>
+<li><a href="https://www.legislation.gov.uk/ukpga/2006/46/contents"><strong>Companies Act 2006, sections 3 and 74</strong> &mdash; the statutory basis of limited liability and shareholder liability in winding up</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/section/74"><strong>Insolvency Act 1986, section 74</strong> &mdash; liability of contributories in a winding up</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/45/contents"><strong>Insolvency Act 1986, sections 213 and 214</strong> &mdash; fraudulent trading and wrongful trading liability for directors and shadow directors</a> - legislation.gov.uk</li>
+<li><a href="https://www.legislation.gov.uk/ukpga/1986/46/contents"><strong>Company Directors Disqualification Act 1986</strong> &mdash; the framework for director disqualification orders and undertakings</a> - legislation.gov.uk</li>
+<li><a href="https://www.bailii.org/uk/cases/UKHL/1896/1.html"><strong><em>Salomon v A Salomon &amp; Co Ltd</em> [1897] AC 22</strong> &mdash; the House of Lords decision establishing the separate legal personality of the company and the foundation of limited liability</a> - bailii.org</li>
+<li><a href="https://www.bailii.org/uk/cases/UKSC/2013/34.html"><strong><em>Prest v Petrodel Resources Ltd</em> [2013] UKSC 34</strong> &mdash; the Supreme Court decision restating the limits on piercing the corporate veil</a> - bailii.org</li>
+<li><a href="https://www.gov.uk/government/organisations/insolvency-service"><strong>The Insolvency Service</strong> &mdash; guidance on director conduct, disqualification, and the wider insolvency framework</a> - gov.uk</li>
+</ul>
+</aside>
+<!-- /wp:html -->
+</article>
