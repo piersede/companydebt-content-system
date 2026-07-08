@@ -139,8 +139,7 @@ async function scan() {
       }
       const note = `Outreach draft (${config.sender.name || 'sender'}):\n\nTo: ${contact.email}\nSubject: ${d.subject}\n\n${d.body}\n\n[${outlook}]`;
       await monday.addUpdate(config, item.id, note);
-      if (config.monday.cols.email) await monday.setSimple(config, item.id, config.monday.cols.email, contact.email);
-      if (config.monday.cols.assetUrl) await monday.setSimple(config, item.id, config.monday.cols.assetUrl, m.asset.url);
+      // (email is already on the row; asset URL is constant — no need to re-write those complex columns)
       if (config.monday.cols.citedSource && m.competitorUrl) await monday.setSimple(config, item.id, config.monday.cols.citedSource, m.competitorUrl);
       await monday.setStatus(config, item.id, config.monday.status.ready);
       U.ok('  → board: Ready to contact');
