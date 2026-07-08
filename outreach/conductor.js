@@ -173,6 +173,7 @@ async function route(item, kind, reason, category, { write, tally }) {
       await monday.addUpdate(config, item.id, `[conductor] ${reason}${category ? ` (suggested reason: ${category})` : ''}`);
       if (kind !== 'blocked') await monday.setStatus(config, item.id, label);
       if (category && config.monday.cols.rejectReason) await monday.setSimple(config, item.id, config.monday.cols.rejectReason, category);
+      if (kind === 'defunct') await monday.moveToGroup(config, item.id, config.monday.groups.defunct);
     } catch (e) { U.err(`  (board write failed: ${e.message})`); }
   }
 }

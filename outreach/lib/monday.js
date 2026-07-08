@@ -93,6 +93,12 @@ async function setStatus(config, itemId, statusLabel) {
   return setSimple(config, itemId, config.monday.cols.status, statusLabel);
 }
 
+async function moveToGroup(config, itemId, groupId) {
+  if (!groupId) return { skipped: true };
+  await gql(config, `mutation ($i:ID!, $g:String!){ move_item_to_group(item_id:$i, group_id:$g){ id } }`, { i: itemId, g: groupId });
+  return { ok: true };
+}
+
 async function addUpdate(config, itemId, body) {
   const data = await gql(config, `mutation ($i:ID!, $b:String!){ create_update(item_id:$i, body:$b){ id } }`, { i: itemId, b: body });
   return { ok: true, id: data.create_update.id };
@@ -105,4 +111,4 @@ async function createItem(config, name, columnValues = {}) {
   return { ok: true, id: data.create_item.id };
 }
 
-module.exports = { gql, boardColumns, allItems, itemsByStatus, getItem, setSimple, setStatus, addUpdate, createItem, MondayError };
+module.exports = { gql, boardColumns, allItems, itemsByStatus, getItem, setSimple, setStatus, moveToGroup, addUpdate, createItem, MondayError };

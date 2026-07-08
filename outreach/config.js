@@ -67,6 +67,10 @@ const config = {
       responded: 'Responded',
       defunct: 'Defunct',
     },
+    // Board groups (Defunct items are moved into their own group for a clean queue).
+    groups: {
+      defunct: env.OUTREACH_GROUP_DEFUNCT || 'group_mm52z487',
+    },
   },
 
   // ---- drafting ----
