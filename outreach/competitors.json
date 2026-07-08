@@ -1,0 +1,21 @@
+{
+  "_comment": "Used by `conductor source` to seed the citation-gap queue. These are the sites whose insolvency/liquidation FIGURES tend to get cited by journalists; when an article cites one of them for an insolvency stat, that is the gap our fresher UK dashboard fills. Add the Ahrefs 'referring page' hosts you want to displace. Own-site and self-links are always dropped.",
+  "dataCompetitors": [
+    "creditsafe.com",
+    "redflagalert.com",
+    "begbies-traynorgroup.com",
+    "realbusinessrescue.co.uk",
+    "companyrescue.co.uk",
+    "gov.uk",
+    "insolvencydirect.bis.gov.uk",
+    "ons.gov.uk"
+  ],
+  "citedSlugHints": [
+    "insolvency-statistics",
+    "company-insolvency",
+    "insolvency-figures",
+    "liquidation-statistics",
+    "business-failures",
+    "companies-house-statistics"
+  ]
+}

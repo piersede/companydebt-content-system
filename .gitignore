@@ -27,3 +27,9 @@ _page_*.html
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# Outreach conductor runtime state + secrets
+outreach/state/
+outreach/outbox/
+outreach/node_modules/
+outreach/.graphcache.json

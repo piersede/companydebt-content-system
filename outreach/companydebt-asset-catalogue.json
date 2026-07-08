@@ -1,0 +1,48 @@
+{
+  "phase": 1,
+  "mode": "STATS_HUB_ONLY",
+  "_comment": "Phase 1 pitches ONLY the data hub. Approved figures below are the claim ledger: a draft may cite these numbers and no others. Refresh approvedFigures + updated/nextRelease each month from https://www.companydebt.com/data/uk-insolvency-statistics/ (they are official Insolvency Service + Companies House figures, not proprietary — the moat is the presentation, never claim exclusivity). Phase 2 will add the hub + pillar pages already listed under 'phase2Assets'.",
+  "assets": [
+    {
+      "id": "uk-insolvency-statistics",
+      "title": "UK Company Insolvency Statistics",
+      "url": "https://www.companydebt.com/data/uk-insolvency-statistics/",
+      "type": "data",
+      "coverage": "England and Wales",
+      "sources": ["The Insolvency Service", "Companies House"],
+      "updated": "2026-06-19",
+      "nextRelease": "2026-07-17",
+      "topics": [
+        "company insolvency", "corporate insolvency", "insolvency statistics",
+        "insolvency figures", "liquidation", "creditors voluntary liquidation", "CVL",
+        "compulsory liquidation", "administration", "company administration",
+        "insolvency rate", "business failures", "company failures", "winding up"
+      ],
+      "sections": [
+        "Latest company insolvency figures (monthly, England and Wales)",
+        "Monthly company insolvencies by procedure (trend, 2000 to present)",
+        "Procedure breakdown: CVLs, compulsory liquidations, administrations",
+        "Insolvency rate per 10,000 active companies",
+        "Sector breakdown of company insolvencies",
+        "UK nations breakdown (England and Wales, Scotland, Northern Ireland)"
+      ],
+      "approvedFigures": [
+        { "label": "total company insolvencies, May 2026 (England and Wales)", "value": "1,868", "period": "May 2026", "note": "down 10% on April 2026 and 16% on May 2025" },
+        { "label": "creditors' voluntary liquidations (CVLs), May 2026", "value": "1,423", "period": "May 2026", "note": "76% of all company insolvencies" },
+        { "label": "compulsory liquidations, May 2026", "value": "285", "period": "May 2026", "note": "down 26% on April 2026" },
+        { "label": "administrations, May 2026", "value": "135", "period": "May 2026", "note": "down 24% on April 2026" },
+        { "label": "insolvency rate per 10,000 active companies", "value": "50.9", "period": "12 months to May 2026" }
+      ],
+      "allowedContextNumbers": ["2000", "2026", "2025", "10000", "10,000"]
+    }
+  ],
+  "phase2Assets": [
+    { "id": "hmrc-debt-enforcement-hub", "title": "HMRC Debt Enforcement Hub", "url": "https://www.companydebt.com/hmrc-debt-enforcement-hub/", "type": "hub", "topics": ["hmrc", "tax debt", "hmrc enforcement", "winding up petition", "time to pay"] },
+    { "id": "bounce-back-loan-support-hub", "title": "Bounce Back Loan Support Hub", "url": "https://www.companydebt.com/bounce-back-loan-support-hub/", "type": "hub", "topics": ["bounce back loan", "bbl", "bbl default", "bbl fraud", "director liability"] },
+    { "id": "director-protection-hub", "title": "Director Protection Hub", "url": "https://www.companydebt.com/director-protection-hub/", "type": "hub", "topics": ["director liability", "personal guarantee", "directors duties", "wrongful trading", "disqualification"] },
+    { "id": "debt-creditor-pressure-hub", "title": "Debt & Creditor Pressure Hub", "url": "https://www.companydebt.com/debt-creditor-pressure-hub/", "type": "hub", "topics": ["creditor pressure", "creditor negotiation", "statutory demand", "county court judgment"] },
+    { "id": "company-rescue-recovery-hub", "title": "Company Rescue & Recovery Hub", "url": "https://www.companydebt.com/company-rescue-recovery-hub/", "type": "hub", "topics": ["company rescue", "cva", "administration", "turnaround", "restructuring"] },
+    { "id": "sample-letters", "title": "Sample Letters Hub", "url": "https://www.companydebt.com/sample-letters/", "type": "hub", "topics": ["debt letter template", "disputing a debt", "creditor letter"] },
+    { "id": "advice", "title": "Advice Hub", "url": "https://www.companydebt.com/advice/", "type": "hub", "topics": ["director advice", "personal liability", "personal guarantee"] }
+  ]
+}
