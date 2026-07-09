@@ -448,17 +448,19 @@ def check_faq_accordion(raw_html: str, body: str) -> CheckResult:
     The Ultimate Blocks wp:ub/content-toggle-block emits FAQPage schema on the
     front end, so its presence satisfies both the accordion and schema rules.
 
-    Per editorial-os/28-htag-semantic-framework.md (April 2026 update),
-    the FAQ H2 must be the FINAL H2 in the main article flow. Methodology
-    and Sources blocks must sit OUTSIDE the H2 hierarchy (as styled labels
-    in a footer/aside/div, not as h2). Any H2 appearing AFTER the FAQ H2 is
-    a hierarchy violation that demotes the FAQ from its routing position.
+    Per editorial-os/28-htag-semantic-framework.md (April 2026 update, Related
+    Guides ordering revision), the FAQ H2 must be immediately followed by
+    exactly one further H2 — Related Guides — which is the TRUE final H2 in
+    the main article flow. Methodology and Sources blocks must sit OUTSIDE the
+    H2 hierarchy (as styled labels in a footer/aside/div, not as h2). Any H2
+    appearing after FAQ that isn't Related Guides, or nothing following FAQ
+    at all, is a hierarchy violation.
     """
     has_ub = bool(re.search(r"wp:ub/content-toggle", raw_html, re.I))
     if not has_ub:
         return CheckResult(
             id="16", tier="T2",
-            name="FAQ accordion present + FAQ is final H2",
+            name="FAQ accordion present + Related Guides is final H2",
             passed=False,
             detail="no accordion block found",
         )
@@ -468,28 +470,41 @@ def check_faq_accordion(raw_html: str, body: str) -> CheckResult:
     if not m:
         return CheckResult(
             id="16", tier="T2",
-            name="FAQ accordion present + FAQ is final H2",
+            name="FAQ accordion present + Related Guides is final H2",
             passed=False,
             detail="accordion present but no FAQ H2 found",
         )
-    # Any H2 after the FAQ H2?
+    # Exactly one H2 must follow FAQ, and it must be Related Guides
     tail = body[m.end():]
-    later_h2 = re.search(r"<h2\b", tail)
-    if later_h2:
-        # Identify which H2 violated the rule
-        later_h2_text = re.search(r"<h2[^>]*>([^<]{0,80})", tail)
-        violator = later_h2_text.group(1).strip() if later_h2_text else "unknown"
+    h2_after = list(re.finditer(r"<h2[^>]*>([^<]{0,80})", tail))
+    if not h2_after:
         return CheckResult(
             id="16", tier="T2",
-            name="FAQ accordion present + FAQ is final H2",
+            name="FAQ accordion present + Related Guides is final H2",
             passed=False,
-            detail=f"accordion present but H2 follows FAQ: '{violator[:60]}'",
+            detail="accordion present but no Related Guides H2 follows FAQ",
+        )
+    first_text = h2_after[0].group(1).strip()
+    if not re.match(r"Related\s+Guides?\b", first_text, re.I):
+        return CheckResult(
+            id="16", tier="T2",
+            name="FAQ accordion present + Related Guides is final H2",
+            passed=False,
+            detail=f"H2 after FAQ is not Related Guides: '{first_text[:60]}'",
+        )
+    if len(h2_after) > 1:
+        extra_text = h2_after[1].group(1).strip()
+        return CheckResult(
+            id="16", tier="T2",
+            name="FAQ accordion present + Related Guides is final H2",
+            passed=False,
+            detail=f"H2 follows Related Guides, which must be final: '{extra_text[:60]}'",
         )
     return CheckResult(
         id="16", tier="T2",
-        name="FAQ accordion present + FAQ is final H2",
+        name="FAQ accordion present + Related Guides is final H2",
         passed=True,
-        detail="wp:ub/content-toggle present, FAQ is final H2",
+        detail="wp:ub/content-toggle present, FAQ followed by Related Guides as final H2",
     )
 
 

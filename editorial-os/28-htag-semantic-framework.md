@@ -25,7 +25,7 @@ The architecture (number and order of H2 sections) is fixed per page family. The
 5. Do not use body-copy prompts as headings.
 6. Do not add broad insolvency sections unless they directly support the page intent.
 7. Do not create sections that should be separate dedicated pages.
-8. Every page must end with an FAQ section: `H2: Frequently Asked Questions About (Primary Keyword)`. **The FAQ H2 must be the FINAL H2 in the visible article.** No editorial H2 may appear after it.
+8. Every page must have an FAQ section: `H2: Frequently Asked Questions About (Primary Keyword)`, immediately followed by `H2: Related Guides`. **Related Guides must be the FINAL H2 in the visible article, sitting directly after the FAQ accordion.** No other editorial H2 may appear after the FAQ H2.
 9. Most pages should stop at H3.
 10. Use British spelling and UK legal/business terminology.
 11. **Heading cannibalisation rule.** Do not promote neighbouring topics into H3s when they have their own dedicated pages or when they pull the article into a different page intent. Supporting concepts should usually be handled as: (a) table rows, (b) checklist items, (c) bolded labels inside a paragraph, (d) short linked summaries, (e) internal-link cards. An H3 must directly support THIS article's title, not a sibling page's title.
@@ -1428,7 +1428,7 @@ The 11-question test below is the binding QA. Every standardised template and ev
 8a. **Are table cells concise?** Body cells ≤ 200 chars, headers ≤ 50 chars. Long cells mean the section wants to be paragraph form, not a table. (`13-readability-governance.md` §3c, audit Check 24.)
 9. **Are Related Guides link blocks** rather than H3-led mini-hubs? (Cross-family Related Guides pattern C.)
 10. **Are Methodology and Sources outside the article H-tag flow?** (Styled labels in a footer / aside / div, not `<h2>` elements.)
-11. **Are FAQs the final H2?** (No editorial H2 may follow.)
+11. **Is Related Guides the final H2, immediately after the FAQ H2?** (No other editorial H2 may follow the FAQ accordion.)
 
 **Plus the original semantic-relevance checks:**
 
@@ -1579,7 +1579,7 @@ Articles already rewritten under earlier H-tag rubrics will be reassessed agains
 
 1. Whether each H2 satisfies the architecture for its assigned page family.
 2. Whether H3s are slot-specific to the title, not generic.
-3. Whether the FAQ H2 is final and keyword-bearing.
+3. Whether the FAQ H2 is keyword-bearing and immediately followed by Related Guides as the true final H2.
 4. Whether the page has drifted into a sibling family's intent.
 
 Articles failing any of those will be re-flagged for an H-tag-only rework rather than a full rewrite.
