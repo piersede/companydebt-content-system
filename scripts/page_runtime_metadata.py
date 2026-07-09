@@ -59,6 +59,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "what-happens-if-a-director-hides-company-assets": "director_risk",
     "can-a-director-be-sued-personally-by-creditors": "director_risk",
     "redundancy-payments-for-directors-in-an-mvl": "director_risk",
+    "are-directors-personally-liable-for-company-debts": "director_risk",
 
     # pricing_cost — fees, costs, affordability
     "how-much-does-liquidation-cost": "pricing_cost",

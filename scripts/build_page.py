@@ -54,6 +54,7 @@ PAGE_REGISTRY = {
     'administration-statistics': 'cc_builder.data.pages.administration_statistics',
     'company-insolvencies-by-sector': 'cc_builder.data.pages.company_insolvencies_by_sector',
     'construction-insolvency-statistics': 'cc_builder.data.pages.construction_insolvency_statistics',
+    'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
