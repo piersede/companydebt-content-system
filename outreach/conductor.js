@@ -58,9 +58,25 @@ async function scan() {
   let drafted = 0;
   const draftedContacts = new Set(); // one draft per contact email per run
 
+  // Cross-run contact dedup: never draft anyone who already has a draft/contact on the board.
+  // Seed with every email already committed to Ready / Contacted / Responded on any row.
+  const committedContacts = new Set();
+  try {
+    const done = new Set([config.monday.status.ready, config.monday.status.contacted, config.monday.status.responded]
+      .map((s) => s.trim().toLowerCase()));
+    for (const it of await monday.allItems(config)) {
+      if (it.email && done.has((it.status || '').trim().toLowerCase())) committedContacts.add(it.email.toLowerCase());
+    }
+    if (committedContacts.size) U.dim(`(${committedContacts.size} contact(s) already drafted on the board — will not re-draft)`);
+  } catch (e) { U.warn(`(could not load committed-contact set: ${e.message})`); }
+
   for (const item of items) {
     U.log('');
     U.log(`${U.C.bold}• ${item.name}${U.C.reset}  (id ${item.id})`);
+
+    // LinkedIn-channel rows share the board but are not email prospects — leave them untouched.
+    const liRaw = item.raw && item.raw['link_mm52fh94'];
+    if (liRaw && liRaw.value && /"url"/.test(liRaw.value)) { U.dim('  (LinkedIn-channel row — skipped by email scan)'); continue; }
 
     if (drafted >= cap) { U.warn('  daily cap reached — leaving in queue for next run'); continue; }
 
@@ -105,8 +121,10 @@ async function scan() {
       G.contactConfidenceGate(contact, config.genericInboxLocalparts)].find((c) => !c.pass);
     if (cg) { await route(item, 'research', cg.reason, cg.category, { write, tally }); continue; }
 
-    // per-contact dedup: never draft the same person twice in one run (sister titles, repeat authors)
+    // per-contact dedup: never draft the same person twice — this run OR any prior run
+    // (sister titles, repeat authors, the same contact on multiple rows).
     const cemail = (contact.email || '').toLowerCase();
+    if (committedContacts.has(cemail)) { U.warn(`  → skipped: ${contact.email} already has a draft/contact on the board (leaving this row queued)`); continue; }
     if (draftedContacts.has(cemail)) { U.warn(`  → skipped: ${contact.email} already drafted this run (stays queued for next run)`); continue; }
 
     // 4) draft
