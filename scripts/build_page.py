@@ -40,6 +40,7 @@ PAGE_REGISTRY = {
     # SLUG_PAGE_CLASS_OVERRIDES.
     'liquidation': 'cc_builder.data.pages.liquidation',
     'members-voluntary-liquidation': 'cc_builder.data.pages.members_voluntary_liquidation',
+    'creditors-voluntary-liquidation': 'cc_builder.data.pages.creditors_voluntary_liquidation',
     'uk-insolvency-statistics': 'cc_builder.data.pages.uk_insolvency_statistics',
     'cant-pay-vat': 'cc_builder.data.pages.cant_pay_vat',
     # The insolvency data hub: lives at /data/ (page 79845, slug 'data').

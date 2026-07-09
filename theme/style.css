@@ -14232,6 +14232,60 @@ html.cd-js .ub_call_to_action:not([data-cd-cta-transformed="1"]) {
 }
 
 /* --------------------------------------------------------------------------
+   cd-key-facts-panel — glanceable Q&A hero card (page-id-7674, CVL)
+   -------------------------------------------------------------------------- */
+.cd-key-facts-panel {
+  border: 1px solid var(--c-blue-dark, #002856);
+  border-radius: 4px;
+  margin: 1.75rem 0;
+  overflow: hidden;
+}
+.cd-key-facts-panel__title {
+  background: var(--c-blue-dark, #002856);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 !important;
+  padding: 0.85rem 1.25rem;
+}
+.cd-key-facts-panel__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+}
+.cd-key-facts-panel__row {
+  display: contents;
+}
+.cd-key-facts-panel__q,
+.cd-key-facts-panel__a {
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-p, 1rem);
+  line-height: 1.45;
+}
+.cd-key-facts-panel__q {
+  font-weight: 700;
+  color: var(--c-blue-dark, #002856);
+  background: var(--c-bcg-third, #f5f7fa);
+  border-top: 1px solid #e2e6ea;
+}
+.cd-key-facts-panel__a {
+  color: var(--c-font-dark, #1a1a1a);
+  border-top: 1px solid #e2e6ea;
+}
+.cd-key-facts-panel__row:first-child .cd-key-facts-panel__q,
+.cd-key-facts-panel__row:first-child .cd-key-facts-panel__a {
+  border-top: none;
+}
+@media (max-width: 600px) {
+  .cd-key-facts-panel__grid {
+    grid-template-columns: 1fr;
+  }
+  .cd-key-facts-panel__a {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
    cd-outcome-grid — 4-card post-liquidation outcome grid (page-id-7669)
    -------------------------------------------------------------------------- */
 .cd-outcome-grid {
