@@ -1,0 +1,221 @@
+{
+  "_about": "Clean, chart-ready data for the /articles/pub-closures-in-the-uk/ refresh. Each dataset is one visual. Figures are transcribed from the 2026 source-research pack (deep-research-report). Every series carries geography, period, publisher, whether the source is original/official or secondary, a confidence rating, and a caveat. British English. Volumes are not rates; 'number of pubs', 'pub closures' and 'hospitality insolvencies' are DIFFERENT measures and must not be merged into one number.",
+  "_refresh_cadence": "Closures and insolvency data at least quarterly; immediately after major policy changes to rates, duty, NICs or wage floors.",
+  "_geography_warning": "UK, Great Britain and England & Wales are used differently by different sources. Do not restate a GB or E&W figure as 'UK'.",
+  "page": {
+    "wp_post_id": 24589,
+    "post_type": "post",
+    "slug": "pub-closures-in-the-uk",
+    "url": "https://www.companydebt.com/articles/pub-closures-in-the-uk/",
+    "staging_url": "https://comdebstage.wpengine.com/articles/pub-closures-in-the-uk/"
+  },
+  "datasets": {
+    "uk_pub_stock_over_time": {
+      "title": "Number of pubs in the UK",
+      "visual": "line chart, labelled points",
+      "unit": "pubs (count)",
+      "geography": "UK",
+      "source_publisher": "House of Commons Library, quoting BBPA",
+      "source_type": "secondary",
+      "confidence": "medium",
+      "caveat": "Secondary citation of BBPA data. Good for long-run framing; not a direct official dataset.",
+      "points": [
+        {"year": 2000, "value": 60800},
+        {"year": 2010, "value": 55400},
+        {"year": 2024, "value": 45000, "approx": true}
+      ]
+    },
+    "annual_closures_ew": {
+      "title": "Pub closures per year, England & Wales",
+      "visual": "column chart with footnote",
+      "unit": "closures (count)",
+      "geography": "England & Wales (2025 forecast is Great Britain)",
+      "source_publisher": "BBPA",
+      "source_type": "original_trade",
+      "confidence": "medium",
+      "caveat": "Trade-body closure series, not an official ONS/VOA business-death count. 2025 value is a BBPA forecast, not final outturn, and is Great Britain not E&W. Label it explicitly.",
+      "points": [
+        {"year": 2024, "value": 289, "geography": "England & Wales", "note": "more than six a week"},
+        {"year": 2025, "value": 378, "geography": "Great Britain", "forecast": true}
+      ]
+    },
+    "quarterly_closures_britain": {
+      "title": "Pub closures, Q1 comparison",
+      "visual": "small paired columns / stat box",
+      "unit": "closures (count)",
+      "geography": "Britain",
+      "source_publisher": "BBPA",
+      "source_type": "original_trade",
+      "confidence": "medium",
+      "caveat": "Britain, not UK. Trade-body closure series, not an official rating-list count. Q1 2026 ~= almost two a day.",
+      "points": [
+        {"period": "Q1 2025", "value": 128},
+        {"period": "Q1 2026", "value": 161}
+      ]
+    },
+    "permanent_losses_ew": {
+      "title": "Permanent pub losses, England & Wales",
+      "visual": "bar chart with explicit definition note",
+      "unit": "pubs (count)",
+      "geography": "England & Wales",
+      "source_publisher": "Ryan analysis of government (VOA rating-list) statistics, via Guardian / Morning Advertiser",
+      "source_type": "secondary",
+      "confidence": "medium",
+      "caveat": "Permanent loss = demolition or conversion away from pub use. Total stock figure INCLUDES pubs that are vacant or being offered to let, so 'net stock' and 'permanent closures' are different. E&W only.",
+      "points": [
+        {"year": 2025, "permanent_losses": 366, "stock_start": 38989, "stock_end": 38623}
+      ]
+    },
+    "regional_hotspots_2025": {
+      "title": "Where pubs were lost in 2025 (England & Wales)",
+      "visual": "ranked bars or regional map",
+      "unit": "qualitative ranking (exact regional counts NOT in source pack)",
+      "geography": "England & Wales",
+      "source_publisher": "Ryan analysis via Guardian / Morning Advertiser",
+      "source_type": "secondary",
+      "confidence": "low",
+      "caveat": "DATA GAP: the research pack gives only the named hardest-hit regions, not exact regional counts. Every region lost pubs in 2025. Do NOT invent regional numbers. Either source exact figures before building this chart, or render as a labelled list of named regions.",
+      "hardest_hit_regions": ["East Midlands", "North West", "Yorkshire and the Humber"]
+    },
+    "hospitality_insolvencies": {
+      "title": "Hospitality company insolvencies vs pub closures",
+      "visual": "dual-axis or side-by-side small multiples (to show they are different systems)",
+      "unit": "mixed (see fields)",
+      "geography": "England & Wales",
+      "source_publisher": "Insolvency Service",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "Accommodation & food service ACTIVITIES (SIC section), not pub-only and not site closures. A company can enter insolvency while sites keep trading; a pub can shut with no insolvency event.",
+      "figures": {
+        "accom_food_insolvencies_12m_to_may_2026": 3296,
+        "share_of_captured_industry_cases_pct": 14,
+        "sector_insolvency_rate_per_10000_2025": 268,
+        "sector_insolvency_rate_per_10000_peak_2023": 314,
+        "note": "Accommodation & food service has had the HIGHEST sector insolvency rate every year since 2015."
+      }
+    },
+    "business_demography": {
+      "title": "Accommodation & food service business births vs deaths",
+      "visual": "clustered columns",
+      "unit": "businesses (count)",
+      "geography": "UK",
+      "source_publisher": "ONS business demography",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "Sector-wide (accommodation & food services), not pub-only.",
+      "figures": {
+        "year": 2024,
+        "births": 30360,
+        "deaths": 26195,
+        "death_rate_pct": 12.9
+      }
+    },
+    "cost_pressure_survey": {
+      "title": "What is affecting hospitality turnover",
+      "visual": "horizontal bars, share of firms",
+      "unit": "% of businesses",
+      "geography": "UK",
+      "source_publisher": "ONS Business Insights and Conditions Survey (BICS)",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "Sample survey, sector-wide (accommodation & food service). Highly current.",
+      "period": "June 2026",
+      "figures": {
+        "any_challenge_affecting_turnover_pct": 83,
+        "cost_of_materials_pct": 48,
+        "cost_of_labour_pct": 48,
+        "economic_uncertainty_pct": 43
+      }
+    },
+    "cost_stack_policy": {
+      "title": "The 2025-2026 cost stack on pubs",
+      "visual": "annotated stacked explainer / policy table",
+      "unit": "mixed policy figures",
+      "geography": "UK (rates figures England only)",
+      "source_publisher": "GOV.UK, HMRC, VOA / House of Commons Library, ONS",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "Economy-wide policy changes, not pub-specific pay/bills. Rates figures are England only. Rateable value is not the final bill; duty is not shelf/bar price.",
+      "items": [
+        {"label": "National Living Wage", "value": "£12.71", "change": "+4.1%", "effective": "April 2026", "geography": "UK", "source": "GOV.UK"},
+        {"label": "Employer NIC rate", "value": "15%", "change": "up from 13.8%", "effective": "April 2025", "geography": "UK", "source": "HMRC"},
+        {"label": "Employer NIC secondary threshold", "value": "£5,000", "change": "down from £9,100", "effective": "April 2025", "geography": "UK", "source": "HMRC"},
+        {"label": "Alcohol duty uprating", "value": "+3.66% (RPI)", "effective": "1 February 2026", "geography": "UK", "source": "HMRC"},
+        {"label": "Draught duty rate (3.5% to <8.5% ABV)", "value": "£19.45 per litre of alcohol", "effective": "1 February 2026", "geography": "UK", "source": "HMRC", "note": "vs main beer rate of £22.58 - draught relief"},
+        {"label": "Pub relief on business rates", "value": "15%", "effective": "2026/27", "geography": "England", "source": "GOV.UK"},
+        {"label": "RHL multiplier (RV below £51,000)", "value": "38.2p", "effective": "2026/27", "geography": "England", "source": "GOV.UK"},
+        {"label": "RHL multiplier (RV £51,000 to £499,999)", "value": "43p", "effective": "2026/27", "geography": "England", "source": "GOV.UK"}
+      ]
+    },
+    "rates_revaluation_2026": {
+      "title": "Pub rateable values at the 2026 revaluation",
+      "visual": "comparison bars",
+      "unit": "% change in rateable value",
+      "geography": "England",
+      "source_publisher": "VOA via House of Commons Library",
+      "source_type": "secondary_of_primary",
+      "confidence": "high",
+      "caveat": "Change in RATEABLE VALUE, not the final bill (multipliers and reliefs change the bill). England only.",
+      "points": [
+        {"category": "Public Houses / Pub Restaurants", "rv_change_pct": 30},
+        {"category": "Public Houses / Pub Restaurants incl. lodge", "rv_change_pct": 70},
+        {"category": "All property (average)", "rv_change_pct": 19.4, "note": "comparison baseline"}
+      ]
+    },
+    "drinking_demand": {
+      "title": "Adults and drinking",
+      "visual": "slope chart (abstention) + single stat (16-24 weekly)",
+      "unit": "% of adults",
+      "geography": "England",
+      "source_publisher": "NHS England, Adults' health-related behaviours",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "England only. Weekly-drinking figure is the lowest age group, not average.",
+      "abstention_last_12m": [
+        {"year": 2022, "pct": 19},
+        {"year": 2024, "pct": 24}
+      ],
+      "age_16_24_weekly_drinking_2024_pct": 30
+    },
+    "pint_price_over_time": {
+      "title": "Average price of a pint of draught lager",
+      "visual": "line chart",
+      "unit": "pence",
+      "geography": "UK",
+      "source_publisher": "ONS (RPI average price series)",
+      "source_type": "original_official",
+      "confidence": "high",
+      "caveat": "RPI average-price series for draught lager, not a 'typical pub pint' from trade commentary. Only the 2000 and 2024 endpoints are in the source pack; intermediate points need extraction from the ONS series if a fuller line is wanted.",
+      "points": [
+        {"year": 2000, "pence": 200},
+        {"year": 2024, "pence": 477}
+      ]
+    },
+    "community_pubs": {
+      "title": "Community-owned and community-run pubs",
+      "visual": "stat cards or small table",
+      "unit": "pubs (count)",
+      "geography": "UK",
+      "source_publisher": "CAMRA / Plunkett UK",
+      "source_type": "campaign",
+      "confidence": "medium",
+      "caveat": "Advocacy/campaign framing. 'Community-owned' and 'community-run' are different categories; do not sum. Use for the rescue/replacement angle, not to overstate survival rates.",
+      "figures": [
+        {"label": "Community-owned pubs", "value": 217, "period": "April 2025"},
+        {"label": "Community-run pubs", "value": 28, "period": "April 2025"},
+        {"label": "Community-owned pubs trading", "value": "210+", "period": "January 2026", "note": "rounded campaign figure"}
+      ]
+    },
+    "conversions_subsection": {
+      "title": "Freehold pubs sold for change of use",
+      "visual": "single stat / used in prose only, NOT in the closures lead",
+      "unit": "% of freehold pub sales",
+      "geography": "UK market",
+      "source_publisher": "Fleurets Survey of Pub Prices 2024",
+      "source_type": "sector_market_report",
+      "confidence": "medium",
+      "caveat": "Property TRANSACTIONS, not a national closures measure. Belongs only in a conversions/redevelopment subsection.",
+      "figures": {"freehold_sold_for_change_of_use_pct": 34, "period": "2023 transactions / 2024 report"}
+    }
+  }
+}

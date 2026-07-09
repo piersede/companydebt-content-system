@@ -1,0 +1,171 @@
+{
+  "_about": "Source registry for the /articles/pub-closures-in-the-uk/ refresh. One entry per upstream source cited on the page. Mirrors data/_meta/source_registry.json. url_status: 'canonical' = stable landing/collection page stated with confidence; 'verify' = exact release/deep-link must be confirmed by fetching before the prose citation goes live (do NOT fabricate a deep-link). ASCII only.",
+  "_url_discipline": "Every figure on the page must trace to one of these. For 'verify' entries, resolve the exact URL during the pre-publish citation pass and record it here.",
+  "sources": [
+    {
+      "source_id": "hoc_pub_stats",
+      "source_name": "Pub statistics / Hospitality: statistics and policy",
+      "publisher": "House of Commons Library",
+      "authority_level": "secondary_of_official",
+      "covers": ["uk_pub_stock_over_time"],
+      "figures": ["45,000 pubs UK 2024", "60,800 in 2000", "55,400 in 2010"],
+      "source_url": "https://commonslibrary.parliament.uk/",
+      "url_status": "verify",
+      "notes": "Long-run UK pub totals are cited by the Library FROM BBPA, not produced by ONS. Attribute as 'House of Commons Library, citing BBPA'."
+    },
+    {
+      "source_id": "hoc_business_rates_pubs",
+      "source_name": "What is happening to business rates on pubs?",
+      "publisher": "House of Commons Library",
+      "authority_level": "secondary_of_official",
+      "covers": ["rates_revaluation_2026", "cost_stack_policy"],
+      "figures": ["pub RV +30%", "pub incl lodge +70%", "2026/27 multipliers", "15% pub relief"],
+      "source_url": "https://commonslibrary.parliament.uk/",
+      "url_status": "verify",
+      "notes": "Synthesises VOA + legislation. England-specific."
+    },
+    {
+      "source_id": "bbpa_closures",
+      "source_name": "BBPA pub closure releases",
+      "publisher": "British Beer and Pub Association",
+      "authority_level": "trade_body",
+      "covers": ["annual_closures_ew", "quarterly_closures_britain"],
+      "figures": ["289 closed E&W 2024", "378 forecast GB 2025", "161 Britain Q1 2026", "128 Britain Q1 2025"],
+      "source_url": "https://beerandpub.com/",
+      "url_status": "verify",
+      "notes": "CHECK GEOGRAPHY on every release (E&W vs Britain vs GB) and whether actual or forecast. Trade-body definition of 'closure', not an official count."
+    },
+    {
+      "source_id": "ryan_altus_permanent_loss",
+      "source_name": "Ryan / Altus rating-list permanent-loss analysis",
+      "publisher": "Ryan (formerly Altus Group), via Guardian / Morning Advertiser",
+      "authority_level": "secondary_analysis",
+      "covers": ["permanent_losses_ew", "regional_hotspots_2025"],
+      "figures": ["366 permanent losses E&W 2025", "38,989 -> 38,623 stock", "regions: East Midlands, North West, Yorkshire & Humber"],
+      "source_url": "https://www.theguardian.com/",
+      "url_status": "verify",
+      "notes": "Secondary; permanent loss = demolition/conversion. Stock total includes vacant/to-let. No exact regional counts published in the pack."
+    },
+    {
+      "source_id": "insolvency_service_company",
+      "source_name": "Company Insolvency Statistics + Business insolvency demography 2015-2025",
+      "publisher": "The Insolvency Service",
+      "authority_level": "official",
+      "covers": ["hospitality_insolvencies"],
+      "figures": ["3,296 accom & food insolvencies 12m to May 2026 (14%)", "rate 268 per 10,000 2025", "peak 314 in 2023"],
+      "source_url": "https://www.gov.uk/government/collections/insolvency-service-official-statistics",
+      "url_status": "canonical",
+      "notes": "Already in the hub source registry. Industry SIC section only, not pub-only. E&W."
+    },
+    {
+      "source_id": "ons_business_demography",
+      "source_name": "Business demography, UK: 2024",
+      "publisher": "Office for National Statistics",
+      "authority_level": "official",
+      "covers": ["business_demography"],
+      "figures": ["26,195 deaths", "30,360 births", "12.9% death rate (accom & food, 2024)"],
+      "source_url": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/bulletins/businessdemography/previousReleases",
+      "url_status": "verify",
+      "notes": "Sector-wide, not pub-only."
+    },
+    {
+      "source_id": "ons_bics",
+      "source_name": "Business Insights and Conditions Survey (BICS)",
+      "publisher": "Office for National Statistics",
+      "authority_level": "official_survey",
+      "covers": ["cost_pressure_survey"],
+      "figures": ["83% report a challenge", "materials 48%", "labour 48%", "uncertainty 43% (June 2026)"],
+      "source_url": "https://www.ons.gov.uk/economy/economicoutputandproductivity/output/datasets/businessinsightsandimpactontheukeconomy",
+      "url_status": "verify",
+      "notes": "Fortnightly sample survey, sector-wide."
+    },
+    {
+      "source_id": "govuk_nmw_2026",
+      "source_name": "National Minimum Wage / National Living Wage 2026",
+      "publisher": "GOV.UK",
+      "authority_level": "official",
+      "covers": ["cost_stack_policy"],
+      "figures": ["NLW £12.71 from April 2026 (+4.1%)"],
+      "source_url": "https://www.gov.uk/national-minimum-wage-rates",
+      "url_status": "canonical",
+      "notes": "Economy-wide."
+    },
+    {
+      "source_id": "hmrc_nic_2025",
+      "source_name": "Employer NIC changes from April 2025",
+      "publisher": "HMRC",
+      "authority_level": "official",
+      "covers": ["cost_stack_policy"],
+      "figures": ["rate 15% (from 13.8%)", "threshold £5,000 (from £9,100)"],
+      "source_url": "https://www.gov.uk/government/publications/changes-to-employer-national-insurance-contributions",
+      "url_status": "verify",
+      "notes": "Economy-wide."
+    },
+    {
+      "source_id": "hmrc_alcohol_duty_2026",
+      "source_name": "Alcohol Duty uprating February 2026",
+      "publisher": "HMRC",
+      "authority_level": "official",
+      "covers": ["cost_stack_policy"],
+      "figures": ["+3.66% RPI from 1 Feb 2026", "draught 3.5-<8.5% ABV £19.45/litre", "main beer £22.58"],
+      "source_url": "https://www.gov.uk/guidance/alcohol-duty-rates",
+      "url_status": "verify",
+      "notes": "Technical duty mechanics; explain plainly."
+    },
+    {
+      "source_id": "govuk_business_rates_relief",
+      "source_name": "Business rates relief / RHL multipliers 2026-27",
+      "publisher": "GOV.UK",
+      "authority_level": "official",
+      "covers": ["cost_stack_policy", "rates_revaluation_2026"],
+      "figures": ["RHL multipliers 38.2p / 43p", "15% pub relief 2026/27"],
+      "source_url": "https://www.gov.uk/apply-for-business-rate-relief",
+      "url_status": "verify",
+      "notes": "England only."
+    },
+    {
+      "source_id": "nhs_england_behaviours",
+      "source_name": "Adults' health-related behaviours",
+      "publisher": "NHS England",
+      "authority_level": "official",
+      "covers": ["drinking_demand"],
+      "figures": ["24% did not drink last 12m 2024 (19% 2022)", "16-24 weekly drinking 30% (lowest)"],
+      "source_url": "https://digital.nhs.uk/",
+      "url_status": "verify",
+      "notes": "England only."
+    },
+    {
+      "source_id": "ons_rpi_lager",
+      "source_name": "RPI: average price, draught lager",
+      "publisher": "Office for National Statistics",
+      "authority_level": "official",
+      "covers": ["pint_price_over_time"],
+      "figures": ["200p (2000)", "477p (2024)"],
+      "source_url": "https://www.ons.gov.uk/economy/inflationandpriceindices",
+      "url_status": "verify",
+      "notes": "RPI average-price series; find the specific series ID for intermediate points."
+    },
+    {
+      "source_id": "camra_plunkett_community",
+      "source_name": "Community-owned / community-run pubs",
+      "publisher": "CAMRA / Plunkett UK",
+      "authority_level": "campaign",
+      "covers": ["community_pubs"],
+      "figures": ["217 community-owned + 28 community-run (Apr 2025)", "210+ trading (Jan 2026)"],
+      "source_url": "https://plunkett.co.uk/",
+      "url_status": "verify",
+      "notes": "Advocacy framing."
+    },
+    {
+      "source_id": "fleurets_pub_prices",
+      "source_name": "Survey of Pub Prices 2024",
+      "publisher": "Fleurets",
+      "authority_level": "sector_market_report",
+      "covers": ["conversions_subsection"],
+      "figures": ["34% of freehold pub sales for change of use (2023 txns)"],
+      "source_url": "https://www.fleurets.com/",
+      "url_status": "verify",
+      "notes": "Property transactions, not closures. Conversions subsection only."
+    }
+  ]
+}

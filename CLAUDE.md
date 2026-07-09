@@ -68,6 +68,8 @@ If the article sounds generic, bloodless, over-balanced, or like AI simulating j
 - Do not bypass evidence rules, disclosure rules, or pre-publish gates.
 - Do not flatten unfairness, cost, or risk into neutral filler.
 - Do not treat token savings as success if output quality drops.
+- Staging pushes do not need per-instance confirmation — auto-push a gated draft to staging once it passes. Live pushes always need explicit confirmation; never push to live unprompted.
+- All article/page writing that goes through the Bernstein pipeline must be done on Claude Opus, not Sonnet or another model. Before starting a writing stage (draft, revise, humanise) on any page, confirm the active model is Opus; if it is not, stop and ask the user to switch before writing. This cannot be checked mechanically by `article_audit.py` — it is an operator discipline, not a gate script check.
 
 ## Site infrastructure rules
 

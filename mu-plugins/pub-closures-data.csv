@@ -1,0 +1,42 @@
+metric,value,unit,geography,period,source
+Pubs in the UK,60800,count,UK,2000,House of Commons Library / BBPA
+Pubs in the UK,55400,count,UK,2010,House of Commons Library / BBPA
+Pubs in the UK,45000,count,UK,2024,House of Commons Library / BBPA
+Permanent pub losses,366,count,England and Wales,2025,Ryan rating-list analysis
+Counted pub stock start of year,38989,count,England and Wales,2025,Ryan rating-list analysis
+Counted pub stock end of year,38623,count,England and Wales,2025,Ryan rating-list analysis
+Pub closures,289,count,England and Wales,2024,BBPA
+Pub closures,161,count,Britain,Q1 2026,BBPA
+Pub closures,128,count,Britain,Q1 2025,BBPA
+Projected pub closures,378,count,Great Britain,2025 forecast,BBPA
+Accommodation and food service company insolvencies,3296,count,England and Wales,12 months to May 2026,Insolvency Service
+Accommodation and food service insolvency rate,268,per 10000 businesses,England and Wales,2025,Insolvency Service
+Accommodation and food service insolvency rate,314,per 10000 businesses,England and Wales,2023,Insolvency Service
+All-industry company insolvency rate,116,per 10000 businesses,England and Wales,2025,Insolvency Service
+Q1 2026 pub closure job losses,2400,jobs,Britain,Q1 2026,BBPA
+Pub and bar company insolvencies,789,count,Britain,2025,UHY Hacker Young analysis
+Pub and bar company insolvencies,367,count,Britain,2020,UHY Hacker Young analysis
+Accommodation and food service business births,30360,count,UK,2024,ONS business demography
+Accommodation and food service business deaths,26195,count,UK,2024,ONS business demography
+Accommodation and food service business death rate,12.9,percent,UK,2024,ONS business demography
+Businesses reporting any turnover challenge,83,percent,UK,June 2026,ONS BICS
+Businesses citing cost of materials,48,percent,UK,June 2026,ONS BICS
+Businesses citing cost of labour,48,percent,UK,June 2026,ONS BICS
+Businesses citing economic uncertainty,43,percent,UK,June 2026,ONS BICS
+National Living Wage,12.71,GBP per hour,UK,April 2026,GOV.UK
+Employer National Insurance rate,15,percent,UK,April 2025,HMRC
+Employer NIC secondary threshold,5000,GBP,UK,April 2025,HMRC
+Alcohol duty uprating,3.66,percent RPI,UK,February 2026,HMRC
+Draught duty rate 3.5 to under 8.5 percent ABV,19.45,GBP per litre of alcohol,UK,February 2026,HMRC
+Pub rateable value change,30,percent,England,2026 revaluation,VOA via House of Commons Library
+Pub with lodge rateable value change,70,percent,England,2026 revaluation,VOA via House of Commons Library
+All property average rateable value change,19.4,percent,England,2026 revaluation,VOA via House of Commons Library
+Adults not drinking in last 12 months,19,percent,England,2022,NHS England
+Adults not drinking in last 12 months,24,percent,England,2024,NHS England
+Adults aged 16 to 24 drinking weekly,30,percent,England,2024,NHS England
+Average pint of draught lager,200,pence,UK,2000,ONS retail prices
+Average pint of draught lager,477,pence,UK,2024,ONS retail prices
+Community-owned pubs,217,count,UK,April 2025,CAMRA / Plunkett UK
+Community-run pubs,28,count,UK,April 2025,CAMRA / Plunkett UK
+Community-owned pubs trading,210,count,UK,January 2026,CAMRA / Plunkett UK
+Freehold pubs sold for change of use,34,percent,UK market,2023,Fleurets Survey of Pub Prices 2024
