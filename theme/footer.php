@@ -163,33 +163,6 @@ if ( ! $cd_disable_related && $post && ( get_field( 'enable_related_articles', $
   else relocate();
 })();
 </script>
-<script id="cd-cls-chat-unlock">
-/* CLS fix companion — release the #chat-widget-container dimension lock
- * (defined in style.css) as soon as the user shows intent to interact
- * with the LiveChat bubble (hover, touch, or focus near it). The unlock
- * fires BEFORE click, so click-to-expand opens the chat normally. */
-(function(){
-  var html = document.documentElement;
-  if (!html) return;
-  function unlock(){
-    html.setAttribute('data-cd-chat-ready', '1');
-    document.removeEventListener('mouseover', check, true);
-    document.removeEventListener('touchstart', check, true);
-    document.removeEventListener('focusin', check, true);
-  }
-  function check(e){
-    var t = e.target;
-    if (!t) return;
-    if (t.id === 'chat-widget-container' ||
-        (t.closest && t.closest('#chat-widget-container'))) {
-      unlock();
-    }
-  }
-  document.addEventListener('mouseover', check, true);
-  document.addEventListener('touchstart', check, true);
-  document.addEventListener('focusin', check, true);
-})();
-</script>
 <script id="cd-faq-toggle-fallback">
 /* Universal chevron injection + click fallback.
  *

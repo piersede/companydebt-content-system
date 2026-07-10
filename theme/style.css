@@ -10340,29 +10340,30 @@ body.cd-ttt-design .section-footer-author .footer-author-eyebrow {
 /* ============================================================
  * CLS fix: stabilise LiveChat widget dimensions
  *
- * #chat-widget-container is position:fixed; bottom:0 — when LiveChat's
- * proactive invitation / greeting card auto-expands the container's
- * height (e.g. from 84px bubble to 161-714px), its top edge moves
- * upward in the viewport. The Layout Instability API counts this as
- * CLS even for fixed-position elements (measured 0.98 CLS on mobile,
- * 0.35 on desktop for /insolvency/creditor-negotiations/, May 2026).
+ * #chat-widget-container is position:fixed; bottom:0 — LiveChat widens
+ * it (84px -> ~320px) and grows it (84px -> ~161px) when the proactive
+ * greeting appears. A fixed-size lock (width/height/contain:size, or
+ * display:flex, which shrink-wraps) clips the greeting because LiveChat
+ * measures the constrained box at init. Reserving height with
+ * min-height ONLY avoids that: LiveChat still measures full width, so
+ * the greeting renders uncut, while the reserved height stops the
+ * 84->161px growth that the Layout Instability API scores as CLS
+ * (measured 0.98 CLS on mobile, 0.35 on desktop for
+ * /insolvency/creditor-negotiations/, May 2026).
  *
- * Lock the container to its bubble dimensions until the user signals
- * intent to interact (hover, focus, or touch the bubble — set by the
- * companion script in footer.php that flips the data-cd-chat-ready
- * attribute on <html>). The lock releases for the rest of the session
- * so click-to-expand and any subsequent chat behaviour are unaffected.
+ * pointer-events:none on the container + pointer-events:auto on its
+ * children keeps the reserved space from blocking clicks to whatever
+ * sits behind it before LiveChat's own elements paint.
  *
- * Trade-off: LiveChat's automatic proactive greeting is suppressed
- * until first user interaction with the bubble area. Manual chat
- * opening is unaffected.
+ * Trade-off: at rest the reserved 172px is taller than the 84px
+ * launcher, leaving a small transparent zone above the button.
  * ============================================================ */
-html:not([data-cd-chat-ready]) #chat-widget-container {
-  width: 84px !important;
-  height: 84px !important;
-  max-width: 84px !important;
-  max-height: 84px !important;
-  contain: size layout style;
+#chat-widget-container {
+  min-height: 172px !important;
+  pointer-events: none !important;
+}
+#chat-widget-container > * {
+  pointer-events: auto !important;
 }
 
 /* footer-cta-block: 55px visual gap top + bottom (section-edge to first/last
