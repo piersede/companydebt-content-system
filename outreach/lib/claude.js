@@ -44,14 +44,20 @@ Subject: <a specific, non-generic subject line>
 <the email body, ending with a single closing line and NO name/title/signature>`;
 }
 
-function buildUserMsg(config, { asset, article, match, contact }) {
+function buildUserMsg(config, { asset, article, match, contact, articleAuthor }) {
   const figs = asset.approvedFigures.map((f) => `- ${f.label}: ${f.value}${f.note ? ` (${f.note})` : ''}`).join('\n');
+  // When the byline author has left / is freelance, the row falls back to an editor or news
+  // desk. In that case the recipient did NOT write the piece, so the email must not say "your article".
+  const differentAuthor = articleAuthor && articleAuthor.trim().toLowerCase() !== (contact.name || '').trim().toLowerCase();
   const lines = [];
   lines.push(`SENDER: an email from someone at Company Debt. Their name and title come from their own email signature, so do NOT write any name, personal job title, or signature block in the body.`);
   lines.push('');
-  lines.push(`RECIPIENT: ${contact.name || 'the writer'}${contact.position ? `, ${contact.position}` : ''} at ${article.publication || match.competitor || (article.url || '')}.`);
+  lines.push(`RECIPIENT: ${contact.name || 'the news desk'}${contact.position ? `, ${contact.position}` : ''} at ${article.publication || match.competitor || (article.url || '')}.`);
+  if (differentAuthor) {
+    lines.push(`IMPORTANT: the recipient is NOT the article's author. The piece was written by ${articleAuthor}. Do NOT write "your article" or imply the recipient wrote it. Address the recipient directly (use a natural team greeting such as "Hello," if it is a desk rather than a named person), and refer to it as a piece ${articleAuthor} wrote for the publication.`);
+  }
   lines.push('');
-  lines.push(`THEIR ARTICLE: ${article.title || '(untitled)'}\nURL: ${article.url || ''}`);
+  lines.push(`THEIR ARTICLE: ${article.title || '(untitled)'}${articleAuthor ? ` (by ${articleAuthor})` : ''}\nURL: ${article.url || ''}`);
   lines.push('');
   lines.push(`THE CITATION WE ARE ADDRESSING (this is what to anchor the email on):`);
   lines.push(match.citedContext ? `"${match.citedContext}"` : '(none captured — DO NOT invent one)');
