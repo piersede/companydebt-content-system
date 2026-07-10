@@ -67,8 +67,12 @@ const config = {
       responded: 'Responded',
       defunct: 'Defunct',
     },
-    // Board groups (Defunct items are moved into their own group for a clean queue).
+    // Board groups (harmonised by theme x channel; Defunct is shared).
     groups: {
+      insolvencyEmail: env.OUTREACH_GROUP_INSOLVENCY_EMAIL || 'topics',
+      pubEmail: env.OUTREACH_GROUP_PUB_EMAIL || 'group_mm53vtbh',
+      linkedin: env.OUTREACH_GROUP_LINKEDIN || 'group_mm52mctc',
+      pubLinkedin: env.OUTREACH_GROUP_PUB_LINKEDIN || 'group_mm53fmpj',
       defunct: env.OUTREACH_GROUP_DEFUNCT || 'group_mm52z487',
     },
   },
@@ -134,6 +138,19 @@ const config = {
   competitors,
   suppression,
   citedContext: citedContextMap,
+};
+
+// ---- multi-asset routing ----
+// Each email group maps to the data asset its rows pitch. Scan resolves the asset per row's
+// group so one board can run several campaigns (insolvency hub, pub closures, ...) side by side.
+config.assetById = Object.fromEntries((catalogue.assets || []).map((a) => [a.id, a]));
+config.groupAssets = {
+  [config.monday.groups.insolvencyEmail]: 'uk-insolvency-statistics',
+  [config.monday.groups.pubEmail]: 'pub-closures',
+};
+config.assetForGroup = (groupId) => {
+  const id = config.groupAssets[groupId];
+  return (id && config.assetById[id]) || catalogue.assets[0];
 };
 
 module.exports = config;

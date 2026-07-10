@@ -43,6 +43,7 @@ async function scan() {
   const process_ = flag('--process');
   const cap = parseInt(opt('--cap', config.dailyCap), 10);
   const statusLabel = opt('--status', config.monday.status.queue);
+  const groupFilter = opt('--group', ''); // restrict to one campaign group (e.g. pub vs insolvency)
   const write = config.review === 'write' && process_;
   const store = new Store(config.stateDir);
   const tally = {};
@@ -54,7 +55,8 @@ async function scan() {
   try { items = await monday.itemsByStatus(config, statusLabel); }
   catch (e) { U.err(`Cannot read Monday board: ${e.message}`); U.dim('Set OUTREACH_BOARD_ID + column ids (see `conductor boardcols`).'); return; }
 
-  U.info(`${items.length} item(s) in "${statusLabel}".`);
+  if (groupFilter) items = items.filter((it) => it.groupId === groupFilter);
+  U.info(`${items.length} item(s) in "${statusLabel}"${groupFilter ? ` (group ${groupFilter})` : ''}.`);
   let drafted = 0;
   const draftedContacts = new Set(); // one draft per contact email per run
 
@@ -83,13 +85,18 @@ async function scan() {
     const articleUrl = item.articleUrl || item.raw?.link?.text;
     if (!articleUrl) { await route(item, 'research', 'no article URL on the row', 'not_enough_citation_context', { write, tally }); continue; }
 
+    // which data asset does this row pitch? (group -> asset; default = insolvency hub)
+    const asset = config.assetForGroup(item.groupId);
+    U.dim(`  asset: ${asset.id}`);
+
     // 1) scrape (with a free fallback to the Ahrefs-captured cited sentence)
     const storedCtx = config.citedContext[articleUrl] || config.citedContext[articleUrl.replace(/\/$/, '')] || '';
     const sc = await scrape(articleUrl, config);
     let title, text, citedContext, competitorLinks;
     if (sc.ok) {
       ({ title, text, competitorLinks } = sc);
-      citedContext = sc.citedContext || storedCtx;
+      // pre-curated assets (e.g. pub closures) trust the stored cited figure over a scraped guess
+      citedContext = asset.preferStoredContext ? (storedCtx || sc.citedContext) : (sc.citedContext || storedCtx);
     } else if (sc.blocked && storedCtx) {
       // page blocked but Ahrefs gave us the cited sentence — draft from that instead of halting
       title = item.name; text = storedCtx; citedContext = storedCtx; competitorLinks = [];
@@ -102,7 +109,7 @@ async function scan() {
 
     // 2) match on the specific cited stat
     const competitorUrl = item.citedSource || (competitorLinks && competitorLinks[0]) || '';
-    const m = matchCandidate({ title, text, articleUrl, citedContext, competitorUrl }, config.catalogue.assets[0], config.competitors);
+    const m = matchCandidate({ title, text, articleUrl, citedContext, competitorUrl }, asset, config.competitors);
     U.dim(`  match: conf ${m.confidence}  gap ${m.gap || 'none'}  ${m.reasons[0] || ''}`);
     if (!m.gap || m.confidence < config.matchThreshold) { await route(item, 'defunct', `weak fit (conf ${m.confidence})`, 'weak_fit', { write, tally }); continue; }
 

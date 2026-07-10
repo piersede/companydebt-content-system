@@ -30,12 +30,14 @@ function matchCandidate(candidate, asset, competitors) {
   const compSlug = slugOf(compUrl);
   const title = candidate.title || '';
   const text = candidate.text || '';
+  // Per-asset vocabulary: a pub-closures asset carries pub terms, insolvency carries insolvency terms.
+  const terms = (asset && asset.statTerms) || STAT_TERMS;
 
   const reasons = [];
   let score = 0;
 
-  // 1) Cited sentence carries an insolvency stat  (heaviest signal)
-  const citedTerms = has(cited, STAT_TERMS);
+  // 1) Cited sentence carries a topical stat  (heaviest signal)
+  const citedTerms = has(cited, terms);
   const citedHasNumber = NUMBER_RE.test(cited);
   if (citedTerms && citedHasNumber) { score += 0.5; reasons.push('cited sentence carries an insolvency figure'); }
   else if (citedTerms) { score += 0.22; reasons.push('cited sentence is insolvency-topical'); }
@@ -48,7 +50,7 @@ function matchCandidate(candidate, asset, competitors) {
   if (knownCompetitor) { score += 0.14; reasons.push(`displaced source is a tracked data competitor (${compHost})`); }
 
   // 3) Host article is at least on-topic (light supporting weight)
-  const topicHits = has(`${title} ${text}`, STAT_TERMS);
+  const topicHits = has(`${title} ${text}`, terms);
   if (topicHits >= 2) { score += 0.1; reasons.push('host article is insolvency-topical'); }
   else if (topicHits === 1) { score += 0.04; }
 

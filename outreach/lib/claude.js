@@ -5,17 +5,28 @@ const { httpFetch } = require('./util');
 // three places that rule is enforced (the others are the dash + variation gates, and the
 // human review before send). Adapted from the BusinessExpert voice spec for Company Debt:
 // different sender, regulated register, and official-stats-not-proprietary framing.
-const VOICE_SYSTEM = `You write genuine, one-to-one editorial emails from a real person at Company Debt (a UK company-insolvency and debt-advice firm) to a specific journalist or writer whose article cites an insolvency or liquidation statistic. You are part of the Company Debt editorial team, not a founder or salesperson.
+// Parameterised per asset (asset.pitch) so a second campaign (e.g. pub closures) reframes the
+// "who we are / what we track / where the data comes from" lines without a second prompt.
+const DEFAULT_PITCH = {
+  citationDesc: 'an insolvency or liquidation statistic',
+  trackerDesc: 'a UK company-insolvency statistics tracker',
+  institutionalLine: 'at Company Debt we keep a monthly tracker of the official UK insolvency figures',
+  sourceLine: 'Our figures come from the Insolvency Service and Companies House. The value we offer is the clearer, more current, one-place UK presentation, not secret data.',
+};
+
+function voiceSystem(asset) {
+  const p = { ...DEFAULT_PITCH, ...((asset && asset.pitch) || {}) };
+  return `You write genuine, one-to-one editorial emails from a real person at Company Debt (a UK company-insolvency and debt-advice firm) to a specific journalist or writer whose article cites ${p.citationDesc}. You are part of the Company Debt editorial team, not a founder or salesperson.
 
 ABSOLUTELY NO TEMPLATING OF ANY KIND. This is the first and hardest rule. Every email is written fresh for this one recipient. No shared skeleton, opener, sentence order, or close. If two of your emails could be diffed and look structurally similar, you have failed. Vary the opener, the body shape, the order of points, and the sign-off structure every time.
 
 THE OPENER VARIES PER ARTICLE. Open with a specific, genuine reaction to what THIS piece actually argues or cites. A fixed opener is itself a template element and is banned. Do not start with stock lines ("I came across your article", "I hope this finds you well", "Great piece on...", "handy resource", "no agenda").
 
-WHO WE ARE, BEFORE THE PITCH. In plain, human sentences, establish that you work with Company Debt and that Company Debt maintains a UK company-insolvency statistics tracker. Keep it institutional ("at Company Debt we keep a monthly tracker of the official UK insolvency figures"). Do NOT state a personal name, and do NOT claim to personally be a licensed insolvency practitioner. The sender's own email signature carries their name and title. No marketing prose.
+WHO WE ARE, BEFORE THE PITCH. In plain, human sentences, establish that you work with Company Debt and that Company Debt maintains ${p.trackerDesc}. Keep it institutional ("${p.institutionalLine}"). Do NOT state a personal name, and do NOT claim to personally be a licensed insolvency practitioner. The sender's own email signature carries their name and title. No marketing prose.
 
-ANCHOR ON THE EXACT CITATION, NOT THE TOPIC. Name the specific figure or source the piece cites for a specific point, and offer our fresher / more current / more granular UK cut of THAT point. Never "your article is about insolvency". You are offering a better source for one specific claim.
+ANCHOR ON THE EXACT CITATION, NOT THE TOPIC. Name the specific figure or source the piece cites for a specific point, and offer our fresher / more current / more granular UK cut of THAT point. Never "your article is about the topic". You are offering a better source for one specific claim.
 
-THE DATA IS OFFICIAL, NOT EXCLUSIVE. Our figures come from the Insolvency Service and Companies House. Never imply the numbers are proprietary, exclusive, or our own research. The value we offer is the clearer, more current, one-place UK presentation (monthly, by procedure, by sector, with the historical trend), not secret data.
+THE DATA IS OFFICIAL, NOT EXCLUSIVE. ${p.sourceLine} Never imply the numbers are proprietary, exclusive, or our own research.
 
 NEVER ASK FOR A LINK OR REVEAL YOU WANT ONE. Present our page purely as a more useful, more current source, with a soft, low-pressure invitation to reply. Do not mention backlinks, SEO, or link-building.
 
@@ -31,6 +42,7 @@ OUTPUT FORMAT. Return exactly:
 Subject: <a specific, non-generic subject line>
 <blank line>
 <the email body, ending with a single closing line and NO name/title/signature>`;
+}
 
 function buildUserMsg(config, { asset, article, match, contact }) {
   const figs = asset.approvedFigures.map((f) => `- ${f.label}: ${f.value}${f.note ? ` (${f.note})` : ''}`).join('\n');
@@ -75,7 +87,7 @@ async function draftAnthropic(config, ctx) {
       model: config.draftModel,
       max_tokens: 1200,
       temperature: 1,
-      system: VOICE_SYSTEM,
+      system: voiceSystem(ctx.asset),
       messages: [{ role: 'user', content: buildUserMsg(config, ctx) }],
     }),
   }, 60000);
@@ -91,7 +103,7 @@ async function draftGemini(config, ctx) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      system_instruction: { parts: [{ text: VOICE_SYSTEM }] },
+      system_instruction: { parts: [{ text: voiceSystem(ctx.asset) }] },
       contents: [{ role: 'user', parts: [{ text: buildUserMsg(config, ctx) }] }],
       // 2.5-pro/3-pro are thinking models: reasoning tokens count against the cap, so budget
       // generously or the visible email comes back empty with finishReason MAX_TOKENS.
@@ -116,4 +128,4 @@ async function draft(config, ctx) {
   return { ok: false, reason: 'no drafting provider configured (set GEMINI_API_KEY or ANTHROPIC_API_KEY)' };
 }
 
-module.exports = { draft, draftGemini, draftAnthropic, VOICE_SYSTEM, buildUserMsg, parseDraft };
+module.exports = { draft, draftGemini, draftAnthropic, voiceSystem, buildUserMsg, parseDraft };

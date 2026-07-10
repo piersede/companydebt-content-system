@@ -42,6 +42,7 @@ function mapItem(config, raw) {
     id: raw.id,
     name: raw.name,
     raw: cols,
+    groupId: raw.group ? raw.group.id : '',
     status: get(C.status),
     email,
     emailName,
@@ -55,7 +56,7 @@ function mapItem(config, raw) {
 async function allItems(config, limit = 200) {
   const q = `query ($b:ID!, $limit:Int!, $cursor:String) {
     boards(ids:[$b]) { items_page(limit:$limit, cursor:$cursor) {
-      cursor items { id name column_values { id text value } } } } }`;
+      cursor items { id name group { id } column_values { id text value } } } } }`;
   if (!config.monday.boardId) throw new MondayError('OUTREACH_BOARD_ID is not set (create the Outreach board, then set it in .env)');
   let cursor = null; const out = [];
   do {
