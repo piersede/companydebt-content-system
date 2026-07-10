@@ -34,11 +34,15 @@ const config = {
   minDR: int(env.OUTREACH_MIN_DR, 30),
   matchThreshold: 0.18, // below this the item is a no-fit skip
 
-  // ---- sender identity (used by the voice prompt) ----
+  // ---- sender identity ----
+  // The sender signature is appended to every draft body after the closing line, because the
+  // sending mailbox (new Outlook / web) does NOT auto-add one.
   sender: {
-    name: env.OUTREACH_SENDER_NAME || '',                 // REQUIRED before real drafts read well
+    name: env.OUTREACH_SENDER_NAME || 'Théo Cristofari',
+    title: env.OUTREACH_SENDER_TITLE || 'Head of PR',
     role: env.OUTREACH_SENDER_ROLE || 'the Company Debt editorial team',
     org: 'Company Debt',
+    get signature() { return this.title ? `${this.name}\n${this.title}` : this.name; },
   },
 
   // ---- Monday ----

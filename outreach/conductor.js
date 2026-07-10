@@ -144,7 +144,8 @@ async function scan() {
     const gateRes = runDraftGates(`${d.subject}\n${d.body}`, m.asset, m.citedContext, store.recentFingerprints());
     if (!gateRes.pass) { await route(item, 'research', `draft gate failed: ${gateRes.failed.reason}`, gateRes.failed.category, { write, tally }); U.warn(`  ✗ ${gateRes.failed.reason}`); continue; }
 
-    // 6) passed — Outlook draft + board
+    // 6) passed — append the sender signature (the mailbox does not auto-add one), then draft + board
+    if (config.sender.signature) d.body = `${d.body}\n${config.sender.signature}`;
     U.ok(`  ✓ draft passes all gates`);
     U.log(`  ${U.C.dim}Subject:${U.C.reset} ${d.subject}`);
     U.log(d.body.split('\n').map((l) => '  | ' + l).join('\n'));
