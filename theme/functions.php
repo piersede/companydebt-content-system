@@ -1253,3 +1253,32 @@ add_filter( 'wpseo_title', function( $title ) {
     $trimmed = preg_replace( '/\s+\S*$/u', '', $trimmed );
     return rtrim( $trimmed, ",.;:!?—- \t\n" ) . '…';
 }, 20 );
+
+/**
+ * WP Rocket — exclude LiveChat from Delay JS (added 2026-07-02).
+ *
+ * The theme's global.js LiveChatWidget.init() runs after user interaction
+ * unlocks WP Rocket's delayed jQuery + global.js. init() then inserts
+ * <script src="https://cdn.livechatinc.com/tracking.js"> into <head>. Without
+ * this exclusion, WP Rocket's Delay JS observer silently swallows that
+ * dynamically-added script and the browser never fetches it, so the chat
+ * widget never hydrates.
+ *
+ * Duplicates the wp_rocket_settings admin exclusion list in code so the fix
+ * survives setting resets + auto-applies when the theme lands in a new
+ * environment (prod). Uses substring match — WP Rocket accepts partials.
+ */
+add_filter( 'rocket_delay_js_exclusions', function( $exclusions ) {
+    $add = array( 'cdn.livechatinc.com', 'secure.livechatinc.com', 'livechatinc.com' );
+    return array_values( array_unique( array_merge( (array) $exclusions, $add ) ) );
+} );
+
+add_filter( 'rocket_exclude_defer_js', function( $exclusions ) {
+    $add = array( 'cdn.livechatinc.com', 'secure.livechatinc.com', 'livechatinc.com' );
+    return array_values( array_unique( array_merge( (array) $exclusions, $add ) ) );
+} );
+
+add_filter( 'rocket_minify_excluded_external_js', function( $exclusions ) {
+    $add = array( 'cdn.livechatinc.com', 'secure.livechatinc.com', 'livechatinc.com' );
+    return array_values( array_unique( array_merge( (array) $exclusions, $add ) ) );
+} );
