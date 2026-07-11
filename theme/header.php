@@ -37,8 +37,6 @@
 
 	<!-- End Google Tag Manager -->
 
-	<!-- Secondary GTM container GTM-KT6M67T retired 2026-06-24 - redundant with GTM-5GTD9ZP (both fed the same GA4 property, risked double-counting). Its unique scroll-depth event should be rebuilt inside GTM-5GTD9ZP if still wanted. -->
-
 	<?php wp_head(); ?>
 	<style id="cd-canonical-type-scale">
 	/* CompanyDebt canonical type + spacing scale (cd-ttt-design). Inlined as CRITICAL
