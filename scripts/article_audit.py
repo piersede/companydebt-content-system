@@ -101,8 +101,12 @@ INTERNAL_HOSTS = ("companydebt.com", "comdebstage.wpengine.com")
 # Author ID for Chris Andersen per repo convention (feedback memory).
 CHRIS_ANDERSEN_AUTHOR_ID = "34"
 
-# Take-the-test template filename fragment.
+# Recognised page-template filename fragments. The take-the-test template is
+# the default for insolvency guide pages; sector posts (/sectors/*) use the
+# post-sectors.php page-builder template instead. Either is acceptable.
 TAKE_THE_TEST_TEMPLATE = "take-the-test"
+SECTOR_TEMPLATE = "post-sectors"
+RECOGNISED_TEMPLATES = (TAKE_THE_TEST_TEMPLATE, SECTOR_TEMPLATE)
 
 
 # ---------------------------------------------------------------------------
@@ -411,8 +415,8 @@ def check_no_body_hero(body: str) -> CheckResult:
 def check_template(template: str) -> CheckResult:
     return CheckResult(
         id="13", tier="T2",
-        name="Template is take-the-test-template.php",
-        passed=TAKE_THE_TEST_TEMPLATE in template,
+        name="Template is take-the-test or post-sectors",
+        passed=any(frag in template for frag in RECOGNISED_TEMPLATES),
         detail=f"template={template}",
     )
 

@@ -55,6 +55,20 @@ PAGE_REGISTRY = {
     'company-insolvencies-by-sector': 'cc_builder.data.pages.company_insolvencies_by_sector',
     'construction-insolvency-statistics': 'cc_builder.data.pages.construction_insolvency_statistics',
     'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
+    # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
+    'construction': 'cc_builder.data.pages.construction_sector',
+    'garden-centres': 'cc_builder.data.pages.garden_centres_sector',
+    'hotels': 'cc_builder.data.pages.hotels_sector',
+    'care-homes': 'cc_builder.data.pages.care_homes_sector',
+    'automotive': 'cc_builder.data.pages.automotive_sector',
+    'retail': 'cc_builder.data.pages.retail_sector',
+    'restaurants': 'cc_builder.data.pages.restaurants_sector',
+    'recruitment': 'cc_builder.data.pages.recruitment_sector',
+    'gyms': 'cc_builder.data.pages.gyms_sector',
+    'leisure': 'cc_builder.data.pages.leisure_sector',
+    'childcare': 'cc_builder.data.pages.childcare_sector',
+    'charity': 'cc_builder.data.pages.charity_sector',
+    'professional-services': 'cc_builder.data.pages.professional_services_sector',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
