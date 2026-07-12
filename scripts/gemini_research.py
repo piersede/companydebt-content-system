@@ -79,61 +79,56 @@ def run_research(articles: list[dict]) -> str:
     print(f"Articles in batch: {len(articles)}")
     print("Estimated time: 5-20 minutes\n")
 
-    interaction_id = None
-    last_event_id = None
-    is_complete = False
-    full_output: list[str] = []
-
-    def process_stream(event_stream):
-        nonlocal interaction_id, last_event_id, is_complete
-
-        for event in event_stream:
-            if event.event_type == "interaction.start":
-                interaction_id = event.interaction.id
-                print(f"Research started (ID: {interaction_id})")
-
-            if event.event_id:
-                last_event_id = event.event_id
-
-            if event.event_type == "content.delta":
-                if event.delta.type == "text":
-                    print(event.delta.text, end="", flush=True)
-                    full_output.append(event.delta.text)
-                elif event.delta.type == "thought_summary":
-                    print(f"\n[Thinking: {event.delta.content.text}]", flush=True)
-
-            if event.event_type == "interaction.complete":
-                print("\n\nResearch complete.")
-                is_complete = True
-
+    # Deep Research runs as a background agent interaction: create it, then poll
+    # interactions.get() until it reaches a terminal status and read the final
+    # text output. (The previous streaming/event-type approach silently returned
+    # nothing once the API event schema changed to interaction.created / step.*
+    # instead of interaction.start / content.delta. Poll-and-read is robust to
+    # that.)
     try:
-        initial_stream = client.interactions.create(
+        interaction = client.interactions.create(
             input=prompt,
             agent=AGENT,
             background=True,
-            store=True,
-            stream=True,
-            agent_config={"type": "deep-research", "thinking_summaries": "auto"},
         )
-        process_stream(initial_stream)
     except Exception as exc:
-        print(f"\nStream interrupted: {exc}")
+        print(f"\nFailed to start research: {exc}")
+        return ""
 
-    while not is_complete and interaction_id:
-        print(f"\nReconnecting... (last event: {last_event_id})")
-        time.sleep(5)
+    interaction_id = getattr(interaction, "id", None)
+    print(f"Research started (ID: {interaction_id}); status={getattr(interaction, 'status', '?')}")
+
+    start = time.time()
+    terminal = {"completed", "failed", "cancelled"}
+    while getattr(interaction, "status", None) not in terminal:
+        time.sleep(15)
         try:
-            resume_stream = client.interactions.get(
-                id=interaction_id,
-                stream=True,
-                last_event_id=last_event_id,
-            )
-            process_stream(resume_stream)
+            interaction = client.interactions.get(interaction_id)
         except Exception as exc:
-            print(f"Reconnect attempt failed: {exc}. Retrying in 10s...")
-            time.sleep(10)
+            print(f"  poll error: {exc}; retrying in 15s")
+            time.sleep(15)
+            continue
+        print(f"  ... {getattr(interaction, 'status', '?')} ({int(time.time() - start)}s elapsed)")
 
-    return "".join(full_output)
+    status = getattr(interaction, "status", None)
+    if status != "completed":
+        print(f"\nResearch {status}: {getattr(interaction, 'error', None)}")
+        return ""
+
+    print(f"\nResearch complete after {int(time.time() - start)}s.")
+
+    # Collect the final report text. Deep Research puts the synthesised report
+    # in interaction.output_text (the `outputs` block array is empty for the
+    # research agent), so prefer that; fall back to text-type output blocks.
+    report = getattr(interaction, "output_text", None)
+    if report:
+        return report
+    outputs = getattr(interaction, "outputs", None) or []
+    texts = [o.text for o in outputs
+             if getattr(o, "type", None) == "text" and getattr(o, "text", None)]
+    if texts:
+        return "\n\n".join(texts)
+    return getattr(outputs[-1], "text", "") if outputs else ""
 
 
 def save_research(content: str, batch_name: str) -> Path:

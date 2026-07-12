@@ -69,6 +69,10 @@ PAGE_REGISTRY = {
     'childcare': 'cc_builder.data.pages.childcare_sector',
     'charity': 'cc_builder.data.pages.charity_sector',
     'professional-services': 'cc_builder.data.pages.professional_services_sector',
+    'events': 'cc_builder.data.pages.events_sector',
+    'taxi-companies': 'cc_builder.data.pages.taxi_companies_sector',
+    'cleaning-contractors': 'cc_builder.data.pages.cleaning_contractors_sector',
+    'haulage': 'cc_builder.data.pages.haulage_sector',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""

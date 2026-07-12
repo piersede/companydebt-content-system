@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "/sectors/events/",
+    "title": "Insolvency and Business Rescue for the Events Sector (UK events management, conferences, exhibitions, festivals, event production, staging/AV hire)",
+    "research_questions": [
+      "What are the specific structural and financial drivers of insolvency in the UK events industry 2023-2026 — deposit/advance-booking exposure and deferred income, thin project margins, supplier prepayments, high fixed overheads on venues/staff, seasonality and cancellation risk, rising staging/AV/energy/insurance costs, and slow post-pandemic recovery of corporate and consumer event budgets? Cite sources and dates.",
+      "Name specific UK events-sector companies (event management agencies, conference/exhibition organisers, festival operators, event production/staging firms) that entered administration, CVL or other insolvency between 2023 and 2026 — give company name, month/year, procedure, and stated cause. Include festival cancellations/insolvencies and any notable exhibition or agency failures. Verify from London Gazette, insolvency practitioner notices, or trade press (Access All Areas, Conference News, Festival Insights).",
+      "How do UK events businesses appear in the Insolvency Service company insolvency statistics for England and Wales by SIC section? Confirm events activities sit largely in SIC section R (arts, entertainment and recreation, e.g. division 90 creative/arts/entertainment, 93 sports/amusement/recreation) and section N (82.30 organisation of conventions and trade shows). Note the Insolvency Service does not isolate an 'events' sub-total and figures are England and Wales only, not UK.",
+      "What are the earliest reliable warning signs that a UK events business is heading toward insolvency — negative working capital masked by client deposits held as deferred income, reliance on the next event's deposits to pay the last event's suppliers, supplier credit tightening or pro-forma demands, VAT/PAYE arrears, and margin erosion on won pitches? Frame as indicators, not proof of insolvency.",
+      "What insolvency and rescue options apply to UK events companies specifically, and what sector complexities arise — treatment of customer deposits and pre-sold ticket money in a CVL/administration (are ticket-holders and deposit-payers unsecured creditors?), consumer prepayment protection, contracts with venues and suppliers, retention of key creditor and client relationships, and when a CVA or administration sale of the agency/brand is realistic? Moderate all legal claims for a YMYL audience."
+    ]
+  },
+  {
+    "slug": "/sectors/taxi-companies/",
+    "title": "Insolvency and Business Rescue for the Taxi and Private Hire Sector (UK taxi firms, private hire operators, minicab fleets, PHV operators)",
+    "research_questions": [
+      "What are the specific structural and financial drivers of insolvency for UK taxi and private hire operators 2023-2026 — competition from app-based platforms (Uber/Bolt) compressing margins, driver shortages and driver acquisition costs, vehicle finance and lease exposure on fleets, the shift to electric/ULEZ-compliant vehicles and capital cost, fuel and insurance cost rises, and local-authority licensing costs? Cite sources and dates.",
+      "Name specific UK taxi or private hire companies that entered administration, CVL or other insolvency between 2023 and 2026 — company name, month/year, procedure, and stated cause. Include any notable regional minicab/PHV operator failures and fleet operators. Verify from London Gazette, insolvency notices, or trade/local press.",
+      "How do UK taxi and private hire businesses appear in the Insolvency Service company insolvency statistics for England and Wales by SIC section? Confirm they sit in SIC section H (transport and storage), division 49 land transport, class 49.32 taxi operation. Note the Insolvency Service reports at section level for E&W and does not isolate a taxi sub-total, and section H also contains haulage/freight; figures are England and Wales only.",
+      "What are the earliest reliable warning signs that a UK taxi/private hire operator is heading toward insolvency — falling driver numbers and rising empty-vehicle costs, missed vehicle-finance or lease payments, HMRC (VAT/PAYE) arrears, VAT treatment uncertainty on operator commissions, and cashflow strain from insurance renewals? Frame as indicators, not proof.",
+      "What insolvency and rescue options apply to UK taxi/private hire companies specifically, and what sector complexities arise — treatment of vehicle finance/HP/lease agreements and asset repossession in a CVL or administration, operator licence continuity, driver (usually self-employed) status and any employment claims, and when restructuring vs closure makes sense? Moderate all legal claims for a YMYL audience."
+    ]
+  }
+]

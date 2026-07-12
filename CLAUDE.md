@@ -42,6 +42,18 @@ During execution, preserve explicitly:
 
 If the article sounds generic, bloodless, over-balanced, or like AI simulating judgement, rewrite it.
 
+## Practitioner-voice depth is a default, not an afterthought
+
+The recurring failure on editorial pages is tone: they pass the mechanical gate but do not sound like an experienced Company Debt insolvency practitioner speaking to a specific, stressed reader in their trade. Fix this in the humanise pass BY DEFAULT, every page, before the gate. It is not a later review step.
+
+Every draft, before the gate, must carry all four (per `runtime-packs/stages/humanise.md` Part C, which is mandatory):
+- concrete scenes drawn from the reader's real world (>= 3 per 1,000 words, one per major section), not category labels;
+- earned practitioner "we" (the lived-caseload voice: "in the cases we handle", "by the time a director calls us") — this is legitimate company-authored operational voice, and it is how the page reaches a natural we/our density honestly;
+- warmth from recognition of reader stress (the persona in `editorial-os/17-audience-and-persona.md`: shame, the personal guarantee, the brown HMRC envelope) near the top and at the decision point;
+- 1-3 asymmetrical editorial lines and tone modulated by section.
+
+The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 with these absent is a FAIL. In particular, the check-04 we/our-density miss is an acceptable exception ONLY when the practitioner voice is genuinely present and the page still lands just under 5/1k; it is never a licence to ship a thin, practitioner-light page. Do a dedicated persona read after the mechanical gate passes.
+
 ## Runtime routing
 
 - For article and page work, keep the quality kernel always available on every turn: `runtime-packs/writer-core.md`, the relevant stage pack, the page-class overlay, and the human-authorship / trust rules surfaced by those packs.

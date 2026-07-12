@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "/sectors/cleaning-contractors/",
+    "title": "Insolvency and Business Rescue for the Cleaning Sector (UK commercial cleaning contractors, facilities/contract cleaning, janitorial, industrial and specialist cleaning firms)",
+    "research_questions": [
+      "What are the specific structural and financial drivers of insolvency for UK commercial cleaning contractors 2023-2026 — labour-intensive low-margin contracts, National Living Wage rises squeezing already thin margins, TUPE liabilities on contract transfers, long client payment terms creating a wage-to-receipt cashflow gap, reliance on a small number of large contracts, and competitive tendering driving prices down? Cite sources and dates.",
+      "Name specific UK commercial cleaning or contract-cleaning companies that entered administration, CVL or other insolvency between 2023 and 2026 — company name, month/year, procedure, and stated cause. Include facilities-management and janitorial contractors. Verify from London Gazette, insolvency notices, or trade press (e.g. Cleaning Matters, Tomorrow's Cleaning, FM press).",
+      "How do UK cleaning contractors appear in the Insolvency Service company insolvency statistics for England and Wales by SIC section? Confirm they sit in SIC section N (administrative and support service activities), division 81 services to buildings and landscape, class 81.2 cleaning activities. Note section N also contains recruitment/employment agencies, the Insolvency Service reports at section level for E&W and does not isolate a cleaning sub-total; figures are England and Wales only.",
+      "What are the earliest reliable warning signs that a UK cleaning contractor is heading toward insolvency — margin erosion after wage rises not passed through in contract prices, over-reliance on one or two anchor contracts, HMRC (PAYE/NIC/VAT) arrears from the wage-cashflow gap, late client payment stretching beyond payroll dates, and TUPE-inherited liabilities on new contracts? Frame as indicators, not proof.",
+      "What insolvency and rescue options apply to UK cleaning contractors specifically, and what sector complexities arise — TUPE transfer of employees on contract loss or business sale, treatment of the workforce and employment liabilities in a CVL or administration, novation of cleaning contracts, and when a CVA (to keep contracts running) or a pre-pack sale of the contract book is realistic? Moderate all legal claims for a YMYL audience."
+    ]
+  },
+  {
+    "slug": "/sectors/haulage/",
+    "title": "Insolvency and Business Rescue for the Haulage Sector (UK road haulage, freight transport, logistics, HGV operators, courier/distribution firms)",
+    "research_questions": [
+      "What are the specific structural and financial drivers of insolvency in UK road haulage and freight 2023-2026 — fuel price volatility, thin per-mile margins, driver shortage and wage inflation, vehicle finance/HP and fleet replacement cost, tightening customer payment terms, fixed operating-licence and compliance costs, and post-Brexit/customs friction on international work? Cite sources and dates.",
+      "Name specific UK road haulage, logistics or freight companies that entered administration, CVL or other insolvency between 2023 and 2026 — company name, month/year, procedure, and stated cause. Include notable HGV operator and distribution failures. Verify from London Gazette, insolvency notices, or trade press (Motor Transport, Commercial Motor, Logistics Manager).",
+      "How do UK haulage and freight businesses appear in the Insolvency Service company insolvency statistics for England and Wales by SIC section? Confirm they sit in SIC section H (transport and storage), division 49 land transport (49.41 freight transport by road) and 52 warehousing/support. Note section H also contains taxi/passenger transport, the Insolvency Service reports at section level for E&W and does not isolate a haulage sub-total; figures are England and Wales only.",
+      "What are the earliest reliable warning signs that a UK haulage operator is heading toward insolvency — margins that do not cover fuel and finance, missed vehicle-finance or fuel-card payments, HMRC (VAT/PAYE) arrears, loss of a major contract customer, and Traffic Commissioner/operator-licence financial-standing pressure? Frame as indicators, not proof.",
+      "What insolvency and rescue options apply to UK haulage companies specifically, and what sector complexities arise — treatment of vehicle finance/HP and asset (tractor unit/trailer) repossession in a CVL or administration, operator licence and Traffic Commissioner financial-standing requirements, retention-of-title on fuel/parts, driver employment liabilities, and when restructuring vs an asset-sale closure is realistic? Moderate all legal claims for a YMYL audience."
+    ]
+  }
+]
