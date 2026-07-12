@@ -73,6 +73,14 @@ PAGE_REGISTRY = {
     'taxi-companies': 'cc_builder.data.pages.taxi_companies_sector',
     'cleaning-contractors': 'cc_builder.data.pages.cleaning_contractors_sector',
     'haulage': 'cc_builder.data.pages.haulage_sector',
+    'dry-cleaning-laundry': 'cc_builder.data.pages.dry_cleaning_laundry_sector',
+    'property': 'cc_builder.data.pages.property_sector',
+    'entertainment': 'cc_builder.data.pages.entertainment_sector',
+    'fish-chip': 'cc_builder.data.pages.fish_chip_sector',
+    'schools': 'cc_builder.data.pages.schools_sector',
+    'travel': 'cc_builder.data.pages.travel_sector',
+    'manufacturing': 'cc_builder.data.pages.manufacturing_sector',
+    'energy': 'cc_builder.data.pages.energy_sector',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
