@@ -60,11 +60,11 @@
       "preferStoredContext": true,
       "topics": ["pub closures", "pubs closing", "pub numbers", "hospitality insolvency", "licensed trade", "pub and bar insolvency", "hospitality closures"],
       "approvedFigures": [
-        { "label": "UK pubs remaining", "value": "45,000", "period": "2024", "note": "down from 60,800 in 2000, a fall of roughly a quarter" },
-        { "label": "pub closures across Britain, Q1 2026", "value": "161", "period": "Q1 2026", "note": "about two a day, up from 128 in Q1 2025" },
-        { "label": "jobs lost from Q1 2026 pub closures", "value": "2,400", "period": "Q1 2026", "note": "BBPA estimate" },
-        { "label": "permanent pub losses, England and Wales", "value": "366", "period": "2025" },
-        { "label": "accommodation and food insolvencies", "value": "3,296", "period": "12 months to May 2026", "note": "the highest insolvency rate of any sector since 2015" }
+        { "label": "UK pubs remaining in 2024", "value": "45,000", "period": "2024", "note": "down from 60,800 in 2000, a fall of roughly a quarter" },
+        { "label": "pub closures across Britain in the first quarter of 2026", "value": "161", "period": "Q1 2026", "note": "about two a day, up from 128 in the first quarter of 2025" },
+        { "label": "jobs lost from the Q1 2026 pub closures", "value": "2,400", "period": "Q1 2026", "note": "BBPA estimate" },
+        { "label": "permanent pub losses in England and Wales in 2025", "value": "366", "period": "2025" },
+        { "label": "accommodation and food insolvencies in the 12 months to May 2026", "value": "3,296", "period": "12 months to May 2026", "note": "this single-year count gives the sector the highest insolvency rate of any UK industry; that RATE is the highest since 2015 (do NOT describe 3,296 as a total since 2015)" }
       ],
       "allowedContextNumbers": ["2000", "2010", "2024", "2025", "2026", "60,800", "55,400", "10000", "10,000"],
       "statTerms": [
