@@ -1,0 +1,119 @@
+{
+  "_comment": "Single source of truth for statutory fees and caps cited across the site. Every figure here is verified against a primary source. If a fee changes, change it HERE and re-run scripts/check_statutory_fees.py to find every page that still carries the old value. Do not hard-code these numbers into new pages without adding them here first.",
+  "_last_verified": "2026-07-14",
+  "_verified_by": "Claude Code, against gov.uk / legislation.gov.uk primary sources",
+
+  "winding_up_petition_court_fee": {
+    "value": "£352",
+    "superseded": ["£343", "£302", "£280"],
+    "description": "Court fee for entering a winding-up petition (companies only).",
+    "source_url": "https://www.gov.uk/government/publications/fees-in-the-civil-and-family-courts-main-fees-ex50/civil-court-fees-ex50",
+    "source_name": "HMCTS civil court fees (EX50)",
+    "source_updated": "2026-07-13"
+  },
+
+  "winding_up_petition_deposit": {
+    "value": "£2,600",
+    "superseded": [],
+    "description": "Petition deposit payable to the Insolvency Service on a winding-up petition (other than under s.124A).",
+    "source_url": "https://www.legislation.gov.uk/uksi/2016/692",
+    "source_name": "Insolvency Proceedings (Fees) Order 2016, as amended 2024",
+    "source_updated": "2025-01-09"
+  },
+
+  "strike_off_ds01_online": {
+    "value": "£13",
+    "superseded": ["£10", "£33"],
+    "description": "Companies House fee to apply for voluntary strike-off (DS01) online.",
+    "source_url": "https://www.gov.uk/government/publications/companies-house-fees/companies-house-fees",
+    "source_name": "Companies House fees",
+    "source_updated": "2026-07-02"
+  },
+
+  "strike_off_ds01_paper": {
+    "value": "£18",
+    "superseded": ["£10", "£33"],
+    "description": "Companies House fee to apply for voluntary strike-off (DS01) by paper.",
+    "source_url": "https://www.gov.uk/government/publications/companies-house-fees/companies-house-fees",
+    "source_name": "Companies House fees",
+    "source_updated": "2026-07-02"
+  },
+
+  "statutory_weekly_pay_cap": {
+    "value": "£751",
+    "superseded": ["£719", "£700", "£643"],
+    "description": "Statutory weekly pay cap used for redundancy, arrears, notice and holiday pay claims. Effective 6 April 2026.",
+    "source_url": "https://www.gov.uk/calculate-your-redundancy-pay",
+    "source_name": "Employment Rights (Increase of Limits) Order 2026",
+    "source_updated": "2026-04-06"
+  },
+
+  "statutory_redundancy_maximum": {
+    "value": "£22,530",
+    "superseded": ["£21,570", "£19,290"],
+    "description": "Maximum statutory redundancy payment (£751 weekly cap x 30 weeks).",
+    "source_url": "https://www.gov.uk/calculate-your-redundancy-pay",
+    "source_name": "Derived from the statutory weekly pay cap",
+    "source_updated": "2026-04-06"
+  },
+
+  "_commercial_fees_comment": "NOT statutory. These are Company Debt's own prices, so they are not verifiable against gov.uk. They are here because they drifted just as badly: the CVL fee was published as £4,000-£6,000 on four pages and £4,000-£7,000 on another, and disbursements as both £500-£1,000 and £500-£1,500. Owner set the canonical values on 2026-07-14.",
+
+  "cvl_practitioner_fee": {
+    "value": "£4,000 to £7,000",
+    "superseded": [],
+    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£6,000", "£4,000\\s*(?:–|-|to)\\s*£5,000"],
+    "description": "Company Debt CVL practitioner fee, plus VAT, straightforward case.",
+    "source_url": null,
+    "source_name": "Company Debt pricing (owner-confirmed)",
+    "source_updated": "2026-07-14"
+  },
+
+  "cvl_disbursements": {
+    "value": "£500 to £1,500",
+    "superseded": [],
+    "drift_patterns": ["£500\\s*(?:–|-|to)\\s*£1,000(?=\\s*(?:in\\s*)?disbursement)"],
+    "description": "Bond, Gazette notices, Companies House filing, statutory mailings.",
+    "source_url": null,
+    "source_name": "Company Debt pricing (owner-confirmed)",
+    "source_updated": "2026-07-14"
+  },
+
+  "mvl_practitioner_fee": {
+    "value": "£2,000 to £4,000",
+    "superseded": [],
+    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000"],
+    "description": "Company Debt MVL practitioner fee, plus VAT, solvent company.",
+    "source_url": null,
+    "source_name": "Company Debt pricing (owner-confirmed)",
+    "source_updated": "2026-07-14"
+  },
+
+  "preferential_wages_limit": {
+    "value": "£800",
+    "superseded": [],
+    "description": "Per-employee limit on preferential status for arrears of wages in an insolvency.",
+    "source_url": "https://www.legislation.gov.uk/ukpga/1986/45/schedule/6",
+    "source_name": "Insolvency Act 1986, Schedule 6",
+    "source_updated": "2026-07-14"
+  },
+
+  "_banned_claims": {
+    "_comment": "Figures that must NOT appear anywhere on the site. Each was traced to an unverifiable origin. scripts/check_statutory_fees.py fails any page containing them.",
+    "director_redundancy_average": {
+      "_note": "Regex, not literals: the claim appears in several phrasings and a literal list missed most of them. Two tiers, because £9,000 also legitimately appears as the top of the CVL all-in cost range (£5,000 to £9,000). banned_patterns are unambiguous and fire anywhere. banned_patterns_in_context are loose and only fire near a redundancy/claim word, so they do not flag a genuine cost figure.",
+      "banned_patterns": [
+        "£9,000\\s*(?:to|-|–|and)\\s*£12,000",
+        "£12,000\\s*(?:to|-|–)\\s*£9,000"
+      ],
+      "banned_patterns_in_context": [
+        "(?:average|typical|worth|closer to|around|approximately)[^.<>]{0,70}£9,000",
+        "£9,000[^.<>]{0,50}(?:average|typical|on average)",
+        "average[^.<>]{0,60}£12,000"
+      ],
+      "context_required": "redundan|claim",
+      "reason": "Presented as an average successful director redundancy claim, but not supported by the cited gov.uk guidance. Traced to editorial-os/17-audience-and-persona.md and to Gemini research output, not to Company Debt caseload. Owner confirmed on 2026-07-14 that the firm cannot stand behind it.",
+      "use_instead": "The statutory calculation method (age, length of service, weekly pay), the £751 weekly cap, the £22,530 maximum, and a link to https://www.gov.uk/calculate-your-redundancy-pay so the reader gets their own figure."
+    }
+  }
+}

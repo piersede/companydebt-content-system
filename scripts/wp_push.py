@@ -65,6 +65,19 @@ add_action('init', function() {{
     // wp_update_post expects slashed input; without wp_slash, internal
     // wp_unslash strips one level of backslashes — breaks JSON unicode
     // escapes (e.g. <) inside Gutenberg block attributes.
+    // Yoast SEO title / description live in post meta, not post_content, so
+    // wp_update_post never touches them. Write them BEFORE wp_update_post:
+    // Yoast rebuilds its wp_yoast_indexable cache row on save_post, and that
+    // rebuild reads the meta. Writing the meta afterwards leaves the indexable
+    // stale and the old <title> keeps rendering.
+    $meta_done = [];
+    if (!empty($p['meta']) && is_array($p['meta'])) {{
+        foreach ($p['meta'] as $mk => $mv) {{
+            update_post_meta((int) $p['post_id'], $mk, wp_slash($mv));
+            $meta_done[] = $mk;
+        }}
+    }}
+
     $update = ['ID' => (int) $p['post_id'], 'post_content' => wp_slash($p['content'])];
     if (!empty($p['title']))  $update['post_title']  = wp_slash($p['title']);
     if (!empty($p['status'])) $update['post_status'] = $p['status'];
@@ -73,8 +86,35 @@ add_action('init', function() {{
     if (is_wp_error($r)) {{
         echo 'ERR: ' . $r->get_error_message();
     }} else {{
+        // Yoast 14+ serves <title> and the meta description from its own
+        // wp_yoast_indexable cache table, NOT from post meta at render time.
+        // That row does not reliably refresh on save_post, so a changed title
+        // keeps rendering stale. Drop the row and Yoast lazily rebuilds it
+        // from the post meta we just wrote.
+        $rebuilt = 0;
+        if (!empty($meta_done)) {{
+            global $wpdb;
+            $tbl = $wpdb->prefix . 'yoast_indexable';
+            if ($wpdb->get_var("SHOW TABLES LIKE '$tbl'") === $tbl) {{
+                $rebuilt = (int) $wpdb->delete(
+                    $tbl,
+                    ['object_id' => (int) $p['post_id'], 'object_type' => 'post'],
+                    ['%d', '%s']
+                );
+            }}
+        }}
+
+        // WP Rocket serves a cached HTML file; without this the old <title>
+        // survives the indexable rebuild.
+        if (function_exists('rocket_clean_post')) {{
+            rocket_clean_post((int) $p['post_id']);
+        }}
+
         $permalink = get_permalink($r);
-        echo 'OK: post=' . $r . ' content_len=' . strlen($p['content']) . ' url=' . $permalink;
+        echo 'OK: post=' . $r . ' content_len=' . strlen($p['content'])
+           . ' meta=[' . implode(',', $meta_done) . ']'
+           . ' indexable_rows_dropped=' . $rebuilt
+           . ' url=' . $permalink;
     }}
 
     wp_cache_flush();
@@ -133,7 +173,7 @@ def sftp_remove_if_exists(remote_paths: list[str]) -> list[str]:
 
 
 def push(post_id: int, html_path: pathlib.Path, status: str | None,
-         title_override: str | None) -> None:
+         title_override: str | None, meta: dict[str, str] | None = None) -> None:
     content, html_title = extract_article_content(html_path)
     title = title_override or html_title
 
@@ -154,6 +194,7 @@ def push(post_id: int, html_path: pathlib.Path, status: str | None,
     payload = {"post_id": post_id, "content": content}
     if title: payload["title"] = title
     if status: payload["status"] = status
+    if meta: payload["meta"] = meta
 
     tmp = ROOT / "tmp"
     tmp.mkdir(exist_ok=True)
@@ -208,13 +249,20 @@ def main() -> int:
     p.add_argument("--status", choices=["draft", "publish", "pending", "private"],
                    help="Set post_status (omit to leave unchanged)")
     p.add_argument("--title", help="Override post_title (else uses <title> from HTML)")
+    p.add_argument("--seo-title", help="Yoast SEO title (the <title> tag). Post meta, "
+                                       "not post_content, so a normal push never sets it.")
+    p.add_argument("--seo-desc", help="Yoast meta description")
     args = p.parse_args()
 
     html_path = pathlib.Path(args.file)
     if not html_path.exists():
         sys.exit(f"ERROR: file not found: {html_path}")
 
-    push(args.id, html_path, args.status, args.title)
+    meta: dict[str, str] = {}
+    if args.seo_title: meta["_yoast_wpseo_title"] = args.seo_title
+    if args.seo_desc:  meta["_yoast_wpseo_metadesc"] = args.seo_desc
+
+    push(args.id, html_path, args.status, args.title, meta or None)
     return 0
 
 
