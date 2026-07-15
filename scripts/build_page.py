@@ -55,6 +55,13 @@ PAGE_REGISTRY = {
     'company-insolvencies-by-sector': 'cc_builder.data.pages.company_insolvencies_by_sector',
     'construction-insolvency-statistics': 'cc_builder.data.pages.construction_insolvency_statistics',
     'furniture-insolvency-statistics': 'cc_builder.data.pages.furniture_insolvency_statistics',
+    'restaurant-insolvency-statistics': 'cc_builder.data.pages.restaurant_insolvency_statistics',
+    'road-haulage-insolvency-statistics': 'cc_builder.data.pages.road_haulage_insolvency_statistics',
+    'recruitment-agency-insolvency-statistics': 'cc_builder.data.pages.recruitment_agency_insolvency_statistics',
+    'temporary-staffing-agency-insolvency-statistics': 'cc_builder.data.pages.temporary_staffing_agency_insolvency_statistics',
+    'motor-vehicle-repair-insolvency-statistics': 'cc_builder.data.pages.motor_vehicle_repair_insolvency_statistics',
+    'cleaning-company-insolvency-statistics': 'cc_builder.data.pages.cleaning_company_insolvency_statistics',
+    'hotel-insolvency-statistics': 'cc_builder.data.pages.hotel_insolvency_statistics',
     'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
     # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
     'construction': 'cc_builder.data.pages.construction_sector',
@@ -84,6 +91,7 @@ PAGE_REGISTRY = {
     'energy': 'cc_builder.data.pages.energy_sector',
     # ── Data-led article rebuilds (posts, not pages) ────────────────────
     'pub-closures-in-the-uk': 'cc_builder.data.pages.pub_closures_in_the_uk',
+    'how-much-does-liquidation-cost': 'cc_builder.data.pages.how_much_does_liquidation_cost',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""

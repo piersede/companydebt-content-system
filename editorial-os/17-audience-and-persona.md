@@ -54,17 +54,22 @@ They are not reading for entertainment. They are reading under stress, often on 
 
 **Emotional state:** Pragmatic, slightly cynical, worn down by the perceived cost of professional insolvency services.
 
-**Awareness level:** Believes they have found a "legal hack" (the Spongebob Plan) to avoid the £4,000–£5,000 cost of a CVL.
+**Awareness level:** Believes they have found a "legal hack" (the Spongebob Plan) to avoid the cost of a CVL.
 
-**Primary goals:** Close the company for the £10 strike-off fee. Avoid professional fees. Ensure debts — especially BBLs — are written off.
+**Primary goals:** Close the company for the price of a DS01 filing. Avoid professional fees. Ensure debts, especially BBLs, are written off.
 
 **Urgent questions:** "Can I strike off a company with HMRC debt?", "Will HMRC object to my dissolution?", "What is the Spongebob Plan?"
 
 **Core fears:** HMRC restoring the company to the register. Being personally investigated for misfeasance. Missing redundancy payouts they didn't know they were entitled to.
 
-**Decision blockers:** The high perceived cost of liquidation vs. the £10 strike-off fee.
+**Decision blockers:** The high perceived cost of liquidation versus the near-zero cost of a strike-off.
 
-**Search language:** "Strike off", "dissolve", "Spongebob", "walk away", "£10 closure", "DS01", "dissolving company with BBL", "HMRC objection to DS01".
+**Search language:** "Strike off", "dissolve", "Spongebob", "walk away", "cheap company closure", "DS01", "dissolving company with BBL", "HMRC objection to DS01".
+
+> **Do not hard-code fees in this file.** Earlier versions quoted a "£10 strike-off fee" and a
+> "£4,000–£5,000 CVL". Both were wrong, and because writers treat this persona as a given, both
+> propagated across the site as fact. Fees belong in `data/statutory_fees.json` and nowhere else.
+> Describe the persona's *belief* ("closing for the price of a filing fee"), never a figure.
 
 **Trust signals needed:** Plain-English explanations of strike-off risks. Transparency on how a CVL can be funded via redundancy claims.
 
@@ -144,7 +149,15 @@ They are not reading for entertainment. They are reading under stress, often on 
 
 **Who they are:** A director specifically researching director redundancy as a way to fund the liquidation and receive a personal financial buffer.
 
-**Primary driver:** Converting a perceived loss into a personal financial outcome. The average director redundancy payout is approximately £9,000.
+**Primary driver:** Converting a perceived loss into a personal financial outcome. They want to know what their own claim is worth.
+
+> **Do not quote an average redundancy payout.** Earlier versions of this file stated
+> "approximately £9,000", which propagated onto at least four live pages (in one case as
+> "£9,000 to £12,000", framed as if it came from gov.uk guidance). The firm cannot stand behind
+> it (owner, 2026-07-14) and no such official average is published. The claim is banned in
+> `data/statutory_fees.json`. Write the statutory calculation instead: age, length of service,
+> weekly pay, the £751 cap, the £22,530 maximum, and a link to the gov.uk calculator so the
+> reader gets their own number.
 
 **Search language:** "Director redundancy", "director redundancy eligibility", "how much redundancy can a director claim".
 

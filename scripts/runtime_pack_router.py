@@ -78,6 +78,7 @@ PAGE_CLASS_OVERLAYS = {
     "case_insight": "overlays/case-insight.md",
     "distress_use_case": "overlays/distress-use-case.md",
     "data_reference": "overlays/statistics.md",
+    "sector_statistics": "overlays/sector-statistics.md",
 }
 
 PAGE_CLASS_CANONICAL = {
@@ -94,6 +95,7 @@ PAGE_CLASS_CANONICAL = {
     "case_insight": ["27-article-type-structure.md", "24-content-registry.md"],
     "distress_use_case": ["27-article-type-structure.md", "24-content-registry.md"],
     "data_reference": ["27-article-type-structure.md", "24-content-registry.md"],
+    "sector_statistics": ["27-article-type-structure.md", "24-content-registry.md"],
 }
 
 FRESHNESS_OVERLAYS = {

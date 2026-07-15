@@ -116,6 +116,13 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     # into build_page.py --publish) requiring a sourced sector-context fact
     # and a practitioner-voice insight paragraph on every page.
     "furniture-insolvency-statistics": "sector_statistics",
+    "restaurant-insolvency-statistics": "sector_statistics",
+    "road-haulage-insolvency-statistics": "sector_statistics",
+    "recruitment-agency-insolvency-statistics": "sector_statistics",
+    "temporary-staffing-agency-insolvency-statistics": "sector_statistics",
+    "motor-vehicle-repair-insolvency-statistics": "sector_statistics",
+    "cleaning-company-insolvency-statistics": "sector_statistics",
+    "hotel-insolvency-statistics": "sector_statistics",
 }
 
 

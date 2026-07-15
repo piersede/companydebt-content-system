@@ -825,8 +825,19 @@ def check_block_comment_json_no_raw_html(raw_html: str) -> CheckResult:
     writers manually replace <X> with \\u003cX\\u003e in panelTitle and
     similar attributes.
     """
-    # Match block-comment markers with JSON attributes
-    block_re = re.compile(r"<!--\s*wp:[\w/-]+\s+(\{[^}]*\})\s*-->", re.DOTALL)
+    # Match block-comment markers with JSON attributes.
+    #
+    # This pattern used to be r"<!--\s*wp:[\w/-]+\s+(\{[^}]*\})\s*-->", which silently
+    # skipped the blocks most likely to break, and so reported a green pass on them:
+    #   1. [^}]* stops at the FIRST closing brace, so any block with nested JSON
+    #      (e.g. "padding":{"top":"0"...},"margin":{...} — i.e. most CTA blocks)
+    #      never matched at all.
+    #   2. It required "-->" and did not allow the self-closing "/-->" form that
+    #      void blocks like ub/call-to-action-block use.
+    # A raw <strong> in a CTA block's JSON therefore sailed through this T1 check and
+    # dumped the whole block comment onto the page as literal text (23698, 2026-07-14).
+    # Non-greedy to the last brace before the closing marker handles nesting correctly.
+    block_re = re.compile(r"<!--\s*wp:[\w/-]+\s+(\{.*?\})\s*/?-->", re.DOTALL)
     offenders: list[str] = []
     # Detect malformed Unicode escapes — common breakage pattern is a writer dropping
     # the leading backslash, leaving "u003cstrong" instead of "<strong". The literal

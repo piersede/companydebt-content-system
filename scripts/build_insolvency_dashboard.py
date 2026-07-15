@@ -419,7 +419,7 @@ def methodology_block() -> str:
         <h3>Data limitations</h3>
         <ul class="cd-limits">
           <li>The latest month is provisional and can be revised.</li>
-          <li>Detailed industry sub-sector breakdowns are published quarterly.</li>
+          <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
           <li>Industry is based on self-reported SIC codes.</li>
           <li>Registered office addresses are not a reliable guide to where a company traded.</li>
           <li>Solvent company closures are not included.</li>
@@ -689,6 +689,15 @@ DASHBOARD_CSS = """
   color: var(--cd-text-soft);
   max-width: 660px;
   margin: 0 0 32px;
+}
+
+/* Optional subtitle line directly under the H1, e.g. a geographic-scope
+   clarifier ("Latest detailed figures for England and Wales"). */
+.cd-data-hub .cd-hero__subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cd-muted);
+  margin: 6px 0 20px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1193,6 +1202,17 @@ DASHBOARD_CSS = """
   line-height: 1.6;
 }
 .cd-data-hub .cd-side-note__d:last-child { margin-bottom: 0; }
+/* Grouped sub-items inside a .cd-side-notes box, each with its own h3 (e.g.
+   the "why <sector> is under pressure" list on single-SIC-sector pages). */
+.cd-data-hub .cd-side-notes .cd-note-item { margin: 0 0 20px; }
+.cd-data-hub .cd-side-notes .cd-note-item:last-child { margin-bottom: 0; }
+.cd-data-hub .cd-side-notes .cd-note-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cd-text);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
 /* Single-note variant used in the UK nations section. */
 .cd-data-hub .cd-side-note--single {
   padding: 20px 22px;
