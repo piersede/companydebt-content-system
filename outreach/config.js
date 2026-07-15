@@ -61,6 +61,7 @@ const config = {
       rejectReason: env.OUTREACH_COL_REJECT_REASON || '',
       lastContacted: env.OUTREACH_COL_LAST_CONTACTED || '',
       citedSource: env.OUTREACH_COL_CITED_SOURCE || '',
+      topic: env.OUTREACH_COL_TOPIC || 'dropdown_mm59xgza', // campaign topic (Insolvency / Pub Closures)
     },
     // Canonical status labels the conductor reads/writes on the Outreach board.
     status: {
@@ -71,12 +72,10 @@ const config = {
       responded: 'Responded',
       defunct: 'Defunct',
     },
-    // Board groups (harmonised by theme x channel; Defunct is shared).
+    // Board groups: simplified to channel only. Campaign topic lives on the Topic column.
     groups: {
-      insolvencyEmail: env.OUTREACH_GROUP_INSOLVENCY_EMAIL || 'topics',
-      pubEmail: env.OUTREACH_GROUP_PUB_EMAIL || 'group_mm53vtbh',
+      emails: env.OUTREACH_GROUP_EMAILS || 'topics',
       linkedin: env.OUTREACH_GROUP_LINKEDIN || 'group_mm52mctc',
-      pubLinkedin: env.OUTREACH_GROUP_PUB_LINKEDIN || 'group_mm53fmpj',
       defunct: env.OUTREACH_GROUP_DEFUNCT || 'group_mm52z487',
     },
   },
@@ -145,15 +144,15 @@ const config = {
 };
 
 // ---- multi-asset routing ----
-// Each email group maps to the data asset its rows pitch. Scan resolves the asset per row's
-// group so one board can run several campaigns (insolvency hub, pub closures, ...) side by side.
+// Campaign topic lives on the board's Topic column (Insolvency / Pub Closures / future ...).
+// Scan resolves the data asset per row from that topic, so one board runs several campaigns.
 config.assetById = Object.fromEntries((catalogue.assets || []).map((a) => [a.id, a]));
-config.groupAssets = {
-  [config.monday.groups.insolvencyEmail]: 'uk-insolvency-statistics',
-  [config.monday.groups.pubEmail]: 'pub-closures',
+config.topicAssets = {
+  'insolvency': 'uk-insolvency-statistics',
+  'pub closures': 'pub-closures',
 };
-config.assetForGroup = (groupId) => {
-  const id = config.groupAssets[groupId];
+config.assetForTopic = (topic) => {
+  const id = config.topicAssets[(topic || '').trim().toLowerCase()];
   return (id && config.assetById[id]) || catalogue.assets[0];
 };
 

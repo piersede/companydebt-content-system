@@ -2,7 +2,8 @@
 'use strict';
 // Ingest LinkedIn prospects (harvested from LinkedIn content-search + engager-mining) into the
 // Outreach board's "LinkedIn Outreach" group.
-// Usage: node scripts/apply_li_prospects.js <prospects.json> [--commit]
+// Usage: node scripts/apply_li_prospects.js <prospects.json> [--commit] [--group <id>]
+//   --group defaults to the insolvency LinkedIn group; pass e.g. group_mm53fmpj for pub.
 // prospects.json: [{name, profileUrl, headline, hook, source}]
 // Dedups by normalized LinkedIn profile URL against existing rows' "LinkedIn URL" column.
 const fs = require('fs');
@@ -12,7 +13,8 @@ const monday = require(path.join(__dirname, '..', 'lib', 'monday'));
 const U = require(path.join(__dirname, '..', 'lib', 'util'));
 
 const LI_URL_COL = 'link_mm52fh94';           // "LinkedIn URL" (link) column
-const LI_GROUP = config.monday.groups.linkedin || 'group_mm52mctc';
+const gi = process.argv.indexOf('--group');
+const LI_GROUP = (gi > -1 && process.argv[gi + 1]) || config.monday.groups.linkedin || 'group_mm52mctc';
 
 const file = process.argv[2];
 const commit = process.argv.includes('--commit');

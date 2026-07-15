@@ -43,7 +43,8 @@ async function scan() {
   const process_ = flag('--process');
   const cap = parseInt(opt('--cap', config.dailyCap), 10);
   const statusLabel = opt('--status', config.monday.status.queue);
-  const groupFilter = opt('--group', ''); // restrict to one campaign group (e.g. pub vs insolvency)
+  const groupFilter = opt('--group', '');           // restrict to one board group (channel)
+  const topicFilter = opt('--topic', '');           // restrict to one campaign topic (e.g. "Pub Closures")
   const write = config.review === 'write' && process_;
   const store = new Store(config.stateDir);
   const tally = {};
@@ -56,7 +57,8 @@ async function scan() {
   catch (e) { U.err(`Cannot read Monday board: ${e.message}`); U.dim('Set OUTREACH_BOARD_ID + column ids (see `conductor boardcols`).'); return; }
 
   if (groupFilter) items = items.filter((it) => it.groupId === groupFilter);
-  U.info(`${items.length} item(s) in "${statusLabel}"${groupFilter ? ` (group ${groupFilter})` : ''}.`);
+  if (topicFilter) items = items.filter((it) => (it.topic || '').trim().toLowerCase() === topicFilter.trim().toLowerCase());
+  U.info(`${items.length} item(s) in "${statusLabel}"${topicFilter ? ` (topic ${topicFilter})` : ''}${groupFilter ? ` (group ${groupFilter})` : ''}.`);
   let drafted = 0;
   const draftedContacts = new Set(); // one draft per contact email per run
 
@@ -85,9 +87,9 @@ async function scan() {
     const articleUrl = item.articleUrl || item.raw?.link?.text;
     if (!articleUrl) { await route(item, 'research', 'no article URL on the row', 'not_enough_citation_context', { write, tally }); continue; }
 
-    // which data asset does this row pitch? (group -> asset; default = insolvency hub)
-    const asset = config.assetForGroup(item.groupId);
-    U.dim(`  asset: ${asset.id}`);
+    // which data asset does this row pitch? (Topic column -> asset; default = insolvency hub)
+    const asset = config.assetForTopic(item.topic);
+    U.dim(`  topic: ${item.topic || '(none)'} -> asset: ${asset.id}`);
 
     // 1) scrape (with a free fallback to the Ahrefs-captured cited sentence)
     const storedCtx = config.citedContext[articleUrl] || config.citedContext[articleUrl.replace(/\/$/, '')] || '';

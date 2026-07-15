@@ -43,6 +43,7 @@ function mapItem(config, raw) {
     name: raw.name,
     raw: cols,
     groupId: raw.group ? raw.group.id : '',
+    topic: get(C.topic),
     status: get(C.status),
     email,
     emailName,
