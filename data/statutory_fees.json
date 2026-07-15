@@ -60,13 +60,13 @@
   "_commercial_fees_comment": "NOT statutory. These are Company Debt's own prices, so they are not verifiable against gov.uk. They are here because they drifted just as badly: the CVL fee was published as £4,000-£6,000 on four pages and £4,000-£7,000 on another, and disbursements as both £500-£1,000 and £500-£1,500. Owner set the canonical values on 2026-07-14.",
 
   "cvl_practitioner_fee": {
-    "value": "£4,000 to £7,000",
+    "value": "£3,500",
     "superseded": [],
-    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£6,000", "£4,000\\s*(?:–|-|to)\\s*£5,000"],
-    "description": "Company Debt CVL practitioner fee, plus VAT, straightforward case.",
+    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£7,000", "£4,000\\s*(?:–|-|to)\\s*£6,000"],
+    "description": "Company Debt CVL practitioner fee, plus VAT, standard fixed fee for a straightforward case. Changed from a £4,000-£7,000 range to a flat £3,500 on 2026-07-15 (owner). Note: £4,000-£5,000 is NOT a drift pattern here - it is the current all-in figure (see cvl_all_in).",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
-    "source_updated": "2026-07-14"
+    "source_updated": "2026-07-15"
   },
 
   "cvl_disbursements": {
@@ -79,14 +79,24 @@
     "source_updated": "2026-07-14"
   },
 
-  "mvl_practitioner_fee": {
-    "value": "£2,000 to £4,000",
+  "cvl_all_in": {
+    "value": "£4,000 to £5,000",
     "superseded": [],
-    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000"],
-    "description": "Company Debt MVL practitioner fee, plus VAT, solvent company.",
+    "drift_patterns": ["£5,000\\s*(?:–|-|to|and)\\s*£9,000"],
+    "description": "Derived: £3,500 fixed fee + £500-£1,500 disbursements. Was £5,000-£9,000 when the fee was a £4,000-£7,000 range.",
+    "source_url": null,
+    "source_name": "Derived from Company Debt pricing",
+    "source_updated": "2026-07-15"
+  },
+
+  "mvl_practitioner_fee": {
+    "value": "£3,500",
+    "superseded": [],
+    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "£2,000\\s*(?:–|-|to)\\s*£4,000"],
+    "description": "Company Debt MVL practitioner fee, plus VAT, standard fixed fee for a solvent company. Changed from a £2,000-£4,000 range to a flat £3,500 on 2026-07-15 (owner).",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
-    "source_updated": "2026-07-14"
+    "source_updated": "2026-07-15"
   },
 
   "preferential_wages_limit": {
