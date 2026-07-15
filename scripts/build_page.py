@@ -54,6 +54,7 @@ PAGE_REGISTRY = {
     'administration-statistics': 'cc_builder.data.pages.administration_statistics',
     'company-insolvencies-by-sector': 'cc_builder.data.pages.company_insolvencies_by_sector',
     'construction-insolvency-statistics': 'cc_builder.data.pages.construction_insolvency_statistics',
+    'furniture-insolvency-statistics': 'cc_builder.data.pages.furniture_insolvency_statistics',
     'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
     # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
     'construction': 'cc_builder.data.pages.construction_sector',
@@ -81,6 +82,8 @@ PAGE_REGISTRY = {
     'travel': 'cc_builder.data.pages.travel_sector',
     'manufacturing': 'cc_builder.data.pages.manufacturing_sector',
     'energy': 'cc_builder.data.pages.energy_sector',
+    # ── Data-led article rebuilds (posts, not pages) ────────────────────
+    'pub-closures-in-the-uk': 'cc_builder.data.pages.pub_closures_in_the_uk',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
@@ -213,6 +216,26 @@ def main():
     # Editorial / insolvency pages go through the Bernstein pipeline gate, not a
     # build-time assembler check.
     print(f'  (editorial page type: {config.get("page_type")}; quality gating via Bernstein)')
+
+    # sector_statistics pages (the SIC-sector data family, e.g. furniture,
+    # construction) carry a REAL automated gate — not just this printed claim.
+    # Run it here and block --publish on a hard-fail, same discipline as the
+    # bernstein.js gate for guide pages, calibrated for this page shape.
+    gate_passed = True
+    if runtime_metadata.page_class == 'sector_statistics':
+        from sector_data_audit import audit_file, print_report
+        draft_path = SCRIPTS_DIR.parent / 'drafts' / f"{config.get('wp_page_id')}_{config.get('slug')}.html"
+        audit = audit_file(draft_path)
+        print_report(audit)
+        gate_passed = audit.gate_passed
+        if not gate_passed:
+            print(f'  SECTOR DATA GATE: FAIL ({audit.score}/{audit.max_score}) — see failures above.')
+        else:
+            print(f'  SECTOR DATA GATE: PASS ({audit.score}/{audit.max_score})')
+
+    if args.publish and not gate_passed:
+        print('ERROR: sector_statistics gate failed — publish blocked. Fix the flagged checks and rebuild.')
+        sys.exit(1)
 
     # Write JSON output
     out_path = os.path.join(tempfile.gettempdir(), f'wp_push_{args.page}.json')

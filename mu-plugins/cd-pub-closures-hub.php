@@ -45,20 +45,20 @@ add_action( 'wp_footer', function () {
 } );
 
 add_filter( 'wpseo_title', function ( $t ) {
-	return cd_pubhub_is_target() ? 'Pub Closures in the UK: How Many, and Why (2026 Data)' : $t;
+	return cd_pubhub_is_target() ? 'UK Pub Closures 2026: Latest Figures and Reasons' : $t;
 }, 20 );
 add_filter( 'wpseo_metadesc', function ( $d ) {
-	return cd_pubhub_is_target() ? 'How many UK pubs have closed and why: current 2026 figures on pub numbers, permanent closures, hospitality insolvency and the cost pressures behind the decline.' : $d;
+	return cd_pubhub_is_target() ? '161 pubs closed across Britain in the first quarter of 2026. See the latest UK pub closure, insolvency and cost data, and why pubs are under pressure.' : $d;
 }, 20 );
 /* OG + Twitter titles (Yoast keeps the old ones otherwise) */
 add_filter( 'wpseo_opengraph_title', function ( $t ) {
-	return cd_pubhub_is_target() ? 'Pub Closures in the UK: How Many, and Why (2026 Data)' : $t;
+	return cd_pubhub_is_target() ? 'UK Pub Closures 2026: Latest Figures and Reasons' : $t;
 }, 20 );
 add_filter( 'wpseo_twitter_title', function ( $t ) {
-	return cd_pubhub_is_target() ? 'Pub Closures in the UK: How Many, and Why (2026 Data)' : $t;
+	return cd_pubhub_is_target() ? 'UK Pub Closures 2026: Latest Figures and Reasons' : $t;
 }, 20 );
 add_filter( 'wpseo_opengraph_desc', function ( $d ) {
-	return cd_pubhub_is_target() ? 'Current 2026 figures on UK pub numbers, permanent closures, hospitality insolvency and the cost pressures behind the decline.' : $d;
+	return cd_pubhub_is_target() ? '161 pubs closed across Britain in the first quarter of 2026. See the latest UK pub closure, insolvency and cost data, and why pubs are under pressure.' : $d;
 }, 20 );
 
 /* WP Schema Pro also emits an Article on this post; suppress it so Yoast's Article
@@ -98,11 +98,13 @@ add_action( 'wp_head', function () {
 			array(
 				'@type' => 'FAQPage',
 				'mainEntity' => array(
-                array( '@type' => 'Question', 'name' => 'How many pubs are left in the UK?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'There were around 45,000 pubs in the UK in 2024, according to the House of Commons Library citing the British Beer and Pub Association, down from 60,800 in 2000. This is a stock figure for the whole UK, and it is a different measure from the number of pubs closing in any single year.' ) ),
-                array( '@type' => 'Question', 'name' => 'How many pubs closed in 2025 and 2026?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Ryan\'s analysis of government rating-list data put permanent pub losses in England and Wales at 366 in 2025. The BBPA counted 161 closures across Britain in the first quarter of 2026, up from 128 in the same quarter of 2025. The two use different definitions and cover different areas, so they will not match exactly.' ) ),
-                array( '@type' => 'Question', 'name' => 'What is the main reason pubs are closing?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'There is no single cause. The measurable drivers are a rising cost stack, in higher wages, employer National Insurance, business rates and alcohol duty, landing at the same time as softer demand, particularly among younger adults. Accommodation and food service has had the highest company insolvency rate of any sector every year since 2015.' ) ),
-                array( '@type' => 'Question', 'name' => 'Is a pub closure the same as an insolvency?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'No. A pub can close without any formal insolvency, and a pub company can become insolvent while its sites keep trading under a new owner. Insolvency Service figures count company insolvencies in the accommodation and food service sector, which is wider than pubs alone and is not a count of closed premises.' ) ),
-                array( '@type' => 'Question', 'name' => 'What should I do if my pub cannot pay its debts?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Get advice while you still have options. Depending on whether the business is viable, the routes include a Time to Pay arrangement with HMRC, a Company Voluntary Arrangement, administration, or a Creditors\' Voluntary Liquidation. If a winding-up petition has been threatened or issued, the timescale is short, so early advice from a licensed insolvency practitioner matters.' ) )
+                array( '@type' => 'Question', 'name' => 'How many pubs are left in the UK in 2026?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'The latest full UK estimate puts the number of pubs at around 45,000, but this figure relates to 2024 rather than 2026. It is down from 60,800 in 2000 and 55,400 in 2010. No newer UK-wide stock total has been published, so 45,000 is the most current reliable estimate rather than a confirmed 2026 count.' ) ),
+                array( '@type' => 'Question', 'name' => 'How many UK pubs closed in 2025?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Rating-list analysis found 366 pubs were permanently lost in England and Wales during 2025, meaning they were demolished or converted to other uses rather than temporarily closed. Separately, insolvencies among pub, bar and nightclub operators rose to 789 across Britain in the year to 31 December 2025. These measures count different events and should not be added together.' ) ),
+                array( '@type' => 'Question', 'name' => 'How many pubs closed in the first quarter of 2026?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'The British Beer and Pub Association recorded 161 pub closures across Britain in the first three months of 2026, almost two a day and 26% more than the 128 recorded in the same quarter of 2025. The BBPA estimated those closures cost around 2,400 jobs. This is a single-quarter figure and should not be read as a full-year total.' ) ),
+                array( '@type' => 'Question', 'name' => 'Why are so many pubs closing in the UK?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'There is no single cause. Labour costs, employer National Insurance, business rates and alcohol duty have all risen together, while alcohol consumption has fallen, particularly among younger adults. Accommodation and food services has recorded the highest company insolvency rate of any sector every year since 2015, which shows how little margin many venues have to absorb rising costs.' ) ),
+                array( '@type' => 'Question', 'name' => 'Is a pub closure the same as a pub-company insolvency?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'No. A pub can close without any formal insolvency, and a pub company can enter insolvency while its sites keep trading under a new operator. Closure counts record premises going dark, while insolvency figures record companies entering a formal procedure. The 3,296 accommodation and food insolvencies in the year to May 2026 also cover hotels and restaurants, not pubs alone.' ) ),
+                array( '@type' => 'Question', 'name' => 'Which parts of the UK are losing the most pubs?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Every region of England and Wales lost pubs in 2025. The steepest declines were in the East Midlands, the North West, and Yorkshire and the Humber. Exact pub counts by region are not published in the underlying rating-list source, so we name the hardest-hit regions rather than giving precise regional figures that cannot be verified.' ) ),
+                array( '@type' => 'Question', 'name' => 'What should a pub director do if the business cannot pay its debts?', 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => 'Get advice early, while options remain open. The first question is whether the pub is viable before debt repayments, tax arrears or an unsustainable lease. Depending on the answer, routes include a Time to Pay arrangement with HMRC, a Company Voluntary Arrangement, administration, or a Creditors\' Voluntary Liquidation. If a winding-up petition is threatened, the timescale is short, so speak to a licensed insolvency practitioner quickly.' ) )
 				),
 			),
 		),

@@ -102,11 +102,20 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "winding-up-petition-tracker": "data_reference",
     "dissolutions-vs-insolvencies": "data_reference",
     "payment-practices-late-payment": "data_reference",
+    "pub-closures-in-the-uk": "data_reference",
     "cvl-statistics": "data_reference",
     "compulsory-liquidation-statistics": "data_reference",
     "administration-statistics": "data_reference",
     "company-insolvencies-by-sector": "data_reference",
     "construction-insolvency-statistics": "data_reference",
+
+    # sector_statistics — single-SIC-sector insolvency data pages (the
+    # per-sector rollout family: scripts/datahub/pages/sic_group_stats.py).
+    # A distinct sub-class of data_reference: same statistics-page discipline,
+    # plus its own real automated gate (scripts/sector_data_audit.py, wired
+    # into build_page.py --publish) requiring a sourced sector-context fact
+    # and a practitioner-voice insight paragraph on every page.
+    "furniture-insolvency-statistics": "sector_statistics",
 }
 
 
