@@ -11,8 +11,14 @@ Output: data/insolvency-statistics/sector_series.json
     "construction": {                                                    # Section F detail
         "section": {...},
         "subsectors": [ {code, level, label, annual:[...], monthly:[...]}, ... ]
-    }
+    },
+    "groups": [ {code, section, division, label, annual:[...], monthly:[...]}, ... ],   # all ~272 3-digit SIC groups
+    "divisions": [ {code, section, label, annual:[...], monthly:[...]}, ... ]           # all ~90 2-digit SIC divisions
   }
+
+"groups"/"divisions" are a generic, code-keyed capture of every row in Table 1c
+(not just Construction), for single-SIC-sector pages (e.g. furniture = group
+310) that don't need a bespoke sub-sector breakdown like Construction has.
 
 Annual covers 2016 onward; monthly only from Jan 2023 (the source does not
 publish monthly-by-industry before then). Suppressed cells ([x]/[z]/[c]) -> null.
@@ -86,6 +92,7 @@ def main() -> int:
         )
 
     sections, total, construction_sub = [], None, []
+    groups, divisions = [], []
     for r in rows[hi + 1:]:
         if not r or r[0] in (None, "", "Back to top"):
             continue
@@ -104,6 +111,15 @@ def main() -> int:
                 "level": "group" if grp not in (None, "") else "division",
                 "label": title(desc), "annual": a, "monthly": mth,
             })
+        if not is_section and grp not in (None, ""):  # generic 3-digit SIC group
+            groups.append({
+                "code": str(grp), "section": code, "division": str(div) if div else None,
+                "label": title(desc), "annual": a, "monthly": mth,
+            })
+        elif not is_section and div not in (None, ""):  # generic 2-digit SIC division
+            divisions.append({
+                "code": str(div), "section": code, "label": title(desc), "annual": a, "monthly": mth,
+            })
 
     construction_section = next((s for s in sections if s["code"] == "F"), None)
     out = {
@@ -113,9 +129,11 @@ def main() -> int:
         "total": total,
         "sections": sections,
         "construction": {"section": construction_section, "subsectors": construction_sub},
+        "groups": groups,
+        "divisions": divisions,
     }
     OUT.write_text(json.dumps(out, indent=2), encoding="utf-8")
-    print(f"Wrote {OUT.name}: {len(sections)} sections, "
+    print(f"Wrote {OUT.name}: {len(sections)} sections, {len(groups)} groups, {len(divisions)} divisions, "
           f"annual {annual_years[0]}-{annual_years[-1]}, "
           f"monthly {monthly_months[0]}..{monthly_months[-1]} ({len(monthly_months)} months), "
           f"{len(construction_sub)} construction sub-sectors")

@@ -31,6 +31,14 @@ function cd_datahub_known_slugs() {
         'administration-statistics',
         'company-insolvencies-by-sector',
         'construction-insolvency-statistics',
+        'furniture-insolvency-statistics',
+        'restaurant-insolvency-statistics',
+        'road-haulage-insolvency-statistics',
+        'recruitment-agency-insolvency-statistics',
+        'temporary-staffing-agency-insolvency-statistics',
+        'motor-vehicle-repair-insolvency-statistics',
+        'cleaning-company-insolvency-statistics',
+        'hotel-insolvency-statistics',
     );
 }
 
@@ -93,6 +101,38 @@ function cd_datahub_seo_meta( $slug ) {
         'construction-insolvency-statistics' => array(
             'title' => 'UK Construction Insolvency Statistics',
             'desc'  => 'UK construction insolvency statistics: company insolvencies in construction since 2016, the trend, sub-sector breakdown and construction\'s share of all company insolvencies.',
+        ),
+        'furniture-insolvency-statistics' => array(
+            'title' => 'UK Furniture Manufacturing Insolvency Statistics',
+            'desc'  => 'UK furniture manufacturing insolvency statistics: company insolvencies among furniture manufacturers since 2016, the monthly trend since 2023 and the sector\'s share of all company insolvencies.',
+        ),
+        'restaurant-insolvency-statistics' => array(
+            'title' => 'UK Restaurant Insolvency Statistics 2026 | Company Debt',
+            'desc'  => '858 restaurant and mobile food businesses entered insolvency between January and May 2026. See the latest monthly and annual restaurant insolvency figures.',
+        ),
+        'road-haulage-insolvency-statistics' => array(
+            'title' => 'UK Road Haulage Insolvency Statistics 2026 | Company Debt',
+            'desc'  => '149 road haulage and removals companies entered insolvency between January and May 2026. See the latest monthly and annual haulage insolvency figures.',
+        ),
+        'recruitment-agency-insolvency-statistics' => array(
+            'title' => 'Recruitment Agency Insolvency Statistics (UK)',
+            'desc'  => 'UK recruitment agency insolvency statistics: company insolvencies among permanent-placement recruitment agencies, year-to-date, rolling 12-month and annual figures.',
+        ),
+        'temporary-staffing-agency-insolvency-statistics' => array(
+            'title' => 'Temporary Staffing Agency Insolvency Statistics (UK)',
+            'desc'  => 'UK temporary staffing agency insolvency statistics: company insolvencies among temp and agency staffing businesses, year-to-date, rolling 12-month and annual figures.',
+        ),
+        'motor-vehicle-repair-insolvency-statistics' => array(
+            'title' => 'Motor Vehicle Repair Insolvency Statistics (UK)',
+            'desc'  => 'UK motor vehicle repair insolvency statistics: company insolvencies among garages and repair workshops, year-to-date, rolling 12-month and annual figures.',
+        ),
+        'cleaning-company-insolvency-statistics' => array(
+            'title' => 'Cleaning Company Insolvency Statistics (UK)',
+            'desc'  => 'UK cleaning company insolvency statistics: company insolvencies among commercial and industrial cleaning contractors, year-to-date, rolling 12-month and annual figures.',
+        ),
+        'hotel-insolvency-statistics' => array(
+            'title' => 'Hotel Insolvency Statistics (UK)',
+            'desc'  => 'UK hotel insolvency statistics: company insolvencies among hotels and similar accommodation, year-to-date, rolling 12-month and annual figures.',
         ),
     );
     return isset( $meta[ $slug ] ) ? $meta[ $slug ] : null;
@@ -406,6 +446,14 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             array( 'Administration Statistics', home_url( '/data/administration-statistics/' ) ),
             array( 'Company Insolvencies by Sector', home_url( '/data/company-insolvencies-by-sector/' ) ),
             array( 'Construction Insolvency Statistics', home_url( '/data/construction-insolvency-statistics/' ) ),
+            array( 'Furniture Manufacturing Insolvency Statistics', home_url( '/data/furniture-insolvency-statistics/' ) ),
+            array( 'Restaurant Insolvency Statistics', home_url( '/data/restaurant-insolvency-statistics/' ) ),
+            array( 'Road Haulage Insolvency Statistics', home_url( '/data/road-haulage-insolvency-statistics/' ) ),
+            array( 'Recruitment Agency Insolvency Statistics', home_url( '/data/recruitment-agency-insolvency-statistics/' ) ),
+            array( 'Temporary Staffing Agency Insolvency Statistics', home_url( '/data/temporary-staffing-agency-insolvency-statistics/' ) ),
+            array( 'Motor Vehicle Repair Insolvency Statistics', home_url( '/data/motor-vehicle-repair-insolvency-statistics/' ) ),
+            array( 'Cleaning Company Insolvency Statistics', home_url( '/data/cleaning-company-insolvency-statistics/' ) ),
+            array( 'Hotel Insolvency Statistics', home_url( '/data/hotel-insolvency-statistics/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -662,6 +710,230 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Construction company insolvencies (annual)',
                     'Construction company insolvencies (monthly)',
                     'Construction sub-sector insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'furniture-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/furniture-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Furniture Manufacturing Insolvency Statistics',
+                'description'      => 'Company insolvencies among furniture-manufacturing companies (SIC Division 31, Group 310), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Manufacturing only, excludes furniture wholesalers and retailers. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Furniture-manufacturing company insolvencies identified via Companies House SIC group 310; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'furniture manufacturing insolvency, furniture manufacturer insolvency, SIC 310, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Furniture manufacturing company insolvencies (annual)',
+                    'Furniture manufacturing company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'restaurant-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/restaurant-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Restaurant Insolvency Statistics',
+                'description'      => 'Company insolvencies among restaurants and mobile food service businesses (SIC group 561), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes pubs, bars and hotels. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Restaurant and mobile food service company insolvencies identified via Companies House SIC group 561; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'restaurant insolvency, restaurant insolvency statistics, SIC 561, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Restaurant company insolvencies (annual)',
+                    'Restaurant company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'road-haulage-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/road-haulage-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Road Haulage Insolvency Statistics',
+                'description'      => 'Company insolvencies among road freight and removals companies (SIC group 494), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes storage and courier activities. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Road freight and removals company insolvencies identified via Companies House SIC group 494; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'road haulage insolvency, haulage company insolvency, SIC 494, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Road haulage company insolvencies (annual)',
+                    'Road haulage company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'recruitment-agency-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/recruitment-agency-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Recruitment Agency Insolvency Statistics',
+                'description'      => 'Company insolvencies among permanent-placement recruitment agencies (SIC group 781), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes temporary staffing agencies. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Recruitment agency company insolvencies identified via Companies House SIC group 781; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'recruitment agency insolvency, recruitment agency insolvency statistics, SIC 781, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Recruitment agency company insolvencies (annual)',
+                    'Recruitment agency company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'temporary-staffing-agency-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/temporary-staffing-agency-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Temporary Staffing Agency Insolvency Statistics',
+                'description'      => 'Company insolvencies among temporary and agency staffing businesses (SIC group 782), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes permanent-placement recruitment agencies. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Temporary staffing agency company insolvencies identified via Companies House SIC group 782; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'temporary staffing agency insolvency, temp agency insolvency, SIC 782, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Temporary staffing agency company insolvencies (annual)',
+                    'Temporary staffing agency company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'motor-vehicle-repair-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/motor-vehicle-repair-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Motor Vehicle Repair Insolvency Statistics',
+                'description'      => 'Company insolvencies among motor vehicle repair and maintenance businesses (SIC group 452), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes sale of vehicles and parts. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Motor vehicle repair and maintenance company insolvencies identified via Companies House SIC group 452; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'motor vehicle repair insolvency, garage insolvency statistics, SIC 452, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Motor vehicle repair company insolvencies (annual)',
+                    'Motor vehicle repair company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'cleaning-company-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/cleaning-company-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Cleaning Company Insolvency Statistics',
+                'description'      => 'Company insolvencies among commercial and industrial cleaning contractors (SIC group 812), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes domestic cleaning and waste collection. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Commercial and industrial cleaning contractor company insolvencies identified via Companies House SIC group 812; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'cleaning company insolvency, cleaning contractor insolvency statistics, SIC 812, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Cleaning contractor company insolvencies (annual)',
+                    'Cleaning contractor company insolvencies (monthly)',
+                    'Share of all company insolvencies',
+                ),
+            ),
+        );
+    }
+
+    if ( 'hotel-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/hotel-insolvency-statistics/' );
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Hotel Insolvency Statistics',
+                'description'      => 'Company insolvencies among hotels and similar accommodation businesses (SIC group 551), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes restaurants, pubs and self-catering accommodation. Source: Insolvency Service.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01/2026-05',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
+                'measurementTechnique' => 'Hotel and similar accommodation company insolvencies identified via Companies House SIC group 551; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'keywords'        => 'hotel insolvency, hotel insolvency statistics, SIC 551, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Hotel company insolvencies (annual)',
+                    'Hotel company insolvencies (monthly)',
+                    'Share of all company insolvencies',
                 ),
             ),
         );

@@ -1,533 +1,6 @@
-"""Assemble the UK Company Insolvency Statistics data hub draft.
-
-Reads parsed JSON + chart SVGs and writes a WordPress block HTML draft to
-drafts/77399_uk-insolvency-statistics.html. Re-runnable: re-parse the source
-files then re-run this to refresh the page for a new monthly release.
-"""
-
-from __future__ import annotations
-
-import json
-from pathlib import Path
-from textwrap import dedent
-
-from build_insolvency_charts import build_all_charts, format_number, month_label
-
-ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data" / "insolvency-statistics"
-DRAFT_PATH = ROOT / "drafts" / "77399_uk-insolvency-statistics.html"
-
-# Logos for the masthead/source strip live in the active theme so they survive
-# content rewrites (KSES leaves <img> alone; the files are deployed via SFTP).
-THEME_ASSETS = "/wp-content/themes/company-debt-webpigment/assets/data-hub"
-
-WP_TEMPLATE = "templates/take-the-test-template.php"
-WP_POST_ID = 77399
-WP_TITLE = "UK Company Insolvency Statistics 2026"
-WP_SLUG = "uk-insolvency-statistics"
-STAGING_LINK = "https://comdebstage.wpengine.com/data/uk-insolvency-statistics/"
-META_DESCRIPTION = (
-    "Monthly UK company insolvency statistics using Insolvency Service and Companies House "
-    "data. Track CVLs, compulsory liquidations, administrations, insolvency rates and sector trends."
-)
-
-
-def load_data() -> dict:
-    return {
-        "metadata":  json.loads((DATA_DIR / "release_metadata.json").read_text(encoding="utf-8")),
-        "monthly":   json.loads((DATA_DIR / "monthly_series.json").read_text(encoding="utf-8")),
-        "rate":      json.loads((DATA_DIR / "rate_series.json").read_text(encoding="utf-8")),
-        "sector":    json.loads((DATA_DIR / "sector_breakdown.json").read_text(encoding="utf-8")),
-        "nations":   json.loads((DATA_DIR / "uk_nations.json").read_text(encoding="utf-8")),
-    }
-
-
-def fmt_pct(value):
-    if value is None:
-        return "n/a"
-    sign = "+" if value > 0 else ""
-    return f"{sign}{value}%"
-
-
-def latest_table_row(row: dict) -> str:
-    return (
-        f'<tr>'
-        f'<th scope="row">{row["procedure"]}</th>'
-        f'<td class="cd-num">{format_number(row["latest"])}</td>'
-        f'<td class="cd-num">{format_number(row["prior_month"])}</td>'
-        f'<td class="cd-num">{format_number(row["prior_year"])}</td>'
-        f'<td class="cd-num">{fmt_pct(row["month_change_pct"])}</td>'
-        f'<td class="cd-num">{fmt_pct(row["year_change_pct"])}</td>'
-        f'</tr>'
-    )
-
-
-# ── Hero ──────────────────────────────────────────────────────────────────
-
-def hero_block(meta: dict, latest_total: int) -> str:
-    """Wide 2-col hero. Title block left, fixed-width KPI card right.
-    Both sit inside the shared cd-w-hero container so they align with the
-    breadcrumb/byline rendered by the PHP template."""
-    return dedent(f"""\
-    <section class="cd-w-hero">
-      <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
-      <div class="cd-hero">
-      <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
-        <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was 10% lower than April 2026 and 16% lower than May 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
-        <dl class="cd-meta-grid">
-          <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
-          <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
-          <div class="cd-meta-item"><span>Next release</span><strong>{meta['next_release_date']}</strong></div>
-          <div class="cd-meta-item"><span>Source</span><strong>{meta['source_label']}</strong></div>
-        </dl>
-        <p class="cd-official-badge"><span aria-hidden="true"></span>{meta['status']}</p>
-      </div>
-
-      <aside class="cd-hero__panel" aria-label="Latest figures">
-        <p class="cd-kpi-label">Latest figures · England and Wales</p>
-        <div class="cd-main-kpi">
-          <span class="cd-main-kpi__v">{format_number(latest_total)}</span>
-          <span class="cd-main-kpi__k">company insolvencies, {meta['latest_month_label']}</span>
-        </div>
-        <div class="cd-change-row cd-change-row--down">
-          <span><strong>-10%</strong> vs April 2026</span>
-          <span><strong>-16%</strong> vs May 2025</span>
-        </div>
-        <div class="cd-kpi-divider" aria-hidden="true"></div>
-        <div class="cd-mini-kpi-grid">
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">1,423</span><span class="cd-mini-kpi__k">CVLs</span><span class="cd-mini-kpi__n">76% of total</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">285</span><span class="cd-mini-kpi__k">Compulsory</span><span class="cd-mini-kpi__n">-26% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">135</span><span class="cd-mini-kpi__k">Administrations</span><span class="cd-mini-kpi__n">-24% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">50.9</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 196 companies</span></div>
-        </div>
-      </aside>
-      </div>
-    </section>
-    """)
-
-
-def secnav_block() -> str:
-    """In-page section navigation. Sits below the source strip, above the
-    first section, matching the design order: masthead, hero, sources, nav."""
-    return dedent("""\
-    <nav class="cd-secnav cd-w-wide" aria-label="Page sections">
-      <a href="#figures">Latest figures</a>
-      <a href="#monthly">Monthly trend</a>
-      <a href="#longrun">Long-run</a>
-      <a href="#rate">Insolvency rate</a>
-      <a href="#procedures">By procedure</a>
-      <a href="#sector">Sector</a>
-      <a href="#nations">UK nations</a>
-      <a href="#method">Method</a>
-      <a href="#source">Source</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    """)
-
-
-def masthead_block() -> str:
-    """Shared data-hub identity bar: CompanyDebt brand lockup + inter-page nav.
-    The brand links back to the hub landing page; the nav is the shared data-hub
-    menu (this is the Insolvency Statistics tab). Mirrors the masthead on the
-    sibling data pages so the whole hub reads as one product with one menu."""
-    return dedent("""\
-    <div class="cd-masthead cd-w-wide">
-      <a class="cd-brand" href="/data/">
-        <span class="cd-brand__mark" aria-hidden="true">CD</span>
-        <span class="cd-brand__name">CompanyDebt</span>
-        <span class="cd-brand__sub">Insolvency Data Hub</span>
-      </a>
-      <nav class="cd-mastnav" aria-label="Data hub pages"><a href="/data/uk-insolvency-statistics/" aria-current="page">Insolvency Statistics</a><a href="/data/winding-up-petition-tracker/">Petition Tracker</a><a href="/data/dissolutions-vs-insolvencies/">Dissolutions</a><a href="/data/payment-practices-late-payment/">Late Payment</a></nav>
-    </div>
-    """)
-
-
-def srcstrip_block() -> str:
-    """Data-sources logo strip. Logos are served from the theme (THEME_ASSETS)
-    so a content rewrite can never strip or relink them."""
-    return dedent(f"""\
-    <div class="cd-w-wide" style="margin-top:8px;margin-bottom:8px">
-      <div class="cd-srcstrip">
-        <span class="cd-srcstrip__label">Data sources</span>
-        <div class="cd-srcstrip__logos">
-          <figure class="cd-srclogo"><img src="{THEME_ASSETS}/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
-          <figure class="cd-srclogo"><img src="{THEME_ASSETS}/logo-companies-house-trim.png" alt="Companies House logo"></figure>
-        </div>
-      </div>
-    </div>
-    """)
-
-
-# ── Latest figures table ──────────────────────────────────────────────────
-
-def latest_figures_block(meta: dict) -> str:
-    t = meta["latest_figures_table"]
-    rows_html = "".join(latest_table_row(r) for r in t["rows"])
-    return dedent(f"""\
-    <section class="cd-section cd-w-standard" id="figures">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">Snapshot <span>· May 2026</span></p>
-        <h2>Latest UK company insolvency figures</h2>
-        <p class="cd-section-intro">The May 2026 total was made up mainly of creditors' voluntary liquidations, and fell back across every main procedure. Administrations were 24% lower than in April, when more than 70 connected real estate companies entered insolvency in a single cluster.</p>
-      </div>
-      <div class="cd-tablewrap">
-        <table class="cd-table cd-table--latest">
-          <caption class="cd-table__caption">Company insolvencies in England and Wales by procedure, May 2026 compared with April 2026 and May 2025. Seasonally adjusted where available. Source: Insolvency Service / Companies House.</caption>
-          <thead>
-            <tr>
-              <th scope="col">Procedure</th>
-              <th scope="col" class="cd-num">May 2026</th>
-              <th scope="col" class="cd-num">April 2026</th>
-              <th scope="col" class="cd-num">May 2025</th>
-              <th scope="col" class="cd-num">Monthly change</th>
-              <th scope="col" class="cd-num">Annual change</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows_html}
-          </tbody>
-        </table>
-      </div>
-      <p class="cd-source-note">Seasonally adjusted, England and Wales. Percentage changes not shown where both values are below five. Source: Insolvency Service / Companies House.</p>
-    </section>
-    """)
-
-
-# ── Monthly chart panel ───────────────────────────────────────────────────
-
-def monthly_chart_block(charts: dict) -> str:
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="monthly">
-      <div class="cd-section-head cd-section-head--inline">
-        <div>
-          <p class="cd-eyebrow">Trend</p>
-          <h2>Monthly company insolvencies by procedure</h2>
-          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations dropped back in May after a connected real-estate cluster lifted the April figure.</p>
-        </div>
-        <div class="cd-chart-controls" role="tablist" aria-label="Time range">
-          <span class="cd-chart-controls__label">View range</span>
-          <button type="button" class="cd-chart-tab is-active" data-cd-view="post_covid" aria-pressed="true">Post-Covid</button>
-          <button type="button" class="cd-chart-tab" data-cd-view="5y" aria-pressed="false">5 years</button>
-          <button type="button" class="cd-chart-tab" data-cd-view="since_2000" aria-pressed="false">Since 2000</button>
-        </div>
-      </div>
-      <figure class="cd-chart-figure">
-        <div class="cd-chart-panel cd-chart-panel--hero">
-          <div class="cd-chart-view is-active" data-cd-view-pane="post_covid">{charts['monthly_stacked_post_covid']}</div>
-          <div class="cd-chart-view" data-cd-view-pane="5y" hidden>{charts['monthly_stacked_5y']}</div>
-          <div class="cd-chart-view" data-cd-view-pane="since_2000" hidden>{charts['monthly_stacked_since_2000']}</div>
-          <ul class="cd-legend" aria-label="Procedure colour legend">
-            <li><span class="cd-legend__sw" style="background:#1d3557"></span>CVLs</li>
-            <li><span class="cd-legend__sw" style="background:#a04646"></span>Compulsory liquidations</li>
-            <li><span class="cd-legend__sw" style="background:#b87333"></span>Administrations</li>
-            <li><span class="cd-legend__sw" style="background:#5a6373"></span>CVAs</li>
-            <li><span class="cd-legend__sw" style="background:#b8bcc4"></span>Receiverships</li>
-          </ul>
-        </div>
-        <figcaption class="cd-figcaption"><strong>Monthly UK company insolvencies by procedure, England and Wales.</strong> CVLs, compulsory liquidations and administrations are seasonally adjusted where available; CVAs and receivership appointments are not seasonally adjusted due to low volumes. Source: Insolvency Service / Companies House.</figcaption>
-      </figure>
-    </section>
-    """)
-
-
-# ── Long-run line chart panel with side notes ─────────────────────────────
-
-def longrun_block(charts: dict) -> str:
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="longrun">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">Long-run</p>
-        <h2>Long-run UK company insolvency trends since 2000</h2>
-        <p class="cd-section-intro">Volumes are now close to levels last seen around the 2008–09 recession. The rate is lower than the recession peak because the active company register has more than doubled since then.</p>
-      </div>
-      <div class="cd-longrun-grid">
-        <figure class="cd-chart-figure">
-          <div class="cd-chart-panel cd-chart-panel--longrun">
-            {charts['longrun_total_line']}
-          </div>
-          <figcaption class="cd-figcaption"><strong>Total monthly UK company insolvencies, England and Wales, 2000–2026.</strong> Seasonally adjusted. Vertical markers note the 2008–09 recession peak, the 2020–21 Covid support period and the post-Covid CVL peak. Source: Insolvency Service / Companies House.</figcaption>
-        </figure>
-        <aside class="cd-side-notes" aria-label="Key context">
-          <h3 class="cd-side-notes__title">What this means</h3>
-          <p class="cd-side-note__d">Current volumes are roughly equal to 2008–09 recession levels — but the insolvency rate is half that recession peak, because the active company register has more than doubled since.</p>
-          <p class="cd-side-note__d">The 2020–21 dip is the Covid support effect, not a real improvement in trading conditions: government support suppressed formal procedures sharply, then volumes rebounded.</p>
-          <p class="cd-side-note__d">The 2022–24 climb tracks the unwinding of Covid support, HMRC's return to active enforcement, and a wave of CVL filings catching up with companies that had stopped trading earlier.</p>
-        </aside>
-      </div>
-    </section>
-    """)
-
-
-# ── Rate section: text + callout | chart (2-col, chart-dominant) ──────────
-
-def rate_block(charts: dict, latest_rate: float) -> str:
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="rate">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">Rate <span>· 12-month rolling</span></p>
-        <h2>UK company insolvency rate (May 2026)</h2>
-      </div>
-      <div class="cd-rate-grid">
-        <div class="cd-rate-text">
-          <p class="cd-section-intro">In the 12 months to 31 May 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 196 companies entering insolvency.</p>
-          <p>The rate was lower than the 53.0 per 10,000 recorded for the 12 months to May 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
-          <div class="cd-callout-card">
-            <div class="cd-callout-card__row">
-              <span class="cd-callout-card__k">May 2026</span>
-              <span class="cd-callout-card__v">{latest_rate} <span class="cd-callout-card__u">per 10,000</span></span>
-            </div>
-            <div class="cd-callout-card__row">
-              <span class="cd-callout-card__k">2008–09 peak</span>
-              <span class="cd-callout-card__v">113.1 <span class="cd-callout-card__u">per 10,000</span></span>
-            </div>
-          </div>
-          <p class="cd-rate-text__note">The rate is calculated on a 12-month rolling basis using company insolvencies and the average number of companies on the effective register.</p>
-        </div>
-        <figure class="cd-chart-figure">
-          <div class="cd-chart-panel cd-chart-panel--rate">
-            {charts['rate_line']}
-          </div>
-          <figcaption class="cd-figcaption"><strong>12-month rolling UK company insolvency rate per 10,000 active companies, England and Wales.</strong> Calculated using company insolvencies and the average number of companies on the effective register. Source: Insolvency Service / Companies House.</figcaption>
-        </figure>
-      </div>
-    </section>
-    """)
-
-
-# ── Procedure card grid ───────────────────────────────────────────────────
-
-def procedure_cards_block() -> str:
-    rows = [
-        ("CVLs", "1,423", "Main procedure. 76% of all insolvencies.",
-         "CVL statistics", "/data/cvl-statistics/"),
-        ("Compulsory liquidations", "285", "Down 26% on April 2026. HMRC-led petitions.",
-         "Compulsory liquidation statistics", "/data/compulsory-liquidation-statistics/"),
-        ("Administrations", "135", "Down 24% after April's real-estate cluster.",
-         "Administration statistics", "/data/administration-statistics/"),
-        ("CVAs", "25", "Low by historical standards.", None, None),
-        ("Receiverships", "0", "Now a rare procedure.", None, None),
-    ]
-    def card_html(name, count, note, link_label, link_href):
-        link_html = (
-            f'<a class="cd-procard__link" href="{link_href}">{link_label} <span aria-hidden="true">→</span></a>'
-            if link_label else ''
-        )
-        return (
-            f'<article class="cd-procard">'
-            f'<h3 class="cd-procard__name">{name}</h3>'
-            f'<p class="cd-procard__value">{count}</p>'
-            f'<p class="cd-procard__note">{note}</p>'
-            f'{link_html}'
-            f'</article>'
-        )
-    rows_html = "".join(card_html(*r) for r in rows)
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="procedures">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">By procedure <span>· May 2026</span></p>
-        <h2>UK company insolvencies by procedure type</h2>
-        <p class="cd-section-intro">Each procedure has its own deep dive. Compulsory liquidations begin with a creditor's petition, tracked monthly in the <a href="/data/winding-up-petition-tracker/">winding-up petition statistics</a>.</p>
-      </div>
-      <div class="cd-procard-grid">{rows_html}</div>
-    </section>
-    """)
-
-
-# ── Sector section: table + chart (2-col) + caveat ────────────────────────
-
-def sector_block(sector: dict, charts: dict) -> str:
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="sector">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">Sector <span>· 12 months to May 2026</span></p>
-        <h2>UK company insolvencies by sector</h2>
-        <p class="cd-section-intro">The sector breakdown covers the 12 months to May 2026, ranked by volume. Construction remains the largest, ahead of wholesale and retail and accommodation and food. The full ranking and year-by-year trends are in the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, including the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>.</p>
-      </div>
-      <figure class="cd-chart-figure">
-        <div class="cd-chart-panel cd-chart-panel--sector">
-          {charts['sector_bars']}
-        </div>
-        <figcaption class="cd-figcaption"><strong>UK company insolvencies by industry section, 12 months to May 2026, England and Wales.</strong> Ranked by volume. SIC code is self-reported and uses the first recorded code. Source: Insolvency Service / Companies House.</figcaption>
-      </figure>
-      <aside class="cd-caveat">
-        <p><strong>About sector volumes.</strong> These are volumes, not sector failure rates. Larger sectors tend to have more insolvencies because they have more registered companies. SIC codes are self-reported, and the first recorded SIC code is used.</p>
-      </aside>
-    </section>
-    """)
-
-
-# ── UK nations: standard container + side note card ───────────────────────
-
-def nations_block(nations: dict) -> str:
-    ew = nations["england_and_wales"]
-    sc = nations["scotland"]
-    ni = nations["northern_ireland"]
-    rows = [
-        ("England and Wales", ew["total"], ew["rate_per_10k"], "Seasonally adjusted headline count"),
-        ("Scotland", sc["total"], sc["rate_per_10k"], "Not seasonally adjusted"),
-        ("Northern Ireland", ni["total"], ni["rate_per_10k"], "Not seasonally adjusted"),
-    ]
-    rows_html = "".join(
-        f'<tr><th scope="row">{name}</th><td class="cd-num">{format_number(total)}</td><td class="cd-num">{rate}</td><td>{note}</td></tr>'
-        for name, total, rate, note in rows
-    )
-    return dedent(f"""\
-    <section class="cd-section cd-w-standard" id="nations">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">UK nations <span>· May 2026</span></p>
-        <h2>UK company insolvencies by jurisdiction</h2>
-        <p class="cd-section-intro">Figures are reported separately for England and Wales, Scotland and Northern Ireland.</p>
-      </div>
-      <div class="cd-nations-grid">
-        <div class="cd-tablewrap">
-          <table class="cd-table cd-table--nations">
-            <caption class="cd-table__caption">Company insolvencies by UK jurisdiction, May 2026. Source: Insolvency Service / Companies House / Department for the Economy (NI).</caption>
-            <thead>
-              <tr>
-                <th scope="col">Jurisdiction</th>
-                <th scope="col" class="cd-num">May 2026</th>
-                <th scope="col" class="cd-num">Rate per 10,000</th>
-                <th scope="col">Notes</th>
-              </tr>
-            </thead>
-            <tbody>{rows_html}</tbody>
-          </table>
-        </div>
-        <aside class="cd-side-note cd-side-note--single">
-          <p class="cd-side-note__k">Important note</p>
-          <p class="cd-side-note__d">Scotland and Northern Ireland figures are not seasonally adjusted. Direct comparisons with England and Wales should account for this.</p>
-        </aside>
-      </div>
-    </section>
-    """)
-
-
-# ── Methodology (full-bleed band) ─────────────────────────────────────────
-
-def methodology_block() -> str:
-    return dedent("""\
-    <div class="cd-bleed cd-method-band">
-      <section class="cd-method-inner" id="method">
-        <div class="cd-section-head">
-          <p class="cd-eyebrow">Method</p>
-          <h2>UK company insolvency statistics: methodology</h2>
-        </div>
-        <p class="cd-section-intro">Company insolvency data is sourced mainly from Companies House. Compulsory liquidation data for England and Wales comes from the Insolvency Service, and compulsory liquidation data for Northern Ireland comes from the Department for the Economy in Northern Ireland.</p>
-        <p>The headline England and Wales figures use seasonally adjusted data where the Insolvency Service has identified seasonality. Scotland and Northern Ireland figures are shown on an unadjusted basis.</p>
-        <p>The statistics count formal company insolvency procedures. They do not include members' voluntary liquidations, dissolutions or ordinary company closures.</p>
-        <h3>Data limitations</h3>
-        <ul class="cd-limits">
-          <li>The latest month is provisional and can be revised.</li>
-          <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
-          <li>Industry is based on self-reported SIC codes.</li>
-          <li>Registered office addresses are not a reliable guide to where a company traded.</li>
-          <li>Solvent company closures are not included.</li>
-        </ul>
-      </section>
-    </div>
-    """)
-
-
-# ── Source + citation (2-col card) ────────────────────────────────────────
-
-def source_citation_block(meta: dict) -> str:
-    citation = (
-        "CompanyDebt. (2026). UK Company Insolvency Statistics 2026. CompanyDebt.com. "
-        "Data sourced from the Insolvency Service and Companies House company insolvency statistics."
-    )
-    return dedent(f"""\
-    <section class="cd-section cd-w-standard" id="source">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">Source</p>
-        <h2>UK company insolvency data: source and citation</h2>
-      </div>
-      <div class="cd-cite-card">
-        <div class="cd-cite-card__left">
-          <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026.</dd>
-            <dt>Supporting source</dt><dd>Companies House company register data.</dd>
-            <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
-            <dt>Next scheduled release</dt><dd>{meta['next_release_date']}</dd>
-            <dt>Status</dt><dd>{meta['status']}</dd>
-          </dl>
-        </div>
-        <div class="cd-cite-card__right">
-          <p class="cd-eyebrow">How to cite this page</p>
-          <p class="cd-cite-text" id="cd-citation-text">{citation}</p>
-          <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-text">Copy citation</button>
-        </div>
-      </div>
-    </section>
-    """)
-
-
-# ── FAQ (FAQPage schema injected by mu-plugin) ────────────────────────────
-
-def faq_block() -> str:
-    qa = [
-        (
-            "How many UK company insolvencies were there in May 2026?",
-            "There were 1,868 registered company insolvencies in England and Wales in May 2026, on a seasonally adjusted basis. That was 10% lower than April 2026 and 16% lower than May 2025. Scotland recorded 100 insolvencies and Northern Ireland 30 in the same month."
-        ),
-        (
-            "What is the current UK company insolvency rate?",
-            "The 12-month rolling company insolvency rate for England and Wales was 50.9 per 10,000 active companies in the year to May 2026 — equal to one in 196 companies. The rate is lower than the 53.0 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
-        ),
-        (
-            "Which procedure accounts for the most UK company insolvencies?",
-            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,423 CVLs in May 2026 — 76% of all company insolvencies for the month. Compulsory liquidations (285) and administrations (135) followed, with a small number of CVAs (25) and no receiverships."
-        ),
-        (
-            "Which UK sectors have the most company insolvencies?",
-            "Across the 12 months to May 2026, construction (3,803, 17%), wholesale and retail (3,527, 15%), and accommodation and food services (3,296, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
-        ),
-        (
-            "When is the next UK insolvency statistics release?",
-            "The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 17 July 2026. This page is updated each month from the official release."
-        ),
-        (
-            "Where does this UK insolvency data come from?",
-            "Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them."
-        ),
-    ]
-    items_html = "".join(
-        f'<details class="cd-faq__item"><summary class="cd-faq__q">{q}</summary><div class="cd-faq__a"><p>{a}</p></div></details>'
-        for q, a in qa
-    )
-    return dedent(f"""\
-    <section class="cd-section cd-w-standard" id="faq">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">FAQ</p>
-        <h2>UK company insolvency statistics: frequently asked questions</h2>
-      </div>
-      <div class="cd-faq">{items_html}</div>
-    </section>
-    """)
-
-
-# ── Final CTA (full-bleed soft band) ──────────────────────────────────────
-
-def final_cta_block() -> str:
-    return dedent("""\
-    <div class="cd-bleed cd-final-cta">
-      <div class="cd-final-cta__inner">
-        <div class="cd-final-cta__copy">
-          <p class="cd-final-cta__head">Worried your company is at risk?</p>
-          <p class="cd-final-cta__body">Our licensed insolvency practitioners offer free, confidential advice. The sooner you call, the more options you have.</p>
-        </div>
-        <div class="cd-final-cta__actions">
-          <a class="cd-final-cta__btn" href="https://companydebt.com/contact-us/">Speak to an adviser</a>
-          <a class="cd-final-cta__phone" href="tel:08000746757">0800 074 6757 <span>· free, no obligation</span></a>
-        </div>
-      </div>
-    </div>
-    """)
-
-
-# ── CSS ──────────────────────────────────────────────────────────────────
-
-DASHBOARD_CSS = """
+<!-- CD-NO-AUTOEDIT: data_reference page generated by scripts/datahub/pages/sic_group_stats.py. Internal-link and article-rewrite pipelines must skip this file. -->
+<!-- wp:html -->
+<style>
 /* ============================================================
    COMPANY DEBT — UK INSOLVENCY DATA HUB
    Scoped under .cd-data-hub. Multi-width layout, panel-wrapped
@@ -1610,60 +1083,198 @@ DASHBOARD_CSS = """
   .cd-data-hub .cd-w-wide, .cd-data-hub .cd-bleed { padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-mini-kpi-grid { grid-template-columns: 1fr; }
 }
-"""
+</style>
+<div class="cd-data-hub">
+<div class="cd-masthead cd-w-wide">
+  <a class="cd-brand" href="/data/">
+    <span class="cd-brand__mark" aria-hidden="true">CD</span>
+    <span class="cd-brand__name">CompanyDebt</span>
+    <span class="cd-brand__sub">Insolvency Data Hub</span>
+  </a>
+  <nav class="cd-mastnav" aria-label="Data hub pages"><a href="/data/uk-insolvency-statistics/" aria-current="page">Insolvency Statistics</a><a href="/data/winding-up-petition-tracker/">Petition Tracker</a><a href="/data/dissolutions-vs-insolvencies/">Dissolutions</a><a href="/data/payment-practices-late-payment/">Late Payment</a></nav>
+</div>
 
+<section class="cd-w-hero">
+  <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
+  <div class="cd-hero">
+  <div class="cd-hero__copy">
+    <h1><span class="cd-h1__line">UK Cleaning Company</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
+    <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
+    <p class="cd-lede">There were 59 insolvencies among commercial and industrial cleaning contractors in England and Wales between January and May 2026, compared with 59 in the same period of 2025. The rolling 12-month total was 172, up from 161 for the previous 12 months.</p>
+    <p class="cd-lede">The data covers SIC Division 81 and Group 812: commercial and industrial cleaning contractors. Domestic cleaning services and waste collection are recorded under separate SIC codes.</p>
+    <dl class="cd-meta-grid">
+      <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
+      <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
+      <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+      <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
+    </dl>
+    <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
+  </div>
+  <aside class="cd-hero__panel" aria-label="Latest figures">
+    <p class="cd-kpi-label">Cleaning contractors (SIC 812) &middot; England and Wales</p>
+    <div class="cd-main-kpi">
+      <span class="cd-main-kpi__v">59</span>
+      <span class="cd-main-kpi__k">insolvencies, January to May 2026</span>
+    </div>
+    <div class="cd-change-row">
+      <span><strong>unchanged from 59</strong> in 2025</span>
+    </div>
+    <div class="cd-kpi-divider" aria-hidden="true"></div>
+    <div class="cd-mini-kpi-grid">
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">172</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to May 2026, up from 161 for the previous 12 months</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">91% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">7.0%</span><span class="cd-mini-kpi__k">Of administrative and support services insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
+    </div>
+  </aside>
+  </div>
+</section>
+<div class="cd-w-wide" style="margin-top:8px;margin-bottom:8px">
+  <div class="cd-srcstrip">
+    <span class="cd-srcstrip__label">Data sources</span>
+    <div class="cd-srcstrip__logos">
+      <figure class="cd-srclogo"><img src="/wp-content/themes/company-debt-webpigment/assets/data-hub/logo-insolvency-service-trim.png" alt="The Insolvency Service logo"></figure>
+      <figure class="cd-srclogo"><img src="/wp-content/themes/company-debt-webpigment/assets/data-hub/logo-companies-house-trim.png" alt="Companies House logo"></figure>
+    </div>
+  </div>
+</div>
 
-def assemble_draft() -> str:
-    d = load_data()
-    charts = build_all_charts(DATA_DIR)
-    meta = d["metadata"]
-    monthly = d["monthly"]
-    latest_total = monthly["series"]["total"][-1]
-    latest_rate  = d["rate"]["rate_per_10k"][-1]
+<section class="cd-section cd-w-standard" id="latest">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Latest data</p>
+    <h2>Latest cleaning company insolvency figures</h2>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Latest cleaning company insolvency figures, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
+      <tbody><tr><th scope="row">Cleaning contractors insolvencies</th><td class="cd-num">59</td><td class="cd-num">59 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">172</td><td class="cd-num">161 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">14</td><td class="cd-num">11 in April 2026; 11 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">172</td><td class="cd-num">172 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">172</td><td class="cd-num">n/a</td><td>2024</td><td>England and Wales</td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are flat modestly. The 2025 total of 172 remained well above the pre-pandemic total of 90 in 2019.</p>
+</section>
+<section class="cd-section cd-w-standard" id="comparison">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Are cleaning company insolvencies changing in 2026?</h2>
+  </div>
+  <div class="cd-side-notes">
+    <p class="cd-side-note__d cd-sector-fact">Insolvencies among commercial and industrial cleaning contractors were broadly flat in the January to May 2026 period, with 59 cases compared with 59 during the same months of 2025 (+0.0%). That contrasts with administrative and support services overall, where insolvencies moved -21.7% over the same comparison.</p>
+    <p class="cd-side-note__d">Commercial and industrial cleaning contractors accounted for 7.0% of all administrative and support services company insolvencies in the January to May 2026 period (59 of 843 cases), up from 5.5% over the same months of 2025.</p>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Cleaning contractors vs administrative and support services overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Cleaning contractors</th><th scope="col" class="cd-num">Administrative and support services overall</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">59</td><td class="cd-num">843</td></tr>
+        <tr><th scope="row">Same period 2025</th><td class="cd-num">59</td><td class="cd-num">1,077</td></tr>
+        <tr><th scope="row">Change</th><td class="cd-num">+0.0%</td><td class="cd-num">-21.7%</td></tr>
+        <tr><th scope="row">Share of administrative and support services</th><td class="cd-num">7.0%</td><td class="cd-num">n/a</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+</section>
+<section class="cd-section cd-w-wide" id="trend">
+  <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Cleaning company insolvencies by month</h2>
+    <p class="cd-section-intro">May 2026 recorded 14 insolvencies, against 11 in April 2026 and 11 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
+    <p class="cd-section-intro">Cleaning contractors sit within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, alongside administrative and support services generally. See also the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
+  <figure class="cd-chart-figure">
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="812-monthly-title 812-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="812-monthly-title">Monthly insolvencies among commercial and industrial cleaning contractors, England and Wales</title><desc id="812-monthly-desc">Monthly company insolvencies among commercial and industrial cleaning contractors, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">10</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">20</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">40</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">50</text></g><polyline points="60.0,277.92 80.6,243.84 101.2,164.32 121.8,238.16 142.4,147.28 163.0,238.16 183.6,249.52 204.2,260.88 224.8,249.52 245.4,277.92 266.0,209.76 286.6,215.44 307.2,255.20 327.8,243.84 348.4,249.52 369.0,181.36 389.6,232.48 410.2,192.72 430.8,238.16 451.4,272.24 472.0,221.12 492.6,232.48 513.2,215.44 533.8,232.48 554.4,243.84 575.0,266.56 595.6,243.84 616.2,221.12 636.8,249.52 657.4,226.80 678.0,255.20 698.6,215.44 719.2,249.52 739.8,187.04 760.4,204.08 781.0,204.08 801.6,249.52 822.2,266.56 842.8,226.80 863.4,249.52 884.0,232.48" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="277.92" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:6</title></circle><circle cx="80.6" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:12</title></circle><circle cx="101.2" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:26</title></circle><circle cx="121.8" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:13</title></circle><circle cx="142.4" cy="147.28" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:29</title></circle><circle cx="163.0" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:13</title></circle><circle cx="183.6" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:11</title></circle><circle cx="204.2" cy="260.88" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:9</title></circle><circle cx="224.8" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:11</title></circle><circle cx="245.4" cy="277.92" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:6</title></circle><circle cx="266.0" cy="209.76" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:18</title></circle><circle cx="286.6" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:17</title></circle><circle cx="307.2" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:10</title></circle><circle cx="327.8" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:12</title></circle><circle cx="348.4" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:11</title></circle><circle cx="369.0" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:23</title></circle><circle cx="389.6" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:14</title></circle><circle cx="410.2" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:21</title></circle><circle cx="430.8" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:13</title></circle><circle cx="451.4" cy="272.24" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:7</title></circle><circle cx="472.0" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:16</title></circle><circle cx="492.6" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:14</title></circle><circle cx="513.2" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:17</title></circle><circle cx="533.8" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:14</title></circle><circle cx="554.4" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:12</title></circle><circle cx="575.0" cy="266.56" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:8</title></circle><circle cx="595.6" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:12</title></circle><circle cx="616.2" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:16</title></circle><circle cx="636.8" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:11</title></circle><circle cx="657.4" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:15</title></circle><circle cx="678.0" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:10</title></circle><circle cx="698.6" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:17</title></circle><circle cx="719.2" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:11</title></circle><circle cx="739.8" cy="187.04" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:22</title></circle><circle cx="760.4" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:19</title></circle><circle cx="781.0" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:19</title></circle><circle cx="801.6" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:11</title></circle><circle cx="822.2" cy="266.56" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:8</title></circle><circle cx="842.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:15</title></circle><circle cx="863.4" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:11</title></circle><circle cx="884.0" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:14</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among commercial and industrial cleaning contractors, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+  </figure>
+</section>
 
-    # NB: dashboard JS is injected by the mu-plugin.
-    # Related guidance block intentionally removed — this is a stats page,
-    # not an advice hub.
-    body = "\n".join([
-        f'<style>{DASHBOARD_CSS}</style>',
-        '<div class="cd-data-hub">',
-        masthead_block(),
-        hero_block(meta, latest_total),
-        srcstrip_block(),
-        secnav_block(),
-        latest_figures_block(meta),
-        monthly_chart_block(charts),
-        longrun_block(charts),
-        rate_block(charts, latest_rate),
-        procedure_cards_block(),
-        sector_block(d["sector"], charts),
-        nations_block(d["nations"]),
-        methodology_block(),
-        source_citation_block(meta),
-        faq_block(),
-        final_cta_block(),
-        '</div>',
-    ])
+<section class="cd-section cd-w-standard" id="pressure">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Context</p>
+    <h2>Why commercial and industrial cleaning contractors are under pressure</h2>
 
-    metadata_comments = (
-        f"<!-- CD-NO-AUTOEDIT: data_reference page generated by build_insolvency_dashboard.py."
-        f" Internal-link and article-rewrite pipelines must skip this file. -->\n"
-        f"<!-- TITLE: {WP_TITLE} -->\n"
-        f"<!-- POST ID: {WP_POST_ID} / TYPE: pages / AUTHOR: 34 / FM: 0 / TEMPLATE: {WP_TEMPLATE} -->\n"
-        f"<!-- LINK: {STAGING_LINK} -->\n"
-        f"<!-- META_DESC: {META_DESCRIPTION} -->\n\n"
-    )
-    return metadata_comments + "<!-- wp:html -->\n" + body + "\n<!-- /wp:html -->\n"
+    <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
+  </div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>Labour cost is almost the entire cost base</h3><p class="cd-side-note__d">Cleaning is overwhelmingly a labour cost business, so minimum wage and employer National Insurance increases hit margins directly, with little scope to absorb them elsewhere in the cost structure.</p></div><div class="cd-note-item"><h3>Fixed-price contracts agreed before costs rose</h3><p class="cd-side-note__d">Multi-year cleaning contracts are often priced years in advance and cannot be repriced until renewal, so a contractor can be locked into a rate that stopped covering its costs long before the contract ends.</p></div></div>
+</section>
+<section class="cd-section cd-w-standard" id="practitioner">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Practitioner view</p>
+    <h2>What we see in cleaning company insolvency cases</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the cases we see, cleaning contracting is almost entirely a labour cost business, so minimum wage and employer National Insurance increases hit the cost base directly, with very little else to trim.</p><p class="cd-side-note__d cd-side-note__insight">Multi-year contracts are the specific trap. A price agreed before a cost increase often cannot be revisited until renewal, leaving a contractor committed to an unprofitable rate for months or years.</p></div>
+</section>
 
+<section class="cd-section cd-w-standard" id="annual">
+  <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Cleaning company insolvencies by year, 2016 to 2025</h2>
+    <p class="cd-section-intro">Cleaning contractors insolvencies rose from 81 in 2016 to a peak of 172 in 2024. Since then, insolvencies have risen 0% to 172 in 2025. The 2025 total of 172 remained well above the pre-pandemic total of 90 in 2019.</p>
+    <p class="cd-section-intro">Recorded insolvencies reached their series low of 56 in 2020, when pandemic restrictions and government support distorted normal insolvency patterns.</p></div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Annual company insolvencies among commercial and industrial cleaning contractors, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
+      <tbody><tr><th scope="row">2016</th><td class="cd-num">81</td></tr><tr><th scope="row">2017</th><td class="cd-num">96</td></tr><tr><th scope="row">2018</th><td class="cd-num">111</td></tr><tr><th scope="row">2019</th><td class="cd-num">90</td></tr><tr><th scope="row">2020</th><td class="cd-num">56</td></tr><tr><th scope="row">2021</th><td class="cd-num">86</td></tr><tr><th scope="row">2022</th><td class="cd-num">141</td></tr><tr><th scope="row">2023</th><td class="cd-num">171</td></tr><tr><th scope="row">2024</th><td class="cd-num">172</td></tr><tr><th scope="row">2025</th><td class="cd-num">172</td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+</section>
 
-def main() -> int:
-    DRAFT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    DRAFT_PATH.write_text(assemble_draft(), encoding="utf-8")
-    size = DRAFT_PATH.stat().st_size
-    print(f"Wrote draft: {DRAFT_PATH}")
-    print(f"Size: {size:,} bytes")
-    return 0
+<section class="cd-section cd-w-standard" id="about">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">How to read this</p>
+    <h2>How to interpret the cleaning company figures</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">Cleaning company insolvencies can move on a handful of cases month to month. Prefer the year-to-date or 12-month rolling total for the steadier read.</p><p class="cd-side-note__d">The count is a volume, not a failure rate. It is not adjusted for how many cleaning contractors are registered, so it cannot be read as a sector-wide risk of insolvency.</p><p class="cd-side-note__d">This is commercial and industrial cleaning only (SIC 812). Domestic cleaning and waste collection sit under separate SIC codes and are not included here.</p></div>
+</section>
 
+<div class="cd-bleed cd-method-band">
+  <section class="cd-method-inner" id="method">
+    <div class="cd-section-head">
+      <p class="cd-eyebrow">Method</p>
+      <h2>UK company insolvency statistics: methodology</h2>
+    </div>
+    <p class="cd-section-intro">Company insolvency data is sourced mainly from Companies House. Compulsory liquidation data for England and Wales comes from the Insolvency Service, and compulsory liquidation data for Northern Ireland comes from the Department for the Economy in Northern Ireland.</p>
+    <p>The headline England and Wales figures use seasonally adjusted data where the Insolvency Service has identified seasonality. Scotland and Northern Ireland figures are shown on an unadjusted basis.</p>
+    <p>The statistics count formal company insolvency procedures. They do not include members' voluntary liquidations, dissolutions or ordinary company closures.</p>
+    <h3>Data limitations</h3>
+    <ul class="cd-limits">
+      <li>The latest month is provisional and can be revised.</li>
+      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
+      <li>Industry is based on self-reported SIC codes.</li>
+      <li>Registered office addresses are not a reliable guide to where a company traded.</li>
+      <li>Solvent company closures are not included.</li>
+    </ul>
+  </section>
+</div>
 
-if __name__ == "__main__":
-    raise SystemExit(main())
+<section class="cd-section cd-w-standard" id="source">
+  <div class="cd-section-head"><p class="cd-eyebrow">Source</p><h2>Source and citation</h2></div>
+  <div class="cd-cite-card">
+    <div class="cd-cite-card__left">
+      <dl>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026 (Table 1c, by industry).</dd>
+        <dt>Supporting source</dt><dd>Companies House company register data.</dd>
+        <dt>Publication date</dt><dd>19 June 2026</dd>
+        <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Status</dt><dd>Accredited official statistics</dd>
+      </dl>
+    </div>
+    <div class="cd-cite-card__right">
+      <p class="cd-eyebrow">How to cite this page</p>
+      <p class="cd-cite-text" id="cd-citation-cleaning-company-insolvency-statistics">CompanyDebt. (2026). UK Cleaning Company Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).</p>
+      <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-cleaning-company-insolvency-statistics">Copy citation</button>
+    </div>
+  </div>
+</section>
+<div class="cd-bleed cd-final-cta">
+  <div class="cd-final-cta__inner">
+    <div class="cd-final-cta__copy">
+      <p class="cd-final-cta__head">Worried your company is at risk?</p>
+      <p class="cd-final-cta__body">Our licensed insolvency practitioners offer free, confidential advice. The sooner you call, the more options you have.</p>
+    </div>
+    <div class="cd-final-cta__actions">
+      <a class="cd-final-cta__btn" href="https://companydebt.com/contact-us/">Speak to an adviser</a>
+      <a class="cd-final-cta__phone" href="tel:08000746757">0800 074 6757 <span>· free, no obligation</span></a>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- /wp:html -->

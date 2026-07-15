@@ -86,3 +86,11 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 ## Site infrastructure rules
 
 - **Redirects**: all redirects live in the Quick Redirects plugin only (`wp-admin/admin.php?page=redirect-updates`). Never add redirects via the Redirection plugin, Yoast, .htaccess, or any other mechanism. The Redirection plugin is installed but intentionally deactivated — do not reactivate it.
+
+## Git hygiene
+
+Plain-English version: git commits and merges are just internal record-keeping. They never touch the live website by themselves — staging/live pushes are separate and still follow the rules below. Because of that, there is no need to ask permission for ordinary commits/merges to `main`; the only pushes that need Piers's explicit yes are staging→live pushes to the actual site.
+
+- Commit freely during a session — treat it as autosave, no need to ask.
+- When Piers indicates he's happy with the session's work (says he's done, satisfied, or ends the session), automatically: commit anything outstanding, merge the working branch into `main`, push `main` to origin, and delete the merged branch. Do this every time, without asking.
+- If a session ends abruptly without that happening (crash, dropped connection, Piers just closes the window), the next session should run `python scripts/check_unmerged_branches.py` at the start and surface any warning verbatim before doing anything else — this is the safety net for the rare miss, not the primary mechanism.
