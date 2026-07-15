@@ -1573,6 +1573,96 @@ H2: FAQs About Company Liquidation
 
 ---
 
+### /liquidation/members-voluntary-liquidation/ — Members' Voluntary Liquidation
+
+**Slug:** `members-voluntary-liquidation` | **WP ID:** 7676 | **Registered:** 2026-07-15
+
+**Family:** Template 9 (Specific closure route or insolvency procedure — MVL is named explicitly in that template's use-for list). Refined here with the Heading Promotion Test and the cross-family patterns; this registration is the binding spec and supersedes the general Template 9 shape and the 2026-06-11 adopted outline for this slug.
+
+**Title:** Members' Voluntary Liquidation: Process, Costs and Tax
+
+**Why this diverges from the flat brief structure:** the source brief (Google/AI-retrieval implementation brief, July 2026) proposed 11 top-level H2s matching its own section list one-for-one. That would duplicate slots this framework already owns (Requirements, Alternatives, at-a-Glance) and inflate the H2 count past what Template 9 and the Heading Promotion Test support. Every requirement from the brief is preserved below, folded into the correct family slot as an H3, table, or callout instead of a standalone H2.
+
+```
+H1: Members' Voluntary Liquidation: Process, Costs and Tax
+
+Intro (no H2 before it):
+  P1: Define MVL — solvent-company closure, 12-month solvency test, licensed IP appointed, surplus distributed to shareholders.
+  P2: Not automatically the right route above £25,000 — depends on shareholder tax position, MVL fee, and unresolved liabilities. (Prevents the banned £25,000 break-even framing.)
+
+H2: Members' Voluntary Liquidation at a Glance
+  → Route/eligibility table. No H3s.
+  → Columns: Your Position / Route to Consider
+  → Rows: solvent + aggregate pre-dissolution distributions ≤ £25,000 → strike-off may be cheaper;
+    solvent + material cash/assets → MVL may give capital treatment and formal closure;
+    solvent but property/claims/multiple shareholders/unresolved tax → MVL may suit, needs individual scoping;
+    cannot pay every liability + interest in full → MVL not appropriate, consider CVL.
+  → Soft CTA below: "Check Whether Your Company Qualifies for an MVL"
+
+H2: What Is a Members' Voluntary Liquidation?
+  → No H3s for the core definition. Bold inline labels: MVL meaning / Who decides (members' special resolution) / Who acts (licensed IP as liquidator).
+  H3: When an MVL Is Suitable
+    → Eligibility checklist (ticks): ceased/ceasing trading, liabilities properly reviewed, every debt + interest payable within ≤12 months, tax up to date, contingent/disputed claims assessed, shareholder approval available, tax position understood as individual not blanket.
+  H3: When an MVL Is Not Suitable
+    → Disqualifier box: cannot pay all liabilities; directors cannot make the declaration on reasonable grounds; unresolved claims make the 12-month position unreliable; likely benefit doesn't justify the fee.
+
+H2: Preparing for a Members' Voluntary Liquidation
+  → H3 per stage — process is central to the title, earned per Template 9's "(Procedure Step Keyword)" slot. The six process stages are split across three H2s (two H3s each) rather than one six-H3 H2, to clear article_audit.py check 25 (3+ H3s under one H2) cleanly rather than rely on its soft/non-blocking status — no content is duplicated, each stage still appears exactly once, satisfying the brief's "one six-stage timeline" rule.
+  H3: Review and Preparation
+  H3: Declaration of Solvency and the 12-Month Test
+    → Explains: majority-directors, proper enquiry, statement of assets/liabilities, period ≤12 months, s.89(4) offence test is "without reasonable grounds," not automatic on a later claim.
+    → "Liabilities Directors Commonly Miss" table lives here (one table, not per-liability H3s): Corporation Tax/VAT/PAYE, statutory interest, lease dilapidations, warranties/guarantees, pending litigation, disputed invoices, employment liabilities, professional fees to close, overdrawn DLA, contingent consideration, historic-work claims.
+    → Restrained Novalpina note here: first-instance decision on the creditor-payment test, appeal position checked before publish, not cited as settled appellate law.
+
+H2: Passing the Resolution and Filing Notices
+  H3: Shareholder Resolution and Appointment
+  H3: Notices and Statutory Filings
+    → Declaration of Solvency filing, special resolution filing, liquidator's appointment notice, Gazette publication — each stated separately, no collapsed "within 15 days" claim.
+
+H2: Completing a Members' Voluntary Liquidation
+  H3: Assets, Creditors and Distributions
+  H3: Final Account and Dissolution
+    → No final general meeting. Final account prepared, sent to members, filed with the required return; dissolution after the statutory period (IA 1986 s.94).
+
+H2: What to Prepare Before Starting an MVL
+  → Checklist. No H3s. (Requirements slot — folds the brief's prep checklist and filing/document requirements together.)
+  → Items: latest statutory + management accounts, bank balances, creditor list, CT/VAT/PAYE position, asset schedule, property/investment details, DLA, leases/contracts, current/possible claims, employee liabilities, shareholder register, future trading intentions, accountant/tax-adviser contact.
+  → Final CTA: "Speak to a Licensed Insolvency Practitioner About an MVL" — explain what happens next (eligibility review, records requested, fee scope, no commitment created by enquiring).
+
+H2: Costs and Tax Treatment of a Members' Voluntary Liquidation
+  → Cost and tax are each named keyword variants for this exact page (MVL cost, MVL cost UK, MVL tax, MVL BADR), so each earns its own H3. Split from timing/delay (below) into its own H2 — two H3s here, two there — to clear check 25 cleanly.
+  H3: How Much Does an MVL Cost?
+    → Scoped fee table — Case Type / Common Features / Suitable Pricing Description (simple cash-only / standard owner-managed / complex).
+    → Fee components kept distinct: IP fee (flat £3,500 + VAT per data/statutory_fees.json), VAT, statutory bond, Gazette/filing expenses, legal fees, valuation costs, tax/accountancy work outside scope.
+    → CTA: "Request a Scoped MVL Quotation"
+  H3: Is an MVL Tax-Efficient?
+    → Capital-treatment explainer, current CGT position, BADR rate (18%) and conditions, lifetime limit, s.1030A £25,000 threshold explained as a statutory rule (not a break-even), winding-up anti-avoidance rule (CTM36305 conditions, not automatic on re-trading within 2 years).
+    → MVL-vs-strike-off decision table + two fully-qualified worked examples (interim substitute for the embedded calculator, which is out of scope for this pass — flagged separately as a dev ticket).
+
+H2: Timescales and Delays in a Members' Voluntary Liquidation
+  H3: How Long Does an MVL Take?
+    → Milestone table (preparation / appointment / initial distribution / creditors paid / final account / dissolution), not one blanket timescale.
+    → 2026 Insolvency Service outcome-data evidence box, clearly labelled as sector data, not Company Debt's own results.
+  H3: What Can Delay or Complicate an MVL?
+    → Two-column delay table (missing records, outstanding returns, property/investments, overdrawn DLA, disputed claims, multiple share classes, overseas assets, lease/warranty exposure, legal proceedings).
+
+H2: Alternatives to Members' Voluntary Liquidation
+  → Comparison table only. No H3s (a 3-way MVL/strike-off/CVL comparison is exactly what the decision-tree treats as table-only, not the category-H3 default from cross-family pattern B).
+  → Columns: Factor / MVL / Strike-Off / CVL. Rows: company position, professional appointment, asset distribution, tax treatment, current filing cost, creditor protection, best suited to.
+
+H2: Frequently Asked Questions About Members' Voluntary Liquidation
+  → FAQ accordion.
+  → 6 FAQs: Can an MVL last longer than 12 months? / How quickly can shareholders receive an initial distribution? / Can a dormant company enter an MVL? / Can company property or investments be distributed without being sold? / Can I start another company after an MVL? / What happens if a creditor appears after the MVL begins?
+
+H2: Related Members' Voluntary Liquidation Guides
+  → wp:list block. No H3s. Final H2 (per the non-negotiable rule 8 ordering — FAQ then Related Guides, not the other way round).
+  → Links: Creditors' Voluntary Liquidation, Company Strike-Off and Dissolution, Voluntary Liquidation overview, Liquidation Costs, Liquidation Deadlines and Time Limits, Business Asset Disposal Relief / company-closure tax guide.
+```
+
+**Notes:** Methodology, Sources, reviewer bio and verification date stay outside the H-tag flow per rule 12 (footer/aside module, not H2s). The embedded MVL-vs-strike-off calculator from the source brief is deferred — the "Is an MVL Tax-Efficient?" H3 ships with the decision table + two worked examples instead, which the brief itself allows as the acceptable interim version.
+
+---
+
 ## Backfill on existing rewrites
 
 Articles already rewritten under earlier H-tag rubrics will be reassessed against this framework on the user's instruction. The audit will check:

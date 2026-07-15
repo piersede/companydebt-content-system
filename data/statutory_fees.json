@@ -62,8 +62,8 @@
   "cvl_practitioner_fee": {
     "value": "£3,500",
     "superseded": [],
-    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£7,000", "£4,000\\s*(?:–|-|to)\\s*£6,000"],
-    "description": "Company Debt CVL practitioner fee, plus VAT, standard fixed fee for a straightforward case. Changed from a £4,000-£7,000 range to a flat £3,500 on 2026-07-15 (owner). Note: £4,000-£5,000 is NOT a drift pattern here - it is the current all-in figure (see cvl_all_in).",
+    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£7,000", "£4,000\\s*(?:–|-|to)\\s*£6,000", "£4[\\s-]*(?:–|-|to)?[\\s-]*£7\\s*k"],
+    "description": "Company Debt CVL practitioner fee, plus VAT, standard fixed fee for a straightforward case. Changed from a £4,000-£7,000 range to a flat £3,500 on 2026-07-15 (owner). Note: £4,000-£5,000 is NOT a drift pattern here - it is the current all-in figure (see cvl_all_in). Drift regex widened 2026-07-15 to also catch the '£4-£7k' shorthand range that appeared on some pages.",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
     "source_updated": "2026-07-15"
@@ -92,8 +92,8 @@
   "mvl_practitioner_fee": {
     "value": "£3,500",
     "superseded": [],
-    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "£2,000\\s*(?:–|-|to)\\s*£4,000"],
-    "description": "Company Debt MVL practitioner fee, plus VAT, standard fixed fee for a solvent company. Changed from a £2,000-£4,000 range to a flat £3,500 on 2026-07-15 (owner).",
+    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "£2,000\\s*(?:–|-|to)\\s*£4,000", "MVL[^.<>]{0,40}£3,000\\s*(?:–|-|to)\\s*£5,000", "£3,000\\s*(?:–|-|to)\\s*£5,000[^.<>]{0,40}(?:MVL|plus VAT)", "MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "MVL[^.<>]{0,25}£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k", "£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k[^.<>]{0,25}(?:MVL|IP fee)"],
+    "description": "Company Debt MVL practitioner fee, plus VAT, standard fixed fee for a solvent company. Changed from a £2,000-£4,000 range to a flat £3,500 on 2026-07-15 (owner). Drift regex widened 2026-07-15: several MVL pages carried the fee as a £3,000-£5,000, £2,000-£5,000 or '£2-£5k' range, which the original £2,000-£4,000 pattern did not catch, so check_statutory_fees.py let them through. The new variants are deliberately gated to MVL/IP-fee context, because a bare £2,000-£5,000 or £3,000-£5,000 range also legitimately describes PGI premiums, pre-pack evaluator fees and legal-challenge costs - a context-free pattern flagged those as false positives, and a guard that cries wolf gets ignored.",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
     "source_updated": "2026-07-15"
