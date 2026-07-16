@@ -69,15 +69,15 @@ function cd_datahub_seo_meta( $slug ) {
         ),
         'uk-insolvency-statistics' => array(
             'title' => 'UK Company Insolvency Statistics: Latest Monthly Data',
-            'desc'  => 'Latest UK company and business insolvency statistics: monthly headline counts, the 12-month rolling rate, the procedure mix and a sector breakdown, from the Insolvency Service.',
+            'desc'  => 'Latest UK insolvency statistics: monthly headline counts, the 12-month rolling rate, procedure mix and sector breakdown, from the Insolvency Service.',
         ),
         'winding-up-petition-tracker' => array(
             'title' => 'Winding-Up Petition Statistics (UK): Monthly Gazette Data',
-            'desc'  => 'Monthly UK winding-up petition statistics from The Gazette: petitions advertised each month, winding-up orders made and the trend. A data source, not legal advice.',
+            'desc'  => 'Monthly UK winding-up petition statistics from The Gazette: petitions advertised, orders made and the trend. A data source, not legal advice.',
         ),
         'dissolutions-vs-insolvencies' => array(
             'title' => 'Company Dissolutions vs Insolvencies (UK Data)',
-            'desc'  => 'UK company dissolution statistics set against formal insolvencies: how many companies are dissolved each month, incorporations, and why most closures are solvent.',
+            'desc'  => 'UK company dissolutions set against formal insolvencies: how many companies are dissolved each month, incorporations, and why most closures are solvent.',
         ),
         'payment-practices-late-payment' => array(
             'title' => 'Payment Practices Reporting and Late Payment Data (UK)',
@@ -85,23 +85,23 @@ function cd_datahub_seo_meta( $slug ) {
         ),
         'cvl-statistics' => array(
             'title' => 'UK CVL Statistics: Creditors\' Voluntary Liquidations',
-            'desc'  => 'UK creditors\' voluntary liquidation (CVL) statistics: monthly volumes since 2000, the share of all company insolvencies and the rate per 10,000 companies. From the Insolvency Service.',
+            'desc'  => 'UK creditors\' voluntary liquidation (CVL) statistics: monthly volumes since 2000, share of all company insolvencies and the rate per 10,000 companies.',
         ),
         'compulsory-liquidation-statistics' => array(
             'title' => 'UK Compulsory Liquidation Statistics: Monthly Data',
-            'desc'  => 'UK compulsory liquidation statistics: monthly court-ordered winding-up volumes since 2000, the share of all company insolvencies and the rate per 10,000 companies.',
+            'desc'  => 'UK compulsory liquidation statistics: monthly court-ordered winding-up volumes since 2000, share of all insolvencies and the rate per 10,000.',
         ),
         'administration-statistics' => array(
             'title' => 'UK Company Administration Statistics: Monthly Data',
-            'desc'  => 'UK company administration statistics: monthly volumes since 2000, the share of all company insolvencies and the rate per 10,000 companies. From the Insolvency Service.',
+            'desc'  => 'UK company administration statistics: monthly volumes since 2000, share of all company insolvencies and the rate per 10,000 companies.',
         ),
         'company-insolvencies-by-sector' => array(
             'title' => 'UK Company Insolvencies by Sector',
-            'desc'  => 'UK company insolvencies by industry sector: which sectors have the most, annual trends since 2016 and the latest 12-month breakdown across all SIC sections. From the Insolvency Service.',
+            'desc'  => 'UK company insolvencies by sector: which industries have the most, annual trends since 2016 and the latest 12-month breakdown across all SIC sections.',
         ),
         'construction-insolvency-statistics' => array(
             'title' => 'UK Construction Insolvency Statistics',
-            'desc'  => 'UK construction insolvency statistics: company insolvencies in construction since 2016, the trend, sub-sector breakdown and construction\'s share of all company insolvencies.',
+            'desc'  => 'UK construction insolvency statistics: insolvencies in construction since 2016, the trend, sub-sector breakdown and construction\'s share of the total.',
         ),
         'furniture-insolvency-statistics' => array(
             'title' => 'UK Furniture Manufacturing Insolvency Statistics',
