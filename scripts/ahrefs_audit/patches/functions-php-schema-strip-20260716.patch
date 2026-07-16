@@ -1,0 +1,84 @@
+--- tmp/staging_pull/wp-content/themes/company-debt-webpigment/functions.php.bak-a11y-schema-empty-strip-20260716	2026-07-16 10:58:03.752829400 +0100
++++ /tmp/edited_functions.php	2026-07-16 10:55:51.761455100 +0100
+@@ -1201,11 +1201,81 @@
+             }
+         }
+ 
++        // 4) Strip null/empty values from every JSON-LD node (added 2026-07-16).
++        //
++        //    THE ACTUAL CAUSE of the ~375 "Schema.org validation error" pages.
++        //    Schema Pro emits the sitewide FinancialService node with its
++        //    opening-hours and geo settings left blank:
++        //
++        //      "addressRegion": null
++        //      "openingHoursSpecification":[{"dayOfWeek":[""],"opens":"","closes":""}]
++        //      "geo":{"latitude":"","longitude":""}
++        //
++        //    `dayOfWeek` is a DayOfWeek enumeration and "" is not a member, so
++        //    the graph fails validation on every page that renders the node -
++        //    i.e. all of them. An OMITTED optional property is valid; an empty
++        //    one is not. So drop them rather than invent values.
++        //
++        //    Note for whoever reads this next: fixes (1) and (2) above were
++        //    added on 2026-07-02 to clear this same issue and did not move the
++        //    count (375 before, 375 after, change +1). They corrected the date
++        //    format and the empty image - neither of which was what Ahrefs was
++        //    objecting to. Don't guess at this one; re-check the emitted graph.
++        //
++        //    Fixing it properly means filling in real opening hours and geo
++        //    coordinates in Schema Pro's settings, which is better for local
++        //    SEO. This strip is the safe floor, not the ceiling.
++        $html = preg_replace_callback(
++            '#(<script[^>]+type=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)#is',
++            function( $m ) {
++                $data = json_decode( $m[2], true );
++                if ( json_last_error() !== JSON_ERROR_NONE || ! is_array( $data ) ) {
++                    return $m[0]; // Leave anything we cannot parse untouched.
++                }
++                $json = wp_json_encode(
++                    cd_schema_strip_empty( $data ),
++                    JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
++                );
++                return $json ? $m[1] . $json . $m[3] : $m[0];
++            },
++            $html
++        );
++
+         return $html;
+     } );
+ }, 0 );
+ 
+ /**
++ * Recursively drop null / empty-string / empty-array values from a JSON-LD
++ * graph, and discard any node left with nothing but its @type.
++ *
++ * List arrays are re-indexed so they stay JSON lists; associative arrays keep
++ * their keys. Getting that distinction wrong silently turns an object into an
++ * array, so the check is explicit.
++ */
++function cd_schema_strip_empty( $node ) {
++    if ( ! is_array( $node ) ) {
++        return $node;
++    }
++    $is_list = ( array_keys( $node ) === range( 0, count( $node ) - 1 ) );
++    $out     = array();
++    foreach ( $node as $k => $v ) {
++        if ( is_array( $v ) ) {
++            $v = cd_schema_strip_empty( $v );
++        }
++        if ( $v === null || $v === '' || $v === array() ) {
++            continue;
++        }
++        // A node reduced to nothing but its @type carries no information.
++        if ( is_array( $v ) && array_keys( $v ) === array( '@type' ) ) {
++            continue;
++        }
++        $out[ $k ] = $v;
++    }
++    return $is_list ? array_values( $out ) : $out;
++}
++
++/**
+  * Testimonial meta description + title length caps (added 2026-07-02).
+  *
+  * Ahrefs flagged 69 individual /testimonials/* pages with meta descriptions
