@@ -123,6 +123,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "motor-vehicle-repair-insolvency-statistics": "sector_statistics",
     "cleaning-company-insolvency-statistics": "sector_statistics",
     "hotel-insolvency-statistics": "sector_statistics",
+    "estate-agency-insolvency-statistics": "sector_statistics",
 }
 
 

@@ -62,6 +62,7 @@ PAGE_REGISTRY = {
     'motor-vehicle-repair-insolvency-statistics': 'cc_builder.data.pages.motor_vehicle_repair_insolvency_statistics',
     'cleaning-company-insolvency-statistics': 'cc_builder.data.pages.cleaning_company_insolvency_statistics',
     'hotel-insolvency-statistics': 'cc_builder.data.pages.hotel_insolvency_statistics',
+    'estate-agency-insolvency-statistics': 'cc_builder.data.pages.estate_agency_insolvency_statistics',
     'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
     # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
     'construction': 'cc_builder.data.pages.construction_sector',

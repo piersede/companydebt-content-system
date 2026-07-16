@@ -203,6 +203,15 @@ PAGES = [
         "meta": "UK hotel insolvency statistics: company insolvencies among hotels and similar accommodation, year-to-date, rolling 12-month and annual figures.",
         "content": "",
     },
+    {
+        "slug": "estate-agency-insolvency-statistics",
+        "title": "Estate Agency Insolvency Statistics (UK)",
+        "parent": "data",
+        "template": TEMPLATE,
+        "seo_title": "Estate Agency Insolvency Statistics (UK)",
+        "meta": "UK estate agency insolvency statistics: company insolvencies among estate agents and property management businesses, year-to-date, rolling 12-month and annual figures.",
+        "content": "",
+    },
 ]
 
 

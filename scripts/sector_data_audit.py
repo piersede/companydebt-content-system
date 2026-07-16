@@ -220,11 +220,12 @@ H2_KEYWORD_STOP = {
 }
 H2_KEYWORD_SECTIONS = (
     "latest", "trend", "comparison", "pressure", "practitioner", "longterm",
-    "annual", "rate", "about", "commercial",
+    "annual", "rate", "about", "commercial", "findings", "procedure", "faq",
 )
-# "policy" is deliberately excluded: a policy-update heading (e.g. a named
-# tax/duty change) legitimately won't contain the sector keyword every time,
-# and it's inherently unique per policy topic — no cannibalization risk.
+# "policy" and "spike" are deliberately excluded: a policy-update heading
+# (e.g. a named tax/duty change) or a spike-correction heading (e.g. a named
+# statistical distortion) legitimately won't contain the sector keyword every
+# time, and each is inherently unique per topic — no cannibalization risk.
 
 
 def check_h2_keyword_coverage(body: str) -> CheckResult:

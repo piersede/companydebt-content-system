@@ -535,6 +535,15 @@ DASHBOARD_CSS = """
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -698,6 +707,21 @@ DASHBOARD_CSS = """
   font-weight: 500;
   color: var(--cd-muted);
   margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1576,9 +1600,28 @@ DASHBOARD_CSS = """
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }

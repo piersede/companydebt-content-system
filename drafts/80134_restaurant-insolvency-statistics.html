@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -171,6 +180,21 @@
   font-weight: 500;
   color: var(--cd-muted);
   margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1049,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1100,12 +1143,15 @@
   <div class="cd-hero__copy">
     <h1><span class="cd-h1__line">UK Restaurant</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
+
     <p class="cd-lede">There were 858 insolvencies among restaurants and mobile food service businesses in England and Wales between January and May 2026, compared with 887 in the same period of 2025. The rolling 12-month total was 2,108, down slightly from 2,187 for the previous 12 months.</p>
-    <p class="cd-lede">The data covers SIC Division 56 and Group 561: restaurants, cafes and mobile or takeaway food service businesses. Pubs, bars and other beverage-serving venues are recorded separately (SIC group 563).</p>
+
+    <p class="cd-lede">This covers restaurants, cafes and mobile or takeaway food service businesses (the official industry code is SIC group 561). Pubs, bars and other beverage-serving venues are recorded separately (SIC group 563).</p>
     <dl class="cd-meta-grid">
       <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
       <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+      <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 561</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
     </dl>
     <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
@@ -1138,6 +1184,7 @@
   </div>
 </div>
 
+
 <section class="cd-section cd-w-standard" id="latest">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Latest data</p>
@@ -1152,29 +1199,29 @@
   </div>
   <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are falling modestly. The 2025 total of 2,137 remained well above the pre-pandemic total of 1,465 in 2019.</p>
 </section>
-<section class="cd-section cd-w-standard" id="comparison">
-  <div class="cd-section-head">
-    <p class="cd-eyebrow">Comparison</p>
-    <h2>Are restaurant insolvencies falling in 2026?</h2>
-  </div>
-  <div class="cd-side-notes">
-    <p class="cd-side-note__d cd-sector-fact">Insolvencies among restaurants and mobile food service businesses were broadly falling in the January to May 2026 period, with 858 cases compared with 887 during the same months of 2025 (-3.3%). That contrasts with accommodation and food service overall, where insolvencies moved -4.6% over the same comparison.</p>
-    <p class="cd-side-note__d">Restaurants and mobile food service businesses accounted for 64.1% of all accommodation and food service company insolvencies in the January to May 2026 period (858 of 1,338 cases), up from 63.3% over the same months of 2025.</p>
-  </div>
-  <div class="cd-tablewrap">
-    <table class="cd-table">
-      <caption class="cd-table__caption">Restaurants vs accommodation and food service overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Restaurants</th><th scope="col" class="cd-num">Accommodation and food service overall</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">858</td><td class="cd-num">1,338</td></tr>
-        <tr><th scope="row">Same period 2025</th><td class="cd-num">887</td><td class="cd-num">1,402</td></tr>
-        <tr><th scope="row">Change</th><td class="cd-num">-3.3%</td><td class="cd-num">-4.6%</td></tr>
-        <tr><th scope="row">Share of accommodation and food service</th><td class="cd-num">64.1%</td><td class="cd-num">n/a</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
-</section>
+  <section class="cd-section cd-w-standard" id="comparison">
+    <div class="cd-section-head">
+      <p class="cd-eyebrow">Comparison</p>
+      <h2>Are restaurant insolvencies falling in 2026?</h2>
+    </div>
+    <div class="cd-side-notes">
+      <p class="cd-side-note__d cd-sector-fact">Insolvencies among restaurants and mobile food service businesses were broadly falling in the January to May 2026 period, with 858 cases compared with 887 during the same months of 2025, a fall of 3.3%. That contrasts with accommodation and food service overall, where insolvencies fell 4.6% over the same period.</p><p class="cd-side-note__d">Restaurants and mobile food service businesses accounted for 64.1% of all accommodation and food service company insolvencies in the January to May 2026 period (858 of 1,338 cases), up from 63.3% over the same months of 2025.</p>
+    </div>
+    <div class="cd-tablewrap">
+  <table class="cd-table">
+    <caption class="cd-table__caption">Restaurants vs accommodation and food service overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+    <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Restaurants</th><th scope="col" class="cd-num">Accommodation and food service overall</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">858</td><td class="cd-num">1,338</td></tr>
+      <tr><th scope="row">Same period 2025</th><td class="cd-num">887</td><td class="cd-num">1,402</td></tr>
+      <tr><th scope="row">Change</th><td class="cd-num">-3.3%</td><td class="cd-num">-4.6%</td></tr>
+      <tr><th scope="row">Share of accommodation and food service</th><td class="cd-num">64.1%</td><td class="cd-num">n/a</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  </section>
+
 <section class="cd-section cd-w-wide" id="trend">
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Restaurant insolvencies by month</h2>
     <p class="cd-section-intro">May 2026 recorded 184 insolvencies, against 198 in April 2026 and 187 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
@@ -1215,6 +1262,8 @@
   </div>
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
 </section>
+
+
 <section class="cd-section cd-w-standard" id="rate">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Context</p>
@@ -1240,6 +1289,7 @@
   </div>
   <div class="cd-side-notes"><p class="cd-side-note__d">A fall in industry insolvencies does not make an individual cash-flow problem less urgent. If a restaurant cannot meet payroll, VAT, rent or supplier payments as they fall due, the useful question is whether the underlying trade is viable before debt repayments and arrears.</p><p class="cd-side-note__d">Acting early gives directors more scope to negotiate a <a href="/hmrc/time-to-pay-hmrc/">Time to Pay arrangement</a> with HMRC, agree terms with landlords and suppliers, or consider a formal rescue procedure such as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> or <a href="/company-administration/">administration</a>.</p><p class="cd-side-note__d">Once a <a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">winding-up petition</a>, forfeiture action or supplier stoppage begins, those choices narrow quickly, and <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> may be the only realistic route left.</p></div>
 </section>
+
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1269,6 +1319,7 @@
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>19 June 2026</dd>
         <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Industry scope</dt><dd>SIC 561: restaurants, cafes and mobile or takeaway food service businesses.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>

@@ -527,58 +527,236 @@ SECTORS = {
         "division_code": "78",
         "parent_section_code": "N",
         "parent_section_label": "administrative and support services",
+        "parent_kind": "division",
+        "parent_label": "employment activities",
         "h1a": "UK Temporary Staffing Agency",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
         "eyebrow": "Temporary staffing agencies",
         "keyword": "temporary staffing agency",
         "singular": "temporary staffing agency",
-        "plural": "temporary and agency staffing businesses",
-        "scope_description": "temporary and agency staffing businesses",
-        "exclusion_note": "Permanent-placement recruitment agencies are recorded separately (SIC group 781).",
-        "notes": [
-            "Temporary staffing is a smaller sector by insolvency count, so monthly "
-            "figures can move sharply on a handful of cases. Prefer the "
-            "year-to-date or 12-month rolling total for the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many staffing agencies are registered, so it cannot be read as a "
-            "sector-wide risk of insolvency.",
-            "This is temporary and agency staffing only (SIC 782). Permanent-"
-            "placement recruitment agencies sit under a separate SIC code and are "
-            "covered on their own page.",
+        "plural": "temporary employment agencies",
+        "scope_description": ("agencies supplying workers on a temporary basis, "
+                              "including temporary office, industrial, medical, "
+                              "nursing and teaching staff"),
+        "exclusion_note": ("Permanent-placement and executive-search agencies "
+                           "(SIC 781) and longer-term human resources provision "
+                           "(SIC 783) are recorded separately."),
+        "hero_note": ("The direction matters more than the size of the increase. "
+                      "Insolvencies across employment activities as a whole fell "
+                      "15.3% over the same period, and permanent-placement agency "
+                      "insolvencies fell 29.5%. Temporary staffing is moving "
+                      "against its own parent sector, not simply following a "
+                      "wider rise."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "59% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "176 vs 111"},
+            {"value": "34.3%", "label": "of SIC 78 insolvencies", "sub": "up from 27.0% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, the defining pressure is the payroll funding "
-            "gap: agencies must pay temporary workers weekly, often before the "
-            "client invoice for that work has even been raised, let alone paid.",
-            "That gap is usually bridged with invoice finance. When a funder "
-            "tightens terms or a large client's payment slips, the agency can be "
-            "funding a payroll it has no immediate way to recover.",
+        "comparison_intro": [
+            ("Yes, on the two more reliable comparisons. The 72 insolvencies "
+             "recorded from January to May 2026 were 7.5% higher than the 67 in "
+             "the same period of 2025, and the rolling 12-month total rose 11.7%, "
+             "from 162 to 181."),
+            ("The monthly figures are more volatile. May's 12 cases were down "
+             "from 16 in April but slightly above the 11 recorded in May 2025, "
+             "and the 2026 path so far has been uneven rather than a steady climb. "
+             "One monthly fall does not outweigh the year-to-date and rolling "
+             "comparisons, but nor do those comparisons describe a smooth "
+             "month-by-month rise."),
+            ("The fairest reading is a renewed deterioration from an already high "
+             "level: the annual series reached a new peak of 176 in 2025. These "
+             "are Company Debt calculations from Insolvency Service Table 1c data."),
+        ],
+        "divergence": {
+            "heading": "Temporary staffing is moving against the wider recruitment sector",
+            "caption": "Temporary staffing agencies against related recruitment classifications",
+            "intro": [
+                ("This is the more important finding on the page. While temporary "
+                 "staffing insolvencies rose, every wider recruitment measure "
+                 "fell: permanent-placement agencies (SIC 781) were down 29.5%, "
+                 "employment activities as a whole (SIC 78) down 15.3%, and the "
+                 "broad administrative and support services section (SIC N) down "
+                 "21.7%."),
+                ("Temporary staffing accounted for 34.3% of all insolvencies "
+                 "across employment activities in the first five months of 2026, "
+                 "up from 27.0% a year earlier, a rise of 7.3 percentage points. "
+                 "Its share of the wider administrative and support services "
+                 "section also rose, from 6.2% to 8.5%."),
+                ("The increase is not just the sector being carried along by a "
+                 "general rise in recruitment failures, because there was no such "
+                 "rise. Temporary staffing is diverging from its peers."),
+            ],
+            "peers": [
+                {"code": "782", "kind": "group", "label": "Temporary employment agencies (SIC 782)", "emphasise": True},
+                {"code": "781", "kind": "group", "label": "Permanent-placement agencies (SIC 781)"},
+                {"code": "78", "kind": "division", "label": "Employment activities overall (SIC 78)"},
+                {"code": "N", "kind": "section", "label": "Administrative and support services (SIC N)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("The annual series does not show a steady decade-long rise. Temporary "
+             "employment agency insolvencies fell from 132 in 2016 to 94 in 2017, "
+             "then sat between 102 and 111 through 2018 and 2019."),
+            ("Recorded cases fell to 78 in 2020 and 92 in 2021, when government "
+             "support, creditor restrictions and disruption to normal insolvency "
+             "processes held the figures down, before returning to 108 in 2022 "
+             "and 107 in 2023."),
+            ("The clear deterioration came later. The annual total rose to 160 in "
+             "2024 and then to a series high of 176 in 2025, which was 10.0% "
+             "above 2024 and 58.6% above the 111 recorded in 2019."),
+        ],
+        "latest_note": (
+            "Both the year-to-date and rolling totals are higher than a year "
+            "earlier, though the monthly pattern is uneven. The fairest reading is "
+            "a renewed deterioration at an already elevated level, rather than a "
+            "steady month-by-month rise."
+        ),
+        "annual_intro": (
+            "The 2025 peak should not be read as proof that every part of the "
+            "temporary staffing market weakened at once. SIC 782 covers agencies "
+            "serving very different client sectors, including industrial, office, "
+            "healthcare and education staffing, and Table 1c does not separate them."
+        ),
+        "pressure_heading": "Why temporary staffing agencies remain financially exposed",
+        "pressure_intro": [
+            ("The current market picture is mixed rather than uniformly bad, and "
+             "the insolvency data is retrospective: it reflects financial distress "
+             "that can build over a long period. The pressures below are current "
+             "sector conditions and common financial mechanisms, not a claim about "
+             "the cause of any individual insolvency."),
         ],
         "pressure": [
             {
-                "h3": "The payroll funding gap",
-                "body": ("Temporary workers are typically paid weekly, well ahead "
-                         "of when client invoices for that work are settled, so "
-                         "agencies carry a permanent funding gap that widens as "
-                         "volumes grow."),
+                "h3": "The wider vacancy market is still weak",
+                "body": [
+                    ("The broader hiring market remains subdued. The ONS estimated "
+                     "707,000 UK vacancies in March to May 2026, down 4.2% on a "
+                     "year earlier and the lowest total since early 2021."),
+                    ("A weaker vacancy market can reduce placement volumes and "
+                     "sharpen competition between agencies, though the ONS series "
+                     "covers vacancies across the whole economy rather than "
+                     "temporary staffing agencies alone."),
+                ],
             },
             {
-                "h3": "Volatile, fast-moving client demand",
-                "body": ("Temporary staffing is often the first cost a client cuts "
-                         "when demand softens and the first they restore when it "
-                         "picks up, making booked volumes swing faster than in most "
-                         "other sectors."),
+                "h3": "Employers are favouring temporary over permanent hiring",
+                "body": [
+                    ("Temporary hiring has recently held up better than permanent "
+                     "recruitment. The KPMG and REC UK Report on Jobs found "
+                     "temporary billings grew in June 2026 at their fastest rate "
+                     "since April 2023, while permanent placements kept falling."),
+                    ("This does not contradict the insolvency data. It suggests "
+                     "trading demand may be improving for some agencies while "
+                     "financial stress remains high for others. Insolvency is "
+                     "often a lagging outcome, and an agency can win more temporary "
+                     "work while still carrying thin margins, arrears or an "
+                     "overstretched funding facility."),
+                    ("The REC survey is UK-wide market context, not the source of "
+                     "the England and Wales insolvency counts."),
+                ],
+            },
+            {
+                "h3": "Direct payroll costs remain high",
+                "body": [
+                    ("For agencies that employ temporary workers directly, payroll "
+                     "on-costs are a real margin issue. In the 2026 to 2027 tax "
+                     "year, employers pay National Insurance at 15% above the "
+                     "secondary threshold of £96 a week, or £417 a month."),
+                    ("Whether that damages the agency depends on the contract and "
+                     "the charge rate. Where a higher employment cost cannot be "
+                     "passed through promptly, gross margin narrows even when "
+                     "billings hold steady. Not every SIC 782 company employs its "
+                     "workers directly, though; some use umbrella companies or "
+                     "other arrangements."),
+                ],
+            },
+            {
+                "h3": "Growth can increase the funding requirement",
+                "body": [
+                    ("Temporary staffing carries an unusual cash-flow risk: growth "
+                     "can increase the external funding needed before it improves "
+                     "cash. Workers and payroll taxes are paid before the "
+                     "corresponding client invoice is collected."),
+                    ("If assignments expand quickly, debtor days lengthen or a "
+                     "large client disputes an invoice, the agency may need more "
+                     "working capital exactly when its billings look strongest. "
+                     "Invoice finance narrows the timing gap but creates reliance "
+                     "on funding headroom, eligible invoices and client "
+                     "concentration limits."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Temporary Staffing Agency Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
-        "related": ('Temporary staffing sits within the wider '
-                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside administrative and support services generally. See also '
+        "practitioner_view": [
+            ("In the temporary staffing cases we handle, insolvency rarely begins "
+             "with one quiet month. More often the gross margin narrows while the "
+             "cash tied up in weekly payroll and unpaid client invoices grows, and "
+             "the agency looks busy from the outside while its funding headroom "
+             "quietly runs down."),
+            ("The warning signs we see are usually operational: debtor days "
+             "rising, a growing reliance on one client, disputed timesheets, "
+             "invoices becoming ineligible for funding, reduced advance rates, and "
+             "PAYE, National Insurance or VAT being deferred to protect payroll. A "
+             "large client failure is especially damaging, because the agency has "
+             "often already paid the workers who generated the unpaid invoice."),
+            ("So the useful tests are not turnover and worker headcount alone. By "
+             "the time a director calls us, the number that has usually moved "
+             "first is gross margin after payroll on-costs. We would rather look "
+             "at that, weekly payroll funding, client concentration, debtor "
+             "ageing, invoice-finance availability and any HMRC arrears."),
+        ],
+        "commercial_transition": [
+            ("A rise or fall in sector insolvencies does not decide whether an "
+             "individual agency is viable. The immediate questions are whether it "
+             "can fund the next payroll, meet PAYE and National Insurance when "
+             "due, and collect enough of its debtor book to stay within its "
+             "funding facility."),
+            ('A business may still be viable if its client book is profitable and '
+             'the problem is a temporary funding gap or historic arrears. It is '
+             'more serious where gross margin no longer covers payroll on-costs '
+             'and overheads, invoices are being excluded from funding, or one '
+             'client is an unsafe share of the ledger.'),
+            ('Acting before payroll or HMRC liabilities are missed gives directors '
+             'more room to negotiate with funders and clients, seek an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'refinance the debtor book, or consider a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once the funding facility is withdrawn or payroll cannot be met, the '
+             'options narrow quickly, and '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may become the only realistic route.'),
+        ],
+        "notes": [
+            "SIC group 782, temporary employment agency activities, covers "
+            "companies whose recorded primary business is supplying workers on a "
+            "temporary basis. Permanent-placement and executive-search agencies "
+            "sit under SIC 781, and longer-term human resources provision under "
+            "SIC 783; both have their own separate figures.",
+            "These are company counts, not the number of branches, workers, "
+            "assignments or client sites affected. One insolvent company may run "
+            "several offices or trading brands, and an agency can stop trading "
+            "without ever entering a formal insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active temporary staffing companies, so "
+            "the year-to-date and rolling 12-month comparisons are a better guide "
+            "than any single month.",
+            "The SIC 782 figures come from Table 1c and are not seasonally "
+            "adjusted. The Insolvency Service seasonally adjusts parts of its "
+            "headline England and Wales series where it finds seasonality, but "
+            "that adjustment does not apply to the industry figures used here. The "
+            "latest month is provisional and can be revised.",
+        ],
+        "citation": ('Company Debt. (2026). "UK Temporary Staffing Agency Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
+        "related": ('The clearest contrast is with '
                     '<a href="/data/recruitment-agency-insolvency-statistics/">recruitment agency insolvency statistics</a> '
-                    'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+                    '(SIC 781, permanent placement), which are falling as temporary staffing rises. '
+                    'Temporary staffing also sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
     "motor-vehicle-repair-insolvency-statistics": {
         "wp_id": 80139,
@@ -755,6 +933,202 @@ SECTORS = {
                     '<a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> '
                     'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
+    "estate-agency-insolvency-statistics": {
+        "wp_id": 80260,
+        "sic_code": "683",
+        "division_code": "68",
+        "parent_section_code": "L",
+        "parent_section_label": "real estate",
+        "h1a": "UK Estate Agency",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "England and Wales, updated monthly",
+        "scope_note": ("Latest official figures for estate agencies and "
+                       "fee-based property management businesses in "
+                       "England and Wales."),
+        "geography_note": ("England and Wales (main series). Scotland is "
+                           "reported separately: 9 in 2025, 1 in "
+                           "January–May 2026. No comparable Northern "
+                           "Ireland series is published, so a UK total "
+                           "cannot be calculated."),
+        "eyebrow": "Estate agencies",
+        "keyword": "estate agency",
+        "singular": "estate agency",
+        "plural": "estate agencies and fee-based property management businesses",
+        "scope_description": ("real estate agencies and businesses "
+                              "managing property for clients on a fee or "
+                              "contract basis"),
+        "exclusion_note": ("It excludes businesses that mainly buy, sell, "
+                           "own or let their own property, which are "
+                           "recorded separately under SIC groups 681 and "
+                           "682."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "48% above 2019", "label": "2025 vs the last normal year", "sub": "233 vs 157"},
+            {"value": "71%", "label": "of 2025 cases were CVLs", "sub": "166 of 233"},
+        ],
+        "notes": [
+            "SIC group 683 covers real estate activities on a fee or "
+            "contract basis. In the official data that means estate "
+            "agencies (SIC 68310) and businesses that manage property for "
+            "clients in exchange for a fee (SIC 68320), combined into one "
+            "published total: the two cannot be split out from the "
+            "monthly release.",
+            "So this is not “estate agencies alone”. A company "
+            "that only manages let properties for landlords, and never "
+            "buys or sells anything itself, is counted in this figure too.",
+            "Property developers, landlords and companies that buy, sell, "
+            "own or let property in their own name sit under different "
+            "codes (SIC 681 and 682) and are not included in the totals "
+            "on this page.",
+            "The headline figures cover England and Wales. Scotland is "
+            "reported separately: 9 insolvencies in 2025, and 1 "
+            "between January and May 2026, down from 2 in the same months "
+            "of 2025. Northern Ireland has no equivalent industry "
+            "breakdown in the monthly release, so a single UK-wide total "
+            "cannot be calculated from the published tables.",
+            "Figures use the first SIC code a company has on record, are "
+            "not seasonally adjusted, and can be revised in later "
+            "releases. They count formal insolvency procedures only, not "
+            "dissolutions, strike-offs or agencies that simply close down "
+            "without a formal process.",
+        ],
+        "practitioner_view": [
+            "In the cases we see, an estate agency's income falls away "
+            "well before the wider property market shows any strain. "
+            "Instructions dry up, a sale or letting takes longer to "
+            "complete, and by the time that shows up as a falling bank "
+            "balance it has usually been building in the pipeline for "
+            "months.",
+            "Multi-branch agencies are particularly exposed, because rent "
+            "and staff costs are fixed per branch and don't fall just "
+            "because fewer viewings are happening. We've seen groups where "
+            "one underperforming branch, kept open too long on the hope "
+            "the market would turn, ended up dragging the whole company "
+            "under.",
+        ],
+        "pressure": [
+            {
+                "h3": "Fee income only arrives when a deal completes",
+                "body": ("Commission is earned on completion, not on "
+                         "instruction, so a sale that falls through or a "
+                         "letting that drags on for weeks costs the agency "
+                         "real cash flow, even though the staff time and "
+                         "marketing spend have already gone out."),
+            },
+            {
+                "h3": "Branch costs don't fall when the market slows",
+                "body": ("A high-street office, its lease and its staff "
+                         "cost broadly the same to run whether the phone "
+                         "rings twenty times a day or twice. When "
+                         "instructions fall, that gap between fixed "
+                         "overheads and thinner fee income is what pushes "
+                         "an agency towards insolvency."),
+            },
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors’ voluntary liquidations", "count": 166, "share": 71.2},
+                {"name": "Compulsory liquidations", "count": 60, "share": 25.8},
+                {"name": "Administrations", "count": 6, "share": 2.6},
+                {"name": "Company voluntary arrangements", "count": 1, "share": 0.4},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors’ voluntary liquidations</a> '
+                "remained the dominant procedure, accounting for 166 of the 233 insolvencies "
+                "recorded in 2025. However, the fall in the overall total was driven by fewer "
+                "CVLs, which declined from 213 in 2024 to 166 in 2025.",
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory liquidations</a> '
+                "moved in the opposite direction, increasing from 54 to 60, a reminder "
+                "that a falling headline total can still hide creditors, more often than not "
+                "HMRC, running out of patience and petitioning to wind a company up.",
+            ],
+        },
+        "spike_correction": {
+            "heading": "Was the 2026 real estate insolvency spike caused by estate agencies?",
+            "intro": [
+                "The official commentary for spring 2026 flagged that around 200 connected "
+                "real estate companies entered administration across March and April. That "
+                "figure covers the whole real estate section, and it should not be read as an "
+                "estate agency insolvency wave.",
+                "The industry data show the spike was concentrated mainly in companies that "
+                "owned, bought, sold or let property in their own name, not in agencies acting "
+                "for clients on a fee basis.",
+            ],
+            "rows": [
+                {"label": "681: Buying and selling of own real estate", "month1": 141, "month2": 81},
+                {"label": "682: Renting and operating own or leased real estate", "month1": 28, "month2": 27},
+                {"label": "683: Fee or contract basis, including estate agencies", "month1": 16, "month2": 19},
+            ],
+            "table_caption": "Real estate company administrations by SIC group, March and April 2026, England and Wales. Source: Insolvency Service.",
+            "month1_label": "March 2026",
+            "month2_label": "April 2026",
+        },
+        "faq": [
+            {
+                "q": "How many estate agency businesses became insolvent in 2025?",
+                "a": ("233 businesses in SIC group 683, estate agencies and fee-based "
+                     "property managers in England and Wales, entered formal insolvency "
+                     "during 2025, down from 272 in 2024 but still 48% above the 2019 total "
+                     "of 157."),
+            },
+            {
+                "q": "Are estate agency insolvencies rising or falling?",
+                "a": ("Falling. Insolvencies peaked in 2024, fell 14% during 2025, and the "
+                     "decline continued into 2026: there were 86 cases between January and "
+                     "May 2026, 22% fewer than the 110 recorded in the same period of 2025."),
+            },
+            {
+                "q": "Do the figures include letting agents and property managers?",
+                "a": ("Yes. SIC group 683 combines real estate agencies with businesses that "
+                     "manage property for clients on a fee or contract basis, including "
+                     "letting agents. The two cannot be separated in the published data."),
+            },
+            {
+                "q": "Do the figures include property developers and landlords?",
+                "a": ("No. Companies that mainly buy, sell, own or let property in their own "
+                     "name are recorded under separate SIC groups (681 and 682) and are "
+                     "excluded from the totals on this page."),
+            },
+            {
+                "q": "Are the figures UK-wide?",
+                "a": ("No. The headline figures cover England and Wales only. Scotland is "
+                     "reported separately: 9 insolvencies in 2025 and 1 in the first "
+                     "five months of 2026, and there is no comparable Northern Ireland "
+                     "industry series, so a complete UK total cannot be calculated."),
+            },
+            {
+                "q": "Which insolvency procedure is most common in the sector?",
+                "a": ("Creditors’ voluntary liquidation. It accounted for 166 of the 233 "
+                     "insolvencies recorded in 2025, 71% of the total, though "
+                     "compulsory liquidations, usually creditor-driven, rose from 54 to 60 "
+                     "over the same period."),
+            },
+        ],
+        "commercial_transition": [
+            "A falling sector total is no comfort to a single agency that can't pay HMRC, "
+            "staff, landlords or other creditors this month. Directors should take advice as "
+            "soon as cash-flow pressure looks like it's more than a slow quarter, particularly "
+            "if the company is still holding client money or taking on new instructions it "
+            "may not be able to see through.",
+            "Where the business is otherwise sound, options such as a "
+            '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> '
+            "or negotiating directly with HMRC can buy time to trade through a slow patch. "
+            "Where it isn't, understanding "
+            '<a href="/director-redundancy/">director redundancy entitlements</a> '
+            "early makes the process easier for everyone involved. Either way, "
+            '<a href="/advice/insolvency-advice-for-directors/">speaking to an adviser</a> '
+            "before a creditor forces the issue keeps more options open.",
+        ],
+        "citation": ('Company Debt. (2026). “UK Estate Agency Insolvency Statistics.” '
+                     "Analysis of Insolvency Service company insolvency data. "
+                     "CompanyDebt.com. Updated 15 July 2026."),
+        "related": ('Estate agencies sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside real estate activities generally. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
 }
 
 
@@ -770,6 +1144,10 @@ def group_by_code(ser: dict, code: str) -> dict:
 
 def section_by_code(ser: dict, code: str) -> dict:
     return next(s for s in ser["sections"] if s["code"] == code)
+
+
+def division_by_code(ser: dict, code: str) -> dict:
+    return next(d for d in ser["divisions"] if d["code"] == code)
 
 
 def trough_year(annual: list, years: list) -> int:
@@ -874,7 +1252,20 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
     ser = c["ser"]
     years = f["years"]
     months = f["months"]
-    parent = section_by_code(ser, cfg["parent_section_code"])
+    # The peer group used for the year-to-date share/change comparison. Defaults
+    # to the broad SIC section, but a sector whose most meaningful peer is its
+    # own division (e.g. temporary staffing vs employment activities, SIC 78,
+    # rather than all of administrative and support services) can set
+    # parent_kind="division" + parent_label. The annual trough context below
+    # stays section-based regardless, since that is genuinely about the wider
+    # section's cycle.
+    if cfg.get("parent_kind") == "division":
+        parent = division_by_code(ser, cfg["division_code"])
+        parent_label = cfg["parent_label"]
+    else:
+        parent = section_by_code(ser, cfg["parent_section_code"])
+        parent_label = cfg["parent_section_label"]
+    section = section_by_code(ser, cfg["parent_section_code"])
     g = f["group"]
 
     parent_ytd_current = ytd_sum(parent["monthly"], months, f["latest_year"], f["latest_mo"])
@@ -902,7 +1293,7 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
     )
 
     g_trough = trough_year(g["annual"], years)
-    p_trough = trough_year(parent["annual"], years)
+    p_trough = trough_year(section["annual"], years)
     t_trough = trough_year(ser["total"]["annual"], years)
     pandemic_years = (2020, 2021)
     if g_trough in pandemic_years:
@@ -936,7 +1327,7 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
             )
 
     return {
-        "parent_label": cfg["parent_section_label"],
+        "parent_label": parent_label,
         "ytd_label": ytd_label,
         "ytd_label_and": ytd_label_and,
         "parent_ytd_current": parent_ytd_current,
@@ -949,7 +1340,7 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
         "band_note": band_note,
         "share_stat": (
             f"{cfg['plural'].capitalize()} accounted for {share_ytd_current}% of all "
-            f"{cfg['parent_section_label']} company insolvencies in the {ytd_label} period "
+            f"{parent_label} company insolvencies in the {ytd_label} period "
             f"({format_number(f['ytd_current'])} of {format_number(parent_ytd_current)} cases), "
             f"{'up' if share_ytd_current >= share_ytd_prior else 'down'} from "
             f"{share_ytd_prior}% over the same months of {f['prior_year']}."
@@ -982,12 +1373,15 @@ def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line">{cfg['h1a']}</span> <span class="cd-h1__line">{cfg['h1b']}</span></h1>
         <p class="cd-hero__subtitle">{cfg['h1_subtitle']}</p>
+        {f'<p class="cd-hero__scope">{cfg["scope_note"]}</p>' if cfg.get('scope_note') else ''}
         <p class="cd-lede">There were {format_number(f['ytd_current'])} insolvencies among {cfg['plural']} in England and Wales between {sf['ytd_label_and']}, compared with {format_number(f['ytd_prior'])} in the same period of {f['prior_year']}. The rolling 12-month total was {format_number(f['rolling_current'])}, {f['rolling_change_phrase']}.</p>
-        <p class="cd-lede">The data covers SIC Division {cfg['division_code']} and Group {cfg['sic_code']}: {cfg['scope_description']}. {cfg['exclusion_note']}</p>
+        {f'<p class="cd-lede">{cfg["hero_note"]}</p>' if cfg.get('hero_note') else ''}
+        <p class="cd-lede">This covers {cfg['scope_description']} (the official industry code is SIC group {cfg['sic_code']}). {cfg['exclusion_note']}</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
           <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
           <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+          <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC {cfg['sic_code']}</strong></div>
           <div class="cd-meta-item"><span>Source</span><strong>{meta['source_label']}</strong></div>
         </dl>
         <p class="cd-official-badge"><span aria-hidden="true"></span>{meta['status']}</p>
@@ -1036,6 +1430,26 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
     direction = "falling" if f["ytd_current"] < f["ytd_prior"] else (
         "rising" if f["ytd_current"] > f["ytd_prior"] else "flat"
     )
+    # Magnitude-aware qualifier: a blanket "modestly" mislabels a large move
+    # (a 19% year-to-date fall is not "modest"). Pick the adverb from the
+    # actual year-to-date change so the prose matches the number in the table.
+    pct = abs(sf["sector_change_pct"]) if sf.get("sector_change_pct") is not None else 0.0
+    if direction == "flat":
+        movement = "broadly flat"
+    else:
+        adverb = "modestly" if pct < 5 else ("steadily" if pct < 12 else "clearly")
+        movement = f"{direction} {adverb}"
+    # The auto sentence assumes the two measures move smoothly in one direction.
+    # A sector with an uneven monthly path (where "steadily" would overstate the
+    # regularity) can override it with authored text via cfg['latest_note'].
+    if cfg.get("latest_note"):
+        latest_note = f"{cfg['latest_note']} {pp_sentence}"
+    else:
+        latest_note = (
+            f"The latest figures point in the same direction across the "
+            f"year-to-date and rolling measures: insolvencies are {movement}. "
+            f"{pp_sentence}"
+        )
     same_month_prior_period = f"{f['prior_year']}-{f['latest_mo']:02d}"
     same_month_prior_label = month_full(same_month_prior_period)
     rolling_to_label = f"To {month_full(f['latest_month'])}"
@@ -1073,7 +1487,7 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
           <tbody>{rows_html}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are {direction} modestly. {pp_sentence}</p>
+      <p class="cd-source-note">{latest_note}</p>
     </section>""")
 
 
@@ -1103,8 +1517,51 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
         "falling" if f["ytd_current"] < f["ytd_prior"] else "flat"
     )
     heading_verb = {"rising": "rising", "falling": "falling", "flat": "changing"}[direction]
+    sector_verb = {"rising": "a rise of", "falling": "a fall of", "flat": "a change of"}[direction]
+    sector_pct_abs = f"{abs(sf['sector_change_pct']):.1f}%" if sf["sector_change_pct"] is not None else "n/a"
     sector_pct = f"{sf['sector_change_pct']:+.1f}%" if sf["sector_change_pct"] is not None else "n/a"
     parent_pct = f"{sf['parent_change_pct']:+.1f}%" if sf["parent_change_pct"] is not None else "n/a"
+    if sf["parent_change_pct"] is None:
+        parent_phrase = "no comparable figure is available"
+    else:
+        parent_verb = "rose" if sf["parent_change_pct"] > 0 else ("fell" if sf["parent_change_pct"] < 0 else "held flat")
+        parent_phrase = f"insolvencies {parent_verb} {abs(sf['parent_change_pct']):.1f}%"
+    # Optional authored interpretation replacing the auto-generated prose — used
+    # where the generic "broadly rising/falling" summary would be too crude
+    # (e.g. an uneven monthly path that the year-to-date total alone hides).
+    if cfg.get("comparison_intro"):
+        # Mark the first authored paragraph as the sourced sector-fact block the
+        # rest of the engine (and the gate) expects the comparison section to
+        # carry, just as the auto-generated prose does.
+        intro_html = "".join(
+            f'<p class="cd-side-note__d{" cd-sector-fact" if i == 0 else ""}">{p}</p>'
+            for i, p in enumerate(cfg["comparison_intro"])
+        )
+    else:
+        intro_html = (
+            f'<p class="cd-side-note__d cd-sector-fact">Insolvencies among {cfg["plural"]} were broadly {direction} in the {sf["ytd_label"]} period, with {format_number(f["ytd_current"])} cases compared with {format_number(f["ytd_prior"])} during the same months of {f["prior_year"]}, {sector_verb} {sector_pct_abs}. That contrasts with {sf["parent_label"]} overall, where {parent_phrase} over the same period.</p>'
+            f'<p class="cd-side-note__d">{sf["share_stat"]}</p>'
+        )
+    # When a dedicated divergence table is configured it carries the peer
+    # comparison in full, so the generic 2-column table here would only repeat
+    # a subset of it — drop it and let the divergence block do the work.
+    if cfg.get("divergence"):
+        table_html = ""
+    else:
+        table_html = dedent(f"""\
+        <div class="cd-tablewrap">
+            <table class="cd-table">
+              <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+              <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">{cfg['eyebrow'].capitalize()}</th><th scope="col" class="cd-num">{sf['parent_label'].capitalize()} overall</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">{sf['ytd_label']} insolvencies</th><td class="cd-num">{format_number(f['ytd_current'])}</td><td class="cd-num">{format_number(sf['parent_ytd_current'])}</td></tr>
+                <tr><th scope="row">Same period {f['prior_year']}</th><td class="cd-num">{format_number(f['ytd_prior'])}</td><td class="cd-num">{format_number(sf['parent_ytd_prior'])}</td></tr>
+                <tr><th scope="row">Change</th><td class="cd-num">{sector_pct}</td><td class="cd-num">{parent_pct}</td></tr>
+                <tr><th scope="row">Share of {sf['parent_label']}</th><td class="cd-num">{sf['share_ytd_current']}%</td><td class="cd-num">n/a</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>""")
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="comparison">
       <div class="cd-section-head">
@@ -1112,22 +1569,61 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
         <h2>Are {cfg['keyword']} insolvencies {heading_verb} in {f['latest_year']}?</h2>
       </div>
       <div class="cd-side-notes">
-        <p class="cd-side-note__d cd-sector-fact">Insolvencies among {cfg['plural']} were broadly {direction} in the {sf['ytd_label']} period, with {format_number(f['ytd_current'])} cases compared with {format_number(f['ytd_prior'])} during the same months of {f['prior_year']} ({sector_pct}). That contrasts with {sf['parent_label']} overall, where insolvencies moved {parent_pct} over the same comparison.</p>
-        <p class="cd-side-note__d">{sf['share_stat']}</p>
+        {intro_html}
       </div>
+      {table_html}
+    </section>""")
+
+
+def divergence_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
+    """Optional: a peer-comparison table showing this sector alongside sibling
+    SIC groups and its parent division/section, each with its own year-to-date
+    change — for pages whose key finding is that the sector is moving against
+    the wider trend (e.g. temporary staffing rising while permanent placement
+    and employment activities overall fall). Every row is computed live from
+    the series (so it self-updates on refresh); the surrounding interpretation
+    is authored in cfg['divergence']['intro']. No-op when unset."""
+    dv = cfg.get("divergence")
+    if not dv:
+        return ""
+    ser = c["ser"]
+    months = f["months"]
+    coll = {"group": ser["groups"], "division": ser["divisions"], "section": ser["sections"]}
+
+    def resolve(code, kind):
+        return next(x for x in coll[kind] if x["code"] == code)
+
+    rows_html = ""
+    for peer in dv["peers"]:
+        obj = resolve(peer["code"], peer["kind"])
+        cur = ytd_sum(obj["monthly"], months, f["latest_year"], f["latest_mo"])
+        pri = ytd_sum(obj["monthly"], months, f["prior_year"], f["latest_mo"])
+        chg = f"{(cur - pri) / pri * 100:+.1f}%" if pri else "n/a"
+        emphasise = peer.get("emphasise")
+        label = f"<strong>{peer['label']}</strong>" if emphasise else peer["label"]
+        chg_cell = f"<strong>{chg}</strong>" if emphasise else chg
+        rows_html += (
+            f"<tr><th scope=\"row\">{label}</th>"
+            f"<td class=\"cd-num\">{format_number(cur)}</td>"
+            f"<td class=\"cd-num\">{format_number(pri)}</td>"
+            f"<td class=\"cd-num\">{chg_cell}</td></tr>"
+        )
+    intro_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in dv["intro"])
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="divergence">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Comparison</p>
+        <h2>{dv['heading']}</h2>
+      </div>
+      <div class="cd-side-notes">{intro_html}</div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-          <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">{cfg['eyebrow'].capitalize()}</th><th scope="col" class="cd-num">{sf['parent_label'].capitalize()} overall</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">{sf['ytd_label']} insolvencies</th><td class="cd-num">{format_number(f['ytd_current'])}</td><td class="cd-num">{format_number(sf['parent_ytd_current'])}</td></tr>
-            <tr><th scope="row">Same period {f['prior_year']}</th><td class="cd-num">{format_number(f['ytd_prior'])}</td><td class="cd-num">{format_number(sf['parent_ytd_prior'])}</td></tr>
-            <tr><th scope="row">Change</th><td class="cd-num">{sector_pct}</td><td class="cd-num">{parent_pct}</td></tr>
-            <tr><th scope="row">Share of {sf['parent_label']}</th><td class="cd-num">{sf['share_ytd_current']}%</td><td class="cd-num">n/a</td></tr>
-          </tbody>
+          <caption class="cd-table__caption">{dv.get('caption', f"{cfg['eyebrow'].capitalize()} against related recruitment classifications")}, {sf['ytd_label']}, England and Wales.</caption>
+          <thead><tr><th scope="col">Classification</th><th scope="col" class="cd-num">{sf['ytd_label']}</th><th scope="col" class="cd-num">Same period {f['prior_year']}</th><th scope="col" class="cd-num">Change</th></tr></thead>
+          <tbody>{rows_html}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service Table 1c data.</p>
     </section>""")
 
 
@@ -1214,6 +1710,128 @@ def commercial_block(cfg: dict) -> str:
     </section>""")
 
 
+def key_findings_block(cfg: dict, f: dict, sf: dict) -> str:
+    """Optional: a compact KPI-card section standing apart from the hero
+    panel — for pages that want the headline numbers restated plainly right
+    after the opening paragraphs, each with its own accessible text label
+    (never colour-only). Cards are the 4 standard measures plus whatever a
+    sector adds via cfg['extra_findings'] (label/value/sub dicts), e.g. a
+    vs-2019 or procedure-share card computed from sector-specific data the
+    generic engine doesn't have."""
+    if not cfg.get("key_findings"):
+        return ""
+    cards = [
+        (format_number(f["ytd_current"]), f"insolvencies, {sf['ytd_label']}", ""),
+        (f["ytd_change_phrase"], f"vs same period {f['prior_year']}", ""),
+        (format_number(f["rolling_current"]), "rolling 12 months", f"to {f['years'][f['li']]}"),
+        (format_number(f["latest_annual"]), f"full year {f['years'][f['li']]}", ""),
+    ]
+    for extra in cfg.get("extra_findings", []):
+        cards.append((extra["value"], extra["label"], extra.get("sub", "")))
+    cards_html = "".join(
+        f'<div class="cd-mini-kpi"><span class="cd-mini-kpi__v">{v}</span>'
+        f'<span class="cd-mini-kpi__k">{k}</span>'
+        f'<span class="cd-mini-kpi__n">{n}</span></div>'
+        for v, k, n in cards
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="findings">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Key findings</p>
+        <h2>Key {cfg['keyword']} insolvency findings</h2>
+      </div>
+      <div class="cd-mini-kpi-grid">{cards_html}</div>
+    </section>""")
+
+
+def procedure_block(cfg: dict) -> str:
+    """Optional: procedure-mix table (CVL/compulsory/administration/CVA/
+    receivership) for the latest complete full year, plus a year-on-year
+    shift analysis. Sourced from the Insolvency Service's supplementary
+    quarterly procedure-by-industry tables — a different workbook to Table
+    1c, so this is populated per sector only where that data has actually
+    been pulled and verified, not assumed."""
+    pb = cfg.get("procedure_breakdown")
+    if not pb:
+        return ""
+    rows_html = "".join(
+        f"<tr><th scope=\"row\">{r['name']}</th><td class=\"cd-num\">{format_number(r['count'])}</td>"
+        f"<td class=\"cd-num\">{r['share']}%</td></tr>"
+        for r in pb["rows"]
+    )
+    analysis_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in pb["analysis"])
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="procedure">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Procedures</p>
+        <h2>What types of {cfg['keyword']} insolvency are most common?</h2>
+      </div>
+      <div class="cd-tablewrap">
+        <table class="cd-table">
+          <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} insolvencies by procedure, {pb['year']}, England and Wales. Source: Insolvency Service.</caption>
+          <thead><tr><th scope="col">Procedure</th><th scope="col" class="cd-num">Cases</th><th scope="col" class="cd-num">Share</th></tr></thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <div class="cd-side-notes">{analysis_html}</div>
+      <p class="cd-source-note">Not a personal recommendation: the table describes procedures used historically, not which procedure suits any individual company. Source: Insolvency Service.</p>
+    </section>""")
+
+
+def spike_correction_block(cfg: dict) -> str:
+    """Optional: a bespoke correction section for sectors whose parent SIC
+    section had a widely-reported spike (e.g. a connected-company cluster)
+    that shouldn't be misread as this specific sector's own trend. Free-
+    authored per sector — the underlying event and evidence vary too much to
+    template generically."""
+    sc = cfg.get("spike_correction")
+    if not sc:
+        return ""
+    intro_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in sc["intro"])
+    rows_html = "".join(
+        f"<tr><th scope=\"row\">{r['label']}</th><td class=\"cd-num\">{format_number(r['month1'])}</td>"
+        f"<td class=\"cd-num\">{format_number(r['month2'])}</td></tr>"
+        for r in sc["rows"]
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="spike">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Context</p>
+        <h2>{sc['heading']}</h2>
+      </div>
+      <div class="cd-side-notes">{intro_html}</div>
+      <div class="cd-tablewrap">
+        <table class="cd-table">
+          <caption class="cd-table__caption">{sc['table_caption']}</caption>
+          <thead><tr><th scope="col">SIC group</th><th scope="col" class="cd-num">{sc['month1_label']}</th><th scope="col" class="cd-num">{sc['month2_label']}</th></tr></thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <p class="cd-source-note">Source: Insolvency Service, Table 1c and official commentary.</p>
+    </section>""")
+
+
+def faq_block(cfg: dict) -> str:
+    """Optional: visible (not accordion-hidden) FAQ pairs — deliberately
+    plain HTML rather than an interactive accordion, so the answers are
+    crawlable without interaction and pair cleanly with FAQPage schema."""
+    faqs = cfg.get("faq")
+    if not faqs:
+        return ""
+    items_html = "".join(
+        f'<div class="cd-note-item"><h3>{item["q"]}</h3><p class="cd-side-note__d">{item["a"]}</p></div>'
+        for item in faqs
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="faq">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">FAQs</p>
+        <h2>Frequently asked questions about {cfg['keyword']} insolvencies</h2>
+      </div>
+      <div class="cd-side-notes">{items_html}</div>
+    </section>""")
+
+
 def longer_term_block(cfg: dict) -> str:
     """Optional: a standalone historical-narrative section (rise / pandemic
     interruption / post-support surge / recent improvement) for sectors whose
@@ -1284,10 +1902,15 @@ def annual_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
         f"<tr><th scope=\"row\">{y}</th><td class=\"cd-num\">{format_number(g['annual'][i])}</td></tr>"
         for i, y in enumerate(f["years"])
     )
+    # A hand-authored annual_intro replaces the generic rise/peak narrative for
+    # series where it would mislead — e.g. a non-monotonic path (fell, recovered,
+    # then surged) that "rose from X to a peak of Y" flattens into a false steady
+    # climb. The longer-term narrative section already tells the full story.
+    intro = cfg.get("annual_intro") or annual_narrative(cfg, f)
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="annual">
       <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>{cfg['keyword'].capitalize()} insolvencies by year, {f['base_year']} to {f['years'][f['li']]}</h2>
-        <p class="cd-section-intro">{annual_narrative(cfg, f)}</p>
+        <p class="cd-section-intro">{intro}</p>
         <p class="cd-section-intro">{sf['trough_note']}</p></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
@@ -1314,9 +1937,14 @@ def context_block(cfg: dict) -> str:
 
 def source_block(slug: str, cfg: dict, meta: dict) -> str:
     cid = f"cd-citation-{slug}"
+    extra_rows = ""
+    if cfg.get("geography_note"):
+        extra_rows += f"<dt>Geography</dt><dd>{cfg['geography_note']}</dd>"
+    extra_rows += f"<dt>Industry scope</dt><dd>SIC {cfg['sic_code']}: {cfg['scope_description']}.</dd>"
+    heading = "Cite this data" if cfg.get("geography_note") else "Source and citation"
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="source">
-      <div class="cd-section-head"><p class="cd-eyebrow">Source</p><h2>Source and citation</h2></div>
+      <div class="cd-section-head"><p class="cd-eyebrow">Source</p><h2>{heading}</h2></div>
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
@@ -1324,6 +1952,7 @@ def source_block(slug: str, cfg: dict, meta: dict) -> str:
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
             <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+            {extra_rows}
             <dt>Status</dt><dd>{meta['status']}</dd>
           </dl>
         </div>
@@ -1344,12 +1973,14 @@ def assemble(slug: str, c: dict) -> str:
     body = "\n".join([
         f"<style>{DASHBOARD_CSS}</style>", '<div class="cd-data-hub">',
         masthead_block(), hero_block(cfg, f, meta, sf), srcstrip_block(),
+        key_findings_block(cfg, f, sf),
         latest_figures_block(cfg, f, sf),
-        comparison_block(cfg, f, sf), chart_block(cfg, c, f),
+        comparison_block(cfg, f, sf), divergence_block(cfg, c, f, sf), chart_block(cfg, c, f),
         longer_term_block(cfg),
         pressure_block(cfg), practitioner_block(cfg), policy_update_block(cfg),
-        annual_block(cfg, c, f, sf), sector_rate_block(cfg, f),
-        context_block(cfg), commercial_block(cfg),
+        annual_block(cfg, c, f, sf), procedure_block(cfg), spike_correction_block(cfg),
+        sector_rate_block(cfg, f),
+        context_block(cfg), commercial_block(cfg), faq_block(cfg),
         methodology_block(), source_block(slug, cfg, meta), final_cta_block(),
         '</div>',
     ])

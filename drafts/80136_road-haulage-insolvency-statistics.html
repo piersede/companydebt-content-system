@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -171,6 +180,21 @@
   font-weight: 500;
   color: var(--cd-muted);
   margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1049,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1100,12 +1143,15 @@
   <div class="cd-hero__copy">
     <h1><span class="cd-h1__line">UK Road Haulage</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
+
     <p class="cd-lede">There were 149 insolvencies among road haulage and removals companies in England and Wales between January and May 2026, compared with 184 in the same period of 2025. The rolling 12-month total was 372, down from 452 for the previous 12 months.</p>
-    <p class="cd-lede">The data covers SIC Division 49 and Group 494: freight transport by road and removal services. Storage, warehousing and postal or courier activities are recorded separately.</p>
+
+    <p class="cd-lede">This covers freight transport by road and removal services (the official industry code is SIC group 494). Storage, warehousing and postal or courier activities are recorded separately.</p>
     <dl class="cd-meta-grid">
       <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
       <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+      <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 494</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
     </dl>
     <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
@@ -1138,6 +1184,7 @@
   </div>
 </div>
 
+
 <section class="cd-section cd-w-standard" id="latest">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Latest data</p>
@@ -1150,31 +1197,31 @@
       <tbody><tr><th scope="row">Road haulage insolvencies</th><td class="cd-num">149</td><td class="cd-num">184 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">372</td><td class="cd-num">452 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">38</td><td class="cd-num">44 in April 2026; 46 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">407</td><td class="cd-num">472 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">501</td><td class="cd-num">n/a</td><td>2023</td><td>England and Wales</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are falling modestly. The 2025 total of 407 remained well above the pre-pandemic total of 282 in 2019.</p>
+  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are falling clearly. The 2025 total of 407 remained well above the pre-pandemic total of 282 in 2019.</p>
 </section>
-<section class="cd-section cd-w-standard" id="comparison">
-  <div class="cd-section-head">
-    <p class="cd-eyebrow">Comparison</p>
-    <h2>Are road haulage insolvencies falling in 2026?</h2>
-  </div>
-  <div class="cd-side-notes">
-    <p class="cd-side-note__d cd-sector-fact">Insolvencies among road haulage and removals companies were broadly falling in the January to May 2026 period, with 149 cases compared with 184 during the same months of 2025 (-19.0%). That contrasts with transportation and storage overall, where insolvencies moved -12.5% over the same comparison.</p>
-    <p class="cd-side-note__d">Road haulage and removals companies accounted for 54.4% of all transportation and storage company insolvencies in the January to May 2026 period (149 of 274 cases), down from 58.8% over the same months of 2025.</p>
-  </div>
-  <div class="cd-tablewrap">
-    <table class="cd-table">
-      <caption class="cd-table__caption">Road haulage vs transportation and storage overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Road haulage</th><th scope="col" class="cd-num">Transportation and storage overall</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">149</td><td class="cd-num">274</td></tr>
-        <tr><th scope="row">Same period 2025</th><td class="cd-num">184</td><td class="cd-num">313</td></tr>
-        <tr><th scope="row">Change</th><td class="cd-num">-19.0%</td><td class="cd-num">-12.5%</td></tr>
-        <tr><th scope="row">Share of transportation and storage</th><td class="cd-num">54.4%</td><td class="cd-num">n/a</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
-</section>
+  <section class="cd-section cd-w-standard" id="comparison">
+    <div class="cd-section-head">
+      <p class="cd-eyebrow">Comparison</p>
+      <h2>Are road haulage insolvencies falling in 2026?</h2>
+    </div>
+    <div class="cd-side-notes">
+      <p class="cd-side-note__d cd-sector-fact">Insolvencies among road haulage and removals companies were broadly falling in the January to May 2026 period, with 149 cases compared with 184 during the same months of 2025, a fall of 19.0%. That contrasts with transportation and storage overall, where insolvencies fell 12.5% over the same period.</p><p class="cd-side-note__d">Road haulage and removals companies accounted for 54.4% of all transportation and storage company insolvencies in the January to May 2026 period (149 of 274 cases), down from 58.8% over the same months of 2025.</p>
+    </div>
+    <div class="cd-tablewrap">
+  <table class="cd-table">
+    <caption class="cd-table__caption">Road haulage vs transportation and storage overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+    <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Road haulage</th><th scope="col" class="cd-num">Transportation and storage overall</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">149</td><td class="cd-num">274</td></tr>
+      <tr><th scope="row">Same period 2025</th><td class="cd-num">184</td><td class="cd-num">313</td></tr>
+      <tr><th scope="row">Change</th><td class="cd-num">-19.0%</td><td class="cd-num">-12.5%</td></tr>
+      <tr><th scope="row">Share of transportation and storage</th><td class="cd-num">54.4%</td><td class="cd-num">n/a</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  </section>
+
 <section class="cd-section cd-w-wide" id="trend">
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Road haulage insolvencies by month</h2>
     <p class="cd-section-intro">May 2026 recorded 38 insolvencies, against 44 in April 2026 and 46 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
@@ -1228,6 +1275,8 @@
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
 </section>
 
+
+
 <section class="cd-section cd-w-standard" id="about">
   <div class="cd-section-head">
     <p class="cd-eyebrow">How to read this</p>
@@ -1242,6 +1291,7 @@
   </div>
   <div class="cd-side-notes"><p class="cd-side-note__d">Falling sector insolvencies do not make an individual cash-flow problem less urgent. If the company cannot meet fuel-card payments, payroll, VAT, vehicle finance or supplier bills as they fall due, the first question is whether its routes and contracts are viable before debt repayments and arrears.</p><p class="cd-side-note__d">Acting early gives directors more scope to renegotiate payment terms, dispose of underused vehicles, approach HMRC about a <a href="/hmrc/time-to-pay-hmrc/">Time to Pay arrangement</a>, or consider a formal rescue procedure such as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> or <a href="/company-administration/">administration</a>.</p><p class="cd-side-note__d">Once fuel cards are withdrawn, vehicles are repossessed or a <a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">winding-up petition</a> is issued, the available options narrow quickly, and <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> may then be the only realistic route left.</p></div>
 </section>
+
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1271,6 +1321,7 @@
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>19 June 2026</dd>
         <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Industry scope</dt><dd>SIC 494: freight transport by road and removal services.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>

@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -171,6 +180,21 @@
   font-weight: 500;
   color: var(--cd-muted);
   margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1049,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1100,12 +1143,15 @@
   <div class="cd-hero__copy">
     <h1><span class="cd-h1__line">UK Furniture Manufacturing</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
+
     <p class="cd-lede">There were 64 insolvencies among furniture-manufacturing companies in England and Wales between January and May 2026, compared with 63 in the same period of 2025. The rolling 12-month total was 144, unchanged from the previous 12 months.</p>
-    <p class="cd-lede">The data covers SIC Division 31 and Group 310: household, office, kitchen and shop furniture and mattress manufacturing. Furniture retailers and wholesalers are recorded separately.</p>
+
+    <p class="cd-lede">This covers household, office, kitchen and shop furniture and mattress manufacturing (the official industry code is SIC group 310). Furniture retailers and wholesalers are recorded separately.</p>
     <dl class="cd-meta-grid">
       <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
       <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+      <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 310</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
     </dl>
     <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
@@ -1118,14 +1164,12 @@
     </div>
     <div class="cd-change-row">
       <span><strong>up slightly from 63</strong> in 2025</span>
-      <span><strong>144</strong> rolling 12 months</span>
     </div>
     <div class="cd-kpi-divider" aria-hidden="true"></div>
     <div class="cd-mini-kpi-grid">
       <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">144</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to May 2026, unchanged from the previous 12 months</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">29% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
       <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">8.3%</span><span class="cd-mini-kpi__k">Of manufacturing insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">143</span><span class="cd-mini-kpi__k">Full year 2025</span><span class="cd-mini-kpi__n">below the series peak of 163 in 2023</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">16</span><span class="cd-mini-kpi__k">May 2026</span><span class="cd-mini-kpi__n">vs 11 in April 2026</span></div>
     </div>
   </aside>
   </div>
@@ -1140,50 +1184,75 @@
   </div>
 </div>
 
+
+<section class="cd-section cd-w-standard" id="latest">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Latest data</p>
+    <h2>Latest furniture manufacturing insolvency figures</h2>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Latest furniture manufacturing insolvency figures, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
+      <tbody><tr><th scope="row">Furniture manufacturing insolvencies</th><td class="cd-num">64</td><td class="cd-num">63 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">144</td><td class="cd-num">144 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">16</td><td class="cd-num">11 in April 2026; 13 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">143</td><td class="cd-num">139 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">163</td><td class="cd-num">n/a</td><td>2023</td><td>England and Wales</td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are rising modestly. The 2025 total of 143 remained well above the pre-pandemic total of 111 in 2019.</p>
+</section>
+  <section class="cd-section cd-w-standard" id="comparison">
+    <div class="cd-section-head">
+      <p class="cd-eyebrow">Comparison</p>
+      <h2>Are furniture manufacturing insolvencies rising in 2026?</h2>
+    </div>
+    <div class="cd-side-notes">
+      <p class="cd-side-note__d cd-sector-fact">Insolvencies among furniture-manufacturing companies were broadly rising in the January to May 2026 period, with 64 cases compared with 63 during the same months of 2025, a rise of 1.6%. That contrasts with manufacturing overall, where insolvencies fell 8.5% over the same period.</p><p class="cd-side-note__d">Furniture-manufacturing companies accounted for 8.3% of all manufacturing company insolvencies in the January to May 2026 period (64 of 768 cases), up from 7.5% over the same months of 2025.</p>
+    </div>
+    <div class="cd-tablewrap">
+  <table class="cd-table">
+    <caption class="cd-table__caption">Furniture manufacturing vs manufacturing overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+    <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Furniture manufacturing</th><th scope="col" class="cd-num">Manufacturing overall</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">64</td><td class="cd-num">768</td></tr>
+      <tr><th scope="row">Same period 2025</th><td class="cd-num">63</td><td class="cd-num">839</td></tr>
+      <tr><th scope="row">Change</th><td class="cd-num">+1.6%</td><td class="cd-num">-8.5%</td></tr>
+      <tr><th scope="row">Share of manufacturing</th><td class="cd-num">8.3%</td><td class="cd-num">n/a</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  </section>
+
 <section class="cd-section cd-w-wide" id="trend">
-  <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Monthly insolvencies since 2023</h2>
-    <p class="cd-section-intro">May 2026 recorded 16 insolvencies, against 11 in April 2026 and 13 in May 2025. Monthly counts are small and move sharply on a handful of cases, so the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
+  <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Furniture manufacturing insolvencies by month</h2>
+    <p class="cd-section-intro">May 2026 recorded 16 insolvencies, against 11 in April 2026 and 13 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
     <p class="cd-section-intro">Furniture manufacturing sits within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, alongside manufacturing generally. See also the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
   <figure class="cd-chart-figure">
     <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="310-monthly-title 310-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="310-monthly-title">Monthly insolvencies among furniture-manufacturing companies, England and Wales</title><desc id="310-monthly-desc">Monthly company insolvencies among furniture-manufacturing companies, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">6</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">12</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">18</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">24</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text></g><polyline points="60.0,160.53 80.6,217.33 101.2,122.67 121.8,217.33 142.4,160.53 163.0,188.93 183.6,217.33 204.2,198.40 224.8,179.47 245.4,188.93 266.0,132.13 286.6,217.33 307.2,226.80 327.8,179.47 348.4,217.33 369.0,198.40 389.6,188.93 410.2,217.33 430.8,226.80 451.4,207.87 472.0,207.87 492.6,179.47 513.2,141.60 533.8,236.27 554.4,207.87 575.0,151.07 595.6,226.80 616.2,188.93 636.8,188.93 657.4,217.33 678.0,207.87 698.6,151.07 719.2,170.00 739.8,226.80 760.4,245.73 781.0,207.87 801.6,198.40 822.2,217.33 842.8,170.00 863.4,207.87 884.0,160.53" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:16</title></circle><circle cx="80.6" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:10</title></circle><circle cx="101.2" cy="122.67" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:20</title></circle><circle cx="121.8" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:10</title></circle><circle cx="142.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:16</title></circle><circle cx="163.0" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:13</title></circle><circle cx="183.6" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:10</title></circle><circle cx="204.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:12</title></circle><circle cx="224.8" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:14</title></circle><circle cx="245.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:13</title></circle><circle cx="266.0" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:19</title></circle><circle cx="286.6" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:10</title></circle><circle cx="307.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:9</title></circle><circle cx="327.8" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:14</title></circle><circle cx="348.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:10</title></circle><circle cx="369.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:12</title></circle><circle cx="389.6" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:13</title></circle><circle cx="410.2" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:10</title></circle><circle cx="430.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:9</title></circle><circle cx="451.4" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:11</title></circle><circle cx="472.0" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:11</title></circle><circle cx="492.6" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:14</title></circle><circle cx="513.2" cy="141.60" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:18</title></circle><circle cx="533.8" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:8</title></circle><circle cx="554.4" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:11</title></circle><circle cx="575.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:17</title></circle><circle cx="595.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:9</title></circle><circle cx="616.2" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:13</title></circle><circle cx="636.8" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:13</title></circle><circle cx="657.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:10</title></circle><circle cx="678.0" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:11</title></circle><circle cx="698.6" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:17</title></circle><circle cx="719.2" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:15</title></circle><circle cx="739.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:9</title></circle><circle cx="760.4" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:7</title></circle><circle cx="781.0" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:11</title></circle><circle cx="801.6" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:12</title></circle><circle cx="822.2" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:10</title></circle><circle cx="842.8" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:15</title></circle><circle cx="863.4" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:11</title></circle><circle cx="884.0" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:16</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
     <figcaption class="cd-figcaption"><strong>Monthly insolvencies among furniture-manufacturing companies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
   </figure>
 </section>
-<section class="cd-section cd-w-standard" id="comparison">
-  <div class="cd-section-head">
-    <p class="cd-eyebrow">Comparison</p>
-    <h2>Are furniture manufacturing insolvencies rising?</h2>
-  </div>
-  <div class="cd-side-notes">
-    <p class="cd-side-note__d cd-sector-fact">Insolvencies among furniture-manufacturing companies were broadly rising in the January to May 2026 period, with 64 cases compared with 63 during the same months of 2025 (+1.6%). That contrasts with manufacturing overall, where insolvencies moved -8.5% over the same comparison.</p>
-    <p class="cd-side-note__d">Furniture-manufacturing companies accounted for 8.3% of all manufacturing company insolvencies in the January to May 2026 period (64 of 768 cases), up from 7.5% over the same months of 2025.</p>
-  </div>
-  <div class="cd-tablewrap">
-    <table class="cd-table">
-      <caption class="cd-table__caption">Furniture manufacturing vs manufacturing overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Furniture manufacturing</th><th scope="col" class="cd-num">Manufacturing overall</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">64</td><td class="cd-num">768</td></tr>
-        <tr><th scope="row">Same period 2025</th><td class="cd-num">63</td><td class="cd-num">839</td></tr>
-        <tr><th scope="row">Change</th><td class="cd-num">+1.6%</td><td class="cd-num">-8.5%</td></tr>
-        <tr><th scope="row">Share of manufacturing</th><td class="cd-num">8.3%</td><td class="cd-num">&mdash;</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
-</section>
+
 <section class="cd-section cd-w-standard" id="pressure">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Context</p>
     <h2>Why furniture-manufacturing companies are under pressure</h2>
+
     <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
   </div>
-  <div class="cd-side-notes"><div class="cd-note-item"><h3>Discretionary consumer demand</h3><p class="cd-side-note__d">Furniture is a considered, big-ticket purchase, so household spending on it is one of the first things cut when confidence or disposable income comes under pressure, ahead of more routine spending categories.</p></div><div class="cd-note-item"><h3>Imported materials and currency exposure</h3><p class="cd-side-note__d">Many manufacturers depend on imported timber, hardware, fabrics, foam or completed components, leaving margins exposed to freight costs and exchange-rate movements.</p></div><div class="cd-note-item"><p class="cd-side-notes__title">In the cases we see</p><p class="cd-side-note__d cd-side-note__insight">In the cases we see, pressure commonly builds through reduced orders, fixed production costs and supplier terms that consume working capital before directors seek advice.</p><p class="cd-side-note__d cd-side-note__insight">Furniture is also one of the first big-ticket purchases households defer when confidence dips, so demand can weaken well before the wider economy turns down.</p></div></div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>Discretionary consumer demand</h3><p class="cd-side-note__d">Furniture is a considered, big-ticket purchase, so household spending on it is one of the first things cut when confidence or disposable income comes under pressure, ahead of more routine spending categories.</p></div><div class="cd-note-item"><h3>Imported materials and currency exposure</h3><p class="cd-side-note__d">Many manufacturers depend on imported timber, hardware, fabrics, foam or completed components, leaving margins exposed to freight costs and exchange-rate movements.</p></div></div>
 </section>
+<section class="cd-section cd-w-standard" id="practitioner">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Practitioner view</p>
+    <h2>What we see in furniture manufacturing insolvency cases</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the cases we see, pressure commonly builds through reduced orders, fixed production costs and supplier terms that consume working capital before directors seek advice.</p><p class="cd-side-note__d cd-side-note__insight">Furniture is also one of the first big-ticket purchases households defer when confidence dips, so demand can weaken well before the wider economy turns down.</p></div>
+</section>
+
 <section class="cd-section cd-w-standard" id="annual">
-  <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Insolvencies by year, 2016 to 2025</h2>
-    <p class="cd-section-intro">Over the full 2016 to 2025 annual series, furniture manufacturing's share of manufacturing insolvencies has held to a narrow 5.7% to 8.7% band, despite manufacturing overall swinging much further year to year.</p>
-    <p class="cd-section-intro">Recorded insolvencies reached their series low of 58 in 2021, when pandemic restrictions and government support distorted normal insolvency patterns. That was in step with manufacturing overall, which also troughed in 2021, a year after the wider economy's 2020 low.</p></div>
+  <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Furniture manufacturing insolvencies by year, 2016 to 2025</h2>
+    <p class="cd-section-intro">Furniture manufacturing insolvencies rose from 94 in 2016 to a peak of 163 in 2023. Since then, insolvencies have fallen 12% to 143 in 2025. The 2025 total of 143 remained well above the pre-pandemic total of 111 in 2019.</p>
+    <p class="cd-section-intro">Recorded insolvencies reached their series low of 58 in 2021, when pandemic restrictions and government support distorted normal insolvency patterns. That was in step with manufacturing overall, which also troughed in 2021, 1 year after the wider economy's 2020 low.</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
       <caption class="cd-table__caption">Annual company insolvencies among furniture-manufacturing companies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
@@ -1193,13 +1262,18 @@
   </div>
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
 </section>
+
+
+
 <section class="cd-section cd-w-standard" id="about">
   <div class="cd-section-head">
     <p class="cd-eyebrow">How to read this</p>
-    <h2>What the furniture manufacturing figures show</h2>
+    <h2>How to interpret the furniture manufacturing figures</h2>
   </div>
   <div class="cd-side-notes"><p class="cd-side-note__d">Furniture manufacturing is a small sector by company count, so monthly figures can move sharply on a handful of cases. Read short-term changes with care and prefer the year-to-date or 12-month rolling total.</p><p class="cd-side-note__d">The count is a volume, not a failure rate. It is not adjusted for how many furniture manufacturers are registered, so it cannot be read as a sector-wide risk of insolvency.</p><p class="cd-side-note__d">This is manufacturing only (SIC 310). Furniture wholesalers and retailers sit under separate, broader SIC codes and are not included here.</p></div>
 </section>
+
+
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1212,7 +1286,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Detailed industry sub-sector breakdowns are published quarterly.</li>
+      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1229,6 +1303,7 @@
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>19 June 2026</dd>
         <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Industry scope</dt><dd>SIC 310: household, office, kitchen and shop furniture and mattress manufacturing.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>

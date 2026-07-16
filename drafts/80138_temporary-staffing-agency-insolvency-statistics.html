@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -171,6 +180,21 @@
   font-weight: 500;
   color: var(--cd-muted);
   margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -1049,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1100,12 +1143,15 @@
   <div class="cd-hero__copy">
     <h1><span class="cd-h1__line">UK Temporary Staffing Agency</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
-    <p class="cd-lede">There were 72 insolvencies among temporary and agency staffing businesses in England and Wales between January and May 2026, compared with 67 in the same period of 2025. The rolling 12-month total was 181, up from 162 for the previous 12 months.</p>
-    <p class="cd-lede">The data covers SIC Division 78 and Group 782: temporary and agency staffing businesses. Permanent-placement recruitment agencies are recorded separately (SIC group 781).</p>
+
+    <p class="cd-lede">There were 72 insolvencies among temporary employment agencies in England and Wales between January and May 2026, compared with 67 in the same period of 2025. The rolling 12-month total was 181, up from 162 for the previous 12 months.</p>
+    <p class="cd-lede">The direction matters more than the size of the increase. Insolvencies across employment activities as a whole fell 15.3% over the same period, and permanent-placement agency insolvencies fell 29.5%. Temporary staffing is moving against its own parent sector, not simply following a wider rise.</p>
+    <p class="cd-lede">This covers agencies supplying workers on a temporary basis, including temporary office, industrial, medical, nursing and teaching staff (the official industry code is SIC group 782). Permanent-placement and executive-search agencies (SIC 781) and longer-term human resources provision (SIC 783) are recorded separately.</p>
     <dl class="cd-meta-grid">
       <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
       <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
+      <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 782</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
     </dl>
     <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
@@ -1123,7 +1169,7 @@
     <div class="cd-mini-kpi-grid">
       <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">181</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to May 2026, up from 162 for the previous 12 months</span></div>
       <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">59% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">8.5%</span><span class="cd-mini-kpi__k">Of administrative and support services insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">34.3%</span><span class="cd-mini-kpi__k">Of employment activities insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
     </div>
   </aside>
   </div>
@@ -1138,6 +1184,13 @@
   </div>
 </div>
 
+<section class="cd-section cd-w-standard" id="findings">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Key findings</p>
+    <h2>Key temporary staffing agency insolvency findings</h2>
+  </div>
+  <div class="cd-mini-kpi-grid"><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">72</span><span class="cd-mini-kpi__k">insolvencies, January to May 2026</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">up from 67</span><span class="cd-mini-kpi__k">vs same period 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">181</span><span class="cd-mini-kpi__k">rolling 12 months</span><span class="cd-mini-kpi__n">to 2025</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">176</span><span class="cd-mini-kpi__k">full year 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">59% above 2019</span><span class="cd-mini-kpi__k">2025 vs the pre-pandemic year</span><span class="cd-mini-kpi__n">176 vs 111</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">34.3%</span><span class="cd-mini-kpi__k">of SIC 78 insolvencies</span><span class="cd-mini-kpi__n">up from 27.0% a year earlier</span></div></div>
+</section>
 <section class="cd-section cd-w-standard" id="latest">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Latest data</p>
@@ -1150,7 +1203,7 @@
       <tbody><tr><th scope="row">Temporary staffing agencies insolvencies</th><td class="cd-num">72</td><td class="cd-num">67 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">181</td><td class="cd-num">162 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">12</td><td class="cd-num">16 in April 2026; 11 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">176</td><td class="cd-num">160 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">176</td><td class="cd-num">n/a</td><td>2025</td><td>England and Wales</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are rising modestly. The 2025 total of 176 remained well above the pre-pandemic total of 111 in 2019.</p>
+  <p class="cd-source-note">Both the year-to-date and rolling totals are higher than a year earlier, though the monthly pattern is uneven. The fairest reading is a renewed deterioration at an already elevated level, rather than a steady month-by-month rise. The 2025 total of 176 remained well above the pre-pandemic total of 111 in 2019.</p>
 </section>
 <section class="cd-section cd-w-standard" id="comparison">
   <div class="cd-section-head">
@@ -1158,57 +1211,65 @@
     <h2>Are temporary staffing agency insolvencies rising in 2026?</h2>
   </div>
   <div class="cd-side-notes">
-    <p class="cd-side-note__d cd-sector-fact">Insolvencies among temporary and agency staffing businesses were broadly rising in the January to May 2026 period, with 72 cases compared with 67 during the same months of 2025 (+7.5%). That contrasts with administrative and support services overall, where insolvencies moved -21.7% over the same comparison.</p>
-    <p class="cd-side-note__d">Temporary and agency staffing businesses accounted for 8.5% of all administrative and support services company insolvencies in the January to May 2026 period (72 of 843 cases), up from 6.2% over the same months of 2025.</p>
+    <p class="cd-side-note__d cd-sector-fact">Yes, on the two more reliable comparisons. The 72 insolvencies recorded from January to May 2026 were 7.5% higher than the 67 in the same period of 2025, and the rolling 12-month total rose 11.7%, from 162 to 181.</p><p class="cd-side-note__d">The monthly figures are more volatile. May's 12 cases were down from 16 in April but slightly above the 11 recorded in May 2025, and the 2026 path so far has been uneven rather than a steady climb. One monthly fall does not outweigh the year-to-date and rolling comparisons, but nor do those comparisons describe a smooth month-by-month rise.</p><p class="cd-side-note__d">The fairest reading is a renewed deterioration from an already high level: the annual series reached a new peak of 176 in 2025. These are Company Debt calculations from Insolvency Service Table 1c data.</p>
   </div>
+
+</section>
+<section class="cd-section cd-w-standard" id="divergence">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Temporary staffing is moving against the wider recruitment sector</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">This is the more important finding on the page. While temporary staffing insolvencies rose, every wider recruitment measure fell: permanent-placement agencies (SIC 781) were down 29.5%, employment activities as a whole (SIC 78) down 15.3%, and the broad administrative and support services section (SIC N) down 21.7%.</p><p class="cd-side-note__d">Temporary staffing accounted for 34.3% of all insolvencies across employment activities in the first five months of 2026, up from 27.0% a year earlier, a rise of 7.3 percentage points. Its share of the wider administrative and support services section also rose, from 6.2% to 8.5%.</p><p class="cd-side-note__d">The increase is not just the sector being carried along by a general rise in recruitment failures, because there was no such rise. Temporary staffing is diverging from its peers.</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Temporary staffing agencies vs administrative and support services overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-      <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Temporary staffing agencies</th><th scope="col" class="cd-num">Administrative and support services overall</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">72</td><td class="cd-num">843</td></tr>
-        <tr><th scope="row">Same period 2025</th><td class="cd-num">67</td><td class="cd-num">1,077</td></tr>
-        <tr><th scope="row">Change</th><td class="cd-num">+7.5%</td><td class="cd-num">-21.7%</td></tr>
-        <tr><th scope="row">Share of administrative and support services</th><td class="cd-num">8.5%</td><td class="cd-num">n/a</td></tr>
-      </tbody>
+      <caption class="cd-table__caption">Temporary staffing agencies against related recruitment classifications, January to May 2026, England and Wales.</caption>
+      <thead><tr><th scope="col">Classification</th><th scope="col" class="cd-num">January to May 2026</th><th scope="col" class="cd-num">Same period 2025</th><th scope="col" class="cd-num">Change</th></tr></thead>
+      <tbody><tr><th scope="row"><strong>Temporary employment agencies (SIC 782)</strong></th><td class="cd-num">72</td><td class="cd-num">67</td><td class="cd-num"><strong>+7.5%</strong></td></tr><tr><th scope="row">Permanent-placement agencies (SIC 781)</th><td class="cd-num">105</td><td class="cd-num">149</td><td class="cd-num">-29.5%</td></tr><tr><th scope="row">Employment activities overall (SIC 78)</th><td class="cd-num">210</td><td class="cd-num">248</td><td class="cd-num">-15.3%</td></tr><tr><th scope="row">Administrative and support services (SIC N)</th><td class="cd-num">843</td><td class="cd-num">1,077</td><td class="cd-num">-21.7%</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service Table 1c data.</p>
 </section>
 <section class="cd-section cd-w-wide" id="trend">
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Temporary staffing agency insolvencies by month</h2>
     <p class="cd-section-intro">May 2026 recorded 12 insolvencies, against 16 in April 2026 and 11 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
-    <p class="cd-section-intro">Temporary staffing sits within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, alongside administrative and support services generally. See also <a href="/data/recruitment-agency-insolvency-statistics/">recruitment agency insolvency statistics</a> and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
+    <p class="cd-section-intro">The clearest contrast is with <a href="/data/recruitment-agency-insolvency-statistics/">recruitment agency insolvency statistics</a> (SIC 781, permanent placement), which are falling as temporary staffing rises. Temporary staffing also sits within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="782-monthly-title 782-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="782-monthly-title">Monthly insolvencies among temporary and agency staffing businesses, England and Wales</title><desc id="782-monthly-desc">Monthly company insolvencies among temporary and agency staffing businesses, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">6</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">12</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">18</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">24</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text></g><polyline points="60.0,264.67 80.6,264.67 101.2,198.40 121.8,236.27 142.4,245.73 163.0,179.47 183.6,245.73 204.2,245.73 224.8,245.73 245.4,198.40 266.0,198.40 286.6,207.87 307.2,245.73 327.8,207.87 348.4,160.53 369.0,151.07 389.6,179.47 410.2,179.47 430.8,151.07 451.4,188.93 472.0,170.00 492.6,226.80 513.2,179.47 533.8,188.93 554.4,217.33 575.0,179.47 595.6,226.80 616.2,94.27 636.8,207.87 657.4,170.00 678.0,179.47 698.6,207.87 719.2,132.13 739.8,122.67 760.4,188.93 781.0,151.07 801.6,188.93 822.2,245.73 842.8,84.80 863.4,160.53 884.0,198.40" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:5</title></circle><circle cx="80.6" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:5</title></circle><circle cx="101.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:12</title></circle><circle cx="121.8" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:8</title></circle><circle cx="142.4" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:7</title></circle><circle cx="163.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:14</title></circle><circle cx="183.6" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:7</title></circle><circle cx="204.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:7</title></circle><circle cx="224.8" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:7</title></circle><circle cx="245.4" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:12</title></circle><circle cx="266.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:12</title></circle><circle cx="286.6" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:11</title></circle><circle cx="307.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:7</title></circle><circle cx="327.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:11</title></circle><circle cx="348.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:16</title></circle><circle cx="369.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:17</title></circle><circle cx="389.6" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:14</title></circle><circle cx="410.2" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:14</title></circle><circle cx="430.8" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:17</title></circle><circle cx="451.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:13</title></circle><circle cx="472.0" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:15</title></circle><circle cx="492.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:9</title></circle><circle cx="513.2" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:14</title></circle><circle cx="533.8" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:13</title></circle><circle cx="554.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:10</title></circle><circle cx="575.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:14</title></circle><circle cx="595.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:9</title></circle><circle cx="616.2" cy="94.27" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:23</title></circle><circle cx="636.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:11</title></circle><circle cx="657.4" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:15</title></circle><circle cx="678.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:14</title></circle><circle cx="698.6" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:11</title></circle><circle cx="719.2" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:19</title></circle><circle cx="739.8" cy="122.67" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:20</title></circle><circle cx="760.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:13</title></circle><circle cx="781.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:17</title></circle><circle cx="801.6" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:13</title></circle><circle cx="822.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:7</title></circle><circle cx="842.8" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:24</title></circle><circle cx="863.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:16</title></circle><circle cx="884.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:12</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
-    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among temporary and agency staffing businesses, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="782-monthly-title 782-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="782-monthly-title">Monthly insolvencies among temporary employment agencies, England and Wales</title><desc id="782-monthly-desc">Monthly company insolvencies among temporary employment agencies, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">6</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">12</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">18</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">24</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text></g><polyline points="60.0,264.67 80.6,264.67 101.2,198.40 121.8,236.27 142.4,245.73 163.0,179.47 183.6,245.73 204.2,245.73 224.8,245.73 245.4,198.40 266.0,198.40 286.6,207.87 307.2,245.73 327.8,207.87 348.4,160.53 369.0,151.07 389.6,179.47 410.2,179.47 430.8,151.07 451.4,188.93 472.0,170.00 492.6,226.80 513.2,179.47 533.8,188.93 554.4,217.33 575.0,179.47 595.6,226.80 616.2,94.27 636.8,207.87 657.4,170.00 678.0,179.47 698.6,207.87 719.2,132.13 739.8,122.67 760.4,188.93 781.0,151.07 801.6,188.93 822.2,245.73 842.8,84.80 863.4,160.53 884.0,198.40" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:5</title></circle><circle cx="80.6" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:5</title></circle><circle cx="101.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:12</title></circle><circle cx="121.8" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:8</title></circle><circle cx="142.4" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:7</title></circle><circle cx="163.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:14</title></circle><circle cx="183.6" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:7</title></circle><circle cx="204.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:7</title></circle><circle cx="224.8" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:7</title></circle><circle cx="245.4" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:12</title></circle><circle cx="266.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:12</title></circle><circle cx="286.6" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:11</title></circle><circle cx="307.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:7</title></circle><circle cx="327.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:11</title></circle><circle cx="348.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:16</title></circle><circle cx="369.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:17</title></circle><circle cx="389.6" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:14</title></circle><circle cx="410.2" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:14</title></circle><circle cx="430.8" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:17</title></circle><circle cx="451.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:13</title></circle><circle cx="472.0" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:15</title></circle><circle cx="492.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:9</title></circle><circle cx="513.2" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:14</title></circle><circle cx="533.8" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:13</title></circle><circle cx="554.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:10</title></circle><circle cx="575.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:14</title></circle><circle cx="595.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:9</title></circle><circle cx="616.2" cy="94.27" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:23</title></circle><circle cx="636.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:11</title></circle><circle cx="657.4" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:15</title></circle><circle cx="678.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:14</title></circle><circle cx="698.6" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:11</title></circle><circle cx="719.2" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:19</title></circle><circle cx="739.8" cy="122.67" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:20</title></circle><circle cx="760.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:13</title></circle><circle cx="781.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:17</title></circle><circle cx="801.6" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:13</title></circle><circle cx="822.2" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:7</title></circle><circle cx="842.8" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:24</title></circle><circle cx="863.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:16</title></circle><circle cx="884.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:12</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among temporary employment agencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
   </figure>
 </section>
-
+<section class="cd-section cd-w-standard" id="longterm">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Context</p>
+    <h2>What the longer-term temporary staffing agency insolvency trend shows</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">The annual series does not show a steady decade-long rise. Temporary employment agency insolvencies fell from 132 in 2016 to 94 in 2017, then sat between 102 and 111 through 2018 and 2019.</p><p class="cd-side-note__d">Recorded cases fell to 78 in 2020 and 92 in 2021, when government support, creditor restrictions and disruption to normal insolvency processes held the figures down, before returning to 108 in 2022 and 107 in 2023.</p><p class="cd-side-note__d">The clear deterioration came later. The annual total rose to 160 in 2024 and then to a series high of 176 in 2025, which was 10.0% above 2024 and 58.6% above the 111 recorded in 2019.</p></div>
+</section>
 <section class="cd-section cd-w-standard" id="pressure">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Context</p>
-    <h2>Why temporary and agency staffing businesses are under pressure</h2>
-
+    <h2>Why temporary staffing agencies remain financially exposed</h2>
+    <p class="cd-section-intro">The current market picture is mixed rather than uniformly bad, and the insolvency data is retrospective: it reflects financial distress that can build over a long period. The pressures below are current sector conditions and common financial mechanisms, not a claim about the cause of any individual insolvency.</p>
     <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
   </div>
-  <div class="cd-side-notes"><div class="cd-note-item"><h3>The payroll funding gap</h3><p class="cd-side-note__d">Temporary workers are typically paid weekly, well ahead of when client invoices for that work are settled, so agencies carry a permanent funding gap that widens as volumes grow.</p></div><div class="cd-note-item"><h3>Volatile, fast-moving client demand</h3><p class="cd-side-note__d">Temporary staffing is often the first cost a client cuts when demand softens and the first they restore when it picks up, making booked volumes swing faster than in most other sectors.</p></div></div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>The wider vacancy market is still weak</h3><p class="cd-side-note__d">The broader hiring market remains subdued. The ONS estimated 707,000 UK vacancies in March to May 2026, down 4.2% on a year earlier and the lowest total since early 2021.</p><p class="cd-side-note__d">A weaker vacancy market can reduce placement volumes and sharpen competition between agencies, though the ONS series covers vacancies across the whole economy rather than temporary staffing agencies alone.</p></div><div class="cd-note-item"><h3>Employers are favouring temporary over permanent hiring</h3><p class="cd-side-note__d">Temporary hiring has recently held up better than permanent recruitment. The KPMG and REC UK Report on Jobs found temporary billings grew in June 2026 at their fastest rate since April 2023, while permanent placements kept falling.</p><p class="cd-side-note__d">This does not contradict the insolvency data. It suggests trading demand may be improving for some agencies while financial stress remains high for others. Insolvency is often a lagging outcome, and an agency can win more temporary work while still carrying thin margins, arrears or an overstretched funding facility.</p><p class="cd-side-note__d">The REC survey is UK-wide market context, not the source of the England and Wales insolvency counts.</p></div><div class="cd-note-item"><h3>Direct payroll costs remain high</h3><p class="cd-side-note__d">For agencies that employ temporary workers directly, payroll on-costs are a real margin issue. In the 2026 to 2027 tax year, employers pay National Insurance at 15% above the secondary threshold of £96 a week, or £417 a month.</p><p class="cd-side-note__d">Whether that damages the agency depends on the contract and the charge rate. Where a higher employment cost cannot be passed through promptly, gross margin narrows even when billings hold steady. Not every SIC 782 company employs its workers directly, though; some use umbrella companies or other arrangements.</p></div><div class="cd-note-item"><h3>Growth can increase the funding requirement</h3><p class="cd-side-note__d">Temporary staffing carries an unusual cash-flow risk: growth can increase the external funding needed before it improves cash. Workers and payroll taxes are paid before the corresponding client invoice is collected.</p><p class="cd-side-note__d">If assignments expand quickly, debtor days lengthen or a large client disputes an invoice, the agency may need more working capital exactly when its billings look strongest. Invoice finance narrows the timing gap but creates reliance on funding headroom, eligible invoices and client concentration limits.</p></div></div>
 </section>
 <section class="cd-section cd-w-standard" id="practitioner">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Practitioner view</p>
     <h2>What we see in temporary staffing agency insolvency cases</h2>
   </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the cases we see, the defining pressure is the payroll funding gap: agencies must pay temporary workers weekly, often before the client invoice for that work has even been raised, let alone paid.</p><p class="cd-side-note__d cd-side-note__insight">That gap is usually bridged with invoice finance. When a funder tightens terms or a large client's payment slips, the agency can be funding a payroll it has no immediate way to recover.</p></div>
+  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the temporary staffing cases we handle, insolvency rarely begins with one quiet month. More often the gross margin narrows while the cash tied up in weekly payroll and unpaid client invoices grows, and the agency looks busy from the outside while its funding headroom quietly runs down.</p><p class="cd-side-note__d cd-side-note__insight">The warning signs we see are usually operational: debtor days rising, a growing reliance on one client, disputed timesheets, invoices becoming ineligible for funding, reduced advance rates, and PAYE, National Insurance or VAT being deferred to protect payroll. A large client failure is especially damaging, because the agency has often already paid the workers who generated the unpaid invoice.</p><p class="cd-side-note__d cd-side-note__insight">So the useful tests are not turnover and worker headcount alone. By the time a director calls us, the number that has usually moved first is gross margin after payroll on-costs. We would rather look at that, weekly payroll funding, client concentration, debtor ageing, invoice-finance availability and any HMRC arrears.</p></div>
 </section>
 
 <section class="cd-section cd-w-standard" id="annual">
   <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Temporary staffing agency insolvencies by year, 2016 to 2025</h2>
-    <p class="cd-section-intro">Temporary staffing agencies insolvencies rose from 132 in 2016 to a peak of 176 in 2025. The 2025 total of 176 remained well above the pre-pandemic total of 111 in 2019.</p>
+    <p class="cd-section-intro">The 2025 peak should not be read as proof that every part of the temporary staffing market weakened at once. SIC 782 covers agencies serving very different client sectors, including industrial, office, healthcare and education staffing, and Table 1c does not separate them.</p>
     <p class="cd-section-intro">Recorded insolvencies reached their series low of 78 in 2020, when pandemic restrictions and government support distorted normal insolvency patterns.</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Annual company insolvencies among temporary and agency staffing businesses, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Annual company insolvencies among temporary employment agencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
       <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
       <tbody><tr><th scope="row">2016</th><td class="cd-num">132</td></tr><tr><th scope="row">2017</th><td class="cd-num">94</td></tr><tr><th scope="row">2018</th><td class="cd-num">102</td></tr><tr><th scope="row">2019</th><td class="cd-num">111</td></tr><tr><th scope="row">2020</th><td class="cd-num">78</td></tr><tr><th scope="row">2021</th><td class="cd-num">92</td></tr><tr><th scope="row">2022</th><td class="cd-num">108</td></tr><tr><th scope="row">2023</th><td class="cd-num">107</td></tr><tr><th scope="row">2024</th><td class="cd-num">160</td></tr><tr><th scope="row">2025</th><td class="cd-num">176</td></tr></tbody>
     </table>
@@ -1216,12 +1277,21 @@
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
 </section>
 
+
+
 <section class="cd-section cd-w-standard" id="about">
   <div class="cd-section-head">
     <p class="cd-eyebrow">How to read this</p>
     <h2>How to interpret the temporary staffing agency figures</h2>
   </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d">Temporary staffing is a smaller sector by insolvency count, so monthly figures can move sharply on a handful of cases. Prefer the year-to-date or 12-month rolling total for the steadier read.</p><p class="cd-side-note__d">The count is a volume, not a failure rate. It is not adjusted for how many staffing agencies are registered, so it cannot be read as a sector-wide risk of insolvency.</p><p class="cd-side-note__d">This is temporary and agency staffing only (SIC 782). Permanent-placement recruitment agencies sit under a separate SIC code and are covered on their own page.</p></div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">SIC group 782, temporary employment agency activities, covers companies whose recorded primary business is supplying workers on a temporary basis. Permanent-placement and executive-search agencies sit under SIC 781, and longer-term human resources provision under SIC 783; both have their own separate figures.</p><p class="cd-side-note__d">These are company counts, not the number of branches, workers, assignments or client sites affected. One insolvent company may run several offices or trading brands, and an agency can stop trading without ever entering a formal insolvency procedure.</p><p class="cd-side-note__d">The figures are insolvency volumes, not a failure rate. They are not adjusted for the number of active temporary staffing companies, so the year-to-date and rolling 12-month comparisons are a better guide than any single month.</p><p class="cd-side-note__d">The SIC 782 figures come from Table 1c and are not seasonally adjusted. The Insolvency Service seasonally adjusts parts of its headline England and Wales series where it finds seasonality, but that adjustment does not apply to the industry figures used here. The latest month is provisional and can be revised.</p></div>
+</section>
+<section class="cd-section cd-w-standard" id="commercial">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Next steps</p>
+    <h2>What to do if your temporary staffing agency cannot pay its debts</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">A rise or fall in sector insolvencies does not decide whether an individual agency is viable. The immediate questions are whether it can fund the next payroll, meet PAYE and National Insurance when due, and collect enough of its debtor book to stay within its funding facility.</p><p class="cd-side-note__d">A business may still be viable if its client book is profitable and the problem is a temporary funding gap or historic arrears. It is more serious where gross margin no longer covers payroll on-costs and overheads, invoices are being excluded from funding, or one client is an unsafe share of the ledger.</p><p class="cd-side-note__d">Acting before payroll or HMRC liabilities are missed gives directors more room to negotiate with funders and clients, seek an <a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, refinance the debtor book, or consider a rescue procedure such as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> or <a href="/company-administration/">administration</a>.</p><p class="cd-side-note__d">Once the funding facility is withdrawn or payroll cannot be met, the options narrow quickly, and <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> may become the only realistic route.</p></div>
 </section>
 
 <div class="cd-bleed cd-method-band">
@@ -1253,12 +1323,13 @@
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>19 June 2026</dd>
         <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Industry scope</dt><dd>SIC 782: agencies supplying workers on a temporary basis, including temporary office, industrial, medical, nursing and teaching staff.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>
     <div class="cd-cite-card__right">
       <p class="cd-eyebrow">How to cite this page</p>
-      <p class="cd-cite-text" id="cd-citation-temporary-staffing-agency-insolvency-statistics">CompanyDebt. (2026). UK Temporary Staffing Agency Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).</p>
+      <p class="cd-cite-text" id="cd-citation-temporary-staffing-agency-insolvency-statistics">Company Debt. (2026). "UK Temporary Staffing Agency Insolvency Statistics." Analysis of Insolvency Service company insolvency data by industry (Table 1c). CompanyDebt.com.</p>
       <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-temporary-staffing-agency-insolvency-statistics">Copy citation</button>
     </div>
   </div>

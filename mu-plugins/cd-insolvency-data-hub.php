@@ -39,6 +39,7 @@ function cd_datahub_known_slugs() {
         'motor-vehicle-repair-insolvency-statistics',
         'cleaning-company-insolvency-statistics',
         'hotel-insolvency-statistics',
+        'estate-agency-insolvency-statistics',
     );
 }
 
@@ -119,8 +120,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => 'UK recruitment agency insolvency statistics: company insolvencies among permanent-placement recruitment agencies, year-to-date, rolling 12-month and annual figures.',
         ),
         'temporary-staffing-agency-insolvency-statistics' => array(
-            'title' => 'Temporary Staffing Agency Insolvency Statistics (UK)',
-            'desc'  => 'UK temporary staffing agency insolvency statistics: company insolvencies among temp and agency staffing businesses, year-to-date, rolling 12-month and annual figures.',
+            'title' => 'UK Temporary Staffing Agency Insolvency Statistics 2026',
+            'desc'  => 'Latest temporary staffing agency insolvency figures for England and Wales, including 2026 trends, annual data, recruitment-sector comparisons and methodology.',
         ),
         'motor-vehicle-repair-insolvency-statistics' => array(
             'title' => 'Motor Vehicle Repair Insolvency Statistics (UK)',
@@ -133,6 +134,10 @@ function cd_datahub_seo_meta( $slug ) {
         'hotel-insolvency-statistics' => array(
             'title' => 'Hotel Insolvency Statistics (UK)',
             'desc'  => 'UK hotel insolvency statistics: company insolvencies among hotels and similar accommodation, year-to-date, rolling 12-month and annual figures.',
+        ),
+        'estate-agency-insolvency-statistics' => array(
+            'title' => 'UK Estate Agency Insolvency Statistics 2026 | Company Debt',
+            'desc'  => 'Latest estate agency insolvency statistics for England and Wales, including 2026 figures, annual trends, insolvency procedures and official SIC scope.',
         ),
     );
     return isset( $meta[ $slug ] ) ? $meta[ $slug ] : null;
@@ -454,6 +459,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             array( 'Motor Vehicle Repair Insolvency Statistics', home_url( '/data/motor-vehicle-repair-insolvency-statistics/' ) ),
             array( 'Cleaning Company Insolvency Statistics', home_url( '/data/cleaning-company-insolvency-statistics/' ) ),
             array( 'Hotel Insolvency Statistics', home_url( '/data/hotel-insolvency-statistics/' ) ),
+            array( 'Estate Agency Insolvency Statistics', home_url( '/data/estate-agency-insolvency-statistics/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -833,17 +839,17 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Temporary Staffing Agency Insolvency Statistics',
-                'description'      => 'Company insolvencies among temporary and agency staffing businesses (SIC group 782), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes permanent-placement recruitment agencies. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for temporary employment agencies (SIC group 782), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, and comparison with permanent-placement agencies (SIC 781) and employment activities overall (SIC 78). Excludes permanent-placement and executive-search agencies (SIC 781) and longer-term human resources provision (SIC 783). Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Temporary staffing agency company insolvencies identified via Companies House SIC group 782; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'temporary staffing agency insolvency, temp agency insolvency, SIC 782, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 782. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'temporary staffing agency insolvency, temp agency insolvency, temporary employment agency insolvency, SIC 782, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
@@ -935,6 +941,74 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                     'Hotel company insolvencies (monthly)',
                     'Share of all company insolvencies',
                 ),
+            ),
+        );
+    }
+
+    if ( 'estate-agency-insolvency-statistics' === $slug ) {
+        $page_url = home_url( '/data/estate-agency-insolvency-statistics/' );
+        $ea_faq_items = array(
+            array(
+                'q' => 'How many estate agency businesses became insolvent in 2025?',
+                'a' => '233 businesses in SIC group 683, estate agencies and fee-based property managers in England and Wales, entered formal insolvency during 2025, down from 272 in 2024 but still 48% above the 2019 total of 157.',
+            ),
+            array(
+                'q' => 'Are estate agency insolvencies rising or falling?',
+                'a' => 'Falling. Insolvencies peaked in 2024, fell 14% during 2025, and the decline continued into 2026: there were 86 cases between January and May 2026, 22% fewer than the 110 recorded in the same period of 2025.',
+            ),
+            array(
+                'q' => 'Do the figures include letting agents and property managers?',
+                'a' => 'Yes. SIC group 683 combines real estate agencies with businesses that manage property for clients on a fee or contract basis, including letting agents. The two cannot be separated in the published data.',
+            ),
+            array(
+                'q' => 'Do the figures include property developers and landlords?',
+                'a' => 'No. Companies that mainly buy, sell, own or let property in their own name are recorded under separate SIC groups (681 and 682) and are excluded from the totals on this page.',
+            ),
+            array(
+                'q' => 'Are the figures UK-wide?',
+                'a' => 'No. The headline figures cover England and Wales only. Scotland is reported separately: 9 insolvencies in 2025 and 1 in the first five months of 2026, and there is no comparable Northern Ireland industry series, so a complete UK total cannot be calculated.',
+            ),
+            array(
+                'q' => 'Which insolvency procedure is most common in the sector?',
+                'a' => 'Creditors’ voluntary liquidation. It accounted for 166 of the 233 insolvencies recorded in 2025, 71% of the total, though compulsory liquidations, usually creditor-driven, rose from 54 to 60 over the same period.',
+            ),
+        );
+        $ea_faq_main_entities = array();
+        foreach ( $ea_faq_items as $item ) {
+            $ea_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Estate Agency Insolvency Statistics',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for estate agencies and fee-based property management businesses (SIC group 683), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes companies that mainly buy, sell, own or let property in their own name (SIC groups 681 and 682). Source: Insolvency Service and Companies House.',
+                'url'              => $page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01-01/2026-05-31',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and procedure shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 683. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'estate agency insolvency, estate agent insolvencies, estate agency insolvencies 2026, SIC 683 insolvency statistics, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Estate agency and property management company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
+                ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $ea_faq_main_entities,
             ),
         );
     }
