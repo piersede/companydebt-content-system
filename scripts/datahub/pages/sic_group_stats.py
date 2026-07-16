@@ -542,50 +542,49 @@ SECTORS = {
         "exclusion_note": ("Permanent-placement and executive-search agencies "
                            "(SIC 781) and longer-term human resources provision "
                            "(SIC 783) are recorded separately."),
-        "hero_note": ("The direction matters more than the size of the increase. "
-                      "Insolvencies across employment activities as a whole fell "
-                      "15.3% over the same period, and permanent-placement agency "
-                      "insolvencies fell 29.5%. Temporary staffing is moving "
-                      "against its own parent sector, not simply following a "
-                      "wider rise."),
+        "hero_note": ("Five extra failures is not a big number. The direction is "
+                      "what matters. Insolvencies across employment activities as "
+                      "a whole fell 15.3% over the same period, and "
+                      "permanent-placement agencies fell 29.5%. Temporary staffing "
+                      "is going the other way from its own trade, which is not "
+                      "what you would expect if this were simply a bad year for "
+                      "recruitment."),
         "key_findings": True,
         "extra_findings": [
             {"value": "59% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "176 vs 111"},
             {"value": "34.3%", "label": "of SIC 78 insolvencies", "sub": "up from 27.0% a year earlier"},
         ],
         "comparison_intro": [
-            ("Yes, on the two more reliable comparisons. The 72 insolvencies "
-             "recorded from January to May 2026 were 7.5% higher than the 67 in "
-             "the same period of 2025, and the rolling 12-month total rose 11.7%, "
-             "from 162 to 181."),
-            ("The monthly figures are more volatile. May's 12 cases were down "
-             "from 16 in April but slightly above the 11 recorded in May 2025, "
-             "and the 2026 path so far has been uneven rather than a steady climb. "
-             "One monthly fall does not outweigh the year-to-date and rolling "
-             "comparisons, but nor do those comparisons describe a smooth "
-             "month-by-month rise."),
-            ("The fairest reading is a renewed deterioration from an already high "
-             "level: the annual series reached a new peak of 176 in 2025. These "
-             "are Company Debt calculations from Insolvency Service Table 1c data."),
+            ("Yes, on the two measures worth trusting. There were 72 insolvencies "
+             "from January to May 2026 against 67 in the same months of 2025, a "
+             "rise of 7.5%, and the rolling 12-month total went from 162 to 181, "
+             "up 11.7%."),
+            ("The monthly figures are noisier. May's 12 cases were down from 16 in "
+             "April, though still above the 11 in May 2025, and the run so far "
+             "this year has gone 13, 7, 24, 16, 12. That is not a steady climb. "
+             "Anyone calling it one is reading the year-to-date total and ignoring "
+             "the path it took to get there."),
+            ("The honest reading is a renewed deterioration from a level that was "
+             "already high: 2025 set a new series peak of 176. These are Company "
+             "Debt calculations from Insolvency Service Table 1c data."),
         ],
         "divergence": {
             "heading": "Temporary staffing is moving against the wider recruitment sector",
             "caption": "Temporary staffing agencies against related recruitment classifications",
             "intro": [
-                ("This is the more important finding on the page. While temporary "
-                 "staffing insolvencies rose, every wider recruitment measure "
-                 "fell: permanent-placement agencies (SIC 781) were down 29.5%, "
-                 "employment activities as a whole (SIC 78) down 15.3%, and the "
-                 "broad administrative and support services section (SIC N) down "
-                 "21.7%."),
+                ("This is the finding worth taking away. Temporary staffing rose "
+                 "while everything next to it fell: permanent-placement agencies "
+                 "(SIC 781) down 29.5%, the whole of employment activities (SIC "
+                 "78) down 15.3%, and the broad administrative and support "
+                 "services section (SIC N) down 21.7%."),
                 ("Temporary staffing accounted for 34.3% of all insolvencies "
                  "across employment activities in the first five months of 2026, "
                  "up from 27.0% a year earlier, a rise of 7.3 percentage points. "
                  "Its share of the wider administrative and support services "
                  "section also rose, from 6.2% to 8.5%."),
-                ("The increase is not just the sector being carried along by a "
-                 "general rise in recruitment failures, because there was no such "
-                 "rise. Temporary staffing is diverging from its peers."),
+                ("So this is not a rising tide lifting every recruitment failure "
+                 "with it. There was no rising tide. Whatever is happening is "
+                 "happening to temporary staffing in particular."),
             ],
             "peers": [
                 {"code": "782", "kind": "group", "label": "Temporary employment agencies (SIC 782)", "emphasise": True},
@@ -595,16 +594,15 @@ SECTORS = {
             ],
         },
         "longer_term_narrative": [
-            ("The annual series does not show a steady decade-long rise. Temporary "
-             "employment agency insolvencies fell from 132 in 2016 to 94 in 2017, "
-             "then sat between 102 and 111 through 2018 and 2019."),
-            ("Recorded cases fell to 78 in 2020 and 92 in 2021, when government "
-             "support, creditor restrictions and disruption to normal insolvency "
-             "processes held the figures down, before returning to 108 in 2022 "
-             "and 107 in 2023."),
-            ("The clear deterioration came later. The annual total rose to 160 in "
-             "2024 and then to a series high of 176 in 2025, which was 10.0% "
-             "above 2024 and 58.6% above the 111 recorded in 2019."),
+            ("Whatever the 2025 peak suggests, this is not a steady decade-long "
+             "climb. Insolvencies fell from 132 in 2016 to 94 in 2017, then sat "
+             "between 102 and 111 through 2018 and 2019."),
+            ("They dropped to 78 in 2020 and 92 in 2021, when government support "
+             "and the restrictions on creditors held the normal insolvency cycle "
+             "in check, before returning to 108 in 2022 and 107 in 2023."),
+            ("The damage is recent. The total jumped to 160 in 2024 and then to "
+             "176 in 2025, the highest in the series, 10.0% above 2024 and 58.6% "
+             "above the 111 recorded in 2019."),
         ],
         "latest_note": (
             "Both the year-to-date and rolling totals are higher than a year "
@@ -613,120 +611,132 @@ SECTORS = {
             "steady month-by-month rise."
         ),
         "annual_intro": (
-            "The 2025 peak should not be read as proof that every part of the "
-            "temporary staffing market weakened at once. SIC 782 covers agencies "
-            "serving very different client sectors, including industrial, office, "
-            "healthcare and education staffing, and Table 1c does not separate them."
+            "A record year does not mean every corner of the market weakened at "
+            "once. SIC 782 lumps together the agency supplying warehouse shifts, "
+            "the one placing office temps, the one covering nursing rotas and the "
+            "one finding supply teachers, and Table 1c does not separate them. The "
+            "peak is real. It is just not evenly spread."
         ),
         "pressure_heading": "Why temporary staffing agencies remain financially exposed",
+        "pressure_caveat_in_intro": True,
         "pressure_intro": [
-            ("The current market picture is mixed rather than uniformly bad, and "
-             "the insolvency data is retrospective: it reflects financial distress "
-             "that can build over a long period. The pressures below are current "
-             "sector conditions and common financial mechanisms, not a claim about "
-             "the cause of any individual insolvency."),
+            ("The market picture is genuinely mixed, and insolvency figures look "
+             "backwards: they record distress that has usually been building for a "
+             "year or more before anyone files anything. What follows is how money "
+             "actually moves through a staffing agency, and where it tends to get "
+             "stuck. It is not a claim about why any particular company failed."),
         ],
         "pressure": [
             {
                 "h3": "The wider vacancy market is still weak",
                 "body": [
-                    ("The broader hiring market remains subdued. The ONS estimated "
-                     "707,000 UK vacancies in March to May 2026, down 4.2% on a "
-                     "year earlier and the lowest total since early 2021."),
-                    ("A weaker vacancy market can reduce placement volumes and "
-                     "sharpen competition between agencies, though the ONS series "
-                     "covers vacancies across the whole economy rather than "
-                     "temporary staffing agencies alone."),
+                    ("Hiring overall is still subdued. The ONS put UK vacancies at "
+                     "707,000 for March to May 2026, down 4.2% on the year and the "
+                     "lowest since early 2021."),
+                    ("Fewer vacancies means fewer shifts to fill and more agencies "
+                     "chasing the ones left. That tends to show up as margin before "
+                     "it shows up as volume: the client asks for a lower charge "
+                     "rate because they know three other agencies will say yes. The "
+                     "ONS count covers the whole economy rather than staffing "
+                     "agencies alone, so treat it as weather, not diagnosis."),
                 ],
             },
             {
                 "h3": "Employers are favouring temporary over permanent hiring",
                 "body": [
-                    ("Temporary hiring has recently held up better than permanent "
-                     "recruitment. The KPMG and REC UK Report on Jobs found "
-                     "temporary billings grew in June 2026 at their fastest rate "
-                     "since April 2023, while permanent placements kept falling."),
-                    ("This does not contradict the insolvency data. It suggests "
-                     "trading demand may be improving for some agencies while "
-                     "financial stress remains high for others. Insolvency is "
-                     "often a lagging outcome, and an agency can win more temporary "
-                     "work while still carrying thin margins, arrears or an "
-                     "overstretched funding facility."),
-                    ("The REC survey is UK-wide market context, not the source of "
-                     "the England and Wales insolvency counts."),
+                    ("Temp work itself is holding up better than permanent. The "
+                     "KPMG and REC UK Report on Jobs found temporary billings grew "
+                     "in June 2026 at their quickest rate since April 2023, while "
+                     "permanent placements kept falling."),
+                    ("That sounds like good news, and for trading it is. It is also "
+                     "the exact pattern that gets agencies into trouble. More temp "
+                     "shifts mean more workers to pay on Friday and more invoices "
+                     "sitting on somebody's desk. Billings go up, the bank balance "
+                     "does not, and the agency feels busy right up until the moment "
+                     "it cannot make payroll."),
+                    ("The REC survey is UK-wide market context. It is not where the "
+                     "England and Wales insolvency counts come from."),
                 ],
             },
             {
                 "h3": "Direct payroll costs remain high",
                 "body": [
-                    ("For agencies that employ temporary workers directly, payroll "
-                     "on-costs are a real margin issue. In the 2026 to 2027 tax "
-                     "year, employers pay National Insurance at 15% above the "
-                     "secondary threshold of £96 a week, or £417 a month."),
-                    ("Whether that damages the agency depends on the contract and "
-                     "the charge rate. Where a higher employment cost cannot be "
-                     "passed through promptly, gross margin narrows even when "
-                     "billings hold steady. Not every SIC 782 company employs its "
-                     "workers directly, though; some use umbrella companies or "
-                     "other arrangements."),
+                    ("For agencies that employ their temps directly, the on-costs "
+                     "are not a rounding error. In the 2026 to 2027 tax year "
+                     "employers pay National Insurance at 15% above the secondary "
+                     "threshold of £96 a week, or £417 a month."),
+                    ("Whether that hurts depends entirely on whether it can be "
+                     "pushed into the charge rate, and on a framework agreement "
+                     "signed eighteen months ago it usually cannot. The margin "
+                     "absorbs it instead. This bites unevenly, though: not every "
+                     "agency employs its workers directly, and some run everything "
+                     "through umbrella companies."),
                 ],
             },
             {
                 "h3": "Growth can increase the funding requirement",
                 "body": [
-                    ("Temporary staffing carries an unusual cash-flow risk: growth "
-                     "can increase the external funding needed before it improves "
-                     "cash. Workers and payroll taxes are paid before the "
-                     "corresponding client invoice is collected."),
-                    ("If assignments expand quickly, debtor days lengthen or a "
-                     "large client disputes an invoice, the agency may need more "
-                     "working capital exactly when its billings look strongest. "
-                     "Invoice finance narrows the timing gap but creates reliance "
-                     "on funding headroom, eligible invoices and client "
-                     "concentration limits."),
+                    ("This is the one that catches people out. In most trades, "
+                     "winning more work eventually fixes a cash problem. In temp "
+                     "staffing it makes it worse first. You pay the workers and the "
+                     "payroll taxes this week; the client pays in thirty, "
+                     "forty-five or sixty days."),
+                    ("Take on a large new contract and you fund every one of those "
+                     "weeks before a penny arrives. Invoice finance is what bridges "
+                     "the gap, and it works, until the funder trims the advance "
+                     "rate, or disallows invoices from your biggest client because "
+                     "they have become too large a share of the ledger, or a "
+                     "timesheet dispute makes a batch ineligible overnight."),
+                    ("The facility that felt comfortable at last year's billings "
+                     "can be the thing that breaks you at this year's."),
                 ],
             },
         ],
         "practitioner_view": [
-            ("In the temporary staffing cases we handle, insolvency rarely begins "
-             "with one quiet month. More often the gross margin narrows while the "
-             "cash tied up in weekly payroll and unpaid client invoices grows, and "
-             "the agency looks busy from the outside while its funding headroom "
-             "quietly runs down."),
-            ("The warning signs we see are usually operational: debtor days "
-             "rising, a growing reliance on one client, disputed timesheets, "
-             "invoices becoming ineligible for funding, reduced advance rates, and "
-             "PAYE, National Insurance or VAT being deferred to protect payroll. A "
-             "large client failure is especially damaging, because the agency has "
-             "often already paid the workers who generated the unpaid invoice."),
-            ("So the useful tests are not turnover and worker headcount alone. By "
-             "the time a director calls us, the number that has usually moved "
-             "first is gross margin after payroll on-costs. We would rather look "
-             "at that, weekly payroll funding, client concentration, debtor "
-             "ageing, invoice-finance availability and any HMRC arrears."),
+            ("In the temporary staffing cases we handle, it almost never starts "
+             "with a quiet month. It starts with a Friday. The workers get paid, "
+             "because the workers always get paid, and something else gives way to "
+             "make that happen: the VAT, the PAYE, the supplier who can wait "
+             "another fortnight."),
+            ("By the time a director calls us the pattern is usually months old. "
+             "Debtor days have crept out, one client has quietly become half the "
+             "ledger, timesheets are being queried, the funder has trimmed the "
+             "advance rate, and there is a personal guarantee on the facility that "
+             "nobody wants to talk about."),
+            ("The agency looks busy throughout. It has often never been busier. "
+             "That is exactly what makes this one so hard to see from the inside, "
+             "and why the call tends to come later than it should."),
+            ("So we would not start with turnover or worker headcount. We would "
+             "look at gross margin after on-costs, what the payroll actually needs "
+             "each week, how concentrated the client book is, how old the debtor "
+             "book is, what the funder will still advance against, and what is "
+             "owed to HMRC. Those six numbers tell you more than the sales figures "
+             "ever will."),
         ],
         "commercial_transition": [
-            ("A rise or fall in sector insolvencies does not decide whether an "
-             "individual agency is viable. The immediate questions are whether it "
-             "can fund the next payroll, meet PAYE and National Insurance when "
-             "due, and collect enough of its debtor book to stay within its "
-             "funding facility."),
-            ('A business may still be viable if its client book is profitable and '
-             'the problem is a temporary funding gap or historic arrears. It is '
-             'more serious where gross margin no longer covers payroll on-costs '
-             'and overheads, invoices are being excluded from funding, or one '
-             'client is an unsafe share of the ledger.'),
-            ('Acting before payroll or HMRC liabilities are missed gives directors '
-             'more room to negotiate with funders and clients, seek an '
+            ("None of the figures above decide whether your agency is viable. "
+             "Sector totals never do. The questions that matter are much narrower: "
+             "can you fund Friday, can you meet PAYE and National Insurance when "
+             "they fall due, and will the debtor book collect quickly enough to "
+             "keep you inside the facility?"),
+            ("Plenty of agencies in trouble are sound businesses with a timing "
+             "problem or an old arrears bill, and that is worth knowing, because "
+             "it is fixable. It is more serious when the margin no longer covers "
+             "on-costs and overheads, when invoices are being knocked back by the "
+             "funder, or when one client has grown too big to lose."),
+            ('If you are reading this with a payroll due and no obvious way to '
+             'fund it, the thing worth knowing is that the earlier you speak to '
+             'someone, the more room there is to move: terms renegotiated, the '
+             'debtor book refinanced, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
-             'refinance the debtor book, or consider a rescue procedure such as a '
+             'or a rescue procedure such as a '
              '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
              'Voluntary Arrangement</a> or '
              '<a href="/company-administration/">administration</a>.'),
-            ('Once the funding facility is withdrawn or payroll cannot be met, the '
-             'options narrow quickly, and '
+            ('Once the facility is pulled or a payroll is missed, that room '
+             'disappears quickly, and '
              '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
-             'voluntary liquidation</a> may become the only realistic route.'),
+             'voluntary liquidation</a> may be the only route left.'),
         ],
         "notes": [
             "SIC group 782, temporary employment agency activities, covers "
@@ -1641,13 +1651,22 @@ def pressure_block(cfg: dict) -> str:
     )
     heading = cfg.get("pressure_heading") or f"Why {cfg['plural']} are under pressure"
     intro_paras = "".join(f'<p class="cd-section-intro">{p}</p>' for p in cfg.get("pressure_intro", []))
+    # The boilerplate caveat is the default and must stay unless the page makes
+    # the same point in its own words: a sector page always needs it somewhere.
+    # Pages that fold it into an authored pressure_intro set this flag, so the
+    # caveat is not simply dropped, just not said twice in a row.
+    caveat = (
+        ""
+        if cfg.get("pressure_caveat_in_intro")
+        else '<p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>'
+    )
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="pressure">
       <div class="cd-section-head">
         <p class="cd-eyebrow">Context</p>
         <h2>{heading}</h2>
         {intro_paras}
-        <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
+        {caveat}
       </div>
       <div class="cd-side-notes">{items}</div>
     </section>""")
