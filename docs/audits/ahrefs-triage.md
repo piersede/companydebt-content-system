@@ -150,6 +150,26 @@ research findings against the source before acting on them.
 
 ---
 
+## 6b. Find the real source before editing anything
+
+Three times in one session the obvious source was the wrong one:
+
+| Symptom | Obvious source | Actual source |
+|---|---|---|
+| ~820 links to redirects | theme / nav menus | **footer block widgets** in the DB |
+| 375 schema errors | the 2026-07-02 date/image patch | **Schema Pro blank settings** |
+| 8 over-long meta descs | Yoast post meta | **`wpseo_metadesc` filter in cd-insolvency-data-hub** |
+
+The meta-description one is the sharpest warning, because two plausible fixes
+returned success and did nothing:
+
+1. REST post-meta write -> `200`, value stored, page unchanged.
+2. Dropping the `wp_yoast_indexable` row (the documented gotcha) -> also 0/8.
+
+Only then did it turn out the mu-plugin filters `wpseo_metadesc` and never
+consults post meta for `/data/` pages. **A 200 is not verification. Re-render
+the page and measure.**
+
 ## 7. "Fixed locally" != "fixed"
 
 Three distinct states, routinely conflated:
@@ -180,6 +200,25 @@ one of those three is a no-op.
   -> insolvency/what-is-wrongful-trading`. Need qppr rule edits; qppr is a known
   silent-failure area and no content links to them any more.
 - **Noindex/testimonial/author pages** (~160): by design.
+- **CSS broken** (3): `/wp-content/cache/min/1/...` 404s are stale WP Rocket
+  minify artifacts on live - the HTML references a minified file the cache has
+  purged. A purge + warm clears it; not a code fix.
+- **Titles "too short"** (3): `/cookie-policy/` is titled "Cookie Policy" (13
+  chars) and `/accreditations/` "Accreditations" (14); Ahrefs wants >=15. Those
+  titles are correct for those pages. Padding them to clear a threshold is the
+  same make-the-dashboard-green instinct this document exists to warn against.
+- **Indexable page not in sitemap** (11): `/testimonials/page/N/` pagination.
+  Paginated archives are not normally sitemap entries.
+
+### Staging mu-plugin cruft (noticed 2026-07-16)
+
+`wp-content/mu-plugins` on staging holds **92 files**, roughly 60 of them
+leftover one-shot debug/fix scripts from past sessions (`mu-update-care-home-v2`
+..`v8`, `mu-fix-batch1-5`, `codex-push-*`, `cd-diag-*`, `cd-inspect-*`). Every
+mu-plugin loads on every request. Most are token-guarded and return immediately,
+so the cost is small, but it is clutter with real risk: several are `cd-fix-*`
+scripts that mutate SEO fields. Worth a dedicated clean-up. None of them
+generates the `?fresh` image redirect - checked.
 
 ---
 
