@@ -108,6 +108,45 @@
     "source_updated": "2026-07-14"
   },
 
+  "prohibited_name_period_years": {
+    "value": "5",
+    "superseded": [],
+    "description": "Section 216 IA 1986 restriction on re-using a liquidated company's name (or a confusingly similar one) without court permission.",
+    "source_url": "https://www.legislation.gov.uk/ukpga/1986/45/section/216",
+    "source_name": "Insolvency Act 1986, s.216",
+    "source_updated": "2026-07-17"
+  },
+
+  "disqualification_range_years": {
+    "value": "2 to 15",
+    "superseded": [],
+    "description": "Director disqualification order length under CDDA 1986 s.6 following a conduct report.",
+    "source_url": "https://www.legislation.gov.uk/ukpga/1986/46/section/6",
+    "source_name": "Company Directors Disqualification Act 1986, s.6",
+    "source_updated": "2026-07-17"
+  },
+
+  "official_cvl_count_2025": {
+    "value": "18,525",
+    "total_registered_insolvencies_2025": "23,938",
+    "cvl_share_of_total": "approximately 77%",
+    "description": "Registered company insolvencies in England and Wales, 2025, and the CVL share of them. The four years to 2025 contain the four highest annual CVL totals since the series began in 1960.",
+    "source_url": "https://www.gov.uk/government/statistics/company-insolvencies-december-2025/commentary-company-insolvency-statistics-december-2025",
+    "source_name": "The Insolvency Service, Company Insolvency Statistics",
+    "source_updated": "2026-07-17"
+  },
+
+  "creditor_decision_and_filing_deadlines": {
+    "value": "15 days (Companies House) / 14 days (Gazette)",
+    "superseded": [],
+    "companies_house_filing_days": "15",
+    "gazette_advertisement_days": "14",
+    "description": "The special resolution to wind up must be filed at Companies House within 15 days of being passed, and advertised in The Gazette within 14 days of being passed. This is separate from the creditor decision procedure, under which creditors are given notice of the liquidator-appointment decision.",
+    "source_url": "https://www.legislation.gov.uk/uksi/2016/1024",
+    "source_name": "Insolvency (England and Wales) Rules 2016",
+    "source_updated": "2026-07-17"
+  },
+
   "_banned_claims": {
     "_comment": "Figures that must NOT appear anywhere on the site. Each was traced to an unverifiable origin. scripts/check_statutory_fees.py fails any page containing them.",
     "director_redundancy_average": {

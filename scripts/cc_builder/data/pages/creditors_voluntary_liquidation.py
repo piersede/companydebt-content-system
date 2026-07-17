@@ -15,5 +15,5 @@ PAGE_CONFIG = {
     'page_type': 'definition',
     'wp_page_id': 7674,
     'title': "Creditors' Voluntary Liquidation (CVL): Practical Guide for UK Directors",
-    'verification_date': '8 July 2026',
+    'verification_date': '17 July 2026',
 }
