@@ -76,6 +76,7 @@ const config = {
     groups: {
       emails: env.OUTREACH_GROUP_EMAILS || 'topics',
       linkedin: env.OUTREACH_GROUP_LINKEDIN || 'group_mm52mctc',
+      contacted: env.OUTREACH_GROUP_CONTACTED || 'group_mm59f8fr',
       defunct: env.OUTREACH_GROUP_DEFUNCT || 'group_mm52z487',
     },
   },
