@@ -2055,6 +2055,10 @@ SECTORS = {
         "division_code": "55",
         "parent_section_code": "I",
         "parent_section_label": "accommodation and food service",
+        # The meaningful peer is the accommodation trade (SIC 55), not all of
+        # hospitality: this page deliberately excludes restaurants and pubs.
+        "parent_kind": "division",
+        "parent_label": "accommodation",
         "h1a": "UK Hotel",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -2062,52 +2066,384 @@ SECTORS = {
         "keyword": "hotel",
         "singular": "hotel",
         "plural": "hotels and similar accommodation businesses",
-        "scope_description": "hotels and similar short-stay accommodation",
-        "exclusion_note": "Restaurants, pubs and self-catering or holiday accommodation are recorded separately.",
-        "notes": [
-            "Hotel insolvencies are a smaller sector by count, so monthly figures "
-            "can move sharply on a handful of cases. Prefer the year-to-date or "
-            "12-month rolling total for the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many hotels are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is hotels and similar accommodation only (SIC 551). Restaurants, "
-            "pubs and self-catering accommodation sit under separate SIC codes "
-            "and are not included here.",
+        "scope_description": ("hotels, motels and similar short-stay "
+                              "accommodation with daily housekeeping"),
+        "exclusion_note": ("Restaurants and pubs (SIC 561 and 563), and "
+                           "self-catering, holiday and short-stay lets (SIC 552), "
+                           "are recorded separately and are not included here."),
+        "hero_note": ("Hotels are improving, which is the good news and not the "
+                      "whole of it. Every other kind of accommodation improved "
+                      "faster: the accommodation trade as a whole fell 23.1% over "
+                      "the same months, more than twice the hotel rate. Hotels now "
+                      "account for 75.6% of all accommodation insolvencies, up from "
+                      "65.0% a year ago. And 2025, at 153, was the worst year in "
+                      "the series."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "75.6%", "label": "of accommodation insolvencies", "sub": "up from 65.0% a year earlier"},
+            {"value": "9.8%", "label": "of 2025 cases were administrations", "sub": "the highest share of any sector here"},
         ],
-        "practitioner_view": [
-            "In the cases we see, hotels carry more fixed cost than most "
-            "hospitality formats: property, energy and a baseline of staffing "
-            "continue through quiet periods regardless of occupancy.",
-            "Many hotels also carry debt from refurbishment cycles that has to be "
-            "serviced whether the rooms are full or not, which turns a soft "
-            "occupancy quarter into a cash-flow problem faster than in a "
-            "lower-cost format.",
+        "comparison_intro": [
+            ("Falling, on both measures. There were 68 insolvencies from January to "
+             "May 2026 against 76 in the same months of 2025, down 10.5%, and the "
+             "rolling 12-month total fell from 154 to 145, down 5.8%. That is a "
+             "genuine improvement and it deserves to be said plainly before the "
+             "qualification. These are Company Debt calculations from Insolvency "
+             "Service Table 1c data."),
+            ("The qualification is the company hotels are keeping. Accommodation as "
+             "a whole fell 23.1%, from 117 to 90. Holiday and short-stay lets fell "
+             "from 17 to 4, and other accommodation from 18 to 14. Every "
+             "neighbouring format is recovering faster than hotels are, which is "
+             "why hotels now make up 75.6% of all accommodation insolvencies "
+             "against 65.0% a year ago."),
+            ("The other thing worth knowing is that 2025 was the worst year on "
+             "record for hotels, at 153. Most of the economy peaked in 2023 and has "
+             "been recovering since. Hotels peaked last year. A 10.5% improvement "
+             "from the worst point in the series is progress from a low base, not a "
+             "return to health."),
+        ],
+        "divergence": {
+            "heading": "Hotels are recovering more slowly than the rest of accommodation",
+            "caption": "Hotels against other accommodation formats and the restaurant trade",
+            "intro": [
+                ("This is the finding worth taking away. Hotels are the heaviest, "
+                 "most capital-intensive way to sell a bed for the night, and they "
+                 "are the format recovering most slowly. The lighter formats, the "
+                 "ones without a payroll and a boiler and a breakfast service, have "
+                 "come back fastest."),
+                ("Two cautions on the table below. The holiday-let and other "
+                 "accommodation series are small, so a move from 17 cases to 4 is a "
+                 "real direction but a shaky percentage, and should not be read as "
+                 "precision. And because hotels are roughly three-quarters of "
+                 "accommodation, the division line is largely hotels looking at "
+                 "themselves."),
+                ('Restaurants are in the table because they are the most useful '
+                 'sibling comparison rather than a competitor: same customer, same '
+                 'staffing market, same energy bills, very different balance sheet. '
+                 'They fell 3.3%. Their figures are on our '
+                 '<a href="/data/restaurant-insolvency-statistics/">restaurant '
+                 'insolvency statistics</a> page.'),
+            ],
+            "peers": [
+                {"code": "551", "kind": "group", "label": "Hotels and similar accommodation (SIC 551)", "emphasise": True},
+                {"code": "552", "kind": "group", "label": "Holiday and short-stay lets (SIC 552)"},
+                {"code": "559", "kind": "group", "label": "Other accommodation (SIC 559)"},
+                {"code": "55", "kind": "division", "label": "Accommodation overall (SIC 55)"},
+                {"code": "561", "kind": "group", "label": "Restaurants (SIC 561)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Hotels do not fit the pattern the rest of this data follows, and it "
+             "is worth understanding why before reading anything else on this page. "
+             "Insolvencies ran at 80, 89 and 96 from 2016 to 2018. Then 2019 came "
+             "in at 144, a jump of 50% in a single year, before the pandemic and "
+             "before anything else on these pages went wrong."),
+            ("Then the strangest number here. In 2020, company insolvencies across "
+             "the whole economy fell 26.4% as government support and the "
+             "restrictions on creditors held the normal cycle in check. Hotels went "
+             "from 144 to 143. They did not get the quiet year that almost every "
+             "other sector got. Whatever the support schemes did, they did not "
+             "reach the hotels that were already going."),
+            ("2021 brought the delayed reprieve at 97, then 125 in 2022, 144 in "
+             "2023 and 136 in 2024. And then 153 in 2025, the highest in the "
+             "series. Hotels have now been at or near their 2019 level for the best "
+             "part of seven years, which is a long time to describe something as a "
+             "recovery."),
+        ],
+        "annual_intro": (
+            "Read this table differently from the others on this site. On most of "
+            "these pages 2019 is the last normal year and everything is measured "
+            "against it. For hotels, 2019 was itself the anomaly: 144 against 96 the "
+            "year before, a 50% jump that arrived before the pandemic. Hotels had no "
+            "good year to go back to."
+        ),
+        "latest_note": (
+            "Both measures are down on a year earlier, so the direction is "
+            "genuinely improving. The context is that 2025 was the worst year in the "
+            "series and every other accommodation format improved faster over the "
+            "same months."
+        ),
+        "pressure_heading": "Why hotels are under more pressure than the rest of hospitality",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("A hotel is a building with a business inside it, and that is the "
+             "whole of the difference. Almost everything below follows from owning "
+             "or leasing a large, expensive property that has to be heated, staffed "
+             "and insured whether anyone is in it or not."),
+            ("Insolvency figures also look backwards, recording distress that has "
+             "usually been building for a year or more. This is not a claim about "
+             "why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "High fixed operating costs",
-                "body": ("Property, energy and a baseline level of staffing "
-                         "continue regardless of occupancy, so hotels carry more "
-                         "fixed cost than most other hospitality formats and less "
-                         "room to cut back when trade is quiet."),
+                "h3": "The costs run whether the rooms sell or not",
+                "body": [
+                    ("A restaurant that has a bad Tuesday can send staff home and "
+                     "buy less food. A hotel cannot un-heat a wing, and it cannot "
+                     "run a hundred-bedroom property with nobody on the desk at "
+                     "2am. The reception, the housekeeping baseline, the boiler, "
+                     "the insurance and the rent or the mortgage are all there at "
+                     "40% occupancy exactly as they are at 90%."),
+                    ("That is what makes hotels a high-operational-gearing "
+                     "business, which is a dry way of saying the good years are "
+                     "very good and the bad ones arrive fast. The gap between a "
+                     "profitable hotel and an insolvent one can be a few points of "
+                     "occupancy sustained over a couple of quarters."),
+                ],
             },
             {
-                "h3": "Discretionary, debt-funded demand",
-                "body": ("Leisure and business travel are both discretionary "
-                         "spend that softens quickly when confidence drops, while "
-                         "refurbishment debt still has to be serviced regardless "
-                         "of how full the hotel is."),
+                "h3": "The wage bill moved, and hotels are staff-heavy",
+                "body": [
+                    ("Hotels employ a lot of people at or near the wage floor, "
+                     "across housekeeping, food and beverage, and front of house. "
+                     "The National Living Wage went from £11.44 an hour in April "
+                     "2024 to £12.21 in April 2025 and £12.71 from April 2026, for "
+                     "workers aged 21 and over."),
+                    ("Employer National Insurance moved at the same time, to 15% "
+                     "from April 2025, with the secondary threshold falling from "
+                     "£175 a week to £96. That threshold cut is worth most where "
+                     "the pay is lowest and the shifts are shortest, which "
+                     "describes a hotel's payroll almost exactly."),
+                    ("Room rates can be raised, and have been. Whether they can be "
+                     "raised as fast as the payroll, in a town where the hotel down "
+                     "the road is discounting to fill rooms, is a different "
+                     "question."),
+                ],
+            },
+            {
+                "h3": "Refurbishment debt does not care about occupancy",
+                "body": [
+                    ("Hotels have to be refurbished on a cycle, because a tired "
+                     "hotel loses rate before it loses occupancy, and the money for "
+                     "that is nearly always borrowed against the building. The "
+                     "borrowing is then serviced out of trading, monthly, "
+                     "regardless of what trading does."),
+                    ("This is the mechanism that turns a soft eighteen months into "
+                     "an insolvency rather than a bad year. The trading dips, the "
+                     "covenant gets tight, the lender wants a valuation, and the "
+                     "valuation is done on the trading. Everything reinforces "
+                     "everything else, in the wrong direction."),
+                ],
+            },
+            {
+                "h3": "Demand is discretionary at both ends",
+                "body": [
+                    ("A hotel sells two things that are among the first to be cut: "
+                     "a leisure break and a business trip. Neither has to happen "
+                     "this quarter. The ONS also found accommodation and food "
+                     "service among the largest contributors to falling vacancies "
+                     "in March to May 2026, down 10,000 on the year, which is what "
+                     "an industry that is not expanding looks like from the outside."),
+                    ("There is a reason the lighter formats in the table above are "
+                     "recovering faster. When people do travel, a holiday let has "
+                     "almost no cost base to carry, and can sit empty for a month "
+                     "without anyone going under. A hotel cannot do that for a "
+                     "fortnight."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Hotel Insolvency Statistics. "
-                     "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
-        "related": ('Hotels sit within the wider '
-                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside accommodation and food service generally. See also '
+        "policy_update": {
+            "heading": "Business rates changed for hotels in April 2026",
+            "paras": [
+                ("This one is worth understanding properly, because it changed in "
+                 "April and a lot of budgets were built on the old arrangement. Up "
+                 "to 31 March 2026, eligible retail, hospitality and leisure "
+                 "properties in England got 40% off their business rates bill, "
+                 "capped at £110,000 per business, with the cap applied across a "
+                 "group rather than per property."),
+                ("From 1 April 2026 that relief was replaced by permanently lower "
+                 "multipliers. For 2026 to 2027 in England, a hospitality property "
+                 "with a rateable value below £51,000 is charged at 38.2p against "
+                 "the 43.2p small business multiplier, and one between £51,000 and "
+                 "£499,999 at 43p against the 48p standard multiplier. In both "
+                 "cases that is 5p in the pound less than an equivalent "
+                 "non-hospitality property."),
+                ("The catch is at the top. A property with a rateable value of "
+                 "£500,000 or more is charged at 50.8p, the highest multiplier "
+                 "there is, and gets no hospitality discount at all. Plenty of "
+                 "city-centre and larger hotels sit above that line."),
+                ("Whether any individual hotel is better or worse off is genuinely "
+                 "not something we can tell you from here, because the 2026 "
+                 "revaluation reset rateable values at the same time."),
+                ("What can be said is the arithmetic. A 5p cut in the multiplier is "
+                 "a smaller benefit than 40% off the bill was, so a hotel that sat "
+                 "comfortably inside the old cap and whose valuation held steady "
+                 "should expect to pay more in 2026 to 2027, not less. The "
+                 "trade-off is that this one is permanent and does not have to be "
+                 "argued for again every autumn."),
+                ("Sources: GOV.UK, Business Rates Relief 2025/26 Retail, "
+                 "Hospitality and Leisure Scheme, and GOV.UK business rates "
+                 "multipliers for 2026 to 2027. England only. Business rates are "
+                 "devolved, so Wales differs."),
+            ],
+        },
+        "practitioner_view": [
+            ("In the hotel cases we handle, the building is usually both the "
+             "problem and the only reason there is anything left to talk about. It "
+             "is what the borrowing is secured on, it is what makes the fixed costs "
+             "unavoidable, and it is the reason a buyer might take the whole thing "
+             "on rather than walk away. Very few of the trades we work with have "
+             "that last part."),
+            ("By the time a director calls us, the pattern is usually two or three "
+             "soft quarters, a covenant conversation that went badly, and a "
+             "refurbishment that has been deferred twice and cannot be deferred "
+             "again without losing the rate. Meanwhile the deposits for next "
+             "season's bookings are sitting in the account, which makes the bank "
+             "balance look considerably better than the business is."),
+            ("That last point deserves saying out loud, because it catches people. "
+             "Forward bookings are other people's money. Spending them on this "
+             "month's wages is one of the most common things we see in this trade "
+             "and one of the hardest to come back from, because the rooms still "
+             "have to be provided later with no cash attached to them."),
+            ("So we would not start with occupancy. We would look at what the "
+             "building costs to open the doors each month before a single room "
+             "sells, the debt service against actual trading, how much of the cash "
+             "in the account is forward deposits, what the rates bill looks like "
+             "under the 2026 multipliers, and what is owed to HMRC on VAT and PAYE. "
+             "Those five tell you how much time there is."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 115, "share": 75.2},
+                {"name": "Compulsory liquidations", "count": 20, "share": 13.1},
+                {"name": "Administrations", "count": 15, "share": 9.8},
+                {"name": "Company voluntary arrangements", "count": 3, "share": 2.0},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                "The number to look at here is administrations, not liquidations. At "
+                "9.8% of 2025 cases, hotels use "
+                '<a href="/company-administration/">administration</a> more than any '
+                "other sector on these pages: garages are at 2.4% and cleaning "
+                "contractors at 1.2%. In 2019 the hotel share was 22.2%.",
+                "That difference is the building. Administration exists to rescue a "
+                "business or get a better result than winding it up, and it needs "
+                "something worth buying. A hotel is a real asset in a real location "
+                "with a trading history attached, so there is usually somebody who "
+                "wants it at a price. Most trades in difficulty have nothing "
+                "comparable to sell.",
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> still account for three-quarters of "
+                "cases, 115 of 153, up from 96 in 2024, and "
+                '<a href="/liquidation/compulsory-liquidation/">compulsory '
+                "liquidations</a> rose from 17 to 20. So the rescue route is more "
+                "available in this trade than in most, which is not the same as it "
+                "being the likely outcome.",
+            ],
+        },
+        "notes": [
+            "SIC group 551 covers companies whose recorded primary business is "
+            "hotels, motels and similar short-stay accommodation, typically with "
+            "daily housekeeping. Self-catering and holiday lets sit under SIC 552, "
+            "and restaurants and pubs under SIC 561 and 563. A hotel with a busy "
+            "restaurant is still counted once, under whichever code it registered.",
+            "The 2019 figure deserves a note of its own. Hotel insolvencies jumped "
+            "from 96 in 2018 to 144 in 2019, a 50% rise before the pandemic. Table "
+            "1c does not break down far enough to explain that, and we have not "
+            "attributed it. It does mean the pre-pandemic comparison used elsewhere "
+            "on this site is a weaker yardstick here than on other pages, and it "
+            "should be treated with care.",
+            "Hotels are a small sector by company count, at roughly a dozen "
+            "insolvencies a month, so single months move on a handful of cases. The "
+            "year-to-date and 12-month rolling totals are the steadier guide.",
+            "These are company counts, not the number of hotels, rooms or staff "
+            "affected. One insolvent company may operate several properties, and a "
+            "hotel can close or change hands without any formal insolvency "
+            "procedure. Hotels also change hands as assets more often than most "
+            "businesses, so a property continuing to trade under a new name tells "
+            "you nothing about whether the company that ran it survived.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active hotel companies.",
+            "The SIC 551 figures come from Table 1c and are not seasonally "
+            "adjusted, which matters more for hotels than for most sectors given "
+            "how seasonal the trade is. The Insolvency Service seasonally adjusts "
+            "parts of its headline England and Wales series where it finds "
+            "seasonality, but that adjustment does not apply to the industry "
+            "figures used here. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your hotel is viable. Sector "
+             "totals never do. The questions that matter are narrower: what does it "
+             "cost to open the doors each month before a room is sold, does trading "
+             "cover that plus the debt service across a full year rather than a "
+             "good quarter, and how much of the money in the account has already "
+             "been spent by guests who have not arrived yet?"),
+            ("Hotels have one advantage over most of the trades we work with, and "
+             "it is worth knowing about early rather than late. Because the "
+             "building is a real asset, there are usually more options than a "
+             "straight liquidation: a sale of the business and assets, a refinance, "
+             "or a rescue procedure that keeps the doors open while it is "
+             "arranged."),
+            ("That is why administrations are a far larger share of hotel "
+             "insolvencies than of any other sector on this site. It is the one "
+             "genuinely encouraging structural fact on this page."),
+            ('Those options need time, and they need the building to still be worth '
+             'something. If the covenant conversation has already happened, the '
+             'useful step is to take advice while there is still a business '
+             'attached to the asset: terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Leave it until a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> is '
+             'advertised and the account is frozen within days, the bookings stop, '
+             'and the asset you were relying on is suddenly being valued as an '
+             'empty building rather than a trading hotel. At that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is often what is left. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK hotels become insolvent each year?",
+                "a": ("153 hotel and similar accommodation companies entered "
+                      "insolvency in England and Wales in 2025, the highest in the "
+                      "series and up from 136 in 2024. The 2019 figure was 144. "
+                      "Source: Insolvency Service, Table 1c."),
+            },
+            {
+                "q": "Are hotel insolvencies falling in 2026?",
+                "a": ("Yes. There were 68 insolvencies between January and May 2026 "
+                      "against 76 in the same months of 2025, down 10.5%, and the "
+                      "rolling 12-month total fell 5.8% to 145. The caveat is that "
+                      "accommodation as a whole fell 23.1% over the same period, so "
+                      "hotels are recovering more slowly than the rest of the trade."),
+            },
+            {
+                "q": "Do these figures include pubs, restaurants and Airbnb-style lets?",
+                "a": ("No. This page counts SIC group 551, hotels and similar "
+                      "short-stay accommodation. Restaurants and pubs are SIC 561 "
+                      "and 563, and self-catering and holiday lets are SIC 552. All "
+                      "are counted separately."),
+            },
+            {
+                "q": "Why are hotel insolvencies compared with 2019 less meaningful?",
+                "a": ("Because 2019 was not a normal year for hotels. Insolvencies "
+                      "jumped from 96 in 2018 to 144 in 2019, before the pandemic. "
+                      "Hotels also did not get the quiet 2020 that most sectors had: "
+                      "company insolvencies across the economy fell 26.4% that year "
+                      "while hotels went from 144 to 143."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for hotels?",
+                "a": ("Creditors' voluntary liquidation, at 115 of the 153 hotel "
+                      "insolvencies in 2025. But administrations are notable at "
+                      "9.8%, the highest share of any sector we cover, because a "
+                      "hotel is a real asset that a buyer may want."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Hotel Insolvency Statistics." '
+                     'Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
+        "related": ('The most useful comparison is with '
                     '<a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> '
-                    'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+                    '(SIC 561), the other half of hospitality. Hotels also sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
     "estate-agency-insolvency-statistics": {
         "wp_id": 80260,
@@ -2546,14 +2882,13 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
 
 
 def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
+    # Share the phrasing with pre_pandemic_phrase() rather than restating it,
+    # so the hero and the latest-figures summary can never drift apart. The
+    # hero renders this inside a larger sentence, hence the trailing period is
+    # stripped rather than the wording being duplicated here.
     if f["vs_pre_pandemic_pct"] is not None:
-        pp_word = "above" if f["vs_pre_pandemic_pct"] >= 0 else "below"
-        pp_value = f"{abs(round(f['vs_pre_pandemic_pct']))}% {pp_word} {f['pre_pandemic_year']}"
-        pp_note = (
-            f"The {f['years'][f['li']]} total of {format_number(f['latest_annual'])} remained "
-            f"well {pp_word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
-            f"in {f['pre_pandemic_year']}"
-        )
+        pp_value, pp_sentence = pre_pandemic_phrase(f)
+        pp_note = pp_sentence.rstrip(".")
     else:
         pp_value = "n/a"
         pp_note = "No pre-pandemic (2019) comparison is available for this series."
@@ -2597,6 +2932,21 @@ def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
     </section>""")
 
 
+def pre_pandemic_qualifier(pct: float) -> str:
+    """How emphatically to describe the gap to 2019.
+
+    A blanket "well above" is fine at +90% and plainly wrong at +6%: it tells
+    the reader a sector is far worse than 2019 when it has all but returned to
+    it. Scale the adverb to the actual gap.
+    """
+    gap = abs(pct)
+    if gap < 3:
+        return "marginally"
+    if gap < 10:
+        return "slightly"
+    return "well"
+
+
 def pre_pandemic_phrase(f: dict) -> tuple[str, str]:
     """(short value for a KPI card, full sentence) comparing the latest full
     year to 2019 — a fixed, meaningful baseline ("the last normal year"),
@@ -2604,10 +2954,11 @@ def pre_pandemic_phrase(f: dict) -> tuple[str, str]:
     if f["vs_pre_pandemic_pct"] is None:
         return "n/a", "No pre-pandemic (2019) comparison is available for this series."
     word = "above" if f["vs_pre_pandemic_pct"] >= 0 else "below"
+    qualifier = pre_pandemic_qualifier(f["vs_pre_pandemic_pct"])
     value = f"{abs(round(f['vs_pre_pandemic_pct']))}% {word} {f['pre_pandemic_year']}"
     sentence = (
         f"The {f['years'][f['li']]} total of {format_number(f['latest_annual'])} remained "
-        f"well {word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
+        f"{qualifier} {word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
         f"in {f['pre_pandemic_year']}."
     )
     return value, sentence

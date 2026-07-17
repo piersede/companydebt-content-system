@@ -132,8 +132,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => '59 cleaning contractors entered insolvency between January and May 2026, exactly flat on a year earlier while the rest of building services improved.',
         ),
         'hotel-insolvency-statistics' => array(
-            'title' => 'Hotel Insolvency Statistics (UK)',
-            'desc'  => 'UK hotel insolvency statistics: company insolvencies among hotels and similar accommodation, year-to-date, rolling 12-month and annual figures.',
+            'title' => 'UK Hotel Insolvency Statistics 2026 | Company Debt',
+            'desc'  => '68 hotels entered insolvency between January and May 2026, down 10.5%, but 2025 was the worst year on record at 153. See the latest hotel figures.',
         ),
         'estate-agency-insolvency-statistics' => array(
             'title' => 'UK Estate Agency Insolvency Statistics 2026 | Company Debt',
@@ -1063,28 +1063,64 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 
     if ( 'hotel-insolvency-statistics' === $slug ) {
         $page_url = home_url( '/data/hotel-insolvency-statistics/' );
+        $hot_faq_items = array(
+            array(
+                'q' => 'How many UK hotels become insolvent each year?',
+                'a' => '153 hotel and similar accommodation companies entered insolvency in England and Wales in 2025, the highest in the series and up from 136 in 2024. The 2019 figure was 144. Source: Insolvency Service, Table 1c.',
+            ),
+            array(
+                'q' => 'Are hotel insolvencies falling in 2026?',
+                'a' => 'Yes. There were 68 insolvencies between January and May 2026 against 76 in the same months of 2025, down 10.5%, and the rolling 12-month total fell 5.8% to 145. The caveat is that accommodation as a whole fell 23.1% over the same period, so hotels are recovering more slowly than the rest of the trade.',
+            ),
+            array(
+                'q' => 'Do these figures include pubs, restaurants and Airbnb-style lets?',
+                'a' => 'No. This page counts SIC group 551, hotels and similar short-stay accommodation. Restaurants and pubs are SIC 561 and 563, and self-catering and holiday lets are SIC 552. All are counted separately.',
+            ),
+            array(
+                'q' => 'Why are hotel insolvencies compared with 2019 less meaningful?',
+                'a' => 'Because 2019 was not a normal year for hotels. Insolvencies jumped from 96 in 2018 to 144 in 2019, before the pandemic. Hotels also did not get the quiet 2020 that most sectors had: company insolvencies across the economy fell 26.4% that year while hotels went from 144 to 143.',
+            ),
+            array(
+                'q' => 'What is the most common insolvency procedure for hotels?',
+                'a' => 'Creditors\' voluntary liquidation, at 115 of the 153 hotel insolvencies in 2025. But administrations are notable at 9.8%, the highest share of any sector we cover, because a hotel is a real asset that a buyer may want.',
+            ),
+        );
+        $hot_faq_main_entities = array();
+        foreach ( $hot_faq_items as $item ) {
+            $hot_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
         return array(
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Hotel Insolvency Statistics',
-                'description'      => 'Company insolvencies among hotels and similar accommodation businesses (SIC group 551), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes restaurants, pubs and self-catering accommodation. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for hotels and similar accommodation (SIC group 551), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, the split by insolvency procedure, and comparison with holiday and short-stay lets (SIC 552), accommodation overall (SIC 55) and restaurants (SIC 561). Covers hotels, motels and similar short-stay accommodation with daily housekeeping. Excludes restaurants and pubs (SIC 561 and 563) and self-catering, holiday and short-stay lets (SIC 552). Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Hotel and similar accommodation company insolvencies identified via Companies House SIC group 551; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'hotel insolvency, hotel insolvency statistics, SIC 551, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 551. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'hotel insolvency, hotel insolvency statistics, hotel insolvencies 2026, SIC 551 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
-                    'Hotel company insolvencies (annual)',
-                    'Hotel company insolvencies (monthly)',
-                    'Share of all company insolvencies',
+                    'Hotel company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
                 ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $hot_faq_main_entities,
             ),
         );
     }
