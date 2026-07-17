@@ -4,20 +4,42 @@
 # real values before the first audit run. validate-config.py will flag them.
 
 account_name: Company Debt
-customer_id: "REPLACE_WITH_CUSTOMER_ID"        # Google Ads customer ID, e.g. "123-456-7890" (no dashes for GAQL)
-login_customer_id: "REPLACE_WITH_MCC_ID"       # only needed if accessed via a manager account — otherwise delete this line
+customer_id: "4634275788"                      # 463-427-5788, dashes stripped for GAQL
+# No login_customer_id — standalone account, not accessed via a manager (MCC) account.
 
 currency: GBP
 timezone: Europe/London
 business_model: lead_generation
 
-# Conversion actions as they are named in the Google Ads account.
-# These must match exactly — check Tools & Settings > Conversions before filling in.
+# Conversion actions as named in Google Ads (Tools & Settings > Conversions),
+# supplied 2026-07-17. [N] badges shown in the Ads UI were stripped — not
+# part of the literal conversion_action.name. Call-duration thresholds (e.g.
+# whether "GoogleAds Phone Calls" variants require 60s+) are not yet
+# confirmed — treat call-based primary conversions as unverified-quality
+# until checked in each action's own settings.
 primary_conversion_actions:
-  - "REPLACE_WITH_PRIMARY_CONVERSION_NAME"     # e.g. "Qualified lead form"
+  - "Guide Download (Website)"
+  - "GoogleAds Form Submissions (Website)"
+  - "Calls from Smart Campaign Ads"
+  - "GoogleAds Phone Calls From Ads"
+  - "GoogleAds Phone Calls"
+  - "GoogleAds Phone Calls (different number format)"
+  - "Smart campaign ad clicks to call"
+  - "GoogleAds Chat"
+  - "Conversation started"
+  - "Local actions - Directions"
+  - "Deals - Deals Stage becomes Closed Won (1)"
+  - "Sales orders - Sales orders Status becomes Approved"
+  - "Deals - Deals Stage becomes Qualified for Insolvency Route"
+  - "Leads - Leads Lead Status becomes Pre Qualified (1)"
 
 secondary_conversion_actions:
-  - "REPLACE_WITH_SECONDARY_CONVERSION_NAME"   # e.g. "Phone call over 60 seconds"
+  - "Lead form - Submit (Google hosted)"
+  - "www.companydebt.com - GA4 (web) form_submission"
+  - "Smart campaign map clicks to call"
+  - "www.companydebt.com - GA4 (web) Chat"
+  - "Android installs (all other apps)"
+  - "Smart campaign map directions"
 
 ignore_as_success_metrics:
   - Page view
@@ -38,6 +60,10 @@ brand_terms:
 
 # Terms that must never be added as negatives even if performance looks weak —
 # e.g. core commercial phrases the business exists to rank/bid on.
+# DEFERRED: no native Google Ads list for this exists (checked Shared Library
+# exclusion lists, Brand lists, Business data — nothing fits). Piers chose to
+# wait until the MCP connection is live, so real campaign/ad group names can
+# be pulled and proposed for his sign-off rather than guessed now.
 protected_terms:
   - REPLACE_WITH_PROTECTED_TERMS               # e.g. "creditors voluntary liquidation", "company debt help"
 
