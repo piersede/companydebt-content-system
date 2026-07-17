@@ -1,0 +1,16 @@
+-- Purpose: PMax placement-level IMPRESSIONS only. Google does not expose
+-- placement-level cost for PMax — never infer or present these impression
+-- counts as spend (see CLAUDE.md, Performance Max rules).
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  detail_placement_view.placement,
+  detail_placement_view.placement_type,
+  detail_placement_view.display_name,
+  metrics.impressions
+FROM detail_placement_view
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'PERFORMANCE_MAX'

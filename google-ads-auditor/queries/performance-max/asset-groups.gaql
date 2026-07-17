@@ -1,0 +1,21 @@
+-- Purpose: PMax asset-group performance and Google's asset-strength label.
+-- Asset strength is a coverage signal, not proof of commercial performance
+-- — never present it as such (see CLAUDE.md, Performance Max rules).
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  asset_group.id,
+  asset_group.name,
+  asset_group.status,
+  asset_group.ad_strength,
+  asset_group.final_urls,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM asset_group
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

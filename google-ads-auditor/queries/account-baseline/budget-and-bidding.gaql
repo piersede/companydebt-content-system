@@ -1,0 +1,21 @@
+-- Purpose: current budget amounts, delivery method, and bidding strategy
+-- config per campaign — used by ad-performance-diagnostic to judge whether
+-- a campaign can plausibly absorb more spend before recommending a budget
+-- move. This is a point-in-time config pull, not a metrics-by-date pull.
+-- Placeholders: {{CUSTOMER_ID}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  campaign.status,
+  campaign_budget.id,
+  campaign_budget.amount_micros,
+  campaign_budget.delivery_method,
+  campaign_budget.explicitly_shared,
+  campaign.bidding_strategy_type,
+  campaign.maximize_conversions.target_cpa_micros,
+  campaign.target_cpa.target_cpa_micros,
+  campaign.target_roas.target_roas
+FROM campaign
+WHERE campaign.status != 'REMOVED'

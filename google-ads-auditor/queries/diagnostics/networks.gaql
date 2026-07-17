@@ -1,0 +1,17 @@
+-- Purpose: performance split by ad network (Search, Search Partners,
+-- Display, YouTube, etc.) — used to catch a network dragging down blended
+-- performance.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  segments.ad_network_type,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

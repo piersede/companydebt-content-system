@@ -1,0 +1,26 @@
+-- Purpose: per-keyword performance for the audit period — used by
+-- ad-performance-diagnostic to assess match-type and keyword-level
+-- performance, and by search-terms-analyzer to compare a search term's
+-- performance against the keyword that triggered it.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  ad_group.id,
+  ad_group.name,
+  ad_group_criterion.criterion_id,
+  ad_group_criterion.keyword.text,
+  ad_group_criterion.keyword.match_type,
+  ad_group_criterion.status,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value,
+  metrics.average_cpc,
+  metrics.search_impression_share
+FROM keyword_view
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+ORDER BY metrics.cost_micros DESC

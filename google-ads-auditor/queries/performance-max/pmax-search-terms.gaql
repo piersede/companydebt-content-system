@@ -1,0 +1,16 @@
+-- Purpose: PMax search-category insights (NOT full search terms — Google
+-- only exposes category-level themes for PMax, unlike Search's
+-- search_term_view). Never treat this as complete search-term visibility.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  campaign_search_term_insight.category_label,
+  segments.search_subcategory,
+  metrics.impressions,
+  metrics.clicks
+FROM campaign_search_term_insight
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'PERFORMANCE_MAX'

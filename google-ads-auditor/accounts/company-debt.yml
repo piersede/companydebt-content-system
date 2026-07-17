@@ -1,0 +1,63 @@
+# Company Debt Google Ads account configuration.
+#
+# Fields marked "REPLACE" below cannot be inferred and must be filled in with
+# real values before the first audit run. validate-config.py will flag them.
+
+account_name: Company Debt
+customer_id: "REPLACE_WITH_CUSTOMER_ID"        # Google Ads customer ID, e.g. "123-456-7890" (no dashes for GAQL)
+login_customer_id: "REPLACE_WITH_MCC_ID"       # only needed if accessed via a manager account — otherwise delete this line
+
+currency: GBP
+timezone: Europe/London
+business_model: lead_generation
+
+# Conversion actions as they are named in the Google Ads account.
+# These must match exactly — check Tools & Settings > Conversions before filling in.
+primary_conversion_actions:
+  - "REPLACE_WITH_PRIMARY_CONVERSION_NAME"     # e.g. "Qualified lead form"
+
+secondary_conversion_actions:
+  - "REPLACE_WITH_SECONDARY_CONVERSION_NAME"   # e.g. "Phone call over 60 seconds"
+
+ignore_as_success_metrics:
+  - Page view
+  - Scroll
+
+targets:
+  target_cpa: null                             # REPLACE — £ target cost per primary conversion, or null if unset
+  minimum_roas: null                            # not applicable unless ecommerce/paid-value goals are running
+  minimum_clicks_before_judgement: 12
+  minimum_impressions_before_ad_judgement: 1000
+  zero_conversion_spend_threshold: 75           # £ — below this, zero-conversion spend is not called "waste"
+  low_conversion_volume_threshold: 5
+  conversion_lag_days: 7                        # exclude/flag the latest N days when judging settled CPA
+
+brand_terms:
+  - company debt
+  - companydebt
+
+# Terms that must never be added as negatives even if performance looks weak —
+# e.g. core commercial phrases the business exists to rank/bid on.
+protected_terms:
+  - REPLACE_WITH_PROTECTED_TERMS               # e.g. "creditors voluntary liquidation", "company debt help"
+
+# Topics genuinely outside Company Debt's business scope — used by
+# negative-keyword-miner to identify clearly irrelevant search terms.
+irrelevant_topics:
+  - personal debt
+  - personal bank account
+  - consumer credit card
+  - student loan
+  - debt collector jobs
+  - CIS/PAYE jobs terms unrelated to insolvency
+
+comparison_periods:
+  primary_days: 7
+  previous_period: true
+  context_days: 28
+  long_term_days: 90
+
+reporting:
+  include_low_confidence_findings: true
+  maximum_priority_actions: 10
+  output_currency_symbol: "£"

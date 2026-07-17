@@ -1,0 +1,20 @@
+-- Purpose: list configured conversion actions with category and status, and
+-- per-action conversion counts/value for the period — used to separate
+-- primary from secondary conversions per accounts/company-debt.yml and to
+-- catch conversion-tracking anomalies (e.g. an action silently disabled).
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  conversion_action.id,
+  conversion_action.name,
+  conversion_action.category,
+  conversion_action.status,
+  conversion_action.type,
+  conversion_action.primary_for_goal,
+  segments.conversion_action,
+  metrics.conversions,
+  metrics.conversions_value,
+  metrics.all_conversions
+FROM conversion_action
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

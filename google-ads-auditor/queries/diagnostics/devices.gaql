@@ -1,0 +1,16 @@
+-- Purpose: performance split by device — used to catch mobile vs desktop
+-- CPA/conversion-rate divergence.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  segments.device,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

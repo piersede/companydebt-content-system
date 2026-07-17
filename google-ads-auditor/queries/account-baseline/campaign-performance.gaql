@@ -1,0 +1,25 @@
+-- Purpose: campaign identity, status, type, and period performance totals.
+-- Used to build the headline numbers table and as the base join for
+-- diagnostic and budget analysis.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  campaign.status,
+  campaign.advertising_channel_type,
+  campaign.advertising_channel_sub_type,
+  campaign.bidding_strategy_type,
+  campaign_budget.amount_micros,
+  campaign_budget.delivery_method,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value,
+  metrics.ctr,
+  metrics.average_cpc
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+ORDER BY metrics.cost_micros DESC

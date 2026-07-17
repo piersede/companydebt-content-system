@@ -1,0 +1,19 @@
+-- Purpose: PMax campaign-level performance, budget, and goal config.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  campaign.status,
+  campaign_budget.amount_micros,
+  campaign.url_expansion_opt_out,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'PERFORMANCE_MAX'
+ORDER BY metrics.cost_micros DESC

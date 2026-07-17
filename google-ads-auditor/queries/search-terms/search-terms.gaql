@@ -1,0 +1,25 @@
+-- Purpose: raw search-term performance for Search campaigns — the primary
+-- input for negative-keyword-miner and search-terms-analyzer. Excludes
+-- PMax, which does not expose full search terms (see pmax-search-terms.gaql
+-- for the category-level equivalent).
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  search_term_view.search_term,
+  search_term_view.status,
+  campaign.id,
+  campaign.name,
+  ad_group.id,
+  ad_group.name,
+  segments.keyword.info.text,
+  segments.keyword.info.match_type,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM search_term_view
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'SEARCH'
+ORDER BY metrics.cost_micros DESC

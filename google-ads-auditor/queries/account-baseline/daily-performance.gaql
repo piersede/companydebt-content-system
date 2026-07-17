@@ -1,0 +1,19 @@
+-- Purpose: day-by-day account and campaign performance across the full
+-- context window — used to detect sudden week-on-week changes and to apply
+-- conversion-lag treatment (the most recent conversion_lag_days are
+-- flagged incomplete, not judged as settled).
+-- Placeholders: {{CUSTOMER_ID}} {{CONTEXT_START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  segments.date,
+  campaign.id,
+  campaign.name,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM campaign
+WHERE segments.date BETWEEN '{{CONTEXT_START_DATE}}' AND '{{END_DATE}}'
+ORDER BY segments.date ASC

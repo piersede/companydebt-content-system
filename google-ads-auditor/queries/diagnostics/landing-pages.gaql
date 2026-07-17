@@ -1,0 +1,18 @@
+-- Purpose: performance by final URL / landing page — used to spot pages
+-- absorbing spend without converting, independent of the campaign/ad
+-- structure sitting above them.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  landing_page_view.unexpanded_final_url,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM landing_page_view
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+ORDER BY metrics.cost_micros DESC
