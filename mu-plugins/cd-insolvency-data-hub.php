@@ -124,8 +124,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => 'Latest temporary staffing agency insolvency figures for England and Wales, including 2026 trends, annual data, recruitment-sector comparisons and methodology.',
         ),
         'motor-vehicle-repair-insolvency-statistics' => array(
-            'title' => 'Motor Vehicle Repair Insolvency Statistics (UK)',
-            'desc'  => 'UK motor vehicle repair insolvency statistics: company insolvencies among garages and repair workshops, year-to-date, rolling 12-month and annual figures.',
+            'title' => 'UK Garage Insolvency Statistics 2026 | Motor Vehicle Repair',
+            'desc'  => '293 garages entered insolvency in 2025, a record, and 113 in the first five months of 2026. See the latest motor vehicle repair insolvency figures.',
         ),
         'cleaning-company-insolvency-statistics' => array(
             'title' => 'Cleaning Company Insolvency Statistics (UK)',
@@ -935,28 +935,64 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 
     if ( 'motor-vehicle-repair-insolvency-statistics' === $slug ) {
         $page_url = home_url( '/data/motor-vehicle-repair-insolvency-statistics/' );
+        $mot_faq_items = array(
+            array(
+                'q' => 'How many UK garages become insolvent each year?',
+                'a' => '293 motor vehicle repair businesses entered insolvency in England and Wales in 2025, the highest in the series and up from 251 in 2024. The pre-pandemic figure was 164 in 2019. Source: Insolvency Service, Table 1c.',
+            ),
+            array(
+                'q' => 'Are garage insolvencies rising or falling in 2026?',
+                'a' => 'The two measures disagree. There were 113 insolvencies between January and May 2026 against 121 a year earlier, down 6.6%, but the rolling 12-month total rose 3.3% to 285. The improvement is recent, and the rolling figure still includes the back half of a record 2025.',
+            ),
+            array(
+                'q' => 'Do these figures include car dealers?',
+                'a' => 'No. This page counts SIC group 452, the maintenance and repair of motor vehicles. Selling vehicles is SIC 451 and selling parts is SIC 453. Both are counted separately, and both are different businesses from a repair workshop.',
+            ),
+            array(
+                'q' => 'Are electric vehicles causing garage insolvencies?',
+                'a' => 'The parc data does not support that as the current cause. SMMT put zero-emission vehicles at around one in 22 on UK roads, so most cars still have an engine. The nearer-term difficulty is that tooling and training for electric work must be paid for years before enough of that work arrives.',
+            ),
+            array(
+                'q' => 'What is the most common insolvency procedure for garages?',
+                'a' => 'Creditors\' voluntary liquidation, at 260 of the 293 garage insolvencies in 2025, or 88.7%. That is the highest CVL share of any sector we cover, and it reflects how little there usually is to rescue in an independent garage.',
+            ),
+        );
+        $mot_faq_main_entities = array();
+        foreach ( $mot_faq_items as $item ) {
+            $mot_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
         return array(
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Motor Vehicle Repair Insolvency Statistics',
-                'description'      => 'Company insolvencies among motor vehicle repair and maintenance businesses (SIC group 452), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes sale of vehicles and parts. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for motor vehicle repair and maintenance businesses (SIC group 452), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, the split by insolvency procedure, and comparison with vehicle sales (SIC 451) and the motor trade overall (SIC 45). Covers independent garages, workshops, MOT centres, bodyshops and tyre and exhaust fitters. Excludes the sale of motor vehicles (SIC 451) and of parts and accessories (SIC 453), which are separate businesses. Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Motor vehicle repair and maintenance company insolvencies identified via Companies House SIC group 452; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'motor vehicle repair insolvency, garage insolvency statistics, SIC 452, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 452. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'motor vehicle repair insolvency, garage insolvency statistics, garage insolvencies 2026, SIC 452 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
-                    'Motor vehicle repair company insolvencies (annual)',
-                    'Motor vehicle repair company insolvencies (monthly)',
-                    'Share of all company insolvencies',
+                    'Motor vehicle repair company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
                 ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $mot_faq_main_entities,
             ),
         );
     }

@@ -1358,52 +1358,339 @@ SECTORS = {
         "division_code": "45",
         "parent_section_code": "G",
         "parent_section_label": "wholesale and retail trade and repair of motor vehicles",
+        # The meaningful peer is the motor trade (SIC 45), not the whole of
+        # retail. The divergence table below separates repair from sales, which
+        # are different businesses sharing a division.
+        "parent_kind": "division",
+        "parent_label": "motor trade",
         "h1a": "UK Motor Vehicle Repair",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
         "eyebrow": "Motor vehicle repair",
         "keyword": "motor vehicle repair",
-        "singular": "garage",
+        # "garage" is the natural word and is used throughout the prose, but
+        # `singular` also renders the commercial-section H2, which has to carry
+        # a word from this page's H1 (gate check 18, anti-cannibalisation).
+        "singular": "repair business",
         "plural": "motor vehicle repair and maintenance businesses",
-        "scope_description": "garages and workshops carrying out motor vehicle maintenance and repair",
-        "exclusion_note": "Sale of motor vehicles and parts is recorded separately.",
-        "notes": [
-            "Motor vehicle repair insolvencies can move on a handful of cases "
-            "month to month. Prefer the year-to-date or 12-month rolling total for "
-            "the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many garages are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is repair and maintenance only (SIC 452). Sale of vehicles and "
-            "parts sits under separate SIC codes and is not included here.",
+        "scope_description": ("garages and workshops carrying out motor vehicle "
+                              "maintenance and repair"),
+        "exclusion_note": ("Selling vehicles is a different business and is counted "
+                           "separately: car dealers and forecourts sit under SIC "
+                           "451, and parts and accessories under SIC 453. Neither is "
+                           "included here."),
+        "scope_note": ("Repair only. This page does not count car dealers, which "
+                       "are a separate SIC code."),
+        "hero_note": ("Read that twice, because the two measures disagree. The "
+                      "year-to-date total says garages are having a better year. "
+                      "The rolling 12 months says they are still getting worse, and "
+                      "2025 was the worst year on record at 293. Both are true: the "
+                      "improvement is recent and the rolling figure is still "
+                      "carrying the back end of a record year."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "79% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "293 vs 164"},
+            {"value": "88.7%", "label": "of 2025 cases were CVLs", "sub": "260 of 293"},
         ],
-        "practitioner_view": [
-            "In the cases we see, independent garages are being squeezed between "
-            "rising parts and equipment costs and competition from manufacturer-"
-            "franchised dealers, who hold newer, higher-margin warranty work.",
-            "The shift toward electric and increasingly complex vehicles adds a "
-            "capital cost independents often cannot spread as easily as a "
-            "multi-site franchised group.",
+        "comparison_intro": [
+            ("That depends which measure you take, and this is the one sector here "
+             "where they genuinely conflict. There were 113 insolvencies from "
+             "January to May 2026 against 121 in the same months of 2025, down "
+             "6.6%. But the rolling 12-month total rose, from 276 to 285, up 3.3%. "
+             "The motor trade as a whole fell 3.8% over the same months. These are "
+             "Company Debt calculations from Insolvency Service Table 1c data."),
+            ("Both numbers are right, and the disagreement is the information. The "
+             "rolling 12 months still contains the second half of 2025, which was "
+             "bad enough to make 2025 the worst year in the series at 293. The "
+             "year-to-date is measuring only 2026, which has been better. What you "
+             "are looking at is a turn that is real but recent, and not yet old "
+             "enough to have worked through the longer measure."),
+            ("The monthly path says the same thing in cruder terms: 15, 23, 24, 32, "
+             "19. April's 32 was the worst month since March 2023, and May's 19 was "
+             "among the quietest in a year. One month is not a trend, and neither "
+             "is one measure."),
+        ],
+        "divergence": {
+            "heading": "Repairing cars and selling cars are different businesses",
+            "caption": ("Motor vehicle repair against vehicle sales, the motor trade "
+                        "and the wider retail sector"),
+            "intro": [
+                ("This distinction matters more here than on most of these pages. "
+                 "SIC division 45 is usually described as the motor trade, but it "
+                 "bundles together the garage fixing a ten-year-old Astra and the "
+                 "forecourt selling a new one. They have almost nothing in common: "
+                 "different customers, different margins, different working "
+                 "capital, different ways of going bust. This page counts the "
+                 "garage."),
+                ("Split out, both halves of the motor trade are improving modestly "
+                 "in 2026: repair down 6.6%, vehicle sales down 4.9%. The "
+                 "difference is what they are improving from. Vehicle sales peaked "
+                 "in 2024 and have been easing since. Repair peaked last year."),
+                ("The wider retail sector, meanwhile, fell 13.1%, roughly twice as "
+                 "fast as the garages inside it. Whatever is lifting retail is not "
+                 "reaching the workshop at the same rate."),
+            ],
+            "peers": [
+                {"code": "452", "kind": "group", "label": "Motor vehicle repair (SIC 452)", "emphasise": True},
+                {"code": "451", "kind": "group", "label": "Sale of motor vehicles (SIC 451)"},
+                {"code": "45", "kind": "division", "label": "Motor trade overall (SIC 45)"},
+                {"code": "G", "kind": "section", "label": "Wholesale and retail trade (SIC G)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Garages had a quiet decade before this. Insolvencies ran between 164 "
+             "and 195 from 2016 to 2019, then fell to 132 in 2020 and 145 in 2021, "
+             "when government support and the restrictions on creditors held the "
+             "normal cycle in check. People also stopped driving, which for once "
+             "cut both ways: less wear, but also less work."),
+            ("The recovery brought the reckoning. 236 in 2022 and 274 in 2023, then "
+             "a dip to 251 in 2024 that looked, at the time, like the worst being "
+             "over."),
+            ("It was not. 2025 came in at 293, the highest in the series and 79% "
+             "above the 164 recorded in 2019. That is the part worth sitting with: "
+             "the peak for garages is not 2023, as it is in much of the economy. It "
+             "is last year."),
+        ],
+        "annual_intro": (
+            "One feature of this table is easy to miss and worth stating plainly. "
+            "For most sectors the worst year was 2023 and everything since has been "
+            "a recovery. For garages the worst year is 2025, the most recent "
+            "complete one. The 2024 dip to 251 turned out to be a pause rather than "
+            "a turn."
+        ),
+        "latest_note": (
+            "The two measures point different ways: the year-to-date total is down "
+            "6.6% while the rolling 12-month total is up 3.3%. That is what a recent "
+            "turn looks like, with the rolling figure still carrying the back half "
+            "of a record 2025. Read them together rather than picking the one you "
+            "prefer."
+        ),
+        "pressure_heading": "Why garages are under pressure when the repair work is there",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Start with the thing that makes this sector strange. There are more "
+             "cars on the road than ever, they are older than ever, and repair "
+             "prices are rising. On paper this should be a good time to own a "
+             "garage. It produced a record year of insolvencies instead, so the "
+             "problem is not the customers."),
+            ("What follows is where the money actually goes. It is not a claim "
+             "about why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "Rising parts and equipment costs",
-                "body": ("Genuine parts, diagnostic equipment and the specialist "
-                         "tooling needed for newer and electric vehicles have risen "
-                         "in cost faster than many independent garages can pass on "
-                         "through labour rates."),
+                "h3": "Demand is not the problem",
+                "body": [
+                    ("The work is there and there is more of it every year. SMMT "
+                     "Motorparc data published on 24 April 2026 put the UK fleet at "
+                     "a record 42,549,649 vehicles, up 1.4%, with the average car "
+                     "now 9.7 years old against 9.5 a year earlier."),
+                    ("A record 45.7% of cars on the road have been in service for "
+                     "more than a decade, up from 43.4%. Older cars break more. "
+                     "Every one of those percentage points is work arriving at "
+                     "somebody's ramp, which is why a garage full of jobs and short "
+                     "of cash is such a common and such a confusing place to be."),
+                ],
             },
             {
-                "h3": "Competition from franchised dealers",
-                "body": ("Manufacturer warranty and servicing schemes pull newer, "
-                         "higher-margin vehicle work toward franchised dealers, "
-                         "leaving independent garages more reliant on older, "
-                         "lower-margin repair work."),
+                "h3": "Neither is the labour rate",
+                "body": [
+                    ("Garages have been putting their prices up, and the official "
+                     "figures for this exact trade confirm it. The ONS producer "
+                     "price index for maintenance and repair services of motor "
+                     "vehicles (SIC 452) reached 156.2 in the first quarter of 2026 "
+                     "against 148.4 a year earlier, a rise of 5.3%, and up 56% on "
+                     "its 2015 base."),
+                    ("So the sector is charging more and doing more work, and still "
+                     "recorded its worst year. That is the whole puzzle in two "
+                     "sentences, and it means the answer is on the cost side of the "
+                     "page, not the revenue side."),
+                    ("The ONS index is a UK-wide price measure. It is not where the "
+                     "England and Wales insolvency counts come from."),
+                ],
+            },
+            {
+                "h3": "The cost side is where it goes",
+                "body": [
+                    ("A garage's costs are a technician, a building and the parts. "
+                     "All three have moved. In the 2026 to 2027 tax year employers "
+                     "pay National Insurance at 15% above the secondary threshold of "
+                     "£96 a week, and the National Living Wage has been £12.71 an "
+                     "hour for workers aged 21 and over since April 2026."),
+                    ("A qualified technician costs well above that, and the "
+                     "franchised dealer down the road can usually outbid you for "
+                     "them. Meanwhile the ramp, the diagnostic subscription and the "
+                     "rent carry on whether the bay is full or empty."),
+                    ("An older car parc also brings worse-tempered work. The owner "
+                     "of a fourteen-year-old car is the most likely person to "
+                     "decline the job, argue the quote, or take the car away in "
+                     "pieces because the repair is worth more than the vehicle. The "
+                     "job still cost you the diagnostic hour."),
+                ],
+            },
+            {
+                "h3": "Electric vehicles are tomorrow's problem, not this year's",
+                "body": [
+                    ("It is worth being straight about this, because the trade press "
+                     "is not always. Electric vehicles are often given as the reason "
+                     "independents are failing. The parc data does not support that "
+                     "as a 2026 cash problem: SMMT put zero-emission vehicles at "
+                     "roughly one in 22 on the road. Twenty-one out of twenty-two "
+                     "cars still have an engine, a clutch and an exhaust."),
+                    ("The real difficulty is the order of events. The tooling, the "
+                     "training and the high-voltage qualifications have to be paid "
+                     "for years before enough electric work arrives to pay for them. "
+                     "That is a capital problem landing on businesses that are "
+                     "already short of capital, which is a different thing from "
+                     "electric vehicles taking the work away."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Motor Vehicle Repair Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the garage cases we handle, the money is nearly always stuck in "
+             "the workshop rather than missing from it. There is a car on the ramp "
+             "in pieces, the customer is not answering the phone about the extra "
+             "work, and the part that was ordered for it is already paid for. "
+             "Multiply that by the number of bays and you have the whole problem."),
+            ("By the time a director calls us, the parts account is usually the "
+             "thing that broke first. The factor puts you on stop, so you cannot "
+             "finish the jobs, so you cannot invoice, so you cannot pay the factor. "
+             "That loop closes fast, and it is why a garage can go from busy to "
+             "finished inside a month while the order book still looks healthy."),
+            ("There is often a personal guarantee on the unit or the parts account, "
+             "and it is rarely the first thing mentioned on the call. It is usually "
+             "the thing that has been keeping someone awake. Worth saying plainly: "
+             "it does not improve by being left, and there is more room to deal with "
+             "it early than late."),
+            ("So we would not start with the number of jobs. We would look at cash "
+             "actually collected against the wage bill, how much is sitting in "
+             "unbilled work in progress and cars you cannot release, what the parts "
+             "factor is owed and whether you are on stop, what the premises commit "
+             "you to, and what is owed to HMRC on VAT and PAYE. Those five tell you "
+             "where the garage really is."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 260, "share": 88.7},
+                {"name": "Compulsory liquidations", "count": 24, "share": 8.2},
+                {"name": "Administrations", "count": 7, "share": 2.4},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 0.7},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> account for 88.7% of garage insolvencies, "
+                "260 of 293 in 2025, the highest share of any sector on these pages. "
+                "That is what an asset-light trade looks like on the way out: when a "
+                "garage stops, there is usually nothing to rescue beyond some tools "
+                "and a lease, so the directors close it themselves.",
+                '<a href="/company-administration/">Administrations</a> make the same '
+                "point from the other side, falling from 17 in 2024 to 7 in 2025, just "
+                "2.4% of cases. Administration needs a buyer, and most independent "
+                "garages are worth more as a going concern to their own owner than to "
+                "anybody else.",
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> doubled, from 12 to 24. A creditor, usually HMRC, "
+                "petitioning to wind the company up is the one column that rose in "
+                "share as well as number.",
+            ],
+        },
+        "notes": [
+            "SIC group 452 covers companies whose recorded primary business is the "
+            "maintenance and repair of motor vehicles: independent garages, "
+            "workshops, MOT centres, bodyshops and tyre and exhaust fitters. "
+            "Selling vehicles (SIC 451) and selling parts and accessories (SIC 453) "
+            "are separate codes and are not counted here, even though many real "
+            "businesses do more than one of those things.",
+            "The SIC code records a company's main recorded activity, not a clean "
+            "split of its work. A garage that also sells a few cars off the "
+            "forecourt appears once, under whichever code it registered.",
+            "These are company counts, not the number of sites, ramps or technicians "
+            "affected. One insolvent company may run several branches, and a garage "
+            "can stop trading without ever entering a formal insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active garages, so they cannot be read as "
+            "the chance of any given garage failing.",
+            "The SIC 452 figures come from Table 1c and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your garage is viable. Sector "
+             "totals never do. The questions that matter are narrower: does the "
+             "labour rate cover the technician once National Insurance is on top, "
+             "how much cash is trapped in jobs you cannot finish or release, and is "
+             "the parts account current or on stop?"),
+            ("Plenty of garages in difficulty are sound businesses with a working "
+             "capital problem or an old VAT bill, and that is worth knowing, "
+             "because both can be dealt with."),
+            ("It is more serious when the arrears have grown across several "
+             "quarters, or when you are turning work away because you cannot buy "
+             "the parts to do it. That is the point at which a garage is winding "
+             "itself down, whether anyone has said so out loud or not."),
+            ('If you are reading this with a stop on the parts account and a VAT '
+             'bill due, the useful thing to know is that the earlier you speak to '
+             'someone, the more room there is to move: terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> is '
+             'advertised, the bank account is usually frozen within days, and on '
+             'these figures '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is where the overwhelming majority of '
+             'garages end up. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start if you want to understand the '
+             'options first.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK garages become insolvent each year?",
+                "a": ("293 motor vehicle repair businesses entered insolvency in "
+                      "England and Wales in 2025, the highest in the series and up "
+                      "from 251 in 2024. The pre-pandemic figure was 164 in 2019. "
+                      "Source: Insolvency Service, Table 1c."),
+            },
+            {
+                "q": "Are garage insolvencies rising or falling in 2026?",
+                "a": ("The two measures disagree. There were 113 insolvencies "
+                      "between January and May 2026 against 121 a year earlier, down "
+                      "6.6%, but the rolling 12-month total rose 3.3% to 285. The "
+                      "improvement is recent, and the rolling figure still includes "
+                      "the back half of a record 2025."),
+            },
+            {
+                "q": "Do these figures include car dealers?",
+                "a": ("No. This page counts SIC group 452, the maintenance and "
+                      "repair of motor vehicles. Selling vehicles is SIC 451 and "
+                      "selling parts is SIC 453. Both are counted separately, and "
+                      "both are different businesses from a repair workshop."),
+            },
+            {
+                "q": "Are electric vehicles causing garage insolvencies?",
+                "a": ("The parc data does not support that as the current cause. "
+                      "SMMT put zero-emission vehicles at around one in 22 on UK "
+                      "roads, so most cars still have an engine. The nearer-term "
+                      "difficulty is that tooling and training for electric work "
+                      "must be paid for years before enough of that work arrives."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for garages?",
+                "a": ("Creditors' voluntary liquidation, at 260 of the 293 garage "
+                      "insolvencies in 2025, or 88.7%. That is the highest CVL share "
+                      "of any sector we cover, and it reflects how little there "
+                      "usually is to rescue in an independent garage."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Motor Vehicle Repair Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
         "related": ('Motor vehicle repair sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside wholesale and retail trade generally. See also the '
@@ -2049,8 +2336,22 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
     # The auto sentence assumes the two measures move smoothly in one direction.
     # A sector with an uneven monthly path (where "steadily" would overstate the
     # regularity) can override it with authored text via cfg['latest_note'].
+    rolling_direction = (
+        direction_of(f["rolling_current"], f["rolling_prior"])
+        if f["rolling_prior"] else direction
+    )
     if cfg.get("latest_note"):
         latest_note = f"{cfg['latest_note']} {pp_sentence}"
+    elif rolling_direction != direction:
+        # The two measures genuinely disagree, so the default "point in the same
+        # direction" claim would be false. Say so instead of picking one.
+        latest_note = (
+            f"The two measures disagree: the year-to-date total is {direction} "
+            f"while the rolling 12-month total is {rolling_direction}. That "
+            f"normally means the turn is recent enough that the rolling figure "
+            f"still carries the older, worse months. Neither measure is wrong; "
+            f"read them together. {pp_sentence}"
+        )
     else:
         latest_note = (
             f"The latest figures point in the same direction across the "
