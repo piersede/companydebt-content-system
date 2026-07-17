@@ -26,6 +26,19 @@ const commit = process.argv.includes('--commit');
 if (!file || !topic) { U.err('usage: node scripts/apply_prospects.js <prospects.json> --topic "<Topic>" [--commit]'); process.exit(1); }
 
 const norm = (u) => { try { const x = new URL(u); return (x.host.replace(/^www\./, '') + x.pathname).replace(/\/+$/, '').toLowerCase(); } catch { return (u || '').toLowerCase(); } };
+
+// One journalist can be reachable at two addresses (ruby.kitchen@ypn.co.uk and
+// ruby.kitchen@nationalworld.com are the same person; Reach/National World staff commonly have
+// both a title address and a group one). Comparing addresses for equality misses that and
+// double-contacts them. So also key on the localpart with separators stripped, but ONLY when the
+// localpart is a person rather than a shared desk, since "editor" collides across every outlet.
+const DESK_LOCALPARTS = new Set(['editor', 'editors', 'edit', 'editorial', 'news', 'newsdesk', 'info', 'hello',
+  'contact', 'enquiries', 'enquiry', 'admin', 'press', 'mail', 'team', 'office', 'feedback', 'tips']);
+const personKey = (email) => {
+  const local = String(email || '').toLowerCase().split('@')[0];
+  if (!local || DESK_LOCALPARTS.has(local)) return null;
+  return local.replace(/[._+-]/g, '');
+};
 // Em/en dashes in stored context prime the model to echo them, which then trips the dash gate.
 const clean = (s) => String(s || '').replace(/[—–]/g, ', ').replace(/\s+/g, ' ').trim();
 
@@ -34,6 +47,8 @@ const clean = (s) => String(s || '').replace(/[—–]/g, ', ').replace(/\s+/g, 
   const items = await monday.allItems(config);
   const seenUrl = new Set(items.map((it) => norm(it.articleUrl)).filter(Boolean));
   const seenEmail = new Set(items.map((it) => (it.email || '').toLowerCase()).filter(Boolean));
+  const seenPerson = new Map();
+  for (const it of items) { const k = personKey(it.email); if (k) seenPerson.set(k, it.email); }
   const cited = fs.existsSync(CITED_PATH) ? JSON.parse(fs.readFileSync(CITED_PATH, 'utf8')) : {};
 
   let created = 0, dup = 0, bad = 0, noEmail = 0, ctxAdded = 0;
@@ -42,11 +57,14 @@ const clean = (s) => String(s || '').replace(/[—–]/g, ', ').replace(/\s+/g, 
     const key = norm(p.articleUrl);
     if (seenUrl.has(key)) { U.dim(`dup url: ${p.outlet}`); dup++; continue; }
     if (p.email && seenEmail.has(p.email.toLowerCase())) { U.dim(`dup contact: ${p.email} (${p.outlet})`); dup++; continue; }
+    const pk = personKey(p.email);
+    if (pk && seenPerson.has(pk)) { U.warn(`same person, different address: ${p.email} is already on the board as ${seenPerson.get(pk)} (${p.outlet})`); dup++; continue; }
 
     const ctx = clean(p.citedContext);
     if (ctx.length < 40) { U.warn(`thin cited context, skipping: ${p.outlet} — the matcher would auto-defunct this`); bad++; continue; }
     seenUrl.add(key);
     if (p.email) seenEmail.add(p.email.toLowerCase());
+    if (pk) seenPerson.set(pk, p.email);
 
     // No verified email is a normal outcome: park the row in To research rather than drop it.
     const status = p.email ? config.monday.status.queue : 'To research';
