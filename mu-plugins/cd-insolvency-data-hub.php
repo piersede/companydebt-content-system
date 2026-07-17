@@ -104,8 +104,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => 'UK construction insolvency statistics: insolvencies in construction since 2016, the trend, sub-sector breakdown and construction\'s share of the total.',
         ),
         'furniture-insolvency-statistics' => array(
-            'title' => 'UK Furniture Manufacturing Insolvency Statistics',
-            'desc'  => 'UK furniture manufacturing insolvency statistics: company insolvencies among furniture manufacturers since 2016, the monthly trend since 2023 and the sector\'s share of all company insolvencies.',
+            'title' => 'UK Furniture Insolvency Statistics 2026 | Company Debt',
+            'desc'  => '64 furniture manufacturers entered insolvency between January and May 2026, flat on a year earlier while manufacturing overall fell 8.5%. Latest figures.',
         ),
         'restaurant-insolvency-statistics' => array(
             'title' => 'UK Restaurant Insolvency Statistics 2026 | Company Debt',
@@ -723,28 +723,64 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 
     if ( 'furniture-insolvency-statistics' === $slug ) {
         $page_url = home_url( '/data/furniture-insolvency-statistics/' );
+        $fur_faq_items = array(
+            array(
+                'q' => 'How many UK furniture manufacturers become insolvent each year?',
+                'a' => '143 furniture-manufacturing companies entered insolvency in England and Wales in 2025, against 139 in 2024. The series peak was 163 in 2023, and the pre-pandemic figure was 111 in 2019. Source: Insolvency Service, Table 1c.',
+            ),
+            array(
+                'q' => 'Are furniture insolvencies rising in 2026?',
+                'a' => 'No, and they are not falling either. There were 64 insolvencies between January and May 2026 against 63 in the same months of 2025, and the rolling 12-month total was unchanged at 144. The sector is flat while manufacturing overall improved by 8.5%.',
+            ),
+            array(
+                'q' => 'Do these figures include furniture shops and wholesalers?',
+                'a' => 'No. This page counts SIC group 310, the manufacture of furniture and mattresses. Furniture retailers and wholesalers are recorded under separate retail and wholesale SIC codes and are counted elsewhere.',
+            ),
+            array(
+                'q' => 'What is the most common insolvency procedure for furniture manufacturers?',
+                'a' => 'Creditors\' voluntary liquidation, which accounted for 115 of the 143 furniture insolvencies in 2025. Compulsory liquidations, where a creditor petitions the court, nearly doubled from 9 to 17 over the same year.',
+            ),
+            array(
+                'q' => 'Do the figures cover the whole UK?',
+                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+            ),
+        );
+        $fur_faq_main_entities = array();
+        foreach ( $fur_faq_items as $item ) {
+            $fur_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
         return array(
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Furniture Manufacturing Insolvency Statistics',
-                'description'      => 'Company insolvencies among furniture-manufacturing companies (SIC Division 31, Group 310), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Manufacturing only, excludes furniture wholesalers and retailers. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for furniture manufacturers (SIC group 310), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, the split by insolvency procedure, and comparison with manufacturing overall (SIC C) and the adjacent household-goods wholesale (SIC 464) and retail (SIC 475) trades. Covers the manufacture of household, office, kitchen and shop furniture and of mattresses. Excludes furniture retailers and wholesalers, which are recorded under separate codes. Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Furniture-manufacturing company insolvencies identified via Companies House SIC group 310; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'furniture manufacturing insolvency, furniture manufacturer insolvency, SIC 310, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 310. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'furniture manufacturing insolvency, furniture manufacturer insolvency, furniture insolvencies 2026, SIC 310 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
-                    'Furniture manufacturing company insolvencies (annual)',
-                    'Furniture manufacturing company insolvencies (monthly)',
-                    'Share of all company insolvencies',
+                    'Furniture manufacturing company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
                 ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $fur_faq_main_entities,
             ),
         );
     }

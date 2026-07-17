@@ -75,6 +75,8 @@ SECTORS = {
         "division_code": "31",
         "parent_section_code": "C",
         "parent_section_label": "manufacturing",
+        # No parent_kind here: SIC division 31 contains only group 310, so a
+        # division comparison would compare furniture against itself.
         "h1a": "UK Furniture Manufacturing",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -82,45 +84,332 @@ SECTORS = {
         "keyword": "furniture manufacturing",
         "singular": "furniture manufacturer",
         "plural": "furniture-manufacturing companies",
-        "scope_description": ("household, office, kitchen and shop furniture and "
-                              "mattress manufacturing"),
-        "exclusion_note": "Furniture retailers and wholesalers are recorded separately.",
-        "notes": [
-            "Furniture manufacturing is a small sector by company count, so monthly "
-            "figures can move sharply on a handful of cases. Read short-term changes "
-            "with care and prefer the year-to-date or 12-month rolling total.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many furniture manufacturers are registered, so it cannot be read as a "
-            "sector-wide risk of insolvency.",
-            "This is manufacturing only (SIC 310). Furniture wholesalers and retailers "
-            "sit under separate, broader SIC codes and are not included here.",
+        "scope_description": ("the manufacture of household, office, kitchen and "
+                              "shop furniture and of mattresses"),
+        "exclusion_note": ("Furniture retailers and wholesalers are recorded under "
+                           "separate retail and wholesale codes, and are not "
+                           "included here."),
+        "hero_note": ("One extra insolvency across five months, and a rolling "
+                      "12-month total sitting exactly where it sat a year ago. Flat "
+                      "is the whole story, and it only means something next to the "
+                      "trade furniture belongs to: manufacturing insolvencies fell "
+                      "8.5% over the same months. Manufacturing is coming down off "
+                      "its peak. Furniture has stayed put."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "29% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "143 vs 111"},
+            {"value": "8.3%", "label": "of manufacturing insolvencies", "sub": "up from 7.5% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, pressure commonly builds through reduced orders, "
-            "fixed production costs and supplier terms that consume working capital "
-            "before directors seek advice.",
-            "Furniture is also one of the first big-ticket purchases households defer "
-            "when confidence dips, so demand can weaken well before the wider economy "
-            "turns down.",
+        "comparison_intro": [
+            ("Barely. There were 64 insolvencies from January to May 2026 against "
+             "63 in the same months of 2025, a difference of one case, and the "
+             "rolling 12-month total was 144 against 144 a year earlier. On any "
+             "honest reading that is flat. Manufacturing as a whole fell 8.5% over "
+             "the same months, from 839 to 768. These are Company Debt calculations "
+             "from Insolvency Service Table 1c data."),
+            ("Flat sounds like the good news until you ask what it is flat against. "
+             "2025 closed at 143, which is 29% above the 111 recorded in 2019, and "
+             "furniture's share of all manufacturing insolvencies rose from 7.5% to "
+             "8.3% for no better reason than that it stood still while the rest of "
+             "the trade improved."),
+            ("The monthly path is noisy, as it always is in a sector this small. "
+             "2026 has run 12, 10, 15, 11, 16. Read any two of those months "
+             "together and you can tell whichever story you fancy, which is exactly "
+             "why the year-to-date and rolling totals are the only measures worth "
+             "arguing from here."),
+        ],
+        "divergence": {
+            "heading": "Furniture is not sharing manufacturing's recovery",
+            "caption": ("Furniture manufacturing against manufacturing overall and "
+                        "the adjacent household-goods trades"),
+            "intro": [
+                ("This is the finding worth taking away. Manufacturing insolvencies "
+                 "fell 8.5% in the first five months of 2026, from 839 to 768. "
+                 "Furniture did not move."),
+                ("The trades on either side of the factory gate are worth a look "
+                 "too, because they show this is not one uniform story about "
+                 "furniture. Wholesale of household goods, which is a large part of "
+                 "how furniture reaches the shops, fell 26.1%. Household equipment "
+                 "retail edged up 4.2%."),
+                ("Neither of those is a clean furniture series. SIC 464 and SIC 475 "
+                 "both cover textiles, appliances and hardware alongside furniture. "
+                 "They are the nearest published comparators, not a like-for-like "
+                 "match, and they are in the table on that basis."),
+                ("Taken together, though, the pattern is hard to miss. The people "
+                 "moving furniture around are having a better year. The people "
+                 "making it are not."),
+            ],
+            "peers": [
+                {"code": "310", "kind": "group", "label": "Furniture manufacturing (SIC 310)", "emphasise": True},
+                {"code": "464", "kind": "group", "label": "Household goods wholesale (SIC 464)"},
+                {"code": "475", "kind": "group", "label": "Household equipment retail (SIC 475)"},
+                {"code": "C", "kind": "section", "label": "Manufacturing overall (SIC C)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Furniture insolvencies did not climb steadily into this. They held "
+             "between 92 and 111 from 2016 to 2019, eased to 102 in 2020, then "
+             "collapsed to 58 in 2021, when government support and the restrictions "
+             "on creditors held the normal insolvency cycle in check."),
+            ("Then the bill arrived. 129 in 2022, and 163 in 2023, the worst year in "
+             "the series and close to triple the 2021 low. The pandemic did not "
+             "spare these companies. It postponed them."),
+            ("What has happened since is the part that matters now. 139 in 2024, 143 "
+             "in 2025: down 12% from the 2023 peak and then stuck. Three years past "
+             "the worst of it, furniture is still running 29% above its last normal "
+             "year. This is not a sector in freefall. It is a sector that has "
+             "levelled off somewhere it cannot really afford to sit."),
+        ],
+        "annual_intro": (
+            "The shape of the decade matters more than the peak. Furniture "
+            "insolvencies held to a narrow band through the late 2010s, fell away to "
+            "a series low of 58 in 2021 while the support schemes were running, then "
+            "more than doubled by 2023. The two years since are a plateau rather "
+            "than a recovery: 139, then 143."
+        ),
+        "latest_note": (
+            "Both the year-to-date and the rolling 12-month totals are effectively "
+            "unchanged on a year earlier. The fair reading is a sector holding at an "
+            "elevated level, neither improving nor deteriorating."
+        ),
+        "pressure_heading": "Why furniture manufacturers remain under pressure",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures look backwards. They record distress that has "
+             "usually been building for a year or more before anyone files anything, "
+             "and a flat total tells you nothing about which factories are quietly "
+             "struggling inside it. What follows is how money moves through a "
+             "furniture business and where it tends to get stuck. It is not a claim "
+             "about why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "Discretionary consumer demand",
-                "body": ("Furniture is a considered, big-ticket purchase, so household "
-                         "spending on it is one of the first things cut when confidence "
-                         "or disposable income comes under pressure, ahead of more "
-                         "routine spending categories."),
+                "h3": "The housing market has turned, and the workshop has not felt it yet",
+                "body": [
+                    ("People buy beds, sofas, wardrobes and kitchens when they move "
+                     "house, and moves are recovering. HMRC put UK residential "
+                     "property transactions at 98,450 in May 2026, 17% higher than "
+                     "May 2025."),
+                    ("That is a genuinely encouraging number, and it is also why so "
+                     "many furniture directors are reading recovery headlines that "
+                     "bear no relation to their own order book. HMRC's own note is "
+                     "that a completion lands two to four months after the offer. "
+                     "The furniture order comes after the completion, once the "
+                     "family has moved in and worked out that the old sofa does not "
+                     "fit the new room."),
+                    ("Then it goes to a retailer, who orders from the factory when "
+                     "their own stock runs down. By the time a recovery in house "
+                     "moves reaches a workshop floor it is most of a year old. The "
+                     "wage bill did not wait for it."),
+                    ("The HMRC series is UK-wide and covers all residential "
+                     "property. The insolvency counts on this page are England and "
+                     "Wales companies. Treat it as the weather, not as a diagnosis."),
+                ],
             },
             {
-                "h3": "Imported materials and currency exposure",
-                "body": ("Many manufacturers depend on imported timber, hardware, "
-                         "fabrics, foam or completed components, leaving margins "
-                         "exposed to freight costs and exchange-rate movements."),
+                "h3": "Household goods spending is going sideways",
+                "body": [
+                    ("The demand signal underneath all this is flat. ONS retail "
+                     "sales volumes at household goods stores in the three months to "
+                     "May 2026 were 1.6% up on the previous three months, and that "
+                     "followed three-month readings of -1.0%, -0.1% and -0.9%."),
+                    ("That is not a collapse. It is not a recovery either. It is a "
+                     "demand line that has been drifting along the flat for the best "
+                     "part of a year, and flat demand is precisely what a plateau in "
+                     "insolvencies looks like from the inside: enough work to keep "
+                     "the doors open, never quite enough to rebuild the reserves the "
+                     "last three years ate."),
+                    ("This measures Great Britain retail stores, not furniture "
+                     "manufacturers, and household goods stores sell a good deal "
+                     "besides furniture. It is context for the order book, not a "
+                     "measure of it."),
+                ],
+            },
+            {
+                "h3": "A factory's costs do not flex with the order book",
+                "body": [
+                    ("This is the arithmetic that catches furniture out. A quiet "
+                     "fortnight does not make the rent smaller, or the rates, or the "
+                     "machinery lease, or the insurance, or the heat in a building "
+                     "big enough to hold a spray booth and a fortnight of stock. You "
+                     "can send people home. You cannot send the building home."),
+                    ("The labour on top of that is not a rounding error either. In "
+                     "the 2026 to 2027 tax year employers pay National Insurance at "
+                     "15% above the secondary threshold of £96 a week, and the "
+                     "National Living Wage has been £12.71 an hour for workers aged "
+                     "21 and over since April 2026."),
+                    ("Whether either of those hurts depends entirely on whether it "
+                     "can go into the price. On a range quoted to a retailer "
+                     "eighteen months ago, it cannot."),
+                ],
+            },
+            {
+                "h3": "Furniture is the first thing a household defers",
+                "body": [
+                    ("A sofa is a decision, not a habit. Nobody has to replace one "
+                     "this year, and a household under pressure can put it off "
+                     "again, and then again, without anything visibly breaking. That "
+                     "makes furniture an early warning for the wider economy and a "
+                     "miserable place to sit while the warning plays out."),
+                    ("It also means the lost demand never arrives as a cancellation "
+                     "you can see coming and plan around. The order simply never "
+                     "gets placed. Nothing appears in the ledger at all, which is "
+                     "the hardest kind of loss to react to in time."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Furniture Manufacturing Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the furniture cases we handle, the timber is bought and paid for "
+             "long before the money comes back. You buy the board, the foam, the "
+             "fabric and the fittings, you pay the people who turn them into a "
+             "bedroom set, and then you wait on a retailer's payment run. Cash goes "
+             "out at the front and comes back at the end, and every week in between "
+             "is funded by you."),
+            ("By the time a director calls us the order book usually still looks "
+             "respectable, which is exactly what makes this one hard to see from the "
+             "inside. What has actually happened is quieter than a lost contract. "
+             "Terms crept from 30 days to 45 and then to 60. One retailer became a "
+             "third of the output without anyone deciding it should. A VAT quarter "
+             "got paid late once, and then never quite caught up."),
+            ("There is usually a personal guarantee somewhere in it as well, on the "
+             "invoice finance or the machinery, and it is rarely the first thing "
+             "anyone mentions on the call. It is almost always the thing they have "
+             "actually been lying awake about. Worth saying plainly: that guarantee "
+             "does not get better by being left alone, and the point at which it can "
+             "still be managed is earlier than most people think."),
+            ("The version we hear most often happens on a Friday. A big customer's "
+             "payment run slips by a week, and the wage run, a timber invoice and a "
+             "VAT payment all land inside the same seven days. Nobody plans for "
+             "that. Most firms survive it once. It is the third time that finishes "
+             "them."),
+            ("So we would not start with turnover. We would look at gross margin "
+             "after materials and direct labour, how much cash is asleep in timber "
+             "and work in progress, how long the debtor book actually takes to pay "
+             "as against how long it claims to, how much of the output leaves on one "
+             "customer's lorry, and what is owed to HMRC. Those five numbers tell "
+             "you more than the sales ledger ever will."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 115, "share": 80.4},
+                {"name": "Compulsory liquidations", "count": 17, "share": 11.9},
+                {"name": "Administrations", "count": 9, "share": 6.3},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 1.4},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> are the overwhelming majority, at 115 of "
+                "the 143 insolvencies recorded in 2025. That number was also 115 in "
+                "2024, so the directors' own decision to stop was no more common last "
+                "year than the year before.",
+                "The movement was somewhere else. "
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> rose from 9 to 17, close to double, taking them from "
+                "6.5% of the total to 11.9%. A creditor, more often than not HMRC, "
+                "petitioning to wind a company up is what pushed the 2025 total above "
+                "2024, and it is a different signal from a director choosing the "
+                "timing: it means somebody else chose it for them.",
+                '<a href="/company-administration/">Administrations</a> went the other '
+                "way, from 13 to 9. Administration needs a business worth rescuing and "
+                "usually assets worth lending against, and on these numbers that "
+                "combination is getting rarer in furniture rather than more common.",
+            ],
+        },
+        "notes": [
+            "SIC group 310 covers companies whose recorded primary business is "
+            "manufacturing furniture: household, office, kitchen and shop furniture, "
+            "and mattresses. Furniture retailers and wholesalers sit under separate "
+            "codes and are not included, so this page counts the makers, not the "
+            "sellers.",
+            "Furniture manufacturing is a small sector by company count, at roughly "
+            "a dozen insolvencies a month. Monthly figures move sharply on a handful "
+            "of cases and should not be read as a trend on their own. The "
+            "year-to-date and 12-month rolling totals are the steadier guide.",
+            "These are company counts, not the number of factories, workers or brands "
+            "affected. One insolvent company may run several sites or trading names, "
+            "and a manufacturer can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active furniture manufacturers, so a flat "
+            "count does not by itself mean a flat risk of failure.",
+            "The SIC 310 figures come from Table 1c and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your business is viable. "
+             "Sector totals never do. The questions that matter are narrower and "
+             "more awkward: does the margin still cover the factory once materials "
+             "and direct labour are paid, can you fund the gap between buying timber "
+             "and getting paid for what you made from it, and what happens to you if "
+             "your largest customer pays 30 days later than promised?"),
+            ("Plenty of furniture manufacturers in difficulty are sound businesses "
+             "with a working capital problem or an old HMRC arrears bill, and that "
+             "is worth knowing, because both are fixable. It is more serious when "
+             "the margin no longer covers the overhead at any realistic volume, or "
+             "when one customer has grown too large to lose and knows it."),
+            ('If you are reading this with a wage run coming and a payment that has '
+             'not landed, the thing worth knowing is that the earlier you speak to '
+             'someone, the more room there is to move: supplier terms renegotiated, '
+             'the debtor book refinanced, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is usually '
+             'frozen within days, and at that point the options narrow to what is '
+             'left rather than what you would choose. '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK furniture manufacturers become insolvent each year?",
+                "a": ("143 furniture-manufacturing companies entered insolvency in "
+                      "England and Wales in 2025, against 139 in 2024. The series "
+                      "peak was 163 in 2023, and the pre-pandemic figure was 111 in "
+                      "2019. Source: Insolvency Service, Table 1c."),
+            },
+            {
+                "q": "Are furniture insolvencies rising in 2026?",
+                "a": ("No, and they are not falling either. There were 64 "
+                      "insolvencies between January and May 2026 against 63 in the "
+                      "same months of 2025, and the rolling 12-month total was "
+                      "unchanged at 144. The sector is flat while manufacturing "
+                      "overall improved by 8.5%."),
+            },
+            {
+                "q": "Do these figures include furniture shops and wholesalers?",
+                "a": ("No. This page counts SIC group 310, the manufacture of "
+                      "furniture and mattresses. Furniture retailers and wholesalers "
+                      "are recorded under separate retail and wholesale SIC codes "
+                      "and are counted elsewhere."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for furniture manufacturers?",
+                "a": ("Creditors' voluntary liquidation, which accounted for 115 of "
+                      "the 143 furniture insolvencies in 2025. Compulsory "
+                      "liquidations, where a creditor petitions the court, nearly "
+                      "doubled from 9 to 17 over the same year."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table 1c covers England and "
+                      "Wales only. Scotland and Northern Ireland run separate "
+                      "insolvency regimes and are reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Furniture Manufacturing Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
         "related": ('Furniture manufacturing sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside manufacturing generally. See also the '
@@ -1190,6 +1479,21 @@ def change_phrase(current: int, prior: int | None, unchanged_vs: str = "", value
     return f"{word} {size}from {format_number(prior)}{value_vs}"
 
 
+def direction_of(current: int, prior: int | None, flat_band: float = 2.0) -> str:
+    """Direction of travel between two counts, with a dead band.
+
+    A raw current-vs-prior test calls 64 against 63 a "rise". On series this
+    small that is one case, and reporting it as a rise overstates what the
+    data can carry. Anything inside +/-flat_band per cent reads as flat.
+    """
+    if not prior:
+        return "flat" if current == prior else ("rising" if current > (prior or 0) else "falling")
+    pct = (current - prior) / prior * 100
+    if abs(pct) < flat_band:
+        return "flat"
+    return "rising" if pct > 0 else "falling"
+
+
 def figures(cfg: dict, c: dict) -> dict:
     ser = c["ser"]
     g = group_by_code(ser, cfg["sic_code"])
@@ -1437,9 +1741,7 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
     already stated elsewhere on the page, gathered into one table so a reader
     doesn't have to hunt through prose for it."""
     pp_value, pp_sentence = pre_pandemic_phrase(f)
-    direction = "falling" if f["ytd_current"] < f["ytd_prior"] else (
-        "rising" if f["ytd_current"] > f["ytd_prior"] else "flat"
-    )
+    direction = direction_of(f["ytd_current"], f["ytd_prior"])
     # Magnitude-aware qualifier: a blanket "modestly" mislabels a large move
     # (a 19% year-to-date fall is not "modest"). Pick the adverb from the
     # actual year-to-date change so the prose matches the number in the table.
@@ -1523,9 +1825,7 @@ def chart_block(cfg: dict, c: dict, f: dict) -> str:
 
 
 def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
-    direction = "rising" if f["ytd_current"] > f["ytd_prior"] else (
-        "falling" if f["ytd_current"] < f["ytd_prior"] else "flat"
-    )
+    direction = direction_of(f["ytd_current"], f["ytd_prior"])
     heading_verb = {"rising": "rising", "falling": "falling", "flat": "changing"}[direction]
     sector_verb = {"rising": "a rise of", "falling": "a fall of", "flat": "a change of"}[direction]
     sector_pct_abs = f"{abs(sf['sector_change_pct']):.1f}%" if sf["sector_change_pct"] is not None else "n/a"
