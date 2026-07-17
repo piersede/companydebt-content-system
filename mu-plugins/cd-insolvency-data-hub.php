@@ -128,8 +128,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => '293 garages entered insolvency in 2025, a record, and 113 in the first five months of 2026. See the latest motor vehicle repair insolvency figures.',
         ),
         'cleaning-company-insolvency-statistics' => array(
-            'title' => 'Cleaning Company Insolvency Statistics (UK)',
-            'desc'  => 'UK cleaning company insolvency statistics: company insolvencies among commercial and industrial cleaning contractors, year-to-date, rolling 12-month and annual figures.',
+            'title' => 'UK Cleaning Company Insolvency Statistics 2026',
+            'desc'  => '59 cleaning contractors entered insolvency between January and May 2026, exactly flat on a year earlier while the rest of building services improved.',
         ),
         'hotel-insolvency-statistics' => array(
             'title' => 'Hotel Insolvency Statistics (UK)',
@@ -999,28 +999,64 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 
     if ( 'cleaning-company-insolvency-statistics' === $slug ) {
         $page_url = home_url( '/data/cleaning-company-insolvency-statistics/' );
+        $cln_faq_items = array(
+            array(
+                'q' => 'How many UK cleaning companies become insolvent each year?',
+                'a' => '172 cleaning contractors entered insolvency in England and Wales in 2025, the same as in 2024 and just above the 171 in 2023. The pre-pandemic figure was 90 in 2019. Source: Insolvency Service, Table 1c.',
+            ),
+            array(
+                'q' => 'Are cleaning company insolvencies rising in 2026?',
+                'a' => 'No. There were 59 insolvencies between January and May 2026 and 59 in the same months of 2025, exactly flat. The rolling 12-month total did rise 6.8% to 172, so the sector is not improving either, at a time when the wider building-services division fell 16.8%.',
+            ),
+            array(
+                'q' => 'Why are cleaning insolvencies flat when other sectors are improving?',
+                'a' => 'Cleaning is close to a pure labour business, so it feels wage and employer National Insurance changes more directly than trades with materials or assets to trim. Its neighbours in the same division improved sharply over the same months: landscaping down 30.2% and facilities support down 31.6%.',
+            ),
+            array(
+                'q' => 'Do these figures include domestic cleaners?',
+                'a' => 'Not generally. This page counts SIC group 812, cleaning activities, which is mainly commercial and industrial building cleaning. Waste collection and landscaping are separate SIC codes and are excluded.',
+            ),
+            array(
+                'q' => 'What is the most common insolvency procedure for cleaning companies?',
+                'a' => 'Creditors\' voluntary liquidation, at 152 of the 172 cleaning insolvencies in 2025, or 88.4%. Administrations are almost unheard of in this trade, at just 2 cases, because there is rarely anything a buyer would pay for.',
+            ),
+        );
+        $cln_faq_main_entities = array();
+        foreach ( $cln_faq_items as $item ) {
+            $cln_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
         return array(
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Cleaning Company Insolvency Statistics',
-                'description'      => 'Company insolvencies among commercial and industrial cleaning contractors (SIC group 812), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes domestic cleaning and waste collection. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for cleaning contractors (SIC group 812), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, the split by insolvency procedure, and comparison with landscape services (SIC 813), combined facilities support (SIC 811) and building and landscape services overall (SIC 81). Covers general and specialist cleaning of buildings and industrial premises, including window cleaning. Excludes agency-provided domestic cleaning, waste collection and landscaping, which are recorded separately. Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Commercial and industrial cleaning contractor company insolvencies identified via Companies House SIC group 812; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'cleaning company insolvency, cleaning contractor insolvency statistics, SIC 812, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 812. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'cleaning company insolvency, cleaning contractor insolvency statistics, cleaning insolvencies 2026, SIC 812 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
-                    'Cleaning contractor company insolvencies (annual)',
-                    'Cleaning contractor company insolvencies (monthly)',
-                    'Share of all company insolvencies',
+                    'Cleaning contractor company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
                 ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $cln_faq_main_entities,
             ),
         );
     }

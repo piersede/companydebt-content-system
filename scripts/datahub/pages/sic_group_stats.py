@@ -1702,53 +1702,348 @@ SECTORS = {
         "division_code": "81",
         "parent_section_code": "N",
         "parent_section_label": "administrative and support services",
+        # The meaningful peer is the building-services trade (SIC 81), where
+        # cleaning sits alongside landscaping and facilities support, not the
+        # whole of administrative and support services.
+        "parent_kind": "division",
+        "parent_label": "building and landscape services",
         "h1a": "UK Cleaning Company",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
         "eyebrow": "Cleaning contractors",
         "keyword": "cleaning company",
-        "singular": "cleaning contractor",
+        "singular": "cleaning company",
         "plural": "commercial and industrial cleaning contractors",
-        "scope_description": "commercial and industrial cleaning contractors",
-        "exclusion_note": "Domestic cleaning services and waste collection are recorded under separate SIC codes.",
-        "notes": [
-            "Cleaning company insolvencies can move on a handful of cases month to "
-            "month. Prefer the year-to-date or 12-month rolling total for the "
-            "steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many cleaning contractors are registered, so it cannot be read as a "
-            "sector-wide risk of insolvency.",
-            "This is commercial and industrial cleaning only (SIC 812). Domestic "
-            "cleaning and waste collection sit under separate SIC codes and are "
-            "not included here.",
+        "scope_description": ("general and specialist cleaning of buildings and "
+                              "industrial premises, including window cleaning and "
+                              "specialist industrial cleaning"),
+        "exclusion_note": ("Domestic cleaning provided by agencies, waste "
+                           "collection, and landscaping or grounds maintenance are "
+                           "recorded under separate SIC codes."),
+        "hero_note": ("Fifty-nine, and fifty-nine a year ago. Nothing moved, and "
+                      "that is the finding rather than the absence of one. Every "
+                      "other part of the building-services trade improved sharply "
+                      "over the same months: landscaping down 30.2%, facilities "
+                      "support down 31.6%, the division as a whole down 16.8%. "
+                      "Cleaning stood still while the trade around it recovered."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "91% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "172 vs 90"},
+            {"value": "54.1%", "label": "of SIC 81 insolvencies", "sub": "up from 45.0% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, cleaning contracting is almost entirely a labour "
-            "cost business, so minimum wage and employer National Insurance "
-            "increases hit the cost base directly, with very little else to trim.",
-            "Multi-year contracts are the specific trap. A price agreed before a "
-            "cost increase often cannot be revisited until renewal, leaving a "
-            "contractor committed to an unprofitable rate for months or years.",
+        "comparison_intro": [
+            ("They are not changing, which is not the same as being fine. There "
+             "were 59 insolvencies from January to May 2026 and 59 in the same "
+             "months of 2025. Building and landscape services as a whole fell 16.8% "
+             "over the same period, from 131 to 109. These are Company Debt "
+             "calculations from Insolvency Service Table 1c data."),
+            ("The rolling 12-month total is the one that should give pause. It rose "
+             "from 161 to 172, up 6.8%. So on the year-to-date measure cleaning is "
+             "flat, and on the longer measure it is still getting slightly worse, "
+             "at a time when its own division is improving. There is no reading of "
+             "these figures in which cleaning is recovering."),
+            ("Because cleaning stood still while everything around it improved, its "
+             "share of all building and landscape services insolvencies climbed from "
+             "45.0% to 54.1% in a single year. The sector did not deteriorate to "
+             "earn that. It simply failed to join in."),
+        ],
+        "divergence": {
+            "heading": "Cleaning is the only part of building services not improving",
+            "caption": "Cleaning contractors against the rest of the building-services trade",
+            "intro": [
+                ("This is the finding worth taking away. Cleaning sits in SIC "
+                 "division 81 alongside landscaping and combined facilities "
+                 "support: broadly the same customers, broadly the same tenders, "
+                 "often the same procurement departments. Those neighbours have had "
+                 "a good year. Cleaning has not had any kind of year at all."),
+                ("Landscape services fell 30.2% and facilities support fell 31.6%, "
+                 "while cleaning did not move. The obvious question is what cleaning "
+                 "has that the others do not, and the most likely answer is the "
+                 "shape of its cost base: cleaning is the most labour-intensive of "
+                 "the three, with the largest number of part-time, hourly-paid "
+                 "people per pound of turnover."),
+                ("That matters because the two costs that have moved most since "
+                 "2024 are the hourly wage floor and the employer National "
+                 "Insurance charged on it. A trade built almost entirely out of "
+                 "hourly people feels both, and feels them first."),
+            ],
+            "peers": [
+                {"code": "812", "kind": "group", "label": "Cleaning contractors (SIC 812)", "emphasise": True},
+                {"code": "813", "kind": "group", "label": "Landscape services (SIC 813)"},
+                {"code": "811", "kind": "group", "label": "Combined facilities support (SIC 811)"},
+                {"code": "81", "kind": "division", "label": "Building and landscape services (SIC 81)"},
+                {"code": "N", "kind": "section", "label": "Administrative and support services (SIC N)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("The decade before this was unremarkable. Cleaning insolvencies ran "
+             "between 81 and 111 from 2016 to 2019, then fell to 56 in 2020, the "
+             "series low, when government support and the restrictions on creditors "
+             "held the normal cycle in check. Cleaning also had a genuinely good "
+             "pandemic, for the obvious reason."),
+            ("Then it nearly doubled and stayed there. 141 in 2022, 171 in 2023, "
+             "172 in 2024, 172 in 2025. Three consecutive years within one case of "
+             "each other, all of them at the top of the series."),
+            ("That flatness is the whole point. Most sectors spiked in 2023 and "
+             "have been coming down since. Cleaning went up and simply stopped, at "
+             "91% above the 90 recorded in 2019. It is not a crisis. It is a new, "
+             "worse normal that has now lasted three years."),
+        ],
+        "annual_intro": (
+            "The last three rows are the ones to look at: 171, then 172, then 172. "
+            "Three years running, within a single case of each other, all at the "
+            "top of the series. Most sectors peaked in 2023 and have improved since. "
+            "Cleaning reached its level and stayed on it."
+        ),
+        "latest_note": (
+            "The year-to-date total is unchanged on a year earlier while the rolling "
+            "12-month total is up 6.8%, so nothing here points to a recovery. The "
+            "fair reading is a sector holding at its worst sustained level while the "
+            "trade around it improves."
+        ),
+        "pressure_heading": "Why cleaning companies are under pressure",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Cleaning is close to a pure labour business. Take out the wages and "
+             "there is not much left but bin bags, machines and a van, which means "
+             "there is almost nothing to trim when the wage bill moves."),
+            ("Insolvency figures also look backwards, recording distress that has "
+             "usually been building for a year or more. What follows is where the "
+             "money goes. It is not a claim about why any particular company "
+             "failed."),
         ],
         "pressure": [
             {
-                "h3": "Labour cost is almost the entire cost base",
-                "body": ("Cleaning is overwhelmingly a labour cost business, so "
-                         "minimum wage and employer National Insurance increases "
-                         "hit margins directly, with little scope to absorb them "
-                         "elsewhere in the cost structure."),
+                "h3": "The cost of employing a cleaner has moved sharply in two years",
+                "body": [
+                    ("Two things changed at once, and both land on hourly staff. The "
+                     "National Living Wage went from £11.44 an hour in April 2024 to "
+                     "£12.21 in April 2025 and £12.71 from April 2026, for workers "
+                     "aged 21 and over. At the same time, employer National "
+                     "Insurance rose from 13.8% to 15% in April 2025, and the "
+                     "secondary threshold at which it starts fell from £175 a week "
+                     "to £96."),
+                    ("That threshold cut is the part that gets underestimated, "
+                     "because it is worth most where the wages are lowest. Take one "
+                     "cleaner on 15 hours a week. In April 2024, at £11.44 an hour, "
+                     "they earned £171.60 a week, which was below the £175 threshold, "
+                     "so the employer paid no National Insurance on them at all."),
+                    ("The same shift today pays £190.65 a week, of which £94.65 is "
+                     "above the threshold, so the employer now pays roughly £14.20 a "
+                     "week, about £738 a year, on a person who two years ago cost "
+                     "nothing in National Insurance. Add the pay rise itself and the "
+                     "cost of that one part-time cleaner has gone from about £8,900 "
+                     "a year to about £10,650, a rise of roughly 19%."),
+                    ("That arithmetic is ours, not an official statistic, and it is "
+                     "an illustration rather than a typical case. It ignores "
+                     "pensions and holiday pay, and it is before the Employment "
+                     "Allowance, which offsets up to £10,500 of an employer's "
+                     "National Insurance bill."),
+                    ("That allowance matters, and it cuts both ways. It covers a "
+                     "small firm entirely. On a contractor running two hundred "
+                     "cleaners it is gone by about the second week of April. "
+                     "Sources: GOV.UK National Minimum Wage rates, and rates and "
+                     "thresholds for employers."),
+                ],
             },
             {
-                "h3": "Fixed-price contracts agreed before costs rose",
-                "body": ("Multi-year cleaning contracts are often priced years in "
-                         "advance and cannot be repriced until renewal, so a "
-                         "contractor can be locked into a rate that stopped "
-                         "covering its costs long before the contract ends."),
+                "h3": "The contract was priced before any of that happened",
+                "body": [
+                    ("A cleaning contract is often a fixed price for a fixed "
+                     "specification over two or three years. The cost that sits "
+                     "underneath it is an hourly rate set by Parliament and revised "
+                     "every April. Those two facts do not fit together, and the gap "
+                     "between them is the contractor's margin."),
+                    ("Unless the contract has an indexation clause that actually "
+                     "works, and plenty do not, the contractor absorbs each April. "
+                     "A price agreed in 2024 is being delivered in 2026 with a wage "
+                     "floor 11% higher and a National Insurance bill on top that did "
+                     "not exist at the low end. Nobody has done anything wrong. The "
+                     "contract has simply stopped covering its costs."),
+                ],
+            },
+            {
+                "h3": "There is nothing else in the cost base to cut",
+                "body": [
+                    ("In most trades under pressure there is somewhere to go: buy "
+                     "cheaper materials, stretch the replacement cycle, sublet the "
+                     "unit. Cleaning has none of that. Labour is nearly all of it, "
+                     "and the specification says how many hours the site gets."),
+                    ("So the levers are the ones nobody wants: cut hours below what "
+                     "the site needs and wait for the complaint, or hold the hours "
+                     "and lose money every month. Most contractors do the second one "
+                     "for far too long, because the first one loses the contract."),
+                ],
+            },
+            {
+                "h3": "Tenders are won by whoever is most wrong about their costs",
+                "body": [
+                    ("Cleaning is bought on price, and the bar to entry is a van and "
+                     "a website. That combination means there is always somebody "
+                     "willing to bid a rate that cannot work, sometimes because they "
+                     "are desperate and sometimes because they have not done the "
+                     "arithmetic above."),
+                    ("They win the contract, and eighteen months later they are in "
+                     "our office. Meanwhile the incumbent either matched the price "
+                     "and is now losing money on a site they used to make money on, "
+                     "or held their nerve and lost the work. Both routes end "
+                     "somewhere unpleasant, and this is a large part of why the "
+                     "count never comes down."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Cleaning Company Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the cleaning cases we handle, the wages always get paid. That is "
+             "the first thing to understand about this trade. The cleaners are paid "
+             "weekly or fortnightly, they are often the lowest-paid people in the "
+             "chain, and no director we have met wants to be the person who does not "
+             "pay them. So when money is short, something else gives way, and what "
+             "gives way is nearly always the VAT and the PAYE."),
+            ("By the time a director calls us, HMRC arrears are usually a year old "
+             "and have quietly become the company's biggest creditor. Nobody decided "
+             "that. It happened one payroll at a time, each one a small, defensible "
+             "decision that made complete sense on the day."),
+            ("The contract book usually looks reassuring right up to the end, which "
+             "is what makes this one so hard to see from the inside. Turnover is "
+             "fine. Sites are staffed. Clients are happy. The company is simply "
+             "losing a few pence an hour across several hundred thousand hours a "
+             "year, and no single site looks bad enough to notice."),
+            ("So we would not start with turnover or the number of contracts. We "
+             "would look at gross margin per site after wages, National Insurance, "
+             "holiday pay and pension, and at which sites are underwater and by how "
+             "much."),
+            ("Then: what is owed to HMRC and how long it has been owed, whether the "
+             "contracts have indexation clauses anyone has ever actually enforced, "
+             "and what TUPE liability travels with the staff if a contract moves. "
+             "Those are the numbers that tell you whether this is fixable."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 152, "share": 88.4},
+                {"name": "Compulsory liquidations", "count": 17, "share": 9.9},
+                {"name": "Administrations", "count": 2, "share": 1.2},
+                {"name": "Company voluntary arrangements", "count": 1, "share": 0.6},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> account for 88.4% of the total, 152 of "
+                "172 in 2025, up from 146 in 2024. In a trade with no assets and no "
+                "resale value, closing the company is usually the only mechanism "
+                "available, and the directors are the ones who have to reach for it.",
+                '<a href="/company-administration/">Administrations</a> are almost '
+                "non-existent, at 2 cases in both 2024 and 2025. That is worth "
+                "understanding rather than glossing over: administration exists to "
+                "rescue a business with something worth buying. A cleaning contractor's "
+                "value is its contracts and its people, and both tend to walk to a "
+                "competitor without anyone paying for them.",
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> actually fell, from 22 to 17. On a flat total that "
+                "means slightly fewer creditors lost patience and slightly more "
+                "directors moved first, which is a marginally better way to end up in "
+                "the same place.",
+            ],
+        },
+        "notes": [
+            "SIC group 812 covers companies whose recorded primary business is "
+            "cleaning activities: general cleaning of buildings, specialist "
+            "industrial cleaning, window cleaning, and similar. Domestic cleaning "
+            "provided through agencies, waste collection and landscaping sit under "
+            "separate codes and are not counted here.",
+            "Cleaning is a small sector by company count, at roughly a dozen "
+            "insolvencies a month, so single months move on a handful of cases. The "
+            "year-to-date and 12-month rolling totals are the steadier guide, and on "
+            "this page they point slightly different ways, which is itself worth "
+            "noting.",
+            "These are company counts, not the number of sites, contracts or "
+            "cleaners affected. One insolvent contractor may staff dozens of sites, "
+            "and a cleaning company can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active cleaning companies. Barriers to entry "
+            "are very low in this trade, so the population changes quickly and a "
+            "flat count does not necessarily mean a flat risk.",
+            "The SIC 812 figures come from Table 1c and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your company is viable. "
+             "Sector totals never do. The questions that matter are narrower and "
+             "site by site: after wages, National Insurance, holiday pay and "
+             "pension, does each contract still make money, and if some do not, can "
+             "you reprice them or exit them before they take the rest with them?"),
+            ("Plenty of cleaning companies in difficulty are sound businesses "
+             "carrying two or three contracts that stopped working, and that is "
+             "worth knowing, because a contract can be repriced, renegotiated or "
+             "handed back. It is more serious when HMRC arrears have been growing "
+             "for several quarters, or when the only reason the wages cleared last "
+             "week is that the VAT did not."),
+            ('If that last sentence is uncomfortably familiar, the useful thing to '
+             'know is that the earlier you speak to someone, the more room there is '
+             'to move: contracts repriced, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ("A CVA is worth a serious look in this trade specifically. The "
+             "contracts are often profitable going forward even when the arrears "
+             "sitting behind them are not survivable, and that is close to the "
+             "textbook case for one."),
+            ('Once HMRC petitions, the bank account is usually frozen within days, '
+             'the wages do not clear, and the sites are uncovered by the following '
+             'morning. At that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is generally what is left. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK cleaning companies become insolvent each year?",
+                "a": ("172 cleaning contractors entered insolvency in England and "
+                      "Wales in 2025, the same as in 2024 and just above the 171 in "
+                      "2023. The pre-pandemic figure was 90 in 2019. Source: "
+                      "Insolvency Service, Table 1c."),
+            },
+            {
+                "q": "Are cleaning company insolvencies rising in 2026?",
+                "a": ("No. There were 59 insolvencies between January and May 2026 "
+                      "and 59 in the same months of 2025, exactly flat. The rolling "
+                      "12-month total did rise 6.8% to 172, so the sector is not "
+                      "improving either, at a time when the wider building-services "
+                      "division fell 16.8%."),
+            },
+            {
+                "q": "Why are cleaning insolvencies flat when other sectors are improving?",
+                "a": ("Cleaning is close to a pure labour business, so it feels wage "
+                      "and employer National Insurance changes more directly than "
+                      "trades with materials or assets to trim. Its neighbours in "
+                      "the same division improved sharply over the same months: "
+                      "landscaping down 30.2% and facilities support down 31.6%."),
+            },
+            {
+                "q": "Do these figures include domestic cleaners?",
+                "a": ("Not generally. This page counts SIC group 812, cleaning "
+                      "activities, which is mainly commercial and industrial "
+                      "building cleaning. Waste collection and landscaping are "
+                      "separate SIC codes and are excluded."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for cleaning companies?",
+                "a": ("Creditors' voluntary liquidation, at 152 of the 172 cleaning "
+                      "insolvencies in 2025, or 88.4%. Administrations are almost "
+                      "unheard of in this trade, at just 2 cases, because there is "
+                      "rarely anything a buyer would pay for."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Cleaning Company Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
         "related": ('Cleaning contractors sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside administrative and support services generally. See also the '
@@ -2801,11 +3096,21 @@ def annual_narrative(cfg: dict, f: dict) -> str:
         )
     if peak_year != latest_year and peak:
         pct = (latest - peak) / peak * 100
-        word = "fallen" if pct < 0 else "risen"
-        parts.append(
-            f"Since then, insolvencies have {word} {abs(round(pct))}% to "
-            f"{format_number(latest)} in {latest_year}."
-        )
+        if round(pct) == 0:
+            # The latest year matches (or all but matches) an earlier peak.
+            # "risen 0%" is what the generic phrasing produces here, which
+            # reads as a rounding artefact rather than the actual finding:
+            # the sector has not come off its peak at all.
+            parts.append(
+                f"It has not come off that peak: {format_number(latest)} in "
+                f"{latest_year} is level with {peak_year}."
+            )
+        else:
+            word = "fallen" if pct < 0 else "risen"
+            parts.append(
+                f"Since then, insolvencies have {word} {abs(round(pct))}% to "
+                f"{format_number(latest)} in {latest_year}."
+            )
     _, pp_sentence = pre_pandemic_phrase(f)
     parts.append(pp_sentence)
     return " ".join(parts)
