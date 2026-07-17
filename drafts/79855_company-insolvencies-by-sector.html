@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -162,6 +171,30 @@
   color: var(--cd-text-soft);
   max-width: 660px;
   margin: 0 0 32px;
+}
+
+/* Optional subtitle line directly under the H1, e.g. a geographic-scope
+   clarifier ("Latest detailed figures for England and Wales"). */
+.cd-data-hub .cd-hero__subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cd-muted);
+  margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -666,6 +699,17 @@
   line-height: 1.6;
 }
 .cd-data-hub .cd-side-note__d:last-child { margin-bottom: 0; }
+/* Grouped sub-items inside a .cd-side-notes box, each with its own h3 (e.g.
+   the "why <sector> is under pressure" list on single-SIC-sector pages). */
+.cd-data-hub .cd-side-notes .cd-note-item { margin: 0 0 20px; }
+.cd-data-hub .cd-side-notes .cd-note-item:last-child { margin-bottom: 0; }
+.cd-data-hub .cd-side-notes .cd-note-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cd-text);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
 /* Single-note variant used in the UK nations section. */
 .cd-data-hub .cd-side-note--single {
   padding: 20px 22px;
@@ -1029,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1138,6 +1201,14 @@
   </div>
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
 </section>
+<section class="cd-section cd-w-standard" id="detail">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Drill down</p>
+    <h2>Insolvency statistics for individual sectors</h2>
+    <p class="cd-section-intro">The figures above are section level, which is as far as the official ranking goes. These pages go a level deeper into a single trade, with its own monthly and annual figures, the split by insolvency procedure and what the numbers mean for a director in that sector. They are grouped below by the section each one sits inside.</p>
+  </div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>Construction</h3><p class="cd-side-note__d"><a href="/data/construction-insolvency-statistics/">construction</a></p></div><div class="cd-note-item"><h3>Wholesale and retail trade; repair of motor vehicles and motorcycles</h3><p class="cd-side-note__d"><a href="/data/motor-vehicle-repair-insolvency-statistics/">motor vehicle repair</a></p></div><div class="cd-note-item"><h3>Accommodation and food service activities</h3><p class="cd-side-note__d"><a href="/data/hotel-insolvency-statistics/">hotels</a>, <a href="/data/restaurant-insolvency-statistics/">restaurants</a></p></div><div class="cd-note-item"><h3>Administrative and support service activities</h3><p class="cd-side-note__d"><a href="/data/cleaning-company-insolvency-statistics/">cleaning contractors</a>, <a href="/data/recruitment-agency-insolvency-statistics/">recruitment agencies</a>, <a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary staffing agencies</a></p></div><div class="cd-note-item"><h3>Manufacturing</h3><p class="cd-side-note__d"><a href="/data/furniture-insolvency-statistics/">furniture manufacturing</a></p></div><div class="cd-note-item"><h3>Real estate activities</h3><p class="cd-side-note__d"><a href="/data/estate-agency-insolvency-statistics/">estate agencies</a></p></div><div class="cd-note-item"><h3>Transportation and storage</h3><p class="cd-side-note__d"><a href="/data/road-haulage-insolvency-statistics/">road haulage</a></p></div></div>
+</section>
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1150,7 +1221,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Detailed industry sub-sector breakdowns are published quarterly.</li>
+      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>

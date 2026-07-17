@@ -46,6 +46,66 @@ WP_ID = {
     "construction-insolvency-statistics": 79856,
 }
 
+# Detail pages that drill into a single trade, grouped under the SIC section
+# they belong to. Read from the sic_group_stats registry rather than restated
+# here, so a new sector page appears in the drill-down automatically instead of
+# relying on someone remembering to update a second list. Construction is the
+# exception: it is a section-level page with its own builder in this module.
+CONSTRUCTION_DETAIL = {
+    "section": "F",
+    "slug": "construction-insolvency-statistics",
+    "label": "Construction",
+}
+
+
+def detail_pages_by_section() -> dict[str, list[dict]]:
+    """{section code: [{slug, label}, ...]} for every sector detail page."""
+    from sic_group_stats import SECTORS  # noqa: E402  (late: avoids a cycle)
+
+    grouped: dict[str, list[dict]] = {
+        CONSTRUCTION_DETAIL["section"]: [
+            {"slug": CONSTRUCTION_DETAIL["slug"], "label": CONSTRUCTION_DETAIL["label"]}
+        ]
+    }
+    for slug, cfg in SECTORS.items():
+        grouped.setdefault(cfg["parent_section_code"], []).append(
+            {"slug": slug, "label": cfg["eyebrow"]}
+        )
+    return grouped
+
+
+def detail_links_block(ser: dict) -> str:
+    """Plain links from the section-level ranking down to the individual
+    trades. The table above this is SIC-section level (21 sections); the detail
+    pages are SIC groups sitting inside those sections, so the mapping is one
+    section to many trades and the links have to be grouped to make sense of
+    it. Sections are ordered by size, matching the ranking above."""
+    grouped = detail_pages_by_section()
+    li = len(ser["annual_years"]) - 1
+    section_label = {s["code"]: s["label"] for s in ser["sections"]}
+    section_size = {s["code"]: (s["annual"][li] or 0) for s in ser["sections"]}
+    ordered = sorted(grouped, key=lambda c: section_size.get(c, 0), reverse=True)
+
+    items = ""
+    for code in ordered:
+        pages = sorted(grouped[code], key=lambda p: p["label"])
+        links = ", ".join(
+            f'<a href="/data/{p["slug"]}/">{p["label"].lower()}</a>' for p in pages
+        )
+        items += (
+            f'<div class="cd-note-item"><h3>{section_label.get(code, code)}</h3>'
+            f'<p class="cd-side-note__d">{links}</p></div>'
+        )
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="detail">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Drill down</p>
+        <h2>Insolvency statistics for individual sectors</h2>
+        <p class="cd-section-intro">The figures above are section level, which is as far as the official ranking goes. These pages go a level deeper into a single trade, with its own monthly and annual figures, the split by insolvency procedure and what the numbers mean for a director in that sector. They are grouped below by the section each one sits inside.</p>
+      </div>
+      <div class="cd-side-notes">{items}</div>
+    </section>""")
+
 
 def load():
     return (
@@ -178,6 +238,7 @@ def build_sector(brk: dict, ser: dict, meta: dict) -> str:
     body = "\n".join([
         f"<style>{DASHBOARD_CSS}</style>", '<div class="cd-data-hub">',
         masthead_block(), hero, srcstrip_block(), chart, trend,
+        detail_links_block(ser),
         methodology_block(), source_block("company-insolvencies-by-sector", meta, citation),
         final_cta_block(), '</div>',
     ])
