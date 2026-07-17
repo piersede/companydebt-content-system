@@ -756,6 +756,10 @@ SECTORS = {
         "division_code": "78",
         "parent_section_code": "N",
         "parent_section_label": "administrative and support services",
+        # The meaningful peer is the agency's own trade (employment activities,
+        # SIC 78), not all of administrative and support services.
+        "parent_kind": "division",
+        "parent_label": "employment activities",
         "h1a": "UK Recruitment Agency",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -763,52 +767,343 @@ SECTORS = {
         "keyword": "recruitment agency",
         "singular": "recruitment agency",
         "plural": "permanent-placement recruitment agencies",
-        "scope_description": "recruitment agencies placing candidates into permanent roles",
-        "exclusion_note": "Temporary and agency staffing businesses are recorded separately (SIC group 782).",
-        "notes": [
-            "Recruitment agency insolvencies can move sharply on a small number of "
-            "cases, since it is a mid-sized sector. Prefer the year-to-date or "
-            "12-month rolling total for the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many agencies are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is permanent-placement recruitment only (SIC 781). Temporary "
-            "staffing agencies sit under a separate SIC code and are covered on "
-            "their own page.",
+        "scope_description": ("employment placement agencies, which mainly find "
+                              "candidates permanent roles, including "
+                              "executive-search and selection businesses"),
+        "exclusion_note": ("Agencies supplying workers on a temporary basis (SIC "
+                           "782) and longer-term human resources provision (SIC "
+                           "783) are recorded separately."),
+        "hero_note": ("That is the sharpest fall on any of our sector insolvency "
+                      "pages, and it needs one immediate qualification: it is a fall from the "
+                      "worst year permanent recruitment has ever had. 2025 closed "
+                      "at 345 insolvencies, a series record and more than double "
+                      "the 2019 figure. The direction has genuinely turned. The "
+                      "level has not finished coming down."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "131% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "345 vs 149"},
+            {"value": "50.0%", "label": "of SIC 78 insolvencies", "sub": "down from 60.1% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, recruitment agencies scale their cost base, "
-            "particularly consultant headcount, to match a hiring boom, then are "
-            "exposed when client hiring slows and fee income drops away almost "
-            "immediately.",
-            "Placement fee income is inherently lumpy. An agency with a handful of "
-            "large clients can see a material share of its pipeline disappear when "
-            "just one of them pauses hiring.",
+        "comparison_intro": [
+            ("They are falling, and hard. There were 105 insolvencies from January "
+             "to May 2026 against 149 in the same months of 2025, down 29.5%, while "
+             "the rolling 12-month total fell from 327 to 301, down 8.0%. Insolvencies "
+             "across employment activities as a whole fell 15.3% over the same "
+             "period. These are Company Debt calculations from Insolvency Service "
+             "Table 1c data."),
+            ("The gap between those two numbers is the story, and it is worth "
+             "understanding before anyone celebrates. A 29.5% fall and an 8.0% fall "
+             "cannot both be the underlying rate of improvement. The year-to-date "
+             "figure is measured against the worst five months this sector has ever "
+             "recorded: May 2025 alone produced 43 insolvencies, the highest single "
+             "month in the series."),
+            ("Strip the flattery out and 2026 has run 17, 24, 24, 19, 21, an average "
+             "of 21 a month against 29.8 a month across the same period of 2025. "
+             "That is a real improvement, and a substantial one. It is just not a "
+             "29.5% one. The rolling 12-month measure, which is much harder to "
+             "flatter with a well-chosen starting point, is the number to trust."),
+        ],
+        "divergence": {
+            "heading": "Permanent placement is falling while temporary staffing rises",
+            "caption": "Permanent-placement agencies against related recruitment classifications",
+            "intro": [
+                ("This is the finding worth taking away, and it is the mirror image "
+                 "of what is happening one SIC code over. Permanent-placement "
+                 "agencies fell 29.5%. Temporary employment agencies (SIC 782) rose "
+                 "7.5%. They are the same trade, often the same building, and they "
+                 "are moving in opposite directions."),
+                ("Permanent placement made up 50.0% of all insolvencies across "
+                 "employment activities in the first five months of 2026, down from "
+                 "60.1% a year earlier. Its share of the wider administrative and "
+                 "support services section fell too, from 13.8% to 12.5%."),
+                ('The reason is not mysterious, and it sits in the trade data rather '
+                 'than the insolvency data. Employers have been buying temporary '
+                 'staff instead of permanent ones. Good for the temp desk, bad for '
+                 'the permanent desk, and the two sets of figures are showing you '
+                 'the same decision from opposite ends.'),
+                ('The other half of this story is on our '
+                 '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary '
+                 'staffing agency insolvency statistics</a> page.'),
+            ],
+            "peers": [
+                {"code": "781", "kind": "group", "label": "Permanent-placement agencies (SIC 781)", "emphasise": True},
+                {"code": "782", "kind": "group", "label": "Temporary employment agencies (SIC 782)"},
+                {"code": "78", "kind": "division", "label": "Employment activities overall (SIC 78)"},
+                {"code": "N", "kind": "section", "label": "Administrative and support services (SIC N)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("For most of the last decade this was a stable trade. Insolvencies sat "
+             "between 127 and 154 from 2016 to 2019, and barely moved through the "
+             "pandemic: 135 in 2020 and 142 in 2021, held in check by government "
+             "support and the restrictions on creditors."),
+            ("Then it tripled. 206 in 2022, 246 in 2023, 295 in 2024 and 345 in "
+             "2025, each year worse than the last, ending 131% above the 149 "
+             "recorded in 2019. This was not a single bad year. It was four "
+             "consecutive years of deterioration, which is a different and more "
+             "serious pattern."),
+            ("2026 is the first year that has broken the run. It is worth being "
+             "clear about what that does and does not mean. The rolling 12-month "
+             "total of 301 is better than the 327 before it, and better than the "
+             "2025 calendar year. It is still twice what this sector was losing in "
+             "2019."),
+        ],
+        "annual_intro": (
+            "The generic reading of this table is a steady climb, and that is close "
+            "enough to true here: permanent recruitment recorded four consecutive "
+            "worsening years from 2022 to 2025, ending at a series peak of 345. What "
+            "the annual table cannot show is that the run stopped in 2026, which is "
+            "why the year-to-date and rolling figures above matter more than this "
+            "one."
+        ),
+        "latest_note": (
+            "The year-to-date and rolling 12-month totals are both down on a year "
+            "earlier, but by very different margins, because the early months of "
+            "2025 were exceptionally severe. The fair reading is a real recovery "
+            "from a record peak, rather than a sector that is out of trouble."
+        ),
+        "pressure_heading": "Why recruitment agencies remain financially exposed",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures look backwards. They record distress that has "
+             "usually been building for a year or more, so a falling 2026 count is "
+             "partly telling you about 2024 and 2025 decisions. What follows is how "
+             "money actually moves through a permanent-placement agency and where it "
+             "tends to get stuck. It is not a claim about why any particular company "
+             "failed."),
         ],
         "pressure": [
             {
-                "h3": "Direct exposure to hiring confidence",
-                "body": ("Placement fee income depends entirely on clients actively "
-                         "hiring, so it falls away almost immediately when clients "
-                         "freeze recruitment, with little notice and no way to "
-                         "recover the lost pipeline."),
+                "h3": "There are still fewer jobs to fill",
+                "body": [
+                    ("The market these agencies sell into is smaller than it was. "
+                     "The ONS put UK vacancies at 707,000 for March to May 2026, "
+                     "down 31,000 or 4.2% on the year, and the lowest level since "
+                     "February to April 2021."),
+                    ("The ratio matters more than the count. There were 2.5 "
+                     "unemployed people per vacancy in February to April 2026, up "
+                     "from 2.2 a year earlier. A recruiter's product is scarcity: "
+                     "when a client can fill a role from their own inbox, the fee "
+                     "gets questioned, and then it gets negotiated, and then it does "
+                     "not get paid at all."),
+                    ("The ONS count covers the whole economy rather than agency "
+                     "hiring alone, so treat it as the weather, not the diagnosis."),
+                ],
             },
             {
-                "h3": "Thin working capital buffers",
-                "body": ("Agencies are typically light on fixed assets and cash "
-                         "between placements, so a run of quiet months can exhaust "
-                         "reserves faster than in sectors with more physical assets "
-                         "to fall back on."),
+                "h3": "Employers swapped permanent hires for temporary ones",
+                "body": [
+                    ("This is the specific thing that separates a permanent desk "
+                     "from a temp desk right now. The KPMG and REC UK Report on "
+                     "Jobs, published on 8 July 2026, found that permanent "
+                     "placements were still falling in June, though at a marginal "
+                     "pace that was the softest in three months, while temporary "
+                     "billings rose at their quickest rate since April 2023."),
+                    ("An employer who is nervous does not stop needing the work "
+                     "done. They stop committing to it. A temp can be ended with a "
+                     "week's notice; a permanent hire cannot, and the ONS Vacancy "
+                     "Survey feedback points the same way, with firms citing "
+                     "economic uncertainty and increased labour costs as reasons "
+                     "they are not recruiting."),
+                    ("The REC survey is UK-wide market context. It is not where the "
+                     "England and Wales insolvency counts on this page come from."),
+                ],
+            },
+            {
+                "h3": "The cost base is people, and it was built for a bigger market",
+                "body": [
+                    ("A recruitment agency has almost no assets. What it has is "
+                     "consultants, desks, a database subscription and an office, and "
+                     "the consultants are the expensive part. Firms that grew "
+                     "through 2022 and 2023 hired to match the billings of 2022 and "
+                     "2023."),
+                    ("When the market halves, the salary bill does not. It is a "
+                     "fixed cost until somebody decides to cut it, and that decision "
+                     "is always taken later than it should be, because every "
+                     "consultant you make redundant is a desk that definitely bills "
+                     "nothing next quarter."),
+                    ("In the 2026 to 2027 tax year employers also pay National "
+                     "Insurance at 15% above the secondary threshold of £96 a week. "
+                     "It lands on precisely the cost the agency is trying to hold "
+                     "on to."),
+                ],
+            },
+            {
+                "h3": "A placement fee is not money until the rebate period has run",
+                "body": [
+                    ("This is the trap that is specific to permanent placement, and "
+                     "it does not exist on the temp side. The invoice goes out when "
+                     "the candidate starts. The fee is commonly subject to a rebate "
+                     "or refund clause if that candidate leaves within an agreed "
+                     "period, so revenue recognised in March can walk back out of "
+                     "the door in May."),
+                    ("In a redundancy market, more placements fail. People take a "
+                     "job, get nervous, and go back to the employer they came from, "
+                     "or the new employer freezes the role two months in. The agency "
+                     "has already paid commission on that billing. In the cases we "
+                     "see, a clawback arriving in a quarter that was already thin is "
+                     "a common last straw rather than the original cause."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Recruitment Agency Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
-        "related": ('Recruitment agencies sit within the wider '
-                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside administrative and support services generally. See also '
+        "practitioner_view": [
+            ("In the recruitment cases we handle, the agency is almost never short "
+             "of activity. It is short of completions. The consultants are busy, the "
+             "pipeline reports look fine, and the interviews are happening. They just "
+             "are not turning into start dates, and a permanent agency does not get "
+             "paid for interviews."),
+            ("By the time a director calls us, the pattern is usually a year old. "
+             "Billings dropped first, then the good consultants left, because good "
+             "consultants can smell a thin desk before anyone announces anything. "
+             "Then the ones who stayed had bigger targets and worse patches. The "
+             "office lease and the salary bill were both signed when things were "
+             "better and neither cares."),
+            ("There is nearly always a personal guarantee in it too, on the office "
+             "lease or the invoice finance, and it is the last thing anyone raises "
+             "and the first thing they have been losing sleep over. It is worth "
+             "saying plainly: a guarantee does not improve by being ignored, and "
+             "there is more that can be done about it early than late."),
+            ("So we would not start with the pipeline. We would look at billings "
+             "actually collected in the last three months against the salary bill, "
+             "how much of the invoiced revenue is still inside a rebate period, how "
+             "much is owed to HMRC on PAYE and VAT, what the office lease commits "
+             "you to, and what happens to the numbers if the two best billers leave. "
+             "Those five tell you more than any forecast."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 266, "share": 77.1},
+                {"name": "Compulsory liquidations", "count": 48, "share": 13.9},
+                {"name": "Administrations", "count": 29, "share": 8.4},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 0.6},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> are the standard route out, at 266 of the "
+                "345 insolvencies recorded in 2025, up from 238 in 2024. That is what "
+                "it looks like when directors of asset-light businesses accept the "
+                "market has gone and close the company themselves.",
+                "The sharper movement was in "
+                '<a href="/liquidation/compulsory-liquidation/">compulsory '
+                "liquidations</a>, which more than doubled from 23 to 48, taking them "
+                "from 7.8% of the total to 13.9%. That is a creditor, more often than "
+                "not HMRC, petitioning to wind the company up rather than waiting. "
+                "PAYE and VAT arrears are the usual reason a recruitment agency ends "
+                "up in that column.",
+                '<a href="/company-administration/">Administrations</a> barely moved, '
+                "from 28 to 29, and remain a small share. Administration needs a "
+                "business somebody would buy, and a permanent agency whose value "
+                "walked out of the door with its consultants is a hard thing to sell.",
+            ],
+        },
+        "notes": [
+            "SIC group 781, activities of employment placement agencies, covers "
+            "companies whose recorded primary business is placing candidates with "
+            "employers, mainly into permanent roles. It includes executive search "
+            "and selection. Agencies supplying workers on a temporary basis sit "
+            "under SIC 782, and longer-term human resources provision under SIC 783.",
+            "A single company can run both a permanent desk and a temporary desk. "
+            "The SIC code records its main recorded activity, not a clean split of "
+            "what it actually does, so the boundary between 781 and 782 is neater in "
+            "the data than it is in the trade.",
+            "These are company counts, not the number of offices, consultants or "
+            "candidates affected. One insolvent company may run several trading "
+            "brands, and an agency can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active recruitment agencies. That matters "
+            "here more than on most pages: thousands of agencies were incorporated "
+            "during the 2021 and 2022 hiring boom, so a rising count could reflect a "
+            "larger population as much as a riskier one.",
+            "The SIC 781 figures come from Table 1c and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your agency is viable. Sector "
+             "totals never do. The questions that matter are narrower: does the cash "
+             "actually collected each month cover the salary bill, how much of your "
+             "recent revenue could still be clawed back under a rebate clause, and "
+             "what is owed to HMRC on PAYE and VAT right now?"),
+            ("Plenty of agencies in difficulty are sound businesses carrying a cost "
+             "base built for a bigger market, and that is worth knowing, because a "
+             "cost base can be cut."),
+            ("It is more serious when the arrears have been growing for several "
+             "quarters, when a rebate wave is coming and the commission on it has "
+             "already been paid, or when the office lease is the biggest single "
+             "thing keeping the company alive on paper and dead in practice."),
+            ('If you are reading this having just worked out that this quarter will '
+             'not cover payroll, the useful thing to know is that the earlier you '
+             'speak to someone, the more room there is to move: the lease '
+             'renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once HMRC petitions, and on these figures HMRC has been petitioning a '
+             'lot more, the bank account is usually frozen within days and the '
+             'choice narrows to '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> or a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> you did not '
+             'choose. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start if you want to talk it '
+             'through first.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK recruitment agencies become insolvent each year?",
+                "a": ("345 permanent-placement recruitment agencies entered "
+                      "insolvency in England and Wales in 2025, the highest in the "
+                      "series and up from 295 in 2024. The pre-pandemic figure was "
+                      "149 in 2019. Source: Insolvency Service, Table 1c."),
+            },
+            {
+                "q": "Are recruitment agency insolvencies falling in 2026?",
+                "a": ("Yes. There were 105 insolvencies between January and May 2026 "
+                      "against 149 in the same months of 2025, a fall of 29.5%, and "
+                      "the rolling 12-month total fell 8.0% to 301. The year-to-date "
+                      "fall is flattered by an unusually severe early 2025, so the "
+                      "rolling measure is the better guide."),
+            },
+            {
+                "q": "Why are recruitment insolvencies falling while temporary staffing insolvencies rise?",
+                "a": ("Because employers have been hiring temporary staff instead of "
+                      "permanent ones. Permanent-placement insolvencies (SIC 781) "
+                      "fell 29.5% in the first five months of 2026 while temporary "
+                      "employment agency insolvencies (SIC 782) rose 7.5%. The KPMG "
+                      "and REC UK Report on Jobs found temp billings in June 2026 "
+                      "rising at their quickest rate since April 2023."),
+            },
+            {
+                "q": "Do these figures include temp agencies?",
+                "a": ("No. This page counts SIC group 781, employment placement "
+                      "agencies, which mainly place candidates into permanent roles. "
+                      "Temporary staffing agencies are SIC 782 and are covered on "
+                      "their own page."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for recruitment agencies?",
+                "a": ("Creditors' voluntary liquidation, which accounted for 266 of "
+                      "the 345 recruitment agency insolvencies in 2025. Compulsory "
+                      "liquidations, where a creditor such as HMRC petitions the "
+                      "court, more than doubled from 23 to 48 over the same year."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Recruitment Agency Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table 1c). CompanyDebt.com."),
+        "related": ('The clearest contrast is with '
                     '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary staffing agency insolvency statistics</a> '
-                    'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+                    '(SIC 782), which are rising as permanent placement falls. Recruitment also sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
     "temporary-staffing-agency-insolvency-statistics": {
         "wp_id": 80138,

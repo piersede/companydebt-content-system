@@ -116,8 +116,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => '149 road haulage and removals companies entered insolvency between January and May 2026. See the latest monthly and annual haulage insolvency figures.',
         ),
         'recruitment-agency-insolvency-statistics' => array(
-            'title' => 'Recruitment Agency Insolvency Statistics (UK)',
-            'desc'  => 'UK recruitment agency insolvency statistics: company insolvencies among permanent-placement recruitment agencies, year-to-date, rolling 12-month and annual figures.',
+            'title' => 'UK Recruitment Agency Insolvency Statistics 2026',
+            'desc'  => '105 recruitment agencies entered insolvency between January and May 2026, down 29.5% from a record 2025, while temporary staffing rose. Latest figures.',
         ),
         'temporary-staffing-agency-insolvency-statistics' => array(
             'title' => 'UK Temporary Staffing Agency Insolvency Statistics 2026',
@@ -843,28 +843,64 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 
     if ( 'recruitment-agency-insolvency-statistics' === $slug ) {
         $page_url = home_url( '/data/recruitment-agency-insolvency-statistics/' );
+        $rec_faq_items = array(
+            array(
+                'q' => 'How many UK recruitment agencies become insolvent each year?',
+                'a' => '345 permanent-placement recruitment agencies entered insolvency in England and Wales in 2025, the highest in the series and up from 295 in 2024. The pre-pandemic figure was 149 in 2019. Source: Insolvency Service, Table 1c.',
+            ),
+            array(
+                'q' => 'Are recruitment agency insolvencies falling in 2026?',
+                'a' => 'Yes. There were 105 insolvencies between January and May 2026 against 149 in the same months of 2025, a fall of 29.5%, and the rolling 12-month total fell 8.0% to 301. The year-to-date fall is flattered by an unusually severe early 2025, so the rolling measure is the better guide.',
+            ),
+            array(
+                'q' => 'Why are recruitment insolvencies falling while temporary staffing insolvencies rise?',
+                'a' => 'Because employers have been hiring temporary staff instead of permanent ones. Permanent-placement insolvencies (SIC 781) fell 29.5% in the first five months of 2026 while temporary employment agency insolvencies (SIC 782) rose 7.5%. The KPMG and REC UK Report on Jobs found temp billings in June 2026 rising at their quickest rate since April 2023.',
+            ),
+            array(
+                'q' => 'Do these figures include temp agencies?',
+                'a' => 'No. This page counts SIC group 781, employment placement agencies, which mainly place candidates into permanent roles. Temporary staffing agencies are SIC 782 and are covered on their own page.',
+            ),
+            array(
+                'q' => 'What is the most common insolvency procedure for recruitment agencies?',
+                'a' => 'Creditors\' voluntary liquidation, which accounted for 266 of the 345 recruitment agency insolvencies in 2025. Compulsory liquidations, where a creditor such as HMRC petitions the court, more than doubled from 23 to 48 over the same year.',
+            ),
+        );
+        $rec_faq_main_entities = array();
+        foreach ( $rec_faq_items as $item ) {
+            $rec_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
         return array(
             array(
                 '@type'            => 'Dataset',
                 'name'             => 'UK Recruitment Agency Insolvency Statistics',
-                'description'      => 'Company insolvencies among permanent-placement recruitment agencies (SIC group 781), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016. Excludes temporary staffing agencies. Source: Insolvency Service.',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for employment placement agencies (SIC group 781), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023, annual figures from 2016, the split by insolvency procedure, and comparison with temporary employment agencies (SIC 782) and employment activities overall (SIC 78). Covers agencies mainly placing candidates into permanent roles, including executive search and selection. Excludes agencies supplying workers on a temporary basis (SIC 782) and longer-term human resources provision (SIC 783). Source: Insolvency Service and Companies House.',
                 'url'              => $page_url,
                 'creator'         => $org_ref,
                 'publisher'       => $org_ref,
                 'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
-                'temporalCoverage' => '2016-01/2026-05',
+                'temporalCoverage' => '2016-01-01/2026-05-31',
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
-                'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Recruitment agency company insolvencies identified via Companies House SIC group 781; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
-                'keywords'        => 'recruitment agency insolvency, recruitment agency insolvency statistics, SIC 781, UK',
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-may-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 781. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'keywords'        => 'recruitment agency insolvency, recruitment agency insolvencies 2026, permanent placement agency insolvency, SIC 781 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
                 'variableMeasured'     => array(
-                    'Recruitment agency company insolvencies (annual)',
-                    'Recruitment agency company insolvencies (monthly)',
-                    'Share of all company insolvencies',
+                    'Recruitment agency company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Insolvency procedure (CVL, compulsory liquidation, administration, CVA, receivership)',
                 ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'mainEntity' => $rec_faq_main_entities,
             ),
         );
     }
