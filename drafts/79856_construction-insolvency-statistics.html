@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -162,6 +171,30 @@
   color: var(--cd-text-soft);
   max-width: 660px;
   margin: 0 0 32px;
+}
+
+/* Optional subtitle line directly under the H1, e.g. a geographic-scope
+   clarifier ("Latest detailed figures for England and Wales"). */
+.cd-data-hub .cd-hero__subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cd-muted);
+  margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -666,6 +699,17 @@
   line-height: 1.6;
 }
 .cd-data-hub .cd-side-note__d:last-child { margin-bottom: 0; }
+/* Grouped sub-items inside a .cd-side-notes box, each with its own h3 (e.g.
+   the "why <sector> is under pressure" list on single-SIC-sector pages). */
+.cd-data-hub .cd-side-notes .cd-note-item { margin: 0 0 20px; }
+.cd-data-hub .cd-side-notes .cd-note-item:last-child { margin-bottom: 0; }
+.cd-data-hub .cd-side-notes .cd-note-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cd-text);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
 /* Single-note variant used in the UK nations section. */
 .cd-data-hub .cd-side-note--single {
   padding: 20px 22px;
@@ -1029,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1079,10 +1142,10 @@
       <div class="cd-hero">
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line">UK Construction Insolvency</span> <span class="cd-h1__line">Statistics</span></h1>
-        <p class="cd-lede">Construction has the most company insolvencies of any UK industry. There were 3,949 construction company insolvencies in 2025, around 16% of all company insolvencies that year. This page tracks the construction trend since 2016, the monthly series since 2023 and the split across building, civil engineering and specialised trades.</p>
+        <p class="cd-lede">Construction has the most company insolvencies of any UK industry. There were 3,948 construction company insolvencies in 2025, around 16% of all company insolvencies that year. This page tracks the construction trend since 2016, the monthly series since 2023 and the split across building, civil engineering and specialised trades.</p>
         <dl class="cd-meta-grid">
-  <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
-  <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
+  <div class="cd-meta-item"><span>Latest data</span><strong>June 2026</strong></div>
+  <div class="cd-meta-item"><span>Published</span><strong>17 July 2026</strong></div>
   <div class="cd-meta-item"><span>Industry update</span><strong>Quarterly</strong></div>
   <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
 </dl>
@@ -1091,7 +1154,7 @@
       <aside class="cd-hero__panel" aria-label="Latest figures">
         <p class="cd-kpi-label">Construction (SIC section F) · England and Wales</p>
         <div class="cd-main-kpi">
-          <span class="cd-main-kpi__v">3,949</span>
+          <span class="cd-main-kpi__v">3,948</span>
           <span class="cd-main-kpi__k">construction insolvencies, 2025</span>
         </div>
         <div class="cd-change-row">
@@ -1122,7 +1185,7 @@
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Monthly construction insolvencies since 2023</h2>
     <p class="cd-section-intro">Company insolvencies in the construction sector, England and Wales. Monthly figures are available from January 2023; the longer view is annual (see below). Construction is the largest sector across the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>; supplier cash-flow pressure is tracked in the <a href="/data/payment-practices-late-payment/">late payment statistics</a>.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="construction-monthly-title construction-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="construction-monthly-title">Monthly construction company insolvencies, England and Wales</title><desc id="construction-monthly-desc">Monthly company insolvencies in the construction sector, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">100</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">200</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">300</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">400</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">500</text></g><polyline points="60.0,146.14 80.6,122.86 101.2,59.81 121.8,151.26 142.4,44.47 163.0,92.18 183.6,155.80 204.2,87.07 224.8,118.88 245.4,96.73 266.0,72.30 286.6,103.54 307.2,138.76 327.8,109.22 348.4,133.08 369.0,82.53 389.6,108.09 410.2,84.80 430.8,117.18 451.4,125.13 472.0,145.01 492.6,130.24 513.2,129.67 533.8,145.58 554.4,138.76 575.0,102.98 595.6,97.86 616.2,125.70 636.8,93.32 657.4,127.40 678.0,123.42 698.6,146.14 719.2,146.14 739.8,103.54 760.4,138.76 781.0,156.94 801.6,153.53 822.2,139.33 842.8,114.90 863.4,81.39 884.0,152.39" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:292</title></circle><circle cx="80.6" cy="122.86" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:333</title></circle><circle cx="101.2" cy="59.81" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:444</title></circle><circle cx="121.8" cy="151.26" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:283</title></circle><circle cx="142.4" cy="44.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:471</title></circle><circle cx="163.0" cy="92.18" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:387</title></circle><circle cx="183.6" cy="155.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:275</title></circle><circle cx="204.2" cy="87.07" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:396</title></circle><circle cx="224.8" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:340</title></circle><circle cx="245.4" cy="96.73" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:379</title></circle><circle cx="266.0" cy="72.30" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:422</title></circle><circle cx="286.6" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:367</title></circle><circle cx="307.2" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:305</title></circle><circle cx="327.8" cy="109.22" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:357</title></circle><circle cx="348.4" cy="133.08" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:315</title></circle><circle cx="369.0" cy="82.53" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:404</title></circle><circle cx="389.6" cy="108.09" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:359</title></circle><circle cx="410.2" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:400</title></circle><circle cx="430.8" cy="117.18" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:343</title></circle><circle cx="451.4" cy="125.13" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:329</title></circle><circle cx="472.0" cy="145.01" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:294</title></circle><circle cx="492.6" cy="130.24" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:320</title></circle><circle cx="513.2" cy="129.67" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:321</title></circle><circle cx="533.8" cy="145.58" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:293</title></circle><circle cx="554.4" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:305</title></circle><circle cx="575.0" cy="102.98" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:368</title></circle><circle cx="595.6" cy="97.86" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:377</title></circle><circle cx="616.2" cy="125.70" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:328</title></circle><circle cx="636.8" cy="93.32" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:385</title></circle><circle cx="657.4" cy="127.40" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:325</title></circle><circle cx="678.0" cy="123.42" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:332</title></circle><circle cx="698.6" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:292</title></circle><circle cx="719.2" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:292</title></circle><circle cx="739.8" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:367</title></circle><circle cx="760.4" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:305</title></circle><circle cx="781.0" cy="156.94" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:273</title></circle><circle cx="801.6" cy="153.53" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:279</title></circle><circle cx="822.2" cy="139.33" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:304</title></circle><circle cx="842.8" cy="114.90" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:347</title></circle><circle cx="863.4" cy="81.39" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:406</title></circle><circle cx="884.0" cy="152.39" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:281</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="construction-monthly-title construction-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="construction-monthly-title">Monthly construction company insolvencies, England and Wales</title><desc id="construction-monthly-desc">Monthly company insolvencies in the construction sector, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">100</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">200</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">300</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">400</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">500</text></g><polyline points="60.0,146.14 80.1,122.86 100.2,59.81 120.3,151.26 140.4,44.47 160.5,92.18 180.6,155.80 200.7,87.07 220.8,118.88 240.9,96.73 261.0,72.30 281.1,103.54 301.2,138.76 321.3,109.22 341.4,133.08 361.5,82.53 381.6,108.09 401.7,84.80 421.8,117.18 441.9,125.13 462.0,145.01 482.0,130.24 502.1,129.67 522.2,145.58 542.3,138.76 562.4,102.98 582.5,97.86 602.6,125.70 622.7,93.32 642.8,127.40 662.9,123.42 683.0,146.14 703.1,146.14 723.2,103.54 743.3,139.33 763.4,156.94 783.5,152.96 803.6,138.76 823.7,114.90 843.8,80.26 863.9,143.87 884.0,136.49" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:292</title></circle><circle cx="80.1" cy="122.86" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:333</title></circle><circle cx="100.2" cy="59.81" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:444</title></circle><circle cx="120.3" cy="151.26" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:283</title></circle><circle cx="140.4" cy="44.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:471</title></circle><circle cx="160.5" cy="92.18" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:387</title></circle><circle cx="180.6" cy="155.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:275</title></circle><circle cx="200.7" cy="87.07" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:396</title></circle><circle cx="220.8" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:340</title></circle><circle cx="240.9" cy="96.73" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:379</title></circle><circle cx="261.0" cy="72.30" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:422</title></circle><circle cx="281.1" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:367</title></circle><circle cx="301.2" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:305</title></circle><circle cx="321.3" cy="109.22" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:357</title></circle><circle cx="341.4" cy="133.08" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:315</title></circle><circle cx="361.5" cy="82.53" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:404</title></circle><circle cx="381.6" cy="108.09" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:359</title></circle><circle cx="401.7" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:400</title></circle><circle cx="421.8" cy="117.18" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:343</title></circle><circle cx="441.9" cy="125.13" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:329</title></circle><circle cx="462.0" cy="145.01" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:294</title></circle><circle cx="482.0" cy="130.24" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:320</title></circle><circle cx="502.1" cy="129.67" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:321</title></circle><circle cx="522.2" cy="145.58" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:293</title></circle><circle cx="542.3" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:305</title></circle><circle cx="562.4" cy="102.98" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:368</title></circle><circle cx="582.5" cy="97.86" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:377</title></circle><circle cx="602.6" cy="125.70" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:328</title></circle><circle cx="622.7" cy="93.32" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:385</title></circle><circle cx="642.8" cy="127.40" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:325</title></circle><circle cx="662.9" cy="123.42" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:332</title></circle><circle cx="683.0" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:292</title></circle><circle cx="703.1" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:292</title></circle><circle cx="723.2" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:367</title></circle><circle cx="743.3" cy="139.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:304</title></circle><circle cx="763.4" cy="156.94" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:273</title></circle><circle cx="783.5" cy="152.96" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:280</title></circle><circle cx="803.6" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:305</title></circle><circle cx="823.7" cy="114.90" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:347</title></circle><circle cx="843.8" cy="80.26" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:408</title></circle><circle cx="863.9" cy="143.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:296</title></circle><circle cx="884.0" cy="136.49" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2026:309</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="301.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="542.3" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="783.5" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
     <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
   </figure>
 </section>
@@ -1133,7 +1196,7 @@
     <table class="cd-table">
       <caption class="cd-table__caption">Construction company insolvencies by sub-sector, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
       <thead><tr><th scope="col">Sub-sector</th><th scope="col" class="cd-num">2016</th><th scope="col" class="cd-num">2025</th></tr></thead>
-      <tbody><tr><th scope="row">Construction of buildings</th><td class="cd-num">818</td><td class="cd-num">1,537</td></tr><tr><th scope="row">Civil engineering</th><td class="cd-num">164</td><td class="cd-num">194</td></tr><tr><th scope="row">Specialised construction activities</th><td class="cd-num">1,575</td><td class="cd-num">2,218</td></tr></tbody>
+      <tbody><tr><th scope="row">Construction of buildings</th><td class="cd-num">818</td><td class="cd-num">1,536</td></tr><tr><th scope="row">Civil engineering</th><td class="cd-num">164</td><td class="cd-num">194</td></tr><tr><th scope="row">Specialised construction activities</th><td class="cd-num">1,575</td><td class="cd-num">2,218</td></tr></tbody>
     </table>
   </div>
 </section>
@@ -1143,7 +1206,7 @@
     <table class="cd-table">
       <caption class="cd-table__caption">Annual construction company insolvencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
       <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Construction insolvencies</th></tr></thead>
-      <tbody><tr><th scope="row">2016</th><td class="cd-num">2,557</td></tr><tr><th scope="row">2017</th><td class="cd-num">2,633</td></tr><tr><th scope="row">2018</th><td class="cd-num">2,996</td></tr><tr><th scope="row">2019</th><td class="cd-num">3,221</td></tr><tr><th scope="row">2020</th><td class="cd-num">2,061</td></tr><tr><th scope="row">2021</th><td class="cd-num">2,581</td></tr><tr><th scope="row">2022</th><td class="cd-num">4,168</td></tr><tr><th scope="row">2023</th><td class="cd-num">4,389</td></tr><tr><th scope="row">2024</th><td class="cd-num">4,040</td></tr><tr><th scope="row">2025</th><td class="cd-num">3,949</td></tr></tbody>
+      <tbody><tr><th scope="row">2016</th><td class="cd-num">2,557</td></tr><tr><th scope="row">2017</th><td class="cd-num">2,633</td></tr><tr><th scope="row">2018</th><td class="cd-num">2,996</td></tr><tr><th scope="row">2019</th><td class="cd-num">3,221</td></tr><tr><th scope="row">2020</th><td class="cd-num">2,061</td></tr><tr><th scope="row">2021</th><td class="cd-num">2,581</td></tr><tr><th scope="row">2022</th><td class="cd-num">4,168</td></tr><tr><th scope="row">2023</th><td class="cd-num">4,389</td></tr><tr><th scope="row">2024</th><td class="cd-num">4,040</td></tr><tr><th scope="row">2025</th><td class="cd-num">3,948</td></tr></tbody>
     </table>
   </div>
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
@@ -1160,7 +1223,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Detailed industry sub-sector breakdowns are published quarterly.</li>
+      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1173,9 +1236,9 @@
   <div class="cd-cite-card">
     <div class="cd-cite-card__left">
       <dl>
-        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026 (Table 1c, by industry).</dd>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table 1c, by industry).</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
-        <dt>Publication date</dt><dd>19 June 2026</dd>
+        <dt>Publication date</dt><dd>17 July 2026</dd>
         <dt>Industry breakdown</dt><dd>Published quarterly (January, April, July, October).</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>

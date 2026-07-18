@@ -1,61 +1,61 @@
 {
-  "latest_month": "2026-05",
-  "latest_month_label": "May 2026",
-  "publication_date": "19 June 2026",
-  "next_release_date": "17 July 2026",
+  "latest_month": "2026-06",
+  "latest_month_label": "June 2026",
+  "publication_date": "17 July 2026",
+  "next_release_date": "18 August 2026",
   "source_label": "Insolvency Service / Companies House",
   "status": "Accredited official statistics",
   "data_window_start": "2000-01",
-  "page_generated": "2026-06-21",
+  "page_generated": "2026-07-18",
   "latest_figures_table": {
-    "latest_month_label": "2026-05",
-    "prior_month_label": "2026-04",
-    "prior_year_label": "2025-05",
+    "latest_month_label": "2026-06",
+    "prior_month_label": "2026-05",
+    "prior_year_label": "2025-06",
     "rows": [
       {
         "procedure": "Total company insolvencies",
-        "latest": 1868,
-        "prior_month": 2087,
-        "prior_year": 2231,
-        "month_change_pct": -10,
-        "year_change_pct": -16
+        "latest": 1845,
+        "prior_month": 1849,
+        "prior_year": 2048,
+        "month_change_pct": 0,
+        "year_change_pct": -10
       },
       {
         "procedure": "Compulsory liquidations",
-        "latest": 285,
-        "prior_month": 384,
-        "prior_year": 345,
-        "month_change_pct": -26,
-        "year_change_pct": -17
+        "latest": 276,
+        "prior_month": 281,
+        "prior_year": 324,
+        "month_change_pct": -2,
+        "year_change_pct": -15
       },
       {
         "procedure": "Creditors' voluntary liquidations",
-        "latest": 1423,
-        "prior_month": 1504,
-        "prior_year": 1730,
-        "month_change_pct": -5,
-        "year_change_pct": -18
+        "latest": 1364,
+        "prior_month": 1411,
+        "prior_year": 1603,
+        "month_change_pct": -3,
+        "year_change_pct": -15
       },
       {
         "procedure": "Administrations",
-        "latest": 135,
-        "prior_month": 178,
-        "prior_year": 142,
-        "month_change_pct": -24,
-        "year_change_pct": -5
+        "latest": 191,
+        "prior_month": 132,
+        "prior_year": 106,
+        "month_change_pct": 45,
+        "year_change_pct": 80
       },
       {
         "procedure": "CVAs",
-        "latest": 25,
-        "prior_month": 20,
-        "prior_year": 14,
-        "month_change_pct": 25,
-        "year_change_pct": 79
+        "latest": 14,
+        "prior_month": 25,
+        "prior_year": 15,
+        "month_change_pct": -44,
+        "year_change_pct": -7
       },
       {
         "procedure": "Receivership appointments",
         "latest": 0,
-        "prior_month": 1,
+        "prior_month": 0,
         "prior_year": 0,
         "month_change_pct": null,
         "year_change_pct": null

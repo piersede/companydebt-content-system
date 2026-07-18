@@ -1,17 +1,17 @@
 {
   "england_and_wales": {
-    "period": "2026-05",
-    "total": 1868,
-    "rate_per_10k": 50.9
+    "period": "2026-06",
+    "total": 1845,
+    "rate_per_10k": 50.5
   },
   "scotland": {
-    "period": "May 2026",
-    "total": 100,
-    "rate_per_10k": 51.0
+    "period": "Jun 2026",
+    "total": 104,
+    "rate_per_10k": 50.8
   },
   "northern_ireland": {
-    "period": "May 2026",
-    "total": 30,
-    "rate_per_10k": 41.6
+    "period": "Jun 2026",
+    "total": 18,
+    "rate_per_10k": 40.8
   }
 }

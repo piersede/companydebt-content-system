@@ -74,7 +74,7 @@ def hero_block(meta: dict, latest_total: int) -> str:
       <div class="cd-hero">
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
-        <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was 10% lower than April 2026 and 16% lower than May 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
+        <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was little changed from May 2026 and 10% lower than June 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
           <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
@@ -91,15 +91,15 @@ def hero_block(meta: dict, latest_total: int) -> str:
           <span class="cd-main-kpi__k">company insolvencies, {meta['latest_month_label']}</span>
         </div>
         <div class="cd-change-row cd-change-row--down">
-          <span><strong>-10%</strong> vs April 2026</span>
-          <span><strong>-16%</strong> vs May 2025</span>
+          <span><strong>0%</strong> vs May 2026</span>
+          <span><strong>-10%</strong> vs June 2025</span>
         </div>
         <div class="cd-kpi-divider" aria-hidden="true"></div>
         <div class="cd-mini-kpi-grid">
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">1,423</span><span class="cd-mini-kpi__k">CVLs</span><span class="cd-mini-kpi__n">76% of total</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">285</span><span class="cd-mini-kpi__k">Compulsory</span><span class="cd-mini-kpi__n">-26% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">135</span><span class="cd-mini-kpi__k">Administrations</span><span class="cd-mini-kpi__n">-24% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">50.9</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 196 companies</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">1,364</span><span class="cd-mini-kpi__k">CVLs</span><span class="cd-mini-kpi__n">74% of total</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">276</span><span class="cd-mini-kpi__k">Compulsory</span><span class="cd-mini-kpi__n">-2% on May</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">191</span><span class="cd-mini-kpi__k">Administrations</span><span class="cd-mini-kpi__n">+45% on May</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">50.5</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 198 companies</span></div>
         </div>
       </aside>
       </div>
@@ -167,19 +167,19 @@ def latest_figures_block(meta: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="figures">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">Snapshot <span>· May 2026</span></p>
+        <p class="cd-eyebrow">Snapshot <span>· June 2026</span></p>
         <h2>Latest UK company insolvency figures</h2>
-        <p class="cd-section-intro">The May 2026 total was made up mainly of creditors' voluntary liquidations, and fell back across every main procedure. Administrations were 24% lower than in April, when more than 70 connected real estate companies entered insolvency in a single cluster.</p>
+        <p class="cd-section-intro">The June 2026 total was made up mainly of creditors' voluntary liquidations, though administrations jumped sharply after around 60 connected real estate companies entered administration in a single cluster. Compulsory liquidations and CVLs both eased back.</p>
       </div>
       <div class="cd-tablewrap">
         <table class="cd-table cd-table--latest">
-          <caption class="cd-table__caption">Company insolvencies in England and Wales by procedure, May 2026 compared with April 2026 and May 2025. Seasonally adjusted where available. Source: Insolvency Service / Companies House.</caption>
+          <caption class="cd-table__caption">Company insolvencies in England and Wales by procedure, June 2026 compared with May 2026 and June 2025. Seasonally adjusted where available. Source: Insolvency Service / Companies House.</caption>
           <thead>
             <tr>
               <th scope="col">Procedure</th>
+              <th scope="col" class="cd-num">June 2026</th>
               <th scope="col" class="cd-num">May 2026</th>
-              <th scope="col" class="cd-num">April 2026</th>
-              <th scope="col" class="cd-num">May 2025</th>
+              <th scope="col" class="cd-num">June 2025</th>
               <th scope="col" class="cd-num">Monthly change</th>
               <th scope="col" class="cd-num">Annual change</th>
             </tr>
@@ -203,7 +203,7 @@ def monthly_chart_block(charts: dict) -> str:
         <div>
           <p class="cd-eyebrow">Trend</p>
           <h2>Monthly company insolvencies by procedure</h2>
-          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations dropped back in May after a connected real-estate cluster lifted the April figure.</p>
+          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations spiked in June after another connected real-estate cluster — the third such episode this year, following clusters in March and April.</p>
         </div>
         <div class="cd-chart-controls" role="tablist" aria-label="Time range">
           <span class="cd-chart-controls__label">View range</span>
@@ -266,15 +266,15 @@ def rate_block(charts: dict, latest_rate: float) -> str:
     <section class="cd-section cd-w-wide" id="rate">
       <div class="cd-section-head">
         <p class="cd-eyebrow">Rate <span>· 12-month rolling</span></p>
-        <h2>UK company insolvency rate (May 2026)</h2>
+        <h2>UK company insolvency rate (June 2026)</h2>
       </div>
       <div class="cd-rate-grid">
         <div class="cd-rate-text">
-          <p class="cd-section-intro">In the 12 months to 31 May 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 196 companies entering insolvency.</p>
-          <p>The rate was lower than the 53.0 per 10,000 recorded for the 12 months to May 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
+          <p class="cd-section-intro">In the 12 months to 30 June 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 198 companies entering insolvency.</p>
+          <p>The rate was lower than the 52.4 per 10,000 recorded for the 12 months to June 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
           <div class="cd-callout-card">
             <div class="cd-callout-card__row">
-              <span class="cd-callout-card__k">May 2026</span>
+              <span class="cd-callout-card__k">June 2026</span>
               <span class="cd-callout-card__v">{latest_rate} <span class="cd-callout-card__u">per 10,000</span></span>
             </div>
             <div class="cd-callout-card__row">
@@ -299,13 +299,13 @@ def rate_block(charts: dict, latest_rate: float) -> str:
 
 def procedure_cards_block() -> str:
     rows = [
-        ("CVLs", "1,423", "Main procedure. 76% of all insolvencies.",
+        ("CVLs", "1,364", "Main procedure. 74% of all insolvencies.",
          "CVL statistics", "/data/cvl-statistics/"),
-        ("Compulsory liquidations", "285", "Down 26% on April 2026. HMRC-led petitions.",
+        ("Compulsory liquidations", "276", "Down 2% on May 2026. HMRC-led petitions.",
          "Compulsory liquidation statistics", "/data/compulsory-liquidation-statistics/"),
-        ("Administrations", "135", "Down 24% after April's real-estate cluster.",
+        ("Administrations", "191", "Up 45% after June's real-estate cluster.",
          "Administration statistics", "/data/administration-statistics/"),
-        ("CVAs", "25", "Low by historical standards.", None, None),
+        ("CVAs", "14", "Low by historical standards.", None, None),
         ("Receiverships", "0", "Now a rare procedure.", None, None),
     ]
     def card_html(name, count, note, link_label, link_href):
@@ -325,7 +325,7 @@ def procedure_cards_block() -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-wide" id="procedures">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">By procedure <span>· May 2026</span></p>
+        <p class="cd-eyebrow">By procedure <span>· June 2026</span></p>
         <h2>UK company insolvencies by procedure type</h2>
         <p class="cd-section-intro">Each procedure has its own deep dive. Compulsory liquidations begin with a creditor's petition, tracked monthly in the <a href="/data/winding-up-petition-tracker/">winding-up petition statistics</a>.</p>
       </div>
@@ -340,15 +340,15 @@ def sector_block(sector: dict, charts: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-wide" id="sector">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">Sector <span>· 12 months to May 2026</span></p>
+        <p class="cd-eyebrow">Sector <span>· 12 months to June 2026</span></p>
         <h2>UK company insolvencies by sector</h2>
-        <p class="cd-section-intro">The sector breakdown covers the 12 months to May 2026, ranked by volume. Construction remains the largest, ahead of wholesale and retail and accommodation and food. The full ranking and year-by-year trends are in the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, including the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>.</p>
+        <p class="cd-section-intro">The sector breakdown covers the 12 months to June 2026, ranked by volume. Construction remains the largest, ahead of wholesale and retail and accommodation and food. The full ranking and year-by-year trends are in the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, including the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>.</p>
       </div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--sector">
           {charts['sector_bars']}
         </div>
-        <figcaption class="cd-figcaption"><strong>UK company insolvencies by industry section, 12 months to May 2026, England and Wales.</strong> Ranked by volume. SIC code is self-reported and uses the first recorded code. Source: Insolvency Service / Companies House.</figcaption>
+        <figcaption class="cd-figcaption"><strong>UK company insolvencies by industry section, 12 months to June 2026, England and Wales.</strong> Ranked by volume. SIC code is self-reported and uses the first recorded code. Source: Insolvency Service / Companies House.</figcaption>
       </figure>
       <aside class="cd-caveat">
         <p><strong>About sector volumes.</strong> These are volumes, not sector failure rates. Larger sectors tend to have more insolvencies because they have more registered companies. SIC codes are self-reported, and the first recorded SIC code is used.</p>
@@ -375,18 +375,18 @@ def nations_block(nations: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="nations">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">UK nations <span>· May 2026</span></p>
+        <p class="cd-eyebrow">UK nations <span>· June 2026</span></p>
         <h2>UK company insolvencies by jurisdiction</h2>
         <p class="cd-section-intro">Figures are reported separately for England and Wales, Scotland and Northern Ireland.</p>
       </div>
       <div class="cd-nations-grid">
         <div class="cd-tablewrap">
           <table class="cd-table cd-table--nations">
-            <caption class="cd-table__caption">Company insolvencies by UK jurisdiction, May 2026. Source: Insolvency Service / Companies House / Department for the Economy (NI).</caption>
+            <caption class="cd-table__caption">Company insolvencies by UK jurisdiction, June 2026. Source: Insolvency Service / Companies House / Department for the Economy (NI).</caption>
             <thead>
               <tr>
                 <th scope="col">Jurisdiction</th>
-                <th scope="col" class="cd-num">May 2026</th>
+                <th scope="col" class="cd-num">June 2026</th>
                 <th scope="col" class="cd-num">Rate per 10,000</th>
                 <th scope="col">Notes</th>
               </tr>
@@ -445,7 +445,7 @@ def source_citation_block(meta: dict) -> str:
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026.</dd>
+            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026.</dd>
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
             <dt>Next scheduled release</dt><dd>{meta['next_release_date']}</dd>
@@ -467,24 +467,24 @@ def source_citation_block(meta: dict) -> str:
 def faq_block() -> str:
     qa = [
         (
-            "How many UK company insolvencies were there in May 2026?",
-            "There were 1,868 registered company insolvencies in England and Wales in May 2026, on a seasonally adjusted basis. That was 10% lower than April 2026 and 16% lower than May 2025. Scotland recorded 100 insolvencies and Northern Ireland 30 in the same month."
+            "How many UK company insolvencies were there in June 2026?",
+            "There were 1,845 registered company insolvencies in England and Wales in June 2026, on a seasonally adjusted basis. That was little changed from May 2026 and 10% lower than June 2025. Scotland recorded 104 insolvencies and Northern Ireland 18 in the same month."
         ),
         (
             "What is the current UK company insolvency rate?",
-            "The 12-month rolling company insolvency rate for England and Wales was 50.9 per 10,000 active companies in the year to May 2026 — equal to one in 196 companies. The rate is lower than the 53.0 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
+            "The 12-month rolling company insolvency rate for England and Wales was 50.5 per 10,000 active companies in the year to June 2026 — equal to one in 198 companies. The rate is lower than the 52.4 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
         ),
         (
             "Which procedure accounts for the most UK company insolvencies?",
-            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,423 CVLs in May 2026 — 76% of all company insolvencies for the month. Compulsory liquidations (285) and administrations (135) followed, with a small number of CVAs (25) and no receiverships."
+            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,364 CVLs in June 2026 — 74% of all company insolvencies for the month. Compulsory liquidations (276) and administrations (191) followed, with a small number of CVAs (14) and no receiverships."
         ),
         (
             "Which UK sectors have the most company insolvencies?",
-            "Across the 12 months to May 2026, construction (3,803, 17%), wholesale and retail (3,527, 15%), and accommodation and food services (3,296, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
+            "Across the 12 months to June 2026, construction (3,805, 17%), wholesale and retail (3,463, 15%), and accommodation and food services (3,233, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
         ),
         (
             "When is the next UK insolvency statistics release?",
-            "The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 17 July 2026. This page is updated each month from the official release."
+            "The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 18 August 2026. This page is updated each month from the official release."
         ),
         (
             "Where does this UK insolvency data come from?",

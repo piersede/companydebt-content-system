@@ -8,6 +8,15 @@
    ============================================================ */
 
 .cd-data-hub {
+  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
+     use width:100vw to escape the WP container). 100vw resolves to the
+     viewport width INCLUDING the scrollbar gutter, so on any page tall
+     enough to scroll it overshoots the true visible width by the scrollbar's
+     width (~15-17px) and creates a real, swipeable horizontal scroll. This
+     is not masking an unknown overflow — the cause is the 100vw pattern
+     above, which has no scrollbar-safe CSS-only fix; contain the resulting
+     15px here rather than letting it leak into the page/site chrome. */
+  overflow-x: hidden;
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -162,6 +171,30 @@
   color: var(--cd-text-soft);
   max-width: 660px;
   margin: 0 0 32px;
+}
+
+/* Optional subtitle line directly under the H1, e.g. a geographic-scope
+   clarifier ("Latest detailed figures for England and Wales"). */
+.cd-data-hub .cd-hero__subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cd-muted);
+  margin: 6px 0 20px;
+}
+/* Optional scope-definition line (e.g. clarifying which SIC groups are and
+   are not included) — sits between the subtitle and the lede, slightly
+   heavier than the subtitle since it carries a real caveat, not just a
+   geography tag. */
+.cd-data-hub .cd-hero__scope {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cd-text-soft);
+  background: var(--cd-surface-soft);
+  border-left: 3px solid var(--cd-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .cd-data-hub .cd-eyebrow {
@@ -666,6 +699,17 @@
   line-height: 1.6;
 }
 .cd-data-hub .cd-side-note__d:last-child { margin-bottom: 0; }
+/* Grouped sub-items inside a .cd-side-notes box, each with its own h3 (e.g.
+   the "why <sector> is under pressure" list on single-SIC-sector pages). */
+.cd-data-hub .cd-side-notes .cd-note-item { margin: 0 0 20px; }
+.cd-data-hub .cd-side-notes .cd-note-item:last-child { margin-bottom: 0; }
+.cd-data-hub .cd-side-notes .cd-note-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cd-text);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
 /* Single-note variant used in the UK nations section. */
 .cd-data-hub .cd-side-note--single {
   padding: 20px 22px;
@@ -1029,9 +1073,28 @@
   .cd-data-hub .cd-meta-grid { grid-template-columns: 1fr; gap: 16px; max-width: none; }
   .cd-data-hub .cd-secnav { overflow-x: auto; flex-wrap: nowrap; padding-left: 16px; padding-right: 16px; }
   .cd-data-hub .cd-secnav a { white-space: nowrap; }
-  .cd-data-hub .cd-tablewrap { overflow-x: auto; }
-  .cd-data-hub .cd-table { min-width: 560px; }
+  .cd-data-hub .cd-tablewrap,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-tablewrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-data-hub .cd-table { min-width: 560px; font-size: 16px; }
   .cd-data-hub .cd-table th, .cd-data-hub .cd-table td { padding: 14px 16px; }
+  /* Body copy stays at a compact 14-15px on desktop, but mobile has no room
+     for a smaller-than-16px paragraph without forcing pinch-zoom or an iOS
+     input-focus zoom (on any field that shares this size). The high-specificity
+     selector duplicates an un-versioned theme-template override
+     (body.page-template-data-hub-template .main-content .cd-data-hub ...,
+     deployed straight to the live template outside this file) that otherwise
+     wins over a plain .cd-data-hub rule regardless of media query. */
+  .cd-data-hub .cd-side-note__d,
+  .cd-data-hub .cd-final-cta__body,
+  .cd-data-hub .cd-table td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-side-note__d,
+  body.page-template-data-hub-template .main-content .cd-data-hub td,
+  body.page-template-data-hub-template .main-content .cd-data-hub .cd-table tbody td {
+    font-size: 16px !important;
+  }
   .cd-data-hub .cd-chart-panel { padding: 20px 18px 16px; }
   .cd-data-hub .cd-cite-card dl { grid-template-columns: 1fr; gap: 4px 0; }
   .cd-data-hub .cd-cite-card dl dd { margin-bottom: 12px; }
@@ -1079,29 +1142,29 @@
       <div class="cd-hero">
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line">UK Company Insolvencies</span> <span class="cd-h1__line">by Sector</span></h1>
-        <p class="cd-lede">Across the 12 months to May 2026, construction recorded the most company insolvencies of any industry, with 3,803 cases (17% of those with a known sector). This page ranks all 21 industry sections and tracks how each has changed since 2016. Industry figures are not failure rates: larger sectors hold more companies, so they tend to record more insolvencies.</p>
+        <p class="cd-lede">Across the 12 months to Jun 2026, construction recorded the most company insolvencies of any industry, with 3,805 cases (17% of those with a known sector). This page ranks all 21 industry sections and tracks how each has changed since 2016. Industry figures are not failure rates: larger sectors hold more companies, so they tend to record more insolvencies.</p>
         <dl class="cd-meta-grid">
-  <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
-  <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
+  <div class="cd-meta-item"><span>Latest data</span><strong>June 2026</strong></div>
+  <div class="cd-meta-item"><span>Published</span><strong>17 July 2026</strong></div>
   <div class="cd-meta-item"><span>Industry update</span><strong>Quarterly</strong></div>
   <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
 </dl>
         <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
       </div>
       <aside class="cd-hero__panel" aria-label="Latest figures">
-        <p class="cd-kpi-label">12 months to May 2026 · England and Wales</p>
+        <p class="cd-kpi-label">12 months to Jun 2026 · England and Wales</p>
         <div class="cd-main-kpi">
           <span class="cd-main-kpi__v">Construction</span>
           <span class="cd-main-kpi__k">most insolvencies of any sector</span>
         </div>
         <div class="cd-change-row">
-          <span><strong>3,803</strong> cases</span>
+          <span><strong>3,805</strong> cases</span>
           <span><strong>17%</strong> of known-sector total</span>
         </div>
         <div class="cd-kpi-divider" aria-hidden="true"></div>
         <div class="cd-mini-kpi-grid">
           <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">21</span><span class="cd-mini-kpi__k">Industry sections</span><span class="cd-mini-kpi__n">tracked</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">22,903</span><span class="cd-mini-kpi__k">Known-sector cases</span><span class="cd-mini-kpi__n">12 months</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">22,722</span><span class="cd-mini-kpi__k">Known-sector cases</span><span class="cd-mini-kpi__n">12 months</span></div>
           <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">Wholesale and retail</span><span class="cd-mini-kpi__k">2nd highest</span><span class="cd-mini-kpi__n">15% of total</span></div>
           <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">Accommodation and food</span><span class="cd-mini-kpi__k">3rd highest</span><span class="cd-mini-kpi__n">14% of total</span></div>
         </div>
@@ -1120,10 +1183,10 @@
 
 <section class="cd-section cd-w-wide" id="ranking">
   <div class="cd-section-head"><p class="cd-eyebrow">Ranking</p><h2>UK company insolvencies by industry, latest 12 months</h2>
-    <p class="cd-section-intro">Company insolvencies by SIC industry section over the 12 months to May 2026, highest to lowest. Cases with no recorded sector are excluded.</p></div>
+    <p class="cd-section-intro">Company insolvencies by SIC industry section over the 12 months to Jun 2026, highest to lowest. Cases with no recorded sector are excluded.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel"><svg viewBox="0 0 900 412" role="img" aria-labelledby="sector-bars-title sector-bars-desc" class="cd-chart cd-chart--sector" xmlns="http://www.w3.org/2000/svg"><title id="sector-bars-title">Company insolvencies by industry, 12 months to May 2026</title><desc id="sector-bars-desc">Horizontal bar chart of company insolvencies by SIC industry section, sorted from highest to lowest count.</desc><g class="cd-chart__grid"><line x1="200.0" x2="200.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="200.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="360.0" x2="360.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="360.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">1,250</text><line x1="520.0" x2="520.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="520.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">2,500</text><line x1="680.0" x2="680.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="680.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">3,750</text><line x1="840.0" x2="840.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="840.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">5,000</text></g><g class="cd-chart__bars"><text x="190" y="35.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Construction</text><rect x="200" y="20.0" width="486.8" height="20" fill="#1d3557"><title>Construction:3,803 (17% of known-sector cases)</title></rect><text x="692.8" y="35.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,803 (17%)</text><text x="190" y="65.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Wholesale and retail</text><rect x="200" y="50.0" width="451.5" height="20" fill="#1d3557"><title>Wholesale and retail trade; repair of motor vehicles and motorcycles:3,527 (15% of known-sector cases)</title></rect><text x="657.5" y="65.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,527 (15%)</text><text x="190" y="95.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Accommodation and food</text><rect x="200" y="80.0" width="421.9" height="20" fill="#1d3557"><title>Accommodation and food service activities:3,296 (14% of known-sector cases)</title></rect><text x="627.9" y="95.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,296 (14%)</text><text x="190" y="125.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Admin and support</text><rect x="200" y="110.0" width="284.3" height="20" fill="#1d3557"><title>Administrative and support service activities:2,221 (10% of known-sector cases)</title></rect><text x="490.3" y="125.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">2,221 (10%)</text><text x="190" y="155.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Professional services</text><rect x="200" y="140.0" width="250.6" height="20" fill="#1d3557"><title>Professional, scientific and technical activities:1,958 (9% of known-sector cases)</title></rect><text x="456.6" y="155.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,958 (9%)</text><text x="190" y="185.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Manufacturing</text><rect x="200" y="170.0" width="239.6" height="20" fill="#1d3557"><title>Manufacturing:1,872 (8% of known-sector cases)</title></rect><text x="445.6" y="185.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,872 (8%)</text><text x="190" y="215.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Information and communicati…</text><rect x="200" y="200.0" width="180.5" height="20" fill="#1d3557"><title>Information and communication:1,410 (6% of known-sector cases)</title></rect><text x="386.5" y="215.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,410 (6%)</text><text x="190" y="245.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Other services</text><rect x="200" y="230.0" width="125.7" height="20" fill="#1d3557"><title>Other service activities:982 (4% of known-sector cases)</title></rect><text x="331.7" y="245.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">982 (4%)</text><text x="190" y="275.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Real estate</text><rect x="200" y="260.0" width="118.3" height="20" fill="#1d3557"><title>Real estate activities:924 (4% of known-sector cases)</title></rect><text x="324.3" y="275.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">924 (4%)</text><text x="190" y="305.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Transport and storage</text><rect x="200" y="290.0" width="91.3" height="20" fill="#1d3557"><title>Transport and storage:713 (3% of known-sector cases)</title></rect><text x="297.3" y="305.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">713 (3%)</text><text x="190" y="335.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Health and social work</text><rect x="200" y="320.0" width="82.9" height="20" fill="#1d3557"><title>Human health and social work activities:648 (3% of known-sector cases)</title></rect><text x="288.9" y="335.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">648 (3%)</text><text x="190" y="365.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Finance and insurance</text><rect x="200" y="350.0" width="61.8" height="20" fill="#1d3557"><title>Financial and insurance activities:483 (2% of known-sector cases)</title></rect><text x="267.8" y="365.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">483 (2%)</text></g><line x1="200" x2="840" y1="376" y2="376" stroke="#9ca3af" stroke-width="1"/></svg></div>
-    <figcaption class="cd-figcaption"><strong>Company insolvencies by industry section, 12 months to May 2026, England and Wales.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+    <div class="cd-chart-panel"><svg viewBox="0 0 900 412" role="img" aria-labelledby="sector-bars-title sector-bars-desc" class="cd-chart cd-chart--sector" xmlns="http://www.w3.org/2000/svg"><title id="sector-bars-title">Company insolvencies by industry, 12 months to Jun 2026</title><desc id="sector-bars-desc">Horizontal bar chart of company insolvencies by SIC industry section, sorted from highest to lowest count.</desc><g class="cd-chart__grid"><line x1="200.0" x2="200.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="200.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="360.0" x2="360.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="360.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">1,250</text><line x1="520.0" x2="520.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="520.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">2,500</text><line x1="680.0" x2="680.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="680.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">3,750</text><line x1="840.0" x2="840.0" y1="16" y2="376" stroke="#e5e7eb" stroke-width="1"/><text x="840.0" y="394" text-anchor="middle" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">5,000</text></g><g class="cd-chart__bars"><text x="190" y="35.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Construction</text><rect x="200" y="20.0" width="487.0" height="20" fill="#1d3557"><title>Construction:3,805 (17% of known-sector cases)</title></rect><text x="693.0" y="35.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,805 (17%)</text><text x="190" y="65.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Wholesale and retail</text><rect x="200" y="50.0" width="443.3" height="20" fill="#1d3557"><title>Wholesale and retail trade; repair of motor vehicles and motorcycles:3,463 (15% of known-sector cases)</title></rect><text x="649.3" y="65.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,463 (15%)</text><text x="190" y="95.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Accommodation and food</text><rect x="200" y="80.0" width="413.8" height="20" fill="#1d3557"><title>Accommodation and food service activities:3,233 (14% of known-sector cases)</title></rect><text x="619.8" y="95.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">3,233 (14%)</text><text x="190" y="125.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Admin and support</text><rect x="200" y="110.0" width="281.1" height="20" fill="#1d3557"><title>Administrative and support service activities:2,196 (10% of known-sector cases)</title></rect><text x="487.1" y="125.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">2,196 (10%)</text><text x="190" y="155.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Professional services</text><rect x="200" y="140.0" width="247.0" height="20" fill="#1d3557"><title>Professional, scientific and technical activities:1,930 (8% of known-sector cases)</title></rect><text x="453.0" y="155.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,930 (8%)</text><text x="190" y="185.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Manufacturing</text><rect x="200" y="170.0" width="237.7" height="20" fill="#1d3557"><title>Manufacturing:1,857 (8% of known-sector cases)</title></rect><text x="443.7" y="185.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,857 (8%)</text><text x="190" y="215.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Information and communicati…</text><rect x="200" y="200.0" width="178.3" height="20" fill="#1d3557"><title>Information and communication:1,393 (6% of known-sector cases)</title></rect><text x="384.3" y="215.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">1,393 (6%)</text><text x="190" y="245.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Real estate</text><rect x="200" y="230.0" width="124.8" height="20" fill="#1d3557"><title>Real estate activities:975 (4% of known-sector cases)</title></rect><text x="330.8" y="245.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">975 (4%)</text><text x="190" y="275.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Other services</text><rect x="200" y="260.0" width="123.5" height="20" fill="#1d3557"><title>Other service activities:965 (4% of known-sector cases)</title></rect><text x="329.5" y="275.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">965 (4%)</text><text x="190" y="305.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Transport and storage</text><rect x="200" y="290.0" width="90.1" height="20" fill="#1d3557"><title>Transport and storage:704 (3% of known-sector cases)</title></rect><text x="296.1" y="305.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">704 (3%)</text><text x="190" y="335.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Health and social work</text><rect x="200" y="320.0" width="82.2" height="20" fill="#1d3557"><title>Human health and social work activities:642 (3% of known-sector cases)</title></rect><text x="288.2" y="335.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">642 (3%)</text><text x="190" y="365.0" text-anchor="end" font-size="12" fill="#374151" dominant-baseline="middle">Finance and insurance</text><rect x="200" y="350.0" width="63.2" height="20" fill="#1d3557"><title>Financial and insurance activities:494 (2% of known-sector cases)</title></rect><text x="269.2" y="365.0" font-size="12" fill="#374151" dominant-baseline="middle" font-variant-numeric="tabular-nums">494 (2%)</text></g><line x1="200" x2="840" y1="376" y2="376" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Company insolvencies by industry section, 12 months to Jun 2026, England and Wales.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
   </figure>
 </section>
 <section class="cd-section cd-w-standard" id="trend">
@@ -1133,7 +1196,7 @@
     <table class="cd-table">
       <caption class="cd-table__caption">Annual company insolvencies by industry section, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
       <thead><tr><th scope="col">Sector</th><th scope="col" class="cd-num">2016</th><th scope="col" class="cd-num">2020</th><th scope="col" class="cd-num">2025</th><th scope="col" class="cd-num">2016 to 2025</th></tr></thead>
-      <tbody><tr><th scope="row">Construction</th><td class="cd-num">2,557</td><td class="cd-num">2,061</td><td class="cd-num">3,949</td><td class="cd-num">+54%</td></tr><tr><th scope="row">Wholesale and retail trade; repair of motor vehicles and motorcycles</th><td class="cd-num">2,046</td><td class="cd-num">1,687</td><td class="cd-num">3,736</td><td class="cd-num">+83%</td></tr><tr><th scope="row">Accommodation and food service activities</th><td class="cd-num">1,530</td><td class="cd-num">1,715</td><td class="cd-num">3,360</td><td class="cd-num">+120%</td></tr><tr><th scope="row">Administrative and support service activities</th><td class="cd-num">1,714</td><td class="cd-num">1,441</td><td class="cd-num">2,455</td><td class="cd-num">+43%</td></tr><tr><th scope="row">Professional, scientific and technical activities</th><td class="cd-num">1,203</td><td class="cd-num">1,007</td><td class="cd-num">2,004</td><td class="cd-num">+67%</td></tr><tr><th scope="row">Manufacturing</th><td class="cd-num">1,347</td><td class="cd-num">1,170</td><td class="cd-num">1,943</td><td class="cd-num">+44%</td></tr><tr><th scope="row">Information and communication</th><td class="cd-num">886</td><td class="cd-num">690</td><td class="cd-num">1,465</td><td class="cd-num">+65%</td></tr><tr><th scope="row">Other service activities</th><td class="cd-num">552</td><td class="cd-num">604</td><td class="cd-num">1,059</td><td class="cd-num">+92%</td></tr><tr><th scope="row">Real estate activities</th><td class="cd-num">380</td><td class="cd-num">367</td><td class="cd-num">773</td><td class="cd-num">+103%</td></tr><tr><th scope="row">Transportation and storage</th><td class="cd-num">346</td><td class="cd-num">436</td><td class="cd-num">752</td><td class="cd-num">+117%</td></tr></tbody>
+      <tbody><tr><th scope="row">Construction</th><td class="cd-num">2,557</td><td class="cd-num">2,061</td><td class="cd-num">3,948</td><td class="cd-num">+54%</td></tr><tr><th scope="row">Wholesale and retail trade; repair of motor vehicles and motorcycles</th><td class="cd-num">2,046</td><td class="cd-num">1,687</td><td class="cd-num">3,737</td><td class="cd-num">+83%</td></tr><tr><th scope="row">Accommodation and food service activities</th><td class="cd-num">1,530</td><td class="cd-num">1,715</td><td class="cd-num">3,361</td><td class="cd-num">+120%</td></tr><tr><th scope="row">Administrative and support service activities</th><td class="cd-num">1,714</td><td class="cd-num">1,441</td><td class="cd-num">2,455</td><td class="cd-num">+43%</td></tr><tr><th scope="row">Professional, scientific and technical activities</th><td class="cd-num">1,203</td><td class="cd-num">1,007</td><td class="cd-num">2,004</td><td class="cd-num">+67%</td></tr><tr><th scope="row">Manufacturing</th><td class="cd-num">1,347</td><td class="cd-num">1,170</td><td class="cd-num">1,943</td><td class="cd-num">+44%</td></tr><tr><th scope="row">Information and communication</th><td class="cd-num">886</td><td class="cd-num">690</td><td class="cd-num">1,465</td><td class="cd-num">+65%</td></tr><tr><th scope="row">Other service activities</th><td class="cd-num">552</td><td class="cd-num">604</td><td class="cd-num">1,059</td><td class="cd-num">+92%</td></tr><tr><th scope="row">Real estate activities</th><td class="cd-num">380</td><td class="cd-num">367</td><td class="cd-num">773</td><td class="cd-num">+103%</td></tr><tr><th scope="row">Transportation and storage</th><td class="cd-num">346</td><td class="cd-num">436</td><td class="cd-num">752</td><td class="cd-num">+117%</td></tr></tbody>
     </table>
   </div>
   <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
@@ -1150,7 +1213,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Detailed industry sub-sector breakdowns are published quarterly.</li>
+      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1163,9 +1226,9 @@
   <div class="cd-cite-card">
     <div class="cd-cite-card__left">
       <dl>
-        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026 (Table 1c, by industry).</dd>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table 1c, by industry).</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
-        <dt>Publication date</dt><dd>19 June 2026</dd>
+        <dt>Publication date</dt><dd>17 July 2026</dd>
         <dt>Industry breakdown</dt><dd>Published quarterly (January, April, July, October).</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
