@@ -28,6 +28,7 @@ targets:
   target_cpa: null
   minimum_roas: null
   minimum_clicks_before_judgement: 12
+  search_term_minimum_clicks: 12  # fixture keeps this equal to the weekly bar for simplicity — production uses 624 (12*52)
   minimum_impressions_before_ad_judgement: 1000
   zero_conversion_spend_threshold: 75
   low_conversion_volume_threshold: 5

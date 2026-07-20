@@ -35,6 +35,8 @@
     "context_end": { "type": "string", "format": "date" },
     "long_term_start": { "type": "string", "format": "date" },
     "long_term_end": { "type": "string", "format": "date" },
+    "lookback_start": { "type": "string", "format": "date", "description": "Search-term/keyword-level lookback window start (search_term_lookback_days) — used by negative-keyword-miner and search-terms-analyzer, distinct from audit_start's 7-day campaign window." },
+    "lookback_end": { "type": "string", "format": "date" },
     "conversion_lag_days": { "type": "integer", "minimum": 0 },
     "generated_at": { "type": "string", "format": "date-time" },
     "api_version": { "type": "string" },

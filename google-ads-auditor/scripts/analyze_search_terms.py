@@ -53,11 +53,17 @@ def main():
     irrelevant_topics = config.get("irrelevant_topics") or []
     brand_terms = config.get("brand_terms") or []
     targets = config.get("targets", {})
-    min_clicks = targets.get("minimum_clicks_before_judgement", 12)
+    # search-terms.json now spans search_term_lookback_days (365 days by default), not
+    # the 7-day audit window - minimum_clicks_before_judgement was calibrated for a
+    # week, so use the dedicated yearly threshold instead.
+    min_clicks = targets.get("search_term_minimum_clicks", targets.get("minimum_clicks_before_judgement", 12))
 
     manifest = load(folder, "manifest.json")
     if manifest:
-        period = {"start": manifest["audit_start"], "end": manifest["audit_end"]}
+        # this skill reads search-terms.json, which now spans the widened
+        # search_term_lookback_days window (365 by default), not the 7-day
+        # audit window every other query uses — report that window here.
+        period = {"start": manifest.get("lookback_start", manifest["audit_start"]), "end": manifest.get("lookback_end", manifest["audit_end"])}
     else:
         period = config.get("_period", {"start": "UNKNOWN", "end": "UNKNOWN"})
 
@@ -110,8 +116,9 @@ def main():
         matched_kw_type = row.get("segments.keyword.info.match_type", "UNKNOWN")
 
         base_caveats = [
-            "search-terms.gaql has no context-window equivalent at search-term granularity — this reflects the "
-            "audit period only, and cannot be checked against prior weeks the way campaign-level findings can.",
+            f"Figures cover the {period.get('start')}-{period.get('end')} lookback window (search_term_lookback_days), "
+            "aggregated into a single total — there's no day-by-day or month-by-month breakdown at search-term "
+            "level to show whether this is a steady pattern or a one-off cluster.",
             "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) "
             "— only phone/email/chat conversions are trusted, and volume has been scant recently.",
         ]
@@ -141,7 +148,7 @@ def main():
             confidence = "low"
             recommendation = (
                 f"Monitor '{term}' for another audit period before adding as a keyword — {clicks} click(s) "
-                f"with {conversions} conversion(s) is below the account's minimum_clicks_before_judgement "
+                f"with {conversions} conversion(s) is below the account's search_term_minimum_clicks "
                 f"threshold ({min_clicks}), so this is too little evidence to act on yet."
             )
             interpretation = (

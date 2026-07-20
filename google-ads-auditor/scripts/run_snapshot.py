@@ -174,12 +174,15 @@ def main():
     audit_start = end - timedelta(days=config["comparison_periods"]["primary_days"] - 1)
     context_days = config["comparison_periods"]["context_days"]
     context_start = end - timedelta(days=context_days - 1)
+    lookback_days = config["comparison_periods"].get("search_term_lookback_days", config["comparison_periods"]["primary_days"])
+    lookback_start = end - timedelta(days=lookback_days - 1)
 
     subs = {
         "CUSTOMER_ID": customer_id,
         "START_DATE": audit_start.isoformat(),
         "END_DATE": end.isoformat(),
         "CONTEXT_START_DATE": context_start.isoformat(),
+        "LOOKBACK_START_DATE": lookback_start.isoformat(),
     }
 
     run_dir = ROOT / "runs" / f"{date.today().isoformat()}-{slug}"
@@ -249,6 +252,8 @@ def main():
         "comparison_end": (audit_start - timedelta(days=1)).isoformat(),
         "context_start": context_start.isoformat(),
         "context_end": end.isoformat(),
+        "lookback_start": lookback_start.isoformat(),
+        "lookback_end": end.isoformat(),
         "conversion_lag_days": config["targets"]["conversion_lag_days"],
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S+00:00", time.gmtime()),
         "api_version": "google-ads-mcp 3.4.4 / google-ads python client 31.1.0",

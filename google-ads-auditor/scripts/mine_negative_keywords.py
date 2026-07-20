@@ -59,12 +59,18 @@ def main():
     irrelevant_topics = config.get("irrelevant_topics") or []
     brand_terms = config.get("brand_terms") or []
     targets = config.get("targets", {})
-    min_clicks = targets.get("minimum_clicks_before_judgement", 12)
+    # search-terms.json now spans search_term_lookback_days (365 days by default), not
+    # the 7-day audit window - minimum_clicks_before_judgement was calibrated for a
+    # week, so use the dedicated yearly threshold instead.
+    min_clicks = targets.get("search_term_minimum_clicks", targets.get("minimum_clicks_before_judgement", 12))
     zero_conv_threshold = targets.get("zero_conversion_spend_threshold", 75)
 
     manifest = load(folder, "manifest.json")  # real runs/ have this; fixtures fall back to account-config.yml's _period
     if manifest:
-        period = {"start": manifest["audit_start"], "end": manifest["audit_end"]}
+        # this skill reads search-terms.json, which now spans the widened
+        # search_term_lookback_days window (365 by default), not the 7-day
+        # audit window every other query uses — report that window here.
+        period = {"start": manifest.get("lookback_start", manifest["audit_start"]), "end": manifest.get("lookback_end", manifest["audit_end"])}
     else:
         period = config.get("_period", {"start": "UNKNOWN", "end": "UNKNOWN"})
 
