@@ -1,0 +1,32 @@
+# Self-contained test fixture for ad-performance-diagnostic, covering
+# tests/README.md scenarios 11 ("limited by budget") and 12 ("limited by
+# rank"), plus dormant-campaign and shared-budget-cluster coverage.
+
+account_name: Company Debt (test fixture)
+customer_id: "0000000000"
+
+_period:
+  start: "2026-07-13"
+  end: "2026-07-19"
+
+currency: GBP
+timezone: Europe/London
+business_model: lead_generation
+
+primary_conversion_actions:
+  - "GoogleAds Form Submissions (Website)"
+
+targets:
+  minimum_clicks_before_judgement: 12
+  zero_conversion_spend_threshold: 75
+  low_conversion_volume_threshold: 5
+  conversion_lag_days: 7
+
+brand_terms:
+  - company debt
+
+comparison_periods:
+  primary_days: 7
+  previous_period: true
+  context_days: 28
+  long_term_days: 90
