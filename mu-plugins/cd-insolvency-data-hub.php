@@ -1197,31 +1197,28 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
 }
 
 /**
- * Flagship site-alignment CSS: brings /data/uk-insolvency-statistics/ into
- * line with the rest of companydebt.com (Arial, the site's full-bleed pale
- * blue hero band, one spacing rhythm), per docs/data-hub/design-brief-2026-07.md
- * and the Claude Design handoff. Strictly gated to this one slug: every
- * /data/ page shares body.page-template-data-hub-template, so this must NOT
- * become a hub-wide stylesheet by accident — the other 17 pages have not been
- * through this alignment pass yet.
+ * Site-alignment CSS: brings a /data/ page into line with the rest of
+ * companydebt.com (Arial, the site's full-bleed pale blue hero band, one
+ * spacing rhythm, the breadcrumb fix), per docs/data-hub/design-brief-2026-07.md
+ * and the Claude Design handoff. Parameterised on $hero_selector because the
+ * flagship's own markup uses .cd-hero while the sibling data pages (built
+ * from a different design-handoff extraction) use .cd-hub-header for the
+ * same role.
  *
- * Echoed in <head> deliberately, not at end-of-body: the design handoff notes
- * an observed FOUC (the page painted with the old layout, then reflowed) when
- * this class of override CSS was appended late. Mirrors the pattern already
- * used for the JSON-LD schema below (cd_datahub_current_slug() gate).
+ * Callers MUST gate on cd_datahub_current_slug() before echoing this: every
+ * /data/ page shares body.page-template-data-hub-template, so an unscoped
+ * call would silently reskin every page in the section, including ones that
+ * have not been through this alignment pass yet.
  */
-add_action( 'wp_head', function() {
-    if ( 'uk-insolvency-statistics' !== cd_datahub_current_slug() ) {
-        return;
-    }
-    ?>
+function cd_datahub_alignment_css( $hero_selector ) {
+    return <<<CSS
 <style id="cd-site-alignment">
 /* 1 -- FONT. Arial, matching body.cd-ttt-design on the rest of the site. */
 html body.page-template-data-hub-template .cd-data-hub,
 html body.page-template-data-hub-template .cd-data-hub h1,
 html body.page-template-data-hub-template .cd-data-hub h2,
 html body.page-template-data-hub-template .cd-data-hub h3,
-html body.page-template-data-hub-template .cd-data-hub .cd-hero h1,
+html body.page-template-data-hub-template .cd-data-hub {$hero_selector} h1,
 html body.page-template-data-hub-template .cd-data-hub .cd-section-head h2,
 html body.page-template-data-hub-template .cd-data-hub .cd-cta h2,
 html body.page-template-data-hub-template .cd-data-hub .cd-brand__name,
@@ -1229,7 +1226,7 @@ html body.page-template-data-hub-template .cd-data-hub .cd-brand__mark {
   font-family: Arial, Helvetica, sans-serif !important;
 }
 /* H1 to the site scale, clamped so it wraps naturally on mobile. */
-html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero h1,
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} h1,
 html body.page-template-data-hub-template .main-content .cd-data-hub h1 {
   font-size: clamp(30px, 5vw, 48px) !important;
   line-height: 1.08 !important;
@@ -1239,13 +1236,13 @@ html body.page-template-data-hub-template .main-content .cd-data-hub h1 {
 /* 2 -- HERO BAND. Copies the site mechanism (.col-12.page-header::before): a
    100vw full-bleed pale blue band. body sets overflow-x:hidden, so 100vw
    cannot introduce horizontal scroll. */
-html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} {
   position: relative;
   padding-top: 35px !important;
   padding-bottom: 54px !important;
   margin-bottom: 24px !important;
 }
-html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero::before {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector}::before {
   content: '';
   position: absolute;
   top: 0; bottom: 0; left: 50%;
@@ -1253,7 +1250,7 @@ html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero::b
   background: #f4f7fe;
   z-index: 0;
 }
-html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero > * {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} > * {
   position: relative;
   z-index: 1;
 }
@@ -1296,14 +1293,29 @@ html body.page-template-data-hub-template .row > .col-12.page-header > * {
   position: relative;
   z-index: 1;
 }
-html body.page-template-data-hub-template .main-content .cd-data-hub .cd-hero {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} {
   padding-top: 8px !important;
 }
 html body.page-template-data-hub-template .page-header .breadcrumbs {
   white-space: normal !important;
 }
 </style>
-    <?php
+
+CSS;
+}
+
+add_action( 'wp_head', function() {
+    if ( 'uk-insolvency-statistics' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hero' );
+}, 30 );
+
+add_action( 'wp_head', function() {
+    if ( 'winding-up-petition-tracker' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
 }, 30 );
 
 add_action( 'wp_head', function() {
