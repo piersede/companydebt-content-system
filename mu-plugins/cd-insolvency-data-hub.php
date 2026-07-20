@@ -1326,6 +1326,13 @@ add_action( 'wp_head', function() {
 }, 30 );
 
 add_action( 'wp_head', function() {
+    if ( 'payment-practices-late-payment' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
+}, 30 );
+
+add_action( 'wp_head', function() {
     $slug = cd_datahub_current_slug();
     if ( '' === $slug ) {
         return;

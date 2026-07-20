@@ -1,0 +1,39 @@
+{
+  "source_id": "payment_practices_trend",
+  "is_enrichment_only": true,
+  "metric": "average_days_to_pay",
+  "basis": "Most recently filed report per company per six-monthly period (period-end date), sample size >= 30 companies.",
+  "min_sample_size": 30,
+  "periods": [
+    {
+      "label": "H1 2023",
+      "average_days_to_pay": 35.4,
+      "companies": 5872
+    },
+    {
+      "label": "H2 2023",
+      "average_days_to_pay": 34.9,
+      "companies": 6043
+    },
+    {
+      "label": "H1 2024",
+      "average_days_to_pay": 34.7,
+      "companies": 6048
+    },
+    {
+      "label": "H2 2024",
+      "average_days_to_pay": 34.3,
+      "companies": 5991
+    },
+    {
+      "label": "H1 2025",
+      "average_days_to_pay": 34.4,
+      "companies": 5791
+    },
+    {
+      "label": "H2 2025",
+      "average_days_to_pay": 34.5,
+      "companies": 5717
+    }
+  ]
+}
