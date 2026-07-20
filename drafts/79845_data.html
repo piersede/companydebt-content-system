@@ -6,7 +6,7 @@
    Self-contained. All styles scoped under .cd-data-hub so the
    markup drops cleanly into the existing WordPress template.
    Tokens, type scale, eyebrow, badges and KPI rhythm match the
-   /data/uk-insolvency-statistics/ dashboard exactly.
+   /uk-insolvency-statistics/ dashboard exactly.
    ============================================================ */
 
 .cd-data-hub {
@@ -473,8 +473,9 @@
   <div class="cd-hub-header cd-w-wide">
     <div class="cd-hub-header__grid">
       <div class="cd-hub-header__copy">
+        <p class="cd-eyebrow"><span class="cd-eyebrow__pulse" aria-hidden="true"></span>UK insolvency data hub</p>
         <h1>UK Company Insolvency Data</h1>
-        <p class="cd-standfirst">Official, citable statistics on company insolvency in the United Kingdom, built for journalists, accountants, lenders and company directors. Every figure shows its source and the month it covers. The monthly headline release is the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p>
+        <p class="cd-standfirst">Official, citable statistics on company insolvency in the United Kingdom, built for journalists, accountants, lenders and company directors. Every figure shows its source and the month it covers.</p>
       </div>
       <aside class="cd-colophon" aria-label="Publication details">
         <p class="cd-colophon__h">Publication</p>
@@ -507,14 +508,14 @@
     </div>
     <div class="cd-kpi-strip">
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">2,085</p>
+        <p class="cd-kpi-card__v">1,868</p>
         <p class="cd-kpi-card__k">Company insolvencies</p>
-        <p class="cd-kpi-card__src"><b>England and Wales, April 2026</b>Insolvency Service</p>
+        <p class="cd-kpi-card__src"><b>England and Wales, May 2026</b>Insolvency Service</p>
       </article>
       <article class="cd-kpi-card">
-        <p class="cd-kpi-card__v">51.8<sub>per 10,000</sub></p>
+        <p class="cd-kpi-card__v">50.9<sub>per 10,000</sub></p>
         <p class="cd-kpi-card__k">12-month insolvency rate</p>
-        <p class="cd-kpi-card__src"><b>England and Wales, to April 2026</b>Insolvency Service</p>
+        <p class="cd-kpi-card__src"><b>England and Wales, to May 2026</b>Insolvency Service</p>
       </article>
       <article class="cd-kpi-card">
         <p class="cd-kpi-card__v">482</p>
@@ -551,30 +552,30 @@
     <section class="cd-section" aria-labelledby="grp-formal">
       <div class="cd-grouphead"><h2 id="grp-formal">Formal statistics</h2></div>
       <div class="cd-dir-grid">
-        <a class="cd-dircard" href="/data/cvl-statistics/">
+        <div class="cd-dircard cd-dircard--muted">
           <div class="cd-dircard__top">
             <h3 class="cd-dircard__title">CVL statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
+            <span class="cd-badge cd-badge--planned">Planned</span>
           </div>
           <p class="cd-dircard__desc">Creditors' voluntary liquidations over time, the largest insolvency procedure.</p>
-          <span class="cd-dircard__arrow">View CVL data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/compulsory-liquidation-statistics/">
+          <span class="cd-dircard__planned">In preparation</span>
+        </div>
+        <div class="cd-dircard cd-dircard--muted">
           <div class="cd-dircard__top">
             <h3 class="cd-dircard__title">Compulsory liquidation statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
+            <span class="cd-badge cd-badge--planned">Planned</span>
           </div>
-          <p class="cd-dircard__desc">Court-ordered windings-up over time, and their share of all company insolvencies.</p>
-          <span class="cd-dircard__arrow">View compulsory data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/administration-statistics/">
+          <p class="cd-dircard__desc">Court-ordered windings-up, including HMRC-led petitions.</p>
+          <span class="cd-dircard__planned">In preparation</span>
+        </div>
+        <div class="cd-dircard cd-dircard--muted">
           <div class="cd-dircard__top">
             <h3 class="cd-dircard__title">Administration statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
+            <span class="cd-badge cd-badge--planned">Planned</span>
           </div>
-          <p class="cd-dircard__desc">Companies entering administration, by month and over the long run.</p>
-          <span class="cd-dircard__arrow">View administration data <span aria-hidden="true">&rarr;</span></span>
-        </a>
+          <p class="cd-dircard__desc">Companies entering administration, by month and by year.</p>
+          <span class="cd-dircard__planned">In preparation</span>
+        </div>
       </div>
     </section>
 
@@ -587,90 +588,90 @@
             <h3 class="cd-dircard__title">Company Insolvencies by Sector</h3>
             <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">Start here. Insolvency volumes ranked across all SIC industry sections, with trends since 2016. This is the overview of every industry, not a single sector: the individual trades are below.</p>
+          <p class="cd-dircard__desc">Insolvency volumes ranked across every SIC industry section, with trends since 2016. Start here, then find your trade below.</p>
           <span class="cd-dircard__arrow">View sector data <span aria-hidden="true">&rarr;</span></span>
         </a>
       </div>
       <div class="cd-dir-grid">
         <a class="cd-dircard" href="/data/construction-insolvency-statistics/">
           <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Construction Insolvency Statistics</h3>
+            <h3 class="cd-dircard__title">Construction</h3>
             <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">The construction sector, consistently the highest by volume, with sub-sector detail.</p>
-          <span class="cd-dircard__arrow">View construction data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/furniture-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Furniture Manufacturing Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Company insolvencies among UK furniture manufacturers, annually since 2016 and monthly since 2023.</p>
-          <span class="cd-dircard__arrow">View furniture data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/restaurant-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Restaurant Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK restaurants and mobile food service businesses.</p>
-          <span class="cd-dircard__arrow">View restaurant data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/road-haulage-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Road Haulage Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK road haulage and removals companies.</p>
-          <span class="cd-dircard__arrow">View haulage data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/recruitment-agency-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Recruitment Agency Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK permanent-placement recruitment agencies.</p>
-          <span class="cd-dircard__arrow">View recruitment data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/temporary-staffing-agency-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Temporary Staffing Agency Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK temporary and agency staffing businesses.</p>
-          <span class="cd-dircard__arrow">View temp staffing data <span aria-hidden="true">&rarr;</span></span>
+          <p class="cd-dircard__desc">The largest sector by insolvency volume: builders, contractors and specialist trades.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a class="cd-dircard" href="/data/motor-vehicle-repair-insolvency-statistics/">
           <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Motor Vehicle Repair Insolvency Statistics</h3>
+            <h3 class="cd-dircard__title">Motor vehicle repair</h3>
             <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK garages and motor vehicle repair businesses.</p>
-          <span class="cd-dircard__arrow">View motor repair data <span aria-hidden="true">&rarr;</span></span>
-        </a>
-        <a class="cd-dircard" href="/data/cleaning-company-insolvency-statistics/">
-          <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Cleaning Company Insolvency Statistics</h3>
-            <span class="cd-badge cd-badge--latest">Latest</span>
-          </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK commercial and industrial cleaning contractors.</p>
-          <span class="cd-dircard__arrow">View cleaning data <span aria-hidden="true">&rarr;</span></span>
+          <p class="cd-dircard__desc">Garages and workshops carrying out motor vehicle maintenance and repair.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a class="cd-dircard" href="/data/hotel-insolvency-statistics/">
           <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Hotel Insolvency Statistics</h3>
+            <h3 class="cd-dircard__title">Hotels</h3>
             <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK hotels and similar accommodation businesses.</p>
-          <span class="cd-dircard__arrow">View hotel data <span aria-hidden="true">&rarr;</span></span>
+          <p class="cd-dircard__desc">Hotels, motels and similar short-stay accommodation with daily housekeeping.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/restaurant-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Restaurants</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Restaurants, cafes and mobile or takeaway food service businesses.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/cleaning-company-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Cleaning contractors</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Commercial and industrial cleaning contractors, including window cleaning.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/recruitment-agency-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Recruitment agencies</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Permanent-placement and executive-search recruitment agencies.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/temporary-staffing-agency-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Temporary staffing agencies</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Agencies supplying temporary office, industrial, medical and teaching staff.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/furniture-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Furniture manufacturing</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Household, office, kitchen and shop furniture and mattress manufacturers.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a class="cd-dircard" href="/data/estate-agency-insolvency-statistics/">
           <div class="cd-dircard__top">
-            <h3 class="cd-dircard__title">Estate Agency Insolvency Statistics</h3>
+            <h3 class="cd-dircard__title">Estate agencies</h3>
             <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">Year-to-date, rolling 12-month and annual insolvencies among UK estate agents and property management businesses.</p>
-          <span class="cd-dircard__arrow">View estate agency data <span aria-hidden="true">&rarr;</span></span>
+          <p class="cd-dircard__desc">Estate agencies and fee-based property management businesses.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="cd-dircard" href="/data/road-haulage-insolvency-statistics/">
+          <div class="cd-dircard__top">
+            <h3 class="cd-dircard__title">Road haulage</h3>
+            <span class="cd-badge cd-badge--latest">Latest</span>
+          </div>
+          <p class="cd-dircard__desc">Freight transport by road and removal services.</p>
+          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>
         </a>
       </div>
     </section>
@@ -724,14 +725,14 @@
     <section class="cd-section" aria-labelledby="grp-method">
       <div class="cd-grouphead"><h2 id="grp-method">Methodology and sources</h2></div>
       <div class="cd-dir-grid cd-dir-grid--single">
-        <div class="cd-dircard cd-dircard--muted">
+        <a class="cd-dircard" href="/data/uk-insolvency-statistics/#method">
           <div class="cd-dircard__top">
             <h3 class="cd-dircard__title">How we use the data and how to cite</h3>
-            <span class="cd-badge cd-badge--planned">Planned</span>
+            <span class="cd-badge cd-badge--latest">Latest</span>
           </div>
-          <p class="cd-dircard__desc">Definitions, methodology, revisions policy and guidance on citing these figures. Each data page carries its own sources and citation block in the meantime.</p>
-          <span class="cd-dircard__planned">In preparation</span>
-        </div>
+          <p class="cd-dircard__desc">Definitions, methodology, revisions policy and guidance on citing these figures.</p>
+          <span class="cd-dircard__arrow">Read the methodology <span aria-hidden="true">&rarr;</span></span>
+        </a>
       </div>
     </section>
 

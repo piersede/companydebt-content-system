@@ -333,64 +333,15 @@ def sector_block(sector: dict, charts: dict) -> str:
 # handoff's sector-trade-links-generator-spec.md. Reads scripts/datahub/pages/
 # sic_group_stats.py's SECTORS registry (not a second hand-maintained list),
 # so a new trade page appears here automatically on the next monthly rebuild.
-# Construction is the one whole-section detail page (build_construction() in
-# sector_pages.py) rather than a SECTORS entry, so it is added by hand.
-
-CONSTRUCTION_TRADE_LINK = {
-    "slug": "construction-insolvency-statistics",
-    "trade": "Construction",
-    "parent_section_code": "F",
-    "blurb": "The largest sector by insolvency volume: builders, contractors and specialist trades.",
-}
-
-# One-line scope notes for the table (distinct from each page's own longer
-# scope_description): tight, ≤120 chars, describes coverage not figures, so
-# it never needs a monthly data refresh.
-TRADE_LINK_BLURBS = {
-    "furniture-insolvency-statistics": "Household, office, kitchen and shop furniture and mattress manufacturers.",
-    "restaurant-insolvency-statistics": "Restaurants, cafes and mobile or takeaway food service businesses.",
-    "road-haulage-insolvency-statistics": "Freight transport by road and removal services.",
-    "recruitment-agency-insolvency-statistics": "Permanent-placement and executive-search recruitment agencies.",
-    "temporary-staffing-agency-insolvency-statistics": "Agencies supplying temporary office, industrial, medical and teaching staff.",
-    "motor-vehicle-repair-insolvency-statistics": "Garages and workshops carrying out motor vehicle maintenance and repair.",
-    "cleaning-company-insolvency-statistics": "Commercial and industrial cleaning contractors, including window cleaning.",
-    "hotel-insolvency-statistics": "Hotels, motels and similar short-stay accommodation with daily housekeeping.",
-    "estate-agency-insolvency-statistics": "Estate agencies and fee-based property management businesses.",
-}
-
+# Registry moved to scripts/datahub/pages/sector_trade_links.py, shared with
+# the hub landing page's "By sector" cards (company_insolvency_hub.py) - one
+# list, not two that can drift apart. See that module's docstring.
 
 def _trade_link_rows() -> list[dict]:
-    """Every published trade-detail row: slug, trade name, blurb, and the
-    parent SIC section's rolling-12-month rank (1 = largest), used only for
-    sort order. Ranks are computed live from sector_series.json rather than
-    hand-maintained, so the table reorders itself if the sector mix shifts."""
     import sys as _sys
-    scripts_dir = Path(__file__).resolve().parent
-    _sys.path.insert(0, str(scripts_dir / "datahub" / "pages"))
-    from sic_group_stats import SECTORS  # noqa: E402  (late: avoids a cycle)
-
-    series = json.loads((DATA_DIR / "sector_series.json").read_text(encoding="utf-8"))
-    section_total = {s["code"]: sum((s["monthly"] or [])[-12:]) for s in series["sections"]}
-    rank_of = {
-        code: i + 1
-        for i, code in enumerate(sorted(section_total, key=lambda c: section_total[c], reverse=True))
-    }
-
-    rows = [{
-        "slug": CONSTRUCTION_TRADE_LINK["slug"],
-        "trade": CONSTRUCTION_TRADE_LINK["trade"],
-        "blurb": CONSTRUCTION_TRADE_LINK["blurb"],
-        "sic_rank": rank_of.get(CONSTRUCTION_TRADE_LINK["parent_section_code"], 99),
-    }]
-    for slug, cfg in SECTORS.items():
-        rows.append({
-            "slug": slug,
-            "trade": cfg["eyebrow"],
-            "blurb": TRADE_LINK_BLURBS[slug],
-            "sic_rank": rank_of.get(cfg["parent_section_code"], 99),
-        })
-    rows.sort(key=lambda r: (r["sic_rank"], r["trade"]))
-    return rows
+    _sys.path.insert(0, str(Path(__file__).resolve().parent / "datahub" / "pages"))
+    from sector_trade_links import rows as _rows  # noqa: E402
+    return _rows()
 
 
 def sector_pages_block() -> str:
