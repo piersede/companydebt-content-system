@@ -3,12 +3,16 @@
 -- search_term_view). Never treat this as complete search-term visibility.
 -- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
 -- Validated against API version: REPLACE_WITH_VERSION
+-- 2026-07-20 fix: segments.search_subcategory can only be selected when
+-- filtering to a single campaign_search_term_insight.id, which this
+-- account-wide query doesn't do ("can only be selected when filtering by a
+-- single campaign_search_term_insight.id in WHERE clause"). Dropped —
+-- category_label is the main insight this query is after.
 
 SELECT
   campaign.id,
   campaign.name,
   campaign_search_term_insight.category_label,
-  segments.search_subcategory,
   metrics.impressions,
   metrics.clicks
 FROM campaign_search_term_insight

@@ -1,13 +1,15 @@
 -- Purpose: PMax campaign-level performance, budget, and goal config.
 -- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
 -- Validated against API version: REPLACE_WITH_VERSION
+-- 2026-07-20 fix: campaign.url_expansion_opt_out is not a recognised field
+-- in the currently installed API version ("Unrecognized field in the
+-- query"). Dropped until a working equivalent field is confirmed.
 
 SELECT
   campaign.id,
   campaign.name,
   campaign.status,
   campaign_budget.amount_micros,
-  campaign.url_expansion_opt_out,
   metrics.cost_micros,
   metrics.impressions,
   metrics.clicks,
