@@ -17,6 +17,16 @@ business_model: lead_generation
 # whether "GoogleAds Phone Calls" variants require 60s+) are not yet
 # confirmed — treat call-based primary conversions as unverified-quality
 # until checked in each action's own settings.
+#
+# STANDING LOW-CONFIDENCE FLAG (Piers, 2026-07-20): only phone calls, email
+# form fill-ins, and live chat entries are conversion events Piers actually
+# trusts as real signals of a lead — and even those have been running scant
+# recently. He chose to keep the full list below as "primary" rather than
+# narrow it, but every finding built on conversion counts for this account
+# should be treated with real scepticism, not read as settled fact — state
+# this caveat explicitly wherever conversion volume drives a judgement
+# (e.g. "this keyword got zero conversions" claims), and don't recommend
+# cutting spend on conversion counts alone without flagging this uncertainty.
 primary_conversion_actions:
   - "Guide Download (Website)"
   - "GoogleAds Form Submissions (Website)"
