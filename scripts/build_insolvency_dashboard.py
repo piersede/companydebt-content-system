@@ -116,8 +116,8 @@ def secnav_block() -> str:
       <a href="#monthly">Monthly trend</a>
       <a href="#longrun">Long-run</a>
       <a href="#rate">Insolvency rate</a>
-      <a href="#procedures">By procedure</a>
       <a href="#sector">Sector</a>
+      <a href="#sector-pages">Trade data</a>
       <a href="#nations">UK nations</a>
       <a href="#method">Method</a>
       <a href="#source">Source</a>
@@ -250,7 +250,7 @@ def longrun_block(charts: dict) -> str:
         </figure>
         <aside class="cd-side-notes" aria-label="Key context">
           <h3 class="cd-side-notes__title">What this means</h3>
-          <p class="cd-side-note__d">Current volumes are roughly equal to 2008–09 recession levels — but the insolvency rate is half that recession peak, because the active company register has more than doubled since.</p>
+          <p class="cd-side-note__d">Current volumes are roughly equal to 2008–09 recession levels, but the insolvency rate is half that recession peak, because the active company register has more than doubled since.</p>
           <p class="cd-side-note__d">The 2020–21 dip is the Covid support effect, not a real improvement in trading conditions: government support suppressed formal procedures sharply, then volumes rebounded.</p>
           <p class="cd-side-note__d">The 2022–24 climb tracks the unwinding of Covid support, HMRC's return to active enforcement, and a wave of CVL filings catching up with companies that had stopped trading earlier.</p>
         </aside>
@@ -295,43 +295,14 @@ def rate_block(charts: dict, latest_rate: float) -> str:
     """)
 
 
-# ── Procedure card grid ───────────────────────────────────────────────────
-
-def procedure_cards_block() -> str:
-    rows = [
-        ("CVLs", "1,423", "Main procedure. 76% of all insolvencies.",
-         "CVL statistics", "/data/cvl-statistics/"),
-        ("Compulsory liquidations", "285", "Down 26% on April 2026. HMRC-led petitions.",
-         "Compulsory liquidation statistics", "/data/compulsory-liquidation-statistics/"),
-        ("Administrations", "135", "Down 24% after April's real-estate cluster.",
-         "Administration statistics", "/data/administration-statistics/"),
-        ("CVAs", "25", "Low by historical standards.", None, None),
-        ("Receiverships", "0", "Now a rare procedure.", None, None),
-    ]
-    def card_html(name, count, note, link_label, link_href):
-        link_html = (
-            f'<a class="cd-procard__link" href="{link_href}">{link_label} <span aria-hidden="true">→</span></a>'
-            if link_label else ''
-        )
-        return (
-            f'<article class="cd-procard">'
-            f'<h3 class="cd-procard__name">{name}</h3>'
-            f'<p class="cd-procard__value">{count}</p>'
-            f'<p class="cd-procard__note">{note}</p>'
-            f'{link_html}'
-            f'</article>'
-        )
-    rows_html = "".join(card_html(*r) for r in rows)
-    return dedent(f"""\
-    <section class="cd-section cd-w-wide" id="procedures">
-      <div class="cd-section-head">
-        <p class="cd-eyebrow">By procedure <span>· May 2026</span></p>
-        <h2>UK company insolvencies by procedure type</h2>
-        <p class="cd-section-intro">Each procedure has its own deep dive. Compulsory liquidations begin with a creditor's petition, tracked monthly in the <a href="/data/winding-up-petition-tracker/">winding-up petition statistics</a>.</p>
-      </div>
-      <div class="cd-procard-grid">{rows_html}</div>
-    </section>
-    """)
+# Procedure card grid removed per the 2026-07 flagship redesign (see
+# docs/data-hub/design-brief-2026-07.md): a statistics page's job is not to
+# route readers off to procedure guides, and the KPI panel in the hero
+# already carries CVL/compulsory/administration counts. Its figures were also
+# hardcoded placeholders (1,423 CVLs, a fixed "May 2026" label) never wired to
+# real data. CVL, compulsory liquidation and administration statistics remain
+# linked from the /data/ hub's "Formal statistics" group, so no page is
+# orphaned by this removal.
 
 
 # ── Sector section: table + chart (2-col) + caveat ────────────────────────
@@ -353,6 +324,107 @@ def sector_block(sector: dict, charts: dict) -> str:
       <aside class="cd-caveat">
         <p><strong>About sector volumes.</strong> These are volumes, not sector failure rates. Larger sectors tend to have more insolvencies because they have more registered companies. SIC codes are self-reported, and the first recorded SIC code is used.</p>
       </aside>
+    </section>
+    """)
+
+
+# ── Trade data-page links: registry-driven table ───────────────────────────
+# Per docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+# handoff's sector-trade-links-generator-spec.md. Reads scripts/datahub/pages/
+# sic_group_stats.py's SECTORS registry (not a second hand-maintained list),
+# so a new trade page appears here automatically on the next monthly rebuild.
+# Construction is the one whole-section detail page (build_construction() in
+# sector_pages.py) rather than a SECTORS entry, so it is added by hand.
+
+CONSTRUCTION_TRADE_LINK = {
+    "slug": "construction-insolvency-statistics",
+    "trade": "Construction",
+    "parent_section_code": "F",
+    "blurb": "The largest sector by insolvency volume: builders, contractors and specialist trades.",
+}
+
+# One-line scope notes for the table (distinct from each page's own longer
+# scope_description): tight, ≤120 chars, describes coverage not figures, so
+# it never needs a monthly data refresh.
+TRADE_LINK_BLURBS = {
+    "furniture-insolvency-statistics": "Household, office, kitchen and shop furniture and mattress manufacturers.",
+    "restaurant-insolvency-statistics": "Restaurants, cafes and mobile or takeaway food service businesses.",
+    "road-haulage-insolvency-statistics": "Freight transport by road and removal services.",
+    "recruitment-agency-insolvency-statistics": "Permanent-placement and executive-search recruitment agencies.",
+    "temporary-staffing-agency-insolvency-statistics": "Agencies supplying temporary office, industrial, medical and teaching staff.",
+    "motor-vehicle-repair-insolvency-statistics": "Garages and workshops carrying out motor vehicle maintenance and repair.",
+    "cleaning-company-insolvency-statistics": "Commercial and industrial cleaning contractors, including window cleaning.",
+    "hotel-insolvency-statistics": "Hotels, motels and similar short-stay accommodation with daily housekeeping.",
+    "estate-agency-insolvency-statistics": "Estate agencies and fee-based property management businesses.",
+}
+
+
+def _trade_link_rows() -> list[dict]:
+    """Every published trade-detail row: slug, trade name, blurb, and the
+    parent SIC section's rolling-12-month rank (1 = largest), used only for
+    sort order. Ranks are computed live from sector_series.json rather than
+    hand-maintained, so the table reorders itself if the sector mix shifts."""
+    import sys as _sys
+    scripts_dir = Path(__file__).resolve().parent
+    _sys.path.insert(0, str(scripts_dir / "datahub" / "pages"))
+    from sic_group_stats import SECTORS  # noqa: E402  (late: avoids a cycle)
+
+    series = json.loads((DATA_DIR / "sector_series.json").read_text(encoding="utf-8"))
+    section_total = {s["code"]: sum((s["monthly"] or [])[-12:]) for s in series["sections"]}
+    rank_of = {
+        code: i + 1
+        for i, code in enumerate(sorted(section_total, key=lambda c: section_total[c], reverse=True))
+    }
+
+    rows = [{
+        "slug": CONSTRUCTION_TRADE_LINK["slug"],
+        "trade": CONSTRUCTION_TRADE_LINK["trade"],
+        "blurb": CONSTRUCTION_TRADE_LINK["blurb"],
+        "sic_rank": rank_of.get(CONSTRUCTION_TRADE_LINK["parent_section_code"], 99),
+    }]
+    for slug, cfg in SECTORS.items():
+        rows.append({
+            "slug": slug,
+            "trade": cfg["eyebrow"],
+            "blurb": TRADE_LINK_BLURBS[slug],
+            "sic_rank": rank_of.get(cfg["parent_section_code"], 99),
+        })
+    rows.sort(key=lambda r: (r["sic_rank"], r["trade"]))
+    return rows
+
+
+def sector_pages_block() -> str:
+    rows = _trade_link_rows()
+    if not rows:
+        # Sticky-nav coupling: an empty table must not ship an empty section
+        # or a dead #sector-pages nav link (the class of bug that produced an
+        # earlier dead #procedures link).
+        return ""
+    rows_html = "".join(
+        f'<tr><th scope="row"><span class="cd-sectorlinks__name">{r["trade"]}</span>'
+        f'<span class="cd-sectorlinks__desc">{r["blurb"].replace("&", "&amp;")}</span></th>'
+        f'<td class="cd-sectorlinks__action">'
+        f'<a class="cd-sectorlinks__btn" href="/data/{r["slug"]}/">View data'
+        f'<span aria-hidden="true">&#8594;</span></a></td></tr>'
+        for r in rows
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-wide" id="sector-pages">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Detailed data</p>
+        <h2>Get the insolvency data for your trade</h2>
+        <p class="cd-section-intro">We publish a dedicated, monthly-updated data page for individual trades within the industry sections above. Find yours in the table and open its full time series.</p>
+      </div>
+      <div class="cd-tablewrap">
+        <table class="cd-table cd-sectorlinks">
+          <caption class="cd-table__caption">Detailed insolvency data pages by trade, grouped by SIC industry section.</caption>
+          <thead>
+            <tr><th scope="col">Trade or sub-sector</th><th scope="col" class="cd-sectorlinks__actionhead">Data page</th></tr>
+          </thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <p class="cd-sectorlinks__all"><a href="/data/company-insolvencies-by-sector/">See all sectors and the full SIC breakdown <span aria-hidden="true">&#8594;</span></a></p>
     </section>
     """)
 
@@ -472,15 +544,15 @@ def faq_block() -> str:
         ),
         (
             "What is the current UK company insolvency rate?",
-            "The 12-month rolling company insolvency rate for England and Wales was 50.9 per 10,000 active companies in the year to May 2026 — equal to one in 196 companies. The rate is lower than the 53.0 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
+            "The 12-month rolling company insolvency rate for England and Wales was 50.9 per 10,000 active companies in the year to May 2026, equal to one in 196 companies. The rate is lower than the 53.0 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
         ),
         (
             "Which procedure accounts for the most UK company insolvencies?",
-            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,423 CVLs in May 2026 — 76% of all company insolvencies for the month. Compulsory liquidations (285) and administrations (135) followed, with a small number of CVAs (25) and no receiverships."
+            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,423 CVLs in May 2026, 76% of all company insolvencies for the month. Compulsory liquidations (285) and administrations (135) followed, with a small number of CVAs (25) and no receiverships."
         ),
         (
             "Which UK sectors have the most company insolvencies?",
-            "Across the 12 months to May 2026, construction (3,803, 17%), wholesale and retail (3,527, 15%), and accommodation and food services (3,296, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
+            "Across the 12 months to May 2026, construction (3,803, 17%), wholesale and retail (3,527, 15%), and accommodation and food services (3,296, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates: larger sectors have more registered companies and so tend to have more insolvencies."
         ),
         (
             "When is the next UK insolvency statistics release?",
@@ -488,7 +560,7 @@ def faq_block() -> str:
         ),
         (
             "Where does this UK insolvency data come from?",
-            "Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them."
+            "Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures. We do not produce them."
         ),
     ]
     items_html = "".join(
@@ -1302,70 +1374,54 @@ DASHBOARD_CSS = """
   .cd-data-hub .cd-chart-panel--rate { min-height: 320px; }
 }
 
-/* ── Procedure card grid ──────────────────────────────────── */
-.cd-data-hub .cd-procard-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.cd-data-hub .cd-procard {
-  padding: 22px 22px 18px;
-  border-radius: 16px;
-  background: var(--cd-surface);
-  border: 1px solid var(--cd-line);
-  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.03);
-  display: flex;
-  flex-direction: column;
-}
-.cd-data-hub .cd-procard__name {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cd-muted);
-  font-weight: 700;
-  margin: 0 0 8px;
-  line-height: 1.3;
-}
-.cd-data-hub .cd-procard__value {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--cd-text);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-}
-.cd-data-hub .cd-procard__note {
-  font-size: 13px;
-  color: var(--cd-muted);
-  margin: 0 0 14px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-.cd-data-hub .cd-procard__link {
-  align-self: flex-start;
-  display: inline-flex;
+/* ── Sector data-page links table ("Get the insolvency data for your
+   trade") — always-visible table pairing each trade with a View data
+   button, replacing the earlier procedure-card grid. Per
+   docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+   handoff's sector-trade-links-generator-spec.md. ──────────────────── */
+.cd-data-hub .cd-sectorlinks th[scope="row"] { font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__name { display: block; font-size: 16px; font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--cd-muted); max-width: 52ch; }
+.cd-data-hub .cd-sectorlinks td { color: var(--cd-text-soft); }
+.cd-data-hub .cd-sectorlinks__actionhead { text-align: left; }
+.cd-data-hub .cd-sectorlinks__action { text-align: left; white-space: nowrap; vertical-align: middle; width: 1%; }
+.cd-data-hub .cd-sectorlinks__btn {
+  /* The WP theme forces `a { display: inline }`, which would collapse the
+     44px min-height tap target to a text baseline. Beat it explicitly. */
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid #d0d5dd;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cd-text);
+  gap: 8px;
+  padding: 11px 16px;
+  min-height: 44px;
+  box-sizing: border-box;
+  background: var(--cd-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
   text-decoration: none;
-  transition: background 0.12s ease, border-color 0.12s ease;
+  white-space: nowrap;
+  transition: background .15s ease;
 }
-.cd-data-hub .cd-procard__link:hover {
-  background: var(--cd-surface-soft);
-  border-color: var(--cd-accent);
-  color: var(--cd-accent);
-  text-decoration: none;
+.cd-data-hub .cd-sectorlinks__btn span { font-size: 15px; line-height: 1; transition: transform .15s ease; }
+.cd-data-hub .cd-sectorlinks__btn::after, .cd-data-hub .cd-sectorlinks__btn::before { content: none !important; display: none !important; }
+.cd-data-hub .cd-sectorlinks .cd-table-arrow { display: none !important; }
+.cd-data-hub .cd-sectorlinks__btn:hover { background: #0c3c66; color: #fff !important; text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__btn:hover span { transform: translateX(3px); }
+.cd-data-hub .cd-sectorlinks__btn:focus-visible { outline: 2px solid var(--cd-accent); outline-offset: 2px; }
+.cd-data-hub .cd-sectorlinks tbody tr:hover { background: var(--cd-surface-soft); }
+.cd-data-hub .cd-sectorlinks__all { margin: 18px 0 0 !important; font-size: 15px; }
+.cd-data-hub .cd-sectorlinks__all a { font-weight: 700; color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__all a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .cd-data-hub .cd-sectorlinks { min-width: 0; }
+  .cd-data-hub .cd-sectorlinks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cd-data-hub .cd-sectorlinks tbody tr { display: block; padding: 16px 4px; }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr { border-top: 1px solid var(--cd-line-soft); }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr td, .cd-data-hub .cd-sectorlinks tbody tr + tr th { border-top: 0; }
+  .cd-data-hub .cd-sectorlinks th[scope="row"] { display: block; padding: 0 0 12px; }
+  .cd-data-hub .cd-sectorlinks__action { display: block; padding: 0; width: auto; }
 }
-.cd-data-hub .cd-procard__link span { font-size: 14px; line-height: 1; }
-@media (max-width: 980px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .cd-data-hub .cd-procard-grid { grid-template-columns: 1fr; } }
 
 /* ── Sector grid ──────────────────────────────────────────── */
 .cd-data-hub .cd-sector-grid {
@@ -1678,8 +1734,8 @@ def assemble_draft() -> str:
         monthly_chart_block(charts),
         longrun_block(charts),
         rate_block(charts, latest_rate),
-        procedure_cards_block(),
         sector_block(d["sector"], charts),
+        sector_pages_block(),
         nations_block(d["nations"]),
         methodology_block(),
         source_citation_block(meta),
