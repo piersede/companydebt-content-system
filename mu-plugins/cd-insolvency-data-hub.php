@@ -1210,9 +1210,43 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
  * call would silently reskin every page in the section, including ones that
  * have not been through this alignment pass yet.
  */
-function cd_datahub_alignment_css( $hero_selector ) {
+function cd_datahub_alignment_css( $hero_selector, $band_selector = null ) {
+    // $band_selector: the element the full-bleed ::before band actually
+    // attaches to. Defaults to $hero_selector, correct for every page whose
+    // hero is a single element. The flagship's hero is two nested layers -
+    // .cd-w-hero (the true 100vw outer wrapper) containing .cd-hero (a
+    // narrower, asymmetrically-inset inner grid) - and the band MUST attach
+    // to the outer one. The "left:50%; margin-left:-50vw" full-bleed trick
+    // only reaches the true viewport edge when the element carrying it is
+    // itself already 100vw wide; attached to the narrower inner element (as
+    // an earlier version of this function did), "50%" resolves against that
+    // element's own ~1136px width, not the viewport, so the band renders as
+    // a bounded card offset ~72px from the edge instead of a true band.
+    if ( null === $band_selector ) {
+        $band_selector = $hero_selector;
+    }
     return <<<CSS
 <style id="cd-site-alignment">
+/* 0 -- FULL-BLEED ESCAPE HATCH. The theme's <main class="site-main"> (the
+   direct ancestor every data-hub page renders inside) carries
+   overflow-x:hidden site-wide, almost certainly to stop oversized ordinary
+   content (images, tables) from creating a horizontal scrollbar on normal
+   pages. Every data-hub full-bleed section (.cd-w-hero, .cd-w-wide,
+   .cd-masthead, .cd-bleed) works by escaping its container via
+   width:100vw + a negative margin - and that escape is clipped right back
+   down by this ancestor's overflow, which is what made the masthead AND the
+   hero band both render as bounded, inset cards rather than true edge-to-
+   edge bands (found 2026-07 via direct browser inspection: computed CSS was
+   correct, but nothing painted past .site-main's own box). Scoped to this
+   template only - .site-main's overflow:hidden stays intact everywhere else
+   on the site, where it is presumably load-bearing.
+   Sets the `overflow` SHORTHAND (both axes), not overflow-x alone: per spec,
+   overflow-x:visible with overflow-y left at its inherited non-visible value
+   is silently computed as overflow-x:auto instead, which still clips - this
+   exact trap cost a whole extra deploy-and-recheck cycle to catch. */
+html body.page-template-data-hub-template .site-main {
+  overflow: visible !important;
+}
 /* 1 -- FONT. Arial, matching body.cd-ttt-design on the rest of the site. */
 html body.page-template-data-hub-template .cd-data-hub,
 html body.page-template-data-hub-template .cd-data-hub h1,
@@ -1235,14 +1269,19 @@ html body.page-template-data-hub-template .main-content .cd-data-hub h1 {
 }
 /* 2 -- HERO BAND. Copies the site mechanism (.col-12.page-header::before): a
    100vw full-bleed pale blue band. body sets overflow-x:hidden, so 100vw
-   cannot introduce horizontal scroll. */
+   cannot introduce horizontal scroll. Vertical padding (the gap above/below
+   the content) stays on $hero_selector; the band's own width/position
+   attaches to $band_selector, the element that is actually 100vw wide. */
 html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} {
   position: relative;
   padding-top: 35px !important;
   padding-bottom: 54px !important;
   margin-bottom: 24px !important;
 }
-html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector}::before {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector} {
+  position: relative;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector}::before {
   content: '';
   position: absolute;
   top: 0; bottom: 0; left: 50%;
@@ -1250,7 +1289,7 @@ html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_sele
   background: #f4f7fe;
   z-index: 0;
 }
-html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} > * {
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector} > * {
   position: relative;
   z-index: 1;
 }
@@ -1308,7 +1347,7 @@ add_action( 'wp_head', function() {
     if ( 'uk-insolvency-statistics' !== cd_datahub_current_slug() ) {
         return;
     }
-    echo cd_datahub_alignment_css( '.cd-hero' );
+    echo cd_datahub_alignment_css( '.cd-hero', '.cd-w-hero' );
 }, 30 );
 
 add_action( 'wp_head', function() {
