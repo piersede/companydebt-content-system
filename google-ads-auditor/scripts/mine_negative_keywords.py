@@ -206,6 +206,13 @@ def main():
                 "The term overlaps with the account's core commercial vocabulary — blocking risk rated medium, "
                 "not low, on that basis."
             )
+        if total_clicks > total_impressions:
+            finding["caveats"].append(
+                f"Reports {total_clicks} click(s) but only {total_impressions} impression(s) — clicks exceeding "
+                "impressions is a known Google Ads search-terms reporting quirk at low volumes (asynchronous "
+                "click/impression attribution), not a data error introduced here. Treat these figures as "
+                "approximate rather than exact."
+            )
 
         if len(rows) == 1:
             finding["campaign_id"] = breakdown[0]["campaign_id"]
