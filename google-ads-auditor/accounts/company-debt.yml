@@ -102,6 +102,13 @@ irrelevant_topics:
   - hrmc                                       # bare "HMRC" (misspelling) — navigational to the tax authority itself, not a help-seeker
   - h r m c                                    # spaced-out variant of the above
   - tax returns payment                        # generic tax-filing intent, not insolvency-specific
+  # Added 2026-07-20, per Piers, from real performance-max-auditor category-label review:
+  - clear start accountants                    # possible competitor/accountancy brand name
+  - ascent collections                         # possible competitor/debt-collection agency brand name
+  - money laundering report uk                 # regulatory/whistleblowing intent, not insolvency-seeking
+  - report non tax payers                      # same — whistleblowing/reporting intent
+  - wrong tax code                             # personal-tax navigational, not insolvency-specific
+  - vat helpline                                # navigational to HMRC's own helpline, same pattern as bare "hrmc"
 
 comparison_periods:
   primary_days: 7
