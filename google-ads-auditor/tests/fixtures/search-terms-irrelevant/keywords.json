@@ -1,0 +1,26 @@
+[
+  {
+    "campaign.id": 1001,
+    "campaign.name": "Search | Company Debt",
+    "ad_group.id": 2001,
+    "ad_group.name": "Insolvency",
+    "ad_group_criterion.criterion_id": 5001,
+    "ad_group_criterion.keyword.text": "insolvency advice",
+    "ad_group_criterion.keyword.match_type": "BROAD",
+    "ad_group_criterion.status": "ENABLED",
+    "ad_group_criterion.negative": false,
+    "ad_group_criterion.quality_info.quality_score": 6
+  },
+  {
+    "campaign.id": 1002,
+    "campaign.name": "Search | Company Liquidation",
+    "ad_group.id": 2002,
+    "ad_group.name": "Liquidation",
+    "ad_group_criterion.criterion_id": 5002,
+    "ad_group_criterion.keyword.text": "cis jobs",
+    "ad_group_criterion.keyword.match_type": "EXACT",
+    "ad_group_criterion.status": "ENABLED",
+    "ad_group_criterion.negative": true,
+    "ad_group_criterion.quality_info.quality_score": 0
+  }
+]
