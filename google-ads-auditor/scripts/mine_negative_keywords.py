@@ -59,10 +59,17 @@ def main():
     irrelevant_topics = config.get("irrelevant_topics") or []
     brand_terms = config.get("brand_terms") or []
     targets = config.get("targets", {})
-    # search-terms.json now spans search_term_lookback_days (365 days by default), not
-    # the 7-day audit window - minimum_clicks_before_judgement was calibrated for a
-    # week, so use the dedicated yearly threshold instead.
-    min_clicks = targets.get("search_term_minimum_clicks", targets.get("minimum_clicks_before_judgement", 12))
+    # NOTE: deliberately NOT using search_term_minimum_clicks (624) here, unlike
+    # analyze_search_terms.py. That figure answers "is this enough evidence to
+    # justify spending money on a new keyword" - a high bar for a costly action.
+    # This skill's low_volume flag answers a different question: "is this
+    # genuinely a thin sample, or just below an arbitrary large bar" - used only
+    # to word the confidence caveat, since irrelevant_topics matches are flagged
+    # regardless of volume either way. Using minimum_clicks_before_judgement (12)
+    # keeps that judgement honest even now search-terms.json spans a year - 12
+    # clicks over a year is genuinely thin; 351 clicks is not, and shouldn't be
+    # described as a "thin sample" just because it's below 624.
+    min_clicks = targets.get("minimum_clicks_before_judgement", 12)
     zero_conv_threshold = targets.get("zero_conversion_spend_threshold", 75)
 
     manifest = load(folder, "manifest.json")  # real runs/ have this; fixtures fall back to account-config.yml's _period
@@ -133,6 +140,14 @@ def main():
         if low_volume:
             low_volume_skipped += 0  # still eligible per SKILL.md — irrelevance is topical, not volume-based
 
+        # A row with status "ADDED" means the search term text IS an existing
+        # keyword in the account — this is deliberately-targeted traffic, not
+        # incidental broad/phrase spillover. Recommending a negative here means
+        # proposing to stop something the account owner chose to target, which
+        # is a bigger decision than blocking accidental matches, especially if
+        # it's been converting.
+        deliberately_targeted = any(r.get("search_term_view.status") == "ADDED" for r in rows)
+
         if total_cost <= zero_conv_threshold:
             severity = "low"
         elif total_cost <= zero_conv_threshold * ZERO_CONV_SEVERITY_MULTIPLIER:
@@ -201,6 +216,23 @@ def main():
                 "already be excluded via a shared list not captured here.",
             ],
         }
+
+        if deliberately_targeted:
+            finding["caveats"].append(
+                f"At least one underlying row has search_term_view.status = 'ADDED' — this exact text is already "
+                f"a deliberately-added keyword in the account, not incidental broad/phrase spillover. It has "
+                f"{total_conversions} recorded conversion(s) and £{total_cost:.2f} spend, so this recommendation "
+                "means proposing to stop something the account owner chose to target and that has been "
+                "converting, not just blocking an accidental match — treat this as a bigger decision than a "
+                "typical negative-keyword add."
+            )
+        if any(t in ("business debtline", "business debt line") for t in matched_topics):
+            finding["caveats"].append(
+                "Piers's assessment (2026-07-20): even where this term registers conversions, Business Debtline "
+                "searchers are typically seeking free advice from the charity itself, not a paid insolvency "
+                "service — so recorded conversions here are treated as likely low-quality/false-positive leads, "
+                "not a reason to keep targeting despite the competitor/brand concern."
+            )
 
         if low_volume:
             finding["caveats"].append(

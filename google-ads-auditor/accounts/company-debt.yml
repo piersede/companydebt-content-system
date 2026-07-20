@@ -85,6 +85,9 @@ protected_terms:
 
 # Topics genuinely outside Company Debt's business scope — used by
 # negative-keyword-miner to identify clearly irrelevant search terms.
+# Includes both topical mismatches AND deliberate business/brand policy
+# exclusions (competitor names, bare-navigational tax-authority searches) —
+# the skill treats both the same way: flag regardless of performance.
 irrelevant_topics:
   - personal debt
   - personal bank account
@@ -92,6 +95,13 @@ irrelevant_topics:
   - student loan
   - debt collector jobs
   - CIS/PAYE jobs terms unrelated to insolvency
+  # Added 2026-07-20, per Piers, from real search-terms-analyzer watch-list review:
+  - business debtline                          # Business Debtline is a charity/competitor — never appear on their name
+  - business debt line                         # same, covers the "business debt line org/uk" spaced variant
+  - gov uk tax bill                            # generic government-navigational search, not insolvency-seeking intent
+  - hrmc                                       # bare "HMRC" (misspelling) — navigational to the tax authority itself, not a help-seeker
+  - h r m c                                    # spaced-out variant of the above
+  - tax returns payment                        # generic tax-filing intent, not insolvency-specific
 
 comparison_periods:
   primary_days: 7
