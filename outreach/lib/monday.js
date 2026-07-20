@@ -38,6 +38,14 @@ function mapItem(config, raw) {
     try { const v = JSON.parse(cols[C.email].value); email = v?.email || ''; emailName = v?.text || ''; } catch { /* fall back */ }
     if (!email) email = ((cols[C.email].text || '').match(/\S+@\S+/) || [''])[0];
   }
+  // Link columns store {url, text} in value JSON; the rendered .text is "text - url" when the
+  // display text differs from the url, so read the url from the JSON and only fall back to .text.
+  const linkUrl = (id) => {
+    if (!id || !cols[id]) return '';
+    try { const v = JSON.parse(cols[id].value); if (v && v.url) return v.url; } catch { /* fall back */ }
+    const t = cols[id].text || '';
+    return (t.match(/https?:\/\/\S+/) || [t])[0];
+  };
   return {
     id: raw.id,
     name: raw.name,
@@ -47,8 +55,8 @@ function mapItem(config, raw) {
     status: get(C.status),
     email,
     emailName,
-    articleUrl: get(C.articleUrl),
-    assetUrl: get(C.assetUrl),
+    articleUrl: linkUrl(C.articleUrl),
+    assetUrl: linkUrl(C.assetUrl),
     citedSource: get(C.citedSource),
     rejectReason: get(C.rejectReason),
   };
