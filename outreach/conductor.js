@@ -43,6 +43,8 @@ async function scan() {
   const process_ = flag('--process');
   const cap = parseInt(opt('--cap', config.dailyCap), 10);
   const statusLabel = opt('--status', config.monday.status.queue);
+  const groupFilter = opt('--group', '');           // restrict to one board group (channel)
+  const topicFilter = opt('--topic', '');           // restrict to one campaign topic (e.g. "Pub Closures")
   const write = config.review === 'write' && process_;
   const store = new Store(config.stateDir);
   const tally = {};
@@ -54,18 +56,40 @@ async function scan() {
   try { items = await monday.itemsByStatus(config, statusLabel); }
   catch (e) { U.err(`Cannot read Monday board: ${e.message}`); U.dim('Set OUTREACH_BOARD_ID + column ids (see `conductor boardcols`).'); return; }
 
-  U.info(`${items.length} item(s) in "${statusLabel}".`);
+  if (groupFilter) items = items.filter((it) => it.groupId === groupFilter);
+  if (topicFilter) items = items.filter((it) => (it.topic || '').trim().toLowerCase() === topicFilter.trim().toLowerCase());
+  U.info(`${items.length} item(s) in "${statusLabel}"${topicFilter ? ` (topic ${topicFilter})` : ''}${groupFilter ? ` (group ${groupFilter})` : ''}.`);
   let drafted = 0;
   const draftedContacts = new Set(); // one draft per contact email per run
+
+  // Cross-run contact dedup: never draft anyone who already has a draft/contact on the board.
+  // Seed with every email already committed to Ready / Contacted / Responded on any row.
+  const committedContacts = new Set();
+  try {
+    const done = new Set([config.monday.status.ready, config.monday.status.contacted, config.monday.status.responded]
+      .map((s) => s.trim().toLowerCase()));
+    for (const it of await monday.allItems(config)) {
+      if (it.email && done.has((it.status || '').trim().toLowerCase())) committedContacts.add(it.email.toLowerCase());
+    }
+    if (committedContacts.size) U.dim(`(${committedContacts.size} contact(s) already drafted on the board — will not re-draft)`);
+  } catch (e) { U.warn(`(could not load committed-contact set: ${e.message})`); }
 
   for (const item of items) {
     U.log('');
     U.log(`${U.C.bold}• ${item.name}${U.C.reset}  (id ${item.id})`);
 
+    // LinkedIn-channel rows share the board but are not email prospects — leave them untouched.
+    const liRaw = item.raw && item.raw['link_mm52fh94'];
+    if (liRaw && liRaw.value && /"url"/.test(liRaw.value)) { U.dim('  (LinkedIn-channel row — skipped by email scan)'); continue; }
+
     if (drafted >= cap) { U.warn('  daily cap reached — leaving in queue for next run'); continue; }
 
     const articleUrl = item.articleUrl || item.raw?.link?.text;
     if (!articleUrl) { await route(item, 'research', 'no article URL on the row', 'not_enough_citation_context', { write, tally }); continue; }
+
+    // which data asset does this row pitch? (Topic column -> asset; default = insolvency hub)
+    const asset = config.assetForTopic(item.topic);
+    U.dim(`  topic: ${item.topic || '(none)'} -> asset: ${asset.id}`);
 
     // 1) scrape (with a free fallback to the Ahrefs-captured cited sentence)
     const storedCtx = config.citedContext[articleUrl] || config.citedContext[articleUrl.replace(/\/$/, '')] || '';
@@ -73,7 +97,8 @@ async function scan() {
     let title, text, citedContext, competitorLinks;
     if (sc.ok) {
       ({ title, text, competitorLinks } = sc);
-      citedContext = sc.citedContext || storedCtx;
+      // pre-curated assets (e.g. pub closures) trust the stored cited figure over a scraped guess
+      citedContext = asset.preferStoredContext ? (storedCtx || sc.citedContext) : (sc.citedContext || storedCtx);
     } else if (sc.blocked && storedCtx) {
       // page blocked but Ahrefs gave us the cited sentence — draft from that instead of halting
       title = item.name; text = storedCtx; citedContext = storedCtx; competitorLinks = [];
@@ -86,7 +111,7 @@ async function scan() {
 
     // 2) match on the specific cited stat
     const competitorUrl = item.citedSource || (competitorLinks && competitorLinks[0]) || '';
-    const m = matchCandidate({ title, text, articleUrl, citedContext, competitorUrl }, config.catalogue.assets[0], config.competitors);
+    const m = matchCandidate({ title, text, articleUrl, citedContext, competitorUrl }, asset, config.competitors);
     U.dim(`  match: conf ${m.confidence}  gap ${m.gap || 'none'}  ${m.reasons[0] || ''}`);
     if (!m.gap || m.confidence < config.matchThreshold) { await route(item, 'defunct', `weak fit (conf ${m.confidence})`, 'weak_fit', { write, tally }); continue; }
 
@@ -105,8 +130,10 @@ async function scan() {
       G.contactConfidenceGate(contact, config.genericInboxLocalparts)].find((c) => !c.pass);
     if (cg) { await route(item, 'research', cg.reason, cg.category, { write, tally }); continue; }
 
-    // per-contact dedup: never draft the same person twice in one run (sister titles, repeat authors)
+    // per-contact dedup: never draft the same person twice — this run OR any prior run
+    // (sister titles, repeat authors, the same contact on multiple rows).
     const cemail = (contact.email || '').toLowerCase();
+    if (committedContacts.has(cemail)) { U.warn(`  → skipped: ${contact.email} already has a draft/contact on the board (leaving this row queued)`); continue; }
     if (draftedContacts.has(cemail)) { U.warn(`  → skipped: ${contact.email} already drafted this run (stays queued for next run)`); continue; }
 
     // 4) draft
@@ -119,7 +146,8 @@ async function scan() {
     const gateRes = runDraftGates(`${d.subject}\n${d.body}`, m.asset, m.citedContext, store.recentFingerprints());
     if (!gateRes.pass) { await route(item, 'research', `draft gate failed: ${gateRes.failed.reason}`, gateRes.failed.category, { write, tally }); U.warn(`  ✗ ${gateRes.failed.reason}`); continue; }
 
-    // 6) passed — Outlook draft + board
+    // 6) passed — append the sender signature (the mailbox does not auto-add one), then draft + board
+    if (config.sender.signature) d.body = `${d.body}\n${config.sender.signature}`;
     U.ok(`  ✓ draft passes all gates`);
     U.log(`  ${U.C.dim}Subject:${U.C.reset} ${d.subject}`);
     U.log(d.body.split('\n').map((l) => '  | ' + l).join('\n'));

@@ -33,7 +33,51 @@
         { "label": "administrations, May 2026", "value": "135", "period": "May 2026", "note": "down 24% on April 2026" },
         { "label": "insolvency rate per 10,000 active companies", "value": "50.9", "period": "12 months to May 2026" }
       ],
-      "allowedContextNumbers": ["2000", "2026", "2025", "10000", "10,000"]
+      "allowedContextNumbers": ["2000", "2026", "2025", "10000", "10,000"],
+      "statTerms": [
+        "insolvency", "insolvencies", "liquidation", "liquidations", "cvl",
+        "creditors' voluntary", "creditors voluntary", "compulsory liquidation",
+        "administration", "administrations", "winding up", "winding-up",
+        "company failure", "company failures", "business failure", "business failures",
+        "corporate insolvency", "insolvency rate", "insolvency figures", "insolvency statistics"
+      ],
+      "pitch": {
+        "citationDesc": "an insolvency or liquidation statistic",
+        "trackerDesc": "a UK company-insolvency statistics tracker",
+        "institutionalLine": "at Company Debt we keep a monthly tracker of the official UK insolvency figures",
+        "sourceLine": "Our figures come from the Insolvency Service and Companies House. The value we offer is the clearer, more current, one-place UK presentation (monthly, by procedure, by sector, with the historical trend), not secret data."
+      }
+    },
+    {
+      "id": "pub-closures",
+      "title": "UK Pub Closures Data",
+      "url": "https://www.companydebt.com/articles/pub-closures-in-the-uk/",
+      "type": "data",
+      "coverage": "United Kingdom",
+      "sources": ["the BBPA", "the House of Commons Library", "the Insolvency Service", "the ONS", "the Valuation Office Agency"],
+      "updated": "2026-07-08",
+      "nextRelease": "",
+      "preferStoredContext": true,
+      "topics": ["pub closures", "pubs closing", "pub numbers", "hospitality insolvency", "licensed trade", "pub and bar insolvency", "hospitality closures"],
+      "approvedFigures": [
+        { "label": "UK pubs remaining in 2024", "value": "45,000", "period": "2024", "note": "down from 60,800 in 2000, a fall of roughly a quarter" },
+        { "label": "pub closures across Britain in the first quarter of 2026", "value": "161", "period": "Q1 2026", "note": "about two a day, up from 128 in the first quarter of 2025" },
+        { "label": "jobs lost from the Q1 2026 pub closures", "value": "2,400", "period": "Q1 2026", "note": "BBPA estimate" },
+        { "label": "permanent pub losses in England and Wales in 2025", "value": "366", "period": "2025" },
+        { "label": "accommodation and food insolvencies in the 12 months to May 2026", "value": "3,296", "period": "12 months to May 2026", "note": "this single-year count gives the sector the highest insolvency rate of any UK industry; that RATE is the highest since 2015 (do NOT describe 3,296 as a total since 2015)" }
+      ],
+      "allowedContextNumbers": ["2000", "2010", "2024", "2025", "2026", "60,800", "55,400", "10000", "10,000"],
+      "statTerms": [
+        "pub", "pubs", "bar", "bars", "closure", "closures", "closed", "close", "closing",
+        "hospitality", "licensed trade", "licensed premises", "brewery", "breweries", "publican",
+        "insolvency", "insolvencies", "administration", "liquidation", "went bust", "call time"
+      ],
+      "pitch": {
+        "citationDesc": "a pub-closure, pub-count, or hospitality-insolvency figure",
+        "trackerDesc": "a data page tracking UK pub closures and hospitality-sector distress",
+        "institutionalLine": "at Company Debt we keep a running data page on UK pub closures, pulling the official BBPA, government and insolvency figures into one place",
+        "sourceLine": "Our figures are compiled from public sources (the BBPA, the House of Commons Library, the Insolvency Service, the ONS and the Valuation Office Agency). The value we offer is one clear, current, consolidated UK view of pub closures and hospitality distress, not proprietary data."
+      }
     }
   ],
   "phase2Assets": [
