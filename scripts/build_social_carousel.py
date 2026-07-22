@@ -232,6 +232,71 @@ def panel_note(c, heading, body):
         ty -= body_lead - body_size
 
 
+def distribution(c, kicker, hero, hero_sub, segments, note=None):
+    """Single-image: one hero number over a horizontal stacked distribution bar.
+
+    segments = [(label, pct, colour_key), ...] summing to ~100. colour_key in
+    {'mid','panel','orange'}. Every number here must be verified from source.
+    """
+    palette = {"mid": MIDBLUE, "panel": PANEL, "orange": ORANGE}
+    hero_size = fit_size(hero, "Lato-Black", COL, NUM_SIZE)
+    hero_cap = hero_size * 0.72
+    sub_lines = wrap(c, hero_sub, "Lato", SUB_SIZE, COL)
+    bar_h, seg_gap = 130, 200
+    note_lines = wrap(c, note, "Lato", 30, COL) if note else []
+
+    block = (KICKER_SIZE + GAP_KICKER + hero_cap + GAP_SUB + len(sub_lines) * SUB_LEAD
+             + seg_gap + bar_h + 70 + (GAP_SUB + len(note_lines) * 42 if note_lines else 0))
+    y = centre_start(block)
+
+    c.setFont("Lato-Bold", KICKER_SIZE)
+    c.setFillColor(MIDBLUE)
+    c.drawString(MARGIN, y - KICKER_SIZE, kicker.upper())
+    y -= KICKER_SIZE + GAP_KICKER
+
+    c.setFont("Lato-Black", hero_size)
+    c.setFillColor(ORANGE)
+    c.drawString(MARGIN, y - hero_cap, hero)
+    y -= hero_cap + GAP_SUB
+
+    c.setFont("Lato", SUB_SIZE)
+    c.setFillColor(WHITE)
+    for line in sub_lines:
+        y -= SUB_SIZE
+        c.drawString(MARGIN, y, line)
+        y -= SUB_LEAD - SUB_SIZE
+    y -= seg_gap - (SUB_LEAD - SUB_SIZE)
+
+    # stacked bar
+    x = MARGIN
+    for label, pct, ck in segments:
+        seg = COL * pct / 100.0
+        c.setFillColor(palette[ck])
+        c.rect(x, y - bar_h, seg, bar_h, stroke=0, fill=1)
+        c.setFillColor(NAVY if ck in ("panel", "orange") else WHITE)
+        c.setFont("Lato-Black", 40)
+        c.drawString(x + 16, y - bar_h + 46, f"{pct:.0f}%")
+        x += seg
+    # labels under the bar
+    x = MARGIN
+    c.setFont("Lato", 26)
+    for label, pct, ck in segments:
+        seg = COL * pct / 100.0
+        c.setFillColor(ORANGE if ck == "orange" else MIDBLUE)
+        c.drawString(x, y - bar_h - 40, label)
+        x += seg
+    y -= bar_h + 70
+
+    if note_lines:
+        y -= GAP_SUB
+        c.setFont("Lato", 30)
+        c.setFillColor(MIDBLUE)
+        for line in note_lines:
+            y -= 30
+            c.drawString(MARGIN, y, line)
+            y -= 12
+
+
 def hbar(c, title, rows, unit, highlight, note=None):
     """Single-image horizontal bar chart. rows = [(label, value), ...].
 
@@ -321,11 +386,26 @@ SLIDES = {
             ],
             note="Average days to pay an invoice, by sector. 6,882 companies, Dec 2024 to May 2026.")),
     ],
+    # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
+    # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
+    11: [
+        ("distribution", dict(
+            kicker="How large UK firms pay, 18 months to July 2026",
+            hero="12%",
+            hero_sub="of invoices from large UK companies are paid more than 60 days after they are issued.",
+            segments=[
+                ("Within 30 days", 59.7, "mid"),
+                ("31 to 60 days", 28.3, "panel"),
+                ("Later than 60", 12.0, "orange"),
+            ],
+            note="Self-reported, unaudited, large companies only. ~6,600 companies, latest report each.")),
+    ],
 }
 
 # Footer source line per post (defaults to the insolvency release).
 SOURCES = {
     5: "Source: UK payment practices reporting, 6,882 companies",
+    11: "Source: gov.uk payment practices export, recomputed 22 Jul 2026",
 }
 
 
@@ -335,6 +415,8 @@ def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE):
 
     if kind == "hbar":
         hbar(c, **spec)
+    elif kind == "distribution":
+        distribution(c, **spec)
     elif kind == "cover":
         big_number(c, "80%", "Administrations, year to June 2026. Mostly one group.",
                    kicker="Company insolvency statistics")
