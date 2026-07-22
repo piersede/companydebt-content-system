@@ -1,12 +1,12 @@
 {
-  "latest_month": "2026-05",
-  "latest_month_label": "May 2026",
-  "publication_date": "19 June 2026",
-  "next_release_date": "17 July 2026",
+  "latest_month": "2026-06",
+  "latest_month_label": "June 2026",
+  "publication_date": "17 July 2026",
+  "next_release_date": "21 August 2026 (estimated from the monthly release cadence; not yet confirmed by the Insolvency Service)",
   "source_label": "Insolvency Service / Companies House",
   "status": "Accredited official statistics",
   "data_window_start": "2000-01",
-  "page_generated": "2026-06-21",
+  "page_generated": "2026-07-22",
   "latest_figures_table": {
     "latest_month_label": "2026-05",
     "prior_month_label": "2026-04",

@@ -406,6 +406,10 @@ if __name__ == "__main__":
         "--slug", default=None,
         help="Override post slug (optional — will be derived from filename if not set)"
     )
+    parser.add_argument(
+        "--post-type", default="posts", choices=["posts", "pages"],
+        help="WP object type: 'posts' for blog posts, 'pages' for WP pages (default: posts)"
+    )
     args = parser.parse_args()
 
     html_path = Path(args.file)
@@ -449,6 +453,7 @@ if __name__ == "__main__":
         creds=creds,
         status=args.status,
         post_id=args.id,
+        post_type=args.post_type,
     )
 
     print(f"\nDone. Open in WordPress:")

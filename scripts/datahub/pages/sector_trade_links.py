@@ -41,6 +41,17 @@ TRADE_LINK_BLURBS = {
     "cleaning-company-insolvency-statistics": "Commercial and industrial cleaning contractors, including window cleaning.",
     "hotel-insolvency-statistics": "Hotels, motels and similar short-stay accommodation with daily housekeeping.",
     "estate-agency-insolvency-statistics": "Estate agencies and fee-based property management businesses.",
+    "it-consultancy-insolvency-statistics": "Software development, systems integration and IT project consultancy.",
+    "management-consultancy-insolvency-statistics": "Strategy, organisation, marketing and operations consultancy.",
+    "architectural-engineering-insolvency-statistics": "Building design, structural and civil engineering consultancy.",
+    "personal-care-services-insolvency-statistics": "Hairdressing, beauty treatment, wellbeing, funeral and dry-cleaning services.",
+    "sports-facility-insolvency-statistics": "Sports facilities, leisure centres, sports clubs and fitness facilities.",
+    "medical-dental-practice-insolvency-statistics": "General and specialist medical practices and dental practices.",
+    "creative-arts-entertainment-insolvency-statistics": "Performing arts, artistic creation and arts venues such as theatres.",
+    "amusement-recreation-insolvency-statistics": "Theme parks, amusement arcades, funfairs and similar attractions.",
+    "real-estate-letting-investment-insolvency-statistics": "Commercial and residential landlords and property-investment companies.",
+    "freight-forwarding-logistics-insolvency-statistics": "Freight forwarding, cargo handling and customs clearance.",
+    "retail-insolvency-statistics": "General, specialist and online retailers selling goods to the public.",
 }
 
 

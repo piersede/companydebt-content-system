@@ -50,6 +50,7 @@ function cd_datahub_known_slugs() {
         'amusement-recreation-insolvency-statistics',
         'real-estate-letting-investment-insolvency-statistics',
         'freight-forwarding-logistics-insolvency-statistics',
+        'retail-insolvency-statistics',
     );
 }
 
@@ -188,6 +189,10 @@ function cd_datahub_seo_meta( $slug ) {
         'freight-forwarding-logistics-insolvency-statistics' => array(
             'title' => 'UK Freight Forwarding & Logistics Insolvency Statistics 2026',
             'desc'  => 'Freight forwarding and logistics insolvencies are still running above last year on a rolling basis, even as road haulage falls sharply. Latest figures.',
+        ),
+        'retail-insolvency-statistics' => array(
+            'title' => 'UK Retail Sector Insolvency Statistics 2026',
+            'desc'  => 'Retail insolvencies fell 15.3% in 2026, the clearest sign yet the 2022-2023 failure wave has passed. See the real figures, sub-sector by sub-sector.',
         ),
     );
     return isset( $meta[ $slug ] ) ? $meta[ $slug ] : null;
@@ -520,6 +525,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             array( 'Amusement and Recreation Insolvency Statistics', home_url( '/data/amusement-recreation-insolvency-statistics/' ) ),
             array( 'Real Estate Letting and Investment Insolvency Statistics', home_url( '/data/real-estate-letting-investment-insolvency-statistics/' ) ),
             array( 'Freight Forwarding and Logistics Insolvency Statistics', home_url( '/data/freight-forwarding-logistics-insolvency-statistics/' ) ),
+            array( 'Retail Sector Insolvency Statistics', home_url( '/data/retail-insolvency-statistics/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -786,7 +792,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $fur_faq_items = array(
             array(
                 'q' => 'How many UK furniture manufacturers become insolvent each year?',
-                'a' => '143 furniture-manufacturing companies entered insolvency in England and Wales in 2025, against 139 in 2024. The series peak was 163 in 2023, and the pre-pandemic figure was 111 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '143 furniture-manufacturing companies entered insolvency in England and Wales in 2025, against 139 in 2024. The series peak was 163 in 2023, and the pre-pandemic figure was 111 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are furniture insolvencies rising in 2026?',
@@ -802,7 +808,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $fur_faq_main_entities = array();
@@ -826,7 +832,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 310. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 310. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'furniture manufacturing insolvency, furniture manufacturer insolvency, furniture insolvencies 2026, SIC 310 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -860,7 +866,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Restaurant and mobile food service company insolvencies identified via Companies House SIC group 561; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'measurementTechnique' => 'Restaurant and mobile food service company insolvencies identified via Companies House SIC group 561; the industry total is published monthly (Table A1b), the procedure-split breakdown quarterly.',
                 'keywords'        => 'restaurant insolvency, restaurant insolvency statistics, SIC 561, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -888,7 +894,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/collections/insolvency-service-official-statistics',
-                'measurementTechnique' => 'Road freight and removals company insolvencies identified via Companies House SIC group 494; the industry total is published monthly (Table 1c), the procedure-split breakdown quarterly.',
+                'measurementTechnique' => 'Road freight and removals company insolvencies identified via Companies House SIC group 494; the industry total is published monthly (Table A1b), the procedure-split breakdown quarterly.',
                 'keywords'        => 'road haulage insolvency, haulage company insolvency, SIC 494, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -906,7 +912,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $rec_faq_items = array(
             array(
                 'q' => 'How many UK recruitment agencies become insolvent each year?',
-                'a' => '345 permanent-placement recruitment agencies entered insolvency in England and Wales in 2025, the highest in the series and up from 295 in 2024. The pre-pandemic figure was 149 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '345 permanent-placement recruitment agencies entered insolvency in England and Wales in 2025, the highest in the series and up from 295 in 2024. The pre-pandemic figure was 149 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are recruitment agency insolvencies falling in 2026?',
@@ -946,7 +952,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 781. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 781. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'recruitment agency insolvency, recruitment agency insolvencies 2026, permanent placement agency insolvency, SIC 781 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -980,7 +986,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 782. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 782. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'temporary staffing agency insolvency, temp agency insolvency, temporary employment agency insolvency, SIC 782, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -998,7 +1004,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $mot_faq_items = array(
             array(
                 'q' => 'How many UK garages become insolvent each year?',
-                'a' => '293 motor vehicle repair businesses entered insolvency in England and Wales in 2025, the highest in the series and up from 251 in 2024. The pre-pandemic figure was 164 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '293 motor vehicle repair businesses entered insolvency in England and Wales in 2025, the highest in the series and up from 251 in 2024. The pre-pandemic figure was 164 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are garage insolvencies rising or falling in 2026?',
@@ -1038,7 +1044,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 452. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 452. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'motor vehicle repair insolvency, garage insolvency statistics, garage insolvencies 2026, SIC 452 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1062,7 +1068,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $cln_faq_items = array(
             array(
                 'q' => 'How many UK cleaning companies become insolvent each year?',
-                'a' => '172 cleaning contractors entered insolvency in England and Wales in 2025, the same as in 2024 and just above the 171 in 2023. The pre-pandemic figure was 90 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '172 cleaning contractors entered insolvency in England and Wales in 2025, the same as in 2024 and just above the 171 in 2023. The pre-pandemic figure was 90 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are cleaning company insolvencies rising in 2026?',
@@ -1102,7 +1108,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 812. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 812. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'cleaning company insolvency, cleaning contractor insolvency statistics, cleaning insolvencies 2026, SIC 812 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1126,7 +1132,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $hot_faq_items = array(
             array(
                 'q' => 'How many UK hotels become insolvent each year?',
-                'a' => '154 hotel and similar accommodation companies entered insolvency in England and Wales in 2025, the highest in the series and up from 136 in 2024. The 2019 figure was 144. Source: Insolvency Service, Table 1c.',
+                'a' => '154 hotel and similar accommodation companies entered insolvency in England and Wales in 2025, the highest in the series and up from 136 in 2024. The 2019 figure was 144. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are hotel insolvencies falling in 2026?',
@@ -1166,7 +1172,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 551. The industry total is published monthly (Table 1c); the procedure-split breakdown is published quarterly.',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons, procedure shares and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 551. The industry total is published monthly (Table A1b); the procedure-split breakdown is published quarterly.',
                 'keywords'        => 'hotel insolvency, hotel insolvency statistics, hotel insolvencies 2026, SIC 551 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1263,7 +1269,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $itc_faq_items = array(
             array(
                 'q' => 'How many UK IT and computer consultancies become insolvent each year?',
-                'a' => '900 computer programming and consultancy companies entered insolvency in England and Wales in 2025, against 906 in 2024, the two highest years the sector has recorded. The pre-pandemic figure was 550 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '900 computer programming and consultancy companies entered insolvency in England and Wales in 2025, against 906 in 2024, the two highest years the sector has recorded. The pre-pandemic figure was 550 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are IT consultancy insolvencies rising in 2026?',
@@ -1279,7 +1285,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $itc_faq_main_entities = array();
@@ -1303,7 +1309,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 620. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 620. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'IT consultancy insolvency, computer consultancy insolvency statistics, IT consultancy insolvencies 2026, SIC 620 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1327,7 +1333,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $mc_faq_items = array(
             array(
                 'q' => 'How many UK management consultancies become insolvent each year?',
-                'a' => '670 management consultancy companies entered insolvency in England and Wales in 2025, against 665 in 2024. The series peak was 708 in 2023, and the pre-pandemic figure was 398 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '670 management consultancy companies entered insolvency in England and Wales in 2025, against 665 in 2024. The series peak was 708 in 2023, and the pre-pandemic figure was 398 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are management consultancy insolvencies rising in 2026?',
@@ -1343,7 +1349,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $mc_faq_main_entities = array();
@@ -1367,7 +1373,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 702. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 702. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'management consultancy insolvency, consultancy insolvency statistics, management consultancy insolvencies 2026, SIC 702 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1391,7 +1397,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $ae_faq_items = array(
             array(
                 'q' => 'How many UK architectural and engineering consultancies become insolvent each year?',
-                'a' => '335 companies in SIC group 711 entered insolvency in England and Wales in 2025, the highest total on record and the fifth consecutive annual rise since 2020. The pre-pandemic figure was 182 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '335 companies in SIC group 711 entered insolvency in England and Wales in 2025, the highest total on record and the fifth consecutive annual rise since 2020. The pre-pandemic figure was 182 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are architectural and engineering consultancy insolvencies still rising in 2026?',
@@ -1407,7 +1413,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $ae_faq_main_entities = array();
@@ -1431,7 +1437,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 711. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 711. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'architectural consultancy insolvency, engineering consultancy insolvency statistics, architect insolvencies 2026, SIC 711 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1455,7 +1461,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $pc_faq_items = array(
             array(
                 'q' => 'How many UK personal care and beauty businesses become insolvent each year?',
-                'a' => '993 companies in SIC group 960, personal care and related services, entered insolvency in England and Wales in 2025, down from 1,065 in 2024 and well below the 2023 peak of 1,286. The pre-pandemic figure was 713 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '993 companies in SIC group 960, personal care and related services, entered insolvency in England and Wales in 2025, down from 1,065 in 2024 and well below the 2023 peak of 1,286. The pre-pandemic figure was 713 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are personal care services insolvencies falling in 2026?',
@@ -1471,7 +1477,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $pc_faq_main_entities = array();
@@ -1495,7 +1501,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes and rolling 12-month comparisons) from Insolvency Service company insolvency tables, identified via Companies House SIC group 960. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes and rolling 12-month comparisons) from Insolvency Service company insolvency tables, identified via Companies House SIC group 960. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'hairdresser insolvency, beauty salon insolvency statistics, personal care insolvencies 2026, SIC 960 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1518,7 +1524,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $sf_faq_items = array(
             array(
                 'q' => 'How many UK sports clubs and facilities become insolvent each year?',
-                'a' => '195 companies in SIC group 931, sports activities, entered insolvency in England and Wales in both 2024 and 2025, below the 2023 peak of 236 but 29% above the 151 recorded in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '195 companies in SIC group 931, sports activities, entered insolvency in England and Wales in both 2024 and 2025, below the 2023 peak of 236 but 29% above the 151 recorded in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are sports club and facility insolvencies rising in 2026?',
@@ -1534,7 +1540,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $sf_faq_main_entities = array();
@@ -1558,7 +1564,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 931. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 931. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'gym insolvency, sports club insolvency statistics, leisure centre insolvencies 2026, SIC 931 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1582,7 +1588,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $md_faq_items = array(
             array(
                 'q' => 'How many UK medical and dental practices become insolvent each year?',
-                'a' => '93 companies in SIC group 862, medical and dental practice activities, entered insolvency in England and Wales in 2025, down slightly from the series high of 106 in 2024 but 33% above the 70 recorded in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '93 companies in SIC group 862, medical and dental practice activities, entered insolvency in England and Wales in 2025, down slightly from the series high of 106 in 2024 but 33% above the 70 recorded in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are medical and dental practice insolvencies rising in 2026?',
@@ -1598,7 +1604,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $md_faq_main_entities = array();
@@ -1622,7 +1628,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 862. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 862. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'medical practice insolvency, dental practice insolvency statistics, GP practice insolvencies 2026, SIC 862 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1646,7 +1652,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $ca_faq_items = array(
             array(
                 'q' => 'How many UK creative, arts and entertainment businesses become insolvent each year?',
-                'a' => '129 companies in SIC group 900, creative, arts and entertainment activities, entered insolvency in England and Wales in 2025, up from 123 in 2024. The series peak was 144 in 2023, and the pre-pandemic figure was 78 in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '129 companies in SIC group 900, creative, arts and entertainment activities, entered insolvency in England and Wales in 2025, up from 123 in 2024. The series peak was 144 in 2023, and the pre-pandemic figure was 78 in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are creative and arts insolvencies rising in 2026?',
@@ -1662,7 +1668,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $ca_faq_main_entities = array();
@@ -1686,7 +1692,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 900. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 900. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'creative industries insolvency, arts venue insolvency statistics, music venue insolvencies 2026, SIC 900 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1710,7 +1716,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $ar_faq_items = array(
             array(
                 'q' => 'How many UK amusement and recreation businesses become insolvent each year?',
-                'a' => '123 companies in SIC group 932, amusement and recreation activities, entered insolvency in England and Wales in 2025, the series peak and the third consecutive annual rise, 38% above the 89 recorded in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '123 companies in SIC group 932, amusement and recreation activities, entered insolvency in England and Wales in 2025, the series peak and the third consecutive annual rise, 38% above the 89 recorded in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are amusement and recreation insolvencies still rising in 2026?',
@@ -1726,7 +1732,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $ar_faq_main_entities = array();
@@ -1750,7 +1756,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 932. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 932. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'amusement park insolvency, theme park insolvency statistics, arcade insolvencies 2026, SIC 932 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1774,7 +1780,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $rl_faq_items = array(
             array(
                 'q' => 'How many UK real estate letting and investment companies become insolvent each year?',
-                'a' => '289 companies in SIC group 682, real estate letting and investment, entered insolvency in England and Wales in 2025, a series high, 62% above the 179 recorded in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '289 companies in SIC group 682, real estate letting and investment, entered insolvency in England and Wales in 2025, a series high, 62% above the 179 recorded in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are real estate letting and investment insolvencies rising in 2026?',
@@ -1790,7 +1796,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $rl_faq_main_entities = array();
@@ -1814,7 +1820,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes and rolling 12-month comparisons) from Insolvency Service company insolvency tables, identified via Companies House SIC group 682. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes and rolling 12-month comparisons) from Insolvency Service company insolvency tables, identified via Companies House SIC group 682. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'landlord insolvency, property investment company insolvency statistics, real estate letting insolvencies 2026, SIC 682 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1837,7 +1843,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
         $ff_faq_items = array(
             array(
                 'q' => 'How many UK freight-forwarding and logistics-support companies become insolvent each year?',
-                'a' => '105 companies in SIC group 522, support activities for transportation, entered insolvency in England and Wales in 2025, easing from the 2023 peak of 122 but 54% above the 68 recorded in 2019. Source: Insolvency Service, Table 1c.',
+                'a' => '105 companies in SIC group 522, support activities for transportation, entered insolvency in England and Wales in 2025, easing from the 2023 peak of 122 but 54% above the 68 recorded in 2019. Source: Insolvency Service, Table A1b.',
             ),
             array(
                 'q' => 'Are freight-forwarding insolvencies rising or falling in 2026?',
@@ -1853,7 +1859,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             ),
             array(
                 'q' => 'Do the figures cover the whole UK?',
-                'a' => 'No. The industry breakdown in Table 1c covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
             ),
         );
         $ff_faq_main_entities = array();
@@ -1877,7 +1883,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 'datePublished'   => $published,
                 'dateModified'    => $modified,
                 'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
-                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 522. The industry total is published monthly (Table 1c).',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and peer-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC group 522. The industry total is published monthly (Table A1b).',
                 'keywords'        => 'freight forwarder insolvency, logistics company insolvency statistics, customs broker insolvencies 2026, SIC 522 insolvency statistics, UK',
                 'isAccessibleForFree'  => true,
                 'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
@@ -1892,6 +1898,70 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 '@type'      => 'FAQPage',
                 '@id'        => $ff_page_url . '#faq',
                 'mainEntity' => $ff_faq_main_entities,
+            ),
+        );
+    }
+
+    if ( 'retail-insolvency-statistics' === $slug ) {
+        $rt_page_url = home_url( '/data/retail-insolvency-statistics/' );
+        $rt_faq_items = array(
+            array(
+                'q' => 'How many UK retail businesses become insolvent each year?',
+                'a' => '1,962 companies in SIC division 47, retail trade, entered insolvency in England and Wales in 2025, down from the 2023 peak of 2,218 but 50% above the 1,308 recorded in 2019. Source: Insolvency Service, Table A1b.',
+            ),
+            array(
+                'q' => 'Are retail insolvencies falling in 2026?',
+                'a' => 'Yes. There were 852 insolvencies between January and June 2026 against 1,006 in the same months of 2025, a fall of 15.3%, and the rolling 12-month total fell 4.5% to 1,808. Both measures point the same way for the first time since the 2022-2023 surge.',
+            ),
+            array(
+                'q' => 'Which part of retail is struggling most?',
+                'a' => 'By percentage change, information and communication equipment retail fell hardest in 2026, down 57.7% from a small base. But the two largest sub-sectors by volume, other specialised-goods retail and non-store retail, both fell by a more moderate 10 to 12%. Household equipment retail was the only sub-sector to rise.',
+            ),
+            array(
+                'q' => 'Does this include motor dealers or wholesalers?',
+                'a' => 'No. This page counts SIC division 47, retail trade except of motor vehicles and motorcycles. Motor vehicle and motorcycle retail and repair (SIC division 45) and wholesale trade (SIC division 46) are recorded under separate codes within the same section.',
+            ),
+            array(
+                'q' => 'Do the figures cover the whole UK?',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+            ),
+        );
+        $rt_faq_main_entities = array();
+        foreach ( $rt_faq_items as $item ) {
+            $rt_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Retail Sector Insolvency Statistics',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for retail trade except of motor vehicles and motorcycles (SIC division 47), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016, with a sub-sector breakdown across all nine SIC groups within the division (471 to 479) and comparison against motor trade (SIC 45), wholesale trade (SIC 46) and the wholesale, retail and motor trade section overall (SIC G). Covers general and specialised stores, household goods, cultural and recreation goods, market stalls, and online and non-store retail. Excludes motor vehicle and motorcycle retail and repair, and wholesale trade. Source: Insolvency Service and Companies House.',
+                'url'              => $rt_page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01-01/2026-06-30',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and sub-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC division 47. The industry total is published monthly (Table A1b).',
+                'keywords'        => 'retail insolvency statistics, UK retailer insolvency 2026, high street business failures, SIC 47 insolvency statistics, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Retail company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Sub-sector shares within retail trade (SIC 47)',
+                ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $rt_page_url . '#faq',
+                'mainEntity' => $rt_faq_main_entities,
             ),
         );
     }

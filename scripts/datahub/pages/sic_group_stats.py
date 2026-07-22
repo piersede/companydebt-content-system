@@ -1,6 +1,6 @@
 """Generate single-SIC-sector insolvency data pages for the data hub.
 
-Reusable engine for any sector with a clean 3-digit SIC group in Table 1c
+Reusable engine for any sector with a clean 3-digit SIC group in Table A1b
 (the Insolvency Service's by-industry table): one config entry, one page. This
 is the generic version of the bespoke Construction page in sector_pages.py —
 use this for every new sector instead of hand-rolling a builder, unless the
@@ -8,7 +8,7 @@ sector needs a bespoke sub-sector breakdown like Construction has.
 
 Leads with the CURRENT picture (year-to-date vs the same months last year,
 rolling 12 months, latest single month) rather than the last full calendar
-year — Table 1c publishes the industry breakdown monthly (through the latest
+year — Table A1b publishes the industry breakdown monthly (through the latest
 headline month), not quarterly as earlier drafts of this page claimed; only
 the supplementary procedure-split tables are quarterly. The full-year annual
 total is still shown, but as trailing context, not the headline.
@@ -104,7 +104,7 @@ SECTORS = {
              "145 against 144 a year earlier, also up slightly."),
             ("Manufacturing as a whole fell 8.5% over the same months, from "
              "1,013 to 927. These are Company Debt calculations from Insolvency "
-             "Service Table 1c data."),
+             "Service Table A1b data."),
             ("Furniture is no longer just standing still, it is drifting the "
              "wrong way while the trade around it improves. 2025 closed at 143, "
              "29% above the 111 recorded in 2019."),
@@ -334,7 +334,7 @@ SECTORS = {
             "The figures are insolvency volumes, not a failure rate. They are not "
             "adjusted for the number of active furniture manufacturers, so a flat "
             "count does not by itself mean a flat risk of failure.",
-            "The SIC 310 figures come from Table 1c and are not seasonally "
+            "The SIC 310 figures come from Table A1b and are not seasonally "
             "adjusted, even though the Insolvency Service does seasonally "
             "adjust parts of its headline England and Wales series. The "
             "latest month is provisional and can be revised.",
@@ -377,7 +377,7 @@ SECTORS = {
                 "a": ("143 furniture-manufacturing companies entered insolvency in "
                       "England and Wales in 2025, against 139 in 2024. The series "
                       "peak was 163 in 2023, and the pre-pandemic figure was 111 in "
-                      "2019. Source: Insolvency Service, Table 1c."),
+                      "2019. Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are furniture insolvencies rising in 2026?",
@@ -402,14 +402,14 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England and "
+                "a": ("No. The industry breakdown in Table A1b covers England and "
                       "Wales only. Scotland and Northern Ireland run separate "
                       "insolvency regimes and are reported separately."),
             },
         ],
         "citation": ('Company Debt. (2026). "UK Furniture Manufacturing Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Furniture manufacturing sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside manufacturing generally. See also the '
@@ -541,7 +541,7 @@ SECTORS = {
         ],
         "citation": ("CompanyDebt. (2026). UK Restaurant Insolvency Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
+                     "company insolvency statistics by industry (Table A1b)."),
         "related": ('Restaurants sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside accommodation and food service generally. See also '
@@ -742,7 +742,7 @@ SECTORS = {
         ],
         "citation": ("CompanyDebt. (2026). UK Road Haulage Insolvency Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
+                     "company insolvency statistics by industry (Table A1b)."),
         "related": ('Road haulage sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside transportation and storage generally. See also the '
@@ -786,7 +786,7 @@ SECTORS = {
              "12-month total fell from 332 to 300, down 9.6%."),
             ("Insolvencies across employment activities as a whole fell "
              "11.7% over the same period. These are Company Debt "
-             "calculations from Insolvency Service Table 1c data."),
+             "calculations from Insolvency Service Table A1b data."),
             ("The gap between those two numbers is the story. A 24.9% fall "
              "and an 11.7% fall cannot both be the underlying rate of "
              "improvement: the year-to-date figure is measured against a "
@@ -1012,7 +1012,7 @@ SECTORS = {
             "here more than on most pages: thousands of agencies were incorporated "
             "during the 2021 and 2022 hiring boom, so a rising count could reflect a "
             "larger population as much as a riskier one.",
-            "The SIC 781 figures come from Table 1c and are not seasonally adjusted. "
+            "The SIC 781 figures come from Table A1b and are not seasonally adjusted. "
             "The Insolvency Service seasonally adjusts parts of its headline England "
             "and Wales series where it finds seasonality, but that adjustment does "
             "not apply to the industry figures used here. The latest month is "
@@ -1057,7 +1057,7 @@ SECTORS = {
                 "a": ("345 permanent-placement recruitment agencies entered "
                       "insolvency in England and Wales in 2025, the highest in the "
                       "series and up from 295 in 2024. The pre-pandemic figure was "
-                      "149 in 2019. Source: Insolvency Service, Table 1c."),
+                      "149 in 2019. Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are recruitment agency insolvencies falling in 2026?",
@@ -1095,7 +1095,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Recruitment Agency Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('The clearest contrast is with '
                     '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary staffing agency insolvency statistics</a> '
                     '(SIC 782), which are rising as permanent placement falls. Recruitment also sits within the wider '
@@ -1144,7 +1144,7 @@ SECTORS = {
             ("The honest reading is a renewed deterioration from a level "
              "that was already high: 2025 set a new series peak of 176. "
              "These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
         ],
         "divergence": {
             "heading": "Temporary staffing is moving against the wider recruitment sector",
@@ -1191,7 +1191,7 @@ SECTORS = {
             "A record year does not mean every corner of the market weakened at "
             "once. SIC 782 lumps together the agency supplying warehouse shifts, "
             "the one placing office temps, the one covering nursing rotas and the "
-            "one finding supply teachers, and Table 1c does not separate them. The "
+            "one finding supply teachers, and Table A1b does not separate them. The "
             "peak is real. It is just not evenly spread."
         ),
         "pressure_heading": "Why temporary staffing agencies remain financially exposed",
@@ -1332,7 +1332,7 @@ SECTORS = {
             "adjusted for the number of active temporary staffing companies, so "
             "the year-to-date and rolling 12-month comparisons are a better guide "
             "than any single month.",
-            "The SIC 782 figures come from Table 1c and are not seasonally "
+            "The SIC 782 figures come from Table A1b and are not seasonally "
             "adjusted. The Insolvency Service seasonally adjusts parts of its "
             "headline England and Wales series where it finds seasonality, but "
             "that adjustment does not apply to the industry figures used here. The "
@@ -1340,7 +1340,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Temporary Staffing Agency Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('The clearest contrast is with '
                     '<a href="/data/recruitment-agency-insolvency-statistics/">recruitment agency insolvency statistics</a> '
                     '(SIC 781, permanent placement), which are falling as temporary staffing rises. '
@@ -1393,7 +1393,7 @@ SECTORS = {
              "essentially unchanged."),
             ("The motor trade as a whole fell 4.3% over the same months. "
              "These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The two measures that used to conflict sharply are now much "
              "closer together. The rolling 12 months still contains the "
              "second half of 2025, which made that year the worst on "
@@ -1607,7 +1607,7 @@ SECTORS = {
             "The figures are insolvency volumes, not a failure rate. They are not "
             "adjusted for the number of active garages, so they cannot be read as "
             "the chance of any given garage failing.",
-            "The SIC 452 figures come from Table 1c and are not seasonally adjusted. "
+            "The SIC 452 figures come from Table A1b and are not seasonally adjusted. "
             "The Insolvency Service seasonally adjusts parts of its headline England "
             "and Wales series where it finds seasonality, but that adjustment does "
             "not apply to the industry figures used here. The latest month is "
@@ -1651,7 +1651,7 @@ SECTORS = {
                 "a": ("293 motor vehicle repair businesses entered insolvency in "
                       "England and Wales in 2025, the highest in the series and up "
                       "from 251 in 2024. The pre-pandemic figure was 164 in 2019. "
-                      "Source: Insolvency Service, Table 1c."),
+                      "Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are garage insolvencies rising or falling in 2026?",
@@ -1687,7 +1687,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Motor Vehicle Repair Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Motor vehicle repair sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside wholesale and retail trade generally. See also the '
@@ -1733,7 +1733,7 @@ SECTORS = {
              "landscape services as a whole fell 22.0% over the same "
              "period, from 159 to 124."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month total is the one that should give "
              "pause. It rose from 155 to 167, up 7.7%. On the year-to-date "
              "measure cleaning is easing slightly; on the longer measure "
@@ -1966,7 +1966,7 @@ SECTORS = {
             "adjusted for the number of active cleaning companies. Barriers to entry "
             "are very low in this trade, so the population changes quickly and a "
             "flat count does not necessarily mean a flat risk.",
-            "The SIC 812 figures come from Table 1c and are not seasonally adjusted. "
+            "The SIC 812 figures come from Table A1b and are not seasonally adjusted. "
             "The Insolvency Service seasonally adjusts parts of its headline England "
             "and Wales series where it finds seasonality, but that adjustment does "
             "not apply to the industry figures used here. The latest month is "
@@ -2011,7 +2011,7 @@ SECTORS = {
                 "a": ("172 cleaning contractors entered insolvency in England and "
                       "Wales in 2025, the same as in 2024 and just above the 171 in "
                       "2023. The pre-pandemic figure was 90 in 2019. Source: "
-                      "Insolvency Service, Table 1c."),
+                      "Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are cleaning company insolvencies rising in 2026?",
@@ -2048,7 +2048,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Cleaning Company Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Cleaning contractors sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside administrative and support services generally. See also the '
@@ -2094,7 +2094,7 @@ SECTORS = {
              "145, down 4.6%. That is a genuine improvement and it "
              "deserves to be said plainly before the qualification."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The qualification is the company hotels are keeping. "
              "Accommodation as a whole fell 19.9%, from 136 to 109. "
              "Holiday and short-stay lets fell from 18 to 6, and other "
@@ -2350,7 +2350,7 @@ SECTORS = {
             "restaurant is still counted once, under whichever code it registered.",
             "The 2019 figure deserves a note of its own. Hotel insolvencies jumped "
             "from 96 in 2018 to 144 in 2019, a 50% rise before the pandemic. Table "
-            "1c does not break down far enough to explain that, and we have not "
+            "A1b does not break down far enough to explain that, and we have not "
             "attributed it. It does mean the pre-pandemic comparison used elsewhere "
             "on this site is a weaker yardstick here than on other pages, and it "
             "should be treated with care.",
@@ -2365,7 +2365,7 @@ SECTORS = {
             "you nothing about whether the company that ran it survived.",
             "The figures are insolvency volumes, not a failure rate. They are not "
             "adjusted for the number of active hotel companies.",
-            "The SIC 551 figures come from Table 1c and are not seasonally "
+            "The SIC 551 figures come from Table A1b and are not seasonally "
             "adjusted, which matters more for hotels than for most sectors given "
             "how seasonal the trade is. The Insolvency Service seasonally adjusts "
             "parts of its headline England and Wales series where it finds "
@@ -2414,7 +2414,7 @@ SECTORS = {
                       "insolvency in England and Wales in 2025, the highest "
                       "in the series and up from 136 in 2024. The 2019 "
                       "figure was 144. Source: Insolvency Service, Table "
-                      "1c."),
+                      "A1b."),
             },
             {
                 "q": "Are hotel insolvencies falling in 2026?",
@@ -2451,7 +2451,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Hotel Insolvency Statistics." '
                      'Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('The most useful comparison is with '
                     '<a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> '
                     '(SIC 561), the other half of hospitality. Hotels also sit within the wider '
@@ -2856,7 +2856,7 @@ SECTORS = {
              "from 725 to 653, because IT and computer consultancy is not "
              "a small corner of that section, it is most of it."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month figure tells a slightly gentler version "
              "of the same story. At 858 cases for the year to June 2026, "
              "against 880 for the year to June 2025, the sector's decline "
@@ -3064,7 +3064,7 @@ SECTORS = {
             "adjusted for the number of active IT consultancies, which has grown "
             "substantially since 2019, so a high count does not, on its own, mean "
             "a high rate of failure.",
-            "The SIC 620 figures come from Table 1c and are not seasonally "
+            "The SIC 620 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -3101,7 +3101,7 @@ SECTORS = {
                       "insolvency in England and Wales in 2025, against 906 in "
                       "2024, the two highest years the sector has recorded. The "
                       "pre-pandemic figure was 550 in 2019. Source: Insolvency "
-                      "Service, Table 1c."),
+                      "Service, Table A1b."),
             },
             {
                 "q": "Are IT consultancy insolvencies rising in 2026?",
@@ -3130,14 +3130,14 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England and "
+                "a": ("No. The industry breakdown in Table A1b covers England and "
                       "Wales only. Scotland and Northern Ireland run separate "
                       "insolvency regimes and are reported separately."),
             },
         ],
         "citation": ('Company Debt. (2026). "UK IT and Computer Consultancy Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('IT and computer consultancy sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside information and communication generally. See also the '
@@ -3180,7 +3180,7 @@ SECTORS = {
              "909, so management consultancy, at a third of the section's "
              "total, is easing less than the section around it."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month figure has actually turned, if only "
              "just: 655 cases for the year to June 2026 against 647 for "
              "the year to June 2025, up 1.2%. However the short-term "
@@ -3385,7 +3385,7 @@ SECTORS = {
             "not adjusted for the number of active management consultancies, "
             "which expanded significantly after 2020, so a high count does not, "
             "on its own, mean a high rate of failure.",
-            "The SIC 702 figures come from Table 1c and are not seasonally "
+            "The SIC 702 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -3421,7 +3421,7 @@ SECTORS = {
                 "a": ("670 management consultancy companies entered insolvency in "
                       "England and Wales in 2025, against 665 in 2024. The series "
                       "peak was 708 in 2023, and the pre-pandemic figure was 398 "
-                      "in 2019. Source: Insolvency Service, Table 1c."),
+                      "in 2019. Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are management consultancy insolvencies rising in 2026?",
@@ -3450,14 +3450,14 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England and "
+                "a": ("No. The industry breakdown in Table A1b covers England and "
                       "Wales only. Scotland and Northern Ireland run separate "
                       "insolvency regimes and are reported separately."),
             },
         ],
         "citation": ('Company Debt. (2026). "UK Management Consultancy Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Management consultancy sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside professional, scientific and technical activities '
@@ -3500,7 +3500,7 @@ SECTORS = {
              "as a whole fell 7.5% over the same months, from 983 to 909, "
              "so this trade held up better than the section around it."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month figure makes the divergence clearer. "
              "At 329 cases for the year to June 2026, against 311 for the "
              "year to June 2025, insolvencies rose 5.8%, while the "
@@ -3688,7 +3688,7 @@ SECTORS = {
             "not adjusted for the number of active practices, which has also "
             "grown since 2019, so a rising count does not, on its own, prove a "
             "rising rate of failure.",
-            "The SIC 711 figures come from Table 1c and are not seasonally "
+            "The SIC 711 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -3725,7 +3725,7 @@ SECTORS = {
                       "England and Wales in 2025, the highest total on record "
                       "and the fifth consecutive annual rise since 2020. The "
                       "pre-pandemic figure was 182 in 2019. Source: Insolvency "
-                      "Service, Table 1c."),
+                      "Service, Table A1b."),
             },
             {
                 "q": "Are architectural and engineering consultancy insolvencies still rising in 2026?",
@@ -3756,14 +3756,14 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England and "
+                "a": ("No. The industry breakdown in Table A1b covers England and "
                       "Wales only. Scotland and Northern Ireland run separate "
                       "insolvency regimes and are reported separately."),
             },
         ],
         "citation": ('Company Debt. (2026). "UK Architectural and Engineering '
                      'Consultancy Insolvency Statistics." Analysis of Insolvency '
-                     "Service company insolvency data by industry (Table 1c). "
+                     "Service company insolvency data by industry (Table A1b). "
                      "CompanyDebt.com."),
         "related": ('Architectural and engineering consultancy sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
@@ -3811,7 +3811,7 @@ SECTORS = {
              "the same amount, 16.9%, because personal care services is "
              "not a small part of that section, it is nearly all of it."),
             ("These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month figure confirms the same direction. "
              "At 911 cases for the year to June 2026, against 1,031 for "
              "the year to June 2025, insolvencies fell 11.6%. Unlike the "
@@ -3965,7 +3965,7 @@ SECTORS = {
             "not adjusted for the number of active personal-care businesses, "
             "so a falling count does not, on its own, mean the underlying "
             "trade is shrinking at the same rate.",
-            "The SIC 960 figures come from Table 1c and are not seasonally "
+            "The SIC 960 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -4001,7 +4001,7 @@ SECTORS = {
                       "related services, entered insolvency in England and "
                       "Wales in 2025, down from 1,065 in 2024 and well below "
                       "the 2023 peak of 1,286. The pre-pandemic figure was 713 "
-                      "in 2019. Source: Insolvency Service, Table 1c."),
+                      "in 2019. Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are personal care services insolvencies falling in 2026?",
@@ -4031,7 +4031,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England "
+                "a": ("No. The industry breakdown in Table A1b covers England "
                       "and Wales only. Scotland and Northern Ireland run "
                       "separate insolvency regimes and are reported "
                       "separately."),
@@ -4039,7 +4039,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Hair, Beauty and Personal Care '
                      'Insolvency Statistics." Analysis of Insolvency Service company '
-                     "insolvency data by industry (Table 1c). CompanyDebt.com."),
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Personal care services sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside other service activities generally. See also the '
@@ -4081,7 +4081,7 @@ SECTORS = {
              "whole rose a slower 2.3%, from 213 to 218."),
             ("Sports facilities, at 42% of the section, are now rising "
              "noticeably faster than the section around them. These are "
-             "Company Debt calculations from Insolvency Service Table 1c "
+             "Company Debt calculations from Insolvency Service Table A1b "
              "data."),
             ("The rolling 12-month figure shows the same gap: 201 cases for "
              "the year to June 2026 against 190 for the year to June 2025, "
@@ -4261,7 +4261,7 @@ SECTORS = {
             "are not adjusted for the number of active sports and leisure "
             "operators, so the count cannot show whether failure has become "
             "more or less likely for a given operator.",
-            "The SIC 931 figures come from Table 1c and are not seasonally "
+            "The SIC 931 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -4297,7 +4297,7 @@ SECTORS = {
                       "entered insolvency in England and Wales in both 2024 "
                       "and 2025, below the 2023 peak of 236 but 29% above the "
                       "151 recorded in 2019. Source: Insolvency Service, "
-                      "Table 1c."),
+                      "Table A1b."),
             },
             {
                 "q": "Are sports club and facility insolvencies rising in 2026?",
@@ -4327,7 +4327,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England "
+                "a": ("No. The industry breakdown in Table A1b covers England "
                       "and Wales only. Scotland and Northern Ireland run "
                       "separate insolvency regimes and are reported "
                       "separately."),
@@ -4335,7 +4335,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Sports Club and Facility Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Sports clubs and facilities sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside arts, entertainment and recreation generally. See '
@@ -4380,7 +4380,7 @@ SECTORS = {
              "rising faster than the section around them, though from a "
              "small base where a handful of cases moves the percentage a "
              "long way. These are Company Debt calculations from Insolvency "
-             "Service Table 1c data."),
+             "Service Table A1b data."),
             ("The rolling 12-month figure tells a gentler story: 101 cases "
              "for the year to June 2026 against 91 for the year to June "
              "2025, up 11.0%, below the section's 21.8% rise over the same "
@@ -4568,7 +4568,7 @@ SECTORS = {
             "are not adjusted for the number of active medical and dental "
             "practices, so a rising count does not, on its own, prove a "
             "rising rate of failure.",
-            "The SIC 862 figures come from Table 1c and are not seasonally "
+            "The SIC 862 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -4605,7 +4605,7 @@ SECTORS = {
                       "practice activities, entered insolvency in England "
                       "and Wales in 2025, down slightly from the series high "
                       "of 106 in 2024 but 33% above the 70 recorded in 2019. "
-                      "Source: Insolvency Service, Table 1c."),
+                      "Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are medical and dental practice insolvencies rising in 2026?",
@@ -4637,7 +4637,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers England "
+                "a": ("No. The industry breakdown in Table A1b covers England "
                       "and Wales only. Scotland and Northern Ireland run "
                       "separate insolvency regimes and are reported "
                       "separately."),
@@ -4645,7 +4645,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Medical and Dental Practice Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Medical and dental practices sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside human health and social work activities generally. '
@@ -4689,7 +4689,7 @@ SECTORS = {
              "months."),
             ("This trade, at 28% of the section, is rising more than seven "
              "times as fast as the section around it. These are Company "
-             "Debt calculations from Insolvency Service Table 1c data."),
+             "Debt calculations from Insolvency Service Table A1b data."),
             ("The rolling 12-month figure confirms the acceleration. At 139 "
              "cases for the year to June 2026 against 121 for the year to "
              "June 2025, insolvencies rose 14.9%, against a 7.6% rise for "
@@ -4860,7 +4860,7 @@ SECTORS = {
             "are not adjusted for the number of active creative and arts "
             "businesses, so a rising count does not, on its own, prove a "
             "rising rate of failure.",
-            "The SIC 900 figures come from Table 1c and are not seasonally "
+            "The SIC 900 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -4898,7 +4898,7 @@ SECTORS = {
                       "England and Wales in 2025, up from 123 in 2024. The "
                       "series peak was 144 in 2023, and the pre-pandemic "
                       "figure was 78 in 2019. Source: Insolvency Service, "
-                      "Table 1c."),
+                      "Table A1b."),
             },
             {
                 "q": "Are creative and arts insolvencies rising in 2026?",
@@ -4931,7 +4931,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers "
+                "a": ("No. The industry breakdown in Table A1b covers "
                       "England and Wales only. Scotland and Northern "
                       "Ireland run separate insolvency regimes and are "
                       "reported separately."),
@@ -4939,7 +4939,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Creative, Arts and Entertainment '
                      'Insolvency Statistics." Analysis of Insolvency Service company '
-                     "insolvency data by industry (Table 1c). CompanyDebt.com."),
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Creative, arts and entertainment sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside arts, entertainment and recreation generally. See '
@@ -4981,7 +4981,7 @@ SECTORS = {
              "whole rose 2.3% over the same months."),
             ("This trade is moving in the opposite direction from the "
              "section it sits in. These are Company Debt calculations from "
-             "Insolvency Service Table 1c data."),
+             "Insolvency Service Table A1b data."),
             ("The rolling 12-month figure shows a gentler version of the "
              "same pull-back: 113 cases for the year to June 2026 against "
              "117 for the year to June 2025, down 3.4%, against a 7.6% rise "
@@ -5150,7 +5150,7 @@ SECTORS = {
             "are not adjusted for the number of active amusement and "
             "recreation operators, so the count cannot show whether "
             "failure has become more or less likely for a given operator.",
-            "The SIC 932 figures come from Table 1c and are not seasonally "
+            "The SIC 932 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -5187,7 +5187,7 @@ SECTORS = {
                       "recreation activities, entered insolvency in England "
                       "and Wales in 2025, the series peak and the third "
                       "consecutive annual rise, 38% above the 89 recorded "
-                      "in 2019. Source: Insolvency Service, Table 1c."),
+                      "in 2019. Source: Insolvency Service, Table A1b."),
             },
             {
                 "q": "Are amusement and recreation insolvencies still rising in 2026?",
@@ -5218,7 +5218,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers "
+                "a": ("No. The industry breakdown in Table A1b covers "
                       "England and Wales only. Scotland and Northern "
                       "Ireland run separate insolvency regimes and are "
                       "reported separately."),
@@ -5226,7 +5226,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Amusement and Recreation Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Amusement and recreation sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside arts, entertainment and recreation generally. See '
@@ -5275,7 +5275,7 @@ SECTORS = {
              "together, concentrated almost entirely in companies that buy "
              "and sell property in their own name, not in this trade. "
              "These are Company Debt calculations from Insolvency Service "
-             "Table 1c data."),
+             "Table A1b data."),
             ("The rolling 12-month figure confirms this trade's own, much "
              "calmer picture: 274 cases for the year to June 2026 against "
              "280 a year earlier, down a modest 2.1%."),
@@ -5451,7 +5451,7 @@ SECTORS = {
             "are not adjusted for the number of active real estate letting "
             "and investment companies, so a rising count does not, on its "
             "own, prove a rising rate of failure.",
-            "The SIC 682 figures come from Table 1c and are not seasonally "
+            "The SIC 682 figures come from Table A1b and are not seasonally "
             "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
@@ -5488,7 +5488,7 @@ SECTORS = {
                       "and investment, entered insolvency in England and "
                       "Wales in 2025, a series high, 62% above the 179 "
                       "recorded in 2019. Source: Insolvency Service, Table "
-                      "1c."),
+                      "A1b."),
             },
             {
                 "q": "Are real estate letting and investment insolvencies rising in 2026?",
@@ -5520,7 +5520,7 @@ SECTORS = {
             },
             {
                 "q": "Do the figures cover the whole UK?",
-                "a": ("No. The industry breakdown in Table 1c covers "
+                "a": ("No. The industry breakdown in Table A1b covers "
                       "England and Wales only. Scotland and Northern "
                       "Ireland run separate insolvency regimes and are "
                       "reported separately."),
@@ -5528,7 +5528,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Real Estate Letting and Investment '
                      'Insolvency Statistics." Analysis of Insolvency Service company '
-                     "insolvency data by industry (Table 1c). CompanyDebt.com."),
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Real estate letting and investment sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside real estate activities generally, and the '
@@ -5908,6 +5908,303 @@ SECTORS = {
                     '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
 
+    "retail-insolvency-statistics": {
+        "wp_id": 80679,
+        "sic_code": "47",
+        "sic_code_kind": "division",
+        "division_code": "47",
+        "parent_section_code": "G",
+        "parent_section_label": "wholesale and retail trade and repair of motor vehicles",
+        "h1a": "UK Retail Sector",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "retail sector",
+        "keyword": "retail",
+        "singular": "retail business",
+        "plural": "retailers",
+        "scope_description": ("the retail sale of goods to the public: general and "
+                              "specialised stores, household goods, cultural and "
+                              "recreation goods, market stalls, and online and "
+                              "non-store retail"),
+        "exclusion_note": ("Motor vehicle and motorcycle retail and repair, and "
+                           "wholesale trade, are recorded under separate codes "
+                           "within the same section and are not included here."),
+        "hero_note": ("Retail company insolvencies fell 15.3% year to date in 2026, "
+                      "the clearest sign yet that the sector's 2022-2023 failure wave "
+                      "has passed its peak. Retail remains 50% above 2019, but every "
+                      "measure on this page now points the same way: down."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "50% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "1,962 vs 1,308"},
+            {"value": "12% below 2023 peak", "label": "2025 vs the series high", "sub": "1,962 vs 2,218"},
+        ],
+        "comparison_intro": [
+            ("There were 852 retail company insolvencies in England and Wales "
+             "between January and June 2026, against 1,006 in the same six "
+             "months of 2025, a fall of 15.3%. Wholesale, retail and motor "
+             "trade as a whole fell 14.3% over the same months."),
+            ("Retail, at 52% of that section, is falling slightly faster "
+             "than the section around it. These are Company Debt "
+             "calculations from Insolvency Service Table A1b data."),
+            ("The rolling 12-month figure confirms the same direction at a "
+             "gentler pace: 1,808 cases for the year to June 2026 against "
+             "1,893 for the year to June 2025, down 4.5%, against a 5.4% "
+             "fall for the section overall."),
+            ("Both measures now point the same way, after three years in "
+             "which retail insolvencies only climbed."),
+        ],
+        "divergence": {
+            "heading": "Nine very different retail trades, one shared direction",
+            "caption": ("Retail sub-sectors against the wider wholesale, retail "
+                        "and motor trade section, England and Wales"),
+            "intro": [
+                ("Retail splits into nine sub-sectors with very different "
+                 "fortunes in 2026. Household equipment retail, covering "
+                 "furniture and homeware specialists, is the only one "
+                 "rising, up 5.3% year to date."),
+                ("Every other sub-sector fell. Information and "
+                 "communication equipment retail fell hardest, down 57.7%, "
+                 "though from a small base of a few dozen cases a year. "
+                 "Market stalls fell 41.7%, also from a small base."),
+                ("The two largest sub-sectors by volume, other "
+                 "specialised-goods retail (clothing, footwear, pharmacies "
+                 "and similar, the largest single trade) and non-store "
+                 "retail (mail order and online), both fell by a more "
+                 "moderate 10.0% and 12.3%."),
+                ("Retail's own 15.3% fall sits between the motor trade's "
+                 "gentler 4.3% fall and wholesale's steeper 17.9% fall, in "
+                 "a section that eased 14.3% overall. This looks like a "
+                 "section retreating broadly together, not one trade "
+                 "dragging the rest down."),
+            ],
+            "peers": [
+                {"code": "47", "kind": "division", "label": "Retail trade overall (SIC 47)", "emphasise": True},
+                {"code": "471", "kind": "group", "label": "Non-specialised stores (SIC 471)"},
+                {"code": "472", "kind": "group", "label": "Food, beverage & tobacco specialists (SIC 472)"},
+                {"code": "473", "kind": "group", "label": "Automotive fuel specialists (SIC 473)"},
+                {"code": "474", "kind": "group", "label": "Electronics & IT equipment retail (SIC 474)"},
+                {"code": "475", "kind": "group", "label": "Household equipment retail (SIC 475)"},
+                {"code": "476", "kind": "group", "label": "Cultural & recreation goods retail (SIC 476)"},
+                {"code": "477", "kind": "group", "label": "Other specialised-goods retail (SIC 477)"},
+                {"code": "478", "kind": "group", "label": "Market stalls (SIC 478)"},
+                {"code": "479", "kind": "group", "label": "Non-store retail, incl. online (SIC 479)"},
+                {"code": "45", "kind": "division", "label": "Motor trade (SIC 45)"},
+                {"code": "46", "kind": "division", "label": "Wholesale trade (SIC 46)"},
+                {"code": "G", "kind": "section", "label": "Wholesale, retail & motor trade overall (SIC G)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Retail insolvencies rose steadily before the pandemic, from "
+             "957 in 2016 to 1,308 by 2019. 2020 and 2021 held below that "
+             "level, 877 and 930, as government support and restricted "
+             "winding-up petitions held the normal cycle back."),
+            ("The rise from there was severe. 1,803 in 2022, then a series "
+             "peak of 2,218 in 2023, a 23% jump in a single year, as energy "
+             "costs, business rates and post-pandemic cost inflation landed "
+             "on the sector at once."),
+            ("2024 and 2025 both eased from that peak, to 1,921 and 1,962, "
+             "and 2026's opening months have continued the retreat. Five "
+             "years on from the pandemic, retail remains 50% above its 2019 "
+             "level, but the worst of the recent wave looks to be behind "
+             "it."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a sharp post-pandemic surge "
+            "that peaked in 2023, followed by two years of easing that "
+            "2026 has so far continued."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are down "
+            "on the year before, and by more than most other trades on "
+            "this site. This reads as a genuine retreat from the 2023 "
+            "peak, not just a quieter few months."
+        ),
+        "pressure_heading": "Why retail insolvencies surged, and why they are now easing",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture "
+             "of the conditions retailers have been trading in, not a "
+             "claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Labour costs have kept rising even as insolvencies ease",
+                "body": [
+                    ("The National Living Wage rose to £12.21 an hour from "
+                     "April 2025 and to £12.71 from April 2026, a direct "
+                     "cost increase for a sector built on part-time and "
+                     "minimum-wage retail staff."),
+                    ("Employer National Insurance changes taking effect "
+                     "from April 2025 raised the rate to 15% above a "
+                     "lowered secondary threshold, compounding the wage "
+                     "rise for any retailer with more than a handful of "
+                     "staff."),
+                ],
+            },
+            {
+                "h3": "A revised business rates system has eased the burden for smaller stores",
+                "body": [
+                    ("From April 2026, a revised business rates system "
+                     "introduced lower multipliers for qualifying retail, "
+                     "hospitality and leisure premises with a rateable "
+                     "value below £500,000, reducing the fixed-cost burden "
+                     "for many smaller and mid-sized stores."),
+                    ("Larger premises in prime locations have not seen the "
+                     "same relief: some operators reported rateable-value "
+                     "increases of up to 400% at the 2026 revaluation, "
+                     "keeping pressure concentrated at the top of the "
+                     "market even as it eases lower down."),
+                ],
+            },
+            {
+                "h3": "The shift to online continues to shrink the physical store estate",
+                "body": [
+                    ("More than 13,000 chain stores closed across Great "
+                     "Britain in 2025 alone, continuing a run that saw a "
+                     "net loss of roughly 3,800 chain stores in 2024. Much "
+                     "of this contraction happens through lease expiry and "
+                     "quiet closure, not formal insolvency."),
+                    ("That matters for reading this page: a shrinking store "
+                     "estate can reduce the pool of companies at risk of "
+                     "insolvency over time, one plausible reason the count "
+                     "is now falling even though the structural pressure on "
+                     "physical retail has not gone away."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the retail cases we see, the trigger is almost always a "
+             "lease or a stock-funding facility, not a single bad trading "
+             "month. A shop can have a full till most days and still be "
+             "insolvent once rent, rates and the National Living Wage are "
+             "covered."),
+            ("Multi-site retailers fail differently to single shops. One "
+             "loss-making unit rarely brings a chain down on its own, but a "
+             "lease renewal or a landlord refusing a rent-free period at "
+             "the wrong moment can force the whole group's hand."),
+            ("Stock is the trap directors miss most often. Retail ties up "
+             "cash in inventory that a service business never carries, and "
+             "a supplier tightening credit terms during a weak season can "
+             "turn a stock problem into a cash problem within weeks."),
+            ("We would not start with footfall or online sales alone. We "
+             "would look at the lease schedule against trading performance "
+             "store by store, what credit terms suppliers are actually "
+             "offering right now, and what is owed to HMRC."),
+            ("A retailer with a sound core estate and a genuinely fixable "
+             "cost or lease problem usually has more options than the "
+             "numbers suggest, a CVA to shed the worst leases, a pre-pack "
+             "sale of the trading business, or support accessed early, "
+             "provided the conversation starts before a creditor forces "
+             "the timing."),
+        ],
+        "notes": [
+            "SIC division 47 covers retail trade except of motor vehicles "
+            "and motorcycles: general stores, food and specialist "
+            "retailers, household goods, and online and non-store retail. "
+            "Motor vehicle and motorcycle retail (SIC division 45) and "
+            "wholesale trade (SIC division 46) are recorded separately "
+            "within the same section.",
+            "This is one of the largest trading divisions on this site, "
+            "and it splits into nine very different sub-sectors, from "
+            "supermarkets to online retailers, each with its own "
+            "trajectory. The sub-sector table above is often where the "
+            "real story sits, not the single headline figure.",
+            "These are company counts, not the number of shops, brands or "
+            "jobs affected. A single insolvent company may operate one "
+            "store or several hundred, and many independent retailers "
+            "trade as sole traders rather than through a company, so this "
+            "page does not capture the whole of high-street distress.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active retail businesses, "
+            "so a falling count does not, on its own, prove that retail "
+            "has become safer to trade in.",
+            "The SIC 47 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular retail "
+             "business is viable. What matters is narrower: how the lease "
+             "schedule compares with store-by-store trading performance, "
+             "what credit terms suppliers are actually offering, and what "
+             "is genuinely owed to HMRC."),
+            ("Plenty of retailers in difficulty are otherwise sound "
+             "businesses carrying a small number of loss-making leases or "
+             "a stock-funding gap, and both are usually fixable if "
+             "addressed early."),
+            ('If you are reading this with a rent quarter-day or a '
+             'supplier payment coming and the cash is not there, the thing '
+             'worth knowing is that the earlier you speak to someone, the '
+             'more room there is to move: a lease renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK retail businesses become insolvent each year?",
+                "a": ("1,962 companies in SIC division 47, retail trade, "
+                      "entered insolvency in England and Wales in 2025, "
+                      "down from the 2023 peak of 2,218 but 50% above the "
+                      "1,308 recorded in 2019. Source: Insolvency Service, "
+                      "Table A1b."),
+            },
+            {
+                "q": "Are retail insolvencies falling in 2026?",
+                "a": ("Yes. There were 852 insolvencies between January "
+                      "and June 2026 against 1,006 in the same months of "
+                      "2025, a fall of 15.3%, and the rolling 12-month "
+                      "total fell 4.5% to 1,808. Both measures point the "
+                      "same way for the first time since the 2022-2023 "
+                      "surge."),
+            },
+            {
+                "q": "Which part of retail is struggling most?",
+                "a": ("By percentage change, information and communication "
+                      "equipment retail fell hardest in 2026, down 57.7% "
+                      "from a small base. But the two largest sub-sectors "
+                      "by volume, other specialised-goods retail and "
+                      "non-store retail, both fell by a more moderate 10 "
+                      "to 12%. Household equipment retail was the only "
+                      "sub-sector to rise."),
+            },
+            {
+                "q": "Does this include motor dealers or wholesalers?",
+                "a": ("No. This page counts SIC division 47, retail trade "
+                      "except of motor vehicles and motorcycles. Motor "
+                      "vehicle and motorcycle retail and repair (SIC "
+                      "division 45) and wholesale trade (SIC division 46) "
+                      "are recorded under separate codes within the same "
+                      "section."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers "
+                      "England and Wales only. Scotland and Northern "
+                      "Ireland run separate insolvency regimes and are "
+                      "reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Retail Sector Insolvency '
+                     'Statistics." Analysis of Insolvency Service company '
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Retail sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside the '
+                    '<a href="/data/motor-vehicle-repair-insolvency-statistics/">motor vehicle repair</a> '
+                    'trade it shares a section with. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+
 }
 
 
@@ -5918,7 +6215,15 @@ def load() -> dict:
 
 
 def group_by_code(ser: dict, code: str) -> dict:
-    return next(g for g in ser["groups"] if g["code"] == code)
+    """Most pages in this family cover a single 3-digit SIC group. A handful
+    (e.g. retail) cover a whole 2-digit division instead, since no single
+    group inside it is representative on its own — falls back to the
+    divisions list so the rest of the pipeline (figures(), charts, etc.)
+    works unchanged either way."""
+    match = next((g for g in ser["groups"] if g["code"] == code), None)
+    if match is not None:
+        return match
+    return next(d for d in ser["divisions"] if d["code"] == code)
 
 
 def section_by_code(ser: dict, code: str) -> dict:
@@ -6169,7 +6474,7 @@ def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
         {f'<p class="cd-hero__scope">{cfg["scope_note"]}</p>' if cfg.get('scope_note') else ''}
         <p class="cd-lede">There were {format_number(f['ytd_current'])} insolvencies among {cfg['plural']} in England and Wales between {sf['ytd_label_and']}, compared with {format_number(f['ytd_prior'])} in the same period of {f['prior_year']}. The rolling 12-month total was {format_number(f['rolling_current'])}, {f['rolling_change_phrase']}.</p>
         {f'<p class="cd-lede">{cfg["hero_note"]}</p>' if cfg.get('hero_note') else ''}
-        <p class="cd-lede">This covers {cfg['scope_description']} (the official industry code is SIC group {cfg['sic_code']}). {cfg['exclusion_note']}</p>
+        <p class="cd-lede">This covers {cfg['scope_description']} (the official industry code is SIC {cfg.get('sic_code_kind', 'group')} {cfg['sic_code']}). {cfg['exclusion_note']}</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
           <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
@@ -6303,7 +6608,7 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
       </div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Latest {cfg['keyword']} insolvency figures, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table 1c')}).</caption>
+          <caption class="cd-table__caption">Latest {cfg['keyword']} insolvency figures, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</caption>
           <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
           <tbody>{rows_html}</tbody>
         </table>
@@ -6328,7 +6633,7 @@ def chart_block(cfg: dict, c: dict, f: dict) -> str:
         <p class="cd-section-intro">{cfg['related']}</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--longrun">{line}</div>
-        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table 1c')}).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</figcaption>
       </figure>
     </section>""")
 
@@ -6370,7 +6675,7 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
         table_html = dedent(f"""\
         <div class="cd-tablewrap">
             <table class="cd-table">
-              <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+              <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table A1b).</caption>
               <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">{cfg['eyebrow'].capitalize()}</th><th scope="col" class="cd-num">{sf['parent_label'].capitalize()} overall</th></tr></thead>
               <tbody>
                 <tr><th scope="row">{sf['ytd_label']} insolvencies</th><td class="cd-num">{format_number(f['ytd_current'])}</td><td class="cd-num">{format_number(sf['parent_ytd_current'])}</td></tr>
@@ -6380,7 +6685,7 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
               </tbody>
             </table>
           </div>
-          <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>""")
+          <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table A1b).</p>""")
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="comparison">
       <div class="cd-section-head">
@@ -6442,7 +6747,7 @@ def divergence_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
           <tbody>{rows_html}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service {cfg.get('source_table', 'Table 1c')} data.</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service {cfg.get('source_table', 'Table A1b')} data.</p>
     </section>""")
 
 
@@ -6617,7 +6922,7 @@ def procedure_block(cfg: dict) -> str:
     receivership) for the latest complete full year, plus a year-on-year
     shift analysis. Sourced from the Insolvency Service's supplementary
     quarterly procedure-by-industry tables — a different workbook to Table
-    1c, so this is populated per sector only where that data has actually
+    A1b, so this is populated per sector only where that data has actually
     been pulled and verified, not assumed.
 
     Base shape is a single-period count+share table (pb['year']). When a
@@ -6836,12 +7141,12 @@ def annual_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
         <p class="cd-section-intro">{sf['trough_note']}</p></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Annual company insolvencies among {cfg['plural']}, England and Wales, not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table 1c')}).</caption>
+          <caption class="cd-table__caption">Annual company insolvencies among {cfg['plural']}, England and Wales, not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</caption>
           <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
           <tbody>{rows}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table 1c')}).</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</p>
     </section>""")
 
 
@@ -6870,11 +7175,11 @@ def source_block(slug: str, cfg: dict, meta: dict) -> str:
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} ({cfg.get('source_table', 'Table 1c')}, by industry).</dd>
+            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} ({cfg.get('source_table', 'Table A1b')}, by industry).</dd>
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
             <dt>Next scheduled release</dt><dd>{meta['next_release_date']}</dd>
-            <dt>Industry breakdown</dt><dd>The industry total by three-digit SIC ({cfg.get('source_table', 'Table 1c')}) runs through the latest headline month. The breakdown by insolvency procedure within each industry comes from {cfg.get('procedure_table', 'the supplementary procedure tables')}.</dd>
+            <dt>Industry breakdown</dt><dd>The industry total by three-digit SIC ({cfg.get('source_table', 'Table A1b')}) runs through the latest headline month. The breakdown by insolvency procedure within each industry comes from {cfg.get('procedure_table', 'Tables A2 to A6')}.</dd>
             {extra_rows}
             <dt>Status</dt><dd>{meta['status']}</dd>
           </dl>

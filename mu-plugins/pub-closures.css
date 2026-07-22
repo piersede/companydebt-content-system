@@ -196,17 +196,24 @@
 .cd-pub-hub .cd-lead { font-size: var(--fs-3); line-height: 1.5; }
 
 /* ── figure / chart card ────────────────────────────────── */
-.cd-pub-hub .cd-figure { margin: 24px 0 48px; }
+.cd-pub-hub .cd-figure { margin: 24px 0 48px; max-width: min(760px, 100%); }
 .cd-pub-hub .cd-figure__card {
   background: var(--cd-surface); border: 1px solid var(--cd-line);
   border-radius: var(--cd-radius-panel); padding: var(--space-6) var(--space-6) var(--space-4);
   box-shadow: var(--cd-shadow-panel);
+  max-width: 100%; overflow: hidden;
 }
 .cd-pub-hub .cd-sec--band .cd-figure__card { box-shadow: var(--cd-shadow-panel); }
 .cd-pub-hub .cd-figure__head { margin: 0 0 var(--space-4); }
 .cd-pub-hub .cd-figure__title { font-family: var(--cd-serif); font-size: var(--fs-3); font-weight: 600; line-height: 1.25; color: var(--cd-ink) !important; margin: 0 0 var(--cd-s1); letter-spacing: -0.01em; }
 .cd-pub-hub .cd-figure__sub { font-size: var(--fs-1); line-height: 1.4; color: var(--cd-muted) !important; margin: 0; letter-spacing: 0.02em; }
-.cd-pub-hub .cd-chart { width: 100%; }
+.cd-pub-hub .cd-chart { width: 100%; max-width: 100%; overflow: hidden; }
+/* The chart engine bakes a pixel width/height onto the <svg> at draw time (see
+   pub-closures.js). If it ever draws against a stale container measurement
+   (WP Rocket delays this script until first interaction, which can race
+   sidebar/font layout), this keeps the chart visually contained and scaled
+   to its card instead of spilling past the column edge. */
+.cd-pub-hub .cd-chart svg { display: block; width: 100%; max-width: 100%; height: auto; }
 .cd-pub-hub figcaption, .cd-pub-hub .cd-figure__cap {
   font-size: var(--fs-1); color: var(--cd-muted); line-height: 1.5;
   margin: var(--cd-s3) 0 0; padding-top: var(--cd-s2); border-top: 1px solid var(--cd-line-soft);
@@ -386,7 +393,7 @@
 .cd-pub-hub .cd-data > summary::-webkit-details-marker { display:none; }
 .cd-pub-hub .cd-data > summary::before { content:"+"; font-weight:700; }
 .cd-pub-hub .cd-data[open] > summary::before { content:"\2212"; }
-.cd-pub-hub .cd-datatable { margin:0; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.cd-pub-hub .cd-datatable { margin:0; max-width: min(760px, 100%); overflow-x: auto; -webkit-overflow-scrolling: touch; }
 /* Standalone data tables (comparison table, community table) sit directly in the
    section as `.cd-w > figure.cd-datatable`, followed immediately by a <p>. Nothing
    reserved space after their figcaption (figure margin 0, figcaption margin-bottom 0,

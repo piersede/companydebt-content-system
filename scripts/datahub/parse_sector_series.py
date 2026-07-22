@@ -1,4 +1,4 @@
-"""Parse Table 1c (company insolvencies by 3-level SIC) from the Insolvency
+"""Parse Table A1b (company insolvencies by 3-level SIC) from the Insolvency
 Service source workbook into a clean by-sector time series for the data hub.
 
 Output: data/insolvency-statistics/sector_series.json
@@ -16,7 +16,7 @@ Output: data/insolvency-statistics/sector_series.json
     "divisions": [ {code, section, label, annual:[...], monthly:[...]}, ... ]           # all ~90 2-digit SIC divisions
   }
 
-"groups"/"divisions" are a generic, code-keyed capture of every row in Table 1c
+"groups"/"divisions" are a generic, code-keyed capture of every row in Table A1b
 (not just Construction), for single-SIC-sector pages (e.g. furniture = group
 310) that don't need a bespoke sub-sector breakdown like Construction has.
 
