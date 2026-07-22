@@ -91,11 +91,14 @@ def draw_wrapped(c, text, font, size, colour, x, y, max_width, leading=None):
     return y
 
 
-def draw_chrome(c, slide_no, total):
-    """Footer source line, url, wordmark and slide counter. Every slide."""
+def draw_chrome(c, slide_no, total, source=FOOTER_SOURCE):
+    """Footer source line, url, wordmark and slide counter. Every slide.
+
+    total <= 1 marks a single-image post: no slide counter is drawn.
+    """
     c.setFont("Lato", 20)
     c.setFillColor(MIDBLUE)
-    c.drawString(MARGIN, 74, FOOTER_SOURCE)
+    c.drawString(MARGIN, 74, source)
     c.setFont("Lato-Bold", 20)
     c.drawString(MARGIN, 44, FOOTER_URL)
 
@@ -103,9 +106,10 @@ def draw_chrome(c, slide_no, total):
     c.setFillColor(WHITE)
     c.drawRightString(W - MARGIN, 44, WORDMARK)
 
-    c.setFont("Lato", 18)
-    c.setFillColor(MIDBLUE)
-    c.drawRightString(W - MARGIN, 74, f"{slide_no}/{total}")
+    if total > 1:
+        c.setFont("Lato", 18)
+        c.setFillColor(MIDBLUE)
+        c.drawRightString(W - MARGIN, 74, f"{slide_no}/{total}")
 
 
 KICKER_SIZE = 32
@@ -228,6 +232,56 @@ def panel_note(c, heading, body):
         ty -= body_lead - body_size
 
 
+def hbar(c, title, rows, unit, highlight, note=None):
+    """Single-image horizontal bar chart. rows = [(label, value), ...].
+
+    One series highlighted in orange, the rest mid-blue. Values printed at the
+    end of each bar. Sits in the full content band with a title above.
+    """
+    title_size, row_h, gap = 46, 88, 20
+    title_lines = wrap(c, title, "Lato-Black", title_size, COL)
+    note_size = 30
+    note_lines = wrap(c, note, "Lato", note_size, COL) if note else []
+
+    chart_h = len(rows) * row_h
+    block = (len(title_lines) * title_size * 1.2 + GAP_KICKER + chart_h
+             + (GAP_SUB + len(note_lines) * note_size * 1.35 if note_lines else 0))
+    y = centre_start(block)
+
+    c.setFillColor(WHITE)
+    c.setFont("Lato-Black", title_size)
+    for line in title_lines:
+        y -= title_size
+        c.drawString(MARGIN, y, line)
+        y -= title_size * 0.2
+    y -= GAP_KICKER
+
+    label_w, label_size = 440, 31
+    bar_max = COL - label_w - 96
+    vmax = max(v for _, v in rows)
+    for label, value in rows:
+        y -= row_h
+        colour = ORANGE if label == highlight else MIDBLUE
+        bar_w = bar_max * value / vmax
+        c.setFillColor(colour)
+        c.rect(MARGIN + label_w, y + 12, bar_w, row_h - gap, stroke=0, fill=1)
+        c.setFillColor(WHITE if label == highlight else MIDBLUE)
+        c.setFont("Lato-Bold" if label == highlight else "Lato", label_size)
+        c.drawString(MARGIN, y + 26, label)
+        c.setFont("Lato-Black", 36)
+        c.setFillColor(ORANGE if label == highlight else WHITE)
+        c.drawString(MARGIN + label_w + bar_w + 20, y + 22, unit.format(value))
+
+    if note_lines:
+        y -= GAP_SUB
+        c.setFont("Lato", note_size)
+        c.setFillColor(MIDBLUE)
+        for line in note_lines:
+            y -= note_size
+            c.drawString(MARGIN, y, line)
+            y -= note_size * 0.35
+
+
 # --- slide specs ------------------------------------------------------------
 SLIDES = {
     1: [
@@ -247,15 +301,41 @@ SLIDES = {
                         kicker="The line worth watching")),
         ("statement", dict(text="The rise is real.\nIt is a quarter,\nnot 80%.")),
         ("outro", {}),
-    ]
+    ],
+    5: [
+        ("hbar", dict(
+            title="How long large UK firms take to pay a supplier",
+            unit="{:.1f}",
+            highlight="Manufacturing",
+            rows=[
+                ("Manufacturing", 47.4),
+                ("Wholesale and retail", 38.5),
+                ("Construction", 34.7),
+                ("Professional services", 34.5),
+                ("Transport and storage", 34.4),
+                ("Accommodation and food", 33.7),
+                ("Information and comms", 33.6),
+                ("Admin and support", 29.9),
+                ("Education", 24.8),
+                ("Finance and insurance", 24.3),
+            ],
+            note="Average days to pay an invoice, by sector. 6,882 companies, Dec 2024 to May 2026.")),
+    ],
+}
+
+# Footer source line per post (defaults to the insolvency release).
+SOURCES = {
+    5: "Source: UK payment practices reporting, 6,882 companies",
 }
 
 
-def render(c, kind, spec, slide_no, total):
+def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE):
     c.setFillColor(NAVY)
     c.rect(0, 0, W, H, stroke=0, fill=1)
 
-    if kind == "cover":
+    if kind == "hbar":
+        hbar(c, **spec)
+    elif kind == "cover":
         big_number(c, "80%", "Administrations, year to June 2026. Mostly one group.",
                    kicker="Company insolvency statistics")
     elif kind == "number":
@@ -298,8 +378,15 @@ def render(c, kind, spec, slide_no, total):
             c.drawString(MARGIN, y, line)
             y -= src_size * 0.35
 
-    draw_chrome(c, slide_no, total)
+    draw_chrome(c, slide_no, total, source)
     c.showPage()
+
+
+def to_png(pdf_path, png_path):
+    """Rasterise a single-page PDF to a 1080x1350 PNG (scale 1 = 72dpi = 1080px)."""
+    import pypdfium2 as pdfium
+    doc = pdfium.PdfDocument(pdf_path)
+    doc[0].render(scale=1).to_pil().save(png_path)
 
 
 def main():
@@ -313,19 +400,31 @@ def main():
         sys.exit(f"No slide spec for post {args.post}. Add one to SLIDES.")
 
     register_fonts(args.root)
-    os.makedirs(os.path.join(args.root, args.out), exist_ok=True)
-    path = os.path.join(args.root, args.out, f"post-{args.post:02d}-carousel.pdf")
+    out_dir = os.path.join(args.root, args.out)
+    os.makedirs(out_dir, exist_ok=True)
 
     slides = SLIDES[args.post]
-    c = canvas.Canvas(path, pagesize=(W, H))
+    source = SOURCES.get(args.post, FOOTER_SOURCE)
+    single = len(slides) == 1
+    kind = "image" if single else "carousel"
+    pdf_path = os.path.join(out_dir, f"post-{args.post:02d}-{kind}.pdf")
+
+    c = canvas.Canvas(pdf_path, pagesize=(W, H))
     c.setTitle(f"Company Debt: LinkedIn post {args.post}")
-    for i, (kind, spec) in enumerate(slides, 1):
-        render(c, kind, spec, i, len(slides))
+    for i, (slide_kind, spec) in enumerate(slides, 1):
+        render(c, slide_kind, spec, i, len(slides), source)
     c.save()
 
-    size_kb = os.path.getsize(path) / 1024
-    print(f"Wrote {path}")
-    print(f"{len(slides)} slides, {W}x{H} (4:5), {size_kb:.0f} KB")
+    print(f"Wrote {pdf_path}")
+    if single:
+        png_path = os.path.join(out_dir, f"post-{args.post:02d}-image.png")
+        to_png(pdf_path, png_path)
+        size_kb = os.path.getsize(png_path) / 1024
+        print(f"Wrote {png_path}")
+        print(f"Single image, {W}x{H} (4:5), {size_kb:.0f} KB")
+    else:
+        size_kb = os.path.getsize(pdf_path) / 1024
+        print(f"{len(slides)} slides, {W}x{H} (4:5), {size_kb:.0f} KB")
 
 
 if __name__ == "__main__":
