@@ -283,6 +283,58 @@ def mythcard(c, kicker, lines, sub, cta=None):
             y -= 12
 
 
+def mythfact(c, kicker, myth, fact, tag=None):
+    """Signature debunk card for the myths pillar: a struck-through MYTH panel
+    over an orange FACT panel. `myth` should be short (fits 1-2 lines struck).
+    Legal/principle posts only; no statistic on the card.
+    """
+    label_size, myth_size, fact_size = 34, 62, 62
+    myth_lead, fact_lead = myth_size * 1.16, fact_size * 1.16
+    myth_lines = wrap(c, myth, "Lato-Black", myth_size, COL)
+    fact_lines = wrap(c, fact, "Lato-Black", fact_size, COL)
+
+    gap_panel = 90
+    block = (KICKER_SIZE + GAP_KICKER
+             + label_size + 24 + len(myth_lines) * myth_lead + gap_panel
+             + label_size + 24 + len(fact_lines) * fact_lead)
+    y = centre_start(block)
+
+    if kicker:
+        c.setFont("Lato-Bold", KICKER_SIZE)
+        c.setFillColor(MIDBLUE)
+        c.drawString(MARGIN, y - KICKER_SIZE, kicker.upper())
+        y -= KICKER_SIZE + GAP_KICKER
+
+    # MYTH panel: muted, struck through
+    c.setFont("Lato-Black", label_size)
+    c.setFillColor(MIDBLUE)
+    c.drawString(MARGIN, y - label_size, "MYTH")
+    y -= label_size + 24
+    c.setFont("Lato-Black", myth_size)
+    c.setFillColor(MIDBLUE)
+    for line in myth_lines:
+        y -= myth_size
+        c.drawString(MARGIN, y, line)
+        lw = pdfmetrics.stringWidth(line, "Lato-Black", myth_size)
+        c.setLineWidth(5)
+        c.setStrokeColor(ORANGE)
+        c.line(MARGIN, y + myth_size * 0.32, MARGIN + lw, y + myth_size * 0.32)
+        y -= myth_lead - myth_size
+    y -= gap_panel
+
+    # FACT panel: full white with an orange label
+    c.setFont("Lato-Black", label_size)
+    c.setFillColor(ORANGE)
+    c.drawString(MARGIN, y - label_size, "FACT")
+    y -= label_size + 24
+    c.setFont("Lato-Black", fact_size)
+    c.setFillColor(WHITE)
+    for line in fact_lines:
+        y -= fact_size
+        c.drawString(MARGIN, y, line)
+        y -= fact_lead - fact_size
+
+
 def distribution(c, kicker, hero, hero_sub, segments, note=None):
     """Single-image: one hero number over a horizontal stacked distribution bar.
 
@@ -448,6 +500,13 @@ SLIDES = {
                 "overdraft, you have very likely signed one.",
             cta="What it commits you to, before you sign the next one. Confidential.")),
     ],
+    # Post 21: Myth/Fact variant of the personal-guarantee post. Pillar template.
+    21: [
+        ("mythfact", dict(
+            kicker="Personal guarantees",
+            myth="Limited liability protects everything I own.",
+            fact="Not a penny of it, on any debt you have personally guaranteed.")),
+    ],
     # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
     # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
     11: [
@@ -470,11 +529,13 @@ SOURCES = {
     5: "Source: UK payment practices reporting, 6,882 companies",
     11: "Source: gov.uk payment practices export, recomputed 22 Jul 2026",
     20: "",
+    21: "",
 }
 
 # Footer URL per post (defaults to the data hub).
 URLS = {
     20: "companydebt.com/advice",
+    21: "companydebt.com/advice",
 }
 
 
@@ -486,6 +547,8 @@ def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE, url=FOOTER_URL)
         hbar(c, **spec)
     elif kind == "mythcard":
         mythcard(c, **spec)
+    elif kind == "mythfact":
+        mythfact(c, **spec)
     elif kind == "distribution":
         distribution(c, **spec)
     elif kind == "cover":
