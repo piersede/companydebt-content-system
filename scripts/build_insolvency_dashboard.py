@@ -120,9 +120,6 @@ def secnav_block() -> str:
       <a href="#sector">Sector</a>
       <a href="#sector-pages">Trade data</a>
       <a href="#nations">UK nations</a>
-      <a href="#method">Method</a>
-      <a href="#source">Source</a>
-      <a href="#faq">FAQ</a>
     </nav>
     """)
 
