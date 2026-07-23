@@ -74,6 +74,54 @@ def _sub(html: str, old: str, new: str) -> str:
     return html.replace(old, new, 1)
 
 
+def build_sector_cards() -> str:
+    """The "By sector" group: the sector overview as a lead card (it is the
+    overview of every industry, not a peer of the trade pages below it - see
+    docs/data-hub/design-brief-2026-07.md), then every published trade-detail
+    page. Read from sector_trade_links.rows(), the same registry the
+    flagship's own sector table reads, rather than hardcoded here: this is
+    exactly the list that went stale in an earlier design snapshot (marked
+    "Planned" with only Construction present, missing the 9 trade pages built
+    since), so it must never be a second hand-maintained copy again."""
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from sector_trade_links import rows as trade_rows  # noqa: E402
+
+    overview = (
+        '<a class="cd-dircard cd-dircard--feature" href="/data/company-insolvencies-by-sector/">\n'
+        '          <div class="cd-dircard__top">\n'
+        '            <h3 class="cd-dircard__title">Company Insolvencies by Sector</h3>\n'
+        '            <span class="cd-badge cd-badge--latest">Latest</span>\n'
+        '          </div>\n'
+        '          <p class="cd-dircard__desc">Insolvency volumes ranked across every SIC industry section, with trends since 2016. Start here, then find your trade below.</p>\n'
+        '          <span class="cd-dircard__arrow">View sector data <span aria-hidden="true">&rarr;</span></span>\n'
+        '        </a>'
+    )
+    trade_cards = "\n        ".join(
+        f'<a class="cd-dircard" href="/data/{r["slug"]}/">\n'
+        f'          <div class="cd-dircard__top">\n'
+        f'            <h3 class="cd-dircard__title">{r["trade"]}</h3>\n'
+        f'            <span class="cd-badge cd-badge--latest">Latest</span>\n'
+        f'          </div>\n'
+        f'          <p class="cd-dircard__desc">{r["blurb"]}</p>\n'
+        f'          <span class="cd-dircard__arrow">View data <span aria-hidden="true">&rarr;</span></span>\n'
+        f'        </a>'
+        for r in trade_rows()
+    )
+    return (
+        '<!-- By sector -->\n'
+        '    <section class="cd-section" aria-labelledby="grp-sector">\n'
+        '      <div class="cd-grouphead"><h2 id="grp-sector">By sector</h2><span class="cd-grouphead__note">Overview, then individual trades</span></div>\n'
+        '      <div class="cd-dir-grid cd-dir-grid--feature">\n'
+        f'        {overview}\n'
+        '      </div>\n'
+        '      <div class="cd-dir-grid">\n'
+        f'        {trade_cards}\n'
+        '      </div>\n'
+        '    </section>'
+    )
+
+
 def inject_data(html: str, f: dict) -> str:
     # KPI values
     html = _sub(html, '<p class="cd-kpi-card__v">2,085</p>',
@@ -96,6 +144,26 @@ def inject_data(html: str, f: dict) -> str:
     # Colophon series year
     html = _sub(html, '<dt>Series</dt><dd>2026</dd>',
                 f'<dt>Series</dt><dd>{f["series_year"]}</dd>')
+
+    # "How we use the data and how to cite" card: the design links to
+    # /data/company-insolvency/methodology/, which the generic rewrite below
+    # turns into /data/methodology/ - a page that does not exist (404). There
+    # is no standalone methodology page; each data page carries its own
+    # #method section. Reroute to the flagship's, which is real and live,
+    # rather than ship a dead link styled as "Latest".
+    html = _sub(html, 'href="/data/company-insolvency/methodology/"',
+                'href="/data/uk-insolvency-statistics/#method"')
+
+    # "By sector" cards: replace the whole design block, which is a stale
+    # snapshot (both cards marked "Planned", only Construction present) - see
+    # build_sector_cards()'s docstring. Matched on the HTML comment through
+    # the section's own closing tag, so it cannot accidentally swallow the
+    # next section if the design's indentation shifts.
+    html = re.sub(
+        r"<!-- By sector -->.*?</section>",
+        build_sector_cards(),
+        html, count=1, flags=re.S,
+    )
     return html
 
 

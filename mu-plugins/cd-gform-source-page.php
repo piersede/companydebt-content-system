@@ -24,10 +24,15 @@
  *   when the visitor clicked an internal CTA. When there is no journey data we
  *   say so explicitly, so a blank is never mistaken for a bug.
  *
- *   Only internal/team notifications are touched (recipient not routed to a
- *   form field), so the enquirer's autoresponder is never affected.
+ *   Only internal/team notifications are touched. A notification routed to a
+ *   FIELD is skipped only when that field is an Email-type field holding the
+ *   visitor's own address (a genuine autoresponder), so the enquirer never
+ *   sees their own journey data. Team notifications routed by a Select/Radio
+ *   "which department" field still get the block, since that field's value
+ *   is an admin address, not the visitor's.
  *
- *   Added 2026-07-10. Self-contained -- safe to remove as one file.
+ *   Added 2026-07-10. Updated 2026-07-21 (precise autoresponder detection).
+ *   Self-contained -- safe to remove as one file.
  * Author: Company Debt
  */
 
@@ -58,6 +63,45 @@ function cd_lj_cookie( $suffix ) {
 }
 
 /**
+ * True only when this notification's "Send To" is routed to a field that
+ * holds the VISITOR's own address -- an Email-type field, the standard way
+ * to build an autoresponder. A notification routed by a Select/Radio field
+ * (e.g. "which department?", where each choice's value is an admin address)
+ * is a team notification and should still get the lead journey block.
+ *
+ * Fails safe: if the field can't be identified, treat it as visitor-routed
+ * (skip) rather than risk leaking journey data to an enquirer.
+ *
+ * @param array $notification
+ * @param array $form
+ * @return bool
+ */
+function cd_lj_is_visitor_routed( $notification, $form ) {
+	$to_type = isset( $notification['toType'] ) ? $notification['toType'] : '';
+	if ( 'field' !== $to_type ) {
+		return false;
+	}
+
+	$field_id = isset( $notification['toField'] ) ? (string) $notification['toField'] : '';
+	if ( '' === $field_id ) {
+		return true;
+	}
+
+	$fields = isset( $form['fields'] ) ? $form['fields'] : array();
+	foreach ( $fields as $field ) {
+		$id = (string) ( is_object( $field ) ? ( $field->id ?? '' ) : ( $field['id'] ?? '' ) );
+		if ( $id !== $field_id ) {
+			continue;
+		}
+		$type = is_object( $field ) ? ( $field->type ?? '' ) : ( $field['type'] ?? '' );
+		return ( 'email' === $type );
+	}
+
+	// Field not found on the form -- fail safe.
+	return true;
+}
+
+/**
  * Append the visitor's journey to internal (team) notifications.
  *
  * @param array $notification
@@ -67,9 +111,8 @@ function cd_lj_cookie( $suffix ) {
  */
 function cd_add_lead_journey_to_notification( $notification, $form, $entry ) {
 
-	// Skip autoresponders sent back to the enquirer (routed to a form field).
-	$to_type = isset( $notification['toType'] ) ? $notification['toType'] : '';
-	if ( 'field' === $to_type ) {
+	// Skip only genuine autoresponders sent back to the enquirer's own address.
+	if ( cd_lj_is_visitor_routed( $notification, $form ) ) {
 		return $notification;
 	}
 

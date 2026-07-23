@@ -1,6 +1,6 @@
 """Generate single-SIC-sector insolvency data pages for the data hub.
 
-Reusable engine for any sector with a clean 3-digit SIC group in Table 1c
+Reusable engine for any sector with a clean 3-digit SIC group in Table A1b
 (the Insolvency Service's by-industry table): one config entry, one page. This
 is the generic version of the bespoke Construction page in sector_pages.py —
 use this for every new sector instead of hand-rolling a builder, unless the
@@ -8,7 +8,7 @@ sector needs a bespoke sub-sector breakdown like Construction has.
 
 Leads with the CURRENT picture (year-to-date vs the same months last year,
 rolling 12 months, latest single month) rather than the last full calendar
-year — Table 1c publishes the industry breakdown monthly (through the latest
+year — Table A1b publishes the industry breakdown monthly (through the latest
 headline month), not quarterly as earlier drafts of this page claimed; only
 the supplementary procedure-split tables are quarterly. The full-year annual
 total is still shown, but as trailing context, not the headline.
@@ -75,6 +75,8 @@ SECTORS = {
         "division_code": "31",
         "parent_section_code": "C",
         "parent_section_label": "manufacturing",
+        # No parent_kind here: SIC division 31 contains only group 310, so a
+        # division comparison would compare furniture against itself.
         "h1a": "UK Furniture Manufacturing",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -82,45 +84,332 @@ SECTORS = {
         "keyword": "furniture manufacturing",
         "singular": "furniture manufacturer",
         "plural": "furniture-manufacturing companies",
-        "scope_description": ("household, office, kitchen and shop furniture and "
-                              "mattress manufacturing"),
-        "exclusion_note": "Furniture retailers and wholesalers are recorded separately.",
-        "notes": [
-            "Furniture manufacturing is a small sector by company count, so monthly "
-            "figures can move sharply on a handful of cases. Read short-term changes "
-            "with care and prefer the year-to-date or 12-month rolling total.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many furniture manufacturers are registered, so it cannot be read as a "
-            "sector-wide risk of insolvency.",
-            "This is manufacturing only (SIC 310). Furniture wholesalers and retailers "
-            "sit under separate, broader SIC codes and are not included here.",
+        "scope_description": ("the manufacture of household, office, kitchen and "
+                              "shop furniture and of mattresses"),
+        "exclusion_note": ("Furniture retailers and wholesalers are recorded under "
+                           "separate retail and wholesale codes, and are not "
+                           "included here."),
+        "hero_note": ("Furniture manufacturing insolvencies edged up in the first "
+                      "half of 2026, 75 against 73 a year earlier, while "
+                      "manufacturing overall fell 8.5% over the same months. The "
+                      "gap between the two keeps widening."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "29% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "143 vs 111"},
+            {"value": "8.1%", "label": "of manufacturing insolvencies", "sub": "up from 7.2% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, pressure commonly builds through reduced orders, "
-            "fixed production costs and supplier terms that consume working capital "
-            "before directors seek advice.",
-            "Furniture is also one of the first big-ticket purchases households defer "
-            "when confidence dips, so demand can weaken well before the wider economy "
-            "turns down.",
+        "comparison_intro": [
+            ("There were 75 insolvencies from January to June 2026 against 73 in "
+             "the same months of 2025, up 2.7%. The rolling 12-month total was "
+             "145 against 144 a year earlier, also up slightly."),
+            ("Manufacturing as a whole fell 8.5% over the same months, from "
+             "1,013 to 927. These are Company Debt calculations from Insolvency "
+             "Service Table A1b data."),
+            ("Furniture is no longer just standing still, it is drifting the "
+             "wrong way while the trade around it improves. 2025 closed at 143, "
+             "29% above the 111 recorded in 2019."),
+            ("Furniture's share of manufacturing insolvencies keeps creeping "
+             "up, for no better reason than that it isn't falling with the "
+             "rest of the trade."),
+            ("The monthly path is noisy, as it always is in a sector this "
+             "small. 2026 has run 12, 10, 15, 11, 16, 11. Read any two of "
+             "those months together and you can tell whichever story you "
+             "fancy."),
+            ("The year-to-date and rolling totals are the only measures "
+             "worth arguing from here."),
+        ],
+        "divergence": {
+            "heading": "Furniture is not sharing manufacturing's recovery",
+            "caption": ("Furniture manufacturing against manufacturing overall and "
+                        "the adjacent household-goods trades"),
+            "intro": [
+                ("Manufacturing insolvencies fell 8.5% in the first half of "
+                 "2026, from 1,013 to 927. Furniture went the other way, up "
+                 "2.7%."),
+                ("Wholesale of household goods, a large part of how furniture "
+                 "reaches the shops, fell 18.3%. Household equipment retail "
+                 "rose 5.3%."),
+                ("Neither of those is a clean furniture series. SIC 464 and "
+                 "SIC 475 both cover textiles, appliances and hardware "
+                 "alongside furniture, the nearest published comparators, not "
+                 "a like-for-like match."),
+                ("Taken together, the pattern is hard to miss. The people "
+                 "moving furniture around are having a mixed year. The "
+                 "people making it are going backwards."),
+            ],
+            "peers": [
+                {"code": "310", "kind": "group", "label": "Furniture manufacturing (SIC 310)", "emphasise": True},
+                {"code": "464", "kind": "group", "label": "Household goods wholesale (SIC 464)"},
+                {"code": "475", "kind": "group", "label": "Household equipment retail (SIC 475)"},
+                {"code": "C", "kind": "section", "label": "Manufacturing overall (SIC C)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Furniture insolvencies did not climb steadily into this. They held "
+             "between 92 and 111 from 2016 to 2019, eased to 102 in 2020, then "
+             "collapsed to 58 in 2021, when government support and the restrictions "
+             "on creditors held the normal insolvency cycle in check."),
+            ("Then the bill arrived. 129 in 2022, and 163 in 2023, the worst year in "
+             "the series and close to triple the 2021 low. The pandemic did not "
+             "spare these companies. It postponed them."),
+            ("What has happened since is the part that matters now. 139 in "
+             "2024, 143 in 2025: down 12% from the 2023 peak and then stuck."),
+            ("Three years past the worst of it, furniture is still running "
+             "29% above its last normal year. This is not a sector in "
+             "freefall. It has levelled off somewhere it cannot afford to "
+             "sit."),
+        ],
+        "annual_intro": (
+            "The shape of the decade matters more than the peak: a narrow "
+            "band through the late 2010s, a 2021 low of 58, then more than "
+            "double by 2023. The two years since are a plateau, not a "
+            "recovery: 139, then 143."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling totals are now slightly up on "
+            "a year earlier, a small but real shift away from flat. The "
+            "sector is drifting further from normal, not settling into it."
+        ),
+        "pressure_heading": "Why furniture manufacturers remain under pressure",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures look backwards. They record distress that has "
+             "usually been building for a year or more before anyone files anything, "
+             "and a flat total tells you nothing about which factories are quietly "
+             "struggling inside it. What follows is how money moves through a "
+             "furniture business and where it tends to get stuck. It is not a claim "
+             "about why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "Discretionary consumer demand",
-                "body": ("Furniture is a considered, big-ticket purchase, so household "
-                         "spending on it is one of the first things cut when confidence "
-                         "or disposable income comes under pressure, ahead of more "
-                         "routine spending categories."),
+                "h3": "The housing market has turned, and the workshop has not felt it yet",
+                "body": [
+                    ("People buy beds, sofas, wardrobes and kitchens when they move "
+                     "house, and moves are recovering. HMRC put UK residential "
+                     "property transactions at 98,450 in May 2026, 17% higher than "
+                     "May 2025."),
+                    ("That is genuinely encouraging, and it is also why so many "
+                     "furniture directors are reading recovery headlines that "
+                     "bear no relation to their own order book. A completion "
+                     "lands two to four months after the offer."),
+                    ("The furniture order comes after the completion, once "
+                     "the family has moved in and decided the old sofa "
+                     "doesn't fit the new room."),
+                    ("Then it goes to a retailer, who orders from the factory when "
+                     "their own stock runs down. By the time a recovery in house "
+                     "moves reaches a workshop floor it is most of a year old. The "
+                     "wage bill did not wait for it."),
+                    ("The HMRC series is UK-wide and covers all residential "
+                     "property. The insolvency counts on this page are England and "
+                     "Wales companies. Treat it as the weather, not as a diagnosis."),
+                ],
             },
             {
-                "h3": "Imported materials and currency exposure",
-                "body": ("Many manufacturers depend on imported timber, hardware, "
-                         "fabrics, foam or completed components, leaving margins "
-                         "exposed to freight costs and exchange-rate movements."),
+                "h3": "Household goods spending is going sideways",
+                "body": [
+                    ("The demand signal underneath all this is flat. ONS retail "
+                     "sales volumes at household goods stores in the three months to "
+                     "May 2026 were 1.6% up on the previous three months, and that "
+                     "followed three-month readings of -1.0%, -0.1% and -0.9%."),
+                    ("That is not a collapse. It is not a recovery either. It "
+                     "is a demand line drifting along the flat for the best "
+                     "part of a year."),
+                    ("Flat demand is precisely what a plateau in insolvencies "
+                     "looks like from the inside: enough work to keep the "
+                     "doors open, never enough to rebuild the reserves the "
+                     "last three years ate."),
+                    ("This measures Great Britain retail stores, not furniture "
+                     "manufacturers, and household goods stores sell a good deal "
+                     "besides furniture. It is context for the order book, not a "
+                     "measure of it."),
+                ],
+            },
+            {
+                "h3": "A factory's costs do not flex with the order book",
+                "body": [
+                    ("This is the arithmetic that catches furniture out. A quiet "
+                     "fortnight does not make the rent smaller, or the rates, or the "
+                     "machinery lease, or the insurance, or the heat in a building "
+                     "big enough to hold a spray booth and a fortnight of stock. You "
+                     "can send people home. You cannot send the building home."),
+                    ("The labour on top of that is not a rounding error either. In "
+                     "the 2026 to 2027 tax year employers pay National Insurance at "
+                     "15% above the secondary threshold of £96 a week, and the "
+                     "National Living Wage has been £12.71 an hour for workers aged "
+                     "21 and over since April 2026."),
+                    ("Whether either of those hurts depends entirely on whether it "
+                     "can go into the price. On a range quoted to a retailer "
+                     "eighteen months ago, it cannot."),
+                ],
+            },
+            {
+                "h3": "Furniture is the first thing a household defers",
+                "body": [
+                    ("A sofa is a decision, not a habit. Nobody has to replace one "
+                     "this year, and a household under pressure can put it off "
+                     "again, and then again, without anything visibly breaking. That "
+                     "makes furniture an early warning for the wider economy and a "
+                     "miserable place to sit while the warning plays out."),
+                    ("It also means the lost demand never arrives as a cancellation "
+                     "you can see coming and plan around. The order simply never "
+                     "gets placed. Nothing appears in the ledger at all, which is "
+                     "the hardest kind of loss to react to in time."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Furniture Manufacturing Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the furniture cases we handle, the timber is bought and "
+             "paid for long before the money comes back. You pay for board, "
+             "foam, fabric and the people who build it, then wait on a "
+             "retailer's payment run."),
+            ("Cash goes out at the front and comes back at the end, and "
+             "every week in between is funded by you."),
+            ("By the time a director calls us the order book usually still "
+             "looks respectable, which is what makes this hard to see from "
+             "the inside. Terms crept from 30 days to 45 and then to 60."),
+            ("One retailer became a third of the output without anyone "
+             "deciding it should. A VAT quarter got paid late once, and "
+             "never quite caught up."),
+            ("A personal guarantee is usually in there too, on the invoice "
+             "finance or the machinery, and it's rarely the first thing "
+             "mentioned on the call. It is almost always what's actually "
+             "kept them awake."),
+            ("That guarantee does not get better by being left alone, and "
+             "the point at which it can still be managed is earlier than "
+             "most people think."),
+            ("The version we hear most often happens on a Friday: a big "
+             "customer's payment run slips by a week, and the wage run, a "
+             "timber invoice and a VAT payment all land in the same seven "
+             "days. Most firms survive that once. The third time finishes "
+             "them."),
+            ("We would not start with turnover. We would look at gross "
+             "margin after materials and labour, how much cash is asleep in "
+             "timber and work in progress, how long the debtor book "
+             "actually takes to pay, how much output leaves on one "
+             "customer's lorry, and what is owed to HMRC."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 115, "share": 80.4},
+                {"name": "Compulsory liquidations", "count": 17, "share": 11.9},
+                {"name": "Administrations", "count": 9, "share": 6.3},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 1.4},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> are the overwhelming majority, at 115 of "
+                "the 143 insolvencies recorded in 2025. That number was also 115 in "
+                "2024, so the directors' own decision to stop was no more common last "
+                "year than the year before.",
+                "The movement was somewhere else. "
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> rose from 9 to 17, close to double, taking "
+                "them from 6.5% of the total to 11.9%.",
+                "A creditor petitioning to wind a company up is what pushed "
+                "the 2025 total above 2024, and that is a different signal "
+                "from a director choosing the timing: it means somebody "
+                "else chose it for them.",
+                '<a href="/company-administration/">Administrations</a> went the other '
+                "way, from 13 to 9. Administration needs a business worth rescuing and "
+                "usually assets worth lending against, and on these numbers that "
+                "combination is getting rarer in furniture rather than more common.",
+            ],
+        },
+        "notes": [
+            "SIC group 310 covers companies whose recorded primary business is "
+            "manufacturing furniture: household, office, kitchen and shop furniture, "
+            "and mattresses. Furniture retailers and wholesalers sit under separate "
+            "codes and are not included, so this page counts the makers, not the "
+            "sellers.",
+            "Furniture manufacturing is a small sector by company count, at roughly "
+            "a dozen insolvencies a month. Monthly figures move sharply on a handful "
+            "of cases and should not be read as a trend on their own. The "
+            "year-to-date and 12-month rolling totals are the steadier guide.",
+            "These are company counts, not the number of factories, workers or brands "
+            "affected. One insolvent company may run several sites or trading names, "
+            "and a manufacturer can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active furniture manufacturers, so a flat "
+            "count does not by itself mean a flat risk of failure.",
+            "The SIC 310 figures come from Table A1b and are not seasonally "
+            "adjusted, even though the Insolvency Service does seasonally "
+            "adjust parts of its headline England and Wales series. The "
+            "latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your business is "
+             "viable. Sector totals never do. The questions that matter are "
+             "narrower: does the margin still cover the factory once "
+             "materials and labour are paid?"),
+            ("Can you fund the gap between buying timber and getting paid "
+             "for what you made from it, and what happens if your largest "
+             "customer pays 30 days later than promised?"),
+            ("Plenty of furniture manufacturers in difficulty are sound "
+             "businesses with a working-capital problem or an old HMRC "
+             "arrears bill, and both are fixable."),
+            ("It is more serious when the margin no longer covers the "
+             "overhead at any realistic volume, or when one customer has "
+             "grown too large to lose and knows it."),
+            ('If you are reading this with a wage run coming and a payment that has '
+             'not landed, the thing worth knowing is that the earlier you speak to '
+             'someone, the more room there is to move: supplier terms renegotiated, '
+             'the debtor book refinanced, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is usually '
+             'frozen within days, and at that point the options narrow to what is '
+             'left rather than what you would choose. '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK furniture manufacturers become insolvent each year?",
+                "a": ("143 furniture-manufacturing companies entered insolvency in "
+                      "England and Wales in 2025, against 139 in 2024. The series "
+                      "peak was 163 in 2023, and the pre-pandemic figure was 111 in "
+                      "2019. Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are furniture insolvencies rising in 2026?",
+                "a": ("Slightly. There were 75 insolvencies between January and "
+                      "June 2026 against 73 in the same months of 2025, up "
+                      "2.7%, and the rolling 12-month total ticked up to 145. "
+                      "Manufacturing overall fell 8.5% over the same months."),
+            },
+            {
+                "q": "Do these figures include furniture shops and wholesalers?",
+                "a": ("No. This page counts SIC group 310, the manufacture of "
+                      "furniture and mattresses. Furniture retailers and wholesalers "
+                      "are recorded under separate retail and wholesale SIC codes "
+                      "and are counted elsewhere."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for furniture manufacturers?",
+                "a": ("Creditors' voluntary liquidation, which accounted for 115 of "
+                      "the 143 furniture insolvencies in 2025. Compulsory "
+                      "liquidations, where a creditor petitions the court, nearly "
+                      "doubled from 9 to 17 over the same year."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England and "
+                      "Wales only. Scotland and Northern Ireland run separate "
+                      "insolvency regimes and are reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Furniture Manufacturing Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Furniture manufacturing sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside manufacturing generally. See also the '
@@ -158,11 +447,12 @@ SECTORS = {
             "disastrous month. More often, the business absorbs rising food, "
             "wage and energy costs for too long, then uses tax arrears, "
             "supplier credit or short-term borrowing to cover the gap.",
-            "By the time directors seek advice, the dining room may still look "
-            "busy. The more useful test is whether each week's trading leaves "
-            "enough cash to meet the next payroll, VAT payment, rent demand and "
-            "supplier run. Early advice matters because the available options "
-            "narrow quickly once suppliers place accounts on stop, HMRC begins "
+            "By the time directors seek advice, the dining room may still "
+            "look busy. The more useful test is whether each week's trading "
+            "leaves enough cash to meet the next payroll, VAT payment, rent "
+            "demand and supplier run.",
+            "Early advice matters because the available options narrow "
+            "quickly once suppliers place accounts on stop, HMRC begins "
             "enforcement action or a landlord takes steps to recover the "
             "premises.",
         ],
@@ -186,19 +476,16 @@ SECTORS = {
             {
                 "h3": "Food, energy and other operating costs remain difficult",
                 "body": [
-                    ("ONS survey data shows these pressures are widespread "
-                     "across accommodation and food services: in early May "
-                     "2026, 78% of businesses in the wider sector reported at "
-                     "least one challenge affecting turnover, with half "
-                     "citing the cost of materials, half citing labour costs "
-                     "and 44% citing economic uncertainty."),
-                    ("The same survey found 62% had seen the prices of goods "
-                     "or services they buy increase in April 2026, and by "
-                     "late June, 88% expressed some concern about energy "
-                     "prices, the highest proportion of any industry. These "
-                     "figures cover accommodation and food services "
-                     "generally, not restaurants alone, but provide current "
-                     "context for the figures above."),
+                    ("ONS survey data shows these pressures are widespread: "
+                     "in early May 2026, 78% of accommodation and food "
+                     "service businesses reported at least one challenge "
+                     "affecting turnover, half citing materials costs, half "
+                     "labour costs, 44% economic uncertainty."),
+                    ("The same survey found 62% had seen their own costs "
+                     "rise in April 2026, and by late June 88% were "
+                     "concerned about energy prices, the highest of any "
+                     "industry. These cover accommodation and food services "
+                     "generally, not restaurants alone."),
                 ],
             },
             {
@@ -208,13 +495,12 @@ SECTORS = {
                      "solution. A menu increase may protect the margin on "
                      "each dish while reducing how often customers visit or "
                      "what they order."),
-                    ("That leaves operators balancing two risks: holding "
-                     "prices too low to cover the cost of trading, or "
-                     "raising them far enough to weaken demand. In March "
-                     "2026, 34% of accommodation and food service businesses "
-                     "reported increasing the prices they charged, the "
-                     "highest proportion of any industry in that survey "
-                     "wave."),
+                    ("That leaves operators balancing two risks: prices too "
+                     "low to cover the cost of trading, or raised far enough "
+                     "to weaken demand."),
+                    ("In March 2026, 34% of accommodation and food service "
+                     "businesses reported raising prices, the highest "
+                     "proportion of any industry in that survey wave."),
                 ],
             },
             {
@@ -242,8 +528,9 @@ SECTORS = {
              "before debt repayments and arrears."),
             ('Acting early gives directors more scope to negotiate a '
              '<a href="/hmrc/time-to-pay-hmrc/">Time to Pay arrangement</a> '
-             'with HMRC, agree terms with landlords and suppliers, or '
-             'consider a formal rescue procedure such as a '
+             'with HMRC and agree terms with landlords and suppliers.'),
+            ('It also leaves room to consider a formal rescue procedure '
+             'such as a '
              '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> '
              'or <a href="/company-administration/">administration</a>.'),
             ('Once a <a href="/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/">winding-up petition</a>, '
@@ -254,7 +541,7 @@ SECTORS = {
         ],
         "citation": ("CompanyDebt. (2026). UK Restaurant Insolvency Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
+                     "company insolvency statistics by industry (Table A1b)."),
         "related": ('Restaurants sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside accommodation and food service generally. See also '
@@ -289,12 +576,11 @@ SECTORS = {
             "codes and are not included here.",
         ],
         "practitioner_view": [
-            "In the cases we see, a haulage company can be busy and still run "
-            "out of cash. The warning signs are often visible in the gap "
-            "between work completed and money collected: fuel cards are close "
-            "to their limits, VAT or PAYE has been used to fund the next week, "
-            "and vehicle repairs are being deferred because there is no spare "
-            "cash.",
+            "In the cases we see, a haulage company can be busy and still "
+            "run out of cash. The warning signs show in the gap between "
+            "work completed and money collected: fuel cards near their "
+            "limit, VAT or PAYE funding the next week.",
+            "Vehicle repairs get deferred because there is no spare cash.",
             "The immediate trigger may be a slow-paying customer, a failed "
             "engine or a fuel-price movement, but the underlying problem is "
             "usually that the margin and working-capital buffer were already "
@@ -325,11 +611,11 @@ SECTORS = {
                      "19.0 billion."),
                     ("Lower freight activity does not affect every operator "
                      "equally, but it can make fleet utilisation and contract "
-                     "pricing more difficult: a vehicle that is financed, "
-                     "insured and staffed still needs enough loaded miles to "
-                     "cover those costs. HGVs also ran empty for 31% of total "
-                     "vehicle kilometres in 2025, a reminder of how much fleet "
-                     "time can generate cost without carrying a paying load."),
+                     "pricing harder: a financed, insured, staffed vehicle "
+                     "still needs enough loaded miles to cover those costs."),
+                    ("HGVs ran empty for 31% of total vehicle kilometres in "
+                     "2025, a reminder of how much fleet time can generate "
+                     "cost without carrying a paying load."),
                     ("These DfT figures cover GB-registered HGVs operating in "
                      "the UK and are sector context, not part of the England "
                      "and Wales insolvency count."),
@@ -349,12 +635,11 @@ SECTORS = {
                      "before knowing what diesel will cost when the work is "
                      "completed."),
                     ("In late June 2026, 86% of transportation and storage "
-                     "businesses expressed some concern about fuel prices, "
-                     "the highest proportion of any industry in that ONS "
-                     "survey. That figure covers transportation and storage "
-                     "generally, and the retail pump price is not "
-                     "necessarily what every operator pays on a bulk "
-                     "contract."),
+                     "businesses were concerned about fuel prices, the "
+                     "highest of any industry in that ONS survey."),
+                    ("That figure covers the sector generally, and the "
+                     "retail pump price is not necessarily what every "
+                     "operator pays on a bulk contract."),
                 ],
             },
             {
@@ -440,10 +725,12 @@ SECTORS = {
              "routes and contracts are viable before debt repayments and "
              "arrears."),
             ('Acting early gives directors more scope to renegotiate '
-             'payment terms, dispose of underused vehicles, approach HMRC '
-             'about a <a href="/hmrc/time-to-pay-hmrc/">Time to Pay '
-             'arrangement</a>, or consider a formal rescue procedure such '
-             'as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'payment terms, dispose of underused vehicles, or approach '
+             'HMRC about a <a href="/hmrc/time-to-pay-hmrc/">Time to Pay '
+             'arrangement</a>.'),
+            ('It also leaves room to consider a formal rescue procedure '
+             'such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
              'Voluntary Arrangement</a> or '
              '<a href="/company-administration/">administration</a>.'),
             ('Once fuel cards are withdrawn, vehicles are repossessed or a '
@@ -455,7 +742,7 @@ SECTORS = {
         ],
         "citation": ("CompanyDebt. (2026). UK Road Haulage Insolvency Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
+                     "company insolvency statistics by industry (Table A1b)."),
         "related": ('Road haulage sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside transportation and storage generally. See also the '
@@ -467,6 +754,10 @@ SECTORS = {
         "division_code": "78",
         "parent_section_code": "N",
         "parent_section_label": "administrative and support services",
+        # The meaningful peer is the agency's own trade (employment activities,
+        # SIC 78), not all of administrative and support services.
+        "parent_kind": "division",
+        "parent_label": "employment activities",
         "h1a": "UK Recruitment Agency",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -474,52 +765,342 @@ SECTORS = {
         "keyword": "recruitment agency",
         "singular": "recruitment agency",
         "plural": "permanent-placement recruitment agencies",
-        "scope_description": "recruitment agencies placing candidates into permanent roles",
-        "exclusion_note": "Temporary and agency staffing businesses are recorded separately (SIC group 782).",
-        "notes": [
-            "Recruitment agency insolvencies can move sharply on a small number of "
-            "cases, since it is a mid-sized sector. Prefer the year-to-date or "
-            "12-month rolling total for the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many agencies are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is permanent-placement recruitment only (SIC 781). Temporary "
-            "staffing agencies sit under a separate SIC code and are covered on "
-            "their own page.",
+        "scope_description": ("employment placement agencies, which mainly find "
+                              "candidates permanent roles, including "
+                              "executive-search and selection businesses"),
+        "exclusion_note": ("Agencies supplying workers on a temporary basis (SIC "
+                           "782) and longer-term human resources provision (SIC "
+                           "783) are recorded separately."),
+        "hero_note": ("That is the sharpest fall on any of our sector pages, but "
+                      "from the worst run permanent recruitment has ever had: "
+                      "2025 closed at 345 insolvencies, a series record. The "
+                      "direction has turned; the level has not finished falling."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "131% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "345 vs 149"},
+            {"value": "51.5%", "label": "of SIC 78 insolvencies", "sub": "down from 60.5% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, recruitment agencies scale their cost base, "
-            "particularly consultant headcount, to match a hiring boom, then are "
-            "exposed when client hiring slows and fee income drops away almost "
-            "immediately.",
-            "Placement fee income is inherently lumpy. An agency with a handful of "
-            "large clients can see a material share of its pipeline disappear when "
-            "just one of them pauses hiring.",
+        "comparison_intro": [
+            ("There were 136 insolvencies from January to June 2026 against "
+             "181 in the same months of 2025, down 24.9%, while the rolling "
+             "12-month total fell from 332 to 300, down 9.6%."),
+            ("Insolvencies across employment activities as a whole fell "
+             "11.7% over the same period. These are Company Debt "
+             "calculations from Insolvency Service Table A1b data."),
+            ("The gap between those two numbers is the story. A 24.9% fall "
+             "and an 11.7% fall cannot both be the underlying rate of "
+             "improvement: the year-to-date figure is measured against a "
+             "genuinely severe first half of 2025."),
+            ("2026 has run 17, 24, 24, 19, 22, 30, an average of 22.7 a "
+             "month against roughly 30 a month across the same period of "
+             "2025. That is a real improvement."),
+            ("The rolling 12-month measure, harder to flatter with a "
+             "well-chosen starting point, is the number to trust."),
+        ],
+        "divergence": {
+            "heading": "Permanent placement is falling while temporary staffing rises",
+            "caption": "Permanent-placement agencies against related recruitment classifications",
+            "intro": [
+                ("This is the mirror image of what is happening one SIC code "
+                 "over. Permanent-placement agencies fell 24.9% year to "
+                 "date. Temporary employment agencies (SIC 782) rose 7.3%."),
+                ("Same trade, often the same building, moving in opposite "
+                 "directions."),
+                ("Permanent placement made up 51.5% of employment-activities "
+                 "insolvencies in the first half of 2026, down from 60.5% a "
+                 "year earlier. Its share of the wider administrative and "
+                 "support services section fell too, from 14.0% to 13.1%."),
+                ("The reason sits in the trade data, not the insolvency "
+                 "data: employers have been buying temporary staff instead "
+                 "of permanent ones. Good for the temp desk, bad for the "
+                 "permanent desk."),
+                ('The other half of this story is on our '
+                 '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary '
+                 'staffing agency insolvency statistics</a> page.'),
+            ],
+            "peers": [
+                {"code": "781", "kind": "group", "label": "Permanent-placement agencies (SIC 781)", "emphasise": True},
+                {"code": "782", "kind": "group", "label": "Temporary employment agencies (SIC 782)"},
+                {"code": "78", "kind": "division", "label": "Employment activities overall (SIC 78)"},
+                {"code": "N", "kind": "section", "label": "Administrative and support services (SIC N)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("For most of the last decade this was a stable trade. Insolvencies sat "
+             "between 127 and 154 from 2016 to 2019, and barely moved through the "
+             "pandemic: 135 in 2020 and 142 in 2021, held in check by government "
+             "support and the restrictions on creditors."),
+            ("Then it tripled. 206 in 2022, 246 in 2023, 295 in 2024 and 345 in "
+             "2025, each year worse than the last, ending 131% above the 149 "
+             "recorded in 2019. This was not a single bad year. It was four "
+             "consecutive years of deterioration, which is a different and more "
+             "serious pattern."),
+            ("2026 is the first year that has broken the run. The rolling "
+             "12-month total of 300 is better than the 332 before it, and "
+             "better than the 2025 calendar year."),
+            ("It is still twice what this sector was losing in 2019."),
+        ],
+        "annual_intro": (
+            "The generic reading of this table is a steady climb, and that is close "
+            "enough to true here: permanent recruitment recorded four consecutive "
+            "worsening years from 2022 to 2025, ending at a series peak of 345. What "
+            "the annual table cannot show is that the run stopped in 2026, which is "
+            "why the year-to-date and rolling figures above matter more than this "
+            "one."
+        ),
+        "latest_note": (
+            "The year-to-date and rolling 12-month totals are both down on a year "
+            "earlier, but by very different margins, because the early months of "
+            "2025 were exceptionally severe. The fair reading is a real recovery "
+            "from a record peak, rather than a sector that is out of trouble."
+        ),
+        "pressure_heading": "Why recruitment agencies remain financially exposed",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures look backwards. They record distress that "
+             "has usually been building for a year or more, so a falling "
+             "2026 count is partly telling you about 2024 and 2025 "
+             "decisions."),
+            ("What follows is how money actually moves through a "
+             "permanent-placement agency and where it tends to get stuck. "
+             "It is not a claim about why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "Direct exposure to hiring confidence",
-                "body": ("Placement fee income depends entirely on clients actively "
-                         "hiring, so it falls away almost immediately when clients "
-                         "freeze recruitment, with little notice and no way to "
-                         "recover the lost pipeline."),
+                "h3": "There are still fewer jobs to fill",
+                "body": [
+                    ("The market these agencies sell into is smaller than it was. "
+                     "The ONS put UK vacancies at 707,000 for March to May 2026, "
+                     "down 31,000 or 4.2% on the year, and the lowest level since "
+                     "February to April 2021."),
+                    ("The ratio matters more than the count. There were 2.5 "
+                     "unemployed people per vacancy in February to April 2026, up "
+                     "from 2.2 a year earlier. A recruiter's product is scarcity: "
+                     "when a client can fill a role from their own inbox, the fee "
+                     "gets questioned, and then it gets negotiated, and then it does "
+                     "not get paid at all."),
+                    ("The ONS count covers the whole economy rather than agency "
+                     "hiring alone, so treat it as the weather, not the diagnosis."),
+                ],
             },
             {
-                "h3": "Thin working capital buffers",
-                "body": ("Agencies are typically light on fixed assets and cash "
-                         "between placements, so a run of quiet months can exhaust "
-                         "reserves faster than in sectors with more physical assets "
-                         "to fall back on."),
+                "h3": "Employers swapped permanent hires for temporary ones",
+                "body": [
+                    ("This is the specific thing that separates a permanent desk "
+                     "from a temp desk right now. The KPMG and REC UK Report on "
+                     "Jobs, published on 8 July 2026, found that permanent "
+                     "placements were still falling in June, though at a marginal "
+                     "pace that was the softest in three months, while temporary "
+                     "billings rose at their quickest rate since April 2023."),
+                    ("An employer who is nervous does not stop needing the work "
+                     "done. They stop committing to it. A temp can be ended with a "
+                     "week's notice; a permanent hire cannot, and the ONS Vacancy "
+                     "Survey feedback points the same way, with firms citing "
+                     "economic uncertainty and increased labour costs as reasons "
+                     "they are not recruiting."),
+                    ("The REC survey is UK-wide market context. It is not where the "
+                     "England and Wales insolvency counts on this page come from."),
+                ],
+            },
+            {
+                "h3": "The cost base is people, and it was built for a bigger market",
+                "body": [
+                    ("A recruitment agency has almost no assets. What it has is "
+                     "consultants, desks, a database subscription and an office, and "
+                     "the consultants are the expensive part. Firms that grew "
+                     "through 2022 and 2023 hired to match the billings of 2022 and "
+                     "2023."),
+                    ("When the market halves, the salary bill does not. It is a "
+                     "fixed cost until somebody decides to cut it, and that decision "
+                     "is always taken later than it should be, because every "
+                     "consultant you make redundant is a desk that definitely bills "
+                     "nothing next quarter."),
+                    ("In the 2026 to 2027 tax year employers also pay National "
+                     "Insurance at 15% above the secondary threshold of £96 a week. "
+                     "It lands on precisely the cost the agency is trying to hold "
+                     "on to."),
+                ],
+            },
+            {
+                "h3": "A placement fee is not money until the rebate period has run",
+                "body": [
+                    ("This is the trap that is specific to permanent placement, and "
+                     "it does not exist on the temp side. The invoice goes out when "
+                     "the candidate starts. The fee is commonly subject to a rebate "
+                     "or refund clause if that candidate leaves within an agreed "
+                     "period, so revenue recognised in March can walk back out of "
+                     "the door in May."),
+                    ("In a redundancy market, more placements fail. People "
+                     "take a job, get nervous, and go back to the employer "
+                     "they came from, or the new employer freezes the role "
+                     "two months in. The agency has already paid commission "
+                     "on that billing."),
+                    ("In the cases we see, a clawback arriving in a quarter "
+                     "that was already thin is a common last straw rather "
+                     "than the original cause."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Recruitment Agency Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
-        "related": ('Recruitment agencies sit within the wider '
-                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside administrative and support services generally. See also '
+        "practitioner_view": [
+            ("In the recruitment cases we handle, the agency is almost "
+             "never short of activity. It is short of completions. The "
+             "consultants are busy and the pipeline looks fine, but "
+             "interviews don't pay the bills."),
+            ("By the time a director calls us, the pattern is usually a "
+             "year old. Billings dropped first, then the good consultants "
+             "left, because they can smell a thin desk before anyone "
+             "announces anything."),
+            ("The ones who stayed had bigger targets and worse patches. The "
+             "office lease and the salary bill were both signed when things "
+             "were better, and neither cares."),
+            ("There is nearly always a personal guarantee in it too, on the "
+             "office lease or the invoice finance, and it is the last thing "
+             "anyone raises and the first thing they have been losing sleep "
+             "over."),
+            ("A guarantee does not improve by being ignored, and there is "
+             "more that can be done about it early than late."),
+            ("We would not start with the pipeline. We would look at "
+             "billings actually collected in the last three months against "
+             "the salary bill, how much revenue is still inside a rebate "
+             "period, what is owed to HMRC, and what happens if the two "
+             "best billers leave."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 266, "share": 77.1},
+                {"name": "Compulsory liquidations", "count": 48, "share": 13.9},
+                {"name": "Administrations", "count": 29, "share": 8.4},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 0.6},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> are the standard route out, at 266 of the "
+                "345 insolvencies recorded in 2025, up from 238 in 2024. That is what "
+                "it looks like when directors of asset-light businesses accept the "
+                "market has gone and close the company themselves.",
+                "The sharper movement was in "
+                '<a href="/liquidation/compulsory-liquidation/">compulsory '
+                "liquidations</a>, which more than doubled from 23 to 48, "
+                "taking them from 7.8% of the total to 13.9%: a creditor "
+                "petitioning to wind the company up rather than waiting.",
+                "PAYE and VAT arrears are the usual reason a recruitment "
+                "agency ends up in that column.",
+                '<a href="/company-administration/">Administrations</a> barely moved, '
+                "from 28 to 29, and remain a small share. Administration needs a "
+                "business somebody would buy, and a permanent agency whose value "
+                "walked out of the door with its consultants is a hard thing to sell.",
+            ],
+        },
+        "notes": [
+            "SIC group 781, activities of employment placement agencies, covers "
+            "companies whose recorded primary business is placing candidates with "
+            "employers, mainly into permanent roles. It includes executive search "
+            "and selection. Agencies supplying workers on a temporary basis sit "
+            "under SIC 782, and longer-term human resources provision under SIC 783.",
+            "A single company can run both a permanent desk and a temporary desk. "
+            "The SIC code records its main recorded activity, not a clean split of "
+            "what it actually does, so the boundary between 781 and 782 is neater in "
+            "the data than it is in the trade.",
+            "These are company counts, not the number of offices, consultants or "
+            "candidates affected. One insolvent company may run several trading "
+            "brands, and an agency can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active recruitment agencies. That matters "
+            "here more than on most pages: thousands of agencies were incorporated "
+            "during the 2021 and 2022 hiring boom, so a rising count could reflect a "
+            "larger population as much as a riskier one.",
+            "The SIC 781 figures come from Table A1b and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your agency is viable. Sector "
+             "totals never do. The questions that matter are narrower: does the cash "
+             "actually collected each month cover the salary bill, how much of your "
+             "recent revenue could still be clawed back under a rebate clause, and "
+             "what is owed to HMRC on PAYE and VAT right now?"),
+            ("Plenty of agencies in difficulty are sound businesses carrying a cost "
+             "base built for a bigger market, and that is worth knowing, because a "
+             "cost base can be cut."),
+            ("It is more serious when the arrears have been growing for several "
+             "quarters, when a rebate wave is coming and the commission on it has "
+             "already been paid, or when the office lease is the biggest single "
+             "thing keeping the company alive on paper and dead in practice."),
+            ('If you are reading this having just worked out that this quarter will '
+             'not cover payroll, the useful thing to know is that the earlier you '
+             'speak to someone, the more room there is to move: the lease '
+             'renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once HMRC petitions, and on these figures HMRC has been petitioning a '
+             'lot more, the bank account is usually frozen within days and the '
+             'choice narrows to '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> or a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> you did not '
+             'choose. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start if you want to talk it '
+             'through first.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK recruitment agencies become insolvent each year?",
+                "a": ("345 permanent-placement recruitment agencies entered "
+                      "insolvency in England and Wales in 2025, the highest in the "
+                      "series and up from 295 in 2024. The pre-pandemic figure was "
+                      "149 in 2019. Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are recruitment agency insolvencies falling in 2026?",
+                "a": ("Yes. There were 136 insolvencies between January and June "
+                      "2026 against 181 in the same months of 2025, a fall of "
+                      "24.9%, and the rolling 12-month total fell 9.6% to 300. "
+                      "The year-to-date fall is flattered by an unusually "
+                      "severe early 2025, so the rolling measure is the "
+                      "better guide."),
+            },
+            {
+                "q": "Why are recruitment insolvencies falling while temporary staffing insolvencies rise?",
+                "a": ("Because employers have been hiring temporary staff "
+                      "instead of permanent ones. Permanent-placement "
+                      "insolvencies (SIC 781) fell 24.9% in the first half "
+                      "of 2026 while temporary employment agency "
+                      "insolvencies (SIC 782) rose 7.3%. The KPMG and REC UK "
+                      "Report on Jobs found temp billings rising at their "
+                      "quickest rate since April 2023."),
+            },
+            {
+                "q": "Do these figures include temp agencies?",
+                "a": ("No. This page counts SIC group 781, employment placement "
+                      "agencies, which mainly place candidates into permanent roles. "
+                      "Temporary staffing agencies are SIC 782 and are covered on "
+                      "their own page."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for recruitment agencies?",
+                "a": ("Creditors' voluntary liquidation, which accounted for 266 of "
+                      "the 345 recruitment agency insolvencies in 2025. Compulsory "
+                      "liquidations, where a creditor such as HMRC petitions the "
+                      "court, more than doubled from 23 to 48 over the same year."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Recruitment Agency Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('The clearest contrast is with '
                     '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary staffing agency insolvency statistics</a> '
-                    'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+                    '(SIC 782), which are rising as permanent placement falls. Recruitment also sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
     "temporary-staffing-agency-insolvency-statistics": {
         "wp_id": 80138,
@@ -542,49 +1123,45 @@ SECTORS = {
         "exclusion_note": ("Permanent-placement and executive-search agencies "
                            "(SIC 781) and longer-term human resources provision "
                            "(SIC 783) are recorded separately."),
-        "hero_note": ("Five extra failures is not a big number. The direction is "
-                      "what matters. Insolvencies across employment activities as "
-                      "a whole fell 15.3% over the same period, and "
-                      "permanent-placement agencies fell 29.5%. Temporary staffing "
-                      "is going the other way from its own trade, which is not "
-                      "what you would expect if this were simply a bad year for "
-                      "recruitment."),
+        "hero_note": ("Six extra failures is not a big number. The direction is "
+                      "what matters. Employment activities as a whole fell "
+                      "11.7% over the same period, and permanent-placement "
+                      "agencies fell 24.9%. Temporary staffing is going the "
+                      "other way from its own trade."),
         "key_findings": True,
         "extra_findings": [
             {"value": "59% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "176 vs 111"},
-            {"value": "34.3%", "label": "of SIC 78 insolvencies", "sub": "up from 27.0% a year earlier"},
+            {"value": "33.3%", "label": "of SIC 78 insolvencies", "sub": "up from 27.4% a year earlier"},
         ],
         "comparison_intro": [
-            ("Yes, on the two measures worth trusting. There were 72 insolvencies "
-             "from January to May 2026 against 67 in the same months of 2025, a "
-             "rise of 7.5%, and the rolling 12-month total went from 162 to 181, "
-             "up 11.7%."),
-            ("The monthly figures are noisier. May's 12 cases were down from 16 in "
-             "April, though still above the 11 in May 2025, and the run so far "
-             "this year has gone 13, 7, 24, 16, 12. That is not a steady climb. "
-             "Anyone calling it one is reading the year-to-date total and ignoring "
-             "the path it took to get there."),
-            ("The honest reading is a renewed deterioration from a level that was "
-             "already high: 2025 set a new series peak of 176. These are Company "
-             "Debt calculations from Insolvency Service Table 1c data."),
+            ("Yes, on the two measures worth trusting. There were 88 "
+             "insolvencies from January to June 2026 against 82 in the same "
+             "months of 2025, a rise of 7.3%, and the rolling 12-month total "
+             "went from 163 to 182, up 11.7%."),
+            ("The monthly figures are noisier. June's 16 cases were up from "
+             "12 in May, and the run so far this year has gone 13, 7, 24, "
+             "16, 12, 16. That is not a steady climb."),
+            ("The honest reading is a renewed deterioration from a level "
+             "that was already high: 2025 set a new series peak of 176. "
+             "These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
         ],
         "divergence": {
             "heading": "Temporary staffing is moving against the wider recruitment sector",
             "caption": "Temporary staffing agencies against related recruitment classifications",
             "intro": [
-                ("This is the finding worth taking away. Temporary staffing rose "
-                 "while everything next to it fell: permanent-placement agencies "
-                 "(SIC 781) down 29.5%, the whole of employment activities (SIC "
-                 "78) down 15.3%, and the broad administrative and support "
-                 "services section (SIC N) down 21.7%."),
-                ("Temporary staffing accounted for 34.3% of all insolvencies "
-                 "across employment activities in the first five months of 2026, "
-                 "up from 27.0% a year earlier, a rise of 7.3 percentage points. "
-                 "Its share of the wider administrative and support services "
-                 "section also rose, from 6.2% to 8.5%."),
-                ("So this is not a rising tide lifting every recruitment failure "
-                 "with it. There was no rising tide. Whatever is happening is "
-                 "happening to temporary staffing in particular."),
+                ("Temporary staffing rose while everything next to it fell: "
+                 "permanent-placement agencies (SIC 781) down 24.9%, "
+                 "employment activities (SIC 78) down 11.7%, and the broad "
+                 "administrative and support services section (SIC N) down "
+                 "20.0%."),
+                ("Temporary staffing accounted for 33.3% of "
+                 "employment-activities insolvencies in the first half of "
+                 "2026, up from 27.4% a year earlier. Its share of the "
+                 "wider section also rose, from 6.3% to 8.5%."),
+                ("This is not a rising tide lifting every recruitment "
+                 "failure with it. Whatever is happening is happening to "
+                 "temporary staffing in particular."),
             ],
             "peers": [
                 {"code": "782", "kind": "group", "label": "Temporary employment agencies (SIC 782)", "emphasise": True},
@@ -614,17 +1191,18 @@ SECTORS = {
             "A record year does not mean every corner of the market weakened at "
             "once. SIC 782 lumps together the agency supplying warehouse shifts, "
             "the one placing office temps, the one covering nursing rotas and the "
-            "one finding supply teachers, and Table 1c does not separate them. The "
+            "one finding supply teachers, and Table A1b does not separate them. The "
             "peak is real. It is just not evenly spread."
         ),
         "pressure_heading": "Why temporary staffing agencies remain financially exposed",
         "pressure_caveat_in_intro": True,
         "pressure_intro": [
-            ("The market picture is genuinely mixed, and insolvency figures look "
-             "backwards: they record distress that has usually been building for a "
-             "year or more before anyone files anything. What follows is how money "
-             "actually moves through a staffing agency, and where it tends to get "
-             "stuck. It is not a claim about why any particular company failed."),
+            ("The market picture is genuinely mixed, and insolvency figures "
+             "look backwards: they record distress that has usually been "
+             "building for a year or more before anyone files anything."),
+            ("What follows is how money actually moves through a staffing "
+             "agency, and where it tends to get stuck. It is not a claim "
+             "about why any particular company failed."),
         ],
         "pressure": [
             {
@@ -633,12 +1211,14 @@ SECTORS = {
                     ("Hiring overall is still subdued. The ONS put UK vacancies at "
                      "707,000 for March to May 2026, down 4.2% on the year and the "
                      "lowest since early 2021."),
-                    ("Fewer vacancies means fewer shifts to fill and more agencies "
-                     "chasing the ones left. That tends to show up as margin before "
-                     "it shows up as volume: the client asks for a lower charge "
-                     "rate because they know three other agencies will say yes. The "
-                     "ONS count covers the whole economy rather than staffing "
-                     "agencies alone, so treat it as weather, not diagnosis."),
+                    ("Fewer vacancies means fewer shifts to fill and more "
+                     "agencies chasing the ones left. That shows up as "
+                     "margin before it shows up as volume: the client asks "
+                     "for a lower rate knowing three other agencies will "
+                     "say yes."),
+                    ("The ONS count covers the whole economy rather than "
+                     "staffing agencies alone, so treat it as weather, not "
+                     "diagnosis."),
                 ],
             },
             {
@@ -752,7 +1332,7 @@ SECTORS = {
             "adjusted for the number of active temporary staffing companies, so "
             "the year-to-date and rolling 12-month comparisons are a better guide "
             "than any single month.",
-            "The SIC 782 figures come from Table 1c and are not seasonally "
+            "The SIC 782 figures come from Table A1b and are not seasonally "
             "adjusted. The Insolvency Service seasonally adjusts parts of its "
             "headline England and Wales series where it finds seasonality, but "
             "that adjustment does not apply to the industry figures used here. The "
@@ -760,7 +1340,7 @@ SECTORS = {
         ],
         "citation": ('Company Debt. (2026). "UK Temporary Staffing Agency Insolvency '
                      'Statistics." Analysis of Insolvency Service company insolvency '
-                     "data by industry (Table 1c). CompanyDebt.com."),
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('The clearest contrast is with '
                     '<a href="/data/recruitment-agency-insolvency-statistics/">recruitment agency insolvency statistics</a> '
                     '(SIC 781, permanent placement), which are falling as temporary staffing rises. '
@@ -774,52 +1354,340 @@ SECTORS = {
         "division_code": "45",
         "parent_section_code": "G",
         "parent_section_label": "wholesale and retail trade and repair of motor vehicles",
+        # The meaningful peer is the motor trade (SIC 45), not the whole of
+        # retail. The divergence table below separates repair from sales, which
+        # are different businesses sharing a division.
+        "parent_kind": "division",
+        "parent_label": "motor trade",
         "h1a": "UK Motor Vehicle Repair",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
         "eyebrow": "Motor vehicle repair",
         "keyword": "motor vehicle repair",
-        "singular": "garage",
+        # "garage" is the natural word and is used throughout the prose, but
+        # `singular` also renders the commercial-section H2, which has to carry
+        # a word from this page's H1 (gate check 18, anti-cannibalisation).
+        "singular": "repair business",
         "plural": "motor vehicle repair and maintenance businesses",
-        "scope_description": "garages and workshops carrying out motor vehicle maintenance and repair",
-        "exclusion_note": "Sale of motor vehicles and parts is recorded separately.",
-        "notes": [
-            "Motor vehicle repair insolvencies can move on a handful of cases "
-            "month to month. Prefer the year-to-date or 12-month rolling total for "
-            "the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many garages are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is repair and maintenance only (SIC 452). Sale of vehicles and "
-            "parts sits under separate SIC codes and is not included here.",
+        "scope_description": ("garages and workshops carrying out motor vehicle "
+                              "maintenance and repair"),
+        "exclusion_note": ("Selling vehicles is a different business and is counted "
+                           "separately: car dealers and forecourts sit under SIC "
+                           "451, and parts and accessories under SIC 453. Neither is "
+                           "included here."),
+        "scope_note": ("Repair only. This page does not count car dealers, which "
+                       "are a separate SIC code."),
+        "hero_note": ("Read that twice, because the two measures used to disagree "
+                      "sharply and now barely do. The year-to-date total says "
+                      "garages are easing. The rolling 12 months, still carrying "
+                      "the back half of a record 2025, is now close to flat too."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "79% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "293 vs 164"},
+            {"value": "88.7%", "label": "of 2025 cases were CVLs", "sub": "260 of 293"},
         ],
-        "practitioner_view": [
-            "In the cases we see, independent garages are being squeezed between "
-            "rising parts and equipment costs and competition from manufacturer-"
-            "franchised dealers, who hold newer, higher-margin warranty work.",
-            "The shift toward electric and increasingly complex vehicles adds a "
-            "capital cost independents often cannot spread as easily as a "
-            "multi-site franchised group.",
+        "comparison_intro": [
+            ("There were 140 insolvencies from January to June 2026 against "
+             "150 in the same months of 2025, down 6.7%. The rolling "
+             "12-month total was 283 against 282 a year earlier, "
+             "essentially unchanged."),
+            ("The motor trade as a whole fell 4.3% over the same months. "
+             "These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The two measures that used to conflict sharply are now much "
+             "closer together. The rolling 12 months still contains the "
+             "second half of 2025, which made that year the worst on "
+             "record at 293."),
+            ("The year-to-date measure, covering only 2026, shows a real "
+             "improvement that is only just starting to reach the rolling "
+             "figure."),
+            ("The monthly path says something similar in cruder terms: 15, "
+             "23, 24, 32, 19, 27. April's 32 was a genuine outlier; June's "
+             "27 sits back near the middle of that range."),
+        ],
+        "divergence": {
+            "heading": "Repairing cars and selling cars are different businesses",
+            "caption": ("Motor vehicle repair against vehicle sales, the motor trade "
+                        "and the wider retail sector"),
+            "intro": [
+                ("SIC division 45 is usually described as the motor trade, "
+                 "but it bundles together the garage fixing a ten-year-old "
+                 "car with the forecourt selling a new one. Different "
+                 "customers, different margins, different working capital. "
+                 "This page counts the garage."),
+                ("Split out, both halves of the motor trade eased by a "
+                 "similar amount in 2026: repair down 6.7%, vehicle sales "
+                 "down 6.2%. Neither is diverging sharply from the other "
+                 "any more."),
+                ("The wider retail sector, meanwhile, fell 14.3%, well over "
+                 "twice as fast as either half of the motor trade. Whatever "
+                 "is lifting retail is not reaching the workshop, or the "
+                 "forecourt, at the same rate."),
+            ],
+            "peers": [
+                {"code": "452", "kind": "group", "label": "Motor vehicle repair (SIC 452)", "emphasise": True},
+                {"code": "451", "kind": "group", "label": "Sale of motor vehicles (SIC 451)"},
+                {"code": "45", "kind": "division", "label": "Motor trade overall (SIC 45)"},
+                {"code": "G", "kind": "section", "label": "Wholesale and retail trade (SIC G)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Garages had a quiet decade before this. Insolvencies ran between 164 "
+             "and 195 from 2016 to 2019, then fell to 132 in 2020 and 145 in 2021, "
+             "when government support and the restrictions on creditors held the "
+             "normal cycle in check. People also stopped driving, which for once "
+             "cut both ways: less wear, but also less work."),
+            ("The recovery brought the reckoning. 236 in 2022 and 274 in 2023, then "
+             "a dip to 251 in 2024 that looked, at the time, like the worst being "
+             "over."),
+            ("It was not. 2025 came in at 293, the highest in the series and 79% "
+             "above the 164 recorded in 2019. That is the part worth sitting with: "
+             "the peak for garages is not 2023, as it is in much of the economy. It "
+             "is last year."),
+        ],
+        "annual_intro": (
+            "One feature of this table is easy to miss and worth stating plainly. "
+            "For most sectors the worst year was 2023 and everything since has been "
+            "a recovery. For garages the worst year is 2025, the most recent "
+            "complete one. The 2024 dip to 251 turned out to be a pause rather than "
+            "a turn."
+        ),
+        "latest_note": (
+            "The two measures are now much closer than they were: the "
+            "year-to-date total is down 6.7% while the rolling 12-month "
+            "total is essentially flat, up 0.4%. That is what a turn "
+            "finally starting to reach the longer measure looks like."
+        ),
+        "pressure_heading": "Why garages are under pressure when the repair work is there",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Start with the thing that makes this sector strange. There are more "
+             "cars on the road than ever, they are older than ever, and repair "
+             "prices are rising. On paper this should be a good time to own a "
+             "garage. It produced a record year of insolvencies instead, so the "
+             "problem is not the customers."),
+            ("What follows is where the money actually goes. It is not a claim "
+             "about why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "Rising parts and equipment costs",
-                "body": ("Genuine parts, diagnostic equipment and the specialist "
-                         "tooling needed for newer and electric vehicles have risen "
-                         "in cost faster than many independent garages can pass on "
-                         "through labour rates."),
+                "h3": "Demand is not the problem",
+                "body": [
+                    ("The work is there and there is more of it every year. SMMT "
+                     "Motorparc data published on 24 April 2026 put the UK fleet at "
+                     "a record 42,549,649 vehicles, up 1.4%, with the average car "
+                     "now 9.7 years old against 9.5 a year earlier."),
+                    ("A record 45.7% of cars on the road have been in service for "
+                     "more than a decade, up from 43.4%. Older cars break more. "
+                     "Every one of those percentage points is work arriving at "
+                     "somebody's ramp, which is why a garage full of jobs and short "
+                     "of cash is such a common and such a confusing place to be."),
+                ],
             },
             {
-                "h3": "Competition from franchised dealers",
-                "body": ("Manufacturer warranty and servicing schemes pull newer, "
-                         "higher-margin vehicle work toward franchised dealers, "
-                         "leaving independent garages more reliant on older, "
-                         "lower-margin repair work."),
+                "h3": "Neither is the labour rate",
+                "body": [
+                    ("Garages have been putting their prices up, and the official "
+                     "figures for this exact trade confirm it. The ONS producer "
+                     "price index for maintenance and repair services of motor "
+                     "vehicles (SIC 452) reached 156.2 in the first quarter of 2026 "
+                     "against 148.4 a year earlier, a rise of 5.3%, and up 56% on "
+                     "its 2015 base."),
+                    ("So the sector is charging more and doing more work, and still "
+                     "recorded its worst year. That is the whole puzzle in two "
+                     "sentences, and it means the answer is on the cost side of the "
+                     "page, not the revenue side."),
+                    ("The ONS index is a UK-wide price measure. It is not where the "
+                     "England and Wales insolvency counts come from."),
+                ],
+            },
+            {
+                "h3": "The cost side is where it goes",
+                "body": [
+                    ("A garage's costs are a technician, a building and the parts. "
+                     "All three have moved. In the 2026 to 2027 tax year employers "
+                     "pay National Insurance at 15% above the secondary threshold of "
+                     "£96 a week, and the National Living Wage has been £12.71 an "
+                     "hour for workers aged 21 and over since April 2026."),
+                    ("A qualified technician costs well above that, and the "
+                     "franchised dealer down the road can usually outbid you for "
+                     "them. Meanwhile the ramp, the diagnostic subscription and the "
+                     "rent carry on whether the bay is full or empty."),
+                    ("An older car parc also brings worse-tempered work. The owner "
+                     "of a fourteen-year-old car is the most likely person to "
+                     "decline the job, argue the quote, or take the car away in "
+                     "pieces because the repair is worth more than the vehicle. The "
+                     "job still cost you the diagnostic hour."),
+                ],
+            },
+            {
+                "h3": "Electric vehicles are tomorrow's problem, not this year's",
+                "body": [
+                    ("It is worth being straight about this, because the "
+                     "trade press is not always. Electric vehicles are "
+                     "often given as the reason independents are failing."),
+                    ("The parc data does not support that as a 2026 cash "
+                     "problem: SMMT put zero-emission vehicles at roughly "
+                     "one in 22 on the road. Twenty-one out of twenty-two "
+                     "cars still have an engine, a clutch and an exhaust."),
+                    ("The real difficulty is the order of events. The tooling, the "
+                     "training and the high-voltage qualifications have to be paid "
+                     "for years before enough electric work arrives to pay for them. "
+                     "That is a capital problem landing on businesses that are "
+                     "already short of capital, which is a different thing from "
+                     "electric vehicles taking the work away."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Motor Vehicle Repair Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the garage cases we handle, the money is nearly always stuck in "
+             "the workshop rather than missing from it. There is a car on the ramp "
+             "in pieces, the customer is not answering the phone about the extra "
+             "work, and the part that was ordered for it is already paid for. "
+             "Multiply that by the number of bays and you have the whole problem."),
+            ("By the time a director calls us, the parts account is usually the "
+             "thing that broke first. The factor puts you on stop, so you cannot "
+             "finish the jobs, so you cannot invoice, so you cannot pay the factor. "
+             "That loop closes fast, and it is why a garage can go from busy to "
+             "finished inside a month while the order book still looks healthy."),
+            ("There is often a personal guarantee on the unit or the parts account, "
+             "and it is rarely the first thing mentioned on the call. It is usually "
+             "the thing that has been keeping someone awake. Worth saying plainly: "
+             "it does not improve by being left, and there is more room to deal with "
+             "it early than late."),
+            ("We would not start with the number of jobs. We would look at "
+             "cash actually collected against the wage bill, how much is "
+             "sitting in unbilled work in progress and cars you cannot "
+             "release."),
+            ("What the parts factor is owed and whether you are on stop, "
+             "what the premises commit you to, and what is owed to HMRC on "
+             "VAT and PAYE. Those tell you where the garage really is."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 260, "share": 88.7},
+                {"name": "Compulsory liquidations", "count": 24, "share": 8.2},
+                {"name": "Administrations", "count": 7, "share": 2.4},
+                {"name": "Company voluntary arrangements", "count": 2, "share": 0.7},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> account for 88.7% of garage insolvencies, "
+                "260 of 293 in 2025, the highest share of any sector on these pages. "
+                "That is what an asset-light trade looks like on the way out: when a "
+                "garage stops, there is usually nothing to rescue beyond some tools "
+                "and a lease, so the directors close it themselves.",
+                '<a href="/company-administration/">Administrations</a> make the same '
+                "point from the other side, falling from 17 in 2024 to 7 in 2025, just "
+                "2.4% of cases. Administration needs a buyer, and most independent "
+                "garages are worth more as a going concern to their own owner than to "
+                "anybody else.",
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> doubled, from 12 to 24. A creditor, usually HMRC, "
+                "petitioning to wind the company up is the one column that rose in "
+                "share as well as number.",
+            ],
+        },
+        "notes": [
+            "SIC group 452 covers companies whose recorded primary business "
+            "is the maintenance and repair of motor vehicles: independent "
+            "garages, workshops, MOT centres, bodyshops and tyre and "
+            "exhaust fitters.",
+            "Selling vehicles (SIC 451) and parts and accessories (SIC 453) "
+            "are separate codes and are not counted here, even though many "
+            "real businesses do more than one of those things.",
+            "The SIC code records a company's main recorded activity, not a clean "
+            "split of its work. A garage that also sells a few cars off the "
+            "forecourt appears once, under whichever code it registered.",
+            "These are company counts, not the number of sites, ramps or technicians "
+            "affected. One insolvent company may run several branches, and a garage "
+            "can stop trading without ever entering a formal insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active garages, so they cannot be read as "
+            "the chance of any given garage failing.",
+            "The SIC 452 figures come from Table A1b and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your garage is viable. Sector "
+             "totals never do. The questions that matter are narrower: does the "
+             "labour rate cover the technician once National Insurance is on top, "
+             "how much cash is trapped in jobs you cannot finish or release, and is "
+             "the parts account current or on stop?"),
+            ("Plenty of garages in difficulty are sound businesses with a working "
+             "capital problem or an old VAT bill, and that is worth knowing, "
+             "because both can be dealt with."),
+            ("It is more serious when the arrears have grown across several "
+             "quarters, or when you are turning work away because you cannot buy "
+             "the parts to do it. That is the point at which a garage is winding "
+             "itself down, whether anyone has said so out loud or not."),
+            ('If you are reading this with a stop on the parts account and a VAT '
+             'bill due, the useful thing to know is that the earlier you speak to '
+             'someone, the more room there is to move: terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> is '
+             'advertised, the bank account is usually frozen within days, and on '
+             'these figures '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is where the overwhelming majority of '
+             'garages end up. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start if you want to understand the '
+             'options first.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK garages become insolvent each year?",
+                "a": ("293 motor vehicle repair businesses entered insolvency in "
+                      "England and Wales in 2025, the highest in the series and up "
+                      "from 251 in 2024. The pre-pandemic figure was 164 in 2019. "
+                      "Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are garage insolvencies rising or falling in 2026?",
+                "a": ("The two measures are converging. There were 140 "
+                      "insolvencies between January and June 2026 against "
+                      "150 a year earlier, down 6.7%, and the rolling "
+                      "12-month total is now essentially flat at 283. The "
+                      "improvement is recent, and the rolling figure still "
+                      "includes the back half of a record 2025."),
+            },
+            {
+                "q": "Do these figures include car dealers?",
+                "a": ("No. This page counts SIC group 452, the maintenance and "
+                      "repair of motor vehicles. Selling vehicles is SIC 451 and "
+                      "selling parts is SIC 453. Both are counted separately, and "
+                      "both are different businesses from a repair workshop."),
+            },
+            {
+                "q": "Are electric vehicles causing garage insolvencies?",
+                "a": ("The parc data does not support that as the current cause. "
+                      "SMMT put zero-emission vehicles at around one in 22 on UK "
+                      "roads, so most cars still have an engine. The nearer-term "
+                      "difficulty is that tooling and training for electric work "
+                      "must be paid for years before enough of that work arrives."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for garages?",
+                "a": ("Creditors' voluntary liquidation, at 260 of the 293 garage "
+                      "insolvencies in 2025, or 88.7%. That is the highest CVL share "
+                      "of any sector we cover, and it reflects how little there "
+                      "usually is to rescue in an independent garage."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Motor Vehicle Repair Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Motor vehicle repair sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside wholesale and retail trade generally. See also the '
@@ -831,53 +1699,356 @@ SECTORS = {
         "division_code": "81",
         "parent_section_code": "N",
         "parent_section_label": "administrative and support services",
+        # The meaningful peer is the building-services trade (SIC 81), where
+        # cleaning sits alongside landscaping and facilities support, not the
+        # whole of administrative and support services.
+        "parent_kind": "division",
+        "parent_label": "building and landscape services",
         "h1a": "UK Cleaning Company",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
         "eyebrow": "Cleaning contractors",
         "keyword": "cleaning company",
-        "singular": "cleaning contractor",
+        "singular": "cleaning company",
         "plural": "commercial and industrial cleaning contractors",
-        "scope_description": "commercial and industrial cleaning contractors",
-        "exclusion_note": "Domestic cleaning services and waste collection are recorded under separate SIC codes.",
-        "notes": [
-            "Cleaning company insolvencies can move on a handful of cases month to "
-            "month. Prefer the year-to-date or 12-month rolling total for the "
-            "steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many cleaning contractors are registered, so it cannot be read as a "
-            "sector-wide risk of insolvency.",
-            "This is commercial and industrial cleaning only (SIC 812). Domestic "
-            "cleaning and waste collection sit under separate SIC codes and are "
-            "not included here.",
+        "scope_description": ("general and specialist cleaning of buildings and "
+                              "industrial premises, including window cleaning and "
+                              "specialist industrial cleaning"),
+        "exclusion_note": ("Domestic cleaning provided by agencies, waste "
+                           "collection, and landscaping or grounds maintenance are "
+                           "recorded under separate SIC codes."),
+        "hero_note": ("Cleaning eased slightly, down 6.8% year to date, but every "
+                      "other part of the building-services trade improved far "
+                      "faster: landscaping down 33.3%, facilities support down "
+                      "40.9%, the division as a whole down 22.0%. Cleaning is "
+                      "still being left behind."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "91% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "172 vs 90"},
+            {"value": "55.6%", "label": "of SIC 81 insolvencies", "sub": "up from 46.5% a year earlier"},
         ],
-        "practitioner_view": [
-            "In the cases we see, cleaning contracting is almost entirely a labour "
-            "cost business, so minimum wage and employer National Insurance "
-            "increases hit the cost base directly, with very little else to trim.",
-            "Multi-year contracts are the specific trap. A price agreed before a "
-            "cost increase often cannot be revisited until renewal, leaving a "
-            "contractor committed to an unprofitable rate for months or years.",
+        "comparison_intro": [
+            ("There were 69 insolvencies from January to June 2026 against "
+             "74 in the same months of 2025, down 6.8%. Building and "
+             "landscape services as a whole fell 22.0% over the same "
+             "period, from 159 to 124."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month total is the one that should give "
+             "pause. It rose from 155 to 167, up 7.7%. On the year-to-date "
+             "measure cleaning is easing slightly; on the longer measure "
+             "it is still getting worse, at a time when its own division "
+             "is improving sharply."),
+            ("Because cleaning is lagging so far behind its own division, "
+             "its share of all building and landscape services "
+             "insolvencies climbed from 46.5% to 55.6% in a single year."),
+        ],
+        "divergence": {
+            "heading": "Cleaning is the only part of building services not improving",
+            "caption": "Cleaning contractors against the rest of the building-services trade",
+            "intro": [
+                ("Cleaning sits in SIC division 81 alongside landscaping and "
+                 "combined facilities support: broadly the same customers, "
+                 "the same tenders, often the same procurement departments. "
+                 "Those neighbours have had a strong year. Cleaning has "
+                 "barely moved."),
+                ("Landscape services fell 33.3% and facilities support fell "
+                 "40.9%, while cleaning eased only 6.8%. The obvious "
+                 "question is what cleaning has that the others do not."),
+                ("The most likely answer is the shape of its cost base: "
+                 "cleaning is the most labour-intensive of the three, with "
+                 "the largest number of part-time, hourly-paid people per "
+                 "pound of turnover."),
+                ("That matters because the two costs that have moved most "
+                 "since 2024 are the hourly wage floor and the employer "
+                 "National Insurance charged on it. A trade built almost "
+                 "entirely out of hourly people feels both, and feels them "
+                 "first."),
+            ],
+            "peers": [
+                {"code": "812", "kind": "group", "label": "Cleaning contractors (SIC 812)", "emphasise": True},
+                {"code": "813", "kind": "group", "label": "Landscape services (SIC 813)"},
+                {"code": "811", "kind": "group", "label": "Combined facilities support (SIC 811)"},
+                {"code": "81", "kind": "division", "label": "Building and landscape services (SIC 81)"},
+                {"code": "N", "kind": "section", "label": "Administrative and support services (SIC N)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("The decade before this was unremarkable. Cleaning insolvencies ran "
+             "between 81 and 111 from 2016 to 2019, then fell to 56 in 2020, the "
+             "series low, when government support and the restrictions on creditors "
+             "held the normal cycle in check. Cleaning also had a genuinely good "
+             "pandemic, for the obvious reason."),
+            ("Then it nearly doubled and stayed there. 141 in 2022, 171 in 2023, "
+             "172 in 2024, 172 in 2025. Three consecutive years within one case of "
+             "each other, all of them at the top of the series."),
+            ("That flatness is the whole point. Most sectors spiked in 2023 and "
+             "have been coming down since. Cleaning went up and simply stopped, at "
+             "91% above the 90 recorded in 2019. It is not a crisis. It is a new, "
+             "worse normal that has now lasted three years."),
+        ],
+        "annual_intro": (
+            "The last three rows are the ones to look at: 171, then 172, then 172. "
+            "Three years running, within a single case of each other, all at the "
+            "top of the series. Most sectors peaked in 2023 and have improved since. "
+            "Cleaning reached its level and stayed on it."
+        ),
+        "latest_note": (
+            "The year-to-date total eased slightly while the rolling "
+            "12-month total rose 7.7%, so nothing here points to a clear "
+            "recovery. The fair reading is a sector still lagging badly "
+            "behind the trade around it."
+        ),
+        "pressure_heading": "Why cleaning companies are under pressure",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Cleaning is close to a pure labour business. Take out the wages and "
+             "there is not much left but bin bags, machines and a van, which means "
+             "there is almost nothing to trim when the wage bill moves."),
+            ("Insolvency figures also look backwards, recording distress that has "
+             "usually been building for a year or more. What follows is where the "
+             "money goes. It is not a claim about why any particular company "
+             "failed."),
         ],
         "pressure": [
             {
-                "h3": "Labour cost is almost the entire cost base",
-                "body": ("Cleaning is overwhelmingly a labour cost business, so "
-                         "minimum wage and employer National Insurance increases "
-                         "hit margins directly, with little scope to absorb them "
-                         "elsewhere in the cost structure."),
+                "h3": "The cost of employing a cleaner has moved sharply in two years",
+                "body": [
+                    ("Two things changed at once, and both land on hourly "
+                     "staff. The National Living Wage went from £11.44 an "
+                     "hour in April 2024 to £12.21 in April 2025 and £12.71 "
+                     "from April 2026, for workers aged 21 and over."),
+                    ("At the same time, employer National Insurance rose "
+                     "from 13.8% to 15% in April 2025, and the secondary "
+                     "threshold at which it starts fell from £175 a week to "
+                     "£96."),
+                    ("That threshold cut is the part that gets underestimated, "
+                     "because it is worth most where the wages are lowest. Take one "
+                     "cleaner on 15 hours a week. In April 2024, at £11.44 an hour, "
+                     "they earned £171.60 a week, which was below the £175 threshold, "
+                     "so the employer paid no National Insurance on them at all."),
+                    ("The same shift today pays £190.65 a week, of which "
+                     "£94.65 is above the threshold, so the employer now "
+                     "pays roughly £14.20 a week, about £738 a year, on a "
+                     "person who two years ago cost nothing in National "
+                     "Insurance."),
+                    ("Add the pay rise itself and the cost of that one "
+                     "part-time cleaner has gone from about £8,900 a year "
+                     "to about £10,650, a rise of roughly 19%."),
+                    ("That arithmetic is ours, not an official statistic, and it is "
+                     "an illustration rather than a typical case. It ignores "
+                     "pensions and holiday pay, and it is before the Employment "
+                     "Allowance, which offsets up to £10,500 of an employer's "
+                     "National Insurance bill."),
+                    ("That allowance matters, and it cuts both ways. It covers a "
+                     "small firm entirely. On a contractor running two hundred "
+                     "cleaners it is gone by about the second week of April. "
+                     "Sources: GOV.UK National Minimum Wage rates, and rates and "
+                     "thresholds for employers."),
+                ],
             },
             {
-                "h3": "Fixed-price contracts agreed before costs rose",
-                "body": ("Multi-year cleaning contracts are often priced years in "
-                         "advance and cannot be repriced until renewal, so a "
-                         "contractor can be locked into a rate that stopped "
-                         "covering its costs long before the contract ends."),
+                "h3": "The contract was priced before any of that happened",
+                "body": [
+                    ("A cleaning contract is often a fixed price for a fixed "
+                     "specification over two or three years. The cost that sits "
+                     "underneath it is an hourly rate set by Parliament and revised "
+                     "every April. Those two facts do not fit together, and the gap "
+                     "between them is the contractor's margin."),
+                    ("Unless the contract has an indexation clause that "
+                     "actually works, and plenty do not, the contractor "
+                     "absorbs each April. A price agreed in 2024 is being "
+                     "delivered in 2026 with a wage floor 11% higher."),
+                    ("Nobody has done anything wrong. The contract has "
+                     "simply stopped covering its costs."),
+                ],
+            },
+            {
+                "h3": "There is nothing else in the cost base to cut",
+                "body": [
+                    ("In most trades under pressure there is somewhere to go: buy "
+                     "cheaper materials, stretch the replacement cycle, sublet the "
+                     "unit. Cleaning has none of that. Labour is nearly all of it, "
+                     "and the specification says how many hours the site gets."),
+                    ("So the levers are the ones nobody wants: cut hours below what "
+                     "the site needs and wait for the complaint, or hold the hours "
+                     "and lose money every month. Most contractors do the second one "
+                     "for far too long, because the first one loses the contract."),
+                ],
+            },
+            {
+                "h3": "Tenders are won by whoever is most wrong about their costs",
+                "body": [
+                    ("Cleaning is bought on price, and the bar to entry is a van and "
+                     "a website. That combination means there is always somebody "
+                     "willing to bid a rate that cannot work, sometimes because they "
+                     "are desperate and sometimes because they have not done the "
+                     "arithmetic above."),
+                    ("They win the contract, and eighteen months later they are in "
+                     "our office. Meanwhile the incumbent either matched the price "
+                     "and is now losing money on a site they used to make money on, "
+                     "or held their nerve and lost the work. Both routes end "
+                     "somewhere unpleasant, and this is a large part of why the "
+                     "count never comes down."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Cleaning Company Insolvency "
-                     "Statistics. CompanyDebt.com. Data sourced from the Insolvency "
-                     "Service company insolvency statistics by industry (Table 1c)."),
+        "practitioner_view": [
+            ("In the cleaning cases we handle, the wages always get paid. "
+             "That is the first thing to understand about this trade. The "
+             "cleaners are paid weekly or fortnightly, often the "
+             "lowest-paid people in the chain, and no director we have met "
+             "wants to be the one who does not pay them."),
+            ("So when money is short, something else gives way, and what "
+             "gives way is nearly always the VAT and the PAYE."),
+            ("By the time a director calls us, HMRC arrears are usually a year old "
+             "and have quietly become the company's biggest creditor. Nobody decided "
+             "that. It happened one payroll at a time, each one a small, defensible "
+             "decision that made complete sense on the day."),
+            ("The contract book usually looks reassuring right up to the end, which "
+             "is what makes this one so hard to see from the inside. Turnover is "
+             "fine. Sites are staffed. Clients are happy. The company is simply "
+             "losing a few pence an hour across several hundred thousand hours a "
+             "year, and no single site looks bad enough to notice."),
+            ("So we would not start with turnover or the number of contracts. We "
+             "would look at gross margin per site after wages, National Insurance, "
+             "holiday pay and pension, and at which sites are underwater and by how "
+             "much."),
+            ("Then: what is owed to HMRC and how long it has been owed, whether the "
+             "contracts have indexation clauses anyone has ever actually enforced, "
+             "and what TUPE liability travels with the staff if a contract moves. "
+             "Those are the numbers that tell you whether this is fixable."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 152, "share": 88.4},
+                {"name": "Compulsory liquidations", "count": 17, "share": 9.9},
+                {"name": "Administrations", "count": 2, "share": 1.2},
+                {"name": "Company voluntary arrangements", "count": 1, "share": 0.6},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> account for 88.4% of the total, 152 of "
+                "172 in 2025, up from 146 in 2024. In a trade with no assets and no "
+                "resale value, closing the company is usually the only mechanism "
+                "available, and the directors are the ones who have to reach for it.",
+                '<a href="/company-administration/">Administrations</a> are almost '
+                "non-existent, at 2 cases in both 2024 and 2025. That is worth "
+                "understanding rather than glossing over: administration exists to "
+                "rescue a business with something worth buying. A cleaning contractor's "
+                "value is its contracts and its people, and both tend to walk to a "
+                "competitor without anyone paying for them.",
+                '<a href="/liquidation/compulsory-liquidation/">Compulsory '
+                "liquidations</a> actually fell, from 22 to 17. On a flat total that "
+                "means slightly fewer creditors lost patience and slightly more "
+                "directors moved first, which is a marginally better way to end up in "
+                "the same place.",
+            ],
+        },
+        "notes": [
+            "SIC group 812 covers companies whose recorded primary business is "
+            "cleaning activities: general cleaning of buildings, specialist "
+            "industrial cleaning, window cleaning, and similar. Domestic cleaning "
+            "provided through agencies, waste collection and landscaping sit under "
+            "separate codes and are not counted here.",
+            "Cleaning is a small sector by company count, at roughly a dozen "
+            "insolvencies a month, so single months move on a handful of cases. The "
+            "year-to-date and 12-month rolling totals are the steadier guide, and on "
+            "this page they point slightly different ways, which is itself worth "
+            "noting.",
+            "These are company counts, not the number of sites, contracts or "
+            "cleaners affected. One insolvent contractor may staff dozens of sites, "
+            "and a cleaning company can stop trading without ever entering a formal "
+            "insolvency procedure.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active cleaning companies. Barriers to entry "
+            "are very low in this trade, so the population changes quickly and a "
+            "flat count does not necessarily mean a flat risk.",
+            "The SIC 812 figures come from Table A1b and are not seasonally adjusted. "
+            "The Insolvency Service seasonally adjusts parts of its headline England "
+            "and Wales series where it finds seasonality, but that adjustment does "
+            "not apply to the industry figures used here. The latest month is "
+            "provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your company is viable. "
+             "Sector totals never do. The questions that matter are narrower and "
+             "site by site: after wages, National Insurance, holiday pay and "
+             "pension, does each contract still make money, and if some do not, can "
+             "you reprice them or exit them before they take the rest with them?"),
+            ("Plenty of cleaning companies in difficulty are sound "
+             "businesses carrying two or three contracts that stopped "
+             "working, and that is worth knowing: a contract can be "
+             "repriced, renegotiated or handed back."),
+            ("It is more serious when HMRC arrears have been growing for "
+             "several quarters, or when the only reason the wages cleared "
+             "last week is that the VAT did not."),
+            ('If that last sentence is uncomfortably familiar, the useful thing to '
+             'know is that the earlier you speak to someone, the more room there is '
+             'to move: contracts repriced, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
+             'a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ("A CVA is worth a serious look in this trade specifically. The "
+             "contracts are often profitable going forward even when the arrears "
+             "sitting behind them are not survivable, and that is close to the "
+             "textbook case for one."),
+            ('Once HMRC petitions, the bank account is usually frozen within days, '
+             'the wages do not clear, and the sites are uncovered by the following '
+             'morning. At that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is generally what is left. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK cleaning companies become insolvent each year?",
+                "a": ("172 cleaning contractors entered insolvency in England and "
+                      "Wales in 2025, the same as in 2024 and just above the 171 in "
+                      "2023. The pre-pandemic figure was 90 in 2019. Source: "
+                      "Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are cleaning company insolvencies rising in 2026?",
+                "a": ("Barely easing. There were 69 insolvencies between "
+                      "January and June 2026 against 74 in the same months "
+                      "of 2025, down 6.8%. The rolling 12-month total rose "
+                      "7.7% to 167, so the sector is still lagging badly at "
+                      "a time when the wider building-services division "
+                      "fell 22.0%."),
+            },
+            {
+                "q": "Why are cleaning insolvencies lagging when other sectors are improving?",
+                "a": ("Cleaning is close to a pure labour business, so it "
+                      "feels wage and employer National Insurance changes "
+                      "more directly than trades with materials or assets "
+                      "to trim. Its neighbours in the same division "
+                      "improved sharply over the same months: landscaping "
+                      "down 33.3% and facilities support down 40.9%."),
+            },
+            {
+                "q": "Do these figures include domestic cleaners?",
+                "a": ("Not generally. This page counts SIC group 812, cleaning "
+                      "activities, which is mainly commercial and industrial "
+                      "building cleaning. Waste collection and landscaping are "
+                      "separate SIC codes and are excluded."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for cleaning companies?",
+                "a": ("Creditors' voluntary liquidation, at 152 of the 172 cleaning "
+                      "insolvencies in 2025, or 88.4%. Administrations are almost "
+                      "unheard of in this trade, at just 2 cases, because there is "
+                      "rarely anything a buyer would pay for."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Cleaning Company Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
         "related": ('Cleaning contractors sit within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
                     'data, alongside administrative and support services generally. See also the '
@@ -889,6 +2060,10 @@ SECTORS = {
         "division_code": "55",
         "parent_section_code": "I",
         "parent_section_label": "accommodation and food service",
+        # The meaningful peer is the accommodation trade (SIC 55), not all of
+        # hospitality: this page deliberately excludes restaurants and pubs.
+        "parent_kind": "division",
+        "parent_label": "accommodation",
         "h1a": "UK Hotel",
         "h1b": "Insolvency Statistics",
         "h1_subtitle": "Latest detailed figures for England and Wales",
@@ -896,52 +2071,392 @@ SECTORS = {
         "keyword": "hotel",
         "singular": "hotel",
         "plural": "hotels and similar accommodation businesses",
-        "scope_description": "hotels and similar short-stay accommodation",
-        "exclusion_note": "Restaurants, pubs and self-catering or holiday accommodation are recorded separately.",
-        "notes": [
-            "Hotel insolvencies are a smaller sector by count, so monthly figures "
-            "can move sharply on a handful of cases. Prefer the year-to-date or "
-            "12-month rolling total for the steadier read.",
-            "The count is a volume, not a failure rate. It is not adjusted for how "
-            "many hotels are registered, so it cannot be read as a sector-wide "
-            "risk of insolvency.",
-            "This is hotels and similar accommodation only (SIC 551). Restaurants, "
-            "pubs and self-catering accommodation sit under separate SIC codes "
-            "and are not included here.",
+        "scope_description": ("hotels, motels and similar short-stay "
+                              "accommodation with daily housekeeping"),
+        "exclusion_note": ("Restaurants and pubs (SIC 561 and 563), and "
+                           "self-catering, holiday and short-stay lets (SIC 552), "
+                           "are recorded separately and are not included here."),
+        "hero_note": ("Hotels are improving, which is the good news and not the "
+                      "whole of it. Every other kind of accommodation improved "
+                      "faster: the accommodation trade as a whole fell 19.9% over "
+                      "the same months, twice the hotel rate. Hotels now account "
+                      "for 73.4% of accommodation insolvencies, up from 65.4%. And "
+                      "2025, at 154, was the worst year in the series."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "73.4%", "label": "of accommodation insolvencies", "sub": "up from 65.4% a year earlier"},
+            {"value": "9.8%", "label": "of 2025 cases were administrations", "sub": "the highest share of any sector here"},
         ],
-        "practitioner_view": [
-            "In the cases we see, hotels carry more fixed cost than most "
-            "hospitality formats: property, energy and a baseline of staffing "
-            "continue through quiet periods regardless of occupancy.",
-            "Many hotels also carry debt from refurbishment cycles that has to be "
-            "serviced whether the rooms are full or not, which turns a soft "
-            "occupancy quarter into a cash-flow problem faster than in a "
-            "lower-cost format.",
+        "comparison_intro": [
+            ("Falling, on both measures. There were 80 insolvencies from "
+             "January to June 2026 against 89 in the same months of 2025, "
+             "down 10.1%, and the rolling 12-month total fell from 152 to "
+             "145, down 4.6%. That is a genuine improvement and it "
+             "deserves to be said plainly before the qualification."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The qualification is the company hotels are keeping. "
+             "Accommodation as a whole fell 19.9%, from 136 to 109. "
+             "Holiday and short-stay lets fell from 18 to 6, and other "
+             "accommodation from 22 to 19."),
+            ("Every neighbouring format is recovering faster than hotels "
+             "are, which is why hotels now make up 73.4% of all "
+             "accommodation insolvencies against 65.4% a year ago."),
+            ("The other thing worth knowing is that 2025 was the worst "
+             "year on record for hotels, at 154. Most of the economy "
+             "peaked in 2023 and has been recovering since. Hotels peaked "
+             "last year."),
+            ("A 10.1% improvement from the worst point in the series is "
+             "progress from a low base, not a return to health."),
+        ],
+        "divergence": {
+            "heading": "Hotels are recovering more slowly than the rest of accommodation",
+            "caption": "Hotels against other accommodation formats and the restaurant trade",
+            "intro": [
+                ("Hotels are the heaviest, most capital-intensive way to "
+                 "sell a bed for the night, and they are the format "
+                 "recovering most slowly. The lighter formats, without a "
+                 "payroll and a boiler and a breakfast service, have come "
+                 "back fastest."),
+                ("Two cautions on the table below. The holiday-let and "
+                 "other accommodation series are small, so a move from 18 "
+                 "cases to 6 is a real direction but a shaky percentage, "
+                 "and should not be read as precision."),
+                ("Because hotels are roughly three-quarters of "
+                 "accommodation, the division line is largely hotels "
+                 "looking at themselves."),
+                ('Restaurants are in the table because they are the most '
+                 'useful sibling comparison rather than a competitor: same '
+                 'customer, same staffing market, same energy bills, very '
+                 'different balance sheet. They fell 6.2%. Their figures '
+                 'are on our '
+                 '<a href="/data/restaurant-insolvency-statistics/">restaurant '
+                 'insolvency statistics</a> page.'),
+            ],
+            "peers": [
+                {"code": "551", "kind": "group", "label": "Hotels and similar accommodation (SIC 551)", "emphasise": True},
+                {"code": "552", "kind": "group", "label": "Holiday and short-stay lets (SIC 552)"},
+                {"code": "559", "kind": "group", "label": "Other accommodation (SIC 559)"},
+                {"code": "55", "kind": "division", "label": "Accommodation overall (SIC 55)"},
+                {"code": "561", "kind": "group", "label": "Restaurants (SIC 561)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Hotels do not fit the pattern the rest of this data follows, and it "
+             "is worth understanding why before reading anything else on this page. "
+             "Insolvencies ran at 80, 89 and 96 from 2016 to 2018. Then 2019 came "
+             "in at 144, a jump of 50% in a single year, before the pandemic and "
+             "before anything else on these pages went wrong."),
+            ("Then the strangest number here. In 2020, company insolvencies across "
+             "the whole economy fell 26.4% as government support and the "
+             "restrictions on creditors held the normal cycle in check. Hotels went "
+             "from 144 to 143. They did not get the quiet year that almost every "
+             "other sector got. Whatever the support schemes did, they did not "
+             "reach the hotels that were already going."),
+            ("2021 brought the delayed reprieve at 97, then 125 in 2022, 144 "
+             "in 2023 and 136 in 2024. And then 154 in 2025, the highest in "
+             "the series."),
+            ("Hotels have now been at or near their 2019 level for the "
+             "best part of seven years, which is a long time to describe "
+             "something as a recovery."),
+        ],
+        "annual_intro": (
+            "Read this table differently from the others on this site. On most of "
+            "these pages 2019 is the last normal year and everything is measured "
+            "against it. For hotels, 2019 was itself the anomaly: 144 against 96 the "
+            "year before, a 50% jump that arrived before the pandemic. Hotels had no "
+            "good year to go back to."
+        ),
+        "latest_note": (
+            "Both measures are down on a year earlier, so the direction is "
+            "genuinely improving. The context is that 2025 was the worst year in the "
+            "series and every other accommodation format improved faster over the "
+            "same months."
+        ),
+        "pressure_heading": "Why hotels are under more pressure than the rest of hospitality",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("A hotel is a building with a business inside it, and that is the "
+             "whole of the difference. Almost everything below follows from owning "
+             "or leasing a large, expensive property that has to be heated, staffed "
+             "and insured whether anyone is in it or not."),
+            ("Insolvency figures also look backwards, recording distress that has "
+             "usually been building for a year or more. This is not a claim about "
+             "why any particular company failed."),
         ],
         "pressure": [
             {
-                "h3": "High fixed operating costs",
-                "body": ("Property, energy and a baseline level of staffing "
-                         "continue regardless of occupancy, so hotels carry more "
-                         "fixed cost than most other hospitality formats and less "
-                         "room to cut back when trade is quiet."),
+                "h3": "The costs run whether the rooms sell or not",
+                "body": [
+                    ("A restaurant that has a bad Tuesday can send staff home and "
+                     "buy less food. A hotel cannot un-heat a wing, and it cannot "
+                     "run a hundred-bedroom property with nobody on the desk at "
+                     "2am. The reception, the housekeeping baseline, the boiler, "
+                     "the insurance and the rent or the mortgage are all there at "
+                     "40% occupancy exactly as they are at 90%."),
+                    ("That is what makes hotels a high-operational-gearing "
+                     "business, which is a dry way of saying the good years are "
+                     "very good and the bad ones arrive fast. The gap between a "
+                     "profitable hotel and an insolvent one can be a few points of "
+                     "occupancy sustained over a couple of quarters."),
+                ],
             },
             {
-                "h3": "Discretionary, debt-funded demand",
-                "body": ("Leisure and business travel are both discretionary "
-                         "spend that softens quickly when confidence drops, while "
-                         "refurbishment debt still has to be serviced regardless "
-                         "of how full the hotel is."),
+                "h3": "The wage bill moved, and hotels are staff-heavy",
+                "body": [
+                    ("Hotels employ a lot of people at or near the wage floor, "
+                     "across housekeeping, food and beverage, and front of house. "
+                     "The National Living Wage went from £11.44 an hour in April "
+                     "2024 to £12.21 in April 2025 and £12.71 from April 2026, for "
+                     "workers aged 21 and over."),
+                    ("Employer National Insurance moved at the same time, to 15% "
+                     "from April 2025, with the secondary threshold falling from "
+                     "£175 a week to £96. That threshold cut is worth most where "
+                     "the pay is lowest and the shifts are shortest, which "
+                     "describes a hotel's payroll almost exactly."),
+                    ("Room rates can be raised, and have been. Whether they can be "
+                     "raised as fast as the payroll, in a town where the hotel down "
+                     "the road is discounting to fill rooms, is a different "
+                     "question."),
+                ],
+            },
+            {
+                "h3": "Refurbishment debt does not care about occupancy",
+                "body": [
+                    ("Hotels have to be refurbished on a cycle, because a tired "
+                     "hotel loses rate before it loses occupancy, and the money for "
+                     "that is nearly always borrowed against the building. The "
+                     "borrowing is then serviced out of trading, monthly, "
+                     "regardless of what trading does."),
+                    ("This is the mechanism that turns a soft eighteen months into "
+                     "an insolvency rather than a bad year. The trading dips, the "
+                     "covenant gets tight, the lender wants a valuation, and the "
+                     "valuation is done on the trading. Everything reinforces "
+                     "everything else, in the wrong direction."),
+                ],
+            },
+            {
+                "h3": "Demand is discretionary at both ends",
+                "body": [
+                    ("A hotel sells two things that are among the first to be cut: "
+                     "a leisure break and a business trip. Neither has to happen "
+                     "this quarter. The ONS also found accommodation and food "
+                     "service among the largest contributors to falling vacancies "
+                     "in March to May 2026, down 10,000 on the year, which is what "
+                     "an industry that is not expanding looks like from the outside."),
+                    ("There is a reason the lighter formats in the table above are "
+                     "recovering faster. When people do travel, a holiday let has "
+                     "almost no cost base to carry, and can sit empty for a month "
+                     "without anyone going under. A hotel cannot do that for a "
+                     "fortnight."),
+                ],
             },
         ],
-        "citation": ("CompanyDebt. (2026). UK Hotel Insolvency Statistics. "
-                     "CompanyDebt.com. Data sourced from the Insolvency Service "
-                     "company insolvency statistics by industry (Table 1c)."),
-        "related": ('Hotels sit within the wider '
-                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside accommodation and food service generally. See also '
+        "policy_update": {
+            "heading": "Business rates changed for hotels in April 2026",
+            "paras": [
+                ("This one is worth understanding properly, because it changed in "
+                 "April and a lot of budgets were built on the old arrangement. Up "
+                 "to 31 March 2026, eligible retail, hospitality and leisure "
+                 "properties in England got 40% off their business rates bill, "
+                 "capped at £110,000 per business, with the cap applied across a "
+                 "group rather than per property."),
+                ("From 1 April 2026 that relief was replaced by permanently lower "
+                 "multipliers. For 2026 to 2027 in England, a hospitality property "
+                 "with a rateable value below £51,000 is charged at 38.2p against "
+                 "the 43.2p small business multiplier, and one between £51,000 and "
+                 "£499,999 at 43p against the 48p standard multiplier. In both "
+                 "cases that is 5p in the pound less than an equivalent "
+                 "non-hospitality property."),
+                ("The catch is at the top. A property with a rateable value of "
+                 "£500,000 or more is charged at 50.8p, the highest multiplier "
+                 "there is, and gets no hospitality discount at all. Plenty of "
+                 "city-centre and larger hotels sit above that line."),
+                ("Whether any individual hotel is better or worse off is genuinely "
+                 "not something we can tell you from here, because the 2026 "
+                 "revaluation reset rateable values at the same time."),
+                ("What can be said is the arithmetic. A 5p cut in the multiplier is "
+                 "a smaller benefit than 40% off the bill was, so a hotel that sat "
+                 "comfortably inside the old cap and whose valuation held steady "
+                 "should expect to pay more in 2026 to 2027, not less. The "
+                 "trade-off is that this one is permanent and does not have to be "
+                 "argued for again every autumn."),
+                ("Sources: GOV.UK, Business Rates Relief 2025/26 Retail, "
+                 "Hospitality and Leisure Scheme, and GOV.UK business rates "
+                 "multipliers for 2026 to 2027. England only. Business rates are "
+                 "devolved, so Wales differs."),
+            ],
+        },
+        "practitioner_view": [
+            ("In the hotel cases we handle, the building is usually both the "
+             "problem and the only reason there is anything left to talk about. It "
+             "is what the borrowing is secured on, it is what makes the fixed costs "
+             "unavoidable, and it is the reason a buyer might take the whole thing "
+             "on rather than walk away. Very few of the trades we work with have "
+             "that last part."),
+            ("By the time a director calls us, the pattern is usually two or three "
+             "soft quarters, a covenant conversation that went badly, and a "
+             "refurbishment that has been deferred twice and cannot be deferred "
+             "again without losing the rate. Meanwhile the deposits for next "
+             "season's bookings are sitting in the account, which makes the bank "
+             "balance look considerably better than the business is."),
+            ("That last point deserves saying out loud, because it catches people. "
+             "Forward bookings are other people's money. Spending them on this "
+             "month's wages is one of the most common things we see in this trade "
+             "and one of the hardest to come back from, because the rooms still "
+             "have to be provided later with no cash attached to them."),
+            ("So we would not start with occupancy. We would look at what the "
+             "building costs to open the doors each month before a single room "
+             "sells, the debt service against actual trading, how much of the cash "
+             "in the account is forward deposits, what the rates bill looks like "
+             "under the 2026 multipliers, and what is owed to HMRC on VAT and PAYE. "
+             "Those five tell you how much time there is."),
+        ],
+        "procedure_breakdown": {
+            "year": 2025,
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 115, "share": 75.2},
+                {"name": "Compulsory liquidations", "count": 20, "share": 13.1},
+                {"name": "Administrations", "count": 15, "share": 9.8},
+                {"name": "Company voluntary arrangements", "count": 3, "share": 2.0},
+                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+            ],
+            "analysis": [
+                "The number to look at here is administrations, not liquidations. At "
+                "9.8% of 2025 cases, hotels use "
+                '<a href="/company-administration/">administration</a> more than any '
+                "other sector on these pages: garages are at 2.4% and cleaning "
+                "contractors at 1.2%. In 2019 the hotel share was 22.2%.",
+                "That difference is the building. Administration exists to rescue a "
+                "business or get a better result than winding it up, and it needs "
+                "something worth buying. A hotel is a real asset in a real location "
+                "with a trading history attached, so there is usually somebody who "
+                "wants it at a price. Most trades in difficulty have nothing "
+                "comparable to sell.",
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                "voluntary liquidations</a> still account for three-quarters of "
+                "cases, 115 of 154, up from 96 in 2024, and "
+                '<a href="/liquidation/compulsory-liquidation/">compulsory '
+                "liquidations</a> rose from 17 to 20. So the rescue route is more "
+                "available in this trade than in most, which is not the same as it "
+                "being the likely outcome.",
+            ],
+        },
+        "notes": [
+            "SIC group 551 covers companies whose recorded primary business is "
+            "hotels, motels and similar short-stay accommodation, typically with "
+            "daily housekeeping. Self-catering and holiday lets sit under SIC 552, "
+            "and restaurants and pubs under SIC 561 and 563. A hotel with a busy "
+            "restaurant is still counted once, under whichever code it registered.",
+            "The 2019 figure deserves a note of its own. Hotel insolvencies jumped "
+            "from 96 in 2018 to 144 in 2019, a 50% rise before the pandemic. Table "
+            "A1b does not break down far enough to explain that, and we have not "
+            "attributed it. It does mean the pre-pandemic comparison used elsewhere "
+            "on this site is a weaker yardstick here than on other pages, and it "
+            "should be treated with care.",
+            "Hotels are a small sector by company count, at roughly a dozen "
+            "insolvencies a month, so single months move on a handful of cases. The "
+            "year-to-date and 12-month rolling totals are the steadier guide.",
+            "These are company counts, not the number of hotels, rooms or staff "
+            "affected. One insolvent company may operate several properties, and a "
+            "hotel can close or change hands without any formal insolvency "
+            "procedure. Hotels also change hands as assets more often than most "
+            "businesses, so a property continuing to trade under a new name tells "
+            "you nothing about whether the company that ran it survived.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active hotel companies.",
+            "The SIC 551 figures come from Table A1b and are not seasonally "
+            "adjusted, which matters more for hotels than for most sectors given "
+            "how seasonal the trade is. The Insolvency Service seasonally adjusts "
+            "parts of its headline England and Wales series where it finds "
+            "seasonality, but that adjustment does not apply to the industry "
+            "figures used here. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether your hotel is viable. Sector "
+             "totals never do. The questions that matter are narrower: what does it "
+             "cost to open the doors each month before a room is sold, does trading "
+             "cover that plus the debt service across a full year rather than a "
+             "good quarter, and how much of the money in the account has already "
+             "been spent by guests who have not arrived yet?"),
+            ("Hotels have one advantage over most of the trades we work with, and "
+             "it is worth knowing about early rather than late. Because the "
+             "building is a real asset, there are usually more options than a "
+             "straight liquidation: a sale of the business and assets, a refinance, "
+             "or a rescue procedure that keeps the doors open while it is "
+             "arranged."),
+            ("That is why administrations are a far larger share of hotel "
+             "insolvencies than of any other sector on this site. It is the one "
+             "genuinely encouraging structural fact on this page."),
+            ('Those options need time, and they need the building to still be worth '
+             'something. If the covenant conversation has already happened, the '
+             'useful step is to take advice while there is still a business '
+             'attached to the asset: terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Leave it until a '
+             '<a href="/winding-up-petitions/">winding-up petition</a> is '
+             'advertised and the account is frozen within days, the bookings stop, '
+             'and the asset you were relying on is suddenly being valued as an '
+             'empty building rather than a trading hotel. At that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> is often what is left. Our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK hotels become insolvent each year?",
+                "a": ("154 hotel and similar accommodation companies entered "
+                      "insolvency in England and Wales in 2025, the highest "
+                      "in the series and up from 136 in 2024. The 2019 "
+                      "figure was 144. Source: Insolvency Service, Table "
+                      "A1b."),
+            },
+            {
+                "q": "Are hotel insolvencies falling in 2026?",
+                "a": ("Yes. There were 80 insolvencies between January and "
+                      "June 2026 against 89 in the same months of 2025, "
+                      "down 10.1%, and the rolling 12-month total fell "
+                      "4.6% to 145. The caveat is that accommodation as a "
+                      "whole fell 19.9% over the same period, so hotels are "
+                      "recovering more slowly than the rest of the trade."),
+            },
+            {
+                "q": "Do these figures include pubs, restaurants and Airbnb-style lets?",
+                "a": ("No. This page counts SIC group 551, hotels and similar "
+                      "short-stay accommodation. Restaurants and pubs are SIC 561 "
+                      "and 563, and self-catering and holiday lets are SIC 552. All "
+                      "are counted separately."),
+            },
+            {
+                "q": "Why are hotel insolvencies compared with 2019 less meaningful?",
+                "a": ("Because 2019 was not a normal year for hotels. Insolvencies "
+                      "jumped from 96 in 2018 to 144 in 2019, before the pandemic. "
+                      "Hotels also did not get the quiet 2020 that most sectors had: "
+                      "company insolvencies across the economy fell 26.4% that year "
+                      "while hotels went from 144 to 143."),
+            },
+            {
+                "q": "What is the most common insolvency procedure for hotels?",
+                "a": ("Creditors' voluntary liquidation, at 115 of the 154 "
+                      "hotel insolvencies in 2025. But administrations are "
+                      "notable at 9.8%, the highest share of any sector we "
+                      "cover, because a hotel is a real asset that a buyer "
+                      "may want."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Hotel Insolvency Statistics." '
+                     'Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('The most useful comparison is with '
                     '<a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> '
-                    'and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+                    '(SIC 561), the other half of hospitality. Hotels also sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
     "estate-agency-insolvency-statistics": {
         "wp_id": 80260,
@@ -951,120 +2466,2834 @@ SECTORS = {
         "parent_section_label": "real estate",
         "h1a": "UK Estate Agency",
         "h1b": "Insolvency Statistics",
-        "h1_subtitle": "England and Wales, updated monthly",
-        "scope_note": ("Latest official figures for estate agencies and "
-                       "fee-based property management businesses in "
-                       "England and Wales."),
-        "geography_note": ("England and Wales (main series). Scotland is "
-                           "reported separately: 9 in 2025, 1 in "
-                           "January–May 2026. No comparable Northern "
-                           "Ireland series is published, so a UK total "
-                           "cannot be calculated."),
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "geography_note": ("England and Wales (main series). Scotland is reported "
+                           "separately: 9 in 2025, 2 in January–June 2026, unchanged "
+                           "from 2 in the same months of 2025. No comparable Northern "
+                           "Ireland series is published, so a UK total cannot be "
+                           "calculated."),
         "eyebrow": "Estate agencies",
         "keyword": "estate agency",
         "singular": "estate agency",
         "plural": "estate agencies and fee-based property management businesses",
-        "scope_description": ("real estate agencies and businesses "
-                              "managing property for clients on a fee or "
-                              "contract basis"),
-        "exclusion_note": ("It excludes businesses that mainly buy, sell, "
-                           "own or let their own property, which are "
-                           "recorded separately under SIC groups 681 and "
-                           "682."),
+        "scope_description": ("estate agencies and fee-based property management, "
+                              "one combined total"),
+        "exclusion_note": "Property traders and landlords (SIC 681/682) are separate.",
         "key_findings": True,
         "extra_findings": [
-            {"value": "48% above 2019", "label": "2025 vs the last normal year", "sub": "233 vs 157"},
-            {"value": "71%", "label": "of 2025 cases were CVLs", "sub": "166 of 233"},
+            {"value": "48.4% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "233 vs 157"},
+            {"value": "16.8%", "label": "of real estate (Division 68) insolvencies", "sub": "down from 32.9% a year earlier"},
         ],
+        "hero_note": ("That improvement is real, but the sector remains 48.4% above "
+                      "its 2019 level. And it is specific to estate agencies: real "
+                      "estate insolvencies overall spiked in 2026, but almost "
+                      "entirely in property-trading companies, not here."),
+        "comparison_intro": [
+            ("Insolvencies in SIC 683 are falling clearly. There were 101 cases "
+             "in the first half of 2026, compared with 131 in the first half of "
+             "2025, a decline of 22.9%."),
+            ("The rolling 12-month total fell at almost the same rate, from 261 "
+             "to 203, down 22.2%. These are Company Debt calculations from "
+             "Insolvency Service supplementary industry Table A1b data."),
+            ("The agreement between the two measures matters. A single monthly "
+             "fall can reflect timing or reporting noise, but a lower half-year "
+             "total and a lower rolling total together give much stronger "
+             "evidence that insolvencies are genuinely easing."),
+            ("June itself recorded 15 cases, three more than May's 12 but six "
+             "fewer than June 2025's 21. That monthly increase does not "
+             "overturn the wider downward movement."),
+        ],
+        "longer_term_narrative": [
+            ("Annual insolvencies in SIC 683 were broadly stable before the "
+             "pandemic, ranging from 145 to 165 between 2016 and 2019."),
+            ("Recorded cases then fell to a joint series low of 125 in both "
+             "2020 and 2021, when government support and creditor restrictions "
+             "distorted the figures."),
+            ("The total rose sharply to 230 in 2022 after temporary protections "
+             "ended, then reached a series peak of 272 in 2024. Insolvencies fell "
+             "14.3% to 233 in 2025."),
+            ("The fall in 2025 was meaningful, but the total remained 48.4% above "
+             "the 2019 figure of 157. The first-half and rolling data for 2026 "
+             "indicate the decline has continued into this year."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is stability before the pandemic, a "
+            "two-year distorted low, a sharp rebound, and a 2024 peak the sector "
+            "has since been easing away from. 2025's fall of 14.3% was the first "
+            "clear annual decline since the pandemic distortion, and the pace has "
+            "continued into 2026."
+        ),
+        "latest_note": (
+            "Both measures are down by around 22%. But the level remains "
+            "elevated, 48.4% above 2019, so this reads as clear easing, not a "
+            "full return to pre-pandemic conditions."
+        ),
         "notes": [
-            "SIC group 683 covers real estate activities on a fee or "
-            "contract basis. In the official data that means estate "
-            "agencies (SIC 68310) and businesses that manage property for "
-            "clients in exchange for a fee (SIC 68320), combined into one "
-            "published total: the two cannot be split out from the "
-            "monthly release.",
-            "So this is not “estate agencies alone”. A company "
-            "that only manages let properties for landlords, and never "
-            "buys or sells anything itself, is counted in this figure too.",
-            "Property developers, landlords and companies that buy, sell, "
-            "own or let property in their own name sit under different "
-            "codes (SIC 681 and 682) and are not included in the totals "
-            "on this page.",
-            "The headline figures cover England and Wales. Scotland is "
-            "reported separately: 9 insolvencies in 2025, and 1 "
-            "between January and May 2026, down from 2 in the same months "
-            "of 2025. Northern Ireland has no equivalent industry "
-            "breakdown in the monthly release, so a single UK-wide total "
-            "cannot be calculated from the published tables.",
-            "Figures use the first SIC code a company has on record, are "
-            "not seasonally adjusted, and can be revised in later "
-            "releases. They count formal insolvency procedures only, not "
-            "dissolutions, strike-offs or agencies that simply close down "
-            "without a formal process.",
+            "The England and Wales figures come from the Insolvency Service's "
+            "Company Insolvency Statistics June 2026 release and its "
+            "supplementary industry tables. SIC 683 totals are taken from Table "
+            "A1b; procedure-level figures are taken from Tables A2 to A6.",
+            "All SIC 683 figures shown on this page are not seasonally "
+            "adjusted, and the latest month is provisional and can be "
+            "revised.",
+            "The Insolvency Service notes the latest month can contain more "
+            "compulsory liquidations with an unknown SIC code, since industry "
+            "information is sometimes captured later, so recent industry "
+            "totals may be revised as those cases are classified.",
+            "Industry is assigned using the first recorded SIC code on the "
+            "Companies House register. SIC codes are self-reported and may not "
+            "describe every activity a company carries on. The release uses UK "
+            "SIC 2007.",
+            "These figures count formal company insolvency procedures. They "
+            "exclude members' voluntary liquidations, dissolutions, strike-offs "
+            "and businesses that stop trading without entering a formal "
+            "insolvency procedure.",
+            "The figures are company counts, not branch, office or property "
+            "counts. One insolvent legal entity may operate several branches, "
+            "brands or managed portfolios. They are volumes, not a sector-wide "
+            "failure rate, because they are not divided by a matching number of "
+            "active SIC 683 companies.",
+            "A registered office is not a reliable guide to where a company "
+            "actually trades. It may be an accountant's office, an insolvency "
+            "practitioner's address, a head office or a virtual office.",
+            "Procedure-level industry data is published quarterly, alongside "
+            "the January, April, July and October headline releases. This "
+            "page's procedure section is updated on that schedule.",
         ],
         "practitioner_view": [
-            "In the cases we see, an estate agency's income falls away "
-            "well before the wider property market shows any strain. "
-            "Instructions dry up, a sale or letting takes longer to "
-            "complete, and by the time that shows up as a falling bank "
-            "balance it has usually been building in the pipeline for "
-            "months.",
-            "Multi-branch agencies are particularly exposed, because rent "
-            "and staff costs are fixed per branch and don't fall just "
-            "because fewer viewings are happening. We've seen groups where "
-            "one underperforming branch, kept open too long on the hope "
-            "the market would turn, ended up dragging the whole company "
-            "under.",
+            "In the estate agency and property-management cases we see, "
+            "distress does not follow one cash-flow pattern. A sales agency "
+            "can carry payroll, portal fees and branch costs for weeks while "
+            "commission sits in an uncertain completion pipeline.",
+            "A letting or property-management business has more recurring "
+            "revenue, but it still has to fund staffing, compliance, "
+            "contractor administration and client-account controls.",
+            "By the time advice is sought, the warning sign is often not "
+            "simply a lack of instructions. Completions may keep slipping, "
+            "tax balances may be ageing, or short-term borrowing may be "
+            "quietly covering routine costs.",
+            "Client money must remain separate and should never be treated "
+            "as working capital.",
+            "The useful weekly test is unrestricted cash after committed "
+            "payroll, PAYE, VAT, rent, portal subscriptions, software and "
+            "supplier costs. Instructions, gross commission and units under "
+            "management are activity measures; they do not show whether the "
+            "company can meet its liabilities as they fall due.",
+        ],
+        "pressure_heading": "What current property-market data shows about estate agencies",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("The figures above describe insolvencies that have already "
+             "happened. The data below describes current trading conditions "
+             "in the wider property market."),
+            ("It provides context, and is consistent with the improvement "
+             "shown above, but it does not establish why any individual "
+             "company failed or prove what caused the sector-wide trend."),
         ],
         "pressure": [
             {
-                "h3": "Fee income only arrives when a deal completes",
-                "body": ("Commission is earned on completion, not on "
-                         "instruction, so a sale that falls through or a "
-                         "letting that drags on for weeks costs the agency "
-                         "real cash flow, even though the staff time and "
-                         "marketing spend have already gone out."),
+                "h3": "Output across SIC 68.3 has improved",
+                "body": [
+                    ("ONS output data for the same broad industry category gives "
+                     "a more current view of trading activity than the "
+                     "insolvency figures, which lag by design. Output in SIC "
+                     "68.3 was 6.3% higher in May 2026 than in May 2025, "
+                     "released 16 July 2026."),
+                    ("This is consistent with an improving operating "
+                     "environment, but output growth does not by itself "
+                     "explain why insolvencies fell: insolvencies usually "
+                     "reflect financial pressure that has built up over a "
+                     "longer period, and the ONS output series covers the "
+                     "whole UK rather than England and Wales alone."),
+                ],
             },
             {
-                "h3": "Branch costs don't fall when the market slows",
-                "body": ("A high-street office, its lease and its staff "
-                         "cost broadly the same to run whether the phone "
-                         "rings twenty times a day or twice. When "
-                         "instructions fall, that gap between fixed "
-                         "overheads and thinner fee income is what pushes "
-                         "an agency towards insolvency."),
+                "h3": "Sales completions and the forward pipeline give different signals",
+                "body": [
+                    ("Completed residential transactions were stronger than a "
+                     "year earlier. HMRC recorded a seasonally adjusted 98,450 "
+                     "UK residential transactions in May 2026, 17% more than "
+                     "in May 2025 but 2% fewer than in April."),
+                    ("The year-on-year comparison is flattered by unusually "
+                     "low activity in April and May 2025 after changes to "
+                     "Stamp Duty Land Tax thresholds, and completions describe "
+                     "deals reaching the end of the process rather than the "
+                     "new pipeline entering it."),
+                    ("The Bank of England's forward indicator was weaker. Net "
+                     "mortgage approvals for house purchase fell from 66,000 "
+                     "in April to 56,200 in May 2026, the lowest figure since "
+                     "December 2023."),
+                    ("Read together, the data suggests a mixed sales "
+                     "environment: completions stronger than a distorted "
+                     "comparison month, the mortgage pipeline softer."),
+                ],
+            },
+            {
+                "h3": "Lettings and property management have a different revenue profile",
+                "body": [
+                    ("Letting and property-management businesses in SIC 683 "
+                     "should not be analysed as if all income depends on "
+                     "sales completions. Many receive recurring management "
+                     "fees instead."),
+                    ("Profitability still depends on staffing, compliance, "
+                     "contractor management, systems and the number and "
+                     "value of properties under management."),
+                    ("Average private rents rose more slowly in May 2026: up "
+                     "3.4% year-on-year in England, 4.7% in Wales."),
+                    ("Rising rents lift the cash value of percentage-based "
+                     "fees, but do not automatically increase profit, and "
+                     "should not be read as evidence that property managers "
+                     "are financially secure."),
+                ],
+            },
+            {
+                "h3": "Home-buying reform is an operational watchpoint",
+                "body": [
+                    ("Government plans published in June 2026 propose more "
+                     "information upfront, greater use of digital property "
+                     "data, and changes intended to reduce delays and failed "
+                     "transactions. These reforms may alter processes, "
+                     "technology requirements and compliance work for "
+                     "agents."),
+                    ("This is a material operating change worth monitoring "
+                     "in later updates, not a current cause of insolvency; "
+                     "the reforms had not taken effect during the period "
+                     "covered by the figures on this page."),
+                ],
             },
         ],
         "procedure_breakdown": {
-            "year": 2025,
+            "period_label": "January–June 2026",
+            "compare_label": "January–June 2025",
             "rows": [
-                {"name": "Creditors’ voluntary liquidations", "count": 166, "share": 71.2},
-                {"name": "Compulsory liquidations", "count": 60, "share": 25.8},
-                {"name": "Administrations", "count": 6, "share": 2.6},
-                {"name": "Company voluntary arrangements", "count": 1, "share": 0.4},
-                {"name": "Receivership appointments", "count": 0, "share": 0.0},
+                {"name": "Creditors' voluntary liquidations", "count": 72, "prior_count": 103, "share": 71.3},
+                {"name": "Compulsory liquidations", "count": 22, "prior_count": 26, "share": 21.8},
+                {"name": "Administrations", "count": 6, "prior_count": 2, "share": 5.9},
+                {"name": "Company voluntary arrangements", "count": 1, "prior_count": 0, "share": 1.0},
+                {"name": "Receivership appointments", "count": 0, "prior_count": 0, "share": 0.0},
             ],
             "analysis": [
-                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors’ voluntary liquidations</a> '
-                "remained the dominant procedure, accounting for 166 of the 233 insolvencies "
-                "recorded in 2025. However, the fall in the overall total was driven by fewer "
-                "CVLs, which declined from 213 in 2024 to 166 in 2025.",
-                '<a href="/liquidation/compulsory-liquidation/">Compulsory liquidations</a> '
-                "moved in the opposite direction, increasing from 54 to 60, a reminder "
-                "that a falling headline total can still hide creditors, more often than not "
-                "HMRC, running out of patience and petitioning to wind a company up.",
+                '<a href="/liquidation/creditors-voluntary-liquidation/">Creditors\' '
+                'voluntary liquidations</a> remained the dominant procedure, '
+                "accounting for 72 of the 101 SIC 683 insolvencies recorded in the "
+                "first half of 2026, 71.3% of the total.",
+                "The overall decline was driven principally by fewer CVLs, which "
+                "fell by 31 cases, from 103 to 72. This reduction was larger than "
+                "the total 30-case fall because four additional administrations "
+                "and one CVA partly offset it. Compulsory liquidations also fell, "
+                "from 26 to 22.",
+                '<a href="/company-administration/">Administrations</a> increased '
+                "from two to six, but the base is too small to support a claim of "
+                "a broad administration trend. The clearer conclusion: voluntary "
+                "closures fell materially while a small number of rescue or sale "
+                "processes moved the other way.",
+                "Compulsory liquidations are creditor-driven and can follow "
+                "petitions by HMRC, landlords, lenders or other unpaid "
+                "creditors; the statistics do not identify the petitioning "
+                "creditor within this sector table.",
             ],
         },
         "spike_correction": {
-            "heading": "Was the 2026 real estate insolvency spike caused by estate agencies?",
+            "heading": "Which part of real estate drove the 2026 increase?",
             "intro": [
-                "The official commentary for spring 2026 flagged that around 200 connected "
-                "real estate companies entered administration across March and April. That "
-                "figure covers the whole real estate section, and it should not be read as an "
-                "estate agency insolvency wave.",
-                "The industry data show the spike was concentrated mainly in companies that "
-                "owned, bought, sold or let property in their own name, not in agencies acting "
-                "for clients on a fee basis.",
+                ("Real estate insolvencies rose sharply in the first half of "
+                 "2026, but the increase was not spread across the division. "
+                 "SIC 681, which covers companies buying and selling their own "
+                 "property, rose from 116 to 363 cases, an increase of 247 "
+                 "cases, or 212.9%."),
+                ("By contrast, SIC 682 fell 9.9% and SIC 683, covered on this "
+                 "page, fell 22.9%. The 2026 increase across real estate "
+                 "overall was therefore more than fully accounted for by SIC "
+                 "681, while the other two groups improved."),
+                ("SIC 683's share of real estate insolvencies nearly halved, "
+                 "from 32.9% in the first half of 2025 to 16.8% in the first "
+                 "half of 2026. This is the clearest evidence that the "
+                 "connected real estate administrations reported during 2026 "
+                 "should not be presented as an estate-agency failure wave."),
+            ],
+            "rows": [
+                {"label": "681: Buying and selling of own real estate", "month1": 363, "month2": 116, "change_pct": 212.9, "share_pct": 60.5},
+                {"label": "682: Renting and operating own or leased real estate", "month1": 136, "month2": 151, "change_pct": -9.9, "share_pct": 22.7},
+                {"label": "683: Fee or contract basis, including estate agencies", "month1": 101, "month2": 131, "change_pct": -22.9, "share_pct": 16.8},
+                {"label": "Division 68: Real estate activities (total)", "month1": 600, "month2": 398, "change_pct": 50.8, "share_pct": 100.0},
+            ],
+            "table_caption": "Real estate company insolvencies by SIC group, January to June 2026 vs January to June 2025, England and Wales. Source: Insolvency Service, supplementary industry Table A1b.",
+            "month1_label": "Jan–Jun 2026",
+            "month2_label": "Jan–Jun 2025",
+            "share_label": "2026 share of Division 68",
+        },
+        "faq": [
+            {
+                "q": "How many estate agency and property-management businesses became insolvent in the first half of 2026?",
+                "a": ("101 formal insolvencies in SIC 683 in England and Wales "
+                     "between January and June 2026, 30 fewer than the 131 "
+                     "recorded in the same period of 2025, a fall of 22.9%."),
+            },
+            {
+                "q": "Are estate agency insolvencies rising or falling?",
+                "a": ("Falling. The first-half total was down 22.9%, and the "
+                     "rolling 12-month total fell 22.2%, from 261 to 203. The "
+                     "latest completed-year total nevertheless remained 48.4% "
+                     "above 2019."),
+            },
+            {
+                "q": "Do the figures include letting agents and property managers?",
+                "a": ("Yes. SIC 683 combines real estate agencies with "
+                     "businesses managing property for clients on a fee or "
+                     "contract basis. The published monthly total does not "
+                     "split SIC 68310 (agencies) from SIC 68320 (fee-based "
+                     "management)."),
+            },
+            {
+                "q": "Was the 2026 increase in real estate insolvencies caused by estate agencies?",
+                "a": ("No. SIC 683 insolvencies fell from 131 to 101 in the "
+                     "first half of 2026. The increase across real estate "
+                     "overall was concentrated in SIC 681, buying and selling "
+                     "of own real estate, which rose from 116 to 363 cases."),
+            },
+            {
+                "q": "Are the figures UK-wide?",
+                "a": ("No. The headline series covers England and Wales. "
+                     "Scotland recorded 2 SIC 683 insolvencies in both the "
+                     "first half of 2025 and the first half of 2026. There is "
+                     "no equivalent Northern Ireland three-digit monthly "
+                     "series, so a complete UK total cannot be calculated."),
+            },
+            {
+                "q": "Which insolvency procedure is most common?",
+                "a": ("Creditors' voluntary liquidation. CVLs accounted for 72 "
+                     "of the 101 SIC 683 insolvencies in the first half of "
+                     "2026, 71.3% of the total."),
+            },
+            {
+                "q": "Do these figures show the percentage of estate agencies that failed?",
+                "a": ("No. They are counts of formal insolvencies, not a "
+                     "failure rate. A reliable rate would require a matching "
+                     "denominator of active companies in the same SIC "
+                     "category, geography and period."),
+            },
+        ],
+        "commercial_transition": [
+            "A falling sector total does not make an individual cash-flow "
+            "problem less urgent. Directors should act if the company cannot "
+            "meet payroll, PAYE, VAT, rent, portal and software charges, "
+            "contractor invoices or other liabilities as they fall due.",
+            "Start by separating the underlying trading position from "
+            "overdue debt. For a sales agency, test expected completion "
+            "income against committed weekly costs, allowing for delays or "
+            "fall-throughs.",
+            "For a letting or management business, assess recurring "
+            "unrestricted fee income separately from client money and "
+            "against the full cost of servicing the portfolio.",
+            'Early advice leaves more scope to approach HMRC or other '
+            'creditors, reduce loss-making overheads, and agree an '
+            '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a> '
+            'or assess whether a '
+            '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+            'Voluntary Arrangement</a>, '
+            '<a href="/company-administration/">administration</a> or an '
+            'orderly '
+            '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+            'voluntary liquidation</a> is appropriate.',
+            'Once a winding-up petition is advertised, the bank account is '
+            'usually frozen within days and the available options narrow to '
+            'what is left rather than what you would choose. If you want to '
+            'talk it through first, our '
+            '<a href="/advice/insolvency-advice-for-directors/">insolvency '
+            'advice for directors</a> is the place to start.',
+        ],
+        "citation": ('Company Debt. (2026). "UK Estate Agency Insolvency Statistics '
+                     '2026." Updated July 2026. Based on Insolvency Service Company '
+                     "Insolvency Statistics, June 2026, SIC 683, England and Wales. "
+                     "CompanyDebt.com."),
+        "related": ('Estate agencies sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside '
+                    '<a href="/data/real-estate-letting-investment-insolvency-statistics/">real estate letting and investment</a> '
+                    'activities. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "it-consultancy-insolvency-statistics": {
+        "wp_id": 80578,
+        "sic_code": "620",
+        "division_code": "62",
+        "parent_section_code": "J",
+        "parent_section_label": "information and communication",
+        # No parent_kind here: SIC division 62 is almost entirely group 620
+        # (the division's only other group, 631, is tiny), so a division
+        # comparison would compare IT consultancy against itself.
+        "h1a": "UK IT and Computer Consultancy",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "IT and computer consultancy",
+        "keyword": "IT consultancy",
+        "singular": "IT consultancy",
+        "plural": "IT and computer consultancies",
+        "scope_description": ("the design, development and consultancy side of software "
+                              "and IT services sold to other businesses, including bespoke "
+                              "software development, systems integration and IT project "
+                              "consultancy"),
+        "exclusion_note": ("Telecommunications providers, data processing and hosting "
+                           "companies, and IT retailers are recorded under separate codes "
+                           "and are not included here."),
+        "hero_note": ("IT and computer consultancy insolvencies were flat between 2024 "
+                      "and 2025, 906 against 900, the two highest years the sector has "
+                      "recorded. That is not the aftermath of a crisis. It is a sector "
+                      "that surged after the pandemic and has not come back down, sitting "
+                      "64% above its last normal year while contractor demand itself keeps "
+                      "flickering between growth and contraction from one month to the "
+                      "next."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "64% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "900 vs 550"},
+            {"value": "61%", "label": "of information & communication insolvencies", "sub": "the section's largest single trade"},
+        ],
+        "comparison_intro": [
+            ("There were 401 IT and computer consultancy insolvencies "
+             "between January and June 2026, against 443 in the same six "
+             "months of 2025, a fall of 9.5%. Information and communication "
+             "as a whole fell by almost exactly the same amount, 9.9%, "
+             "from 725 to 653, because IT and computer consultancy is not "
+             "a small corner of that section, it is most of it."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month figure tells a slightly gentler version "
+             "of the same story. At 858 cases for the year to June 2026, "
+             "against 880 for the year to June 2025, the sector's decline "
+             "over that longer window, 2.5%, has been milder than the "
+             "section's."),
+            ("The smaller trades sharing information and communication "
+             "with it, data processing, other information services, "
+             "publishing, have fallen faster this year. IT consultancy is "
+             "not diverging from its section so much as it is dragging the "
+             "whole section wherever it goes."),
+        ],
+        "divergence": {
+            "heading": "IT consultancy is the section it sits in",
+            "caption": ("Computer programming and consultancy against its section "
+                        "peers, England and Wales"),
+            "intro": [
+                ("This is not a sector fighting a trend that belongs to "
+                 "somebody else, the way a single flat trade sometimes sits "
+                 "inside a section that is otherwise recovering. IT and "
+                 "computer consultancy is what information and "
+                 "communication insolvencies mostly are."),
+                ("The smaller trades around it move a great deal more, "
+                 "because they start from a much smaller base. Data "
+                 "processing, hosting and web portals fell 45.5% year to "
+                 "date. Other information service activities fell 45.5% "
+                 "too. Publishing fell 18.9%."),
+                ("Other telecommunications activities is the outlier, up "
+                 "12.9%. None of those moves says much on its own, a "
+                 "handful of cases in a small category swings the "
+                 "percentage wildly, but together they show a section with "
+                 "no single story except the one IT consultancy is "
+                 "telling."),
+                ("Read the peer table as context, not competition. An IT "
+                 "consultancy cannot point anywhere else in information and "
+                 "communication and find a materially different sector "
+                 "economy: this is the economy."),
+            ],
+            "peers": [
+                {"code": "620", "kind": "group", "label": "Computer programming & consultancy (SIC 620)", "emphasise": True},
+                {"code": "631", "kind": "group", "label": "Data processing & hosting (SIC 631)"},
+                {"code": "639", "kind": "group", "label": "Other information services (SIC 639)"},
+                {"code": "581", "kind": "group", "label": "Publishing (SIC 581)"},
+                {"code": "619", "kind": "group", "label": "Other telecommunications (SIC 619)"},
+                {"code": "J", "kind": "section", "label": "Information & communication overall (SIC J)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("IT and computer consultancy insolvencies held in a narrow band before "
+             "the pandemic: 488 in 2016, rising gently to 550 by 2019. 2020 brought a "
+             "fall to 425, the same pattern seen across most of the economy while "
+             "government support schemes and restrictions on winding-up petitions "
+             "held the normal insolvency cycle back."),
+            ("What happened next did not happen elsewhere in the same way. "
+             "574 in 2021, 789 in 2022, 883 in 2023: three years of "
+             "increases that took the sector to nearly double its "
+             "pre-pandemic level, driven by a surge in company formations "
+             "as businesses raced to digitise."),
+            ("The contractor market boomed on the back of remote-work "
+             "technology spending. A lot of those companies were formed "
+             "fast, in a hot market, without much of a cushion."),
+            ("2024 brought the peak, 906, and 2025 held almost exactly there, at "
+             "900. Three years past the sharpest rise, IT consultancy has not come "
+             "back down. It has plateaued at a level that would have looked like a "
+             "crisis in any year before 2022."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a spike that never really reversed. IT "
+            "and computer consultancy insolvencies more than doubled between the "
+            "2020 low and the current level, and unlike sectors where a "
+            "post-pandemic surge has since eased, the last two years, 906 then 900, "
+            "show no sign of coming down."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are down on the "
+            "year before, but only modestly, and from a base that was already the "
+            "highest the sector has recorded. A cooling from a record high is not "
+            "the same as a sector putting its problems behind it."
+        ),
+        "pressure_heading": "Why IT and computer consultancy insolvencies remain near a record high",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has usually "
+             "been building for months. What follows is a picture of the conditions "
+             "IT and computer consultancy companies have been trading in, not a "
+             "claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Contractor demand cannot hold a trend for more than a month",
+                "body": [
+                    ("The clearest live read on this market is the "
+                     "Recruitment & Employment Confederation's IT "
+                     "contractor demand index, which measures new contract "
+                     "starts. It read 50.5 in May 2026, the first reading "
+                     "above the 50-point growth threshold since August "
+                     "2023, then fell straight back to 48.2 in June."),
+                    ("Two and a half years without sustained growth is not "
+                     "the backdrop a director can plan a bench of unbilled "
+                     "consultants against."),
+                    ("A great many of the companies counted on this page are "
+                     "personal service companies and small consultancies whose "
+                     "income depends on the next contract landing before the last "
+                     "one's cash runs out. A market that cannot hold two consecutive "
+                     "months of growth is one where that gap keeps opening."),
+                ],
+            },
+            {
+                "h3": "Permanent hiring has pulled back hardest in this sector",
+                "body": [
+                    ("KPMG and the REC's monthly Report on Jobs tracks permanent "
+                     "placements and vacancies by sector. Its January 2026 edition, "
+                     "covering December 2025, recorded the steepest contraction in "
+                     "permanent vacancies anywhere in the economy for "
+                     "Executive/Professional roles, with IT and Computing close "
+                     "behind in second place."),
+                    ("A consultancy that sells its people into client projects, not "
+                     "just its own headcount, feels a client's hiring freeze twice: "
+                     "once when the client will not take on staff, and again when "
+                     "the client decides it can make do without the contractor it "
+                     "would otherwise have engaged instead."),
+                ],
+            },
+            {
+                "h3": "IR35 compliance risk has just shifted onto more of these companies, not fewer",
+                "body": [
+                    ("From 6 April 2026, two of the three size thresholds that "
+                     "decide whether an end-client counts as small for IR35 "
+                     "purposes rose, turnover from £10.2 million to £15 million and "
+                     "balance sheet total from £5.1 million to £7.5 million. HMRC "
+                     "estimates that around 14,000 businesses have been "
+                     "reclassified as small as a result."),
+                    ("For every one of those businesses, the duty to determine a "
+                     "contractor's IR35 status moves off the end-client and back "
+                     "onto the contractor's own personal service company, the exact "
+                     "company type this page counts. Getting that determination "
+                     "wrong is what creates the retrospective tax bill that can "
+                     "turn a viable one-person consultancy into an insolvent one."),
+                ],
+            },
+            {
+                "h3": "The day rate a consultancy can charge now depends on what it specialises in",
+                "body": [
+                    ("Contractor benchmarking in 2026 shows senior AI and machine "
+                     "learning specialists commanding £700 to £1,000 a day, up from "
+                     "roughly £600 to £850 in 2024, while day rates for less "
+                     "specialised development and consultancy work have softened as "
+                     "candidate supply has stayed high relative to demand."),
+                    ("A sector-wide insolvency count cannot show this split, but it "
+                     "matters for reading one: a company built around commodity "
+                     "development skills is trading in a materially harder market "
+                     "than the same company would have been three years ago, even "
+                     "while the average headline rate looks steady."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the IT consultancy cases we see, the company usually looks fine on "
+             "paper for longer than most, because a services business with no stock "
+             "and no factory floor can keep going a surprisingly long time on "
+             "discipline alone. What we are actually looking at is the gap between "
+             "when a contract ends and when the next one starts, and how many "
+             "months of that gap the company can fund before it cannot."),
+            ("The pattern that catches directors out is concentration. One client "
+             "becomes most of the billing without anyone deciding it should, "
+             "because saying yes to more of a good client's work is always the "
+             "easier call than chasing a second one. When that client's IR35 "
+             "determination changes, or their budget freezes, or they simply do "
+             "not renew, there is no second client to lean on while a new one is "
+             "found."),
+            ("VAT is usually where it shows first, one quarter paid late "
+             "while a determination is contested or a client payment "
+             "slips, then never quite caught up."),
+            ("By the time a director calls us, HMRC arrears have often "
+             "been running for two or three quarters, and the personal "
+             "guarantee on an invoice-finance facility or a business loan "
+             "is the thing that has actually kept them awake, even when "
+             "the conversation starts with the contract pipeline."),
+            ("We would not start with day rate or turnover. We would look at how "
+             "many months of unbilled bench time the company's cash reserves would "
+             "cover today, how concentrated the client base actually is, whether "
+             "any live IR35 determination could turn into a backdated liability, "
+             "and what is owed to HMRC and for how long."),
+            ("None of that means the business is unsound. A consultancy that has "
+             "simply run into a slow patch between contracts, or is waiting on one "
+             "delayed client payment, usually has more options than it thinks, "
+             "provided the conversation happens before a creditor forces the "
+             "timing."),
+        ],
+        "notes": [
+            "SIC group 620 covers companies whose recorded primary business is "
+            "computer programming, consultancy and related activities: software "
+            "development, systems design, IT project consultancy and related "
+            "technical work sold to other businesses. It does not include "
+            "telecommunications, data hosting or the wider information and "
+            "communication section's other trades, which are recorded separately.",
+            "This is one of the largest single SIC groups on this site, at more "
+            "than 800 insolvencies a year, so month-to-month figures are a more "
+            "reliable guide here than on the smaller sector pages. Even so, the "
+            "year-to-date and rolling 12-month totals are the steadier measure.",
+            "These are company counts, not the number of contractors, consultants "
+            "or clients affected. A single insolvent company may be a one-person "
+            "personal service company or a consultancy employing dozens, and this "
+            "page cannot distinguish between them.",
+            "The figures are insolvency volumes, not a failure rate. They are not "
+            "adjusted for the number of active IT consultancies, which has grown "
+            "substantially since 2019, so a high count does not, on its own, mean "
+            "a high rate of failure.",
+            "The SIC 620 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular consultancy is "
+             "viable. What matters is narrower: whether the pipeline covers the "
+             "bench time between contracts, whether one client's decision could "
+             "take out most of the billing at once, and what is genuinely owed to "
+             "HMRC once any live IR35 determination is accounted for."),
+            ("Plenty of IT consultancies in difficulty are sound businesses "
+             "carrying a working-capital gap or an HMRC arrears bill built up "
+             "during a slow quarter, and both of those are usually fixable if "
+             "addressed early enough."),
+            ('If you are reading this with a payment run coming and a client '
+             'invoice that has not landed, the thing worth knowing is that the '
+             'earlier you speak to someone, the more room there is to move: '
+             'supplier or lender terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK IT and computer consultancies become insolvent each year?",
+                "a": ("900 computer programming and consultancy companies entered "
+                      "insolvency in England and Wales in 2025, against 906 in "
+                      "2024, the two highest years the sector has recorded. The "
+                      "pre-pandemic figure was 550 in 2019. Source: Insolvency "
+                      "Service, Table A1b."),
+            },
+            {
+                "q": "Are IT consultancy insolvencies rising in 2026?",
+                "a": ("No, they are easing slightly from a record high. "
+                      "There were 401 insolvencies between January and "
+                      "June 2026 against 443 in the same months of 2025, a "
+                      "fall of 9.5%, and the rolling 12-month total fell "
+                      "2.5% to 858. The sector remains 64% above its 2019 "
+                      "level."),
+            },
+            {
+                "q": "Does this include IT retailers, telecoms or data centre companies?",
+                "a": ("No. This page counts SIC group 620, computer programming, "
+                      "consultancy and related activities. Telecommunications, "
+                      "data processing and hosting, and other "
+                      "information-and-communication trades are recorded under "
+                      "separate SIC codes and counted elsewhere."),
+            },
+            {
+                "q": "Why have IT consultancy insolvencies stayed high since the pandemic?",
+                "a": ("The sector saw a sharp rise in company formations from 2021 "
+                      "to 2023 as digital transformation spending and remote-work "
+                      "technology demand boomed. Insolvencies rose alongside that "
+                      "expansion and have not come back down as the market has "
+                      "cooled, sitting at 906 in 2024 and 900 in 2025."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England and "
+                      "Wales only. Scotland and Northern Ireland run separate "
+                      "insolvency regimes and are reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK IT and Computer Consultancy Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('IT and computer consultancy sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside information and communication generally. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "management-consultancy-insolvency-statistics": {
+        "wp_id": 80581,
+        "sic_code": "702",
+        "division_code": "70",
+        "parent_section_code": "M",
+        "parent_section_label": "professional, scientific and technical activities",
+        "h1a": "UK Management Consultancy",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "management consultancy",
+        "keyword": "management consultancy",
+        "singular": "management consultancy",
+        "plural": "management consultancies",
+        "scope_description": ("advice on strategy, organisation, marketing, operations and "
+                              "related business activities sold to other organisations"),
+        "exclusion_note": ("Accountancy, legal services, architectural and engineering "
+                           "consultancy, and IT consultancy are recorded under separate "
+                           "codes and are not included here."),
+        "hero_note": ("Management consultancy insolvencies ticked up slightly in 2025, "
+                      "670 against 665 the year before, the second-highest total the "
+                      "sector has recorded. The headline consulting-industry story is one "
+                      "of growth, driven largely by overseas demand for UK expertise, but "
+                      "that growth has not reached the domestic-facing companies counted "
+                      "here, which remain 68% above their last normal year."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "68% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "670 vs 398"},
+            {"value": "33%", "label": "of professional & technical insolvencies", "sub": "the largest single trade in the section"},
+        ],
+        "comparison_intro": [
+            ("There were 317 management consultancy insolvencies between "
+             "January and June 2026, against 332 in the same six months of "
+             "2025, a fall of 4.5%. Professional, scientific and technical "
+             "activities as a whole fell further, by 7.5%, from 983 to "
+             "909, so management consultancy, at a third of the section's "
+             "total, is easing less than the section around it."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month figure has actually turned, if only "
+             "just: 655 cases for the year to June 2026 against 647 for "
+             "the year to June 2025, up 1.2%. However the short-term "
+             "numbers move month to month, this is not the trade falling "
+             "fastest inside professional and technical services."),
+        ],
+        "divergence": {
+            "heading": "Management consultancy is easing the least inside professional services",
+            "caption": ("Management consultancy against its section peers, England "
+                        "and Wales"),
+            "intro": [
+                ("The professional, scientific and technical activities "
+                 "section holds a wide mix of trades, and they are not "
+                 "moving together. Other professional activities not "
+                 "elsewhere classified, a catch-all covering everything "
+                 "from management coaching to translation, fell 44.7%, "
+                 "though from a smaller base where a handful of cases "
+                 "swings the percentage sharply."),
+                ("Specialised design activities fell 13.6%. Advertising "
+                 "and architectural and engineering consultancy were both "
+                 "essentially flat, down 1.2% and 4.1%."),
+                ("Management consultancy sits in the middle of that "
+                 "spread, easing 4.5%, and because it is the largest "
+                 "single trade in the section, its own trajectory does "
+                 "more to set the section's direction than any of its "
+                 "neighbours."),
+                ("Nobody in this section is telling a uniform story. That matters "
+                 "for reading the headline professional-services figure: a section "
+                 "total moving one way can still contain a dominant trade moving "
+                 "quite differently underneath it, which is what is happening "
+                 "here."),
+            ],
+            "peers": [
+                {"code": "702", "kind": "group", "label": "Management consultancy (SIC 702)", "emphasise": True},
+                {"code": "711", "kind": "group", "label": "Architectural & engineering consultancy (SIC 711)"},
+                {"code": "731", "kind": "group", "label": "Advertising (SIC 731)"},
+                {"code": "741", "kind": "group", "label": "Specialised design activities (SIC 741)"},
+                {"code": "749", "kind": "group", "label": "Other professional activities n.e.c. (SIC 749)"},
+                {"code": "M", "kind": "section", "label": "Professional & technical overall (SIC M)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Management consultancy insolvencies moved in a tight band before the "
+             "pandemic, between 363 and 398 a year from 2016 to 2019. 2020 brought "
+             "a fall to 289, in line with the wider pattern of support schemes and "
+             "restricted winding-up petitions holding the normal insolvency cycle "
+             "back."),
+            ("The recovery from there was sharp and sustained. 532 in 2021, 645 in "
+             "2022, 708 in 2023: three consecutive years of increases that nearly "
+             "doubled the pre-pandemic level, as businesses spent heavily on "
+             "strategy, restructuring and digital-transformation advice coming out "
+             "of the pandemic and consultancy headcount expanded to meet it."),
+            ("2024 brought a pull-back to 665, and 2025 ticked back up to 670. Two "
+             "years past the 2023 peak, the sector has settled into a plateau "
+             "rather than a clean recovery, one that still sits 68% above the "
+             "last normal year."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a rapid climb followed by a stall. "
+            "Management consultancy insolvencies nearly doubled from the 2020 low "
+            "to the 2023 peak, eased slightly, and have now held close to that "
+            "peak for two years running."
+        ),
+        "latest_note": (
+            "The year-to-date total is down on a year earlier, but the rolling "
+            "12-month figure has nudged up, and both numbers sit well above "
+            "anything recorded before 2021. This reads as a sector holding at an "
+            "elevated level rather than genuinely correcting."
+        ),
+        "pressure_heading": "Why management consultancy insolvencies remain elevated",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture of the "
+             "conditions management consultancies have been trading in, not a "
+             "claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "The government's own consultancy bill is being deliberately cut",
+                "body": [
+                    ("The Cabinet Office introduced new controls from November "
+                     "2024 aimed at saving £1.2 billion in public-sector "
+                     "consultancy spending by 2026: ministerial sign-off is now "
+                     "required for any consultancy contract over £600,000 or "
+                     "lasting more than nine months, and spending over £100,000 "
+                     "needs sign-off from the department's permanent secretary."),
+                    ("Government and the wider public sector are major "
+                     "consultancy clients, and a policy specifically "
+                     "designed to shrink that spend removes work from the "
+                     "market at the same time as everything else."),
+                    ("The National Audit Office noted in November 2025 "
+                     "that the Treasury still lacks comprehensive data on "
+                     "what departments are actually spending, so the full "
+                     "effect of the policy is not yet clear even to "
+                     "government itself."),
+                ],
+            },
+            {
+                "h3": "Sector revenue is growing, but not for the companies most exposed to the UK market",
+                "body": [
+                    ("The Management Consultancies Association's own members "
+                     "reported almost 10% revenue growth in 2025, but its forecast "
+                     "for 2026 has been cut from close to 9% to 6%, and the "
+                     "association attributes the growth that is happening to "
+                     "overseas clients seeking UK consulting expertise rather than "
+                     "to domestic demand, which it describes as flat."),
+                    ("A sector-level growth number built on exports does not help "
+                     "a small consultancy whose clients are other UK businesses. "
+                     "Most of the companies counted on this page are exactly that "
+                     "kind of business, not the international practices picking "
+                     "up the overseas work."),
+                ],
+            },
+            {
+                "h3": "The largest firms are cutting headcount, and the caution runs down the client chain",
+                "body": [
+                    ("KPMG announced more than 500 UK job cuts weighted toward its "
+                     "audit practice, and across Deloitte, EY, KPMG and PwC "
+                     "combined at least 2,800 UK redundancies have been "
+                     "confirmed, with salary, bonus and promotion freezes common "
+                     "industry-wide through 2026."),
+                    ("Big Four job losses do not directly cause a small "
+                     "consultancy's insolvency, but they are a visible symptom of "
+                     "the same client caution that hits smaller firms first: when "
+                     "the largest, best-capitalised practices in the market are "
+                     "cutting, the discretionary advisory budgets that keep "
+                     "boutique consultancies fed are the first thing a client "
+                     "protects by not spending."),
+                ],
+            },
+            {
+                "h3": "AI has started to remove the junior work consultancies used to sell",
+                "body": [
+                    ("A January 2026 survey by the Management Consultancies "
+                     "Association found 77% of UK consulting firms had "
+                     "integrated AI into their systems or made it available to "
+                     "staff, with 76% using it for research tasks. McKinsey has "
+                     "cut several thousand roles globally since 2025, "
+                     "concentrated in junior research positions where generative "
+                     "AI has compressed work that used to take a team of "
+                     "analysts."),
+                    ("The economics of a small consultancy have traditionally "
+                     "depended on billing junior time at a margin above cost. If "
+                     "a client can get the same research output from a senior "
+                     "consultant working with AI tools, the junior day-rate that "
+                     "used to fund a consultancy's overheads is the first thing "
+                     "to disappear."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the consultancy cases we see, the business usually has almost "
+             "nothing to sell if the advice stops landing, no stock, no premises "
+             "worth much, sometimes not even much of a team once contractors are "
+             "stood down. The whole asset is the next signed engagement, and the "
+             "gap between one contract ending and the next one starting is where "
+             "the company actually fails."),
+            ("The pattern we see most often is a single public-sector or "
+             "corporate framework contract that has quietly become most of the "
+             "billing. It looked like security when it was won. It looks very "
+             "different the week a department tightens its sign-off thresholds "
+             "or a corporate client freezes discretionary spend, because there is "
+             "rarely a second client of that size waiting to take its place."),
+            ("VAT and PAYE arrears usually show up first, often after a "
+             "client payment milestone slips or a contract is delayed "
+             "rather than cancelled outright, so the director keeps "
+             "expecting the cash any month now."),
+            ("By the time we are called in, that expectation has usually "
+             "been running for two or three quarters, and a personal "
+             "guarantee on an office lease or a business loan is doing "
+             "more of the worrying than the client relationship itself."),
+            ("We would not start with the pipeline value on the CRM. We would "
+             "look at how much of next quarter's billing sits with one client, "
+             "how many months the company could fund itself with zero new work, "
+             "what associate and contractor costs are already committed against "
+             "unsigned engagements, and what HMRC is actually owed."),
+            ("A consultancy waiting on one delayed public-sector payment, or "
+             "between two genuine engagements, is usually in a stronger position "
+             "than it feels. The options narrow fastest once a creditor, often "
+             "HMRC, moves first, so the conversation is worth having before that "
+             "happens rather than after."),
+        ],
+        "notes": [
+            "SIC group 702 covers companies whose recorded primary business is "
+            "management consultancy: advice on strategy, organisation, marketing, "
+            "operations and related business activities sold to other "
+            "organisations. It does not include accountancy, legal, architectural "
+            "or IT consultancy, which are recorded under separate codes.",
+            "This is the largest single SIC group in professional, scientific and "
+            "technical activities, at roughly 670 insolvencies a year, so "
+            "month-to-month figures are a reasonably reliable guide here. The "
+            "year-to-date and rolling 12-month totals remain the steadier "
+            "measure.",
+            "These are company counts, not the number of consultants, "
+            "contractors or clients affected. Many management consultancies are "
+            "small, and some of the largest advisory practices operate as "
+            "partnerships or LLPs rather than companies, so this page does not "
+            "capture the whole consulting industry, only the part incorporated "
+            "as companies.",
+            "The figures are insolvency volumes, not a failure rate. They are "
+            "not adjusted for the number of active management consultancies, "
+            "which expanded significantly after 2020, so a high count does not, "
+            "on its own, mean a high rate of failure.",
+            "The SIC 702 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular consultancy "
+             "is viable. What matters is narrower: how concentrated the client "
+             "base is, how many months of overheads the company could fund with "
+             "no new engagements signed, and what is genuinely owed to HMRC once "
+             "any delayed client payments are accounted for."),
+            ("Plenty of consultancies in difficulty are sound businesses "
+             "carrying a working-capital gap created by a delayed client payment "
+             "or a slow contract-renewal cycle, and that is usually fixable if it "
+             "is addressed early."),
+            ('If you are reading this with a payment run coming and a client '
+             'milestone that has not landed, the thing worth knowing is that the '
+             'earlier you speak to someone, the more room there is to move: '
+             'supplier or lender terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK management consultancies become insolvent each year?",
+                "a": ("670 management consultancy companies entered insolvency in "
+                      "England and Wales in 2025, against 665 in 2024. The series "
+                      "peak was 708 in 2023, and the pre-pandemic figure was 398 "
+                      "in 2019. Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are management consultancy insolvencies rising in 2026?",
+                "a": ("The year-to-date count is down: 317 insolvencies "
+                      "between January and June 2026 against 332 in the "
+                      "same months of 2025, a fall of 4.5%. But the "
+                      "rolling 12-month total has ticked up 1.2% to 655, "
+                      "so the picture is a sector holding near its peak "
+                      "rather than clearly recovering."),
+            },
+            {
+                "q": "Does this include accountants, lawyers or IT consultants?",
+                "a": ("No. This page counts SIC group 702, management "
+                      "consultancy activities. Accountancy, legal services, "
+                      "architectural and engineering consultancy, and IT "
+                      "consultancy are recorded under separate SIC codes and "
+                      "counted elsewhere."),
+            },
+            {
+                "q": "Why are management consultancy insolvencies still so high?",
+                "a": ("Insolvencies nearly doubled between 2020 and the 2023 peak "
+                      "as the sector expanded rapidly on post-pandemic strategy, "
+                      "restructuring and digital-transformation work, and have "
+                      "not come down significantly since, holding at 665 in 2024 "
+                      "and 670 in 2025 against 398 in 2019."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England and "
+                      "Wales only. Scotland and Northern Ireland run separate "
+                      "insolvency regimes and are reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Management Consultancy Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Management consultancy sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside professional, scientific and technical activities '
+                    'generally. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "architectural-engineering-insolvency-statistics": {
+        "wp_id": 80584,
+        "sic_code": "711",
+        "division_code": "71",
+        "parent_section_code": "M",
+        "parent_section_label": "professional, scientific and technical activities",
+        "h1a": "UK Architectural and Engineering Consultancy",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "architectural and engineering consultancy",
+        "keyword": "architectural and engineering consultancy",
+        "singular": "architectural or engineering consultancy",
+        "plural": "architectural and engineering consultancies",
+        "scope_description": ("building design, structural and civil engineering, and "
+                              "related technical consultancy sold to other businesses"),
+        "exclusion_note": ("Surveying, accountancy, legal services, management "
+                           "consultancy and IT consultancy are recorded under separate "
+                           "codes and are not included here."),
+        "hero_note": ("Architectural and engineering consultancy insolvencies have "
+                      "risen every year since 2020, reaching 335 in 2025, the highest "
+                      "total on record and 84% above 2019. Unlike sectors that spiked in "
+                      "the post-pandemic recovery and have since plateaued, this one has "
+                      "never stopped climbing."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "84% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "335 vs 182"},
+            {"value": "5 years", "label": "consecutive annual rise", "sub": "2021 through 2025, no year down"},
+        ],
+        "comparison_intro": [
+            ("There were 141 architectural and engineering consultancy "
+             "insolvencies between January and June 2026, against 147 in "
+             "the same six months of 2025, essentially unchanged, a fall "
+             "of 4.1%. Professional, scientific and technical activities "
+             "as a whole fell 7.5% over the same months, from 983 to 909, "
+             "so this trade held up better than the section around it."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month figure makes the divergence clearer. "
+             "At 329 cases for the year to June 2026, against 311 for the "
+             "year to June 2025, insolvencies rose 5.8%, while the "
+             "section's rolling total fell. This is the one trade in "
+             "professional and technical services that is still genuinely "
+             "growing, not merely failing to fall."),
+        ],
+        "divergence": {
+            "heading": "The one trade in professional services still climbing",
+            "caption": ("Architectural and engineering consultancy against its "
+                        "section peers, England and Wales"),
+            "intro": [
+                ("Every other trade covered on this site inside "
+                 "professional, scientific and technical activities is "
+                 "either flat or easing. Architectural and engineering "
+                 "consultancy is not."),
+                ("Other professional activities not elsewhere classified "
+                 "fell 44.7%, though from a smaller base where a handful "
+                 "of cases swings the percentage sharply. Management "
+                 "consultancy eased 4.5%. Advertising and activities of "
+                 "head offices were both close to flat, down 1.2% and up "
+                 "7.0%."),
+                ("Architectural and engineering consultancy's own "
+                 "year-to-date change is close to flat too, down 4.1%, but "
+                 "its rolling 12-month total, the steadier measure, is up "
+                 "5.8%, one of the only genuine increases among the trades "
+                 "in this table. It has also risen in every calendar year "
+                 "since 2020, a run none of its neighbours can match."),
+                ("A section total moving sideways can still hide one trade that "
+                 "has never stopped growing since the pandemic. This is that "
+                 "trade."),
+            ],
+            "peers": [
+                {"code": "711", "kind": "group", "label": "Architectural & engineering consultancy (SIC 711)", "emphasise": True},
+                {"code": "701", "kind": "group", "label": "Activities of head offices (SIC 701)"},
+                {"code": "731", "kind": "group", "label": "Advertising (SIC 731)"},
+                {"code": "741", "kind": "group", "label": "Specialised design activities (SIC 741)"},
+                {"code": "749", "kind": "group", "label": "Other professional activities n.e.c. (SIC 749)"},
+                {"code": "M", "kind": "section", "label": "Professional & technical overall (SIC M)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Architectural and engineering consultancy insolvencies held "
+             "broadly flat before the pandemic, 143 in 2016 rising gently to 182 "
+             "by 2019. 2020 brought a fall to 140, in line with the wider "
+             "pattern of government support and restricted winding-up petitions "
+             "holding the normal insolvency cycle back."),
+            ("What followed did not stop. 242 in 2021, 295 in 2022, 305 in 2023, "
+             "329 in 2024, 335 in 2025: five consecutive years of increases, "
+             "each smaller than the last but none of them a fall. No other "
+             "trade on this site has climbed for five straight years without a "
+             "single down year."),
+            ("The result is a sector now running at close to double its "
+             "pre-pandemic level, 84% above 2019, with no sign in the annual "
+             "figures of the plateau or pull-back seen elsewhere in "
+             "professional services."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a single long climb. Architectural "
+            "and engineering consultancy insolvencies have risen every year "
+            "since the 2020 low, and the rate of increase, though slowing, has "
+            "not yet turned negative."
+        ),
+        "latest_note": (
+            "The year-to-date total is flat on a year earlier, but the rolling "
+            "12-month figure is still rising, and the annual series has not "
+            "recorded a single down year since 2020. This looks less like a "
+            "sector correcting and more like one still working through the "
+            "consequences of its post-pandemic expansion."
+        ),
+        "pressure_heading": "Why architectural and engineering consultancy insolvencies keep rising",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture of "
+             "the conditions architectural and engineering practices have been "
+             "trading in, not a claim about why any individual company "
+             "failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Architects' own confidence has collapsed within months",
+                "body": [
+                    ("The Royal Institute of British Architects tracks practice "
+                     "confidence every month through its Future Trends survey. "
+                     "Its Workload Index stood at +5 in February 2026, a "
+                     "genuinely optimistic reading, and fell to -9 by May, a "
+                     "14-point swing into negative territory in three months. A "
+                     "negative reading means more practices expect workloads to "
+                     "fall over the next quarter than expect them to rise."),
+                    ("Smaller practices, the ones most likely to be counted as "
+                     "insolvencies on this page, have seen their outlook weaken "
+                     "furthest. Architects sit at the front of the construction "
+                     "pipeline: when their workload expectations turn down, it is "
+                     "usually a lead indicator for the building work that "
+                     "follows, not a lagging one."),
+                ],
+            },
+            {
+                "h3": "A 2022 law has just made decades-old work newly liable",
+                "body": [
+                    ("Section 135 of the Building Safety Act 2022 extended "
+                     "the limitation period for claims over dwellings made "
+                     "unfit for habitation by defective work: "
+                     "retrospectively to 30 years for work completed "
+                     "before 28 June 2022, and prospectively to 15 years "
+                     "for work completed after."),
+                    ("For structural and geotechnical engineers in "
+                     "particular, this reopened a long tail of claims on "
+                     "work that had previously fallen outside any time "
+                     "limit at all."),
+                    ("A practice does not need to have done anything wrong to "
+                     "feel this. It needs a client, an insurer or a subsequent "
+                     "purchaser to allege that it did, on a project finished ten "
+                     "or twenty years ago, and the cost of defending that "
+                     "allegation can outlast the fee the practice was ever paid "
+                     "for the work."),
+                ],
+            },
+            {
+                "h3": "Insurance for the highest-risk work is getting harder to buy, not easier",
+                "body": [
+                    ("Professional indemnity cover for engineers exposed "
+                     "to higher-risk buildings, structural and fire-safety "
+                     "work on tall residential blocks in particular, is "
+                     "being repriced and narrowed in 2026 as insurers "
+                     "respond to claims tied to late design changes and "
+                     "incomplete Golden Thread documentation."),
+                    ("Generalist mid-sized consultancies typically pay "
+                     "£3,000 to £25,000 for £2 million to £10 million of "
+                     "cover; specialist high-rise structural and fire "
+                     "engineers pay a good deal more, where cover is "
+                     "available at all."),
+                    ("A practice that cannot obtain adequate cover cannot "
+                     "lawfully take on regulated work, whatever its order book "
+                     "looks like. Insurance availability, not workload, is what "
+                     "removes some of these companies from the market before an "
+                     "insolvency figure ever registers them."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the architecture and engineering practices we see, the trigger "
+             "is rarely the current project. It is usually a much older one, a "
+             "claim, a subsidence letter, an insurer's reservation of rights, "
+             "on a building finished years ago that the director had stopped "
+             "thinking about."),
+            ("Professional indemnity renewal is the date that concentrates "
+             "minds. A premium that jumps sharply, or an insurer that declines "
+             "to quote at all for higher-risk work, can force a decision inside "
+             "weeks that the practice's own trading would never have forced on "
+             "its own."),
+            ("Fee income in this trade is lumpy by nature, a handful of larger "
+             "projects rather than a steady flow, so one delayed planning "
+             "decision or one client pausing a scheme can strip out a quarter's "
+             "revenue without any single dramatic event. HMRC arrears usually "
+             "build quietly during exactly that kind of gap."),
+            ("We would not start with the project pipeline. We would look at "
+             "what the claims history and PI renewal terms actually say, how "
+             "concentrated fee income is across live projects, how much of the "
+             "work sits on schemes that could still be paused or cancelled, and "
+             "what is owed to HMRC."),
+            ("A practice with a strong technical reputation and a genuine "
+             "claims-free history usually has more room to negotiate, on "
+             "insurance and with creditors, than one already fighting a live "
+             "claim. The earlier that conversation happens, the more of that "
+             "room is still available."),
+        ],
+        "notes": [
+            "SIC group 711 covers companies whose recorded primary business is "
+            "architectural and engineering consultancy and related technical "
+            "consultancy: building design, structural and civil engineering, "
+            "and related technical advice. It sits within professional, "
+            "scientific and technical activities, alongside management "
+            "consultancy and other trades recorded separately.",
+            "This trade has risen every calendar year since 2020, the only one "
+            "covered on this site to do so. Even so, the year-to-date and "
+            "rolling 12-month totals remain the steadier guide to the current "
+            "trend than any single month.",
+            "These are company counts, not the number of architects, engineers "
+            "or projects affected. A single insolvent company may be a "
+            "sole-practitioner practice or a multi-disciplinary consultancy "
+            "employing dozens.",
+            "The figures are insolvency volumes, not a failure rate. They are "
+            "not adjusted for the number of active practices, which has also "
+            "grown since 2019, so a rising count does not, on its own, prove a "
+            "rising rate of failure.",
+            "The SIC 711 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular practice is "
+             "viable. What matters is narrower: what live or historic claims "
+             "exist, how insurance renewal is likely to go, how concentrated "
+             "fee income is across current projects, and what is genuinely owed "
+             "to HMRC."),
+            ("Plenty of practices in difficulty are technically sound "
+             "businesses carrying an insurance-driven cash shock or a delayed "
+             "project payment, and that is usually fixable if it is addressed "
+             "early."),
+            ('If you are reading this with a premium renewal or a payment run '
+             'coming and the cash is not there, the thing worth knowing is that '
+             'the earlier you speak to someone, the more room there is to move: '
+             'supplier or lender terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK architectural and engineering consultancies become insolvent each year?",
+                "a": ("335 companies in SIC group 711 entered insolvency in "
+                      "England and Wales in 2025, the highest total on record "
+                      "and the fifth consecutive annual rise since 2020. The "
+                      "pre-pandemic figure was 182 in 2019. Source: Insolvency "
+                      "Service, Table A1b."),
+            },
+            {
+                "q": "Are architectural and engineering consultancy insolvencies still rising in 2026?",
+                "a": ("The year-to-date count is essentially flat, 141 "
+                      "insolvencies between January and June 2026 against "
+                      "147 a year earlier. But the rolling 12-month total "
+                      "rose 5.8% to 329, one of the only genuine increases "
+                      "among the professional-services trades covered on "
+                      "this site, and the annual figure has not fallen in "
+                      "any year since 2020."),
+            },
+            {
+                "q": "Does this include accountants, surveyors or IT consultants?",
+                "a": ("No. This page counts SIC group 711, architectural and "
+                      "engineering activities and related technical "
+                      "consultancy. Surveying, accountancy, legal services, "
+                      "management consultancy and IT consultancy are recorded "
+                      "under separate SIC codes."),
+            },
+            {
+                "q": "Why do architectural and engineering consultancy insolvencies keep rising?",
+                "a": ("The trade has climbed every year since the 2020 low, "
+                      "from 140 to 335 in 2025. Contributing pressures include "
+                      "falling architect confidence in 2026, extended "
+                      "retrospective liability for older projects under the "
+                      "Building Safety Act 2022, and tightening professional "
+                      "indemnity insurance for higher-risk building work."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England and "
+                      "Wales only. Scotland and Northern Ireland run separate "
+                      "insolvency regimes and are reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Architectural and Engineering '
+                     'Consultancy Insolvency Statistics." Analysis of Insolvency '
+                     "Service company insolvency data by industry (Table A1b). "
+                     "CompanyDebt.com."),
+        "related": ('Architectural and engineering consultancy sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside professional, scientific and technical activities '
+                    'generally, and the wider '
+                    '<a href="/data/construction-insolvency-statistics/">construction</a> '
+                    'pipeline it serves. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "personal-care-services-insolvency-statistics": {
+        "wp_id": 80587,
+        "sic_code": "960",
+        "division_code": "96",
+        "parent_section_code": "S",
+        "parent_section_label": "other service activities",
+        # No parent_kind here: SIC group 960 is 94% of section S by itself, so
+        # a division comparison would compare the trade against itself.
+        "h1a": "UK Hair, Beauty and Personal Care",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "personal care services",
+        "keyword": "personal care services",
+        "singular": "personal care business",
+        "plural": "personal care businesses",
+        "scope_description": ("hairdressing, beauty, wellbeing, funeral and personal "
+                              "laundry services, a mixed group that cannot be split "
+                              "further"),
+        "exclusion_note": "Gyms, business dry cleaning and industrial laundry are recorded separately.",
+        "hero_note": ("Personal care services insolvencies have fallen for two "
+                      "straight years, from a 2023 peak of 1,286 to 993 in 2025, "
+                      "and the decline has continued into 2026, down 15.7% year "
+                      "to date. The sector is still 39% above its pre-pandemic "
+                      "level, but the post-pandemic spike that drove it there is "
+                      "now clearly unwinding."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "39% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "993 vs 713"},
+            {"value": "95%", "label": "of other-service-activities insolvencies", "sub": "this trade is effectively the whole section"},
+        ],
+        "comparison_intro": [
+            ("There were 439 personal care services insolvencies between "
+             "January and June 2026, against 521 in the same six months "
+             "of 2025, a fall of 15.7%. Other service activities, the "
+             "wider section this trade sits in, fell by almost exactly "
+             "the same amount, 16.9%, because personal care services is "
+             "not a small part of that section, it is nearly all of it."),
+            ("These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month figure confirms the same direction. "
+             "At 911 cases for the year to June 2026, against 1,031 for "
+             "the year to June 2025, insolvencies fell 11.6%. Unlike the "
+             "professional-services trades covered elsewhere on this "
+             "site, where the picture is mixed, this is a clean, "
+             "section-wide decline."),
+        ],
+        "longer_term_narrative": [
+            ("Personal care services insolvencies held broadly flat before "
+             "the pandemic, 517 in both 2016 and 2017, rising to 713 by "
+             "2019. 2020 brought a fall to 566, in line with government "
+             "support and restricted winding-up petitions holding the "
+             "normal insolvency cycle back across most of the economy."),
+            ("Salons and personal-care businesses were also among those "
+             "forced to close entirely for months at a time."),
+            ("What followed was the sharpest single-year jump on this site. "
+             "682 in 2021, then 1,205 in 2022, a 77% increase in one year, and "
+             "a further rise to 1,286 in 2023, the series peak. That surge "
+             "coincided with an entire sector reopening after repeated "
+             "closures, rapid cost inflation, and a wave of new salons and "
+             "studios opening into strong post-lockdown demand that did not "
+             "all prove durable."),
+            ("2024 and 2025 have both come down from that peak, to 1,065 and "
+             "then 993, and the decline has continued into 2026. The "
+             "post-pandemic spike is unwinding, though the sector remains well "
+             "above where it stood before any of this began."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a sharp pandemic-recovery spike "
+            "that has since gone into reverse. Personal care services "
+            "insolvencies nearly doubled between 2021 and the 2023 peak, and "
+            "have fallen in both years since."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are down "
+            "by double digits on the year before. Two consecutive annual "
+            "falls plus a continued year-to-date decline is one of the "
+            "clearer improving trends on this site, even though the level "
+            "remains well above 2019."
+        ),
+        "pressure_heading": "Why personal care services insolvencies remain elevated even as they fall",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture of "
+             "the conditions personal care businesses have been trading in, "
+             "not a claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Labour costs matter more here than almost anywhere else",
+                "body": [
+                    ("Labour typically accounts for around 60% of a hair and "
+                     "beauty business's costs, against a much lower share in "
+                     "most trades, because the work itself is the service. The "
+                     "National Living Wage rose to £12.71 an hour from April "
+                     "2026, a 4.1% increase on the year before, and every point "
+                     "of that rise reaches the bottom line directly in a "
+                     "business that cannot substitute machinery for people."),
+                    ("A salon or clinic that is fully booked can still be "
+                     "losing money once wages, employer National Insurance and "
+                     "rent are covered, because there is a hard ceiling on how "
+                     "many appointments a chair or a treatment room can fit "
+                     "into a working day. Unlike a shop, this sector cannot "
+                     "sell more by simply stocking more."),
+                ],
+            },
+            {
+                "h3": "The business rates relief given to other high-street trades has not reached this one",
+                "body": [
+                    ("A significant overhaul of the business rates system took "
+                     "effect from 1 April 2026, alongside a nationwide property "
+                     "revaluation that has raised some bills to as much as four "
+                     "times their previous level. Pubs and music venues "
+                     "received a 15% relief as part of the changes. Salons, "
+                     "spas and beauty retailers did not, leaving many facing "
+                     "the full increase."),
+                    ("That gap is part of what is pushing the trade toward "
+                     "mobile and home-based working, which can show up in these "
+                     "figures as a company ceasing to trade from premises, "
+                     "whether or not the person providing the service has "
+                     "stopped working altogether."),
+                ],
+            },
+            {
+                "h3": "Chair rental is reshaping how the trade is structured, and creating its own tax exposure",
+                "body": [
+                    ("A growing share of salons now rent chairs to "
+                     "self-employed stylists rather than employing them "
+                     "directly, a way of moving fixed staff costs onto rent "
+                     "instead."),
+                    ("HMRC treats chair-rental income as taxable turnover "
+                     "in its own right, so a salon owner totting up "
+                     "services, retail sales and chair rents together can "
+                     "find themselves pulled over the £90,000 VAT "
+                     "registration threshold by the rental income alone, "
+                     "even if the underlying business has not grown."),
+                    ("That shift also explains why a falling company-insolvency "
+                     "count is not quite the same as a stable trade: some of "
+                     "the contraction on this page is business owners "
+                     "restructuring out of the company model entirely, into "
+                     "self-employment, rather than the underlying service "
+                     "disappearing."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the personal care cases we see, the business is rarely short "
+             "of customers. It is short of margin, because the cost of "
+             "putting a stylist or therapist behind a chair for the day has "
+             "risen faster than the price a local high street will bear for a "
+             "cut or a treatment."),
+            ("Rent is usually the second pressure, and it is a fixed cost in a "
+             "trade with almost no ability to flex it: a salon cannot easily "
+             "downsize its premises the way a business with stock or "
+             "equipment can, and a rates bill set at revaluation does not fall "
+             "just because footfall has."),
+            ("PAYE arrears tend to build first here, because staff still need "
+             "paying on the usual date even in a slow month, and a director "
+             "will often keep drawing down personally rather than cut the "
+             "wage bill, right up until HMRC starts pressing."),
+            ("We would not start with the appointment book. We would look at "
+             "labour cost as a share of takings, what the actual rent and "
+             "rates commitment is against current footfall, whether a move to "
+             "a chair-rental or self-employed model has been priced properly "
+             "including its VAT consequences, and what is owed to HMRC."),
+            ("A salon or clinic with loyal, regular clients usually has more "
+             "genuine options than the owner assumes, restructuring costs, "
+             "renegotiating a lease, or changing how the team is engaged, "
+             "provided the conversation starts before a creditor forces the "
+             "pace."),
+        ],
+        "notes": [
+            "SIC group 960 covers a mixed set of personal-service trades that "
+            "cannot be split further in the published data: hairdressing and "
+            "beauty treatment, physical wellbeing activities such as spas and "
+            "saunas, funeral and related services, and laundry and "
+            "dry-cleaning services for individuals. Hairdressing and beauty "
+            "treatment is generally understood to be the largest part of this "
+            "group.",
+            "This trade group is effectively the whole of other service "
+            "activities in the official statistics, at 94% of the section's "
+            "insolvencies, so the section-level comparison above tells you "
+            "very little beyond what this page already shows.",
+            "These are company counts, not the number of salons, therapists or "
+            "self-employed stylists affected. A stylist moving from employment "
+            "to a self-employed chair-rental arrangement changes how a "
+            "business is structured without necessarily reflecting fewer "
+            "people working in the trade.",
+            "The figures are insolvency volumes, not a failure rate. They are "
+            "not adjusted for the number of active personal-care businesses, "
+            "so a falling count does not, on its own, mean the underlying "
+            "trade is shrinking at the same rate.",
+            "The SIC 960 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular business "
+             "is viable. What matters is narrower: whether labour cost as a "
+             "share of takings still leaves a margin, whether the rent and "
+             "rates commitment matches current footfall, and what is "
+             "genuinely owed to HMRC."),
+            ("Plenty of salons and clinics in difficulty are sound businesses "
+             "carrying a rates shock or a PAYE arrears bill built up during a "
+             "slow patch, and both are usually fixable if addressed early."),
+            ('If you are reading this with a wage run coming and the takings '
+             'are not there, the thing worth knowing is that the earlier you '
+             'speak to someone, the more room there is to move: rent '
+             'renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK personal care and beauty businesses become insolvent each year?",
+                "a": ("993 companies in SIC group 960, personal care and "
+                      "related services, entered insolvency in England and "
+                      "Wales in 2025, down from 1,065 in 2024 and well below "
+                      "the 2023 peak of 1,286. The pre-pandemic figure was 713 "
+                      "in 2019. Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are personal care services insolvencies falling in 2026?",
+                "a": ("Yes. There were 439 insolvencies between January and "
+                      "June 2026 against 521 in the same months of 2025, a "
+                      "fall of 15.7%, and the rolling 12-month total fell "
+                      "11.6% to 911. Both measures have declined for two "
+                      "consecutive years from the 2023 peak."),
+            },
+            {
+                "q": "Does this include gyms, dry cleaners or funeral directors?",
+                "a": ("Laundry and dry-cleaning services for individuals and "
+                      "funeral and related services are both included in this "
+                      "SIC group alongside hairdressing, beauty treatment and "
+                      "wellbeing activities such as spas. Gyms and sports "
+                      "facilities are recorded under a separate SIC code and "
+                      "are not included here."),
+            },
+            {
+                "q": "Why did personal care services insolvencies spike after the pandemic?",
+                "a": ("Insolvencies nearly doubled from 682 in 2021 to 1,205 "
+                      "in 2022 as the trade reopened after repeated pandemic "
+                      "closures into a period of rapid cost inflation and a "
+                      "wave of new salons and studios, not all of which proved "
+                      "durable. The total has fallen in both years since the "
+                      "2023 peak of 1,286."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England "
+                      "and Wales only. Scotland and Northern Ireland run "
+                      "separate insolvency regimes and are reported "
+                      "separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Hair, Beauty and Personal Care '
+                     'Insolvency Statistics." Analysis of Insolvency Service company '
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Personal care services sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside other service activities generally. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "sports-facility-insolvency-statistics": {
+        "wp_id": 80590,
+        "sic_code": "931",
+        "division_code": "93",
+        "parent_section_code": "R",
+        "parent_section_label": "arts, entertainment and recreation",
+        "h1a": "UK Sports Club and Facility",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "sports clubs and facilities",
+        "keyword": "sports club and facility",
+        "singular": "sports club or facility",
+        "plural": "sports clubs and facilities",
+        "scope_description": ("the operation of sports facilities and leisure centres, "
+                              "sports clubs, fitness facilities such as gyms, and other "
+                              "sports activities"),
+        "exclusion_note": ("Amusement and recreation activities such as theme parks and "
+                           "arcades, and cultural activities such as museums and "
+                           "libraries, are recorded under separate codes within the same "
+                           "section and are not included here."),
+        "hero_note": ("Sports club and facility insolvencies held at 195 in both 2024 "
+                      "and 2025, but 2026 is running ahead: up 6.7% year to date. The "
+                      "sector remains 29% above its pre-pandemic level, and energy costs "
+                      "and council funding pressures are still building, not easing."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "29% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "195 vs 151"},
+            {"value": "42%", "label": "of arts, entertainment & recreation insolvencies", "sub": "the largest single trade in the section"},
+        ],
+        "comparison_intro": [
+            ("There were 96 sports club and facility insolvencies between "
+             "January and June 2026, against 90 in the same six months of "
+             "2025, a rise of 6.7%. Arts, entertainment and recreation as a "
+             "whole rose a slower 2.3%, from 213 to 218."),
+            ("Sports facilities, at 42% of the section, are now rising "
+             "noticeably faster than the section around them. These are "
+             "Company Debt calculations from Insolvency Service Table A1b "
+             "data."),
+            ("The rolling 12-month figure shows the same gap: 201 cases for "
+             "the year to June 2026 against 190 for the year to June 2025, "
+             "up 5.8%, against a 7.6% rise for the section overall."),
+            ("Two flat years, 195 in both 2024 and 2025, have given way to a "
+             "modest but real uptick in 2026."),
+        ],
+        "divergence": {
+            "heading": "Sports facilities against the rest of arts, entertainment and recreation",
+            "caption": ("Sports clubs and facilities against its section peers, "
+                        "England and Wales"),
+            "intro": [
+                ("The trades sharing this section are moving in different "
+                 "directions this year. Creative, arts and entertainment "
+                 "activities rose 17.2% year to date. Amusement and "
+                 "recreation, covering attractions such as theme parks and "
+                 "arcades, fell 16.7%."),
+                ("Libraries, archives and museums, and gambling and betting, "
+                 "are both too small, a handful of cases a year, for the "
+                 "percentage change to mean very much on their own."),
+                ("Sports facilities, up 6.7% year to date, are now rising "
+                 "faster than the section as a whole, which rose 2.3%. At "
+                 "42% of the section's total, that puts sports ahead of, not "
+                 "just in line with, the wider trend."),
+                ("It still makes this trade useful context for reading the "
+                 "section-level figure elsewhere on this site, even though "
+                 "sports facilities are currently moving a little faster "
+                 "than the section around them."),
+            ],
+            "peers": [
+                {"code": "931", "kind": "group", "label": "Sports activities (SIC 931)", "emphasise": True},
+                {"code": "900", "kind": "group", "label": "Creative, arts & entertainment (SIC 900)"},
+                {"code": "932", "kind": "group", "label": "Amusement & recreation activities (SIC 932)"},
+                {"code": "910", "kind": "group", "label": "Libraries, archives & museums (SIC 910)"},
+                {"code": "920", "kind": "group", "label": "Gambling & betting activities (SIC 920)"},
+                {"code": "R", "kind": "section", "label": "Arts, entertainment & recreation overall (SIC R)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Sports club and facility insolvencies rose steadily before the "
+             "pandemic, from 94 in 2016 to 151 by 2019. 2020 brought a modest "
+             "fall to 135, smaller than the drop seen in many other trades, "
+             "reflecting how quickly gyms and sports facilities were forced "
+             "to close and then reopen repeatedly through 2020 and 2021 "
+             "rather than trading through the period at a reduced level."),
+            ("The rise from there was sharp. 153 in 2021, then 231 in 2022, a "
+             "51% jump in a single year, and a further rise to 236 in 2023, "
+             "the series peak. That coincided with the first full year of "
+             "post-lockdown energy price rises landing on some of the most "
+             "energy-intensive premises in the economy."),
+            ("2024 and 2025 both held at exactly 195, a genuine plateau "
+             "rather than a recovery, and 2026 has opened slightly above that "
+             "level. Five years on from the pandemic, the sector has not "
+             "returned anywhere near its 2019 footing."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a steady pre-pandemic rise, a "
+            "sharp post-pandemic surge as energy costs hit some of the most "
+            "energy-intensive premises in the economy, and a two-year plateau "
+            "that 2026 has so far failed to continue."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are up on "
+            "the year before, a real reversal of the flat 2024-2025 "
+            "plateau. It is too early in 2026 to call this a firm trend, "
+            "but this is not, on the numbers so far, a sector that has "
+            "finished correcting."
+        ),
+        "pressure_heading": "Why sports club and facility insolvencies remain elevated",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture of "
+             "the conditions sports clubs and facilities have been trading "
+             "in, not a claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Energy costs have not returned to anything like a normal level",
+                "body": [
+                    ("Swimming pools and leisure facilities are among the "
+                     "most energy-intensive premises in the economy: heating, "
+                     "filtration, ventilation and lighting run close to "
+                     "continuously, whether the building is busy or not."),
+                    ("A House of Lords committee report found that 77 local "
+                     "authority managed leisure centres across the UK closed "
+                     "between 2021 and 2024, with rising utility costs cited "
+                     "as a contributing factor in many cases."),
+                    ("The scale of the increase at individual operators has "
+                     "been severe. One medium-sized public leisure operator "
+                     "reported utility costs rising from £8 million in 2021 "
+                     "to an estimated £24 million by 2024, a threefold "
+                     "increase in three years that no realistic membership "
+                     "price rise could absorb on its own."),
+                ],
+            },
+            {
+                "h3": "Councils are cutting the subsidies that kept many facilities viable",
+                "body": [
+                    ("A large share of sports and leisure facilities operate "
+                     "under contract to, or with subsidy from, local "
+                     "authorities, many of which are themselves under severe "
+                     "financial pressure."),
+                    ("Several UK councils have issued Section 114 notices, "
+                     "effectively declaring themselves unable to balance "
+                     "their budgets, and discretionary spending on leisure "
+                     "and sport is among the first areas councils reduce "
+                     "when core statutory services have to be protected."),
+                    ("A facility that loses its council subsidy or sees its "
+                     "management contract retendered on worse terms can go "
+                     "from viable to loss-making without anything changing in "
+                     "how many people walk through the door."),
+                ],
+            },
+            {
+                "h3": "Budget gym chains keep undercutting the mid-market on price",
+                "body": [
+                    ("The rise of low-cost, high-volume gym chains, offering "
+                     "memberships from around £15 a month against a national "
+                     "average nearer £48, has put sustained downward pressure "
+                     "on what a smaller or mid-market operator can charge. "
+                     "These chains run on a model built around minimal "
+                     "staffing and large scale, economics that a single-site "
+                     "independent club or council leisure centre cannot "
+                     "easily replicate."),
+                    ("A member choosing between a full-service local sports "
+                     "club and a 24-hour budget gym at a fraction of the "
+                     "price is, increasingly, choosing on price alone, which "
+                     "leaves smaller operators competing for a shrinking pool "
+                     "of members willing to pay more."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the sports and leisure cases we see, the trigger is almost "
+             "always a fixed cost that has moved a long way in a short time, "
+             "an energy contract renewing at several times its previous "
+             "rate, or a council subsidy or lease that has been cut or not "
+             "renewed, rather than a sudden drop in members."),
+            ("Membership income is sticky in ways that can mislead a "
+             "director. People do not cancel a gym or club membership as "
+             "quickly as spending falls elsewhere, so the revenue line can "
+             "look steady for months while the cost base underneath it has "
+             "already moved decisively against the business."),
+            ("VAT and PAYE arrears tend to build during exactly that gap, "
+             "because a facility usually keeps running, keeps paying staff "
+             "and keeps taking memberships, right up until a renewal date or "
+             "a contract review forces the true cost position into the "
+             "open."),
+            ("We would not start with membership numbers. We would look at "
+             "when the next energy contract renews and on what terms, "
+             "whether any council subsidy or facility-management contract is "
+             "secure beyond the current year, how labour costs compare with "
+             "income per member, and what is owed to HMRC."),
+            ("A club or facility with a loyal membership base and a "
+             "genuinely fixable cost problem usually has more options than "
+             "the numbers suggest, renegotiating a contract, restructuring "
+             "premises costs, or bringing in support before a lease or an "
+             "energy bill forces the timing instead."),
+        ],
+        "notes": [
+            "SIC group 931 covers companies whose recorded primary business "
+            "is sports activities: the operation of sports facilities and "
+            "leisure centres, sports clubs, fitness facilities such as gyms, "
+            "and other sports activities. It sits within arts, entertainment "
+            "and recreation, alongside amusement and recreation activities "
+            "and creative, arts and entertainment activities, which are "
+            "recorded separately.",
+            "This is the largest single trade in its section, at 42% of "
+            "arts, entertainment and recreation insolvencies, so its own "
+            "trajectory does a good deal to shape the section total, though "
+            "less completely than in some other pages in this series.",
+            "These are company counts, not the number of gyms, clubs, "
+            "facilities or members affected. A single insolvent company may "
+            "operate one site or several.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active sports and leisure "
+            "operators, so the count cannot show whether failure has become "
+            "more or less likely for a given operator.",
+            "The SIC 931 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular club or "
+             "facility is viable. What matters is narrower: what the next "
+             "energy renewal will cost, whether council or contract funding "
+             "is secure, and what is genuinely owed to HMRC."),
+            ("Plenty of clubs and facilities in difficulty are otherwise "
+             "sound operations carrying an energy-cost shock or a funding "
+             "gap left by a council decision, and both are usually fixable "
+             "if addressed early."),
+            ('If you are reading this with an energy bill or a wage run '
+             'coming and the cash is not there, the thing worth knowing is '
+             'that the earlier you speak to someone, the more room there is '
+             'to move: supplier or lender terms renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK sports clubs and facilities become insolvent each year?",
+                "a": ("195 companies in SIC group 931, sports activities, "
+                      "entered insolvency in England and Wales in both 2024 "
+                      "and 2025, below the 2023 peak of 236 but 29% above the "
+                      "151 recorded in 2019. Source: Insolvency Service, "
+                      "Table A1b."),
+            },
+            {
+                "q": "Are sports club and facility insolvencies rising in 2026?",
+                "a": ("They are ticking up after two flat years. There were "
+                      "96 insolvencies between January and June 2026 against "
+                      "90 in the same months of 2025, a rise of 6.7%, and the "
+                      "rolling 12-month total rose 5.8% to 201."),
+            },
+            {
+                "q": "Does this include theme parks, arcades or museums?",
+                "a": ("No. This page counts SIC group 931, sports "
+                      "activities. Amusement and recreation activities such "
+                      "as theme parks and arcades, and cultural activities "
+                      "such as museums and libraries, are recorded under "
+                      "separate SIC codes within the same section and "
+                      "counted elsewhere."),
+            },
+            {
+                "q": "Why are sports club and facility insolvencies still elevated?",
+                "a": ("Energy costs are a major factor: swimming pools and "
+                      "leisure facilities are among the most energy-intensive "
+                      "premises in the economy, and utility cost rises have "
+                      "contributed to dozens of local authority leisure "
+                      "centre closures since 2021. Local authority budget "
+                      "pressure and competition from low-cost gym chains add "
+                      "to the squeeze."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England "
+                      "and Wales only. Scotland and Northern Ireland run "
+                      "separate insolvency regimes and are reported "
+                      "separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Sports Club and Facility Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Sports clubs and facilities sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside arts, entertainment and recreation generally. See '
+                    'also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "medical-dental-practice-insolvency-statistics": {
+        "wp_id": 80593,
+        "sic_code": "862",
+        "division_code": "86",
+        "parent_section_code": "Q",
+        "parent_section_label": "human health and social work activities",
+        "h1a": "UK Medical and Dental Practice",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "medical and dental practices",
+        "keyword": "medical and dental practice",
+        "singular": "medical or dental practice",
+        "plural": "medical and dental practices",
+        "scope_description": ("general and specialist medical practice and dental "
+                              "practice, whether NHS, private or mixed, operated as a "
+                              "company"),
+        "exclusion_note": ("Hospitals, other human health activities, and residential "
+                           "and social care activities are recorded under separate "
+                           "codes within the same section and are not included here."),
+        "hero_note": ("Medical and dental practice insolvencies rose again in 2026: 50 "
+                      "cases between January and June, against 42 in the same months of "
+                      "2025, up 19.0%. This is a small sector, so a handful of cases "
+                      "moves the percentage a long way, and the wider health and social "
+                      "care section rose 12.3% over the same months."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "33% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "93 vs 70"},
+            {"value": "19%", "label": "year-to-date rise, 2026 vs 2025", "sub": "50 cases vs 42, from a small base"},
+        ],
+        "comparison_intro": [
+            ("There were 50 medical and dental practice insolvencies between "
+             "January and June 2026, against 42 in the same six months of "
+             "2025, a rise of 19.0%. Human health and social work activities "
+             "as a whole rose 12.3%, from 285 to 320."),
+            ("Medical and dental practices, at 16% of the section, are "
+             "rising faster than the section around them, though from a "
+             "small base where a handful of cases moves the percentage a "
+             "long way. These are Company Debt calculations from Insolvency "
+             "Service Table A1b data."),
+            ("The rolling 12-month figure tells a gentler story: 101 cases "
+             "for the year to June 2026 against 91 for the year to June "
+             "2025, up 11.0%, below the section's 21.8% rise over the same "
+             "period."),
+            ("The two measures agree on direction, up, but not on how "
+             "sharply. Read that as a sign of how noisy a small trade's "
+             "numbers can be from one month to the next."),
+        ],
+        "divergence": {
+            "heading": "A small trade inside a section that is rising almost everywhere",
+            "caption": ("Medical and dental practices against its section "
+                        "peers, England and Wales"),
+            "intro": [
+                ("This is one of the few pages on this site where nearly "
+                 "every trade sharing its section is rising, just not at "
+                 "the same pace. Other residential care activities rose "
+                 "61.5% year to date."),
+                ("Social work activities without accommodation for the "
+                 "elderly and disabled rose 123.1%, from a very small base. "
+                 "Hospital activities was the one exception, down 15.6%."),
+                ("Medical and dental practices, up 19.0%, sit above the "
+                 "section average of 12.3% but well below the sharpest "
+                 "rises in the table. Whatever is driving the wider rise in "
+                 "health and social care insolvencies, medical and dental "
+                 "practices are not being spared it."),
+                ("With figures this small across most trades in the table, "
+                 "read the direction as the signal and the precise "
+                 "percentage as noisy. A section moving broadly upward "
+                 "across four of its five trades is harder to dismiss as "
+                 "random than any single trade's number would be alone."),
+            ],
+            "peers": [
+                {"code": "862", "kind": "group", "label": "Medical & dental practices (SIC 862)", "emphasise": True},
+                {"code": "861", "kind": "group", "label": "Hospital activities (SIC 861)"},
+                {"code": "869", "kind": "group", "label": "Other human health activities (SIC 869)"},
+                {"code": "879", "kind": "group", "label": "Other residential care activities (SIC 879)"},
+                {"code": "881", "kind": "group", "label": "Social work, no accommodation, elderly & disabled (SIC 881)"},
+                {"code": "Q", "kind": "section", "label": "Human health & social work overall (SIC Q)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Medical and dental practice insolvencies have always been a "
+             "small, noisy series: 51 in 2016, jumping to 84 in 2017, back to "
+             "60 in 2018, 70 in 2019. At this scale, a handful of cases moves "
+             "the annual figure by double-digit percentages, so the "
+             "pre-pandemic years are better read as a range, roughly 50 to "
+             "85, than a trend."),
+            ("2020 and 2021 stayed within that range, 61 and 58, before a "
+             "clearer rise took hold: 75 in 2022, 94 in 2023, 106 in 2024, "
+             "the series high. 2025 eased slightly to 93, still comfortably "
+             "the second-highest year on record."),
+            ("The sharp rise in the first five months of 2026 suggests "
+             "2025's dip was not the start of a new falling trend. Whether "
+             "the year closes above or below 2024's peak, the sector is "
+             "trading at a materially higher level of distress than at any "
+             "point before 2022."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a small, volatile series that "
+            "has settled at a higher level since 2022. Every year from 2022 "
+            "to 2024 set a new high, and 2026's opening months suggest the "
+            "rise has not finished."
+        ),
+        "latest_note": (
+            "Both figures are up on the year before, though less sharply "
+            "than the very steep rise recorded earlier in 2026. This trade "
+            "records few cases in a typical year, so read the exact "
+            "percentage with some caution."
+        ),
+        "pressure_heading": "Why medical and dental practice insolvencies are rising",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture of "
+             "the conditions medical and dental practices have been trading "
+             "in, not a claim about why any individual practice failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "NHS dentistry is losing practices faster than it is replacing them",
+                "body": [
+                    ("More than 1,000 NHS dental practices in England handed "
+                     "back some or all of their NHS contract in 2023 alone. "
+                     "NHS England's own figures put the number of people "
+                     "unable to access NHS dental care over the past two "
+                     "years at around 12 million."),
+                    ("A dental contract reform took effect on 1 April 2026, "
+                     "requiring practices to deliver 8.2% of contract value "
+                     "as urgent or unscheduled care, a change widely "
+                     "expected to accelerate rather than reverse the "
+                     "existing drift away from NHS work."),
+                    ("A practice reducing its NHS commitment or going fully "
+                     "private is not automatically an insolvency, but the "
+                     "transition period, renegotiating contracts, losing "
+                     "NHS-only patients, adjusting staffing, is exactly the "
+                     "kind of disruption that turns a marginal practice into "
+                     "a failed one."),
+                ],
+            },
+            {
+                "h3": "The GP partnership model is under structural strain",
+                "body": [
+                    ("1,470 independent GP practices have closed or merged "
+                     "since 2015, leaving 6,153 practices in England as of "
+                     "May 2026, and 81 surgeries closed in just the 18 "
+                     "months before that count. Rising operational costs, a "
+                     "heavier administrative burden and the increased "
+                     "personal financial risk of taking on a partnership "
+                     "share have contributed to a loss of more than 6,500 "
+                     "full-time-equivalent GP partners."),
+                    ("The employer National Insurance changes taking effect "
+                     "from April 2025 raised the rate to 15% above a lowered "
+                     "secondary threshold, a direct cost increase for any "
+                     "practice employing reception, nursing or "
+                     "administrative staff, on top of the National Living "
+                     "Wage rises affecting every labour-intensive business."),
+                ],
+            },
+            {
+                "h3": "This is not an isolated trend: health and social care is under pressure almost everywhere",
+                "body": [
+                    ("Nearly every trade covered by this site's health and "
+                     "social care section rose over the first six months of "
+                     "2026, except hospital activities, which fell. Other "
+                     "residential care activities rose 61.5% year to date, "
+                     "and social work activities without accommodation for "
+                     "the elderly and disabled rose sharply from a very "
+                     "small base."),
+                    ("A single trade moving against the grain is easier to "
+                     "explain away as noise. A whole section moving broadly "
+                     "the same direction across four different trades, "
+                     "medical and dental practices among them, is a harder "
+                     "pattern to dismiss, even allowing for how small some of "
+                     "the underlying numbers are."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the medical and dental practice cases we see, the trigger "
+             "is usually a funding or contract change rather than a sudden "
+             "loss of patients. A practice can be fully booked and still be "
+             "losing money once staff costs and compliance requirements are "
+             "covered, particularly where NHS-rate work no longer covers its "
+             "own cost."),
+            ("Partnership structures add a complication a limited company "
+             "does not have: when one partner wants to leave or retire and "
+             "no successor can be found on workable terms, the practice's "
+             "viability can come into question for reasons that have "
+             "nothing to do with clinical demand."),
+            ("Staff costs are usually the largest fixed commitment, and in a "
+             "practice they cannot easily flex with a quiet week the way "
+             "stock or discretionary spending can. HMRC and pension-scheme "
+             "arrears tend to build during exactly the kind of transition, a "
+             "contract renegotiation, a partner departure, a move away from "
+             "NHS work, that these pressures are creating right now."),
+            ("We would not start with patient numbers. We would look at the "
+             "mix of NHS and private income and how each is trending, what "
+             "staff and compliance costs are committed regardless of "
+             "income, whether a partnership or ownership change is pending, "
+             "and what is owed to HMRC."),
+            ("A practice going through a genuine transition, from NHS to "
+             "mixed or private work, or through a partner change, usually "
+             "has more options than it feels like from the inside, provided "
+             "the conversation with an adviser starts before a creditor "
+             "forces the timing."),
+        ],
+        "notes": [
+            "SIC group 862 covers companies whose recorded primary business "
+            "is medical and dental practice activities: general and "
+            "specialist medical practice and dental practice, whether NHS, "
+            "private or mixed. Hospitals, other human health activities and "
+            "social work activities are recorded under separate codes within "
+            "the same section.",
+            "This is a small sector, fewer than 110 insolvencies in any year "
+            "on record, so month-to-month and even year-to-date figures move "
+            "sharply on a handful of cases. Read the direction of travel "
+            "rather than the precision of any single percentage.",
+            "These are company counts, not the number of practices, "
+            "clinicians or patients affected. Many medical and dental "
+            "practices operate as unincorporated partnerships rather than "
+            "companies, and are not counted in this figure at all, so this "
+            "page understates the true scale of distress in the wider "
+            "primary care sector.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active medical and dental "
+            "practices, so a rising count does not, on its own, prove a "
+            "rising rate of failure.",
+            "The SIC 862 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular "
+             "practice is viable. What matters is narrower: how the NHS and "
+             "private income mix is trending, whether staff and compliance "
+             "costs are covered at current volumes, and what is genuinely "
+             "owed to HMRC."),
+            ("Plenty of practices in difficulty are clinically sound "
+             "businesses carrying a funding-transition gap or a partner "
+             "departure they have not yet resolved, and that is usually "
+             "fixable if addressed early."),
+            ('If you are reading this with a payroll or pension-scheme '
+             'payment coming and the cash is not there, the thing worth '
+             'knowing is that the earlier you speak to someone, the more '
+             'room there is to move: an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK medical and dental practices become insolvent each year?",
+                "a": ("93 companies in SIC group 862, medical and dental "
+                      "practice activities, entered insolvency in England "
+                      "and Wales in 2025, down slightly from the series high "
+                      "of 106 in 2024 but 33% above the 70 recorded in 2019. "
+                      "Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are medical and dental practice insolvencies rising in 2026?",
+                "a": ("Yes, though less sharply than earlier in the year. "
+                      "There were 50 insolvencies between January and June "
+                      "2026 against 42 in the same months of 2025, a rise of "
+                      "19.0%, and the rolling 12-month total rose 11.0% to "
+                      "101. This is a small sector, so the exact percentage "
+                      "should be read with some caution, but the direction "
+                      "is consistent across every measure."),
+            },
+            {
+                "q": "Does this include hospitals or care homes?",
+                "a": ("No. This page counts SIC group 862, medical and "
+                      "dental practice activities. Hospitals, other human "
+                      "health activities, and residential and social care "
+                      "activities are recorded under separate SIC codes "
+                      "within the same section."),
+            },
+            {
+                "q": "Why are medical and dental practice insolvencies rising?",
+                "a": ("NHS dentistry has seen over 1,000 practices hand back "
+                      "NHS contracts in 2023 alone, with a further contract "
+                      "reform in April 2026 accelerating the shift away from "
+                      "NHS work. The GP partnership model is under similar "
+                      "strain, with 1,470 practices closed or merged since "
+                      "2015 and rising staff and National Insurance costs "
+                      "adding pressure across primary care."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers England "
+                      "and Wales only. Scotland and Northern Ireland run "
+                      "separate insolvency regimes and are reported "
+                      "separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Medical and Dental Practice Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Medical and dental practices sit within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside human health and social work activities generally. '
+                    'See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "creative-arts-entertainment-insolvency-statistics": {
+        "wp_id": 80596,
+        "sic_code": "900",
+        "division_code": "90",
+        "parent_section_code": "R",
+        "parent_section_label": "arts, entertainment and recreation",
+        "h1a": "UK Creative, Arts and Entertainment",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "creative, arts and entertainment",
+        "keyword": "creative, arts and entertainment",
+        "singular": "creative or performing arts business",
+        "plural": "creative, arts and entertainment businesses",
+        "scope_description": ("performing arts, support activities for performing arts, "
+                              "artistic creation, and the operation of arts facilities "
+                              "such as theatres and concert venues"),
+        "exclusion_note": ("Sports activities, amusement and recreation activities such "
+                           "as theme parks, and museums and libraries are recorded under "
+                           "separate codes within the same section and are not included "
+                           "here."),
+        "hero_note": ("Creative, arts and entertainment insolvencies rose again in 2025, "
+                      "to 129, and 2026 has kept climbing: up 17.2% year to date. The "
+                      "sector remains below its 2023 peak of 144, but this year's "
+                      "direction is unambiguous, and faster than the section around it."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "65% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "129 vs 78"},
+            {"value": "28%", "label": "of arts, entertainment & recreation insolvencies", "sub": "second-largest trade in the section"},
+        ],
+        "comparison_intro": [
+            ("There were 68 creative, arts and entertainment insolvencies "
+             "between January and June 2026, against 58 in the same six "
+             "months of 2025, a rise of 17.2%. Arts, entertainment and "
+             "recreation as a whole rose a slower 2.3% over the same "
+             "months."),
+            ("This trade, at 28% of the section, is rising more than seven "
+             "times as fast as the section around it. These are Company "
+             "Debt calculations from Insolvency Service Table A1b data."),
+            ("The rolling 12-month figure confirms the acceleration. At 139 "
+             "cases for the year to June 2026 against 121 for the year to "
+             "June 2025, insolvencies rose 14.9%, against a 7.6% rise for "
+             "the section overall."),
+            ("Whatever is unsettled elsewhere in arts, entertainment and "
+             "recreation, creative and performing arts businesses are the "
+             "trade feeling it hardest right now."),
+        ],
+        "divergence": {
+            "heading": "Creative and performing arts is outpacing the rest of the section",
+            "caption": ("Creative, arts and entertainment against its section "
+                        "peers, England and Wales"),
+            "intro": [
+                ("Sports clubs and facilities, the largest trade in this "
+                 "section, rose a comparatively modest 6.7% year to date. "
+                 "Amusement and recreation activities, covering theme parks "
+                 "and arcades, actually fell 16.7% over the same months."),
+                ("Creative, arts and entertainment sits well above both, and "
+                 "well above the section's own 2.3% rise."),
+                ("That gap matters because creative and performing arts is "
+                 "not a small trade inside this section, it is the "
+                 "second-largest, at 28% of the total. A trade this size "
+                 "rising several times faster than its neighbours is not "
+                 "noise."),
+                ("The distinctive pressures on live music, theatre and "
+                 "performing arts venues, set out below, are not shared in "
+                 "the same way by a sports centre or a theme park, which "
+                 "helps explain why this trade is moving so differently from "
+                 "the rest of its own section."),
+            ],
+            "peers": [
+                {"code": "900", "kind": "group", "label": "Creative, arts & entertainment (SIC 900)", "emphasise": True},
+                {"code": "931", "kind": "group", "label": "Sports activities (SIC 931)"},
+                {"code": "932", "kind": "group", "label": "Amusement & recreation activities (SIC 932)"},
+                {"code": "910", "kind": "group", "label": "Libraries, archives & museums (SIC 910)"},
+                {"code": "920", "kind": "group", "label": "Gambling & betting activities (SIC 920)"},
+                {"code": "R", "kind": "section", "label": "Arts, entertainment & recreation overall (SIC R)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Creative, arts and entertainment insolvencies held broadly "
+             "flat before the pandemic, 56 in 2016 rising to 78 by 2019. "
+             "2020 brought only a modest fall, to 71, smaller than in many "
+             "trades, likely reflecting how many performing-arts businesses "
+             "and venues went dormant or relied on furlough and "
+             "cultural-recovery grants rather than trading through repeated "
+             "closures at reduced capacity."),
+            ("The rise from there was sharp and has not really stopped. 98 "
+             "in 2021, 119 in 2022, 144 in 2023, the series peak. 2024 eased "
+             "to 123, but 2025 climbed back to 129, and 2026 has opened well "
+             "above even that pace."),
+            ("Five years on from the pandemic, this trade is running at "
+             "well over half again its pre-pandemic level, and shows no "
+             "settled pattern of coming back down the way some other trades "
+             "on this site have."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a rise that has barely paused "
+            "since 2021. Creative, arts and entertainment insolvencies have "
+            "stayed close to or above 120 a year since 2022, well over 50% "
+            "higher than any year before the pandemic."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are up "
+            "sharply, and by more than the wider section. This reads as a "
+            "trade under active, worsening pressure rather than one working "
+            "through a settled post-pandemic adjustment."
+        ),
+        "pressure_heading": "Why creative, arts and entertainment insolvencies keep rising",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture "
+             "of the conditions creative, arts and entertainment businesses "
+             "have been trading in, not a claim about why any individual "
+             "company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Grassroots venues are being priced out by the 2026 business rates revaluation",
+                "body": [
+                    ("Around £7 million in new premises taxes from the 2026 "
+                     "business rates revaluation has put more than 350 "
+                     "grassroots music venues at immediate risk of closure, "
+                     "according to industry estimates, threatening over "
+                     "12,000 jobs and more than £250 million of economic "
+                     "activity built on live music. More than half, 53%, of "
+                     "grassroots music venues recorded no profit at all in "
+                     "2025."),
+                    ("Employer National Insurance changes and business rates "
+                     "together are estimated to have cost the grassroots "
+                     "venue sector around 6,000 jobs, a 19% contraction in "
+                     "the workforce in a single year. A venue does not need "
+                     "to lose its audience to close: it can sell every "
+                     "ticket and still not cover a materially higher "
+                     "fixed-cost base."),
+                ],
+            },
+            {
+                "h3": "Venues are closing faster than new ones can open",
+                "body": [
+                    ("The Music Venue Trust has tracked roughly one "
+                     "grassroots venue lost every fortnight over the last "
+                     "two years, with capacity leaving the circuit faster "
+                     "than it is being replaced."),
+                    ("A new Grassroots Levy, a £1 contribution from arena "
+                     "and stadium ticket sales, began arriving in 2026 as an "
+                     "industry-funded response, with government stating it "
+                     "will legislate a statutory version if the voluntary "
+                     "scheme cannot prove itself by June 2026."),
+                    ("A shrinking touring circuit does not only affect the "
+                     "venues that close. Every closure removes a stop from "
+                     "national tours, making the remaining venues' own "
+                     "booking economics harder and adding to the pressure "
+                     "on the businesses that support live performance: "
+                     "promoters, technical crews and production companies "
+                     "among them."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the creative and performing arts cases we see, the "
+             "business is often smaller and more exposed than it looks from "
+             "the outside, a single venue, a small promotions company, a "
+             "production outfit with almost no reserves between one show "
+             "and the next."),
+            ("Fixed costs dominate in a way that ticket sales cannot easily "
+             "offset. Rent, business rates and staffing are committed "
+             "months ahead of a show, while the revenue depends on how many "
+             "tickets sell in the days before it, so a run of quieter "
+             "bookings can turn a venue insolvent even while its long-term "
+             "audience is unchanged."),
+            ("PAYE and VAT arrears tend to build during exactly that "
+             "mismatch, particularly around a rates revaluation or a lease "
+             "renewal, where the fixed-cost jump lands before the business "
+             "has had time to adjust pricing or programming around it."),
+            ("We would not start with the box office. We would look at the "
+             "fixed-cost base against realistic average attendance, whether "
+             "a rates revaluation or lease event is imminent, how exposed "
+             "the business is to a single promoter or touring relationship, "
+             "and what is owed to HMRC."),
+            ("A venue or company with a genuine local following usually has "
+             "more options than the fixed-cost pressure suggests, a "
+             "renegotiated lease, a restructured booking model, or support "
+             "accessed early, provided the conversation starts before a "
+             "creditor forces the timing."),
+        ],
+        "notes": [
+            "SIC group 900 covers companies whose recorded primary business "
+            "is creative, arts and entertainment activities: performing "
+            "arts, support activities for performing arts, artistic "
+            "creation, and the operation of arts facilities such as "
+            "theatres and concert venues.",
+            "It sits within arts, entertainment and recreation, alongside "
+            "sports activities and amusement and recreation activities, "
+            "recorded separately.",
+            "This is the second-largest trade in its section, at 28% of "
+            "arts, entertainment and recreation insolvencies, and it is "
+            "rising several times faster than the section average, so its "
+            "own trajectory increasingly shapes the section total.",
+            "These are company counts, not the number of venues, performers "
+            "or productions affected. A single insolvent company may "
+            "operate one venue or several, and many performers and small "
+            "production companies trade as sole traders rather than "
+            "through a company at all, so this page does not capture the "
+            "whole of the sector's distress.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active creative and arts "
+            "businesses, so a rising count does not, on its own, prove a "
+            "rising rate of failure.",
+            "The SIC 900 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular venue "
+             "or company is viable. What matters is narrower: whether the "
+             "fixed-cost base is covered at realistic attendance, what a "
+             "pending rates revaluation or lease event will cost, and what "
+             "is genuinely owed to HMRC."),
+            ("Plenty of creative and arts businesses in difficulty are "
+             "artistically sound operations carrying a rates shock or a "
+             "quiet-booking-run cash gap, and both are usually fixable if "
+             "addressed early."),
+            ('If you are reading this with a wage run or a rates payment '
+             'coming and the takings are not there, the thing worth knowing '
+             'is that the earlier you speak to someone, the more room there '
+             'is to move: a lease renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK creative, arts and entertainment businesses become insolvent each year?",
+                "a": ("129 companies in SIC group 900, creative, arts and "
+                      "entertainment activities, entered insolvency in "
+                      "England and Wales in 2025, up from 123 in 2024. The "
+                      "series peak was 144 in 2023, and the pre-pandemic "
+                      "figure was 78 in 2019. Source: Insolvency Service, "
+                      "Table A1b."),
+            },
+            {
+                "q": "Are creative and arts insolvencies rising in 2026?",
+                "a": ("Yes, sharply. There were 68 insolvencies between "
+                      "January and June 2026 against 58 in the same months "
+                      "of 2025, a rise of 17.2%, and the rolling 12-month "
+                      "total rose 14.9% to 139. Both measures are rising "
+                      "several times faster than the wider arts, "
+                      "entertainment and recreation section."),
+            },
+            {
+                "q": "Does this include sports clubs, theme parks or museums?",
+                "a": ("No. This page counts SIC group 900, creative, arts "
+                      "and entertainment activities, covering performing "
+                      "arts, artistic creation and arts venues such as "
+                      "theatres. Sports activities, amusement and "
+                      "recreation activities, and museums and libraries are "
+                      "recorded under separate SIC codes within the same "
+                      "section."),
+            },
+            {
+                "q": "Why are creative and arts insolvencies rising so fast?",
+                "a": ("Grassroots music and performance venues are under "
+                      "acute pressure from the 2026 business rates "
+                      "revaluation, estimated to put over 350 grassroots "
+                      "music venues at risk, alongside employer National "
+                      "Insurance changes that have contributed to a "
+                      "reported 19% workforce contraction across the "
+                      "grassroots venue sector in a single year."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers "
+                      "England and Wales only. Scotland and Northern "
+                      "Ireland run separate insolvency regimes and are "
+                      "reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Creative, Arts and Entertainment '
+                     'Insolvency Statistics." Analysis of Insolvency Service company '
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Creative, arts and entertainment sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside arts, entertainment and recreation generally. See '
+                    'also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "amusement-recreation-insolvency-statistics": {
+        "wp_id": 80597,
+        "sic_code": "932",
+        "division_code": "93",
+        "parent_section_code": "R",
+        "parent_section_label": "arts, entertainment and recreation",
+        "h1a": "UK Amusement and Recreation",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "amusement and recreation",
+        "keyword": "amusement and recreation",
+        "singular": "amusement or recreation business",
+        "plural": "amusement and recreation businesses",
+        "scope_description": ("theme parks, amusement arcades, funfairs and similar "
+                              "attractions"),
+        "exclusion_note": ("Sports activities, creative and performing arts venues, and "
+                           "museums and libraries are recorded under separate codes "
+                           "within the same section and are not included here."),
+        "hero_note": ("Amusement and recreation insolvencies climbed for three straight "
+                      "years to a record 123 in 2025, more than double the 2021 level. "
+                      "2026 has opened with a pull-back, down 16.7% year to date, the "
+                      "first sign the multi-year rise may be cracking, though it is too "
+                      "early to call a trend."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "38% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "123 vs 89"},
+            {"value": "3 years", "label": "of consecutive annual rises to a series peak", "sub": "2023 through 2025"},
+        ],
+        "comparison_intro": [
+            ("There were 50 amusement and recreation insolvencies between "
+             "January and June 2026, against 60 in the same six months of "
+             "2025, a fall of 16.7%. Arts, entertainment and recreation as a "
+             "whole rose 2.3% over the same months."),
+            ("This trade is moving in the opposite direction from the "
+             "section it sits in. These are Company Debt calculations from "
+             "Insolvency Service Table A1b data."),
+            ("The rolling 12-month figure shows a gentler version of the "
+             "same pull-back: 113 cases for the year to June 2026 against "
+             "117 for the year to June 2025, down 3.4%, against a 7.6% rise "
+             "for the section overall."),
+            ("After three consecutive years of increases to a 2025 peak, "
+             "this is the clearest sign yet that the rise has paused."),
+        ],
+        "divergence": {
+            "heading": "The one trade in this section pulling back in 2026",
+            "caption": ("Amusement and recreation against its section peers, "
+                        "England and Wales"),
+            "intro": [
+                ("Every other trade in arts, entertainment and recreation "
+                 "covered on this site rose in the first six months of "
+                 "2026. Creative, arts and entertainment rose 17.2%. Sports "
+                 "clubs and facilities rose 6.7%. The section overall rose "
+                 "2.3%."),
+                ("Amusement and recreation activities is the exception, "
+                 "falling 16.7% over the same months."),
+                ("That makes it an unusual page in this series: most pages "
+                 "here describe a trade rising in line with, or faster "
+                 "than, a struggling section. This one describes a trade "
+                 "easing after its own sharpest run of increases, even as "
+                 "its neighbours continue to climb."),
+                ("Whether this is the start of a genuine correction or a "
+                 "pause in a longer rise will only be clear over the next "
+                 "few monthly releases. On the numbers so far, though, "
+                 "amusement and recreation is not part of the wider "
+                 "section's current upward pressure."),
+            ],
+            "peers": [
+                {"code": "932", "kind": "group", "label": "Amusement & recreation activities (SIC 932)", "emphasise": True},
+                {"code": "900", "kind": "group", "label": "Creative, arts & entertainment (SIC 900)"},
+                {"code": "931", "kind": "group", "label": "Sports activities (SIC 931)"},
+                {"code": "910", "kind": "group", "label": "Libraries, archives & museums (SIC 910)"},
+                {"code": "920", "kind": "group", "label": "Gambling & betting activities (SIC 920)"},
+                {"code": "R", "kind": "section", "label": "Arts, entertainment & recreation overall (SIC R)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Amusement and recreation insolvencies rose steadily before "
+             "the pandemic, from 53 in 2016 to 89 by 2019. 2020 brought a "
+             "fall to 76, and 2021 held close to that level at 79, "
+             "reflecting how repeated closures affected indoor and seasonal "
+             "attractions through the pandemic period."),
+            ("2022 was, unusually for a trade on this site, a down year: "
+             "71, lower than 2021. The rise resumed from there and did not "
+             "stop. 85 in 2023, 101 in 2024, 123 in 2025, three consecutive "
+             "annual increases to a series peak more than a third above the "
+             "pre-pandemic level."),
+            ("2026 has opened below that peak pace, the first year-to-date "
+             "fall since the run began. Whether this becomes a genuine turn "
+             "or proves to be a single quieter year inside a longer rise is "
+             "not yet clear from three years of data."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a late, sustained climb: three "
+            "years of consecutive rises took amusement and recreation "
+            "insolvencies to a 2025 peak well above anything recorded "
+            "before, and 2026 has opened with the first pause in that "
+            "climb."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are down on "
+            "the year before, the first sustained fall since the trade's "
+            "three-year climb began in 2023. It is one trade's data over a "
+            "few months, not yet a confirmed reversal, but it is a genuine "
+            "change of direction on the numbers available."
+        ),
+        "pressure_heading": "Why amusement and recreation insolvencies climbed, and what might now be easing",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture "
+             "of the conditions amusement and recreation businesses have "
+             "been trading in, not a claim about why any individual company "
+             "failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Visitor numbers are still below 2019, and growth is slowing",
+                "body": [
+                    ("The Association of Leading Visitor Attractions "
+                     "recorded 165 million visits to its 409 member sites "
+                     "in 2025, up 2% on the year before but still 7% below "
+                     "the 170 million recorded in 2019."),
+                    ("That growth rate has itself been slowing: the "
+                     "previous year's increase was 3.4%. A sector still "
+                     "short of its pre-pandemic footing, and growing more "
+                     "slowly each year, gives an attraction less room to "
+                     "absorb a bad season."),
+                    ("ALVA members are the largest, best-resourced "
+                     "attractions in the country. The smaller amusement "
+                     "parks, arcades and seasonal attractions counted on "
+                     "this page, without the same reserves or the same "
+                     "pulling power for overseas visitors, are generally "
+                     "more exposed to the same soft visitor trend, not "
+                     "less."),
+                ],
+            },
+            {
+                "h3": "Cost rises have reportedly wiped out planned surpluses across the industry",
+                "body": [
+                    ("Increased employer National Insurance, a lower "
+                     "threshold before that National Insurance becomes "
+                     "payable, and a higher National Minimum Wage have, in "
+                     "the industry's own assessment, effectively wiped out "
+                     "planned surpluses for many attractions."),
+                    ("A seasonal business that only trades profitably for "
+                     "part of the year has little room to absorb a fixed "
+                     "step-up in labour costs that applies for the whole of "
+                     "it."),
+                    ("Seaside arcades face a distinct, sector-specific "
+                     "threat on top of this: operators have warned that all "
+                     "400 or so UK seaside arcades could be at risk if "
+                     "gaming duty on slot machines were raised from its "
+                     "current 20% rate toward 50%, since off-season income "
+                     "from machines is what keeps many of these venues open "
+                     "through the winter."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the amusement and recreation cases we see, the business is "
+             "usually seasonal by design, built to make most of its money "
+             "across a few summer months and survive the rest of the year "
+             "on what it banked. A single poor summer, whether from weather "
+             "or from softer visitor numbers, can undo a year's margin in a "
+             "way a year-round business rarely experiences in one go."),
+            ("Fixed costs do not take a winter break even when the "
+             "business does. Business rates, insurance, loan repayments and "
+             "a skeleton staff all continue through the off-season, so the "
+             "gap between a strong and a weak season shows up directly in "
+             "whether the company can fund its own quiet months."),
+            ("HMRC arrears in this trade often build over a winter, "
+             "deferred rather than avoided, on the assumption that the "
+             "next season's takings will catch up. That assumption is what "
+             "breaks when a second weak season follows the first."),
+            ("We would not start with this season's ticket sales. We would "
+             "look at how the business is funded through its off-season "
+             "months, what fixed costs continue regardless of trade, how "
+             "exposed it is to weather or a single poor season, and what is "
+             "owed to HMRC."),
+            ("An attraction or arcade with a strong core following and a "
+             "genuinely fixable seasonal cash-flow problem usually has more "
+             "options than a single bad summer suggests, restructured "
+             "finance, renegotiated fixed costs, or support secured before "
+             "the next season is put at risk by this one."),
+        ],
+        "notes": [
+            "SIC group 932 covers companies whose recorded primary business "
+            "is amusement and recreation activities: theme parks, amusement "
+            "arcades, funfairs and similar attractions. It sits within "
+            "arts, entertainment and recreation, alongside sports "
+            "activities and creative, arts and entertainment activities, "
+            "which are recorded separately.",
+            "This trade rose for three consecutive years to a 2025 peak "
+            "before easing in the opening months of 2026, the clearest "
+            "change of direction of any trade covered on this site. Even "
+            "so, three years of annual data and six months of 2026 are a "
+            "short run to call a confirmed trend.",
+            "These are company counts, not the number of attractions, "
+            "rides or visitors affected. A single insolvent company may "
+            "operate one site or several.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active amusement and "
+            "recreation operators, so the count cannot show whether "
+            "failure has become more or less likely for a given operator.",
+            "The SIC 932 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular "
+             "attraction is viable. What matters is narrower: how the "
+             "business is funded through its off-season, what fixed costs "
+             "continue regardless of trade, and what is genuinely owed to "
+             "HMRC."),
+            ("Plenty of amusement and recreation businesses in difficulty "
+             "are otherwise sound operations carrying a weak-season cash "
+             "gap or a cost step-up they have not yet priced in, and both "
+             "are usually fixable if addressed early."),
+            ('If you are reading this heading into a quiet season with a '
+             'payment run coming and the cash is not there, the thing worth '
+             'knowing is that the earlier you speak to someone, the more '
+             'room there is to move: finance restructured, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK amusement and recreation businesses become insolvent each year?",
+                "a": ("123 companies in SIC group 932, amusement and "
+                      "recreation activities, entered insolvency in England "
+                      "and Wales in 2025, the series peak and the third "
+                      "consecutive annual rise, 38% above the 89 recorded "
+                      "in 2019. Source: Insolvency Service, Table A1b."),
+            },
+            {
+                "q": "Are amusement and recreation insolvencies still rising in 2026?",
+                "a": ("No, the trend has paused. There were 50 insolvencies "
+                      "between January and June 2026 against 60 in the same "
+                      "months of 2025, a fall of 16.7%, and the rolling "
+                      "12-month total fell 3.4% to 113, the first sustained "
+                      "fall since the three-year rise to 2025 began."),
+            },
+            {
+                "q": "Does this include sports clubs, museums or creative venues?",
+                "a": ("No. This page counts SIC group 932, amusement and "
+                      "recreation activities: theme parks, amusement "
+                      "arcades and similar attractions. Sports facilities, "
+                      "creative and performing arts venues, and museums and "
+                      "libraries are recorded under separate SIC codes "
+                      "within the same section."),
+            },
+            {
+                "q": "Why did amusement and recreation insolvencies rise for three years to 2025?",
+                "a": ("Visitor numbers across the wider attractions sector "
+                      "remain below 2019 levels even as they recover, with "
+                      "growth slowing. Rising National Insurance and "
+                      "National Minimum Wage costs have, in the industry's "
+                      "own assessment, wiped out planned surpluses, on top "
+                      "of pressures such as a proposed gaming duty rise "
+                      "threatening seaside arcades."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers "
+                      "England and Wales only. Scotland and Northern "
+                      "Ireland run separate insolvency regimes and are "
+                      "reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Amusement and Recreation Insolvency '
+                     'Statistics." Analysis of Insolvency Service company insolvency '
+                     "data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Amusement and recreation sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside arts, entertainment and recreation generally. See '
+                    'also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+    "real-estate-letting-investment-insolvency-statistics": {
+        "wp_id": 80601,
+        "sic_code": "682",
+        "division_code": "68",
+        "parent_section_code": "L",
+        "parent_section_label": "real estate activities",
+        "h1a": "UK Real Estate Letting and Investment",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "real estate letting and investment",
+        "keyword": "real estate letting and investment",
+        "singular": "landlord or property-investment company",
+        "plural": "real estate letting and investment companies",
+        "scope_description": ("renting and operating property that a company owns or "
+                              "leases: commercial and residential landlords and "
+                              "property-investment companies"),
+        "exclusion_note": ("Companies that buy and sell property in their own name, and "
+                           "estate agencies acting for clients on a fee basis, are "
+                           "recorded under separate codes within the same section and "
+                           "are not included here."),
+        "hero_note": ("Real estate letting and investment company insolvencies eased "
+                      "in the first half of 2026, down 9.9% year to date, even as the "
+                      "wider real estate section posted a headline rise of 50.8%. That "
+                      "gap is not a coincidence: the spike was concentrated in property "
+                      "trading companies, not the landlords and investors counted here."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "62% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "289 vs 179"},
+            {"value": "37%", "label": "of real estate section insolvencies", "sub": "the largest single trade in the section"},
+        ],
+        "comparison_intro": [
+            ("There were 136 real estate letting and investment "
+             "insolvencies between January and June 2026, against 151 in "
+             "the same six months of 2025, a fall of 9.9%. Real estate "
+             "activities as a whole rose sharply, by 50.8%, from 398 to "
+             "600."),
+            ("That section-level rise is not a story about landlords: the "
+             "Insolvency Service's own commentary for spring 2026 flagged "
+             "around 200 connected companies entering administration "
+             "together, concentrated almost entirely in companies that buy "
+             "and sell property in their own name, not in this trade. "
+             "These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+            ("The rolling 12-month figure confirms this trade's own, much "
+             "calmer picture: 274 cases for the year to June 2026 against "
+             "280 a year earlier, down a modest 2.1%."),
+            ("Real estate letting and investment, the largest single trade "
+             "in its section at 37% of the total, is not where the "
+             "section's headline number is coming from."),
+        ],
+        "spike_correction": {
+            "heading": "Was the 2026 real estate insolvency spike caused by landlords?",
+            "intro": [
+                "The official commentary for spring 2026 flagged that around "
+                "200 connected real estate companies entered administration "
+                "across March and April. That figure covers the whole real "
+                "estate section, and it should not be read as a wave of "
+                "landlord or property-investor failures.",
+                "The industry data show the spike was concentrated mainly in "
+                "companies that buy and sell property in their own name, not "
+                "in companies that hold property to rent it out.",
             ],
             "rows": [
                 {"label": "681: Buying and selling of own real estate", "month1": 141, "month2": 81},
@@ -1075,70 +5304,907 @@ SECTORS = {
             "month1_label": "March 2026",
             "month2_label": "April 2026",
         },
-        "faq": [
+        "longer_term_narrative": [
+            ("Real estate letting and investment insolvencies were choppy "
+             "before the pandemic, 149 in 2016 dropping to 106 in 2017, "
+             "before climbing to 179 by 2019. 2020 brought a fall to 140, in "
+             "line with government support and restricted winding-up "
+             "petitions holding the normal insolvency cycle back across the "
+             "economy."),
+            ("The rise from there has been sustained. 176 in 2021, 242 in "
+             "2022, 277 in 2023, then a pull-back to 236 in 2024, before a "
+             "fresh rise to 289 in 2025, the series high. Unlike some trades "
+             "on this site, this one has not settled into a clean plateau: "
+             "it keeps setting new highs after brief pauses."),
+            ("289 in 2025 sits 62% above 2019, and the pattern of the last "
+             "three years, a fall then a new peak, suggests the pressure on "
+             "real estate letting and investment companies has not fully "
+             "worked its way through the system."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is an uneven but persistent "
+            "climb, interrupted by pauses rather than genuine reversals. "
+            "2025 set a fresh series high, the third time in five years "
+            "this trade has recorded its highest annual total on record."
+        ),
+        "latest_note": (
+            "Both figures are down slightly, in sharp contrast to the "
+            "section total, which is dominated in 2026 by a one-off "
+            "cluster of connected-company administrations elsewhere in "
+            "real estate. Read this trade's own figures, not the section "
+            "headline, as the guide to how landlords are actually trading."
+        ),
+        "pressure_heading": "Why real estate letting and investment insolvencies remain elevated",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture "
+             "of the conditions landlords and property-investment companies "
+             "have been trading in, not a claim about why any individual "
+             "company failed."),
+        ],
+        "pressure": [
             {
-                "q": "How many estate agency businesses became insolvent in 2025?",
-                "a": ("233 businesses in SIC group 683, estate agencies and fee-based "
-                     "property managers in England and Wales, entered formal insolvency "
-                     "during 2025, down from 272 in 2024 but still 48% above the 2019 total "
-                     "of 157."),
+                "h3": "Debt taken on when rates were near zero is now refinancing at 5-8%",
+                "body": [
+                    ("Facilities written when the Bank of England base rate "
+                     "sat below 1% are maturing into a structurally higher "
+                     "cost of debt. Coverage ratios that looked comfortable "
+                     "in 2020 are tight today, and the pressure compounds "
+                     "across portfolios spread over multiple properties and "
+                     "lenders."),
+                    ("Standard commercial mortgage rates in 2026 typically "
+                     "start around 5.5% for the strongest borrowers, with "
+                     "most seeing indicative rates of 6% to 8%."),
+                    ("Lenders have also tightened how they test these loans, "
+                     "stress-testing interest cover at higher hypothetical "
+                     "rates and modelling realistic vacancy scenarios across "
+                     "a whole portfolio rather than one property at a time. "
+                     "A refinancing that would have been routine in 2020 can "
+                     "now fail a lender's own stress test even where the "
+                     "rental income itself has not fallen."),
+                ],
             },
             {
-                "q": "Are estate agency insolvencies rising or falling?",
-                "a": ("Falling. Insolvencies peaked in 2024, fell 14% during 2025, and the "
-                     "decline continued into 2026: there were 86 cases between January and "
-                     "May 2026, 22% fewer than the 110 recorded in the same period of 2025."),
+                "h3": "Energy-efficiency rules are turning some landlords into sellers",
+                "body": [
+                    ("Private rented properties in England and Wales must "
+                     "reach an EPC C rating by 1 October 2030, and "
+                     "government data puts the average compliance cost at "
+                     "£6,864 per property, capped at £10,000 over ten "
+                     "years. For many landlords, 2026 has become what the "
+                     "industry is calling the crunch point: the year they "
+                     "weigh the cost of upgrading an older property against "
+                     "simply selling it."),
+                    ("A sale does not remove the obligation, it passes it to "
+                     "the buyer, who prices the future upgrade cost into "
+                     "their offer. That discount can be the difference "
+                     "between a landlord exiting with equity intact and one "
+                     "selling into a loss, particularly where the property "
+                     "was already carrying debt taken on at a lower rate."),
+                ],
             },
             {
-                "q": "Do the figures include letting agents and property managers?",
-                "a": ("Yes. SIC group 683 combines real estate agencies with businesses that "
-                     "manage property for clients on a fee or contract basis, including "
-                     "letting agents. The two cannot be separated in the published data."),
+                "h3": "Falling commercial values add a second squeeze on top of higher rates",
+                "body": [
+                    ("Office and retail values in parts of the commercial "
+                     "market have fallen alongside the rise in borrowing "
+                     "costs, which cuts both ways for a geared landlord: the "
+                     "loan does not shrink to match a lower valuation, so "
+                     "the loan-to-value ratio a lender assesses at "
+                     "refinancing can move against the borrower even where "
+                     "nothing about the tenancy has changed."),
+                    ("A landlord holding a single asset with a lease expiry "
+                     "or a refinancing date approaching in the same window "
+                     "as a valuation fall has comparatively little room to "
+                     "negotiate, which is a large part of why the timing of "
+                     "refinancing, not just the level of debt, has become "
+                     "as important as the underlying property's condition."),
+                ],
             },
-            {
-                "q": "Do the figures include property developers and landlords?",
-                "a": ("No. Companies that mainly buy, sell, own or let property in their own "
-                     "name are recorded under separate SIC groups (681 and 682) and are "
-                     "excluded from the totals on this page."),
-            },
-            {
-                "q": "Are the figures UK-wide?",
-                "a": ("No. The headline figures cover England and Wales only. Scotland is "
-                     "reported separately: 9 insolvencies in 2025 and 1 in the first "
-                     "five months of 2026, and there is no comparable Northern Ireland "
-                     "industry series, so a complete UK total cannot be calculated."),
-            },
-            {
-                "q": "Which insolvency procedure is most common in the sector?",
-                "a": ("Creditors’ voluntary liquidation. It accounted for 166 of the 233 "
-                     "insolvencies recorded in 2025, 71% of the total, though "
-                     "compulsory liquidations, usually creditor-driven, rose from 54 to 60 "
-                     "over the same period."),
-            },
+        ],
+        "practitioner_view": [
+            ("In the real estate letting cases we see, the trigger is "
+             "almost always a refinancing date, not a sudden loss of "
+             "tenants. A portfolio can be fully let and still fail a "
+             "lender's renewed stress test, because the test itself, not "
+             "the rent roll, is what has changed since the loan was first "
+             "written."),
+            ("Personal guarantees are common in this trade, particularly on "
+             "smaller portfolios, and they are rarely the first thing a "
+             "director raises on a call. They are almost always the thing "
+             "that has actually been keeping them awake, because a company "
+             "insolvency does not, on its own, end a director's personal "
+             "exposure on a guaranteed facility."),
+            ("Void periods matter more than they used to. A unit standing "
+             "empty for a few months used to be an inconvenience; against a "
+             "tightly stress-tested loan, it can be the difference between "
+             "a refinancing that clears and one that does not."),
+            ("We would not start with the rent roll. We would look at when "
+             "the next refinancing or lease expiry falls, what the "
+             "loan-to-value position looks like against a realistic current "
+             "valuation, what EPC and compliance costs are outstanding "
+             "across the portfolio, and what is owed to HMRC."),
+            ("A landlord with a sound, well-let portfolio and a genuinely "
+             "difficult refinancing date usually has more options than the "
+             "loan terms alone suggest, an extension, a partial disposal, "
+             "or restructuring finance, provided the conversation with a "
+             "lender and an adviser starts well before the maturity date "
+             "arrives."),
+        ],
+        "notes": [
+            "SIC group 682 covers companies whose recorded primary business "
+            "is renting and operating property they own or lease to others: "
+            "commercial and residential landlords and property-investment "
+            "companies. Companies that buy and sell property in their own "
+            "name, and estate agencies acting for clients on a fee basis, "
+            "are recorded under separate codes within the same section.",
+            "This is the largest single trade in the real estate section, "
+            "at 37% of the section's insolvencies, but it was not the "
+            "source of the large spring 2026 spike in the section total; "
+            "that was concentrated in property-trading companies (SIC 681), "
+            "covered above.",
+            "These are company counts, not the number of properties, units "
+            "or tenants affected. A single insolvent company may hold one "
+            "property or an entire portfolio.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active real estate letting "
+            "and investment companies, so a rising count does not, on its "
+            "own, prove a rising rate of failure.",
+            "The SIC 682 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
         ],
         "commercial_transition": [
-            "A falling sector total is no comfort to a single agency that can't pay HMRC, "
-            "staff, landlords or other creditors this month. Directors should take advice as "
-            "soon as cash-flow pressure looks like it's more than a slow quarter, particularly "
-            "if the company is still holding client money or taking on new instructions it "
-            "may not be able to see through.",
-            "Where the business is otherwise sound, options such as a "
-            '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> '
-            "or negotiating directly with HMRC can buy time to trade through a slow patch. "
-            "Where it isn't, understanding "
-            '<a href="/director-redundancy/">director redundancy entitlements</a> '
-            "early makes the process easier for everyone involved. Either way, "
-            '<a href="/advice/insolvency-advice-for-directors/">speaking to an adviser</a> '
-            "before a creditor forces the issue keeps more options open.",
+            ("None of the figures above decide whether a particular "
+             "landlord or property company is viable. What matters is "
+             "narrower: what the loan-to-value position looks like at the "
+             "next refinancing, what compliance costs remain outstanding, "
+             "and what is genuinely owed to HMRC."),
+            ("Plenty of letting and investment companies in difficulty are "
+             "otherwise sound businesses carrying a refinancing-timing "
+             "problem or a compliance cost they have not yet funded, and "
+             "both are usually fixable if addressed early."),
+            ('If you are reading this with a refinancing date approaching '
+             'and the numbers do not work, the thing worth knowing is that '
+             'the earlier you speak to someone, the more room there is to '
+             'move: terms renegotiated with a lender, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
         ],
-        "citation": ('Company Debt. (2026). “UK Estate Agency Insolvency Statistics.” '
-                     "Analysis of Insolvency Service company insolvency data. "
-                     "CompanyDebt.com. Updated 15 July 2026."),
-        "related": ('Estate agencies sit within the wider '
+        "faq": [
+            {
+                "q": "How many UK real estate letting and investment companies become insolvent each year?",
+                "a": ("289 companies in SIC group 682, real estate letting "
+                      "and investment, entered insolvency in England and "
+                      "Wales in 2025, a series high, 62% above the 179 "
+                      "recorded in 2019. Source: Insolvency Service, Table "
+                      "A1b."),
+            },
+            {
+                "q": "Are real estate letting and investment insolvencies rising in 2026?",
+                "a": ("No, this trade's own figures are down slightly: 136 "
+                      "insolvencies between January and June 2026 against "
+                      "151 a year earlier, down 9.9%, and the rolling "
+                      "12-month total down a modest 2.1%. The real estate "
+                      "section as a whole shows a much larger rise, but "
+                      "that is driven almost entirely by a separate trade."),
+            },
+            {
+                "q": "Why does the real estate section total look so much worse than this page?",
+                "a": ("The Insolvency Service flagged around 200 connected "
+                      "real estate companies entering administration "
+                      "together across March and April 2026. Our data show "
+                      "that spike was concentrated in companies that buy "
+                      "and sell property in their own name, SIC 681, 222 "
+                      "cases across those two months, rather than in "
+                      "letting and investment companies, SIC 682, 55 cases, "
+                      "or estate agencies, SIC 683, 35 cases."),
+            },
+            {
+                "q": "Does this include estate agents or property developers?",
+                "a": ("No. This page counts SIC group 682, companies that "
+                      "rent out property they own or lease. Estate agencies "
+                      "acting for clients on a fee basis (SIC 683) and "
+                      "companies that buy and sell property in their own "
+                      "name (SIC 681) are recorded under separate codes."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers "
+                      "England and Wales only. Scotland and Northern "
+                      "Ireland run separate insolvency regimes and are "
+                      "reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Real Estate Letting and Investment '
+                     'Insolvency Statistics." Analysis of Insolvency Service company '
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Real estate letting and investment sits within the wider '
                     '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
-                    'data, alongside real estate activities generally. See also the '
+                    'data, alongside real estate activities generally, and the '
+                    '<a href="/data/estate-agency-insolvency-statistics/">estate agency</a> '
+                    'trade that shares its section. See also the '
                     '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
     },
+    "freight-forwarding-logistics-insolvency-statistics": {
+        "wp_id": 80604,
+        "sic_code": "522",
+        "division_code": "52",
+        "parent_section_code": "H",
+        "parent_section_label": "transportation and storage",
+        "source_table": "Table A1b",
+        "procedure_table": "Tables A2 to A6",
+        "h1a": "UK Freight Forwarding and Transport Support",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest official SIC 522 figures for England and Wales",
+        "eyebrow": "support activities for transportation",
+        "keyword": "freight forwarding and transport support",
+        "singular": "freight-forwarding or transport-support company",
+        "plural": "SIC 522 transport-support companies",
+        "scope_description": ("support activities for transportation, from freight "
+                              "forwarding, customs agency work and cargo handling to "
+                              "ports, airport ground handling, rail terminals and "
+                              "towing"),
+        "scope_note": ("The official figures cover the whole of SIC 522, support "
+                       "activities for transportation. That is broader than freight "
+                       "forwarding alone, so these numbers should not be read as a "
+                       "freight-forwarder-only count."),
+        "exclusion_note": ("Road haulage, warehousing, and postal and courier "
+                           "activities are recorded under separate codes and are not "
+                           "included here."),
+        "hero_note": ("The rolling 12-month total rose from 94 to 103, but that "
+                      "increase was inherited from a busier second half of 2025; the "
+                      "first six months of 2026 were slightly lower than a year "
+                      "earlier. The fairest description is stability at an elevated "
+                      "level, with slower improvement than transportation and storage "
+                      "overall."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "13.4%", "label": "of transport & storage insolvencies", "sub": "up from 12.3% a year earlier"},
+            {"value": "54.4% above 2019", "label": "longer-term context", "sub": "105 in 2025 vs 68 in 2019"},
+        ],
+        "comparison_intro": [
+            ("There were 45 insolvencies among SIC 522 transport-support "
+             "companies between January and June 2026, two fewer than the 47 "
+             "in the same six months of 2025, a fall of 4.3%. Transportation "
+             "and storage as a whole fell much faster, from 383 to 335, down "
+             "12.5%."),
+            ("So this category is improving, just more slowly than the "
+             "section around it. That relative gap matters more than the "
+             "two-case fall on its own: SIC 522 accounted for 13.4% of "
+             "transportation and storage insolvencies in the first half of "
+             "2026, up from 12.3% a year earlier."),
+            ("A 4.3% fall built on two cases is too small to call a recovery. "
+             "These are Company Debt calculations from Insolvency Service "
+             "Table A1b data."),
+        ],
+        "period_decomposition": {
+            "heading": "Why the year-to-date and rolling measures point in different directions",
+            "intro": [
+                ("The rolling 12-month total rose by nine cases, from 94 to "
+                 "103, even though the year-to-date figure fell by two. The "
+                 "difference comes entirely from the six months that entered "
+                 "the rolling window and the six that dropped out of it."),
+                ("July to December 2025 recorded 58 insolvencies, against 47 "
+                 "in the same half of 2024. That 11-case rise more than "
+                 "offsets the two-case fall in the first half of 2026."),
+                ("So the higher rolling total does not show a fresh rise "
+                 "running through 2026. It shows that the second half of 2025 "
+                 "was busier, and the trailing annual total had not yet worked "
+                 "that period back out by June 2026."),
+            ],
+            "rows": [
+                {"label": "July to December 2024", "value": 47},
+                {"label": "January to June 2025", "value": 47},
+                {"label": "July to December 2025", "value": 58},
+                {"label": "January to June 2026", "value": 45},
+            ],
+            "caption": ("Company insolvencies in SIC 522, support activities for "
+                        "transportation, by half-year, England and Wales."),
+            "source_note": ("Not seasonally adjusted, England and Wales. Company Debt "
+                            "calculations from Insolvency Service Table A1b data."),
+        },
+        "divergence": {
+            "heading": "How SIC 522 compares with transportation and storage",
+            "caption": ("SIC 522, support activities for transportation, against its "
+                        "section peers, England and Wales"),
+            "intro": [
+                ("Transportation and storage is not moving as one. Road "
+                 "haulage, the biggest trade in the section, fell 16.4% year "
+                 "to date; warehousing fell 15.0% and postal and courier "
+                 "activities 39.1%, the sharpest move of all. Other passenger "
+                 "land transport went the other way, up 26.5%."),
+                ("Against that, SIC 522's 4.3% fall is shallow. That is why "
+                 "its share of the section rose even as its own case count "
+                 "edged down: it is falling, but more slowly than most of the "
+                 "trades around it."),
+                ("The section total conceals several different paths, so a "
+                 "single figure for transportation and storage tells you "
+                 "little about any one trade inside it."),
+            ],
+            "peers": [
+                {"code": "522", "kind": "group", "label": "Support activities for transportation (SIC 522)", "emphasise": True},
+                {"code": "494", "kind": "group", "label": "Road haulage & removals (SIC 494)"},
+                {"code": "521", "kind": "group", "label": "Warehousing & storage (SIC 521)"},
+                {"code": "532", "kind": "group", "label": "Other postal & courier activities (SIC 532)"},
+                {"code": "493", "kind": "group", "label": "Other passenger land transport (SIC 493)"},
+                {"code": "H", "kind": "section", "label": "Transportation & storage overall (SIC H)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("SIC 522 insolvencies climbed from 40 in 2016 to 68 in 2019, but "
+             "not smoothly: the annual total reached 75 in 2018 before easing "
+             "the following year, a reminder that in a smaller category the "
+             "yearly figure moves less evenly than in larger sectors."),
+            ("They held close to that level through 2020 and 2021, at 71 and "
+             "72. Pandemic support, creditor restrictions and court disruption "
+             "make those two years an awkward benchmark, even though this "
+             "series did not show the sharp drop seen in some industries."),
+            ("The total then rose to 92 in 2022 and peaked at 122 in 2023, "
+             "before easing to 111 in 2024 and 105 in 2025. That leaves 2025 "
+             "down 13.9% from the peak but still 54.4% above 2019. The first "
+             "half of 2026, flat year to date, does not yet establish a fresh "
+             "annual rise."),
+        ],
+        "annual_intro": (
+            "The last decade divides into three phases: an uneven climb to "
+            "2019, a pandemic plateau, then a sharp rise to a 2023 peak "
+            "followed by two years of easing. The opening months of 2026 have "
+            "not clearly extended that easing, but nor have they reversed it."
+        ),
+        "latest_note": (
+            "The first half of 2026 was little changed from a year earlier. "
+            "The rolling 12-month total is higher only because more cases fell "
+            "in the second half of 2025; it is not evidence of a fresh rise in "
+            "2026. The 2025 annual total was lower than in 2023 and 2024 but "
+            "well above 2019."
+        ),
+        "pressure_heading": "Current conditions affecting transport-support businesses",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record. What follows describes "
+             "the conditions transport-support businesses have been trading in "
+             "over the past year. It is context for the numbers above, not an "
+             "explanation of why any single company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Freight throughput is mixed, not collapsing",
+                "body": [
+                    ("Activity does not point to a simple collapse in freight "
+                     "demand. UK major ports handled 104.7 million tonnes in "
+                     "the first quarter of 2026, 3% less than a year earlier, "
+                     "while unitised traffic held broadly flat at 4.7 million "
+                     "units, down by less than 1%."),
+                    ("That backdrop matters most to ports, cargo handling and "
+                     "part of the forwarding trade within SIC 522. It does not "
+                     "cover every business in the category, and it does not "
+                     "explain any individual insolvency. Source: Department "
+                     "for Transport, port freight statistics, January to March "
+                     "2026."),
+                ],
+            },
+            {
+                "h3": "Goods trade values picked up in spring 2026",
+                "body": [
+                    ("UK goods trade strengthened in value in the three months "
+                     "to May 2026. Goods imports rose 5.9% and goods exports "
+                     "6.2% against the previous three months, measured in "
+                     "current prices rather than volume."),
+                    ("Higher trade values can support demand for forwarding "
+                     "and customs work, but they say nothing about whether "
+                     "intermediaries are holding their margins or turning that "
+                     "activity into cash. Source: Office for National "
+                     "Statistics, UK trade, May 2026."),
+                ],
+            },
+            {
+                "h3": "Customs-intermediary standards are tightening",
+                "body": [
+                    ("In June 2026 BSI published PAS 41201:2026, an "
+                     "HMRC-sponsored voluntary standard for customs "
+                     "intermediaries covering due diligence, competence, "
+                     "systems and the preparation of declarations. The "
+                     "government also opened a consultation, running to "
+                     "September 2026, on mandatory registration for customs "
+                     "intermediaries."),
+                    ("The consultation notes that 80% of international customs "
+                     "declarations cleared in 2025 were handled by a third "
+                     "party, and that 99% of traders using an intermediary "
+                     "relied on one to declare all of their trade. That shows "
+                     "how central customs agents and forwarders have become, "
+                     "and why rising standards and compliance costs bear on "
+                     "them."),
+                    ("This applies to the customs-intermediary part of SIC "
+                     "522, not to the whole category. Sources: HMRC and BSI, "
+                     "PAS 41201:2026; HMRC customs-intermediaries consultation, "
+                     "2026."),
+                ],
+            },
+            {
+                "h3": "International shipping routes remain volatile",
+                "body": [
+                    ("Container shipping has stayed diverted around the Cape "
+                     "of Good Hope since attacks in the Red Sea. UN Trade and "
+                     "Development reported Suez Canal tonnage still running "
+                     "about 70% below 2023 levels in May 2025."),
+                    ("Longer voyages and less predictable rates create extra "
+                     "work and risk for some forwarders. The available "
+                     "evidence does not show that this caused the SIC 522 "
+                     "insolvency trend, and the effect falls unevenly across "
+                     "the category. Source: UN Trade and Development, Review "
+                     "of Maritime Transport 2025."),
+                ],
+            },
+        ],
+        "practitioner_heading": "What to watch in a freight-forwarding business",
+        "practitioner_scope": ("This applies to freight forwarders and customs "
+                               "intermediaries within SIC 522, not to every "
+                               "transport-support business in the official data."),
+        "practitioner_view": [
+            ("When we are asked to look at a freight forwarder in difficulty, "
+             "we do not start with booking volumes. A forwarder can look busy "
+             "while its working capital quietly weakens. What we check first "
+             "is gross profit per consignment, carrier or duty payments made "
+             "but not yet recovered, slow customer receipts, and exposure to "
+             "demurrage, detention and storage charges."),
+            ("Customer concentration is usually where the risk sits. One "
+             "late-paying shipper can leave a forwarder funding several "
+             "movements at once, and a disputed customs entry or delayed "
+             "shipment can create costs that cannot be passed on quickly."),
+            ("So the figures we watch, and the ones a director should watch, "
+             "are aged receivables, gross profit by customer and route, "
+             "unbilled disbursements, contingent shipment liabilities, HMRC "
+             "arrears, and how much cash is committed before customers pay. "
+             "Turnover on its own is a weak measure of whether the business is "
+             "viable."),
+        ],
+        "procedure_breakdown": {
+            "period_label": "Jan–Jun 2026",
+            "compare_label": "Jan–Jun 2025",
+            "rows": [
+                {"name": "Creditors' voluntary liquidations", "count": 33, "prior_count": 33, "share": 73.3},
+                {"name": "Compulsory liquidations", "count": 8, "prior_count": 10, "share": 17.8},
+                {"name": "Administrations", "count": 4, "prior_count": 3, "share": 8.9},
+                {"name": "Company voluntary arrangements", "count": 0, "prior_count": 1, "share": 0.0},
+                {"name": "Receiverships", "count": 0, "prior_count": 0, "share": 0.0},
+                {"name": "Total", "count": 45, "prior_count": 47, "share": 100.0},
+            ],
+            "analysis": [
+                ("Creditors' voluntary liquidations did the bulk of the work: "
+                 "33 of the 45 cases in the first half of 2026, the same number "
+                 "as a year earlier. The two-case fall in the total came from "
+                 "compulsory liquidations, down from 10 to 8, with small "
+                 "movements in administrations and CVAs."),
+                ("These are low counts, so the split should not be over-read. "
+                 "But the pattern is the ordinary one for a smaller trade under "
+                 "steady pressure: most companies reach insolvency through a "
+                 "creditors' voluntary liquidation rather than being wound up "
+                 "by a creditor or rescued through administration. Source: "
+                 "Insolvency Service, Tables A2 to A6."),
+            ],
+        },
+        "notes": [
+            "SIC group 522 covers support activities for transportation: "
+            "freight forwarding, customs agency work, cargo handling, and "
+            "support for road, rail, water and air transport such as ports, "
+            "airport ground services and rail terminals. It is broader than "
+            "freight forwarding, and the group-level table cannot isolate "
+            "freight forwarders specifically.",
+            "Road haulage and removals (SIC 494), warehousing and storage (SIC "
+            "521), and postal and courier activities are recorded separately "
+            "within the same section.",
+            "The annual insolvency count is comparatively small, so a handful "
+            "of cases can move a monthly or year-to-date percentage sharply. "
+            "The annual and rolling 12-month totals are the steadier guide. "
+            "This is a count of recorded insolvencies, not a measure of how "
+            "many companies operate in the category.",
+            "These are company counts, not shipments, clients or staff "
+            "affected. One insolvent company may be a one-person customs agent "
+            "or a multi-site logistics operator.",
+            "The figures are insolvency volumes, not a failure rate. They are "
+            "not divided by the number of active SIC 522 businesses, so they "
+            "cannot show whether failure has become more or less likely for a "
+            "given operator.",
+            "The SIC 522 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of these figures decide whether a particular business can "
+             "be rescued. For a freight forwarder the live questions are "
+             "narrower: what demurrage or liability sits on current shipments, "
+             "how concentrated the customer base is, and what is genuinely "
+             "owed to HMRC. Other transport-support businesses may need to "
+             "weigh asset commitments, contract liabilities and overdue tax "
+             "instead."),
+            ("Plenty of companies in difficulty are operationally sound but "
+             "carrying a one-off liability shock or a customer payment delay, "
+             "and both are usually fixable if they are addressed early."),
+            ('If the company cannot pay HMRC, staff, carriers, landlords or '
+             'other creditors as debts fall due, early advice leaves more room '
+             'to move: renegotiated terms, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a creditor begins formal winding-up action, banks and other '
+             'creditors may start to restrict the company\'s options, and a '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> can become the more realistic route. '
+             'The point is not to wait for a petition before assessing whether '
+             'the underlying business is viable. If you want to talk it '
+             'through, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "Do these figures count only freight forwarders?",
+                "a": ("No. They cover SIC group 522, support activities for "
+                      "transportation. Freight forwarding and customs agency "
+                      "work are included, but so are cargo handling, port "
+                      "services, airport ground operations, rail terminals, "
+                      "towing and other transport support. The published table "
+                      "does not isolate freight forwarders at four-digit SIC "
+                      "level."),
+            },
+            {
+                "q": "Are freight-forwarding and transport-support insolvencies rising in 2026?",
+                "a": ("Broadly stable. There were 45 cases in the first half "
+                      "of 2026, against 47 a year earlier, a fall of 4.3%. The "
+                      "rolling 12-month total rose from 94 to 103, but that "
+                      "came from a busier second half of 2025, not a fresh rise "
+                      "in 2026."),
+            },
+            {
+                "q": "How does SIC 522 compare with transportation and storage overall?",
+                "a": ("It is improving more slowly. SIC 522 insolvencies fell "
+                      "4.3% in the first half of 2026 while transportation and "
+                      "storage as a whole fell 12.5%. Its share of the section "
+                      "therefore rose, from 12.3% to 13.4%."),
+            },
+            {
+                "q": "Which insolvency procedures were most common?",
+                "a": ("Creditors' voluntary liquidations, which accounted for "
+                      "33 of the 45 cases in the first half of 2026. There were "
+                      "8 compulsory liquidations and 4 administrations, with no "
+                      "CVAs or receiverships recorded. Source: Insolvency "
+                      "Service, Tables A2 to A6."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown used here covers companies "
+                      "registered in England and Wales. Scotland and Northern "
+                      "Ireland run separate insolvency systems and are reported "
+                      "separately."),
+            },
+            {
+                "q": "Are these figures a failure rate?",
+                "a": ("No. They are counts of formal insolvencies. They are "
+                      "not divided by the number of active SIC 522 businesses, "
+                      "so they do not show the probability that a company will "
+                      "fail."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Freight Forwarding and Transport '
+                     'Support Insolvency Statistics." Analysis of Insolvency Service '
+                     "company insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Freight forwarding and transport support sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside the '
+                    '<a href="/data/road-haulage-insolvency-statistics/">road haulage</a> '
+                    'trade it works with in transportation and storage. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+
+    "retail-insolvency-statistics": {
+        "wp_id": 80679,
+        "sic_code": "47",
+        "sic_code_kind": "division",
+        "division_code": "47",
+        "parent_section_code": "G",
+        "parent_section_label": "wholesale and retail trade and repair of motor vehicles",
+        "h1a": "UK Retail Sector",
+        "h1b": "Insolvency Statistics",
+        "h1_subtitle": "Latest detailed figures for England and Wales",
+        "eyebrow": "retail sector",
+        "keyword": "retail",
+        "singular": "retail business",
+        "plural": "retailers",
+        "scope_description": ("the retail sale of goods to the public: general and "
+                              "specialised stores, household goods, cultural and "
+                              "recreation goods, market stalls, and online and "
+                              "non-store retail"),
+        "exclusion_note": ("Motor vehicle and motorcycle retail and repair, and "
+                           "wholesale trade, are recorded under separate codes "
+                           "within the same section and are not included here."),
+        "hero_note": ("Retail company insolvencies fell 15.3% year to date in 2026, "
+                      "the clearest sign yet that the sector's 2022-2023 failure wave "
+                      "has passed its peak. Retail remains 50% above 2019, but every "
+                      "measure on this page now points the same way: down."),
+        "key_findings": True,
+        "extra_findings": [
+            {"value": "50% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "1,962 vs 1,308"},
+            {"value": "12% below 2023 peak", "label": "2025 vs the series high", "sub": "1,962 vs 2,218"},
+        ],
+        "comparison_intro": [
+            ("There were 852 retail company insolvencies in England and Wales "
+             "between January and June 2026, against 1,006 in the same six "
+             "months of 2025, a fall of 15.3%. Wholesale, retail and motor "
+             "trade as a whole fell 14.3% over the same months."),
+            ("Retail, at 52% of that section, is falling slightly faster "
+             "than the section around it. These are Company Debt "
+             "calculations from Insolvency Service Table A1b data."),
+            ("The rolling 12-month figure confirms the same direction at a "
+             "gentler pace: 1,808 cases for the year to June 2026 against "
+             "1,893 for the year to June 2025, down 4.5%, against a 5.4% "
+             "fall for the section overall."),
+            ("Both measures now point the same way, after three years in "
+             "which retail insolvencies only climbed."),
+        ],
+        "divergence": {
+            "heading": "Nine very different retail trades, one shared direction",
+            "caption": ("Retail sub-sectors against the wider wholesale, retail "
+                        "and motor trade section, England and Wales"),
+            "intro": [
+                ("Retail splits into nine sub-sectors with very different "
+                 "fortunes in 2026. Household equipment retail, covering "
+                 "furniture and homeware specialists, is the only one "
+                 "rising, up 5.3% year to date."),
+                ("Every other sub-sector fell. Information and "
+                 "communication equipment retail fell hardest, down 57.7%, "
+                 "though from a small base of a few dozen cases a year. "
+                 "Market stalls fell 41.7%, also from a small base."),
+                ("The two largest sub-sectors by volume, other "
+                 "specialised-goods retail (clothing, footwear, pharmacies "
+                 "and similar, the largest single trade) and non-store "
+                 "retail (mail order and online), both fell by a more "
+                 "moderate 10.0% and 12.3%."),
+                ("Retail's own 15.3% fall sits between the motor trade's "
+                 "gentler 4.3% fall and wholesale's steeper 17.9% fall, in "
+                 "a section that eased 14.3% overall. This looks like a "
+                 "section retreating broadly together, not one trade "
+                 "dragging the rest down."),
+            ],
+            "peers": [
+                {"code": "47", "kind": "division", "label": "Retail trade overall (SIC 47)", "emphasise": True},
+                {"code": "471", "kind": "group", "label": "Non-specialised stores (SIC 471)"},
+                {"code": "472", "kind": "group", "label": "Food, beverage & tobacco specialists (SIC 472)"},
+                {"code": "473", "kind": "group", "label": "Automotive fuel specialists (SIC 473)"},
+                {"code": "474", "kind": "group", "label": "Electronics & IT equipment retail (SIC 474)"},
+                {"code": "475", "kind": "group", "label": "Household equipment retail (SIC 475)"},
+                {"code": "476", "kind": "group", "label": "Cultural & recreation goods retail (SIC 476)"},
+                {"code": "477", "kind": "group", "label": "Other specialised-goods retail (SIC 477)"},
+                {"code": "478", "kind": "group", "label": "Market stalls (SIC 478)"},
+                {"code": "479", "kind": "group", "label": "Non-store retail, incl. online (SIC 479)"},
+                {"code": "45", "kind": "division", "label": "Motor trade (SIC 45)"},
+                {"code": "46", "kind": "division", "label": "Wholesale trade (SIC 46)"},
+                {"code": "G", "kind": "section", "label": "Wholesale, retail & motor trade overall (SIC G)"},
+            ],
+        },
+        "longer_term_narrative": [
+            ("Retail insolvencies rose steadily before the pandemic, from "
+             "957 in 2016 to 1,308 by 2019. 2020 and 2021 held below that "
+             "level, 877 and 930, as government support and restricted "
+             "winding-up petitions held the normal cycle back."),
+            ("The rise from there was severe. 1,803 in 2022, then a series "
+             "peak of 2,218 in 2023, a 23% jump in a single year, as energy "
+             "costs, business rates and post-pandemic cost inflation landed "
+             "on the sector at once."),
+            ("2024 and 2025 both eased from that peak, to 1,921 and 1,962, "
+             "and 2026's opening months have continued the retreat. Five "
+             "years on from the pandemic, retail remains 50% above its 2019 "
+             "level, but the worst of the recent wave looks to be behind "
+             "it."),
+        ],
+        "annual_intro": (
+            "The shape of the last decade is a sharp post-pandemic surge "
+            "that peaked in 2023, followed by two years of easing that "
+            "2026 has so far continued."
+        ),
+        "latest_note": (
+            "Both the year-to-date and rolling 12-month figures are down "
+            "on the year before, and by more than most other trades on "
+            "this site. This reads as a genuine retreat from the 2023 "
+            "peak, not just a quieter few months."
+        ),
+        "pressure_heading": "Why retail insolvencies surged, and why they are now easing",
+        "pressure_caveat_in_intro": True,
+        "pressure_intro": [
+            ("Insolvency figures are a lagging record of distress that has "
+             "usually been building for months. What follows is a picture "
+             "of the conditions retailers have been trading in, not a "
+             "claim about why any individual company failed."),
+        ],
+        "pressure": [
+            {
+                "h3": "Labour costs have kept rising even as insolvencies ease",
+                "body": [
+                    ("The National Living Wage rose to £12.21 an hour from "
+                     "April 2025 and to £12.71 from April 2026, a direct "
+                     "cost increase for a sector built on part-time and "
+                     "minimum-wage retail staff."),
+                    ("Employer National Insurance changes taking effect "
+                     "from April 2025 raised the rate to 15% above a "
+                     "lowered secondary threshold, compounding the wage "
+                     "rise for any retailer with more than a handful of "
+                     "staff."),
+                ],
+            },
+            {
+                "h3": "A revised business rates system has eased the burden for smaller stores",
+                "body": [
+                    ("From April 2026, a revised business rates system "
+                     "introduced lower multipliers for qualifying retail, "
+                     "hospitality and leisure premises with a rateable "
+                     "value below £500,000, reducing the fixed-cost burden "
+                     "for many smaller and mid-sized stores."),
+                    ("Larger premises in prime locations have not seen the "
+                     "same relief: some operators reported rateable-value "
+                     "increases of up to 400% at the 2026 revaluation, "
+                     "keeping pressure concentrated at the top of the "
+                     "market even as it eases lower down."),
+                ],
+            },
+            {
+                "h3": "The shift to online continues to shrink the physical store estate",
+                "body": [
+                    ("More than 13,000 chain stores closed across Great "
+                     "Britain in 2025 alone, continuing a run that saw a "
+                     "net loss of roughly 3,800 chain stores in 2024. Much "
+                     "of this contraction happens through lease expiry and "
+                     "quiet closure, not formal insolvency."),
+                    ("That matters for reading this page: a shrinking store "
+                     "estate can reduce the pool of companies at risk of "
+                     "insolvency over time, one plausible reason the count "
+                     "is now falling even though the structural pressure on "
+                     "physical retail has not gone away."),
+                ],
+            },
+        ],
+        "practitioner_view": [
+            ("In the retail cases we see, the trigger is almost always a "
+             "lease or a stock-funding facility, not a single bad trading "
+             "month. A shop can have a full till most days and still be "
+             "insolvent once rent, rates and the National Living Wage are "
+             "covered."),
+            ("Multi-site retailers fail differently to single shops. One "
+             "loss-making unit rarely brings a chain down on its own, but a "
+             "lease renewal or a landlord refusing a rent-free period at "
+             "the wrong moment can force the whole group's hand."),
+            ("Stock is the trap directors miss most often. Retail ties up "
+             "cash in inventory that a service business never carries, and "
+             "a supplier tightening credit terms during a weak season can "
+             "turn a stock problem into a cash problem within weeks."),
+            ("We would not start with footfall or online sales alone. We "
+             "would look at the lease schedule against trading performance "
+             "store by store, what credit terms suppliers are actually "
+             "offering right now, and what is owed to HMRC."),
+            ("A retailer with a sound core estate and a genuinely fixable "
+             "cost or lease problem usually has more options than the "
+             "numbers suggest, a CVA to shed the worst leases, a pre-pack "
+             "sale of the trading business, or support accessed early, "
+             "provided the conversation starts before a creditor forces "
+             "the timing."),
+        ],
+        "notes": [
+            "SIC division 47 covers retail trade except of motor vehicles "
+            "and motorcycles: general stores, food and specialist "
+            "retailers, household goods, and online and non-store retail. "
+            "Motor vehicle and motorcycle retail (SIC division 45) and "
+            "wholesale trade (SIC division 46) are recorded separately "
+            "within the same section.",
+            "This is one of the largest trading divisions on this site, "
+            "and it splits into nine very different sub-sectors, from "
+            "supermarkets to online retailers, each with its own "
+            "trajectory. The sub-sector table above is often where the "
+            "real story sits, not the single headline figure.",
+            "These are company counts, not the number of shops, brands or "
+            "jobs affected. A single insolvent company may operate one "
+            "store or several hundred, and many independent retailers "
+            "trade as sole traders rather than through a company, so this "
+            "page does not capture the whole of high-street distress.",
+            "The figures are insolvency volumes, not a failure rate. They "
+            "are not adjusted for the number of active retail businesses, "
+            "so a falling count does not, on its own, prove that retail "
+            "has become safer to trade in.",
+            "The SIC 47 figures come from Table A1b and are not seasonally "
+            "adjusted. The latest month is provisional and can be revised.",
+        ],
+        "commercial_transition": [
+            ("None of the figures above decide whether a particular retail "
+             "business is viable. What matters is narrower: how the lease "
+             "schedule compares with store-by-store trading performance, "
+             "what credit terms suppliers are actually offering, and what "
+             "is genuinely owed to HMRC."),
+            ("Plenty of retailers in difficulty are otherwise sound "
+             "businesses carrying a small number of loss-making leases or "
+             "a stock-funding gap, and both are usually fixable if "
+             "addressed early."),
+            ('If you are reading this with a rent quarter-day or a '
+             'supplier payment coming and the cash is not there, the thing '
+             'worth knowing is that the earlier you speak to someone, the '
+             'more room there is to move: a lease renegotiated, an '
+             '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
+             'or a rescue procedure such as a '
+             '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
+             'Voluntary Arrangement</a> or '
+             '<a href="/company-administration/">administration</a>.'),
+            ('Once a winding-up petition is advertised, the bank account is '
+             'usually frozen within days, and at that point '
+             '<a href="/liquidation/creditors-voluntary-liquidation/">creditors\' '
+             'voluntary liquidation</a> may be the only route still open. If you '
+             'want to talk it through first, our '
+             '<a href="/advice/insolvency-advice-for-directors/">insolvency advice '
+             'for directors</a> is the place to start.'),
+        ],
+        "faq": [
+            {
+                "q": "How many UK retail businesses become insolvent each year?",
+                "a": ("1,962 companies in SIC division 47, retail trade, "
+                      "entered insolvency in England and Wales in 2025, "
+                      "down from the 2023 peak of 2,218 but 50% above the "
+                      "1,308 recorded in 2019. Source: Insolvency Service, "
+                      "Table A1b."),
+            },
+            {
+                "q": "Are retail insolvencies falling in 2026?",
+                "a": ("Yes. There were 852 insolvencies between January "
+                      "and June 2026 against 1,006 in the same months of "
+                      "2025, a fall of 15.3%, and the rolling 12-month "
+                      "total fell 4.5% to 1,808. Both measures point the "
+                      "same way for the first time since the 2022-2023 "
+                      "surge."),
+            },
+            {
+                "q": "Which part of retail is struggling most?",
+                "a": ("By percentage change, information and communication "
+                      "equipment retail fell hardest in 2026, down 57.7% "
+                      "from a small base. But the two largest sub-sectors "
+                      "by volume, other specialised-goods retail and "
+                      "non-store retail, both fell by a more moderate 10 "
+                      "to 12%. Household equipment retail was the only "
+                      "sub-sector to rise."),
+            },
+            {
+                "q": "Does this include motor dealers or wholesalers?",
+                "a": ("No. This page counts SIC division 47, retail trade "
+                      "except of motor vehicles and motorcycles. Motor "
+                      "vehicle and motorcycle retail and repair (SIC "
+                      "division 45) and wholesale trade (SIC division 46) "
+                      "are recorded under separate codes within the same "
+                      "section."),
+            },
+            {
+                "q": "Do the figures cover the whole UK?",
+                "a": ("No. The industry breakdown in Table A1b covers "
+                      "England and Wales only. Scotland and Northern "
+                      "Ireland run separate insolvency regimes and are "
+                      "reported separately."),
+            },
+        ],
+        "citation": ('Company Debt. (2026). "UK Retail Sector Insolvency '
+                     'Statistics." Analysis of Insolvency Service company '
+                     "insolvency data by industry (Table A1b). CompanyDebt.com."),
+        "related": ('Retail sits within the wider '
+                    '<a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> '
+                    'data, alongside the '
+                    '<a href="/data/motor-vehicle-repair-insolvency-statistics/">motor vehicle repair</a> '
+                    'trade it shares a section with. See also the '
+                    '<a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.'),
+    },
+
 }
 
 
@@ -1149,7 +6215,15 @@ def load() -> dict:
 
 
 def group_by_code(ser: dict, code: str) -> dict:
-    return next(g for g in ser["groups"] if g["code"] == code)
+    """Most pages in this family cover a single 3-digit SIC group. A handful
+    (e.g. retail) cover a whole 2-digit division instead, since no single
+    group inside it is representative on its own — falls back to the
+    divisions list so the rest of the pipeline (figures(), charts, etc.)
+    works unchanged either way."""
+    match = next((g for g in ser["groups"] if g["code"] == code), None)
+    if match is not None:
+        return match
+    return next(d for d in ser["divisions"] if d["code"] == code)
 
 
 def section_by_code(ser: dict, code: str) -> dict:
@@ -1188,6 +6262,21 @@ def change_phrase(current: int, prior: int | None, unchanged_vs: str = "", value
     size = "slightly " if pct is not None and pct < 5 else ""
     word = "up" if diff > 0 else "down"
     return f"{word} {size}from {format_number(prior)}{value_vs}"
+
+
+def direction_of(current: int, prior: int | None, flat_band: float = 2.0) -> str:
+    """Direction of travel between two counts, with a dead band.
+
+    A raw current-vs-prior test calls 64 against 63 a "rise". On series this
+    small that is one case, and reporting it as a rise overstates what the
+    data can carry. Anything inside +/-flat_band per cent reads as flat.
+    """
+    if not prior:
+        return "flat" if current == prior else ("rising" if current > (prior or 0) else "falling")
+    pct = (current - prior) / prior * 100
+    if abs(pct) < flat_band:
+        return "flat"
+    return "rising" if pct > 0 else "falling"
 
 
 def figures(cfg: dict, c: dict) -> dict:
@@ -1365,14 +6454,13 @@ def sector_fact(cfg: dict, c: dict, f: dict) -> dict:
 
 
 def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
+    # Share the phrasing with pre_pandemic_phrase() rather than restating it,
+    # so the hero and the latest-figures summary can never drift apart. The
+    # hero renders this inside a larger sentence, hence the trailing period is
+    # stripped rather than the wording being duplicated here.
     if f["vs_pre_pandemic_pct"] is not None:
-        pp_word = "above" if f["vs_pre_pandemic_pct"] >= 0 else "below"
-        pp_value = f"{abs(round(f['vs_pre_pandemic_pct']))}% {pp_word} {f['pre_pandemic_year']}"
-        pp_note = (
-            f"The {f['years'][f['li']]} total of {format_number(f['latest_annual'])} remained "
-            f"well {pp_word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
-            f"in {f['pre_pandemic_year']}"
-        )
+        pp_value, pp_sentence = pre_pandemic_phrase(f)
+        pp_note = pp_sentence.rstrip(".")
     else:
         pp_value = "n/a"
         pp_note = "No pre-pandemic (2019) comparison is available for this series."
@@ -1381,12 +6469,12 @@ def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">{cfg['h1a']}</span> <span class="cd-h1__line">{cfg['h1b']}</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">{cfg['h1a']}</span> <span class="cd-h1__line" style="white-space: normal;">{cfg['h1b']}</span></h1>
         <p class="cd-hero__subtitle">{cfg['h1_subtitle']}</p>
         {f'<p class="cd-hero__scope">{cfg["scope_note"]}</p>' if cfg.get('scope_note') else ''}
         <p class="cd-lede">There were {format_number(f['ytd_current'])} insolvencies among {cfg['plural']} in England and Wales between {sf['ytd_label_and']}, compared with {format_number(f['ytd_prior'])} in the same period of {f['prior_year']}. The rolling 12-month total was {format_number(f['rolling_current'])}, {f['rolling_change_phrase']}.</p>
         {f'<p class="cd-lede">{cfg["hero_note"]}</p>' if cfg.get('hero_note') else ''}
-        <p class="cd-lede">This covers {cfg['scope_description']} (the official industry code is SIC group {cfg['sic_code']}). {cfg['exclusion_note']}</p>
+        <p class="cd-lede">This covers {cfg['scope_description']} (the official industry code is SIC {cfg.get('sic_code_kind', 'group')} {cfg['sic_code']}). {cfg['exclusion_note']}</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
           <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
@@ -1416,6 +6504,21 @@ def hero_block(cfg: dict, f: dict, meta: dict, sf: dict) -> str:
     </section>""")
 
 
+def pre_pandemic_qualifier(pct: float) -> str:
+    """How emphatically to describe the gap to 2019.
+
+    A blanket "well above" is fine at +90% and plainly wrong at +6%: it tells
+    the reader a sector is far worse than 2019 when it has all but returned to
+    it. Scale the adverb to the actual gap.
+    """
+    gap = abs(pct)
+    if gap < 3:
+        return "marginally"
+    if gap < 10:
+        return "slightly"
+    return "well"
+
+
 def pre_pandemic_phrase(f: dict) -> tuple[str, str]:
     """(short value for a KPI card, full sentence) comparing the latest full
     year to 2019 — a fixed, meaningful baseline ("the last normal year"),
@@ -1423,10 +6526,11 @@ def pre_pandemic_phrase(f: dict) -> tuple[str, str]:
     if f["vs_pre_pandemic_pct"] is None:
         return "n/a", "No pre-pandemic (2019) comparison is available for this series."
     word = "above" if f["vs_pre_pandemic_pct"] >= 0 else "below"
+    qualifier = pre_pandemic_qualifier(f["vs_pre_pandemic_pct"])
     value = f"{abs(round(f['vs_pre_pandemic_pct']))}% {word} {f['pre_pandemic_year']}"
     sentence = (
         f"The {f['years'][f['li']]} total of {format_number(f['latest_annual'])} remained "
-        f"well {word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
+        f"{qualifier} {word} the pre-pandemic total of {format_number(f['pre_pandemic_val'])} "
         f"in {f['pre_pandemic_year']}."
     )
     return value, sentence
@@ -1437,9 +6541,7 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
     already stated elsewhere on the page, gathered into one table so a reader
     doesn't have to hunt through prose for it."""
     pp_value, pp_sentence = pre_pandemic_phrase(f)
-    direction = "falling" if f["ytd_current"] < f["ytd_prior"] else (
-        "rising" if f["ytd_current"] > f["ytd_prior"] else "flat"
-    )
+    direction = direction_of(f["ytd_current"], f["ytd_prior"])
     # Magnitude-aware qualifier: a blanket "modestly" mislabels a large move
     # (a 19% year-to-date fall is not "modest"). Pick the adverb from the
     # actual year-to-date change so the prose matches the number in the table.
@@ -1452,8 +6554,22 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
     # The auto sentence assumes the two measures move smoothly in one direction.
     # A sector with an uneven monthly path (where "steadily" would overstate the
     # regularity) can override it with authored text via cfg['latest_note'].
+    rolling_direction = (
+        direction_of(f["rolling_current"], f["rolling_prior"])
+        if f["rolling_prior"] else direction
+    )
     if cfg.get("latest_note"):
         latest_note = f"{cfg['latest_note']} {pp_sentence}"
+    elif rolling_direction != direction:
+        # The two measures genuinely disagree, so the default "point in the same
+        # direction" claim would be false. Say so instead of picking one.
+        latest_note = (
+            f"The two measures disagree: the year-to-date total is {direction} "
+            f"while the rolling 12-month total is {rolling_direction}. That "
+            f"normally means the turn is recent enough that the rolling figure "
+            f"still carries the older, worse months. Neither measure is wrong; "
+            f"read them together. {pp_sentence}"
+        )
     else:
         latest_note = (
             f"The latest figures point in the same direction across the "
@@ -1492,7 +6608,7 @@ def latest_figures_block(cfg: dict, f: dict, sf: dict) -> str:
       </div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Latest {cfg['keyword']} insolvency figures, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+          <caption class="cd-table__caption">Latest {cfg['keyword']} insolvency figures, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</caption>
           <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
           <tbody>{rows_html}</tbody>
         </table>
@@ -1517,15 +6633,13 @@ def chart_block(cfg: dict, c: dict, f: dict) -> str:
         <p class="cd-section-intro">{cfg['related']}</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--longrun">{line}</div>
-        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</figcaption>
       </figure>
     </section>""")
 
 
 def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
-    direction = "rising" if f["ytd_current"] > f["ytd_prior"] else (
-        "falling" if f["ytd_current"] < f["ytd_prior"] else "flat"
-    )
+    direction = direction_of(f["ytd_current"], f["ytd_prior"])
     heading_verb = {"rising": "rising", "falling": "falling", "flat": "changing"}[direction]
     sector_verb = {"rising": "a rise of", "falling": "a fall of", "flat": "a change of"}[direction]
     sector_pct_abs = f"{abs(sf['sector_change_pct']):.1f}%" if sf["sector_change_pct"] is not None else "n/a"
@@ -1561,7 +6675,7 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
         table_html = dedent(f"""\
         <div class="cd-tablewrap">
             <table class="cd-table">
-              <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+              <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} vs {sf['parent_label']} overall, {sf['ytd_label']}, England and Wales. Source: Insolvency Service (Table A1b).</caption>
               <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">{cfg['eyebrow'].capitalize()}</th><th scope="col" class="cd-num">{sf['parent_label'].capitalize()} overall</th></tr></thead>
               <tbody>
                 <tr><th scope="row">{sf['ytd_label']} insolvencies</th><td class="cd-num">{format_number(f['ytd_current'])}</td><td class="cd-num">{format_number(sf['parent_ytd_current'])}</td></tr>
@@ -1571,7 +6685,7 @@ def comparison_block(cfg: dict, f: dict, sf: dict) -> str:
               </tbody>
             </table>
           </div>
-          <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>""")
+          <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table A1b).</p>""")
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="comparison">
       <div class="cd-section-head">
@@ -1633,7 +6747,41 @@ def divergence_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
           <tbody>{rows_html}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service Table 1c data.</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service {cfg.get('source_table', 'Table A1b')} data.</p>
+    </section>""")
+
+
+def period_decomposition_block(cfg: dict) -> str:
+    """Optional: a compact six-month (or arbitrary period) decomposition table
+    explaining why the year-to-date and rolling 12-month measures can point in
+    different directions — e.g. a rolling total that rose only because the half
+    that dropped out of the window was quieter than the half that entered it.
+    Rows are authored (label + value), because the split points are a bespoke
+    analytical choice, not a generic series operation. No-op when unset."""
+    pd = cfg.get("period_decomposition")
+    if not pd:
+        return ""
+    intro_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in pd["intro"])
+    rows_html = "".join(
+        f"<tr><th scope=\"row\">{r['label']}</th><td class=\"cd-num\">{format_number(r['value'])}</td></tr>"
+        for r in pd["rows"]
+    )
+    value_head = pd.get("value_head", "Insolvencies")
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="decomposition">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Comparison</p>
+        <h2>{pd['heading']}</h2>
+      </div>
+      <div class="cd-side-notes">{intro_html}</div>
+      <div class="cd-tablewrap">
+        <table class="cd-table">
+          <caption class="cd-table__caption">{pd['caption']}</caption>
+          <thead><tr><th scope="col">{pd.get('period_head', 'Six-month period')}</th><th scope="col" class="cd-num">{value_head}</th></tr></thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <p class="cd-source-note">{pd.get('source_note', 'Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service data.')}</p>
     </section>""")
 
 
@@ -1682,11 +6830,17 @@ def practitioner_block(cfg: dict) -> str:
     paras = "".join(
         f'<p class="cd-side-note__d cd-side-note__insight">{p}</p>' for p in cfg["practitioner_view"]
     )
+    heading = cfg.get("practitioner_heading") or f"What we see in {cfg['keyword']} insolvency cases"
+    scope = (
+        f'<p class="cd-section-intro">{cfg["practitioner_scope"]}</p>'
+        if cfg.get("practitioner_scope") else ""
+    )
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="practitioner">
       <div class="cd-section-head">
         <p class="cd-eyebrow">Practitioner view</p>
-        <h2>What we see in {cfg['keyword']} insolvency cases</h2>
+        <h2>{heading}</h2>
+        {scope}
       </div>
       <div class="cd-side-notes">{paras}</div>
     </section>""")
@@ -1742,7 +6896,7 @@ def key_findings_block(cfg: dict, f: dict, sf: dict) -> str:
     cards = [
         (format_number(f["ytd_current"]), f"insolvencies, {sf['ytd_label']}", ""),
         (f["ytd_change_phrase"], f"vs same period {f['prior_year']}", ""),
-        (format_number(f["rolling_current"]), "rolling 12 months", f"to {f['years'][f['li']]}"),
+        (format_number(f["rolling_current"]), "rolling 12 months", f"to {month_full(f['latest_month'])}"),
         (format_number(f["latest_annual"]), f"full year {f['years'][f['li']]}", ""),
     ]
     for extra in cfg.get("extra_findings", []):
@@ -1768,16 +6922,46 @@ def procedure_block(cfg: dict) -> str:
     receivership) for the latest complete full year, plus a year-on-year
     shift analysis. Sourced from the Insolvency Service's supplementary
     quarterly procedure-by-industry tables — a different workbook to Table
-    1c, so this is populated per sector only where that data has actually
-    been pulled and verified, not assumed."""
+    A1b, so this is populated per sector only where that data has actually
+    been pulled and verified, not assumed.
+
+    Base shape is a single-period count+share table (pb['year']). When a
+    row carries 'prior_count', the table instead renders a two-period
+    comparison (this period vs pb['compare_label']) with numerical and
+    percentage change columns, driven by pb['period_label'] as the caption
+    period in place of a bare year — used for e.g. a half-year procedure
+    refresh between annual releases."""
     pb = cfg.get("procedure_breakdown")
     if not pb:
         return ""
-    rows_html = "".join(
-        f"<tr><th scope=\"row\">{r['name']}</th><td class=\"cd-num\">{format_number(r['count'])}</td>"
-        f"<td class=\"cd-num\">{r['share']}%</td></tr>"
-        for r in pb["rows"]
-    )
+    has_compare = any("prior_count" in r for r in pb["rows"])
+    if has_compare:
+        def pct_change_cell(r):
+            if not r["prior_count"]:
+                return "n/a"
+            return f"{(r['count'] - r['prior_count']) / r['prior_count'] * 100:+.1f}%"
+        rows_html = "".join(
+            f"<tr><th scope=\"row\">{r['name']}</th>"
+            f"<td class=\"cd-num\">{format_number(r['count'])}</td>"
+            f"<td class=\"cd-num\">{format_number(r['prior_count'])}</td>"
+            f"<td class=\"cd-num\">{r['count'] - r['prior_count']:+d}</td>"
+            f"<td class=\"cd-num\">{pct_change_cell(r)}</td>"
+            f"<td class=\"cd-num\">{r['share']}%</td></tr>"
+            for r in pb["rows"]
+        )
+        head = (f'<th scope="col">Procedure</th><th scope="col" class="cd-num">{pb.get("period_label", "Latest period")}</th>'
+                f'<th scope="col" class="cd-num">{pb.get("compare_label", "Prior period")}</th>'
+                f'<th scope="col" class="cd-num">Change</th><th scope="col" class="cd-num">% change</th>'
+                f'<th scope="col" class="cd-num">Share</th>')
+        caption_period = pb.get("period_label", pb.get("year", ""))
+    else:
+        rows_html = "".join(
+            f"<tr><th scope=\"row\">{r['name']}</th><td class=\"cd-num\">{format_number(r['count'])}</td>"
+            f"<td class=\"cd-num\">{r['share']}%</td></tr>"
+            for r in pb["rows"]
+        )
+        head = '<th scope="col">Procedure</th><th scope="col" class="cd-num">Cases</th><th scope="col" class="cd-num">Share</th>'
+        caption_period = pb.get("year", "")
     analysis_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in pb["analysis"])
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="procedure">
@@ -1787,8 +6971,8 @@ def procedure_block(cfg: dict) -> str:
       </div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} insolvencies by procedure, {pb['year']}, England and Wales. Source: Insolvency Service.</caption>
-          <thead><tr><th scope="col">Procedure</th><th scope="col" class="cd-num">Cases</th><th scope="col" class="cd-num">Share</th></tr></thead>
+          <caption class="cd-table__caption">{cfg['eyebrow'].capitalize()} insolvencies by procedure, {caption_period}, England and Wales. Source: Insolvency Service.</caption>
+          <thead><tr>{head}</tr></thead>
           <tbody>{rows_html}</tbody>
         </table>
       </div>
@@ -1802,16 +6986,30 @@ def spike_correction_block(cfg: dict) -> str:
     section had a widely-reported spike (e.g. a connected-company cluster)
     that shouldn't be misread as this specific sector's own trend. Free-
     authored per sector — the underlying event and evidence vary too much to
-    template generically."""
+    template generically.
+
+    Base shape is a two-period comparison (month1/month2, e.g. two individual
+    months). Rows may optionally add 'change_pct' and/or 'share_pct' —
+    when ANY row in the table carries one of those keys, the corresponding
+    column renders for every row (blank cell where a given row omits it),
+    so a richer period-vs-period-with-change-and-share table (e.g. H1 2026
+    vs H1 2025) can reuse the same renderer without a second code path."""
     sc = cfg.get("spike_correction")
     if not sc:
         return ""
+    has_change = any("change_pct" in r for r in sc["rows"])
+    has_share = any("share_pct" in r for r in sc["rows"])
     intro_html = "".join(f'<p class="cd-side-note__d">{p}</p>' for p in sc["intro"])
     rows_html = "".join(
         f"<tr><th scope=\"row\">{r['label']}</th><td class=\"cd-num\">{format_number(r['month1'])}</td>"
-        f"<td class=\"cd-num\">{format_number(r['month2'])}</td></tr>"
+        f"<td class=\"cd-num\">{format_number(r['month2'])}</td>"
+        + (f"<td class=\"cd-num\">{r['change_pct']:+.1f}%</td>" if has_change else "")
+        + (f"<td class=\"cd-num\">{r['share_pct']:.1f}%</td>" if has_share else "")
+        + "</tr>"
         for r in sc["rows"]
     )
+    change_th = '<th scope="col" class="cd-num">Change</th>' if has_change else ""
+    share_th = f'<th scope="col" class="cd-num">{sc.get("share_label", "Share")}</th>' if has_share else ""
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="spike">
       <div class="cd-section-head">
@@ -1822,11 +7020,11 @@ def spike_correction_block(cfg: dict) -> str:
       <div class="cd-tablewrap">
         <table class="cd-table">
           <caption class="cd-table__caption">{sc['table_caption']}</caption>
-          <thead><tr><th scope="col">SIC group</th><th scope="col" class="cd-num">{sc['month1_label']}</th><th scope="col" class="cd-num">{sc['month2_label']}</th></tr></thead>
+          <thead><tr><th scope="col">SIC group</th><th scope="col" class="cd-num">{sc['month1_label']}</th><th scope="col" class="cd-num">{sc['month2_label']}</th>{change_th}{share_th}</tr></thead>
           <tbody>{rows_html}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Source: Insolvency Service, Table 1c and official commentary.</p>
+      <p class="cd-source-note">Source: Insolvency Service, supplementary industry Table A1b, not seasonally adjusted. Percentage comparisons are Company Debt calculations.</p>
     </section>""")
 
 
@@ -1905,11 +7103,21 @@ def annual_narrative(cfg: dict, f: dict) -> str:
         )
     if peak_year != latest_year and peak:
         pct = (latest - peak) / peak * 100
-        word = "fallen" if pct < 0 else "risen"
-        parts.append(
-            f"Since then, insolvencies have {word} {abs(round(pct))}% to "
-            f"{format_number(latest)} in {latest_year}."
-        )
+        if round(pct) == 0:
+            # The latest year matches (or all but matches) an earlier peak.
+            # "risen 0%" is what the generic phrasing produces here, which
+            # reads as a rounding artefact rather than the actual finding:
+            # the sector has not come off its peak at all.
+            parts.append(
+                f"It has not come off that peak: {format_number(latest)} in "
+                f"{latest_year} is level with {peak_year}."
+            )
+        else:
+            word = "fallen" if pct < 0 else "risen"
+            parts.append(
+                f"Since then, insolvencies have {word} {abs(round(pct))}% to "
+                f"{format_number(latest)} in {latest_year}."
+            )
     _, pp_sentence = pre_pandemic_phrase(f)
     parts.append(pp_sentence)
     return " ".join(parts)
@@ -1933,12 +7141,12 @@ def annual_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
         <p class="cd-section-intro">{sf['trough_note']}</p></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Annual company insolvencies among {cfg['plural']}, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+          <caption class="cd-table__caption">Annual company insolvencies among {cfg['plural']}, England and Wales, not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</caption>
           <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
           <tbody>{rows}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</p>
     </section>""")
 
 
@@ -1967,10 +7175,11 @@ def source_block(slug: str, cfg: dict, meta: dict) -> str:
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} (Table 1c, by industry).</dd>
+            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} ({cfg.get('source_table', 'Table A1b')}, by industry).</dd>
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
-            <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+            <dt>Next scheduled release</dt><dd>{meta['next_release_date']}</dd>
+            <dt>Industry breakdown</dt><dd>The industry total by three-digit SIC ({cfg.get('source_table', 'Table A1b')}) runs through the latest headline month. The breakdown by insolvency procedure within each industry comes from {cfg.get('procedure_table', 'Tables A2 to A6')}.</dd>
             {extra_rows}
             <dt>Status</dt><dd>{meta['status']}</dd>
           </dl>
@@ -1994,7 +7203,8 @@ def assemble(slug: str, c: dict) -> str:
         masthead_block(), hero_block(cfg, f, meta, sf), srcstrip_block(),
         key_findings_block(cfg, f, sf),
         latest_figures_block(cfg, f, sf),
-        comparison_block(cfg, f, sf), divergence_block(cfg, c, f, sf), chart_block(cfg, c, f),
+        comparison_block(cfg, f, sf), period_decomposition_block(cfg),
+        divergence_block(cfg, c, f, sf), chart_block(cfg, c, f),
         longer_term_block(cfg),
         pressure_block(cfg), practitioner_block(cfg), policy_update_block(cfg),
         annual_block(cfg, c, f, sf), procedure_block(cfg), spike_correction_block(cfg),

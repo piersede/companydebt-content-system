@@ -124,6 +124,17 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "cleaning-company-insolvency-statistics": "sector_statistics",
     "hotel-insolvency-statistics": "sector_statistics",
     "estate-agency-insolvency-statistics": "sector_statistics",
+    "it-consultancy-insolvency-statistics": "sector_statistics",
+    "management-consultancy-insolvency-statistics": "sector_statistics",
+    "architectural-engineering-insolvency-statistics": "sector_statistics",
+    "personal-care-services-insolvency-statistics": "sector_statistics",
+    "sports-facility-insolvency-statistics": "sector_statistics",
+    "medical-dental-practice-insolvency-statistics": "sector_statistics",
+    "creative-arts-entertainment-insolvency-statistics": "sector_statistics",
+    "amusement-recreation-insolvency-statistics": "sector_statistics",
+    "real-estate-letting-investment-insolvency-statistics": "sector_statistics",
+    "freight-forwarding-logistics-insolvency-statistics": "sector_statistics",
+    "retail-insolvency-statistics": "sector_statistics",
 }
 
 

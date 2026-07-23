@@ -8,15 +8,21 @@
    ============================================================ */
 
 .cd-data-hub {
-  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
-     use width:100vw to escape the WP container). 100vw resolves to the
-     viewport width INCLUDING the scrollbar gutter, so on any page tall
-     enough to scroll it overshoots the true visible width by the scrollbar's
-     width (~15-17px) and creates a real, swipeable horizontal scroll. This
-     is not masking an unknown overflow — the cause is the 100vw pattern
-     above, which has no scrollbar-safe CSS-only fix; contain the resulting
-     15px here rather than letting it leak into the page/site chrome. */
-  overflow-x: hidden;
+  /* NOT overflow-x:hidden here (removed 2026-07). .cd-w-hero/.cd-w-wide/
+     .cd-bleed use width:100vw + a negative margin specifically to ESCAPE
+     this element and reach the true viewport edge - that is the entire
+     mechanism a full-bleed band relies on. overflow-x:hidden on the exact
+     element those sections are escaping FROM clips their paint back down to
+     .cd-data-hub's own (much narrower) box, which is what made the hero
+     band render as a bounded, inset card instead of a true edge-to-edge
+     band (found 2026-07, see docs/data-hub commit history).
+     The real reason this was here - width:100vw resolving to the viewport
+     WIDTH INCLUDING THE SCROLLBAR GUTTER, ~15-17px wider than the visible
+     area, which would otherwise create a real swipeable horizontal scroll -
+     is already handled a level up: the theme template sets
+     `body.page-template-data-hub-template { overflow-x: hidden; }`
+     (templates/data-hub-template.php), which contains that overshoot at the
+     body without clipping anything trying to bleed within the page. */
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -109,25 +115,32 @@
 }
 .cd-data-hub .cd-w-narrow   { max-width: 760px; }
 .cd-data-hub .cd-w-standard { max-width: 1040px; }
-/* Wide sections bleed out of the WP container so they can actually reach
-   1280px on wide viewports. max-width:none beats inherited theme caps. */
+/* Wide sections bleed out of the WP container so they can span the full
+   viewport, but re-centre to the site's single 1040px rail (per the 2026-07
+   Claude Design handoff: "every band sits on one 1040px content column with
+   an identical left edge... do NOT reintroduce per-section widths"). This
+   was previously 1280px (a "-640" constant, a second, wider rail) - that is
+   what put the masthead (already unified to 1040px, both via the theme
+   template's own masthead-pin fix and this file's site-alignment CSS) out of
+   line with every content section below it: a real, visible 120px
+   left-edge misalignment running down the whole page, not a cosmetic nit. */
 .cd-data-hub .cd-w-wide {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 /* Full-bleed band that escapes the parent .container. Inner content
-   re-aligns to a 1280px max-width. */
+   re-aligns to the same 1040px rail as .cd-w-wide. */
 .cd-data-hub .cd-bleed {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 
 /* ── Spacing rhythm ───────────────────────────────────────── */
@@ -775,70 +788,54 @@
   .cd-data-hub .cd-chart-panel--rate { min-height: 320px; }
 }
 
-/* ── Procedure card grid ──────────────────────────────────── */
-.cd-data-hub .cd-procard-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.cd-data-hub .cd-procard {
-  padding: 22px 22px 18px;
-  border-radius: 16px;
-  background: var(--cd-surface);
-  border: 1px solid var(--cd-line);
-  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.03);
-  display: flex;
-  flex-direction: column;
-}
-.cd-data-hub .cd-procard__name {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cd-muted);
-  font-weight: 700;
-  margin: 0 0 8px;
-  line-height: 1.3;
-}
-.cd-data-hub .cd-procard__value {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--cd-text);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-}
-.cd-data-hub .cd-procard__note {
-  font-size: 13px;
-  color: var(--cd-muted);
-  margin: 0 0 14px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-.cd-data-hub .cd-procard__link {
-  align-self: flex-start;
-  display: inline-flex;
+/* ── Sector data-page links table ("Get the insolvency data for your
+   trade") — always-visible table pairing each trade with a View data
+   button, replacing the earlier procedure-card grid. Per
+   docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+   handoff's sector-trade-links-generator-spec.md. ──────────────────── */
+.cd-data-hub .cd-sectorlinks th[scope="row"] { font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__name { display: block; font-size: 16px; font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--cd-muted); max-width: 52ch; }
+.cd-data-hub .cd-sectorlinks td { color: var(--cd-text-soft); }
+.cd-data-hub .cd-sectorlinks__actionhead { text-align: left; }
+.cd-data-hub .cd-sectorlinks__action { text-align: left; white-space: nowrap; vertical-align: middle; width: 1%; }
+.cd-data-hub .cd-sectorlinks__btn {
+  /* The WP theme forces `a { display: inline }`, which would collapse the
+     44px min-height tap target to a text baseline. Beat it explicitly. */
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid #d0d5dd;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cd-text);
+  gap: 8px;
+  padding: 11px 16px;
+  min-height: 44px;
+  box-sizing: border-box;
+  background: var(--cd-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
   text-decoration: none;
-  transition: background 0.12s ease, border-color 0.12s ease;
+  white-space: nowrap;
+  transition: background .15s ease;
 }
-.cd-data-hub .cd-procard__link:hover {
-  background: var(--cd-surface-soft);
-  border-color: var(--cd-accent);
-  color: var(--cd-accent);
-  text-decoration: none;
+.cd-data-hub .cd-sectorlinks__btn span { font-size: 15px; line-height: 1; transition: transform .15s ease; }
+.cd-data-hub .cd-sectorlinks__btn::after, .cd-data-hub .cd-sectorlinks__btn::before { content: none !important; display: none !important; }
+.cd-data-hub .cd-sectorlinks .cd-table-arrow { display: none !important; }
+.cd-data-hub .cd-sectorlinks__btn:hover { background: #0c3c66; color: #fff !important; text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__btn:hover span { transform: translateX(3px); }
+.cd-data-hub .cd-sectorlinks__btn:focus-visible { outline: 2px solid var(--cd-accent); outline-offset: 2px; }
+.cd-data-hub .cd-sectorlinks tbody tr:hover { background: var(--cd-surface-soft); }
+.cd-data-hub .cd-sectorlinks__all { margin: 18px 0 0 !important; font-size: 15px; }
+.cd-data-hub .cd-sectorlinks__all a { font-weight: 700; color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__all a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .cd-data-hub .cd-sectorlinks { min-width: 0; }
+  .cd-data-hub .cd-sectorlinks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cd-data-hub .cd-sectorlinks tbody tr { display: block; padding: 16px 4px; }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr { border-top: 1px solid var(--cd-line-soft); }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr td, .cd-data-hub .cd-sectorlinks tbody tr + tr th { border-top: 0; }
+  .cd-data-hub .cd-sectorlinks th[scope="row"] { display: block; padding: 0 0 12px; }
+  .cd-data-hub .cd-sectorlinks__action { display: block; padding: 0; width: auto; }
 }
-.cd-data-hub .cd-procard__link span { font-size: 14px; line-height: 1; }
-@media (max-width: 980px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .cd-data-hub .cd-procard-grid { grid-template-columns: 1fr; } }
 
 /* ── Sector grid ──────────────────────────────────────────── */
 .cd-data-hub .cd-sector-grid {
@@ -1185,8 +1182,8 @@
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Monthly construction insolvencies since 2023</h2>
     <p class="cd-section-intro">Company insolvencies in the construction sector, England and Wales. Monthly figures are available from January 2023; the longer view is annual (see below). Construction is the largest sector across the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>; supplier cash-flow pressure is tracked in the <a href="/data/payment-practices-late-payment/">late payment statistics</a>.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="construction-monthly-title construction-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="construction-monthly-title">Monthly construction company insolvencies, England and Wales</title><desc id="construction-monthly-desc">Monthly company insolvencies in the construction sector, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">100</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">200</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">300</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">400</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">500</text></g><polyline points="60.0,146.14 80.1,122.86 100.2,59.81 120.3,151.26 140.4,44.47 160.5,92.18 180.6,155.80 200.7,87.07 220.8,118.88 240.9,96.73 261.0,72.30 281.1,103.54 301.2,138.76 321.3,109.22 341.4,133.08 361.5,82.53 381.6,108.09 401.7,84.80 421.8,117.18 441.9,125.13 462.0,145.01 482.0,130.24 502.1,129.67 522.2,145.58 542.3,138.76 562.4,102.98 582.5,97.86 602.6,125.70 622.7,93.32 642.8,127.40 662.9,123.42 683.0,146.14 703.1,146.14 723.2,103.54 743.3,139.33 763.4,156.94 783.5,152.96 803.6,138.76 823.7,114.90 843.8,80.26 863.9,143.87 884.0,136.49" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:292</title></circle><circle cx="80.1" cy="122.86" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:333</title></circle><circle cx="100.2" cy="59.81" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:444</title></circle><circle cx="120.3" cy="151.26" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:283</title></circle><circle cx="140.4" cy="44.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:471</title></circle><circle cx="160.5" cy="92.18" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:387</title></circle><circle cx="180.6" cy="155.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:275</title></circle><circle cx="200.7" cy="87.07" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:396</title></circle><circle cx="220.8" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:340</title></circle><circle cx="240.9" cy="96.73" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:379</title></circle><circle cx="261.0" cy="72.30" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:422</title></circle><circle cx="281.1" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:367</title></circle><circle cx="301.2" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:305</title></circle><circle cx="321.3" cy="109.22" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:357</title></circle><circle cx="341.4" cy="133.08" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:315</title></circle><circle cx="361.5" cy="82.53" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:404</title></circle><circle cx="381.6" cy="108.09" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:359</title></circle><circle cx="401.7" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:400</title></circle><circle cx="421.8" cy="117.18" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:343</title></circle><circle cx="441.9" cy="125.13" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:329</title></circle><circle cx="462.0" cy="145.01" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:294</title></circle><circle cx="482.0" cy="130.24" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:320</title></circle><circle cx="502.1" cy="129.67" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:321</title></circle><circle cx="522.2" cy="145.58" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:293</title></circle><circle cx="542.3" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:305</title></circle><circle cx="562.4" cy="102.98" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:368</title></circle><circle cx="582.5" cy="97.86" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:377</title></circle><circle cx="602.6" cy="125.70" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:328</title></circle><circle cx="622.7" cy="93.32" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:385</title></circle><circle cx="642.8" cy="127.40" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:325</title></circle><circle cx="662.9" cy="123.42" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:332</title></circle><circle cx="683.0" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:292</title></circle><circle cx="703.1" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:292</title></circle><circle cx="723.2" cy="103.54" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:367</title></circle><circle cx="743.3" cy="139.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:304</title></circle><circle cx="763.4" cy="156.94" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:273</title></circle><circle cx="783.5" cy="152.96" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:280</title></circle><circle cx="803.6" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:305</title></circle><circle cx="823.7" cy="114.90" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:347</title></circle><circle cx="843.8" cy="80.26" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:408</title></circle><circle cx="863.9" cy="143.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:296</title></circle><circle cx="884.0" cy="136.49" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2026:309</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="301.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="542.3" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="783.5" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
-    <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="construction-monthly-title construction-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="construction-monthly-title">Monthly construction company insolvencies, England and Wales</title><desc id="construction-monthly-desc">Monthly company insolvencies in the construction sector, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">100</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">200</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">300</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">400</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">500</text></g><polyline points="60.0,189.31 66.6,196.13 73.2,181.93 79.8,177.95 86.4,202.94 93.0,185.90 99.6,200.67 106.1,218.85 112.7,176.25 119.3,198.40 125.9,170.57 132.5,192.72 139.1,178.52 145.7,183.63 152.3,159.21 158.9,193.86 165.5,198.40 172.1,192.15 178.7,192.72 185.2,203.51 191.8,177.95 198.4,206.92 205.0,188.74 211.6,172.84 218.2,162.62 224.8,171.70 231.4,158.07 238.0,170.57 244.6,176.25 251.2,162.05 257.8,170.57 264.4,159.78 270.9,159.78 277.5,175.11 284.1,161.48 290.7,214.30 297.3,133.65 303.9,185.90 310.5,134.78 317.1,137.06 323.7,171.14 330.3,160.91 336.9,163.75 343.5,167.73 350.0,164.32 356.6,157.50 363.2,148.42 369.8,189.31 376.4,161.48 383.0,168.86 389.6,193.29 396.2,185.90 402.8,219.98 409.4,236.46 416.0,225.66 422.6,254.06 429.2,233.62 435.7,248.38 442.3,236.46 448.9,209.19 455.5,242.70 462.1,239.86 468.7,224.53 475.3,222.82 481.9,202.94 488.5,171.70 495.1,210.33 501.7,170.57 508.3,148.42 514.8,163.75 521.4,127.40 528.0,152.96 534.6,131.38 541.2,136.49 547.8,72.87 554.4,95.02 561.0,112.06 567.6,133.65 574.2,112.63 580.8,120.02 587.4,135.92 594.0,114.34 600.5,104.11 607.1,108.09 613.7,146.14 620.3,122.86 626.9,59.81 633.5,151.26 640.1,44.47 646.7,92.18 653.3,155.80 659.9,87.07 666.5,118.88 673.1,96.73 679.6,72.30 686.2,103.54 692.8,138.76 699.4,109.22 706.0,133.08 712.6,82.53 719.2,108.09 725.8,84.80 732.4,117.18 739.0,125.13 745.6,145.01 752.2,130.24 758.8,129.67 765.3,145.58 771.9,138.76 778.5,102.98 785.1,97.86 791.7,125.70 798.3,93.32 804.9,127.40 811.5,123.42 818.1,146.14 824.7,146.14 831.3,103.54 837.9,139.33 844.4,156.94 851.0,152.96 857.6,138.76 864.2,114.90 870.8,80.26 877.4,143.87 884.0,136.49" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="189.31" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2016:216</title></circle><circle cx="73.2" cy="181.93" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2016:229</title></circle><circle cx="86.4" cy="202.94" r="3.5" fill="transparent" stroke="transparent"><title>May 2016:192</title></circle><circle cx="99.6" cy="200.67" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2016:196</title></circle><circle cx="112.7" cy="176.25" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2016:239</title></circle><circle cx="125.9" cy="170.57" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2016:249</title></circle><circle cx="139.1" cy="178.52" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2017:235</title></circle><circle cx="152.3" cy="159.21" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2017:269</title></circle><circle cx="165.5" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>May 2017:200</title></circle><circle cx="178.7" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2017:210</title></circle><circle cx="191.8" cy="177.95" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2017:236</title></circle><circle cx="205.0" cy="188.74" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2017:217</title></circle><circle cx="218.2" cy="162.62" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2018:263</title></circle><circle cx="231.4" cy="158.07" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2018:271</title></circle><circle cx="244.6" cy="176.25" r="3.5" fill="transparent" stroke="transparent"><title>May 2018:239</title></circle><circle cx="257.8" cy="170.57" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2018:249</title></circle><circle cx="270.9" cy="159.78" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2018:268</title></circle><circle cx="284.1" cy="161.48" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2018:265</title></circle><circle cx="297.3" cy="133.65" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2019:314</title></circle><circle cx="310.5" cy="134.78" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2019:312</title></circle><circle cx="323.7" cy="171.14" r="3.5" fill="transparent" stroke="transparent"><title>May 2019:248</title></circle><circle cx="336.9" cy="163.75" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2019:261</title></circle><circle cx="350.0" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2019:260</title></circle><circle cx="363.2" cy="148.42" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2019:288</title></circle><circle cx="376.4" cy="161.48" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2020:265</title></circle><circle cx="389.6" cy="193.29" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2020:209</title></circle><circle cx="402.8" cy="219.98" r="3.5" fill="transparent" stroke="transparent"><title>May 2020:162</title></circle><circle cx="416.0" cy="225.66" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2020:152</title></circle><circle cx="429.2" cy="233.62" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2020:138</title></circle><circle cx="442.3" cy="236.46" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2020:133</title></circle><circle cx="455.5" cy="242.70" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2021:122</title></circle><circle cx="468.7" cy="224.53" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2021:154</title></circle><circle cx="481.9" cy="202.94" r="3.5" fill="transparent" stroke="transparent"><title>May 2021:192</title></circle><circle cx="495.1" cy="210.33" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2021:179</title></circle><circle cx="508.3" cy="148.42" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2021:288</title></circle><circle cx="521.4" cy="127.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2021:325</title></circle><circle cx="534.6" cy="131.38" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2022:318</title></circle><circle cx="547.8" cy="72.87" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2022:421</title></circle><circle cx="561.0" cy="112.06" r="3.5" fill="transparent" stroke="transparent"><title>May 2022:352</title></circle><circle cx="574.2" cy="112.63" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2022:351</title></circle><circle cx="587.4" cy="135.92" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2022:310</title></circle><circle cx="600.5" cy="104.11" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2022:366</title></circle><circle cx="613.7" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:292</title></circle><circle cx="626.9" cy="59.81" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:444</title></circle><circle cx="640.1" cy="44.47" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:471</title></circle><circle cx="653.3" cy="155.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:275</title></circle><circle cx="666.5" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:340</title></circle><circle cx="679.6" cy="72.30" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:422</title></circle><circle cx="692.8" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:305</title></circle><circle cx="706.0" cy="133.08" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:315</title></circle><circle cx="719.2" cy="108.09" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:359</title></circle><circle cx="732.4" cy="117.18" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:343</title></circle><circle cx="745.6" cy="145.01" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:294</title></circle><circle cx="758.8" cy="129.67" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:321</title></circle><circle cx="771.9" cy="138.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:305</title></circle><circle cx="785.1" cy="97.86" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:377</title></circle><circle cx="798.3" cy="93.32" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:385</title></circle><circle cx="811.5" cy="123.42" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:332</title></circle><circle cx="824.7" cy="146.14" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:292</title></circle><circle cx="837.9" cy="139.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:304</title></circle><circle cx="851.0" cy="152.96" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:280</title></circle><circle cx="864.2" cy="114.90" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:347</title></circle><circle cx="877.4" cy="143.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:296</title></circle><circle cx="884.0" cy="136.49" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2026:309</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2016</text><text x="218.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2018</text><text x="376.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2020</text><text x="534.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2022</text><text x="692.8" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="851.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
   </figure>
 </section>
 <section class="cd-section cd-w-standard" id="subsectors">
@@ -1194,7 +1191,7 @@
     <p class="cd-section-intro">Construction divides into the construction of buildings, civil engineering and specialised construction activities (the largest, covering trades such as electrical and plumbing).</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Construction company insolvencies by sub-sector, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Construction company insolvencies by sub-sector, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Sub-sector</th><th scope="col" class="cd-num">2016</th><th scope="col" class="cd-num">2025</th></tr></thead>
       <tbody><tr><th scope="row">Construction of buildings</th><td class="cd-num">818</td><td class="cd-num">1,536</td></tr><tr><th scope="row">Civil engineering</th><td class="cd-num">164</td><td class="cd-num">194</td></tr><tr><th scope="row">Specialised construction activities</th><td class="cd-num">1,575</td><td class="cd-num">2,218</td></tr></tbody>
     </table>
@@ -1204,12 +1201,12 @@
   <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Construction insolvencies by year, 2016 to 2025</h2></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Annual construction company insolvencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Annual construction company insolvencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Construction insolvencies</th></tr></thead>
       <tbody><tr><th scope="row">2016</th><td class="cd-num">2,557</td></tr><tr><th scope="row">2017</th><td class="cd-num">2,633</td></tr><tr><th scope="row">2018</th><td class="cd-num">2,996</td></tr><tr><th scope="row">2019</th><td class="cd-num">3,221</td></tr><tr><th scope="row">2020</th><td class="cd-num">2,061</td></tr><tr><th scope="row">2021</th><td class="cd-num">2,581</td></tr><tr><th scope="row">2022</th><td class="cd-num">4,168</td></tr><tr><th scope="row">2023</th><td class="cd-num">4,389</td></tr><tr><th scope="row">2024</th><td class="cd-num">4,040</td></tr><tr><th scope="row">2025</th><td class="cd-num">3,948</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table A1b).</p>
 </section>
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
@@ -1223,7 +1220,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
+      <li>Industry totals by three-digit SIC are published monthly, through the latest headline month, alongside the breakdown by insolvency procedure within each industry.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1236,7 +1233,7 @@
   <div class="cd-cite-card">
     <div class="cd-cite-card__left">
       <dl>
-        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table 1c, by industry).</dd>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table A1b, by industry).</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>17 July 2026</dd>
         <dt>Industry breakdown</dt><dd>Published quarterly (January, April, July, October).</dd>
@@ -1245,7 +1242,7 @@
     </div>
     <div class="cd-cite-card__right">
       <p class="cd-eyebrow">How to cite this page</p>
-      <p class="cd-cite-text" id="cd-citation-construction-insolvency-statistics">CompanyDebt. (2026). UK Construction Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).</p>
+      <p class="cd-cite-text" id="cd-citation-construction-insolvency-statistics">CompanyDebt. (2026). UK Construction Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table A1b).</p>
       <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-construction-insolvency-statistics">Copy citation</button>
     </div>
   </div>

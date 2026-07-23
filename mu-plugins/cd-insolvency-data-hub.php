@@ -50,6 +50,7 @@ function cd_datahub_known_slugs() {
         'amusement-recreation-insolvency-statistics',
         'real-estate-letting-investment-insolvency-statistics',
         'freight-forwarding-logistics-insolvency-statistics',
+        'retail-insolvency-statistics',
     );
 }
 
@@ -188,6 +189,10 @@ function cd_datahub_seo_meta( $slug ) {
         'freight-forwarding-logistics-insolvency-statistics' => array(
             'title' => 'UK Freight Forwarding & Logistics Insolvency Statistics 2026',
             'desc'  => 'Freight forwarding and logistics insolvencies are still running above last year on a rolling basis, even as road haulage falls sharply. Latest figures.',
+        ),
+        'retail-insolvency-statistics' => array(
+            'title' => 'UK Retail Sector Insolvency Statistics 2026',
+            'desc'  => 'Retail insolvencies fell 15.3% in 2026, the clearest sign yet the 2022-2023 failure wave has passed. See the real figures, sub-sector by sub-sector.',
         ),
     );
     return isset( $meta[ $slug ] ) ? $meta[ $slug ] : null;
@@ -520,6 +525,7 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
             array( 'Amusement and Recreation Insolvency Statistics', home_url( '/data/amusement-recreation-insolvency-statistics/' ) ),
             array( 'Real Estate Letting and Investment Insolvency Statistics', home_url( '/data/real-estate-letting-investment-insolvency-statistics/' ) ),
             array( 'Freight Forwarding and Logistics Insolvency Statistics', home_url( '/data/freight-forwarding-logistics-insolvency-statistics/' ) ),
+            array( 'Retail Sector Insolvency Statistics', home_url( '/data/retail-insolvency-statistics/' ) ),
         );
         $list_items = array();
         foreach ( $cards as $i => $card ) {
@@ -1892,6 +1898,70 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
                 '@type'      => 'FAQPage',
                 '@id'        => $ff_page_url . '#faq',
                 'mainEntity' => $ff_faq_main_entities,
+            ),
+        );
+    }
+
+    if ( 'retail-insolvency-statistics' === $slug ) {
+        $rt_page_url = home_url( '/data/retail-insolvency-statistics/' );
+        $rt_faq_items = array(
+            array(
+                'q' => 'How many UK retail businesses become insolvent each year?',
+                'a' => '1,962 companies in SIC division 47, retail trade, entered insolvency in England and Wales in 2025, down from the 2023 peak of 2,218 but 50% above the 1,308 recorded in 2019. Source: Insolvency Service, Table A1b.',
+            ),
+            array(
+                'q' => 'Are retail insolvencies falling in 2026?',
+                'a' => 'Yes. There were 852 insolvencies between January and June 2026 against 1,006 in the same months of 2025, a fall of 15.3%, and the rolling 12-month total fell 4.5% to 1,808. Both measures point the same way for the first time since the 2022-2023 surge.',
+            ),
+            array(
+                'q' => 'Which part of retail is struggling most?',
+                'a' => 'By percentage change, information and communication equipment retail fell hardest in 2026, down 57.7% from a small base. But the two largest sub-sectors by volume, other specialised-goods retail and non-store retail, both fell by a more moderate 10 to 12%. Household equipment retail was the only sub-sector to rise.',
+            ),
+            array(
+                'q' => 'Does this include motor dealers or wholesalers?',
+                'a' => 'No. This page counts SIC division 47, retail trade except of motor vehicles and motorcycles. Motor vehicle and motorcycle retail and repair (SIC division 45) and wholesale trade (SIC division 46) are recorded under separate codes within the same section.',
+            ),
+            array(
+                'q' => 'Do the figures cover the whole UK?',
+                'a' => 'No. The industry breakdown in Table A1b covers England and Wales only. Scotland and Northern Ireland run separate insolvency regimes and are reported separately.',
+            ),
+        );
+        $rt_faq_main_entities = array();
+        foreach ( $rt_faq_items as $item ) {
+            $rt_faq_main_entities[] = array(
+                '@type'          => 'Question',
+                'name'           => $item['q'],
+                'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ),
+            );
+        }
+        return array(
+            array(
+                '@type'            => 'Dataset',
+                'name'             => 'UK Retail Sector Insolvency Statistics',
+                'description'      => 'Company Debt analysis of Insolvency Service company insolvency data for retail trade except of motor vehicles and motorcycles (SIC division 47), England and Wales: year-to-date and rolling 12-month totals, the monthly series from 2023 and annual figures from 2016, with a sub-sector breakdown across all nine SIC groups within the division (471 to 479) and comparison against motor trade (SIC 45), wholesale trade (SIC 46) and the wholesale, retail and motor trade section overall (SIC G). Covers general and specialised stores, household goods, cultural and recreation goods, market stalls, and online and non-store retail. Excludes motor vehicle and motorcycle retail and repair, and wholesale trade. Source: Insolvency Service and Companies House.',
+                'url'              => $rt_page_url,
+                'creator'         => $org_ref,
+                'publisher'       => $org_ref,
+                'spatialCoverage' => array( '@type' => 'Place', 'name' => 'England and Wales' ),
+                'temporalCoverage' => '2016-01-01/2026-06-30',
+                'datePublished'   => $published,
+                'dateModified'    => $modified,
+                'isBasedOn'       => 'https://www.gov.uk/government/statistics/company-insolvencies-june-2026',
+                'measurementTechnique' => 'Company Debt calculations (percentage changes, rolling 12-month comparisons and sub-sector shares) from Insolvency Service company insolvency tables, identified via Companies House SIC division 47. The industry total is published monthly (Table A1b).',
+                'keywords'        => 'retail insolvency statistics, UK retailer insolvency 2026, high street business failures, SIC 47 insolvency statistics, UK',
+                'isAccessibleForFree'  => true,
+                'license'              => 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                'variableMeasured'     => array(
+                    'Retail company insolvencies (count)',
+                    'Annual percentage change',
+                    'Rolling 12-month count',
+                    'Sub-sector shares within retail trade (SIC 47)',
+                ),
+            ),
+            array(
+                '@type'      => 'FAQPage',
+                '@id'        => $rt_page_url . '#faq',
+                'mainEntity' => $rt_faq_main_entities,
             ),
         );
     }

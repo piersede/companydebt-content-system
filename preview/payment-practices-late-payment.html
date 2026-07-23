@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<title>Payment Practices & Late Payment | CompanyDebt</title>
+<meta name="description" content="How slowly large UK companies pay their suppliers, how many invoices are paid late, and which sectors are worst. Payment Practices Reporting data.">
+<style>
+/* ============================================================
+   CD DATA HUB — Winding-Up Petition Tracker
+   Same design system as the hub landing page. All styles scoped
+   under .cd-data-hub. Tokens, type scale, badges, KPI and card
+   rhythm are shared; chart, table and caveat components added.
+   ============================================================ */
+.cd-data-hub {
+  --cd-text: #101828;
+  --cd-text-soft: #1f2937;
+  --cd-muted: #667085;
+  --cd-line: #e4e7ec;
+  --cd-line-soft: #eef0f3;
+  --cd-surface: #ffffff;
+  --cd-surface-soft: #f8fafc;
+  --cd-accent: #0f4c81;
+  --cd-accent-soft: #e8f1f8;
+  --cd-figure: #0a1f44;
+  --cd-positive: #166534;
+  --cd-positive-dot: #16a34a;
+  --cd-cta-orange: #ec6608;
+
+  --cd-shadow-panel: 0 16px 45px rgba(16, 24, 40, 0.06);
+
+  --cd-s1: 8px;  --cd-s2: 16px; --cd-s3: 24px;
+  --cd-s4: 40px; --cd-s5: 64px; --cd-s6: 96px;
+
+  --cd-radius-panel: 24px;
+  --cd-radius-card: 18px;
+
+  /* type scale — five sizes only */
+  --fs-1: 12px;                   /* micro: labels, eyebrows, badges, sources */
+  --fs-2: 15px;                   /* body, descriptions, buttons */
+  --fs-3: 19px;                   /* leads & titles */
+  --fs-4: clamp(34px, 3vw, 44px); /* hero figures */
+  --fs-5: clamp(40px, 5vw, 56px); /* display H1 */
+
+  --cd-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  color: var(--cd-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: "tnum" 1;
+  font-size: var(--fs-2);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.cd-data-hub *, .cd-data-hub *::before, .cd-data-hub *::after { box-sizing: border-box; }
+.cd-data-hub img, .cd-data-hub svg { max-width: 100%; }
+.cd-data-hub a { color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cd-data-hub .cd-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* ── Width containers (two only) ──────────────────────────── */
+.cd-data-hub .cd-w-standard { max-width:1040px; margin-inline:auto; padding-inline:24px; }
+.cd-data-hub .cd-w-wide     { max-width:1040px; margin-inline:auto; padding-inline:24px; }
+
+/* ── Eyebrow ──────────────────────────────────────────────── */
+.cd-data-hub .cd-eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s2); line-height:1.2; display:inline-flex; align-items:center; }
+.cd-data-hub .cd-eyebrow__pulse { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cd-positive-dot); margin-right:10px; box-shadow:0 0 0 0 rgba(22,163,74,.6); animation:cd-pulse 2.2s ease-out infinite; }
+@keyframes cd-pulse { 0%{box-shadow:0 0 0 0 rgba(22,163,74,.6);} 70%{box-shadow:0 0 0 7px rgba(22,163,74,0);} 100%{box-shadow:0 0 0 0 rgba(22,163,74,0);} }
+@media (prefers-reduced-motion: reduce){ .cd-data-hub .cd-eyebrow__pulse{ animation:none; } }
+
+/* ── Back link ────────────────────────────────────────────── */
+.cd-data-hub .cd-back { display:inline-flex; align-items:center; gap:7px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--cd-muted); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-back:hover { color:var(--cd-accent); text-decoration:none; }
+
+/* ── Header ───────────────────────────────────────────────── */
+.cd-data-hub .cd-hub-header { padding-top:var(--cd-s5); padding-bottom:var(--cd-s2); }
+.cd-data-hub .cd-hub-header h1 { font-size:var(--fs-5); line-height:1.02; letter-spacing:-0.04em; font-weight:700; margin:0 0 var(--cd-s3); max-width:18ch; color:var(--cd-text); }
+.cd-data-hub .cd-standfirst { font-size:var(--fs-3); line-height:1.6; color:var(--cd-text-soft); max-width:64ch; margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-hub-meta { display:inline-flex; align-items:center; gap:var(--cd-s2); flex-wrap:wrap; font-size:var(--fs-1); letter-spacing:0.04em; text-transform:uppercase; font-weight:650; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-hub-meta__dot { color:var(--cd-line); }
+
+/* ── Section + group heads ────────────────────────────────── */
+.cd-data-hub .cd-section { margin-top:var(--cd-s6); }
+.cd-data-hub .cd-grouphead { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s3); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-grouphead h2 { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-grouphead__note { font-size:var(--fs-1); letter-spacing:0.04em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); }
+
+/* ── KPI strip ────────────────────────────────────────────── */
+.cd-data-hub .cd-kpi-strip { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); }
+.cd-data-hub .cd-kpi-card { grid-column:span 3; background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); display:flex; flex-direction:column; box-shadow:0 4px 14px rgba(16,24,40,.03); }
+.cd-data-hub .cd-kpi-card__v { font-size:var(--fs-4); line-height:1; font-weight:750; letter-spacing:-0.03em; color:var(--cd-figure); font-variant-numeric:tabular-nums; margin:0; }
+.cd-data-hub .cd-kpi-card__k { margin:var(--cd-s2) 0 0; font-size:var(--fs-2); font-weight:600; color:var(--cd-text); }
+.cd-data-hub .cd-kpi-card__src { margin:auto 0 0; padding-top:var(--cd-s2); font-size:var(--fs-1); line-height:1.5; color:var(--cd-muted); }
+.cd-data-hub .cd-kpi-card__src b { display:block; font-weight:600; color:var(--cd-text-soft); margin-bottom:2px; }
+
+/* ── Freshness badges ─────────────────────────────────────── */
+.cd-data-hub .cd-badge { flex:none; display:inline-flex; align-items:center; gap:7px; padding:4px 11px; border-radius:100px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.01em; white-space:nowrap; }
+.cd-data-hub .cd-badge::before { content:""; width:6px; height:6px; border-radius:999px; }
+.cd-data-hub .cd-badge--latest { background:#f0fdf4; border:1px solid #bbf7d0; color:var(--cd-positive); }
+.cd-data-hub .cd-badge--latest::before { background:var(--cd-positive-dot); }
+.cd-data-hub .cd-badge--provisional { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; }
+.cd-data-hub .cd-badge--provisional::before { background:#ea580c; }
+
+/* ── Panel (charts, table) ────────────────────────────────── */
+.cd-data-hub .cd-panel { background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); box-shadow:var(--cd-shadow-panel); }
+.cd-data-hub .cd-panel__head { display:flex; align-items:flex-start; justify-content:space-between; gap:var(--cd-s3); margin-bottom:var(--cd-s4); }
+.cd-data-hub .cd-panel__eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-panel__title { font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); margin:0; max-width:36ch; }
+.cd-data-hub .cd-source { margin:var(--cd-s3) 0 0; font-size:var(--fs-1); line-height:1.6; color:var(--cd-muted); }
+.cd-data-hub .cd-source b { font-weight:600; color:var(--cd-text-soft); }
+
+/* ── Legend ───────────────────────────────────────────────── */
+.cd-data-hub .cd-legend { display:flex; flex-wrap:wrap; gap:var(--cd-s3); margin-bottom:var(--cd-s3); }
+.cd-data-hub .cd-legend__item { display:inline-flex; align-items:center; gap:8px; font-size:var(--fs-1); font-weight:600; letter-spacing:0.02em; text-transform:uppercase; color:var(--cd-muted); }
+.cd-data-hub .cd-legend__swatch { width:14px; height:3px; border-radius:2px; }
+
+/* ── Column chart ─────────────────────────────────────────── */
+.cd-data-hub .cd-scroll { overflow-x:auto; }
+.cd-data-hub .cd-colchart { display:flex; align-items:flex-end; gap:10px; height:300px; min-width:620px; padding-top:18px; }
+.cd-data-hub .cd-col { flex:1; display:flex; flex-direction:column; align-items:center; height:100%; }
+.cd-data-hub .cd-col__track { flex:1; width:100%; display:flex; align-items:flex-end; justify-content:center; }
+.cd-data-hub .cd-col__bar { position:relative; width:62%; max-width:30px; background:var(--cd-accent); border-radius:5px 5px 0 0; }
+.cd-data-hub .cd-col:last-child .cd-col__bar { background:var(--cd-figure); }
+.cd-data-hub .cd-col__v { position:absolute; top:-19px; left:50%; transform:translateX(-50%); font-size:var(--fs-1); font-weight:600; color:var(--cd-text-soft); font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-col__x { margin-top:10px; font-size:var(--fs-1); color:var(--cd-muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cd-data-hub .cd-col__x small { color:var(--cd-text-soft); font-weight:600; margin-left:2px; }
+
+/* ── Line chart (SVG) ─────────────────────────────────────── */
+.cd-data-hub .cd-linechart { width:100%; height:auto; display:block; min-width:620px; }
+.cd-data-hub .cd-grid { stroke:var(--cd-line); stroke-width:1; }
+.cd-data-hub .cd-axis-y { fill:var(--cd-muted); font-size:12px; text-anchor:end; font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-axis-x { fill:var(--cd-muted); font-size:12px; text-anchor:middle; }
+.cd-data-hub .cd-line { fill:none; stroke-width:2.5; stroke-linejoin:round; stroke-linecap:round; }
+.cd-data-hub .cd-line--p { stroke:var(--cd-accent); }
+.cd-data-hub .cd-line--o { stroke:var(--cd-figure); }
+.cd-data-hub .cd-dot--p { fill:var(--cd-accent); }
+.cd-data-hub .cd-dot--o { fill:var(--cd-figure); }
+
+/* ── Table ────────────────────────────────────────────────── */
+.cd-data-hub .cd-table { width:100%; border-collapse:collapse; }
+.cd-data-hub .cd-table thead th { text-align:left; font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-muted); padding:0 0 var(--cd-s2); border-bottom:1px solid var(--cd-line); }
+.cd-data-hub .cd-table thead th.num { text-align:right; }
+.cd-data-hub .cd-table tbody td { padding:16px 0; border-bottom:1px solid var(--cd-line-soft); }
+.cd-data-hub .cd-table tbody tr:last-child td { border-bottom:0; }
+.cd-data-hub .cd-table td.lab { font-weight:600; color:var(--cd-text); }
+.cd-data-hub .cd-table td.lab span { display:block; font-weight:400; font-size:var(--fs-1); color:var(--cd-muted); margin-top:2px; }
+.cd-data-hub .cd-table td.num { text-align:right; font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-figure); font-variant-numeric:tabular-nums; vertical-align:middle; }
+
+/* ── Lower two-column composition (shared 12-col grid) ────── */
+.cd-data-hub .cd-lower { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); align-items:stretch; }
+.cd-data-hub .cd-lower__main { grid-column:span 6; display:flex; flex-direction:column; }
+.cd-data-hub .cd-lower__main > .cd-panel { flex:1; }
+.cd-data-hub .cd-lower__side { grid-column:span 6; display:flex; flex-direction:column; gap:var(--cd-s3); }
+.cd-data-hub .cd-lower__side > .cd-grouphead { margin-bottom:0; }
+
+/* ── Caveat panel (amber, unmissable) ─────────────────────── */
+.cd-data-hub .cd-caveat { display:grid; grid-template-columns:1fr; gap:var(--cd-s3); align-content:start; background:#fff7ed; border:1px solid #fed7aa; border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-caveat__label { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#9a3412; margin:0 0 var(--cd-s2); }
+.cd-data-hub .cd-caveat h2 { font-size:var(--fs-3); line-height:1.35; font-weight:650; letter-spacing:-0.01em; color:#7c2d12; margin:0 0 var(--cd-s2); max-width:46ch; }
+.cd-data-hub .cd-caveat p { font-size:var(--fs-2); line-height:1.6; color:#7c2d12; margin:0; max-width:52ch; }
+.cd-data-hub .cd-caveat__stat { background:#fff; border:1px solid #fed7aa; border-radius:var(--cd-radius-card); padding:var(--cd-s3); text-align:left; }
+.cd-data-hub .cd-caveat__stat .v { font-size:var(--fs-4); font-weight:750; letter-spacing:-0.03em; color:#9a3412; font-variant-numeric:tabular-nums; line-height:1; }
+.cd-data-hub .cd-caveat__stat .k { margin-top:var(--cd-s2); font-size:var(--fs-1); line-height:1.5; color:#9a3412; }
+.cd-data-hub .cd-caveat__stat .k b { display:block; font-weight:600; }
+
+/* ── Credibility note ─────────────────────────────────────── */
+.cd-data-hub .cd-cred { display:grid; grid-template-columns:auto 1fr; gap:var(--cd-s4); align-items:center; background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-cred__fig { text-align:center; padding-right:var(--cd-s4); border-right:1px solid var(--cd-line); }
+.cd-data-hub .cd-cred__fig .v { font-size:var(--fs-4); font-weight:750; letter-spacing:-0.03em; color:var(--cd-figure); font-variant-numeric:tabular-nums; line-height:1; }
+.cd-data-hub .cd-cred__fig .k { margin-top:var(--cd-s1); font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.04em; color:var(--cd-muted); }
+.cd-data-hub .cd-cred__body p { margin:0; font-size:var(--fs-2); line-height:1.65; color:var(--cd-text-soft); max-width:62ch; }
+.cd-data-hub .cd-cred__body .cd-eyebrow { margin-bottom:var(--cd-s1); }
+
+/* ── Cite this data ───────────────────────────────────────── */
+.cd-data-hub .cd-cite { background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s4); }
+.cd-data-hub .cd-cite__eyebrow { font-size:var(--fs-1); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-cite h2 { font-size:var(--fs-3); font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-cite__text { background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); margin:0; font-size:var(--fs-2); line-height:1.65; color:var(--cd-text); font-variant-numeric:tabular-nums; }
+.cd-data-hub .cd-cite__actions { display:flex; align-items:center; gap:var(--cd-s3); margin-top:var(--cd-s3); flex-wrap:wrap; }
+.cd-data-hub .cd-cite__btn { display:inline-flex; align-items:center; gap:9px; background:var(--cd-figure); color:#fff; border:0; cursor:pointer; font-family:inherit; font-size:var(--fs-2); font-weight:650; padding:12px 22px; border-radius:10px; transition:filter .14s ease; }
+.cd-data-hub .cd-cite__btn:hover { filter:brightness(1.18); }
+.cd-data-hub .cd-cite__btn svg { width:15px; height:15px; }
+.cd-data-hub .cd-cite__status { font-size:var(--fs-1); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--cd-positive); }
+
+/* ── Final CTA ────────────────────────────────────────────── */
+.cd-data-hub .cd-cta { margin-top:var(--cd-s6); background:#f3f7fb; border:1px solid var(--cd-line); border-radius:var(--cd-radius-panel); padding:var(--cd-s5) var(--cd-s4); display:flex; flex-direction:column; align-items:center; text-align:center; }
+.cd-data-hub .cd-cta h2 { font-size:var(--fs-3); line-height:1.25; letter-spacing:-0.02em; font-weight:700; color:var(--cd-text); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-cta p { font-size:var(--fs-2); color:var(--cd-text-soft); max-width:54ch; margin:0 0 var(--cd-s3); }
+.cd-data-hub .cd-cta__btn { display:inline-flex; align-items:center; gap:8px; background:var(--cd-cta-orange); color:#fff; font-size:var(--fs-2); font-weight:650; padding:14px 26px; border-radius:10px; transition:filter .14s ease; }
+.cd-data-hub .cd-cta__btn:hover { filter:brightness(.94); text-decoration:none; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.cd-data-hub .cd-hub-foot { margin-top:var(--cd-s4); padding-bottom:var(--cd-s5); font-size:var(--fs-1); line-height:1.6; color:var(--cd-muted); max-width:80ch; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width:980px){
+  .cd-data-hub .cd-kpi-card { grid-column:span 6; }
+  .cd-data-hub .cd-lower__main, .cd-data-hub .cd-lower__side { grid-column:span 12; }
+  .cd-data-hub .cd-cred { grid-template-columns:1fr; }
+  .cd-data-hub .cd-cred__fig { padding:0 0 var(--cd-s3); border-right:0; border-bottom:1px solid var(--cd-line); text-align:left; }
+}
+@media (max-width:600px){
+  .cd-data-hub .cd-section { margin-top:var(--cd-s5); }
+  .cd-data-hub .cd-kpi-card { grid-column:span 12; }
+  .cd-data-hub .cd-panel { padding:var(--cd-s3); }
+}
+
+/* ── Scale comparison bars ────────────────────────────────── */
+.cd-data-hub .cd-scalebar { display:flex; flex-direction:column; gap:var(--cd-s4); }
+.cd-data-hub .cd-scalebar__head { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s2); margin-bottom:var(--cd-s2); flex-wrap:wrap; }
+.cd-data-hub .cd-scalebar__k { font-size:var(--fs-2); font-weight:650; color:var(--cd-text); }
+.cd-data-hub .cd-scalebar__src { font-size:var(--fs-1); color:var(--cd-muted); }
+.cd-data-hub .cd-scalebar__track { background:var(--cd-surface-soft); border:1px solid var(--cd-line); border-radius:9px; height:60px; display:flex; align-items:stretch; }
+.cd-data-hub .cd-scalebar__fill { height:100%; border-radius:8px; display:flex; align-items:center; position:relative; min-width:3px; }
+.cd-data-hub .cd-scalebar__fill--diss { background:#cdddee; }
+.cd-data-hub .cd-scalebar__fill--ins { background:var(--cd-accent); }
+.cd-data-hub .cd-scalebar__v { font-size:var(--fs-3); font-weight:700; color:var(--cd-figure); font-variant-numeric:tabular-nums; padding:0 var(--cd-s3); white-space:nowrap; }
+.cd-data-hub .cd-scalebar__v--out { position:absolute; left:100%; margin-left:14px; color:var(--cd-accent); padding:0; }
+.cd-data-hub .cd-scale-callout { margin:var(--cd-s4) 0 0; font-size:var(--fs-3); line-height:1.45; font-weight:650; letter-spacing:-0.01em; color:var(--cd-text); max-width:60ch; }
+.cd-data-hub .cd-scale-callout b { color:var(--cd-accent); }
+
+/* ── Reason cards ─────────────────────────────────────────── */
+.cd-data-hub .cd-section-lead { font-size:var(--fs-3); line-height:1.6; color:var(--cd-text-soft); max-width:72ch; margin:0 0 var(--cd-s4); }
+.cd-data-hub .cd-reasons { display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--cd-s3); }
+.cd-data-hub .cd-reason { grid-column:span 4; background:var(--cd-surface); border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s3); }
+.cd-data-hub .cd-reason__n { font-size:var(--fs-1); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--cd-accent); margin:0 0 var(--cd-s2); }
+.cd-data-hub .cd-reason__t { font-size:var(--fs-2); font-weight:650; color:var(--cd-text); margin:0 0 var(--cd-s1); }
+.cd-data-hub .cd-reason__d { font-size:var(--fs-2); line-height:1.6; color:var(--cd-text-soft); margin:0; }
+@media (max-width:980px){ .cd-data-hub .cd-reason { grid-column:span 12; } }
+
+/* ── Publication identity: masthead, colophon, source marks ─ */
+.cd-data-hub .cd-hub-header h1,
+.cd-data-hub .cd-panel__title,
+.cd-data-hub .cd-caveat h2,
+.cd-data-hub .cd-cta h2,
+.cd-data-hub .cd-cite h2,
+.cd-data-hub .cd-scale-callout { font-family:var(--cd-serif); }
+.cd-data-hub .cd-hub-header h1 { letter-spacing:-0.02em; font-weight:700; }
+.cd-data-hub .cd-panel__title { font-weight:700; }
+
+.cd-data-hub .cd-masthead { display:flex; align-items:center; justify-content:space-between; gap:var(--cd-s3); padding-top:var(--cd-s3); padding-bottom:var(--cd-s3); border-bottom:1px solid var(--cd-line); flex-wrap:wrap; }
+.cd-data-hub .cd-brand { display:inline-flex; align-items:center; gap:12px; color:var(--cd-text); }
+.cd-data-hub .cd-brand:hover { text-decoration:none; }
+.cd-data-hub .cd-brand__mark { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:9px; background:var(--cd-figure); color:#fff; font-family:var(--cd-serif); font-weight:700; font-size:16px; letter-spacing:0.02em; }
+.cd-data-hub .cd-brand__name { font-family:var(--cd-serif); font-weight:700; font-size:18px; letter-spacing:-0.01em; line-height:1; }
+.cd-data-hub .cd-brand__sub { font-size:var(--fs-1); letter-spacing:0.07em; text-transform:uppercase; color:var(--cd-muted); border-left:1px solid var(--cd-line); padding-left:12px; }
+.cd-data-hub .cd-masthead__meta { display:inline-flex; align-items:center; gap:var(--cd-s3); font-size:var(--fs-1); letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--cd-muted); margin:0; }
+.cd-data-hub .cd-verified { display:inline-flex; align-items:center; gap:7px; color:var(--cd-positive); }
+.cd-data-hub .cd-verified svg { width:14px; height:14px; }
+
+.cd-data-hub .cd-hub-header__grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:var(--cd-s5); align-items:start; }
+.cd-data-hub .cd-hub-header__copy { min-width:0; }
+.cd-data-hub .cd-colophon { border:1px solid var(--cd-line); border-radius:var(--cd-radius-card); padding:var(--cd-s2) var(--cd-s3); min-width:236px; background:var(--cd-surface); box-shadow:0 4px 14px rgba(16,24,40,.03); }
+.cd-data-hub .cd-colophon__h { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-accent); margin:var(--cd-s1) 0; }
+.cd-data-hub .cd-colophon dl { margin:0; }
+.cd-data-hub .cd-colophon dl > div { display:flex; align-items:baseline; justify-content:space-between; gap:var(--cd-s2); padding:10px 0; border-top:1px solid var(--cd-line-soft); }
+.cd-data-hub .cd-colophon dt { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.05em; color:var(--cd-muted); font-weight:600; }
+.cd-data-hub .cd-colophon dd { margin:0; font-size:var(--fs-1); font-weight:700; color:var(--cd-text); letter-spacing:0.01em; font-variant-numeric:tabular-nums; }
+
+.cd-data-hub .cd-sources { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:var(--cd-s4); }
+.cd-data-hub .cd-sources__label { font-size:var(--fs-1); text-transform:uppercase; letter-spacing:0.07em; font-weight:700; color:var(--cd-muted); }
+.cd-data-hub .cd-srcchip { display:inline-flex; align-items:center; gap:9px; padding:6px 13px 6px 7px; border:1px solid var(--cd-line); border-radius:100px; background:var(--cd-surface); font-size:var(--fs-1); font-weight:600; color:var(--cd-text); white-space:nowrap; }
+.cd-data-hub .cd-srcchip__mark { display:inline-grid; place-items:center; width:24px; height:24px; border-radius:6px; background:var(--cd-accent-soft); color:var(--cd-accent); font-size:10px; font-weight:800; letter-spacing:0.03em; }
+
+@media (max-width:900px){
+  .cd-data-hub .cd-hub-header__grid { grid-template-columns:1fr; gap:var(--cd-s4); }
+  .cd-data-hub .cd-colophon { width:100%; }
+}
+@media (max-width:560px){
+  .cd-data-hub .cd-brand__sub { display:none; }
+  .cd-data-hub .cd-masthead__meta { display:none; }
+}
+
+/* ── Data sources logo strip ──────────────────────────────── */
+.cd-data-hub .cd-srcstrip { display:flex; align-items:center; gap:40px; flex-wrap:wrap; padding:28px 0; border-top:1px solid var(--cd-line); border-bottom:1px solid var(--cd-line); }
+.cd-data-hub .cd-srcstrip__label { font-size:var(--fs-1,12px); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--cd-muted); flex:none; }
+.cd-data-hub .cd-srcstrip__logos { display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+.cd-data-hub .cd-srclogo { display:flex; flex-direction:column; gap:9px; margin:0; }
+.cd-data-hub .cd-srclogo img { height:74px; width:auto; max-width:240px; display:block; object-fit:contain; }
+.cd-data-hub .cd-srclogo figcaption { font-size:var(--fs-1,12px); color:var(--cd-muted); font-weight:600; letter-spacing:0.02em; }
+@media (max-width:560px){ .cd-data-hub .cd-srclogo img { height:56px; } .cd-data-hub .cd-srcstrip { gap:20px; } }
+
+/* ── Stacked "where invoices land" bar ────────────────────── */
+.cd-data-hub .cd-stack { display:flex; height:64px; border-radius:9px; overflow:hidden; border:1px solid var(--cd-line); }
+.cd-data-hub .cd-stack__seg { display:flex; align-items:center; justify-content:center; min-width:0; color:#fff; font-weight:700; font-variant-numeric:tabular-nums; font-size:var(--fs-2); white-space:nowrap; }
+.cd-data-hub .cd-stack__seg--a { background:#cdddee; color:var(--cd-figure); }
+.cd-data-hub .cd-stack__seg--b { background:#6a98c4; }
+.cd-data-hub .cd-stack__seg--c { background:var(--cd-accent); }
+.cd-data-hub .cd-stacklegend { display:flex; flex-wrap:wrap; gap:var(--cd-s3); margin-top:var(--cd-s3); }
+.cd-data-hub .cd-stacklegend__item { display:inline-flex; align-items:center; gap:9px; font-size:var(--fs-1); font-weight:600; color:var(--cd-text-soft); }
+.cd-data-hub .cd-stacklegend__sw { width:13px; height:13px; border-radius:3px; flex:none; }
+/* sector table: slowest rows carry a quiet accent tick */
+.cd-data-hub .cd-table td.num--lead { color:var(--cd-accent); }
+</style>
+<style id="cd-mastnav-css">
+.cd-data-hub .cd-mastnav { display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.cd-data-hub .cd-mastnav a { font-size:13px; font-weight:600; letter-spacing:.01em; color:var(--cd-text-soft); padding:7px 12px; border-radius:8px; white-space:nowrap; }
+.cd-data-hub .cd-mastnav a:hover { background:var(--cd-surface-soft); color:var(--cd-accent); text-decoration:none; }
+.cd-data-hub .cd-mastnav a[aria-current="page"] { color:var(--cd-accent); background:var(--cd-accent-soft); }
+.cd-data-hub .cd-masthead__meta { margin-left:auto; }
+@media (max-width:1120px){ .cd-data-hub .cd-masthead__meta { display:none; } }
+@media (max-width:640px){ .cd-data-hub .cd-mastnav a { font-size:12px; padding:6px 9px; } }
+</style>
+</head>
+<body style="margin:0; background:#ffffff;">
+
+<main class="cd-data-hub">
+
+  <div class="cd-masthead cd-w-wide">
+    <a class="cd-brand" href="/">
+      <span class="cd-brand__mark" aria-hidden="true">CD</span>
+      <span class="cd-brand__name">CompanyDebt</span>
+      <span class="cd-brand__sub">Insolvency Data Hub</span>
+    </a>
+    <nav class="cd-mastnav" aria-label="Data hub pages"><a href="uk-insolvency-statistics.html">Insolvency Statistics</a><a href="winding-up-petition-tracker.html">Petition Tracker</a><a href="company-dissolutions-vs-insolvencies.html">Dissolutions</a><a href="payment-practices-late-payment.html" aria-current="page">Late Payment</a></nav>
+  </div>
+
+  <header class="cd-hub-header cd-w-wide">
+    <a class="cd-back" href="company-insolvency-data-hub.html"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
+    <div class="cd-hub-header__grid">
+      <div class="cd-hub-header__copy">
+        <p class="cd-eyebrow"><span class="cd-eyebrow__pulse" aria-hidden="true"></span>Supplier payment</p>
+        <h1>Payment Practices &amp; Late Payment</h1>
+        <p class="cd-standfirst">Large UK companies must report how quickly they pay their suppliers. Late payment drains cash from smaller firms and is a common trigger for insolvency. This page tracks how long big companies take to pay, how many invoices are paid late, and which sectors are slowest.</p>
+      </div>
+      <aside class="cd-colophon" aria-label="Publication details">
+        <p class="cd-colophon__h">Publication</p>
+        <dl>
+          <div><dt>Series</dt><dd>2026</dd></div>
+          <div><dt>Updated</dt><dd>Six-monthly</dd></div>
+          <div><dt>Coverage</dt><dd>United Kingdom</dd></div>
+          <div><dt>Compiled</dt><dd>Independently</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <div class="cd-w-wide" style="margin-top:8px">
+    <div class="cd-srcstrip">
+      <span class="cd-srcstrip__label">Data sources</span>
+      <div class="cd-srcstrip__logos">
+        <figure class="cd-srclogo"><img src="assets/logo-dbt-trim.png" alt="Department for Business and Trade logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="cd-srcchip" style="display:none"><span class="cd-srcchip__mark" aria-hidden="true">DBT</span>Department for Business and Trade</span></figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI strip -->
+  <section class="cd-section cd-w-wide" aria-labelledby="glance-h">
+    <div class="cd-grouphead">
+      <h2 id="glance-h">Latest at a glance</h2>
+      <span class="cd-grouphead__note">Latest reporting period</span>
+    </div>
+    <div class="cd-kpi-strip">
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">34.5 days</p>
+        <p class="cd-kpi-card__k">Average time to pay an invoice</p>
+        <p class="cd-kpi-card__src"><b>Across all reporting businesses</b>Department for Business and Trade</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">22%</p>
+        <p class="cd-kpi-card__k">Invoices paid later than agreed terms</p>
+        <p class="cd-kpi-card__src"><b>Not paid within agreed period</b>Department for Business and Trade</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">60%</p>
+        <p class="cd-kpi-card__k">Invoices paid within 30 days</p>
+        <p class="cd-kpi-card__src"><b>Of all invoices reported</b>Department for Business and Trade</p>
+      </article>
+      <article class="cd-kpi-card">
+        <p class="cd-kpi-card__v">6,882</p>
+        <p class="cd-kpi-card__k">Companies in the latest data</p>
+        <p class="cd-kpi-card__src"><b>Most recent report each, to May 2026</b>Department for Business and Trade</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Chart A: average days to pay -->
+  <section class="cd-section cd-w-wide" aria-labelledby="chartA-h">
+    <div class="cd-panel">
+      <div class="cd-panel__head">
+        <div>
+          <p class="cd-panel__eyebrow">Chart A &middot; Speed of payment</p>
+          <h2 class="cd-panel__title" id="chartA-h">How long large companies take to pay</h2>
+        </div>
+        <span class="cd-badge cd-badge--latest">Latest</span>
+      </div>
+      <div class="cd-scroll">
+        <div class="cd-colchart" role="img" aria-label="Column chart of the average number of days large companies take to pay an invoice, by six-monthly reporting period, from 35 days in H1 2023 to 34 days in H2 2025.">
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:87.0%"><span class="cd-col__v">35</span></div></div>
+          <div class="cd-col__x">H1 2023</div>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:85.7%"><span class="cd-col__v">35</span></div></div>
+          <div class="cd-col__x">H2 2023</div>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:85.2%"><span class="cd-col__v">35</span></div></div>
+          <div class="cd-col__x">H1 2024</div>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:84.3%"><span class="cd-col__v">34</span></div></div>
+          <div class="cd-col__x">H2 2024</div>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:84.5%"><span class="cd-col__v">34</span></div></div>
+          <div class="cd-col__x">H1 2025</div>
+        </div>
+        <div class="cd-col">
+          <div class="cd-col__track"><div class="cd-col__bar" style="height:84.7%"><span class="cd-col__v">34</span></div></div>
+          <div class="cd-col__x">H2 2025</div>
+        </div>
+        </div>
+      </div>
+      <p class="cd-source"><b>Source: Department for Business and Trade, Payment Practices Reporting.</b> Average reported days to pay an invoice, by six-monthly reporting period. Company Debt calculations from the DBT Payment Practices Reporting bulk export: most recently filed report per company per period, periods shown once their 30-day filing deadline plus a margin has passed.</p>
+    </div>
+  </section>
+
+  <!-- Chart B: where invoices land (centrepiece) -->
+  <section class="cd-section cd-w-wide" aria-labelledby="chartB-h">
+    <div class="cd-panel">
+      <div class="cd-panel__head">
+        <div>
+          <p class="cd-panel__eyebrow">Chart B &middot; When invoices are paid</p>
+          <h2 class="cd-panel__title" id="chartB-h">Where invoices land</h2>
+        </div>
+        <span class="cd-badge cd-badge--latest">Latest</span>
+      </div>
+      <div class="cd-stack" role="img" aria-label="Stacked bar showing when reported invoices are paid: 60 per cent within 30 days, 28 per cent in 31 to 60 days, and 12 per cent at 61 days or more.">
+        <div class="cd-stack__seg cd-stack__seg--a" style="width:60%">60%</div>
+        <div class="cd-stack__seg cd-stack__seg--b" style="width:28%">28%</div>
+        <div class="cd-stack__seg cd-stack__seg--c" style="width:12%">12%</div>
+      </div>
+      <div class="cd-stacklegend">
+        <span class="cd-stacklegend__item"><span class="cd-stacklegend__sw" style="background:#cdddee"></span>Within 30 days</span>
+        <span class="cd-stacklegend__item"><span class="cd-stacklegend__sw" style="background:#6a98c4"></span>31&ndash;60 days</span>
+        <span class="cd-stacklegend__item"><span class="cd-stacklegend__sw" style="background:var(--cd-accent)"></span>61+ days</span>
+      </div>
+      <p class="cd-scale-callout"><b>22% of invoices</b> are paid outside agreed terms, cash that smaller suppliers are owed but cannot yet use.</p>
+      <p class="cd-source"><b>Source: Department for Business and Trade, Payment Practices Reporting.</b> Share of reported invoices by time taken to pay. Paid outside agreed terms cuts across these bands. Company Debt calculations from the DBT Payment Practices Reporting bulk export.</p>
+    </div>
+  </section>
+
+  <!-- Sector table -->
+  <section class="cd-section cd-w-wide" aria-labelledby="sector-h">
+    <div class="cd-grouphead">
+      <h2 id="sector-h">Payment performance by sector</h2>
+      <span class="cd-grouphead__note">Slowest first</span>
+    </div>
+    <div class="cd-panel">
+      <table class="cd-table">
+        <thead>
+          <tr>
+            <th scope="col">Sector</th>
+            <th scope="col" class="num">Avg days to pay</th>
+            <th scope="col" class="num">% paid late</th>
+            <th scope="col" class="num">% paid within 30 days</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr><td class="lab">Manufacturing</td><td class="num num--lead">47</td><td class="num">29%</td><td class="num">37%</td></tr>
+              <tr><td class="lab">Wholesale and retail</td><td class="num num--lead">38</td><td class="num">24%</td><td class="num">48%</td></tr>
+              <tr><td class="lab">Water and waste</td><td class="num num--lead">36</td><td class="num">24%</td><td class="num">54%</td></tr>
+              <tr><td class="lab">Mining and quarrying</td><td class="num">35</td><td class="num">20%</td><td class="num">60%</td></tr>
+              <tr><td class="lab">Construction</td><td class="num">35</td><td class="num">19%</td><td class="num">54%</td></tr>
+              <tr><td class="lab">Professional services</td><td class="num">34</td><td class="num">22%</td><td class="num">64%</td></tr>
+              <tr><td class="lab">Other services</td><td class="num">34</td><td class="num">21%</td><td class="num">63%</td></tr>
+              <tr><td class="lab">Transport and storage</td><td class="num">34</td><td class="num">20%</td><td class="num">56%</td></tr>
+              <tr><td class="lab">Accommodation and food</td><td class="num">34</td><td class="num">18%</td><td class="num">56%</td></tr>
+              <tr><td class="lab">Information and communication</td><td class="num">34</td><td class="num">23%</td><td class="num">67%</td></tr>
+              <tr><td class="lab">Agriculture, forestry and fishing</td><td class="num">34</td><td class="num">22%</td><td class="num">59%</td></tr>
+              <tr><td class="lab">Arts and recreation</td><td class="num">32</td><td class="num">21%</td><td class="num">64%</td></tr>
+              <tr><td class="lab">Real estate</td><td class="num">30</td><td class="num">24%</td><td class="num">73%</td></tr>
+              <tr><td class="lab">Admin and support</td><td class="num">30</td><td class="num">20%</td><td class="num">67%</td></tr>
+              <tr><td class="lab">Health and social work</td><td class="num">29</td><td class="num">17%</td><td class="num">71%</td></tr>
+              <tr><td class="lab">Electricity and gas</td><td class="num">28</td><td class="num">17%</td><td class="num">74%</td></tr>
+              <tr><td class="lab">Education</td><td class="num">25</td><td class="num">19%</td><td class="num">79%</td></tr>
+              <tr><td class="lab">Finance and insurance</td><td class="num">24</td><td class="num">18%</td><td class="num">80%</td></tr>
+        </tbody>
+      </table>
+      <p class="cd-source"><b>Source: Department for Business and Trade, Payment Practices Reporting.</b> Figures are self-reported by businesses above the reporting threshold. Company Debt calculations from the DBT Payment Practices Reporting bulk export, most recent report per company in the trailing window. 3 sectors with fewer than 20 reporting companies excluded, too small a sample to average reliably.</p>
+    </div>
+  </section>
+
+  <!-- Caveat -->
+  <section class="cd-section cd-w-standard" aria-labelledby="caveat-h">
+    <div class="cd-caveat">
+      <div>
+        <p class="cd-caveat__label">Read this first</p>
+        <h2 id="caveat-h">Payment-practices figures are self-reported by large businesses.</h2>
+        <p>They describe payment behaviour, not insolvency. Slow payment is a pressure on suppliers, not a measure of the reporting company's own solvency.</p>
+      </div>
+      <div class="cd-caveat__stat">
+        <div class="v">33%</div>
+        <div class="k"><b>of invoices paid late</b>outside the agreed payment terms</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cite this data -->
+  <section class="cd-section cd-w-standard" aria-labelledby="cite-h">
+    <div class="cd-cite" data-cite-title="Payment Practices & Late Payment" data-cite-url="https://www.companydebt.com/data/company-insolvency/payment-practices-late-payment/">
+      <p class="cd-cite__eyebrow">Cite this data</p>
+      <h2 id="cite-h">Reference these figures</h2>
+      <p class="cd-cite__text" id="citation">CompanyDebt (2026) &lsquo;Payment Practices &amp; Late Payment&rsquo;.</p>
+      <div class="cd-cite__actions">
+        <button class="cd-cite__btn" type="button" data-copy>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>
+          Copy citation
+        </button>
+        <span class="cd-cite__status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Single advice CTA -->
+  <section class="cd-w-standard">
+    <div class="cd-cta">
+      <h2>Chasing unpaid invoices and running out of road?</h2>
+      <p>Late payment is one of the most common reasons solvent businesses run short of cash. Our licensed insolvency practitioners offer confidential, no-obligation guidance on your options.</p>
+      <a class="cd-cta__btn" href="/contact-us/">Talk to our insolvency team <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <footer class="cd-w-standard">
+    <p class="cd-hub-foot">Payment-practices figures are drawn from the UK government's statutory Payment Practices Reporting service (Department for Business and Trade), which large UK companies must file every six months. Figures are self-reported and describe payment behaviour, not insolvency. Values shown in the charts and table are representative sample data pending the live six-monthly series.</p>
+  </footer>
+
+</main>
+<script>
+(function(){
+  document.querySelectorAll('.cd-cite').forEach(function(block){
+    var out = block.querySelector('.cd-cite__text');
+    var btn = block.querySelector('[data-copy]');
+    var status = block.querySelector('.cd-cite__status');
+    var title = block.getAttribute('data-cite-title') || document.title.split('|')[0].trim();
+    var canon = document.querySelector('link[rel="canonical"]');
+    var og = document.querySelector('meta[property="og:url"]');
+    var url = block.getAttribute('data-cite-url') || (canon && canon.href) || (og && og.content) || location.href;
+    var accessed = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+    var citation = 'CompanyDebt (2026) \u2018' + title + '\u2019. Available at: ' + url + ' (Accessed: ' + accessed + ').';
+    out.textContent = citation;
+    if (!btn) return;
+    function flash(){ status.textContent = 'Copied to clipboard'; setTimeout(function(){ status.textContent=''; }, 2600); }
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents(out);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      try { document.execCommand('copy'); } catch(e){}
+      s.removeAllRanges();
+    }
+    btn.addEventListener('click', function(){
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(citation).catch(fallback);
+        } else { fallback(); }
+      } catch(e) { fallback(); }
+      flash();
+    });
+  });
+})();
+</script>
+</body>
+</html>

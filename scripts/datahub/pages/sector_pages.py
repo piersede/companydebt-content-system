@@ -46,6 +46,66 @@ WP_ID = {
     "construction-insolvency-statistics": 79856,
 }
 
+# Detail pages that drill into a single trade, grouped under the SIC section
+# they belong to. Read from the sic_group_stats registry rather than restated
+# here, so a new sector page appears in the drill-down automatically instead of
+# relying on someone remembering to update a second list. Construction is the
+# exception: it is a section-level page with its own builder in this module.
+CONSTRUCTION_DETAIL = {
+    "section": "F",
+    "slug": "construction-insolvency-statistics",
+    "label": "Construction",
+}
+
+
+def detail_pages_by_section() -> dict[str, list[dict]]:
+    """{section code: [{slug, label}, ...]} for every sector detail page."""
+    from sic_group_stats import SECTORS  # noqa: E402  (late: avoids a cycle)
+
+    grouped: dict[str, list[dict]] = {
+        CONSTRUCTION_DETAIL["section"]: [
+            {"slug": CONSTRUCTION_DETAIL["slug"], "label": CONSTRUCTION_DETAIL["label"]}
+        ]
+    }
+    for slug, cfg in SECTORS.items():
+        grouped.setdefault(cfg["parent_section_code"], []).append(
+            {"slug": slug, "label": cfg["eyebrow"]}
+        )
+    return grouped
+
+
+def detail_links_block(ser: dict) -> str:
+    """Plain links from the section-level ranking down to the individual
+    trades. The table above this is SIC-section level (21 sections); the detail
+    pages are SIC groups sitting inside those sections, so the mapping is one
+    section to many trades and the links have to be grouped to make sense of
+    it. Sections are ordered by size, matching the ranking above."""
+    grouped = detail_pages_by_section()
+    li = len(ser["annual_years"]) - 1
+    section_label = {s["code"]: s["label"] for s in ser["sections"]}
+    section_size = {s["code"]: (s["annual"][li] or 0) for s in ser["sections"]}
+    ordered = sorted(grouped, key=lambda c: section_size.get(c, 0), reverse=True)
+
+    items = ""
+    for code in ordered:
+        pages = sorted(grouped[code], key=lambda p: p["label"])
+        links = ", ".join(
+            f'<a href="/data/{p["slug"]}/">{p["label"].lower()}</a>' for p in pages
+        )
+        items += (
+            f'<div class="cd-note-item"><h3>{section_label.get(code, code)}</h3>'
+            f'<p class="cd-side-note__d">{links}</p></div>'
+        )
+    return dedent(f"""\
+    <section class="cd-section cd-w-standard" id="detail">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Drill down</p>
+        <h2>Insolvency statistics for individual sectors</h2>
+        <p class="cd-section-intro">The figures above are section level, which is as far as the official ranking goes. These pages go a level deeper into a single trade, with its own monthly and annual figures, the split by insolvency procedure and what the numbers mean for a director in that sector. They are grouped below by the section each one sits inside.</p>
+      </div>
+      <div class="cd-side-notes">{items}</div>
+    </section>""")
+
 
 def load():
     return (
@@ -73,7 +133,7 @@ def source_block(slug: str, meta: dict, citation: str) -> str:
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} (Table 1c, by industry).</dd>
+            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, {meta['latest_month_label']} (Table A1b, by industry).</dd>
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
             <dt>Industry breakdown</dt><dd>Published quarterly (January, April, July, October).</dd>
@@ -155,7 +215,7 @@ def build_sector(brk: dict, ser: dict, meta: dict) -> str:
         <p class="cd-section-intro">Company insolvencies by SIC industry section over the 12 months to {brk['window_end']}, highest to lowest. Cases with no recorded sector are excluded.</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel">{build_sector_bars(brk, chart_id="sector-bars", top_n=12)}</div>
-        <figcaption class="cd-figcaption"><strong>Company insolvencies by industry section, 12 months to {brk['window_end']}, England and Wales.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Company insolvencies by industry section, 12 months to {brk['window_end']}, England and Wales.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
       </figure>
     </section>""")
 
@@ -165,19 +225,20 @@ def build_sector(brk: dict, ser: dict, meta: dict) -> str:
         <p class="cd-section-intro">Annual company insolvencies for the ten largest sectors, England and Wales. The 2020 dip reflects pandemic support; the climb since tracks its withdrawal and the return of creditor enforcement. Construction leads every year, covered in full in the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>; headline totals are in the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a> and the procedure split in <a href="/data/cvl-statistics/">CVL statistics</a>.</p></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Annual company insolvencies by industry section, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+          <caption class="cd-table__caption">Annual company insolvencies by industry section, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
           <thead><tr><th scope="col">Sector</th><th scope="col" class="cd-num">2016</th><th scope="col" class="cd-num">2020</th><th scope="col" class="cd-num">{years[li]}</th><th scope="col" class="cd-num">2016 to {years[li]}</th></tr></thead>
           <tbody>{trend_rows}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table A1b).</p>
     </section>""")
 
     citation = ("CompanyDebt. (2026). UK Company Insolvencies by Sector. CompanyDebt.com. "
-                "Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).")
+                "Data sourced from the Insolvency Service company insolvency statistics by industry (Table A1b).")
     body = "\n".join([
         f"<style>{DASHBOARD_CSS}</style>", '<div class="cd-data-hub">',
         masthead_block(), hero, srcstrip_block(), chart, trend,
+        detail_links_block(ser),
         methodology_block(), source_block("company-insolvencies-by-sector", meta, citation),
         final_cta_block(), '</div>',
     ])
@@ -258,7 +319,7 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
         <p class="cd-section-intro">Company insolvencies in the construction sector, England and Wales. Monthly figures are available from January 2023; the longer view is annual (see below). Construction is the largest sector across the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>; supplier cash-flow pressure is tracked in the <a href="/data/payment-practices-late-payment/">late payment statistics</a>.</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--longrun">{line}</div>
-        <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
       </figure>
     </section>""")
 
@@ -268,7 +329,7 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
         <p class="cd-section-intro">Construction divides into the construction of buildings, civil engineering and specialised construction activities (the largest, covering trades such as electrical and plumbing).</p></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Construction company insolvencies by sub-sector, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+          <caption class="cd-table__caption">Construction company insolvencies by sub-sector, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
           <thead><tr><th scope="col">Sub-sector</th><th scope="col" class="cd-num">2016</th><th scope="col" class="cd-num">{years[li]}</th></tr></thead>
           <tbody>{sub_rows}</tbody>
         </table>
@@ -280,16 +341,16 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
       <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Construction insolvencies by year, 2016 to {years[li]}</h2></div>
       <div class="cd-tablewrap">
         <table class="cd-table">
-          <caption class="cd-table__caption">Annual construction company insolvencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+          <caption class="cd-table__caption">Annual construction company insolvencies, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
           <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Construction insolvencies</th></tr></thead>
           <tbody>{annual_cells}</tbody>
         </table>
       </div>
-      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table 1c).</p>
+      <p class="cd-source-note">Not seasonally adjusted, England and Wales. Industry data is published quarterly. Source: Insolvency Service (Table A1b).</p>
     </section>""")
 
     citation = ("CompanyDebt. (2026). UK Construction Insolvency Statistics. CompanyDebt.com. "
-                "Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).")
+                "Data sourced from the Insolvency Service company insolvency statistics by industry (Table A1b).")
     body = "\n".join([
         f"<style>{DASHBOARD_CSS}</style>", '<div class="cd-data-hub">',
         masthead_block(), hero, srcstrip_block(), chart, subs, annual,

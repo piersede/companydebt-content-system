@@ -118,6 +118,7 @@ def secnav_block() -> str:
       <a href="#rate">Insolvency rate</a>
       <a href="#procedures">By procedure</a>
       <a href="#sector">Sector</a>
+      <a href="#sector-pages">Trade data</a>
       <a href="#nations">UK nations</a>
       <a href="#method">Method</a>
       <a href="#source">Source</a>
@@ -353,6 +354,58 @@ def sector_block(sector: dict, charts: dict) -> str:
       <aside class="cd-caveat">
         <p><strong>About sector volumes.</strong> These are volumes, not sector failure rates. Larger sectors tend to have more insolvencies because they have more registered companies. SIC codes are self-reported, and the first recorded SIC code is used.</p>
       </aside>
+    </section>
+    """)
+
+
+# ── Trade data-page links: registry-driven table ───────────────────────────
+# Per docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+# handoff's sector-trade-links-generator-spec.md. Reads scripts/datahub/pages/
+# sic_group_stats.py's SECTORS registry (not a second hand-maintained list),
+# so a new trade page appears here automatically on the next monthly rebuild.
+# Registry moved to scripts/datahub/pages/sector_trade_links.py, shared with
+# the hub landing page's "By sector" cards (company_insolvency_hub.py) - one
+# list, not two that can drift apart. See that module's docstring.
+
+def _trade_link_rows() -> list[dict]:
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent / "datahub" / "pages"))
+    from sector_trade_links import rows as _rows  # noqa: E402
+    return _rows()
+
+
+def sector_pages_block() -> str:
+    rows = _trade_link_rows()
+    if not rows:
+        # Sticky-nav coupling: an empty table must not ship an empty section
+        # or a dead #sector-pages nav link (the class of bug that produced an
+        # earlier dead #procedures link).
+        return ""
+    rows_html = "".join(
+        f'<tr><th scope="row"><span class="cd-sectorlinks__name">{r["trade"]}</span>'
+        f'<span class="cd-sectorlinks__desc">{r["blurb"].replace("&", "&amp;")}</span></th>'
+        f'<td class="cd-sectorlinks__action">'
+        f'<a class="cd-sectorlinks__btn" href="/data/{r["slug"]}/">View data'
+        f'<span aria-hidden="true">&#8594;</span></a></td></tr>'
+        for r in rows
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-wide" id="sector-pages">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Detailed data</p>
+        <h2>Get the insolvency data for your trade</h2>
+        <p class="cd-section-intro">We publish a dedicated, monthly-updated data page for individual trades within the industry sections above. Find yours in the table and open its full time series.</p>
+      </div>
+      <div class="cd-tablewrap">
+        <table class="cd-table cd-sectorlinks">
+          <caption class="cd-table__caption">Detailed insolvency data pages by trade, grouped by SIC industry section.</caption>
+          <thead>
+            <tr><th scope="col">Trade or sub-sector</th><th scope="col" class="cd-sectorlinks__actionhead">Data page</th></tr>
+          </thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <p class="cd-sectorlinks__all"><a href="/data/company-insolvencies-by-sector/">See all sectors and the full SIC breakdown <span aria-hidden="true">&#8594;</span></a></p>
     </section>
     """)
 
@@ -1680,6 +1733,7 @@ def assemble_draft() -> str:
         rate_block(charts, latest_rate),
         procedure_cards_block(),
         sector_block(d["sector"], charts),
+        sector_pages_block(),
         nations_block(d["nations"]),
         methodology_block(),
         source_citation_block(meta),
