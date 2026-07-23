@@ -95,6 +95,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "seek-insolvency-advice-before-missing-payments": "trigger",
     "what-happens-if-i-stop-paying-company-debts": "trigger",
     "cant-pay-vat": "trigger",
+    "problems-paying-corporation-tax-hmrc": "trigger",
 
     # data_reference — official statistics and data series pages
     "uk-insolvency-statistics": "data_reference",
