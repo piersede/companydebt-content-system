@@ -204,7 +204,7 @@ def hero_block(cfg: dict, f: dict, meta: dict) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">{cfg['h1a']}</span> <span class="cd-h1__line">{cfg['h1b']}</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">{cfg['h1a']}</span> <span class="cd-h1__line" style="white-space: normal;">{cfg['h1b']}</span></h1>
         <p class="cd-lede">In {f['month']} there were {format_number(f['latest'])} {cfg['plural']} in England and Wales, {f['share']}% of all company insolvencies. {cfg['definition']} This page tracks the monthly trend back to 2000, the rate per 10,000 companies and how the procedure sits within the wider insolvency total.</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{f['month']}</strong></div>

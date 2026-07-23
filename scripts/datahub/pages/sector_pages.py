@@ -123,7 +123,7 @@ def build_sector(brk: dict, ser: dict, meta: dict) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">UK Company Insolvencies</span> <span class="cd-h1__line">by Sector</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">UK Company Insolvencies</span> <span class="cd-h1__line" style="white-space: normal;">by Sector</span></h1>
         <p class="cd-lede">Across the 12 months to {brk['window_end']}, {top['label_short'].lower()} recorded the most company insolvencies of any industry, with {format_number(top['count'])} cases ({top['share_pct']}% of those with a known sector). This page ranks all {n_sections} industry sections and tracks how each has changed since 2016. Industry figures are not failure rates: larger sectors hold more companies, so they tend to record more insolvencies.</p>
         {meta_grid(meta)}
         <p class="cd-official-badge"><span aria-hidden="true"></span>{meta['status']}</p>
@@ -226,7 +226,7 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">UK Construction Insolvency</span> <span class="cd-h1__line">Statistics</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">UK Construction Insolvency</span> <span class="cd-h1__line" style="white-space: normal;">Statistics</span></h1>
         <p class="cd-lede">Construction has the most company insolvencies of any UK industry. There were {format_number(latest_annual)} construction company insolvencies in {years[li]}, around {share}% of all company insolvencies that year. This page tracks the construction trend since 2016, the monthly series since 2023 and the split across building, civil engineering and specialised trades.</p>
         {meta_grid(meta)}
         <p class="cd-official-badge"><span aria-hidden="true"></span>{meta['status']}</p>
