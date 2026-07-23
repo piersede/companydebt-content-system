@@ -25,7 +25,7 @@
       step: 1000,
       range: {
         min: [0],
-        max: [300000],
+        max: [350000],
       },
       connect: "lower",
     });
@@ -34,7 +34,7 @@
       step: 1000,
       range: {
         min: [0],
-        max: [300000],
+        max: [350000],
       },
       connect: "lower",
     });
@@ -43,7 +43,7 @@
       step: 1000,
       range: {
         min: [0],
-        max: [300000],
+        max: [350000],
       },
       connect: "lower",
     });
@@ -52,7 +52,7 @@
       step: 1000,
       range: {
         min: [0],
-        max: [300000],
+        max: [350000],
       },
       connect: "lower",
     });

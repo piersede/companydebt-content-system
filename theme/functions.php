@@ -458,7 +458,7 @@ function company_debt_webpigment_scripts() {
 			array( 'nouislider' ),
 			CD_THEME_VERSION,
 		);
-		wp_enqueue_script( 'company-debt-webpigment-quiz-insolvency', get_template_directory_uri() . '/assets/js/quiz-insolvency.js', array( 'jquery', 'nouislider' ), _S_VERSION, true );
+		wp_enqueue_script( 'company-debt-webpigment-quiz-insolvency', get_template_directory_uri() . '/assets/js/quiz-insolvency.js', array( 'jquery', 'nouislider' ), '1.4.6-350k', true );
 	}
 
 	if ( is_page_template( 'templates/insolvency-landing-page.php' ) ) {
@@ -859,18 +859,6 @@ function update_attachment_title_from_post_title( $attachment_ID ) {
 // Add action to update attachment title from post title
 add_action( 'add_attachment', 'update_attachment_title_from_post_title' );
 
-add_filter( 'gform_field_value_refurl', 'populate_referral_url');
- 
-function populate_referral_url( $value ){
-    $refurl = $_SERVER['HTTP_REFERER'] ?? '';
-
-	if ( empty( $refurl ) ) {
-		return $refurl;
-	}
- 
-    return esc_url_raw( $refurl );
-}
-
 // add_filter( 'wsp_pages_return', function( $return ) {
 // 	var_dump( $return ); die;
 // }, 20 );
@@ -947,6 +935,7 @@ add_filter( 'wp_schema_pro_schema_article', function( $schema, $data, $post ) {
 
 	return $schema;
 }, 10, 3 );
+
 
 // Change Gravity Forms submit button text for sidebar callback form
 add_filter( "gform_submit_button_41", function( $button, $form ) {
@@ -1105,7 +1094,10 @@ add_filter( 'body_class', function( $classes ) {
  * shared by both URL families.
  */
 add_filter( 'body_class', function( $classes ) {
-    if ( is_page_template( 'templates/take-the-test-template.php' ) ) {
+    if ( is_page_template( 'templates/take-the-test-template.php' )
+         || is_page_template( 'templates/quiz-insolvency.php' ) ) {
+        /* quiz-insolvency added 2026-07-20 so /insolvency-calculator/
+         * inherits the TTT hero (breadcrumbs + big H1 + author widget). */
         $classes[] = 'cd-ttt-design';
     } elseif ( is_singular( 'post' )
                && ! in_category( 'sectors' )
@@ -1137,3 +1129,295 @@ function cd_reading_time_minutes( $post = null ) {
     $minutes = (int) ceil( $words / 220 );
     return max( 1, $minutes );
 }
+
+
+
+/**
+ * Schema JSON-LD post-processor (added 2026-07-02).
+ *
+ * Fixes two Ahrefs-flagged schema.org validation errors across ~375 pages:
+ *   1) Article `dateModified` emitted with an invalid timezone marker
+ *      (`+0000` no-colon variant, or no tz at all). Normalise to the
+ *      canonical ISO 8601 form ending in `+HH:MM`.
+ *   2) `FinancialService` node emitted with `image:[]` (empty). LocalBusiness
+ *      subtypes require at least one image or Google marks the graph invalid.
+ *      Inject the sitewide branded fallback (same asset used for og:image).
+ *
+ * Uses output buffering rather than Schema Pro's filter hooks because those
+ * hooks don't fire on our pages — Schema Pro's generated markup is emitted
+ * via a code path that appears to bypass apply_filters() (likely via a cached
+ * blob per post). Buffering the HTML is idempotent and covers all emitters,
+ * including plugins we don't control. Delete the add_action() below to revert.
+ */
+add_action( 'template_redirect', function() {
+    if ( is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+        return;
+    }
+    ob_start( function( $html ) {
+        if ( ! is_string( $html ) || strpos( $html, 'application/ld+json' ) === false ) {
+            return $html;
+        }
+
+        // 1a) Coerce `+0000` (no colon) to `+00:00`.
+        $html = preg_replace(
+            '/("date(?:Modified|Published)":"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})\+0000"/',
+            '$1+00:00"',
+            $html
+        );
+
+        // 1b) Add missing tz on datePublished/dateModified inside JSON-LD.
+        // Only touch dates that lack `Z`, `+HH:MM` or `-HH:MM` suffix.
+        // Use WP's gmt_offset to compute the correct offset.
+        $tz = get_option( 'gmt_offset' );
+        $sign = $tz >= 0 ? '+' : '-';
+        $abs  = abs( $tz );
+        $hh   = str_pad( (string) intval( $abs ), 2, '0', STR_PAD_LEFT );
+        $mm   = str_pad( (string) intval( ( $abs - intval( $abs ) ) * 60 ), 2, '0', STR_PAD_LEFT );
+        $suffix = $sign . $hh . ':' . $mm;
+        $html = preg_replace_callback(
+            '/("date(?:Modified|Published)":"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})"/',
+            function( $m ) use ( $suffix ) { return $m[1] . $suffix . '"'; },
+            $html
+        );
+
+        // 2) Inject default image on empty FinancialService images.
+        $img = esc_url_raw( home_url( '/wp-content/uploads/2026/07/companydebt-default-og.jpg' ) );
+        $img_j = wp_json_encode( $img, JSON_UNESCAPED_SLASHES );
+        $html = str_replace(
+            '"@type":"FinancialService","name":"Company Debt Ltd","image":[]',
+            '"@type":"FinancialService","name":"Company Debt Ltd","image":' . $img_j,
+            $html
+        );
+
+        // 3) og:image fallback — inject a branded default only if the page
+        //    emits ZERO og:image tags. Covers pages where the featured image
+        //    is unset AND Yoast cannot auto-detect one from content. Duplicate-
+        //    proof: skipped whenever any og:image already exists (from featured
+        //    image, Yoast meta, or Yoast's first-image-in-content auto-detect).
+        if ( strpos( $html, 'property="og:image"' ) === false && strpos( $html, "property='og:image'" ) === false ) {
+            $og_tag = '<meta property="og:image" content="' . esc_url( $img ) . '" />' . "
+";
+            // Insert before </head> if present; else prepend.
+            $head_close = strpos( $html, '</head>' );
+            if ( $head_close !== false ) {
+                $html = substr( $html, 0, $head_close ) . $og_tag . substr( $html, $head_close );
+            }
+        }
+
+        // 4) Strip null/empty values from every JSON-LD node (added 2026-07-16).
+        //
+        //    THE ACTUAL CAUSE of the ~375 "Schema.org validation error" pages.
+        //    Schema Pro emits the sitewide FinancialService node with its
+        //    opening-hours and geo settings left blank:
+        //
+        //      "addressRegion": null
+        //      "openingHoursSpecification":[{"dayOfWeek":[""],"opens":"","closes":""}]
+        //      "geo":{"latitude":"","longitude":""}
+        //
+        //    `dayOfWeek` is a DayOfWeek enumeration and "" is not a member, so
+        //    the graph fails validation on every page that renders the node -
+        //    i.e. all of them. An OMITTED optional property is valid; an empty
+        //    one is not. So drop them rather than invent values.
+        //
+        //    Note for whoever reads this next: fixes (1) and (2) above were
+        //    added on 2026-07-02 to clear this same issue and did not move the
+        //    count (375 before, 375 after, change +1). They corrected the date
+        //    format and the empty image - neither of which was what Ahrefs was
+        //    objecting to. Don't guess at this one; re-check the emitted graph.
+        //
+        //    Fixing it properly means filling in real opening hours and geo
+        //    coordinates in Schema Pro's settings, which is better for local
+        //    SEO. This strip is the safe floor, not the ceiling.
+        $html = preg_replace_callback(
+            '#(<script[^>]+type=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)#is',
+            function( $m ) {
+                $data = json_decode( $m[2], true );
+                if ( json_last_error() !== JSON_ERROR_NONE || ! is_array( $data ) ) {
+                    return $m[0]; // Leave anything we cannot parse untouched.
+                }
+                $json = wp_json_encode(
+                    cd_schema_strip_empty( $data ),
+                    JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+                );
+                return $json ? $m[1] . $json . $m[3] : $m[0];
+            },
+            $html
+        );
+
+        return $html;
+    } );
+}, 0 );
+
+/**
+ * Recursively drop null / empty-string / empty-array values from a JSON-LD
+ * graph, and discard any node left with nothing but its @type.
+ *
+ * List arrays are re-indexed so they stay JSON lists; associative arrays keep
+ * their keys. Getting that distinction wrong silently turns an object into an
+ * array, so the check is explicit.
+ */
+function cd_schema_strip_empty( $node ) {
+    if ( ! is_array( $node ) ) {
+        return $node;
+    }
+    $is_list = ( array_keys( $node ) === range( 0, count( $node ) - 1 ) );
+    $out     = array();
+    foreach ( $node as $k => $v ) {
+        if ( is_array( $v ) ) {
+            $v = cd_schema_strip_empty( $v );
+        }
+        if ( $v === null || $v === '' || $v === array() ) {
+            continue;
+        }
+        // A node reduced to nothing but its @type carries no information.
+        if ( is_array( $v ) && array_keys( $v ) === array( '@type' ) ) {
+            continue;
+        }
+        $out[ $k ] = $v;
+    }
+    return $is_list ? array_values( $out ) : $out;
+}
+
+/**
+ * Testimonial meta description + title length caps (added 2026-07-02).
+ *
+ * Ahrefs flagged 69 individual /testimonials/* pages with meta descriptions
+ * 200-215 chars (Google truncates at ~155-160) and 48 titles ~77 chars
+ * (Google truncates around 60). Both come from Yoast's default templates
+ * appending fixed tail text to the quote excerpt and the post title.
+ *
+ * Instead of editing 69 pages one by one, cap both at their display limits
+ * for the `testimonial` post type. Word-boundary trim + ellipsis so the cut
+ * still reads cleanly. Delete both add_filter() lines to revert.
+ */
+add_filter( 'wpseo_metadesc', function( $desc ) {
+    if ( 'testimonial' !== get_post_type() ) {
+        return $desc;
+    }
+    if ( ! is_string( $desc ) || mb_strlen( $desc ) <= 155 ) {
+        return $desc;
+    }
+    $trimmed = mb_substr( $desc, 0, 152 );
+    // Trim trailing partial word.
+    $trimmed = preg_replace( '/\s+\S*$/u', '', $trimmed );
+    return rtrim( $trimmed, ",.;:!?—- \t\n" ) . '…';
+}, 20 );
+
+add_filter( 'wpseo_title', function( $title ) {
+    if ( 'testimonial' !== get_post_type() ) {
+        return $title;
+    }
+    if ( ! is_string( $title ) || mb_strlen( $title ) <= 60 ) {
+        return $title;
+    }
+    $trimmed = mb_substr( $title, 0, 57 );
+    $trimmed = preg_replace( '/\s+\S*$/u', '', $trimmed );
+    return rtrim( $trimmed, ",.;:!?—- \t\n" ) . '…';
+}, 20 );
+
+/**
+ * =====================================================================
+ * Company Debt — Lead-source attribution (entry meta, no form edits)
+ * ---------------------------------------------------------------------
+ * Stores channel / placement / CTA-origin as Gravity Forms ENTRY META,
+ * read from first-party cookies set by assets/js/cd-attribution.js
+ * (cache-safe: cookies travel with the submission POST, never cached).
+ *
+ * Deliberately touches NO form definition, so it cannot break existing
+ * fields, conditional logic, or the per-form customisations elsewhere
+ * in this file (#30 download, #33 calc, #38 attachment, #41/#44 buttons).
+ *
+ * Values appear as Entries columns and in CSV exports.
+ * Added 2026-07-09. Self-contained — safe to remove as one block.
+ * =====================================================================
+ */
+
+// Load the client-side capture script sitewide.
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_script(
+		'cd-attribution',
+		CD_THEME_URL . 'assets/js/cd-attribution.js',
+		array(),
+		'1.2.0-failclosed',
+		true
+	);
+} );
+
+/**
+ * Attribution keys we persist: cookie/meta suffix => human label.
+ * Meta key stored is 'cd_' . <suffix>.
+ */
+function cd_attr_keys() {
+	return array(
+		'utm_source'           => 'UTM Source',
+		'utm_medium'           => 'UTM Medium',
+		'utm_campaign'         => 'UTM Campaign',
+		'utm_content'          => 'UTM Content',
+		'utm_term'             => 'UTM Term',
+		'gclid'                => 'gclid',
+		'gbraid'               => 'gbraid',
+		'wbraid'               => 'wbraid',
+		'msclkid'              => 'msclkid',
+		'fbclid'               => 'fbclid',
+		'landing_url'          => 'Landing URL',
+		'referrer_domain'      => 'Referrer Domain',
+		'cta_origin_url'       => 'CTA Origin URL',
+		'cta_origin_placement' => 'CTA Origin Placement',
+		'cta_text'             => 'CTA Text',
+		'form_placement'       => 'Form Placement',
+		'conversion_url'       => 'Conversion URL',
+	);
+}
+
+// Register meta so it shows as sortable Entries columns and exports.
+add_filter( 'gform_entry_meta', function ( $entry_meta, $form_id ) {
+	$default_cols = array( 'form_placement', 'cta_origin_placement', 'utm_source' );
+	foreach ( cd_attr_keys() as $key => $label ) {
+		$entry_meta[ 'cd_' . $key ] = array(
+			'label'             => $label,
+			'is_numeric'        => false,
+			'is_default_column' => in_array( $key, $default_cols, true ),
+		);
+	}
+	return $entry_meta;
+}, 10, 2 );
+
+// On every submission, copy cookie/context values into entry meta.
+add_action( 'gform_after_submission', function ( $entry, $form ) {
+	if ( ! function_exists( 'gform_update_meta' ) ) {
+		return;
+	}
+
+	$entry_id = rgar( $entry, 'id' );
+	$form_id  = (string) rgar( $entry, 'form_id' );
+
+	// Placement of THIS form, from the JS-set cookie map.
+	$placement = '';
+	if ( ! empty( $_COOKIE['cd_placements'] ) ) {
+		$map = json_decode( stripslashes( $_COOKIE['cd_placements'] ), true );
+		if ( is_array( $map ) && isset( $map[ $form_id ] ) ) {
+			$placement = sanitize_text_field( $map[ $form_id ] );
+		}
+	}
+
+	$conversion_url = rgar( $entry, 'source_url' );
+
+	foreach ( cd_attr_keys() as $key => $label ) {
+		if ( 'form_placement' === $key ) {
+			$val = $placement;
+		} elseif ( 'conversion_url' === $key ) {
+			$val = $conversion_url;
+		} else {
+			$val = isset( $_COOKIE[ 'cd_' . $key ] ) ? wp_unslash( $_COOKIE[ 'cd_' . $key ] ) : '';
+		}
+
+		if ( is_string( $val ) && '' !== $val ) {
+			$val = ( false !== strpos( $key, 'url' ) )
+				? esc_url_raw( $val )
+				: sanitize_text_field( $val );
+			if ( '' !== $val ) {
+				gform_update_meta( $entry_id, 'cd_' . $key, $val );
+			}
+		}
+	}
+}, 10, 2 );

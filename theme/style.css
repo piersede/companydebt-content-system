@@ -14249,6 +14249,9 @@ html.cd-js .ub_call_to_action:not([data-cd-cta-transformed="1"]) {
   margin: 0 !important;
   padding: 0.85rem 1.25rem;
 }
+body.cd-ttt-design .main-content .cd-key-facts-panel__title {
+  color: #fff !important;
+}
 .cd-key-facts-panel__grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -14271,6 +14274,12 @@ html.cd-js .ub_call_to_action:not([data-cd-cta-transformed="1"]) {
 .cd-key-facts-panel__a {
   color: var(--c-font-dark, #1a1a1a);
   border-top: 1px solid #e2e6ea;
+}
+body.cd-ttt-design .main-content .cd-key-facts-panel__q {
+  color: var(--c-blue-dark, #002856) !important;
+}
+body.cd-ttt-design .main-content .cd-key-facts-panel__a {
+  color: var(--c-font-dark, #1a1a1a) !important;
 }
 .cd-key-facts-panel__row:first-child .cd-key-facts-panel__q,
 .cd-key-facts-panel__row:first-child .cd-key-facts-panel__a {
@@ -14320,4 +14329,1688 @@ html.cd-js .ub_call_to_action:not([data-cd-cta-transformed="1"]) {
   .cd-outcome-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ============================================================
+   CD-CTA — in-body call-to-action blocks (2026-07-14)
+   Restored after mu-plugin bulk-edit stripped the original inline
+   <style> block from post_content. Kept here in the theme stylesheet
+   so future content resaves cannot wipe it.
+
+   Structure (from post_content):
+     .cd-cta.cd-cta--{test|service|phone}
+       .cd-cta__body
+         .cd-cta__title       (h2/p heading)
+         .cd-cta__bullets     (ul)
+         .cd-cta__button      (a.cd-cta__button)
+         .cd-cta__trust       (small trust line under button)
+       .cd-cta__icon          (optional right-side icon container)
+   ============================================================ */
+
+.cd-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+  margin: 32px 0;
+  padding: 28px 32px;
+  background: #f4f7fe;
+  border: 1px solid #d6e0f0;
+  border-left: 4px solid #002856;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+  font-family: Arial, sans-serif;
+}
+
+.cd-cta__body {
+  min-width: 0;
+}
+
+.cd-cta__title {
+  margin: 0 0 12px 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #002856;
+}
+
+.cd-cta__bullets {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cd-cta__bullets li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #344054;
+}
+
+.cd-cta__bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+
+.cd-cta__button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 24px;
+  background: #002856;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.15s ease, transform 0.06s ease;
+  cursor: pointer;
+}
+
+.cd-cta__button:hover,
+.cd-cta__button:focus {
+  background: #001838;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.cd-cta__button:active {
+  transform: translateY(1px);
+}
+
+.cd-cta__trust {
+  margin: 14px 0 0 0;
+  padding: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.cd-cta__icon {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  color: #002856;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cd-cta__icon:empty {
+  display: none;
+}
+
+.cd-cta__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Variants: subtle colour cues so the 3 CTAs feel distinct --- */
+
+/* Test / self-assessment CTA — blue accent */
+.cd-cta--test {
+  background: #f4f7fe;
+  border-color: #d6e0f0;
+  border-left-color: #002856;
+}
+
+/* Service CTA (talk to an IP) — warm accent */
+.cd-cta--service {
+  background: #fff7ed;
+  border-color: #fde3c3;
+  border-left-color: #b45309;
+}
+.cd-cta--service .cd-cta__title { color: #7c2d12; }
+.cd-cta--service .cd-cta__bullets li::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b45309'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--service .cd-cta__button { background: #b45309; }
+.cd-cta--service .cd-cta__button:hover,
+.cd-cta--service .cd-cta__button:focus { background: #8f3f07; }
+
+/* Phone CTA — green accent, phone icon */
+.cd-cta--phone {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  border-left-color: #047857;
+}
+.cd-cta--phone .cd-cta__title { color: #064e3b; }
+.cd-cta--phone .cd-cta__bullets li::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23047857'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--phone .cd-cta__button { background: #047857; }
+.cd-cta--phone .cd-cta__button:hover,
+.cd-cta--phone .cd-cta__button:focus { background: #035c43; }
+
+/* Mobile: single column, tighter padding */
+@media (max-width: 640px) {
+  .cd-cta {
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
+    gap: 16px;
+  }
+  .cd-cta__title { font-size: 19px; }
+  .cd-cta__icon { display: none; }
+  .cd-cta__button { width: 100%; text-align: center; }
+}
+
+
+/* CD-CTA specificity boosters — beat theme's .main-content p/a defaults */
+body .main-content .cd-cta .cd-cta__title {
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+body .main-content .cd-cta--service .cd-cta__title { color: #7c2d12 !important; }
+body .main-content .cd-cta--phone .cd-cta__title { color: #064e3b !important; }
+
+body .main-content .cd-cta a.cd-cta__button,
+body .main-content .cd-cta a.cd-cta__button:visited {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 12px 24px !important;
+  background: #002856 !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+}
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited { background: #b45309 !important; }
+body .main-content .cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited { background: #047857 !important; }
+
+body .main-content .cd-cta a.cd-cta__button:hover,
+body .main-content .cd-cta a.cd-cta__button:focus {
+  color: #ffffff !important;
+  background: #001838 !important;
+}
+body .main-content .cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus { background: #8f3f07 !important; }
+body .main-content .cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus { background: #035c43 !important; }
+
+body .main-content .cd-cta .cd-cta__trust {
+  margin: 14px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+}
+
+body .main-content .cd-cta .cd-cta__bullets {
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+body .main-content .cd-cta .cd-cta__bullets li {
+  font-size: 15px !important;
+  color: #344054 !important;
+  padding-left: 24px !important;
+  margin: 0 !important;
+}
+
+
+/* CD-CTA trust line — icons next to each item */
+body .main-content .cd-cta .cd-cta__trust {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px 18px !important;
+  align-items: center !important;
+  margin: 14px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  line-height: 1.4 !important;
+}
+body .main-content .cd-cta .cd-cta__trust span {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #6b7280 !important;
+  font-size: 13px !important;
+}
+body .main-content .cd-cta .cd-cta__trust span::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  flex: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+body .main-content .cd-cta--service .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b45309'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23047857'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+
+
+/* CD-CTA overrides — blue-only palette + new title spec + intro paragraph */
+
+/* All 3 variants become shades of blue — replace the earlier orange/green tokens. */
+body .main-content .cd-cta--test {
+  background: #f4f7fe !important;
+  border-color: #d6e0f0 !important;
+  border-left-color: #002856 !important;
+}
+body .main-content .cd-cta--service {
+  background: #eaf1fb !important;
+  border-color: #c7d8ef !important;
+  border-left-color: #1e3a8a !important;
+}
+body .main-content .cd-cta--phone {
+  background: #e0edfd !important;
+  border-color: #b6cef2 !important;
+  border-left-color: #1d4ed8 !important;
+}
+
+/* All titles: Arial 700 28/34 navy #002856 */
+body .main-content .cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-family: Arial, sans-serif !important;
+  font-size: 28px !important;
+  line-height: 34px !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+
+/* Intro paragraph (replaces the tick bullets) */
+body .main-content .cd-cta .cd-cta__intro {
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  color: #344054 !important;
+  font-weight: 400 !important;
+}
+
+/* Buttons — all navy variants */
+body .main-content .cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button:visited {
+  background: #002856 !important;
+}
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited {
+  background: #1e3a8a !important;
+}
+body .main-content .cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited {
+  background: #1d4ed8 !important;
+}
+body .main-content .cd-cta--test a.cd-cta__button:hover,
+body .main-content .cd-cta--test a.cd-cta__button:focus { background: #001838 !important; }
+body .main-content .cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus { background: #172b6f !important; }
+body .main-content .cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus { background: #1642b3 !important; }
+
+/* Trust-line checkmark icons in each variant's blue */
+body .main-content .cd-cta--test .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+body .main-content .cd-cta--service .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231d4ed8'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+
+
+/* CD-CTA — narrow title + intro to 80% width, bigger button padding */
+body .main-content .cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  max-width: 80% !important;
+}
+body .main-content .cd-cta .cd-cta__intro {
+  max-width: 80% !important;
+}
+body .main-content .cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button {
+  padding: 16px 28px !important;
+}
+@media (max-width: 640px) {
+  body .main-content .cd-cta .cd-cta__title,
+  body .main-content .cd-cta .cd-cta__intro { max-width: 100% !important; }
+}
+
+
+/* CD-CTA — match trust top-margin to intro bottom-margin so gaps around button are symmetric */
+body .main-content .cd-cta .cd-cta__trust {
+  margin-top: 20px !important;
+}
+
+
+/* CD-CTA — UNIFY all 3 variants to identical mid-blue styling (2026-07-15) */
+
+/* Panel: same bg + borders regardless of variant */
+body .main-content .cd-cta,
+body .main-content .cd-cta--test,
+body .main-content .cd-cta--service,
+body .main-content .cd-cta--phone {
+  background: #eaf1fb !important;
+  border: 1px solid #c7d8ef !important;
+  border-left: 4px solid #1e3a8a !important;
+}
+
+/* Button: same bg + hover for every variant */
+body .main-content .cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button:visited,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited,
+body .main-content .cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited {
+  background: #1e3a8a !important;
+}
+body .main-content .cd-cta a.cd-cta__button:hover,
+body .main-content .cd-cta a.cd-cta__button:focus,
+body .main-content .cd-cta--test a.cd-cta__button:hover,
+body .main-content .cd-cta--test a.cd-cta__button:focus,
+body .main-content .cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus,
+body .main-content .cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus {
+  background: #172b6f !important;
+}
+
+/* Trust checkmark icons: same mid-blue on all variants */
+body .main-content .cd-cta .cd-cta__trust span::before,
+body .main-content .cd-cta--test .cd-cta__trust span::before,
+body .main-content .cd-cta--service .cd-cta__trust span::before,
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+
+
+/* CD-CTA — MATCH REFERENCE DESIGN (2026-07-15) */
+
+/* Panel: drop the left border accent, keep a soft border+bg */
+body .main-content .cd-cta,
+body .main-content .cd-cta--test,
+body .main-content .cd-cta--service,
+body .main-content .cd-cta--phone {
+  border-left: 1px solid #c7d8ef !important;
+  border-radius: 16px !important;
+  padding: 40px 44px !important;
+}
+
+/* Eyebrow label above the title */
+body .main-content .cd-cta .cd-cta__eyebrow {
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #1e40af !important;
+  line-height: 1.2 !important;
+}
+
+/* Title: bigger + bolder */
+body .main-content .cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 16px 0 !important;
+}
+
+/* Intro paragraph */
+body .main-content .cd-cta .cd-cta__intro {
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  color: #344054 !important;
+  margin: 0 0 24px 0 !important;
+}
+
+/* Button — slightly rounder, slightly bigger */
+body .main-content .cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button {
+  padding: 18px 32px !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  letter-spacing: -0.005em !important;
+}
+
+/* Trust items — bigger circles, more spacing */
+body .main-content .cd-cta .cd-cta__trust {
+  gap: 8px 28px !important;
+  margin-top: 24px !important;
+  font-size: 15px !important;
+}
+body .main-content .cd-cta .cd-cta__trust span::before,
+body .main-content .cd-cta--test .cd-cta__trust span::before,
+body .main-content .cd-cta--service .cd-cta__trust span::before,
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 8px !important;
+}
+body .main-content .cd-cta .cd-cta__trust span {
+  font-size: 15px !important;
+  color: #344054 !important;
+  font-weight: 400 !important;
+}
+
+/* Disclaimer strip: separator line + shield icon + muted text */
+body .main-content .cd-cta .cd-cta__disclaimer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 24px 0 0 0 !important;
+  padding: 20px 0 0 0 !important;
+  border-top: 1px solid #c7d8ef !important;
+  font-size: 14px !important;
+  color: #6b7280 !important;
+  line-height: 1.4 !important;
+}
+body .main-content .cd-cta .cd-cta__disclaimer-icon {
+  width: 18px !important;
+  height: 18px !important;
+  flex: none !important;
+  color: #1e40af !important;
+  fill: #1e40af !important;
+}
+
+/* Mobile: tighten padding + drop title size */
+@media (max-width: 640px) {
+  body .main-content .cd-cta,
+  body .main-content .cd-cta--test,
+  body .main-content .cd-cta--service,
+  body .main-content .cd-cta--phone {
+    padding: 24px !important;
+  }
+  body .main-content .cd-cta .cd-cta__title,
+  body .main-content .cd-cta--test .cd-cta__title,
+  body .main-content .cd-cta--service .cd-cta__title,
+  body .main-content .cd-cta--phone .cd-cta__title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+}
+
+
+/* CD-CTA title: reduce weight from 800 back to 700 to match reference */
+body .main-content .cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-weight: 700 !important;
+}
+
+
+/* TOC sidebar pills — Arial 600 15/28 rgb(122,133,153) */
+body .toc .toc__li,
+body .toc--sidebar .toc__li,
+body .widget--cd-toc .toc__li {
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 28px !important;
+  color: rgb(122, 133, 153) !important;
+}
+
+
+/* Higher-specificity color override for TOC sidebar pills */
+body .main-content .toc .toc__li,
+body .main-content .toc--sidebar .toc__li,
+body .main-content .widget--cd-toc .toc__li,
+body .toc--sidebar a.toc__li,
+body .widget--cd-toc a.toc__li {
+  color: rgb(122, 133, 153) !important;
+}
+
+
+/* Force TOC pill color with maximum specificity */
+body.page .main-content a.toc__li,
+body.page .main-content a.toc__li:link,
+body.page .main-content a.toc__li:visited,
+body .toc a.toc__li,
+body .toc a.toc__li:link,
+body .toc a.toc__li:visited {
+  color: rgb(122, 133, 153) !important;
+}
+
+
+/* Match theme's toc rule specificity (0,4,2) so we can override color */
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc .toc__li,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:link,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:visited,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:focus,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:hover {
+  color: rgb(122, 133, 153) !important;
+}
+
+
+/* Revert TOC pill styling to defaults (my prior override was targeting wrong elements) */
+body .toc .toc__li,
+body .toc--sidebar .toc__li,
+body .widget--cd-toc .toc__li,
+body .main-content .toc .toc__li,
+body .main-content .toc--sidebar .toc__li,
+body .main-content .widget--cd-toc .toc__li,
+body.page .main-content a.toc__li,
+body.page .main-content a.toc__li:link,
+body.page .main-content a.toc__li:visited,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc .toc__li,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:link,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:visited,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:focus,
+html[data-toc-sidebar="on"] body.cd-ttt-design .widget--cd-toc a.toc__li:hover {
+  /* let theme defaults apply */
+  font-weight: initial;
+  font-size: initial;
+  line-height: initial;
+  color: initial;
+}
+
+/* CTA eyebrow — Arial 600 15px/28px rgb(122,133,153) per spec */
+body .main-content .cd-cta .cd-cta__eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 28px !important;
+  color: rgb(122, 133, 153) !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 10px 0 !important;
+}
+
+
+/* CTA subtext (intro) — Arial 400 18/31 rgb(82,96,109) per spec */
+body .main-content .cd-cta .cd-cta__intro {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  color: rgb(82, 96, 109) !important;
+}
+
+
+/* ==== CD-CTA — universal styling (no .main-content dependency) ============
+   Fixes issue where pages outside the .main-content wrapper (e.g. .container>.content>.site-main)
+   didn't receive the unified blue palette. Selectors use `body .cd-cta*` for
+   consistent styling on every page. ========================================= */
+
+/* Panel: identical for all variants */
+body .cd-cta,
+body .cd-cta--test,
+body .cd-cta--service,
+body .cd-cta--rescue,
+body .cd-cta--review,
+body .cd-cta--phone {
+  background: #eaf1fb !important;
+  border: 1px solid #c7d8ef !important;
+  border-left: 1px solid #c7d8ef !important;
+  border-radius: 16px !important;
+  padding: 40px 44px !important;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04) !important;
+  font-family: Arial, sans-serif !important;
+}
+
+/* Eyebrow */
+body .cd-cta .cd-cta__eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 28px !important;
+  color: rgb(122, 133, 153) !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
+
+/* Title */
+body .cd-cta .cd-cta__title,
+body .cd-cta--test .cd-cta__title,
+body .cd-cta--service .cd-cta__title,
+body .cd-cta--rescue .cd-cta__title,
+body .cd-cta--review .cd-cta__title,
+body .cd-cta--phone .cd-cta__title {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  max-width: 80% !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+}
+
+/* Intro (subtext) */
+body .cd-cta .cd-cta__intro {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  color: rgb(82, 96, 109) !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  max-width: 80% !important;
+}
+
+/* Button */
+body .cd-cta a.cd-cta__button,
+body .cd-cta--test a.cd-cta__button,
+body .cd-cta--service a.cd-cta__button,
+body .cd-cta--rescue a.cd-cta__button,
+body .cd-cta--review a.cd-cta__button,
+body .cd-cta--phone a.cd-cta__button,
+body .cd-cta--test a.cd-cta__button:visited,
+body .cd-cta--service a.cd-cta__button:visited,
+body .cd-cta--rescue a.cd-cta__button:visited,
+body .cd-cta--review a.cd-cta__button:visited,
+body .cd-cta--phone a.cd-cta__button:visited {
+  display: inline-block !important;
+  padding: 18px 32px !important;
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+body .cd-cta a.cd-cta__button:hover,
+body .cd-cta a.cd-cta__button:focus {
+  background: #172b6f !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Trust items */
+body .cd-cta .cd-cta__trust {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 28px !important;
+  align-items: center !important;
+  margin: 24px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 15px !important;
+  color: #344054 !important;
+  line-height: 1.4 !important;
+}
+body .cd-cta .cd-cta__trust span {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #344054 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
+body .cd-cta .cd-cta__trust span::before,
+body .cd-cta--test .cd-cta__trust span::before,
+body .cd-cta--service .cd-cta__trust span::before,
+body .cd-cta--rescue .cd-cta__trust span::before,
+body .cd-cta--review .cd-cta__trust span::before,
+body .cd-cta--phone .cd-cta__trust span::before {
+  content: "";
+  display: inline-block;
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 8px !important;
+  flex: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+
+/* Hide anything that shouldn't appear (bullets fallback, icon empty div) */
+body .cd-cta .cd-cta__icon:empty { display: none !important; }
+body .cd-cta .cd-cta__bullets { display: none !important; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  body .cd-cta,
+  body .cd-cta--test,
+  body .cd-cta--service,
+  body .cd-cta--rescue,
+  body .cd-cta--review,
+  body .cd-cta--phone {
+    padding: 24px !important;
+  }
+  body .cd-cta .cd-cta__title,
+  body .cd-cta--test .cd-cta__title,
+  body .cd-cta--service .cd-cta__title,
+  body .cd-cta--rescue .cd-cta__title,
+  body .cd-cta--review .cd-cta__title,
+  body .cd-cta--phone .cd-cta__title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+    max-width: 100% !important;
+  }
+  body .cd-cta .cd-cta__intro { max-width: 100% !important; }
+}
+
+
+/* Universal .cd-faq-icon styling — theme's existing rules only scope to .col-8 /
+   .main-content ancestors, but many take-the-test pages sit inside .container>.content
+   with no .main-content wrapper, so the FAQ icon SVG renders at intrinsic size
+   (giant question mark). Applies globally now. */
+body .wp-block-ub-content-toggle .cd-faq-icon-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  flex-shrink: 0 !important;
+  margin-right: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-radius: 50% !important;
+  color: #002856 !important;
+  vertical-align: middle !important;
+}
+body .wp-block-ub-content-toggle .cd-faq-icon {
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+}
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .cd-faq-icon-wrap {
+  color: #ff6600 !important;
+  border-color: rgba(255, 102, 0, 0.25) !important;
+}
+
+
+/* ==== FAQ ACCORDION — universal (no .col-8/.main-content scoping) ====
+   Mirrors the theme's existing FAQ styling for pages sitting outside
+   the .col-8 / .main-content wrappers (e.g. .container>.content). */
+
+body .wp-block-ub-content-toggle {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin: 24px 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion {
+  background: #f4f7fe !important;
+  border: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-title-wrap {
+  background: transparent !important;
+  padding: 20px 28px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-title {
+  font-family: Arial, sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  color: #002856 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-title strong {
+  font-weight: 600 !important;
+  color: inherit !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-toggle-wrap {
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  color: #002856 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-state-indicator {
+  margin: 0 !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-content-wrap:not(.ub-hiding) {
+  padding: 4px 28px 20px 28px !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-content-wrap.ub-toggle-transition {
+  transition: 0.4s ease-in-out !important;
+}
+
+body .wp-block-ub-content-toggle .cd-faq-icon-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  flex-shrink: 0 !important;
+  margin-right: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 40, 86, 0.08) !important;
+  border-radius: 50% !important;
+  color: #002856 !important;
+  vertical-align: middle !important;
+  transition: color 0.18s ease, border-color 0.18s ease !important;
+}
+
+body .wp-block-ub-content-toggle .cd-faq-icon {
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-title {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-toggle-wrap {
+  transition: color 0.18s ease !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title {
+  transition: color 0.18s ease !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .cd-faq-icon-wrap {
+  color: #ff6600 !important;
+  border-color: rgba(255, 102, 0, 0.25) !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-toggle-wrap {
+  color: #ff6600 !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-title,
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-title strong {
+  color: #ff6600 !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-content-wrap p {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: #2d3a4a !important;
+  margin: 0 0 12px 0 !important;
+}
+
+body .wp-block-ub-content-toggle .wp-block-ub-content-toggle-accordion-content-wrap p:last-child {
+  margin-bottom: 0 !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .cd-faq-icon-wrap {
+  color: #ff6600 !important;
+  border-color: rgba(255, 102, 0, 0.25) !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-toggle-wrap {
+  color: #ff6600 !important;
+}
+
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-title,
+body .wp-block-ub-content-toggle-accordion-title-wrap:has(.wp-block-ub-content-toggle-accordion-state-indicator.open) .wp-block-ub-content-toggle-accordion-title strong {
+  color: #ff6600 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   INSOLVENCY CALCULATOR — full redesign (2026-07-22, spec-exact pass)
+   Scoped to body.page-template-quiz-insolvency. Replaces the entire prior
+   quiz block. Structure/JS hooks preserved: #slider-range-*, #quiz-amount-*,
+   .quiz-yes-no/.quiz-radio-container, Gravity Form 38, form="gform_38" button.
+   Brand: navy #002856, accent #FF6600 (hover #e65c00), pale #f4f6fa.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* ── Page background ──────────────────────────────────────────────────── */
+body.page-template-quiz-insolvency,
+body.page-template-quiz-insolvency .content,
+body.page-template-quiz-insolvency main.cd-calc-main {
+    background-color: #F4F6FA !important;
+}
+
+/* ── Strip the theme hero/container chrome on this template ───────────── */
+body.page-template-quiz-insolvency .quiz-content .quiz-tab-container,
+body.page-template-quiz-insolvency .quiz-content .quiz-tab-container .quiz-tab-content {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+body.page-template-quiz-insolvency .quiz-nav-tabs,
+body.page-template-quiz-insolvency .quiz-button-container,
+body.page-template-quiz-insolvency #gform_38 .gform_footer,
+body.page-template-quiz-insolvency #gform_submit_button_38 {
+    display: none !important;
+}
+
+/* ── HERO ─────────────────────────────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-calc-hero {
+    text-align: center !important;
+    max-width: 840px !important;
+    margin: 44px auto 20px !important;
+    padding: 0 16px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+body.page-template-quiz-insolvency .cd-calc-hero__pill {
+    display: inline-block !important;
+    background: #ffffff !important;
+    color: #7a8599 !important;
+    border: 1px solid #d3dbe8 !important;
+    border-radius: 999px !important;
+    padding: 8px 16px !important;
+    font: 600 12.5px/22px Arial, sans-serif !important;
+    letter-spacing: 0 !important;
+    margin-bottom: 0 !important;
+}
+body.page-template-quiz-insolvency h1.post-title.cd-calc-hero__title,
+body.page-template-quiz-insolvency .cd-calc-hero__title {
+    font-family: Arial, sans-serif !important;
+    font-size: 48px !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+    color: #002856 !important;
+    margin: 20px auto 0 !important;
+    /* override the theme's .post-title fixed width so the title isn't forced to wrap */
+    width: 100% !important;
+    max-width: 100% !important;
+    letter-spacing: -0.01em !important;
+}
+body.page-template-quiz-insolvency .cd-calc-hero__subhead {
+    font: 400 18px/1.55 Arial, sans-serif !important;
+    color: #5b6b85 !important;
+    margin: 18px auto 0 !important;
+    max-width: 600px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-hero__reviews {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-hero__stars { display: inline-flex !important; gap: 2px !important; }
+body.page-template-quiz-insolvency .cd-calc-hero__stars svg { fill: #FF6600 !important; }
+body.page-template-quiz-insolvency .cd-calc-hero__reviews-text {
+    font: 400 14px/1 Arial, sans-serif !important;
+    color: #5b6b85 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-hero__reviews-text strong { color: #002856 !important; font-weight: 700 !important; }
+
+/* ── MEGABOX ──────────────────────────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-calc-megabox {
+    max-width: 1120px !important;
+    margin: 0 auto 64px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f1 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 22px 50px -28px rgba(0, 40, 86, 0.32) !important;
+    padding: 22px !important;
+    box-sizing: border-box !important;
+}
+body.page-template-quiz-insolvency .cd-calc-grid {
+    display: grid !important;
+    grid-template-columns: 1.35fr 1fr !important;
+    gap: 20px !important;
+    align-items: start !important;
+}
+body.page-template-quiz-insolvency .cd-calc-grid > .quiz-tab-pane {
+    display: block !important;
+    width: auto !important;
+    grid-column: auto !important;
+}
+
+/* ── LEFT: questions ──────────────────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-calc-questions {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 14px 16px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-q {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+/* Divider between questions: equal clear space + 1px centred hairline.
+   Sized so the questions column ends level with the taller results/form
+   column (no dead space under the last question), matching the design. */
+body.page-template-quiz-insolvency .cd-calc-q + .cd-calc-q {
+    margin-top: 40px !important;
+    padding-top: 40px !important;
+    border-top: 1px solid #eceff4 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-q__head {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-bottom: 22px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-q:last-child .cd-calc-q__head { margin-bottom: 18px !important; }
+body.page-template-quiz-insolvency .cd-calc-qnum {
+    flex: 0 0 auto !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background: #F4F6FA !important;
+    color: #002856 !important;
+    font: 700 15px/32px Arial, sans-serif !important;
+    text-align: center !important;
+}
+body.page-template-quiz-insolvency h2.cd-calc-q__title {
+    font-family: Arial, sans-serif !important;
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #002856 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-q__body--center { display: flex !important; justify-content: center !important; }
+
+/* slider rows */
+body.page-template-quiz-insolvency .cd-calc-srow { margin: 0 0 20px !important; }
+body.page-template-quiz-insolvency .cd-calc-srow__head {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    margin-bottom: 11px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-srow__head label {
+    font: 400 18px/31px Arial, sans-serif !important;
+    color: #52606d !important;
+    margin: 0 !important;
+}
+
+/* £ value group — sign is a static sibling, gap 9 to the field */
+body.page-template-quiz-insolvency .cd-calc-money {
+    position: static !important;
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-money__sign {
+    position: static !important;
+    transform: none !important;
+    color: #002856 !important;
+    font: 700 20px/1 Arial, sans-serif !important;
+    pointer-events: none !important;
+}
+body.page-template-quiz-insolvency input.quiz-amount.cd-calc-money__input {
+    width: 126px !important;
+    box-sizing: border-box !important;
+    text-align: right !important;
+    background: #ffffff !important;
+    border: 1px solid #dbe2ec !important;
+    border-radius: 4px !important;
+    padding: 7px 10px !important;
+    color: #002856 !important;
+    font-family: Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    font-variant-numeric: tabular-nums !important;
+    outline: none !important;
+    transition: border-color .15s ease, box-shadow .15s ease !important;
+}
+body.page-template-quiz-insolvency input.quiz-amount.cd-calc-money__input:focus {
+    border-color: #FF6600 !important;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15) !important;
+}
+
+/* noUiSlider — 8px track, orange fill, 26px white thumb w/ 6px orange ring */
+body.page-template-quiz-insolvency .cd-calc-slider,
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-base,
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-connects {
+    height: 8px !important;
+    border-radius: 999px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-slider {
+    background: #e4e9f1 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 6px 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-connect {
+    background: #FF6600 !important;
+    border-radius: 999px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-handle {
+    width: 26px !important;
+    height: 26px !important;
+    top: -9px !important;
+    right: -13px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    border: 6px solid #FF6600 !important;
+    box-shadow: 0 2px 8px rgba(0, 40, 86, 0.28) !important;
+    cursor: pointer !important;
+}
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-handle:focus {
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(0, 40, 86, 0.28), 0 0 0 4px rgba(255, 102, 0, 0.20) !important;
+}
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-handle::before,
+body.page-template-quiz-insolvency .cd-calc-slider .noUi-handle::after { display: none !important; }
+
+/* total owed summary — boxed */
+body.page-template-quiz-insolvency .cd-calc-total {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-top: 30px !important;
+    padding: 15px 18px !important;
+    background: #f4f6fa !important;
+    border: 1px solid #e2e8f1 !important;
+    border-radius: 6px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-total__label {
+    font: 600 15px/28px Arial, sans-serif !important;
+    color: #7a8599 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-total__val {
+    font: 700 24px/1 Arial, sans-serif !important;
+    color: #002856 !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+/* ── Personal-guarantee toggle (JS-bound radios preserved) ────────────── */
+body.page-template-quiz-insolvency .quiz-yes-no {
+    display: flex !important;
+    gap: 14px !important;
+    justify-content: center !important;
+    width: 100% !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+body.page-template-quiz-insolvency .quiz-yes-no .quiz-radio-container {
+    flex: 1 1 0 !important;
+    max-width: 130px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+body.page-template-quiz-insolvency .quiz-yes-no .quiz-radio-container label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 15px !important;
+    background: #f7f9fc !important;
+    border: 1px solid #dbe2ec !important;
+    border-radius: 6px !important;
+    color: #002856 !important;
+    font: 700 16px/1 Arial, sans-serif !important;
+    cursor: pointer !important;
+    transition: border-color .15s ease, background .15s ease, color .15s ease !important;
+    margin: 0 !important;
+}
+body.page-template-quiz-insolvency .quiz-yes-no .quiz-radio-container label:hover { border-color: #002856 !important; }
+body.page-template-quiz-insolvency .quiz-yes-no .quiz-radio-container.active label {
+    background: #002856 !important;
+    border-color: #002856 !important;
+    color: #ffffff !important;
+}
+body.page-template-quiz-insolvency .quiz-yes-no .quiz-radio {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    pointer-events: none !important;
+}
+
+/* ── RIGHT: results + form (navy) ─────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-calc-grid > .cd-calc-side {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-self: start !important;
+}
+
+/* Estimated position */
+body.page-template-quiz-insolvency .cd-calc-position {
+    background: #002856 !important;
+    border-radius: 10px !important;
+    padding: 28px !important;
+    color: #ffffff !important;
+    box-shadow: 0 24px 50px -28px rgba(0, 40, 86, 0.55) !important;
+}
+body.page-template-quiz-insolvency h2.cd-calc-position__title {
+    font: 700 22px/1.2 Arial, sans-serif !important;
+    color: #ffffff !important;
+    margin: 0 0 20px !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__rows { margin-bottom: 0 !important; }
+body.page-template-quiz-insolvency .cd-calc-position__row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font: 400 14px/1 Arial, sans-serif !important;
+    color: #b7c6de !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__row:first-child { margin-bottom: 12px !important; }
+body.page-template-quiz-insolvency .cd-calc-position__row:last-child {
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__num {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: #ffffff !important;
+    font-variant-numeric: tabular-nums !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__figure {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: 18px !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__caption {
+    font: 700 13px/1 Arial, sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #8ba0c2 !important;
+    margin-bottom: 6px !important;
+    order: -1 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-position__amount {
+    font: 700 40px/1 Arial, sans-serif !important;
+    color: #ffffff !important;
+    letter-spacing: -0.01em !important;
+    font-variant-numeric: tabular-nums !important;
+    margin-bottom: 0 !important;
+}
+
+/* Instant results + form box — natural height (no stretch) */
+body.page-template-quiz-insolvency .cd-calc-form { margin: 0 !important; display: block !important; }
+body.page-template-quiz-insolvency .cd-calc-form .form-container { padding: 0 !important; margin: 0 !important; width: 100% !important; display: block !important; }
+body.page-template-quiz-insolvency .cd-calc-form .form-group {
+    background: #002856 !important;
+    border-radius: 10px !important;
+    padding: 30px 28px !important;
+    box-shadow: 0 24px 50px -28px rgba(0, 40, 86, 0.55) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    display: block !important;
+}
+body.page-template-quiz-insolvency h2.cd-calc-form__title {
+    font: 700 22px/1.2 Arial, sans-serif !important;
+    color: #ffffff !important;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form__lead {
+    font: 400 13.5px/1.5 Arial, sans-serif !important;
+    color: #b7c6de !important;
+    margin: 0 0 18px !important;
+}
+
+/* Gravity Form on navy — white fields, 2-col grid */
+body.page-template-quiz-insolvency .cd-calc-form #gform_wrapper_38,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 { width: 100% !important; max-width: none !important; }
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gform_fields {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 13px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gfield {
+    margin: 0 !important;
+    grid-column: 1 / -1 !important;
+    display: block !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_1 { grid-column: 1 / 2 !important; }
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_3 { grid-column: 2 / 3 !important; }
+/* Extra non-required AM/PM dropdown is not in the approved design */
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_8 { display: none !important; }
+/* Hide the reCAPTCHA widget */
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_16 { display: none !important; }
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gfield_label {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    font: 600 13px/1.3 Arial, sans-serif !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    color: #ffffff !important;
+    margin: 0 0 7px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gfield_required { display: none !important; }
+/* Field wrappers must fill the grid cell (GF/theme leaves them ~70% wide) */
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gfield,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .ginput_container,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .ginput_container_select {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 input,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 select {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+    font: 400 15px/1.3 Arial, sans-serif !important;
+    color: #002856 !important;
+    height: auto !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 input:focus,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 select:focus {
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.30) !important;
+    outline: none !important;
+}
+/* Placeholder: muted blue-grey, cleared the moment the field is focused */
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 input::placeholder,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 textarea::placeholder {
+    color: #7f93b3 !important;
+    opacity: 1 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 input:focus::placeholder,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 textarea:focus::placeholder {
+    color: transparent !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gfield_description,
+body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gform_validation_errors { color: #c3d0e4 !important; }
+
+/* Get My Results button */
+body.page-template-quiz-insolvency .cd-calc-form .cd-get-results-container {
+    display: block !important;
+    margin: 18px 0 0 !important;
+}
+body.page-template-quiz-insolvency .cd-get-results-btn {
+    width: 100% !important;
+    display: block !important;
+    background: #FF6600 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    padding: 15px !important;
+    border-radius: 6px !important;
+    font: 700 16px/1 Arial, sans-serif !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    transition: background .15s ease !important;
+}
+body.page-template-quiz-insolvency .cd-get-results-btn:hover { background: #e65c00 !important; }
+body.page-template-quiz-insolvency .cd-calc-form__micro {
+    text-align: center !important;
+    font: 400 12.5px/1 Arial, sans-serif !important;
+    color: #8ba0c2 !important;
+    margin: 18px 0 0 !important;
+}
+
+/* GF AJAX confirmation (thank-you state) */
+body.page-template-quiz-insolvency .cd-calc-form .gform_confirmation_message {
+    text-align: center !important;
+    color: #c3d0e4 !important;
+    font: 400 14.5px/1.55 Arial, sans-serif !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    padding: 30px 6px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form .gform_confirmation_message strong,
+body.page-template-quiz-insolvency .cd-calc-form .gform_confirmation_message h3 {
+    display: block !important;
+    color: #ffffff !important;
+    font: 700 24px/1.2 Arial, sans-serif !important;
+    margin: 0 0 12px !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form .gform_confirmation_message::before {
+    content: "" !important;
+    display: block !important;
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 20px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 102, 0, 0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%23FF6600' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/30px no-repeat !important;
+}
+
+/* ── Full-width guide band (kept) ─────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-guide-band {
+    margin: 20px 0 0 !important;
+    background: #002856 !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 12px rgba(0, 40, 86, 0.15) !important;
+    padding: 36px 40px !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band .form-sidebar {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 40px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band h4 {
+    font: 700 22px/1.2 Arial, sans-serif !important;
+    color: #ffffff !important;
+    margin: 0 0 20px !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 24px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 32px !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band ul li {
+    padding: 4px 0 4px 30px !important;
+    position: relative !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font: 400 15px/1.5 Arial, sans-serif !important;
+    list-style: none !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band ul li::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 7px !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    background: #FF6600 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band .form-sidebar-cta {
+    display: inline-block !important;
+    background: #FF6600 !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+    border-radius: 6px !important;
+    font: 700 15px/1 Arial, sans-serif !important;
+    text-decoration: none !important;
+    transition: background .15s ease !important;
+}
+body.page-template-quiz-insolvency .cd-guide-band .form-sidebar-cta:hover { background: #e65c00 !important; }
+body.page-template-quiz-insolvency .cd-guide-band .form-sidebar-image { flex: 0 0 auto !important; }
+body.page-template-quiz-insolvency .cd-guide-band .form-sidebar-image img { display: block !important; border-radius: 6px !important; }
+
+/* ── Results view (post-submit) ───────────────────────────────────────── */
+body.page-template-quiz-insolvency .cd-results { display: none; }
+body.page-template-quiz-insolvency .cd-results.is-visible {
+    display: block !important;
+    max-width: 840px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px 80px !important;
+    text-align: center !important;
+}
+body.page-template-quiz-insolvency .cd-results__heading {
+    font: 700 38px/1.2 Arial, sans-serif !important;
+    color: #002856 !important;
+    margin: 0 auto 44px !important;
+    max-width: 720px !important;
+    letter-spacing: -0.01em !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-results__stamp {
+    display: inline-block !important;
+    background: #ffffff !important;
+    border: 5px solid #cc2031 !important;
+    border-radius: 8px !important;
+    padding: 16px 44px !important;
+    max-width: 480px !important;
+    transform: rotate(-4deg) !important;
+    box-shadow: 0 20px 34px -20px rgba(0, 40, 86, 0.40) !important;
+    margin: 0 0 48px !important;
+}
+body.page-template-quiz-insolvency .cd-results__verdict {
+    display: block !important;
+    font: 700 30px/1.12 Arial, sans-serif !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #cc2031 !important;
+}
+body.page-template-quiz-insolvency .cd-results__stamp.is-solvent { border-color: #002856 !important; }
+body.page-template-quiz-insolvency .cd-results__stamp.is-solvent .cd-results__verdict { color: #002856 !important; }
+body.page-template-quiz-insolvency .cd-results__body {
+    font: 400 16px/1.65 Arial, sans-serif !important;
+    color: #52606d !important;
+    max-width: 620px !important;
+    margin: 0 auto 34px !important;
+}
+body.page-template-quiz-insolvency .cd-results__body p { margin: 0 0 16px !important; }
+body.page-template-quiz-insolvency .cd-results__body p:last-child { margin-bottom: 0 !important; }
+
+/* ── Copy-change helper / note / privacy text ─────────────────────────── */
+body.page-template-quiz-insolvency .cd-calc-help {
+    font: 400 13px/1.5 Arial, sans-serif !important;
+    color: #7a8599 !important;
+    margin: -8px 0 18px !important;
+    padding: 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-help--center { text-align: center !important; margin: -6px 0 20px !important; }
+body.page-template-quiz-insolvency .cd-calc-position__note {
+    font: 400 12px/1.5 Arial, sans-serif !important;
+    color: #b7c6de !important;
+    margin: 16px 0 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form__privacy {
+    font: 400 12px/1.5 Arial, sans-serif !important;
+    color: #8ba0c2 !important;
+    text-align: center !important;
+    margin: 12px 0 0 !important;
+}
+body.page-template-quiz-insolvency .cd-calc-form__privacy a { color: #c3d0e4 !important; text-decoration: underline !important; }
+body.page-template-quiz-insolvency .cd-results__trust {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font: 700 15px/1 Arial, sans-serif !important;
+    color: #002856 !important;
+    margin: 0 0 34px !important;
+}
+body.page-template-quiz-insolvency .cd-results__lock { color: #002856 !important; flex: 0 0 auto !important; }
+body.page-template-quiz-insolvency .cd-results__cta { margin: 0 !important; }
+body.page-template-quiz-insolvency .cd-results__btn {
+    display: inline-block !important;
+    background: #FF6600 !important;
+    color: #ffffff !important;
+    padding: 16px 34px !important;
+    border-radius: 8px !important;
+    font: 700 16px/1 Arial, sans-serif !important;
+    text-decoration: none !important;
+    transition: background .15s ease !important;
+}
+body.page-template-quiz-insolvency .cd-results__btn:hover { background: #e65c00 !important; color: #ffffff !important; text-decoration: none !important; }
+
+/* ── RESPONSIVE (single column below ~760px) ──────────────────────────── */
+@media (max-width: 767px) {
+    body.page-template-quiz-insolvency .cd-calc-megabox { padding: 20px 18px !important; }
+    body.page-template-quiz-insolvency .cd-calc-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px !important;
+    }
+    body.page-template-quiz-insolvency .cd-calc-questions { padding: 0 !important; }
+    body.page-template-quiz-insolvency h1.post-title.cd-calc-hero__title,
+    body.page-template-quiz-insolvency .cd-calc-hero__title { font-size: 32px !important; }
+    body.page-template-quiz-insolvency .cd-calc-qnum { width: 30px !important; height: 30px !important; line-height: 30px !important; }
+    body.page-template-quiz-insolvency .cd-calc-q__head { gap: 12px !important; }
+    body.page-template-quiz-insolvency h2.cd-calc-q__title { font-size: 18px !important; }
+    body.page-template-quiz-insolvency .cd-calc-q + .cd-calc-q { margin-top: 22px !important; padding-top: 22px !important; }
+    body.page-template-quiz-insolvency .cd-calc-srow__head { margin-bottom: 10px !important; flex-wrap: wrap !important; }
+    body.page-template-quiz-insolvency .cd-calc-srow__head label { font-size: 15px !important; line-height: 1.3 !important; }
+    body.page-template-quiz-insolvency .cd-calc-money { gap: 6px !important; }
+    body.page-template-quiz-insolvency input.quiz-amount.cd-calc-money__input { width: 92px !important; font-size: 16px !important; padding: 7px 9px !important; }
+    body.page-template-quiz-insolvency .cd-calc-slider .noUi-handle { width: 28px !important; height: 28px !important; top: -10px !important; right: -14px !important; }
+    body.page-template-quiz-insolvency .quiz-yes-no { gap: 12px !important; }
+    body.page-template-quiz-insolvency .cd-calc-form #gform_38 .gform_fields { grid-template-columns: 1fr !important; }
+    body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_1,
+    body.page-template-quiz-insolvency .cd-calc-form #gform_38 #field_38_3 { grid-column: 1 / -1 !important; }
+    body.page-template-quiz-insolvency .cd-guide-band .form-sidebar { flex-direction: column !important; text-align: center !important; }
+    body.page-template-quiz-insolvency .cd-guide-band ul { grid-template-columns: 1fr !important; }
+    body.page-template-quiz-insolvency .cd-guide-band ul li { text-align: left !important; }
+}
+
+/* ── Results view — mobile ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    body.page-template-quiz-insolvency .cd-results__heading { font-size: 26px !important; margin-bottom: 32px !important; }
+    body.page-template-quiz-insolvency .cd-results__verdict { font-size: 23px !important; letter-spacing: 0.5px !important; }
+    body.page-template-quiz-insolvency .cd-results__stamp { padding: 10px 34px !important; margin-bottom: 36px !important; }
+    body.page-template-quiz-insolvency .cd-results__btn { display: block !important; }
 }
