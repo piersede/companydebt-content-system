@@ -15751,7 +15751,7 @@ body.page-template-quiz-insolvency .cd-calc-form #gform_38 select {
     border: 0 !important;
     border-radius: 8px !important;
     padding: 14px 16px !important;
-    font: 400 15px/1.3 Arial, sans-serif !important;
+    font: 400 16px/1.3 Arial, sans-serif !important;
     color: #002856 !important;
     height: auto !important;
 }
@@ -15979,7 +15979,17 @@ body.page-template-quiz-insolvency .cd-results__btn {
 }
 body.page-template-quiz-insolvency .cd-results__btn:hover { background: #e65c00 !important; color: #ffffff !important; text-decoration: none !important; }
 
-/* ── RESPONSIVE (single column below ~760px) ──────────────────────────── */
+/* ── RESPONSIVE ───────────────────────────────────────────────────────── */
+/* Collapse the two-column calculator to a single column early enough that
+   tablets / large phones (e.g. 768px) get the comfortable stacked layout
+   instead of a cramped 2-col. Below 767px the phone-specific rules add on
+   top (typography, single-column form fields, etc.). */
+@media (max-width: 991px) {
+    body.page-template-quiz-insolvency .cd-calc-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+    }
+}
 @media (max-width: 767px) {
     body.page-template-quiz-insolvency .cd-calc-megabox { padding: 20px 18px !important; }
     body.page-template-quiz-insolvency .cd-calc-grid {
@@ -15988,7 +15998,7 @@ body.page-template-quiz-insolvency .cd-results__btn:hover { background: #e65c00 
     }
     body.page-template-quiz-insolvency .cd-calc-questions { padding: 0 !important; }
     body.page-template-quiz-insolvency h1.post-title.cd-calc-hero__title,
-    body.page-template-quiz-insolvency .cd-calc-hero__title { font-size: 32px !important; }
+    body.page-template-quiz-insolvency .cd-calc-hero__title { font-size: 26px !important; }
     body.page-template-quiz-insolvency .cd-calc-qnum { width: 30px !important; height: 30px !important; line-height: 30px !important; }
     body.page-template-quiz-insolvency .cd-calc-q__head { gap: 12px !important; }
     body.page-template-quiz-insolvency h2.cd-calc-q__title { font-size: 18px !important; }
