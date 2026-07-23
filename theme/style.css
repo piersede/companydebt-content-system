@@ -4206,13 +4206,22 @@ footer .custom-logo {
 /* Footer — accreditation logos */
 .footer-accred-logos {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   margin-top: 13px;
 }
+/* !important: on data-hub-template pages something in that page's own
+   embedded post-content stylesheet outranks this plain declaration (cause
+   not isolated — no matching rule found in any introspectable same-origin
+   stylesheet — but confirmed empirically: without !important these render
+   at native pixel size, e.g. 997x649, blowing the footer out to ~1000px
+   wide and forcing page-level horizontal scroll at mobile widths; keeps
+   rendering correctly at 50px on ordinary pages either way). */
 .footer-accred-logos img {
-  width: 50px;
-  height: auto;
+  width: 50px !important;
+  max-width: 50px !important;
+  height: auto !important;
 }
 .footer-accred-logos .footer-logo-invert {
   filter: brightness(0) invert(1);
