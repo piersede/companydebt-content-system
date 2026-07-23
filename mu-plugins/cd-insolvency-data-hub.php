@@ -1969,6 +1969,188 @@ function cd_datahub_schema_graph( $slug, $page_id ) {
     return null;
 }
 
+/**
+ * Site-alignment CSS: brings a /data/ page into line with the rest of
+ * companydebt.com (Arial, the site's full-bleed pale blue hero band, one
+ * spacing rhythm, the breadcrumb fix), per docs/data-hub/design-brief-2026-07.md
+ * and the Claude Design handoff. Parameterised on $hero_selector because the
+ * flagship's own markup uses .cd-hero while the sibling data pages (built
+ * from a different design-handoff extraction) use .cd-hub-header for the
+ * same role.
+ *
+ * Callers MUST gate on cd_datahub_current_slug() before echoing this: every
+ * /data/ page shares body.page-template-data-hub-template, so an unscoped
+ * call would silently reskin every page in the section, including ones that
+ * have not been through this alignment pass yet.
+ */
+function cd_datahub_alignment_css( $hero_selector, $band_selector = null ) {
+    // $band_selector: the element the full-bleed ::before band actually
+    // attaches to. Defaults to $hero_selector, correct for every page whose
+    // hero is a single element. The flagship's hero is two nested layers -
+    // .cd-w-hero (the true 100vw outer wrapper) containing .cd-hero (a
+    // narrower, asymmetrically-inset inner grid) - and the band MUST attach
+    // to the outer one. The "left:50%; margin-left:-50vw" full-bleed trick
+    // only reaches the true viewport edge when the element carrying it is
+    // itself already 100vw wide; attached to the narrower inner element (as
+    // an earlier version of this function did), "50%" resolves against that
+    // element's own ~1136px width, not the viewport, so the band renders as
+    // a bounded card offset ~72px from the edge instead of a true band.
+    if ( null === $band_selector ) {
+        $band_selector = $hero_selector;
+    }
+    return <<<CSS
+<style id="cd-site-alignment">
+/* 0 -- FULL-BLEED ESCAPE HATCH. The theme's <main class="site-main"> (the
+   direct ancestor every data-hub page renders inside) carries
+   overflow-x:hidden site-wide, almost certainly to stop oversized ordinary
+   content (images, tables) from creating a horizontal scrollbar on normal
+   pages. Every data-hub full-bleed section (.cd-w-hero, .cd-w-wide,
+   .cd-masthead, .cd-bleed) works by escaping its container via
+   width:100vw + a negative margin - and that escape is clipped right back
+   down by this ancestor's overflow, which is what made the masthead AND the
+   hero band both render as bounded, inset cards rather than true edge-to-
+   edge bands (found 2026-07 via direct browser inspection: computed CSS was
+   correct, but nothing painted past .site-main's own box). Scoped to this
+   template only - .site-main's overflow:hidden stays intact everywhere else
+   on the site, where it is presumably load-bearing.
+   Sets the `overflow` SHORTHAND (both axes), not overflow-x alone: per spec,
+   overflow-x:visible with overflow-y left at its inherited non-visible value
+   is silently computed as overflow-x:auto instead, which still clips - this
+   exact trap cost a whole extra deploy-and-recheck cycle to catch. */
+html body.page-template-data-hub-template .site-main {
+  overflow: visible !important;
+}
+/* 1 -- FONT. Arial, matching body.cd-ttt-design on the rest of the site. */
+html body.page-template-data-hub-template .cd-data-hub,
+html body.page-template-data-hub-template .cd-data-hub h1,
+html body.page-template-data-hub-template .cd-data-hub h2,
+html body.page-template-data-hub-template .cd-data-hub h3,
+html body.page-template-data-hub-template .cd-data-hub {$hero_selector} h1,
+html body.page-template-data-hub-template .cd-data-hub .cd-section-head h2,
+html body.page-template-data-hub-template .cd-data-hub .cd-cta h2,
+html body.page-template-data-hub-template .cd-data-hub .cd-brand__name,
+html body.page-template-data-hub-template .cd-data-hub .cd-brand__mark {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+/* H1 to the site scale, clamped so it wraps naturally on mobile. */
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} h1,
+html body.page-template-data-hub-template .main-content .cd-data-hub h1 {
+  font-size: clamp(30px, 5vw, 48px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important;
+  max-width: 800px !important;
+}
+/* 2 -- HERO BAND. Copies the site mechanism (.col-12.page-header::before): a
+   100vw full-bleed pale blue band. body sets overflow-x:hidden, so 100vw
+   cannot introduce horizontal scroll. Vertical padding (the gap above/below
+   the content) stays on $hero_selector; the band's own width/position
+   attaches to $band_selector, the element that is actually 100vw wide. */
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} {
+  position: relative;
+  padding-top: 35px !important;
+  padding-bottom: 54px !important;
+  margin-bottom: 24px !important;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector} {
+  position: relative;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector}::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 100vw; margin-left: -50vw;
+  background: #f4f7fe;
+  z-index: 0;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub {$band_selector} > * {
+  position: relative;
+  z-index: 1;
+}
+/* 3 -- SPACING RHYTHM. One rhythm across the page. */
+html body.page-template-data-hub-template .main-content .cd-data-hub {
+  --cd-space-section: 104px;
+  --cd-space-section-small: 64px;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub .cd-section {
+  margin-top: 104px !important;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub .cd-section-small {
+  margin-top: 64px !important;
+}
+/* 4 -- BREADCRUMB. The theme's .row is display:flex, so .col-12.page-header
+   collapses to min-content and the trail wraps onto multiple lines. Restore
+   it to full row width and seat it on the same pale-blue band as the hero,
+   matching the rest of the site. */
+html body.page-template-data-hub-template .row > .col-12.page-header {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  position: relative !important;
+  margin-bottom: 0 !important;
+  padding-top: 28px !important;
+  padding-bottom: 18px !important;
+  padding-left: max(24px, calc(50vw - 520px)) !important;
+  padding-right: max(24px, calc(50vw - 520px)) !important;
+}
+html body.page-template-data-hub-template .row > .col-12.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 100vw; margin-left: -50vw;
+  background: #f4f7fe;
+  z-index: 0;
+}
+html body.page-template-data-hub-template .row > .col-12.page-header > * {
+  position: relative;
+  z-index: 1;
+}
+html body.page-template-data-hub-template .main-content .cd-data-hub {$hero_selector} {
+  padding-top: 8px !important;
+}
+html body.page-template-data-hub-template .page-header .breadcrumbs {
+  white-space: normal !important;
+}
+</style>
+
+CSS;
+}
+
+add_action( 'wp_head', function() {
+    if ( 'uk-insolvency-statistics' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hero', '.cd-w-hero' );
+}, 30 );
+
+add_action( 'wp_head', function() {
+    if ( 'winding-up-petition-tracker' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
+}, 30 );
+
+add_action( 'wp_head', function() {
+    if ( 'dissolutions-vs-insolvencies' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
+}, 30 );
+
+add_action( 'wp_head', function() {
+    if ( 'payment-practices-late-payment' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
+}, 30 );
+
+add_action( 'wp_head', function() {
+    if ( 'data' !== cd_datahub_current_slug() ) {
+        return;
+    }
+    echo cd_datahub_alignment_css( '.cd-hub-header' );
+}, 30 );
+
 add_action( 'wp_head', function() {
     $slug = cd_datahub_current_slug();
     if ( '' === $slug ) {
