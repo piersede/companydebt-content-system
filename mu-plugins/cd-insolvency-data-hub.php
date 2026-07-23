@@ -364,6 +364,34 @@ add_action( 'wp_footer', function() {
     <?php
 }, 50 );
 
+/**
+ * Mobile overflow fix: every page bakes its own `.cd-grouphead { display:flex;
+ * ...; flex-wrap not set (defaults to nowrap) }` rule into post_content (KSES
+ * strips <style> from admin edits but not from the passthrough build, so it
+ * lives per-page, not in one shared stylesheet). At narrow widths the H2 +
+ * `.cd-grouphead__note` label don't both fit on one line; nowrap makes the
+ * label spill past the row's right edge instead of dropping to a new line.
+ * On ordinary pages that would be invisibly clipped by .site-main's
+ * overflow-x:hidden, but data-hub-template pages flip that to
+ * `overflow: visible !important` (see cd-site-alignment below, for the
+ * full-bleed hero band) so the spill becomes real page-level horizontal
+ * scroll (confirmed via document.documentElement.scrollWidth > clientWidth
+ * at 390px on payment-practices-late-payment and winding-up-petition-tracker).
+ * Printed in wp_footer, i.e. after the page's own inline <style>, so it wins
+ * the cascade on equal specificity without needing !important. Harmless at
+ * desktop widths - wrap only activates when content doesn't fit on one line.
+ */
+add_action( 'wp_footer', function() {
+    if ( '' === cd_datahub_current_slug() ) {
+        return;
+    }
+    ?>
+<style id="cd-datahub-grouphead-wrap-fix">
+.cd-data-hub .cd-grouphead { flex-wrap: wrap; row-gap: 4px; }
+</style>
+    <?php
+}, 51 );
+
 /* ------------------------------------------------------------------ *
  *  JSON-LD per page. Emitted in <head> so structured-data parsers
  *  find it. Headline figures are hard-coded (the data dir is not on
