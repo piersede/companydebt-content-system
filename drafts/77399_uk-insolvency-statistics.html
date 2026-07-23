@@ -13,15 +13,21 @@
    ============================================================ */
 
 .cd-data-hub {
-  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
-     use width:100vw to escape the WP container). 100vw resolves to the
-     viewport width INCLUDING the scrollbar gutter, so on any page tall
-     enough to scroll it overshoots the true visible width by the scrollbar's
-     width (~15-17px) and creates a real, swipeable horizontal scroll. This
-     is not masking an unknown overflow — the cause is the 100vw pattern
-     above, which has no scrollbar-safe CSS-only fix; contain the resulting
-     15px here rather than letting it leak into the page/site chrome. */
-  overflow-x: hidden;
+  /* NOT overflow-x:hidden here (removed 2026-07). .cd-w-hero/.cd-w-wide/
+     .cd-bleed use width:100vw + a negative margin specifically to ESCAPE
+     this element and reach the true viewport edge - that is the entire
+     mechanism a full-bleed band relies on. overflow-x:hidden on the exact
+     element those sections are escaping FROM clips their paint back down to
+     .cd-data-hub's own (much narrower) box, which is what made the hero
+     band render as a bounded, inset card instead of a true edge-to-edge
+     band (found 2026-07, see docs/data-hub commit history).
+     The real reason this was here - width:100vw resolving to the viewport
+     WIDTH INCLUDING THE SCROLLBAR GUTTER, ~15-17px wider than the visible
+     area, which would otherwise create a real swipeable horizontal scroll -
+     is already handled a level up: the theme template sets
+     `body.page-template-data-hub-template { overflow-x: hidden; }`
+     (templates/data-hub-template.php), which contains that overshoot at the
+     body without clipping anything trying to bleed within the page. */
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -114,25 +120,32 @@
 }
 .cd-data-hub .cd-w-narrow   { max-width: 760px; }
 .cd-data-hub .cd-w-standard { max-width: 1040px; }
-/* Wide sections bleed out of the WP container so they can actually reach
-   1280px on wide viewports. max-width:none beats inherited theme caps. */
+/* Wide sections bleed out of the WP container so they can span the full
+   viewport, but re-centre to the site's single 1040px rail (per the 2026-07
+   Claude Design handoff: "every band sits on one 1040px content column with
+   an identical left edge... do NOT reintroduce per-section widths"). This
+   was previously 1280px (a "-640" constant, a second, wider rail) - that is
+   what put the masthead (already unified to 1040px, both via the theme
+   template's own masthead-pin fix and this file's site-alignment CSS) out of
+   line with every content section below it: a real, visible 120px
+   left-edge misalignment running down the whole page, not a cosmetic nit. */
 .cd-data-hub .cd-w-wide {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 /* Full-bleed band that escapes the parent .container. Inner content
-   re-aligns to a 1280px max-width. */
+   re-aligns to the same 1040px rail as .cd-w-wide. */
 .cd-data-hub .cd-bleed {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 
 /* ── Spacing rhythm ───────────────────────────────────────── */
@@ -1151,7 +1164,7 @@
     <dl class="cd-meta-grid">
       <div class="cd-meta-item"><span>Latest data</span><strong>June 2026</strong></div>
       <div class="cd-meta-item"><span>Published</span><strong>17 July 2026</strong></div>
-      <div class="cd-meta-item"><span>Next release</span><strong>18 August 2026</strong></div>
+      <div class="cd-meta-item"><span>Next release</span><strong>21 August 2026 (estimated from the monthly release cadence; not yet confirmed by the Insolvency Service)</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
     </dl>
     <p class="cd-official-badge"><span aria-hidden="true"></span>Accredited official statistics</p>
@@ -1195,6 +1208,7 @@
   <a href="#rate">Insolvency rate</a>
   <a href="#procedures">By procedure</a>
   <a href="#sector">Sector</a>
+  <a href="#sector-pages">Trade data</a>
   <a href="#nations">UK nations</a>
   <a href="#method">Method</a>
   <a href="#source">Source</a>
@@ -1337,6 +1351,24 @@
   </aside>
 </section>
 
+<section class="cd-section cd-w-wide" id="sector-pages">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Detailed data</p>
+    <h2>Get the insolvency data for your trade</h2>
+    <p class="cd-section-intro">We publish a dedicated, monthly-updated data page for individual trades within the industry sections above. Find yours in the table and open its full time series.</p>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table cd-sectorlinks">
+      <caption class="cd-table__caption">Detailed insolvency data pages by trade, grouped by SIC industry section.</caption>
+      <thead>
+        <tr><th scope="col">Trade or sub-sector</th><th scope="col" class="cd-sectorlinks__actionhead">Data page</th></tr>
+      </thead>
+      <tbody><tr><th scope="row"><span class="cd-sectorlinks__name">Construction</span><span class="cd-sectorlinks__desc">The largest sector by insolvency volume: builders, contractors and specialist trades.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/construction-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Motor vehicle repair</span><span class="cd-sectorlinks__desc">Garages and workshops carrying out motor vehicle maintenance and repair.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/motor-vehicle-repair-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">retail sector</span><span class="cd-sectorlinks__desc">General, specialist and online retailers selling goods to the public.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/retail-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Hotels</span><span class="cd-sectorlinks__desc">Hotels, motels and similar short-stay accommodation with daily housekeeping.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/hotel-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Restaurants</span><span class="cd-sectorlinks__desc">Restaurants, cafes and mobile or takeaway food service businesses.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/restaurant-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Cleaning contractors</span><span class="cd-sectorlinks__desc">Commercial and industrial cleaning contractors, including window cleaning.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/cleaning-company-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Recruitment agencies</span><span class="cd-sectorlinks__desc">Permanent-placement and executive-search recruitment agencies.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/recruitment-agency-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Temporary staffing agencies</span><span class="cd-sectorlinks__desc">Agencies supplying temporary office, industrial, medical and teaching staff.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/temporary-staffing-agency-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">architectural and engineering consultancy</span><span class="cd-sectorlinks__desc">Building design, structural and civil engineering consultancy.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/architectural-engineering-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">management consultancy</span><span class="cd-sectorlinks__desc">Strategy, organisation, marketing and operations consultancy.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/management-consultancy-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Furniture manufacturing</span><span class="cd-sectorlinks__desc">Household, office, kitchen and shop furniture and mattress manufacturers.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/furniture-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">IT and computer consultancy</span><span class="cd-sectorlinks__desc">Software development, systems integration and IT project consultancy.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/it-consultancy-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Estate agencies</span><span class="cd-sectorlinks__desc">Estate agencies and fee-based property management businesses.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/estate-agency-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">real estate letting and investment</span><span class="cd-sectorlinks__desc">Commercial and residential landlords and property-investment companies.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/real-estate-letting-investment-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">personal care services</span><span class="cd-sectorlinks__desc">Hairdressing, beauty treatment, wellbeing, funeral and dry-cleaning services.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/personal-care-services-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">Road haulage</span><span class="cd-sectorlinks__desc">Freight transport by road and removal services.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/road-haulage-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">support activities for transportation</span><span class="cd-sectorlinks__desc">Freight forwarding, cargo handling and customs clearance.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/freight-forwarding-logistics-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">medical and dental practices</span><span class="cd-sectorlinks__desc">General and specialist medical practices and dental practices.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/medical-dental-practice-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">amusement and recreation</span><span class="cd-sectorlinks__desc">Theme parks, amusement arcades, funfairs and similar attractions.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/amusement-recreation-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">creative, arts and entertainment</span><span class="cd-sectorlinks__desc">Performing arts, artistic creation and arts venues such as theatres.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/creative-arts-entertainment-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr><tr><th scope="row"><span class="cd-sectorlinks__name">sports clubs and facilities</span><span class="cd-sectorlinks__desc">Sports facilities, leisure centres, sports clubs and fitness facilities.</span></th><td class="cd-sectorlinks__action"><a class="cd-sectorlinks__btn" href="/data/sports-facility-insolvency-statistics/">View data<span aria-hidden="true">&#8594;</span></a></td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-sectorlinks__all"><a href="/data/company-insolvencies-by-sector/">See all sectors and the full SIC breakdown <span aria-hidden="true">&#8594;</span></a></p>
+</section>
+
 <section class="cd-section cd-w-standard" id="nations">
   <div class="cd-section-head">
     <p class="cd-eyebrow">UK nations <span>· June 2026</span></p>
@@ -1396,7 +1428,7 @@
         <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026.</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
         <dt>Publication date</dt><dd>17 July 2026</dd>
-        <dt>Next scheduled release</dt><dd>18 August 2026</dd>
+        <dt>Next scheduled release</dt><dd>21 August 2026 (estimated from the monthly release cadence; not yet confirmed by the Insolvency Service)</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>
