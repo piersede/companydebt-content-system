@@ -476,6 +476,23 @@ function company_debt_webpigment_scripts() {
 			true
 		);
 	}
+
+	// Quick Quote redesign assets (fonts + scoped stylesheet). The calculator
+	// JS/CSS above still loads because the page's assigned template is unchanged.
+	if ( is_page( 'quick-quote' ) ) {
+		wp_enqueue_style(
+			'cd-qq-fonts',
+			'https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap',
+			array(),
+			null
+		);
+		wp_enqueue_style(
+			'cd-quick-quote-redesign',
+			CD_THEME_URL . 'public/qq-redesign.css',
+			array( 'nouislider', 'quiz-insolvency' ),
+			filemtime( get_template_directory() . '/public/qq-redesign.css' )
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'company_debt_webpigment_scripts' );
 
