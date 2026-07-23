@@ -73,7 +73,7 @@ def hero_block(meta: dict, latest_total: int) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">UK Company Insolvency</span> <span class="cd-h1__line" style="white-space: normal;">Statistics 2026</span></h1>
         <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was little changed from May 2026 and 10% lower than June 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
