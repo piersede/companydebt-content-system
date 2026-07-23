@@ -91,16 +91,19 @@ def draw_wrapped(c, text, font, size, colour, x, y, max_width, leading=None):
     return y
 
 
-def draw_chrome(c, slide_no, total, source=FOOTER_SOURCE):
+def draw_chrome(c, slide_no, total, source=FOOTER_SOURCE, url=FOOTER_URL):
     """Footer source line, url, wordmark and slide counter. Every slide.
 
     total <= 1 marks a single-image post: no slide counter is drawn.
+    An empty source string omits the source line (for non-data posts).
     """
-    c.setFont("Lato", 20)
-    c.setFillColor(MIDBLUE)
-    c.drawString(MARGIN, 74, source)
+    if source:
+        c.setFont("Lato", 20)
+        c.setFillColor(MIDBLUE)
+        c.drawString(MARGIN, 74, source)
     c.setFont("Lato-Bold", 20)
-    c.drawString(MARGIN, 44, FOOTER_URL)
+    c.setFillColor(MIDBLUE)
+    c.drawString(MARGIN, 44, url)
 
     c.setFont("Lato-Black", 20)
     c.setFillColor(WHITE)
@@ -230,6 +233,54 @@ def panel_note(c, heading, body):
         ty -= body_size
         c.drawString(MARGIN + pad + 12, ty, line)
         ty -= body_lead - body_size
+
+
+def mythcard(c, kicker, lines, sub, cta=None):
+    """Single-image statement card. `lines` is a list of (text, colour_key)
+    where colour_key in {'white','orange'}; each is one big headline line.
+    For myth/legal posts that carry no number to verify.
+    """
+    palette = {"white": WHITE, "orange": ORANGE}
+    head_size = 92
+    head_lead = head_size * 1.16
+    sub_lines = wrap(c, sub, "Lato", SUB_SIZE, COL)
+    cta_lines = wrap(c, cta, "Lato-Bold", 34, COL) if cta else []
+
+    block = (KICKER_SIZE + GAP_KICKER + len(lines) * head_lead + GAP_SUB
+             + len(sub_lines) * SUB_LEAD + (GAP_SUB + len(cta_lines) * 46 if cta_lines else 0))
+    y = centre_start(block)
+
+    c.setFont("Lato-Bold", KICKER_SIZE)
+    c.setFillColor(MIDBLUE)
+    c.drawString(MARGIN, y - KICKER_SIZE, kicker.upper())
+    y -= KICKER_SIZE + GAP_KICKER
+
+    c.setFont("Lato-Black", head_size)
+    for text, ck in lines:
+        y -= head_size
+        c.setFillColor(palette[ck])
+        c.drawString(MARGIN, y, text)
+        y -= head_lead - head_size
+    y -= GAP_SUB
+
+    c.setFont("Lato", SUB_SIZE)
+    c.setFillColor(WHITE)
+    for line in sub_lines:
+        y -= SUB_SIZE
+        c.drawString(MARGIN, y, line)
+        y -= SUB_LEAD - SUB_SIZE
+
+    if cta_lines:
+        y -= GAP_SUB
+        c.setFillColor(ORANGE)
+        c.rect(MARGIN, y - 4, 120, RULE_H, stroke=0, fill=1)
+        y -= GAP_SUB - 10
+        c.setFont("Lato-Bold", 34)
+        c.setFillColor(MIDBLUE)
+        for line in cta_lines:
+            y -= 34
+            c.drawString(MARGIN, y, line)
+            y -= 12
 
 
 def distribution(c, kicker, hero, hero_sub, segments, note=None):
@@ -386,6 +437,17 @@ SLIDES = {
             ],
             note="Average days to pay an invoice, by sector. 6,882 companies, Dec 2024 to May 2026.")),
     ],
+    # Post PG: legal-principle myth post, no statistic. Grounded in
+    # drafts/22785 (reviewed by licensed IPs). No number to verify.
+    20: [
+        ("mythcard", dict(
+            kicker="What the bank did not spell out",
+            lines=[("Limited liability", "white"),
+                   ("has a hole in it.", "orange")],
+            sub="It is called a personal guarantee. If your company has a loan, lease or "
+                "overdraft, you have very likely signed one.",
+            cta="What it commits you to, before you sign the next one. Confidential.")),
+    ],
     # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
     # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
     11: [
@@ -403,18 +465,27 @@ SLIDES = {
 }
 
 # Footer source line per post (defaults to the insolvency release).
+# Empty string = no source line (legal/principle posts carry no dataset).
 SOURCES = {
     5: "Source: UK payment practices reporting, 6,882 companies",
     11: "Source: gov.uk payment practices export, recomputed 22 Jul 2026",
+    20: "",
+}
+
+# Footer URL per post (defaults to the data hub).
+URLS = {
+    20: "companydebt.com/advice",
 }
 
 
-def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE):
+def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE, url=FOOTER_URL):
     c.setFillColor(NAVY)
     c.rect(0, 0, W, H, stroke=0, fill=1)
 
     if kind == "hbar":
         hbar(c, **spec)
+    elif kind == "mythcard":
+        mythcard(c, **spec)
     elif kind == "distribution":
         distribution(c, **spec)
     elif kind == "cover":
@@ -460,7 +531,7 @@ def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE):
             c.drawString(MARGIN, y, line)
             y -= src_size * 0.35
 
-    draw_chrome(c, slide_no, total, source)
+    draw_chrome(c, slide_no, total, source, url)
     c.showPage()
 
 
@@ -487,6 +558,7 @@ def main():
 
     slides = SLIDES[args.post]
     source = SOURCES.get(args.post, FOOTER_SOURCE)
+    url = URLS.get(args.post, FOOTER_URL)
     single = len(slides) == 1
     kind = "image" if single else "carousel"
     pdf_path = os.path.join(out_dir, f"post-{args.post:02d}-{kind}.pdf")
@@ -494,7 +566,7 @@ def main():
     c = canvas.Canvas(pdf_path, pagesize=(W, H))
     c.setTitle(f"Company Debt: LinkedIn post {args.post}")
     for i, (slide_kind, spec) in enumerate(slides, 1):
-        render(c, slide_kind, spec, i, len(slides), source)
+        render(c, slide_kind, spec, i, len(slides), source, url)
     c.save()
 
     print(f"Wrote {pdf_path}")
