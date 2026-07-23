@@ -480,6 +480,25 @@ function company_debt_webpigment_scripts() {
 add_action( 'wp_enqueue_scripts', 'company_debt_webpigment_scripts' );
 
 /**
+ * Quick Quote redesign: render the /quick-quote/ page through the dedicated
+ * templates/quick-quote.php template instead of its assigned template.
+ *
+ * This does NOT change the page's stored template assignment or its Gutenberg
+ * content — both remain intact in the database as an instant rollback. To
+ * revert, simply remove this filter (or assign a different template in
+ * wp-admin). Matched by slug so it stays correct across environments.
+ */
+add_filter( 'template_include', function ( $template ) {
+	if ( is_page( 'quick-quote' ) ) {
+		$qq = locate_template( 'templates/quick-quote.php' );
+		if ( $qq ) {
+			return $qq;
+		}
+	}
+	return $template;
+}, 99 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
