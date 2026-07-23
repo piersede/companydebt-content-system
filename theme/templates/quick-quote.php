@@ -108,7 +108,125 @@ get_header();
 		</div>
 	</section>
 
+	<!-- TRUST STRIP -->
+	<section class="qq-trust">
+		<div class="qq-trust__inner">
+			<div class="qq-trust__item">
+				<span class="qq-trust__ico"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+				<span class="qq-trust__txt">Simplified process</span>
+			</div>
+			<div class="qq-trust__item">
+				<span class="qq-trust__ico"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+				<span class="qq-trust__txt">No physical meetings</span>
+			</div>
+			<div class="qq-trust__item">
+				<span class="qq-trust__ico"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+				<span class="qq-trust__txt">Liquidate from home</span>
+			</div>
+			<div class="qq-trust__item">
+				<span class="qq-trust__ico"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
+				<span class="qq-trust__txt">Free same-day consultation</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- HOW IT WORKS -->
+	<section class="qq-process">
+		<div class="qq-process__head">
+			<p class="qq-eyebrow">How it works</p>
+			<h2 class="qq-h2">Our Easy 4-Step Liquidation Process</h2>
+			<p class="qq-lead">From first form to formal closure, we handle the liquidation so you don't have to.</p>
+		</div>
+		<div class="qq-steps">
+			<div class="qq-step">
+				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8 13h6"/><path d="M8 17h6"/><path d="M8 9h2"/></svg></span>
+				<div><h3 class="qq-step__title">Complete the quick quote form</h3><p class="qq-step__text">Give us a few basic figures. Everything you share is fully confidential and without obligation.</p></div>
+			</div>
+			<div class="qq-step">
+				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+				<div><h3 class="qq-step__title">A licensed insolvency practitioner takes over</h3><p class="qq-step__text">Your liquidation is handled by regulated experts whose mission is to find positive solutions for directors.</p></div>
+			</div>
+			<div class="qq-step">
+				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+				<div><h3 class="qq-step__title">We close the company &amp; deal with creditors</h3><p class="qq-step__text">Company assets are realised and distributed fairly, with any surplus returned to shareholders.</p></div>
+			</div>
+			<div class="qq-step qq-step--final">
+				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.8 10A10 10 0 1 1 17 3.34"/><path d="m9 11 3 3L22 4"/></svg></span>
+				<div><h3 class="qq-step__title">The company is dissolved &amp; debts cease to exist</h3><p class="qq-step__text">The company is struck off the register, the liquidation concludes and its debts come to an end.</p></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TESTIMONIAL -->
+	<section class="qq-tmony">
+		<div class="qq-tmony__inner">
+			<p class="qq-eyebrow qq-eyebrow--on-navy">Help you can trust</p>
+			<div class="qq-tmony__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+			<p class="qq-tmony__quote">&ldquo;Calling Company Debt was one of the best decisions I&rsquo;ve ever made. I was given clear, genuine advice and a difficult time was handled sensitively and effectively.&rdquo;</p>
+			<div class="qq-tmony__who">
+				<p class="qq-tmony__name">Company Director</p>
+				<p class="qq-tmony__role">Heating &amp; Plumbing Company, London</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="qq-faq">
+		<div class="qq-faq__head">
+			<p class="qq-eyebrow">Liquidation FAQs</p>
+			<h2 class="qq-h2">Frequently Asked Questions</h2>
+		</div>
+		<div class="qq-faq__list">
+			<div class="qq-faq__item">
+				<button class="qq-faq__q" type="button" aria-expanded="false">
+					<span>How Long Does the Process Take?</span>
+					<span class="qq-faq__sign" aria-hidden="true">+</span>
+				</button>
+				<div class="qq-faq__a">
+					<p>Whilst liquidation timeframes will vary widely depending on the size and complexity of the case, especially if there are assets that need to be realised. Once appointed it is the liquidator that is responsible for dealing with creditors, getting in the assets of the company and distributing any proceeds of sale. The director&rsquo;s responsibility is to provide the liquidator with the information to do this, the majority of which is undertaken in the first 6 months.</p>
+					<p>Once a director has provided the liquidator with all the information they have requested, there is normally very little left for the director to do. So whilst a typical liquidation might last for 12&ndash;18 months, in most cases the director need have no further involvement after the first 6 months.</p>
+				</div>
+			</div>
+			<div class="qq-faq__item">
+				<button class="qq-faq__q" type="button" aria-expanded="false">
+					<span>Could I Liquidate my Own Company?</span>
+					<span class="qq-faq__sign" aria-hidden="true">+</span>
+				</button>
+				<div class="qq-faq__a">
+					<p>The short answer is no, you cannot liquidate a company yourself. All company liquidations require the services of a licensed liquidator, under UK law.</p>
+				</div>
+			</div>
+			<div class="qq-faq__item">
+				<button class="qq-faq__q" type="button" aria-expanded="false">
+					<span>Are Directors Entitled to Redundancy?</span>
+					<span class="qq-faq__sign" aria-hidden="true">+</span>
+				</button>
+				<div class="qq-faq__a">
+					<p>If you&rsquo;re a company director and have paid yourself via PAYE, with more than two years&rsquo; service, it&rsquo;s very likely you can claim redundancy if your company has closed due to insolvency.</p>
+					<p>Claims must be made through the Redundancy Payments Service, part of the Insolvency Service, and we will tell you how to process your claim. If the claim is successful, it will then be paid by the National Insurance Fund.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- AS FEATURED ON -->
+	<section class="qq-featured">
+		<div class="qq-featured__inner">
+			<p class="qq-featured__label">As featured on</p>
+			<div class="qq-featured__logos">
+				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/Telegraph-logo.png' ) ); ?>" alt="The Telegraph" height="20">
+				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/BBC-Logo.png' ) ); ?>" alt="BBC" height="18">
+				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/Daily-Express-Logo.png' ) ); ?>" alt="Daily Express" height="21">
+				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/FT-Logo.png' ) ); ?>" alt="Financial Times" height="20">
+			</div>
+		</div>
+	</section>
+
 </div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How Long Does the Process Take?","acceptedAnswer":{"@type":"Answer","text":"Whilst liquidation timeframes vary widely depending on the size and complexity of the case, once appointed the liquidator is responsible for dealing with creditors, realising the company's assets and distributing any proceeds. The director provides the liquidator with the information to do this, the majority within the first 6 months. Whilst a typical liquidation might last 12-18 months, in most cases the director need have no further involvement after the first 6 months."}},{"@type":"Question","name":"Could I Liquidate my Own Company?","acceptedAnswer":{"@type":"Answer","text":"No, you cannot liquidate a company yourself. All company liquidations require the services of a licensed liquidator, under UK law."}},{"@type":"Question","name":"Are Directors Entitled to Redundancy?","acceptedAnswer":{"@type":"Answer","text":"If you're a company director and have paid yourself via PAYE, with more than two years' service, it's very likely you can claim redundancy if your company has closed due to insolvency. Claims are made through the Redundancy Payments Service, part of the Insolvency Service, and if successful are paid by the National Insurance Fund."}}]}
+</script>
 
 <script>
 /* Cosmetic only: relabel GF40's submit button to match the design.
@@ -116,6 +234,30 @@ get_header();
 document.addEventListener('DOMContentLoaded', function () {
 	var btn = document.getElementById('gform_submit_button_40');
 	if (btn) { btn.value = 'Get My Tailored Quote'; }
+
+	// Keep the FAQ heading as designed. A site-wide theme script relabels FAQ
+	// headings to "FAQs About {title}", which reads awkwardly here; hold ours.
+	var faqH2 = document.querySelector('.qq-faq__head .qq-h2');
+	if (faqH2) {
+		var wantHeading = 'Frequently Asked Questions';
+		faqH2.textContent = wantHeading;
+		var mo = new MutationObserver(function () {
+			if (faqH2.textContent !== wantHeading) { faqH2.textContent = wantHeading; }
+		});
+		mo.observe(faqH2, { childList: true, characterData: true, subtree: true });
+		setTimeout(function () { mo.disconnect(); }, 4000);
+	}
+
+	// FAQ accordion (progressive enhancement; answers are in the DOM + schema regardless)
+	document.querySelectorAll('.qq-faq__q').forEach(function (q) {
+		q.addEventListener('click', function () {
+			var item = q.closest('.qq-faq__item');
+			var open = item.classList.toggle('is-open');
+			q.setAttribute('aria-expanded', open ? 'true' : 'false');
+			var sign = q.querySelector('.qq-faq__sign');
+			if (sign) { sign.textContent = open ? '−' : '+'; }
+		});
+	});
 });
 </script>
 
