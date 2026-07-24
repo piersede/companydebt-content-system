@@ -20,15 +20,22 @@
  */
 
 get_header();
+
+// Staging-only flag: used to hide GF40's v2 reCAPTCHA (whose site key isn't
+// registered for comdebstage, so Google renders an "invalid domain" error box).
+// Never hide it in production — there it's a live, required field.
+$qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'comdebstage' ) !== false );
 ?>
-<div class="qq">
+<div class="qq<?php echo $qq_is_staging ? ' qq--staging' : ''; ?>">
 
 	<!-- HERO + QUOTE FORM -->
 	<section class="qq-hero">
 
 		<!-- Custom landing header (logo · Google reviews · Speak to an Expert),
-		     sits on the navy hero. The theme renders no desktop header here. -->
-		<header class="qq-topbar">
+		     sits on the navy hero. A <div> (not <header>) so the theme's bare
+		     `header{…}` rules — which set inset:0 and a transparent background —
+		     don't hijack it. role="banner" preserves the landmark semantics. -->
+		<div class="qq-topbar" role="banner">
 			<div class="qq-topbar__inner">
 				<a class="qq-topbar__logo" href="https://www.companydebt.com/">
 					<img src="<?php echo esc_url( content_url( 'uploads/2023/02/logo-cd.png' ) ); ?>" alt="Company Debt" height="27">
@@ -39,7 +46,7 @@ get_header();
 				</div>
 				<a class="qq-topbar__cta" href="tel:08000746757">Speak to an Expert</a>
 			</div>
-		</header>
+		</div>
 
 		<div class="qq-hero__inner">
 
@@ -251,6 +258,24 @@ get_header();
 document.addEventListener('DOMContentLoaded', function () {
 	var btn = document.getElementById('gform_submit_button_40');
 	if (btn) { btn.value = 'Get My Tailored Quote'; }
+
+	// Sticky header: transparent (blends into hero) at the top, frosted glass
+	// once scrolled — matches the mockup's scroll behaviour.
+	var topbar = document.querySelector('.qq-topbar');
+	if (topbar) {
+		var onScroll = function () {
+			topbar.classList.toggle('is-glass', window.pageYOffset > 8);
+		};
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+	}
+
+	// Cosmetic placeholder text to match the design (GF40 field settings unchanged).
+	var ph = { 'input_40_16': 'Full name*', 'input_40_2': 'Email*', 'input_40_14': 'Phone*' };
+	Object.keys(ph).forEach(function (id) {
+		var el = document.getElementById(id);
+		if (el) { el.setAttribute('placeholder', ph[id]); }
+	});
 
 	// Keep the FAQ heading as designed. A site-wide theme script relabels FAQ
 	// headings to "FAQs About {title}", which reads awkwardly here; hold ours.

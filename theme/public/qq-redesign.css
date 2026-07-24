@@ -11,13 +11,28 @@
 /* ── HERO ─────────────────────────────────────────────────────────────── */
 .qq .qq-hero { position: relative; background: linear-gradient(155deg, #124079 0%, #09285D 52%, #061c42 100%); }
 .qq .qq-hero__inner {
-	max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px;
+	max-width: 1180px; margin: 0 auto; padding: 104px 24px 80px;
 	display: grid; grid-template-columns: 6fr 4fr; gap: 56px; align-items: start;
 }
-.qq .qq-hero__left { padding-top: 6px; }
+.qq .qq-hero__left { padding-top: 18px; }
 
-/* ── Custom landing header (on the navy hero) ─────────────────────────── */
-.qq .qq-topbar { position: relative; z-index: 3; }
+/* ── Custom landing header — fixed, transparent (blends into the navy hero),
+     turns to frosted glass once the page is scrolled. Matches the mockup. ─ */
+.qq .qq-topbar {
+	position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+	background: transparent; border-bottom: 1px solid transparent;
+	transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.qq .qq-topbar.is-glass {
+	/* !important beats the theme's higher-specificity `#page header` background */
+	background: rgba(9, 40, 93, .72) !important;
+	-webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+	border-bottom-color: rgba(255, 255, 255, .14) !important;
+	box-shadow: 0 8px 28px -14px rgba(0, 0, 0, .55) !important;
+}
+/* keep the fixed bar below the WP admin bar for logged-in editors */
+.admin-bar .qq .qq-topbar { top: 32px; }
+@media (max-width: 782px) { .admin-bar .qq .qq-topbar { top: 46px; } }
 .qq .qq-topbar__inner {
 	max-width: 1180px; margin: 0 auto; padding: 16px 24px;
 	display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
@@ -48,6 +63,7 @@
 .qq .qq-hero__title {
 	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 50px;
 	line-height: 1.05; letter-spacing: -.02em; color: #fff; margin: 22px 0 0;
+	-webkit-text-stroke: .7px currentColor; paint-order: stroke fill;
 }
 .qq .qq-hero__sub { font-size: 19px; line-height: 1.55; color: #c4d2df; margin: 20px 0 0; max-width: 480px; }
 
@@ -74,17 +90,19 @@
 .qq .qq-card { background: #fff; border-radius: 18px; box-shadow: 0 30px 70px -28px rgba(6,24,40,.55); overflow: hidden; }
 .qq .qq-card__sliders { padding: 26px 26px 8px; }
 .qq .qq-card__eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #FF6600; margin: 0 0 3px; }
-.qq .qq-card__sliders .qq-card__eyebrow:not(:first-child) { margin-top: 20px; }
+.qq .qq-card__sliders .qq-card__eyebrow:not(:first-child) { margin-top: 6px; }
 .qq .qq-card__note { font-size: 14px; color: #5a6b7a; margin: 0 0 16px; }
 
-.qq .qq-slider { margin-bottom: 17px; }
-.qq .qq-slider__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+.qq .qq-slider { margin-bottom: 18px; }
+.qq .qq-slider__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
 .qq .qq-slider__label { font-weight: 600; font-size: 15px; color: #1a2733; margin: 0; }
+/* Value display: the calculator writes "£ 0" into this span. Reproduce the
+   mockup's editable-field look — right-aligned figure over a dashed underline. */
 .qq .qq-slider__val, .qq .quiz__amount {
 	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; color: #09285D; white-space: nowrap;
-	/* strip the old calculator CSS's boxed treatment — mockup wants clean text */
-	border: 0 !important; background: transparent !important; padding: 0 !important;
-	box-shadow: none !important; min-width: 0 !important; width: auto !important; text-align: right !important;
+	display: inline-block !important; min-width: 92px !important; text-align: right !important;
+	border: 0 !important; border-bottom: 1px dashed rgba(9, 40, 93, .28) !important;
+	background: transparent !important; padding: 0 0 2px !important; box-shadow: none !important; width: auto !important;
 }
 
 /* noUiSlider skin — thin track, orange fill, white/orange handle */
@@ -113,6 +131,16 @@
 .qq .qq-card__form .gform_validation_container { display: none !important; }
 .qq .qq-card__form .gfield { margin: 0; grid-column: 1 / -1; }
 .qq .qq-card__form .gfield--width-half { grid-column: auto; }
+/* Exact mockup layout on GF40's own 12-column grid (which overrides ours):
+   Name spans all 12; Email + Phone take 6 each on the row beneath. */
+.qq .qq-card__form #field_40_16 { grid-column: 1 / -1; }   /* Full name — full width */
+.qq .qq-card__form #field_40_2  { grid-column: span 6; }   /* Email — half */
+.qq .qq-card__form #field_40_14 { grid-column: span 6; }   /* Phone — half */
+/* Hide the v2 checkbox reCAPTCHA ONLY on staging (via the PHP-added .qq--staging
+   flag): its site key isn't registered for comdebstage, so Google renders an
+   "invalid domain" error box. In production the field stays live and visible;
+   go-live switches GF40 to Invisible reCAPTCHA (no box). */
+.qq--staging .qq-card__form #field_40_15 { display: none !important; }
 .qq .qq-card__form .gfield_label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .qq .qq-card__form input[type=text],
 .qq .qq-card__form input[type=email],
@@ -204,8 +232,9 @@
 @media (max-width: 600px) {
 	.qq .qq-hero__title { font-size: 30px; }
 	.qq .qq-hero__sub { font-size: 17px; }
-	.qq .qq-card__form .gform_fields { grid-template-columns: 1fr; }
 	.qq .qq-card__form .gfield--width-half { grid-column: 1 / -1; }
+	.qq .qq-card__form #field_40_2,
+	.qq .qq-card__form #field_40_14 { grid-column: 1 / -1; }  /* stack Email + Phone */
 	.qq .qq-btn--solid, .qq .qq-btn--ghost { flex: 1 1 auto; justify-content: center; }
 	.qq .qq-h2 { font-size: 26px; }
 	.qq .qq-trust__inner { grid-template-columns: 1fr; }
