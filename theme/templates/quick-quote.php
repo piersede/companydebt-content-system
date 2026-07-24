@@ -161,7 +161,11 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<h2 class="qq-h2">Our Easy 4-Step Liquidation Process</h2>
 			<p class="qq-lead">From first form to formal closure, we handle the liquidation so you don't have to.</p>
 		</div>
-		<div class="qq-steps">
+		<div class="qq-process__grid">
+			<div class="qq-process__media">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-director.webp' ) ); ?>" alt="Director starting the liquidation process from home" loading="lazy">
+			</div>
+			<div class="qq-steps">
 			<div class="qq-step">
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8 13h6"/><path d="M8 17h6"/><path d="M8 9h2"/></svg></span>
 				<div><h3 class="qq-step__title">Complete the quick quote form</h3><p class="qq-step__text">Give us a few basic figures. Everything you share is fully confidential and without obligation.</p></div>
@@ -178,6 +182,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.8 10A10 10 0 1 1 17 3.34"/><path d="m9 11 3 3L22 4"/></svg></span>
 				<div><h3 class="qq-step__title">The company is dissolved &amp; debts cease to exist</h3><p class="qq-step__text">The company is struck off the register, the liquidation concludes and its debts come to an end.</p></div>
 			</div>
+			</div>
 		</div>
 	</section>
 
@@ -188,8 +193,11 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<div class="qq-tmony__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
 			<p class="qq-tmony__quote">&ldquo;Calling Company Debt was one of the best decisions I&rsquo;ve ever made. I was given clear, genuine advice and a difficult time was handled sensitively and effectively.&rdquo;</p>
 			<div class="qq-tmony__who">
-				<p class="qq-tmony__name">Company Director</p>
-				<p class="qq-tmony__role">Heating &amp; Plumbing Company, London</p>
+				<img class="qq-tmony__avatar" src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-avatar.webp' ) ); ?>" alt="Company Director" width="48" height="48" loading="lazy">
+				<div class="qq-tmony__whotext">
+					<p class="qq-tmony__name">Company Director</p>
+					<p class="qq-tmony__role">Heating &amp; Plumbing Company, London</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -238,10 +246,13 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 		<div class="qq-featured__inner">
 			<p class="qq-featured__label">As featured on</p>
 			<div class="qq-featured__logos">
-				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/Telegraph-logo.png' ) ); ?>" alt="The Telegraph" height="20">
-				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/BBC-Logo.png' ) ); ?>" alt="BBC" height="18">
-				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/Daily-Express-Logo.png' ) ); ?>" alt="Daily Express" height="21">
-				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/FT-Logo.png' ) ); ?>" alt="Financial Times" height="20">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-telegraph.webp' ) ); ?>" alt="The Telegraph" height="19">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-bbc.webp' ) ); ?>" alt="BBC" height="17">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-express.webp' ) ); ?>" alt="Daily Express" height="20">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-ft.webp' ) ); ?>" alt="Financial Times" height="19">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-guardian.webp' ) ); ?>" alt="The Guardian" height="20">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-investopedia.webp' ) ); ?>" alt="Investopedia" height="16">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-press-fortune.webp' ) ); ?>" alt="Fortune" height="17">
 			</div>
 		</div>
 	</section>
