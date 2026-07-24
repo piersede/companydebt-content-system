@@ -1,0 +1,10 @@
+[
+  { "campaign.id": 3001, "campaign.name": "Search Active Budget Limited", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 800000000, "metrics.clicks": 120, "metrics.conversions": 10.0 },
+  { "campaign.id": 3002, "campaign.name": "Search Active Rank Limited", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 300000000, "metrics.clicks": 40, "metrics.conversions": 2.0 },
+  { "campaign.id": 3003, "campaign.name": "Dormant Shared A", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+  { "campaign.id": 3004, "campaign.name": "Dormant Shared B", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+  { "campaign.id": 3005, "campaign.name": "Dormant Paused Ads", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+  { "campaign.id": 3006, "campaign.name": "Dormant Unknown Cause", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+  { "campaign.id": 3007, "campaign.name": "Paused Campaign", "campaign.status": "PAUSED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+  { "campaign.id": 3008, "campaign.name": "Zero Budget Campaign", "campaign.status": "ENABLED", "campaign.advertising_channel_type": "SEARCH", "metrics.cost_micros": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 }
+]

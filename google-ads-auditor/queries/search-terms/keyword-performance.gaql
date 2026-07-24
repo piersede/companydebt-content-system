@@ -4,6 +4,10 @@
 -- performance against the keyword that triggered it.
 -- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
 -- Validated against API version: REPLACE_WITH_VERSION
+-- 2026-07-20 fix: with no campaign-status scoping this returned 778k rows
+-- (~515MB) for a 7-day window — unworkable, and mostly noise from years of
+-- dead paused campaigns since only 2 campaigns are actually active. Scoped
+-- to ENABLED campaigns only, matching keywords.gaql's fix.
 
 SELECT
   campaign.id,
@@ -23,4 +27,5 @@ SELECT
   metrics.search_impression_share
 FROM keyword_view
 WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.status = 'ENABLED'
 ORDER BY metrics.cost_micros DESC

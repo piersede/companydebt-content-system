@@ -1,0 +1,108 @@
+[
+  {
+    "finding_id": "OPP-001",
+    "source_skill": "search-terms-analyzer",
+    "category": "untargeted-opportunity",
+    "severity": "high",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "1001",
+    "campaign": "Search | Company Debt",
+    "ad_group_id": "2001",
+    "ad_group": "Insolvency",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "search_term": "insolvency helpline for directors",
+      "triggering_keyword": "insolvency advice",
+      "triggering_match_type": "BROAD",
+      "cost_gbp": 150.0,
+      "clicks": 25,
+      "impressions": 400,
+      "conversions": 2.0,
+      "is_brand_term": false
+    },
+    "observation": "The search term 'insolvency helpline for directors' received 25 click(s) and £150.00 spend via the BROAD match keyword 'insolvency advice' in the 2026-07-13-2026-07-19 period, with 2.0 conversion(s).",
+    "interpretation": "This term is being picked up incidentally by the BROAD match keyword 'insolvency advice' rather than deliberately targeted, and has enough volume and a conversion signal to justify dedicated targeting and bid control.",
+    "recommendation": "Add 'insolvency helpline for directors' as an EXACT match keyword in the ad group 'Insolvency' (campaign 1001), so it can be bid and tracked independently of the BROAD keyword 'insolvency advice' that incidentally triggered it.",
+    "estimated_impact": "Dedicated EXACT-match targeting typically gives better bid control and a cleaner Quality Score signal than an incidental broad/phrase match, but no specific £ uplift is claimed — the evidence here doesn't support estimating one.",
+    "effort": "low",
+    "caveats": [
+      "Figures cover the 2026-07-13-2026-07-19 lookback window (search_term_lookback_days), aggregated into a single total — there's no day-by-day or month-by-month breakdown at search-term level to show whether this is a steady pattern or a one-off cluster.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — only phone/email/chat conversions are trusted, and volume has been scant recently."
+    ]
+  },
+  {
+    "finding_id": "OPP-002",
+    "source_skill": "search-terms-analyzer",
+    "category": "untargeted-opportunity",
+    "severity": "low",
+    "confidence": "low",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "1001",
+    "campaign": "Search | Company Debt",
+    "ad_group_id": "2001",
+    "ad_group": "Insolvency",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "search_term": "close down my ltd company",
+      "triggering_keyword": "closing an insolvent limited company",
+      "triggering_match_type": "BROAD",
+      "cost_gbp": 20.0,
+      "clicks": 3,
+      "impressions": 30,
+      "conversions": 1.0,
+      "is_brand_term": false
+    },
+    "observation": "The search term 'close down my ltd company' received 3 click(s) and £20.00 spend via the BROAD match keyword 'closing an insolvent limited company' in the 2026-07-13-2026-07-19 period, with 1.0 conversion(s).",
+    "interpretation": "A single low-volume conversion is exactly the kind of thin signal the account's conversion-data caveat warns about — worth watching, not yet worth a confident recommendation.",
+    "recommendation": "Monitor 'close down my ltd company' for another audit period before adding as a keyword — 3 click(s) with 1.0 conversion(s) is below the account's search_term_minimum_clicks threshold (12), so this is too little evidence to act on yet.",
+    "estimated_impact": "Dedicated EXACT-match targeting typically gives better bid control and a cleaner Quality Score signal than an incidental broad/phrase match, but no specific £ uplift is claimed — the evidence here doesn't support estimating one.",
+    "effort": "low",
+    "caveats": [
+      "Figures cover the 2026-07-13-2026-07-19 lookback window (search_term_lookback_days), aggregated into a single total — there's no day-by-day or month-by-month breakdown at search-term level to show whether this is a steady pattern or a one-off cluster.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — only phone/email/chat conversions are trusted, and volume has been scant recently."
+    ]
+  },
+  {
+    "finding_id": "OPP-003",
+    "source_skill": "search-terms-analyzer",
+    "category": "untargeted-opportunity",
+    "severity": "high",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "1001",
+    "campaign": "Search | Company Debt",
+    "ad_group_id": "2001",
+    "ad_group": "Insolvency",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "search_term": "company debt help scheme",
+      "triggering_keyword": "debt help",
+      "triggering_match_type": "BROAD",
+      "cost_gbp": 200.0,
+      "clicks": 30,
+      "impressions": 600,
+      "conversions": 3.0,
+      "is_brand_term": true
+    },
+    "observation": "The search term 'company debt help scheme' received 30 click(s) and £200.00 spend via the BROAD match keyword 'debt help' in the 2026-07-13-2026-07-19 period, with 3.0 conversion(s).",
+    "interpretation": "This term is being picked up incidentally by the BROAD match keyword 'debt help' rather than deliberately targeted, and has enough volume and a conversion signal to justify dedicated targeting and bid control.",
+    "recommendation": "Add 'company debt help scheme' as an EXACT match keyword in the ad group 'Insolvency' (campaign 1001), so it can be bid and tracked independently of the BROAD keyword 'debt help' that incidentally triggered it.",
+    "estimated_impact": "Dedicated EXACT-match targeting typically gives better bid control and a cleaner Quality Score signal than an incidental broad/phrase match, but no specific £ uplift is claimed — the evidence here doesn't support estimating one.",
+    "effort": "low",
+    "caveats": [
+      "Figures cover the 2026-07-13-2026-07-19 lookback window (search_term_lookback_days), aggregated into a single total — there's no day-by-day or month-by-month breakdown at search-term level to show whether this is a steady pattern or a one-off cluster.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — only phone/email/chat conversions are trusted, and volume has been scant recently.",
+      "This term matches the account's brand_terms — brand and non-brand performance should never be compared or read the same way; brand terms typically convert very differently."
+    ]
+  }
+]

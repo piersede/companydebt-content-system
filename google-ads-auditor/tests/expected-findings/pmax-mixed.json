@@ -1,0 +1,119 @@
+[
+  {
+    "finding_id": "PMX-001",
+    "source_skill": "performance-max-auditor",
+    "category": "pmax-off-target-category",
+    "severity": "medium",
+    "confidence": "high",
+    "evidence_label": "observed",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "7001",
+    "campaign": "Performance Max Live",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "category_label": "student loan hardship advice",
+      "matched_irrelevant_topic": "student loan",
+      "impressions": 40,
+      "clicks": 12
+    },
+    "observation": "The PMax search-category insight 'student loan hardship advice' received 40 impression(s) and 12 click(s) in the 2026-07-13-2026-07-19 period, and matches the configured irrelevant-topic category 'student loan'.",
+    "interpretation": "This category label reads as outside the account's target audience. Cost impact cannot be stated — PMax search-category insights have no cost field, unlike Search's search_term_view.",
+    "recommendation": "Add 'student loan hardship advice' to the account-level Performance Max negative keyword list (Settings > Account-level negative keywords), or a brand exclusion list if this is a competitor/brand name — PMax does not support ad-group or campaign-level EXACT-match negatives the way Search does.",
+    "estimated_impact": "Not measurable — no cost data exists at this granularity for PMax search-category insights.",
+    "effort": "low",
+    "caveats": [
+      "PMax search-category insights are category-level labels, not literal search queries, and have no cost field — this finding states a topical concern, not a £ impact.",
+      "Categories not matching the configured irrelevant_topics list were not evaluated — an unmatched category that looks off-target is a configuration gap for human review, not something this skill classifies unilaterally."
+    ]
+  },
+  {
+    "finding_id": "PMX-002",
+    "source_skill": "performance-max-auditor",
+    "category": "pmax-off-target-category",
+    "severity": "low",
+    "confidence": "high",
+    "evidence_label": "observed",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "7001",
+    "campaign": "Performance Max Live",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "category_label": "debt collector jobs vacancy",
+      "matched_irrelevant_topic": "debt collector jobs",
+      "impressions": 5,
+      "clicks": 1
+    },
+    "observation": "The PMax search-category insight 'debt collector jobs vacancy' received 5 impression(s) and 1 click(s) in the 2026-07-13-2026-07-19 period, and matches the configured irrelevant-topic category 'debt collector jobs'.",
+    "interpretation": "This category label reads as outside the account's target audience. Cost impact cannot be stated — PMax search-category insights have no cost field, unlike Search's search_term_view.",
+    "recommendation": "Add 'debt collector jobs vacancy' to the account-level Performance Max negative keyword list (Settings > Account-level negative keywords), or a brand exclusion list if this is a competitor/brand name — PMax does not support ad-group or campaign-level EXACT-match negatives the way Search does.",
+    "estimated_impact": "Not measurable — no cost data exists at this granularity for PMax search-category insights.",
+    "effort": "low",
+    "caveats": [
+      "PMax search-category insights are category-level labels, not literal search queries, and have no cost field — this finding states a topical concern, not a £ impact.",
+      "Categories not matching the configured irrelevant_topics list were not evaluated — an unmatched category that looks off-target is a configuration gap for human review, not something this skill classifies unilaterally."
+    ]
+  },
+  {
+    "finding_id": "PMX-003",
+    "source_skill": "performance-max-auditor",
+    "category": "pmax-asset-strength",
+    "severity": "medium",
+    "confidence": "high",
+    "evidence_label": "inferred",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "7001",
+    "campaign": "Performance Max Live",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "asset_group": "Live Poor Group",
+      "ad_strength": "POOR",
+      "impressions": 300,
+      "clicks": 10,
+      "cost_gbp": 50.0
+    },
+    "observation": "Asset group 'Live Poor Group' in 'Performance Max Live' is ENABLED, in an ENABLED campaign, with ad_strength = POOR.",
+    "interpretation": "Ad strength is Google's own coverage/completeness heuristic (more headline/description variety, better asset-type coverage), not a measure of commercial performance — this asset group could be converting fine despite the label, or an EXCELLENT one could be underperforming. This finding is about asset coverage, not proven results.",
+    "recommendation": "Add more headline/description/image variety to 'Live Poor Group' to improve Google's coverage assessment.",
+    "estimated_impact": "Not measurable as a commercial outcome — asset strength does not equate to conversion performance.",
+    "effort": "low",
+    "caveats": [
+      "asset_group.ad_strength is an inferred coverage label from Google, not proof of commercial performance, per CLAUDE.md's Performance Max rules."
+    ]
+  },
+  {
+    "finding_id": "PMX-004",
+    "source_skill": "performance-max-auditor",
+    "category": "pmax-dormant-campaign",
+    "severity": "medium",
+    "confidence": "high",
+    "evidence_label": "observed",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "7003",
+    "campaign": "Performance Max Dormant",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "daily_budget_gbp": 20.0,
+      "impressions": 0
+    },
+    "observation": "'Performance Max Dormant' is ENABLED with a £20.00/day budget but received 0 impressions in the 2026-07-13-2026-07-19 period.",
+    "interpretation": "This skill doesn't cross-reference PMax asset-group/policy status the way ad-performance-diagnostic does for Search ads/keywords — the cause isn't diagnosed here, only observed.",
+    "recommendation": "Investigate and either fix delivery or pause/remove this campaign.",
+    "estimated_impact": "Unknown until investigated.",
+    "effort": "medium",
+    "caveats": [
+      "No deeper diagnosis (asset-group status, policy holds) was performed for this campaign — this check only observes zero delivery against an active budget."
+    ]
+  }
+]

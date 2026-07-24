@@ -1,0 +1,210 @@
+[
+  {
+    "finding_id": "ADP-001",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "dormant-campaign",
+    "severity": "medium",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3003",
+    "campaign": "Dormant Shared A",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "daily_budget_gbp": 20.0,
+      "campaign_budget_id": "9003",
+      "search_impression_share": 0.0,
+      "bidding_strategy_type": "MAXIMIZE_CONVERSIONS",
+      "target_cpa_gbp": 60.0
+    },
+    "observation": "'Dormant Shared A' is ENABLED with a £20.00/day budget but shows 0% search impression share in the 2026-07-13-2026-07-19 period — it received no impressions at all.",
+    "interpretation": "Checked: budget-sharing/near-zero, ad status, keyword status. Likely explanation(s): shares campaign_budget.id 9003 (£20.00/day) with 1 other ENABLED campaign(s) — whichever wins auctions first may be exhausting the shared budget before this one gets a look-in.",
+    "recommendation": "Investigate and either fix delivery or pause/remove this campaign — an enabled, budgeted campaign that can't deliver is doing nothing but sitting in the account.",
+    "estimated_impact": "Unknown until investigated — this skill cannot estimate the value of fixing a problem whose cause isn't confirmed.",
+    "effort": "medium",
+    "caveats": [
+      "The three explanations this skill checks (budget-sharing/near-zero, ad status, keyword status) are not exhaustive — ad schedule, geo/language targeting, policy holds, and campaign dates are not captured by the current query library."
+    ]
+  },
+  {
+    "finding_id": "ADP-002",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "dormant-campaign",
+    "severity": "medium",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3004",
+    "campaign": "Dormant Shared B",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "daily_budget_gbp": 20.0,
+      "campaign_budget_id": "9003",
+      "search_impression_share": 0.0,
+      "bidding_strategy_type": "MAXIMIZE_CONVERSIONS",
+      "target_cpa_gbp": 60.0
+    },
+    "observation": "'Dormant Shared B' is ENABLED with a £20.00/day budget but shows 0% search impression share in the 2026-07-13-2026-07-19 period — it received no impressions at all.",
+    "interpretation": "Checked: budget-sharing/near-zero, ad status, keyword status. Likely explanation(s): shares campaign_budget.id 9003 (£20.00/day) with 1 other ENABLED campaign(s) — whichever wins auctions first may be exhausting the shared budget before this one gets a look-in.",
+    "recommendation": "Investigate and either fix delivery or pause/remove this campaign — an enabled, budgeted campaign that can't deliver is doing nothing but sitting in the account.",
+    "estimated_impact": "Unknown until investigated — this skill cannot estimate the value of fixing a problem whose cause isn't confirmed.",
+    "effort": "medium",
+    "caveats": [
+      "The three explanations this skill checks (budget-sharing/near-zero, ad status, keyword status) are not exhaustive — ad schedule, geo/language targeting, policy holds, and campaign dates are not captured by the current query library."
+    ]
+  },
+  {
+    "finding_id": "ADP-003",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "dormant-campaign",
+    "severity": "medium",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3005",
+    "campaign": "Dormant Paused Ads",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "daily_budget_gbp": 30.0,
+      "campaign_budget_id": "9005",
+      "search_impression_share": 0.0,
+      "bidding_strategy_type": "MAXIMIZE_CONVERSIONS",
+      "target_cpa_gbp": 90.0
+    },
+    "observation": "'Dormant Paused Ads' is ENABLED with a £30.00/day budget but shows 0% search impression share in the 2026-07-13-2026-07-19 period — it received no impressions at all.",
+    "interpretation": "Checked: budget-sharing/near-zero, ad status, keyword status. Likely explanation(s): every ad in this campaign is PAUSED — nothing eligible to serve.",
+    "recommendation": "Investigate and either fix delivery or pause/remove this campaign — an enabled, budgeted campaign that can't deliver is doing nothing but sitting in the account.",
+    "estimated_impact": "Unknown until investigated — this skill cannot estimate the value of fixing a problem whose cause isn't confirmed.",
+    "effort": "medium",
+    "caveats": [
+      "The three explanations this skill checks (budget-sharing/near-zero, ad status, keyword status) are not exhaustive — ad schedule, geo/language targeting, policy holds, and campaign dates are not captured by the current query library."
+    ]
+  },
+  {
+    "finding_id": "ADP-004",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "dormant-campaign",
+    "severity": "medium",
+    "confidence": "low",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3006",
+    "campaign": "Dormant Unknown Cause",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "daily_budget_gbp": 15.0,
+      "campaign_budget_id": "9006",
+      "search_impression_share": 0.0,
+      "bidding_strategy_type": "MAXIMIZE_CONVERSIONS",
+      "target_cpa_gbp": 45.0
+    },
+    "observation": "'Dormant Unknown Cause' is ENABLED with a £15.00/day budget but shows 0% search impression share in the 2026-07-13-2026-07-19 period — it received no impressions at all.",
+    "interpretation": "Checked: budget-sharing/near-zero, ad status, keyword status — none of these explain it; budget, ads, and keywords all appear active for this campaign, but it shows zero delivery. The cause isn't visible in this data (could be ad schedule, geo/language targeting, a policy or billing hold, or campaign start/end dates, none of which the current query library captures).",
+    "recommendation": "Investigate and either fix delivery or pause/remove this campaign — an enabled, budgeted campaign that can't deliver is doing nothing but sitting in the account.",
+    "estimated_impact": "Unknown until investigated — this skill cannot estimate the value of fixing a problem whose cause isn't confirmed.",
+    "effort": "medium",
+    "caveats": [
+      "The three explanations this skill checks (budget-sharing/near-zero, ad status, keyword status) are not exhaustive — ad schedule, geo/language targeting, policy holds, and campaign dates are not captured by the current query library."
+    ]
+  },
+  {
+    "finding_id": "ADP-005",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "shared-budget-cluster",
+    "severity": "high",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "campaign_budget_id": "9003",
+      "daily_budget_gbp": 20.0,
+      "campaign_count": 2,
+      "campaigns": [
+        "Dormant Shared A",
+        "Dormant Shared B"
+      ],
+      "dormant_count_in_cluster": 2
+    },
+    "observation": "2 ENABLED campaigns share campaign_budget.id 9003 (£20.00/day): Dormant Shared A; Dormant Shared B. 2 of them show 0% impression share this period.",
+    "interpretation": "A shared budget across this many campaigns can be a deliberate strategy, but with 2 of 2 showing zero delivery, it's at least worth confirming this is intentional rather than an accidental leftover from campaign duplication/testing.",
+    "recommendation": "Review whether this is intentional; if not, give each campaign its own budget so they don't compete with each other for the same spend.",
+    "estimated_impact": "Unknown — depends on whether splitting the budget would let currently-dormant campaigns in the cluster actually deliver.",
+    "effort": "low",
+    "caveats": [
+      "campaign_budget.explicitly_shared read false for these campaigns despite sharing an ID — the shared ID itself is treated as the evidence here, not that flag."
+    ]
+  },
+  {
+    "finding_id": "ADP-006",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "impression-share-constraint",
+    "severity": "high",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3001",
+    "campaign": "Search Active Budget Limited",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "search_impression_share": 0.3,
+      "search_budget_lost_impression_share": 0.5,
+      "search_rank_lost_impression_share": 0.1,
+      "period_cost_gbp": 800.0,
+      "period_conversions": 10.0,
+      "constraint_type": "budget-constrained"
+    },
+    "observation": "'Search Active Budget Limited' won 30.0% of available search impression share in the 2026-07-13-2026-07-19 period, losing 50.0% to budget and 10.0% to rank.",
+    "interpretation": "Losing more impression share to budget (50%) than it's currently winning (30%) — budget looks like the binding constraint here, not bid/quality.",
+    "recommendation": "Worth testing a higher budget — no specific figure recommended, this data doesn't support estimating the right one.",
+    "estimated_impact": "Directional only — this data shows a constraint exists, not the precise volume a fix would unlock.",
+    "effort": "low",
+    "caveats": [
+      "No specific new budget figure is being recommended — only that current budget is or isn't a binding constraint.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — weigh cost/impression-share evidence more heavily than the conversion figure here."
+    ]
+  },
+  {
+    "finding_id": "ADP-007",
+    "source_skill": "ad-performance-diagnostic",
+    "category": "impression-share-constraint",
+    "severity": "medium",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "3002",
+    "campaign": "Search Active Rank Limited",
+    "period": {
+      "start": "2026-07-13",
+      "end": "2026-07-19"
+    },
+    "evidence": {
+      "search_impression_share": 0.2,
+      "search_budget_lost_impression_share": 0.05,
+      "search_rank_lost_impression_share": 0.6,
+      "period_cost_gbp": 300.0,
+      "period_conversions": 2.0,
+      "constraint_type": "rank-constrained"
+    },
+    "observation": "'Search Active Rank Limited' won 20.0% of available search impression share in the 2026-07-13-2026-07-19 period, losing 5.0% to budget and 60.0% to rank.",
+    "interpretation": "Rank loss (60%) exceeds budget loss (5%) — a budget increase alone won't help here; the constraint looks like bid/Quality Score/ad relevance, which this skill doesn't have the ad-level evidence to fully diagnose.",
+    "recommendation": "Budget increase won't help here — investigate bids/Quality Score/ad relevance instead.",
+    "estimated_impact": "Directional only — this data shows a constraint exists, not the precise volume a fix would unlock.",
+    "effort": "low",
+    "caveats": [
+      "No specific new budget figure is being recommended — only that current budget is or isn't a binding constraint.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — weigh cost/impression-share evidence more heavily than the conversion figure here."
+    ]
+  }
+]

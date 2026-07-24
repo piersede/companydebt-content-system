@@ -4,6 +4,7 @@
 *credentials*.json
 *oauth*.json
 service-account*.json
+credentials/
 
 # Runtime audit data — contains real account/customer data
 runs/*

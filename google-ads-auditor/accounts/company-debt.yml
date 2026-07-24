@@ -17,6 +17,16 @@ business_model: lead_generation
 # whether "GoogleAds Phone Calls" variants require 60s+) are not yet
 # confirmed — treat call-based primary conversions as unverified-quality
 # until checked in each action's own settings.
+#
+# STANDING LOW-CONFIDENCE FLAG (Piers, 2026-07-20): only phone calls, email
+# form fill-ins, and live chat entries are conversion events Piers actually
+# trusts as real signals of a lead — and even those have been running scant
+# recently. He chose to keep the full list below as "primary" rather than
+# narrow it, but every finding built on conversion counts for this account
+# should be treated with real scepticism, not read as settled fact — state
+# this caveat explicitly wherever conversion volume drives a judgement
+# (e.g. "this keyword got zero conversions" claims), and don't recommend
+# cutting spend on conversion counts alone without flagging this uncertainty.
 primary_conversion_actions:
   - "Guide Download (Website)"
   - "GoogleAds Form Submissions (Website)"
@@ -48,7 +58,13 @@ ignore_as_success_metrics:
 targets:
   target_cpa: null                             # REPLACE — £ target cost per primary conversion, or null if unset
   minimum_roas: null                            # not applicable unless ecommerce/paid-value goals are running
-  minimum_clicks_before_judgement: 12
+  minimum_clicks_before_judgement: 12           # weekly-window bar — for campaign/ad-group findings using the 7-day audit period
+  # separate, larger bar for negative-keyword-miner/search-terms-analyzer, which read
+  # search-terms.json over comparison_periods.search_term_lookback_days (365 days) —
+  # added 2026-07-20, per Piers: minimum_clicks_before_judgement was calibrated for a
+  # week and is meaningless applied to a year. Derived as 12 * 52 weeks = 624, not an
+  # arbitrary round number — revisit if the lookback window changes.
+  search_term_minimum_clicks: 624
   minimum_impressions_before_ad_judgement: 1000
   zero_conversion_spend_threshold: 75           # £ — below this, zero-conversion spend is not called "waste"
   low_conversion_volume_threshold: 5
@@ -69,6 +85,9 @@ protected_terms:
 
 # Topics genuinely outside Company Debt's business scope — used by
 # negative-keyword-miner to identify clearly irrelevant search terms.
+# Includes both topical mismatches AND deliberate business/brand policy
+# exclusions (competitor names, bare-navigational tax-authority searches) —
+# the skill treats both the same way: flag regardless of performance.
 irrelevant_topics:
   - personal debt
   - personal bank account
@@ -76,12 +95,31 @@ irrelevant_topics:
   - student loan
   - debt collector jobs
   - CIS/PAYE jobs terms unrelated to insolvency
+  # Added 2026-07-20, per Piers, from real search-terms-analyzer watch-list review:
+  - business debtline                          # Business Debtline is a charity/competitor — never appear on their name
+  - business debt line                         # same, covers the "business debt line org/uk" spaced variant
+  - gov uk tax bill                            # generic government-navigational search, not insolvency-seeking intent
+  - hrmc                                       # bare "HMRC" (misspelling) — navigational to the tax authority itself, not a help-seeker
+  - h r m c                                    # spaced-out variant of the above
+  - tax returns payment                        # generic tax-filing intent, not insolvency-specific
+  # Added 2026-07-20, per Piers, from real performance-max-auditor category-label review:
+  - clear start accountants                    # possible competitor/accountancy brand name
+  - ascent collections                         # possible competitor/debt-collection agency brand name
+  - money laundering report uk                 # regulatory/whistleblowing intent, not insolvency-seeking
+  - report non tax payers                      # same — whistleblowing/reporting intent
+  - wrong tax code                             # personal-tax navigational, not insolvency-specific
+  - vat helpline                                # navigational to HMRC's own helpline, same pattern as bare "hrmc"
 
 comparison_periods:
   primary_days: 7
   previous_period: true
   context_days: 28
   long_term_days: 90
+  # search-term/keyword-level lookback for negative-keyword-miner and
+  # search-terms-analyzer only (added 2026-07-20, per Piers) — a 7-day
+  # window is too thin a sample for keyword-level judgement on this
+  # low-volume account. Campaign-level findings still use primary_days.
+  search_term_lookback_days: 365
 
 reporting:
   include_low_confidence_findings: true

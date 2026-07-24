@@ -1,0 +1,98 @@
+[
+  {
+    "finding_id": "NEG-001",
+    "source_skill": "negative-keyword-miner",
+    "category": "irrelevant-topic-negative",
+    "severity": "low",
+    "confidence": "low",
+    "account": "Company Debt (test fixture)",
+    "period": { "start": "2026-07-13", "end": "2026-07-19" },
+    "evidence": {
+      "search_term": "insolvency practitioner jobs manchester",
+      "matched_irrelevant_topic": "insolvency practitioner jobs",
+      "total_cost_gbp": 8.0,
+      "total_clicks": 3,
+      "total_impressions": 60,
+      "total_conversions": 0.0,
+      "breakdown": [
+        { "campaign": "Search | Company Debt", "campaign_id": "1001", "ad_group": "Insolvency", "ad_group_id": "2001", "cost_gbp": 5.0, "clicks": 2, "impressions": 40 },
+        { "campaign": "Search | Company Liquidation", "campaign_id": "1002", "ad_group": "Liquidation", "ad_group_id": "2002", "cost_gbp": 3.0, "clicks": 1, "impressions": 20 }
+      ]
+    },
+    "observation": "The search term 'insolvency practitioner jobs manchester' received 3 clicks and £8.00 spend across 2 campaigns in the 13-19 Jul 2026 period, with 0 conversions, and matches the configured irrelevant-topic category 'insolvency practitioner jobs'.",
+    "interpretation": "This reads as job-seeking intent (someone looking for insolvency practitioner employment), not someone looking for insolvency services — outside the account's target audience.",
+    "recommendation": "Add 'insolvency practitioner jobs manchester' as an EXACT match negative keyword at ad-group level in 'Insolvency' (campaign 1001) and 'Liquidation' (campaign 1002).",
+    "estimated_impact": "Would prevent further spend on this exact query going forward. Historical spend of £8.00 has already occurred and is not recovered by adding a negative.",
+    "effort": "low",
+    "blocking_risk": "medium",
+    "caveats": [
+      "Existing negative-keyword coverage was only checked at ad-group/campaign level via keyword_view; shared negative-keyword lists are not visible in the current query library, so this term could already be excluded via a shared list not captured here.",
+      "Volume is low (3 clicks total) — confidence is low because the sample is thin, even though the topic match itself is unambiguous.",
+      "The term contains 'insolvency', which overlaps with the account's core commercial vocabulary — blocking risk rated medium, not low, on that basis."
+    ]
+  },
+  {
+    "finding_id": "NEG-002",
+    "source_skill": "negative-keyword-miner",
+    "category": "irrelevant-topic-negative",
+    "severity": "medium",
+    "confidence": "high",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "1001",
+    "campaign": "Search | Company Debt",
+    "ad_group_id": "2001",
+    "ad_group": "Insolvency",
+    "period": { "start": "2026-07-13", "end": "2026-07-19" },
+    "evidence": {
+      "search_term": "student loan debt help",
+      "matched_irrelevant_topic": "student loan",
+      "cost_gbp": 120.0,
+      "clicks": 20,
+      "impressions": 300,
+      "conversions": 0.0
+    },
+    "observation": "The search term 'student loan debt help' received 20 clicks and £120.00 spend in the 13-19 Jul 2026 period, with 0 conversions, and matches the configured irrelevant-topic category 'student loan'.",
+    "interpretation": "This is personal student-loan debt intent, not the business/company insolvency audience Company Debt serves — outside the account's target audience.",
+    "recommendation": "Add 'student loan debt help' as an EXACT match negative keyword at ad-group level in 'Insolvency' (campaign 1001).",
+    "estimated_impact": "Would prevent further spend on this exact query going forward (£120.00 spent this period on 0 conversions). Historical spend is not recovered by adding a negative.",
+    "effort": "low",
+    "blocking_risk": "medium",
+    "caveats": [
+      "Existing negative-keyword coverage was only checked at ad-group/campaign level via keyword_view; shared negative-keyword lists are not visible in the current query library, so this term could already be excluded via a shared list not captured here.",
+      "The term contains 'debt', which overlaps with the account's core commercial vocabulary — blocking risk rated medium, not low, on that basis.",
+      "Conversion counts for this account carry a standing low-confidence flag (see accounts/company-debt.yml) — the zero-conversion figure here is supporting evidence, not the basis for this recommendation, which rests on topical irrelevance."
+    ]
+  },
+  {
+    "finding_id": "NEG-003",
+    "source_skill": "negative-keyword-miner",
+    "category": "irrelevant-topic-negative",
+    "severity": "low",
+    "confidence": "low",
+    "account": "Company Debt (test fixture)",
+    "campaign_id": "1001",
+    "campaign": "Search | Company Debt",
+    "ad_group_id": "2001",
+    "ad_group": "Insolvency",
+    "period": { "start": "2026-07-13", "end": "2026-07-19" },
+    "evidence": {
+      "search_term": "personal debt collector jobs london",
+      "matched_irrelevant_topic": "personal debt, debt collector jobs",
+      "cost_gbp": 45.0,
+      "clicks": 6,
+      "impressions": 60,
+      "conversions": 0.0
+    },
+    "observation": "The search term 'personal debt collector jobs london' received 6 clicks and £45.00 spend in the 13-19 Jul 2026 period, with 0 conversions, and matches two configured irrelevant-topic categories: 'personal debt' and 'debt collector jobs'.",
+    "interpretation": "This reads as job-seeking intent for debt-collector roles, not someone looking for insolvency services — outside the account's target audience.",
+    "recommendation": "Add 'personal debt collector jobs london' as an EXACT match negative keyword at ad-group level in 'Insolvency' (campaign 1001).",
+    "estimated_impact": "Would prevent further spend on this exact query going forward. Historical spend of £45.00 has already occurred and is not recovered by adding a negative.",
+    "effort": "low",
+    "blocking_risk": "medium",
+    "caveats": [
+      "Existing negative-keyword coverage was only checked at ad-group/campaign level via keyword_view; shared negative-keyword lists are not visible in the current query library, so this term could already be excluded via a shared list not captured here.",
+      "Volume is low (6 clicks) — confidence is low because the sample is thin, even though the topic match itself is unambiguous (matches two irrelevant-topic categories).",
+      "The term contains 'debt', which overlaps with the account's core commercial vocabulary — blocking risk rated medium, not low, on that basis."
+    ]
+  }
+]
