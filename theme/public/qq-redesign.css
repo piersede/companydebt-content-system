@@ -96,22 +96,28 @@
 .qq .qq-slider { margin-bottom: 18px; }
 .qq .qq-slider__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
 .qq .qq-slider__label { font-weight: 600; font-size: 15px; color: #1a2733; margin: 0; }
-/* Value display: the calculator writes "£ 0" into this span. Reproduce the
-   mockup's editable-field look — right-aligned figure over a dashed underline. */
+/* Value display: the calculator writes "£ 0" into this span; a small script
+   (see template) splits it into .qq-cur (£) + .qq-fig (number) so we can pin the
+   £ left and the figure right over a dashed underline — exactly like the mockup. */
 .qq .qq-slider__val, .qq .quiz__amount {
 	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; color: #09285D; white-space: nowrap;
-	display: inline-block !important; min-width: 92px !important; text-align: right !important;
+	display: inline-flex !important; justify-content: space-between; align-items: baseline; gap: 12px;
+	min-width: 96px !important; text-align: right !important;
 	border: 0 !important; border-bottom: 1px dashed rgba(9, 40, 93, .28) !important;
 	background: transparent !important; padding: 0 0 2px !important; box-shadow: none !important; width: auto !important;
 }
+.qq .quiz__amount .qq-fig { text-align: right; }
 
 /* noUiSlider skin — thin track, orange fill, white/orange handle */
-.qq .slider-range-noUI-container { padding: 6px 0; }
+.qq .slider-range-noUI-container { padding: 4px 0; }
 .qq .slider-range-noUI,
 .qq .slider-range-noUI .noUi-base,
 .qq .slider-range-noUI .noUi-connects { height: 6px; border-radius: 999px; }
 .qq .slider-range-noUI {
 	background: #e3e9ee !important; border: 0 !important; box-shadow: none !important;
+	/* the calculator CSS sets margin:20px 10px — 40px of vertical bloat per row.
+	   Kill the vertical margin (keep 11px sides for the handle overflow). */
+	margin: 0 11px !important;
 }
 .qq .slider-range-noUI .noUi-connect { background: #FF6600 !important; border-radius: 999px !important; }
 .qq .slider-range-noUI .noUi-handle {

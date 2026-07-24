@@ -277,6 +277,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (el) { el.setAttribute('placeholder', ph[id]); }
 	});
 
+	// Value fields: the calculator writes "£ 25,000" as one string. Split it into
+	// £ (left) + figure (right) so the dashed field matches the mockup. Purely a
+	// display reformat — the slider, hidden GF amount fields and quote logic are
+	// untouched. Loop-guarded via data-fig so it never fights the calculator.
+	document.querySelectorAll('.quiz__amount').forEach(function (span) {
+		var reformat = function () {
+			var fig = span.textContent.replace(/[£\s]/g, '').trim() || '0';
+			var figEl = span.querySelector('.qq-fig');
+			// already in our split form with the right figure? leave it (prevents loops)
+			if (figEl && figEl.textContent === fig) { return; }
+			span.innerHTML = '<span class="qq-cur">£</span><span class="qq-fig">' + fig + '</span>';
+		};
+		reformat();
+		new MutationObserver(reformat).observe(span, { childList: true, characterData: true, subtree: true });
+	});
+
 	// Keep the FAQ heading as designed. A site-wide theme script relabels FAQ
 	// headings to "FAQs About {title}", which reads awkwardly here; hold ours.
 	var faqH2 = document.querySelector('.qq-faq__head .qq-h2');
