@@ -507,6 +507,14 @@ SLIDES = {
             myth="Limited liability protects everything I own.",
             fact="Not a penny of it, on any debt you have personally guaranteed.")),
     ],
+    # Post 22: Myth/Fact, overdrawn director's loan. Grounded in drafts/75111
+    # (Chris Andersen byline). s.455 33.75% verified on gov.uk 2026-07-22.
+    22: [
+        ("mythfact", dict(
+            kicker="Director's loan accounts",
+            myth="It's my company, so it's my money.",
+            fact="An overdrawn loan account is a debt the liquidator will reclaim from you.")),
+    ],
     # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
     # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
     11: [
@@ -530,12 +538,14 @@ SOURCES = {
     11: "Source: gov.uk payment practices export, recomputed 22 Jul 2026",
     20: "",
     21: "",
+    22: "",
 }
 
 # Footer URL per post (defaults to the data hub).
 URLS = {
     20: "companydebt.com/advice",
     21: "companydebt.com/advice",
+    22: "companydebt.com/advice",
 }
 
 
