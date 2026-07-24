@@ -9,12 +9,34 @@
 .qq .qq-accent { color: #FF6600; }
 
 /* ── HERO ─────────────────────────────────────────────────────────────── */
-.qq .qq-hero { background: linear-gradient(155deg, #124079 0%, #09285D 52%, #061c42 100%); }
+.qq .qq-hero { position: relative; background: linear-gradient(155deg, #124079 0%, #09285D 52%, #061c42 100%); }
 .qq .qq-hero__inner {
-	max-width: 1180px; margin: 0 auto; padding: 72px 24px 80px;
+	max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px;
 	display: grid; grid-template-columns: 6fr 4fr; gap: 56px; align-items: start;
 }
 .qq .qq-hero__left { padding-top: 6px; }
+
+/* ── Custom landing header (on the navy hero) ─────────────────────────── */
+.qq .qq-topbar { position: relative; z-index: 3; }
+.qq .qq-topbar__inner {
+	max-width: 1180px; margin: 0 auto; padding: 16px 24px;
+	display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
+}
+.qq .qq-topbar__logo { display: inline-flex; align-items: center; }
+.qq .qq-topbar__logo img { height: 27px; width: auto; display: block; }
+.qq .qq-topbar__reviews {
+	position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+	display: flex; align-items: center; gap: 9px; white-space: nowrap;
+}
+.qq .qq-topbar__stars { color: #fbbc05; font-size: 14px; letter-spacing: 1px; line-height: 1; }
+.qq .qq-topbar__rtxt { font-size: 13px; color: #b9c8da; }
+.qq .qq-topbar__rtxt strong { color: #fff; font-weight: 700; }
+.qq .qq-topbar__cta {
+	background: #FF6600; color: #fff; text-decoration: none;
+	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px;
+	padding: 11px 20px; border-radius: 9px; transition: background .2s ease;
+}
+.qq .qq-topbar__cta:hover { background: #e65c00; color: #fff; }
 
 .qq .qq-hero__pill {
 	display: inline-flex; align-items: center; gap: 8px;
@@ -41,7 +63,12 @@
 .qq .qq-btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
 
 .qq .qq-hero__logos { display: flex; align-items: center; gap: 34px; margin: 34px 0 0; }
-.qq .qq-hero__logos img { width: auto; display: block; filter: brightness(0) invert(1); opacity: .9; }
+/* Heights forced !important: a theme content-image rule otherwise overrides the
+   HTML height attribute (collapsing IPA/TMA and ballooning the large ICAS PNG). */
+.qq .qq-hero__logos img { flex: none; width: auto !important; display: block; }
+.qq .qq-logo--ipa  { height: 40px !important; filter: grayscale(1); opacity: .95; }
+.qq .qq-logo--tma  { height: 47px !important; filter: brightness(0) invert(1); opacity: .9; }
+.qq .qq-logo--icas { height: 26px !important; filter: brightness(0) invert(1); opacity: .9; }
 
 /* ── FORM CARD ────────────────────────────────────────────────────────── */
 .qq .qq-card { background: #fff; border-radius: 18px; box-shadow: 0 30px 70px -28px rgba(6,24,40,.55); overflow: hidden; }
@@ -160,8 +187,12 @@
 .qq .qq-featured__logos img { width: auto; max-height: 30px; opacity: .85; }
 
 /* ── RESPONSIVE ───────────────────────────────────────────────────────── */
+@media (max-width: 820px) {
+	.qq .qq-topbar__reviews { display: none; }
+}
 @media (max-width: 960px) {
-	.qq .qq-hero__inner { grid-template-columns: 1fr; gap: 36px; padding: 48px 20px 56px; }
+	.qq .qq-hero__inner { grid-template-columns: 1fr; gap: 36px; padding: 28px 20px 56px; }
+	.qq .qq-topbar__inner { padding: 14px 20px; }
 	.qq .qq-hero__title { font-size: 38px; }
 	.qq .qq-hero__sub { max-width: none; }
 	.qq .qq-h2 { font-size: 30px; }

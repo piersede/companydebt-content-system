@@ -25,6 +25,22 @@ get_header();
 
 	<!-- HERO + QUOTE FORM -->
 	<section class="qq-hero">
+
+		<!-- Custom landing header (logo · Google reviews · Speak to an Expert),
+		     sits on the navy hero. The theme renders no desktop header here. -->
+		<header class="qq-topbar">
+			<div class="qq-topbar__inner">
+				<a class="qq-topbar__logo" href="https://www.companydebt.com/">
+					<img src="<?php echo esc_url( content_url( 'uploads/2023/02/logo-cd.png' ) ); ?>" alt="Company Debt" height="27">
+				</a>
+				<div class="qq-topbar__reviews">
+					<span class="qq-topbar__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+					<span class="qq-topbar__rtxt">Rated <strong>4.9/5</strong> on Google Reviews</span>
+				</div>
+				<a class="qq-topbar__cta" href="tel:08000746757">Speak to an Expert</a>
+			</div>
+		</header>
+
 		<div class="qq-hero__inner">
 
 			<div class="qq-hero__left">
@@ -47,8 +63,9 @@ get_header();
 				</div>
 
 				<div class="qq-hero__logos">
-					<img src="<?php echo esc_url( content_url( 'uploads/2022/03/IPA_White_PNG.png' ) ); ?>" alt="Insolvency Practitioners Association" height="40">
-					<img src="<?php echo esc_url( content_url( 'uploads/2022/03/TMA_White_PNG.png' ) ); ?>" alt="Turnaround Management Association" height="44">
+					<img class="qq-logo--ipa" src="<?php echo esc_url( content_url( 'uploads/2022/03/IPA_White_PNG.png' ) ); ?>" alt="Insolvency Practitioners Association" height="40">
+					<img class="qq-logo--tma" src="<?php echo esc_url( content_url( 'uploads/2022/03/TMA_White_PNG.png' ) ); ?>" alt="Turnaround Management Association" height="47">
+					<img class="qq-logo--icas" src="<?php echo esc_url( content_url( 'uploads/2026/04/icas-logo-1.png' ) ); ?>" alt="ICAS" height="26">
 				</div>
 			</div>
 
