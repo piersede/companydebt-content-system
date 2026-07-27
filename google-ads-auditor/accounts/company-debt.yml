@@ -109,6 +109,16 @@ irrelevant_topics:
   - report non tax payers                      # same — whistleblowing/reporting intent
   - wrong tax code                             # personal-tax navigational, not insolvency-specific
   - vat helpline                                # navigational to HMRC's own helpline, same pattern as bare "hrmc"
+  # Added 2026-07-24, per Piers, from real landing-page-list search-terms review
+  # ("Can't Pay HMRC/VAT" cluster) — correctly-spelled compounds the "hrmc"
+  # misspelling entry above doesn't catch, plus two new navigational patterns.
+  # Deliberately NOT adding bare "hmrc" here — that would also exclude genuine
+  # distress-intent terms like "cant pay hmrc bill".
+  - govhmrc                                     # navigational to HMRC itself, correctly-spelled compound
+  - payinghmrc                                  # covers "gov uk payinghmrc" — navigational to gov.uk's own payment page
+  - vat helpdesk                                # navigational to HMRC's own VAT helpdesk, not distress intent
+  - taxcalc support                             # TaxCalc accounting-software support query, not insolvency-seeking
+  - vat bristol                                 # generic local VAT-service search, not distress/insolvency intent
 
 comparison_periods:
   primary_days: 7
