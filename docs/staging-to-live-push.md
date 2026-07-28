@@ -64,9 +64,26 @@ python -c "import os,pathlib,requests;from dotenv import load_dotenv;load_dotenv
 
 ### Code to live
 
-In the WP Engine portal, choose **"file system only"**. No database, no risk. Note that
+Either route works. Both copy **every** file, not just the changed ones. Note that
 mu-plugin and theme edits are made on *staging* via `scripts/sftp_edit.py`, so a
 file-system copy is how they reach live.
+
+**Scripted (preferred):**
+
+```bash
+python scripts/wpe_copy_files_to_live.py            # dry run
+python scripts/wpe_copy_files_to_live.py --confirm  # only when Piers has asked
+```
+
+Needs `WPENGINE_API_USER` **and** `WPENGINE_API_PASSWORD` in `.env`, generated together
+in the portal under Profile > API Access. The username alone returns `401 Bad Credentials`.
+
+> The API's `POST /install_copy` **defaults `include_db` to true**. A request that
+> omits `custom_options` copies the whole database and does exactly the damage described
+> above. `wpe_copy_files_to_live.py` hard-codes `include_db: false`, never sends
+> `db_tables`, and asserts both before the request leaves. Do not hand-roll this call.
+
+**Portal:** Copy environment, Staging to Production, **"file system only"**.
 
 ### If a database push is genuinely unavoidable
 
@@ -78,13 +95,28 @@ wp_posts  wp_postmeta  wp_terms  wp_termmeta
 wp_term_taxonomy  wp_term_relationships  wp_options  wp_yoast_indexable
 ```
 
-Never "select all". WP Engine does not save table selections between copies, and its API
-cannot copy environments at all, so this is manual every time.
+Never "select all". WP Engine does not save table selections between copies, so in the
+portal this is manual every time. The API accepts a `db_tables` allowlist on
+`/install_copy`, but `wpe_copy_files_to_live.py` deliberately refuses to send one: any
+database copy should be a slow, deliberate, human decision.
 
 ## After ANY push to live
 
-1. **Purge caches**: WP Rocket, WP Engine, and **Cloudflare**. Cloudflare is a separate
-   layer and will otherwise keep serving the old page and old 301s for up to a year.
+1. **Purge caches**: WP Engine, **Cloudflare**, and **WP Rocket**. Cloudflare is a
+   separate layer and will otherwise keep serving the old page and old 301s for up to a
+   year. WP Engine's caches can be purged from here:
+
+   ```bash
+   python -c "import os,pathlib,requests;from dotenv import load_dotenv;load_dotenv(pathlib.Path('.env'));a=(os.environ['WPENGINE_API_USER'],os.environ['WPENGINE_API_PASSWORD']);[print(t,requests.post('https://api.wpengineapi.com/v1/installs/87153507-ffe2-4d06-ba32-32c96d2b2791/purge_cache',auth=a,json={'type':t}).status_code) for t in ('object','page','cdn')]"
+   ```
+
+   > **WP Rocket is a manual click and it matters.** Live pages load WP Rocket's minified
+   > copy of the stylesheet (`wp-content/cache/min/1/.../style.css`), **not** the theme
+   > file. Until that is rebuilt, `style.css` can match staging byte for byte and the
+   > change still will not render. Nothing here can trigger it: `wpe_purge.py` is
+   > staging-only, the WP Engine API's `purge_cache` does not touch it, `wp-rocket/v1`
+   > has no purge route, and application passwords do not authenticate `wp-admin`.
+   > Go to live `wp-admin` > WP Rocket > **Clear cache**.
 2. **Re-render the page** in a browser and check length and structure. A `200 OK` is not
    proof the right content landed.
 3. **Check form entries survived**:
