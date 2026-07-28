@@ -224,14 +224,17 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 		</div>
 		<div class="qq-options__grid">
 			<div class="qq-option">
+				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
 				<h3 class="qq-option__title">Continue or Rescue the Business</h3>
 				<p class="qq-option__text">If the business is viable, this can mean better cash flow, negotiating with creditors, or a formal restructuring process.</p>
 			</div>
 			<div class="qq-option">
+				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
 				<h3 class="qq-option__title">Close an Insolvent Company</h3>
 				<p class="qq-option__text">Where recovery isn&rsquo;t realistic, a Creditors&rsquo; Voluntary Liquidation closes the company in an orderly way.</p>
 			</div>
 			<div class="qq-option">
+				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
 				<h3 class="qq-option__title">Consider Another Route</h3>
 				<p class="qq-option__text">Some companies suit a different closure or insolvency procedure. We&rsquo;ll explain which after reviewing your position.</p>
 			</div>

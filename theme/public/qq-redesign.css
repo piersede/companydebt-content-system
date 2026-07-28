@@ -546,7 +546,7 @@
 	.qq-v2 .qq-hero__title     { font-size: 56px; }
 	.qq-v2 .qq-topbar__inner   { padding: 16px 84px; }
 	.qq-v2 .qq-hero__inner     { padding: 187px 84px 64px; }
-	.qq-v2 .qq-trust__inner    { padding: 24px 84px; }
+	.qq-v2 .qq-trust__inner    { padding: 29px 84px; }   /* +20% top/bottom */
 	.qq-v2 .qq-process         { padding: 48px 0; }   /* half vertical; full-width band */
 	.qq-v2 .qq-process__inner  { max-width: 1180px; margin: 0 auto; padding: 0 84px; }
 	.qq-v2 .qq-options         { padding: 48px 0; }   /* full-width white band; half vertical */
@@ -610,5 +610,7 @@
 .qq-v2 .qq-trust__ico { width: 48px; height: 48px; border-radius: 11px; }
 .qq-v2 .qq-trust__ico svg { width: 24px; height: 24px; }
 .qq-v2 .qq-trust__txt { font-size: 16px; }
-/* Possible Options: its own full-width white section band. */
+/* Possible Options: its own full-width white section band, cards get an icon
+   (navy box, matching the 4-step icons). */
 .qq-v2 .qq-options { background: #fff; max-width: none; margin: 0; }
+.qq-v2 .qq-option__ico { flex: none; width: 44px; height: 44px; border-radius: 11px; background: #09285D; color: #fff; display: grid; place-items: center; margin-bottom: 16px; }
