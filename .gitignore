@@ -12,6 +12,7 @@ desktop.ini
 .env
 .env.local
 *.env
+.env.bak-*
 credentials*
 secrets*
 
