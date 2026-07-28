@@ -528,8 +528,8 @@
 .qq-v2 .qq-hero__grid .qq-hero__sub { max-width: none; }
 /* pill hugs its content instead of stretching to the column width */
 .qq-v2 .qq-hero__pill { align-self: flex-start; }
-/* tick items closer together (16 → 13 → 9, a further −30%) */
-.qq-v2 .qq-hero__ticks { gap: 9px; }
+/* tick items closer together (16 → 13 → 9 → 7, successive −20% / −30% / −20%) */
+.qq-v2 .qq-hero__ticks { gap: 7px; }
 /* both hero CTAs share one width */
 .qq-v2 .qq-hero__cta {
 	display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
@@ -544,15 +544,19 @@
    of air below the ~93px top bar, twice the previous ~47px). */
 @media (min-width: 961px) {
 	.qq-v2 .qq-hero__title     { font-size: 56px; }
-	.qq-v2 .qq-topbar__inner   { padding: 16px 70px; }
-	.qq-v2 .qq-hero__inner     { padding: 187px 70px 64px; }
-	.qq-v2 .qq-trust__inner    { padding: 24px 70px; }
-	.qq-v2 .qq-process         { padding: 96px 70px; }
-	.qq-v2 .qq-options         { padding: 96px 70px; }
-	.qq-v2 .qq-tmony__inner    { padding: 96px 70px; }
-	.qq-v2 .qq-faq             { padding: 96px 70px; }
-	.qq-v2 .qq-finalcta        { padding: 96px 70px; }
-	.qq-v2 .qq-featured__inner { padding: 40px 70px; }
+	.qq-v2 .qq-topbar__inner   { padding: 16px 84px; }
+	.qq-v2 .qq-hero__inner     { padding: 187px 84px 64px; }
+	.qq-v2 .qq-trust__inner    { padding: 24px 84px; }
+	.qq-v2 .qq-process         { padding: 48px 0; }   /* half vertical; full-width band */
+	.qq-v2 .qq-process__inner  { max-width: 1180px; margin: 0 auto; padding: 0 84px; }
+	.qq-v2 .qq-options         { padding: 96px 84px; }
+	.qq-v2 .qq-tmony__inner    { padding: 96px 84px; }
+	.qq-v2 .qq-faq             { padding: 96px 84px; }
+	.qq-v2 .qq-finalcta        { padding: 96px 84px; }
+	.qq-v2 .qq-featured__inner { padding: 40px 84px; }
+	/* 4-step: photo box stretches to the full height of the 4 stacked cards */
+	.qq-v2 .qq-process__grid   { align-items: stretch; }
+	.qq-v2 .qq-process__media  { aspect-ratio: auto; }
 }
 
 /* ── Form card tweaks ─────────────────────────────────────────────────── */
@@ -582,3 +586,22 @@
 .qq-v2 .qq-card__form .gform_footer { padding-bottom: 0 !important; }
 .qq-v2 .qq-card__trust { flex-wrap: nowrap; gap: 10px; margin-top: 8px; }
 .qq-v2 .qq-card__trust-item { font-size: 12px; white-space: nowrap; gap: 6px; }
+
+/* ── Round 5 ──────────────────────────────────────────────────────────── */
+/* Hero sub: force left alignment (never justified). */
+.qq-v2 .qq-hero__sub { text-align: left; }
+/* Part 2's "we aim to call" → first field gap raised to match Part 1's
+   "your figures" → "what does the company owe" gap (both ~28px). */
+.qq-v2 .qq-card__form .qq-card__privacy { margin-bottom: 28px; }
+/* 4-step section: full-width tinted band (#F4F7FE). max-width/margin cleared so
+   the colour runs edge to edge; the .qq-process__inner holds the centred content. */
+.qq-v2 .qq-process { background: #F4F7FE; max-width: none; margin: 0; }
+/* 4-step cards: icon vertically centred against the card text. */
+.qq-v2 .qq-step { align-items: center; }
+/* Trust bar: bigger icons/containers/text. Two columns (was four) so the longer
+   labels fit on one line at the larger size. */
+.qq-v2 .qq-trust__inner { grid-template-columns: repeat(2, 1fr); gap: 20px 40px; }
+.qq-v2 .qq-trust__item { gap: 12px; }
+.qq-v2 .qq-trust__ico { width: 52px; height: 52px; border-radius: 12px; }
+.qq-v2 .qq-trust__ico svg { width: 26px; height: 26px; }
+.qq-v2 .qq-trust__txt { font-size: 18px; }

@@ -181,6 +181,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 
 	<!-- HOW IT WORKS -->
 	<section class="qq-process">
+		<div class="qq-process__inner">
 		<div class="qq-process__head">
 			<p class="qq-eyebrow">How it works</p>
 			<h2 class="qq-h2">A Clear Four-Step Process</h2>
@@ -188,7 +189,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 		</div>
 		<div class="qq-process__grid">
 			<div class="qq-process__media">
-				<img src="<?php echo esc_url( content_url( 'uploads/2022/03/Girl-with-Laptiop.jpg' ) ); ?>" alt="Director reviewing company finances from home" loading="lazy">
+				<img src="<?php echo esc_url( content_url( 'uploads/2026/07/qq-director.webp' ) ); ?>" alt="Director reviewing company finances from home" loading="lazy">
 			</div>
 			<div class="qq-steps">
 			<div class="qq-step">
@@ -210,6 +211,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			</div>
 		</div>
 		<p class="qq-process__note">If a formal insolvency procedure is appropriate and you choose to proceed, it will be handled by a licensed insolvency practitioner.</p>
+		</div>
 	</section>
 
 	<!-- POSSIBLE OPTIONS -->
