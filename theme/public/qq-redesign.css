@@ -528,8 +528,8 @@
 .qq-v2 .qq-hero__grid .qq-hero__sub { max-width: none; }
 /* pill hugs its content instead of stretching to the column width */
 .qq-v2 .qq-hero__pill { align-self: flex-start; }
-/* tick items 20% closer together (16 → 13) */
-.qq-v2 .qq-hero__ticks { gap: 13px; }
+/* tick items closer together (16 → 13 → 9, a further −30%) */
+.qq-v2 .qq-hero__ticks { gap: 9px; }
 /* both hero CTAs share one width */
 .qq-v2 .qq-hero__cta {
 	display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
@@ -537,26 +537,40 @@
 }
 .qq-v2 .qq-hero__cta .qq-btn { justify-content: center; }
 
-/* Left/right gutters on the top bar, hero and every content section — 58px
-   (48 +20%). Desktop only; mobile keeps its tighter edges (later pass).
-   Hero top padding raised again (140 vs 128) for ~20% more air between the top
-   bar and the pill. */
+/* Left/right gutters on the hero and every content section — 70px (58 +20%).
+   The top bar is kept matched to the hero so the logo/CTA stay aligned with the
+   headline. Desktop only; mobile keeps its tighter edges (later pass).
+   Hero top padding doubled relative to the topnav→brow gap (140 → 187 puts ~94px
+   of air below the ~93px top bar, twice the previous ~47px). */
 @media (min-width: 961px) {
-	.qq-v2 .qq-topbar__inner   { padding: 16px 58px; }
-	.qq-v2 .qq-hero__inner     { padding: 140px 58px 64px; }
-	.qq-v2 .qq-trust__inner    { padding: 24px 58px; }
-	.qq-v2 .qq-process         { padding: 96px 58px; }
-	.qq-v2 .qq-options         { padding: 96px 58px; }
-	.qq-v2 .qq-tmony__inner    { padding: 96px 58px; }
-	.qq-v2 .qq-faq             { padding: 96px 58px; }
-	.qq-v2 .qq-finalcta        { padding: 96px 58px; }
-	.qq-v2 .qq-featured__inner { padding: 40px 58px; }
+	.qq-v2 .qq-hero__title     { font-size: 56px; }
+	.qq-v2 .qq-topbar__inner   { padding: 16px 70px; }
+	.qq-v2 .qq-hero__inner     { padding: 187px 70px 64px; }
+	.qq-v2 .qq-trust__inner    { padding: 24px 70px; }
+	.qq-v2 .qq-process         { padding: 96px 70px; }
+	.qq-v2 .qq-options         { padding: 96px 70px; }
+	.qq-v2 .qq-tmony__inner    { padding: 96px 70px; }
+	.qq-v2 .qq-faq             { padding: 96px 70px; }
+	.qq-v2 .qq-finalcta        { padding: 96px 70px; }
+	.qq-v2 .qq-featured__inner { padding: 40px 70px; }
 }
 
 /* ── Form card tweaks ─────────────────────────────────────────────────── */
-/* Each step's privacy line tucks up close under its "Your situation" /
-   "Your details" label (was 16px below the label). */
-.qq-v2 .qq-card__step { margin-bottom: 4px; }
+/* Step → privacy line: halve the visual gap. The box gap was already small (4px)
+   but both inherit the theme's 32px line-height on 13px text (~19px of dead
+   leading) — that, not the margin, was the gap. Tighten the line-height and set
+   a small margin so the visual gap lands ~half (~23 → ~11px). */
+.qq-v2 .qq-card__step { line-height: 1.3; margin-bottom: 6px; }
+.qq-v2 .qq-card__privacy { line-height: 1.3; }
+/* "What does the company owe/own" headings: a real gap above (collapses with the
+   element above to 28px) and a bit more breathing room below, before the first
+   slider (8 → 14px). */
+.qq-v2 .qq-card__eyebrow { margin-top: 28px; margin-bottom: 14px; }
+.qq-v2 .qq-card__eyebrow ~ .qq-card__eyebrow { margin-top: 28px; }
+/* Monochromatic grey form icons (replacing the emoji lock/clock/star/shield). */
+.qq-v2 .qq-card__ico { flex: none; display: inline-flex; align-items: center; color: #5a6b7a; }
+.qq-v2 .qq-card__ico svg { display: block; }
+.qq-v2 .qq-card__micro { display: flex; align-items: center; justify-content: center; gap: 6px; }
 /* Plain circular slider handles — drop the grip glyph inside the circle. */
 .qq-v2 .slider-range-noUI .noUi-handle { background-image: none !important; }
 /* Submit CTA corner radius matched to the input fields (10px). !important to

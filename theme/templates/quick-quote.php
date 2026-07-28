@@ -98,7 +98,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<div class="qq-card" id="quick-quote-form">
 				<div class="qq-card__sliders">
 					<p class="qq-card__step">Your situation</p>
-					<p class="qq-card__privacy">&#128274; Your figures stay confidential. Used only to prepare your options.</p>
+					<p class="qq-card__privacy">Your figures stay confidential. Used only to prepare your options.</p>
 					<p class="qq-card__eyebrow">What Does the Company Owe?</p>
 
 					<div class="qq-slider">
@@ -143,13 +143,13 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 
 				<div class="qq-card__form form-wrapper">
 					<p class="qq-card__step">Your details</p>
-					<p class="qq-card__privacy">&#128337; We aim to call you back by 5pm the same working day.</p>
+					<p class="qq-card__privacy">We aim to call you back by 5pm the same working day.</p>
 					<?php echo do_shortcode( '[gravityform id="40" title="false" description="false" ajax="true"]' ); ?>
 					<div class="qq-card__trust">
-						<span class="qq-card__trust-item"><span aria-hidden="true">&#9733;</span> 4.9/5 on Google Reviews</span>
-						<span class="qq-card__trust-item"><span aria-hidden="true">&#128737;</span> Licensed insolvency practitioners</span>
+						<span class="qq-card__trust-item"><span class="qq-card__ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></span> 4.9/5 on Google Reviews</span>
+						<span class="qq-card__trust-item"><span class="qq-card__ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> Licensed insolvency practitioners</span>
 					</div>
-					<p class="qq-card__micro">&#128274; Confidential. No obligation to proceed.</p>
+					<p class="qq-card__micro"><span class="qq-card__ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span> Confidential. No obligation to proceed.</p>
 				</div>
 			</div>
 			</div>
