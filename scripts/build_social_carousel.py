@@ -515,6 +515,14 @@ SLIDES = {
             myth="It's my company, so it's my money.",
             fact="An overdrawn loan account is a debt the liquidator will reclaim from you.")),
     ],
+    # Post 23: Myth/Fact, strike-off/dissolution. Grounded in the live page
+    # (creditors restore within 6yr, HMRC 20yr; DS01 £13). No number on card.
+    23: [
+        ("mythfact", dict(
+            kicker="Striking off a company",
+            myth="Dissolve the company and the debts die with it.",
+            fact="Creditors can block it, restore the company, and pursue you.")),
+    ],
     # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
     # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
     11: [
@@ -539,6 +547,7 @@ SOURCES = {
     20: "",
     21: "",
     22: "",
+    23: "",
 }
 
 # Footer URL per post (defaults to the data hub).
@@ -546,6 +555,7 @@ URLS = {
     20: "companydebt.com/advice",
     21: "companydebt.com/advice",
     22: "companydebt.com/advice",
+    23: "companydebt.com/liquidation",
 }
 
 
