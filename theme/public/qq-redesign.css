@@ -516,30 +516,55 @@
 .qq-v2 .qq-hero__micro { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #c4d2df; }
 .qq-v2 .qq-hero__micro-ico { flex: none; display: inline-flex; color: #c4d2df; }
 
-/* Hero rhythm: the pill sits on its own row; the H1 now leads the left column,
-   so the form card (right column) inherits the grid's align-items:start and its
-   top lines up with the H1's top. ONE gap value drives pill→H1 and every step of
-   the left column (H1→text→ticks→cta→disclaimer→logos) — identical throughout. */
-.qq-v2 .qq-hero__top { margin: 0; }
-.qq-v2 .qq-hero__grid { margin-top: var(--hero-gap); align-items: start; }
+/* Hero rhythm: the pill (brow) now leads the left column, so the form card
+   (right column) inherits the grid's align-items:start and its top lines up with
+   the PILL, not the H1 below it. ONE gap value drives every step of the left
+   column (pill→H1→text→ticks→cta→disclaimer→logos) — identical throughout. */
+.qq-v2 .qq-hero__grid { margin-top: 0; align-items: start; }
 .qq-v2 .qq-hero__grid .qq-hero__left {
 	display: flex; flex-direction: column; gap: var(--hero-gap); padding-top: 0;
 }
 .qq-v2 .qq-hero__grid .qq-hero__left > * { margin: 0; }
 .qq-v2 .qq-hero__grid .qq-hero__sub { max-width: none; }
-
-/* Doubled left/right gutters on the top bar, hero and every content section —
-   desktop only; mobile keeps its tighter edges (tuned in the later pass).
-   Hero top padding also raised (128 vs 96) to add air between the top bar and
-   the pill, which was reading as too flush. */
-@media (min-width: 961px) {
-	.qq-v2 .qq-topbar__inner   { padding: 16px 48px; }
-	.qq-v2 .qq-hero__inner     { padding: 128px 48px 64px; }
-	.qq-v2 .qq-trust__inner    { padding: 24px 48px; }
-	.qq-v2 .qq-process         { padding: 96px 48px; }
-	.qq-v2 .qq-options         { padding: 96px 48px; }
-	.qq-v2 .qq-tmony__inner    { padding: 96px 48px; }
-	.qq-v2 .qq-faq             { padding: 96px 48px; }
-	.qq-v2 .qq-finalcta        { padding: 96px 48px; }
-	.qq-v2 .qq-featured__inner { padding: 40px 48px; }
+/* pill hugs its content instead of stretching to the column width */
+.qq-v2 .qq-hero__pill { align-self: flex-start; }
+/* tick items 20% closer together (16 → 13) */
+.qq-v2 .qq-hero__ticks { gap: 13px; }
+/* both hero CTAs share one width */
+.qq-v2 .qq-hero__cta {
+	display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+	width: 100%; max-width: 440px; align-self: flex-start;
 }
+.qq-v2 .qq-hero__cta .qq-btn { justify-content: center; }
+
+/* Left/right gutters on the top bar, hero and every content section — 58px
+   (48 +20%). Desktop only; mobile keeps its tighter edges (later pass).
+   Hero top padding raised again (140 vs 128) for ~20% more air between the top
+   bar and the pill. */
+@media (min-width: 961px) {
+	.qq-v2 .qq-topbar__inner   { padding: 16px 58px; }
+	.qq-v2 .qq-hero__inner     { padding: 140px 58px 64px; }
+	.qq-v2 .qq-trust__inner    { padding: 24px 58px; }
+	.qq-v2 .qq-process         { padding: 96px 58px; }
+	.qq-v2 .qq-options         { padding: 96px 58px; }
+	.qq-v2 .qq-tmony__inner    { padding: 96px 58px; }
+	.qq-v2 .qq-faq             { padding: 96px 58px; }
+	.qq-v2 .qq-finalcta        { padding: 96px 58px; }
+	.qq-v2 .qq-featured__inner { padding: 40px 58px; }
+}
+
+/* ── Form card tweaks ─────────────────────────────────────────────────── */
+/* Each step's privacy line tucks up close under its "Your situation" /
+   "Your details" label (was 16px below the label). */
+.qq-v2 .qq-card__step { margin-bottom: 4px; }
+/* Plain circular slider handles — drop the grip glyph inside the circle. */
+.qq-v2 .slider-range-noUI .noUi-handle { background-image: none !important; }
+/* Submit CTA corner radius matched to the input fields (10px). !important to
+   beat the theme's own submit-button radius (5px), same as the inputs do. */
+.qq-v2 .qq-card__form #gform_submit_button_40 { border-radius: 10px !important; margin-bottom: 0 !important; }
+/* Trust row: one line, snug under the submit button. The button carries an 8px
+   bottom margin and Gravity Forms' footer 16px of bottom padding — both removed
+   (above + here, !important to beat the theme) so the trust tucks right under. */
+.qq-v2 .qq-card__form .gform_footer { padding-bottom: 0 !important; }
+.qq-v2 .qq-card__trust { flex-wrap: nowrap; gap: 10px; margin-top: 8px; }
+.qq-v2 .qq-card__trust-item { font-size: 12px; white-space: nowrap; gap: 6px; }

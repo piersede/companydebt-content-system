@@ -60,18 +60,11 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 
 		<div class="qq-hero__inner">
 
-			<!-- Full-width row, outside the 2-col grid below: the pill/H1's
-			     height varies (H1 wraps 1-2 lines depending on viewport width),
-			     and any responsive height change here must NOT shift the grid's
-			     alignment with the card. Keeping it out of the grid entirely
-			     means the grid's own align-items:start always lines the card up
-			     with the paragraph, with no pixel offset to keep in sync. -->
-			<div class="qq-hero__top">
-				<span class="qq-hero__pill">Licensed and Regulated Insolvency Practitioners</span>
-			</div>
-
+			<!-- v2: the pill leads the left column so the grid's align-items:start
+			     lines the form card up with the pill (brow), not the H1 below it. -->
 			<div class="qq-hero__grid">
 			<div class="qq-hero__left">
+				<span class="qq-hero__pill">Licensed and Regulated Insolvency Practitioners</span>
 				<h1 class="qq-hero__title">Understand Your Company&rsquo;s <span class="qq-accent">Options</span></h1>
 				<p class="qq-hero__sub">Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.</p>
 
@@ -104,7 +97,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<!-- FORM CARD: mockup visuals over the real calculator hooks -->
 			<div class="qq-card" id="quick-quote-form">
 				<div class="qq-card__sliders">
-					<p class="qq-card__step">Part 1 of 2</p>
+					<p class="qq-card__step">Your situation</p>
 					<p class="qq-card__privacy">&#128274; Your figures stay confidential. Used only to prepare your options.</p>
 					<p class="qq-card__eyebrow">What Does the Company Owe?</p>
 
@@ -149,7 +142,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				</div>
 
 				<div class="qq-card__form form-wrapper">
-					<p class="qq-card__step">Part 2 of 2</p>
+					<p class="qq-card__step">Your details</p>
 					<p class="qq-card__privacy">&#128337; We aim to call you back by 5pm the same working day.</p>
 					<?php echo do_shortcode( '[gravityform id="40" title="false" description="false" ajax="true"]' ); ?>
 					<div class="qq-card__trust">
