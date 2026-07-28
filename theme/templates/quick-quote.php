@@ -36,7 +36,7 @@ get_header();
 // Never hide it in production — there it's a live, required field.
 $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'comdebstage' ) !== false );
 ?>
-<div class="qq<?php echo $qq_is_staging ? ' qq--staging' : ''; ?>">
+<div class="qq qq-v2<?php echo $qq_is_staging ? ' qq--staging' : ''; ?>">
 
 	<!-- HERO + QUOTE FORM -->
 	<section class="qq-hero">
@@ -68,11 +68,11 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			     with the paragraph, with no pixel offset to keep in sync. -->
 			<div class="qq-hero__top">
 				<span class="qq-hero__pill">Licensed and Regulated Insolvency Practitioners</span>
-				<h1 class="qq-hero__title">Understand Your Company&rsquo;s <span class="qq-accent">Options</span></h1>
 			</div>
 
 			<div class="qq-hero__grid">
 			<div class="qq-hero__left">
+				<h1 class="qq-hero__title">Understand Your Company&rsquo;s <span class="qq-accent">Options</span></h1>
 				<p class="qq-hero__sub">Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.</p>
 
 				<ul class="qq-hero__ticks">
@@ -83,22 +83,21 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				</ul>
 
 				<div class="qq-hero__cta">
-					<a href="tel:08000746757" class="qq-btn qq-btn--solid">
+					<a href="tel:08000746757" class="qq-btn qq-btn--solid">Get Help Now</a>
+					<a href="tel:08000746757" class="qq-btn qq-btn--ghost">
 						<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1.02z"/></svg>
-						Call 0800 074 6757
+						0800 074 6757
 					</a>
 				</div>
-				<p class="qq-hero__micro"><span class="qq-tick qq-tick--sm">&#10003;</span> You do not need exact figures. Reasonable estimates are fine.</p>
+				<p class="qq-hero__micro">
+					<span class="qq-hero__micro-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
+					You do not need exact figures. Reasonable estimates are fine.
+				</p>
 
 				<div class="qq-hero__logos">
 					<img class="qq-logo--ipa" src="<?php echo esc_url( content_url( 'uploads/2022/03/IPA_White_PNG.png' ) ); ?>" alt="Insolvency Practitioners Association" height="40">
 					<img class="qq-logo--tma" src="<?php echo esc_url( content_url( 'uploads/2022/03/TMA_White_PNG.png' ) ); ?>" alt="Turnaround Management Association" height="47">
 					<img class="qq-logo--icas" src="<?php echo esc_url( content_url( 'uploads/2026/04/icas-logo-1.png' ) ); ?>" alt="ICAS" height="26">
-				</div>
-
-				<div class="qq-hero__reviews">
-					<span class="qq-hero__reviews-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-					<span class="qq-hero__reviews-txt"><strong>4.9/5</strong> from company directors on Google Reviews</span>
 				</div>
 			</div>
 

@@ -497,3 +497,49 @@
 @media (max-width: 960px) {
 	.qq .qq-options__grid { grid-template-columns: 1fr; gap: 16px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   V2 — desktop redesign of /quick-quote/ (the options page). Scoped to
+   .qq-v2 so the shared-stylesheet sibling /quick-quote-options/ is untouched.
+   2026-07-28: doubled gutters, H1-aligned form card, one uniform hero rhythm,
+   plain ticks, dual CTA, info-icon disclaimer. Mobile tuned in a later pass.
+   ═════════════════════════════════════════════════════════════════════ */
+.qq-v2 { --hero-gap: 24px; }
+
+/* Ticks: the checkmark alone — no circle chip. */
+.qq-v2 .qq-tick {
+	width: auto; height: auto; background: none; border: 0; border-radius: 0;
+	color: #FF8C42; font-size: 16px; font-weight: 700; line-height: 1;
+}
+
+/* Disclaimer under the CTA row uses an information icon, not a tick. */
+.qq-v2 .qq-hero__micro { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #c4d2df; }
+.qq-v2 .qq-hero__micro-ico { flex: none; display: inline-flex; color: #c4d2df; }
+
+/* Hero rhythm: the pill sits on its own row; the H1 now leads the left column,
+   so the form card (right column) inherits the grid's align-items:start and its
+   top lines up with the H1's top. ONE gap value drives pill→H1 and every step of
+   the left column (H1→text→ticks→cta→disclaimer→logos) — identical throughout. */
+.qq-v2 .qq-hero__top { margin: 0; }
+.qq-v2 .qq-hero__grid { margin-top: var(--hero-gap); align-items: start; }
+.qq-v2 .qq-hero__grid .qq-hero__left {
+	display: flex; flex-direction: column; gap: var(--hero-gap); padding-top: 0;
+}
+.qq-v2 .qq-hero__grid .qq-hero__left > * { margin: 0; }
+.qq-v2 .qq-hero__grid .qq-hero__sub { max-width: none; }
+
+/* Doubled left/right gutters on the top bar, hero and every content section —
+   desktop only; mobile keeps its tighter edges (tuned in the later pass).
+   Hero top padding also raised (128 vs 96) to add air between the top bar and
+   the pill, which was reading as too flush. */
+@media (min-width: 961px) {
+	.qq-v2 .qq-topbar__inner   { padding: 16px 48px; }
+	.qq-v2 .qq-hero__inner     { padding: 128px 48px 64px; }
+	.qq-v2 .qq-trust__inner    { padding: 24px 48px; }
+	.qq-v2 .qq-process         { padding: 96px 48px; }
+	.qq-v2 .qq-options         { padding: 96px 48px; }
+	.qq-v2 .qq-tmony__inner    { padding: 96px 48px; }
+	.qq-v2 .qq-faq             { padding: 96px 48px; }
+	.qq-v2 .qq-finalcta        { padding: 96px 48px; }
+	.qq-v2 .qq-featured__inner { padding: 40px 48px; }
+}
