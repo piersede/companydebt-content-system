@@ -194,19 +194,19 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<div class="qq-steps">
 			<div class="qq-step">
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8 13h6"/><path d="M8 17h6"/><path d="M8 9h2"/></svg></span>
-				<div><h3 class="qq-step__title">Tell Us About the Company</h3><p class="qq-step__text">Provide a few approximate figures about the company&rsquo;s debts, assets and current financial position.</p></div>
+				<div class="qq-step__body"><h3 class="qq-step__title">Tell Us About the Company</h3><p class="qq-step__text">Provide a few approximate figures about the company&rsquo;s debts, assets and current financial position.</p></div>
 			</div>
 			<div class="qq-step">
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-				<div><h3 class="qq-step__title">Speak With an Experienced Adviser</h3><p class="qq-step__text">A member of our insolvency team will review the information with you and ask any further questions needed to understand the situation.</p></div>
+				<div class="qq-step__body"><h3 class="qq-step__title">Speak With an Experienced Adviser</h3><p class="qq-step__text">A member of our insolvency team will review the information with you and ask any further questions needed to understand the situation.</p></div>
 			</div>
 			<div class="qq-step">
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
-				<div><h3 class="qq-step__title">Understand the Realistic Options</h3><p class="qq-step__text">We will explain whether the company may have a viable route forward or whether closure should be considered. This may include informal arrangements, restructuring or a formal insolvency process.</p></div>
+				<div class="qq-step__body"><h3 class="qq-step__title">Understand the Realistic Options</h3><p class="qq-step__text">We will explain whether the company may have a viable route forward or whether closure should be considered. This may include informal arrangements, restructuring or a formal insolvency process.</p></div>
 			</div>
 			<div class="qq-step qq-step--final">
 				<span class="qq-step__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.8 10A10 10 0 1 1 17 3.34"/><path d="m9 11 3 3L22 4"/></svg></span>
-				<div><h3 class="qq-step__title">Decide What Happens Next</h3><p class="qq-step__text">You will receive a clear explanation of the likely process and costs. You can then decide whether to proceed, with no pressure or obligation.</p></div>
+				<div class="qq-step__body"><h3 class="qq-step__title">Decide What Happens Next</h3><p class="qq-step__text">You will receive a clear explanation of the likely process and costs. You can then decide whether to proceed, with no pressure or obligation.</p></div>
 			</div>
 			</div>
 		</div>
@@ -216,6 +216,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 
 	<!-- POSSIBLE OPTIONS -->
 	<section class="qq-options">
+		<div class="qq-options__inner">
 		<div class="qq-options__head">
 			<p class="qq-eyebrow">Possible options</p>
 			<h2 class="qq-h2">What Options Could Be Available?</h2>
@@ -236,6 +237,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			</div>
 		</div>
 		<p class="qq-options__foot">You do not need to choose an option before contacting us.</p>
+		</div>
 	</section>
 
 	<!-- TESTIMONIAL -->
