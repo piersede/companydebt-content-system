@@ -549,10 +549,10 @@
 	.qq-v2 .qq-trust__inner    { padding: 24px 84px; }
 	.qq-v2 .qq-process         { padding: 48px 0; }   /* half vertical; full-width band */
 	.qq-v2 .qq-process__inner  { max-width: 1180px; margin: 0 auto; padding: 0 84px; }
-	.qq-v2 .qq-options         { padding: 96px 0; }   /* full-width white band */
+	.qq-v2 .qq-options         { padding: 48px 0; }   /* full-width white band; half vertical */
 	.qq-v2 .qq-options__inner  { max-width: 1180px; margin: 0 auto; padding: 0 84px; }
-	.qq-v2 .qq-tmony__inner    { padding: 96px 84px; }
-	.qq-v2 .qq-faq             { padding: 96px 84px; }
+	.qq-v2 .qq-tmony__inner    { padding: 48px 84px; }
+	.qq-v2 .qq-faq             { padding: 48px 84px; }
 	.qq-v2 .qq-finalcta        { padding: 96px 84px; }
 	.qq-v2 .qq-featured__inner { padding: 40px 84px; }
 	/* 4-step: photo box stretches to the full height of the 4 stacked cards */
