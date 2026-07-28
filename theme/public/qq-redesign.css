@@ -614,3 +614,25 @@
    (navy box, matching the 4-step icons). */
 .qq-v2 .qq-options { background: #fff; max-width: none; margin: 0; }
 .qq-v2 .qq-option__ico { flex: none; width: 44px; height: 44px; border-radius: 11px; background: #09285D; color: #fff; display: grid; place-items: center; margin-bottom: 16px; }
+
+/* ── Round 8 — mobile ─────────────────────────────────────────────────── */
+/* Submit CTA: the theme forces a 34px line-height that sat the label low in the
+   button — reset it so the text is vertically centred. */
+.qq-v2 .qq-card__form #gform_submit_button_40 { line-height: 1.2 !important; height: auto !important; }
+
+/* Trust bar: the desktop 4-across is unreadable on small screens. */
+@media (max-width: 960px) {
+	.qq-v2 .qq-trust__inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+	.qq-v2 .qq-trust__inner { grid-template-columns: 1fr; }
+	/* Hero: centre the whole left column. */
+	.qq-v2 .qq-hero__left { align-items: center; text-align: center; }
+	.qq-v2 .qq-hero__pill { align-self: center; }
+	.qq-v2 .qq-hero__ticks { align-items: center; }
+	.qq-v2 .qq-hero__logos { justify-content: center; flex-wrap: wrap; }
+	/* Hero CTAs: one above the other, full width. */
+	.qq-v2 .qq-hero__cta { grid-template-columns: 1fr; width: 100%; max-width: none; align-self: stretch; }
+	/* Form trust row: stack the two items, one under the other. */
+	.qq-v2 .qq-card__trust { flex-direction: column; align-items: center; gap: 8px; }
+}
