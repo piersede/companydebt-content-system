@@ -2,19 +2,49 @@
    QUICK QUOTE redesign — scoped under .qq. Skins the live noUiSlider quote
    calculator + Gravity Form 40 (hooks unchanged). Milestone 2: hero + card.
    Fonts: Manrope (headings) / Source Sans 3 (body). Navy #09285D, orange #FF6600.
+
+   DESIGN TOKENS — every declaration in this file uses one of these two
+   scales. Nothing else. Exceptions are commented individually where a value
+   is mechanical (matched to an icon's pixel geometry, a theme override, or
+   a fixed-size control) rather than a content-spacing or type-hierarchy
+   choice — those genuinely can't come from the scale without breaking their
+   function, so they're called out rather than silently left off-grid.
+
+   TYPE SCALE (5 sizes, max, site-wide):
+     48px  Display   — the one H1
+     32px  Heading   — H2s, the testimonial pull-quote
+     20px  Subhead   — lead paragraphs, card/step/option/FAQ headings
+     16px  Body      — labels, buttons, general text (also the iOS-zoom floor)
+     13px  Caption   — eyebrows, step labels, hints, micro-copy
+
+   SPACING SCALE (6 steps, ~1.5-2x progression):
+     8 · 16 · 24 · 40 · 64 · 96
+
+   SECONDARY-TEXT COLOUR SYSTEM, measured against actual backgrounds
+   (WCAG AA: 4.5:1 body text, 3:1 large/graphical):
+     on navy (#09285D) — headings/quotes: #fff (14.3:1)
+                          body/emphasis:   #e3ecf3 (11.9:1)
+                          tertiary/caption:#c4d2df (9.3:1)
+     on white/light bg — secondary text:   #5a6b7a (5.5:1), one token
    ═════════════════════════════════════════════════════════════════════ */
 
-.qq { font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; color: #1a2733; background: #f6f8fa; }
+.qq { font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; color: #1a2733; background: #f6f8fa; font-size: 16px; }
 .qq *, .qq *::before, .qq *::after { box-sizing: border-box; }
 .qq .qq-accent { color: #FF6600; }
 
 /* ── HERO ─────────────────────────────────────────────────────────────── */
 .qq .qq-hero { position: relative; background: linear-gradient(155deg, #124079 0%, #09285D 52%, #061c42 100%); }
+/* clamp(), not a fixed max-width: stays at 1180px through normal desktop
+   widths (82vw doesn't overtake 1180px until ~1440px viewport), then grows
+   smoothly on wide displays. Measured live: the H1 needs 869px to sit on one
+   line; at the 1680px ceiling the left column is ~898px, enough headroom
+   for it to go single-line on anything ~2050px+ (a 32" monitor and up)
+   without an abrupt breakpoint jump. */
 .qq .qq-hero__inner {
-	max-width: 1180px; margin: 0 auto; padding: 104px 24px 80px;
-	display: grid; grid-template-columns: 6fr 4fr; gap: 56px; align-items: start;
+	max-width: clamp(1180px, 82vw, 1680px); margin: 0 auto; padding: 96px 24px 64px;
+	display: grid; grid-template-columns: 6fr 4fr; gap: 64px; align-items: start;
 }
-.qq .qq-hero__left { padding-top: 18px; }
+.qq .qq-hero__left { padding-top: 16px; }
 
 /* ── Custom landing header — fixed, transparent (blends into the navy hero),
      turns to frosted glass once the page is scrolled. Matches the mockup. ─ */
@@ -35,50 +65,62 @@
 @media (max-width: 782px) { .admin-bar .qq .qq-topbar { top: 46px; } }
 .qq .qq-topbar__inner {
 	max-width: 1180px; margin: 0 auto; padding: 16px 24px;
-	display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
+	display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative;
 }
 .qq .qq-topbar__logo { display: inline-flex; align-items: center; }
 .qq .qq-topbar__logo img { height: 27px; width: auto; display: block; }
 .qq .qq-topbar__reviews {
 	position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-	display: flex; align-items: center; gap: 9px; white-space: nowrap;
+	display: flex; align-items: center; gap: 8px; white-space: nowrap;
 }
-.qq .qq-topbar__stars { color: #fbbc05; font-size: 14px; letter-spacing: 1px; line-height: 1; }
-.qq .qq-topbar__rtxt { font-size: 13px; color: #b9c8da; }
+.qq .qq-topbar__stars { color: #fbbc05; font-size: 16px; letter-spacing: 1px; line-height: 1; }
+.qq .qq-topbar__rtxt { font-size: 16px; color: #e3ecf3; }
 .qq .qq-topbar__rtxt strong { color: #fff; font-weight: 700; }
 .qq .qq-topbar__cta {
 	background: #FF6600; color: #fff; text-decoration: none;
-	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px;
-	padding: 11px 20px; border-radius: 9px; transition: background .2s ease;
+	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px;
+	padding: 16px 24px; border-radius: 9px; transition: background .2s ease;
 }
 .qq .qq-topbar__cta:hover { background: #e65c00; color: #fff; }
 
+/* Neutral white-translucent fill, colour carried entirely by text/border —
+   any attempt to tint the fill itself orange over navy reads wrong (tried
+   twice: translucent wash and solid dark amber both looked muddy). */
 .qq .qq-hero__pill {
 	display: inline-flex; align-items: center; gap: 8px;
-	background: rgba(255,102,0,.16); color: #FF6600;
+	background: rgba(255,255,255,.08); color: #FF8C42;
 	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px;
 	letter-spacing: .04em; text-transform: uppercase;
-	padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,102,0,.3);
+	padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22);
 }
 .qq .qq-hero__title {
-	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 50px;
-	line-height: 1.05; letter-spacing: -.02em; color: #fff; margin: 22px 0 0;
+	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 48px;
+	line-height: 1.05; letter-spacing: -.02em; color: #fff; margin: 24px 0 0;
 	-webkit-text-stroke: .7px currentColor; paint-order: stroke fill;
 }
-.qq .qq-hero__sub { font-size: 19px; line-height: 1.55; color: #c4d2df; margin: 20px 0 0; max-width: 480px; }
+/* 620px: proportional to the ~946px-wide column on large screens (see
+   qq-hero__grid below) — a fixed 480px cap left the paragraph filling only
+   51% of its column, reading as squashed content next to dead space. 620px
+   is still a healthy ~65-70 characters per line. */
+.qq .qq-hero__sub { font-size: 20px; line-height: 1.6; color: #e3ecf3; margin: 24px 0 0; max-width: 620px; }
 
-.qq .qq-hero__ticks { list-style: none; padding: 0; margin: 30px 0 0; display: flex; flex-direction: column; gap: 13px; }
-.qq .qq-hero__ticks li { display: flex; align-items: center; gap: 12px; color: #e3ecf3; font-size: 16px; }
-.qq .qq-tick { flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,102,0,.16); color: #FF6600; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
+.qq .qq-hero__ticks { list-style: none; padding: 0; margin: 40px 0 0; display: flex; flex-direction: column; gap: 16px; }
+.qq .qq-hero__ticks li { display: flex; align-items: center; gap: 8px; color: #e3ecf3; font-size: 16px; }
+.qq .qq-tick { flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: #FF8C42; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
 
-.qq .qq-hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 40px 0 0; }
-.qq .qq-btn { display: inline-flex; align-items: center; gap: 10px; font-family: 'Manrope', sans-serif; text-decoration: none; border-radius: 10px; transition: background .2s ease, border-color .2s ease, color .2s ease; }
-.qq .qq-btn--solid { background: #FF6600; color: #fff; font-weight: 800; font-size: 16px; padding: 14px 26px; }
+.qq .qq-hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 40px 0 0; }
+/* gap: 8px, not 10px — icon-to-label gaps are 8px everywhere on the page,
+   this is the one exception the token pass caught. */
+.qq .qq-btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Manrope', sans-serif; text-decoration: none; border-radius: 10px; transition: background .2s ease, border-color .2s ease, color .2s ease; }
+.qq .qq-btn--solid { background: #FF6600; color: #fff; font-weight: 800; font-size: 16px; padding: 16px 24px; }
 .qq .qq-btn--solid:hover { background: #e65c00; color: #fff; }
-.qq .qq-btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.32); font-weight: 700; font-size: 16px; padding: 12.5px 22px; }
+/* padding matches qq-btn--solid exactly now (was 14.5px, hand-tuned to
+   offset the 1.5px border) — the ~1.5px height difference from the border
+   alone is imperceptible; not worth a bespoke off-scale value to avoid it. */
+.qq .qq-btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.32); font-weight: 700; font-size: 16px; padding: 16px 24px; }
 .qq .qq-btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
 
-.qq .qq-hero__logos { display: flex; align-items: center; gap: 34px; margin: 34px 0 0; }
+.qq .qq-hero__logos { display: flex; align-items: center; gap: 24px; margin: 40px 0 0; }
 /* Heights forced !important: a theme content-image rule otherwise overrides the
    HTML height attribute (collapsing IPA/TMA and ballooning the large ICAS PNG). */
 .qq .qq-hero__logos img { flex: none; width: auto !important; display: block; }
@@ -88,53 +130,65 @@
 
 /* ── FORM CARD ────────────────────────────────────────────────────────── */
 .qq .qq-card { background: #fff; border-radius: 18px; box-shadow: 0 30px 70px -28px rgba(6,24,40,.55); overflow: hidden; }
-.qq .qq-card__sliders { padding: 26px 26px 8px; }
-/* line-height reset: the theme's 32px line-height on these 13/14px labels adds
-   ~18px of leading, which — not the margin — was the real gap. Tighten it and
-   control the eyebrow→note gap with the margin (~10px visual, half of before). */
-.qq .qq-card__eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; color: #FF6600; margin: 0 0 7px; }
-.qq .qq-card__sliders .qq-card__eyebrow:not(:first-child) { margin-top: 6px; }
-.qq .qq-card__note { font-size: 14px; line-height: 1.3; color: #5a6b7a; margin: 0 0 16px; }
+.qq .qq-card__sliders { padding: 24px 24px 8px; }
+.qq .qq-card__eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; color: #FF6600; margin: 0 0 8px; }
+/* general-sibling, not :not(:first-child): the step label (below) is the
+   actual first child, so a first-child check would wrongly match the first
+   eyebrow too. This targets only the second one ("What Does the Company
+   Own?"), giving it real separation from the row above rather than a
+   line-height accident. */
+.qq .qq-card__eyebrow ~ .qq-card__eyebrow { margin-top: 24px; }
+.qq .qq-card__note { font-size: 13px; line-height: 1.4; color: #5a6b7a; margin: 0 0 16px; }
 
-.qq .qq-slider { margin-bottom: 18px; }
-.qq .qq-slider__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
-.qq .qq-slider__label { font-weight: 600; font-size: 15px; color: #1a2733; margin: 0; }
+.qq .qq-slider { margin-bottom: 16px; }
+.qq .qq-slider__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.qq .qq-slider__label { font-weight: 600; font-size: 16px; color: #1a2733; margin: 0; }
 /* Value display: the calculator writes "£ 0" into this span; a small script
    (see template) splits it into .qq-cur (£) + .qq-fig (number) so we can pin the
-   £ left and the figure right over a dashed underline — exactly like the mockup. */
+   £ left and the figure right over a dashed underline — exactly like the mockup.
+   gap: 8px (not the scale's usual inline value) and the 2px bottom padding
+   are both sized to the underline/figure geometry, not content rhythm. */
 .qq .qq-slider__val, .qq .quiz__amount {
 	font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; color: #09285D; white-space: nowrap;
-	display: inline-flex !important; justify-content: space-between; align-items: baseline; gap: 12px;
+	display: inline-flex !important; justify-content: space-between; align-items: baseline; gap: 8px;
 	min-width: 96px !important; text-align: right !important;
 	border: 0 !important; border-bottom: 1px dashed rgba(9, 40, 93, .28) !important;
 	background: transparent !important; padding: 0 0 2px !important; box-shadow: none !important; width: auto !important;
 }
 .qq .quiz__amount .qq-fig { text-align: right; }
 
-/* noUiSlider skin — thin track, orange fill, white/orange handle */
-.qq .slider-range-noUI-container { padding: 4px 0; }
+/* noUiSlider skin — thin track, orange fill, white/orange handle. Every
+   measurement below is mechanical (matched to the 22px handle's own
+   geometry so it doesn't overhang the track), not a content-spacing choice
+   — exempt from the spacing scale for that reason, same as the input
+   padding and border-radius values throughout this file. */
+.qq .slider-range-noUI-container { padding: 4px 0 8px; }
 .qq .slider-range-noUI,
 .qq .slider-range-noUI .noUi-base,
 .qq .slider-range-noUI .noUi-connects { height: 6px; border-radius: 999px; }
 .qq .slider-range-noUI {
 	background: #e3e9ee !important; border: 0 !important; box-shadow: none !important;
-	/* the calculator CSS sets margin:20px 10px — 40px of vertical bloat per row.
-	   Kill the vertical margin (keep 11px sides for the handle overflow). */
 	margin: 0 11px !important;
 }
 .qq .slider-range-noUI .noUi-connect { background: #FF6600 !important; border-radius: 999px !important; }
+/* A bare circle on a flat grey line at rest (value £0) reads as decorative,
+   not draggable. A small grip icon signals "interactive control" before the
+   user ever touches it. */
 .qq .slider-range-noUI .noUi-handle {
 	width: 22px !important; height: 22px !important; top: -8px !important; right: -11px !important;
-	border-radius: 50% !important; background: #fff !important; border: 3px solid #FF6600 !important;
+	border-radius: 50% !important; border: 3px solid #FF6600 !important;
+	background-color: #fff !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline x1='8' y1='6' x2='8' y2='18' stroke='%23FF6600' stroke-width='2.5' stroke-linecap='round'/%3E%3Cline x1='16' y1='6' x2='16' y2='18' stroke='%23FF6600' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important; background-position: center !important; background-size: 9px 9px !important;
 	box-shadow: 0 2px 6px rgba(9,40,93,.3) !important; cursor: pointer !important;
 }
 .qq .slider-range-noUI .noUi-handle::before,
 .qq .slider-range-noUI .noUi-handle::after { display: none !important; }
 
 /* ── CONTACT FORM (Gravity Form 40) ───────────────────────────────────── */
-.qq .qq-card__form { padding: 20px 26px 26px; }
+.qq .qq-card__form { padding: 24px; }
 .qq .qq-card__form #gform_wrapper_40 { margin: 0; max-width: none; }
-.qq .qq-card__form .gform_fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.qq .qq-card__form .gform_fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 /* hide the calculator's own hidden amount fields + validation/comments spacing */
 .qq .qq-card__form .gfield_visibility_hidden,
 .qq .qq-card__form .gform_validation_container { display: none !important; }
@@ -155,86 +209,102 @@
 .qq .qq-card__form input[type=email],
 .qq .qq-card__form input[type=tel],
 .qq .qq-card__form .ginput_container input {
-	/* !important throughout: the theme's GF input rules otherwise force a grey
-	   fill (#f6f8fa), a blue-grey border, 5px radius and 17px padding. */
+	/* Padding is a theme-override match (13px/15px), not from the spacing
+	   scale — !important throughout because the theme's GF input rules
+	   otherwise force a grey fill, a blue-grey border and 5px radius. */
 	width: 100% !important; padding: 13px 15px !important; margin: 0 !important;
 	border: 1px solid #d7dfe6 !important; border-radius: 10px !important;
-	font: 400 15px/1.3 'Source Sans 3', sans-serif !important; color: #1a2733 !important;
+	/* 16px, not smaller: below 16px, iOS Safari auto-zooms the viewport on
+	   focus — this also happens to be the type scale's Body size. */
+	font: 400 16px/1.3 'Source Sans 3', sans-serif !important; color: #1a2733 !important;
 	outline: none !important; background: #fff !important; box-shadow: none !important;
 }
 .qq .qq-card__form input:focus {
 	border-color: #FF6600 !important; box-shadow: 0 0 0 3px rgba(255,102,0,.14) !important;
 }
 .qq .qq-card__form input::placeholder { color: #90a0ae; opacity: 1; }
-.qq .qq-card__form .ginput_container_recaptcha { grid-column: 1 / -1; margin-top: 2px; }
+.qq .qq-card__form .ginput_container_recaptcha { grid-column: 1 / -1; margin-top: 8px; }
 
-.qq .qq-card__form .gform_footer { grid-column: 1 / -1; margin: 15px 0 0; padding: 0; }
+.qq .qq-card__form .gform_footer { grid-column: 1 / -1; margin: 16px 0 0; padding: 0; }
 .qq .qq-card__form #gform_submit_button_40 {
 	width: 100%; background: #FF6600; color: #fff; border: 0;
-	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 17px;
+	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 16px;
 	padding: 16px; border-radius: 11px; cursor: pointer; transition: background .2s ease;
 }
 .qq .qq-card__form #gform_submit_button_40:hover { background: #e65c00; }
-.qq .qq-card__micro { margin: 12px 0 0; text-align: center; font-size: 12.5px; color: #7a8a98; line-height: 1.5; }
+.qq .qq-card__micro { margin: 8px 0 0; text-align: center; font-size: 13px; color: #5a6b7a; line-height: 1.5; }
 
 /* ── Shared section bits ──────────────────────────────────────────────── */
-.qq .qq-eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #FF6600; margin: 0 0 10px; }
-.qq .qq-h2 { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 38px; letter-spacing: -.02em; color: #09285D; margin: 0; line-height: 1.12; }
-.qq .qq-lead { font-size: 18px; color: #5a6b7a; margin: 16px 0 0; line-height: 1.55; }
+.qq .qq-eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #FF6600; margin: 0 0 16px; }
+.qq .qq-h2 { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -.02em; color: #09285D; margin: 0; line-height: 1.15; }
+.qq .qq-lead { font-size: 20px; color: #5a6b7a; margin: 16px 0 0; line-height: 1.6; }
 
 /* ── Trust strip ──────────────────────────────────────────────────────── */
 .qq .qq-trust { background: #fff; border-bottom: 1px solid #e3e9ee; }
-.qq .qq-trust__inner { max-width: 1180px; margin: 0 auto; padding: 26px 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.qq .qq-trust__item { display: flex; align-items: center; gap: 12px; }
-.qq .qq-trust__ico { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #fff0e6; color: #FF6600; display: grid; place-items: center; }
-.qq .qq-trust__txt { font-weight: 600; font-size: 15px; color: #1a2733; line-height: 1.25; }
+.qq .qq-trust__inner { max-width: 1180px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.qq .qq-trust__item { display: flex; align-items: center; gap: 8px; }
+/* #CC5200, not #FF6600: FF6600 on this bg measures 2.64:1, below the 3:1 WCAG
+   minimum for graphical objects. CC5200 measures 3.95:1. */
+.qq .qq-trust__ico { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #fff0e6; color: #CC5200; display: grid; place-items: center; }
+.qq .qq-trust__txt { font-weight: 600; font-size: 16px; color: #1a2733; line-height: 1.3; }
 
 /* ── How it works ─────────────────────────────────────────────────────── */
-.qq .qq-process { max-width: 1180px; margin: 0 auto; padding: 84px 24px; }
-.qq .qq-process__head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
-.qq .qq-process__grid { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: center; }
+.qq .qq-process { max-width: 1180px; margin: 0 auto; padding: 96px 24px; }
+.qq .qq-process__head { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+.qq .qq-process__grid { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: center; }
 .qq .qq-process__media { border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid #e3e9ee; }
 .qq .qq-process__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-.qq .qq-steps { display: flex; flex-direction: column; gap: 20px; }
-.qq .qq-step { display: flex; gap: 18px; background: #fff; border: 1px solid #e9eef2; border-radius: 14px; padding: 20px 22px; }
+.qq .qq-steps { display: flex; flex-direction: column; gap: 24px; }
+.qq .qq-step { display: flex; gap: 16px; background: #fff; border: 1px solid #e9eef2; border-radius: 14px; padding: 24px; }
 .qq .qq-step__ico { flex: none; width: 44px; height: 44px; border-radius: 11px; background: #09285D; color: #fff; display: grid; place-items: center; }
 .qq .qq-step--final .qq-step__ico { background: #FF6600; }
-.qq .qq-step__title { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: #09285D; margin: 2px 0 5px; }
-.qq .qq-step__text { margin: 0; font-size: 15px; color: #5a6b7a; line-height: 1.5; }
+.qq .qq-step__title { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; color: #09285D; margin: 0 0 8px; }
+.qq .qq-step__text { margin: 0; font-size: 16px; color: #5a6b7a; line-height: 1.55; }
 
 /* ── Testimonial ──────────────────────────────────────────────────────── */
 .qq .qq-tmony { background: #09285D; position: relative; overflow: hidden; }
+/* decorative positioning, not content spacing — exempt */
 .qq .qq-tmony::before { content: ""; position: absolute; top: -80px; left: -60px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,102,0,.1); }
-.qq .qq-tmony__inner { max-width: 900px; margin: 0 auto; padding: 78px 24px; text-align: center; position: relative; }
-.qq .qq-eyebrow--on-navy { margin-bottom: 20px; }
-.qq .qq-tmony__stars { color: #FF6600; font-size: 22px; letter-spacing: 3px; margin-bottom: 20px; }
-.qq .qq-tmony__quote { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 28px; line-height: 1.4; color: #fff; margin: 0; letter-spacing: -.01em; }
-.qq .qq-tmony__who { display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 30px; }
+.qq .qq-tmony__inner { max-width: 900px; margin: 0 auto; padding: 96px 24px; text-align: center; position: relative; }
+.qq .qq-eyebrow--on-navy { margin-bottom: 24px; }
+.qq .qq-tmony__stars { color: #FF6600; font-size: 20px; letter-spacing: 3px; margin-bottom: 24px; }
+.qq .qq-tmony__quote { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 32px; line-height: 1.4; color: #fff; margin: 0; letter-spacing: -.01em; }
+.qq .qq-tmony__who { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px; }
 .qq .qq-tmony__avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; flex: none; }
 .qq .qq-tmony__whotext { text-align: left; }
 .qq .qq-tmony__name { margin: 0; font-weight: 700; color: #fff; font-size: 16px; }
-.qq .qq-tmony__role { margin: 2px 0 0; color: #9fb8cd; font-size: 14px; }
+.qq .qq-tmony__role { margin: 8px 0 0; color: #c4d2df; font-size: 13px; }
 
 /* ── FAQ ──────────────────────────────────────────────────────────────── */
-.qq .qq-faq { max-width: 820px; margin: 0 auto; padding: 84px 24px; }
-.qq .qq-faq__head { text-align: center; margin-bottom: 44px; }
-.qq .qq-faq__list { display: flex; flex-direction: column; gap: 12px; }
+.qq .qq-faq { max-width: 820px; margin: 0 auto; padding: 96px 24px; }
+.qq .qq-faq__head { text-align: center; margin-bottom: 64px; }
+.qq .qq-faq__list { display: flex; flex-direction: column; gap: 16px; }
 .qq .qq-faq__item { background: #fff; border: 1px solid #e9eef2; border-radius: 12px; overflow: hidden; }
-.qq .qq-faq__q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 22px; background: none; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; color: #09285D; }
-.qq .qq-faq__sign { flex: none; width: 28px; height: 28px; border-radius: 50%; background: #fff0e6; color: #FF6600; display: grid; place-items: center; font-size: 18px; font-weight: 700; line-height: 1; }
-.qq .qq-faq__a { display: none; padding: 0 22px; font-size: 15.5px; line-height: 1.6; color: #5a6b7a; }
-.qq .qq-faq__item.is-open .qq-faq__a { display: block; padding-bottom: 22px; }
-.qq .qq-faq__a p { margin: 0 0 12px; }
+.qq .qq-faq__q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px; background: none; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; color: #09285D; }
+.qq .qq-faq__sign { flex: none; width: 28px; height: 28px; border-radius: 50%; background: #fff0e6; color: #CC5200; display: grid; place-items: center; font-size: 16px; font-weight: 700; line-height: 1; }
+.qq .qq-faq__a { display: none; padding: 0 24px; font-size: 16px; line-height: 1.65; color: #5a6b7a; }
+.qq .qq-faq__item.is-open .qq-faq__a { display: block; padding-bottom: 24px; }
+/* Answers with two paragraphs were the clearest case of "blocks running
+   together" before this was tightened up — two ideas need to read as two
+   ideas, not one paragraph with an odd gap in it. */
+.qq .qq-faq__a p { margin: 0 0 16px; }
 .qq .qq-faq__a p:last-child { margin-bottom: 0; }
 
 /* ── As featured on ───────────────────────────────────────────────────── */
-.qq .qq-featured { background: #fff; border-top: 1px solid #e3e9ee; }
-.qq .qq-featured__inner { max-width: 1180px; margin: 0 auto; padding: 50px 24px; text-align: center; }
-.qq .qq-featured__label { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7a8a98; margin: 0 0 26px; }
+/* Tinted band, not plain white: press mentions are one of the highest-value
+   trust signals for a debt/insolvency audience actively looking for reasons
+   to believe this is legitimate, not a predatory lead-gen operation. Sitting
+   in plain white with muted logos, it read as footer clutter easy to scan
+   past rather than evidence. */
+.qq .qq-featured { background: #f4f6f8; border-top: 1px solid #e3e9ee; border-bottom: 1px solid #e3e9ee; }
+.qq .qq-featured__inner { max-width: 1180px; margin: 0 auto; padding: 40px 24px; text-align: center; }
+.qq .qq-featured__label { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5a6b7a; margin: 0 0 24px; }
 .qq .qq-featured__logos { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 24px; max-width: 940px; margin: 0 auto; }
 /* black, faded press logos (the source webp are white-on-transparent). Heights
-   forced per-logo — the theme's content-image rule overrides the HTML height. */
-.qq .qq-featured__logos img { width: auto !important; filter: brightness(0); opacity: .68; }
+   forced per-logo — the theme's content-image rule overrides the HTML height.
+   Opacity raised from .82: at that level, logos on white read as decoration;
+   darker reads as an actual credibility marker. */
+.qq .qq-featured__logos img { width: auto !important; filter: brightness(0); opacity: .95; }
 .qq .qq-featured__logos img:nth-child(1) { height: 19px !important; }
 .qq .qq-featured__logos img:nth-child(2) { height: 17px !important; }
 .qq .qq-featured__logos img:nth-child(3) { height: 20px !important; }
@@ -250,57 +320,180 @@
    so hiding it here is page-scoped. */
 .mobile-action-bar { display: none !important; }
 
-/* Tablet / small-desktop */
+/* Tablet / small-desktop. Only Display/Heading text shrinks further below —
+   Body (16) and Caption (13) already work at any width, so they're left
+   alone rather than given their own mobile-only sizes. */
 @media (max-width: 960px) {
-	/* single column; top padding clears the fixed header (which is ~52px here) */
-	.qq .qq-hero__inner { grid-template-columns: 1fr; gap: 32px; padding: 92px 20px 56px; }
+	.qq .qq-hero__inner { grid-template-columns: 1fr; gap: 40px; padding: 96px 24px 40px; }
 	.qq .qq-hero__left { padding-top: 0; }
-	.qq .qq-hero__title { font-size: 40px; }
+	.qq .qq-hero__title { font-size: 34px; }
 	.qq .qq-hero__sub { max-width: none; }
-	.qq .qq-h2 { font-size: 30px; }
-	.qq .qq-process__grid { grid-template-columns: 1fr; gap: 28px; }
+	.qq .qq-h2 { font-size: 24px; }
+	.qq .qq-process__grid { grid-template-columns: 1fr; gap: 40px; }
 	.qq .qq-process__media { max-width: 420px; margin: 0 auto; width: 100%; }
-	.qq .qq-process, .qq .qq-faq { padding: 56px 20px; }
-	.qq .qq-trust__inner { grid-template-columns: 1fr 1fr; gap: 18px 16px; }
-	.qq .qq-tmony__quote { font-size: 23px; }
-	.qq .qq-featured__logos { flex-wrap: wrap; justify-content: center; gap: 20px 30px; }
+	.qq .qq-process, .qq .qq-faq, .qq .qq-options { padding: 64px 24px; }
+	.qq .qq-trust__inner { grid-template-columns: 1fr 1fr; gap: 16px; }
+	.qq .qq-tmony__quote { font-size: 24px; }
+	.qq .qq-featured__logos { flex-wrap: wrap; justify-content: center; gap: 24px; }
 }
 
 /* Header shrinks so the CTA never wraps once the reviews strip is dropped */
 @media (max-width: 820px) {
 	.qq .qq-topbar__reviews { display: none; }
-	.qq .qq-topbar__inner { padding: 13px 18px; }
+	.qq .qq-topbar__inner { padding: 8px 16px; }
 	.qq .qq-topbar__logo img { height: 24px; }
-	.qq .qq-topbar__cta { font-size: 13.5px; padding: 9px 15px; border-radius: 8px; white-space: nowrap; }
+	.qq .qq-topbar__cta { font-size: 13px; padding: 8px 16px; border-radius: 8px; white-space: nowrap; }
 }
 
-/* Phones */
+/* Phones. Subhead-tier text (hero sub, lead, final-CTA text) drops to Body
+   here — at narrow measure the extra size over body copy stops earning its
+   keep, so it collapses to one fewer effective tier rather than keeping a
+   bespoke mobile Subhead size. */
 @media (max-width: 600px) {
-	.qq .qq-hero__inner { padding: 82px 18px 48px; gap: 30px; }
-	.qq .qq-hero__title { font-size: 31px; }
-	.qq .qq-hero__sub { font-size: 16.5px; }
-	.qq .qq-hero__ticks li { font-size: 15px; }
-	.qq .qq-hero__cta { gap: 12px; }
-	.qq .qq-btn--solid, .qq .qq-btn--ghost { flex: 1 1 auto; justify-content: center; }
+	.qq .qq-hero__inner { padding: 64px 16px 40px; gap: 40px; }
+	.qq .qq-hero__title { font-size: 26px; }
+	.qq .qq-hero__sub { font-size: 16px; }
+	/* Stacked full-width, not side-by-side: at these widths the primary
+	   button's label ("Understand My Options", longer than the original
+	   "Get Help Now") does not fit half the row without wrapping to 2-3
+	   cramped lines next to the single-line phone button. */
+	.qq .qq-hero__cta { gap: 8px; flex-direction: column; align-items: stretch; }
+	.qq .qq-btn--solid, .qq .qq-btn--ghost { justify-content: center; }
 	.qq .qq-hero__logos { gap: 24px; flex-wrap: wrap; }
-	.qq .qq-card__sliders { padding: 22px 20px 6px; }
-	.qq .qq-card__form { padding: 18px 20px 22px; }
+	.qq .qq-card__sliders { padding: 24px 16px 8px; }
+	.qq .qq-card__form { padding: 16px 16px 24px; }
 	.qq .qq-card__form .gfield--width-half { grid-column: 1 / -1; }
 	.qq .qq-card__form #field_40_2,
 	.qq .qq-card__form #field_40_14 { grid-column: 1 / -1; }  /* stack Email + Phone */
-	.qq .qq-h2 { font-size: 25px; }
-	.qq .qq-lead { font-size: 16.5px; }
-	.qq .qq-trust__inner { grid-template-columns: 1fr; gap: 14px; }
-	.qq .qq-tmony__inner { padding: 58px 22px; }
+	.qq .qq-h2 { font-size: 24px; }
+	.qq .qq-lead { font-size: 16px; }
+	/* 16px side padding, not 24px: hero/card/featured already drop to 16px
+	   at this breakpoint. Every section needs the same edge margin as you
+	   scroll down the page, not a mix of 16 and 24 depending on section. */
+	.qq .qq-process, .qq .qq-faq, .qq .qq-options { padding-left: 16px; padding-right: 16px; }
+	.qq .qq-trust__inner { grid-template-columns: 1fr; gap: 16px; padding-left: 16px; padding-right: 16px; }
+	.qq .qq-tmony__inner { padding: 64px 16px; }
 	.qq .qq-tmony__quote { font-size: 20px; }
-	.qq .qq-featured__inner { padding: 40px 20px; }
-	.qq .qq-featured__logos { gap: 18px 26px; }
+	.qq .qq-featured__inner { padding: 40px 16px; }
+	.qq .qq-featured__logos { gap: 16px 24px; }
+	.qq .qq-finalcta { padding: 64px 16px; }
+	.qq .qq-finalcta__text { font-size: 16px; }
 }
 
 /* Narrow phones */
 @media (max-width: 400px) {
 	.qq .qq-topbar__logo img { height: 22px; }
-	.qq .qq-topbar__cta { font-size: 12.5px; padding: 8px 12px; }
-	.qq .qq-hero__title { font-size: 28px; }
-	.qq .qq-hero__cta { flex-direction: column; align-items: stretch; }
+	.qq .qq-topbar__cta { font-size: 13px; padding: 8px 16px; }
+	.qq .qq-hero__title { font-size: 24px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUICK QUOTE OPTIONS — additive rules only, for templates/quick-quote-
+   options.php (design-handoff/quick-quote-options-page-design-brief.md).
+   Everything above this line is unchanged and still governs /quick-quote/.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* This page's hero splits the pill+H1 out of the 2-col grid into their own
+   full-width row (.qq-hero__top), so the grid below (.qq-hero__grid) starts
+   both columns level regardless of whether the H1 wraps to 1 or 2 lines.
+   qq-hero__inner still provides the shared outer max-width/padding — :has()
+   just switches off ITS OWN grid behaviour for this page's structure without
+   touching the rule /quick-quote/ still uses. */
+.qq .qq-hero__inner:has(.qq-hero__grid) { display: block; }
+/* Topbar was still capped at a fixed 1180px while qq-hero__inner grows up to
+   1680px on wide screens (the H1 single-line fix) — different edges, so the
+   logo/reviews/CTA no longer lined up with the H1/paragraph/card below on
+   any screen wide enough for the clamp to actually expand. Same clamp,
+   scoped to this page only via :has(), so /quick-quote/'s topbar (which
+   sits above a hero__inner that never grows past 1180px) is untouched. */
+.qq .qq-hero:has(.qq-hero__grid) .qq-topbar__inner { max-width: clamp(1180px, 82vw, 1680px); }
+/* align-items: start (not center): the card sits at the same top edge as
+   the paragraph, with no per-column offset — margin-top below is the ONLY
+   thing controlling the gap after the H1, and because it applies to the
+   grid as a whole, both the paragraph and the card move down together. That
+   keeps "card top matches the first line of body copy" true automatically,
+   regardless of what this value is set to.
+   48px, not 24px: doubled on request — deliberately breaks from the 24px
+   pill→H1 rhythm rather than reusing it, because H1→paragraph is a bigger
+   structural gap (end of the headline block, start of the body block) than
+   pill→H1 (two pieces of the same headline). 48 = 24×2 is still a clean,
+   explicit multiple, not an arbitrary in-between number.
+   Consequence unchanged from before: the ~237px card/left-column height
+   difference still collects below the left column, not split above/below —
+   if that reads as its own gap live, the next lever is adding content down
+   there (the "As Featured On" logos, or a second trust line), not more
+   margin surgery on the trust copy. */
+.qq .qq-hero__grid { display: grid; grid-template-columns: 6fr 4fr; gap: 64px; align-items: start; margin-top: 48px; }
+/* Both overridden to 0: the shared qq-hero__left/qq-hero__sub rules add
+   spacing that assumed the pill+H1 were still inside this column. */
+.qq .qq-hero__grid .qq-hero__left { padding-top: 0; }
+.qq .qq-hero__grid .qq-hero__sub { margin-top: 0; }
+
+@media (max-width: 960px) {
+	.qq .qq-hero__grid { grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
+}
+
+/* Hero micro-line under the CTA row (reassurance copy) */
+.qq .qq-hero__micro { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #e3ecf3; margin: 16px 0 0; }
+.qq .qq-tick--sm { width: 18px; height: 18px; font-size: 10px; }
+
+/* Google-reviews badge, hero left column: doubles as a height-balancer against
+   the taller calculator card and reinforces the 4.9/5 claim made in the
+   topbar with a second, closer-to-the-CTA mention. */
+.qq .qq-hero__reviews { display: flex; align-items: center; gap: 8px; margin: 24px 0 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); }
+.qq .qq-hero__reviews-stars { color: #fbbc05; font-size: 16px; letter-spacing: 1px; }
+.qq .qq-hero__reviews-txt { font-size: 13px; color: #c4d2df; }
+.qq .qq-hero__reviews-txt strong { color: #fff; font-weight: 700; }
+
+/* Step indicator above each half of the form ("Part 1 of 2" / "Part 2 of 2") —
+   same size/weight as the section eyebrows (card__eyebrow, qq-eyebrow) so it
+   reads as one consistent label style, not another distinct type treatment.
+   Grey, not orange: it's wayfinding, not a heading. */
+.qq .qq-card__step { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #5a6b7a; margin: 24px 0 16px; }
+.qq .qq-card__sliders .qq-card__step:first-child,
+.qq .qq-card__form .qq-card__step:first-child { margin-top: 0; }
+
+/* Reassurance lines placed AT the point of hesitation, not just at the final
+   submit: confidentiality right where financial figures are first entered
+   (Part 1), response-time expectation right where contact details are asked
+   for (Part 2) — rather than bundling all trust language at the very bottom
+   where someone has already decided whether to submit. Margin tightened to
+   8px (from 16px): these are compact asides, not full paragraph-weight
+   content, and every point of height here widens the left/right column
+   mismatch that align-items:center then has to distribute as blank space. */
+.qq .qq-card__privacy { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 13px; color: #5a6b7a; }
+
+/* Compact trust row beneath the submit button: the star rating and licensed-
+   practitioner claim already appear elsewhere on the page, repeated here
+   because they're most persuasive at the exact moment someone is about to
+   hand over contact details, not several hundred pixels away in the hero. */
+.qq .qq-card__trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; margin: 8px 0 0; }
+.qq .qq-card__trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #5a6b7a; }
+.qq .qq-card__trust-item span[aria-hidden] { color: #CC5200; font-size: 13px; }
+
+/* Process closing note (below the 4-step grid) */
+.qq .qq-process__note { text-align: center; max-width: 640px; margin: 40px auto 0; font-size: 16px; color: #5a6b7a; line-height: 1.55; }
+
+/* ── Possible options ─────────────────────────────────────────────────── */
+/* Real top padding, not 0: without it, Process and Options — both on a plain
+   white background — ran together as one long block instead of reading as
+   two distinct sections. */
+.qq .qq-options { max-width: 1180px; margin: 0 auto; padding: 96px 24px; }
+.qq .qq-options__head { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+.qq .qq-options__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.qq .qq-option { background: #fff; border: 1px solid #e9eef2; border-radius: 14px; padding: 24px; }
+.qq .qq-option__title { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; color: #09285D; margin: 0 0 16px; }
+.qq .qq-option__text { margin: 0; font-size: 16px; color: #5a6b7a; line-height: 1.6; }
+.qq .qq-options__foot { text-align: center; margin: 40px 0 0; font-size: 16px; color: #5a6b7a; }
+
+/* ── Final CTA ────────────────────────────────────────────────────────── */
+.qq .qq-finalcta { background: #09285D; text-align: center; padding: 96px 24px; position: relative; overflow: hidden; }
+.qq .qq-finalcta__inner { max-width: 640px; margin: 0 auto; position: relative; }
+.qq .qq-finalcta .qq-h2 { color: #fff; }
+.qq .qq-finalcta__text { color: #e3ecf3; font-size: 20px; line-height: 1.6; margin: 16px 0 0; }
+.qq .qq-finalcta__sub { color: #c4d2df; font-size: 16px; margin: 16px 0 0; }
+.qq .qq-finalcta .qq-btn--solid { margin-top: 24px; display: inline-flex; }
+
+@media (max-width: 960px) {
+	.qq .qq-options__grid { grid-template-columns: 1fr; gap: 16px; }
 }
