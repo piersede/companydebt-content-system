@@ -1008,3 +1008,129 @@ more durable thing.
 
 Nothing in this addendum was changed. No live, staging, Ads, GTM, GA4 or Search Console setting was
 modified, and no cookie prompt was answered.
+
+---
+---
+
+# Addendum 4 — consent platform: stay on CookieYes or move to a free plugin? 29 July 2026
+
+Prompted by Piers: the CookieYes account appears to be on the free tier, so is there any reason not to
+switch to a free plugin?
+
+Read-only throughout. Nothing installed, activated, deactivated or changed.
+
+---
+
+## A. CORRECTION to Addendum 3 §2a — the plugin *is* installed and active
+
+Addendum 3 §2a said CookieYes was "deployed inside GTM-5GTD9ZP, **not as a WordPress plugin**". The
+second half of that is **wrong** and is corrected here.
+
+**VERIFIED, live plugin list read via the WordPress REST API (read-only):**
+
+```
+active   CookieYes | GDPR Cookie Consent  v3.4.2   [cookie-law-info/cookie-law-info]
+active   WP Rocket                        v3.21.2
+active   Gravity Forms                    v2.6.4
+```
+
+The plugin is present and **active**. What was right is the operative half: **the banner is not being
+delivered by the plugin.** It is delivered by the CookieYes tag template inside GTM.
+
+**VERIFIED by reading the public container** (`https://www.googletagmanager.com/gtm.js?id=GTM-5GTD9ZP`):
+the container contains the CookieYes website key `75253ed13008cd18bc532356` and code that builds
+`https://cdn-cookieyes.com/client_data/<websiteKey>/script.js` and calls `inject_script`. It also
+contains the category-to-signal mapping (`"advertisement"` → `ad_personalization` and so on) — **the
+Consent Mode v2 signals are emitted by the GTM template**, not by the plugin.
+
+Correspondingly, the served HTML contains **no** reference to `cookieyes`, `cdn-cookieyes`,
+`client_data`, the website key, `cookielawinfo` or `cookie-law-info` (all counts zero on a cache-busted
+fetch of the homepage). The plugin is active but silent on the front end.
+
+**Minor correction while here:** Addendum 3's early note of `cky-nav` / `cky-sidebar` strings in the HTML
+was a false positive — those are substrings of `sticky-nav` and `is-position-sticky`. There is no
+CookieYes markup in the served HTML. This does not change any conclusion.
+
+**So the current state is a split installation:** an active plugin that renders nothing, and a GTM tag
+that renders everything, both pointed at the same CookieYes account. That is worth tidying regardless of
+which platform is chosen.
+
+---
+
+## B. What the free CookieYes tier actually includes
+
+**VERIFIED from CookieYes's own pricing page, 29 July 2026:**
+
+Free plan **includes**: 5,000 pageviews/month; 100 pages per scan; basic customisation; cookie
+auto-blocking; granular cookie control; consent expiry and renewal; **"Consent log"**; **"Consent trends
+& pageviews"**; Google Certified CMP; privacy and cookie policy generators.
+
+Free plan **excludes**: **Google Consent Mode v2**; custom colours; multilingual banner; popup layout;
+geo-targeting; staging site; scheduled scanning; multi-user access; chat support.
+
+Two consequences, and they pull in opposite directions.
+
+### B1. Good news for the unanswered question in Addendum 3 §1
+
+**"Consent log" and "Consent trends & pageviews" are included on the free tier.** The acceptance rate
+Piers asked for should therefore be readable from the CookieYes dashboard **without paying anything** —
+it only needs the login. That strengthens Addendum 3 §1's first recommendation.
+
+### B2. The trap — Consent Mode v2 is a paid feature, and it is currently working
+
+Consent Mode v2 is **demonstrably live** on the site (Addendum 3 §3e verified the six-signal `consent`
+update firing, and Addendum 1 §7 confirmed Google reports modelling as active). Yet CookieYes lists
+Consent Mode v2 as **excluded from the free plan**.
+
+**INFERRED, and it matters:** the signals are coming from the **GTM template**, which emits them
+regardless of plan tier. That is very likely *why* someone put CookieYes into GTM in the first place —
+whether deliberately or by accident, the GTM route is delivering a paid-tier behaviour on a free account.
+
+**The practical warning: moving the banner from GTM to the plugin could silently switch off Consent Mode
+v2**, unless the account is upgraded or the replacement tool emits the signals itself. That would be a
+real regression — Google Ads would lose the cookieless pings that currently feed conversion modelling.
+This is exactly the kind of change that returns HTTP 200 and looks fine while quietly costing data, so it
+must be verified in the browser after any switch, not assumed.
+
+### B3. The pageview cap is close
+
+**VERIFIED via Search Console:** 663 organic clicks in the 28 days to 22 July 2026 (~24/day). Add roughly
+22 UK ad clicks/day plus direct, brand and referral traffic, and the site is plausibly in the region of
+**3,000–6,000 pageviews a month** — i.e. **around or just over the free plan's 5,000 cap**.
+
+**Not verified**, because it needs the dashboard: which plan the account is actually on, and whether the
+cap is being hit. If it is being exceeded, banner or logging behaviour may already be degrading. Worth
+checking at the same time as the acceptance rate.
+
+---
+
+## C. Is there a reason to stay on CookieYes?
+
+**No strong one, and no cost argument either way** — the account is already free, so switching saves
+nothing. The honest position:
+
+| Consideration | Assessment |
+|---|---|
+| Cost | **Neutral.** Already on a free tier. A move saves £0 |
+| The acceptance-rate number | **Slight reason to stay, short term.** The consent log already exists on this account. Switching resets that history |
+| Consent Mode v2 | **Reason for caution.** Currently supplied by the GTM template on a free account. Any replacement must be confirmed to emit all six signals, in the browser, before the old one is removed |
+| The actual problem (§2a, §4b) | **Vendor-neutral.** The banner being invisible until interaction is caused by *delivery through GTM behind WP Rocket's delay*, not by CookieYes. Changing vendor does not fix it. Changing delivery does |
+| Tidiness | **Reason to change something.** An active plugin that renders nothing alongside a GTM tag that renders everything is a confusing setup for whoever inherits it |
+
+**INFERRED recommendation:** the vendor is not the problem, so do not lead with a vendor swap. In order:
+
+1. **Read the consent log first** (free, no change, answers Addendum 3 §1 and confirms the plan and cap).
+2. **Then fix delivery** — one tool, loading early, not behind the JS delay. If the existing plugin can
+   render the banner *and* keep Consent Mode v2, that is the smallest change available, since it is
+   already installed and active.
+3. **Only then consider a different plugin**, if step 2 turns out to need a paid CookieYes tier. Several
+   free plugins advertise Consent Mode v2 without an upgrade; **none of those claims were verified here**
+   — they come from vendor and affiliate pages, which are not a sound basis for a compliance decision.
+   Any candidate must be tested on staging and the six consent signals confirmed in the browser before it
+   goes near live.
+
+**Do not swap vendor and change delivery in the same step.** If measurement breaks, there would be no way
+to tell which change caused it.
+
+**Not a recommendation on legal sufficiency.** Whether any given tool meets the site's obligations is for
+whoever owns the cookie policy, as in Addendum 3 §3d.
