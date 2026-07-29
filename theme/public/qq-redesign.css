@@ -635,4 +635,22 @@
 	.qq-v2 .qq-hero__cta { grid-template-columns: 1fr; width: 100%; max-width: none; align-self: stretch; }
 	/* Form trust row: stack the two items, one under the other. */
 	.qq-v2 .qq-card__trust { flex-direction: column; align-items: center; gap: 8px; }
+
+	/* ── Mobile pass 2 (2026-07-29) ─────────────────────────────────────
+	   Keep the eyebrow, each tick, and the figures disclaimer on ONE line at
+	   phone widths (~358px of usable hero column), and drop the process photo.
+	   Widths below are measured against that 358px column. */
+	/* Eyebrow → transparent (no chip): drop the pill background, border and
+	   side padding so it reads as plain uppercase text, then size it down to
+	   sit on one line (~321px at 11px; 13px would run to ~414px and wrap). */
+	.qq-v2 .qq-hero__pill { background: transparent; border: 0; padding-left: 0; padding-right: 0; font-size: 11px; }
+	/* Ticks: shrink just enough that the longest ("Confidential help from an
+	   experienced insolvency team", ~338px) holds one line — 14px runs to ~360
+	   and wraps. */
+	.qq-v2 .qq-hero__ticks li { font-size: 13px; }
+	/* Figures disclaimer on one line (~345px at 11px; even 12px runs to ~375
+	   and wraps). Tighten the icon gap a touch to buy margin. */
+	.qq-v2 .qq-hero__micro { font-size: 11px; gap: 6px; }
+	/* Hide the how-it-works photo on mobile; the four steps stack full width. */
+	.qq-v2 .qq-process__media { display: none; }
 }
