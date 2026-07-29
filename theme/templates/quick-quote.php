@@ -240,28 +240,28 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 	<section class="qq-options">
 		<div class="qq-options__inner">
 		<div class="qq-options__head">
-			<p class="qq-eyebrow">Possible options</p>
-			<h2 class="qq-h2">What Options Could Be Available?</h2>
-			<p class="qq-lead">The right approach depends on the company&rsquo;s debts, assets, cash flow and future prospects.</p>
+			<p class="qq-eyebrow"><?php echo is_page( 'close-my-company' ) ? 'Ways to close' : 'Possible options'; ?></p>
+			<h2 class="qq-h2"><?php echo is_page( 'close-my-company' ) ? 'Which Way of Closing Fits Your Company?' : 'What Options Could Be Available?'; ?></h2>
+			<p class="qq-lead"><?php echo is_page( 'close-my-company' ) ? 'Which route is right comes down to two things: whether the company is solvent, and what it still owns and owes.' : 'The right approach depends on the company&rsquo;s debts, assets, cash flow and future prospects.'; ?></p>
 		</div>
 		<div class="qq-options__grid">
-			<div class="qq-option">
-				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
-				<h3 class="qq-option__title">Continue or Rescue the Business</h3>
-				<p class="qq-option__text">If the business is viable, this can mean better cash flow, negotiating with creditors, or a formal restructuring process.</p>
-			</div>
-			<div class="qq-option">
-				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-				<h3 class="qq-option__title">Close an Insolvent Company</h3>
-				<p class="qq-option__text">Where recovery isn&rsquo;t realistic, a Creditors&rsquo; Voluntary Liquidation closes the company in an orderly way.</p>
-			</div>
-			<div class="qq-option">
-				<span class="qq-option__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
-				<h3 class="qq-option__title">Consider Another Route</h3>
-				<p class="qq-option__text">Some companies suit a different closure or insolvency procedure. We&rsquo;ll explain which after reviewing your position.</p>
-			</div>
-		</div>
-		<p class="qq-options__foot">You do not need to choose an option before contacting us.</p>
+<?php
+				$qq_opts = is_page( 'close-my-company' ) ? array(
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>', 'Strike-Off (Voluntary Dissolution)', 'The simplest, cheapest close for a company with no significant debts or assets left. We confirm it qualifies, file the DS01 and handle any objection.' ),
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>', 'Members&rsquo; Voluntary Liquidation', 'For a solvent company with retained profit or assets to release &mdash; usually the most tax-efficient way to close. Handled by a licensed insolvency practitioner.' ),
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', 'Creditors&rsquo; Voluntary Liquidation', 'If the company cannot pay its debts, strike-off is not safe. A CVL closes it properly and shields you from the risks of dissolving with debts unpaid.' ),
+				)
+				: array(
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>', 'Continue or Rescue the Business', 'If the business is viable, this can mean better cash flow, negotiating with creditors, or a formal restructuring process.' ),
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', 'Close an Insolvent Company', 'Where recovery isn&rsquo;t realistic, a Creditors&rsquo; Voluntary Liquidation closes the company in an orderly way.' ),
+					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>', 'Consider Another Route', 'Some companies suit a different closure or insolvency procedure. We&rsquo;ll explain which after reviewing your position.' ),
+				);
+				foreach ( $qq_opts as $qo ) {
+					echo '<div class="qq-option"><span class="qq-option__ico">' . $qo[0] . '</span><h3 class="qq-option__title">' . $qo[1] . '</h3><p class="qq-option__text">' . $qo[2] . '</p></div>';
+				}
+				?>
+				</div>
+		<p class="qq-options__foot"><?php echo is_page( 'close-my-company' ) ? 'You do not need to know which route you need before contacting us.' : 'You do not need to choose an option before contacting us.'; ?></p>
 		</div>
 	</section>
 
