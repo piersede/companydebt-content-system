@@ -80,7 +80,7 @@ Contact Us (form 41) and the homepage block (form 44) declare Name, Email **and*
 
 Enhanced conversions for leads works by matching a hashed email address. Every lead with no usable email is permanently unmatchable. Switching the feature on over this data would quietly under-report and look like poor ad performance.
 
-**Fix:** **Done in code, 29 Jul** — `mu-plugins/cd-gform-hardening.php` adds honeypot enforcement, email validation, UK phone validation and outreach-spam blocking. Still needs deploying and verifying on staging, then live.
+**Fix:** **Written and deployed to staging, 29 Jul** — `mu-plugins/cd-gform-hardening.php` (27 KB, on staging at 09:03) adds honeypot enforcement, email validation, UK phone validation and outreach-spam blocking. Confirmed present on staging by SFTP. **Not yet on live** — that is Piers's push to make.
 
 That job also confirmed and extended this finding:
 - forms that already use a properly typed email field had **0 bad emails across 622 entries**, so field typing was the entire cause
@@ -175,8 +175,8 @@ The specific claim from the July round that conversion tracking *overstates* vol
 - Restore Google Ads API access so the account settings can be audited properly
 
 **Do next**
-- Deploy and verify the form hardening (written 29 Jul, not yet on staging or live)
-- Do not switch on enhanced conversions for leads until that email validation is actually live, not merely written
+- Test the form hardening on staging, then push it to live (it is on staging already)
+- Do not switch on enhanced conversions for leads until that email validation is live, not merely on staging
 - Fix `scripts/check_unmerged_branches.py` — it crashes on any repo using worktrees, so the safety net for unmerged work is currently dead
 - Confirm the phone conversion settings in the account, including any call-duration threshold
 - Check inside GTM that container KT6M67T is empty, then archive it
