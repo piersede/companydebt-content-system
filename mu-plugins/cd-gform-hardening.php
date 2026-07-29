@@ -221,7 +221,14 @@ function cd_gf_phone_normalise($raw) {
     }
     // A UK mobile typed without its leading zero: 7863348067 -> 07863348067.
     // This is the single most common genuine mistake in the entry history.
-    if (strlen($digits) === 10 && substr($digits, 0, 1) === '7') {
+    //
+    // Only promote when the raw input is bare digits and spaces. North American
+    // numbers announce themselves with brackets and dashes, and "(724) 746-3096"
+    // would otherwise become "07247463096" and be stored as a UK mobile. That is
+    // in the real entry data: a US steel rigging company, silently converted into
+    // a plausible British number somebody would eventually dial.
+    if (strlen($digits) === 10 && substr($digits, 0, 1) === '7'
+        && preg_match('/^[\d\s]+$/', $s)) {
         return array('0' . $digits, 'uk');
     }
     return array($digits, 'bare');
@@ -254,12 +261,29 @@ function cd_gf_phone_is_valid($raw) {
     if (cd_gf_phone_is_filler($digits))      return 'filler';
 
     if ($kind === 'uk') {
-        // Mobiles: 071 to 079, excluding 070 personal numbering, which is
-        // almost entirely fraudulent traffic in this form's history.
-        if (preg_match('/^07[1-9]\d{8}$/', $norm))                        return '';
-        // Landline, non-geographic and freephone ranges.
-        if (preg_match('/^0(1\d{8,9}|2\d{9}|3\d{9}|5\d{9}|8\d{8,9}|9\d{9})$/', $norm)) return '';
-        return 'uk_shape';
+        $n = strlen($digits);
+        // Separate "wrong length" from "wrong shape" so the person can be told
+        // which mistake they made. A dropped digit is the common honest error
+        // and deserves a better answer than a generic refusal.
+        if (substr($norm, 0, 2) === '07') {
+            if ($n < 11) return 'short';
+            if ($n > 11) return 'long';
+            // Mobiles: 071 to 079, excluding 070 personal numbering, which is
+            // almost entirely fraudulent traffic in this form's history.
+            return preg_match('/^07[1-9]\d{8}$/', $norm) ? '' : 'uk_shape';
+        }
+        if ($n < 10) return 'short';
+        if ($n > 11) return 'long';
+        // 09 is premium rate. Nobody gives an 09 number as their own callback
+        // number, and if the team rings it the firm pays by the minute to call
+        // its own lead. Refuse it outright.
+        if (substr($norm, 0, 2) === '09') return 'premium';
+        // Landline, non-geographic and freephone ranges. 084 and 087 are
+        // revenue share and do cost to ring, but a small business can genuinely
+        // publish one as its main line, so those are accepted and flagged on the
+        // entry instead of being refused. See cd_gf_phone_tariff().
+        return preg_match('/^0(1\d{8,9}|2\d{9}|3\d{9}|5\d{9}|8\d{8,9}|9\d{9})$/', $norm)
+            ? '' : 'uk_shape';
     }
     if ($kind === 'intl') {
         $n = strlen($digits);
@@ -316,10 +340,67 @@ function cd_gf_message_is_spam($raw) {
  * Wiring
  * ------------------------------------------------------------------------ */
 
+// Say which mistake was made, not just that one was. Someone who has dropped a
+// digit should be told that, rather than being handed the same wall of text as
+// someone who typed "no thanks".
+function cd_gf_phone_message($why) {
+    switch ($why) {
+        case 'short':
+            return 'That number looks too short. A UK mobile has 11 digits, for example '
+                 . '07700 900123, and a landline has 10 or 11, for example 020 7946 0958.';
+        case 'long':
+            return 'That number looks too long. A UK number has 10 or 11 digits, for example '
+                 . '07700 900123 or 020 7946 0958.';
+        case 'no_country_code':
+            return 'If that is a UK number, please start it with 0, for example 07700 900123. '
+                 . 'If you are outside the UK, start with your country code, for example '
+                 . '+353 1 234 5678.';
+        case 'premium':
+            return 'That is a premium rate number, which we cannot call you back on. '
+                 . 'Please give a standard number, for example 07700 900123 or 020 7946 0958.';
+        case 'intl_shape':
+            return 'That international number does not look right. Please check it, for example '
+                 . '+353 1 234 5678.';
+        default: // filler, uk_shape
+            return 'That does not look like a UK phone number. Please check it, for example '
+                 . '07700 900123 or 020 7946 0958.';
+    }
+}
+
+// Is this a number that costs money to ring back?
+function cd_gf_phone_tariff($norm) {
+    if (preg_match('/^0(84|87)/', $norm)) return 'revenue-share';
+    if (preg_match('/^0(800|808)/', $norm)) return 'freephone';
+    return '';
+}
+
+// Count every block, permanently, bucketed by day and reason.
+//
+// This whole job started by proving a filter was turning real people away, and
+// the only reason that stayed hidden for years is that nothing counted the
+// refusals. Shipping a new filter without counting its own would repeat exactly
+// that mistake. Read it with:
+//   get_option('cd_gf_block_counts')
 function cd_gf_log($form_id, $field_id, $reason, $value) {
-    if (!defined('CD_GF_HARDENING_DEBUG') || !CD_GF_HARDENING_DEBUG) return;
-    error_log(sprintf('[CD-GF] blocked form=%s field=%s reason=%s value=%s',
-        $form_id, $field_id, $reason, substr((string) $value, 0, 60)));
+    if (defined('CD_GF_HARDENING_DEBUG') && CD_GF_HARDENING_DEBUG) {
+        error_log(sprintf('[CD-GF] blocked form=%s field=%s reason=%s value=%s',
+            $form_id, $field_id, $reason, substr((string) $value, 0, 60)));
+    }
+
+    $counts = get_option('cd_gf_block_counts', array());
+    if (!is_array($counts)) $counts = array();
+    $day = gmdate('Y-m-d');
+    $key = $form_id . '|' . $reason;
+    if (!isset($counts[$day])) $counts[$day] = array();
+    $counts[$day][$key] = isset($counts[$day][$key]) ? $counts[$day][$key] + 1 : 1;
+
+    // Keep it bounded: 120 days is plenty to spot a trend and will not grow
+    // without limit in the options table.
+    if (count($counts) > 120) {
+        ksort($counts);
+        $counts = array_slice($counts, -120, null, true);
+    }
+    update_option('cd_gf_block_counts', $counts, false);
 }
 
 add_filter('gform_field_validation', function ($result, $value, $form, $field) {
@@ -350,8 +431,7 @@ add_filter('gform_field_validation', function ($result, $value, $form, $field) {
         if ($why !== '') {
             cd_gf_log($form_id, $field_id, 'phone:' . $why, $raw);
             $result['is_valid'] = false;
-            $result['message']  = 'Please enter a UK phone number, for example 07700 900123 or 020 7946 0958. '
-                                . 'If you are outside the UK, start with your country code, for example +353 1 234 5678.';
+            $result['message']  = cd_gf_phone_message($why);
             return $result;
         }
     }
@@ -429,9 +509,7 @@ add_filter('gform_validation', function ($result) {
             }
         } else {
             $field->failed_validation  = true;
-            $field->validation_message = 'Please enter a UK phone number, for example 07700 900123 or '
-                . '020 7946 0958. If you are outside the UK, start with your country code, for example '
-                . '+353 1 234 5678.';
+            $field->validation_message = cd_gf_phone_message($why);
         }
     }
 
@@ -444,8 +522,30 @@ add_filter('gform_validation', function ($result) {
     return $result;
 }, 20, 1);
 
-// Store phone numbers in a single consistent format, so the number that reaches
-// the entry, the notification email and the Zoho Mobile field is dialable.
+/* ---------------------------------------------------------------------------
+ * Storage
+ *
+ * Phone numbers are stored in E.164 (+447700900123), not the readable 0 form.
+ *
+ * This matters for more than tidiness. cd-livechat-zoho.php copies the entry
+ * value straight into Zoho's Mobile field, and Google Ads enhanced conversions
+ * for leads, which is part of why this job was commissioned, will only match a
+ * phone number in E.164. Storing "07700900123" is the one format Google cannot
+ * use. E.164 is also unambiguous and dials correctly from any handset.
+ *
+ * Whatever the visitor actually typed is kept in entry meta rather than thrown
+ * away, so a normalisation that gets it wrong can always be traced back.
+ * ------------------------------------------------------------------------ */
+
+function cd_gf_phone_e164($value) {
+    list($norm, $kind) = cd_gf_phone_normalise($value);
+    if ($kind === 'uk')   return '+44' . substr($norm, 1);
+    if ($kind === 'intl') return $norm;               // already carries its "+"
+    return '';
+}
+
+$GLOBALS['cd_gf_raw_phones'] = array();
+
 add_filter('gform_save_field_value', function ($value, $lead, $field, $form) {
     if (!is_object($field) || !isset($form['id'])) return $value;
     $phones  = cd_gf_phone_fields();
@@ -453,6 +553,27 @@ add_filter('gform_save_field_value', function ($value, $lead, $field, $form) {
     if (!isset($phones[$form_id]) || !in_array((int) $field->id, $phones[$form_id], true)) return $value;
     if (trim((string) $value) === '') return $value;
 
-    list($norm, $kind) = cd_gf_phone_normalise($value);
-    return ($kind === 'uk' || $kind === 'intl') ? $norm : $value;
+    $e164 = cd_gf_phone_e164($value);
+    if ($e164 === '') return $value;                  // unreadable, keep it verbatim
+
+    $GLOBALS['cd_gf_raw_phones'][(int) $field->id] = array(
+        'raw'    => (string) $value,
+        'tariff' => cd_gf_phone_tariff(cd_gf_phone_normalise($value)[0]),
+    );
+    return $e164;
 }, 10, 4);
+
+// Keep the original alongside the stored value, and mark numbers that cost
+// money to ring so nobody dials an 084 or 087 without knowing.
+add_action('gform_entry_post_save', function ($entry, $form) {
+    if (empty($GLOBALS['cd_gf_raw_phones']) || !function_exists('gform_update_meta')) return;
+    foreach ($GLOBALS['cd_gf_raw_phones'] as $field_id => $info) {
+        if ($info['raw'] !== rgar($entry, (string) $field_id)) {
+            gform_update_meta($entry['id'], 'cd_phone_raw_' . $field_id, $info['raw'], $form['id']);
+        }
+        if ($info['tariff'] !== '') {
+            gform_update_meta($entry['id'], 'cd_phone_tariff_' . $field_id, $info['tariff'], $form['id']);
+        }
+    }
+    $GLOBALS['cd_gf_raw_phones'] = array();
+}, 10, 2);

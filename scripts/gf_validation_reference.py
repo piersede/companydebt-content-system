@@ -1,13 +1,19 @@
-"""Reference implementation of the proposed rules. Mirrored exactly in PHP."""
+"""Reference implementation of the phone and email rules in
+mu-plugins/cd-gform-hardening.php. Mirrored exactly in PHP; used to backtest
+rule changes against real Gravity Forms entries before deploying them.
+"""
 import re
 
 EMAIL_RE = re.compile(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$")
+UK_MOBILE = re.compile(r"^07[1-9]\d{8}$")
+UK_GEO    = re.compile(r"^0(1\d{8,9}|2\d{9}|3\d{9}|5\d{9}|8\d{8,9}|9\d{9})$")
+
 
 def check_email(raw):
     v = (raw or "").strip()
     if v == "":
         return False, "empty"
-    if " " in v or "\t" in v:
+    if " " in v or "	" in v:
         return False, "contains a space"
     if not EMAIL_RE.match(v):
         return False, "not an email address"
@@ -16,19 +22,16 @@ def check_email(raw):
         return False, "malformed domain"
     return True, "ok"
 
-UK_MOBILE   = re.compile(r"^07[1-9]\d{8}$")
-UK_GEO      = re.compile(r"^0(1\d{8,9}|2\d{9}|3\d{9}|5\d{9}|8\d{8,9}|9\d{9})$")
 
 def _junk(d):
     core = d.lstrip("0")
     if len(set(core)) <= 1:
-        return True                                   # 077777777777, 9999999999
-    for n in (2, 3, 4):                               # 1201201200, 213213213
+        return True
+    for n in (2, 3, 4):
         if len(core) >= n * 2 and core == (core[:n] * (len(core) // n + 1))[:len(core)]:
             return True
-    if core in ("123456789", "1234567890", "12345678901"):
-        return True
-    return False
+    return core in ("123456789", "1234567890", "12345678901")
+
 
 def normalise_phone(raw):
     s = (raw or "").strip()
@@ -44,26 +47,62 @@ def normalise_phone(raw):
         return "0" + digits[2:], "uk"
     if digits.startswith("0"):
         return digits, "uk"
-    if len(digits) == 10 and digits[0] == "7":        # UK mobile, leading zero omitted
+    # Only promote a bare mobile missing its leading zero when the raw input is
+    # digits and spaces. "(724) 746-3096" is North American and must not become
+    # a plausible UK mobile.
+    if len(digits) == 10 and digits[0] == "7" and re.fullmatch(r"[\d\s]+", s):
         return "0" + digits, "uk"
     return digits, "bare"
 
+
 def check_phone(raw, allow_intl=True):
+    """Returns (acceptable, normalised, reason). Empty is acceptable here; the
+    form's own required setting decides whether an empty box is allowed."""
     v = (raw or "").strip()
     if v == "":
-        return True, "", "empty (optional)"
+        return True, "", ""
     norm, kind = normalise_phone(v)
     digits = re.sub(r"\D", "", norm)
     if len(digits) < 9:
-        return False, norm, "too short"
+        return False, norm, "short"
     if _junk(digits):
-        return False, norm, "repeated/sequential junk"
+        return False, norm, "filler"
     if kind == "uk":
-        if UK_MOBILE.match(norm) or UK_GEO.match(norm):
-            return True, norm, "uk"
-        return False, norm, "not a valid UK number"
+        n = len(digits)
+        if norm.startswith("07"):
+            if n < 11:
+                return False, norm, "short"
+            if n > 11:
+                return False, norm, "long"
+            return (True, norm, "") if UK_MOBILE.match(norm) else (False, norm, "uk_shape")
+        if n < 10:
+            return False, norm, "short"
+        if n > 11:
+            return False, norm, "long"
+        if norm.startswith("09"):
+            return False, norm, "premium"
+        return (True, norm, "") if UK_GEO.match(norm) else (False, norm, "uk_shape")
     if kind == "intl":
-        if allow_intl and 8 <= len(digits) <= 15:
-            return True, norm, "international"
-        return False, norm, "non-UK number"
-    return False, norm, "no country code and not a UK number"
+        n = len(digits)
+        if allow_intl and 8 <= n <= 15:
+            return True, norm, ""
+        return False, norm, "intl_shape"
+    return False, norm, "no_country_code"
+
+
+def to_e164(raw):
+    """What gets stored: Google Ads enhanced conversions only match E.164."""
+    norm, kind = normalise_phone(raw)
+    if kind == "uk":
+        return "+44" + norm[1:]
+    if kind == "intl":
+        return norm
+    return ""
+
+
+def phone_tariff(norm):
+    if re.match(r"^0(84|87)", norm):
+        return "revenue-share"
+    if re.match(r"^0(800|808)", norm):
+        return "freephone"
+    return ""
