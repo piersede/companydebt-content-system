@@ -196,6 +196,18 @@ function cd_gf_email_is_valid($raw) {
  * country code, which is what nearly all of the junk looks like.
  * ------------------------------------------------------------------------ */
 
+// Drop the trunk "0" that British people write in brackets after the country
+// code: "+44 (0)7700 900123". Stripping non-digits turns that into
+// "4407700900123", and prefixing the usual "0" gave "007700900123", which then
+// failed every shape check. It is a normal way to write a number on a business
+// card or email signature, so this refused genuine enquirers.
+//
+// Only ONE leading zero is removed, and only after the 44 has been taken off,
+// so a real number is never shortened.
+function cd_gf_strip_trunk($rest) {
+    return (substr($rest, 0, 1) === '0') ? substr($rest, 1) : $rest;
+}
+
 function cd_gf_phone_normalise($raw) {
     $s = trim((string) $raw);
     if ($s === '') return array('', 'none');
@@ -204,13 +216,13 @@ function cd_gf_phone_normalise($raw) {
 
     if (substr($s, 0, 1) === '+') {
         return (substr($digits, 0, 2) === '44')
-            ? array('0' . substr($digits, 2), 'uk')
+            ? array('0' . cd_gf_strip_trunk(substr($digits, 2)), 'uk')
             : array('+' . $digits, 'intl');
     }
     if (substr($digits, 0, 2) === '00') {
         $d = substr($digits, 2);
         return (substr($d, 0, 2) === '44')
-            ? array('0' . substr($d, 2), 'uk')
+            ? array('0' . cd_gf_strip_trunk(substr($d, 2)), 'uk')
             : array('+' . $d, 'intl');
     }
     if (substr($digits, 0, 2) === '44' && strlen($digits) === 12) {

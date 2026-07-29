@@ -33,16 +33,24 @@ def _junk(d):
     return core in ("123456789", "1234567890", "12345678901")
 
 
+def _strip_trunk(rest):
+    """Drop the trunk "0" British people write in brackets after the country
+    code: "+44 (0)7700 900123". Stripping non-digits makes that "4407700900123",
+    and the usual "0" prefix gave "007700900123", which failed every shape check
+    and refused a genuine enquirer. Removes ONE zero, only after the 44 is off."""
+    return rest[1:] if rest.startswith("0") else rest
+
+
 def normalise_phone(raw):
     s = (raw or "").strip()
     digits = re.sub(r"\D", "", s)
     if not digits:
         return "", "none"
     if s.startswith("+"):
-        return ("0" + digits[2:], "uk") if digits.startswith("44") else ("+" + digits, "intl")
+        return ("0" + _strip_trunk(digits[2:]), "uk") if digits.startswith("44") else ("+" + digits, "intl")
     if digits.startswith("00"):
         d = digits[2:]
-        return ("0" + d[2:], "uk") if d.startswith("44") else ("+" + d, "intl")
+        return ("0" + _strip_trunk(d[2:]), "uk") if d.startswith("44") else ("+" + d, "intl")
     if digits.startswith("44") and len(digits) == 12:
         return "0" + digits[2:], "uk"
     if digits.startswith("0"):
