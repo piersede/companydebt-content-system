@@ -1305,3 +1305,79 @@ consenting visitors would be tracked as if they had refused, and conversions wou
 - **The CookieYes cookie scan has never run**, so the declared cookie inventory is empty against at least
   six in evidence. The banner cannot describe what it does not know about.
 - **The paused GTM tag** remains paused, not deleted, and is restorable in one click if needed.
+
+---
+---
+
+# Addendum 6 — deployed to live, 29 July 2026
+
+The Addendum 5 fix is now on live. Route: WP Engine `install_copy`, `include_files: true`,
+**`include_db: false`**. Live database never touched; form-entry counts identical before and after
+(1,605 / 677 / 1,393 / 1,580 / 76).
+
+## A. Pre-flight that nearly didn't happen — 71 throwaway mu-plugins
+
+A file-system copy takes **every** file, and everything in `wp-content/mu-plugins` executes on every
+request with no way to disable it from `wp-admin`. A pre-flight scan found **71 leftover one-shot
+scripts** on staging: content pushers, batch fixers, dumpers, inspectors, dating back to April.
+
+All were written to `@unlink(__FILE__)` after firing; none had. Several were `wp_update_post()`
+endpoints reachable by anyone with the URL and guarded only by a static query token, some as weak as
+`?token=ch28apr`. Four `codex-push-*.php` files (51-66 KB) held base64-encoded article bodies — the same
+encoding trick that hid the real `gclid` setter from every text search in Addendum 3.
+
+**INFERRED:** these were probably already on live, since staging-edited mu-plugins demonstrably reach
+live. Not confirmed — there is no live file access from here, and firing unknown write endpoints on live
+to find out is not an acceptable test.
+
+All 71 removed from staging (backed up locally; article payloads archived to
+`docs/archive/codex-push-payloads/`) before the copy ran. 26 files remain: 21 real plugins, 5 WP Engine
+core. Now enforced by `scripts/audit_mu_plugins.py`, wired into `docs/staging-to-live-push.md` as a
+mandatory pre-flight and stated in `CLAUDE.md`.
+
+## B. Live verification — VERIFIED, clean browser profile, origin-fresh
+
+| Check | Result |
+|---|---|
+| Rendered without error | 228,204 bytes, no parse/fatal error |
+| Consent default present | Yes, `<script data-cd-consent-default="1">` |
+| Delayed by WP Rocket? | **No** |
+| Order | default **before** the GTM snippet |
+| CookieYes properties loading | **One** (`387f1b54…`); the paused GTM tag is gone from the container |
+| **Refuse / ignore the banner** | `_ga`, `_ga_P39KJ34V6G`, `_gcl_au`, `_gcl_aw`, `gclid` — **none set**. Google registers `default=false` on all four ad/analytics signals |
+| **Accept the banner** | All seven signals flip to `update=true`; `_gcl_aw=GCL…LIVEVERIFY9911`, `_gcl_au`, `_ga`, `_ga_P39KJ34V6G` and the `gclid` cookie all appear |
+| Live database | Untouched, entry counts unchanged |
+
+**The open question from Addendum 5 §E is now closed.** CookieYes's free-tier `update` *does* correctly
+flip the defaults to granted on acceptance. Consenting visitors are tracked in full, including click-ID
+attribution. The fix does not cost conversions from people who agree.
+
+## C. Outstanding — Cloudflare has not been purged
+
+**VERIFIED and important.** Cloudflare is serving cached HTML with `Age: 14781` (~4.1 hours) on the
+canonical URLs. `cf-cache-status: HIT`, consent snippet absent. Every verification above used a
+cache-busting query string, which reaches the origin.
+
+**So the fix is live on the origin but has not reached real visitors.** Until Cloudflare is purged,
+anyone arriving at `https://www.companydebt.com/` still gets the pre-fix page: no consent default, and
+Google's cookies written before any choice is made.
+
+There are no Cloudflare credentials in `.env`, so this cannot be done from here. **It is a manual step
+and it is the last thing standing between the current state and the fix actually working.**
+
+After purging, re-check that a plain request to `https://www.companydebt.com/` (no query string) returns
+`data-cd-consent-default` and that `cf-cache-status` shows a fresh MISS/EXPIRED.
+
+## D. Still open
+
+- **Baseline conversions before the change propagates.** Conversions will fall; that fall is mostly
+  correction, not breakage, and without a baseline the two are indistinguishable.
+- **LiveChat still loads at ~631 ms, before any consent exists** (deliberately excluded from the JS
+  delay). Consent Mode does not govern it. Unresolved.
+- **`cd-attribution.js` still gates on "any of three categories"** rather than `advertisement`
+  specifically; the new code is correctly keyed. Bring the theme script into line.
+- **CookieYes cookie scan has never run** — the declared inventory is empty against at least six cookies
+  in evidence.
+- **Forms 29/40/41 stopped storing entries in March**; only form 44 is recording. Blocks the
+  "how did you hear about us?" field.
+- **Server-side call tracking** remains the largest measurable upside and is untouched.
