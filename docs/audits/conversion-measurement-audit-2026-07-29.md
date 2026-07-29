@@ -1134,3 +1134,174 @@ to tell which change caused it.
 
 **Not a recommendation on legal sufficiency.** Whether any given tool meets the site's obligations is for
 whoever owns the cookie policy, as in Addendum 3 §3d.
+
+---
+---
+
+# Addendum 5 — the 29 July consent incident, and the fix built on staging
+
+Same day as Addenda 3 and 4. This records a live incident that happened *during* the audit, a
+correction to Addendum 3, and the remediation now sitting on staging awaiting a live deploy.
+
+---
+
+## A. CORRECTION to Addendum 3 §3b — the `gclid` cookie setter was misidentified
+
+Addendum 3 §3b attributed the un-gated `gclid` cookie to **LiveChat's `tracking.js`**, reasoning by
+elimination from resource timings. **That was wrong.**
+
+**VERIFIED:** the setter is CompanyDebt's own code — an inline script printed into `wp_head` at
+priority 1 by `cd-livechat-zoho.php`, which was stored base64-encoded in the source. Decoded, it read:
+
+```js
+var p = new URLSearchParams(location.search), K = ['gclid','gbraid','wbraid'];
+K.forEach(function (k) { var v = p.get(k);
+  if (v) document.cookie = k + '=' + encodeURIComponent(v) + ';path=/;max-age=' + (90*86400); });
+```
+
+No consent check of any kind. It also pushed those values, plus `landing_page` (which carries the click
+id in its query string), into LiveChat as session variables.
+
+The conclusion in §3d is unchanged and if anything firmer: click ids were being stored and forwarded to
+the CRM for visitors who had not consented. Only the mechanism was misattributed. The practical
+difference is favourable — it is our own code, so it was directly fixable.
+
+Lesson worth keeping: elimination-by-timing is not proof of authorship. The base64 encoding hid the real
+setter from every text search performed in §3.
+
+---
+
+## B. INCIDENT — 29 July 2026: consent gate removed for roughly one hour
+
+**Sequence, all VERIFIED:**
+
+1. The CookieYes WordPress plugin (`cookie-law-info` v3.4.2, active but previously unlinked) was linked
+   to the CookieYes account. It immediately began injecting its own banner script into the page HTML,
+   using website key `387f1b54…`.
+2. The site was now running **two different CookieYes properties**: the plugin's `387f1b54…` in the HTML,
+   and the pre-existing GTM tag's `75253ed1…`. They overwrote each other's `cookieyes-consent` cookie.
+   Observed result: cookie written with **every value blank**
+   (`consent:, necessary:, analytics:, advertisement:`), **no banner rendered at all**, and **zero
+   consent events reaching Google**.
+3. The GTM tag `CookieYes Consent Manager` (type: CookieYes CMP, trigger: Consent Initialization – All
+   Pages) was **paused and published** to leave the plugin as the single source.
+4. That removed the only thing setting Consent Mode **defaults**. The free CookieYes tier sends the
+   `update` but not the `default`. With no default, Google's tags initialised unrestricted.
+
+**Measured state after step 4**, on a clean browser profile with nothing clicked:
+
+```
+_gcl_aw = GCL.1785334251.FRESH88213     <- Google Ads click cookie, holding the test click id
+_gcl_au = 1.1.1613826582.1785334250
+_ga     = GA1.1.857543448.1785334251
+_ga_P39KJ34V6G = GS2.1.s1785334250...
+cookieyes-consent = ...advertisement:no
+```
+
+The banner correctly recorded a refusal **and Google's cookies were written anyway**, because the
+refusal arrived after the tags had already initialised (`google_tag_data.ics` showed `update: false`).
+
+**This was worse than the pre-incident state**, where the GTM tag's Consent Initialization trigger put a
+denial in place before any tag ran and no `_ga`/`_gcl_*` cookies appeared.
+
+**INFERRED (unresolved):** how many visitors were affected. Traffic is roughly 50–60 visits/day, the
+window was about an hour in UK afternoon, so the order of magnitude is a few dozen. Cloudflare was also
+serving hour-old cached HTML during the window, so some visitors got older markup. No precise figure is
+available and none should be invented.
+
+---
+
+## C. Expert review of the proposed fix
+
+The remediation was stress-tested against a six-perspective panel before implementation. The
+substantive changes it forced, all incorporated:
+
+| Challenge | Change made |
+|---|---|
+| WP Rocket delays inline scripts and would silently void the fix | Snippet excluded from delay via `rocket_delay_js_exclusions` **and** `rocket_excluded_inline_js_content`; verified un-delayed in rendered HTML |
+| `ads_data_redaction` would degrade modelling | Explicitly set to `false`, with the reasoning recorded in-file |
+| Click id must survive page-to-page without storage | `url_passthrough: true` |
+| Existing 90-day cookies do not expire because the setter was fixed | Active deletion of `gclid`/`gbraid`/`wbraid` on any load without advertising consent |
+| Click ids reach Zoho via `source_url` even when the cookie is withheld | `cd_lc_strip_click_ids()` applied to the stored `Website_URL` |
+| The chat webhook cannot read visitor cookies | Explicit `ad_consent` session variable, set only on consent; URL fallback skipped without it |
+| Consent Mode governs Google only, not the wider storage surface | Acknowledged, not solved — see §F |
+
+---
+
+## D. What was changed on staging
+
+**Three files. Backups taken on the server for the two that existed.**
+
+**1. `wp-content/themes/company-debt-webpigment/header.php`**
+(backup: `header.php.bak-a11y-consent-default-20260729`)
+
+Consent Mode v2 defaults inserted immediately above the GTM snippet. **This placement is not
+negotiable**: GTM is hardcoded in `header.php` and printed *before* `wp_head()`, so no WordPress hook
+can precede it. Snippet held in the repo at `theme-snippets/consent-mode-defaults.header.html`.
+
+All six signals denied, `security_storage` granted, `wait_for_update: 500`, `url_passthrough: true`,
+`ads_data_redaction: false`.
+
+**2. `wp-content/mu-plugins/cd-consent-mode-defaults.php`** (new)
+
+Sole job: keep the snippet out of WP Rocket's delayed-JS handling. This is the single highest-risk
+failure mode — a delayed consent default is not a consent default, and it fails silently.
+
+**3. `wp-content/mu-plugins/cd-livechat-zoho.php`**
+(backup: `cd-livechat-zoho.php.bak-a11y-consent-gate-20260729`)
+
+- Base64 inline script replaced with readable, consent-gated JavaScript.
+- Nothing stored or forwarded unless `advertisement:yes`; stale click-id cookies deleted when it is not.
+- Re-runs on `cookieyes_consent_update`, so accepting on the landing page still captures.
+- New `cd_lc_ad_consent()` and `cd_lc_strip_click_ids()` helpers.
+- Gravity Forms handler: both the cookie route and the `source_url` route gated; click ids stripped from
+  the stored URL when consent is absent.
+- Chat webhook: gated on the explicit `ad_consent` session variable.
+
+**Accepted trade-off, recorded deliberately:** a visitor who accepts only after navigating away from the
+landing page loses the click id, because it is no longer in the URL. Stashing it pre-consent "just in
+case" would be the same problem in a different container.
+
+---
+
+## E. Verification on staging — VERIFIED, clean browser profile
+
+| Check | Result |
+|---|---|
+| PHP renders without error | 257,562 bytes, no parse/fatal error |
+| JavaScript syntax (both blocks) | `node --check` passes |
+| Order in page | consent default (char 17,936) → **GTM (19,345)** → cd-lc inline (19,556) |
+| Snippet delayed by WP Rocket? | **No** — renders as `<script data-cd-consent-default="1">`, no `type` attribute |
+| Default reaches the dataLayer | **Position 0**, ahead of `gtm.start` |
+| Google's registered state after GTM loads | `ad_storage`, `ad_user_data`, `ad_personalization`, `analytics_storage` all `default=false`; `security_storage` `default=true` |
+| Cookies before consent, with `?gclid=` | **None.** No `_ga`, no `_ga_*`, no `_gcl_au`, no `_gcl_aw`, no `gclid` |
+| Modelling input preserved | **Yes** — `pagead2.googlesyndication.com/ccm/collect?…&gclid=…` and `region1.google-analytics.com/g/collect` both still fire |
+| Stale click-id cleanup | Seeded `gclid`+`gbraid` 90-day cookies; both **deleted** on next no-consent load |
+| Consent-granted path | With `advertisement:yes`: `gclid` cookie stored, LiveChat receives `gclid`, `landing_page`, `ad_consent=yes` |
+
+**What staging could NOT prove, and why.** CookieYes website keys are domain-bound and the staging
+install is not linked to the account, so no banner loads there. The granted path was therefore tested by
+seeding a `cookieyes-consent` cookie by hand, which exercises our code but **not** CookieYes's own
+`update` call. The one thing still unproven is that CookieYes's update correctly flips the defaults to
+granted on live. That must be checked in the browser immediately after the live deploy — if it fails,
+consenting visitors would be tracked as if they had refused, and conversions would fall.
+
+---
+
+## F. Still open after this fix
+
+- **Live deploy.** Everything above is on staging only. It does nothing until it reaches live, and the
+  live exposure in §B continues until then.
+- **Post-deploy verification is mandatory**, not optional: confirm the un-delayed snippet in view-source,
+  confirm no `_ga`/`_gcl_*` before consent, confirm the update flips on accept, then purge WP Rocket
+  **and** Cloudflare and re-check.
+- **Baseline conversions before deploying.** Conversions will fall. That fall is mostly correction, not
+  breakage, but without a baseline the two are indistinguishable.
+- **Non-Google storage is untouched.** LiveChat still loads at ~631 ms, before any consent exists,
+  deliberately excluded from the JS delay. Consent Mode does not govern it. Unresolved.
+- **`cd-attribution.js` still gates on "any of three categories"** (`advertisement|analytics|performance`),
+  so accepting analytics alone still opens click-id capture there. The new code is keyed to
+  `advertisement` specifically. The theme script should be brought into line.
+- **The CookieYes cookie scan has never run**, so the declared cookie inventory is empty against at least
+  six in evidence. The banner cannot describe what it does not know about.
+- **The paused GTM tag** remains paused, not deleted, and is restorable in one click if needed.
