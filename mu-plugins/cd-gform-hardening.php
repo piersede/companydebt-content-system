@@ -108,22 +108,18 @@ function cd_gf_require_country_code() {
 
 // Forms where a phone number we cannot read actually STOPS the submission.
 //
-// Deliberately empty. The phone field stays compulsory, so nobody can skip it,
-// but whatever they type is accepted. That preserves the escape hatch: a
-// director who does not want to hand over a number can put anything in the box
-// and still reach us, which is how several genuine enquiries in the entry
-// history got through ("0", "07", "111-111-1111").
+// What is enforced is the SHAPE of the number, not whether it truly belongs to
+// the person. We cannot tell those apart and should not pretend to. So "0",
+// "123" and "no thanks" are refused, while a plausible but invented number is
+// accepted. Anyone determined to withhold their real number still can; they
+// just have to make one up that looks like a phone number. The error message
+// even shows them a valid example, which is fine: the point is to stop the box
+// being used as a dumping ground, not to interrogate the caller.
 //
-// The number is still normalised below, so a real number typed as +44 or
-// without its leading zero is silently corrected and stays dialable. What we
-// give up is telling somebody who fat-fingers a digit that they have done so;
-// they will submit and be uncontactable by phone. That is the price of the
-// escape hatch and it is the intended trade.
-//
-// Spam defence does not rest on this. The honeypot, the email check and the
-// outreach filter do that work, and they are untouched.
+// The practical gain is that a genuine mistype now gets caught and corrected by
+// the person, instead of arriving as an enquiry nobody can ring back.
 function cd_gf_phone_blocking_forms() {
-    return array();
+    return array(29, 31, 38, 39, 40, 41, 44);
 }
 
 function cd_gf_phone_blocks($form_id) {
