@@ -500,3 +500,122 @@ There are **4 unopened Tag Manager invitations** on the account. One of them may
 **Closed by this addendum:** Consent Mode modelling is already active (main audit item withdrawn); the GA4 "wrong site" claim is definitively wrong; the Conversion Linker is present and firing on all pages; the Ads account inventory is now on record.
 
 **Still not verified:** whether GTM-KT6M67T exists at all; why Data Manager shows no connected products; the consent acceptance rate; whether the untagged-landing-page reports are caused by interaction-gated tag loading (stated above as the most likely cause, not proven).
+
+---
+---
+
+# Addendum 2 — follow-up checks and the first changes made, 29 July 2026
+
+Prompted by Piers's five-point list. Items 1–3 turned out differently from the first reading once the underlying data was checked; item 4 has been actioned; item 5 is closed by decision.
+
+## A. "Get directions" and duplicate form conversions — already handled, no action needed
+
+**VERIFIED.** Two independent checks:
+
+1. **Last 7 days (22–28 Jul 2026): Get directions = 0.** Also Page views 0, Phone call leads 4, Submit lead forms 1. The action has stopped recording; the 41 in the 90-day window came from earlier in the period, before it was switched off. `Local actions - Directions` is already in the **Removed** state.
+2. **The account-default goals are:** Purchase, Submit lead form, Sign-up, Phone call lead, Contact, Qualified lead, Leads from messages (plus 2 custom goals). **There is no "Get directions" account-default goal**, and the duplicate `www.companydebt.com - GA4 (web) form_submission` is Secondary and marked *not* included in account-level goals.
+
+**So neither pollutes the conversions Google bids on.** Both appear only in the **"All conversions"** reporting column. The finding in Addendum 1 §6(3)–(4) stands as a *reporting* caveat, and is **withdrawn as a defect** — the account is configured correctly. The practical instruction is to read the "Conversions" column, not "All conversions".
+
+Goal configuration detail worth recording:
+
+| Account-default goal | Primary conversion actions | Campaigns using it |
+|---|---|---|
+| Purchase | 1 | 94 of 98 |
+| Submit lead form | 1 | 95 of 98 |
+| Sign-up | 1 | 94 of 98 |
+| Phone call lead | 2 | 96 of 98 |
+| Contact | 1 | 95 of 98 |
+| **Qualified lead** | **5** | **0 of 98** |
+| Leads from messages | 1 | 95 of 98 |
+
+The Qualified lead goal holds the five Zoho CRM stage actions and **no campaign uses it** — consistent with §B below.
+
+## B. Why the Zoho pipeline reads zero — it is not a new-setup teething problem
+
+**VERIFIED.** Google Ads → Goals → Uploads. **34 uploads in total; the most recent was 8 April 2024.** All were manual CSV/XLSX files uploaded by the two former-agency accounts. Results:
+
+| Date | File | Result |
+|---|---|---|
+| 8 Apr 2024 23:27 | Conversion_Import_by_GCLID.csv | 14 successful, **1,986 errors** |
+| 8 Apr 2024 23:24 | Conversion_Import_by_GCLID.csv | No changes |
+| 12 Feb 2024 17:16 | Conversion_Import_by_GCLID.csv | 1 successful, **1,999 errors** |
+| 12 Feb 2024 16:40 | Conversion_Import_by_GCLID.csv | **2,000 errors** |
+| 4 Dec 2023 16:38 | Conversion_Import_by_GCLID.csv | 1 successful, **1,999 errors** |
+| 4 Dec 2023 16:36 | Conversion_Import_by_GCLID.csv | **2,000 errors** |
+| 11 Oct 2023 | Conversion_Import_by_GCLID.csv | **2,000 errors** |
+| 7 Sept 2023 22:37 | Company Debt - Conversion Import by GCLID.csv | No changes |
+| 7 Sept 2023 22:36 | Conversion Import by GCLID.csv | 1 successful, **1,999 errors** |
+| 12 Aug 2023 13:49 | Company Debt - Conversion Import by GCLID.xlsx | 2 successful, **3,999 errors** |
+
+**Uploads → Schedules tab: "You don't have any entries yet."** No automated or recurring import has ever been configured.
+
+**Conclusion.** Nothing has been sent to this account for over two years, and when it was, roughly 999 records in every 1,000 were rejected. The conversion actions themselves are correctly built — they are an empty pipe at both ends. This is consistent with the separately-verified position (`findings-v2/connection-3-status.md`, 27 Jul 2026) that the Zoho→Ads integration was never connected, and that 453 of 456 click-ID leads were already outside Google's 90-day import window.
+
+**INFERRED:** the failures are the expected result of uploading click IDs that are either absent (never captured, per the consent gate) or older than 90 days. Re-uploading will not fix it. The order has to be: capture the click ID on the site → carry it into Zoho → then connect the feed.
+
+## C. "Deleting" dead conversion actions — mostly not possible
+
+**VERIFIED.** In Google Ads, **"Removed" is the delete state** for a conversion action. They cannot be purged; they remain listed for historical reporting. The ~40 Removed actions therefore cannot be tidied further — only filtered out of the view (Status: Enabled).
+
+What *can* be cleaned are the actions still **enabled but inert** (approximately 12):
+
+| Action | Reason |
+|---|---|
+| Calls from Smart Campaign Ads | No Smart campaigns run |
+| Smart campaign ad clicks to call | No Smart campaigns run |
+| Smart campaign map clicks to call | No Smart campaigns run |
+| Smart campaign map directions | No Smart campaigns run |
+| Lead form – Submit | Google-hosted lead form not used; 1-day window |
+| www.companydebt.com – GA4 (web) Chat | Status Inactive |
+| [N] GoogleAds Phone Calls (different number format) | 0 conversions; duplicate |
+| Zoho CRM Sales / Leads-Contacts / Lead Qualification | Keep only if the pipeline is to be fixed |
+| Deals × 2, Sales orders, Leads (Zoho stage actions) | As above |
+
+None of these affect bidding today. This is cosmetic tidying, not remediation.
+
+## D. CHANGE MADE — three users removed from Tag Manager
+
+**Done, 29 July 2026, on Piers's explicit instruction.** Google Tag Manager → CompanyDebt account → User Management. Removed direct account and container permissions for:
+
+- `nikoladonevski@yandex.com` (User)
+- `nikoladppc@gmail.com` (User)
+- `jamesjohnson32@googlemail.com` (User)
+
+**Verified after the change: 2 users remain**, both Administrator — `companydebt01@gmail.com` and `jamesonsmithandco@gmail.com` (Piers). Kept deliberately: `companydebt01@gmail.com`.
+
+This is the only change made to any Google property in this session. No GTM container version was published, so the live tag configuration is untouched (still Version 81).
+
+## E. Google Ads access — the ex-agency accounts were never there
+
+**VERIFIED.** Google Ads → Admin → Access and security → Users. 5 users, and **neither Nikola account appears.** The former-agency exposure was Tag Manager only and is now closed.
+
+| User | Access level | Email type | Last signed in | Added |
+|---|---|---|---|---|
+| `jamesonsmithandco@gmail.com` (Piers) | Admin | Personal | 29 Jul 2026 | 16 Nov 2016 |
+| **Maria Waters** `mariawppc@gmail.com` | **Admin** | Personal | 29 Jul 2026 | 27 Feb 2024 |
+| `ns@aabrs.com` | Admin | Unmanaged | 27 Jul 2026 | 14 May 2018 |
+| `companydebt01@gmail.com` | Admin | Personal | 5 Jun 2026 | 12 Apr 2011 |
+| `archy@cannon-digital.co.uk` | Standard | Business | 17 Jul 2026 | 24 Sept 2025 |
+
+Google flags: *"4 personal or unmanaged email accounts are used to access accounts that you manage."* Four of the five have **passkeys disabled**; only Maria Waters has one enabled. Four of five hold **Admin**. Not urgent, but tighter than it needs to be for an account spending at this level — noted, no action taken.
+
+## F. GTM-KT6M67T — closed off by decision
+
+**Piers's decision, 29 July 2026: stop tracking it.**
+
+Position of record: the container is **not on the live site** (verified across four pages, source and runtime), is **not in the CompanyDebt Tag Manager account**, and is **not visible to any Google account available here**. It cannot be inspected or archived from this side. It is treated as somebody else's container and is out of scope. The Addendum 1 §10 caution ("do not retire it before checking its contents") is moot — nobody here can retire it either way.
+
+No further mention is required in future audit rounds.
+
+## Addendum 2 — net position
+
+| Piers's item | Outcome |
+|---|---|
+| 1. Get directions + duplicate forms | **No action needed** — already excluded from the goals Google bids on; Get directions has stopped recording |
+| 2. Zoho reads zero | **Explained** — nothing uploaded since Apr 2024, ~99.9% failure rate when it was, no scheduled import ever configured. Not a new-setup issue |
+| 3. Delete dead conversion actions | **Mostly impossible** — "Removed" is already the delete state. ~12 enabled-but-inert actions can be cleaned; cosmetic only |
+| 4. Remove ex-agency emails | **DONE** — 3 removed from Tag Manager; verified. They were never in Google Ads |
+| 5. Second container GTM-KT6M67T | **Closed** — out of scope, no longer tracked |
+
+Unchanged and still outstanding from Addendum 1: the interaction-gated tag loading (§2), the Custom HTML number-swap duplicate (§5ii), the extra `ad_storage` requirement on the two call tags (§5i), the form conversion trigger design (§4a), and the unmeasured consent acceptance rate.
