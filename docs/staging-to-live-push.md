@@ -68,6 +68,47 @@ Either route works. Both copy **every** file, not just the changed ones. Note th
 mu-plugin and theme edits are made on *staging* via `scripts/sftp_edit.py`, so a
 file-system copy is how they reach live.
 
+#### MANDATORY pre-flight: clear throwaway scripts out of mu-plugins
+
+**Because the copy takes every file, anything left in `wp-content/mu-plugins` goes live —
+and everything in `mu-plugins` executes on every single request, with no way to disable
+it from `wp-admin`.**
+
+Sessions routinely leave one-shot helpers there: content pushers, batch fixers, dumpers,
+inspectors. They are written to `@unlink(__FILE__)` after firing, but any that never fired
+just sit there for ever. On 2026-07-29 a pre-flight check found **71** of them, some dating
+to April, including four 50-60KB `codex-push-*.php` files holding base64-encoded article
+bodies. Several were `wp_update_post()` endpoints reachable by anyone with the URL, guarded
+only by a static query token — a few as weak as `?token=ch28apr`. There is no login check.
+
+Run this before every code push and delete what it finds:
+
+```bash
+python scripts/audit_mu_plugins.py            # list one-shot / throwaway scripts
+python scripts/audit_mu_plugins.py --delete   # back up to tmp/ then remove from staging
+```
+
+Rules:
+
+- **Archive anything with a payload first.** The `codex-push-*` files carried real article
+  content. Decoded copies live in `docs/archive/codex-push-payloads/`. Never delete a
+  payload-bearing script without saving the payload.
+- **Keep-list is authoritative.** Real functionality (`cd-insolvency-data-hub.php`,
+  `cd-gform-hardening.php`, `cd-consent-mode-defaults.php`, `cd-livechat-zoho.php`,
+  `cd-server-render.php`, WP Engine's own `wpe-*`/`slt-*`) is never touched. The script
+  aborts if a keep-list name is ever classified for deletion.
+- **A one-shot that already ran is still safe to delete.** Scripts like
+  `cd-livechat-wpr-exclude.php` wrote their result into the database (WP Rocket settings,
+  redirect rules); the settings persist without the file.
+- **`.bak-*` files do not execute** (WordPress only loads `*.php` from the `mu-plugins`
+  root), so they are clutter rather than risk. They are the rollback path — leave them.
+- **Verify after deleting, before copying**: re-render the homepage, `/contact-us/` and
+  `/uk-insolvency-statistics/` and check for `Fatal error` / `critical error`, then confirm
+  the consent default still renders un-delayed and above the GTM snippet.
+
+Do not skip this because the diff "is only one file". The diff is never only one file — the
+copy is the whole file system.
+
 **Scripted (preferred):**
 
 ```bash
