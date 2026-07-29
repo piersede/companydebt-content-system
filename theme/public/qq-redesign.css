@@ -654,3 +654,45 @@
 	/* Hide the how-it-works photo on mobile; the four steps stack full width. */
 	.qq-v2 .qq-process__media { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CONTACT-FORM CARD — /close-my-company/ only (Gravity Form 41).
+   The shared quote card (above) visually-hides its field labels in favour of
+   placeholders and targets GF40's ids. This clone page swaps in GF41 (Name,
+   Email, Telephone, Comments), so it needs its own handling: visible labels,
+   a styled Comments textarea, GF41's submit button, and — on staging only —
+   the reCAPTCHA box hidden. Everything is scoped to .qq-card--contact so the
+   original /quick-quote/ card is untouched.
+   ═════════════════════════════════════════════════════════════════════ */
+.qq-v2 .qq-card--contact .qq-card__form #gform_wrapper_41 { margin: 0; max-width: none; }
+/* one field per row (Name / Email / Telephone / Comments) */
+.qq-v2 .qq-card--contact .qq-card__form .gform_fields { grid-template-columns: 1fr; }
+/* show the field labels (the quote form hides them; a contact form needs them) */
+.qq-v2 .qq-card--contact .qq-card__form .gfield_label {
+	position: static; width: auto; height: auto; overflow: visible; clip: auto;
+	display: block; margin: 0 0 6px; font: 600 14px/1.3 'Source Sans 3', sans-serif; color: #33475b;
+}
+/* Comments textarea — mirror the input treatment */
+.qq-v2 .qq-card--contact .qq-card__form textarea,
+.qq-v2 .qq-card--contact .qq-card__form .ginput_container textarea {
+	width: 100% !important; padding: 13px 15px !important; margin: 0 !important;
+	border: 1px solid #d7dfe6 !important; border-radius: 10px !important;
+	font: 400 16px/1.4 'Source Sans 3', sans-serif !important; color: #1a2733 !important;
+	outline: none !important; background: #fff !important; box-shadow: none !important;
+	min-height: 120px; resize: vertical;
+}
+.qq-v2 .qq-card--contact .qq-card__form textarea:focus {
+	border-color: #FF6600 !important; box-shadow: 0 0 0 3px rgba(255,102,0,.14) !important;
+}
+/* GF41 submit button — same orange treatment as GF40's */
+.qq-v2 .qq-card--contact .qq-card__form #gform_submit_button_41 {
+	width: 100%; background: #FF6600; color: #fff; border: 0;
+	font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 16px;
+	padding: 16px; border-radius: 10px !important; cursor: pointer;
+	transition: background .2s ease; margin: 0 !important; line-height: 1.2 !important; height: auto !important;
+}
+.qq-v2 .qq-card--contact .qq-card__form #gform_submit_button_41:hover { background: #e65c00; }
+/* Hide GF41's reCAPTCHA box ONLY on staging (its site key isn't registered for
+   comdebstage, so Google renders an "invalid domain" error). The CAPTCHA is
+   optional, so hiding it does not block submission. Live keeps it visible. */
+.qq--staging .qq-card--contact .qq-card__form #field_41_6 { display: none !important; }
