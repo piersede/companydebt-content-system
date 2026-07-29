@@ -552,7 +552,43 @@ The Qualified lead goal holds the five Zoho CRM stage actions and **no campaign 
 
 **Conclusion.** Nothing has been sent to this account for over two years, and when it was, roughly 999 records in every 1,000 were rejected. The conversion actions themselves are correctly built — they are an empty pipe at both ends. This is consistent with the separately-verified position (`findings-v2/connection-3-status.md`, 27 Jul 2026) that the Zoho→Ads integration was never connected, and that 453 of 456 click-ID leads were already outside Google's 90-day import window.
 
-**INFERRED:** the failures are the expected result of uploading click IDs that are either absent (never captured, per the consent gate) or older than 90 days. Re-uploading will not fix it. The order has to be: capture the click ID on the site → carry it into Zoho → then connect the feed.
+**INFERRED:** the failures are the expected result of uploading click IDs that are either absent (never captured, per the consent gate) or older than 90 days. Re-uploading old data will not fix it.
+
+### B2. CORRECTION to §B — the Uploads screen cannot see the new Zoho integration
+
+**Raised by Piers, 29 July: the section above ignored the Zoho integration work done 26–28 July. That is a fair criticism and §B as originally written was wrong in its framing.**
+
+**VERIFIED.** The **Uploads** screen logs **file-based imports only**. The Zoho→Google Ads integration reconnected on 28 July pushes through Google's conversion-upload **API**, which does not appear on that screen. So "nothing since April 2024" is a true statement about *manual CSV uploads* and tells us **nothing whatsoever** about the new pipeline. The conclusion "this is not a new-setup teething problem" was an overreach and is **withdrawn**.
+
+**What is actually verifiable about the new integration:**
+
+| Conversion action | Date created | Goal | Source | Window | Value rule | Data so far |
+|---|---|---|---|---|---|---|
+| `Zoho CRM Sales` | **28/07/2026** | Purchases, Primary | Import from clicks | 90 days | "Use different values. If there's no value, use £1." | none |
+| `Zoho CRM Leads/Contacts` | **28/07/2026** | Sign-ups, Primary | Import from clicks | 90 days | same | none |
+| `Zoho CRM Lead Qualification` | (same generation) | Qualified leads, Primary | Import from clicks | 90 days | same | none |
+
+So **the reconnect did reach Google**: Zoho created its own conversion actions on 28 July, exactly as its documentation says it would. These are a **new generation**, distinct from the older stage-named actions (`Deals - Deals Stage becomes Closed Won`, `Leads - Leads Lead Status becomes Pre Qualified` and the `(1)`-suffixed duplicates) left behind by the earlier configuration.
+
+**Both new actions currently show:** *"Start measuring conversions by connecting to a data source — This conversion action isn't receiving data because there aren't any associated connections."*
+
+**INFERRED, and deliberately not called either way:** that banner is consistent with two different explanations — (a) Google's UI simply does not register an API-pushing partner integration as a "connection", which would make the banner cosmetic; or (b) the link is genuinely not registered on Google's side, which would tally with Data Manager → Connected products rendering empty (Addendum 1 §3). **Do not act on this until it has had a fair run.**
+
+**Why zero is the expected reading right now, not evidence of failure:**
+
+1. The integration was connected on **28 July**; Zoho's own note states it syncs **once every 24 hours**. The reporting window read in this audit was 30 Apr – 28 Jul, so effectively no elapsed time.
+2. The acceptance-test lead (`1974818000085653001`) carries a **deliberately fake click ID** (`CDCONVTEST20260728A`). Google cannot match it to a real click, so even a perfectly successful export would not surface as a conversion. That test isolates whether **Zoho exports**, not whether **Google counts**.
+3. Per the 28 July session record, the corrected Gravity Forms handler and the LiveChat v6 `get_chat` endpoint were **on staging only**, pending a live push. Until that push lands, live may still be running the earlier code, so genuinely new click-ID-carrying leads may not yet be reaching Zoho at all.
+4. Of the 456 CD leads carrying a click ID, **453 are older than the 90-day import window** and the remaining 3 are test records.
+
+**Correct conclusion, replacing §B's:** the *historical* manual pipeline is dead and re-uploading it is pointless — that part stands. But the *new* pipeline is roughly one day old, has correctly created its Google-side actions, and has had neither the time nor a single real recent click ID to prove itself. **It is too early to judge, and nothing here should be read as the integration failing.**
+
+**The checkpoint is now due.** What to look at, in order:
+1. Zoho's own integration sync/export log — that is the authoritative answer on whether Zoho is sending.
+2. Whether the staging→live push of `cd-livechat-zoho.php` has happened, since without it live captures nothing usable.
+3. Once a **real** ad click produces a lead: whether that lead's click ID reaches Zoho, and whether it appears against the Zoho conversion actions within 24–48 hours.
+
+**Bidding caution when it does start working:** all three Zoho actions are **Primary**. `Zoho CRM Leads/Contacts` fires on lead creation, which is the *same event* the on-site `[N] GoogleAds Form Submissions` tag already counts as Primary. Once the pipe is live, that is a genuine double count in bidding — unlike the "Get directions"/GA4 pairs in §A, which are already excluded. Resolve before the flow becomes material: keep the on-site tag Primary for speed, and demote the Zoho lead-creation action to Secondary, keeping only the deeper outcomes (qualified, won) as Primary.
 
 ## C. "Deleting" dead conversion actions — mostly not possible
 
@@ -613,7 +649,7 @@ No further mention is required in future audit rounds.
 | Piers's item | Outcome |
 |---|---|
 | 1. Get directions + duplicate forms | **No action needed** — already excluded from the goals Google bids on; Get directions has stopped recording |
-| 2. Zoho reads zero | **Explained** — nothing uploaded since Apr 2024, ~99.9% failure rate when it was, no scheduled import ever configured. Not a new-setup issue |
+| 2. Zoho reads zero | **Partly explained, and my first answer was wrong** — the manual-upload history is dead (last Apr 2024, ~99.9% failures) but that screen cannot see the new API integration. The 28 Jul reconnect *did* create its Google-side actions. One day old, no real click ID yet, checkpoint due now. See §B2 |
 | 3. Delete dead conversion actions | **Mostly impossible** — "Removed" is already the delete state. ~12 enabled-but-inert actions can be cleaned; cosmetic only |
 | 4. Remove ex-agency emails | **DONE** — 3 removed from Tag Manager; verified. They were never in Google Ads |
 | 5. Second container GTM-KT6M67T | **Closed** — out of scope, no longer tracked |
