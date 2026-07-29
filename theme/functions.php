@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.4.6' );
+	define( '_S_VERSION', '1.4.7' );
 }
 
 if ( ! defined( 'CD_THEME_DIR' ) ) {
@@ -479,7 +479,10 @@ function company_debt_webpigment_scripts() {
 
 	// Quick Quote redesign assets (fonts + scoped stylesheet). The calculator
 	// JS/CSS above still loads because the page's assigned template is unchanged.
-	if ( is_page( 'quick-quote' ) ) {
+	// quick-quote-options (added 2026-07-27) is a separate clone page built from
+	// design-handoff/quick-quote-options-page-design-brief.md — shares this same
+	// stylesheet (additive rules only, does not alter the original page's rules).
+	if ( is_page( array( 'quick-quote', 'quick-quote-options', 'close-my-company' ) ) ) {
 		wp_enqueue_style(
 			'cd-qq-fonts',
 			'https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap',
@@ -499,17 +502,26 @@ add_action( 'wp_enqueue_scripts', 'company_debt_webpigment_scripts' );
 /**
  * Quick Quote redesign: render the /quick-quote/ page through the dedicated
  * templates/quick-quote.php template instead of its assigned template.
+ * quick-quote-options is a separate clone page, routed to its own template
+ * file (templates/quick-quote-options.php) the same way.
  *
- * This does NOT change the page's stored template assignment or its Gutenberg
- * content — both remain intact in the database as an instant rollback. To
- * revert, simply remove this filter (or assign a different template in
- * wp-admin). Matched by slug so it stays correct across environments.
+ * This does NOT change either page's stored template assignment or its
+ * Gutenberg content — both remain intact in the database as an instant
+ * rollback. To revert, simply remove the relevant branch below (or assign a
+ * different template in wp-admin). Matched by slug so it stays correct
+ * across environments.
  */
 add_filter( 'template_include', function ( $template ) {
-	if ( is_page( 'quick-quote' ) ) {
+	if ( is_page( array( 'quick-quote', 'close-my-company' ) ) ) {
 		$qq = locate_template( 'templates/quick-quote.php' );
 		if ( $qq ) {
 			return $qq;
+		}
+	}
+	if ( is_page( 'quick-quote-options' ) ) {
+		$qqo = locate_template( 'templates/quick-quote-options.php' );
+		if ( $qqo ) {
+			return $qqo;
 		}
 	}
 	return $template;
@@ -783,7 +795,6 @@ function custom_validation( $validation_result ) {
 
 	$form = $validation_result['form'];
 	//Loop through Form Fields
-	$phone_start = ['020', '0161', '028', '07', '20', '161', '28', '7'];
 	foreach( $form['fields'] as &$field ) {
 		//Store Submitted Field Value in a Local Variable
 		$field_value = rgpost( "input_{$field['id']}" );
@@ -796,24 +807,6 @@ function custom_validation( $validation_result ) {
 			break;
 		}
 
-		if ( strtolower( $field->placeholder ) === 'telephone' || strtolower( $field->label ) === 'telephone' ) {
-			$phone_valid = false;
-			foreach( $phone_start as $starting_point ) {
-				if ( str_starts_with( $field_value, $starting_point ) ) {
-					$phone_valid = true;
-				}
-			}
-			if ( ! $phone_valid ) {
-				$validation_result['is_valid'] = false;
-				$field->failed_validation = true;
-				$field->validation_message = 'Invalid Phone number';
-			}
-		}
-
-
-		else {
-			continue;
-		}
 	}
 
 	//Assign modified $form object back to the validation result
