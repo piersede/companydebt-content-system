@@ -65,14 +65,18 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<div class="qq-hero__grid">
 			<div class="qq-hero__left">
 				<span class="qq-hero__pill">Licensed and Regulated Insolvency Practitioners</span>
-				<h1 class="qq-hero__title">Understand Your Company&rsquo;s <span class="qq-accent">Options</span></h1>
-				<p class="qq-hero__sub">Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.</p>
+				<h1 class="qq-hero__title"><?php echo is_page( 'close-my-company' ) ? 'Close Your Limited Company <span class="qq-accent">the Right Way</span>' : 'Understand Your Company&rsquo;s <span class="qq-accent">Options</span>'; ?></h1>
+				<p class="qq-hero__sub"><?php echo is_page( 'close-my-company' ) ? 'Thinking of closing your limited company? Whether it is solvent and ready to be struck off, or debts mean strike-off is not an option, we will explain the right way to close it &mdash; the costs, the timescales and what it means for you as a director.' : 'Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.'; ?></p>
 
 				<ul class="qq-hero__ticks">
-					<li><span class="qq-tick">&#10003;</span> Clear advice on rescue, restructuring and closure</li>
-					<li><span class="qq-tick">&#10003;</span> Confidential help from an experienced insolvency team</li>
-					<li><span class="qq-tick">&#10003;</span> Clear costs before you make any decision</li>
-					<li><span class="qq-tick">&#10003;</span> No pressure and no obligation to proceed</li>
+					<?php
+					$qq_ticks = is_page( 'close-my-company' )
+						? array( 'Advice on strike-off, dissolution and closure', 'Whether you can strike off or need to liquidate', 'Clear costs and timescales before you decide', 'Confidential help, no pressure, no obligation' )
+						: array( 'Clear advice on rescue, restructuring and closure', 'Confidential help from an experienced insolvency team', 'Clear costs before you make any decision', 'No pressure and no obligation to proceed' );
+					foreach ( $qq_ticks as $qq_t ) {
+						echo '<li><span class="qq-tick">&#10003;</span> ' . esc_html( $qq_t ) . '</li>';
+					}
+					?>
 				</ul>
 
 				<div class="qq-hero__cta">
@@ -84,7 +88,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				</div>
 				<p class="qq-hero__micro">
 					<span class="qq-hero__micro-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
-					You do not need exact figures. Reasonable estimates are fine.
+					<?php echo is_page( 'close-my-company' ) ? 'Talk it through with someone who has handled it before.' : 'You do not need exact figures. Reasonable estimates are fine.'; ?>
 				</p>
 
 				<div class="qq-hero__logos">
@@ -357,9 +361,9 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 	<!-- FINAL CTA -->
 	<section class="qq-finalcta">
 		<div class="qq-finalcta__inner">
-			<h2 class="qq-h2">Understand Your Company&rsquo;s Options</h2>
-			<p class="qq-finalcta__text">Answer a few questions about the company&rsquo;s current financial position. We will explain the realistic options, likely costs and next steps. There is no obligation to proceed.</p>
-			<a href="#quick-quote-form" class="qq-btn qq-btn--solid">Understand My Options</a>
+			<h2 class="qq-h2"><?php echo is_page( 'close-my-company' ) ? 'Ready to Close Your Limited Company?' : 'Understand Your Company&rsquo;s Options'; ?></h2>
+			<p class="qq-finalcta__text"><?php echo is_page( 'close-my-company' ) ? 'Tell us what is happening with the company and we will explain the right way to close it, what it costs and what it means for you. There is no obligation to proceed.' : 'Answer a few questions about the company&rsquo;s current financial position. We will explain the realistic options, likely costs and next steps. There is no obligation to proceed.'; ?></p>
+			<a href="<?php echo is_page( 'close-my-company' ) ? '#close-my-company-form' : '#quick-quote-form'; ?>" class="qq-btn qq-btn--solid"><?php echo is_page( 'close-my-company' ) ? 'Request a Callback' : 'Understand My Options'; ?></a>
 			<p class="qq-finalcta__sub">or speak confidentially with an adviser on <a href="tel:08000746757" style="color:#fff;">0800 074 6757</a></p>
 		</div>
 	</section>
