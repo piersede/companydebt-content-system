@@ -66,26 +66,29 @@ function cd_gf_phone_fields() {
 
 // form id => phone field ids that must NOT be compulsory.
 //
-// Insolvency is a distress enquiry. A director who is frightened, ashamed, or
-// worried about what they have already done will often want to open by email
-// and give a number later. A compulsory phone field does not get us a number
-// from that person, it gets us a fake one or it loses them: the stored entries
-// include a real training company that typed "0", a genuine hotmail user who
-// typed "07", someone who typed their own email address into the phone box,
-// and a director asking about a dormant company who typed "111-111-1111".
-// Those are people who wanted to talk to us and had to lie to get in.
+// CURRENTLY EMPTY BY INSTRUCTION. The phone number stays compulsory on forms
+// 29, 31, 38, 39 and 40. To relax it, restore the list below:
 //
-// Making the field optional also removes the reason the junk exists, rather
-// than filtering it out afterwards. The validation above only ever runs on a
-// value somebody actually typed, so an empty box stays perfectly acceptable.
+//     29 => array(9), 31 => array(9), 38 => array(4),
+//     39 => array(4), 40 => array(14),
+//
+// The argument for relaxing it, kept here so the reasoning is not lost:
+// insolvency is a distress enquiry, and a director who is frightened or
+// worried about what they have already done often wants to open by email. A
+// compulsory field does not get a number from that person. It gets a fake one,
+// or it loses them. The stored entries show it: a real training company typed
+// "0", a genuine hotmail user typed "07", one person typed their own email
+// address into the phone box, and a director asking about a dormant company
+// typed "111-111-1111".
+//
+// Note the interaction. Those four got through only because nothing checked
+// the value. With the validation above in place and the field still
+// compulsory, that escape route is closed, so the combination is stricter than
+// this site has ever been. Anyone unwilling to give a real number now has to
+// abandon the form. That is a deliberate trade of reach for contactability,
+// not an oversight.
 function cd_gf_optional_phone_fields() {
-    return array(
-        29 => array(9),
-        31 => array(9),
-        38 => array(4),
-        39 => array(4),
-        40 => array(14),
-    );
+    return array();
 }
 
 // form id => field ids holding a free-text message, checked for outreach spam.
@@ -101,6 +104,30 @@ function cd_gf_message_fields() {
 // Set to false to accept any plausible number that carries a "+" country code.
 function cd_gf_require_country_code() {
     return apply_filters('cd_gf_require_country_code', true);
+}
+
+// Forms where a phone number we cannot read actually STOPS the submission.
+//
+// Deliberately empty. The phone field stays compulsory, so nobody can skip it,
+// but whatever they type is accepted. That preserves the escape hatch: a
+// director who does not want to hand over a number can put anything in the box
+// and still reach us, which is how several genuine enquiries in the entry
+// history got through ("0", "07", "111-111-1111").
+//
+// The number is still normalised below, so a real number typed as +44 or
+// without its leading zero is silently corrected and stays dialable. What we
+// give up is telling somebody who fat-fingers a digit that they have done so;
+// they will submit and be uncontactable by phone. That is the price of the
+// escape hatch and it is the intended trade.
+//
+// Spam defence does not rest on this. The honeypot, the email check and the
+// outreach filter do that work, and they are untouched.
+function cd_gf_phone_blocking_forms() {
+    return array();
+}
+
+function cd_gf_phone_blocks($form_id) {
+    return in_array((int) $form_id, cd_gf_phone_blocking_forms(), true);
 }
 
 /* ---------------------------------------------------------------------------
@@ -321,7 +348,8 @@ add_filter('gform_field_validation', function ($result, $value, $form, $field) {
     }
 
     $phones = cd_gf_phone_fields();
-    if (isset($phones[$form_id]) && in_array($field_id, $phones[$form_id], true)) {
+    if (cd_gf_phone_blocks($form_id)
+        && isset($phones[$form_id]) && in_array($field_id, $phones[$form_id], true)) {
         $why = cd_gf_phone_is_valid($raw);
         if ($why !== '') {
             cd_gf_log($form_id, $field_id, 'phone:' . $why, $raw);
@@ -383,9 +411,21 @@ add_filter('gform_validation', function ($result) {
         $value = rgpost('input_' . $field->id);
         $why   = cd_gf_phone_is_valid($value);
 
-        if ($why === '') {
-            // Valid by our rules. Clear a failure only if it is the theme's
-            // phone verdict, so bad words and other checks are left intact.
+        // An empty box must fall through to the clearing branch below, not be
+        // skipped. The theme's rule asks whether the value STARTS WITH one of
+        // its prefixes, and an empty string starts with none of them, so it
+        // fails an empty box too. That has quietly made the "optional"
+        // Telephone field on forms 41 and 44 compulsory in practice, and told
+        // the visitor "Invalid Phone number" rather than asking for anything.
+        // Where the field genuinely is required, Gravity Forms has already set
+        // its own "This field is required." message, which we leave alone
+        // because we only ever clear the theme's exact wording.
+
+        if ($why === '' || !cd_gf_phone_blocks($form_id)) {
+            // Either the number is fine, or this form does not block on the
+            // phone at all and the value is whatever the visitor chose to type.
+            // Clear a failure only if it is the theme's phone verdict, so bad
+            // words and other checks are left intact.
             if (!empty($field->failed_validation)
                 && (string) $field->validation_message === 'Invalid Phone number') {
                 $field->failed_validation  = false;
