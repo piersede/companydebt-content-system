@@ -665,8 +665,12 @@
    original /quick-quote/ card is untouched.
    ═════════════════════════════════════════════════════════════════════ */
 .qq-v2 .qq-card--contact .qq-card__form #gform_wrapper_41 { margin: 0; max-width: none; }
-/* one field per row (Name / Email / Telephone / Comments) */
-.qq-v2 .qq-card--contact .qq-card__form .gform_fields { grid-template-columns: 1fr; }
+/* One field per row, all equal width. GF41's own layout sets the Name field to
+   a partial width (no .gfield--width-full class), which GF's 12-column grid then
+   renders narrower than the rest. Bypass that grid entirely with a single-column
+   flex so every field is full width, whatever GF's per-field setting says. */
+.qq-v2 .qq-card--contact .qq-card__form .gform_fields { display: flex !important; flex-direction: column; gap: 16px; }
+.qq-v2 .qq-card--contact .qq-card__form .gfield { grid-column: auto !important; width: 100% !important; max-width: 100% !important; margin: 0; }
 /* show the field labels (the quote form hides them; a contact form needs them) */
 .qq-v2 .qq-card--contact .qq-card__form .gfield_label {
 	position: static; width: auto; height: auto; overflow: visible; clip: auto;
