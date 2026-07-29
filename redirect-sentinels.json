@@ -41,6 +41,16 @@
       "request": "/articles/energy-costs-will-increase-construction-insolvencies/",
       "expect_final": "/company-cash-flow-problems/cant-pay-business-energy/",
       "note": "target was already right, chain was 2 hops; flattened 2026-07-29"
+    },
+    {
+      "request": "/ir35-contractor",
+      "expect_final": "/closing-a-limited-company/",
+      "note": "was dumped at the homepage; real target /closing-a-limited-company/ir35-contractor/ never existed, repointed 2026-07-29"
+    },
+    {
+      "request": "/hmrc-tax-investigations/hmrcs-ir35-investigations-different/how-do-i-close-a-company-due-to-ir35-reforms/",
+      "expect_final": "/closing-a-limited-company/",
+      "note": "301'd straight into a 404 (/closing-a-limited-company/ir35-contractor/ does not exist); repointed 2026-07-29"
     }
   ]
 }
