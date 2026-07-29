@@ -64,6 +64,30 @@ function cd_gf_phone_fields() {
     );
 }
 
+// form id => phone field ids that must NOT be compulsory.
+//
+// Insolvency is a distress enquiry. A director who is frightened, ashamed, or
+// worried about what they have already done will often want to open by email
+// and give a number later. A compulsory phone field does not get us a number
+// from that person, it gets us a fake one or it loses them: the stored entries
+// include a real training company that typed "0", a genuine hotmail user who
+// typed "07", someone who typed their own email address into the phone box,
+// and a director asking about a dormant company who typed "111-111-1111".
+// Those are people who wanted to talk to us and had to lie to get in.
+//
+// Making the field optional also removes the reason the junk exists, rather
+// than filtering it out afterwards. The validation above only ever runs on a
+// value somebody actually typed, so an empty box stays perfectly acceptable.
+function cd_gf_optional_phone_fields() {
+    return array(
+        29 => array(9),
+        31 => array(9),
+        38 => array(4),
+        39 => array(4),
+        40 => array(14),
+    );
+}
+
 // form id => field ids holding a free-text message, checked for outreach spam.
 function cd_gf_message_fields() {
     return array(
@@ -91,9 +115,36 @@ function cd_gf_require_country_code() {
 // touching the stored form.
 add_filter('gform_form_post_get_meta', function ($form) {
     if (!is_array($form) || !isset($form['id'])) return $form;
-    if (in_array((int) $form['id'], cd_gf_honeypot_forms(), true)) {
+    $form_id = (int) $form['id'];
+
+    if (in_array($form_id, cd_gf_honeypot_forms(), true)) {
         $form['enableHoneypot'] = true;
     }
+
+    // Leave the form editor showing the stored setting, so that what an admin
+    // sees on screen is the truth about what is saved in the database. Every
+    // other context, including the front end and the submit handler, gets the
+    // relaxed rule. convert_field_objects() has already run by this point, so
+    // the fields are objects rather than arrays.
+    $in_form_editor = is_admin() && isset($_GET['page']) && $_GET['page'] === 'gf_edit_forms';
+    $optional = cd_gf_optional_phone_fields();
+    if (!$in_form_editor && isset($optional[$form_id]) && !empty($form['fields'])) {
+        foreach ($form['fields'] as $field) {
+            if (!is_object($field) || !in_array((int) $field->id, $optional[$form_id], true)) continue;
+            $field->isRequired = false;
+
+            // These fields hide their label, so the placeholder is the only
+            // thing the user reads. Forms 29, 31 and 40 spell it "Phone*" and
+            // "Your Phone*", which would go on advertising the field as
+            // compulsory after it stopped being so. Trade the asterisk for the
+            // word, rather than just deleting it and leaving no signal either way.
+            $ph = trim((string) $field->placeholder);
+            if ($ph !== '' && substr($ph, -1) === '*') {
+                $field->placeholder = rtrim(substr($ph, 0, -1)) . ' (optional)';
+            }
+        }
+    }
+
     return $form;
 }, 10, 1);
 
