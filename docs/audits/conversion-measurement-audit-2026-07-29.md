@@ -655,3 +655,356 @@ No further mention is required in future audit rounds.
 | 5. Second container GTM-KT6M67T | **Closed** — out of scope, no longer tracked |
 
 Unchanged and still outstanding from Addendum 1: the interaction-gated tag loading (§2), the Custom HTML number-swap duplicate (§5ii), the extra `ad_storage` requirement on the two call tags (§5i), the form conversion trigger design (§4a), and the unmeasured consent acceptance rate.
+
+---
+---
+
+# Addendum 3 — cookie consent: acceptance rate, banner, and the click-ID question, 29 July 2026
+
+Follow-on from the main audit's gap #1. Three questions were asked: what share of visitors accept
+advertising cookies, what the banner actually looks like, and what the site really does with the
+Google click ID when someone declines.
+
+All live inspection in this addendum was read-only (HTTP fetch and browser observation). **No cookie
+prompt was accepted, rejected or dismissed.** Nothing was changed on live, staging, Google Ads, Tag
+Manager, GA4 or Search Console.
+
+The headline: **the acceptance rate could not be measured with the access available**, and separately,
+**it matters less than we assumed**, because the click ID is being captured for everyone regardless of
+what they choose. §3 is the important section.
+
+---
+
+## 1. The acceptance rate — NOT MEASURED, and here is exactly why
+
+**VERIFIED — every route was tried and each is genuinely blocked:**
+
+| Route | Result |
+|---|---|
+| CookieYes dashboard | **No credentials.** The project `.env` was read in full; it holds WP, SFTP, WP Engine, Zoho, LiveChat, Gravity Forms, Gemini, Monday, Companies House, Bing and OpenAI keys. There is **nothing for CookieYes**. No login is available from this side |
+| GA4 property G-P39KJ34V6G | **No access.** `get_account_summaries` returns exactly one property for this service account: `properties/328407537`, "www.businessexpert.co.uk GA4". The companydebt.com property is not visible here |
+| Google Ads API | **Not connected this session** (`GOOGLE_APPLICATION_CREDENTIALS` unset). Separately, the Ads API does **not** expose an observed-versus-modelled conversion split at all, so even with access it would not yield a rate |
+| Search Console | **Works** (`https://www.companydebt.com/`, siteFullUser). But GSC only supplies the cookie-free *denominator*. Without a consented *numerator* from GA4 it cannot produce a ratio |
+| Server-side signal on WP Engine | **None exists.** Consent is logged by the browser to `log.cookieyes.com/api/v1/log`, a third party. The site itself stores no record of any consent decision |
+
+The intended method was to divide a consent-dependent traffic count (GA4) by a consent-independent one
+(Google Ads clicks, or GSC clicks). Losing GA4 access removes the numerator, and there is no substitute.
+
+**No defensible number can be produced.** A figure quoted here would be a guess wearing a measurement's
+clothes, which is worse than no answer.
+
+**What would settle it, in order of speed:**
+
+1. **A CookieYes dashboard login.** CookieYes records every banner interaction and reports accepted /
+   rejected / no-action directly. This is a five-minute answer for whoever holds the account. It is the
+   only route that gives the true rate rather than an estimate.
+2. **GA4 read access to G-P39KJ34V6G** for the existing service account. That enables the
+   clicks-versus-sessions estimate. Note this would be a *lower bound* on the acceptance rate, not the
+   rate itself, because GA4 also loses visitors to the tag-delay problem in §2 — the two losses are
+   confounded and cannot be separated from outside.
+
+**INFERRED, and flagged as such:** the banner is non-blocking and does not appear until the visitor
+interacts (§2). Both push the true rate down relative to a blocking banner. That is a direction of
+travel, not a number, and it should not be quoted as one.
+
+---
+
+## 2. Banner review — VERIFIED by live inspection
+
+Observed on `https://www.companydebt.com/` and `/contact-us/`, desktop 1280x720 and mobile 375x812.
+
+### 2a. It is delivered through Tag Manager, and that is the biggest problem
+
+**VERIFIED.** The CookieYes script appears nowhere in the served HTML of any page checked (a
+case-insensitive search for "cookieyes" returns zero on the homepage and `/contact-us/`). It loads at
+runtime from `cdn-cookieyes.com/client_data/75253ed13008cd18bc532356/`, immediately after `gtm.js`.
+**CookieYes is deployed inside GTM-5GTD9ZP**, not as a WordPress plugin.
+
+That matters because WP Rocket delays all JavaScript until first interaction (main audit gap #7).
+Resource timings from a controlled load of `/contact-us/?gclid=…`:
+
+| Time | What loaded |
+|---|---|
+| 631 ms | `cdn.livechatinc.com/tracking.js` — LiveChat, **excluded from the delay** |
+| 1,192–2,240 ms | LiveChat API calls, chat session opens |
+| **10,629 ms** | `gtm.js?id=GTM-5GTD9ZP` — only after interaction |
+| 10,776 ms | CookieYes `script.js` |
+| 10,832 ms | CookieYes `banner.js` |
+| 11,309 ms | Banner images render |
+
+At first paint the page has **zero cookies, no `dataLayer`, no `gtag`, no GTM and no banner in the DOM
+at all** (verified directly). The visitor reads the page first and is asked afterwards — if they ever
+move the mouse. Anyone who lands, reads and leaves is never asked anything.
+
+**The cookie banner is behind the same delay as the tags it is supposed to govern.** LiveChat has
+already been given an exemption from that delay (`cd-livechat-wpr-exclude.php` adds `cdn.livechatinc.com`,
+`secure.livechatinc.com` and `livechatinc.com` to WP Rocket's `delay_js_exclusions`). CookieYes has not.
+
+### 2b. Placement — it does not block anything
+
+**VERIFIED.** Container `cky-consent-container cky-box-bottom-left`, `position: fixed`.
+Desktop: 440 px box, bottom-left. Mobile: full-width strip at the bottom.
+
+The overlay element carries the class `cky-hide` and computes to `display: none`; `document.body`
+computes `overflow: visible`. **The page is fully readable and scrollable without answering.** This is a
+bar people scroll past, not a modal.
+
+Consequence, seen in the cookie itself: after loading two pages without touching the banner, the stored
+value was
+
+```
+consentid:…,consent:no,action:,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no
+```
+
+`action:` is **empty** — no decision was made — and everything is already recorded as `no`. Ignoring the
+banner produces the same tracking outcome as pressing Reject All.
+
+### 2c. Buttons — Reject is one click, same size as Accept
+
+**VERIFIED, computed styles and geometry.**
+
+Desktop, all on one row, all 44 px tall:
+
+| Button | Size | Fill | Text |
+|---|---|---|---|
+| Customize | 127 x 44 | transparent, blue outline | blue |
+| **Reject All** | 120 x 44 | transparent, blue outline | blue |
+| **Accept All** | 123 x 44 | **solid blue `#1863dc`** | white |
+
+Mobile, stacked full width (325 x 44 each), in this top-to-bottom order:
+**Accept All → Customize → Reject All.**
+
+On the test that matters for the ICO's stated expectation — that rejecting is **as easy as** accepting —
+**Reject All is a single click, at the same size, at the same level, never hidden behind Customize.**
+That test is met on both desktop and mobile.
+
+Two softer points, which are style rather than the hard rule:
+- Accept is solid-filled while Reject is outline-only, so Accept is visually weightier.
+- On mobile Accept is first and Reject is last.
+
+**Not a ruling on lawfulness.** The equal-ease requirement appears to be satisfied; the visual weighting
+is the kind of thing the ICO has commented on in guidance. Whoever owns the cookie policy should form
+their own view.
+
+### 2d. Copy
+
+**VERIFIED, exact text:**
+
+> We value your privacy
+> We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze
+> our traffic. By clicking "Accept All", you consent to our use of cookies.
+
+This is CookieYes's stock wording, unedited: American spelling ("personalized", "analyze"), and it
+describes what the site wants rather than anything the visitor gets. The preference centre offers five
+categories: Necessary, Functional, Analytics, Performance, Advertisement.
+
+### 2e. Page coverage
+
+**VERIFIED.** The CookieYes targeting config (`6KMpOrCv.json`) reads `[{"targetBanner":1945786,
+"condition":"all"}]` — all pages, no exclusions. The banner was observed on the homepage and
+`/contact-us/`. **No page-type gap was found.** (An earlier apparent gap on an `/insolvency/` URL was my
+error — the URL I tried returns 404, so nothing loaded. Recorded here so it is not mistaken for a finding.)
+
+---
+
+## 3. The open compliance question — RESOLVED, and the answer is not what the earlier flag said
+
+This is the section that changes the picture.
+
+### 3a. The browser-side script is correctly gated
+
+**VERIFIED.** The live minified `cd-attribution.js` still gates capture:
+
+```js
+function runCapture(){ if (started || !hasConsent()) return; … }
+```
+
+Live test: loaded `/?gclid=TESTCONSENTAUDIT2026` and did not touch the banner. Result: **no `cd_*`
+cookies were written at all.** The earlier flag — that this script had at times run regardless of consent
+— does **not** describe the deployed code today. On this path, it behaves correctly.
+
+**One genuine mismatch remains.** The gate is:
+
+```js
+/(?:advertisement|analytics|performance):yes/
+```
+
+Any **one** of three categories opens it. A visitor who accepts Analytics but explicitly declines
+Advertisement still has their Google click ID stored. The gate is named for advertising but is not
+keyed to it.
+
+### 3b. But a bare `gclid` cookie is set for everyone, consent or not
+
+**VERIFIED, twice, on two different pages.** Loaded `/?gclid=TESTCONSENTAUDIT2026` and
+`/contact-us/?gclid=TIMINGPROBE7788` without touching the banner. In both cases the consent cookie read
+`consent:no, action:, analytics:no, performance:no, advertisement:no` — and a first-party cookie named
+**`gclid` held the exact test value**. It **persisted across navigation** to a page with no `gclid` in
+the URL.
+
+**Setter identified by elimination on resource timing.** At the moment the cookie was first observed,
+`window.google_tag_manager` and `window._googCallTrackingImpl` were both `undefined` and
+`cd-attribution.js` had not yet loaded. The only tracker that had run was **LiveChat's
+`tracking.js`, loaded at 631 ms** — because LiveChat is deliberately excluded from WP Rocket's JS delay.
+
+So the sequence for a Google Ads visitor is: **LiveChat loads and stores the click ID at well under one
+second; the cookie banner does not exist for another ten seconds.**
+
+It is not set by the server — `Set-Cookie` on a cache-busted live request returns only Cloudflare's
+`__cf_bm`. It is set in the browser.
+
+### 3c. That cookie reaches the CRM
+
+**VERIFIED** in `cd-livechat-zoho.php` (pulled from staging). In the Gravity Forms handler:
+
+```php
+$url   = rgar($entry,'source_url');
+$gclid = cd_lc_from_url($url,'gclid');
+if ($gclid==='' && isset($_COOKIE['gclid'])) $gclid = $_COOKIE['gclid'];
+…
+if ($gclid) $fields['Google_Click_ID'] = $gclid;
+```
+
+**There is no consent check anywhere in this file.** Three things follow:
+
+1. The click ID is read from the un-gated `gclid` cookie and written to Zoho as `Google_Click_ID`.
+2. It is *also* parsed straight out of `source_url`, so a visitor who lands on `/?gclid=…` and submits
+   the form on that same page is captured even with no cookie involved at all.
+3. `Website_URL` stores the full `source_url`, which carries the click ID in the query string.
+
+The LiveChat chat path (`cd_lc_hook`) does the same from chat custom variables, also with no consent check.
+
+### 3d. The factual position, for whoever owns the cookie policy
+
+**A visitor who has not answered the banner — or who has actively pressed Reject All — still has their
+Google click ID stored in a first-party cookie on their device, and still has it written into their
+Zoho CRM record if they submit a form or start a live chat.**
+
+That is the fact. **This addendum does not rule on whether it is lawful.** It is a decision for whoever
+owns the cookie policy, and it needs one of two outcomes: either the capture is brought behind consent,
+or the cookie policy is updated to disclose it. What is not tenable is a banner that says one thing while
+the code does another.
+
+Worth noting in fairness: the practical effect today is small, because the Zoho pipeline is delivering
+nothing anyway (Addendum 1 §6, Addendum 2 §B2) and 453 of 456 click-ID leads were already outside
+Google's 90-day import window. The exposure is procedural, not a live flood of data.
+
+### 3e. Two related findings
+
+**VERIFIED — Consent Mode has no explicit default.** Google's internal consent state shows
+`implicit: true` on `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage`. That
+means **no `gtag('consent','default',…)` runs before the tags**. The denial arrives afterwards, as an
+`update`. Observed `dataLayer` order:
+
+1. `gtm.js` starts
+2. **`config AW-977276330/xrGGCKvV68gDEKqbgNID` with `phone_conversion_number`** — the consent-unchecked
+   Custom HTML tag added 28 July (Addendum 1 §5ii)
+3. `gtm.dom`
+4. `gtm.load`
+5. `consent update` — everything denied
+6. `cookie_consent_update`
+
+**The number-swap tag fires before any consent signal exists.** This is the concrete harm of the missing
+default, and it is a second reason to remove that duplicate tag.
+
+**VERIFIED — the cookieless ping carries the click ID.** A request to
+`pagead2.googlesyndication.com/ccm/collect` including `&gclid=TIMINGPROBE7788` fires for declining
+visitors. This is normal, documented Consent Mode behaviour — no cookie is set and it is what feeds
+modelling — but it is recorded here for completeness.
+
+---
+
+## 4. Options, with realistic upside
+
+### 4a. Settle the contradiction in §3 — do this first
+
+No measurement upside; it removes an inconsistency between the stated policy and the code. Either:
+
+- **Gate the capture:** hold LiveChat's tracker until consent (the same exclusion mechanism already
+  exists, in reverse), and add a consent check to `cd-livechat-zoho.php` before `Google_Click_ID` and
+  before storing `source_url` with its query string; or
+- **Disclose it:** update the cookie policy to state that a click identifier is stored.
+
+**This is the policy owner's call, not a technical default.** Flagging only — no change made.
+
+### 4b. Let people actually see the banner — the biggest banner lever
+
+Not copy, not colour: **the banner does not exist until the visitor interacts**, because it sits inside
+GTM behind WP Rocket's delay (§2a). Taking CookieYes out of the delay — exactly the exemption LiveChat
+already has — would let visitors answer at all. **INFERRED:** this should move the acceptance rate more
+than any wording change, because the current rate includes everyone who was never asked. It also fixes
+the §3e ordering problem, since consent would be established before the tags fire.
+
+Trade-off, stated honestly: it makes the banner appear earlier and more visibly, which is a slight
+first-impression cost on a site where visitors arrive stressed.
+
+### 4c. Banner copy and layout — modest
+
+Replace CookieYes's stock American text with something specific and British; on mobile, move Reject out
+of last place. Keep Reject as one click, which it already is. Real but small.
+
+### 4d. Ask people directly — best value for the effort
+
+**VERIFIED: no form has a "how did you hear about us?" field.** Checked live via the Gravity Forms API:
+
+| Form | Fields |
+|---|---|
+| 40 Quick Quote | Name, Email, Phone, Amount Bank, Amount HMRC, Amount Creditors, Amount Assets, CAPTCHA |
+| 41 Contact Us | Name, Email, Telephone, Comments, HTML Block, CAPTCHA |
+| 44 Home Page - Contact Block | Name, Email, Telephone, CAPTCHA |
+| 29 Contact Us - Advisors | Name, Email, Phone, Message, HTML Block, CAPTCHA |
+
+At roughly two enquiries a day this is entirely viable, and it is **completely unaffected by cookies,
+consent, ad blockers or browser privacy changes**. It will not reconcile to Google click IDs, so it
+cannot feed offline conversion imports — but it answers the business question ("where do our clients
+come from") which the click ID only ever answered indirectly.
+
+**Blocker to fix first — VERIFIED:** `check_live_form_entries.py` shows only **form 44** receiving new
+entries (newest 29 Jul 2026). Forms 29, 40 and 41 have newest entries of 13 Mar, 23 Mar and 16 Mar 2026.
+Adding a field to a form that is not storing submissions achieves nothing. **This needs its own
+investigation** and is out of scope here.
+
+### 4e. Server-side call tracking — the largest measurable upside
+
+Phone is the business: **124 of 272 conversions (46%) are calls placed straight from the ad** (Addendum 1
+§6). Website call tracking is effectively dead at **4 conversions in 90 days**, because Google's number
+swapping needs `ad_storage` granted and the two call tags additionally carry a manual `ad_storage`
+requirement (Addendum 1 §5i).
+
+A dedicated call-tracking provider swaps the number **server-side, at page render**, and reports the call
+back from its own switchboard. It does not depend on the visitor's browser, cookies, or Google's consent
+state. The account's **removed "Infinity Calls" conversion action** indicates Infinity was used here
+before, so this is a return to something that already worked rather than a new experiment.
+
+**Stated honestly:** this is not a consent loophole. It still involves assigning and storing an identifier
+against a visitor, and it carries its own privacy position that has to be settled the same way §3 does.
+What it does is make the measurement work *independently of the Google tag*, which is a different and
+more durable thing.
+
+### 4f. What will not work — say this plainly
+
+- **There is no lawful technical trick to track people who declined.** Anything that captures them
+  anyway is the §3 problem with extra steps.
+- **Consent Mode modelling does not help the CRM loop.** It is already on and working (Addendum 1 §7).
+  It estimates conversions Google could not observe. It **never returns a click ID**, so it can never
+  feed an offline conversion import back from Zoho.
+- **Google tag gateway does not change any of this.** It changes where the tag is *served from*
+  (a first-party endpoint instead of Google's domain). It does not change whether consent was given, and
+  it does not recover declining visitors.
+
+---
+
+## Addendum 3 — net position
+
+| Question | Answer |
+|---|---|
+| What is the acceptance rate? | **Unmeasured, and not measurable from here.** No CookieYes credentials exist in `.env`; GA4 access covers only businessexpert.co.uk. Needs a CookieYes dashboard login (direct answer) or GA4 access to G-P39KJ34V6G (estimate only) |
+| Is Reject as easy as Accept? | **Yes** — one click, same size, same row, never hidden behind Customize. Accept is solid-filled and sits first on mobile; styling weighting only |
+| Does the banner block the page? | **No.** Bottom-left box, overlay disabled, page fully scrollable. Ignoring it records the same as Reject All |
+| Does the banner always appear? | Targets all pages — but **does not exist until the visitor interacts**, because CookieYes sits inside GTM behind WP Rocket's JS delay |
+| Is the click ID captured from people who declined? | **Yes.** Not by `cd-attribution.js`, which is correctly gated, but by an un-gated first-party `gclid` cookie set by LiveChat at 631 ms, which `cd-livechat-zoho.php` then writes to Zoho with no consent check |
+| Is that lawful? | **Not ruled on here.** Facts are laid out in §3d for the cookie-policy owner to decide |
+| Biggest realistic upside | **Server-side call tracking** (§4e) — phone is 46% of conversions and website call tracking reads 4 in 90 days |
+| Best value for effort | **A "how did you hear about us?" field** (§4d) — but only after fixing why forms 29/40/41 stopped storing entries |
+
+Nothing in this addendum was changed. No live, staging, Ads, GTM, GA4 or Search Console setting was
+modified, and no cookie prompt was answered.
