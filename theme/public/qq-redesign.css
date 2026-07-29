@@ -545,7 +545,7 @@
 @media (min-width: 961px) {
 	.qq-v2 .qq-hero__title     { font-size: 56px; }
 	.qq-v2 .qq-topbar__inner   { padding: 16px 84px; }
-	.qq-v2 .qq-hero__inner     { padding: 187px 84px 64px; }
+	.qq-v2 .qq-hero__inner     { padding: 187px 84px 94px; }   /* bottom 94 = the ~94px of visible air above the hero content (187 top less the ~93px fixed topbar), so top/bottom air match */
 	.qq-v2 .qq-trust__inner    { padding: 29px 84px; }   /* +20% top/bottom */
 	.qq-v2 .qq-process         { padding: 48px 0; }   /* half vertical; full-width band */
 	.qq-v2 .qq-process__inner  { max-width: 1180px; margin: 0 auto; padding: 0 84px; }
@@ -700,3 +700,9 @@
    comdebstage, so Google renders an "invalid domain" error). The CAPTCHA is
    optional, so hiding it does not block submission. Live keeps it visible. */
 .qq--staging .qq-card--contact .qq-card__form #field_41_6 { display: none !important; }
+
+/* Testimonial author: keep the name (e.g. "Company Director") and the company
+   line tight together. The theme's tall <p> line-height plus an 8px margin left
+   too much air between them. Applies at all widths. */
+.qq-v2 .qq-tmony__name { line-height: 1.25; }
+.qq-v2 .qq-tmony__role { margin-top: 2px; line-height: 1.25; }
