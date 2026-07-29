@@ -80,8 +80,14 @@ Contact Us (form 41) and the homepage block (form 44) declare Name, Email **and*
 
 Enhanced conversions for leads works by matching a hashed email address. Every lead with no usable email is permanently unmatchable. Switching the feature on over this data would quietly under-report and look like poor ad performance.
 
-**Fix:** already queued as a separate job.
-**Who:** Claude, on staging first, with Piers approving the live push.
+**Fix:** **Done in code, 29 Jul** — `mu-plugins/cd-gform-hardening.php` adds honeypot enforcement, email validation, UK phone validation and outreach-spam blocking. Still needs deploying and verifying on staging, then live.
+
+That job also confirmed and extended this finding:
+- forms that already use a properly typed email field had **0 bad emails across 622 entries**, so field typing was the entire cause
+- phone numbers are now stored in E.164 (`+447700900123`) rather than `07700900123`, because the readable form is the one Google cannot match on
+- a knock-on effect not spotted in this audit: `cd-livechat-zoho.php` only accepts a value containing `@`, so junk emails reached Zoho blank, and a blank **defeats the duplicate check** — meaning every bot created a brand new lead rather than merging into an existing one
+
+**Who:** Claude for the staging deploy, Piers to approve the live push.
 
 ### 4. Phone measurement is thinner than it looks
 **Cost: unquantified, likely material, since phone is a primary channel.**
@@ -169,8 +175,9 @@ The specific claim from the July round that conversion tracking *overstates* vol
 - Restore Google Ads API access so the account settings can be audited properly
 
 **Do next**
-- Finish the form validation job (spam protection, real email fields, UK phone rules)
-- Do not switch on enhanced conversions for leads until email validation is live
+- Deploy and verify the form hardening (written 29 Jul, not yet on staging or live)
+- Do not switch on enhanced conversions for leads until that email validation is actually live, not merely written
+- Fix `scripts/check_unmerged_branches.py` — it crashes on any repo using worktrees, so the safety net for unmerged work is currently dead
 - Confirm the phone conversion settings in the account, including any call-duration threshold
 - Check inside GTM that container KT6M67T is empty, then archive it
 
