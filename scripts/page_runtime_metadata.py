@@ -67,6 +67,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     # enforcement — creditor action, legal pressure, petitions
     "bailiffs-high-court-enforcement-officers": "enforcement",
     "dealing-with-an-hmrc-winding-up-petition": "enforcement",
+    "winding-up-petitions": "enforcement",
     "can-a-supplier-force-my-company-into-liquidation": "enforcement",
     "winding-up-petition-vs-compulsory-liquidation": "enforcement",
     "ccj-when-going-insolvent": "enforcement",
