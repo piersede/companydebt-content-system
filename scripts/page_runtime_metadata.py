@@ -60,6 +60,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "can-a-director-be-sued-personally-by-creditors": "director_risk",
     "redundancy-payments-for-directors-in-an-mvl": "director_risk",
     "are-directors-personally-liable-for-company-debts": "director_risk",
+    "can-personal-assets-of-directors-be-seized-from-a-ltd-company": "director_risk",
 
     # pricing_cost — fees, costs, affordability
     "how-much-does-liquidation-cost": "pricing_cost",
@@ -73,6 +74,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "ccj-when-going-insolvent": "enforcement",
     "what-happens-if-a-creditor-takes-me-to-court": "enforcement",
     "hmrc-as-a-creditor-in-liquidation": "enforcement",
+    "debt-creditor-pressure-hub": "enforcement",
 
     # recovery_strategy — alternatives, decisions, planning ahead
     "alternatives-to-company-liquidation": "recovery_strategy",
@@ -81,6 +83,8 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "should-i-close-my-company-or-try-to-save-it": "recovery_strategy",
     "cva-vs-strike-off-vs-liquidation": "recovery_strategy",
     "can-you-liquidate-to-avoid-paying-suppliers": "recovery_strategy",
+    "company-rescue-solutions": "recovery_strategy",
+    "company-rescue-recovery-hub": "recovery_strategy",
 
     # legal_compliance — dissolution, regulatory, statutory timelines
     "company-strike-off-and-dissolution": "legal_compliance",
