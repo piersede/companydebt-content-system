@@ -65,14 +65,14 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<div class="qq-hero__grid">
 			<div class="qq-hero__left">
 				<span class="qq-hero__pill">Licensed and Regulated Insolvency Practitioners</span>
-				<h1 class="qq-hero__title"><?php echo is_page( 'close-my-company' ) ? 'Close Your Limited Company <span class="qq-accent">the Right Way</span>' : 'Understand Your Company&rsquo;s <span class="qq-accent">Options</span>'; ?></h1>
-				<p class="qq-hero__sub"><?php echo is_page( 'close-my-company' ) ? 'Thinking of closing your limited company? Whether it is solvent and ready to be struck off, or debts mean strike-off is not an option, we will explain the right way to close it &mdash; the costs, the timescales and what it means for you as a director.' : 'Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.'; ?></p>
+				<h1 class="qq-hero__title"><?php echo is_page( 'insolvency-practitioner' ) ? 'Find a Licensed Insolvency <span class="qq-accent">Practitioner</span>' : ( is_page( 'close-my-company' ) ? 'Close Your Limited Company <span class="qq-accent">the Right Way</span>' : 'Understand Your Company&rsquo;s <span class="qq-accent">Options</span>' ); ?></h1>
+				<p class="qq-hero__sub"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get free, confidential advice from a licensed and regulated insolvency practitioner, wherever you are in the UK. We will explain the company&rsquo;s options, the likely costs and the right procedure &mdash; with no obligation to proceed.' : ( is_page( 'close-my-company' ) ? 'Thinking of closing your limited company? Whether it is solvent and ready to be struck off, or debts mean strike-off is not an option, we will explain the right way to close it &mdash; the costs, the timescales and what it means for you as a director.' : 'Whether you are considering closing your limited company, struggling with company debts or hoping the business can continue, answer a few questions about its current financial position. We will explain the realistic options, likely costs and next steps. You do not need to know which insolvency procedure, if any, the company requires.' ); ?></p>
 
 				<ul class="qq-hero__ticks">
 					<?php
-					$qq_ticks = is_page( 'close-my-company' )
+					$qq_ticks = is_page( 'insolvency-practitioner' ) ? array( 'Fully licensed and regulated practitioners', 'Free initial advice, anywhere in the UK', 'Clear costs explained before you commit', 'Confidential, with no obligation to proceed' ) : ( is_page( 'close-my-company' )
 						? array( 'Advice on strike-off, dissolution and closure', 'Whether you can strike off or need to liquidate', 'Clear costs and timescales before you decide', 'Confidential help, no pressure, no obligation' )
-						: array( 'Clear advice on rescue, restructuring and closure', 'Confidential help from an experienced insolvency team', 'Clear costs before you make any decision', 'No pressure and no obligation to proceed' );
+						: array( 'Clear advice on rescue, restructuring and closure', 'Confidential help from an experienced insolvency team', 'Clear costs before you make any decision', 'No pressure and no obligation to proceed' ) );
 					foreach ( $qq_ticks as $qq_t ) {
 						echo '<li><span class="qq-tick">&#10003;</span> ' . esc_html( $qq_t ) . '</li>';
 					}
@@ -204,8 +204,8 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 		<div class="qq-process__inner">
 		<div class="qq-process__head">
 			<p class="qq-eyebrow">How it works</p>
-			<h2 class="qq-h2"><?php echo is_page( 'close-my-company' ) ? 'Closing Your Company, Step by Step' : 'A Clear Four-Step Process'; ?></h2>
-			<p class="qq-lead"><?php echo is_page( 'close-my-company' ) ? 'You do not need to work out the right closure route yourself. Tell us where the company stands and we will confirm whether a strike-off fits &mdash; and handle it properly if it does.' : 'You do not need to diagnose the problem yourself. Tell us what is happening and we will explain the realistic options.'; ?></p>
+			<h2 class="qq-h2"><?php echo is_page( 'insolvency-practitioner' ) ? 'How to Get Advice From a Licensed Practitioner' : ( is_page( 'close-my-company' ) ? 'Closing Your Company, Step by Step' : 'A Clear Four-Step Process' ); ?></h2>
+			<p class="qq-lead"><?php echo is_page( 'insolvency-practitioner' ) ? 'You do not need to know which procedure the company needs. Tell us what is happening and a licensed insolvency practitioner will explain your options and the likely costs.' : ( is_page( 'close-my-company' ) ? 'You do not need to work out the right closure route yourself. Tell us where the company stands and we will confirm whether a strike-off fits &mdash; and handle it properly if it does.' : 'You do not need to diagnose the problem yourself. Tell us what is happening and we will explain the realistic options.' ); ?></p>
 		</div>
 		<div class="qq-process__grid">
 			<div class="qq-process__media">
@@ -213,7 +213,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			</div>
 			<div class="qq-steps">
 <?php
-				$proc_steps = is_page( 'close-my-company' ) ? array(
+				$proc_steps = is_page( 'insolvency-practitioner' ) ? array( array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8 13h6"/><path d="M8 17h6"/><path d="M8 9h2"/></svg>', 'Tell Us About the Company', 'Share a few details about the company&rsquo;s debts, assets and situation. You do not need exact figures.' ), array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', 'Speak With a Licensed Insolvency Practitioner', 'You will talk to a regulated professional who reviews the position with you, not a call centre.' ), array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>', 'Understand Your Options and Costs', 'We explain the realistic procedures, what each involves and the likely cost, in plain English.' ), array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.8 10A10 10 0 1 1 17 3.34"/><path d="m9 11 3 3L22 4"/></svg>', 'Decide With No Pressure', 'The first conversation is free. You decide whether to proceed, with no obligation to appoint us.' ) ) : ( is_page( 'close-my-company' ) ? array(
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8 13h6"/><path d="M8 17h6"/><path d="M8 9h2"/></svg>', 'Tell Us Where the Company Stands', 'Share the basics: any remaining debts, any assets, and whether the company has traded recently. Those three things decide whether a strike-off is actually the right way to close it.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>', 'We Confirm Strike-Off Is the Right Route', 'Strike-off only suits a company with no significant debts or assets left. We check that honestly &mdash; and if a solvent liquidation (MVL) or a Creditors&rsquo; Voluntary Liquidation would be safer or more tax-efficient, we tell you.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', 'We Handle the Filing and Any Objections', 'If strike-off is right, we prepare and submit the DS01, notify the parties who must be told, and deal with any objection from HMRC or other creditors &mdash; so it does not stall or get reversed.' ),
@@ -224,7 +224,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', 'Speak With an Experienced Adviser', 'A member of our insolvency team will review the information with you and ask any further questions needed to understand the situation.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>', 'Understand the Realistic Options', 'We will explain whether the company may have a viable route forward or whether closure should be considered. This may include informal arrangements, restructuring or a formal insolvency process.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.8 10A10 10 0 1 1 17 3.34"/><path d="m9 11 3 3L22 4"/></svg>', 'Decide What Happens Next', 'You will receive a clear explanation of the likely process and costs. You can then decide whether to proceed, with no pressure or obligation.' ),
-				);
+				) );
 				foreach ( $proc_steps as $psi => $ps ) {
 					$fin = ( $psi === count( $proc_steps ) - 1 ) ? ' qq-step--final' : '';
 					echo '<div class="qq-step' . $fin . '"><span class="qq-step__ico">' . $ps[0] . '</span><div class="qq-step__body"><h3 class="qq-step__title">' . $ps[1] . '</h3><p class="qq-step__text">' . $ps[2] . '</p></div></div>';
@@ -232,7 +232,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				?>
 				</div>
 		</div>
-		<p class="qq-process__note"><?php echo is_page( 'close-my-company' ) ? 'If the company cannot pay its debts, striking it off is the wrong route and can leave you personally exposed. Where that is the case, a licensed insolvency practitioner will close it properly through liquidation.' : 'If a formal insolvency procedure is appropriate and you choose to proceed, it will be handled by a licensed insolvency practitioner.'; ?></p>
+		<p class="qq-process__note"><?php echo is_page( 'insolvency-practitioner' ) ? 'Any formal insolvency procedure is carried out by a licensed and regulated insolvency practitioner. The first conversation is free and confidential.' : ( is_page( 'close-my-company' ) ? 'If the company cannot pay its debts, striking it off is the wrong route and can leave you personally exposed. Where that is the case, a licensed insolvency practitioner will close it properly through liquidation.' : 'If a formal insolvency procedure is appropriate and you choose to proceed, it will be handled by a licensed insolvency practitioner.' ); ?></p>
 		</div>
 	</section>
 
@@ -240,13 +240,13 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 	<section class="qq-options">
 		<div class="qq-options__inner">
 		<div class="qq-options__head">
-			<p class="qq-eyebrow"><?php echo is_page( 'close-my-company' ) ? 'Ways to close' : 'Possible options'; ?></p>
-			<h2 class="qq-h2"><?php echo is_page( 'close-my-company' ) ? 'Which Way of Closing Fits Your Company?' : 'What Options Could Be Available?'; ?></h2>
-			<p class="qq-lead"><?php echo is_page( 'close-my-company' ) ? 'Which route is right comes down to two things: whether the company is solvent, and what it still owns and owes.' : 'The right approach depends on the company&rsquo;s debts, assets, cash flow and future prospects.'; ?></p>
+			<p class="qq-eyebrow"><?php echo is_page( 'insolvency-practitioner' ) ? 'What we handle' : ( is_page( 'close-my-company' ) ? 'Ways to close' : 'Possible options' ); ?></p>
+			<h2 class="qq-h2"><?php echo is_page( 'insolvency-practitioner' ) ? 'What a Licensed Insolvency Practitioner Can Do' : ( is_page( 'close-my-company' ) ? 'Which Way of Closing Fits Your Company?' : 'What Options Could Be Available?' ); ?></h2>
+			<p class="qq-lead"><?php echo is_page( 'insolvency-practitioner' ) ? 'A licensed insolvency practitioner can rescue, restructure or close a company &mdash; and will tell you honestly which is realistic for yours.' : ( is_page( 'close-my-company' ) ? 'Which route is right comes down to two things: whether the company is solvent, and what it still owns and owes.' : 'The right approach depends on the company&rsquo;s debts, assets, cash flow and future prospects.' ); ?></p>
 		</div>
 		<div class="qq-options__grid">
 <?php
-				$qq_opts = is_page( 'close-my-company' ) ? array(
+				$qq_opts = is_page( 'insolvency-practitioner' ) ? array( array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>', 'Company Rescue and Restructuring', 'Where the business is viable, options like a CVA or administration can protect it while the debts are dealt with.' ), array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', 'Liquidation (CVL or MVL)', 'Closing a company properly &mdash; whether it is insolvent (CVL) or solvent and being wound up (MVL).' ), array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>', 'Honest Advice First', 'Not sure what you need? We assess the position, explain the likely costs and never push you into a procedure.' ) ) : ( is_page( 'close-my-company' ) ? array(
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>', 'Strike-Off (Voluntary Dissolution)', 'The simplest, cheapest close for a company with no significant debts or assets left. We confirm it qualifies, file the DS01 and handle any objection.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>', 'Members&rsquo; Voluntary Liquidation', 'For a solvent company with retained profit or assets to release &mdash; usually the most tax-efficient way to close. Handled by a licensed insolvency practitioner.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', 'Creditors&rsquo; Voluntary Liquidation', 'If the company cannot pay its debts, strike-off is not safe. A CVL closes it properly and shields you from the risks of dissolving with debts unpaid.' ),
@@ -255,13 +255,13 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>', 'Continue or Rescue the Business', 'If the business is viable, this can mean better cash flow, negotiating with creditors, or a formal restructuring process.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', 'Close an Insolvent Company', 'Where recovery isn&rsquo;t realistic, a Creditors&rsquo; Voluntary Liquidation closes the company in an orderly way.' ),
 					array( '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>', 'Consider Another Route', 'Some companies suit a different closure or insolvency procedure. We&rsquo;ll explain which after reviewing your position.' ),
-				);
+				) );
 				foreach ( $qq_opts as $qo ) {
 					echo '<div class="qq-option"><span class="qq-option__ico">' . $qo[0] . '</span><h3 class="qq-option__title">' . $qo[1] . '</h3><p class="qq-option__text">' . $qo[2] . '</p></div>';
 				}
 				?>
 				</div>
-		<p class="qq-options__foot"><?php echo is_page( 'close-my-company' ) ? 'You do not need to know which route you need before contacting us.' : 'You do not need to choose an option before contacting us.'; ?></p>
+		<p class="qq-options__foot"><?php echo is_page( 'insolvency-practitioner' ) ? 'Not sure which applies? That is exactly what the first call is for.' : ( is_page( 'close-my-company' ) ? 'You do not need to know which route you need before contacting us.' : 'You do not need to choose an option before contacting us.' ); ?></p>
 		</div>
 	</section>
 
@@ -287,7 +287,22 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 			<p class="qq-eyebrow">Company debt and insolvency</p>
 			<h2 class="qq-h2">Frequently Asked Questions</h2>
 		</div>
-		<div class="qq-faq__list">
+		<?php $ip_faqs = array(
+	array( 'What Is a Licensed Insolvency Practitioner?', array( 'A licensed insolvency practitioner is a regulated professional authorised to advise on and carry out formal insolvency procedures, such as liquidations, administrations and voluntary arrangements.', 'They are licensed by a recognised professional body and must meet strict conduct and competence standards. Only a licensed practitioner can be appointed to place a company into most formal procedures.' ) ),
+	array( 'How Much Does an Insolvency Practitioner Cost?', array( 'The cost depends on the procedure and the complexity of the case &mdash; the number of creditors and employees, the assets involved and the state of the records.', 'There is no single set price, but the first conversation is free and the likely cost, and what it includes, is explained clearly before you commit to anything.' ) ),
+	array( 'Is a Licensed Insolvency Practitioner the Same as the Insolvency Service?', array( 'No. The Insolvency Service is a government agency. It handles compulsory, court-ordered liquidations and bankruptcies, investigates director conduct and runs the Redundancy Payments Service.', 'A licensed insolvency practitioner is a private, regulated professional you appoint to advise on and carry out voluntary procedures such as a CVL, MVL, CVA or administration. If you are choosing how to deal with a company yourself, it is a practitioner you need.' ) ),
+	array( 'Can You Help Wherever I Am in the UK?', array( 'Yes. We work with company directors across England, Wales, Scotland and Northern Ireland, and most of the process is handled by phone, email and video.', 'You do not need a practitioner on your doorstep. You need the right one for your situation.' ) ),
+	array( 'How Do I Check That a Practitioner Is Licensed?', array( 'Every licensed insolvency practitioner is authorised by a recognised professional body and appears on a public register, so their licence can be checked.', 'We will always tell you who would be appointed and confirm their authorisation before anything formal happens.' ) ),
+	array( 'Do I Have to Proceed After the First Call?', array( 'No. The first conversation is free, confidential and without obligation. You can ask questions, get a clear picture of your options and costs, and decide in your own time.', 'We will never pressure you into appointing us or starting a procedure.' ) ),
+); ?>
+			<div class="qq-faq__list">
+<?php if ( is_page( 'insolvency-practitioner' ) ) {
+	foreach ( $ip_faqs as $fq ) {
+		echo '<div class="qq-faq__item"><button class="qq-faq__q" type="button" aria-expanded="false"><span>' . $fq[0] . '</span><span class="qq-faq__sign" aria-hidden="true">+</span></button><div class="qq-faq__a">';
+		foreach ( $fq[1] as $fp ) { echo '<p>' . $fp . '</p>'; }
+		echo '</div></div>';
+	}
+} else { ?>
 			<div class="qq-faq__item">
 				<button class="qq-faq__q" type="button" aria-expanded="false">
 					<span>Do I Need to Know Which Option the Company Requires?</span>
@@ -357,15 +372,16 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 					<p>A typical liquidation may remain open for 12 to 18 months, although the director&rsquo;s main involvement is usually concentrated near the beginning of the process. The likely timescale should be explained before you proceed.</p>
 				</div>
 			</div>
-		</div>
+		<?php } ?>
+			</div>
 	</section>
 
 	<!-- FINAL CTA -->
 	<section class="qq-finalcta">
 		<div class="qq-finalcta__inner">
-			<h2 class="qq-h2"><?php echo is_page( 'close-my-company' ) ? 'Ready to Close Your Limited Company?' : 'Understand Your Company&rsquo;s Options'; ?></h2>
-			<p class="qq-finalcta__text"><?php echo is_page( 'close-my-company' ) ? 'Tell us what is happening with the company and we will explain the right way to close it, what it costs and what it means for you. There is no obligation to proceed.' : 'Answer a few questions about the company&rsquo;s current financial position. We will explain the realistic options, likely costs and next steps. There is no obligation to proceed.'; ?></p>
-			<a href="<?php echo is_page( 'close-my-company' ) ? '#close-my-company-form' : '#quick-quote-form'; ?>" class="qq-btn qq-btn--solid"><?php echo is_page( 'close-my-company' ) ? 'Request a Callback' : 'Understand My Options'; ?></a>
+			<h2 class="qq-h2"><?php echo is_page( 'insolvency-practitioner' ) ? 'Speak to a Licensed Insolvency Practitioner' : ( is_page( 'close-my-company' ) ? 'Ready to Close Your Limited Company?' : 'Understand Your Company&rsquo;s Options' ); ?></h2>
+			<p class="qq-finalcta__text"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get free, confidential advice from a regulated professional. We will explain the company&rsquo;s options and the likely costs, with no obligation to proceed.' : ( is_page( 'close-my-company' ) ? 'Tell us what is happening with the company and we will explain the right way to close it, what it costs and what it means for you. There is no obligation to proceed.' : 'Answer a few questions about the company&rsquo;s current financial position. We will explain the realistic options, likely costs and next steps. There is no obligation to proceed.' ); ?></p>
+			<a href="<?php echo is_page( 'close-my-company' ) ? '#close-my-company-form' : '#quick-quote-form'; ?>" class="qq-btn qq-btn--solid"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get Free Advice' : ( is_page( 'close-my-company' ) ? 'Request a Callback' : 'Understand My Options' ); ?></a>
 			<p class="qq-finalcta__sub">or speak confidentially with an adviser on <a href="tel:08000746757" style="color:#fff;">0800 074 6757</a></p>
 		</div>
 	</section>
@@ -389,7 +405,15 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 </div>
 
 <script type="application/ld+json">
+<?php if ( is_page( 'insolvency-practitioner' ) ) {
+	$sch = array( '@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => array() );
+	foreach ( $ip_faqs as $fq ) {
+		$sch['mainEntity'][] = array( '@type' => 'Question', 'name' => html_entity_decode( $fq[0], ENT_QUOTES ), 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => html_entity_decode( implode( ' ', $fq[1] ), ENT_QUOTES ) ) );
+	}
+	echo wp_json_encode( $sch );
+} else { ?>
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I Need to Know Which Option the Company Requires?","acceptedAnswer":{"@type":"Answer","text":"No. Many directors contact us before they know whether the company can continue, needs restructuring or should close. Tell us what is happening and we will explain which options appear realistic. You are not expected to understand insolvency procedures before asking for help."}},{"@type":"Question","name":"Can the Company Still Be Rescued?","acceptedAnswer":{"@type":"Answer","text":"Possibly. This depends on whether the underlying business is viable, why the financial problems arose and whether the company can meet its future costs. Possible solutions may include improving cash flow, negotiating with creditors, agreeing a Time to Pay arrangement with HMRC or considering a formal restructuring procedure. We will also tell you honestly if rescue does not appear realistic."}},{"@type":"Question","name":"How Much Does It Cost to Liquidate a Company?","acceptedAnswer":{"@type":"Answer","text":"The cost depends on factors including the number of creditors, employees and company assets, the quality of the accounting records and the complexity of the case. The figures you provide can be used to give an initial indication. The final fee and everything included in it should be explained clearly before you decide whether to proceed."}},{"@type":"Question","name":"Do I Have to Proceed After Making an Enquiry?","acceptedAnswer":{"@type":"Answer","text":"No. Completing the form or speaking with our team does not commit you to a formal insolvency procedure. You can ask questions, consider the information and decide what to do without any pressure to appoint us."}},{"@type":"Question","name":"Will the Company's Debts Become My Personal Debts?","acceptedAnswer":{"@type":"Answer","text":"Directors are not normally personally responsible for debts taken out in the company's name. However, you may remain responsible for debts covered by a personal guarantee. Personal liability can also arise in some circumstances involving director conduct or particular liabilities."}},{"@type":"Question","name":"Could I Qualify for Director Redundancy?","acceptedAnswer":{"@type":"Answer","text":"Some company directors may qualify for statutory redundancy and other employment-related payments if they were also genuine employees of the company. Eligibility depends on factors including employment status, working arrangements and length of service. The Redundancy Payments Service assesses each claim and makes the final decision."}},{"@type":"Question","name":"How Long Does a Company Liquidation Take?","acceptedAnswer":{"@type":"Answer","text":"The timescale varies according to the company's size and complexity, the assets that need to be realised and any matters that require investigation. A typical liquidation may remain open for 12 to 18 months, although the director's main involvement is usually concentrated near the beginning of the process."}}]}
+<?php } ?>
 </script>
 
 <script>
