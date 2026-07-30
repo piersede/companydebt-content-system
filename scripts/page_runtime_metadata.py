@@ -309,6 +309,29 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "request-a-reduced-monthly-payment": "process_guide",
     "tell-debt-collector-to-stop-contacting-you": "process_guide",
     "write-off-my-debt": "process_guide",
+
+    # -- Adopted existing pages: Hubs, sector distress pages and standalone guides --
+    "chinese-takeaway": "case_insight",
+    "director-redundancy": "director_risk",
+    "care-home-insolvency": "distress_use_case",
+    "charity-non-profit-insolvency": "distress_use_case",
+    "construction-insolvency": "distress_use_case",
+    "energy-provider-insolvency": "distress_use_case",
+    "hospitality-restaurant-insolvency": "distress_use_case",
+    "manufacturing-insolvency": "distress_use_case",
+    "professional-services-insolvency": "distress_use_case",
+    "transport-haulage-insolvency": "distress_use_case",
+    "county-court-judgements": "enforcement",
+    "company-rescue-recovery-hub": "entity_owner",
+    "debt-creditor-pressure-hub": "entity_owner",
+    "director-protection-hub": "entity_owner",
+    "insolvency-news-commentary": "entity_owner",
+    "sector-specific-insolvency": "entity_owner",
+    "closing-a-limited-company": "process_guide",
+    "business-debt-advice": "recovery_strategy",
+    "debt-charities-uk": "recovery_strategy",
+    "mental-health-debt-stress-support": "recovery_strategy",
+    "insolvency-test": "trigger",
 }
 
 
