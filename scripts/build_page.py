@@ -279,6 +279,28 @@ PAGE_REGISTRY = {
     'what-is-the-insolvency-service': 'cc_builder.data.pages.what_is_the_insolvency_service',
     'what-is-wrongful-trading': 'cc_builder.data.pages.what_is_wrongful_trading',
     'what-to-do-about-customer-insolvency': 'cc_builder.data.pages.what_to_do_about_customer_insolvency',
+    # -- Adopted existing pages: Cash-flow pressure and Bounce Back Loans --
+    'biggest-struggles-for-small-business-owners': 'cc_builder.data.pages.biggest_struggles_for_small_business_owners',
+    'bounce-back-loan-fraud': 'cc_builder.data.pages.bounce_back_loan_fraud',
+    'bounce-back-loan-hub': 'cc_builder.data.pages.bounce_back_loan_hub',
+    'can-i-lose-my-house-with-a-bounce-back-loan': 'cc_builder.data.pages.can_i_lose_my_house_with_a_bounce_back_loan',
+    'cant-afford-to-pay-suppliers-what-are-the-options': 'cc_builder.data.pages.cant_afford_to_pay_suppliers_what_are_the_options',
+    'cant-afford-to-repay-business-loan': 'cc_builder.data.pages.cant_afford_to_repay_business_loan',
+    'cant-pay-a-commercial-lease-or-rent': 'cc_builder.data.pages.cant_pay_a_commercial_lease_or_rent',
+    'cant-pay-a-company-mortgage': 'cc_builder.data.pages.cant_pay_a_company_mortgage',
+    'cant-pay-business-energy': 'cc_builder.data.pages.cant_pay_business_energy',
+    'cant-pay-business-rates': 'cc_builder.data.pages.cant_pay_business_rates',
+    'cant-pay-coronavirus-business-interruption-loan-cbils': 'cc_builder.data.pages.cant_pay_coronavirus_business_interruption_loan_cbils',
+    'cant-pay-staff-wages': 'cc_builder.data.pages.cant_pay_staff_wages',
+    'challenge-a-statutory-demand': 'cc_builder.data.pages.challenge_a_statutory_demand',
+    'company-cash-flow-problems': 'cc_builder.data.pages.company_cash_flow_problems',
+    'company-is-having-financial-difficulties': 'cc_builder.data.pages.company_is_having_financial_difficulties',
+    'directors-liability-for-bounce-back-loans': 'cc_builder.data.pages.directors_liability_for_bounce_back_loans',
+    'dissolving-a-company-with-bounce-back-loan': 'cc_builder.data.pages.dissolving_a_company_with_bounce_back_loan',
+    'what-happens-if-i-default': 'cc_builder.data.pages.what_happens_if_i_default',
+    'what-is-a-statutory-demand-against-a-company': 'cc_builder.data.pages.what_is_a_statutory_demand_against_a_company',
+    'when-employers-cant-afford-redundancy-payments': 'cc_builder.data.pages.when_employers_cant_afford_redundancy_payments',
+    'why-debt-is-not-always-a-bad-thing-for-your-business': 'cc_builder.data.pages.why_debt_is_not_always_a_bad_thing_for_your_business',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""

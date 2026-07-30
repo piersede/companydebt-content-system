@@ -253,6 +253,29 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "stop-or-avoid-insolvency": "recovery_strategy",
     "what-are-the-warning-signs-of-an-insolvent-company": "trigger",
     "what-happens-if-a-company-cannot-pay-its-debts": "trigger",
+
+    # -- Adopted existing pages: Cash-flow pressure and Bounce Back Loans --
+    "can-i-lose-my-house-with-a-bounce-back-loan": "director_risk",
+    "directors-liability-for-bounce-back-loans": "director_risk",
+    "challenge-a-statutory-demand": "enforcement",
+    "what-is-a-statutory-demand-against-a-company": "enforcement",
+    "bounce-back-loan-hub": "entity_owner",
+    "why-debt-is-not-always-a-bad-thing-for-your-business": "entity_owner",
+    "dissolving-a-company-with-bounce-back-loan": "legal_compliance",
+    "bounce-back-loan-fraud": "process_guide",
+    "biggest-struggles-for-small-business-owners": "trigger",
+    "cant-afford-to-pay-suppliers-what-are-the-options": "trigger",
+    "cant-afford-to-repay-business-loan": "trigger",
+    "cant-pay-a-commercial-lease-or-rent": "trigger",
+    "cant-pay-a-company-mortgage": "trigger",
+    "cant-pay-business-energy": "trigger",
+    "cant-pay-business-rates": "trigger",
+    "cant-pay-coronavirus-business-interruption-loan-cbils": "trigger",
+    "cant-pay-staff-wages": "trigger",
+    "company-cash-flow-problems": "trigger",
+    "company-is-having-financial-difficulties": "trigger",
+    "what-happens-if-i-default": "trigger",
+    "when-employers-cant-afford-redundancy-payments": "trigger",
 }
 
 
