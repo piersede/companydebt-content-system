@@ -1,0 +1,33 @@
+{
+  "slug": "what-happens-to-directors-in-liquidation",
+  "audited_at": "2026-07-30",
+  "audited_by": "claude-opus-4-8",
+  "prose_sha": "e54acff0ca15851720118a714ae9c17c96f705c2600f15d6acd411d9e06223e0",
+  "measured": {
+    "metrics": {
+      "words": 3120,
+      "you": 88,
+      "you_per_1k": 28.2,
+      "we": 19,
+      "we_per_1k": 6.1,
+      "i": 1,
+      "i_per_1k": 0.3
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 79,
+      "cv": 0.345,
+      "uniform": false
+    },
+    "scene_proxy": 6
+  },
+  "attested": {
+    "concrete_scenes": 8,
+    "evaluative_bite_lines": 4,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Voice-only pass over Chris-signed-off facts. 8 reader-world scenes (supplier paid in March vs late VAT; lender's-desk guarantee; books at the kitchen table; payroll just clearing; official-receiver meeting), one per major section. Persona warmth top + decision point. you trimmed 31->28/1k. No invented CD casework; company-authored we only."
+  },
+  "verdict": "pass"
+}
