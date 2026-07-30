@@ -1123,7 +1123,13 @@ def main() -> int:
             for check in a.checks:
                 if not check.passed:
                     detail = check.detail or "(no detail)"
-                    print(f"HARD FAIL: {check.id}. {check.name} - {detail}")
+                    # Only checks that actually block the gate may emit the
+                    # HARD FAIL prefix — that string is what Bernstein's
+                    # parseHardFails() consumes. Soft checks (hard_fail=False)
+                    # are advisory by definition and were previously reported
+                    # as blocking, which contradicted gate_passed.
+                    label = "HARD FAIL" if check.hard_fail else "SOFT"
+                    print(f"{label}: {check.id}. {check.name} - {detail}")
 
     print("=" * 80)
     print("SUMMARY")
