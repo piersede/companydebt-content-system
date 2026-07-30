@@ -1,0 +1,33 @@
+{
+  "slug": "what-is-a-statutory-demand-against-a-company",
+  "audited_at": "2026-07-30",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "8b9e807e9e96c4aae70a42238ed74e20dcd9eb2fa9f6dbe03758b364de00ac76",
+  "measured": {
+    "metrics": {
+      "words": 1390,
+      "you": 22,
+      "you_per_1k": 15.8,
+      "we": 10,
+      "we_per_1k": 7.2,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 36,
+      "cv": 0.427,
+      "uniform": false
+    },
+    "scene_proxy": 2
+  },
+  "attested": {
+    "concrete_scenes": 4,
+    "evaluative_bite_lines": 4,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Humanise pass on Opus. Scenes: unremarkable envelope; golf-club 'scare tactic' remark; demand sitting in the accountant's tray until Thursday's post run; card machine stops settling / payroll bounces Friday because the bank read the Gazette first. Bite: 'that is the cheapest this problem is ever going to be'; 'the instalment plans we see fail are almost never the ones the creditor refused'; 'narrower and more expensive, in that order'. Warmth at top (lost a night over it) and at the decision point (putting the call off feels like admitting the company is finished). Practitioner we lifted 4.8 to 7.2/1k via lived-caseload observation, not padding. Replaced banned US register 'full menu of response options'; glossed 'presumption crystallises' and 'compounding arrangement' in plain English. Note-form Scenario 1-3 block rewritten as practitioner prose."
+  },
+  "verdict": "pass"
+}
