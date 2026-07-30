@@ -18,6 +18,6 @@ PAGE_CONFIG = {
     'slug': "what-happens-to-directors-in-liquidation",
     'page_type': "process_guide",
     'wp_page_id': 46222,
-    'title': "What Happens to Directors in Liquidation? Duties, Risks, and Liabilities in the UK",
+    'title': "What Happens to a Director When a Company Goes Into Liquidation?",
     'verification_date': "30 July 2026",
 }
