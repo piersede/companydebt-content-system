@@ -40,9 +40,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * one or both, so the banner initialises on page load.
  */
 add_filter( 'rocket_delay_js_exclusions', function ( $excluded ) {
+	// NB: do NOT add a bare 'cookieyes' pattern -- it also matches the click-id
+	// capture inline script (it references the 'cookieyes-consent' cookie), which
+	// would un-delay that script as an unintended side effect. These three match
+	// the CookieYes loader/banner only.
 	$add = array(
 		'client_data',
-		'cookieyes',
 		'cdn-cookieyes\.com',
 		'387f1b54d36b6afe444ba7b09ed20e83',
 	);

@@ -90,6 +90,14 @@ New file on staging: `wp-content/mu-plugins/cd-cookieyes-banner-fix.php`. Two fi
 
 This goes live on the **next** file-system copy (same method as the measurement push). It was NOT in this morning's push.
 
+**PUSHED + VERIFIED LIVE, 30 Jul 2026.** Files-only copy (DB excluded, HTTP 202), WPE caches purged, WP Rocket + Cloudflare cleared by Piers. Verified on live at 2560px in a fresh browser:
+- Banner appears on load with no interaction. ✓
+- Shorter compliant wording live ("...improve your experience, measure our traffic and show relevant ads. Choose Accept, Reject or Customise below."). ✓ (published in CookieYes dashboard, not a file)
+- Customise panel opens dead-centre (0px offset), fully on-screen. ✓
+- Measurement guard still 4/4 PASS; form entries identical (form 44 = 76, newest 2026-07-29 04:11:37) — DB untouched. ✓
+
+**Follow-up (harmless, staged): pattern narrowed.** The initial exclusion used a bare `cookieyes` pattern which also matched the click-id capture inline script (it references the `cookieyes-consent` cookie), un-delaying that script too. Harmless (the capture script is consent-gated), but not intended. Narrowed to `client_data` / `cdn-cookieyes.com` / the client id on staging (v3). Rides the next push; no dedicated push needed just for this.
+
 ## After the push — do NOT trust a 200
 
 1. `python scripts/check_consent_tag_order.py --target live` → must read **4/4 PASS**
