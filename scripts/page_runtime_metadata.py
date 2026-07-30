@@ -76,6 +76,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "what-happens-if-a-creditor-takes-me-to-court": "enforcement",
     "hmrc-as-a-creditor-in-liquidation": "enforcement",
     "hmrc-penalties-investigations": "enforcement",
+    "debt-creditor-pressure-hub": "enforcement",
 
     # recovery_strategy — alternatives, decisions, planning ahead
     "alternatives-to-company-liquidation": "recovery_strategy",
@@ -84,6 +85,8 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "should-i-close-my-company-or-try-to-save-it": "recovery_strategy",
     "cva-vs-strike-off-vs-liquidation": "recovery_strategy",
     "can-you-liquidate-to-avoid-paying-suppliers": "recovery_strategy",
+    "company-rescue-solutions": "recovery_strategy",
+    "company-rescue-recovery-hub": "recovery_strategy",
 
     # legal_compliance — dissolution, regulatory, statutory timelines
     "company-strike-off-and-dissolution": "legal_compliance",
@@ -100,14 +103,6 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "what-happens-if-i-stop-paying-company-debts": "trigger",
     "cant-pay-vat": "trigger",
     "problems-paying-corporation-tax-hmrc": "trigger",
-
-    # hub — navigational taxonomy pages. Their body is a set of grouped
-    # guide lists rather than a linear article, so the article structure
-    # checks 16 (trailing Related Guides) and 25 (3+ H3s under an H2) do
-    # not apply; scripts/article_audit.py exempts this class from them.
-    "company-rescue-solutions": "hub",
-    "company-rescue-recovery-hub": "hub",
-    "debt-creditor-pressure-hub": "hub",
 
     # data_reference — official statistics and data series pages
     "uk-insolvency-statistics": "data_reference",

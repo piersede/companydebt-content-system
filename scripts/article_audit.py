@@ -992,33 +992,6 @@ def check_h3_density_per_h2(body: str) -> CheckResult:
 # Runner.
 # ---------------------------------------------------------------------------
 
-def _page_class_for(path: Path) -> str | None:
-    """Resolve a draft's page class from its filename.
-
-    Drafts are named drafts/{wp_id}_{slug}.html, and page-class routing lives
-    in scripts/page_runtime_metadata.py SLUG_PAGE_CLASS_OVERRIDES. Returns None
-    when the slug is not registered.
-    """
-    stem = path.stem
-    slug = stem.split("_", 1)[1] if "_" in stem and stem.split("_", 1)[0].isdigit() else stem
-    try:
-        from page_runtime_metadata import SLUG_PAGE_CLASS_OVERRIDES
-    except ImportError:
-        return None
-    return SLUG_PAGE_CLASS_OVERRIDES.get(slug)
-
-
-# Structure checks that do not apply to hub pages. Hubs are navigational
-# taxonomies, not linear articles: their body IS a set of grouped guide lists,
-# so 3+ H3s under an H2 is the intended shape rather than an over-structuring
-# signal.
-#
-# Check 16 is NOT exempt: hubs carry a Related Guides block like any other
-# page, built from the cd-hub-grid / cd-hub-card pattern rather than a plain
-# list so it reads as navigation rather than a second body list.
-HUB_EXEMPT_CHECK_IDS = {"25"}
-
-
 def audit_file(path: Path) -> ArticleAudit:
     raw = path.read_text(encoding="utf-8")
     meta = _extract_metadata(raw)
@@ -1064,10 +1037,6 @@ def audit_file(path: Path) -> ArticleAudit:
         check_table_cell_brevity(body),
         check_h3_density_per_h2(body),
     ]
-
-    if _page_class_for(path) == "hub":
-        audit.checks = [c for c in audit.checks if c.id not in HUB_EXEMPT_CHECK_IDS]
-
     return audit
 
 
