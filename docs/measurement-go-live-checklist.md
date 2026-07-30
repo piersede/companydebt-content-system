@@ -52,6 +52,26 @@
 
 ---
 
+## GO-LIVE RECORD — 29 July 2026
+
+**Pushed:** files-only copy staging → production via `scripts/wpe_copy_files_to_live.py --confirm` (destination verified as www.companydebt.com; `include_db: false` asserted). API returned **HTTP 202** (queued). Forms plugin held back (`.off-hold-20260729`), `cd-resave` held back.
+
+**Verified after the push:**
+- **Database untouched.** `check_live_form_entries.py` identical before and after — form 44 still 76 entries, newest 2026-07-29 04:11:37; all other counts unchanged. The copy did not touch a single row.
+- **Code correct at origin.** Cache-busting fetch of live shows the consent snippet present and the GTM loader freed (`<script>`, not `rocketlazyloadscript`).
+- **WP Engine caches purged** (object, page, cdn — all 202).
+- **Cached page, partial:** the consent snippet is now live AND un-delayed (the compliance-critical piece), but the GTM loader still shows delayed on the cached page. This is WP Rocket's page cache, not a code problem.
+- **Interim state is safe:** consent defaults denied + GTM delayed = no tags fire without consent.
+
+**STILL REQUIRED — manual, live wp-admin / dashboards only (cannot be done from here):**
+1. **Live wp-admin → WP Rocket → Clear cache.** Regenerates cached pages with the freed tag. App passwords can't reach wp-admin and there's no purge route, so this is Piers's click.
+2. **Cloudflare dashboard → Caching → Purge Everything** (no Cloudflare API creds in .env by design).
+3. After both: re-run `python scripts/check_consent_tag_order.py --target live` → should read **4/4 PASS**.
+4. **End-to-end proof:** load a live page with `?gclid=CDLIVETEST0729`, accept cookies, submit a form → confirm a `Website Form - CD` lead in Zoho carrying that click id. Then delete the test lead.
+5. Once proven, turn `CD_LC_DEBUG` off in `cd-livechat-secrets.php` (staging) and re-copy files, or edit live via the portal.
+
+---
+
 ## After the push — do NOT trust a 200
 
 1. `python scripts/check_consent_tag_order.py --target live` → must read **4/4 PASS**
