@@ -27,6 +27,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "intellectual-property-and-trading-assets-in-liquidation": "entity_owner",
     "company-pensions-and-liquidation": "entity_owner",
     "business-bank-account-in-liquidation": "entity_owner",
+    "company-administration": "entity_owner",
 
     # process_guide — procedural / step-by-step / what happens next
     "how-to-prepare-for-company-liquidation": "process_guide",
@@ -77,6 +78,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     # recovery_strategy — alternatives, decisions, planning ahead
     "alternatives-to-company-liquidation": "recovery_strategy",
     "cant-afford-to-liquidate": "recovery_strategy",
+    "creditor-negotiations": "recovery_strategy",
     "company-restoration-after-liquidation": "recovery_strategy",
     "should-i-close-my-company-or-try-to-save-it": "recovery_strategy",
     "cva-vs-strike-off-vs-liquidation": "recovery_strategy",
@@ -97,6 +99,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "what-happens-if-i-stop-paying-company-debts": "trigger",
     "cant-pay-vat": "trigger",
     "problems-paying-corporation-tax-hmrc": "trigger",
+    "cant-pay-paye": "trigger",
 
     # data_reference — official statistics and data series pages
     "uk-insolvency-statistics": "data_reference",
