@@ -482,7 +482,7 @@ function company_debt_webpigment_scripts() {
 	// quick-quote-options (added 2026-07-27) is a separate clone page built from
 	// design-handoff/quick-quote-options-page-design-brief.md — shares this same
 	// stylesheet (additive rules only, does not alter the original page's rules).
-	if ( is_page( array( 'quick-quote', 'quick-quote-options', 'close-my-company' ) ) ) {
+	if ( is_page( array( 'quick-quote', 'quick-quote-options', 'close-my-company', 'insolvency-practitioner' ) ) ) {
 		wp_enqueue_style(
 			'cd-qq-fonts',
 			'https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap',
@@ -512,7 +512,7 @@ add_action( 'wp_enqueue_scripts', 'company_debt_webpigment_scripts' );
  * across environments.
  */
 add_filter( 'template_include', function ( $template ) {
-	if ( is_page( array( 'quick-quote', 'close-my-company' ) ) ) {
+	if ( is_page( array( 'quick-quote', 'close-my-company', 'insolvency-practitioner' ) ) ) {
 		$qq = locate_template( 'templates/quick-quote.php' );
 		if ( $qq ) {
 			return $qq;
