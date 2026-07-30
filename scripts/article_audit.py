@@ -1011,9 +1011,12 @@ def _page_class_for(path: Path) -> str | None:
 # Structure checks that do not apply to hub pages. Hubs are navigational
 # taxonomies, not linear articles: their body IS a set of grouped guide lists,
 # so 3+ H3s under an H2 is the intended shape rather than an over-structuring
-# signal (check 25), and a trailing "Related Guides" block duplicates the
-# "Key <topic> Guides" section that defines the page (check 16).
-HUB_EXEMPT_CHECK_IDS = {"16", "25"}
+# signal.
+#
+# Check 16 is NOT exempt: hubs carry a Related Guides block like any other
+# page, built from the cd-hub-grid / cd-hub-card pattern rather than a plain
+# list so it reads as navigation rather than a second body list.
+HUB_EXEMPT_CHECK_IDS = {"25"}
 
 
 def audit_file(path: Path) -> ArticleAudit:
