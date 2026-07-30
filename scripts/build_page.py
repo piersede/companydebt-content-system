@@ -356,6 +356,28 @@ PAGE_REGISTRY = {
     'sector-specific-insolvency': 'cc_builder.data.pages.sector_specific_insolvency',
     'transport-haulage-insolvency': 'cc_builder.data.pages.transport_haulage_insolvency',
 }
+# ── Deliberately NOT Bernstein pages ───────────────────────────────────
+# Every editorial content page belongs in PAGE_REGISTRY (see CLAUDE.md). These
+# drafts are the documented exceptions: they are not editorial content, so the
+# voice, evidence, freshness and pre-publish standards do not apply to them and
+# putting them through the pipeline would be meaningless. Listed here so that a
+# draft missing from PAGE_REGISTRY is always either a bug or one of these.
+#
+# Navigation and legal pages that have no draft file at all (About, Contact,
+# Terms) are out of scope for the same reason and simply never enter drafts/.
+NON_EDITORIAL_PAGES = {
+    'privacy-policy': (
+        'Legal boilerplate maintained by the business, not the editorial team. '
+        'No voice, evidence or freshness standard applies.'
+    ),
+    'pre-pack-advantages-and-disadvantages': (
+        'Stale duplicate draft of WP page 68356. The live slug is '
+        '"advantages-and-disadvantages", which IS registered; this older, '
+        'shorter copy is retained only as history.'
+    ),
+}
+
+
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
     if slug not in PAGE_REGISTRY:
