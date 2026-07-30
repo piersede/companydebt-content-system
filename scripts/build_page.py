@@ -301,6 +301,27 @@ PAGE_REGISTRY = {
     'what-is-a-statutory-demand-against-a-company': 'cc_builder.data.pages.what_is_a_statutory_demand_against_a_company',
     'when-employers-cant-afford-redundancy-payments': 'cc_builder.data.pages.when_employers_cant_afford_redundancy_payments',
     'why-debt-is-not-always-a-bad-thing-for-your-business': 'cc_builder.data.pages.why_debt_is_not_always_a_bad_thing_for_your_business',
+    # -- Adopted existing pages: Rescue, administration, CVA and pre-pack --
+    'advantages-and-disadvantages': 'cc_builder.data.pages.advantages_and_disadvantages',
+    'company-administration': 'cc_builder.data.pages.company_administration',
+    'company-rescue-solutions': 'cc_builder.data.pages.company_rescue_solutions',
+    'company-voluntary-arrangement': 'cc_builder.data.pages.company_voluntary_arrangement',
+    'company-voluntary-arrangement-vs-administration-which-to-choose': 'cc_builder.data.pages.company_voluntary_arrangement_vs_administration_which_to_choose',
+    'director-guarantees-in-a-cva': 'cc_builder.data.pages.director_guarantees_in_a_cva',
+    'light-touch-administration': 'cc_builder.data.pages.light_touch_administration',
+    'making-employees-redundant-cva': 'cc_builder.data.pages.making_employees_redundant_cva',
+    'notice-of-intention-to-appoint-administrators': 'cc_builder.data.pages.notice_of_intention_to_appoint_administrators',
+    'partnership-voluntary-arrangements': 'cc_builder.data.pages.partnership_voluntary_arrangements',
+    'pre-packs': 'cc_builder.data.pages.pre_packs',
+    'pros-and-cons': 'cc_builder.data.pages.pros_and_cons',
+    'receivership-mean-business': 'cc_builder.data.pages.receivership_mean_business',
+    'use-a-cva-to-close-a-company': 'cc_builder.data.pages.use_a_cva_to_close_a_company',
+    'vs-administrative-receivership': 'cc_builder.data.pages.vs_administrative_receivership',
+    'vs-cva': 'cc_builder.data.pages.vs_cva',
+    'vs-liquidation': 'cc_builder.data.pages.vs_liquidation',
+    'what-happens-if-a-cva-fails-mid-term': 'cc_builder.data.pages.what_happens_if_a_cva_fails_mid_term',
+    'what-is-a-pre-pack-administration': 'cc_builder.data.pages.what_is_a_pre_pack_administration',
+    'when-a-cva-fails': 'cc_builder.data.pages.when_a_cva_fails',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""

@@ -276,6 +276,28 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "company-is-having-financial-difficulties": "trigger",
     "what-happens-if-i-default": "trigger",
     "when-employers-cant-afford-redundancy-payments": "trigger",
+
+    # -- Adopted existing pages: Rescue, administration, CVA and pre-pack --
+    "company-voluntary-arrangement-vs-administration-which-to-choose": "debt_solution_comparison",
+    "vs-administrative-receivership": "debt_solution_comparison",
+    "vs-cva": "debt_solution_comparison",
+    "vs-liquidation": "debt_solution_comparison",
+    "director-guarantees-in-a-cva": "director_risk",
+    "company-administration": "entity_owner",
+    "company-rescue-solutions": "entity_owner",
+    "company-voluntary-arrangement": "entity_owner",
+    "partnership-voluntary-arrangements": "entity_owner",
+    "pre-packs": "entity_owner",
+    "receivership-mean-business": "entity_owner",
+    "what-is-a-pre-pack-administration": "entity_owner",
+    "advantages-and-disadvantages": "recovery_strategy",
+    "light-touch-administration": "recovery_strategy",
+    "making-employees-redundant-cva": "recovery_strategy",
+    "notice-of-intention-to-appoint-administrators": "recovery_strategy",
+    "pros-and-cons": "recovery_strategy",
+    "use-a-cva-to-close-a-company": "recovery_strategy",
+    "what-happens-if-a-cva-fails-mid-term": "recovery_strategy",
+    "when-a-cva-fails": "recovery_strategy",
 }
 
 
