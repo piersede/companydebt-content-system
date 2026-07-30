@@ -19,5 +19,5 @@ PAGE_CONFIG = {
     'page_type': "process_guide",
     'wp_page_id': 46222,
     'title': "What Happens to Directors in Liquidation? Duties, Risks, and Liabilities in the UK",
-    'verification_date': "24 May 2026",
+    'verification_date': "30 July 2026",
 }
