@@ -38,10 +38,15 @@
 - This is **atomic**: all five files land together. So the one dangerous window — the tag freed while the consent default is missing — cannot occur. The strict push *order* only matters if files are placed individually; with a bulk copy it is automatic.
 - **Never** include the database. A DB copy wipes live form entries/users. File-system-only only.
 
-**Blast radius — read before copying.** A file-system copy ships the ENTIRE staging filesystem, not just these five. Also currently active on staging and would ride along:
-- `cd-gform-hardening.php` — forms spam/validation (honeypot, email/phone validation, outreach blocking). Intended for live eventually, but decide deliberately: overly strict validation could reject genuine submissions. Either accept it in this push or move it aside on staging first.
-- `cd-resave.php` — inert one-off (only fires on `?cd_resave=run`, then self-deletes). Clutter; ideally delete from staging before the copy. Not a blocker.
-- Anything else changed on staging since the last live file copy.
+**Pre-push prep completed on staging (29 Jul):**
+- `cd-resave.php` — inert one-off maintenance file — **disabled** (renamed to `.bak-preLive-20260729`) so it will not ride along.
+- `header.php` — **diffed live vs staging** (`tmp/diff_head.py`): staging's static header is live's header plus the consent snippet plus the un-delayed GTM, and nothing else. Overwriting live's header drops nothing.
+- Credentials (`cd-livechat-secrets.php`) — all Zoho + LiveChat keys present. `CD_LC_DEBUG = true`, intentionally, so the first live run surfaces any failure as a visible debug lead. **Turn off after the end-to-end test passes.**
+- Guard passes 4/4 on `/`, `/contact-us/`, `/quick-quote/`.
+
+**Blast radius — one deliberate decision remains.** A file-system copy ships the ENTIRE staging filesystem, not just the five files above. The one rider that changes behaviour:
+- `cd-gform-hardening.php` — forms spam/validation (honeypot, email/phone validation, outreach blocking). Built and tested for live, but it switches on stricter validation at the same time; overly strict rules could reject a genuine submission. **Decide before the copy:** ship it in this push, or move it aside on staging first.
+- Otherwise, staging code is expected to be ahead of or equal to live (staging-first workflow); no live-only hotfixes are known. Live theme/plugin files cannot be read from here to diff exhaustively, so this is reasoned, not proven.
 
 **Surgical alternative (Piers's own WPE access only):** place files 1–5 on live via SFTP/SSH/WPE file manager, then purge once. If done this way, upload all five *before* purging so they go live together.
 
