@@ -171,6 +171,13 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "time-to-pay-hmrc": "recovery_strategy",
     "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement": "recovery_strategy",
     "cant-pay-paye": "trigger",
+
+    # -- Adopted existing pages: Liquidation section (/liquidation/*) --
+    "directors-responsibilities-after-a-company-is-struck-off": "director_risk",
+    "insolvency-myths-debunked": "entity_owner",
+    "uk-insolvency-glossary": "entity_owner",
+    "can-i-be-sued-after-my-company-is-dissolved": "legal_compliance",
+    "uk-insolvency-flowchart": "process_guide",
 }
 
 
