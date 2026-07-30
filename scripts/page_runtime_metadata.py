@@ -27,6 +27,7 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "intellectual-property-and-trading-assets-in-liquidation": "entity_owner",
     "company-pensions-and-liquidation": "entity_owner",
     "business-bank-account-in-liquidation": "entity_owner",
+    "company-administration": "entity_owner",
 
     # process_guide — procedural / step-by-step / what happens next
     "how-to-prepare-for-company-liquidation": "process_guide",
