@@ -299,7 +299,11 @@
 .qq .qq-featured { background: #f4f6f8; border-top: 1px solid #e3e9ee; border-bottom: 1px solid #e3e9ee; }
 .qq .qq-featured__inner { max-width: 1180px; margin: 0 auto; padding: 40px 24px; text-align: center; }
 .qq .qq-featured__label { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #5a6b7a; margin: 0 0 24px; }
-.qq .qq-featured__logos { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 24px; max-width: 940px; margin: 0 auto; }
+/* wrap (not nowrap): between ~961-1040px the 84px section padding leaves the
+   7-logo row too little width, so the last logo overflowed the viewport. Wrapping
+   + centring fixes that band; on full desktop the row still fits on one line so
+   nothing changes there. */
+.qq .qq-featured__logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px 24px; max-width: 940px; margin: 0 auto; }
 /* black, faded press logos (the source webp are white-on-transparent). Heights
    forced per-logo — the theme's content-image rule overrides the HTML height.
    Opacity raised from .82: at that level, logos on white read as decoration;
