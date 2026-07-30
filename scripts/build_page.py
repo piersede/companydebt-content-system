@@ -45,6 +45,7 @@ PAGE_REGISTRY = {
     'cant-pay-vat': 'cc_builder.data.pages.cant_pay_vat',
     'problems-paying-corporation-tax-hmrc': 'cc_builder.data.pages.problems_paying_corporation_tax_hmrc',
     'dealing-with-an-hmrc-winding-up-petition': 'cc_builder.data.pages.dealing_with_an_hmrc_winding_up_petition',
+    'winding-up-petition-vs-compulsory-liquidation': 'cc_builder.data.pages.winding_up_petition_vs_compulsory_liquidation',
     # The insolvency data hub: lives at /data/ (page 79845, slug 'data').
     # Module file keeps its company_insolvency.py name; the page slug is 'data'.
     'data': 'cc_builder.data.pages.company_insolvency',
