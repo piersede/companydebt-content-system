@@ -77,6 +77,7 @@ PAGE_REGISTRY = {
     'freight-forwarding-logistics-insolvency-statistics': 'cc_builder.data.pages.freight_forwarding_logistics_insolvency_statistics',
     'retail-insolvency-statistics': 'cc_builder.data.pages.retail_insolvency_statistics',
     'are-directors-personally-liable-for-company-debts': 'cc_builder.data.pages.are_directors_personally_liable_for_company_debts',
+    'which-creditors-get-paid-first': 'cc_builder.data.pages.which_creditors_get_paid_first',
     # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
     'construction': 'cc_builder.data.pages.construction_sector',
     'garden-centres': 'cc_builder.data.pages.garden_centres_sector',
