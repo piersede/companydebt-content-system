@@ -298,6 +298,17 @@ SLUG_PAGE_CLASS_OVERRIDES = {
     "use-a-cva-to-close-a-company": "recovery_strategy",
     "what-happens-if-a-cva-fails-mid-term": "recovery_strategy",
     "when-a-cva-fails": "recovery_strategy",
+
+    # -- Adopted existing pages: Sample letters (/sample-letters/*) --
+    "sample-letters-hub": "entity_owner",
+    "cease-trading-template": "process_guide",
+    "hold-action-on-my-account": "process_guide",
+    "i-cannot-afford-to-repay-my-debt": "process_guide",
+    "i-have-no-knowledge-of-this-debt": "process_guide",
+    "i-need-more-information-about-this-debt": "process_guide",
+    "request-a-reduced-monthly-payment": "process_guide",
+    "tell-debt-collector-to-stop-contacting-you": "process_guide",
+    "write-off-my-debt": "process_guide",
 }
 
 

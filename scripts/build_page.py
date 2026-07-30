@@ -322,6 +322,16 @@ PAGE_REGISTRY = {
     'what-happens-if-a-cva-fails-mid-term': 'cc_builder.data.pages.what_happens_if_a_cva_fails_mid_term',
     'what-is-a-pre-pack-administration': 'cc_builder.data.pages.what_is_a_pre_pack_administration',
     'when-a-cva-fails': 'cc_builder.data.pages.when_a_cva_fails',
+    # -- Adopted existing pages: Sample letters (/sample-letters/*) --
+    'cease-trading-template': 'cc_builder.data.pages.cease_trading_template',
+    'hold-action-on-my-account': 'cc_builder.data.pages.hold_action_on_my_account',
+    'i-cannot-afford-to-repay-my-debt': 'cc_builder.data.pages.i_cannot_afford_to_repay_my_debt',
+    'i-have-no-knowledge-of-this-debt': 'cc_builder.data.pages.i_have_no_knowledge_of_this_debt',
+    'i-need-more-information-about-this-debt': 'cc_builder.data.pages.i_need_more_information_about_this_debt',
+    'request-a-reduced-monthly-payment': 'cc_builder.data.pages.request_a_reduced_monthly_payment',
+    'sample-letters-hub': 'cc_builder.data.pages.sample_letters_hub',
+    'tell-debt-collector-to-stop-contacting-you': 'cc_builder.data.pages.tell_debt_collector_to_stop_contacting_you',
+    'write-off-my-debt': 'cc_builder.data.pages.write_off_my_debt',
 }
 def load_page_config(slug: str) -> dict:
     """Import page module and return its PAGE_CONFIG dict."""
