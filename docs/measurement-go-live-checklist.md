@@ -63,12 +63,18 @@
 - **Cached page, partial:** the consent snippet is now live AND un-delayed (the compliance-critical piece), but the GTM loader still shows delayed on the cached page. This is WP Rocket's page cache, not a code problem.
 - **Interim state is safe:** consent defaults denied + GTM delayed = no tags fire without consent.
 
-**STILL REQUIRED — manual, live wp-admin / dashboards only (cannot be done from here):**
-1. **Live wp-admin → WP Rocket → Clear cache.** Regenerates cached pages with the freed tag. App passwords can't reach wp-admin and there's no purge route, so this is Piers's click.
-2. **Cloudflare dashboard → Caching → Purge Everything** (no Cloudflare API creds in .env by design).
-3. After both: re-run `python scripts/check_consent_tag_order.py --target live` → should read **4/4 PASS**.
-4. **End-to-end proof:** load a live page with `?gclid=CDLIVETEST0729`, accept cookies, submit a form → confirm a `Website Form - CD` lead in Zoho carrying that click id. Then delete the test lead.
-5. Once proven, turn `CD_LC_DEBUG` off in `cd-livechat-secrets.php` (staging) and re-copy files, or edit live via the portal.
+**Cache clear done (Piers, 29 Jul) — VERIFIED LIVE:**
+- WP Rocket cache cleared + Cloudflare purged.
+- `check_consent_tag_order.py --target live` = **4/4 PASS** on `/`, `/contact-us/`, `/quick-quote/`. Consent snippet present, before GTM, un-delayed; GTM loader freed; capture script delayed (intended).
+- Form entries still identical (form 44 = 76, newest 2026-07-29 04:11:37). Database confirmed untouched end to end.
+
+**The measurement/consent go-live is COMPLETE and verified.**
+
+**STILL OPEN (follow-ups, not blockers):**
+1. **End-to-end proof:** load a live page with `?gclid=CDLIVETEST0729`, accept cookies, submit a form → confirm a `Website Form - CD` lead in Zoho carrying that click id. Then delete the test lead. This is the one thing not yet proven from here (needs a real submission).
+2. Once proven, turn `CD_LC_DEBUG` off in `cd-livechat-secrets.php` (staging) and re-copy files.
+3. Account-side (Maria/Piers, separate): set the Zoho lead-creation action to secondary before real data flows; remove the extra consent requirement on the two call tags; leave enhanced conversions off until the forms-hardening is live; investigate the phone-lead drop.
+4. Ship the held-back forms-hardening plugin (`cd-gform-hardening.php.off-hold-20260729`) as its own later step once the measurement change has bedded in.
 
 ---
 
