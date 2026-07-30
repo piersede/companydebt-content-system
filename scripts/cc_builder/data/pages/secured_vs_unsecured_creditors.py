@@ -1,18 +1,23 @@
-"""Page config for: Secured vs Unsecured Creditors.
+"""Page config for: Secured vs Unsecured Creditors
 
-Creditor-types page at /insolvency/secured-vs-unsecured-creditors/ (WordPress PAGE id 74891,
-template templates/take-the-test-template.php). Registered as editorial
-'process_guide' so build_page reads the authored draft
-drafts/74891_secured-vs-unsecured-creditors.html directly. Page-class routing
-('entity_owner') lives in scripts/page_runtime_metadata.py
-SLUG_PAGE_CLASS_OVERRIDES.
+Live at /insolvency/secured-vs-unsecured-creditors/ (WP pages 74891).
+
+Adopted into Bernstein by registration only -- no content was regenerated.
+Page class ("secured-vs-unsecured-creditors" -> "debt_solution_comparison") sits in
+scripts/page_runtime_metadata.py SLUG_PAGE_CLASS_OVERRIDES.
+
+verification_date is the date the draft was last changed in git, not a claim
+that the page has been fact-checked since. It exists so the runtime router can
+infer an honest freshness tier.
+
+Slim config -- only the fields the Bernstein pipeline and runtime-pack router
+read. Content is read directly from drafts/74891_secured-vs-unsecured-creditors.html.
 """
 
 PAGE_CONFIG = {
-    'slug': 'secured-vs-unsecured-creditors',
-    'page_type': 'process_guide',
-    'page_class': 'entity_owner',
+    'slug': "secured-vs-unsecured-creditors",
+    'page_type': "process_guide",
     'wp_page_id': 74891,
-    'title': 'Secured vs Unsecured Creditors',
-    'verification_date': '30 July 2026',
+    'title': "Secured vs Unsecured Creditors",
+    'verification_date': "15 July 2026",
 }

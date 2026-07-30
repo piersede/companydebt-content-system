@@ -1,18 +1,21 @@
-"""Page config for: HMRC as a Creditor in Liquidation.
+"""Page config for: HMRC as a Creditor in Liquidation
 
-Liquidation Q&A page at /liquidation/hmrc-as-a-creditor-in-liquidation/ (WordPress PAGE id 79342,
-template templates/take-the-test-template.php). Registered as editorial
-'process_guide' so build_page reads the authored draft
-drafts/79342_hmrc-as-a-creditor-in-liquidation.html directly. Page-class routing
-('enforcement') lives in scripts/page_runtime_metadata.py
-SLUG_PAGE_CLASS_OVERRIDES.
+Liquidation-section page at /liquidation/hmrc-as-a-creditor-in-liquidation/.
+Covers HMRC's secondary preferential status since 1 December 2020, what that
+did to bank and supplier recovery, HMRC's voting power in formal procedures,
+and the personal-liability routes HMRC can use against a director.
+
+Page-class override ("hmrc-as-a-creditor-in-liquidation" -> "enforcement")
+already sits in scripts/page_runtime_metadata.py SLUG_PAGE_CLASS_OVERRIDES.
+
+Content is read directly from
+drafts/79342_hmrc-as-a-creditor-in-liquidation.html.
 """
 
 PAGE_CONFIG = {
     'slug': 'hmrc-as-a-creditor-in-liquidation',
-    'page_type': 'process_guide',
-    'page_class': 'enforcement',
+    'page_type': 'definition',
     'wp_page_id': 79342,
-    'title': 'HMRC as a Creditor in Liquidation',
+    'title': 'HMRC as a Creditor in Liquidation: What to Expect',
     'verification_date': '30 July 2026',
 }

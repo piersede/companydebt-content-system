@@ -1,18 +1,23 @@
-"""Page config for: Debt and Creditor Pressure Hub.
+"""Page config for: Debt & Creditor Pressure Hub
 
-Creditor-pressure hub page at /debt-creditor-pressure-hub/ (WordPress PAGE id 77146,
-template templates/take-the-test-template.php). Registered as editorial
-'process_guide' so build_page reads the authored draft
-drafts/77146_debt-creditor-pressure-hub.html directly. Page-class routing
-('enforcement') lives in scripts/page_runtime_metadata.py
-SLUG_PAGE_CLASS_OVERRIDES.
+Live at /debt-creditor-pressure-hub/ (WP pages 77146).
+
+Adopted into Bernstein by registration only -- no content was regenerated.
+Page class ("debt-creditor-pressure-hub" -> "entity_owner") sits in
+scripts/page_runtime_metadata.py SLUG_PAGE_CLASS_OVERRIDES.
+
+verification_date is the date the draft was last changed in git, not a claim
+that the page has been fact-checked since. It exists so the runtime router can
+infer an honest freshness tier.
+
+Slim config -- only the fields the Bernstein pipeline and runtime-pack router
+read. Content is read directly from drafts/77146_debt-creditor-pressure-hub.html.
 """
 
 PAGE_CONFIG = {
-    'slug': 'debt-creditor-pressure-hub',
-    'page_type': 'process_guide',
-    'page_class': 'enforcement',
+    'slug': "debt-creditor-pressure-hub",
+    'page_type': "hub",
     'wp_page_id': 77146,
-    'title': 'Debt and Creditor Pressure Hub',
-    'verification_date': '30 July 2026',
+    'title': "Debt & Creditor Pressure Hub",
+    'verification_date': "29 July 2026",
 }

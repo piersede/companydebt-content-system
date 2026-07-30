@@ -88,6 +88,13 @@ function loadRegistrySnapshot() {
   return JSON.parse(runPython(script));
 }
 
+// Render a JS value as a Python literal for the `python -c` bridge.
+// null/undefined must become `None`, never JSON's `null`.
+function pyLiteral(value) {
+  if (value === null || value === undefined || value === '') return 'None';
+  return JSON.stringify(String(value));
+}
+
 function resolvePageConfigPath(page) {
   const parts = String(page.module_path || '').split('.');
   return path.join(ROOT, 'scripts', ...parts) + '.py';
@@ -179,11 +186,14 @@ function resolveRuntimeContext(identifier, stage = 'draft') {
     'root = Path.cwd()',
     "sys.path.insert(0, str(root / 'scripts'))",
     'from runtime_pack_router import resolve_runtime_context',
-    `payload = resolve_runtime_context(${JSON.stringify(task)}, `
-      + `page_type=${JSON.stringify(page.page_type || null)}, `
-      + `slug=${JSON.stringify(page.slug || page.page_id)}, `
-      + `page_class=${JSON.stringify(page.page_class || null)}, `
-      + `freshness_tier=${JSON.stringify(page.freshness_tier || null)})`,
+    // pyLiteral, not JSON.stringify: JSON renders absent values as `null`, which is
+    // not a Python name and crashes the -c script with NameError for any page that
+    // has no page-class override or freshness tier.
+    `payload = resolve_runtime_context(${pyLiteral(task)}, `
+      + `page_type=${pyLiteral(page.page_type)}, `
+      + `slug=${pyLiteral(page.slug || page.page_id)}, `
+      + `page_class=${pyLiteral(page.page_class)}, `
+      + `freshness_tier=${pyLiteral(page.freshness_tier)})`,
     'print(json.dumps(payload))',
   ].join('\n');
 
