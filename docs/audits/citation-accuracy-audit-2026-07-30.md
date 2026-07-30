@@ -55,7 +55,7 @@ factsheet codes (CC/FS*), COP codes, SIP numbers and gov.uk publication referenc
 
 | # | Page | Cited | What the provision actually is | Correct citation |
 |---|---|---|---|---|
-| 5 | `11788_frozen-bank-account`<br>`13029_understanding-hmrc-debt-collection`<br>`24434_what-is-a-freezing-order-or-injunction`<br>`67809_hmrc`<br>`77162_hmrc-enforcement-action`<br>`77205_hmrc-debt-enforcement-hub`<br>`79563_what-happens-if-hmrc-freezes-your-business-bank-account`<br>`79580_can-hmrc-shut-down-my-business`<br>`79588_what-happens-if-you-ignore-hmrc-letters`<br>`79596_what-happens-if-hmrc-rejects-your-time-to-pay-arrangement` | **F(No.2)A 2015, Part 2** for HMRC's Direct Recovery of Debts | Part 2 is **"Inheritance tax — Rate bands"**. Nothing to do with DRD | **F(No.2)A 2015, s.51 and Schedule 8** — "Enforcement by deduction from accounts" |
+| 5 | `11788_frozen-bank-account`<br>`13029_understanding-hmrc-debt-collection`<br>`8350_hmrc-threatening-letters`<br>`67809_hmrc`<br>`77162_hmrc-enforcement-action`<br>`77205_hmrc-debt-enforcement-hub`<br>`79563_what-happens-if-hmrc-freezes-your-business-bank-account`<br>`79580_can-hmrc-shut-down-my-business`<br>`79588_what-happens-if-you-ignore-hmrc-letters`<br>`79596_what-happens-if-hmrc-rejects-your-time-to-pay-arrangement` | **F(No.2)A 2015, Part 2** for HMRC's Direct Recovery of Debts | Part 2 is **"Inheritance tax — Rate bands"**. Nothing to do with DRD | **F(No.2)A 2015, s.51 and Schedule 8** — "Enforcement by deduction from accounts" |
 | 6 | `77157_construction-insolvency` | "HMRC may seek a Personal Liability Notice under **section 69 of the Finance Act 2020**, attaching personal liability to the director for the unpaid CIS deductions" | FA 2020 **s.69 is "Recovery of DST liability"** (Digital Services Tax) | Compound error. PLNs are **SSAA 1992, s.121C**, and they cover **unpaid NIC only — not CIS deductions**. There is no PLN route for CIS. This sentence needs rewriting, not just re-citing |
 | 7 | `79342_hmrc-as-a-creditor-in-liquidation` | "the Finance Act 2020 (Schedule 26 reinstating HMRC secondary preferential status **and introducing Personal Liability Notices** and Joint and Several Liability Notices)" | FA 2020 did not introduce PLNs — they date from **SSAA 1992, s.121C**, 28 years earlier | Split the claim: **s.98** (secondary preference), **s.100 + Sch 13** (Joint and Several Liability), **SSAA 1992 s.121C** (PLNs) |
 | 8 | `20428_vs-liquidation` | Finance Act 2020, **Schedule 2** ("Crown preference reinstatement, in force 1 December 2020") | FA 2020 Sch 2 is **"The loan charge: consequential amendments"** | **FA 2020, s.98** |
@@ -156,7 +156,9 @@ Two entries overlap with the findings above and should be fixed with them:
 
 ## Recommended remediation order
 
-**19 pages** need a citation fix. Group them so related prose is touched once:
+**25 pages** need a citation fix. Of those, **17 are reference-block-only** (the bad citation
+appears solely in a Sources & References or Methodology block) and **8 involve body prose**.
+Group them so related prose is touched once:
 
 1. **FA 2020 Crown-preference family — 8 pages** (findings 1, 2, 8, 9). One correct target:
    `FA 2020, s.98`. `79342` and `77739` also need the PLN/JSL claim untangled (findings 7, 2).
