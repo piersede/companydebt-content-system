@@ -1,5 +1,18 @@
 # Citation Accuracy Audit — 30 July 2026
 
+> **STATUS: all 13 findings remediated on 2026-07-30** (commits `bf1139a`, `1169b0f`,
+> `a3a1012`). 25 pages changed, all holding their pre-fix `article_audit.py` scores.
+> Corpus-wide provision verification is down to two non-resolving citations, both
+> confirmed false positives and recorded in the LOW table below. Staging push not yet
+> done — needs sign-off.
+>
+> Two corrections to this report were found during remediation, both now applied
+> inline: finding 5's page list named `24434` in error (the correct page is `8350`;
+> 24434 cites the Act without a Part and is fine), and finding 4 affected **5
+> instances on 68120**, not one. The per-page dedupe in extraction hid the
+> multiplicity — a lesson for the standing guard proposed at the end of this report:
+> **report every occurrence, not one row per page.**
+
 Systematic verification of statutory and official-guidance citations across all page drafts.
 **Audit pass only. No page content was edited.** Fixes go per-page through Bernstein.
 
