@@ -47,6 +47,7 @@ PAGE_REGISTRY = {
     'dealing-with-an-hmrc-winding-up-petition': 'cc_builder.data.pages.dealing_with_an_hmrc_winding_up_petition',
     'winding-up-petition-vs-compulsory-liquidation': 'cc_builder.data.pages.winding_up_petition_vs_compulsory_liquidation',
     'cant-pay-paye': 'cc_builder.data.pages.cant_pay_paye',
+    'creditor-negotiations': 'cc_builder.data.pages.creditor_negotiations',
     # The insolvency data hub: lives at /data/ (page 79845, slug 'data').
     # Module file keeps its company_insolvency.py name; the page slug is 'data'.
     'data': 'cc_builder.data.pages.company_insolvency',
