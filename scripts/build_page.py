@@ -84,6 +84,8 @@ PAGE_REGISTRY = {
     'can-personal-assets-of-directors-be-seized-from-a-ltd-company': 'cc_builder.data.pages.can_personal_assets_of_directors_be_seized',
     'leases-and-contracts-in-liquidation': 'cc_builder.data.pages.leases_and_contracts_in_liquidation',
     'hmrc-as-a-creditor-in-liquidation': 'cc_builder.data.pages.hmrc_as_a_creditor_in_liquidation',
+    'secured-vs-unsecured-creditors': 'cc_builder.data.pages.secured_vs_unsecured_creditors',
+    'hmrc-penalties-investigations': 'cc_builder.data.pages.hmrc_penalties_investigations',
     # ── Sector pages (/sectors/*) — clean-rebuild programme, posts not pages ──
     'construction': 'cc_builder.data.pages.construction_sector',
     'garden-centres': 'cc_builder.data.pages.garden_centres_sector',

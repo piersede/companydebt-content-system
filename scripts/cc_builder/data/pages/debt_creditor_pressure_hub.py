@@ -2,16 +2,16 @@
 
 Creditor-pressure hub page at /debt-creditor-pressure-hub/ (WordPress PAGE id 77146,
 template templates/take-the-test-template.php). Registered as editorial
-'process_guide' so build_page reads the authored draft
+'hub' so build_page reads the authored draft
 drafts/77146_debt-creditor-pressure-hub.html directly. Page-class routing
-('enforcement') lives in scripts/page_runtime_metadata.py
+('hub') lives in scripts/page_runtime_metadata.py
 SLUG_PAGE_CLASS_OVERRIDES.
 """
 
 PAGE_CONFIG = {
     'slug': 'debt-creditor-pressure-hub',
-    'page_type': 'process_guide',
-    'page_class': 'enforcement',
+    'page_type': 'hub',
+    'page_class': 'hub',
     'wp_page_id': 77146,
     'title': 'Debt and Creditor Pressure Hub',
     'verification_date': '30 July 2026',
