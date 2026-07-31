@@ -257,7 +257,9 @@ get_header();
     window.__cdVerdict = verdict.toUpperCase();
   }
 
-  document.addEventListener("DOMContentLoaded", function(){
+  // Run even if the DOM is already parsed (WP Rocket delay-JS can inject this
+  // inline script after DOMContentLoaded has fired — a plain listener would never run).
+  (function(cb){ if (document.readyState !== "loading") { cb(); } else { document.addEventListener("DOMContentLoaded", cb); } })(function(){
     setTimeout(function(){
       FIELDS.forEach(function(f){
         var slider = document.getElementById(f.slider);
@@ -352,9 +354,13 @@ get_header();
     window.scrollTo(0, 0);
   }
   window.cdShowResults = showResults; // manual preview hook
-  if (window.jQuery) {
-    jQuery(document).on("gform_confirmation_loaded", showResults);
-  }
+  // Bind once jQuery is available. jQuery loads later (footer / WP Rocket delay-JS),
+  // so a one-time `if (window.jQuery)` check ran too early and silently skipped this,
+  // leaving "Show My Initial Result" with nothing to reveal the results. Poll instead.
+  (function bindGf(){
+    if (window.jQuery) { window.jQuery(document).on("gform_confirmation_loaded", showResults); }
+    else { setTimeout(bindGf, 50); }
+  })();
 })();
 </script>
 </main>
