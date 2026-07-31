@@ -1481,10 +1481,20 @@ add_filter( 'gform_field_validation', function( $result, $value, $form, $field )
 // Pilot page id -> cluster (Phase 1). From docs/cta-rollout-manifest.md.
 function cd_acta_map() {
 	return array(
-		79615 => 'liquidation', 79606 => 'liquidation', 79553 => 'liquidation',
-		79596 => 'hmrc',        79588 => 'hmrc',        79580 => 'hmrc',
-		79387 => 'rescue',      79369 => 'rescue',
-		75111 => 'director-liability', 68180 => 'director-liability',
+		43675 => 'bounce-back',
+		26139 => 'cash-flow', 26902 => 'cash-flow', 58601 => 'cash-flow',
+		20681 => 'director-liability', 24780 => 'director-liability', 41082 => 'director-liability', 43522 => 'director-liability', 68153 => 'director-liability', 68180 => 'director-liability',
+		75111 => 'director-liability',
+		13766 => 'general', 17686 => 'general', 21122 => 'general', 22554 => 'general', 26279 => 'general', 28526 => 'general',
+		47772 => 'general', 53185 => 'general', 68076 => 'general', 68134 => 'general', 74891 => 'general', 77146 => 'general',
+		8324 => 'hmrc', 8350 => 'hmrc', 8408 => 'hmrc', 8414 => 'hmrc', 9443 => 'hmrc', 11384 => 'hmrc',
+		12958 => 'hmrc', 14619 => 'hmrc', 67438 => 'hmrc', 76920 => 'hmrc', 79342 => 'hmrc', 79580 => 'hmrc',
+		79588 => 'hmrc', 79596 => 'hmrc',
+		7669 => 'liquidation', 7674 => 'liquidation', 7687 => 'liquidation', 15010 => 'liquidation', 23698 => 'liquidation', 46222 => 'liquidation',
+		77739 => 'liquidation', 78129 => 'liquidation', 78191 => 'liquidation', 79322 => 'liquidation', 79379 => 'liquidation', 79553 => 'liquidation',
+		79606 => 'liquidation', 79615 => 'liquidation',
+		7665 => 'rescue', 65483 => 'rescue', 68130 => 'rescue', 68356 => 'rescue', 74439 => 'rescue', 77372 => 'rescue',
+		79369 => 'rescue', 79387 => 'rescue',
 	);
 }
 
