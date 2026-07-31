@@ -523,6 +523,15 @@ SLIDES = {
             myth="Dissolve the company and the debts die with it.",
             fact="Creditors can block it, restore the company, and pursue you.")),
     ],
+    # Post 24: Myth/Fact, Bounce Back Loan. Grounded in the live page + draft
+    # 43745. NB no personal guarantee on BBLs; risk is company debt + evasion,
+    # not a called PG. No number on card.
+    24: [
+        ("mythfact", dict(
+            kicker="Bounce Back Loans",
+            myth="Dissolve the company and the Bounce Back Loan disappears.",
+            fact="It doesn't. The lender blocks the strike-off, and the attempt looks like evasion.")),
+    ],
     # Post 11: verified 2026-07-22 by recomputing from the gov.uk bulk export.
     # Window 2025-01-11 to 2026-07-05, ~6,600 companies, latest report each.
     11: [
@@ -548,6 +557,7 @@ SOURCES = {
     21: "",
     22: "",
     23: "",
+    24: "",
 }
 
 # Footer URL per post (defaults to the data hub).
@@ -556,6 +566,7 @@ URLS = {
     21: "companydebt.com/advice",
     22: "companydebt.com/advice",
     23: "companydebt.com/liquidation",
+    24: "companydebt.com/bounce-back-loan-support-hub",
 }
 
 
