@@ -88,7 +88,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				</div>
 				<p class="qq-hero__micro">
 					<span class="qq-hero__micro-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
-					<?php echo is_page( 'close-my-company' ) ? 'Talk it through with someone who has handled it before.' : 'You do not need exact figures. Reasonable estimates are fine.'; ?>
+					<?php echo is_page( array( 'close-my-company', 'insolvency-practitioner' ) ) ? 'Talk it through with someone who has handled it before.' : 'You do not need exact figures. Reasonable estimates are fine.'; ?>
 				</p>
 
 				<div class="qq-hero__logos">
@@ -98,9 +98,9 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 				</div>
 			</div>
 
-			<?php if ( is_page( 'close-my-company' ) ) : ?>
+			<?php if ( is_page( array( 'close-my-company', 'insolvency-practitioner' ) ) ) : ?>
 			<!-- CONTACT CARD (Gravity Form 41) - /close-my-company/ only -->
-			<div class="qq-card qq-card--contact" id="close-my-company-form">
+			<div class="qq-card qq-card--contact" id="contact-form">
 				<div class="qq-card__form form-wrapper">
 					<p class="qq-card__step">Speak to Our Team</p>
 					<p class="qq-card__privacy">Tell us what is happening with the company and we will call you back, usually the same working day.</p>
@@ -381,7 +381,7 @@ $qq_is_staging = ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST
 		<div class="qq-finalcta__inner">
 			<h2 class="qq-h2"><?php echo is_page( 'insolvency-practitioner' ) ? 'Speak to a Licensed Insolvency Practitioner' : ( is_page( 'close-my-company' ) ? 'Ready to Close Your Limited Company?' : 'Understand Your Company&rsquo;s Options' ); ?></h2>
 			<p class="qq-finalcta__text"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get free, confidential advice from a regulated professional. We will explain the company&rsquo;s options and the likely costs, with no obligation to proceed.' : ( is_page( 'close-my-company' ) ? 'Tell us what is happening with the company and we will explain the right way to close it, what it costs and what it means for you. There is no obligation to proceed.' : 'Answer a few questions about the company&rsquo;s current financial position. We will explain the realistic options, likely costs and next steps. There is no obligation to proceed.' ); ?></p>
-			<a href="<?php echo is_page( 'close-my-company' ) ? '#close-my-company-form' : '#quick-quote-form'; ?>" class="qq-btn qq-btn--solid"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get Free Advice' : ( is_page( 'close-my-company' ) ? 'Request a Callback' : 'Understand My Options' ); ?></a>
+			<a href="<?php echo is_page( array( 'close-my-company', 'insolvency-practitioner' ) ) ? '#contact-form' : '#quick-quote-form'; ?>" class="qq-btn qq-btn--solid"><?php echo is_page( 'insolvency-practitioner' ) ? 'Get Free Advice' : ( is_page( 'close-my-company' ) ? 'Request a Callback' : 'Understand My Options' ); ?></a>
 			<p class="qq-finalcta__sub">or speak confidentially with an adviser on <a href="tel:08000746757" style="color:#fff;">0800 074 6757</a></p>
 		</div>
 	</section>
