@@ -1511,7 +1511,7 @@ function cd_acta_block( $variant, $eyebrow, $title, $intro, $btn, $href, $trust,
 		$sep = ( strpos( $href, '?' ) !== false ) ? '&' : '?';
 		$url = $href . $sep . 'utm_source=article&utm_medium=inline-cta&utm_campaign=' . rawurlencode( $src );
 	}
-	$label = $btn . ( $arrow ? ' &rarr;' : '' );
+	$label = $btn; // no arrow glyphs in button labels (per Theo)
 	$pills = '';
 	foreach ( (array) $trust as $tp ) { $pills .= '<span>' . $tp . '</span>'; }
 	return '<div class="cd-cta cd-cta--' . esc_attr( $variant ) . '">'
