@@ -1492,13 +1492,13 @@ function cd_acta_map() {
 function cd_acta_service( $cluster ) {
 	$lib = array(
 		'liquidation'        => array( 'Liquidation Advice', 'A Company That Can&rsquo;t Pay Its Debts?', 'Speak to a Licensed Insolvency Practitioner about your liquidation options and the likely costs. The first call is free and there is no obligation.', 'Get Liquidation Advice', '/liquidation/', 'Licensed IPs', 'Nationwide', 'No obligation' ),
-		'solvent-closure'    => array( 'Solvent Closure', 'Closing a Solvent Company?', 'Strike-off or MVL &mdash; which route is right, and what it means for your tax. Get it clear before you file.', 'Explore Closure Options', '/liquidation/members-voluntary-liquidation/', 'Licensed IPs', 'Tax-efficient', 'No obligation' ),
-		'hmrc'               => array( 'HMRC Debt Help', 'Behind on Tax With HMRC?', 'VAT, PAYE or a growing bill &mdash; talk to someone who deals with HMRC every day. Free, confidential first call.', 'Speak to a Tax-Debt Adviser', '/hmrc/', 'Free call', 'Confidential', 'UK based' ),
+		'solvent-closure'    => array( 'Solvent Closure', 'Closing a Solvent Company?', 'Strike-off or MVL: which route is right, and what it means for your tax. Get it clear before you file.', 'Explore Closure Options', '/liquidation/members-voluntary-liquidation/', 'Licensed IPs', 'Tax-efficient', 'No obligation' ),
+		'hmrc'               => array( 'HMRC Debt Help', 'Behind on Tax With HMRC?', 'VAT, PAYE or a growing bill. Talk to someone who deals with HMRC every day. Free, confidential first call.', 'Speak to a Tax-Debt Adviser', '/hmrc/', 'Free call', 'Confidential', 'UK based' ),
 		'rescue'             => array( 'Company Rescue', 'Is the Business Still Viable?', 'If the company can be saved, options like a CVA or administration may protect it. Find out where you stand.', 'Explore Rescue Options', '/company-rescue-solutions/', 'Licensed IPs', 'Confidential', 'No obligation' ),
-		'cash-flow'          => array( 'Cash-Flow Support', 'Struggling With Cash Flow?', 'Practical, confidential advice before the pressure builds &mdash; while you still have options.', 'Get Cash-Flow Advice', '/company-cash-flow-problems/', 'Free call', 'Confidential', 'No obligation' ),
-		'director-liability' => array( 'Director Liability', 'Worried About Personal Liability?', 'Personal guarantees, overdrawn loans, misfeasance &mdash; understand your exposure before it escalates.', 'Get Confidential Advice', '/advice/', 'Confidential', 'Regulated', 'No obligation' ),
-		'bounce-back'        => array( 'Bounce Back Loan', 'A Bounce Back Loan You Can&rsquo;t Repay?', 'Understand your options if the company can&rsquo;t repay it &mdash; and what it means for you as a director.', 'Get Bounce Back Loan Advice', '/bounce-back-loan-support-hub/', 'Confidential', 'Regulated', 'No obligation' ),
-		'general'            => array( 'Confidential Advice', 'Worried About Your Company?', 'Free, confidential advice on the realistic options &mdash; no obligation, wherever you are in the UK.', 'Get Confidential Advice', '/company-rescue-solutions/', 'Free call', 'Confidential', 'UK based' ),
+		'cash-flow'          => array( 'Cash-Flow Support', 'Struggling With Cash Flow?', 'Practical, confidential advice before the pressure builds, while you still have options.', 'Get Cash-Flow Advice', '/company-cash-flow-problems/', 'Free call', 'Confidential', 'No obligation' ),
+		'director-liability' => array( 'Director Liability', 'Worried About Personal Liability?', 'Personal guarantees, overdrawn loans, misfeasance: understand your exposure before it escalates.', 'Get Confidential Advice', '/advice/', 'Confidential', 'Regulated', 'No obligation' ),
+		'bounce-back'        => array( 'Bounce Back Loan', 'A Bounce Back Loan You Can&rsquo;t Repay?', 'Understand your options if the company can&rsquo;t repay it, and what it means for you as a director.', 'Get Bounce Back Loan Advice', '/bounce-back-loan-support-hub/', 'Confidential', 'Regulated', 'No obligation' ),
+		'general'            => array( 'Confidential Advice', 'Worried About Your Company?', 'Free, confidential advice on the realistic options. No obligation, wherever you are in the UK.', 'Get Confidential Advice', '/company-rescue-solutions/', 'Free call', 'Confidential', 'UK based' ),
 	);
 	return isset( $lib[ $cluster ] ) ? $lib[ $cluster ] : $lib['general'];
 }
@@ -1551,7 +1551,7 @@ add_filter( 'the_content', function( $content ) {
 	$p3 = $off[ $n - 1 ];                 // before the last H2 (FAQ / related) -> CTA3 (phone)
 
 	$svc  = cd_acta_service( $map[ $id ] );
-	$cta1 = cd_acta_block( 'test', '30-Second Insolvency Check', 'Not Sure If Your Company Is Actually Insolvent?', 'Answer a few quick questions to see whether your company may be insolvent &mdash; and what to do next.', 'Check My Company', '/insolvency-calculator/', array( 'Free', 'Confidential', 'Regulated' ), 'assessment' );
+	$cta1 = cd_acta_block( 'test', '30-Second Insolvency Check', 'Not Sure If Your Company Is Actually Insolvent?', 'Answer a few quick questions to see whether your company may be insolvent, and what to do next.', 'Check My Company', '/insolvency-calculator/', array( 'Free', 'Confidential', 'Regulated' ), 'assessment' );
 	$cta2 = cd_acta_block( 'service', $svc[0], $svc[1], $svc[2], $svc[3], $svc[4], array( $svc[5], $svc[6], $svc[7] ), $map[ $id ] );
 	$cta3 = cd_acta_block( 'phone', 'Free Director Helpline', 'Talk to a Licensed Insolvency Practitioner Today', 'Get straight through to a Licensed IP for a confidential, no-obligation conversation. We take HMRC and creditor pressure off you from the first call.', '0800 074 6757', 'tel:08000746757', array( 'Free call', 'UK based', 'Confidential' ), 'phone', false );
 
