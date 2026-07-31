@@ -22,10 +22,12 @@ CTA3 (Call 0800 074 6757 -> tel) are the same on every article. CTA2 is the cate
 | /about-us/ | EXCLUDE | — | utility/legal |
 | /accessibility/ | EXCLUDE | — | utility/legal |
 | /accreditations/ | EXCLUDE | — | utility/legal |
+| /bounce-back-loan-support-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
 | /careers/ | EXCLUDE | — | utility/legal |
 | /case-studies-hub/ | EXCLUDE | — | utility/legal |
 | /charge-out-rates/ | EXCLUDE | — | utility/legal |
 | /close-my-company/ | EXCLUDE | — | landing page |
+| /company-rescue-recovery-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
 | /complaints-procedure/ | EXCLUDE | — | utility/legal |
 | /complaints/ | EXCLUDE | — | utility/legal |
 | /contact-us/ | EXCLUDE | — | utility/legal |
@@ -62,39 +64,37 @@ CTA3 (Call 0800 074 6757 -> tel) are the same on every article. CTA2 is the cate
 | /data/temporary-staffing-agency-insolvency-statistics/ | EXCLUDE | — | data/statistics |
 | /data/uk-insolvency-statistics/ | EXCLUDE | — | data/statistics |
 | /data/winding-up-petition-tracker/ | EXCLUDE | — | data/statistics |
+| /debt-charities-uk/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /debt-creditor-pressure-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
+| /director-protection-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
 | /express-liquidation/ | EXCLUDE | — | landing page |
 | /feedback/ | EXCLUDE | — | utility/legal |
+| /guides-resources-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
 | /insolvency-calculator/ | EXCLUDE | — | landing page |
+| /insolvency-news-commentary/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
 | /insolvency-practitioner/ | EXCLUDE | — | landing page |
 | /legal/ | EXCLUDE | — | utility/legal |
 | /meet-the-team/ | EXCLUDE | — | utility/legal |
+| /mental-health-debt-stress-support/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
 | /privacy-policy/ | EXCLUDE | — | utility/legal |
 | /prize-draw-terms-conditions/ | EXCLUDE | — | utility/legal |
 | /quick-quote-options/ | EXCLUDE | — | landing page |
 | /quick-quote/ | EXCLUDE | — | landing page |
+| /sample-letters/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/cease-trading-template/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/hold-action-on-my-account/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/i-cannot-afford-to-repay-my-debt/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/i-have-no-knowledge-of-this-debt/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/i-need-more-information-about-this-debt/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/request-a-reduced-monthly-payment/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/tell-debt-collector-to-stop-contacting-you/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sample-letters/write-off-my-debt/ | EXCLUDE | — | uncategorised / resource / sample-letter (excluded per decision) |
+| /sector-insolvency-hub/ | EXCLUDE | — | hub index page (excluded per decision) |
+| /sector-specific-insolvency/ | EXCLUDE | — | hub index page (excluded per decision) |
 | /site-map/ | EXCLUDE | — | utility/legal |
 | /stressed-directors-guide/ | EXCLUDE | — | utility/legal |
 | /terms-conditions/ | EXCLUDE | — | utility/legal |
 | /useful-publications/ | EXCLUDE | — | utility/legal |
-| /bounce-back-loan-support-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /company-rescue-recovery-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /debt-charities-uk/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /debt-creditor-pressure-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /director-protection-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /guides-resources-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /insolvency-news-commentary/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /mental-health-debt-stress-support/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/cease-trading-template/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/hold-action-on-my-account/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/i-cannot-afford-to-repay-my-debt/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/i-have-no-knowledge-of-this-debt/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/i-need-more-information-about-this-debt/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/request-a-reduced-monthly-payment/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/tell-debt-collector-to-stop-contacting-you/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sample-letters/write-off-my-debt/ | REVIEW | **REVIEW** | uncategorised - assign manually |
-| /sector-insolvency-hub/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
-| /sector-specific-insolvency/ | REVIEW | **REVIEW** | hub index page (article? confirm) |
 | /bounce-back-loan-support-hub/bounce-back-loan-fraud/ | bounce-back | Get Bounce Back Loan Advice |  |
 | /bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/ | bounce-back | Get Bounce Back Loan Advice |  |
 | /bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/ | bounce-back | Get Bounce Back Loan Advice |  |
