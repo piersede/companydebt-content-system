@@ -1450,3 +1450,20 @@ add_action( 'gform_after_submission', function ( $entry, $form ) {
 		}
 	}
 }, 10, 2 );
+
+
+/**
+ * Staging-only: bypass Gravity Forms 38 reCAPTCHA (the insolvency-calculator
+ * form). The reCAPTCHA site key is not registered for comdebstage, so its token
+ * is always invalid here, which blocks submission and stops the results view
+ * from ever appearing. Production keeps full reCAPTCHA via the host guard.
+ */
+add_filter( 'gform_field_validation', function( $result, $value, $form, $field ) {
+	$cd_is_staging = isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'comdebstage' ) !== false;
+	if ( $cd_is_staging && ! empty( $form['id'] ) && (int) $form['id'] === 38
+		&& isset( $field->type ) && $field->type === 'captcha' ) {
+		$result['is_valid'] = true;
+		$result['message']  = '';
+	}
+	return $result;
+}, 20, 4 );
