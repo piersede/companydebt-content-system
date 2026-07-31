@@ -1469,12 +1469,14 @@ add_filter( 'gform_field_validation', function( $result, $value, $form, $field )
 }, 20, 4 );
 
 
-/* ── Inline article CTAs — Phase 1 pilot ───────────────────────────────────
+/* -- Inline article CTAs -- Phase 1 pilot ---------------------------------
    Injects 3 CTAs (assessment / category service / phone) at H2 boundaries in
-   the ARTICLE BODY only (the_content) — the sidebar is never touched. Central
-   and category-driven. Gated to a pilot page list for now; to go wider, expand
-   cd_acta_map() (or replace it with the category-derived cluster lookup).
-   -------------------------------------------------------------------------- */
+   the ARTICLE BODY only (the_content) -- the sidebar is never touched. Uses the
+   site-wide .cd-cta component styling (see style.css) so injected CTAs are
+   visually identical to the hand-placed ones. If a page already carries any
+   cd-cta block (the earlier hand-placed set), this injector does NOTHING on it,
+   so bespoke CTAs are never duplicated or overwritten. Gated to a pilot map.
+   ------------------------------------------------------------------------- */
 
 // Pilot page id -> cluster (Phase 1). From docs/cta-rollout-manifest.md.
 function cd_acta_map() {
@@ -1486,66 +1488,72 @@ function cd_acta_map() {
 	);
 }
 
-// CTA 2 library (the category-driven one). headline, sub, button, dest.
+// CTA 2 library (the category-driven one): eyebrow, title, intro, button, dest, 3 trust pills.
 function cd_acta_service( $cluster ) {
 	$lib = array(
-		'liquidation'        => array( 'A Company That Can&rsquo;t Pay Its Debts?', 'We&rsquo;ll explain your liquidation options and the likely costs, honestly.', 'Get Liquidation Advice', '/liquidation/' ),
-		'solvent-closure'    => array( 'Closing a Solvent Company?', 'Strike-off or MVL &mdash; which is right, and what it means for tax.', 'Explore Your Closure Options', '/liquidation/members-voluntary-liquidation/' ),
-		'hmrc'               => array( 'Behind on Tax With HMRC?', 'VAT, PAYE or a growing bill &mdash; talk to someone who deals with HMRC daily.', 'Speak to a Tax-Debt Adviser', '/hmrc/' ),
-		'rescue'             => array( 'Is the Business Still Viable?', 'If it can be saved, options like a CVA or administration may protect it.', 'Explore Rescue Options', '/company-rescue-solutions/' ),
-		'cash-flow'          => array( 'Struggling With Cash Flow?', 'Practical, confidential advice before the pressure builds.', 'Get Cash-Flow Advice', '/company-cash-flow-problems/' ),
-		'director-liability' => array( 'Worried About Personal Liability?', 'Personal guarantees, overdrawn loans, misfeasance &mdash; know where you stand.', 'Get Confidential Advice', '/advice/' ),
-		'bounce-back'        => array( 'A Bounce Back Loan You Can&rsquo;t Repay?', 'Understand your options if the company can&rsquo;t repay it.', 'Get Bounce Back Loan Advice', '/bounce-back-loan-support-hub/' ),
-		'general'            => array( 'Worried About Your Company?', 'Free, confidential advice on the realistic options &mdash; no obligation.', 'Get Confidential Advice', '/company-rescue-solutions/' ),
+		'liquidation'        => array( 'Liquidation Advice', 'A Company That Can&rsquo;t Pay Its Debts?', 'Speak to a Licensed Insolvency Practitioner about your liquidation options and the likely costs. The first call is free and there is no obligation.', 'Get Liquidation Advice', '/liquidation/', 'Licensed IPs', 'Nationwide', 'No obligation' ),
+		'solvent-closure'    => array( 'Solvent Closure', 'Closing a Solvent Company?', 'Strike-off or MVL &mdash; which route is right, and what it means for your tax. Get it clear before you file.', 'Explore Closure Options', '/liquidation/members-voluntary-liquidation/', 'Licensed IPs', 'Tax-efficient', 'No obligation' ),
+		'hmrc'               => array( 'HMRC Debt Help', 'Behind on Tax With HMRC?', 'VAT, PAYE or a growing bill &mdash; talk to someone who deals with HMRC every day. Free, confidential first call.', 'Speak to a Tax-Debt Adviser', '/hmrc/', 'Free call', 'Confidential', 'UK based' ),
+		'rescue'             => array( 'Company Rescue', 'Is the Business Still Viable?', 'If the company can be saved, options like a CVA or administration may protect it. Find out where you stand.', 'Explore Rescue Options', '/company-rescue-solutions/', 'Licensed IPs', 'Confidential', 'No obligation' ),
+		'cash-flow'          => array( 'Cash-Flow Support', 'Struggling With Cash Flow?', 'Practical, confidential advice before the pressure builds &mdash; while you still have options.', 'Get Cash-Flow Advice', '/company-cash-flow-problems/', 'Free call', 'Confidential', 'No obligation' ),
+		'director-liability' => array( 'Director Liability', 'Worried About Personal Liability?', 'Personal guarantees, overdrawn loans, misfeasance &mdash; understand your exposure before it escalates.', 'Get Confidential Advice', '/advice/', 'Confidential', 'Regulated', 'No obligation' ),
+		'bounce-back'        => array( 'Bounce Back Loan', 'A Bounce Back Loan You Can&rsquo;t Repay?', 'Understand your options if the company can&rsquo;t repay it &mdash; and what it means for you as a director.', 'Get Bounce Back Loan Advice', '/bounce-back-loan-support-hub/', 'Confidential', 'Regulated', 'No obligation' ),
+		'general'            => array( 'Confidential Advice', 'Worried About Your Company?', 'Free, confidential advice on the realistic options &mdash; no obligation, wherever you are in the UK.', 'Get Confidential Advice', '/company-rescue-solutions/', 'Free call', 'Confidential', 'UK based' ),
 	);
 	return isset( $lib[ $cluster ] ) ? $lib[ $cluster ] : $lib['general'];
 }
 
-// One CTA block (headline / sub / button / dest / attribution source slug).
-function cd_acta_block( $headline, $sub, $btn, $href, $src ) {
+// One CTA block, rendered in the site-wide .cd-cta component markup.
+function cd_acta_block( $variant, $eyebrow, $title, $intro, $btn, $href, $trust, $src, $arrow = true ) {
 	if ( strpos( $href, 'tel:' ) === 0 ) {
 		$url = $href;
 	} else {
 		$sep = ( strpos( $href, '?' ) !== false ) ? '&' : '?';
 		$url = $href . $sep . 'utm_source=article&utm_medium=inline-cta&utm_campaign=' . rawurlencode( $src );
 	}
-	return '<div class="cd-acta cd-acta--' . esc_attr( $src ) . '">'
-		. '<div class="cd-acta__txt">'
-		. '<p class="cd-acta__h">' . $headline . '</p>'
-		. '<p class="cd-acta__sub">' . $sub . '</p>'
-		. '<p class="cd-acta__trust">Confidential &middot; no obligation</p>'
+	$label = $btn . ( $arrow ? ' &rarr;' : '' );
+	$pills = '';
+	foreach ( (array) $trust as $tp ) { $pills .= '<span>' . $tp . '</span>'; }
+	return '<div class="cd-cta cd-cta--' . esc_attr( $variant ) . '">'
+		. '<div class="cd-cta__body">'
+		. '<p class="cd-cta__eyebrow">' . $eyebrow . '</p>'
+		. '<p class="cd-cta__title">' . $title . '</p>'
+		. '<p class="cd-cta__intro">' . $intro . '</p>'
+		. '<a class="cd-cta__button" href="' . esc_url( $url ) . '">' . $label . '</a>'
+		. '<p class="cd-cta__trust">' . $pills . '</p>'
 		. '</div>'
-		. '<a class="cd-acta__btn" href="' . esc_url( $url ) . '">' . esc_html( $btn ) . '</a>'
+		. '<div class="cd-cta__icon"></div>'
 		. '</div>';
 }
 
 add_filter( 'the_content', function( $content ) {
 	if ( ! is_singular() || ! is_main_query() ) { return $content; }
 	// This theme's article template renders the_content outside the formal loop,
-	// so in_the_loop() can't gate. Instead: only the MAIN page's own content
-	// (its id in the pilot map) with >= 4 H2s gets CTAs — related-post snippets
-	// (a different id / too few H2s) are skipped below.
+	// so in_the_loop() can't gate. Only the MAIN page's own content (its id in
+	// the pilot map) gets CTAs; related-post snippets (a different id) are skipped.
 	$map = cd_acta_map();
 	$id  = get_queried_object_id();
 	if ( get_the_ID() && get_the_ID() !== $id ) { return $content; }
 	if ( ! isset( $map[ $id ] ) ) { return $content; }
-	if ( strpos( $content, 'cd-acta' ) !== false ) { return $content; } // idempotent
+	// Never duplicate: if the page already carries a cd-cta block (hand-placed
+	// set, or a previous injection this render), leave it completely alone.
+	if ( strpos( $content, 'cd-cta__' ) !== false || strpos( $content, 'cd-cta--' ) !== false ) { return $content; }
 
 	// top-level H2 open positions
 	if ( ! preg_match_all( '/<h2[ >]/i', $content, $m, PREG_OFFSET_CAPTURE ) ) { return $content; }
 	$off = array();
 	foreach ( $m[0] as $hit ) { $off[] = $hit[1]; }
 	$n = count( $off );
-	if ( $n < 4 ) { return $content; } // pilot: only rich articles, so the 3 stay well spaced
+	if ( $n < 4 ) { return $content; } // only rich articles, so the 3 stay well spaced
 
-	$p1 = $off[1];                        // before 2nd H2  -> CTA1 (assessment), ~after the intro
+	$p1 = $off[1];                        // before 2nd H2 -> CTA1 (assessment), after the intro
 	$p2 = $off[ (int) ceil( $n / 2 ) ];   // before a middle H2 -> CTA2 (service)
 	$p3 = $off[ $n - 1 ];                 // before the last H2 (FAQ / related) -> CTA3 (phone)
 
 	$svc  = cd_acta_service( $map[ $id ] );
-	$cta1 = cd_acta_block( 'Not Sure Where the Company Stands?', 'A free, confidential read on your options in about a minute.', 'Take the Free 30-Second Test', '/insolvency-calculator/', 'assessment' );
-	$cta2 = cd_acta_block( $svc[0], $svc[1], $svc[2], $svc[3], $map[ $id ] );
-	$cta3 = cd_acta_block( 'Speak to a Licensed Insolvency Practitioner', 'Free, confidential call &mdash; no obligation, wherever you are in the UK.', 'Call 0800 074 6757', 'tel:08000746757', 'phone' );
+	$cta1 = cd_acta_block( 'test', '30-Second Insolvency Check', 'Not Sure If Your Company Is Actually Insolvent?', 'Answer a few quick questions to see whether your company may be insolvent &mdash; and what to do next.', 'Check My Company', '/insolvency-calculator/', array( 'Free', 'Confidential', 'Regulated' ), 'assessment' );
+	$cta2 = cd_acta_block( 'service', $svc[0], $svc[1], $svc[2], $svc[3], $svc[4], array( $svc[5], $svc[6], $svc[7] ), $map[ $id ] );
+	$cta3 = cd_acta_block( 'phone', 'Free Director Helpline', 'Talk to a Licensed Insolvency Practitioner Today', 'Get straight through to a Licensed IP for a confidential, no-obligation conversation. We take HMRC and creditor pressure off you from the first call.', '0800 074 6757', 'tel:08000746757', array( 'Free call', 'UK based', 'Confidential' ), 'phone', false );
 
 	// insert LAST -> FIRST so earlier offsets stay valid
 	$content = substr( $content, 0, $p3 ) . $cta3 . substr( $content, $p3 );
@@ -1553,20 +1561,3 @@ add_filter( 'the_content', function( $content ) {
 	$content = substr( $content, 0, $p1 ) . $cta1 . substr( $content, $p1 );
 	return $content;
 }, 20 );
-
-// Component CSS (printed once, only on pages that get the CTAs).
-add_action( 'wp_head', function() {
-	if ( ! is_singular() ) { return; }
-	$map = cd_acta_map();
-	if ( ! isset( $map[ get_the_ID() ] ) ) { return; }
-	echo '<style id="cd-acta-css">'
-		. '.cd-acta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;justify-content:space-between;background:#f4f7fe;border:1px solid #e3e9ee;border-left:4px solid #FF6600;border-radius:12px;padding:20px 24px;margin:32px 0;}'
-		. '.cd-acta__txt{flex:1 1 320px;}'
-		. '.cd-acta__h{font-weight:800;font-size:20px;line-height:1.25;color:#09285D;margin:0 0 4px;}'
-		. '.cd-acta__sub{font-size:15px;line-height:1.5;color:#33475b;margin:0 0 6px;}'
-		. '.cd-acta__trust{font-size:12px;color:#5a6b7a;margin:0;letter-spacing:.02em;}'
-		. '.cd-acta__btn{flex:none;display:inline-block;background:#FF6600;color:#fff;font-weight:800;font-size:15px;line-height:1;text-decoration:none;padding:14px 22px;border-radius:10px;white-space:nowrap;transition:background .2s ease;}'
-		. '.cd-acta__btn:hover,.cd-acta__btn:focus{background:#e65c00;color:#fff;}'
-		. '@media(max-width:600px){.cd-acta{padding:18px;gap:14px;}.cd-acta__btn{width:100%;text-align:center;}}'
-		. '</style>';
-}, 99 );

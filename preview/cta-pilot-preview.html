@@ -1,0 +1,562 @@
+<title>Inline CTA - Phase 1 (cd-cta styling)</title>
+<style>
+ body{font-family:Arial,Helvetica,sans-serif;max-width:820px;margin:0 auto;padding:32px 24px;color:#1d2733;background:#fff;line-height:1.6;font-size:18px;}
+ h2{color:#09285D;font-size:26px;margin:38px 0 12px;}
+ p.body{margin:0 0 16px;color:#33475b;}
+ .note{background:#eef6ff;border:1px solid #cfe3ff;border-radius:8px;padding:12px 16px;font-size:14px;color:#1e40af;margin-bottom:28px;}
+.cd-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+  margin: 32px 0;
+  padding: 28px 32px;
+  background: #f4f7fe;
+  border: 1px solid #d6e0f0;
+  border-left: 4px solid #002856;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+  font-family: Arial, sans-serif;
+}
+.cd-cta__body {
+  min-width: 0;
+}
+.cd-cta__title {
+  margin: 0 0 12px 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #002856;
+}
+.cd-cta__bullets {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cd-cta__bullets li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #344054;
+}
+.cd-cta__bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta__button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 24px;
+  background: #002856;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.15s ease, transform 0.06s ease;
+  cursor: pointer;
+}
+.cd-cta__button:hover,
+.cd-cta__button:focus {
+  background: #001838;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.cd-cta__button:active {
+  transform: translateY(1px);
+}
+.cd-cta__trust {
+  margin: 14px 0 0 0;
+  padding: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+.cd-cta__icon {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  color: #002856;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cd-cta__icon:empty {
+  display: none;
+}
+.cd-cta__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.cd-cta--test {
+  background: #f4f7fe;
+  border-color: #d6e0f0;
+  border-left-color: #002856;
+}
+.cd-cta--service {
+  background: #fff7ed;
+  border-color: #fde3c3;
+  border-left-color: #b45309;
+}
+.cd-cta--service .cd-cta__title { color: #7c2d12; }
+.cd-cta--service .cd-cta__bullets li::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b45309'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--service .cd-cta__button { background: #b45309; }
+.cd-cta--service .cd-cta__button:hover,
+.cd-cta--service .cd-cta__button:focus { background: #8f3f07; }
+.cd-cta--phone {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  border-left-color: #047857;
+}
+.cd-cta--phone .cd-cta__title { color: #064e3b; }
+.cd-cta--phone .cd-cta__bullets li::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23047857'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4L8.5 12l6.8-6.7a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--phone .cd-cta__button { background: #047857; }
+.cd-cta--phone .cd-cta__button:hover,
+.cd-cta--phone .cd-cta__button:focus { background: #035c43; }
+.cd-cta .cd-cta__title {
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+.cd-cta--service .cd-cta__title { color: #7c2d12 !important; }
+.cd-cta--phone .cd-cta__title { color: #064e3b !important; }
+.cd-cta a.cd-cta__button,
+body .main-content .cd-cta a.cd-cta__button:visited {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 12px 24px !important;
+  background: #002856 !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+}
+.cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited { background: #b45309 !important; }
+.cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited { background: #047857 !important; }
+.cd-cta a.cd-cta__button:hover,
+body .main-content .cd-cta a.cd-cta__button:focus {
+  color: #ffffff !important;
+  background: #001838 !important;
+}
+.cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus { background: #8f3f07 !important; }
+.cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus { background: #035c43 !important; }
+.cd-cta .cd-cta__trust {
+  margin: 14px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+}
+.cd-cta .cd-cta__bullets {
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.cd-cta .cd-cta__bullets li {
+  font-size: 15px !important;
+  color: #344054 !important;
+  padding-left: 24px !important;
+  margin: 0 !important;
+}
+.cd-cta .cd-cta__trust {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px 18px !important;
+  align-items: center !important;
+  margin: 14px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  line-height: 1.4 !important;
+}
+.cd-cta .cd-cta__trust span {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #6b7280 !important;
+  font-size: 13px !important;
+}
+.cd-cta .cd-cta__trust span::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  flex: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--service .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b45309'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23047857'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain;
+}
+.cd-cta--test {
+  background: #f4f7fe !important;
+  border-color: #d6e0f0 !important;
+  border-left-color: #002856 !important;
+}
+.cd-cta--service {
+  background: #eaf1fb !important;
+  border-color: #c7d8ef !important;
+  border-left-color: #1e3a8a !important;
+}
+.cd-cta--phone {
+  background: #e0edfd !important;
+  border-color: #b6cef2 !important;
+  border-left-color: #1d4ed8 !important;
+}
+.cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-family: Arial, sans-serif !important;
+  font-size: 28px !important;
+  line-height: 34px !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+.cd-cta .cd-cta__intro {
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  color: #344054 !important;
+  font-weight: 400 !important;
+}
+.cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button:visited {
+  background: #002856 !important;
+}
+.cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited {
+  background: #1e3a8a !important;
+}
+.cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited {
+  background: #1d4ed8 !important;
+}
+.cd-cta--test a.cd-cta__button:hover,
+body .main-content .cd-cta--test a.cd-cta__button:focus { background: #001838 !important; }
+.cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus { background: #172b6f !important; }
+.cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus { background: #1642b3 !important; }
+.cd-cta--test .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23002856'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+.cd-cta--service .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+.cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231d4ed8'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+.cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  max-width: 80% !important;
+}
+.cd-cta .cd-cta__intro {
+  max-width: 80% !important;
+}
+.cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button {
+  padding: 16px 28px !important;
+}
+.cd-cta .cd-cta__trust {
+  margin-top: 20px !important;
+}
+.cd-cta,
+body .main-content .cd-cta--test,
+body .main-content .cd-cta--service,
+body .main-content .cd-cta--phone {
+  background: #eaf1fb !important;
+  border: 1px solid #c7d8ef !important;
+  border-left: 4px solid #1e3a8a !important;
+}
+.cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button:visited,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button:visited,
+body .main-content .cd-cta--phone a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button:visited {
+  background: #1e3a8a !important;
+}
+.cd-cta a.cd-cta__button:hover,
+body .main-content .cd-cta a.cd-cta__button:focus,
+body .main-content .cd-cta--test a.cd-cta__button:hover,
+body .main-content .cd-cta--test a.cd-cta__button:focus,
+body .main-content .cd-cta--service a.cd-cta__button:hover,
+body .main-content .cd-cta--service a.cd-cta__button:focus,
+body .main-content .cd-cta--phone a.cd-cta__button:hover,
+body .main-content .cd-cta--phone a.cd-cta__button:focus {
+  background: #172b6f !important;
+}
+.cd-cta .cd-cta__trust span::before,
+body .main-content .cd-cta--test .cd-cta__trust span::before,
+body .main-content .cd-cta--service .cd-cta__trust span::before,
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+.cd-cta,
+body .main-content .cd-cta--test,
+body .main-content .cd-cta--service,
+body .main-content .cd-cta--phone {
+  border-left: 1px solid #c7d8ef !important;
+  border-radius: 16px !important;
+  padding: 40px 44px !important;
+}
+.cd-cta .cd-cta__eyebrow {
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #1e40af !important;
+  line-height: 1.2 !important;
+}
+.cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 16px 0 !important;
+}
+.cd-cta .cd-cta__intro {
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  color: #344054 !important;
+  margin: 0 0 24px 0 !important;
+}
+.cd-cta a.cd-cta__button,
+body .main-content .cd-cta--test a.cd-cta__button,
+body .main-content .cd-cta--service a.cd-cta__button,
+body .main-content .cd-cta--phone a.cd-cta__button {
+  padding: 18px 32px !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  letter-spacing: -0.005em !important;
+}
+.cd-cta .cd-cta__trust {
+  gap: 8px 28px !important;
+  margin-top: 24px !important;
+  font-size: 15px !important;
+}
+.cd-cta .cd-cta__trust span::before,
+body .main-content .cd-cta--test .cd-cta__trust span::before,
+body .main-content .cd-cta--service .cd-cta__trust span::before,
+body .main-content .cd-cta--phone .cd-cta__trust span::before {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 8px !important;
+}
+.cd-cta .cd-cta__trust span {
+  font-size: 15px !important;
+  color: #344054 !important;
+  font-weight: 400 !important;
+}
+.cd-cta .cd-cta__disclaimer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 24px 0 0 0 !important;
+  padding: 20px 0 0 0 !important;
+  border-top: 1px solid #c7d8ef !important;
+  font-size: 14px !important;
+  color: #6b7280 !important;
+  line-height: 1.4 !important;
+}
+.cd-cta .cd-cta__disclaimer-icon {
+  width: 18px !important;
+  height: 18px !important;
+  flex: none !important;
+  color: #1e40af !important;
+  fill: #1e40af !important;
+}
+.cd-cta .cd-cta__title,
+body .main-content .cd-cta--test .cd-cta__title,
+body .main-content .cd-cta--service .cd-cta__title,
+body .main-content .cd-cta--phone .cd-cta__title {
+  font-weight: 700 !important;
+}
+.cd-cta .cd-cta__eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 28px !important;
+  color: rgb(122, 133, 153) !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 10px 0 !important;
+}
+.cd-cta .cd-cta__intro {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  color: rgb(82, 96, 109) !important;
+}
+.cd-cta*` for
+   consistent styling on every page. ========================================= */
+
+/* Panel: identical for all variants */
+body .cd-cta,
+body .cd-cta--test,
+body .cd-cta--service,
+body .cd-cta--rescue,
+body .cd-cta--review,
+body .cd-cta--phone {
+  background: #eaf1fb !important;
+  border: 1px solid #c7d8ef !important;
+  border-left: 1px solid #c7d8ef !important;
+  border-radius: 16px !important;
+  padding: 40px 44px !important;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04) !important;
+  font-family: Arial, sans-serif !important;
+}
+.cd-cta .cd-cta__eyebrow {
+  font-family: Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 28px !important;
+  color: rgb(122, 133, 153) !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
+.cd-cta .cd-cta__title,
+body .cd-cta--test .cd-cta__title,
+body .cd-cta--service .cd-cta__title,
+body .cd-cta--rescue .cd-cta__title,
+body .cd-cta--review .cd-cta__title,
+body .cd-cta--phone .cd-cta__title {
+  font-family: Arial, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-weight: 700 !important;
+  color: #002856 !important;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  max-width: 80% !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+}
+.cd-cta .cd-cta__intro {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 31px !important;
+  color: rgb(82, 96, 109) !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  max-width: 80% !important;
+}
+.cd-cta a.cd-cta__button,
+body .cd-cta--test a.cd-cta__button,
+body .cd-cta--service a.cd-cta__button,
+body .cd-cta--rescue a.cd-cta__button,
+body .cd-cta--review a.cd-cta__button,
+body .cd-cta--phone a.cd-cta__button,
+body .cd-cta--test a.cd-cta__button:visited,
+body .cd-cta--service a.cd-cta__button:visited,
+body .cd-cta--rescue a.cd-cta__button:visited,
+body .cd-cta--review a.cd-cta__button:visited,
+body .cd-cta--phone a.cd-cta__button:visited {
+  display: inline-block !important;
+  padding: 18px 32px !important;
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+.cd-cta a.cd-cta__button:hover,
+body .cd-cta a.cd-cta__button:focus {
+  background: #172b6f !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.cd-cta .cd-cta__trust {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 28px !important;
+  align-items: center !important;
+  margin: 24px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 15px !important;
+  color: #344054 !important;
+  line-height: 1.4 !important;
+}
+.cd-cta .cd-cta__trust span {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #344054 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
+.cd-cta .cd-cta__trust span::before,
+body .cd-cta--test .cd-cta__trust span::before,
+body .cd-cta--service .cd-cta__trust span::before,
+body .cd-cta--rescue .cd-cta__trust span::before,
+body .cd-cta--review .cd-cta__trust span::before,
+body .cd-cta--phone .cd-cta__trust span::before {
+  content: "";
+  display: inline-block;
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 8px !important;
+  flex: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231e3a8a'><path fill-rule='evenodd' d='M10 2a8 8 0 100 16 8 8 0 000-16zm3.7 6.3l-4.5 4.5a1 1 0 01-1.4 0L5.3 10.7a1 1 0 011.4-1.4L8.5 11l4.8-4.8a1 1 0 011.4 1.4z' clip-rule='evenodd'/></svg>") no-repeat center / contain !important;
+}
+.cd-cta .cd-cta__icon:empty { display: none !important; }
+.cd-cta .cd-cta__bullets { display: none !important; }
+</style>
+<div class="note">The exact three CTAs now injected into the clean pilot article <em>Overdrawn Directors&rsquo; Loan Accounts</em> (director-liability cluster), rendered with the site&rsquo;s real .cd-cta CSS &mdash; identical to the hand-placed CTAs across the site. Grey text stands in for article body.</div>
+<h2>What an Overdrawn Director&rsquo;s Loan Account Actually Means</h2>
+<p class="body">If you have drawn more from the company than you have put in or been paid&hellip;</p>
+<div class="cd-cta cd-cta--test"><div class="cd-cta__body"><p class="cd-cta__eyebrow">30-Second Insolvency Check</p><p class="cd-cta__title">Not Sure If Your Company Is Actually Insolvent?</p><p class="cd-cta__intro">Answer a few quick questions to see whether your company may be insolvent &mdash; and what to do next.</p><a class="cd-cta__button" href="/insolvency-calculator/?utm_source=article&#038;utm_medium=inline-cta&#038;utm_campaign=assessment">Check My Company &rarr;</a><p class="cd-cta__trust"><span>Free</span><span>Confidential</span><span>Regulated</span></p></div><div class="cd-cta__icon"></div></div>
+<h2>How It Is Treated If the Company Becomes Insolvent</h2>
+<p class="body">A liquidator can pursue an overdrawn loan as an asset of the company&hellip;</p>
+<h2>Tax Consequences Under s455</h2>
+<p class="body">&hellip;</p>
+<div class="cd-cta cd-cta--service"><div class="cd-cta__body"><p class="cd-cta__eyebrow">Director Liability</p><p class="cd-cta__title">Worried About Personal Liability?</p><p class="cd-cta__intro">Personal guarantees, overdrawn loans, misfeasance &mdash; understand your exposure before it escalates.</p><a class="cd-cta__button" href="/advice/?utm_source=article&#038;utm_medium=inline-cta&#038;utm_campaign=director-liability">Get Confidential Advice &rarr;</a><p class="cd-cta__trust"><span>Confidential</span><span>Regulated</span><span>No obligation</span></p></div><div class="cd-cta__icon"></div></div>
+<h2>Options for Repaying or Resolving It</h2>
+<p class="body">&hellip;</p>
+<h2>Frequently Asked Questions</h2>
+<div class="cd-cta cd-cta--phone"><div class="cd-cta__body"><p class="cd-cta__eyebrow">Free Director Helpline</p><p class="cd-cta__title">Talk to a Licensed Insolvency Practitioner Today</p><p class="cd-cta__intro">Get straight through to a Licensed IP for a confidential, no-obligation conversation. We take HMRC and creditor pressure off you from the first call.</p><a class="cd-cta__button" href="tel:08000746757">0800 074 6757</a><p class="cd-cta__trust"><span>Free call</span><span>UK based</span><span>Confidential</span></p></div><div class="cd-cta__icon"></div></div>
