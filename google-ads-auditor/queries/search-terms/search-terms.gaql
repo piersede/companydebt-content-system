@@ -1,0 +1,32 @@
+-- Purpose: raw search-term performance for Search campaigns — the primary
+-- input for negative-keyword-miner and search-terms-analyzer. Excludes
+-- PMax, which does not expose full search terms (see pmax-search-terms.gaql
+-- for the category-level equivalent).
+-- Placeholders: {{CUSTOMER_ID}} {{LOOKBACK_START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+-- 2026-07-20: widened from the 7-day audit window to
+-- comparison_periods.search_term_lookback_days (365 by default) at Piers's
+-- request — a single week is too thin a sample for keyword-level judgement
+-- on a low-volume account. Scoped to ENABLED campaigns only (matching the
+-- keywords.gaql/keyword-performance.gaql fix earlier the same day) to avoid
+-- repeating the ~750MB unscoped-history problem over a full year's data.
+
+SELECT
+  search_term_view.search_term,
+  search_term_view.status,
+  campaign.id,
+  campaign.name,
+  ad_group.id,
+  ad_group.name,
+  segments.keyword.info.text,
+  segments.keyword.info.match_type,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM search_term_view
+WHERE segments.date BETWEEN '{{LOOKBACK_START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'SEARCH'
+  AND campaign.status = 'ENABLED'
+ORDER BY metrics.cost_micros DESC

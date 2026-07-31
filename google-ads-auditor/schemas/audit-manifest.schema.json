@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://companydebt.internal/google-ads-auditor/schemas/audit-manifest.schema.json",
+  "title": "Audit run manifest",
+  "description": "manifest.json saved in every runs/YYYY-MM-DD-account-slug/ folder.",
+  "type": "object",
+  "required": [
+    "account_name",
+    "customer_id",
+    "currency",
+    "timezone",
+    "audit_start",
+    "audit_end",
+    "comparison_start",
+    "comparison_end",
+    "context_start",
+    "context_end",
+    "generated_at",
+    "api_version",
+    "query_library_version",
+    "data_complete",
+    "warnings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "account_name": { "type": "string" },
+    "customer_id": { "type": "string" },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "timezone": { "type": "string" },
+    "audit_start": { "type": "string", "format": "date" },
+    "audit_end": { "type": "string", "format": "date" },
+    "comparison_start": { "type": "string", "format": "date" },
+    "comparison_end": { "type": "string", "format": "date" },
+    "context_start": { "type": "string", "format": "date" },
+    "context_end": { "type": "string", "format": "date" },
+    "long_term_start": { "type": "string", "format": "date" },
+    "long_term_end": { "type": "string", "format": "date" },
+    "lookback_start": { "type": "string", "format": "date", "description": "Search-term/keyword-level lookback window start (search_term_lookback_days) — used by negative-keyword-miner and search-terms-analyzer, distinct from audit_start's 7-day campaign window." },
+    "lookback_end": { "type": "string", "format": "date" },
+    "conversion_lag_days": { "type": "integer", "minimum": 0 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "api_version": { "type": "string" },
+    "query_library_version": { "type": "string" },
+    "data_complete": { "type": "boolean" },
+    "failed_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["query_file", "error"],
+        "properties": {
+          "query_file": { "type": "string" },
+          "error": { "type": "string" }
+        }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "description": "Cross-report totals check for cost/clicks/conversions.",
+      "properties": {
+        "reconciled": { "type": "boolean" },
+        "tolerance_pct": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -32,6 +32,18 @@ the article says.
   land after a longer one. Break the uniform cadence that revision produces.
 - Add asymmetrical lines where the prose is too even. Not every sentence needs
   three parallel clauses; kill the reflexive tricolon.
+- Watch specifically for a repeated aphorism-label tic: "that/this is the
+  [adjective] [noun]" (e.g. "that is the trap", "the blunt backdrop", "the
+  quiet mechanism behind X"), and self-announcing honesty ("worth stating
+  plainly", "the honest read comes from..."). Either can appear once and be
+  fine. The actual tell is REPETITION of the same device across one page --
+  invisible if you read any single sentence on its own, obvious once you
+  count instances. Caught on the pub-closures page 2026-07-22: the same
+  labelling construction appeared five times and passed a sentence-by-sentence
+  read. Before marking `humanise_complete`, scan the whole page for repeats of
+  the same rhetorical shape, not just for guardrail patterns (em dashes,
+  banned openings) or presence/absence of "we"/"you". A page can pass every
+  mechanical check and still fail this.
 - Recover mild UK texture where natural. Apply moral clarity where the evidence
   supports it.
 - Restore earned "you" and "we". Company-authored voice (see 09-voice): the
@@ -103,9 +115,17 @@ Bake these in WHILE humanising so the output clears `article_audit.py`:
   practitioner-light page and wave the miss through. If the page is under 5/1k
   because the practitioner voice is absent, that is a Part C failure to fix here,
   not an accepted miss. Never pad hollow "we" to chase the number.
-- **Write in self-standing sentences** so the paragraph-length gate (<= ~400
-  chars / ~4 rendered lines per `<p>`) can be met by splitting at sentence
-  boundaries without breaking a thought mid-clause.
+- **Write in self-standing sentences, and keep every `<p>` to 2-3 rendered
+  lines (roughly 150-250 chars).** This is tighter than the mechanical gate's
+  ~400-char/~4-line hard limit -- treat the gate as the absolute ceiling, not
+  the target. A page that merely clears 400 chars per paragraph still reads
+  as a wall of text and overwhelms the reader; split at sentence boundaries,
+  never mid-clause, whenever a paragraph runs past 2-3 lines. This applies
+  everywhere on a page, including the hero -- a hero stacking a subtitle,
+  scope note, auto-lede and a long hero_note in a row is exactly the failure
+  mode to avoid; cut hero_note to one tight 2-3 line paragraph and push any
+  supporting detail down into the section that already covers it, rather
+  than repeating it at the top.
 - Lead paragraph carries no `<strong>`/`<b>` (the theme auto-bolds it).
 - Preserve FAQ accordion `panelTitle` escapes: `<` built via chr(92), never
   raw `<strong>` (renders as literal junk) and never double-backslash.
@@ -114,7 +134,8 @@ Bake these in WHILE humanising so the output clears `article_audit.py`:
 
 1. Humanise the prose in full, writing for rhythm and voice, ignoring paragraph
    length for the moment.
-2. THEN reconcile with the gate: split any `<p>` over ~380 chars at a sentence
+2. THEN reconcile with the gate: split any `<p>` over 2-3 rendered lines
+   (roughly 150-250 chars, and always before ~380 chars) at a sentence
    boundary (never inside a tag or mid-clause). Humanise first, split second --
    never pre-flatten the voice to dodge the splitter.
 3. Re-read P1-P3 specifically for banned openings introduced during humanising.
@@ -129,6 +150,11 @@ Bake these in WHILE humanising so the output clears `article_audit.py`:
   specifically, the pass is NOT done, whatever the gate score says.
 - Reads as authored: concrete detail, earned judgement, varied cadence, a few
   asymmetrical lines. It would not be mistaken for AI-balanced copy.
+- Checked for REPEATED rhetorical devices across the whole page (aphorism
+  labels, self-announced honesty, the same contrastive "not X, Y" shape used
+  more than 2-3 times) -- not just verified sentence-by-sentence. A pass that
+  only checks guardrails and per-sentence voice markers will miss this; it
+  has before.
 - Facts, claims, structure, headings, callouts, links UNCHANGED from the revised
   draft. Voice only.
 - `article_audit.py` passes except, at most, the two documented exceptions:

@@ -1,0 +1,23 @@
+-- Purpose: ad-level performance and Google's ad-strength label, for Search
+-- responsive search ads — used to check ad performance and asset coverage.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  ad_group.id,
+  ad_group.name,
+  ad_group_ad.ad.id,
+  ad_group_ad.ad.type,
+  ad_group_ad.status,
+  ad_group_ad.ad_strength,
+  ad_group_ad.ad.final_urls,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM ad_group_ad
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+ORDER BY metrics.cost_micros DESC

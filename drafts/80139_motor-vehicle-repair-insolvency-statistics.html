@@ -8,15 +8,21 @@
    ============================================================ */
 
 .cd-data-hub {
-  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
-     use width:100vw to escape the WP container). 100vw resolves to the
-     viewport width INCLUDING the scrollbar gutter, so on any page tall
-     enough to scroll it overshoots the true visible width by the scrollbar's
-     width (~15-17px) and creates a real, swipeable horizontal scroll. This
-     is not masking an unknown overflow — the cause is the 100vw pattern
-     above, which has no scrollbar-safe CSS-only fix; contain the resulting
-     15px here rather than letting it leak into the page/site chrome. */
-  overflow-x: hidden;
+  /* NOT overflow-x:hidden here (removed 2026-07). .cd-w-hero/.cd-w-wide/
+     .cd-bleed use width:100vw + a negative margin specifically to ESCAPE
+     this element and reach the true viewport edge - that is the entire
+     mechanism a full-bleed band relies on. overflow-x:hidden on the exact
+     element those sections are escaping FROM clips their paint back down to
+     .cd-data-hub's own (much narrower) box, which is what made the hero
+     band render as a bounded, inset card instead of a true edge-to-edge
+     band (found 2026-07, see docs/data-hub commit history).
+     The real reason this was here - width:100vw resolving to the viewport
+     WIDTH INCLUDING THE SCROLLBAR GUTTER, ~15-17px wider than the visible
+     area, which would otherwise create a real swipeable horizontal scroll -
+     is already handled a level up: the theme template sets
+     `body.page-template-data-hub-template { overflow-x: hidden; }`
+     (templates/data-hub-template.php), which contains that overshoot at the
+     body without clipping anything trying to bleed within the page. */
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -109,25 +115,32 @@
 }
 .cd-data-hub .cd-w-narrow   { max-width: 760px; }
 .cd-data-hub .cd-w-standard { max-width: 1040px; }
-/* Wide sections bleed out of the WP container so they can actually reach
-   1280px on wide viewports. max-width:none beats inherited theme caps. */
+/* Wide sections bleed out of the WP container so they can span the full
+   viewport, but re-centre to the site's single 1040px rail (per the 2026-07
+   Claude Design handoff: "every band sits on one 1040px content column with
+   an identical left edge... do NOT reintroduce per-section widths"). This
+   was previously 1280px (a "-640" constant, a second, wider rail) - that is
+   what put the masthead (already unified to 1040px, both via the theme
+   template's own masthead-pin fix and this file's site-alignment CSS) out of
+   line with every content section below it: a real, visible 120px
+   left-edge misalignment running down the whole page, not a cosmetic nit. */
 .cd-data-hub .cd-w-wide {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 /* Full-bleed band that escapes the parent .container. Inner content
-   re-aligns to a 1280px max-width. */
+   re-aligns to the same 1040px rail as .cd-w-wide. */
 .cd-data-hub .cd-bleed {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 
 /* ── Spacing rhythm ───────────────────────────────────────── */
@@ -775,70 +788,54 @@
   .cd-data-hub .cd-chart-panel--rate { min-height: 320px; }
 }
 
-/* ── Procedure card grid ──────────────────────────────────── */
-.cd-data-hub .cd-procard-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.cd-data-hub .cd-procard {
-  padding: 22px 22px 18px;
-  border-radius: 16px;
-  background: var(--cd-surface);
-  border: 1px solid var(--cd-line);
-  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.03);
-  display: flex;
-  flex-direction: column;
-}
-.cd-data-hub .cd-procard__name {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cd-muted);
-  font-weight: 700;
-  margin: 0 0 8px;
-  line-height: 1.3;
-}
-.cd-data-hub .cd-procard__value {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--cd-text);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-}
-.cd-data-hub .cd-procard__note {
-  font-size: 13px;
-  color: var(--cd-muted);
-  margin: 0 0 14px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-.cd-data-hub .cd-procard__link {
-  align-self: flex-start;
-  display: inline-flex;
+/* ── Sector data-page links table ("Get the insolvency data for your
+   trade") — always-visible table pairing each trade with a View data
+   button, replacing the earlier procedure-card grid. Per
+   docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+   handoff's sector-trade-links-generator-spec.md. ──────────────────── */
+.cd-data-hub .cd-sectorlinks th[scope="row"] { font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__name { display: block; font-size: 16px; font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--cd-muted); max-width: 52ch; }
+.cd-data-hub .cd-sectorlinks td { color: var(--cd-text-soft); }
+.cd-data-hub .cd-sectorlinks__actionhead { text-align: left; }
+.cd-data-hub .cd-sectorlinks__action { text-align: left; white-space: nowrap; vertical-align: middle; width: 1%; }
+.cd-data-hub .cd-sectorlinks__btn {
+  /* The WP theme forces `a { display: inline }`, which would collapse the
+     44px min-height tap target to a text baseline. Beat it explicitly. */
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid #d0d5dd;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cd-text);
+  gap: 8px;
+  padding: 11px 16px;
+  min-height: 44px;
+  box-sizing: border-box;
+  background: var(--cd-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
   text-decoration: none;
-  transition: background 0.12s ease, border-color 0.12s ease;
+  white-space: nowrap;
+  transition: background .15s ease;
 }
-.cd-data-hub .cd-procard__link:hover {
-  background: var(--cd-surface-soft);
-  border-color: var(--cd-accent);
-  color: var(--cd-accent);
-  text-decoration: none;
+.cd-data-hub .cd-sectorlinks__btn span { font-size: 15px; line-height: 1; transition: transform .15s ease; }
+.cd-data-hub .cd-sectorlinks__btn::after, .cd-data-hub .cd-sectorlinks__btn::before { content: none !important; display: none !important; }
+.cd-data-hub .cd-sectorlinks .cd-table-arrow { display: none !important; }
+.cd-data-hub .cd-sectorlinks__btn:hover { background: #0c3c66; color: #fff !important; text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__btn:hover span { transform: translateX(3px); }
+.cd-data-hub .cd-sectorlinks__btn:focus-visible { outline: 2px solid var(--cd-accent); outline-offset: 2px; }
+.cd-data-hub .cd-sectorlinks tbody tr:hover { background: var(--cd-surface-soft); }
+.cd-data-hub .cd-sectorlinks__all { margin: 18px 0 0 !important; font-size: 15px; }
+.cd-data-hub .cd-sectorlinks__all a { font-weight: 700; color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__all a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .cd-data-hub .cd-sectorlinks { min-width: 0; }
+  .cd-data-hub .cd-sectorlinks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cd-data-hub .cd-sectorlinks tbody tr { display: block; padding: 16px 4px; }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr { border-top: 1px solid var(--cd-line-soft); }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr td, .cd-data-hub .cd-sectorlinks tbody tr + tr th { border-top: 0; }
+  .cd-data-hub .cd-sectorlinks th[scope="row"] { display: block; padding: 0 0 12px; }
+  .cd-data-hub .cd-sectorlinks__action { display: block; padding: 0; width: auto; }
 }
-.cd-data-hub .cd-procard__link span { font-size: 14px; line-height: 1; }
-@media (max-width: 980px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .cd-data-hub .cd-procard-grid { grid-template-columns: 1fr; } }
 
 /* ── Sector grid ──────────────────────────────────────────── */
 .cd-data-hub .cd-sector-grid {
@@ -1141,15 +1138,15 @@
   <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
   <div class="cd-hero">
   <div class="cd-hero__copy">
-    <h1><span class="cd-h1__line">UK Motor Vehicle Repair</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
+    <h1><span class="cd-h1__line" style="white-space: normal;">UK Motor Vehicle Repair</span> <span class="cd-h1__line" style="white-space: normal;">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
-
-    <p class="cd-lede">There were 113 insolvencies among motor vehicle repair and maintenance businesses in England and Wales between January and May 2026, compared with 121 in the same period of 2025. The rolling 12-month total was 285, up slightly from 276 for the previous 12 months.</p>
-
-    <p class="cd-lede">This covers garages and workshops carrying out motor vehicle maintenance and repair (the official industry code is SIC group 452). Sale of motor vehicles and parts is recorded separately.</p>
+    <p class="cd-hero__scope">Repair only. This page does not count car dealers, which are a separate SIC code.</p>
+    <p class="cd-lede">There were 140 insolvencies among motor vehicle repair and maintenance businesses in England and Wales between January and June 2026, compared with 150 in the same period of 2025. The rolling 12-month total was 283, up slightly from 282 for the previous 12 months.</p>
+    <p class="cd-lede">Read that twice, because the two measures used to disagree sharply and now barely do. The year-to-date total says garages are easing. The rolling 12 months, still carrying the back half of a record 2025, is now close to flat too.</p>
+    <p class="cd-lede">This covers garages and workshops carrying out motor vehicle maintenance and repair (the official industry code is SIC group 452). Selling vehicles is a different business and is counted separately: car dealers and forecourts sit under SIC 451, and parts and accessories under SIC 453. Neither is included here.</p>
     <dl class="cd-meta-grid">
-      <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
-      <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
+      <div class="cd-meta-item"><span>Latest data</span><strong>June 2026</strong></div>
+      <div class="cd-meta-item"><span>Published</span><strong>17 July 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
       <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 452</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
@@ -1159,17 +1156,17 @@
   <aside class="cd-hero__panel" aria-label="Latest figures">
     <p class="cd-kpi-label">Motor vehicle repair (SIC 452) &middot; England and Wales</p>
     <div class="cd-main-kpi">
-      <span class="cd-main-kpi__v">113</span>
-      <span class="cd-main-kpi__k">insolvencies, January to May 2026</span>
+      <span class="cd-main-kpi__v">140</span>
+      <span class="cd-main-kpi__k">insolvencies, January to June 2026</span>
     </div>
     <div class="cd-change-row">
-      <span><strong>down from 121</strong> in 2025</span>
+      <span><strong>down from 150</strong> in 2025</span>
     </div>
     <div class="cd-kpi-divider" aria-hidden="true"></div>
     <div class="cd-mini-kpi-grid">
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">285</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to May 2026, up slightly from 276 for the previous 12 months</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">283</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to June 2026, up slightly from 282 for the previous 12 months</span></div>
       <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">79% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">8.2%</span><span class="cd-mini-kpi__k">Of wholesale and retail trade and repair of motor vehicles insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">45.5%</span><span class="cd-mini-kpi__k">Of motor trade insolvencies</span><span class="cd-mini-kpi__n">January to June 2026</span></div>
     </div>
   </aside>
   </div>
@@ -1184,7 +1181,13 @@
   </div>
 </div>
 
-
+<section class="cd-section cd-w-standard" id="findings">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Key findings</p>
+    <h2>Key motor vehicle repair insolvency findings</h2>
+  </div>
+  <div class="cd-mini-kpi-grid"><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">140</span><span class="cd-mini-kpi__k">insolvencies, January to June 2026</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">down from 150</span><span class="cd-mini-kpi__k">vs same period 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">283</span><span class="cd-mini-kpi__k">rolling 12 months</span><span class="cd-mini-kpi__n">to June 2026</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">293</span><span class="cd-mini-kpi__k">full year 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">79% above 2019</span><span class="cd-mini-kpi__k">2025 vs the pre-pandemic year</span><span class="cd-mini-kpi__n">293 vs 164</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">88.7%</span><span class="cd-mini-kpi__k">of 2025 cases were CVLs</span><span class="cd-mini-kpi__n">260 of 293</span></div></div>
+</section>
 <section class="cd-section cd-w-standard" id="latest">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Latest data</p>
@@ -1192,77 +1195,101 @@
   </div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Latest motor vehicle repair insolvency figures, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Latest motor vehicle repair insolvency figures, England and Wales. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
-      <tbody><tr><th scope="row">Motor vehicle repair insolvencies</th><td class="cd-num">113</td><td class="cd-num">121 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">285</td><td class="cd-num">276 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">19</td><td class="cd-num">32 in April 2026; 27 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">293</td><td class="cd-num">251 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">293</td><td class="cd-num">n/a</td><td>2025</td><td>England and Wales</td></tr></tbody>
+      <tbody><tr><th scope="row">Motor vehicle repair insolvencies</th><td class="cd-num">140</td><td class="cd-num">150 in the same period of 2025</td><td>January to June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">283</td><td class="cd-num">282 in the preceding 12 months</td><td>To June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">27</td><td class="cd-num">19 in May 2026; 29 in June 2025</td><td>June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">293</td><td class="cd-num">251 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">293</td><td class="cd-num">n/a</td><td>2025</td><td>England and Wales</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are falling steadily. The 2025 total of 293 remained well above the pre-pandemic total of 164 in 2019.</p>
+  <p class="cd-source-note">The two measures are now much closer than they were: the year-to-date total is down 6.7% while the rolling 12-month total is essentially flat, up 0.4%. That is what a turn finally starting to reach the longer measure looks like. The 2025 total of 293 remained well above the pre-pandemic total of 164 in 2019.</p>
 </section>
-  <section class="cd-section cd-w-standard" id="comparison">
-    <div class="cd-section-head">
-      <p class="cd-eyebrow">Comparison</p>
-      <h2>Are motor vehicle repair insolvencies falling in 2026?</h2>
-    </div>
-    <div class="cd-side-notes">
-      <p class="cd-side-note__d cd-sector-fact">Insolvencies among motor vehicle repair and maintenance businesses were broadly falling in the January to May 2026 period, with 113 cases compared with 121 during the same months of 2025, a fall of 6.6%. That contrasts with wholesale and retail trade and repair of motor vehicles overall, where insolvencies fell 13.1% over the same period.</p><p class="cd-side-note__d">Motor vehicle repair and maintenance businesses accounted for 8.2% of all wholesale and retail trade and repair of motor vehicles company insolvencies in the January to May 2026 period (113 of 1,385 cases), up from 7.6% over the same months of 2025.</p>
-    </div>
-    <div class="cd-tablewrap">
-  <table class="cd-table">
-    <caption class="cd-table__caption">Motor vehicle repair vs wholesale and retail trade and repair of motor vehicles overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-    <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Motor vehicle repair</th><th scope="col" class="cd-num">Wholesale and retail trade and repair of motor vehicles overall</th></tr></thead>
-    <tbody>
-      <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">113</td><td class="cd-num">1,385</td></tr>
-      <tr><th scope="row">Same period 2025</th><td class="cd-num">121</td><td class="cd-num">1,594</td></tr>
-      <tr><th scope="row">Change</th><td class="cd-num">-6.6%</td><td class="cd-num">-13.1%</td></tr>
-      <tr><th scope="row">Share of wholesale and retail trade and repair of motor vehicles</th><td class="cd-num">8.2%</td><td class="cd-num">n/a</td></tr>
-    </tbody>
-  </table>
-</div>
-<p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
-  </section>
+<section class="cd-section cd-w-standard" id="comparison">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Are motor vehicle repair insolvencies falling in 2026?</h2>
+  </div>
+  <div class="cd-side-notes">
+    <p class="cd-side-note__d cd-sector-fact">There were 140 insolvencies from January to June 2026 against 150 in the same months of 2025, down 6.7%. The rolling 12-month total was 283 against 282 a year earlier, essentially unchanged.</p><p class="cd-side-note__d">The motor trade as a whole fell 4.3% over the same months. These are Company Debt calculations from Insolvency Service Table A1b data.</p><p class="cd-side-note__d">The two measures that used to conflict sharply are now much closer together. The rolling 12 months still contains the second half of 2025, which made that year the worst on record at 293.</p><p class="cd-side-note__d">The year-to-date measure, covering only 2026, shows a real improvement that is only just starting to reach the rolling figure.</p><p class="cd-side-note__d">The monthly path says something similar in cruder terms: 15, 23, 24, 32, 19, 27. April's 32 was a genuine outlier; June's 27 sits back near the middle of that range.</p>
+  </div>
 
+</section>
+
+<section class="cd-section cd-w-standard" id="divergence">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Repairing cars and selling cars are different businesses</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">SIC division 45 is usually described as the motor trade, but it bundles together the garage fixing a ten-year-old car with the forecourt selling a new one. Different customers, different margins, different working capital. This page counts the garage.</p><p class="cd-side-note__d">Split out, both halves of the motor trade eased by a similar amount in 2026: repair down 6.7%, vehicle sales down 6.2%. Neither is diverging sharply from the other any more.</p><p class="cd-side-note__d">The wider retail sector, meanwhile, fell 14.3%, well over twice as fast as either half of the motor trade. Whatever is lifting retail is not reaching the workshop, or the forecourt, at the same rate.</p></div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Motor vehicle repair against vehicle sales, the motor trade and the wider retail sector, January to June 2026, England and Wales.</caption>
+      <thead><tr><th scope="col">Classification</th><th scope="col" class="cd-num">January to June 2026</th><th scope="col" class="cd-num">Same period 2025</th><th scope="col" class="cd-num">Change</th></tr></thead>
+      <tbody><tr><th scope="row"><strong>Motor vehicle repair (SIC 452)</strong></th><td class="cd-num">140</td><td class="cd-num">150</td><td class="cd-num"><strong>-6.7%</strong></td></tr><tr><th scope="row">Sale of motor vehicles (SIC 451)</th><td class="cd-num">120</td><td class="cd-num">128</td><td class="cd-num">-6.2%</td></tr><tr><th scope="row">Motor trade overall (SIC 45)</th><td class="cd-num">308</td><td class="cd-num">322</td><td class="cd-num">-4.3%</td></tr><tr><th scope="row">Wholesale and retail trade (SIC G)</th><td class="cd-num">1,646</td><td class="cd-num">1,920</td><td class="cd-num">-14.3%</td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service Table A1b data.</p>
+</section>
 <section class="cd-section cd-w-wide" id="trend">
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Motor vehicle repair insolvencies by month</h2>
-    <p class="cd-section-intro">May 2026 recorded 19 insolvencies, against 32 in April 2026 and 27 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
+    <p class="cd-section-intro">June 2026 recorded 27 insolvencies, against 19 in May 2026 and 29 in June 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
     <p class="cd-section-intro">Motor vehicle repair sits within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, alongside wholesale and retail trade generally. See also the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="452-monthly-title 452-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="452-monthly-title">Monthly insolvencies among motor vehicle repair and maintenance businesses, England and Wales</title><desc id="452-monthly-desc">Monthly company insolvencies among motor vehicle repair and maintenance businesses, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">10</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">20</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">40</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">50</text></g><polyline points="60.0,198.40 80.6,192.72 101.2,118.88 121.8,209.76 142.4,147.28 163.0,221.12 183.6,192.72 204.2,164.32 224.8,215.44 245.4,152.96 266.0,158.64 286.6,215.44 307.2,226.80 327.8,226.80 348.4,215.44 369.0,170.00 389.6,175.68 410.2,181.36 430.8,198.40 451.4,164.32 472.0,192.72 492.6,175.68 513.2,198.40 533.8,192.72 554.4,204.08 575.0,192.72 595.6,164.32 616.2,152.96 636.8,158.64 657.4,147.28 678.0,158.64 698.6,187.04 719.2,181.36 739.8,204.08 760.4,135.92 781.0,192.72 801.6,226.80 822.2,181.36 842.8,175.68 863.4,130.24 884.0,204.08" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:20</title></circle><circle cx="80.6" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:21</title></circle><circle cx="101.2" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:34</title></circle><circle cx="121.8" cy="209.76" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:18</title></circle><circle cx="142.4" cy="147.28" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:29</title></circle><circle cx="163.0" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:16</title></circle><circle cx="183.6" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:21</title></circle><circle cx="204.2" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:26</title></circle><circle cx="224.8" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:17</title></circle><circle cx="245.4" cy="152.96" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:28</title></circle><circle cx="266.0" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:27</title></circle><circle cx="286.6" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:17</title></circle><circle cx="307.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:15</title></circle><circle cx="327.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:15</title></circle><circle cx="348.4" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:17</title></circle><circle cx="369.0" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:25</title></circle><circle cx="389.6" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:24</title></circle><circle cx="410.2" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:23</title></circle><circle cx="430.8" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:20</title></circle><circle cx="451.4" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:26</title></circle><circle cx="472.0" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:21</title></circle><circle cx="492.6" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:24</title></circle><circle cx="513.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:20</title></circle><circle cx="533.8" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:21</title></circle><circle cx="554.4" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:19</title></circle><circle cx="575.0" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:21</title></circle><circle cx="595.6" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:26</title></circle><circle cx="616.2" cy="152.96" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:28</title></circle><circle cx="636.8" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:27</title></circle><circle cx="657.4" cy="147.28" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:29</title></circle><circle cx="678.0" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:27</title></circle><circle cx="698.6" cy="187.04" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:22</title></circle><circle cx="719.2" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:23</title></circle><circle cx="739.8" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:19</title></circle><circle cx="760.4" cy="135.92" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:31</title></circle><circle cx="781.0" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:21</title></circle><circle cx="801.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:15</title></circle><circle cx="822.2" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:23</title></circle><circle cx="842.8" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:24</title></circle><circle cx="863.4" cy="130.24" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:32</title></circle><circle cx="884.0" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:19</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
-    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among motor vehicle repair and maintenance businesses, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="452-monthly-title 452-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="452-monthly-title">Monthly insolvencies among motor vehicle repair and maintenance businesses, England and Wales</title><desc id="452-monthly-desc">Monthly company insolvencies among motor vehicle repair and maintenance businesses, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">10</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">20</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">40</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">50</text></g><polyline points="60.0,226.80 66.6,226.80 73.2,209.76 79.8,209.76 86.4,238.16 93.0,209.76 99.6,243.84 106.1,243.84 112.7,232.48 119.3,232.48 125.9,221.12 132.5,260.88 139.1,226.80 145.7,238.16 152.3,204.08 158.9,198.40 165.5,181.36 172.1,260.88 178.7,221.12 185.2,209.76 191.8,238.16 198.4,260.88 205.0,238.16 211.6,243.84 218.2,226.80 224.8,232.48 231.4,209.76 238.0,243.84 244.6,232.48 251.2,238.16 257.8,170.00 264.4,209.76 270.9,226.80 277.5,221.12 284.1,198.40 290.7,226.80 297.3,204.08 303.9,243.84 310.5,238.16 317.1,255.20 323.7,175.68 330.3,243.84 336.9,249.52 343.5,238.16 350.0,283.60 356.6,198.40 363.2,221.12 369.8,260.88 376.4,209.76 383.0,238.16 389.6,221.12 396.2,249.52 402.8,260.88 409.4,243.84 416.0,255.20 422.6,277.92 429.2,226.80 435.7,283.60 442.3,266.56 448.9,260.88 455.5,289.28 462.1,272.24 468.7,249.52 475.3,238.16 481.9,243.84 488.5,243.84 495.1,232.48 501.7,260.88 508.3,238.16 514.8,226.80 521.4,243.84 528.0,181.36 534.6,243.84 541.2,255.20 547.8,158.64 554.4,181.36 561.0,215.44 567.6,198.40 574.2,226.80 580.8,164.32 587.4,243.84 594.0,187.04 600.5,158.64 607.1,170.00 613.7,198.40 620.3,192.72 626.9,118.88 633.5,209.76 640.1,147.28 646.7,221.12 653.3,192.72 659.9,164.32 666.5,215.44 673.1,152.96 679.6,158.64 686.2,215.44 692.8,226.80 699.4,226.80 706.0,215.44 712.6,170.00 719.2,175.68 725.8,181.36 732.4,198.40 739.0,164.32 745.6,192.72 752.2,175.68 758.8,198.40 765.3,192.72 771.9,204.08 778.5,192.72 785.1,164.32 791.7,152.96 798.3,158.64 804.9,147.28 811.5,158.64 818.1,187.04 824.7,181.36 831.3,204.08 837.9,135.92 844.4,192.72 851.0,226.80 857.6,181.36 864.2,175.68 870.8,130.24 877.4,204.08 884.0,158.64" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2016:15</title></circle><circle cx="73.2" cy="209.76" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2016:18</title></circle><circle cx="86.4" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>May 2016:13</title></circle><circle cx="99.6" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2016:12</title></circle><circle cx="112.7" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2016:14</title></circle><circle cx="125.9" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2016:16</title></circle><circle cx="139.1" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2017:15</title></circle><circle cx="152.3" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2017:19</title></circle><circle cx="165.5" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>May 2017:23</title></circle><circle cx="178.7" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2017:16</title></circle><circle cx="191.8" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2017:13</title></circle><circle cx="205.0" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2017:13</title></circle><circle cx="218.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2018:15</title></circle><circle cx="231.4" cy="209.76" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2018:18</title></circle><circle cx="244.6" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>May 2018:14</title></circle><circle cx="257.8" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2018:25</title></circle><circle cx="270.9" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2018:15</title></circle><circle cx="284.1" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2018:20</title></circle><circle cx="297.3" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2019:19</title></circle><circle cx="310.5" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2019:13</title></circle><circle cx="323.7" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>May 2019:24</title></circle><circle cx="336.9" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2019:11</title></circle><circle cx="350.0" cy="283.60" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2019:5</title></circle><circle cx="363.2" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2019:16</title></circle><circle cx="376.4" cy="209.76" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2020:18</title></circle><circle cx="389.6" cy="221.12" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2020:16</title></circle><circle cx="402.8" cy="260.88" r="3.5" fill="transparent" stroke="transparent"><title>May 2020:9</title></circle><circle cx="416.0" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2020:10</title></circle><circle cx="429.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2020:15</title></circle><circle cx="442.3" cy="266.56" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2020:8</title></circle><circle cx="455.5" cy="289.28" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2021:4</title></circle><circle cx="468.7" cy="249.52" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2021:11</title></circle><circle cx="481.9" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>May 2021:12</title></circle><circle cx="495.1" cy="232.48" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2021:14</title></circle><circle cx="508.3" cy="238.16" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2021:13</title></circle><circle cx="521.4" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2021:12</title></circle><circle cx="534.6" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2022:12</title></circle><circle cx="547.8" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2022:27</title></circle><circle cx="561.0" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>May 2022:17</title></circle><circle cx="574.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2022:15</title></circle><circle cx="587.4" cy="243.84" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2022:12</title></circle><circle cx="600.5" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2022:27</title></circle><circle cx="613.7" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:20</title></circle><circle cx="626.9" cy="118.88" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:34</title></circle><circle cx="640.1" cy="147.28" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:29</title></circle><circle cx="653.3" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:21</title></circle><circle cx="666.5" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:17</title></circle><circle cx="679.6" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:27</title></circle><circle cx="692.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:15</title></circle><circle cx="706.0" cy="215.44" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:17</title></circle><circle cx="719.2" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:24</title></circle><circle cx="732.4" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:20</title></circle><circle cx="745.6" cy="192.72" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:21</title></circle><circle cx="758.8" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:20</title></circle><circle cx="771.9" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:19</title></circle><circle cx="785.1" cy="164.32" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:26</title></circle><circle cx="798.3" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:27</title></circle><circle cx="811.5" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:27</title></circle><circle cx="824.7" cy="181.36" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:23</title></circle><circle cx="837.9" cy="135.92" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:31</title></circle><circle cx="851.0" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:15</title></circle><circle cx="864.2" cy="175.68" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:24</title></circle><circle cx="877.4" cy="204.08" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:19</title></circle><circle cx="884.0" cy="158.64" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2026:27</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2016</text><text x="218.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2018</text><text x="376.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2020</text><text x="534.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2022</text><text x="692.8" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="851.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among motor vehicle repair and maintenance businesses, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
   </figure>
 </section>
-
+<section class="cd-section cd-w-standard" id="longterm">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Context</p>
+    <h2>What the longer-term motor vehicle repair insolvency trend shows</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">Garages had a quiet decade before this. Insolvencies ran between 164 and 195 from 2016 to 2019, then fell to 132 in 2020 and 145 in 2021, when government support and the restrictions on creditors held the normal cycle in check. People also stopped driving, which for once cut both ways: less wear, but also less work.</p><p class="cd-side-note__d">The recovery brought the reckoning. 236 in 2022 and 274 in 2023, then a dip to 251 in 2024 that looked, at the time, like the worst being over.</p><p class="cd-side-note__d">It was not. 2025 came in at 293, the highest in the series and 79% above the 164 recorded in 2019. That is the part worth sitting with: the peak for garages is not 2023, as it is in much of the economy. It is last year.</p></div>
+</section>
 <section class="cd-section cd-w-standard" id="pressure">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Context</p>
-    <h2>Why motor vehicle repair and maintenance businesses are under pressure</h2>
+    <h2>Why garages are under pressure when the repair work is there</h2>
+    <p class="cd-section-intro">Start with the thing that makes this sector strange. There are more cars on the road than ever, they are older than ever, and repair prices are rising. On paper this should be a good time to own a garage. It produced a record year of insolvencies instead, so the problem is not the customers.</p><p class="cd-section-intro">What follows is where the money actually goes. It is not a claim about why any particular company failed.</p>
 
-    <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
   </div>
-  <div class="cd-side-notes"><div class="cd-note-item"><h3>Rising parts and equipment costs</h3><p class="cd-side-note__d">Genuine parts, diagnostic equipment and the specialist tooling needed for newer and electric vehicles have risen in cost faster than many independent garages can pass on through labour rates.</p></div><div class="cd-note-item"><h3>Competition from franchised dealers</h3><p class="cd-side-note__d">Manufacturer warranty and servicing schemes pull newer, higher-margin vehicle work toward franchised dealers, leaving independent garages more reliant on older, lower-margin repair work.</p></div></div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>Demand is not the problem</h3><p class="cd-side-note__d">The work is there and there is more of it every year. SMMT Motorparc data published on 24 April 2026 put the UK fleet at a record 42,549,649 vehicles, up 1.4%, with the average car now 9.7 years old against 9.5 a year earlier.</p><p class="cd-side-note__d">A record 45.7% of cars on the road have been in service for more than a decade, up from 43.4%. Older cars break more. Every one of those percentage points is work arriving at somebody's ramp, which is why a garage full of jobs and short of cash is such a common and such a confusing place to be.</p></div><div class="cd-note-item"><h3>Neither is the labour rate</h3><p class="cd-side-note__d">Garages have been putting their prices up, and the official figures for this exact trade confirm it. The ONS producer price index for maintenance and repair services of motor vehicles (SIC 452) reached 156.2 in the first quarter of 2026 against 148.4 a year earlier, a rise of 5.3%, and up 56% on its 2015 base.</p><p class="cd-side-note__d">So the sector is charging more and doing more work, and still recorded its worst year. That is the whole puzzle in two sentences, and it means the answer is on the cost side of the page, not the revenue side.</p><p class="cd-side-note__d">The ONS index is a UK-wide price measure. It is not where the England and Wales insolvency counts come from.</p></div><div class="cd-note-item"><h3>The cost side is where it goes</h3><p class="cd-side-note__d">A garage's costs are a technician, a building and the parts. All three have moved. In the 2026 to 2027 tax year employers pay National Insurance at 15% above the secondary threshold of £96 a week, and the National Living Wage has been £12.71 an hour for workers aged 21 and over since April 2026.</p><p class="cd-side-note__d">A qualified technician costs well above that, and the franchised dealer down the road can usually outbid you for them. Meanwhile the ramp, the diagnostic subscription and the rent carry on whether the bay is full or empty.</p><p class="cd-side-note__d">An older car parc also brings worse-tempered work. The owner of a fourteen-year-old car is the most likely person to decline the job, argue the quote, or take the car away in pieces because the repair is worth more than the vehicle. The job still cost you the diagnostic hour.</p></div><div class="cd-note-item"><h3>Electric vehicles are tomorrow's problem, not this year's</h3><p class="cd-side-note__d">It is worth being straight about this, because the trade press is not always. Electric vehicles are often given as the reason independents are failing.</p><p class="cd-side-note__d">The parc data does not support that as a 2026 cash problem: SMMT put zero-emission vehicles at roughly one in 22 on the road. Twenty-one out of twenty-two cars still have an engine, a clutch and an exhaust.</p><p class="cd-side-note__d">The real difficulty is the order of events. The tooling, the training and the high-voltage qualifications have to be paid for years before enough electric work arrives to pay for them. That is a capital problem landing on businesses that are already short of capital, which is a different thing from electric vehicles taking the work away.</p></div></div>
 </section>
 <section class="cd-section cd-w-standard" id="practitioner">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Practitioner view</p>
     <h2>What we see in motor vehicle repair insolvency cases</h2>
+
   </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the cases we see, independent garages are being squeezed between rising parts and equipment costs and competition from manufacturer-franchised dealers, who hold newer, higher-margin warranty work.</p><p class="cd-side-note__d cd-side-note__insight">The shift toward electric and increasingly complex vehicles adds a capital cost independents often cannot spread as easily as a multi-site franchised group.</p></div>
+  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the garage cases we handle, the money is nearly always stuck in the workshop rather than missing from it. There is a car on the ramp in pieces, the customer is not answering the phone about the extra work, and the part that was ordered for it is already paid for. Multiply that by the number of bays and you have the whole problem.</p><p class="cd-side-note__d cd-side-note__insight">By the time a director calls us, the parts account is usually the thing that broke first. The factor puts you on stop, so you cannot finish the jobs, so you cannot invoice, so you cannot pay the factor. That loop closes fast, and it is why a garage can go from busy to finished inside a month while the order book still looks healthy.</p><p class="cd-side-note__d cd-side-note__insight">There is often a personal guarantee on the unit or the parts account, and it is rarely the first thing mentioned on the call. It is usually the thing that has been keeping someone awake. Worth saying plainly: it does not improve by being left, and there is more room to deal with it early than late.</p><p class="cd-side-note__d cd-side-note__insight">We would not start with the number of jobs. We would look at cash actually collected against the wage bill, how much is sitting in unbilled work in progress and cars you cannot release.</p><p class="cd-side-note__d cd-side-note__insight">What the parts factor is owed and whether you are on stop, what the premises commit you to, and what is owed to HMRC on VAT and PAYE. Those tell you where the garage really is.</p></div>
 </section>
 
 <section class="cd-section cd-w-standard" id="annual">
   <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Motor vehicle repair insolvencies by year, 2016 to 2025</h2>
-    <p class="cd-section-intro">Motor vehicle repair insolvencies rose from 174 in 2016 to a peak of 293 in 2025. The 2025 total of 293 remained well above the pre-pandemic total of 164 in 2019.</p>
+    <p class="cd-section-intro">One feature of this table is easy to miss and worth stating plainly. For most sectors the worst year was 2023 and everything since has been a recovery. For garages the worst year is 2025, the most recent complete one. The 2024 dip to 251 turned out to be a pause rather than a turn.</p>
     <p class="cd-section-intro">Recorded insolvencies reached their series low of 132 in 2020, when pandemic restrictions and government support distorted normal insolvency patterns.</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Annual company insolvencies among motor vehicle repair and maintenance businesses, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Annual company insolvencies among motor vehicle repair and maintenance businesses, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
       <tbody><tr><th scope="row">2016</th><td class="cd-num">174</td></tr><tr><th scope="row">2017</th><td class="cd-num">180</td></tr><tr><th scope="row">2018</th><td class="cd-num">195</td></tr><tr><th scope="row">2019</th><td class="cd-num">164</td></tr><tr><th scope="row">2020</th><td class="cd-num">132</td></tr><tr><th scope="row">2021</th><td class="cd-num">145</td></tr><tr><th scope="row">2022</th><td class="cd-num">236</td></tr><tr><th scope="row">2023</th><td class="cd-num">274</td></tr><tr><th scope="row">2024</th><td class="cd-num">251</td></tr><tr><th scope="row">2025</th><td class="cd-num">293</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table A1b).</p>
 </section>
-
+<section class="cd-section cd-w-standard" id="procedure">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Procedures</p>
+    <h2>What types of motor vehicle repair insolvency are most common?</h2>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Motor vehicle repair insolvencies by procedure, 2025, England and Wales. Source: Insolvency Service.</caption>
+      <thead><tr><th scope="col">Procedure</th><th scope="col" class="cd-num">Cases</th><th scope="col" class="cd-num">Share</th></tr></thead>
+      <tbody><tr><th scope="row">Creditors' voluntary liquidations</th><td class="cd-num">260</td><td class="cd-num">88.7%</td></tr><tr><th scope="row">Compulsory liquidations</th><td class="cd-num">24</td><td class="cd-num">8.2%</td></tr><tr><th scope="row">Administrations</th><td class="cd-num">7</td><td class="cd-num">2.4%</td></tr><tr><th scope="row">Company voluntary arrangements</th><td class="cd-num">2</td><td class="cd-num">0.7%</td></tr><tr><th scope="row">Receivership appointments</th><td class="cd-num">0</td><td class="cd-num">0.0%</td></tr></tbody>
+    </table>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d"><a href="/liquidation/creditors-voluntary-liquidation/">Creditors' voluntary liquidations</a> account for 88.7% of garage insolvencies, 260 of 293 in 2025, the highest share of any sector on these pages. That is what an asset-light trade looks like on the way out: when a garage stops, there is usually nothing to rescue beyond some tools and a lease, so the directors close it themselves.</p><p class="cd-side-note__d"><a href="/company-administration/">Administrations</a> make the same point from the other side, falling from 17 in 2024 to 7 in 2025, just 2.4% of cases. Administration needs a buyer, and most independent garages are worth more as a going concern to their own owner than to anybody else.</p><p class="cd-side-note__d"><a href="/liquidation/compulsory-liquidation/">Compulsory liquidations</a> doubled, from 12 to 24. A creditor, usually HMRC, petitioning to wind the company up is the one column that rose in share as well as number.</p></div>
+  <p class="cd-source-note">Not a personal recommendation: the table describes procedures used historically, not which procedure suits any individual company. Source: Insolvency Service.</p>
+</section>
 
 
 <section class="cd-section cd-w-standard" id="about">
@@ -1270,10 +1297,22 @@
     <p class="cd-eyebrow">How to read this</p>
     <h2>How to interpret the motor vehicle repair figures</h2>
   </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d">Motor vehicle repair insolvencies can move on a handful of cases month to month. Prefer the year-to-date or 12-month rolling total for the steadier read.</p><p class="cd-side-note__d">The count is a volume, not a failure rate. It is not adjusted for how many garages are registered, so it cannot be read as a sector-wide risk of insolvency.</p><p class="cd-side-note__d">This is repair and maintenance only (SIC 452). Sale of vehicles and parts sits under separate SIC codes and is not included here.</p></div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">SIC group 452 covers companies whose recorded primary business is the maintenance and repair of motor vehicles: independent garages, workshops, MOT centres, bodyshops and tyre and exhaust fitters.</p><p class="cd-side-note__d">Selling vehicles (SIC 451) and parts and accessories (SIC 453) are separate codes and are not counted here, even though many real businesses do more than one of those things.</p><p class="cd-side-note__d">The SIC code records a company's main recorded activity, not a clean split of its work. A garage that also sells a few cars off the forecourt appears once, under whichever code it registered.</p><p class="cd-side-note__d">These are company counts, not the number of sites, ramps or technicians affected. One insolvent company may run several branches, and a garage can stop trading without ever entering a formal insolvency procedure.</p><p class="cd-side-note__d">The figures are insolvency volumes, not a failure rate. They are not adjusted for the number of active garages, so they cannot be read as the chance of any given garage failing.</p><p class="cd-side-note__d">The SIC 452 figures come from Table A1b and are not seasonally adjusted. The Insolvency Service seasonally adjusts parts of its headline England and Wales series where it finds seasonality, but that adjustment does not apply to the industry figures used here. The latest month is provisional and can be revised.</p></div>
 </section>
-
-
+<section class="cd-section cd-w-standard" id="commercial">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Next steps</p>
+    <h2>What to do if your repair business cannot pay its debts</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">None of the figures above decide whether your garage is viable. Sector totals never do. The questions that matter are narrower: does the labour rate cover the technician once National Insurance is on top, how much cash is trapped in jobs you cannot finish or release, and is the parts account current or on stop?</p><p class="cd-side-note__d">Plenty of garages in difficulty are sound businesses with a working capital problem or an old VAT bill, and that is worth knowing, because both can be dealt with.</p><p class="cd-side-note__d">It is more serious when the arrears have grown across several quarters, or when you are turning work away because you cannot buy the parts to do it. That is the point at which a garage is winding itself down, whether anyone has said so out loud or not.</p><p class="cd-side-note__d">If you are reading this with a stop on the parts account and a VAT bill due, the useful thing to know is that the earlier you speak to someone, the more room there is to move: terms renegotiated, an <a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or a rescue procedure such as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> or <a href="/company-administration/">administration</a>.</p><p class="cd-side-note__d">Once a <a href="/winding-up-petitions/">winding-up petition</a> is advertised, the bank account is usually frozen within days, and on these figures <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> is where the overwhelming majority of garages end up. Our <a href="/advice/insolvency-advice-for-directors/">insolvency advice for directors</a> is the place to start if you want to understand the options first.</p></div>
+</section>
+<section class="cd-section cd-w-standard" id="faq">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">FAQs</p>
+    <h2>Frequently asked questions about motor vehicle repair insolvencies</h2>
+  </div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>How many UK garages become insolvent each year?</h3><p class="cd-side-note__d">293 motor vehicle repair businesses entered insolvency in England and Wales in 2025, the highest in the series and up from 251 in 2024. The pre-pandemic figure was 164 in 2019. Source: Insolvency Service, Table A1b.</p></div><div class="cd-note-item"><h3>Are garage insolvencies rising or falling in 2026?</h3><p class="cd-side-note__d">The two measures are converging. There were 140 insolvencies between January and June 2026 against 150 a year earlier, down 6.7%, and the rolling 12-month total is now essentially flat at 283. The improvement is recent, and the rolling figure still includes the back half of a record 2025.</p></div><div class="cd-note-item"><h3>Do these figures include car dealers?</h3><p class="cd-side-note__d">No. This page counts SIC group 452, the maintenance and repair of motor vehicles. Selling vehicles is SIC 451 and selling parts is SIC 453. Both are counted separately, and both are different businesses from a repair workshop.</p></div><div class="cd-note-item"><h3>Are electric vehicles causing garage insolvencies?</h3><p class="cd-side-note__d">The parc data does not support that as the current cause. SMMT put zero-emission vehicles at around one in 22 on UK roads, so most cars still have an engine. The nearer-term difficulty is that tooling and training for electric work must be paid for years before enough of that work arrives.</p></div><div class="cd-note-item"><h3>What is the most common insolvency procedure for garages?</h3><p class="cd-side-note__d">Creditors' voluntary liquidation, at 260 of the 293 garage insolvencies in 2025, or 88.7%. That is the highest CVL share of any sector we cover, and it reflects how little there usually is to rescue in an independent garage.</p></div></div>
+</section>
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1286,7 +1325,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
+      <li>Industry totals by three-digit SIC are published monthly, through the latest headline month, alongside the breakdown by insolvency procedure within each industry.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1299,17 +1338,18 @@
   <div class="cd-cite-card">
     <div class="cd-cite-card__left">
       <dl>
-        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026 (Table 1c, by industry).</dd>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table A1b, by industry).</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
-        <dt>Publication date</dt><dd>19 June 2026</dd>
-        <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
+        <dt>Publication date</dt><dd>17 July 2026</dd>
+        <dt>Next scheduled release</dt><dd>21 August 2026 (estimated from the monthly release cadence; not yet confirmed by the Insolvency Service)</dd>
+        <dt>Industry breakdown</dt><dd>The industry total by three-digit SIC (Table A1b) runs through the latest headline month. The breakdown by insolvency procedure within each industry comes from Tables A2 to A6.</dd>
         <dt>Industry scope</dt><dd>SIC 452: garages and workshops carrying out motor vehicle maintenance and repair.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>
     <div class="cd-cite-card__right">
       <p class="cd-eyebrow">How to cite this page</p>
-      <p class="cd-cite-text" id="cd-citation-motor-vehicle-repair-insolvency-statistics">CompanyDebt. (2026). UK Motor Vehicle Repair Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).</p>
+      <p class="cd-cite-text" id="cd-citation-motor-vehicle-repair-insolvency-statistics">Company Debt. (2026). "UK Motor Vehicle Repair Insolvency Statistics." Analysis of Insolvency Service company insolvency data by industry (Table A1b). CompanyDebt.com.</p>
       <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-motor-vehicle-repair-insolvency-statistics">Copy citation</button>
     </div>
   </div>

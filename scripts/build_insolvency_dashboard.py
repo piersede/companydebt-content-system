@@ -73,8 +73,8 @@ def hero_block(meta: dict, latest_total: int) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">UK Company Insolvency</span> <span class="cd-h1__line">Statistics 2026</span></h1>
-        <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was 10% lower than April 2026 and 16% lower than May 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
+        <h1><span class="cd-h1__line" style="white-space: normal;">UK Company Insolvency</span> <span class="cd-h1__line" style="white-space: normal;">Statistics 2026</span></h1>
+        <p class="cd-lede">The Insolvency Service's {meta['latest_month_label']} release records {format_number(latest_total)} company insolvencies in England and Wales. That was little changed from May 2026 and 10% lower than June 2025. This page tracks the headline figures, the 12-month rolling rate and business insolvency statistics by sector, updated with each monthly release.</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{meta['latest_month_label']}</strong></div>
           <div class="cd-meta-item"><span>Published</span><strong>{meta['publication_date']}</strong></div>
@@ -91,15 +91,15 @@ def hero_block(meta: dict, latest_total: int) -> str:
           <span class="cd-main-kpi__k">company insolvencies, {meta['latest_month_label']}</span>
         </div>
         <div class="cd-change-row cd-change-row--down">
-          <span><strong>-10%</strong> vs April 2026</span>
-          <span><strong>-16%</strong> vs May 2025</span>
+          <span><strong>0%</strong> vs May 2026</span>
+          <span><strong>-10%</strong> vs June 2025</span>
         </div>
         <div class="cd-kpi-divider" aria-hidden="true"></div>
         <div class="cd-mini-kpi-grid">
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">1,423</span><span class="cd-mini-kpi__k">CVLs</span><span class="cd-mini-kpi__n">76% of total</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">285</span><span class="cd-mini-kpi__k">Compulsory</span><span class="cd-mini-kpi__n">-26% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">135</span><span class="cd-mini-kpi__k">Administrations</span><span class="cd-mini-kpi__n">-24% on April</span></div>
-          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">50.9</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 196 companies</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">1,364</span><span class="cd-mini-kpi__k">CVLs</span><span class="cd-mini-kpi__n">74% of total</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">276</span><span class="cd-mini-kpi__k">Compulsory</span><span class="cd-mini-kpi__n">-2% on May</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">191</span><span class="cd-mini-kpi__k">Administrations</span><span class="cd-mini-kpi__n">+45% on May</span></div>
+          <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">50.5</span><span class="cd-mini-kpi__k">Rate per 10,000</span><span class="cd-mini-kpi__n">1 in 198 companies</span></div>
         </div>
       </aside>
       </div>
@@ -118,10 +118,8 @@ def secnav_block() -> str:
       <a href="#rate">Insolvency rate</a>
       <a href="#procedures">By procedure</a>
       <a href="#sector">Sector</a>
+      <a href="#sector-pages">Trade data</a>
       <a href="#nations">UK nations</a>
-      <a href="#method">Method</a>
-      <a href="#source">Source</a>
-      <a href="#faq">FAQ</a>
     </nav>
     """)
 
@@ -167,19 +165,19 @@ def latest_figures_block(meta: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="figures">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">Snapshot <span>· May 2026</span></p>
+        <p class="cd-eyebrow">Snapshot <span>· June 2026</span></p>
         <h2>Latest UK company insolvency figures</h2>
-        <p class="cd-section-intro">The May 2026 total was made up mainly of creditors' voluntary liquidations, and fell back across every main procedure. Administrations were 24% lower than in April, when more than 70 connected real estate companies entered insolvency in a single cluster.</p>
+        <p class="cd-section-intro">The June 2026 total was made up mainly of creditors' voluntary liquidations, though administrations jumped sharply after around 60 connected real estate companies entered administration in a single cluster. Compulsory liquidations and CVLs both eased back.</p>
       </div>
       <div class="cd-tablewrap">
         <table class="cd-table cd-table--latest">
-          <caption class="cd-table__caption">Company insolvencies in England and Wales by procedure, May 2026 compared with April 2026 and May 2025. Seasonally adjusted where available. Source: Insolvency Service / Companies House.</caption>
+          <caption class="cd-table__caption">Company insolvencies in England and Wales by procedure, June 2026 compared with May 2026 and June 2025. Seasonally adjusted where available. Source: Insolvency Service / Companies House.</caption>
           <thead>
             <tr>
               <th scope="col">Procedure</th>
+              <th scope="col" class="cd-num">June 2026</th>
               <th scope="col" class="cd-num">May 2026</th>
-              <th scope="col" class="cd-num">April 2026</th>
-              <th scope="col" class="cd-num">May 2025</th>
+              <th scope="col" class="cd-num">June 2025</th>
               <th scope="col" class="cd-num">Monthly change</th>
               <th scope="col" class="cd-num">Annual change</th>
             </tr>
@@ -203,7 +201,7 @@ def monthly_chart_block(charts: dict) -> str:
         <div>
           <p class="cd-eyebrow">Trend</p>
           <h2>Monthly company insolvencies by procedure</h2>
-          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations dropped back in May after a connected real-estate cluster lifted the April figure.</p>
+          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations spiked in June after another connected real-estate cluster — the third such episode this year, following clusters in March and April.</p>
         </div>
         <div class="cd-chart-controls" role="tablist" aria-label="Time range">
           <span class="cd-chart-controls__label">View range</span>
@@ -266,15 +264,15 @@ def rate_block(charts: dict, latest_rate: float) -> str:
     <section class="cd-section cd-w-wide" id="rate">
       <div class="cd-section-head">
         <p class="cd-eyebrow">Rate <span>· 12-month rolling</span></p>
-        <h2>UK company insolvency rate (May 2026)</h2>
+        <h2>UK company insolvency rate (June 2026)</h2>
       </div>
       <div class="cd-rate-grid">
         <div class="cd-rate-text">
-          <p class="cd-section-intro">In the 12 months to 31 May 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 196 companies entering insolvency.</p>
-          <p>The rate was lower than the 53.0 per 10,000 recorded for the 12 months to May 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
+          <p class="cd-section-intro">In the 12 months to 30 June 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 198 companies entering insolvency.</p>
+          <p>The rate was lower than the 52.4 per 10,000 recorded for the 12 months to June 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
           <div class="cd-callout-card">
             <div class="cd-callout-card__row">
-              <span class="cd-callout-card__k">May 2026</span>
+              <span class="cd-callout-card__k">June 2026</span>
               <span class="cd-callout-card__v">{latest_rate} <span class="cd-callout-card__u">per 10,000</span></span>
             </div>
             <div class="cd-callout-card__row">
@@ -299,13 +297,13 @@ def rate_block(charts: dict, latest_rate: float) -> str:
 
 def procedure_cards_block() -> str:
     rows = [
-        ("CVLs", "1,423", "Main procedure. 76% of all insolvencies.",
+        ("CVLs", "1,364", "Main procedure. 74% of all insolvencies.",
          "CVL statistics", "/data/cvl-statistics/"),
-        ("Compulsory liquidations", "285", "Down 26% on April 2026. HMRC-led petitions.",
+        ("Compulsory liquidations", "276", "Down 2% on May 2026. HMRC-led petitions.",
          "Compulsory liquidation statistics", "/data/compulsory-liquidation-statistics/"),
-        ("Administrations", "135", "Down 24% after April's real-estate cluster.",
+        ("Administrations", "191", "Up 45% after June's real-estate cluster.",
          "Administration statistics", "/data/administration-statistics/"),
-        ("CVAs", "25", "Low by historical standards.", None, None),
+        ("CVAs", "14", "Low by historical standards.", None, None),
         ("Receiverships", "0", "Now a rare procedure.", None, None),
     ]
     def card_html(name, count, note, link_label, link_href):
@@ -325,7 +323,7 @@ def procedure_cards_block() -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-wide" id="procedures">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">By procedure <span>· May 2026</span></p>
+        <p class="cd-eyebrow">By procedure <span>· June 2026</span></p>
         <h2>UK company insolvencies by procedure type</h2>
         <p class="cd-section-intro">Each procedure has its own deep dive. Compulsory liquidations begin with a creditor's petition, tracked monthly in the <a href="/data/winding-up-petition-tracker/">winding-up petition statistics</a>.</p>
       </div>
@@ -340,19 +338,71 @@ def sector_block(sector: dict, charts: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-wide" id="sector">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">Sector <span>· 12 months to May 2026</span></p>
+        <p class="cd-eyebrow">Sector <span>· 12 months to June 2026</span></p>
         <h2>UK company insolvencies by sector</h2>
-        <p class="cd-section-intro">The sector breakdown covers the 12 months to May 2026, ranked by volume. Construction remains the largest, ahead of wholesale and retail and accommodation and food. The full ranking and year-by-year trends are in the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, including the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>.</p>
+        <p class="cd-section-intro">The sector breakdown covers the 12 months to June 2026, ranked by volume. Construction remains the largest, ahead of wholesale and retail and accommodation and food. The full ranking and year-by-year trends are in the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, including the <a href="/data/construction-insolvency-statistics/">construction insolvency statistics</a>.</p>
       </div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--sector">
           {charts['sector_bars']}
         </div>
-        <figcaption class="cd-figcaption"><strong>UK company insolvencies by industry section, 12 months to May 2026, England and Wales.</strong> Ranked by volume. SIC code is self-reported and uses the first recorded code. Source: Insolvency Service / Companies House.</figcaption>
+        <figcaption class="cd-figcaption"><strong>UK company insolvencies by industry section, 12 months to June 2026, England and Wales.</strong> Ranked by volume. SIC code is self-reported and uses the first recorded code. Source: Insolvency Service / Companies House.</figcaption>
       </figure>
       <aside class="cd-caveat">
         <p><strong>About sector volumes.</strong> These are volumes, not sector failure rates. Larger sectors tend to have more insolvencies because they have more registered companies. SIC codes are self-reported, and the first recorded SIC code is used.</p>
       </aside>
+    </section>
+    """)
+
+
+# ── Trade data-page links: registry-driven table ───────────────────────────
+# Per docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+# handoff's sector-trade-links-generator-spec.md. Reads scripts/datahub/pages/
+# sic_group_stats.py's SECTORS registry (not a second hand-maintained list),
+# so a new trade page appears here automatically on the next monthly rebuild.
+# Registry moved to scripts/datahub/pages/sector_trade_links.py, shared with
+# the hub landing page's "By sector" cards (company_insolvency_hub.py) - one
+# list, not two that can drift apart. See that module's docstring.
+
+def _trade_link_rows() -> list[dict]:
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent / "datahub" / "pages"))
+    from sector_trade_links import rows as _rows  # noqa: E402
+    return _rows()
+
+
+def sector_pages_block() -> str:
+    rows = _trade_link_rows()
+    if not rows:
+        # Sticky-nav coupling: an empty table must not ship an empty section
+        # or a dead #sector-pages nav link (the class of bug that produced an
+        # earlier dead #procedures link).
+        return ""
+    rows_html = "".join(
+        f'<tr><th scope="row"><span class="cd-sectorlinks__name">{r["trade"]}</span>'
+        f'<span class="cd-sectorlinks__desc">{r["blurb"].replace("&", "&amp;")}</span></th>'
+        f'<td class="cd-sectorlinks__action">'
+        f'<a class="cd-sectorlinks__btn" href="/data/{r["slug"]}/">View data'
+        f'<span aria-hidden="true">&#8594;</span></a></td></tr>'
+        for r in rows
+    )
+    return dedent(f"""\
+    <section class="cd-section cd-w-wide" id="sector-pages">
+      <div class="cd-section-head">
+        <p class="cd-eyebrow">Detailed data</p>
+        <h2>Get the insolvency data for your trade</h2>
+        <p class="cd-section-intro">We publish a dedicated, monthly-updated data page for individual trades within the industry sections above. Find yours in the table and open its full time series.</p>
+      </div>
+      <div class="cd-tablewrap">
+        <table class="cd-table cd-sectorlinks">
+          <caption class="cd-table__caption">Detailed insolvency data pages by trade, grouped by SIC industry section.</caption>
+          <thead>
+            <tr><th scope="col">Trade or sub-sector</th><th scope="col" class="cd-sectorlinks__actionhead">Data page</th></tr>
+          </thead>
+          <tbody>{rows_html}</tbody>
+        </table>
+      </div>
+      <p class="cd-sectorlinks__all"><a href="/data/company-insolvencies-by-sector/">See all sectors and the full SIC breakdown <span aria-hidden="true">&#8594;</span></a></p>
     </section>
     """)
 
@@ -375,18 +425,18 @@ def nations_block(nations: dict) -> str:
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="nations">
       <div class="cd-section-head">
-        <p class="cd-eyebrow">UK nations <span>· May 2026</span></p>
+        <p class="cd-eyebrow">UK nations <span>· June 2026</span></p>
         <h2>UK company insolvencies by jurisdiction</h2>
         <p class="cd-section-intro">Figures are reported separately for England and Wales, Scotland and Northern Ireland.</p>
       </div>
       <div class="cd-nations-grid">
         <div class="cd-tablewrap">
           <table class="cd-table cd-table--nations">
-            <caption class="cd-table__caption">Company insolvencies by UK jurisdiction, May 2026. Source: Insolvency Service / Companies House / Department for the Economy (NI).</caption>
+            <caption class="cd-table__caption">Company insolvencies by UK jurisdiction, June 2026. Source: Insolvency Service / Companies House / Department for the Economy (NI).</caption>
             <thead>
               <tr>
                 <th scope="col">Jurisdiction</th>
-                <th scope="col" class="cd-num">May 2026</th>
+                <th scope="col" class="cd-num">June 2026</th>
                 <th scope="col" class="cd-num">Rate per 10,000</th>
                 <th scope="col">Notes</th>
               </tr>
@@ -445,7 +495,7 @@ def source_citation_block(meta: dict) -> str:
       <div class="cd-cite-card">
         <div class="cd-cite-card__left">
           <dl>
-            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026.</dd>
+            <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026.</dd>
             <dt>Supporting source</dt><dd>Companies House company register data.</dd>
             <dt>Publication date</dt><dd>{meta['publication_date']}</dd>
             <dt>Next scheduled release</dt><dd>{meta['next_release_date']}</dd>
@@ -467,24 +517,24 @@ def source_citation_block(meta: dict) -> str:
 def faq_block() -> str:
     qa = [
         (
-            "How many UK company insolvencies were there in May 2026?",
-            "There were 1,868 registered company insolvencies in England and Wales in May 2026, on a seasonally adjusted basis. That was 10% lower than April 2026 and 16% lower than May 2025. Scotland recorded 100 insolvencies and Northern Ireland 30 in the same month."
+            "How many UK company insolvencies were there in June 2026?",
+            "There were 1,845 registered company insolvencies in England and Wales in June 2026, on a seasonally adjusted basis. That was little changed from May 2026 and 10% lower than June 2025. Scotland recorded 104 insolvencies and Northern Ireland 18 in the same month."
         ),
         (
             "What is the current UK company insolvency rate?",
-            "The 12-month rolling company insolvency rate for England and Wales was 50.9 per 10,000 active companies in the year to May 2026 — equal to one in 196 companies. The rate is lower than the 53.0 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
+            "The 12-month rolling company insolvency rate for England and Wales was 50.5 per 10,000 active companies in the year to June 2026 — equal to one in 198 companies. The rate is lower than the 52.4 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
         ),
         (
             "Which procedure accounts for the most UK company insolvencies?",
-            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,423 CVLs in May 2026 — 76% of all company insolvencies for the month. Compulsory liquidations (285) and administrations (135) followed, with a small number of CVAs (25) and no receiverships."
+            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,364 CVLs in June 2026 — 74% of all company insolvencies for the month. Compulsory liquidations (276) and administrations (191) followed, with a small number of CVAs (14) and no receiverships."
         ),
         (
             "Which UK sectors have the most company insolvencies?",
-            "Across the 12 months to May 2026, construction (3,803, 17%), wholesale and retail (3,527, 15%), and accommodation and food services (3,296, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
+            "Across the 12 months to June 2026, construction (3,805, 17%), wholesale and retail (3,463, 15%), and accommodation and food services (3,233, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
         ),
         (
             "When is the next UK insolvency statistics release?",
-            "The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 17 July 2026. This page is updated each month from the official release."
+            "The Insolvency Service publishes monthly company insolvency statistics. The next scheduled release is 18 August 2026. This page is updated each month from the official release."
         ),
         (
             "Where does this UK insolvency data come from?",
@@ -535,15 +585,21 @@ DASHBOARD_CSS = """
    ============================================================ */
 
 .cd-data-hub {
-  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
-     use width:100vw to escape the WP container). 100vw resolves to the
-     viewport width INCLUDING the scrollbar gutter, so on any page tall
-     enough to scroll it overshoots the true visible width by the scrollbar's
-     width (~15-17px) and creates a real, swipeable horizontal scroll. This
-     is not masking an unknown overflow — the cause is the 100vw pattern
-     above, which has no scrollbar-safe CSS-only fix; contain the resulting
-     15px here rather than letting it leak into the page/site chrome. */
-  overflow-x: hidden;
+  /* NOT overflow-x:hidden here (removed 2026-07). .cd-w-hero/.cd-w-wide/
+     .cd-bleed use width:100vw + a negative margin specifically to ESCAPE
+     this element and reach the true viewport edge - that is the entire
+     mechanism a full-bleed band relies on. overflow-x:hidden on the exact
+     element those sections are escaping FROM clips their paint back down to
+     .cd-data-hub's own (much narrower) box, which is what made the hero
+     band render as a bounded, inset card instead of a true edge-to-edge
+     band (found 2026-07, see docs/data-hub commit history).
+     The real reason this was here - width:100vw resolving to the viewport
+     WIDTH INCLUDING THE SCROLLBAR GUTTER, ~15-17px wider than the visible
+     area, which would otherwise create a real swipeable horizontal scroll -
+     is already handled a level up: the theme template sets
+     `body.page-template-data-hub-template { overflow-x: hidden; }`
+     (templates/data-hub-template.php), which contains that overshoot at the
+     body without clipping anything trying to bleed within the page. */
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -636,25 +692,32 @@ DASHBOARD_CSS = """
 }
 .cd-data-hub .cd-w-narrow   { max-width: 760px; }
 .cd-data-hub .cd-w-standard { max-width: 1040px; }
-/* Wide sections bleed out of the WP container so they can actually reach
-   1280px on wide viewports. max-width:none beats inherited theme caps. */
+/* Wide sections bleed out of the WP container so they can span the full
+   viewport, but re-centre to the site's single 1040px rail (per the 2026-07
+   Claude Design handoff: "every band sits on one 1040px content column with
+   an identical left edge... do NOT reintroduce per-section widths"). This
+   was previously 1280px (a "-640" constant, a second, wider rail) - that is
+   what put the masthead (already unified to 1040px, both via the theme
+   template's own masthead-pin fix and this file's site-alignment CSS) out of
+   line with every content section below it: a real, visible 120px
+   left-edge misalignment running down the whole page, not a cosmetic nit. */
 .cd-data-hub .cd-w-wide {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 /* Full-bleed band that escapes the parent .container. Inner content
-   re-aligns to a 1280px max-width. */
+   re-aligns to the same 1040px rail as .cd-w-wide. */
 .cd-data-hub .cd-bleed {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 
 /* ── Spacing rhythm ───────────────────────────────────────── */
@@ -1302,6 +1365,65 @@ DASHBOARD_CSS = """
   .cd-data-hub .cd-chart-panel--rate { min-height: 320px; }
 }
 
+/* ── Sector data-page links table ("Get the insolvency data for your
+   trade") — always-visible table pairing each trade with a View data
+   button, replacing the earlier procedure-card grid. Per
+   docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+   handoff's sector-trade-links-generator-spec.md. ──────────────────── */
+.cd-data-hub .cd-sectorlinks th[scope="row"] { font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__name { display: block; font-size: 16px; font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--cd-muted); max-width: 52ch; }
+.cd-data-hub .cd-sectorlinks td { color: var(--cd-text-soft); }
+.cd-data-hub .cd-sectorlinks__actionhead { text-align: left; }
+.cd-data-hub .cd-sectorlinks__action { text-align: left; white-space: nowrap; vertical-align: middle; width: 1%; }
+.cd-data-hub .cd-sectorlinks__btn.cd-sectorlinks__btn {
+  /* The WP theme forces `a { display: inline }`, which would collapse the
+     44px min-height tap target to a text baseline. Beat it explicitly. */
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  min-height: 44px;
+  box-sizing: border-box;
+  background: var(--cd-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s ease;
+}
+.cd-data-hub .cd-sectorlinks__btn span { font-size: 15px; line-height: 1; transition: transform .15s ease; }
+.cd-data-hub .cd-sectorlinks__btn::after, .cd-data-hub .cd-sectorlinks__btn::before { content: none !important; display: none !important; }
+.cd-data-hub .cd-sectorlinks .cd-table-arrow { display: none !important; }
+/* This button lives inside <table class="cd-table"> / <td class="cd-table-link-cell">,
+   and the WP theme styles that structure with `body .cd-table td.cd-table-link-cell
+   a(:hover/:visited/:focus) { color: #002856 !important }`. That selector has 3 type
+   steps (body, td, a) against our plain `.cd-data-hub .cd-sectorlinks__btn`'s 2 classes,
+   so on specificity the theme rule wins even though both sides use !important - the
+   button text rendered dark navy in every state, not just :visited. Doubling the class
+   here (and on each pseudo-class variant below) pushes our class count past the theme
+   rule's, so this needs to stay doubled rather than being "cleaned up" back to one. */
+.cd-data-hub .cd-sectorlinks__btn.cd-sectorlinks__btn:visited,
+.cd-data-hub .cd-sectorlinks__btn.cd-sectorlinks__btn:focus { color: #fff !important; }
+.cd-data-hub .cd-sectorlinks__btn.cd-sectorlinks__btn:hover { background: #0c3c66; color: #fff !important; text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__btn:hover span { transform: translateX(3px); }
+.cd-data-hub .cd-sectorlinks__btn:focus-visible { outline: 2px solid var(--cd-accent); outline-offset: 2px; }
+.cd-data-hub .cd-sectorlinks tbody tr:hover { background: var(--cd-surface-soft); }
+.cd-data-hub .cd-sectorlinks__all { margin: 18px 0 0 !important; font-size: 15px; }
+.cd-data-hub .cd-sectorlinks__all a { font-weight: 700; color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__all a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .cd-data-hub .cd-sectorlinks { min-width: 0; }
+  .cd-data-hub .cd-sectorlinks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cd-data-hub .cd-sectorlinks tbody tr { display: block; padding: 16px 4px; }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr { border-top: 1px solid var(--cd-line-soft); }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr td, .cd-data-hub .cd-sectorlinks tbody tr + tr th { border-top: 0; }
+  .cd-data-hub .cd-sectorlinks th[scope="row"] { display: block; padding: 0 0 12px; }
+  .cd-data-hub .cd-sectorlinks__action { display: block; padding: 0; width: auto; }
+}
+
 /* ── Procedure card grid ──────────────────────────────────── */
 .cd-data-hub .cd-procard-grid {
   display: grid;
@@ -1680,6 +1802,7 @@ def assemble_draft() -> str:
         rate_block(charts, latest_rate),
         procedure_cards_block(),
         sector_block(d["sector"], charts),
+        sector_pages_block(),
         nations_block(d["nations"]),
         methodology_block(),
         source_citation_block(meta),

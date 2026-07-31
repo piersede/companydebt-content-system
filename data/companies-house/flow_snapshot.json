@@ -1,29 +1,29 @@
 {
   "source_id": "companies_house_register",
-  "month": "2026-05",
-  "retrieved_at": "2026-06-16",
+  "month": "2026-06",
+  "retrieved_at": "2026-07-18",
   "observations": [
     {
       "metric_key": "active_companies_total",
       "metric_label": "Active companies on the register",
-      "period": "as_of_2026-06-16",
-      "value": 5498905,
+      "period": "as_of_2026-07-18",
+      "value": 5499002,
       "unit": "companies",
       "notes": "Point-in-time count of the live register (advanced-search). Denominator for rates."
     },
     {
       "metric_key": "incorporations",
       "metric_label": "Company incorporations",
-      "period": "2026-05",
-      "value": 62523,
+      "period": "2026-06",
+      "value": 63572,
       "unit": "companies",
       "notes": "Companies with an incorporation date in the month."
     },
     {
       "metric_key": "dissolutions",
       "metric_label": "Company dissolutions",
-      "period": "2026-05",
-      "value": 59296,
+      "period": "2026-06",
+      "value": 47189,
       "unit": "companies",
       "notes": "Companies with a dissolution date in the month. Mostly strike-offs, NOT insolvencies."
     }

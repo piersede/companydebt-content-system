@@ -1,0 +1,7 @@
+[
+  { "campaign.id": 3001, "campaign.name": "Search Active Budget Limited", "ad_group.id": 4001, "ad_group.name": "Main", "ad_group_ad.ad.id": 5001, "ad_group_ad.status": "ENABLED", "ad_group_ad.ad_strength": "GOOD" },
+  { "campaign.id": 3003, "campaign.name": "Dormant Shared A", "ad_group.id": 4003, "ad_group.name": "Main", "ad_group_ad.ad.id": 5003, "ad_group_ad.status": "ENABLED", "ad_group_ad.ad_strength": "AVERAGE" },
+  { "campaign.id": 3004, "campaign.name": "Dormant Shared B", "ad_group.id": 4004, "ad_group.name": "Main", "ad_group_ad.ad.id": 5004, "ad_group_ad.status": "ENABLED", "ad_group_ad.ad_strength": "AVERAGE" },
+  { "campaign.id": 3005, "campaign.name": "Dormant Paused Ads", "ad_group.id": 4005, "ad_group.name": "Main", "ad_group_ad.ad.id": 5005, "ad_group_ad.status": "PAUSED", "ad_group_ad.ad_strength": "PENDING" },
+  { "campaign.id": 3006, "campaign.name": "Dormant Unknown Cause", "ad_group.id": 4006, "ad_group.name": "Main", "ad_group_ad.ad.id": 5006, "ad_group_ad.status": "ENABLED", "ad_group_ad.ad_strength": "EXCELLENT" }
+]

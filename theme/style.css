@@ -4206,13 +4206,22 @@ footer .custom-logo {
 /* Footer — accreditation logos */
 .footer-accred-logos {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   margin-top: 13px;
 }
+/* !important: on data-hub-template pages something in that page's own
+   embedded post-content stylesheet outranks this plain declaration (cause
+   not isolated — no matching rule found in any introspectable same-origin
+   stylesheet — but confirmed empirically: without !important these render
+   at native pixel size, e.g. 997x649, blowing the footer out to ~1000px
+   wide and forcing page-level horizontal scroll at mobile widths; keeps
+   rendering correctly at 50px on ordinary pages either way). */
 .footer-accred-logos img {
-  width: 50px;
-  height: auto;
+  width: 50px !important;
+  max-width: 50px !important;
+  height: auto !important;
 }
 .footer-accred-logos .footer-logo-invert {
   filter: brightness(0) invert(1);
@@ -11922,6 +11931,23 @@ body .cd-table:has(thead) > tbody > tr:hover > td,
 body .cd-table:not(:has(thead)) > tbody > tr:not(:first-child):hover > th,
 body .cd-table:not(:has(thead)) > tbody > tr:not(:first-child):hover > td {
   background: #f4f7fe !important;
+}
+
+/* Mobile (<=767px): .cd-table is rendered directly in post content on most pages
+   with no scroll wrapper div (only the data-hub template's own .cd-scroll wrapper
+   has one). table-layout:auto plus 4-5 columns of real sentences forces a
+   min-content width well past the viewport, causing page-level horizontal
+   scroll (seen on /liquidation/ at 390px: table needed 630-664px). Making the
+   table itself the scroll container — instead of requiring every page's HTML
+   to add a wrapper — contains the overflow at the table without a content edit.
+   -- 20260723 (bug: /liquidation/ mobile horizontal scroll) */
+@media (max-width: 767px) {
+  body .cd-table {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-width: 100% !important;
+  }
 }
 
 /* Related Guides — card grid, replaces the default ul.wp-block-list rendering.

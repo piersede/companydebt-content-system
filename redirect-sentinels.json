@@ -21,6 +21,36 @@
       "request": "/news/rescue-news/government-announces-the-final-stage-of-its-pre-pack-reforms/",
       "expect_final": "/company-rescue-solutions/pre-packs/",
       "note": "legacy pre-pack reforms news URL; flattened 2026-06-20"
+    },
+    {
+      "request": "/articles/common-causes-of-construction-insolvency/",
+      "expect_final": "/data/construction-insolvency-statistics/",
+      "note": "retired construction guide; repointed off the generic /insolvency/ hub 2026-07-29 because it carries external backlinks (e.g. hbkcpa.com)"
+    },
+    {
+      "request": "/news/common-causes-of-construction-insolvency/",
+      "expect_final": "/data/construction-insolvency-statistics/",
+      "note": "older /news/ home of the construction guide; was a 2-hop chain into /insolvency/, flattened 2026-07-29"
+    },
+    {
+      "request": "/construction-industry-insolvency-trends/",
+      "expect_final": "/data/construction-insolvency-statistics/",
+      "note": "oldest construction URL; was a 3-hop chain into /insolvency/, flattened 2026-07-29"
+    },
+    {
+      "request": "/articles/energy-costs-will-increase-construction-insolvencies/",
+      "expect_final": "/company-cash-flow-problems/cant-pay-business-energy/",
+      "note": "target was already right, chain was 2 hops; flattened 2026-07-29"
+    },
+    {
+      "request": "/ir35-contractor",
+      "expect_final": "/closing-a-limited-company/",
+      "note": "was dumped at the homepage; real target /closing-a-limited-company/ir35-contractor/ never existed, repointed 2026-07-29"
+    },
+    {
+      "request": "/hmrc-tax-investigations/hmrcs-ir35-investigations-different/how-do-i-close-a-company-due-to-ir35-reforms/",
+      "expect_final": "/closing-a-limited-company/",
+      "note": "301'd straight into a 404 (/closing-a-limited-company/ir35-contractor/ does not exist); repointed 2026-07-29"
     }
   ]
 }

@@ -1,0 +1,64 @@
+# Self-contained test fixture config for the "Search campaigns with valuable
+# untargeted terms" scenario (tests/README.md scenario 8). Not the live
+# account config.
+
+account_name: Company Debt (test fixture)
+customer_id: "0000000000"
+login_customer_id: "1111111111"
+
+_period:
+  start: "2026-07-13"
+  end: "2026-07-19"
+
+currency: GBP
+timezone: Europe/London
+business_model: lead_generation
+
+primary_conversion_actions:
+  - "GoogleAds Form Submissions (Website)"
+  - "GoogleAds Phone Calls"
+
+secondary_conversion_actions:
+  - "Lead form - Submit (Google hosted)"
+
+ignore_as_success_metrics:
+  - Page view
+
+targets:
+  target_cpa: null
+  minimum_roas: null
+  minimum_clicks_before_judgement: 12
+  search_term_minimum_clicks: 12  # fixture keeps this equal to the weekly bar for simplicity — production uses 624 (12*52)
+  minimum_impressions_before_ad_judgement: 1000
+  zero_conversion_spend_threshold: 75
+  low_conversion_volume_threshold: 5
+  conversion_lag_days: 7
+
+brand_terms:
+  - company debt
+  - companydebt
+
+protected_terms:
+  - creditors voluntary liquidation
+  - company debt help
+
+irrelevant_topics:
+  - personal debt
+  - personal bank account
+  - consumer credit card
+  - student loan
+  - debt collector jobs
+  - insolvency practitioner jobs
+  - cis jobs
+  - paye jobs
+
+comparison_periods:
+  primary_days: 7
+  previous_period: true
+  context_days: 28
+  long_term_days: 90
+
+reporting:
+  include_low_confidence_findings: true
+  maximum_priority_actions: 10
+  output_currency_symbol: "£"

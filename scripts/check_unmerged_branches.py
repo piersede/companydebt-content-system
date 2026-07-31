@@ -30,9 +30,16 @@ def main():
         print("Not inside a git repo — nothing to check.")
         return 0
 
+    # --format gives the bare branch name, with no decoration to strip. Parsing
+    # the default output breaks on the markers git puts in column 1: "*" for the
+    # current branch and "+" for a branch checked out in another worktree. This
+    # repo uses worktrees constantly, so "+" lines used to parse down to "+" and
+    # crash on "git rev-list main..+" — the check died exactly when it mattered.
     branches = [
-        b.strip().lstrip("* ").split()[0]
-        for b in run("branch", "--no-merged", "main").splitlines()
+        b.strip()
+        for b in run(
+            "branch", "--no-merged", "main", "--format=%(refname:short)"
+        ).splitlines()
         if b.strip()
     ]
     branches = [b for b in branches if b != "main"]

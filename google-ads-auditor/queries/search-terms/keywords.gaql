@@ -1,0 +1,24 @@
+-- Purpose: current keyword inventory with match type and status — used to
+-- check whether a search term is "new" before recommending it as a keyword
+-- opportunity, and to check whether a term already exists as a negative.
+-- Placeholders: {{CUSTOMER_ID}}
+-- Validated against API version: REPLACE_WITH_VERSION
+-- 2026-07-20 fix: this account has years of PAUSED campaigns carrying
+-- 400k+ keyword rows between them — "!= REMOVED" pulled the entire dead
+-- inventory, producing an unworkable ~240MB snapshot file. Scoped to
+-- ENABLED campaigns only, matching what a live audit actually needs to
+-- act on. Revisit if a future audit specifically needs the paused history.
+
+SELECT
+  campaign.id,
+  campaign.name,
+  ad_group.id,
+  ad_group.name,
+  ad_group_criterion.criterion_id,
+  ad_group_criterion.keyword.text,
+  ad_group_criterion.keyword.match_type,
+  ad_group_criterion.status,
+  ad_group_criterion.negative,
+  ad_group_criterion.quality_info.quality_score
+FROM keyword_view
+WHERE campaign.status = 'ENABLED'

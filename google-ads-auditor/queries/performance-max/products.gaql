@@ -1,0 +1,20 @@
+-- Purpose: Shopping/product performance within PMax — used to spot products
+-- spending without primary conversions and feed concentration. Only
+-- relevant if the account runs a Shopping feed; otherwise this returns
+-- empty and should be recorded as not-applicable, not a failure.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  segments.product_item_id,
+  segments.product_title,
+  segments.product_category_level1,
+  metrics.cost_micros,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.conversions,
+  metrics.conversions_value
+FROM shopping_performance_view
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

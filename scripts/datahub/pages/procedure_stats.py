@@ -126,9 +126,11 @@ PROCEDURES = {
                        "liquidation. The company gains protection from creditor action "
                        "while a plan is put in place."),
         "trend_intro": ("Administration volumes are small and can swing sharply on a "
-                        "single event. A cluster of more than 70 connected real estate "
-                        "companies lifted the April 2026 figure; May fell back as that "
-                        "cluster passed. Read short-term moves with care."),
+                        "single event. Connected real estate companies entering "
+                        "administration in clusters lifted the figure three times in "
+                        "the first half of 2026 — March, April and June — pushing "
+                        "administrations across that period around 41% above 2025 "
+                        "levels. Read short-term moves with care."),
         "notes": [
             "Monthly administration volumes are small, so a single cluster of "
             "connected companies can move the figure sharply. Read month-to-month "
@@ -202,7 +204,7 @@ def hero_block(cfg: dict, f: dict, meta: dict) -> str:
       <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
       <div class="cd-hero">
       <div class="cd-hero__copy">
-        <h1><span class="cd-h1__line">{cfg['h1a']}</span> <span class="cd-h1__line">{cfg['h1b']}</span></h1>
+        <h1><span class="cd-h1__line" style="white-space: normal;">{cfg['h1a']}</span> <span class="cd-h1__line" style="white-space: normal;">{cfg['h1b']}</span></h1>
         <p class="cd-lede">In {f['month']} there were {format_number(f['latest'])} {cfg['plural']} in England and Wales, {f['share']}% of all company insolvencies. {cfg['definition']} This page tracks the monthly trend back to 2000, the rate per 10,000 companies and how the procedure sits within the wider insolvency total.</p>
         <dl class="cd-meta-grid">
           <div class="cd-meta-item"><span>Latest data</span><strong>{f['month']}</strong></div>

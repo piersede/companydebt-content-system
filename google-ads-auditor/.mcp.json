@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "google-ads-mcp": {
+      "command": "C:\\Users\\piers\\AppData\\Local\\Packages\\Claude_pzs8sxrjxfjjc\\LocalCache\\Local\\pipx\\pipx\\venvs\\google-ads-mcp\\Scripts\\google-ads-mcp.exe",
+      "args": [],
+      "env": {
+        "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}",
+        "GOOGLE_ADS_DEVELOPER_TOKEN": "${GOOGLE_ADS_DEVELOPER_TOKEN}",
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+        "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_OAUTH_CLIENT_ID}",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_OAUTH_CLIENT_SECRET}"
+      }
+    }
+  }
+}

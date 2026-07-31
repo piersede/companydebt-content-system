@@ -36,6 +36,7 @@ add_action('init', function() {{
         if (method_exists('WpeCommon','purge_memcached')) {{ WpeCommon::purge_memcached(); $done[] = 'wpe_memcached'; }}
         if (method_exists('WpeCommon','purge_varnish_cache')) {{ WpeCommon::purge_varnish_cache(); $done[] = 'wpe_varnish'; }}
     }}
+    if (function_exists('opcache_reset')) {{ opcache_reset(); $done[] = 'opcache_reset'; }}
     echo 'OK: purged ' . implode(',', $done);
     @unlink(__FILE__);
     exit;

@@ -1,0 +1,20 @@
+-- Purpose: per-conversion-action breakdown for the audit period — which
+-- named actions are actually firing and how much each contributes. Added
+-- 2026-07-20 in response to a direct question from Piers ("what's going
+-- wrong on this account") after conversion-actions.gaql (inventory-only,
+-- see that file's own fix note) turned out not to be enough: it lists
+-- which actions exist and their status, but not which ones are actually
+-- contributing to the "conversions" total everyone has been looking at.
+-- segments.conversion_action_name avoids the join problem that broke the
+-- original conversion-actions.gaql attempt at pulling this from the
+-- conversion_action resource directly.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  segments.conversion_action_name,
+  segments.conversion_action_category,
+  metrics.all_conversions,
+  metrics.all_conversions_value
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'

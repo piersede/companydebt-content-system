@@ -141,11 +141,32 @@
   var BUILDERS = { area: buildArea, line: buildArea, hbar: buildHBar, vbar: buildVBar };
 
   function draw(item) { item.host.innerHTML = BUILDERS[item.cfg.type](item.host, item.cfg); }
-  function register(host, cfg) { var item = { host: host, cfg: cfg }; registry.push(item); draw(item); }
+  function register(host, cfg) {
+    var item = { host: host, cfg: cfg };
+    registry.push(item);
+    draw(item);
+    // host.clientWidth at draw time can be wrong if this script (delayed by
+    // WP Rocket until first interaction) runs before the sidebar/grid or a
+    // web font has finished settling. Re-measure on the next frame once
+    // layout is definitely final, so the baked-in SVG width matches reality.
+    if (window.requestAnimationFrame) requestAnimationFrame(function () { draw(item); });
+  }
   function redrawAll() { registry.forEach(draw); }
 
   var rt;
   window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(redrawAll, 120); });
+
+  // window "resize" only fires for the browser window itself. A chart's
+  // container can also change width without that -- a sidebar rendering in,
+  // a web font swap reflowing text, a CSS file arriving late -- and none of
+  // those fire a window resize event. Watch each host directly so the chart
+  // stays correctly sized (not just visually clamped by the CSS fallback).
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(function () { clearTimeout(rt); rt = setTimeout(redrawAll, 120); });
+    var origRegister = register;
+    register = function (host, cfg) { origRegister(host, cfg); ro.observe(host); };
+  }
+
   window.CDCharts = { register: register, redrawAll: redrawAll };
 })();
 

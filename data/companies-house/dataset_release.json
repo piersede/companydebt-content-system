@@ -442,6 +442,24 @@
         }
       ],
       "is_provisional": false,
+      "status": "superseded",
+      "notes": "Counts are live-register reads, not an official statistic. Dissolutions are mostly strike-offs, not insolvencies."
+    },
+    {
+      "release_id": "ch_flows_2026-06",
+      "source_id": "companies_house_register",
+      "dataset_name": "Companies House population and flows, 2026-06",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "publication_date": "2026-07-18",
+      "source_files": [
+        {
+          "endpoint": "https://api.company-information.service.gov.uk/advanced-search/companies",
+          "retrieved_at": "2026-07-18",
+          "note": "Counts read live from the register; no file artifact."
+        }
+      ],
+      "is_provisional": false,
       "status": "current",
       "notes": "Counts are live-register reads, not an official statistic. Dissolutions are mostly strike-offs, not insolvencies."
     }

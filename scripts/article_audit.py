@@ -41,6 +41,12 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Any
 
+# Shared voice/human-authorship metrics (same source of truth as voice_audit.py).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import voice_metrics as vm  # noqa: E402
+
+VOICE_AUDIT_DIR = Path(__file__).resolve().parent.parent / "editorial-os" / "voice-audits"
+
 # Force UTF-8 stdout on Windows so emoji squares render without a charmap crash.
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -989,6 +995,69 @@ def check_h3_density_per_h2(body: str) -> CheckResult:
 
 
 # ---------------------------------------------------------------------------
+# Voice / human-authorship checks.
+#
+# The mechanical half of editorial-os/docs/human-authorship-voice-engine.md is
+# enforced directly (checks 27-29). The SUBJECTIVE half (concrete scenes,
+# evaluative bite, tone modulation, read-aloud flatness) cannot be scored by a
+# script, so it is enforced indirectly: check 26 requires a voice-audit record
+# whose prose hash matches the current draft. Any prose edit invalidates it,
+# forcing the voice pass to be re-run and re-attested — which is precisely the
+# skip-and-outrun failure mode that motivated this (2026-07-30).
+# ---------------------------------------------------------------------------
+
+def check_voice_audit(raw: str, slug: str) -> CheckResult:
+    name = "Voice self-audit recorded and current"
+    rec = VOICE_AUDIT_DIR / f"{slug}.json"
+    fix = (f"run: python scripts/voice_audit.py --slug {slug} --record "
+           f"--by <model> --scenes N --bite N --tone pass --rhythm pass "
+           f"--read-aloud pass --verdict pass --notes \"...\"")
+    if not rec.exists():
+        return CheckResult(id="26", tier="T1", name=name, passed=False,
+                           detail=f"no voice-audit record for '{slug}' — {fix}")
+    try:
+        data = json.loads(rec.read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        return CheckResult(id="26", tier="T1", name=name, passed=False,
+                           detail=f"voice-audit record unreadable: {e}")
+    if data.get("prose_sha") != vm.prose_sha(raw):
+        return CheckResult(id="26", tier="T1", name=name, passed=False,
+                           detail=f"voice audit STALE (prose changed since audit) — re-{fix}")
+    if data.get("verdict") != "pass":
+        return CheckResult(id="26", tier="T1", name=name, passed=False,
+                           detail=f"recorded voice verdict is '{data.get('verdict')}', not 'pass'")
+    return CheckResult(id="26", tier="T1", name=name, passed=True,
+                       detail=f"audited {data.get('audited_at')} by {data.get('audited_by')}")
+
+
+def check_zero_you_sections(raw: str) -> CheckResult:
+    name = "No 200w+ section without 'you' (voice engine)"
+    offenders = vm.sections_over_200w_without_you(raw)
+    if offenders:
+        secs = "; ".join(f"{o['section']} ({o['words']}w)" for o in offenders[:3])
+        return CheckResult(id="27", tier="T1", name=name, passed=False,
+                           detail=f"{len(offenders)} section(s) over 200w with zero 'you': {secs}")
+    return CheckResult(id="27", tier="T1", name=name, passed=True)
+
+
+def check_you_ceiling(raw: str) -> CheckResult:
+    name = "'you' density within ceiling (<=30/1k)"
+    d = vm.pronoun_densities(raw)
+    passed = d["you_per_1k"] <= vm.YOU_CEILING
+    return CheckResult(id="28", tier="T2", name=name, passed=passed, hard_fail=False,
+                       detail=f"{d['you_per_1k']}/1k exceeds ceiling {vm.YOU_CEILING}" if not passed else "")
+
+
+def check_rhythm_variation(raw: str) -> CheckResult:
+    name = "Paragraph rhythm not uniform (advisory proxy)"
+    r = vm.rhythm_uniformity(raw)
+    passed = not r["uniform"]
+    return CheckResult(id="29", tier="T2", name=name, passed=passed, hard_fail=False,
+                       detail=(f"paragraph-length cv={r['cv']} < {vm.RHYTHM_MIN_CV} (uniform lengths; "
+                               f"read aloud for flatness)") if not passed else "")
+
+
+# ---------------------------------------------------------------------------
 # Runner.
 # ---------------------------------------------------------------------------
 
@@ -999,6 +1068,7 @@ def audit_file(path: Path) -> ArticleAudit:
     body_excl_sources = _strip_sources_section(body)
     prose = _prose_text(body)
     wc = len(prose.split())
+    slug = re.sub(r"^\d+_", "", path.stem)
 
     audit = ArticleAudit(
         path=str(path),
@@ -1036,6 +1106,10 @@ def audit_file(path: Path) -> ArticleAudit:
         check_no_strong_in_auto_bolded_table_cells(body),
         check_table_cell_brevity(body),
         check_h3_density_per_h2(body),
+        check_voice_audit(raw, slug),
+        check_zero_you_sections(raw),
+        check_you_ceiling(raw),
+        check_rhythm_variation(raw),
     ]
     return audit
 
@@ -1123,7 +1197,13 @@ def main() -> int:
             for check in a.checks:
                 if not check.passed:
                     detail = check.detail or "(no detail)"
-                    print(f"HARD FAIL: {check.id}. {check.name} - {detail}")
+                    # Only checks that actually block the gate may emit the
+                    # HARD FAIL prefix — that string is what Bernstein's
+                    # parseHardFails() consumes. Soft checks (hard_fail=False)
+                    # are advisory by definition and were previously reported
+                    # as blocking, which contradicted gate_passed.
+                    label = "HARD FAIL" if check.hard_fail else "SOFT"
+                    print(f"{label}: {check.id}. {check.name} - {detail}")
 
     print("=" * 80)
     print("SUMMARY")

@@ -1,0 +1,16 @@
+-- Purpose: Search impression share and the budget/rank loss split — the
+-- key evidence for whether a campaign can plausibly absorb more spend.
+-- Never recommend a budget move without checking this first.
+-- Placeholders: {{CUSTOMER_ID}} {{START_DATE}} {{END_DATE}}
+-- Validated against API version: REPLACE_WITH_VERSION
+
+SELECT
+  campaign.id,
+  campaign.name,
+  metrics.search_impression_share,
+  metrics.search_budget_lost_impression_share,
+  metrics.search_rank_lost_impression_share,
+  metrics.search_exact_match_impression_share
+FROM campaign
+WHERE segments.date BETWEEN '{{START_DATE}}' AND '{{END_DATE}}'
+  AND campaign.advertising_channel_type = 'SEARCH'

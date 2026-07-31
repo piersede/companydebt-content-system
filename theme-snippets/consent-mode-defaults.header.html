@@ -1,0 +1,38 @@
+<!-- Extracted from wp-content/themes/company-debt-webpigment/header.php.
+     Sits immediately ABOVE the GTM container snippet, because GTM is printed
+     in header.php before wp_head() and no WordPress hook can precede it.
+     Deployed to staging 2026-07-29. Backup on server:
+     header.php.bak-a11y-consent-default-20260729 -->
+
+<!-- Google Consent Mode v2 defaults - added 2026-07-29.
+     MUST stay above the GTM snippet below and MUST NOT be delayed by WP Rocket
+     (see cd-consent-mode-defaults.php, which excludes the 'cd-consent-default'
+     marker from delay_js_exclusions). Without this, Google's tags initialise
+     with no consent state and write _ga / _gcl_* before the visitor answers the
+     banner - which is exactly what happened on 29 Jul 2026 when the CookieYes
+     GTM tag (which used to set these defaults on Consent Initialization) was
+     paused in favour of the CookieYes WordPress plugin. The plugin's free tier
+     sends the 'update' but not the 'default', so this snippet supplies it.
+     CookieYes then flips these to granted when the visitor accepts. -->
+<script data-cd-consent-default="1">/* cd-consent-default */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'ad_storage': 'denied',
+'ad_user_data': 'denied',
+'ad_personalization': 'denied',
+'analytics_storage': 'denied',
+'functionality_storage': 'denied',
+'personalization_storage': 'denied',
+'security_storage': 'granted',
+'wait_for_update': 500
+});
+/* Keep the click id usable in the URL across pages while storage is denied.
+   This is signalling, not storage - no cookie is written. */
+gtag('set', 'url_passthrough', true);
+/* Deliberately NOT enabling ads_data_redaction: with storage already denied it
+   adds no legal protection and it degrades the cookieless pings that feed
+   Google's conversion modelling. Revisit only if counsel asks. */
+gtag('set', 'ads_data_redaction', false);
+window.cdConsentDefaultApplied = true;
+</script>

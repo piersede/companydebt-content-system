@@ -1,0 +1,9 @@
+[
+  { "campaign.id": 3001, "campaign.name": "Search Active Budget Limited", "metrics.search_impression_share": 0.30, "metrics.search_budget_lost_impression_share": 0.50, "metrics.search_rank_lost_impression_share": 0.10, "metrics.search_exact_match_impression_share": 0.25 },
+  { "campaign.id": 3002, "campaign.name": "Search Active Rank Limited", "metrics.search_impression_share": 0.20, "metrics.search_budget_lost_impression_share": 0.05, "metrics.search_rank_lost_impression_share": 0.60, "metrics.search_exact_match_impression_share": 0.15 },
+  { "campaign.id": 3003, "campaign.name": "Dormant Shared A", "metrics.search_impression_share": 0.0, "metrics.search_budget_lost_impression_share": 0.0, "metrics.search_rank_lost_impression_share": 0.0, "metrics.search_exact_match_impression_share": 0.0 },
+  { "campaign.id": 3004, "campaign.name": "Dormant Shared B", "metrics.search_impression_share": 0.0, "metrics.search_budget_lost_impression_share": 0.0, "metrics.search_rank_lost_impression_share": 0.0, "metrics.search_exact_match_impression_share": 0.0 },
+  { "campaign.id": 3005, "campaign.name": "Dormant Paused Ads", "metrics.search_impression_share": 0.0, "metrics.search_budget_lost_impression_share": 0.0, "metrics.search_rank_lost_impression_share": 0.0, "metrics.search_exact_match_impression_share": 0.0 },
+  { "campaign.id": 3006, "campaign.name": "Dormant Unknown Cause", "metrics.search_impression_share": 0.0, "metrics.search_budget_lost_impression_share": 0.0, "metrics.search_rank_lost_impression_share": 0.0, "metrics.search_exact_match_impression_share": 0.0 },
+  { "campaign.id": 3008, "campaign.name": "Zero Budget Campaign", "metrics.search_impression_share": 0.0, "metrics.search_budget_lost_impression_share": 0.0, "metrics.search_rank_lost_impression_share": 0.0, "metrics.search_exact_match_impression_share": 0.0 }
+]

@@ -1,0 +1,20 @@
+# Credentials — never commit
+.env
+.env.local
+*credentials*.json
+*oauth*.json
+service-account*.json
+credentials/
+
+# Runtime audit data — contains real account/customer data
+runs/*
+!runs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

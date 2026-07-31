@@ -1,0 +1,21 @@
+{
+  "search_terms": [
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "campaign_search_term_insight.category_label": "student loan hardship advice", "metrics.impressions": 40, "metrics.clicks": 12 },
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "campaign_search_term_insight.category_label": "company liquidation help", "metrics.impressions": 500, "metrics.clicks": 60 },
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "campaign_search_term_insight.category_label": "debt collector jobs vacancy", "metrics.impressions": 5, "metrics.clicks": 1 }
+  ],
+  "asset_groups": [
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "asset_group.id": 8001, "asset_group.name": "Live Poor Group", "asset_group.status": "ENABLED", "asset_group.ad_strength": "POOR", "metrics.cost_micros": 50000000, "metrics.impressions": 300, "metrics.clicks": 10, "metrics.conversions": 1.0 },
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "asset_group.id": 8002, "asset_group.name": "Live Excellent Group", "asset_group.status": "ENABLED", "asset_group.ad_strength": "EXCELLENT", "metrics.cost_micros": 200000000, "metrics.impressions": 2000, "metrics.clicks": 100, "metrics.conversions": 8.0 },
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "asset_group.id": 8003, "asset_group.name": "Paused Group In Live Campaign", "asset_group.status": "PAUSED", "asset_group.ad_strength": "POOR", "metrics.cost_micros": 0, "metrics.impressions": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 },
+    { "campaign.id": 7002, "campaign.name": "Performance Max Paused Campaign", "asset_group.id": 8004, "asset_group.name": "Group In Paused Campaign", "asset_group.status": "ENABLED", "asset_group.ad_strength": "POOR", "metrics.cost_micros": 0, "metrics.impressions": 0, "metrics.clicks": 0, "metrics.conversions": 0.0 }
+  ],
+  "campaigns": [
+    { "campaign.id": 7001, "campaign.name": "Performance Max Live", "campaign.status": "ENABLED", "campaign_budget.amount_micros": 100000000, "metrics.cost_micros": 250000000, "metrics.impressions": 2300, "metrics.clicks": 110, "metrics.conversions": 9.0, "metrics.conversions_value": 0.0 },
+    { "campaign.id": 7002, "campaign.name": "Performance Max Paused Campaign", "campaign.status": "PAUSED", "campaign_budget.amount_micros": 5000000, "metrics.cost_micros": 0, "metrics.impressions": 0, "metrics.clicks": 0, "metrics.conversions": 0.0, "metrics.conversions_value": 0.0 },
+    { "campaign.id": 7003, "campaign.name": "Performance Max Dormant", "campaign.status": "ENABLED", "campaign_budget.amount_micros": 20000000, "metrics.cost_micros": 0, "metrics.impressions": 0, "metrics.clicks": 0, "metrics.conversions": 0.0, "metrics.conversions_value": 0.0 },
+    { "campaign.id": 7004, "campaign.name": "Performance Max Zero Budget", "campaign.status": "ENABLED", "campaign_budget.amount_micros": 0, "metrics.cost_micros": 0, "metrics.impressions": 0, "metrics.clicks": 0, "metrics.conversions": 0.0, "metrics.conversions_value": 0.0 }
+  ],
+  "placements": [],
+  "products": []
+}

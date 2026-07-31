@@ -8,15 +8,21 @@
    ============================================================ */
 
 .cd-data-hub {
-  /* Contains the intentional full-bleed sections below (.cd-w-wide, .cd-bleed
-     use width:100vw to escape the WP container). 100vw resolves to the
-     viewport width INCLUDING the scrollbar gutter, so on any page tall
-     enough to scroll it overshoots the true visible width by the scrollbar's
-     width (~15-17px) and creates a real, swipeable horizontal scroll. This
-     is not masking an unknown overflow — the cause is the 100vw pattern
-     above, which has no scrollbar-safe CSS-only fix; contain the resulting
-     15px here rather than letting it leak into the page/site chrome. */
-  overflow-x: hidden;
+  /* NOT overflow-x:hidden here (removed 2026-07). .cd-w-hero/.cd-w-wide/
+     .cd-bleed use width:100vw + a negative margin specifically to ESCAPE
+     this element and reach the true viewport edge - that is the entire
+     mechanism a full-bleed band relies on. overflow-x:hidden on the exact
+     element those sections are escaping FROM clips their paint back down to
+     .cd-data-hub's own (much narrower) box, which is what made the hero
+     band render as a bounded, inset card instead of a true edge-to-edge
+     band (found 2026-07, see docs/data-hub commit history).
+     The real reason this was here - width:100vw resolving to the viewport
+     WIDTH INCLUDING THE SCROLLBAR GUTTER, ~15-17px wider than the visible
+     area, which would otherwise create a real swipeable horizontal scroll -
+     is already handled a level up: the theme template sets
+     `body.page-template-data-hub-template { overflow-x: hidden; }`
+     (templates/data-hub-template.php), which contains that overshoot at the
+     body without clipping anything trying to bleed within the page. */
   /* tokens */
   --cd-text: #101828;
   --cd-text-soft: #1f2937;
@@ -109,25 +115,32 @@
 }
 .cd-data-hub .cd-w-narrow   { max-width: 760px; }
 .cd-data-hub .cd-w-standard { max-width: 1040px; }
-/* Wide sections bleed out of the WP container so they can actually reach
-   1280px on wide viewports. max-width:none beats inherited theme caps. */
+/* Wide sections bleed out of the WP container so they can span the full
+   viewport, but re-centre to the site's single 1040px rail (per the 2026-07
+   Claude Design handoff: "every band sits on one 1040px content column with
+   an identical left edge... do NOT reintroduce per-section widths"). This
+   was previously 1280px (a "-640" constant, a second, wider rail) - that is
+   what put the masthead (already unified to 1040px, both via the theme
+   template's own masthead-pin fix and this file's site-alignment CSS) out of
+   line with every content section below it: a real, visible 120px
+   left-edge misalignment running down the whole page, not a cosmetic nit. */
 .cd-data-hub .cd-w-wide {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 /* Full-bleed band that escapes the parent .container. Inner content
-   re-aligns to a 1280px max-width. */
+   re-aligns to the same 1040px rail as .cd-w-wide. */
 .cd-data-hub .cd-bleed {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-left: max(24px, calc(50vw - 640px));
-  padding-right: max(24px, calc(50vw - 640px));
+  padding-left: max(24px, calc(50vw - 520px));
+  padding-right: max(24px, calc(50vw - 520px));
 }
 
 /* ── Spacing rhythm ───────────────────────────────────────── */
@@ -775,70 +788,54 @@
   .cd-data-hub .cd-chart-panel--rate { min-height: 320px; }
 }
 
-/* ── Procedure card grid ──────────────────────────────────── */
-.cd-data-hub .cd-procard-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-.cd-data-hub .cd-procard {
-  padding: 22px 22px 18px;
-  border-radius: 16px;
-  background: var(--cd-surface);
-  border: 1px solid var(--cd-line);
-  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.03);
-  display: flex;
-  flex-direction: column;
-}
-.cd-data-hub .cd-procard__name {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cd-muted);
-  font-weight: 700;
-  margin: 0 0 8px;
-  line-height: 1.3;
-}
-.cd-data-hub .cd-procard__value {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: var(--cd-text);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-}
-.cd-data-hub .cd-procard__note {
-  font-size: 13px;
-  color: var(--cd-muted);
-  margin: 0 0 14px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-.cd-data-hub .cd-procard__link {
-  align-self: flex-start;
-  display: inline-flex;
+/* ── Sector data-page links table ("Get the insolvency data for your
+   trade") — always-visible table pairing each trade with a View data
+   button, replacing the earlier procedure-card grid. Per
+   docs/data-hub/design-brief-2026-07-sector-nav.md and the Claude Design
+   handoff's sector-trade-links-generator-spec.md. ──────────────────── */
+.cd-data-hub .cd-sectorlinks th[scope="row"] { font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__name { display: block; font-size: 16px; font-weight: 650; color: var(--cd-text); }
+.cd-data-hub .cd-sectorlinks__desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--cd-muted); max-width: 52ch; }
+.cd-data-hub .cd-sectorlinks td { color: var(--cd-text-soft); }
+.cd-data-hub .cd-sectorlinks__actionhead { text-align: left; }
+.cd-data-hub .cd-sectorlinks__action { text-align: left; white-space: nowrap; vertical-align: middle; width: 1%; }
+.cd-data-hub .cd-sectorlinks__btn {
+  /* The WP theme forces `a { display: inline }`, which would collapse the
+     44px min-height tap target to a text baseline. Beat it explicitly. */
+  display: inline-flex !important;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid #d0d5dd;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cd-text);
+  gap: 8px;
+  padding: 11px 16px;
+  min-height: 44px;
+  box-sizing: border-box;
+  background: var(--cd-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
   text-decoration: none;
-  transition: background 0.12s ease, border-color 0.12s ease;
+  white-space: nowrap;
+  transition: background .15s ease;
 }
-.cd-data-hub .cd-procard__link:hover {
-  background: var(--cd-surface-soft);
-  border-color: var(--cd-accent);
-  color: var(--cd-accent);
-  text-decoration: none;
+.cd-data-hub .cd-sectorlinks__btn span { font-size: 15px; line-height: 1; transition: transform .15s ease; }
+.cd-data-hub .cd-sectorlinks__btn::after, .cd-data-hub .cd-sectorlinks__btn::before { content: none !important; display: none !important; }
+.cd-data-hub .cd-sectorlinks .cd-table-arrow { display: none !important; }
+.cd-data-hub .cd-sectorlinks__btn:hover { background: #0c3c66; color: #fff !important; text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__btn:hover span { transform: translateX(3px); }
+.cd-data-hub .cd-sectorlinks__btn:focus-visible { outline: 2px solid var(--cd-accent); outline-offset: 2px; }
+.cd-data-hub .cd-sectorlinks tbody tr:hover { background: var(--cd-surface-soft); }
+.cd-data-hub .cd-sectorlinks__all { margin: 18px 0 0 !important; font-size: 15px; }
+.cd-data-hub .cd-sectorlinks__all a { font-weight: 700; color: var(--cd-accent); text-decoration: none; }
+.cd-data-hub .cd-sectorlinks__all a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .cd-data-hub .cd-sectorlinks { min-width: 0; }
+  .cd-data-hub .cd-sectorlinks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cd-data-hub .cd-sectorlinks tbody tr { display: block; padding: 16px 4px; }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr { border-top: 1px solid var(--cd-line-soft); }
+  .cd-data-hub .cd-sectorlinks tbody tr + tr td, .cd-data-hub .cd-sectorlinks tbody tr + tr th { border-top: 0; }
+  .cd-data-hub .cd-sectorlinks th[scope="row"] { display: block; padding: 0 0 12px; }
+  .cd-data-hub .cd-sectorlinks__action { display: block; padding: 0; width: auto; }
 }
-.cd-data-hub .cd-procard__link span { font-size: 14px; line-height: 1; }
-@media (max-width: 980px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .cd-data-hub .cd-procard-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .cd-data-hub .cd-procard-grid { grid-template-columns: 1fr; } }
 
 /* ── Sector grid ──────────────────────────────────────────── */
 .cd-data-hub .cd-sector-grid {
@@ -1141,15 +1138,15 @@
   <a class="cd-back" href="/data/"><span aria-hidden="true">&larr;</span> UK Company Insolvency Data</a>
   <div class="cd-hero">
   <div class="cd-hero__copy">
-    <h1><span class="cd-h1__line">UK Hotel</span> <span class="cd-h1__line">Insolvency Statistics</span></h1>
+    <h1><span class="cd-h1__line" style="white-space: normal;">UK Hotel</span> <span class="cd-h1__line" style="white-space: normal;">Insolvency Statistics</span></h1>
     <p class="cd-hero__subtitle">Latest detailed figures for England and Wales</p>
 
-    <p class="cd-lede">There were 68 insolvencies among hotels and similar accommodation businesses in England and Wales between January and May 2026, compared with 76 in the same period of 2025. The rolling 12-month total was 145, down from 154 for the previous 12 months.</p>
-
-    <p class="cd-lede">This covers hotels and similar short-stay accommodation (the official industry code is SIC group 551). Restaurants, pubs and self-catering or holiday accommodation are recorded separately.</p>
+    <p class="cd-lede">There were 80 insolvencies among hotels and similar accommodation businesses in England and Wales between January and June 2026, compared with 89 in the same period of 2025. The rolling 12-month total was 145, down slightly from 152 for the previous 12 months.</p>
+    <p class="cd-lede">Hotels are improving, which is the good news and not the whole of it. Every other kind of accommodation improved faster: the accommodation trade as a whole fell 19.9% over the same months, twice the hotel rate. Hotels now account for 73.4% of accommodation insolvencies, up from 65.4%. And 2025, at 154, was the worst year in the series.</p>
+    <p class="cd-lede">This covers hotels, motels and similar short-stay accommodation with daily housekeeping (the official industry code is SIC group 551). Restaurants and pubs (SIC 561 and 563), and self-catering, holiday and short-stay lets (SIC 552), are recorded separately and are not included here.</p>
     <dl class="cd-meta-grid">
-      <div class="cd-meta-item"><span>Latest data</span><strong>May 2026</strong></div>
-      <div class="cd-meta-item"><span>Published</span><strong>19 June 2026</strong></div>
+      <div class="cd-meta-item"><span>Latest data</span><strong>June 2026</strong></div>
+      <div class="cd-meta-item"><span>Published</span><strong>17 July 2026</strong></div>
       <div class="cd-meta-item"><span>Industry update</span><strong>Monthly</strong></div>
       <div class="cd-meta-item"><span>Statistical scope</span><strong>SIC 551</strong></div>
       <div class="cd-meta-item"><span>Source</span><strong>Insolvency Service / Companies House</strong></div>
@@ -1159,17 +1156,17 @@
   <aside class="cd-hero__panel" aria-label="Latest figures">
     <p class="cd-kpi-label">Hotels (SIC 551) &middot; England and Wales</p>
     <div class="cd-main-kpi">
-      <span class="cd-main-kpi__v">68</span>
-      <span class="cd-main-kpi__k">insolvencies, January to May 2026</span>
+      <span class="cd-main-kpi__v">80</span>
+      <span class="cd-main-kpi__k">insolvencies, January to June 2026</span>
     </div>
     <div class="cd-change-row">
-      <span><strong>down from 76</strong> in 2025</span>
+      <span><strong>down from 89</strong> in 2025</span>
     </div>
     <div class="cd-kpi-divider" aria-hidden="true"></div>
     <div class="cd-mini-kpi-grid">
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">145</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to May 2026, down from 154 for the previous 12 months</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">6% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
-      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">5.1%</span><span class="cd-mini-kpi__k">Of accommodation and food service insolvencies</span><span class="cd-mini-kpi__n">January to May 2026</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">145</span><span class="cd-mini-kpi__k">Rolling 12 months</span><span class="cd-mini-kpi__n">to June 2026, down slightly from 152 for the previous 12 months</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">7% above 2019</span><span class="cd-mini-kpi__k">Longer-term context</span><span class="cd-mini-kpi__n">2025 vs 2019</span></div>
+      <div class="cd-mini-kpi"><span class="cd-mini-kpi__v">73.4%</span><span class="cd-mini-kpi__k">Of accommodation insolvencies</span><span class="cd-mini-kpi__n">January to June 2026</span></div>
     </div>
   </aside>
   </div>
@@ -1184,7 +1181,13 @@
   </div>
 </div>
 
-
+<section class="cd-section cd-w-standard" id="findings">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Key findings</p>
+    <h2>Key hotel insolvency findings</h2>
+  </div>
+  <div class="cd-mini-kpi-grid"><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">80</span><span class="cd-mini-kpi__k">insolvencies, January to June 2026</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">down from 89</span><span class="cd-mini-kpi__k">vs same period 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">145</span><span class="cd-mini-kpi__k">rolling 12 months</span><span class="cd-mini-kpi__n">to June 2026</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">154</span><span class="cd-mini-kpi__k">full year 2025</span><span class="cd-mini-kpi__n"></span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">73.4%</span><span class="cd-mini-kpi__k">of accommodation insolvencies</span><span class="cd-mini-kpi__n">up from 65.4% a year earlier</span></div><div class="cd-mini-kpi"><span class="cd-mini-kpi__v">9.8%</span><span class="cd-mini-kpi__k">of 2025 cases were administrations</span><span class="cd-mini-kpi__n">the highest share of any sector here</span></div></div>
+</section>
 <section class="cd-section cd-w-standard" id="latest">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Latest data</p>
@@ -1192,77 +1195,107 @@
   </div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Latest hotel insolvency figures, England and Wales. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Latest hotel insolvency figures, England and Wales. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Latest figure</th><th scope="col" class="cd-num">Comparison</th><th scope="col">Period</th><th scope="col">Geography</th></tr></thead>
-      <tbody><tr><th scope="row">Hotels insolvencies</th><td class="cd-num">68</td><td class="cd-num">76 in the same period of 2025</td><td>January to May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">145</td><td class="cd-num">154 in the preceding 12 months</td><td>To May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">13</td><td class="cd-num">19 in April 2026; 11 in May 2025</td><td>May 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">153</td><td class="cd-num">136 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">153</td><td class="cd-num">n/a</td><td>2025</td><td>England and Wales</td></tr></tbody>
+      <tbody><tr><th scope="row">Hotels insolvencies</th><td class="cd-num">80</td><td class="cd-num">89 in the same period of 2025</td><td>January to June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Rolling 12-month insolvencies</th><td class="cd-num">145</td><td class="cd-num">152 in the preceding 12 months</td><td>To June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Latest monthly figure</th><td class="cd-num">13</td><td class="cd-num">12 in May 2026; 13 in June 2025</td><td>June 2026</td><td>England and Wales</td></tr><tr><th scope="row">Full-year insolvencies</th><td class="cd-num">154</td><td class="cd-num">136 in 2024</td><td>2025</td><td>England and Wales</td></tr><tr><th scope="row">Series peak</th><td class="cd-num">154</td><td class="cd-num">n/a</td><td>2025</td><td>England and Wales</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">The latest figures point in the same direction across the year-to-date and rolling measures: insolvencies are falling steadily. The 2025 total of 153 remained well above the pre-pandemic total of 144 in 2019.</p>
+  <p class="cd-source-note">Both measures are down on a year earlier, so the direction is genuinely improving. The context is that 2025 was the worst year in the series and every other accommodation format improved faster over the same months. The 2025 total of 154 remained slightly above the pre-pandemic total of 144 in 2019.</p>
 </section>
-  <section class="cd-section cd-w-standard" id="comparison">
-    <div class="cd-section-head">
-      <p class="cd-eyebrow">Comparison</p>
-      <h2>Are hotel insolvencies falling in 2026?</h2>
-    </div>
-    <div class="cd-side-notes">
-      <p class="cd-side-note__d cd-sector-fact">Insolvencies among hotels and similar accommodation businesses were broadly falling in the January to May 2026 period, with 68 cases compared with 76 during the same months of 2025, a fall of 10.5%. That contrasts with accommodation and food service overall, where insolvencies fell 4.6% over the same period.</p><p class="cd-side-note__d">Hotels and similar accommodation businesses accounted for 5.1% of all accommodation and food service company insolvencies in the January to May 2026 period (68 of 1,338 cases), down from 5.4% over the same months of 2025.</p>
-    </div>
-    <div class="cd-tablewrap">
-  <table class="cd-table">
-    <caption class="cd-table__caption">Hotels vs accommodation and food service overall, January to May 2026, England and Wales. Source: Insolvency Service (Table 1c).</caption>
-    <thead><tr><th scope="col">Measure</th><th scope="col" class="cd-num">Hotels</th><th scope="col" class="cd-num">Accommodation and food service overall</th></tr></thead>
-    <tbody>
-      <tr><th scope="row">January to May 2026 insolvencies</th><td class="cd-num">68</td><td class="cd-num">1,338</td></tr>
-      <tr><th scope="row">Same period 2025</th><td class="cd-num">76</td><td class="cd-num">1,402</td></tr>
-      <tr><th scope="row">Change</th><td class="cd-num">-10.5%</td><td class="cd-num">-4.6%</td></tr>
-      <tr><th scope="row">Share of accommodation and food service</th><td class="cd-num">5.1%</td><td class="cd-num">n/a</td></tr>
-    </tbody>
-  </table>
-</div>
-<p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
-  </section>
+<section class="cd-section cd-w-standard" id="comparison">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Are hotel insolvencies falling in 2026?</h2>
+  </div>
+  <div class="cd-side-notes">
+    <p class="cd-side-note__d cd-sector-fact">Falling, on both measures. There were 80 insolvencies from January to June 2026 against 89 in the same months of 2025, down 10.1%, and the rolling 12-month total fell from 152 to 145, down 4.6%. That is a genuine improvement and it deserves to be said plainly before the qualification.</p><p class="cd-side-note__d">These are Company Debt calculations from Insolvency Service Table A1b data.</p><p class="cd-side-note__d">The qualification is the company hotels are keeping. Accommodation as a whole fell 19.9%, from 136 to 109. Holiday and short-stay lets fell from 18 to 6, and other accommodation from 22 to 19.</p><p class="cd-side-note__d">Every neighbouring format is recovering faster than hotels are, which is why hotels now make up 73.4% of all accommodation insolvencies against 65.4% a year ago.</p><p class="cd-side-note__d">The other thing worth knowing is that 2025 was the worst year on record for hotels, at 154. Most of the economy peaked in 2023 and has been recovering since. Hotels peaked last year.</p><p class="cd-side-note__d">A 10.1% improvement from the worst point in the series is progress from a low base, not a return to health.</p>
+  </div>
 
+</section>
+
+<section class="cd-section cd-w-standard" id="divergence">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Comparison</p>
+    <h2>Hotels are recovering more slowly than the rest of accommodation</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">Hotels are the heaviest, most capital-intensive way to sell a bed for the night, and they are the format recovering most slowly. The lighter formats, without a payroll and a boiler and a breakfast service, have come back fastest.</p><p class="cd-side-note__d">Two cautions on the table below. The holiday-let and other accommodation series are small, so a move from 18 cases to 6 is a real direction but a shaky percentage, and should not be read as precision.</p><p class="cd-side-note__d">Because hotels are roughly three-quarters of accommodation, the division line is largely hotels looking at themselves.</p><p class="cd-side-note__d">Restaurants are in the table because they are the most useful sibling comparison rather than a competitor: same customer, same staffing market, same energy bills, very different balance sheet. They fell 6.2%. Their figures are on our <a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> page.</p></div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Hotels against other accommodation formats and the restaurant trade, January to June 2026, England and Wales.</caption>
+      <thead><tr><th scope="col">Classification</th><th scope="col" class="cd-num">January to June 2026</th><th scope="col" class="cd-num">Same period 2025</th><th scope="col" class="cd-num">Change</th></tr></thead>
+      <tbody><tr><th scope="row"><strong>Hotels and similar accommodation (SIC 551)</strong></th><td class="cd-num">80</td><td class="cd-num">89</td><td class="cd-num"><strong>-10.1%</strong></td></tr><tr><th scope="row">Holiday and short-stay lets (SIC 552)</th><td class="cd-num">6</td><td class="cd-num">18</td><td class="cd-num">-66.7%</td></tr><tr><th scope="row">Other accommodation (SIC 559)</th><td class="cd-num">19</td><td class="cd-num">22</td><td class="cd-num">-13.6%</td></tr><tr><th scope="row">Accommodation overall (SIC 55)</th><td class="cd-num">109</td><td class="cd-num">136</td><td class="cd-num">-19.9%</td></tr><tr><th scope="row">Restaurants (SIC 561)</th><td class="cd-num">1,011</td><td class="cd-num">1,078</td><td class="cd-num">-6.2%</td></tr></tbody>
+    </table>
+  </div>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Company Debt calculations from Insolvency Service Table A1b data.</p>
+</section>
 <section class="cd-section cd-w-wide" id="trend">
   <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Hotel insolvencies by month</h2>
-    <p class="cd-section-intro">May 2026 recorded 13 insolvencies, against 19 in April 2026 and 11 in May 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
-    <p class="cd-section-intro">Hotels sit within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data, alongside accommodation and food service generally. See also <a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
+    <p class="cd-section-intro">June 2026 recorded 13 insolvencies, against 12 in May 2026 and 13 in June 2025. One month does not establish a trend, but the year-to-date and rolling 12-month totals above are the steadier read; this chart is the detail behind them.</p>
+    <p class="cd-section-intro">The most useful comparison is with <a href="/data/restaurant-insolvency-statistics/">restaurant insolvency statistics</a> (SIC 561), the other half of hospitality. Hotels also sit within the wider <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>.</p></div>
   <figure class="cd-chart-figure">
-    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="551-monthly-title 551-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="551-monthly-title">Monthly insolvencies among hotels and similar accommodation businesses, England and Wales</title><desc id="551-monthly-desc">Monthly company insolvencies among hotels and similar accommodation businesses, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">6</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">12</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">18</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">24</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text></g><polyline points="60.0,217.33 80.6,198.40 101.2,198.40 121.8,236.27 142.4,207.87 163.0,198.40 183.6,255.20 204.2,198.40 224.8,255.20 245.4,84.80 266.0,141.60 286.6,188.93 307.2,151.07 327.8,226.80 348.4,217.33 369.0,245.73 389.6,170.00 410.2,170.00 430.8,179.47 451.4,226.80 472.0,170.00 492.6,245.73 513.2,198.40 533.8,255.20 554.4,160.53 575.0,160.53 595.6,132.13 616.2,179.47 636.8,207.87 657.4,188.93 678.0,151.07 698.6,226.80 719.2,198.40 739.8,207.87 760.4,255.20 781.0,226.80 801.6,179.47 822.2,207.87 842.8,207.87 863.4,132.13 884.0,188.93" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:10</title></circle><circle cx="80.6" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2023:12</title></circle><circle cx="101.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:12</title></circle><circle cx="121.8" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2023:8</title></circle><circle cx="142.4" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:11</title></circle><circle cx="163.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2023:12</title></circle><circle cx="183.6" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:6</title></circle><circle cx="204.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2023:12</title></circle><circle cx="224.8" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:6</title></circle><circle cx="245.4" cy="84.80" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2023:24</title></circle><circle cx="266.0" cy="141.60" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:18</title></circle><circle cx="286.6" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2023:13</title></circle><circle cx="307.2" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:17</title></circle><circle cx="327.8" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2024:9</title></circle><circle cx="348.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:10</title></circle><circle cx="369.0" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2024:7</title></circle><circle cx="389.6" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:15</title></circle><circle cx="410.2" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2024:15</title></circle><circle cx="430.8" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:14</title></circle><circle cx="451.4" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2024:9</title></circle><circle cx="472.0" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:15</title></circle><circle cx="492.6" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2024:7</title></circle><circle cx="513.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:12</title></circle><circle cx="533.8" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2024:6</title></circle><circle cx="554.4" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:16</title></circle><circle cx="575.0" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2025:16</title></circle><circle cx="595.6" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:19</title></circle><circle cx="616.2" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2025:14</title></circle><circle cx="636.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:11</title></circle><circle cx="657.4" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2025:13</title></circle><circle cx="678.0" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:17</title></circle><circle cx="698.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Aug 2025:9</title></circle><circle cx="719.2" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:12</title></circle><circle cx="739.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Oct 2025:11</title></circle><circle cx="760.4" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:6</title></circle><circle cx="781.0" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Dec 2025:9</title></circle><circle cx="801.6" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:14</title></circle><circle cx="822.2" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Feb 2026:11</title></circle><circle cx="842.8" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:11</title></circle><circle cx="863.4" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Apr 2026:19</title></circle><circle cx="884.0" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:13</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2023</text><text x="307.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="554.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2025</text><text x="801.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
-    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among hotels and similar accommodation businesses, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table 1c).</figcaption>
+    <div class="cd-chart-panel cd-chart-panel--longrun"><svg viewBox="0 0 900 360" role="img" aria-labelledby="551-monthly-title 551-monthly-desc" class="cd-chart cd-chart--line" xmlns="http://www.w3.org/2000/svg"><title id="551-monthly-title">Monthly insolvencies among hotels and similar accommodation businesses, England and Wales</title><desc id="551-monthly-desc">Monthly company insolvencies among hotels and similar accommodation businesses, England and Wales, since January 2023.</desc><g class="cd-chart__grid"><line x1="60" x2="884" y1="312.0" y2="312.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="316.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">0</text><line x1="60" x2="884" y1="255.2" y2="255.2" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="259.2" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">6</text><line x1="60" x2="884" y1="198.4" y2="198.4" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="202.4" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">12</text><line x1="60" x2="884" y1="141.6" y2="141.6" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="145.6" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">18</text><line x1="60" x2="884" y1="84.8" y2="84.8" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="88.8" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">24</text><line x1="60" x2="884" y1="28.0" y2="28.0" stroke="#e5e7eb" stroke-width="1"/><text x="52" y="32.0" text-anchor="end" font-size="11" fill="#374151" font-variant-numeric="tabular-nums">30</text></g><polyline points="60.0,255.20 66.6,217.33 73.2,207.87 79.8,236.27 86.4,264.67 93.0,264.67 99.6,283.60 106.1,207.87 112.7,293.07 119.3,255.20 125.9,226.80 132.5,274.13 139.1,217.33 145.7,226.80 152.3,226.80 158.9,302.53 165.5,245.73 172.1,179.47 178.7,255.20 185.2,274.13 191.8,245.73 198.4,245.73 205.0,236.27 211.6,245.73 218.2,170.00 224.8,179.47 231.4,255.20 238.0,245.73 244.6,274.13 251.2,283.60 257.8,245.73 264.4,236.27 270.9,274.13 277.5,226.80 284.1,226.80 290.7,217.33 297.3,179.47 303.9,264.67 310.5,179.47 317.1,160.53 323.7,160.53 330.3,217.33 336.9,217.33 343.5,188.93 350.0,132.13 356.6,207.87 363.2,226.80 369.8,245.73 376.4,226.80 383.0,188.93 389.6,226.80 396.2,226.80 402.8,151.07 409.4,132.13 416.0,198.40 422.6,217.33 429.2,236.27 435.7,236.27 442.3,217.33 448.9,132.13 455.5,274.13 462.1,236.27 468.7,198.40 475.3,245.73 481.9,198.40 488.5,264.67 495.1,245.73 501.7,274.13 508.3,264.67 514.8,236.27 521.4,217.33 528.0,170.00 534.6,236.27 541.2,264.67 547.8,217.33 554.4,188.93 561.0,170.00 567.6,255.20 574.2,170.00 580.8,217.33 587.4,226.80 594.0,188.93 600.5,217.33 607.1,207.87 613.7,217.33 620.3,198.40 626.9,198.40 633.5,236.27 640.1,207.87 646.7,198.40 653.3,255.20 659.9,198.40 666.5,255.20 673.1,84.80 679.6,141.60 686.2,188.93 692.8,151.07 699.4,226.80 706.0,217.33 712.6,245.73 719.2,170.00 725.8,170.00 732.4,179.47 739.0,226.80 745.6,170.00 752.2,245.73 758.8,198.40 765.3,255.20 771.9,160.53 778.5,160.53 785.1,132.13 791.7,179.47 798.3,207.87 804.9,188.93 811.5,151.07 818.1,226.80 824.7,198.40 831.3,207.87 837.9,245.73 844.4,226.80 851.0,179.47 857.6,207.87 864.2,207.87 870.8,132.13 877.4,198.40 884.0,188.93" fill="none" stroke="#0f172a" stroke-width="1.6"/><g class="cd-chart__points"><circle cx="60.0" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2016:6</title></circle><circle cx="73.2" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2016:11</title></circle><circle cx="86.4" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>May 2016:5</title></circle><circle cx="99.6" cy="283.60" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2016:3</title></circle><circle cx="112.7" cy="293.07" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2016:2</title></circle><circle cx="125.9" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2016:9</title></circle><circle cx="139.1" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2017:10</title></circle><circle cx="152.3" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2017:9</title></circle><circle cx="165.5" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>May 2017:7</title></circle><circle cx="178.7" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2017:6</title></circle><circle cx="191.8" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2017:7</title></circle><circle cx="205.0" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2017:8</title></circle><circle cx="218.2" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2018:15</title></circle><circle cx="231.4" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2018:6</title></circle><circle cx="244.6" cy="274.13" r="3.5" fill="transparent" stroke="transparent"><title>May 2018:4</title></circle><circle cx="257.8" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2018:7</title></circle><circle cx="270.9" cy="274.13" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2018:4</title></circle><circle cx="284.1" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2018:9</title></circle><circle cx="297.3" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2019:14</title></circle><circle cx="310.5" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2019:14</title></circle><circle cx="323.7" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>May 2019:16</title></circle><circle cx="336.9" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2019:10</title></circle><circle cx="350.0" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2019:19</title></circle><circle cx="363.2" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2019:9</title></circle><circle cx="376.4" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2020:9</title></circle><circle cx="389.6" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2020:9</title></circle><circle cx="402.8" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>May 2020:17</title></circle><circle cx="416.0" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2020:12</title></circle><circle cx="429.2" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2020:8</title></circle><circle cx="442.3" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2020:10</title></circle><circle cx="455.5" cy="274.13" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2021:4</title></circle><circle cx="468.7" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2021:12</title></circle><circle cx="481.9" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>May 2021:12</title></circle><circle cx="495.1" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2021:7</title></circle><circle cx="508.3" cy="264.67" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2021:5</title></circle><circle cx="521.4" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2021:10</title></circle><circle cx="534.6" cy="236.27" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2022:8</title></circle><circle cx="547.8" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2022:10</title></circle><circle cx="561.0" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>May 2022:15</title></circle><circle cx="574.2" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2022:15</title></circle><circle cx="587.4" cy="226.80" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2022:9</title></circle><circle cx="600.5" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2022:10</title></circle><circle cx="613.7" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2023:10</title></circle><circle cx="626.9" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2023:12</title></circle><circle cx="640.1" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2023:11</title></circle><circle cx="653.3" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2023:6</title></circle><circle cx="666.5" cy="255.20" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2023:6</title></circle><circle cx="679.6" cy="141.60" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2023:18</title></circle><circle cx="692.8" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2024:17</title></circle><circle cx="706.0" cy="217.33" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2024:10</title></circle><circle cx="719.2" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>May 2024:15</title></circle><circle cx="732.4" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2024:14</title></circle><circle cx="745.6" cy="170.00" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2024:15</title></circle><circle cx="758.8" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2024:12</title></circle><circle cx="771.9" cy="160.53" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2025:16</title></circle><circle cx="785.1" cy="132.13" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2025:19</title></circle><circle cx="798.3" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>May 2025:11</title></circle><circle cx="811.5" cy="151.07" r="3.5" fill="transparent" stroke="transparent"><title>Jul 2025:17</title></circle><circle cx="824.7" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>Sep 2025:12</title></circle><circle cx="837.9" cy="245.73" r="3.5" fill="transparent" stroke="transparent"><title>Nov 2025:7</title></circle><circle cx="851.0" cy="179.47" r="3.5" fill="transparent" stroke="transparent"><title>Jan 2026:14</title></circle><circle cx="864.2" cy="207.87" r="3.5" fill="transparent" stroke="transparent"><title>Mar 2026:11</title></circle><circle cx="877.4" cy="198.40" r="3.5" fill="transparent" stroke="transparent"><title>May 2026:12</title></circle><circle cx="884.0" cy="188.93" r="3.5" fill="transparent" stroke="transparent"><title>Jun 2026:13</title></circle></g><g class="cd-chart__xaxis"><text x="60.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2016</text><text x="218.2" y="330" text-anchor="middle" font-size="11" fill="#374151">2018</text><text x="376.4" y="330" text-anchor="middle" font-size="11" fill="#374151">2020</text><text x="534.6" y="330" text-anchor="middle" font-size="11" fill="#374151">2022</text><text x="692.8" y="330" text-anchor="middle" font-size="11" fill="#374151">2024</text><text x="851.0" y="330" text-anchor="middle" font-size="11" fill="#374151">2026</text></g><line x1="60" x2="884" y1="312" y2="312" stroke="#9ca3af" stroke-width="1"/></svg></div>
+    <figcaption class="cd-figcaption"><strong>Monthly insolvencies among hotels and similar accommodation businesses, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
   </figure>
 </section>
-
+<section class="cd-section cd-w-standard" id="longterm">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Context</p>
+    <h2>What the longer-term hotel insolvency trend shows</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">Hotels do not fit the pattern the rest of this data follows, and it is worth understanding why before reading anything else on this page. Insolvencies ran at 80, 89 and 96 from 2016 to 2018. Then 2019 came in at 144, a jump of 50% in a single year, before the pandemic and before anything else on these pages went wrong.</p><p class="cd-side-note__d">Then the strangest number here. In 2020, company insolvencies across the whole economy fell 26.4% as government support and the restrictions on creditors held the normal cycle in check. Hotels went from 144 to 143. They did not get the quiet year that almost every other sector got. Whatever the support schemes did, they did not reach the hotels that were already going.</p><p class="cd-side-note__d">2021 brought the delayed reprieve at 97, then 125 in 2022, 144 in 2023 and 136 in 2024. And then 154 in 2025, the highest in the series.</p><p class="cd-side-note__d">Hotels have now been at or near their 2019 level for the best part of seven years, which is a long time to describe something as a recovery.</p></div>
+</section>
 <section class="cd-section cd-w-standard" id="pressure">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Context</p>
-    <h2>Why hotels and similar accommodation businesses are under pressure</h2>
+    <h2>Why hotels are under more pressure than the rest of hospitality</h2>
+    <p class="cd-section-intro">A hotel is a building with a business inside it, and that is the whole of the difference. Almost everything below follows from owning or leasing a large, expensive property that has to be heated, staffed and insured whether anyone is in it or not.</p><p class="cd-section-intro">Insolvency figures also look backwards, recording distress that has usually been building for a year or more. This is not a claim about why any particular company failed.</p>
 
-    <p class="cd-section-intro">General sector conditions, not a claim about any individual company. Read alongside the figures above, not as their explanation.</p>
   </div>
-  <div class="cd-side-notes"><div class="cd-note-item"><h3>High fixed operating costs</h3><p class="cd-side-note__d">Property, energy and a baseline level of staffing continue regardless of occupancy, so hotels carry more fixed cost than most other hospitality formats and less room to cut back when trade is quiet.</p></div><div class="cd-note-item"><h3>Discretionary, debt-funded demand</h3><p class="cd-side-note__d">Leisure and business travel are both discretionary spend that softens quickly when confidence drops, while refurbishment debt still has to be serviced regardless of how full the hotel is.</p></div></div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>The costs run whether the rooms sell or not</h3><p class="cd-side-note__d">A restaurant that has a bad Tuesday can send staff home and buy less food. A hotel cannot un-heat a wing, and it cannot run a hundred-bedroom property with nobody on the desk at 2am. The reception, the housekeeping baseline, the boiler, the insurance and the rent or the mortgage are all there at 40% occupancy exactly as they are at 90%.</p><p class="cd-side-note__d">That is what makes hotels a high-operational-gearing business, which is a dry way of saying the good years are very good and the bad ones arrive fast. The gap between a profitable hotel and an insolvent one can be a few points of occupancy sustained over a couple of quarters.</p></div><div class="cd-note-item"><h3>The wage bill moved, and hotels are staff-heavy</h3><p class="cd-side-note__d">Hotels employ a lot of people at or near the wage floor, across housekeeping, food and beverage, and front of house. The National Living Wage went from £11.44 an hour in April 2024 to £12.21 in April 2025 and £12.71 from April 2026, for workers aged 21 and over.</p><p class="cd-side-note__d">Employer National Insurance moved at the same time, to 15% from April 2025, with the secondary threshold falling from £175 a week to £96. That threshold cut is worth most where the pay is lowest and the shifts are shortest, which describes a hotel's payroll almost exactly.</p><p class="cd-side-note__d">Room rates can be raised, and have been. Whether they can be raised as fast as the payroll, in a town where the hotel down the road is discounting to fill rooms, is a different question.</p></div><div class="cd-note-item"><h3>Refurbishment debt does not care about occupancy</h3><p class="cd-side-note__d">Hotels have to be refurbished on a cycle, because a tired hotel loses rate before it loses occupancy, and the money for that is nearly always borrowed against the building. The borrowing is then serviced out of trading, monthly, regardless of what trading does.</p><p class="cd-side-note__d">This is the mechanism that turns a soft eighteen months into an insolvency rather than a bad year. The trading dips, the covenant gets tight, the lender wants a valuation, and the valuation is done on the trading. Everything reinforces everything else, in the wrong direction.</p></div><div class="cd-note-item"><h3>Demand is discretionary at both ends</h3><p class="cd-side-note__d">A hotel sells two things that are among the first to be cut: a leisure break and a business trip. Neither has to happen this quarter. The ONS also found accommodation and food service among the largest contributors to falling vacancies in March to May 2026, down 10,000 on the year, which is what an industry that is not expanding looks like from the outside.</p><p class="cd-side-note__d">There is a reason the lighter formats in the table above are recovering faster. When people do travel, a holiday let has almost no cost base to carry, and can sit empty for a month without anyone going under. A hotel cannot do that for a fortnight.</p></div></div>
 </section>
 <section class="cd-section cd-w-standard" id="practitioner">
   <div class="cd-section-head">
     <p class="cd-eyebrow">Practitioner view</p>
     <h2>What we see in hotel insolvency cases</h2>
-  </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the cases we see, hotels carry more fixed cost than most hospitality formats: property, energy and a baseline of staffing continue through quiet periods regardless of occupancy.</p><p class="cd-side-note__d cd-side-note__insight">Many hotels also carry debt from refurbishment cycles that has to be serviced whether the rooms are full or not, which turns a soft occupancy quarter into a cash-flow problem faster than in a lower-cost format.</p></div>
-</section>
 
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d cd-side-note__insight">In the hotel cases we handle, the building is usually both the problem and the only reason there is anything left to talk about. It is what the borrowing is secured on, it is what makes the fixed costs unavoidable, and it is the reason a buyer might take the whole thing on rather than walk away. Very few of the trades we work with have that last part.</p><p class="cd-side-note__d cd-side-note__insight">By the time a director calls us, the pattern is usually two or three soft quarters, a covenant conversation that went badly, and a refurbishment that has been deferred twice and cannot be deferred again without losing the rate. Meanwhile the deposits for next season's bookings are sitting in the account, which makes the bank balance look considerably better than the business is.</p><p class="cd-side-note__d cd-side-note__insight">That last point deserves saying out loud, because it catches people. Forward bookings are other people's money. Spending them on this month's wages is one of the most common things we see in this trade and one of the hardest to come back from, because the rooms still have to be provided later with no cash attached to them.</p><p class="cd-side-note__d cd-side-note__insight">So we would not start with occupancy. We would look at what the building costs to open the doors each month before a single room sells, the debt service against actual trading, how much of the cash in the account is forward deposits, what the rates bill looks like under the 2026 multipliers, and what is owed to HMRC on VAT and PAYE. Those five tell you how much time there is.</p></div>
+</section>
+<section class="cd-section cd-w-standard" id="policy">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Policy update</p>
+    <h2>Business rates changed for hotels in April 2026</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">This one is worth understanding properly, because it changed in April and a lot of budgets were built on the old arrangement. Up to 31 March 2026, eligible retail, hospitality and leisure properties in England got 40% off their business rates bill, capped at £110,000 per business, with the cap applied across a group rather than per property.</p><p class="cd-side-note__d">From 1 April 2026 that relief was replaced by permanently lower multipliers. For 2026 to 2027 in England, a hospitality property with a rateable value below £51,000 is charged at 38.2p against the 43.2p small business multiplier, and one between £51,000 and £499,999 at 43p against the 48p standard multiplier. In both cases that is 5p in the pound less than an equivalent non-hospitality property.</p><p class="cd-side-note__d">The catch is at the top. A property with a rateable value of £500,000 or more is charged at 50.8p, the highest multiplier there is, and gets no hospitality discount at all. Plenty of city-centre and larger hotels sit above that line.</p><p class="cd-side-note__d">Whether any individual hotel is better or worse off is genuinely not something we can tell you from here, because the 2026 revaluation reset rateable values at the same time.</p><p class="cd-side-note__d">What can be said is the arithmetic. A 5p cut in the multiplier is a smaller benefit than 40% off the bill was, so a hotel that sat comfortably inside the old cap and whose valuation held steady should expect to pay more in 2026 to 2027, not less. The trade-off is that this one is permanent and does not have to be argued for again every autumn.</p><p class="cd-side-note__d">Sources: GOV.UK, Business Rates Relief 2025/26 Retail, Hospitality and Leisure Scheme, and GOV.UK business rates multipliers for 2026 to 2027. England only. Business rates are devolved, so Wales differs.</p></div>
+</section>
 <section class="cd-section cd-w-standard" id="annual">
   <div class="cd-section-head"><p class="cd-eyebrow">Annual</p><h2>Hotel insolvencies by year, 2016 to 2025</h2>
-    <p class="cd-section-intro">Hotels insolvencies rose from 80 in 2016 to a peak of 153 in 2025. The 2025 total of 153 remained well above the pre-pandemic total of 144 in 2019.</p>
+    <p class="cd-section-intro">Read this table differently from the others on this site. On most of these pages 2019 is the last normal year and everything is measured against it. For hotels, 2019 was itself the anomaly: 144 against 96 the year before, a 50% jump that arrived before the pandemic. Hotels had no good year to go back to.</p>
     <p class="cd-section-intro">Recorded insolvencies reached their series low of 80 in 2016. Accommodation and food service overall shows the same pattern: 2016 was its lowest year too, both series having climbed fairly steadily since the data begins.</p></div>
   <div class="cd-tablewrap">
     <table class="cd-table">
-      <caption class="cd-table__caption">Annual company insolvencies among hotels and similar accommodation businesses, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table 1c).</caption>
+      <caption class="cd-table__caption">Annual company insolvencies among hotels and similar accommodation businesses, England and Wales, not seasonally adjusted. Source: Insolvency Service (Table A1b).</caption>
       <thead><tr><th scope="col">Year</th><th scope="col" class="cd-num">Insolvencies</th></tr></thead>
-      <tbody><tr><th scope="row">2016</th><td class="cd-num">80</td></tr><tr><th scope="row">2017</th><td class="cd-num">89</td></tr><tr><th scope="row">2018</th><td class="cd-num">96</td></tr><tr><th scope="row">2019</th><td class="cd-num">144</td></tr><tr><th scope="row">2020</th><td class="cd-num">143</td></tr><tr><th scope="row">2021</th><td class="cd-num">97</td></tr><tr><th scope="row">2022</th><td class="cd-num">125</td></tr><tr><th scope="row">2023</th><td class="cd-num">144</td></tr><tr><th scope="row">2024</th><td class="cd-num">136</td></tr><tr><th scope="row">2025</th><td class="cd-num">153</td></tr></tbody>
+      <tbody><tr><th scope="row">2016</th><td class="cd-num">80</td></tr><tr><th scope="row">2017</th><td class="cd-num">89</td></tr><tr><th scope="row">2018</th><td class="cd-num">96</td></tr><tr><th scope="row">2019</th><td class="cd-num">144</td></tr><tr><th scope="row">2020</th><td class="cd-num">143</td></tr><tr><th scope="row">2021</th><td class="cd-num">97</td></tr><tr><th scope="row">2022</th><td class="cd-num">125</td></tr><tr><th scope="row">2023</th><td class="cd-num">144</td></tr><tr><th scope="row">2024</th><td class="cd-num">136</td></tr><tr><th scope="row">2025</th><td class="cd-num">154</td></tr></tbody>
     </table>
   </div>
-  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table 1c).</p>
+  <p class="cd-source-note">Not seasonally adjusted, England and Wales. Source: Insolvency Service (Table A1b).</p>
 </section>
-
+<section class="cd-section cd-w-standard" id="procedure">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Procedures</p>
+    <h2>What types of hotel insolvency are most common?</h2>
+  </div>
+  <div class="cd-tablewrap">
+    <table class="cd-table">
+      <caption class="cd-table__caption">Hotels insolvencies by procedure, 2025, England and Wales. Source: Insolvency Service.</caption>
+      <thead><tr><th scope="col">Procedure</th><th scope="col" class="cd-num">Cases</th><th scope="col" class="cd-num">Share</th></tr></thead>
+      <tbody><tr><th scope="row">Creditors' voluntary liquidations</th><td class="cd-num">115</td><td class="cd-num">75.2%</td></tr><tr><th scope="row">Compulsory liquidations</th><td class="cd-num">20</td><td class="cd-num">13.1%</td></tr><tr><th scope="row">Administrations</th><td class="cd-num">15</td><td class="cd-num">9.8%</td></tr><tr><th scope="row">Company voluntary arrangements</th><td class="cd-num">3</td><td class="cd-num">2.0%</td></tr><tr><th scope="row">Receivership appointments</th><td class="cd-num">0</td><td class="cd-num">0.0%</td></tr></tbody>
+    </table>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">The number to look at here is administrations, not liquidations. At 9.8% of 2025 cases, hotels use <a href="/company-administration/">administration</a> more than any other sector on these pages: garages are at 2.4% and cleaning contractors at 1.2%. In 2019 the hotel share was 22.2%.</p><p class="cd-side-note__d">That difference is the building. Administration exists to rescue a business or get a better result than winding it up, and it needs something worth buying. A hotel is a real asset in a real location with a trading history attached, so there is usually somebody who wants it at a price. Most trades in difficulty have nothing comparable to sell.</p><p class="cd-side-note__d"><a href="/liquidation/creditors-voluntary-liquidation/">Creditors' voluntary liquidations</a> still account for three-quarters of cases, 115 of 154, up from 96 in 2024, and <a href="/liquidation/compulsory-liquidation/">compulsory liquidations</a> rose from 17 to 20. So the rescue route is more available in this trade than in most, which is not the same as it being the likely outcome.</p></div>
+  <p class="cd-source-note">Not a personal recommendation: the table describes procedures used historically, not which procedure suits any individual company. Source: Insolvency Service.</p>
+</section>
 
 
 <section class="cd-section cd-w-standard" id="about">
@@ -1270,10 +1303,22 @@
     <p class="cd-eyebrow">How to read this</p>
     <h2>How to interpret the hotel figures</h2>
   </div>
-  <div class="cd-side-notes"><p class="cd-side-note__d">Hotel insolvencies are a smaller sector by count, so monthly figures can move sharply on a handful of cases. Prefer the year-to-date or 12-month rolling total for the steadier read.</p><p class="cd-side-note__d">The count is a volume, not a failure rate. It is not adjusted for how many hotels are registered, so it cannot be read as a sector-wide risk of insolvency.</p><p class="cd-side-note__d">This is hotels and similar accommodation only (SIC 551). Restaurants, pubs and self-catering accommodation sit under separate SIC codes and are not included here.</p></div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">SIC group 551 covers companies whose recorded primary business is hotels, motels and similar short-stay accommodation, typically with daily housekeeping. Self-catering and holiday lets sit under SIC 552, and restaurants and pubs under SIC 561 and 563. A hotel with a busy restaurant is still counted once, under whichever code it registered.</p><p class="cd-side-note__d">The 2019 figure deserves a note of its own. Hotel insolvencies jumped from 96 in 2018 to 144 in 2019, a 50% rise before the pandemic. Table A1b does not break down far enough to explain that, and we have not attributed it. It does mean the pre-pandemic comparison used elsewhere on this site is a weaker yardstick here than on other pages, and it should be treated with care.</p><p class="cd-side-note__d">Hotels are a small sector by company count, at roughly a dozen insolvencies a month, so single months move on a handful of cases. The year-to-date and 12-month rolling totals are the steadier guide.</p><p class="cd-side-note__d">These are company counts, not the number of hotels, rooms or staff affected. One insolvent company may operate several properties, and a hotel can close or change hands without any formal insolvency procedure. Hotels also change hands as assets more often than most businesses, so a property continuing to trade under a new name tells you nothing about whether the company that ran it survived.</p><p class="cd-side-note__d">The figures are insolvency volumes, not a failure rate. They are not adjusted for the number of active hotel companies.</p><p class="cd-side-note__d">The SIC 551 figures come from Table A1b and are not seasonally adjusted, which matters more for hotels than for most sectors given how seasonal the trade is. The Insolvency Service seasonally adjusts parts of its headline England and Wales series where it finds seasonality, but that adjustment does not apply to the industry figures used here. The latest month is provisional and can be revised.</p></div>
 </section>
-
-
+<section class="cd-section cd-w-standard" id="commercial">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">Next steps</p>
+    <h2>What to do if your hotel cannot pay its debts</h2>
+  </div>
+  <div class="cd-side-notes"><p class="cd-side-note__d">None of the figures above decide whether your hotel is viable. Sector totals never do. The questions that matter are narrower: what does it cost to open the doors each month before a room is sold, does trading cover that plus the debt service across a full year rather than a good quarter, and how much of the money in the account has already been spent by guests who have not arrived yet?</p><p class="cd-side-note__d">Hotels have one advantage over most of the trades we work with, and it is worth knowing about early rather than late. Because the building is a real asset, there are usually more options than a straight liquidation: a sale of the business and assets, a refinance, or a rescue procedure that keeps the doors open while it is arranged.</p><p class="cd-side-note__d">That is why administrations are a far larger share of hotel insolvencies than of any other sector on this site. It is the one genuinely encouraging structural fact on this page.</p><p class="cd-side-note__d">Those options need time, and they need the building to still be worth something. If the covenant conversation has already happened, the useful step is to take advice while there is still a business attached to the asset: terms renegotiated, an <a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or a rescue procedure such as a <a href="/company-rescue-solutions/company-voluntary-arrangement/">Company Voluntary Arrangement</a> or <a href="/company-administration/">administration</a>.</p><p class="cd-side-note__d">Leave it until a <a href="/winding-up-petitions/">winding-up petition</a> is advertised and the account is frozen within days, the bookings stop, and the asset you were relying on is suddenly being valued as an empty building rather than a trading hotel. At that point <a href="/liquidation/creditors-voluntary-liquidation/">creditors' voluntary liquidation</a> is often what is left. Our <a href="/advice/insolvency-advice-for-directors/">insolvency advice for directors</a> is the place to start.</p></div>
+</section>
+<section class="cd-section cd-w-standard" id="faq">
+  <div class="cd-section-head">
+    <p class="cd-eyebrow">FAQs</p>
+    <h2>Frequently asked questions about hotel insolvencies</h2>
+  </div>
+  <div class="cd-side-notes"><div class="cd-note-item"><h3>How many UK hotels become insolvent each year?</h3><p class="cd-side-note__d">154 hotel and similar accommodation companies entered insolvency in England and Wales in 2025, the highest in the series and up from 136 in 2024. The 2019 figure was 144. Source: Insolvency Service, Table A1b.</p></div><div class="cd-note-item"><h3>Are hotel insolvencies falling in 2026?</h3><p class="cd-side-note__d">Yes. There were 80 insolvencies between January and June 2026 against 89 in the same months of 2025, down 10.1%, and the rolling 12-month total fell 4.6% to 145. The caveat is that accommodation as a whole fell 19.9% over the same period, so hotels are recovering more slowly than the rest of the trade.</p></div><div class="cd-note-item"><h3>Do these figures include pubs, restaurants and Airbnb-style lets?</h3><p class="cd-side-note__d">No. This page counts SIC group 551, hotels and similar short-stay accommodation. Restaurants and pubs are SIC 561 and 563, and self-catering and holiday lets are SIC 552. All are counted separately.</p></div><div class="cd-note-item"><h3>Why are hotel insolvencies compared with 2019 less meaningful?</h3><p class="cd-side-note__d">Because 2019 was not a normal year for hotels. Insolvencies jumped from 96 in 2018 to 144 in 2019, before the pandemic. Hotels also did not get the quiet 2020 that most sectors had: company insolvencies across the economy fell 26.4% that year while hotels went from 144 to 143.</p></div><div class="cd-note-item"><h3>What is the most common insolvency procedure for hotels?</h3><p class="cd-side-note__d">Creditors' voluntary liquidation, at 115 of the 154 hotel insolvencies in 2025. But administrations are notable at 9.8%, the highest share of any sector we cover, because a hotel is a real asset that a buyer may want.</p></div></div>
+</section>
 <div class="cd-bleed cd-method-band">
   <section class="cd-method-inner" id="method">
     <div class="cd-section-head">
@@ -1286,7 +1331,7 @@
     <h3>Data limitations</h3>
     <ul class="cd-limits">
       <li>The latest month is provisional and can be revised.</li>
-      <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
+      <li>Industry totals by three-digit SIC are published monthly, through the latest headline month, alongside the breakdown by insolvency procedure within each industry.</li>
       <li>Industry is based on self-reported SIC codes.</li>
       <li>Registered office addresses are not a reliable guide to where a company traded.</li>
       <li>Solvent company closures are not included.</li>
@@ -1299,17 +1344,18 @@
   <div class="cd-cite-card">
     <div class="cd-cite-card__left">
       <dl>
-        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, May 2026 (Table 1c, by industry).</dd>
+        <dt>Primary source</dt><dd>Insolvency Service, Company Insolvency Statistics, June 2026 (Table A1b, by industry).</dd>
         <dt>Supporting source</dt><dd>Companies House company register data.</dd>
-        <dt>Publication date</dt><dd>19 June 2026</dd>
-        <dt>Industry breakdown</dt><dd>Table 1c total by industry is published monthly, through the latest headline month. The supplementary breakdown by insolvency procedure is published quarterly.</dd>
-        <dt>Industry scope</dt><dd>SIC 551: hotels and similar short-stay accommodation.</dd>
+        <dt>Publication date</dt><dd>17 July 2026</dd>
+        <dt>Next scheduled release</dt><dd>21 August 2026 (estimated from the monthly release cadence; not yet confirmed by the Insolvency Service)</dd>
+        <dt>Industry breakdown</dt><dd>The industry total by three-digit SIC (Table A1b) runs through the latest headline month. The breakdown by insolvency procedure within each industry comes from Tables A2 to A6.</dd>
+        <dt>Industry scope</dt><dd>SIC 551: hotels, motels and similar short-stay accommodation with daily housekeeping.</dd>
         <dt>Status</dt><dd>Accredited official statistics</dd>
       </dl>
     </div>
     <div class="cd-cite-card__right">
       <p class="cd-eyebrow">How to cite this page</p>
-      <p class="cd-cite-text" id="cd-citation-hotel-insolvency-statistics">CompanyDebt. (2026). UK Hotel Insolvency Statistics. CompanyDebt.com. Data sourced from the Insolvency Service company insolvency statistics by industry (Table 1c).</p>
+      <p class="cd-cite-text" id="cd-citation-hotel-insolvency-statistics">Company Debt. (2026). "UK Hotel Insolvency Statistics." Analysis of Insolvency Service company insolvency data by industry (Table A1b). CompanyDebt.com.</p>
       <button type="button" class="cd-cite-copy" aria-label="Copy citation to clipboard" data-cd-copy="#cd-citation-hotel-insolvency-statistics">Copy citation</button>
     </div>
   </div>
