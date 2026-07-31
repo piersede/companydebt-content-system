@@ -507,6 +507,13 @@ SLIDES = {
             myth="Limited liability protects everything I own.",
             fact="Not a penny of it, on any debt you have personally guaranteed.")),
     ],
+    # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
+    # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
+    12: [
+        ("number", dict(value="1 in 198",
+                        sub="UK companies entered insolvency in the year to June 2026.",
+                        kicker="How common is it, really?")),
+    ],
     # Post 22: Myth/Fact, overdrawn director's loan. Grounded in drafts/75111
     # (Chris Andersen byline). s.455 33.75% verified on gov.uk 2026-07-22.
     22: [
