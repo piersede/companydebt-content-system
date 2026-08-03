@@ -530,6 +530,38 @@ add_filter('gform_validation', function ($result) {
 }, 20, 1);
 
 /* ---------------------------------------------------------------------------
+ * Spam source IPs
+ *
+ * A submission from a known spam source is quarantined as spam: Gravity Forms
+ * keeps it in the spam folder (reviewable, reversible) but does NOT send the
+ * notification email and does NOT hand it to the CRM sync. This is deliberately
+ * softer than a hard reject: nothing is silently lost, and a false positive can
+ * be restored from the spam folder.
+ *
+ * 217.60.2.243 flooded form 44 (Home Page Contact Block) with junk name, email
+ * and phone across 31 Jul - 1 Aug 2026. The email and phone validation above
+ * already blocks that traffic on content, so this IP rule is a second layer
+ * that also covers any future submission from the same source that happens to
+ * carry a well-formed email and phone.
+ * ------------------------------------------------------------------------ */
+
+function cd_gf_spam_ips() {
+    return apply_filters('cd_gf_spam_ips', array(
+        '217.60.2.243',
+    ));
+}
+
+add_filter('gform_entry_is_spam', function ($is_spam, $form, $entry) {
+    if ($is_spam) return $is_spam;                    // already flagged, leave it
+    $ip = (string) rgar($entry, 'ip');
+    if ($ip !== '' && in_array($ip, cd_gf_spam_ips(), true)) {
+        cd_gf_log(isset($form['id']) ? (int) $form['id'] : 0, 0, 'spam_ip', $ip);
+        return true;
+    }
+    return $is_spam;
+}, 10, 3);
+
+/* ---------------------------------------------------------------------------
  * Storage
  *
  * Phone numbers are stored in the readable UK national form (07700900123),
