@@ -537,23 +537,29 @@ add_filter('gform_validation', function ($result) {
 /* ---------------------------------------------------------------------------
  * Storage
  *
- * Phone numbers are stored in E.164 (+447700900123), not the readable 0 form.
+ * Phone numbers are stored in the readable UK national form (07700900123),
+ * keeping the leading zero, NOT E.164 (+447700900123) and NOT a bare number
+ * field. A stored number is dialable exactly as it appears.
  *
- * This matters for more than tidiness. cd-livechat-zoho.php copies the entry
- * value straight into Zoho's Mobile field, and Google Ads enhanced conversions
- * for leads, which is part of why this job was commissioned, will only match a
- * phone number in E.164. Storing "07700900123" is the one format Google cannot
- * use. E.164 is also unambiguous and dials correctly from any handset.
+ * Why readable, not E.164: the brief is that full UK numbers (11 digits with
+ * the leading zero) must be what lands in the entry, because a 10-digit value
+ * cannot be dialled. Google Ads enhanced conversions normalises to E.164 at
+ * hashing time on its own, so storing the readable 0-form does not stop the
+ * conversion match; it just keeps the entry human-usable and consistent with
+ * every historic entry on the site.
  *
- * Whatever the visitor actually typed is kept in entry meta rather than thrown
- * away, so a normalisation that gets it wrong can always be traced back.
+ * The only rewrite that happens here is a benign clean-up: a UK mobile typed
+ * without its leading zero (7700900123) is repaired to 07700900123, and inner
+ * spaces are removed, so what stores is always the tidy national form. The
+ * value the visitor actually typed is preserved in entry meta so any repair
+ * can be traced back.
  * ------------------------------------------------------------------------ */
 
-function cd_gf_phone_e164($value) {
+function cd_gf_phone_store_format($value) {
     list($norm, $kind) = cd_gf_phone_normalise($value);
-    if ($kind === 'uk')   return '+44' . substr($norm, 1);
+    if ($kind === 'uk')   return $norm;               // 07xxxxxxxxx, leading zero kept
     if ($kind === 'intl') return $norm;               // already carries its "+"
-    return '';
+    return '';                                        // unreadable, keep it verbatim
 }
 
 $GLOBALS['cd_gf_raw_phones'] = array();
@@ -565,14 +571,14 @@ add_filter('gform_save_field_value', function ($value, $lead, $field, $form) {
     if (!isset($phones[$form_id]) || !in_array((int) $field->id, $phones[$form_id], true)) return $value;
     if (trim((string) $value) === '') return $value;
 
-    $e164 = cd_gf_phone_e164($value);
-    if ($e164 === '') return $value;                  // unreadable, keep it verbatim
+    $stored = cd_gf_phone_store_format($value);
+    if ($stored === '') return $value;                // unreadable, keep it verbatim
 
     $GLOBALS['cd_gf_raw_phones'][(int) $field->id] = array(
         'raw'    => (string) $value,
         'tariff' => cd_gf_phone_tariff(cd_gf_phone_normalise($value)[0]),
     );
-    return $e164;
+    return $stored;
 }, 10, 4);
 
 // Keep the original alongside the stored value, and mark numbers that cost
