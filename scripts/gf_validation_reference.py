@@ -57,9 +57,8 @@ def normalise_phone(raw):
         return digits, "uk"
     # Only promote a bare mobile missing its leading zero when the raw input is
     # digits and spaces. "(724) 746-3096" is North American and must not become
-    # a plausible UK mobile.
-    if len(digits) == 10 and digits[0] == "7" and re.fullmatch(r"[\d\s]+", s):
-        return "0" + digits, "uk"
+    # a plausible UK mobile. By instruction (2026-08-03) a bare number is NOT
+    # promoted: it is refused so the person re-enters it with the leading 0.
     return digits, "bare"
 
 

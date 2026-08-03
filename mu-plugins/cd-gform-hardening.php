@@ -231,18 +231,13 @@ function cd_gf_phone_normalise($raw) {
     if (substr($digits, 0, 1) === '0') {
         return array($digits, 'uk');
     }
-    // A UK mobile typed without its leading zero: 7863348067 -> 07863348067.
-    // This is the single most common genuine mistake in the entry history.
-    //
-    // Only promote when the raw input is bare digits and spaces. North American
-    // numbers announce themselves with brackets and dashes, and "(724) 746-3096"
-    // would otherwise become "07247463096" and be stored as a UK mobile. That is
-    // in the real entry data: a US steel rigging company, silently converted into
-    // a plausible British number somebody would eventually dial.
-    if (strlen($digits) === 10 && substr($digits, 0, 1) === '7'
-        && preg_match('/^[\d\s]+$/', $s)) {
-        return array('0' . $digits, 'uk');
-    }
+    // A number with no leading zero and no country code is treated as "bare"
+    // and REFUSED (see cd_gf_phone_is_valid -> 'no_country_code'). By explicit
+    // instruction we do NOT silently promote a bare 10-digit mobile to 07...:
+    // an incorrectly formatted number must be blocked so the person re-enters it
+    // correctly, rather than the site guessing. This also avoids the old trap of
+    // turning a North American number like "(724) 746-3096" into a plausible UK
+    // mobile nobody could actually dial.
     return array($digits, 'bare');
 }
 
