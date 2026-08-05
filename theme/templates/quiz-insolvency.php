@@ -154,7 +154,12 @@ get_header();
                                             <p class="cd-calc-form__lead">Enter your details to see your initial result. You can also request a free, confidential call to discuss your company&rsquo;s position.</p>
                                             <?php echo do_shortcode( '[gravityform name="Insolvency Calculator" title="false" ajax="true"]' ); ?>
                                             <div class="cd-get-results-container">
-                                                <button type="submit" form="gform_38" class="cd-get-results-btn">Show My Initial Result</button>
+                                                <?php // The native GF submit (#gform_submit_button_38) is hidden by
+                                                      // style.css; a plain HTML5 `form="gform_38"` submit skipped GF's
+                                                      // own onclick + AJAX hook so the form never posted. Click the
+                                                      // hidden native button instead — that runs GF's onclick (sets
+                                                      // gf_submitting_38 + triggers the form's submit handler chain). ?>
+                                                <button type="button" class="cd-get-results-btn" onclick="var b=document.getElementById('gform_submit_button_38'); if(b){b.click();} return false;">Show My Initial Result</button>
                                             </div>
                                             <p class="cd-calc-form__micro">Free &middot; Confidential &middot; No obligation</p>
                                             <p class="cd-calc-form__privacy">We will use these details to provide your assessment and contact you about your company&rsquo;s position. Read our <a href="/privacy-policy/">Privacy Policy</a>.</p>
