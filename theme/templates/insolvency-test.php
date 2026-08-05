@@ -41,7 +41,7 @@ get_header();
     Back
 </button>
 
-<div class="cd-itest-panel">
+<div class="cd-itest-panel cd-itest-panel--intro">
 
     <?php // ── STEP 0 · INTRO ─────────────────────────────────────────── ?>
     <section class="cd-itest-step cd-itest-step--active" data-stage="0" id="cd-itest-step-intro" role="group" aria-label="Introduction">
@@ -220,8 +220,15 @@ body.page-template-insolvency-test {
 }
 body.page-template-insolvency-test .cd-itest-main {
     max-width: 1040px; margin: 0 auto; padding: var(--cdi-sp-5) var(--cdi-sp-2) var(--cdi-sp-6);
-    font-family: Arial, "Segoe UI", Roboto, -apple-system, sans-serif;
+    /* System font stack first so Windows gets Segoe UI and macOS gets SF —
+       matches the design mockup rendering. Arial is a last-resort fallback. */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     color: var(--cdi-text); line-height: 1.6; font-size: var(--cdi-fs-base);
+}
+body.page-template-insolvency-test .cd-itest-main,
+body.page-template-insolvency-test .cd-itest-main * {
+    /* Beat the site's global heading + text font declarations. */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 body.page-template-insolvency-test .cd-itest-main *,
 body.page-template-insolvency-test .cd-itest-main *::before,
@@ -244,9 +251,14 @@ body.page-template-insolvency-test .cd-itest-main *::after { box-sizing: border-
 .cd-itest-panel {
     background: #fff; border: 1px solid var(--cdi-border); border-radius: 14px;
     box-shadow: 0 1px 3px rgba(0,40,86,.06);
-    padding: var(--cdi-sp-5); max-width: 720px; min-height: 460px; margin: 0 auto;
+    padding: var(--cdi-sp-4); max-width: 720px; margin: 0 auto;
     transition: min-height .25s ease;
+    /* Panel sizes to its content by default; the intro screen (which has the
+       most content) still uses a generous min-height, applied via a class
+       toggled by the goTo() JS. Question screens fit their few options snugly
+       rather than showing empty space below. */
 }
+.cd-itest-panel.cd-itest-panel--intro { min-height: 460px; }
 .cd-itest-step { display: none; }
 .cd-itest-step.cd-itest-step--active { display: block; animation: cdItestFade .3s ease; }
 @keyframes cdItestFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -426,6 +438,10 @@ body.page-template-insolvency-test .cd-itest-result-title {
         if (!next) return;
         next.classList.add('cd-itest-step--active');
         if (stepHistory[stepHistory.length - 1] !== id) stepHistory.push(id);
+        // Panel min-height only on the intro (which has the most content); on
+        // shorter question screens the panel snaps to its natural size.
+        var panel = document.querySelector('.cd-itest-panel');
+        if (panel) panel.classList.toggle('cd-itest-panel--intro', id === 'intro');
         var pw = document.getElementById('cd-itest-progressWrap');
         var back = document.getElementById('cd-itest-backBtn');
         if (id === 'intro' || id === 'result') {
