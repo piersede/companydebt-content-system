@@ -498,7 +498,11 @@ function cd_itest_bootstrap($request) {
                               array('text' => 'Yes', 'value' => 'yes'),
                               array('text' => 'No',  'value' => 'no'),
                           )),
-                    array('id' => 4, 'type' => 'phone',    'label' => 'Phone',          'isRequired' => false),
+                    // phoneFormat MUST be 'international' — GF defaults phone
+                    // fields to 'standard', which is US-format validation and
+                    // rejects every UK number (found live 2026-08-05: it was
+                    // silently blocking every "Yes, please call me" submission).
+                    array('id' => 4, 'type' => 'phone',    'label' => 'Phone',          'isRequired' => false, 'phoneFormat' => 'international'),
                     array('id' => 5, 'type' => 'text',     'label' => 'Preferred time', 'isRequired' => false),
                     array('id' => 6, 'type' => 'text',     'label' => 'Risk tier',      'isRequired' => false),
                     array('id' => 7, 'type' => 'textarea', 'label' => 'Quiz payload',   'isRequired' => false),
@@ -556,7 +560,7 @@ function cd_itest_bootstrap($request) {
             if (!$has_named($form, 'Insolvency Test — internal lead')) {
                 $id = uniqid('cd_', true);
                 $form['notifications'][$id] = array(
-                    'id' => $id, 'name' => 'Insolvency Test — internal lead', 'event' => 'form_submission', 'isActive' => true,
+                    'id' => $id, 'name' => 'Insolvency Test — internal lead', 'event' => 'form_submission', 'isActive' => true, 'service' => 'wordpress',
                     'to' => $internal_to, 'fromName' => 'Company Debt Website', 'from' => '{admin_email}',
                     'subject' => 'Insolvency Test lead — {Risk tier:6} — {First name:1}',
                     'message' => "New Insolvency Test lead received.\n\nRisk tier: {Risk tier:6}\nWants call: {Wants call:3}\nPreferred time: {Preferred time:5}\n\nName: {First name:1}\nEmail: {Email:2}\nPhone: {Phone:4}\n\nLanding page: {Landing page:8}\nReferring page: {Referring page:9}\n\nQuiz payload (JSON):\n{Quiz payload:7}\n",
@@ -567,7 +571,7 @@ function cd_itest_bootstrap($request) {
             if (!$has_named($form, 'Insolvency Test — visitor result')) {
                 $id = uniqid('cd_', true);
                 $form['notifications'][$id] = array(
-                    'id' => $id, 'name' => 'Insolvency Test — visitor result', 'event' => 'form_submission', 'isActive' => true,
+                    'id' => $id, 'name' => 'Insolvency Test — visitor result', 'event' => 'form_submission', 'isActive' => true, 'service' => 'wordpress',
                     'toType' => 'field', 'to' => '2',
                     'fromName' => 'Company Debt', 'from' => 'info@companydebt.com',
                     'subject' => 'Your Insolvency Test result — {Risk tier:6}',
