@@ -114,12 +114,16 @@ body.page-template-insolvency-test .cd-itest-main *::after {
 /* Page background — the site's page-wrapper otherwise shows through white */
 body.page-template-insolvency-test { background: var(--cdi-bg) !important; }
 
-/* Progress bar (above the panel) */
+/* Progress bar (above the panel). Hidden by default — only shown between
+   the cashflow and risk steps, toggled by JS via .cd-itest-show. */
 body.page-template-insolvency-test .cd-itest-progress-wrap {
-    display: block !important;
+    display: none !important;
     max-width: 720px !important;
     margin: 0 auto var(--cdi-sp-3) !important;
     padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-progress-wrap.cd-itest-show {
+    display: block !important;
 }
 body.page-template-insolvency-test .cd-itest-progress-track {
     display: block !important;
@@ -669,12 +673,17 @@ body.page-template-insolvency-test .cd-itest-steps-ol li::marker {
     font-weight: 800 !important;
 }
 
-/* Callout panels — personal guarantee (warm) + creditor duty (warn) */
+/* Callout panels — personal guarantee (warm) + creditor duty (warn).
+   Hidden by default; JS reveals via .cd-itest-show when the visitor's
+   answers say the panel is relevant. */
 body.page-template-insolvency-test .cd-itest-callout {
-    display: block !important;
+    display: none !important;
     border-radius: 10px !important;
     padding: var(--cdi-sp-3) !important;
     margin: 0 0 var(--cdi-sp-3) !important;
+}
+body.page-template-insolvency-test .cd-itest-callout.cd-itest-show {
+    display: block !important;
 }
 body.page-template-insolvency-test .cd-itest-callout--warm { background: var(--cdi-warm-bg) !important; border: 1px solid var(--cdi-warm-bd) !important; }
 body.page-template-insolvency-test .cd-itest-callout--warn { background: var(--cdi-warn-bg) !important; border: 1px solid var(--cdi-warn-bd) !important; }
@@ -722,9 +731,10 @@ body.page-template-insolvency-test .cd-itest-cta-block .cd-itest-note-sm {
     text-align: center !important;
 }
 
-/* Quiet confirmation at bottom of result */
+/* Quiet confirmation at bottom of result. Hidden until the capture step
+   successfully submits and JS reveals via .cd-itest-show. */
 body.page-template-insolvency-test .cd-itest-confirm-quiet {
-    display: flex !important;
+    display: none !important;
     align-items: flex-start !important;
     gap: var(--cdi-sp-1) !important;
     background: transparent !important;
@@ -734,6 +744,9 @@ body.page-template-insolvency-test .cd-itest-confirm-quiet {
     color: var(--cdi-grey) !important;
     font-size: var(--cdi-fs-sm) !important;
     line-height: 1.5 !important;
+}
+body.page-template-insolvency-test .cd-itest-confirm-quiet.cd-itest-show {
+    display: flex !important;
 }
 body.page-template-insolvency-test .cd-itest-confirm-quiet__tick {
     flex-shrink: 0 !important;

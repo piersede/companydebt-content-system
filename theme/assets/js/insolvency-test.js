@@ -75,11 +75,15 @@
         var pw = document.getElementById('cd-itest-progressWrap');
         var back = document.getElementById('cd-itest-backBtn');
 
+        // Progress bar + Back button visibility toggled via .cd-itest-show
+        // class (not inline style) because the CSS uses `display: … !important`
+        // on the base rule to beat the site's global !important rules, and
+        // !important beats inline style.
         if (id === 'intro' || id === 'result') {
-            pw.style.display = 'none';
+            pw.classList.remove('cd-itest-show');
             back.classList.remove('cd-itest-show');
         } else {
-            pw.style.display = 'block';
+            pw.classList.add('cd-itest-show');
             document.getElementById('cd-itest-progressFill').style.width = (STAGES[id] * 100) + '%';
             document.getElementById('cd-itest-progressLabel').textContent = LABELS[id] || '';
             back.classList.add('cd-itest-show');
@@ -351,8 +355,9 @@
             return '<li>' + escapeHtml(o) + '</li>';
         }).join('');
 
-        document.getElementById('cd-itest-pgNote').style.display       = hasPersonalGuarantee ? 'block' : 'none';
-        document.getElementById('cd-itest-creditorNote').style.display = hasPreferential      ? 'block' : 'none';
+        // Class toggle rather than inline style — see progress-wrap note above.
+        document.getElementById('cd-itest-pgNote').classList.toggle('cd-itest-show', hasPersonalGuarantee);
+        document.getElementById('cd-itest-creditorNote').classList.toggle('cd-itest-show', hasPreferential);
 
         return { level: level, score: score, forceUrgent: forceUrgent };
     }
@@ -434,7 +439,7 @@
                 banner.innerHTML = tick + '<span>Your result has been sent to ' + escapeHtml(email) +
                     '. You selected email only — we will not call unless you request one.</span>';
             }
-            banner.style.display = 'flex';
+            banner.classList.add('cd-itest-show');
 
             goTo('result');
             ga('insolvency_test_result', { tier: result.level, score: result.score });
