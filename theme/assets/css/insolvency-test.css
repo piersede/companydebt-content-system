@@ -27,15 +27,23 @@
  */
 
 /* ================================================================== */
-/* 1. RESET — strip site influence                                    */
+/* 1. NO CSS RESET                                                     */
 /* ================================================================== */
-
-body.page-template-insolvency-test .cd-itest-main,
-body.page-template-insolvency-test .cd-itest-main *,
-body.page-template-insolvency-test .cd-itest-main *::before,
-body.page-template-insolvency-test .cd-itest-main *::after {
-    all: revert;
-}
+/*
+ * Deliberately no `all: revert` reset here. An earlier iteration tried
+ * `all: revert !important` on .cd-itest-main + all descendants; that
+ * clobbered SVG stroke/fill (the inline checkmarks use
+ * `stroke="currentColor" fill="none"` attributes, which the reset
+ * flattened to `none`, rendering the SVGs invisible), and it also broke
+ * initially-hidden elements whose `style="display:none"` was being beaten
+ * by `display: <val> !important` on base rules.
+ *
+ * Instead, every rule below is scoped `body.page-template-insolvency-test
+ * <class>` — specificity (0,2,1) — plus `!important` on every property
+ * that matters. That combination beats the site's global rules like
+ * `body.page p { font-size: 18px }` (specificity (0,1,2)) without touching
+ * SVGs or any other element's initial state.
+ */
 
 /* ================================================================== */
 /* 2. DESIGN TOKENS                                                    */
@@ -92,7 +100,6 @@ body.page-template-insolvency-test .cd-itest-main {
 /* ================================================================== */
 
 body.page-template-insolvency-test .cd-itest-main {
-    all: revert !important;
     display: block !important;
     max-width: 1040px !important;
     margin: 0 auto !important;
