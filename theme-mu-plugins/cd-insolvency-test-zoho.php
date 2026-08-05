@@ -63,42 +63,67 @@ add_action('init', function () {
     add_filter("gform_is_asynchronous_notifications_enabled_{$form_id}", '__return_false', 99);
 }, 20);
 
-// 2. Rehydrate the saved entry before GF hands it to the notification
-//    renderer. Runs at PHP_INT_MAX so any other entry filters have
-//    already had their say.
-add_filter('gform_entry_post_save', 'cd_itest_rehydrate_entry_for_notifications', PHP_INT_MAX, 2);
-function cd_itest_rehydrate_entry_for_notifications($entry, $form) {
-    $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
-    if (!$target_id || (int) rgar($form, 'id') !== $target_id) {
-        return $entry;
+// 2. Suppress GF's own notification send for this form, then fire the
+//    notifications ourselves from gform_entry_created with a freshly
+//    loaded entry.
+//
+//    Proven necessary 2026-08-05: firing the SAME notifications on the
+//    SAME stored entry via POST /wp-json/gf/v2/entries/{id}/notifications
+//    produced a fully-populated email, while the automatic send during
+//    POST /wp-json/gf/v2/forms/46/submissions produced empty merge tags.
+//    So the entry is fine — only the timing of GF's own send on the
+//    /submissions path is broken. Rather than fight that pipeline, we
+//    take ownership of the send.
+//
+//    $cd_itest_manual_send guards against suppressing our OWN send.
+$GLOBALS['cd_itest_manual_send'] = false;
+
+add_filter('gform_disable_notification', 'cd_itest_suppress_native_notification', PHP_INT_MAX, 5);
+function cd_itest_suppress_native_notification($is_disabled, $notification, $form, $entry, $data = array()) {
+    if (!empty($GLOBALS['cd_itest_manual_send'])) {
+        return $is_disabled; // our own send in progress — let it through
     }
+    $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
+    if ($target_id && (int) rgar($form, 'id') === $target_id) {
+        return true; // suppress GF's automatic (broken-context) send
+    }
+    return $is_disabled;
+}
+
+// Fire our own notifications once the entry is saved and readable. Runs
+// after the Zoho push (priority 10) so a Zoho failure can't block the
+// internal lead email.
+add_action('gform_entry_created', 'cd_itest_send_notifications_manually', 20, 2);
+function cd_itest_send_notifications_manually($entry, $form) {
+    $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
+    if (!$target_id || (int) rgar($form, 'id') !== $target_id) return;
 
     $entry_id = absint(rgar($entry, 'id'));
     if (!$entry_id) {
-        if (class_exists('GFCommon')) {
-            \GFCommon::log_error('[cd-insolvency-test] notification repair: saved entry has no entry ID.');
-        }
-        return $entry;
+        cd_itest_zoho_record_error('notif_no_entry_id', 'Manual notification send: entry has no id');
+        return;
     }
 
     $fresh = \GFAPI::get_entry($entry_id);
     if (is_wp_error($fresh)) {
-        if (class_exists('GFCommon')) {
-            \GFCommon::log_error(sprintf(
-                '[cd-insolvency-test] notification repair: could not reload entry %d: %s',
-                $entry_id, $fresh->get_error_message()
-            ));
-        }
-        return $entry;
+        cd_itest_zoho_record_error('notif_entry_reload_failed', $fresh->get_error_message(), array('entry_id' => $entry_id));
+        return;
     }
 
-    if (class_exists('GFCommon')) {
-        \GFCommon::log_debug(sprintf(
-            '[cd-insolvency-test] notification repair: rehydrated entry %d before notifications.',
-            $entry_id
-        ));
+    $GLOBALS['cd_itest_manual_send'] = true;
+    try {
+        $sent = \GFAPI::send_notifications($form, $fresh, 'form_submission');
+        if (class_exists('GFCommon')) {
+            \GFCommon::log_debug(sprintf(
+                '[cd-insolvency-test] manual notification send for entry %d: %s',
+                $entry_id, wp_json_encode($sent)
+            ));
+        }
+    } catch (\Throwable $e) {
+        cd_itest_zoho_record_error('notif_send_exception', $e->getMessage(), array('entry_id' => $entry_id));
+    } finally {
+        $GLOBALS['cd_itest_manual_send'] = false;
     }
-    return $fresh;
 }
 
 // REST route for the pagehide abandonment beacon. Previously the beacon
