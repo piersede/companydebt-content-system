@@ -110,6 +110,12 @@ function cd_itest_send_notifications_manually($entry, $form) {
         return;
     }
 
+    // Swap the raw JSON payload for a plain-English summary in the copy of
+    // the entry we hand to the notification renderer. The STORED entry keeps
+    // the JSON (Zoho + any later analysis still get the machine-readable
+    // version — that push runs at priority 10 with its own copy).
+    $fresh['7'] = cd_itest_humanise_answers(rgar($fresh, '7'));
+
     $GLOBALS['cd_itest_manual_send'] = true;
     try {
         $sent = \GFAPI::send_notifications($form, $fresh, 'form_submission');
@@ -338,6 +344,93 @@ function cd_itest_zoho_push($entry, $form) {
     } catch (\Throwable $e) {
         cd_itest_zoho_record_error('exception', $e->getMessage());
     }
+}
+
+/**
+ * Turn the stored quiz JSON into a plain-English summary for the internal
+ * lead email. Whoever picks up the phone needs to see what the director
+ * actually said, not a JSON blob.
+ *
+ * Falls back to returning the input unchanged if it isn't decodable, so a
+ * payload-shape change can never blank the email.
+ */
+function cd_itest_humanise_answers($json) {
+    $raw = trim((string) $json);
+    if ($raw === '') return '';
+    $d = json_decode($raw, true);
+    if (!is_array($d)) return $raw;
+
+    $a = isset($d['answers']) && is_array($d['answers']) ? $d['answers'] : array();
+
+    $cashflow = array(
+        'difficulty' => 'Can pay, but only with difficulty',
+        'late'       => 'Some payments are already late',
+        'cannot'     => 'Cannot pay everything',
+        'unsure'     => 'Not sure',
+    );
+    $warning = array(
+        'hmrc_overdue'            => 'HMRC payments overdue',
+        'payroll_risk'            => 'Payroll may not be met',
+        'supplier_pressure'       => 'Suppliers chasing / reducing credit',
+        'bank_limit'              => 'Bank account or overdraft at its limit',
+        'personal_funds_reliance' => 'Relying on personal funds',
+    );
+    $position = array(
+        'assets_more' => 'Cash and assets worth more than it owes',
+        'about_same'  => 'Cash and assets worth about the same as it owes',
+        'debts_more'  => 'Owes more than its cash and assets are worth',
+        'unsure'      => 'Not sure',
+    );
+    $debtrange = array(
+        'under10k'  => 'Under £10,000',
+        '10-25k'    => '£10,000 – £25,000',
+        '25-50k'    => '£25,000 – £50,000',
+        '50-100k'   => '£50,000 – £100,000',
+        '100-250k'  => '£100,000 – £250,000',
+        'over250k'  => 'More than £250,000',
+        'unsure'    => 'Not sure',
+    );
+    $risk = array(
+        'personal_guarantee' => 'Has signed a personal guarantee',
+        'statutory'          => 'Statutory demand / winding-up petition / enforcement notice received',
+        'stopped_trading'    => 'Company has stopped trading',
+        'preferential'       => 'Deciding which creditors to pay',
+    );
+
+    $map_one = function ($map, $key) {
+        if ($key === null || $key === '') return '—';
+        return isset($map[$key]) ? $map[$key] : $key;
+    };
+    $map_many = function ($map, $vals) {
+        if (!is_array($vals) || !$vals) return 'None selected';
+        $out = array();
+        foreach ($vals as $v) $out[] = isset($map[$v]) ? $map[$v] : $v;
+        return implode("\n  • ", $out);
+    };
+
+    $lines = array();
+    $lines[] = 'Can the company pay its bills?  ' . $map_one($cashflow, rgar($a, 'cashflow'));
+    $lines[] = '';
+    $lines[] = 'Warning signs happening now:';
+    $lines[] = '  • ' . $map_many($warning, isset($a['warning']) ? $a['warning'] : array());
+    $lines[] = '';
+    $lines[] = 'Owns vs owes:  ' . $map_one($position, rgar($a, 'position'));
+    if (!empty($a['debtRange'])) {
+        $lines[] = 'Roughly owed in total:  ' . $map_one($debtrange, $a['debtRange']);
+    }
+    $lines[] = '';
+    $lines[] = 'Risk factors:';
+    $lines[] = '  • ' . $map_many($risk, isset($a['risk']) ? $a['risk'] : array());
+
+    if (isset($d['score'])) {
+        $lines[] = '';
+        $lines[] = 'Score: ' . (int) $d['score'] . (!empty($d['forceUrgent']) ? ' (urgent trigger fired)' : '');
+    }
+    if (!empty($d['duration_ms'])) {
+        $lines[] = 'Time taken: ' . max(1, (int) round(((int) $d['duration_ms']) / 1000)) . ' seconds';
+    }
+
+    return implode("\n", $lines);
 }
 
 /**
