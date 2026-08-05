@@ -2,27 +2,27 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-05",
   "audited_by": "claude-opus-4-7",
-  "prose_sha": "f780a86eb0878a041e238f0d71d140c97ae6e4494d0dc8a12a018a401b63eec8",
+  "prose_sha": "fe88b1073bb7927b26d3de694ae73d9176881fc5520717cc9a220335ec67f142",
   "passes_since_baseline": {
-    "count": 9,
-    "baseline_ref": "file-creation",
-    "override_reason": "Hardening land pass; git counter exceeds 4 due to iterative gate development, not editorial revision",
+    "count": 0,
+    "baseline_ref": "250e54be6ea0",
+    "override_reason": "CTA insertion, no prose changes; passes-since-redraft counter high due to hardening iterations",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3958,
-      "you": 88,
-      "you_per_1k": 22.2,
-      "we": 27,
-      "we_per_1k": 6.8,
+      "words": 4061,
+      "you": 91,
+      "you_per_1k": 22.4,
+      "we": 30,
+      "we_per_1k": 7.4,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 87,
-      "cv": 0.36,
+      "paras": 95,
+      "cv": 0.433,
       "uniform": false
     },
     "scene_proxy": 0
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Post-hardening pass. Gate now includes checks 30 (payoff-intent meta-refs), 31 (jargon first-mention), 32 (algorithmic shorthand). All pass. Redraft counter and stranger-read report fields now available.",
+    "notes": "Added two CTA blocks matching the liquidation-page pattern: cd-cta--test after the solvency H2 (30-Second Insolvency Check, Check My Company), cd-cta--phone after the winding-up-petition H3 (Free Director Helpline, tel 0800 074 6757). Both carry Confidential trust markers per persona doc requirement. UTM campaign tagged closing-assessment for the test CTA.",
     "stranger_read_report": null
   },
   "verdict": "pass"
