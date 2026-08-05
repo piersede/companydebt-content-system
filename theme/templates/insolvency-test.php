@@ -74,8 +74,13 @@ get_header();
     <?php // ── STEP 1 · CASHFLOW (auto-advance) ─────────────────────────── ?>
     <section class="cd-itest-step" data-stage="1" id="cd-itest-step-cashflow" role="group" aria-label="Question 1 of 4: cashflow">
         <h2 class="cd-itest-q">Can the company currently pay its bills when they fall due?</h2>
+        <?php // "Yes, comfortably" removed 2026-08-05 (Piers): a director in
+              // that position would not have started this check, so offering
+              // it as an answer implied the tool is for anyone rather than
+              // for people already worried about the company. The JS scorer
+              // has no handler for 'comfortable' so nothing else needs
+              // touching there. ?>
         <ul class="cd-itest-options" id="cd-itest-opts-cashflow">
-            <li class="cd-itest-opt"><input type="radio" name="cd_cashflow" id="cd-cf-1" value="comfortable"><label for="cd-cf-1">Yes, comfortably</label></li>
             <li class="cd-itest-opt"><input type="radio" name="cd_cashflow" id="cd-cf-2" value="difficulty"><label for="cd-cf-2">Yes, but only with difficulty</label></li>
             <li class="cd-itest-opt"><input type="radio" name="cd_cashflow" id="cd-cf-3" value="late"><label for="cd-cf-3">Some payments are already late</label></li>
             <li class="cd-itest-opt"><input type="radio" name="cd_cashflow" id="cd-cf-4" value="cannot"><label for="cd-cf-4">No, it cannot pay everything</label></li>
