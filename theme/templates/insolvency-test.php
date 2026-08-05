@@ -143,20 +143,44 @@ get_header();
     </section>
 
     <?php // ── STEP 5 · CAPTURE (value exchange before result) ─────────── ?>
+    <?php // Rebuilt 2026-08-05 per Piers's spec: heading reframed ("Your
+          // Result Is Ready"), call-preference options styled as visible
+          // radio cards with a subtitle rather than plain input-lookalikes,
+          // "No, email only" defaulted to checked so the low-pressure route
+          // is the path of least resistance, large sidebar trust panel
+          // (including Chris Andersen photo + Reviews.io claim) replaced
+          // with two short reassurance lines directly under the CTA. The
+          // practitioner attribution moved to the result page, where the
+          // named authority actually earns its keep. ?>
     <section class="cd-itest-step" data-stage="5" id="cd-itest-step-capture" role="group" aria-label="Your details">
-        <h2 class="cd-itest-q">Where Should We Send Your Result?</h2>
+        <h2 class="cd-itest-q">Your Result Is Ready</h2>
         <p class="cd-itest-lede">Enter your details to view your personalised result and receive a copy by email.</p>
+
         <div class="cd-itest-field-grid">
             <div class="cd-itest-field"><label for="cd-c-name">First name</label><input type="text" id="cd-c-name" autocomplete="given-name" placeholder="Jordan"></div>
             <div class="cd-itest-field"><label for="cd-c-email">Email address</label><input type="email" id="cd-c-email" autocomplete="email" placeholder="you@company.co.uk"></div>
         </div>
-        <div class="cd-itest-field" style="margin-bottom:20px">
-            <label>Would you like an adviser to talk through your result?</label>
-            <ul class="cd-itest-options cd-itest-options--compact">
-                <li class="cd-itest-opt"><input type="radio" name="cd_callpref" id="cd-cp-yes" value="yes"><label for="cd-cp-yes">Yes, please call me</label></li>
-                <li class="cd-itest-opt"><input type="radio" name="cd_callpref" id="cd-cp-no" value="no"><label for="cd-cp-no">No, email only</label></li>
+
+        <div class="cd-itest-field cd-itest-callpref">
+            <label class="cd-itest-callpref__q">Would You Like Someone to Talk Through Your Result?</label>
+            <ul class="cd-itest-options cd-itest-callpref-options">
+                <li class="cd-itest-opt cd-itest-opt--rich">
+                    <input type="radio" name="cd_callpref" id="cd-cp-yes" value="yes">
+                    <label for="cd-cp-yes">
+                        <span class="cd-itest-opt__title">Yes, please call me</span>
+                        <span class="cd-itest-opt__sub">I would like a confidential call about my result.</span>
+                    </label>
+                </li>
+                <li class="cd-itest-opt cd-itest-opt--rich">
+                    <input type="radio" name="cd_callpref" id="cd-cp-no" value="no" checked>
+                    <label for="cd-cp-no">
+                        <span class="cd-itest-opt__title">No, email only</span>
+                        <span class="cd-itest-opt__sub">Send my result by email. No call will be made.</span>
+                    </label>
+                </li>
             </ul>
         </div>
+
         <div class="cd-itest-reveal" id="cd-itest-callbackFields">
             <div class="cd-itest-field"><label for="cd-c-phone">Phone number</label><input type="tel" id="cd-c-phone" autocomplete="tel" placeholder="07&hellip;"></div>
             <div class="cd-itest-field"><label>Preferred time</label>
@@ -168,30 +192,14 @@ get_header();
                 </ul>
             </div>
         </div>
+
         <button class="cd-itest-btn-primary" type="button" id="cd-itest-capture-submit">See My Result</button>
-        <p class="cd-itest-error" id="cd-itest-err-capture">Please add your name, a valid email address, and choose whether you would like a call.</p>
+        <p class="cd-itest-error" id="cd-itest-err-capture">Please add your name and a valid email address.</p>
         <p class="cd-itest-error" id="cd-itest-err-network" style="display:none">We could not save your details just now. Please try again, or call <a href="tel:08000746757">0800 074 6757</a>.</p>
 
-        <div class="cd-itest-sidebar-trust">
-            <div class="cd-itest-expert-row">
-                <div class="cd-itest-expert-photo">
-                    <img src="<?php echo esc_url( $cd_itest_chris_photo ); ?>" alt="Chris Andersen, Licensed Insolvency Practitioner" width="64" height="64" loading="lazy">
-                </div>
-                <div>
-                    <div class="cd-itest-expert-name">Chris Andersen</div>
-                    <div class="cd-itest-expert-role">Licensed Insolvency Practitioner</div>
-                </div>
-            </div>
-            <ul>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Your result is emailed immediately; a call only happens if you request one</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Any conversation is confidential and without obligation</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Company Debt has advised UK company directors since 2007</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Formal insolvency appointments are handled by licensed insolvency practitioners</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Rated 5.0 by clients on Reviews.io</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>We will not sell your details</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Prefer to talk now? Call <a href="tel:08000746757">0800 074 6757</a></li>
-            </ul>
-        </div>
+        <p class="cd-itest-capture-reassure">Your result will be sent immediately. A call will only be made if you request one.</p>
+        <p class="cd-itest-capture-trust">Your details are treated confidentially. Company Debt has helped UK company directors since 2007, with formal insolvency work handled by licensed insolvency practitioners.</p>
+        <p class="cd-itest-capture-phone">Prefer to speak now? Call <a href="tel:08000746757">0800 074 6757</a>.</p>
     </section>
 
     <?php // ── STEP 6 · RESULT (post-capture) ──────────────────────────── ?>
@@ -226,6 +234,20 @@ get_header();
             <p class="cd-itest-result-section__intro" id="cd-itest-resultOptionsIntro"></p>
             <ul id="cd-itest-resultOptions"></ul>
             <p class="cd-itest-result-section__note">These are possible routes rather than recommendations. The appropriate option depends on a review of the company&rsquo;s full financial position.</p>
+        </div>
+
+        <?php // Practitioner attribution — moved here from the capture screen
+              // where Piers felt Chris's photo + "Licensed Insolvency
+              // Practitioner" role next to the form made a nervous user
+              // think they were entering a formal insolvency process.
+              // Post-result it earns its keep as professional authority. ?>
+        <div class="cd-itest-attribution">
+            <div class="cd-itest-attribution__photo">
+                <img src="<?php echo esc_url( $cd_itest_chris_photo ); ?>" alt="Chris Andersen, Licensed Insolvency Practitioner" width="56" height="56" loading="lazy">
+            </div>
+            <p class="cd-itest-attribution__text">
+                This assessment has been developed with input from licensed insolvency practitioners, including <strong>Chris Andersen</strong>.
+            </p>
         </div>
 
         <div class="cd-itest-cta-block">

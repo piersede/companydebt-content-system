@@ -412,6 +412,63 @@ body.page-template-insolvency-test .cd-itest-opt input:focus-visible + label {
     outline-offset: 2px !important;
 }
 
+/* Rich radio cards (capture step call-preference) — a visible radio circle
+   on the left, a title, and a subtitle. Otherwise these look like text
+   inputs and users don't realise they're selectable. */
+body.page-template-insolvency-test .cd-itest-opt--rich label {
+    position: relative !important;
+    align-items: flex-start !important;
+    padding: 14px 18px 14px 48px !important;
+    min-height: 0 !important;
+    line-height: 1.4 !important;
+    display: block !important;
+}
+body.page-template-insolvency-test .cd-itest-opt--rich label::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 16px !important;
+    top: 18px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #c4cbd4 !important;
+    border-radius: 50% !important;
+    background: var(--cdi-white) !important;
+    box-sizing: border-box !important;
+    transition: border-color .15s, box-shadow .15s !important;
+}
+body.page-template-insolvency-test .cd-itest-opt--rich input:checked + label::before {
+    border-color: var(--cdi-orange) !important;
+    box-shadow: inset 0 0 0 5px var(--cdi-orange) !important;
+}
+body.page-template-insolvency-test .cd-itest-opt__title {
+    display: block !important;
+    font-size: var(--cdi-fs-base) !important;
+    font-weight: 700 !important;
+    color: var(--cdi-navy) !important;
+    line-height: 1.3 !important;
+    margin: 0 0 3px !important;
+}
+body.page-template-insolvency-test .cd-itest-opt__sub {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    font-weight: 400 !important;
+    color: var(--cdi-grey) !important;
+    line-height: 1.4 !important;
+}
+body.page-template-insolvency-test .cd-itest-callpref { margin-bottom: 16px !important; }
+body.page-template-insolvency-test .cd-itest-callpref__q {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    font-weight: 700 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    line-height: 1.4 !important;
+}
+body.page-template-insolvency-test .cd-itest-callpref-options {
+    gap: 10px !important;
+    margin-bottom: 0 !important;
+}
+
 /* ================================================================== */
 /* 7. BUTTONS                                                          */
 /* ================================================================== */
@@ -459,8 +516,8 @@ body.page-template-insolvency-test .cd-itest-btn-primary--cta {
 
 body.page-template-insolvency-test .cd-itest-field-grid {
     display: grid !important;
-    gap: var(--cdi-sp-2) !important;
-    margin-bottom: var(--cdi-sp-3) !important;
+    gap: 14px !important;
+    margin-bottom: var(--cdi-sp-2) !important;
 }
 body.page-template-insolvency-test .cd-itest-field {
     margin: 0 !important;
@@ -480,7 +537,9 @@ body.page-template-insolvency-test .cd-itest-field input[type=email],
 body.page-template-insolvency-test .cd-itest-field input[type=tel] {
     display: block !important;
     width: 100% !important;
-    padding: var(--cdi-sp-2) !important;
+    /* Tightened from var(--cdi-sp-2)=20px to 14/18px so fields feel like a
+       quick final step, not another stage of the assessment. */
+    padding: 14px 18px !important;
     border: 2px solid var(--cdi-border) !important;
     border-radius: 10px !important;
     font-size: var(--cdi-fs-base) !important;
@@ -519,71 +578,90 @@ body.page-template-insolvency-test .cd-itest-reveal.cd-itest-show {
 }
 
 /* ================================================================== */
-/* 9. CAPTURE SIDEBAR — expert / trust panel                           */
+/* 9. CAPTURE REASSURANCE (post-CTA)                                   */
 /* ================================================================== */
-
-body.page-template-insolvency-test .cd-itest-sidebar-trust {
-    background: var(--cdi-bg) !important;
-    border: 1px solid var(--cdi-border) !important;
-    border-radius: 12px !important;
-    padding: var(--cdi-sp-3) !important;
-    margin: var(--cdi-sp-4) 0 0 !important;
-}
-body.page-template-insolvency-test .cd-itest-expert-row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: var(--cdi-sp-2) !important;
-    align-items: center !important;
-    margin: 0 0 var(--cdi-sp-2) !important;
-}
-body.page-template-insolvency-test .cd-itest-expert-photo {
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    flex-shrink: 0 !important;
-    background: var(--cdi-white) !important;
-}
-body.page-template-insolvency-test .cd-itest-expert-photo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+/*
+ * Replaced the large boxed "sidebar-trust" panel that used to sit under
+ * the CTA on the capture screen with three short reassurance lines.
+ * Piers's spec (2026-08-05): the boxed panel introduced six more claims
+ * just as the user was ready to finish, made the page feel like a
+ * consultation funnel rather than a quick final step, and Chris Andersen's
+ * photo next to "Licensed Insolvency Practitioner" made nervous users
+ * think they were entering formal insolvency proceedings. The named
+ * practitioner attribution now lives on the result page instead.
+ */
+body.page-template-insolvency-test .cd-itest-capture-reassure {
     display: block !important;
-}
-body.page-template-insolvency-test .cd-itest-expert-name {
-    font-weight: 800 !important;
-    color: var(--cdi-navy) !important;
+    text-align: center !important;
     font-size: var(--cdi-fs-sm) !important;
-    line-height: 1.4 !important;
-}
-body.page-template-insolvency-test .cd-itest-expert-role {
-    font-size: var(--cdi-fs-xs) !important;
-    line-height: 1.4 !important;
-    color: var(--cdi-grey) !important;
-}
-body.page-template-insolvency-test .cd-itest-sidebar-trust ul {
-    list-style: none !important;
-    margin: 0 !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-text) !important;
+    font-weight: 600 !important;
+    margin: var(--cdi-sp-3) 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
-    display: grid !important;
-    gap: var(--cdi-sp-1) !important;
 }
-body.page-template-insolvency-test .cd-itest-sidebar-trust li {
-    display: flex !important;
-    gap: var(--cdi-sp-1) !important;
-    align-items: flex-start !important;
+body.page-template-insolvency-test .cd-itest-capture-trust {
+    display: block !important;
+    text-align: center !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.55 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    padding: 0 !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+body.page-template-insolvency-test .cd-itest-capture-phone {
+    display: block !important;
+    text-align: center !important;
     font-size: var(--cdi-fs-xs) !important;
     line-height: 1.5 !important;
     color: var(--cdi-grey) !important;
     margin: 0 !important;
     padding: 0 !important;
 }
-body.page-template-insolvency-test .cd-itest-sidebar-trust li svg {
-    flex-shrink: 0 !important;
-    margin-top: 3px !important;
-    color: var(--cdi-orange) !important;
+body.page-template-insolvency-test .cd-itest-capture-phone a {
+    color: var(--cdi-navy) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
 }
-body.page-template-insolvency-test .cd-itest-sidebar-trust li a {
+body.page-template-insolvency-test .cd-itest-capture-phone a:hover { color: var(--cdi-orange) !important; }
+
+/* Practitioner attribution on the result page (moved here from capture) —
+   subtle, unboxed, sitting just above the "Speak to Someone About Your
+   Result" CTA block so the professional authority reads at the moment of
+   decision. */
+body.page-template-insolvency-test .cd-itest-attribution {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--cdi-sp-2) !important;
+    margin: var(--cdi-sp-3) 0 0 !important;
+    padding: var(--cdi-sp-2) 0 0 !important;
+    border-top: 1px solid var(--cdi-border) !important;
+}
+body.page-template-insolvency-test .cd-itest-attribution__photo {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    background: var(--cdi-white) !important;
+}
+body.page-template-insolvency-test .cd-itest-attribution__photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+body.page-template-insolvency-test .cd-itest-attribution__text {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+}
+body.page-template-insolvency-test .cd-itest-attribution__text strong {
     color: var(--cdi-navy) !important;
     font-weight: 700 !important;
 }

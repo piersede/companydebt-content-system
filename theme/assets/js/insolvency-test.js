@@ -373,12 +373,14 @@
 
         var name = document.getElementById('cd-c-name').value.trim();
         var email = document.getElementById('cd-c-email').value.trim();
-        var callpref = document.querySelector('input[name="cd_callpref"]:checked');
+        // callpref defaults to "no" (checked in HTML) so it's always present —
+        // fall back to that if for any reason the DOM query misses.
+        var callpref = document.querySelector('input[name="cd_callpref"]:checked') || { value: 'no' };
         var errValidation = document.getElementById('cd-itest-err-capture');
         var errNetwork = document.getElementById('cd-itest-err-network');
         errNetwork.style.display = 'none';
 
-        if (!name || !emailRe.test(email) || !callpref) {
+        if (!name || !emailRe.test(email)) {
             errValidation.classList.add('cd-itest-show');
             return;
         }
