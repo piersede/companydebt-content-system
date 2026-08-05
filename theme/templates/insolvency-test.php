@@ -187,14 +187,49 @@ get_header();
 
     <?php // ── STEP 6 · RESULT (post-capture) ──────────────────────────── ?>
     <section class="cd-itest-step" data-stage="6" id="cd-itest-step-result" role="group" aria-label="Your result">
-        <div id="cd-itest-resultConfirmBanner" class="cd-itest-proof-strip" style="display:none;margin-bottom:24px"></div>
+
         <span class="cd-itest-result-badge" id="cd-itest-resultBadge"></span>
         <h2 class="cd-itest-result-title" id="cd-itest-resultTitle"></h2>
         <p class="cd-itest-result-urgency" id="cd-itest-resultUrgency"></p>
-        <div class="cd-itest-result-section"><h3>Why you received this result</h3><ul id="cd-itest-resultReasons"></ul></div>
-        <div id="cd-itest-pgNote" class="cd-itest-pg-note" style="display:none">You indicated that you may have signed a personal guarantee. This does not determine whether the company is insolvent, but it may affect your personal exposure if the company cannot repay the borrowing. Do not make payments or transfer assets without first understanding the terms of the guarantee.</div>
-        <div class="cd-itest-result-section"><h3>Options that may be relevant</h3><ul id="cd-itest-resultOptions"></ul></div>
-        <p class="cd-itest-note-sm">Prefer to talk sooner? Call <a href="tel:08000746757">0800 074 6757</a> &mdash; a member of our team is ready to help.</p>
+
+        <div class="cd-itest-result-section" id="cd-itest-resultReasonsSection">
+            <h3>Warning Signs Identified</h3>
+            <ul id="cd-itest-resultReasons"></ul>
+        </div>
+
+        <?php // Conditional panel: shown only if the visitor ticked "personal guarantee". ?>
+        <div id="cd-itest-pgNote" class="cd-itest-callout cd-itest-callout--warm" style="display:none">
+            <h4 class="cd-itest-callout__title">You Mentioned a Personal Guarantee</h4>
+            <p>A personal guarantee does not determine whether the company is insolvent, but it could make you personally responsible for some borrowing if the company cannot repay it. Have the guarantee reviewed before making decisions based on it.</p>
+        </div>
+
+        <?php // Conditional panel: shown only if the visitor ticked "deciding which creditors to pay". ?>
+        <div id="cd-itest-creditorNote" class="cd-itest-callout cd-itest-callout--warn" style="display:none">
+            <h4 class="cd-itest-callout__title">You Mentioned Deciding Which Creditors to Pay</h4>
+            <p>Until the position has been reviewed, take care not to favour particular creditors, repay connected parties or transfer company assets outside normal business activity.</p>
+        </div>
+
+        <div class="cd-itest-result-section">
+            <h3>What to Do Now</h3>
+            <ol class="cd-itest-steps-ol" id="cd-itest-resultSteps"></ol>
+        </div>
+
+        <div class="cd-itest-result-section" id="cd-itest-resultOptionsSection">
+            <h3>What a Professional Review May Consider</h3>
+            <p class="cd-itest-result-section__intro" id="cd-itest-resultOptionsIntro"></p>
+            <ul id="cd-itest-resultOptions"></ul>
+            <p class="cd-itest-result-section__note">These are possible routes rather than recommendations. The appropriate option depends on a review of the company&rsquo;s full financial position.</p>
+        </div>
+
+        <div class="cd-itest-cta-block">
+            <h3>Speak to Someone About Your Result</h3>
+            <a href="tel:08000746757" class="cd-itest-btn-primary cd-itest-btn-primary--cta">Request a Confidential Call</a>
+            <p class="cd-itest-note-sm">Prefer to speak now? Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation about your result.</p>
+        </div>
+
+        <div id="cd-itest-resultConfirmBanner" class="cd-itest-confirm-quiet" style="display:none"></div>
+
+        <p class="cd-itest-disclaimer">This screening result is based on the answers provided. It identifies warning signs but is not a formal determination of insolvency.</p>
     </section>
 
 </div>
@@ -378,6 +413,55 @@ body.page-template-insolvency-test .cd-itest-result-title {
     margin-bottom: var(--cdi-sp-3);
 }
 
+/* Conditional callout panels — personal guarantee (warm) + creditor duty (warn). */
+.cd-itest-callout {
+    border-radius: 10px; padding: var(--cdi-sp-3);
+    margin-bottom: var(--cdi-sp-3);
+}
+.cd-itest-callout--warm { background: #fff6ef; border: 1px solid #ffd9b3; }
+.cd-itest-callout--warn { background: #fdf2f2; border: 1px solid #f3c6c4; }
+body.page-template-insolvency-test .cd-itest-callout__title {
+    font-size: var(--cdi-fs-sm); font-weight: 800;
+    color: var(--cdi-navy);
+    margin: 0 0 var(--cdi-sp-1);
+    text-transform: none; letter-spacing: 0;
+}
+.cd-itest-callout p { margin: 0; color: var(--cdi-text); font-size: var(--cdi-fs-sm); line-height: 1.6; }
+
+/* "What to Do Now" numbered list — bold digit, tighter than default ol. */
+.cd-itest-steps-ol { margin: 0; padding-left: var(--cdi-sp-3); }
+.cd-itest-steps-ol li {
+    margin: 0 0 var(--cdi-sp-1);
+    color: var(--cdi-text); font-size: var(--cdi-fs-base); line-height: 1.6;
+}
+.cd-itest-steps-ol li::marker { color: var(--cdi-navy); font-weight: 800; }
+
+.cd-itest-result-section__intro { margin: 0 0 var(--cdi-sp-1); color: var(--cdi-grey); font-size: var(--cdi-fs-sm); }
+.cd-itest-result-section__note  { margin: var(--cdi-sp-1) 0 0; color: var(--cdi-grey); font-size: var(--cdi-fs-xs); font-style: italic; }
+
+/* Result-page CTA block — button + phone alt. */
+.cd-itest-cta-block {
+    background: var(--cdi-bg); border: 1px solid var(--cdi-border);
+    border-radius: 12px; padding: var(--cdi-sp-3);
+    margin: var(--cdi-sp-4) 0 var(--cdi-sp-3);
+    text-align: center;
+}
+body.page-template-insolvency-test .cd-itest-cta-block h3 {
+    font-size: var(--cdi-fs-md); font-weight: 800; color: var(--cdi-navy);
+    margin: 0 0 var(--cdi-sp-2); text-transform: none; letter-spacing: 0;
+}
+.cd-itest-btn-primary--cta { width: auto; padding: var(--cdi-sp-2) var(--cdi-sp-4); margin-bottom: var(--cdi-sp-2); }
+.cd-itest-cta-block .cd-itest-note-sm { text-align: center; }
+
+/* Quiet confirmation at bottom of result: subtle tick + one line of text. */
+.cd-itest-confirm-quiet {
+    display: flex; align-items: flex-start; gap: var(--cdi-sp-1);
+    background: transparent; border: 0; padding: var(--cdi-sp-1) 0;
+    margin-top: var(--cdi-sp-2);
+    color: var(--cdi-grey); font-size: var(--cdi-fs-sm);
+}
+.cd-itest-confirm-quiet__tick { flex-shrink: 0; color: #1e6b3a; margin-top: 2px; }
+
 .cd-itest-sidebar-trust {
     background: var(--cdi-bg); border: 1px solid var(--cdi-border);
     border-radius: 12px; padding: var(--cdi-sp-3); margin-top: var(--cdi-sp-4);
@@ -553,66 +637,151 @@ body.page-template-insolvency-test .cd-itest-result-title {
     }
 
     // --- Scoring / result render ---
+    // Copy + logic follow the "answers should shape the whole result" spec:
+    // wording is softened where the visitor only gave estimates, the "today"
+    // urgency phrasing is reserved for genuinely time-critical triggers, and
+    // options like CVL / Administration are only shown when the answers
+    // actually support them.
     function computeResult() {
-        var score = 0, reasons = [], forceUrgent = false;
         var cf = answers.cashflow;
-        if (cf === 'difficulty') { score += 2; reasons.push('the company can only pay its bills with difficulty'); }
-        else if (cf === 'late')    { score += 4; reasons.push('some payments to creditors are already late'); }
-        else if (cf === 'cannot')  { score += 6; forceUrgent = true; reasons.push('the company cannot currently pay everyone it owes'); }
-        else if (cf === 'unsure')  { score += 2; reasons.push('there is uncertainty about whether the company can meet its current commitments'); }
+        var hasStatutory        = answers.risk.indexOf('statutory') > -1;
+        var hasStoppedTrading   = answers.risk.indexOf('stopped_trading') > -1;
+        var hasPreferential     = answers.risk.indexOf('preferential') > -1;
+        var hasPersonalGuarantee = answers.risk.indexOf('personal_guarantee') > -1;
+        var hasPayrollRisk      = answers.warning.indexOf('payroll_risk') > -1;
+        var cannotPay = cf === 'cannot';
+        // "Today" wording is only used when a genuinely urgent trigger fired,
+        // not just because the total score crossed 14.
+        var todayJustified = hasStatutory || cannotPay || hasPayrollRisk;
+
+        var score = 0, reasons = [], forceUrgent = false;
+        if (cf === 'difficulty')      { score += 2; reasons.push('The company can only pay its bills with difficulty'); }
+        else if (cf === 'late')       { score += 4; reasons.push('Some payments to creditors are already late'); }
+        else if (cf === 'cannot')     { score += 6; forceUrgent = true; reasons.push('The company cannot currently pay all its bills'); }
+        else if (cf === 'unsure')     { score += 2; reasons.push('There is uncertainty about whether the company can meet its current commitments'); }
+
         var wmap = {
-            hmrc_overdue: [3, 'HMRC payments are overdue'],
-            payroll_risk: [3, 'payroll may not be met'],
-            supplier_pressure: [2, 'suppliers are chasing payment or reducing credit'],
-            bank_limit: [2, 'the bank account or overdraft is at its limit'],
-            personal_funds_reliance: [2, 'the company is relying on personal funds to keep going']
+            hmrc_overdue:            [3, 'HMRC payments are overdue'],
+            payroll_risk:            [3, 'Payroll may not be met'],
+            supplier_pressure:       [2, 'Suppliers are chasing payment or reducing credit'],
+            bank_limit:              [2, 'The bank account or overdraft is at its limit'],
+            personal_funds_reliance: [2, 'The company is relying on personal funds to keep going']
         };
         for (var i = 0; i < answers.warning.length; i++) {
             var m = wmap[answers.warning[i]];
             if (m) { score += m[0]; reasons.push(m[1]); }
         }
-        if (answers.position === 'debts_more') { score += 3; reasons.push('the company probably owes more than its cash and assets are worth'); }
-        else if (answers.position === 'unsure') { score += 1; reasons.push('it is unclear whether the company’s assets cover what it owes'); }
+
+        // Position phrasing softened — these are the visitor's estimates, not verified accounts.
+        if (answers.position === 'debts_more') { score += 3; reasons.push('The company may owe more than its cash and assets are worth'); }
+        else if (answers.position === 'unsure') { score += 1; reasons.push('It is unclear whether the company’s assets cover what it owes'); }
+
         var drmap = { '25-50k':1, '50-100k':1, '100-250k':2, 'over250k':3 };
         if (drmap[answers.debtRange]) score += drmap[answers.debtRange];
-        if (answers.risk.indexOf('statutory') > -1) { score += 6; forceUrgent = true; reasons.push('a statutory demand, winding-up petition or enforcement notice has been received'); }
-        if (answers.risk.indexOf('stopped_trading') > -1) { score += 4; reasons.push('the company has stopped trading'); }
-        if (answers.risk.indexOf('preferential') > -1) { score += 2; reasons.push('you are having to decide which creditors to pay ahead of others'); }
 
-        var level, badgeClass, urgency, opts;
+        if (hasStatutory)       { score += 6; forceUrgent = true; reasons.push('A statutory demand, winding-up petition or enforcement notice has been received'); }
+        if (hasStoppedTrading)  { score += 4; reasons.push('The company has stopped trading'); }
+        if (hasPreferential)    { score += 2; reasons.push('You are having to decide which creditors to pay ahead of others'); }
+
+        // Tier + badge label + verdict sentence + next-step recommendation.
+        var level, verdict, badgeClass, urgency;
         if (forceUrgent || score >= 14) {
-            level = 'Urgent Professional Review Recommended';
+            level = 'Urgent Review Recommended';
+            verdict = 'Your answers indicate several serious insolvency warning signs.';
             badgeClass = 'cd-itest-badge-urgent';
-            urgency = 'Recommended action: seek urgent advice today';
-            opts = ["Creditors' Voluntary Liquidation", "Administration", "Immediate advice from a licensed insolvency practitioner"];
+            urgency = todayJustified
+                ? 'Recommended next step: Speak to a licensed insolvency practitioner today.'
+                : 'Recommended next step: Speak to a licensed insolvency practitioner within the next 48 hours.';
         } else if (score >= 8) {
             level = 'Significant Insolvency Risk';
+            verdict = 'The signs in your answers point to significant insolvency risk.';
             badgeClass = 'cd-itest-badge-sig';
-            urgency = 'Recommended action: speak to an adviser within 48 hours';
-            opts = ['Company Voluntary Arrangement', "Creditors' Voluntary Liquidation", 'Formal negotiation with creditors'];
+            urgency = 'Recommended next step: Speak to a licensed insolvency practitioner within the next 48 hours.';
         } else if (score >= 4) {
             level = 'Some Warning Signs';
+            verdict = 'A few warning signs are worth reviewing.';
             badgeClass = 'cd-itest-badge-some';
-            urgency = 'Recommended action: review within the next seven days';
-            opts = ['Time to Pay arrangement with HMRC', 'Informal negotiation with creditors', 'Solvent closure or strike-off where appropriate'];
+            urgency = 'Recommended next step: Review the position within the next seven days.';
         } else {
-            level = 'No Immediate Warning Identified';
+            level = 'No Immediate Warning Signs';
+            verdict = 'No immediate warning signs came up in your answers.';
             badgeClass = 'cd-itest-badge-none';
-            urgency = 'Recommended action: keep monitoring cash flow and creditor payments';
-            opts = ['Continue monitoring cash flow', 'Keep creditor payments up to date'];
+            urgency = 'Recommended next step: Keep monitoring cash flow and creditor payments.';
         }
-        if (reasons.length === 0) reasons.push('no significant warning signs were identified across your answers');
 
+        // "What to Do Now" — practical, condition-aware.
+        var steps = [];
+        if (forceUrgent || score >= 8) {
+            steps.push('Arrange a confidential review today so that the company’s full position can be assessed.');
+        } else if (score >= 4) {
+            steps.push('Arrange a confidential review within the next few days so that the position can be assessed properly.');
+        } else {
+            steps.push('Keep monitoring cash flow and creditor payments and re-check the position if it changes.');
+        }
+        if (forceUrgent || score >= 8) {
+            steps.push('Take care not to favour particular creditors, repay connected parties or transfer company assets outside normal business activity.');
+        }
+        if (hasPayrollRisk) {
+            steps.push('Work out how employees will be paid this cycle and what cash is available to meet payroll.');
+        }
+        if (score >= 4) {
+            steps.push('Gather any available bank balances, creditor totals, HMRC correspondence and personal guarantee documents.');
+        }
+
+        // Options list — only surface CVL / Administration where the answers
+        // support them. Stopped-trading answers drop rescue-led options.
+        var opts = [];
+        var optsIntro = '';
+        if (score < 4) {
+            optsIntro = 'For a position with no immediate warning signs, the useful actions are usually:';
+            opts.push('Continue monitoring cash flow');
+            opts.push('Keep creditor payments up to date');
+            opts.push('Re-run this check if the position changes');
+        } else if (score < 8) {
+            optsIntro = 'For the warning signs shown, a professional review might explore:';
+            opts.push('A Time to Pay arrangement with HMRC');
+            opts.push('Informal negotiation with creditors to buy time');
+            if (answers.position === 'assets_more' || answers.position === 'about_same') {
+                opts.push('Solvent closure or strike-off if the company is winding down and can meet its debts');
+            }
+        } else {
+            optsIntro = 'Depending on the company’s full circumstances, possible routes may include:';
+            opts.push('An agreement or repayment arrangement with creditors');
+            if (!hasStoppedTrading) {
+                opts.push('Restructuring or company rescue options');
+                opts.push('Administration, where there is a viable business or assets to protect');
+            }
+            opts.push("Creditors’ Voluntary Liquidation if the company cannot continue");
+        }
+
+        // --- Render ---
         var badge = document.getElementById('cd-itest-resultBadge');
         badge.className = 'cd-itest-result-badge ' + badgeClass;
         badge.textContent = level;
-        document.getElementById('cd-itest-resultTitle').textContent = level;
+        document.getElementById('cd-itest-resultTitle').textContent = verdict;
         document.getElementById('cd-itest-resultUrgency').textContent = urgency;
-        document.getElementById('cd-itest-resultReasons').innerHTML = reasons.slice(0, 5).map(function (r) {
-            return '<li>' + r.charAt(0).toUpperCase() + r.slice(1) + '</li>';
+
+        var reasonsEl = document.getElementById('cd-itest-resultReasons');
+        var reasonsSection = document.getElementById('cd-itest-resultReasonsSection');
+        if (reasons.length === 0) {
+            reasonsSection.style.display = 'none';
+        } else {
+            reasonsSection.style.display = 'block';
+            reasonsEl.innerHTML = reasons.slice(0, 6).map(function (r) {
+                return '<li>' + r + '</li>';
+            }).join('');
+        }
+
+        document.getElementById('cd-itest-resultSteps').innerHTML = steps.map(function (s) {
+            return '<li>' + s + '</li>';
         }).join('');
-        document.getElementById('cd-itest-resultOptions').innerHTML = opts.map(function (o) { return '<li>' + o + '</li>'; }).join('');
-        document.getElementById('cd-itest-pgNote').style.display = answers.risk.indexOf('personal_guarantee') > -1 ? 'block' : 'none';
+        document.getElementById('cd-itest-resultOptionsIntro').textContent = optsIntro;
+        document.getElementById('cd-itest-resultOptions').innerHTML = opts.map(function (o) {
+            return '<li>' + o + '</li>';
+        }).join('');
+
+        document.getElementById('cd-itest-pgNote').style.display       = hasPersonalGuarantee ? 'block' : 'none';
+        document.getElementById('cd-itest-creditorNote').style.display = hasPreferential      ? 'block' : 'none';
 
         return { level: level, score: score, forceUrgent: forceUrgent };
     }
@@ -677,10 +846,11 @@ body.page-template-insolvency-test .cd-itest-result-title {
             }
             submitted = true;
             var banner = document.getElementById('cd-itest-resultConfirmBanner');
+            var tick = '<svg class="cd-itest-confirm-quiet__tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>';
             if (callpref.value === 'yes') {
-                banner.innerHTML = '<span>Sent to ' + escapeHtml(email) + '. An adviser will call you' + (calltime ? ' ' + calltime.toLowerCase() : '') + ' to talk through your result.</span>';
+                banner.innerHTML = tick + '<span>Your result has been sent to ' + escapeHtml(email) + '. An adviser will call you' + (calltime ? ' ' + calltime.toLowerCase() : '') + '.</span>';
             } else {
-                banner.innerHTML = '<span>Sent to ' + escapeHtml(email) + '. Email only &mdash; no call will be made unless you request one.</span>';
+                banner.innerHTML = tick + '<span>Your result has been sent to ' + escapeHtml(email) + '. You selected email only &mdash; we will not call unless you request one.</span>';
             }
             banner.style.display = 'flex';
             goTo('result');
