@@ -163,30 +163,22 @@ get_header();
 
         <div class="cd-itest-field cd-itest-callpref">
             <label class="cd-itest-callpref__q">Would You Like Someone to Talk Through Your Result?</label>
-            <?php // Radio marker is a real <span class="cd-itest-opt__radio"> —
-                  // was a label::before pseudo-element but something in the
-                  // cascade dropped its `position: absolute` so it rendered
-                  // as a block below the title. A real span sitting inside
-                  // a flex label is bulletproof. ?>
+            <?php // Radio circles dropped 2026-08-05 (Piers) — looked out of
+                  // place. Selection state now conveyed solely through the
+                  // orange border + warm background on the chosen card. ?>
             <ul class="cd-itest-options cd-itest-callpref-options">
                 <li class="cd-itest-opt cd-itest-opt--rich">
                     <input type="radio" name="cd_callpref" id="cd-cp-yes" value="yes">
                     <label for="cd-cp-yes">
-                        <span class="cd-itest-opt__radio" aria-hidden="true"></span>
-                        <span class="cd-itest-opt__body">
-                            <span class="cd-itest-opt__title">Yes, please call me</span>
-                            <span class="cd-itest-opt__sub">I would like a confidential call about my result.</span>
-                        </span>
+                        <span class="cd-itest-opt__title">Yes, please call me</span>
+                        <span class="cd-itest-opt__sub">I would like a confidential call about my result.</span>
                     </label>
                 </li>
                 <li class="cd-itest-opt cd-itest-opt--rich">
                     <input type="radio" name="cd_callpref" id="cd-cp-no" value="no" checked>
                     <label for="cd-cp-no">
-                        <span class="cd-itest-opt__radio" aria-hidden="true"></span>
-                        <span class="cd-itest-opt__body">
-                            <span class="cd-itest-opt__title">No, email only</span>
-                            <span class="cd-itest-opt__sub">Send my result by email. No call will be made.</span>
-                        </span>
+                        <span class="cd-itest-opt__title">No, email only</span>
+                        <span class="cd-itest-opt__sub">Send my result by email. No call will be made.</span>
                     </label>
                 </li>
             </ul>
