@@ -461,6 +461,29 @@ function company_debt_webpigment_scripts() {
 		wp_enqueue_script( 'company-debt-webpigment-quiz-insolvency', get_template_directory_uri() . '/assets/js/quiz-insolvency.js', array( 'jquery', 'nouislider' ), '1.4.6-350k', true );
 	}
 
+	// Insolvency Test (multi-step rebuild — replaces quiz-insolvency for the
+	// /insolvency-calculator/ page). Uses its own dedicated stylesheet with a
+	// scoped `all: revert` reset to insulate from site-global CSS rules, so
+	// no dependency on other stylesheets. filemtime() defeats browser cache
+	// on every push.
+	if ( is_page_template( 'templates/insolvency-test.php' ) ) {
+		$cd_itest_css_path = get_template_directory() . '/assets/css/insolvency-test.css';
+		$cd_itest_js_path  = get_template_directory() . '/assets/js/insolvency-test.js';
+		wp_enqueue_style(
+			'cd-insolvency-test',
+			CD_THEME_URL . 'assets/css/insolvency-test.css',
+			array(),
+			file_exists( $cd_itest_css_path ) ? filemtime( $cd_itest_css_path ) : CD_THEME_VERSION
+		);
+		wp_enqueue_script(
+			'cd-insolvency-test',
+			get_template_directory_uri() . '/assets/js/insolvency-test.js',
+			array(),
+			file_exists( $cd_itest_js_path ) ? filemtime( $cd_itest_js_path ) : CD_THEME_VERSION,
+			true
+		);
+	}
+
 	if ( is_page_template( 'templates/insolvency-landing-page.php' ) ) {
 		wp_enqueue_style(
 			'quiz-insolvency',

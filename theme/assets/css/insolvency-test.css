@@ -1,0 +1,767 @@
+/*
+ * Insolvency Test — dedicated stylesheet.
+ * Loaded via wp_enqueue_style('cd-insolvency-test', …) only when the
+ * template templates/insolvency-test.php is active.
+ *
+ * Design brief: tmp/new_calc_design/design_handoff_insolvency_test/
+ * Screens:      screenshots/01-intro.png … 07-result.png
+ *
+ * Structure:
+ *   1. Reset          — strip site influence via `all: revert !important`
+ *   2. Design tokens  — colours, typography, spacing scale
+ *   3. Container      — main + panel + progress + back
+ *   4. Screens        — intro, question, capture, result
+ *   5. Components     — options, buttons, callouts, cta, confirm
+ *   6. Responsive     — mobile ≤640px breakpoint
+ *
+ * Approach note:
+ *   The site's global CSS declares rules like `body.page p { font-size: 18px }`
+ *   at specificity (0,2,1). To keep this template fully insulated without
+ *   fighting selector-by-selector, we run a scoped reset — `all: revert
+ *   !important` on the container and every descendant — then rebuild every
+ *   style from a clean base. All component rules also use !important so
+ *   the reset doesn't itself out-cascade them. `all: revert` reverts to
+ *   the user-agent stylesheet (browser defaults), not to `initial`, so
+ *   sensible defaults like `display: block` on divs and list bullets on
+ *   `<ol>` are preserved.
+ */
+
+/* ================================================================== */
+/* 1. RESET — strip site influence                                    */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-main,
+body.page-template-insolvency-test .cd-itest-main *,
+body.page-template-insolvency-test .cd-itest-main *::before,
+body.page-template-insolvency-test .cd-itest-main *::after {
+    all: revert;
+}
+
+/* ================================================================== */
+/* 2. DESIGN TOKENS                                                    */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-main {
+    /* Palette */
+    --cdi-navy:      #002856;
+    --cdi-navy-dk:   #102a43;
+    --cdi-orange:    #ff6600;
+    --cdi-orange-dk: #e65c00;
+    --cdi-text:      #2a2a2e;
+    --cdi-grey:      #52606d;
+    --cdi-bg:        #f4f6f8;
+    --cdi-border:    rgba(0, 40, 86, .14);
+    --cdi-white:     #ffffff;
+
+    /* Callouts / result badges */
+    --cdi-warm-bg:   #fff6ef;
+    --cdi-warm-bd:   #ffd9b3;
+    --cdi-warn-bg:   #fdf2f2;
+    --cdi-warn-bd:   #f3c6c4;
+    --cdi-good-bg:   #e6f4ea;
+    --cdi-good-fg:   #1e6b3a;
+    --cdi-some-bg:   #fff3cd;
+    --cdi-some-fg:   #8a6100;
+    --cdi-sig-bg:    #ffe3cc;
+    --cdi-sig-fg:    #a13f00;
+    --cdi-urg-bg:    #fde2e1;
+    --cdi-urg-fg:    #a3231b;
+
+    /* Spacing scale (8-based, +25%) */
+    --cdi-sp-1: 10px;
+    --cdi-sp-2: 20px;
+    --cdi-sp-3: 30px;
+    --cdi-sp-4: 40px;
+    --cdi-sp-5: 52px;
+    --cdi-sp-6: 64px;
+
+    /* Type scale */
+    --cdi-fs-xs:   13px;
+    --cdi-fs-sm:   15px;
+    --cdi-fs-base: 16px;
+    --cdi-fs-md:   18px;
+    --cdi-fs-lg:   24px;
+    --cdi-fs-xl:   32px;
+
+    /* Type stack */
+    --cdi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ================================================================== */
+/* 3. CONTAINER                                                        */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-main {
+    all: revert !important;
+    display: block !important;
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: var(--cdi-sp-5) var(--cdi-sp-2) var(--cdi-sp-6) !important;
+    background: transparent !important;
+    font-family: var(--cdi-font) !important;
+    font-size: var(--cdi-fs-base) !important;
+    line-height: 1.55 !important;
+    color: var(--cdi-text) !important;
+}
+
+body.page-template-insolvency-test .cd-itest-main *,
+body.page-template-insolvency-test .cd-itest-main *::before,
+body.page-template-insolvency-test .cd-itest-main *::after {
+    box-sizing: border-box !important;
+    font-family: var(--cdi-font) !important;
+}
+
+/* Page background — the site's page-wrapper otherwise shows through white */
+body.page-template-insolvency-test { background: var(--cdi-bg) !important; }
+
+/* Progress bar (above the panel) */
+body.page-template-insolvency-test .cd-itest-progress-wrap {
+    display: block !important;
+    max-width: 720px !important;
+    margin: 0 auto var(--cdi-sp-3) !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-progress-track {
+    display: block !important;
+    height: 8px !important;
+    background: #e2e7ec !important;
+    border-radius: 999px !important;
+    overflow: hidden !important;
+}
+body.page-template-insolvency-test .cd-itest-progress-fill {
+    display: block !important;
+    height: 100% !important;
+    background: var(--cdi-orange) !important;
+    border-radius: 999px !important;
+    transition: width .35s ease !important;
+    width: 0%;
+}
+body.page-template-insolvency-test .cd-itest-progress-label {
+    display: block !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.4 !important;
+    color: var(--cdi-grey) !important;
+    margin: var(--cdi-sp-1) 0 0 !important;
+    font-weight: 600 !important;
+}
+
+/* Back button */
+body.page-template-insolvency-test .cd-itest-back-btn {
+    display: none !important;
+    align-items: center !important;
+    gap: var(--cdi-sp-1) !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--cdi-grey) !important;
+    font-size: var(--cdi-fs-sm) !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    margin: 0 auto var(--cdi-sp-2) !important;
+    padding: var(--cdi-sp-1) 0 !important;
+    max-width: 720px !important;
+    width: 100% !important;
+}
+body.page-template-insolvency-test .cd-itest-back-btn.cd-itest-show { display: inline-flex !important; }
+
+/* Panel */
+body.page-template-insolvency-test .cd-itest-panel {
+    display: block !important;
+    background: var(--cdi-white) !important;
+    border: 1px solid var(--cdi-border) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 1px 3px rgba(0, 40, 86, .06) !important;
+    padding: var(--cdi-sp-4) !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    transition: min-height .25s ease !important;
+}
+body.page-template-insolvency-test .cd-itest-panel.cd-itest-panel--intro {
+    min-height: 460px !important;
+}
+
+/* Step visibility (only the active one is visible) */
+body.page-template-insolvency-test .cd-itest-step { display: none !important; }
+body.page-template-insolvency-test .cd-itest-step.cd-itest-step--active {
+    display: block !important;
+    animation: cdItestFade .3s ease;
+}
+@keyframes cdItestFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ================================================================== */
+/* 4. TYPOGRAPHY                                                       */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-h1 {
+    display: block !important;
+    font-size: var(--cdi-fs-xl) !important;
+    line-height: 1.25 !important;
+    color: var(--cdi-navy) !important;
+    font-weight: 800 !important;
+    margin: 0 0 var(--cdi-sp-2) !important;
+    padding: 0 !important;
+    letter-spacing: -0.01em !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+body.page-template-insolvency-test .cd-itest-q {
+    display: block !important;
+    font-size: var(--cdi-fs-lg) !important;
+    line-height: 1.35 !important;
+    color: var(--cdi-navy) !important;
+    font-weight: 800 !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-lede {
+    display: block !important;
+    font-size: var(--cdi-fs-md) !important;
+    line-height: 1.55 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+    font-weight: 400 !important;
+}
+body.page-template-insolvency-test .cd-itest-lede-sub {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+    font-weight: 400 !important;
+}
+body.page-template-insolvency-test .cd-itest-note-sm {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-reg-line {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+body.page-template-insolvency-test .cd-itest-reg-line--centered {
+    text-align: center !important;
+    margin: var(--cdi-sp-3) 0 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-disclaimer {
+    display: block !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    text-align: center !important;
+    margin: var(--cdi-sp-3) 0 0 !important;
+    padding: var(--cdi-sp-3) 0 0 !important;
+    border-top: 1px solid var(--cdi-border) !important;
+}
+body.page-template-insolvency-test .cd-itest-value-reassure,
+body.page-template-insolvency-test .cd-itest-phone-alt {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+body.page-template-insolvency-test .cd-itest-phone-alt a {
+    font-weight: 700 !important;
+    color: var(--cdi-navy) !important;
+    text-decoration: none !important;
+}
+body.page-template-insolvency-test .cd-itest-phone-alt a:hover { color: var(--cdi-orange) !important; }
+
+body.page-template-insolvency-test .cd-itest-main a {
+    color: var(--cdi-navy) !important;
+    text-decoration: underline !important;
+}
+body.page-template-insolvency-test .cd-itest-main a:hover { color: var(--cdi-orange) !important; }
+
+/* ================================================================== */
+/* 5. INTRO SCREEN                                                     */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-trust-list {
+    list-style: none !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+    padding: 0 !important;
+    display: grid !important;
+    gap: var(--cdi-sp-1) !important;
+}
+body.page-template-insolvency-test .cd-itest-trust-list li {
+    display: flex !important;
+    gap: var(--cdi-sp-1) !important;
+    align-items: center !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.45 !important;
+    color: var(--cdi-text) !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-trust-list li svg {
+    flex-shrink: 0 !important;
+    color: var(--cdi-navy) !important;
+    opacity: .55 !important;
+}
+
+body.page-template-insolvency-test .cd-itest-proof-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--cdi-sp-1) !important;
+    background: var(--cdi-bg) !important;
+    border: 1px solid var(--cdi-border) !important;
+    border-radius: 10px !important;
+    padding: var(--cdi-sp-2) !important;
+    margin: 0 0 var(--cdi-sp-2) !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+body.page-template-insolvency-test .cd-itest-proof-strip:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+body.page-template-insolvency-test .cd-itest-stars {
+    color: var(--cdi-orange) !important;
+    letter-spacing: 1px !important;
+    font-size: var(--cdi-fs-sm) !important;
+}
+body.page-template-insolvency-test .cd-itest-proof-strip strong {
+    color: var(--cdi-navy) !important;
+    font-weight: 700 !important;
+    font-size: var(--cdi-fs-sm) !important;
+}
+body.page-template-insolvency-test .cd-itest-proof-strip span {
+    font-size: var(--cdi-fs-sm) !important;
+    color: var(--cdi-grey) !important;
+    line-height: 1.4 !important;
+}
+
+body.page-template-insolvency-test .cd-itest-cta-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: var(--cdi-sp-2) !important;
+    margin-top: var(--cdi-sp-1) !important;
+}
+
+/* ================================================================== */
+/* 6. OPTIONS (radio/checkbox cards)                                   */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-options {
+    list-style: none !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+    padding: 0 !important;
+    display: grid !important;
+    gap: var(--cdi-sp-2) !important;
+}
+body.page-template-insolvency-test .cd-itest-options--compact { margin-bottom: var(--cdi-sp-1) !important; }
+body.page-template-insolvency-test .cd-itest-opt {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-opt input {
+    position: absolute !important;
+    opacity: 0 !important;
+    inset: 0 !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-opt label {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    padding: var(--cdi-sp-2) var(--cdi-sp-3) !important;
+    border: 2px solid var(--cdi-border) !important;
+    border-radius: 10px !important;
+    font-size: var(--cdi-fs-base) !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    color: var(--cdi-text) !important;
+    cursor: pointer !important;
+    background: var(--cdi-white) !important;
+    transition: border-color .15s, background .15s !important;
+    margin: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-opt input:checked + label {
+    border-color: var(--cdi-orange) !important;
+    background: var(--cdi-warm-bg) !important;
+}
+body.page-template-insolvency-test .cd-itest-opt input:focus-visible + label {
+    outline: 2px solid var(--cdi-navy) !important;
+    outline-offset: 2px !important;
+}
+
+/* ================================================================== */
+/* 7. BUTTONS                                                          */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-btn-primary {
+    display: inline-block !important;
+    background: var(--cdi-orange) !important;
+    color: var(--cdi-white) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    padding: var(--cdi-sp-2) var(--cdi-sp-4) !important;
+    font-size: var(--cdi-fs-md) !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+    font-family: var(--cdi-font) !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-primary:hover,
+body.page-template-insolvency-test .cd-itest-btn-primary:focus {
+    background: var(--cdi-orange-dk) !important;
+    color: var(--cdi-white) !important;
+    text-decoration: none !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-primary:disabled {
+    background: #d8dee3 !important;
+    cursor: not-allowed !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-primary--intro {
+    width: 78% !important;
+    align-self: center !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-primary--cta {
+    width: auto !important;
+    padding: 14px 32px !important;
+    margin: 0 auto var(--cdi-sp-2) !important;
+}
+
+/* ================================================================== */
+/* 8. CAPTURE SCREEN — form fields                                     */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-field-grid {
+    display: grid !important;
+    gap: var(--cdi-sp-2) !important;
+    margin-bottom: var(--cdi-sp-3) !important;
+}
+body.page-template-insolvency-test .cd-itest-field {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-field label {
+    display: block !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-field input[type=text],
+body.page-template-insolvency-test .cd-itest-field input[type=email],
+body.page-template-insolvency-test .cd-itest-field input[type=tel] {
+    display: block !important;
+    width: 100% !important;
+    padding: var(--cdi-sp-2) !important;
+    border: 2px solid var(--cdi-border) !important;
+    border-radius: 10px !important;
+    font-size: var(--cdi-fs-base) !important;
+    line-height: 1.4 !important;
+    font-family: var(--cdi-font) !important;
+    background: var(--cdi-white) !important;
+    color: var(--cdi-text) !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+body.page-template-insolvency-test .cd-itest-field input:focus {
+    outline: none !important;
+    border-color: var(--cdi-navy) !important;
+}
+
+body.page-template-insolvency-test .cd-itest-error {
+    display: none !important;
+    color: #b3261e !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    margin: var(--cdi-sp-2) 0 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-error.cd-itest-show { display: block !important; }
+
+body.page-template-insolvency-test .cd-itest-reveal {
+    display: none !important;
+    margin-top: calc(var(--cdi-sp-1) * -1) !important;
+    padding-top: var(--cdi-sp-1) !important;
+}
+body.page-template-insolvency-test .cd-itest-reveal.cd-itest-show {
+    display: grid !important;
+    gap: var(--cdi-sp-2) !important;
+    margin-bottom: var(--cdi-sp-3) !important;
+}
+
+/* ================================================================== */
+/* 9. CAPTURE SIDEBAR — expert / trust panel                           */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-sidebar-trust {
+    background: var(--cdi-bg) !important;
+    border: 1px solid var(--cdi-border) !important;
+    border-radius: 12px !important;
+    padding: var(--cdi-sp-3) !important;
+    margin: var(--cdi-sp-4) 0 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-expert-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--cdi-sp-2) !important;
+    align-items: center !important;
+    margin: 0 0 var(--cdi-sp-2) !important;
+}
+body.page-template-insolvency-test .cd-itest-expert-photo {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    background: var(--cdi-white) !important;
+}
+body.page-template-insolvency-test .cd-itest-expert-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+body.page-template-insolvency-test .cd-itest-expert-name {
+    font-weight: 800 !important;
+    color: var(--cdi-navy) !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.4 !important;
+}
+body.page-template-insolvency-test .cd-itest-expert-role {
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.4 !important;
+    color: var(--cdi-grey) !important;
+}
+body.page-template-insolvency-test .cd-itest-sidebar-trust ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    gap: var(--cdi-sp-1) !important;
+}
+body.page-template-insolvency-test .cd-itest-sidebar-trust li {
+    display: flex !important;
+    gap: var(--cdi-sp-1) !important;
+    align-items: flex-start !important;
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-sidebar-trust li svg {
+    flex-shrink: 0 !important;
+    margin-top: 3px !important;
+    color: var(--cdi-orange) !important;
+}
+body.page-template-insolvency-test .cd-itest-sidebar-trust li a {
+    color: var(--cdi-navy) !important;
+    font-weight: 700 !important;
+}
+
+/* ================================================================== */
+/* 10. RESULT SCREEN                                                   */
+/* ================================================================== */
+
+body.page-template-insolvency-test .cd-itest-result-badge {
+    display: inline-block !important;
+    padding: var(--cdi-sp-1) var(--cdi-sp-2) !important;
+    border-radius: 999px !important;
+    font-weight: 800 !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.4 !important;
+    letter-spacing: .02em !important;
+    margin: 0 0 var(--cdi-sp-2) !important;
+}
+body.page-template-insolvency-test .cd-itest-badge-none   { background: var(--cdi-good-bg) !important; color: var(--cdi-good-fg) !important; }
+body.page-template-insolvency-test .cd-itest-badge-some   { background: var(--cdi-some-bg) !important; color: var(--cdi-some-fg) !important; }
+body.page-template-insolvency-test .cd-itest-badge-sig    { background: var(--cdi-sig-bg) !important;  color: var(--cdi-sig-fg) !important; }
+body.page-template-insolvency-test .cd-itest-badge-urgent { background: var(--cdi-urg-bg) !important;  color: var(--cdi-urg-fg) !important; }
+
+body.page-template-insolvency-test .cd-itest-result-title {
+    display: block !important;
+    font-size: var(--cdi-fs-lg) !important;
+    line-height: 1.35 !important;
+    font-weight: 800 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    padding: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-result-urgency {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    font-weight: 700 !important;
+    color: var(--cdi-orange) !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section {
+    margin: 0 0 var(--cdi-sp-3) !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section h3 {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    padding: 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .03em !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section ul,
+body.page-template-insolvency-test .cd-itest-result-section ol {
+    margin: 0 !important;
+    padding-left: var(--cdi-sp-3) !important;
+    list-style: disc !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section ol { list-style: decimal !important; }
+body.page-template-insolvency-test .cd-itest-result-section li {
+    font-size: var(--cdi-fs-base) !important;
+    line-height: 1.55 !important;
+    color: var(--cdi-text) !important;
+    margin: 0 0 4px !important;
+    padding: 0 !important;
+    display: list-item !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section p {
+    margin: 0 0 var(--cdi-sp-1) !important;
+    color: var(--cdi-grey) !important;
+    font-size: var(--cdi-fs-base) !important;
+    line-height: 1.55 !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section__intro {
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+}
+body.page-template-insolvency-test .cd-itest-result-section__note {
+    font-size: var(--cdi-fs-xs) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    font-style: italic !important;
+    margin: var(--cdi-sp-1) 0 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-steps-ol { list-style: decimal !important; }
+body.page-template-insolvency-test .cd-itest-steps-ol li::marker {
+    color: var(--cdi-navy) !important;
+    font-weight: 800 !important;
+}
+
+/* Callout panels — personal guarantee (warm) + creditor duty (warn) */
+body.page-template-insolvency-test .cd-itest-callout {
+    display: block !important;
+    border-radius: 10px !important;
+    padding: var(--cdi-sp-3) !important;
+    margin: 0 0 var(--cdi-sp-3) !important;
+}
+body.page-template-insolvency-test .cd-itest-callout--warm { background: var(--cdi-warm-bg) !important; border: 1px solid var(--cdi-warm-bd) !important; }
+body.page-template-insolvency-test .cd-itest-callout--warn { background: var(--cdi-warn-bg) !important; border: 1px solid var(--cdi-warn-bd) !important; }
+body.page-template-insolvency-test .cd-itest-callout__title {
+    display: block !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-1) !important;
+    padding: 0 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-callout p {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--cdi-text) !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.55 !important;
+}
+
+/* Result CTA block */
+body.page-template-insolvency-test .cd-itest-cta-block {
+    background: var(--cdi-bg) !important;
+    border: 1px solid var(--cdi-border) !important;
+    border-radius: 12px !important;
+    padding: var(--cdi-sp-3) !important;
+    margin: var(--cdi-sp-4) 0 var(--cdi-sp-3) !important;
+    text-align: center !important;
+}
+body.page-template-insolvency-test .cd-itest-cta-block h3 {
+    display: block !important;
+    font-size: var(--cdi-fs-md) !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+    color: var(--cdi-navy) !important;
+    margin: 0 0 var(--cdi-sp-2) !important;
+    padding: 0 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-cta-block .cd-itest-note-sm {
+    text-align: center !important;
+}
+
+/* Quiet confirmation at bottom of result */
+body.page-template-insolvency-test .cd-itest-confirm-quiet {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: var(--cdi-sp-1) !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: var(--cdi-sp-1) 0 !important;
+    margin: var(--cdi-sp-2) 0 0 !important;
+    color: var(--cdi-grey) !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+}
+body.page-template-insolvency-test .cd-itest-confirm-quiet__tick {
+    flex-shrink: 0 !important;
+    color: var(--cdi-good-fg) !important;
+    margin-top: 2px !important;
+}
+body.page-template-insolvency-test .cd-itest-confirm-quiet span {
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+}
+
+/* ================================================================== */
+/* 11. RESPONSIVE — mobile ≤640px                                      */
+/* ================================================================== */
+
+@media (max-width: 640px) {
+    body.page-template-insolvency-test .cd-itest-main {
+        padding: var(--cdi-sp-3) var(--cdi-sp-1) var(--cdi-sp-4) !important;
+    }
+    body.page-template-insolvency-test .cd-itest-panel {
+        padding: var(--cdi-sp-3) var(--cdi-sp-2) !important;
+        min-height: 0 !important;
+        border-radius: 12px !important;
+    }
+    body.page-template-insolvency-test .cd-itest-panel.cd-itest-panel--intro { min-height: 0 !important; }
+    body.page-template-insolvency-test .cd-itest-h1 { font-size: 27px !important; }
+    body.page-template-insolvency-test .cd-itest-q  { font-size: 21px !important; }
+    body.page-template-insolvency-test .cd-itest-result-title { font-size: 21px !important; }
+    body.page-template-insolvency-test .cd-itest-btn-primary--intro { width: 100% !important; }
+}
