@@ -1,0 +1,33 @@
+{
+  "slug": "closing-a-limited-company",
+  "audited_at": "2026-08-05",
+  "audited_by": "claude-opus-4-7",
+  "prose_sha": "e8f7dbf1be276d1956475fb5a9ad75e43e6abd8255191bede8616b0e2357563b",
+  "measured": {
+    "metrics": {
+      "words": 3878,
+      "you": 87,
+      "you_per_1k": 22.4,
+      "we": 26,
+      "we_per_1k": 6.7,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 83,
+      "cv": 0.346,
+      "uniform": false
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 10,
+    "evaluative_bite_lines": 3,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Readability pass 3 for the stressed director: (1) rewrote the compare-options callout into full calm sentences instead of curt bullet fragments; (2) reduced the route table from 5 dense columns to 4 tight ones with short cells for visual breathing space; (3) split six wall-of-text body paragraphs at sentence boundaries; (4) converted two long comma-list sentences (personal liability triggers, MVL decision factors) into scannable bullets. Nothing was cut on substance; just given air."
+  },
+  "verdict": "pass"
+}

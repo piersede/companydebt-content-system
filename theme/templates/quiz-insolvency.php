@@ -154,12 +154,16 @@ get_header();
                                             <p class="cd-calc-form__lead">Enter your details to see your initial result. You can also request a free, confidential call to discuss your company&rsquo;s position.</p>
                                             <?php echo do_shortcode( '[gravityform name="Insolvency Calculator" title="false" ajax="true"]' ); ?>
                                             <div class="cd-get-results-container">
-                                                <?php // The native GF submit (#gform_submit_button_38) is hidden by
-                                                      // style.css; a plain HTML5 `form="gform_38"` submit skipped GF's
-                                                      // own onclick + AJAX hook so the form never posted. Click the
-                                                      // hidden native button instead — that runs GF's onclick (sets
-                                                      // gf_submitting_38 + triggers the form's submit handler chain). ?>
-                                                <button type="button" class="cd-get-results-btn" onclick="var b=document.getElementById('gform_submit_button_38'); if(b){b.click();} return false;">Show My Initial Result</button>
+                                                <?php // Call form.submit() directly. Clicking the native GF button
+                                                      // (or the HTML5 form="gform_38" variant) fires the browser's
+                                                      // submit EVENT, and something in the GF-2.5+ / WP Rocket JS
+                                                      // stack lets defaultPrevented stay false but still swallows the
+                                                      // default form-submit action, so the iframe never posts.
+                                                      // Native form.submit() bypasses the event entirely — the
+                                                      // browser posts straight to target=gform_ajax_frame_38 and GF's
+                                                      // iframe onload handler runs (fires gform_confirmation_loaded
+                                                      // which the theme JS below listens for to show the results). ?>
+                                                <button type="button" class="cd-get-results-btn" onclick="var f=document.getElementById('gform_38'); if(f){window['gf_submitting_38']=true; f.submit();} return false;">Show My Initial Result</button>
                                             </div>
                                             <p class="cd-calc-form__micro">Free &middot; Confidential &middot; No obligation</p>
                                             <p class="cd-calc-form__privacy">We will use these details to provide your assessment and contact you about your company&rsquo;s position. Read our <a href="/privacy-policy/">Privacy Policy</a>.</p>
