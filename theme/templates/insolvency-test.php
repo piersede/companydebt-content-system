@@ -55,16 +55,19 @@ get_header();
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Your answers are treated confidentially</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No credit check or Companies House search</li>
         </ul>
-        <a class="cd-itest-proof-strip" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener">
-            <span class="cd-itest-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span><strong>Excellent</strong> &middot; Rated 5.0 on Reviews.io</span>
-        </a>
+        <?php // Checklist leads directly into the CTA — no boxed panel between
+              // the reassurance points and the button. The Reviews.io line
+              // moved to the bottom of the screen as a small unboxed line
+              // (below reg-line, above the disclaimer). ?>
         <div class="cd-itest-cta-row">
             <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position</button>
-            <p class="cd-itest-value-reassure">A few short questions &middot; Personalised result &middot; No obligation</p>
+            <p class="cd-itest-value-reassure">Takes around two minutes &middot; Personalised result &middot; No obligation</p>
             <p class="cd-itest-phone-alt">Prefer to speak to someone now? Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
         </div>
-        <p class="cd-itest-reg-line cd-itest-reg-line--centered">Company Debt has helped UK company directors since 2007. Where formal insolvency work is required, it is handled by licensed insolvency practitioners regulated by the Insolvency Practitioners Association.</p>
+        <p class="cd-itest-reg-line cd-itest-reg-line--centered">Helping UK company directors since 2007. Formal insolvency work is handled by licensed insolvency practitioners regulated by the Insolvency Practitioners Association.</p>
+        <a class="cd-itest-reviews-line" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener">
+            <span class="cd-itest-reviews-line__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated Excellent on Reviews.io
+        </a>
         <p class="cd-itest-disclaimer">This check identifies common warning signs and provides initial guidance. It is not a formal insolvency opinion.</p>
     </section>
 

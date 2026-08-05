@@ -83,10 +83,12 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-sp-5: 52px;
     --cdi-sp-6: 64px;
 
-    /* Type scale */
-    --cdi-fs-xs:   13px;
-    --cdi-fs-sm:   15px;
-    --cdi-fs-base: 16px;
+    /* Type scale — bumped +1px on the three lower steps per Piers's
+       readability spec (2026-08-05): body/inputs 17px, supporting text 16px,
+       fine print no smaller than 14px. Headings + button unchanged. */
+    --cdi-fs-xs:   14px;
+    --cdi-fs-sm:   16px;
+    --cdi-fs-base: 17px;
     --cdi-fs-md:   18px;
     --cdi-fs-lg:   24px;
     --cdi-fs-xl:   32px;
@@ -175,7 +177,9 @@ body.page-template-insolvency-test .cd-itest-back-btn {
 }
 body.page-template-insolvency-test .cd-itest-back-btn.cd-itest-show { display: inline-flex !important; }
 
-/* Panel */
+/* Panel — widened from 720 to 780 (2026-08-05 per Piers) so the card
+   feels less lost inside a large empty page on desktop and the intro copy
+   breaks into fewer lines. Inner content width becomes ~700px. */
 body.page-template-insolvency-test .cd-itest-panel {
     display: block !important;
     background: var(--cdi-white) !important;
@@ -183,10 +187,14 @@ body.page-template-insolvency-test .cd-itest-panel {
     border-radius: 14px !important;
     box-shadow: 0 1px 3px rgba(0, 40, 86, .06) !important;
     padding: var(--cdi-sp-4) !important;
-    max-width: 720px !important;
+    max-width: 780px !important;
     margin: 0 auto !important;
     transition: min-height .25s ease !important;
 }
+/* Progress bar + Back button widths bump to match new panel width so their
+   left/right edges line up with the panel edges. */
+body.page-template-insolvency-test .cd-itest-progress-wrap { max-width: 780px !important; }
+body.page-template-insolvency-test .cd-itest-back-btn      { max-width: 780px !important; }
 body.page-template-insolvency-test .cd-itest-panel.cd-itest-panel--intro {
     min-height: 460px !important;
 }
@@ -321,37 +329,27 @@ body.page-template-insolvency-test .cd-itest-trust-list li svg {
     opacity: .55 !important;
 }
 
-body.page-template-insolvency-test .cd-itest-proof-strip {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    gap: var(--cdi-sp-1) !important;
-    background: var(--cdi-bg) !important;
-    border: 1px solid var(--cdi-border) !important;
-    border-radius: 10px !important;
-    padding: var(--cdi-sp-2) !important;
-    margin: 0 0 var(--cdi-sp-2) !important;
+/* Small unboxed Reviews.io line — sits at the bottom of the intro (above
+   the disclaimer), replacing the earlier boxed proof-strip which acted as
+   a visual roadblock between the checklist and the CTA. */
+body.page-template-insolvency-test .cd-itest-reviews-line {
+    display: block !important;
+    text-align: center !important;
+    font-size: var(--cdi-fs-sm) !important;
+    line-height: 1.5 !important;
+    color: var(--cdi-grey) !important;
+    margin: var(--cdi-sp-2) 0 0 !important;
+    padding: 0 !important;
     text-decoration: none !important;
-    color: inherit !important;
+    border: 0 !important;
+    background: transparent !important;
 }
-body.page-template-insolvency-test .cd-itest-proof-strip:hover {
-    text-decoration: none !important;
-    color: inherit !important;
-}
-body.page-template-insolvency-test .cd-itest-stars {
+body.page-template-insolvency-test .cd-itest-reviews-line:hover { color: var(--cdi-navy) !important; }
+body.page-template-insolvency-test .cd-itest-reviews-line__stars {
     color: var(--cdi-orange) !important;
     letter-spacing: 1px !important;
     font-size: var(--cdi-fs-sm) !important;
-}
-body.page-template-insolvency-test .cd-itest-proof-strip strong {
-    color: var(--cdi-navy) !important;
-    font-weight: 700 !important;
-    font-size: var(--cdi-fs-sm) !important;
-}
-body.page-template-insolvency-test .cd-itest-proof-strip span {
-    font-size: var(--cdi-fs-sm) !important;
-    color: var(--cdi-grey) !important;
-    line-height: 1.4 !important;
+    margin-right: 4px !important;
 }
 
 body.page-template-insolvency-test .cd-itest-cta-row {
