@@ -37,6 +37,19 @@ add_action('rest_api_init', function () {
         'callback'            => 'cd_itest_record_abandonment',
         'permission_callback' => '__return_true',
     ));
+
+    // One-shot bootstrap for the live environment. Runs the DB-side setup
+    // the WPE files-only copy can't do: plants Zoho credentials, creates
+    // the Gravity Form (idempotent — reuses an existing one with the same
+    // title), adds the two notifications, and restores page 53942 to the
+    // insolvency-test template. Requires manage_options capability (admin
+    // app-password auth). Self-disables via wp_options['cd_itest_bootstrap_done']
+    // after first success — no follow-up code removal needed.
+    register_rest_route('cd-itest/v1', '/bootstrap', array(
+        'methods'             => 'POST',
+        'callback'            => 'cd_itest_bootstrap',
+        'permission_callback' => function () { return current_user_can('manage_options'); },
+    ));
 });
 
 /**
@@ -302,4 +315,207 @@ function cd_itest_zoho_record_error($kind, $message, $extra = array()) {
         'If the credentials are missing, run scripts/wp_set_zoho_options.py against this environment.',
     );
     wp_mail($to, $subject, implode("\n", $body_lines));
+}
+
+/**
+ * One-shot bootstrap endpoint. Idempotent, self-disabling. Called once
+ * against live from scripts/live_bootstrap_insolvency_test.py after the
+ * WPE files-only copy runs. Auth via admin app-password (manage_options
+ * capability). Body: { zoho: { client_id, client_secret, refresh_token,
+ * api_domain, accounts_domain } }. Returns per-step status.
+ */
+function cd_itest_bootstrap($request) {
+    if (get_option('cd_itest_bootstrap_done')) {
+        return new \WP_REST_Response(array(
+            'ok'    => false,
+            'error' => 'bootstrap already ran; option cd_itest_bootstrap_done set',
+        ), 409);
+    }
+
+    $steps = array();
+    $body  = $request->get_json_params();
+    if (!is_array($body)) $body = array();
+    $zoho  = isset($body['zoho']) && is_array($body['zoho']) ? $body['zoho'] : array();
+
+    // Step 1: Zoho credentials (only set the ones supplied AND currently empty).
+    $zoho_keys = array(
+        'client_id'       => 'cd_zoho_client_id',
+        'client_secret'   => 'cd_zoho_client_secret',
+        'refresh_token'   => 'cd_zoho_refresh_token',
+        'api_domain'      => 'cd_zoho_api_domain',
+        'accounts_domain' => 'cd_zoho_accounts_domain',
+    );
+    $zoho_set = 0; $zoho_skipped = 0;
+    foreach ($zoho_keys as $body_key => $opt_key) {
+        if (empty($zoho[$body_key])) { $zoho_skipped++; continue; }
+        if (get_option($opt_key)) { $zoho_skipped++; continue; }
+        update_option($opt_key, (string) $zoho[$body_key], false);
+        $zoho_set++;
+    }
+    $steps['zoho_options'] = "set={$zoho_set} skipped={$zoho_skipped}";
+
+    if (!class_exists('GFAPI')) {
+        $steps['gf_form']       = 'error: GFAPI missing';
+        $steps['notifications'] = 'skipped';
+        $steps['page_53942']    = 'skipped';
+        return new \WP_REST_Response(array('ok' => false, 'steps' => $steps), 500);
+    }
+
+    // Step 2: create the Insolvency Test form if it doesn't already exist.
+    $form_id = (int) get_option('cd_insolvency_test_form_id', 0);
+    if (!$form_id) {
+        // Look for an existing form with the same title before creating a
+        // duplicate (mirrors gf_create_insolvency_test_form.py behaviour).
+        $existing_id = 0;
+        foreach (\GFAPI::get_forms() as $f) {
+            if (isset($f['title']) && $f['title'] === 'Insolvency Test') {
+                $existing_id = (int) $f['id']; break;
+            }
+        }
+        if ($existing_id) {
+            $form_id = $existing_id;
+            update_option('cd_insolvency_test_form_id', $form_id);
+            $steps['gf_form'] = "existing:{$form_id}";
+        } else {
+            $spec = array(
+                'title'          => 'Insolvency Test',
+                'description'    => 'Capture step for the multi-step insolvency test at /insolvency-calculator/. Do not add fields here without updating the template.',
+                'labelPlacement' => 'top_label',
+                'button'         => array('type' => 'text', 'text' => 'Submit'),
+                'fields' => array(
+                    array('id' => 1, 'type' => 'text',     'label' => 'First name',     'isRequired' => true),
+                    array('id' => 2, 'type' => 'email',    'label' => 'Email',          'isRequired' => true),
+                    array('id' => 3, 'type' => 'radio',    'label' => 'Wants call',     'isRequired' => true,
+                          'choices' => array(
+                              array('text' => 'Yes', 'value' => 'yes'),
+                              array('text' => 'No',  'value' => 'no'),
+                          )),
+                    array('id' => 4, 'type' => 'phone',    'label' => 'Phone',          'isRequired' => false),
+                    array('id' => 5, 'type' => 'text',     'label' => 'Preferred time', 'isRequired' => false),
+                    array('id' => 6, 'type' => 'text',     'label' => 'Risk tier',      'isRequired' => false),
+                    array('id' => 7, 'type' => 'textarea', 'label' => 'Quiz payload',   'isRequired' => false),
+                    array('id' => 8, 'type' => 'text',     'label' => 'Landing page',   'isRequired' => false),
+                    array('id' => 9, 'type' => 'text',     'label' => 'Referring page', 'isRequired' => false),
+                ),
+                'confirmations' => array(
+                    'default' => array(
+                        'id' => 'default', 'name' => 'Default confirmation', 'isDefault' => true,
+                        'type' => 'message', 'message' => 'Received.', 'disableAutoformat' => true,
+                    ),
+                ),
+                'notifications' => array(),
+                'useCurrentUserAsAuthor' => false,
+                'nextFieldId'   => 10,
+            );
+            $new_id = \GFAPI::add_form($spec);
+            if (is_wp_error($new_id)) {
+                $steps['gf_form'] = 'error: ' . $new_id->get_error_message();
+            } else {
+                $form_id = (int) $new_id;
+                update_option('cd_insolvency_test_form_id', $form_id);
+                $steps['gf_form'] = "created:{$form_id}";
+            }
+        }
+    } else {
+        $steps['gf_form'] = "existing:{$form_id}";
+    }
+
+    // Step 3: notifications (idempotent — add-if-missing by name).
+    $notif_added_internal = false;
+    $notif_added_visitor  = false;
+    if ($form_id) {
+        $form = \GFAPI::get_form($form_id);
+        if (is_array($form)) {
+            // Discover the internal recipient from form 38 (the old calc) so
+            // leads land in the same inbox with no manual reconfiguration.
+            $internal_to = '';
+            $form38 = \GFAPI::get_form(38);
+            if ($form38 && !empty($form38['notifications'])) {
+                foreach ($form38['notifications'] as $n) {
+                    if (!empty($n['to']) && filter_var(explode(',', $n['to'])[0], FILTER_VALIDATE_EMAIL)) {
+                        $internal_to = $n['to']; break;
+                    }
+                }
+            }
+            if (!$internal_to) $internal_to = get_option('admin_email');
+
+            if (empty($form['notifications'])) $form['notifications'] = array();
+            $has_named = function ($form, $name) {
+                foreach ($form['notifications'] as $n) if (isset($n['name']) && $n['name'] === $name) return true;
+                return false;
+            };
+
+            if (!$has_named($form, 'Insolvency Test — internal lead')) {
+                $id = uniqid('cd_', true);
+                $form['notifications'][$id] = array(
+                    'id' => $id, 'name' => 'Insolvency Test — internal lead', 'event' => 'form_submission', 'isActive' => true,
+                    'to' => $internal_to, 'fromName' => 'Company Debt Website', 'from' => '{admin_email}',
+                    'subject' => 'Insolvency Test lead — {Risk tier:6} — {First name:1}',
+                    'message' => "New Insolvency Test lead received.\n\nRisk tier: {Risk tier:6}\nWants call: {Wants call:3}\nPreferred time: {Preferred time:5}\n\nName: {First name:1}\nEmail: {Email:2}\nPhone: {Phone:4}\n\nLanding page: {Landing page:8}\nReferring page: {Referring page:9}\n\nQuiz payload (JSON):\n{Quiz payload:7}\n",
+                    'disableAutoformat' => false,
+                );
+                $notif_added_internal = true;
+            }
+            if (!$has_named($form, 'Insolvency Test — visitor result')) {
+                $id = uniqid('cd_', true);
+                $form['notifications'][$id] = array(
+                    'id' => $id, 'name' => 'Insolvency Test — visitor result', 'event' => 'form_submission', 'isActive' => true,
+                    'toType' => 'field', 'to' => '2',
+                    'fromName' => 'Company Debt', 'from' => 'info@companydebt.com',
+                    'subject' => 'Your Insolvency Test result — {Risk tier:6}',
+                    'message' => "Hi {First name:1},\n\nThank you for completing our Insolvency Test. Based on your answers, the initial result is:\n\n**{Risk tier:6}**\n\nThis is an initial guidance result, not a formal insolvency opinion. If you have any questions or would like to talk through your position, you can reach a member of our team on 0800 074 6757 or reply to this email.\n\nWarm regards,\nCompany Debt\nLicensed Insolvency Practitioners\nhttps://www.companydebt.com\n",
+                    'disableAutoformat' => false,
+                );
+                $notif_added_visitor = true;
+            }
+            if ($notif_added_internal || $notif_added_visitor) {
+                $res = \GFAPI::update_form($form);
+                if (is_wp_error($res)) {
+                    $steps['notifications'] = 'error: ' . $res->get_error_message();
+                } else {
+                    $steps['notifications'] = 'added: '
+                        . ($notif_added_internal ? 'internal ' : '')
+                        . ($notif_added_visitor  ? 'visitor'   : '');
+                }
+            } else {
+                $steps['notifications'] = 'existing';
+            }
+        }
+    } else {
+        $steps['notifications'] = 'skipped (no form id)';
+    }
+
+    // Step 4: restore page 53942 to the insolvency-test template.
+    $page_id = 53942;
+    $post = get_post($page_id);
+    if (!$post) {
+        $steps['page_53942'] = 'error: page missing';
+    } else {
+        $tpl_now = get_post_meta($page_id, '_wp_page_template', true);
+        if ($tpl_now === 'templates/insolvency-test.php') {
+            $steps['page_53942'] = 'already-on-template';
+        } else {
+            update_post_meta($page_id, '_wp_page_template', 'templates/insolvency-test.php');
+            $res = wp_update_post(array(
+                'ID'           => $page_id,
+                'post_content' => '<!-- Insolvency Test — content rendered by templates/insolvency-test.php -->',
+                'post_status'  => 'publish',
+            ), true);
+            if (is_wp_error($res)) {
+                $steps['page_53942'] = 'error: ' . $res->get_error_message();
+            } else {
+                clean_post_cache($page_id);
+                if (function_exists('rocket_clean_post'))   { rocket_clean_post($page_id); }
+                if (function_exists('rocket_clean_domain')) { rocket_clean_domain(); }
+                if (class_exists('WpeCommon')) {
+                    if (method_exists('WpeCommon', 'purge_memcached'))     WpeCommon::purge_memcached();
+                    if (method_exists('WpeCommon', 'purge_varnish_cache')) WpeCommon::purge_varnish_cache();
+                }
+                $steps['page_53942'] = "updated (was: {$tpl_now})";
+            }
+        }
+    }
+
+    update_option('cd_itest_bootstrap_done', array('time' => time(), 'steps' => $steps), false);
+    return new \WP_REST_Response(array('ok' => true, 'steps' => $steps), 200);
 }
