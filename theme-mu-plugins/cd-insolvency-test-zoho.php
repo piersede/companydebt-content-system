@@ -29,36 +29,76 @@
 // Using entry_created gives us a consistent, complete payload.
 add_action('gform_entry_created', 'cd_itest_zoho_push', 10, 2);
 
-// Fix: when GF fires notifications from the REST /submissions endpoint, the
-// $entry passed to the notification pipeline is a stub without the saved
-// field values (verified live 2026-08-05: {form_title} + {admin_email}
-// resolve, but {entry_id}, {:1}, {Risk tier:6} and {all_fields} render
-// empty). Reload the entry from the DB and pre-resolve merge tags in
-// subject + message so the email arrives properly populated.
-add_filter('gform_notification', 'cd_itest_notification_entry_fix', 10, 3);
-function cd_itest_notification_entry_fix($notification, $form, $entry) {
+/*
+ * NOTIFICATION REPAIR
+ *
+ * Symptom (live, 2026-08-05): submissions arriving via the GF REST
+ * /submissions endpoint produced notification emails where form-level
+ * merge tags resolved ({form_title}, {admin_email}) but every entry-level
+ * tag was empty ({entry_id}, {:1}, {Risk tier:6}, {all_fields}).
+ *
+ * Cause: GF's background (asynchronous) notification processor runs in a
+ * separate request and receives an entry object that hasn't been fully
+ * hydrated from the DB.
+ *
+ * Fix, in two parts:
+ *   1. Force notifications for this form to run synchronously, removing
+ *      the separate-request boundary entirely.
+ *   2. Rehydrate the entry at gform_entry_post_save — the native
+ *      interception point that runs immediately after the entry is saved
+ *      but BEFORE notifications and confirmations, and whose return value
+ *      is used downstream.
+ *
+ * An earlier attempt used gform_notification to pre-resolve merge tags;
+ * that runs too late — with background notifications the entry context
+ * has already been serialised by then.
+ */
+
+// 1. Disable asynchronous notifications for this form. GF exposes the
+//    filter per-form-id, so we register it dynamically once the form id
+//    is known.
+add_action('init', function () {
+    $form_id = (int) get_option('cd_insolvency_test_form_id', 0);
+    if (!$form_id) return;
+    add_filter("gform_is_asynchronous_notifications_enabled_{$form_id}", '__return_false', 99);
+}, 20);
+
+// 2. Rehydrate the saved entry before GF hands it to the notification
+//    renderer. Runs at PHP_INT_MAX so any other entry filters have
+//    already had their say.
+add_filter('gform_entry_post_save', 'cd_itest_rehydrate_entry_for_notifications', PHP_INT_MAX, 2);
+function cd_itest_rehydrate_entry_for_notifications($entry, $form) {
     $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
-    if (!$target_id || (int) $form['id'] !== $target_id) return $notification;
-
-    // If entry lacks field values, reload it fresh from the DB.
-    if (is_array($entry) && !empty($entry['id']) && empty($entry['2'])) {
-        $fresh = \GFAPI::get_entry((int) $entry['id']);
-        if (is_array($fresh)) $entry = $fresh;
+    if (!$target_id || (int) rgar($form, 'id') !== $target_id) {
+        return $entry;
     }
 
-    // Pre-resolve merge tags with the properly-loaded entry so GF's
-    // downstream send path uses the resolved text as-is.
-    if (class_exists('GFCommon') && is_array($entry)) {
-        if (!empty($notification['subject'])) {
-            $notification['subject'] = \GFCommon::replace_variables(
-                $notification['subject'], $form, $entry, false, false, true, 'text');
+    $entry_id = absint(rgar($entry, 'id'));
+    if (!$entry_id) {
+        if (class_exists('GFCommon')) {
+            \GFCommon::log_error('[cd-insolvency-test] notification repair: saved entry has no entry ID.');
         }
-        if (!empty($notification['message'])) {
-            $notification['message'] = \GFCommon::replace_variables(
-                $notification['message'], $form, $entry, false, false, true, 'html');
-        }
+        return $entry;
     }
-    return $notification;
+
+    $fresh = \GFAPI::get_entry($entry_id);
+    if (is_wp_error($fresh)) {
+        if (class_exists('GFCommon')) {
+            \GFCommon::log_error(sprintf(
+                '[cd-insolvency-test] notification repair: could not reload entry %d: %s',
+                $entry_id, $fresh->get_error_message()
+            ));
+        }
+        return $entry;
+    }
+
+    if (class_exists('GFCommon')) {
+        \GFCommon::log_debug(sprintf(
+            '[cd-insolvency-test] notification repair: rehydrated entry %d before notifications.',
+            $entry_id
+        ));
+    }
+    return $fresh;
 }
 
 // REST route for the pagehide abandonment beacon. Previously the beacon
