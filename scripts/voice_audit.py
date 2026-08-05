@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -36,6 +37,55 @@ import voice_metrics as vm
 SCRIPTS_DIR = Path(__file__).resolve().parent
 REPO = SCRIPTS_DIR.parent
 AUDIT_DIR = REPO / "editorial-os" / "voice-audits"
+
+# CLAUDE.md rule: "after 4+ passes still reading AI-edited, stop patching and
+# redraft fresh from spec". This threshold is measured from git history: count
+# commits touching the draft file since the last commit tagged 'redraft:' in
+# its message (or since the file was created if there is no such marker).
+REDRAFT_PASS_CEILING = 4
+
+
+def count_passes_since_redraft(draft_path: Path) -> tuple[int, str]:
+    """
+    Return (pass_count, baseline_ref) where pass_count is the number of git
+    commits touching the draft file since the most recent 'redraft:' marker
+    commit (or since file creation). baseline_ref is the SHA of the marker
+    commit, or 'file-creation' if no marker.
+
+    A 'redraft:' marker is any commit whose subject line starts with 'redraft:'
+    (case-insensitive). Use it to signal a fresh baseline after iterative edits
+    would otherwise accumulate AI signature.
+    """
+    try:
+        rel = str(draft_path.relative_to(REPO))
+    except ValueError:
+        rel = str(draft_path)
+    try:
+        # Find the most recent commit whose subject starts with 'redraft:' AND
+        # touches this file. If none exists, we count all commits touching it.
+        result = subprocess.run(
+            ["git", "-C", str(REPO), "log", "--format=%H%x00%s", "--", rel],
+            capture_output=True, text=True, timeout=10, encoding="utf-8", errors="replace",
+        )
+        if result.returncode != 0:
+            return (0, "git-unavailable")
+        lines = [l for l in result.stdout.splitlines() if l.strip()]
+        # Walk from newest to oldest; pass_count is the number of commits above
+        # the marker (i.e., commits newer than the last redraft baseline).
+        baseline_ref = "file-creation"
+        pass_count = len(lines)
+        for i, line in enumerate(lines):
+            try:
+                sha, subject = line.split("\x00", 1)
+            except ValueError:
+                continue
+            if subject.lower().startswith("redraft:"):
+                pass_count = i  # commits ABOVE this marker
+                baseline_ref = sha[:12]
+                break
+        return (pass_count, baseline_ref)
+    except (FileNotFoundError, subprocess.TimeoutExpired, subprocess.SubprocessError):
+        return (0, "git-error")
 
 
 def find_draft(slug: str) -> Path | None:
@@ -75,14 +125,39 @@ def print_analysis(slug: str, rep: dict) -> None:
     print("   - persona warmth near the top and at the decision point")
 
 
-def do_record(slug: str, raw: str, args) -> int:
+def do_record(slug: str, raw: str, args, draft_path: Path) -> int:
     rep = analyse(raw)
+
+    # CLAUDE.md redraft rule: block --record when the draft has been iterated
+    # on more than REDRAFT_PASS_CEILING times since the last 'redraft:' marker.
+    # Iterative patching accumulates AI signature; the honest fix is to redraft
+    # from spec, not keep polishing. Override with --override-redraft-rule if
+    # a specific case genuinely warrants continuing the iteration.
+    pass_count, baseline_ref = count_passes_since_redraft(draft_path)
+    if pass_count >= REDRAFT_PASS_CEILING and not args.override_redraft_rule and not args.redraft_now:
+        print(
+            f"ERROR: {pass_count} commits touch this draft since the last 'redraft:' marker "
+            f"(baseline {baseline_ref}). CLAUDE.md rule: after {REDRAFT_PASS_CEILING}+ passes stop patching and "
+            f"redraft fresh from spec. Options:\n"
+            f"  --redraft-now             : record a fresh baseline (make sure your next commit "
+            f"subject starts with 'redraft:' so the counter resets)\n"
+            f"  --override-redraft-rule R : force through with reason R recorded in the audit log",
+            file=sys.stderr,
+        )
+        return 3
+
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     record = {
         "slug": slug,
         "audited_at": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "audited_by": args.by,
         "prose_sha": rep["prose_sha"],
+        "passes_since_baseline": {
+            "count": pass_count,
+            "baseline_ref": baseline_ref,
+            "override_reason": args.override_redraft_rule or None,
+            "redraft_now": bool(args.redraft_now),
+        },
         "measured": {
             "metrics": rep["metrics"],
             "sections_over_200w_without_you": rep["sections_over_200w_without_you"],
@@ -96,14 +171,20 @@ def do_record(slug: str, raw: str, args) -> int:
             "rhythm_varied": args.rhythm,
             "read_aloud_ok": args.read_aloud,
             "notes": args.notes,
+            "stranger_read_report": args.stranger_read_report or None,
         },
         "verdict": args.verdict,
     }
     record_path(slug).write_text(json.dumps(record, indent=2), encoding="utf-8")
     print(f"Recorded voice audit: {record_path(slug).relative_to(REPO)}")
     print(f"  verdict={args.verdict}  prose_sha={rep['prose_sha'][:16]}...")
+    print(f"  passes since baseline: {pass_count} (baseline={baseline_ref})")
     if args.verdict != "pass":
         print("  NOTE: verdict is not 'pass' -- the gate will still fail until it is.")
+    if pass_count >= REDRAFT_PASS_CEILING - 1 and not args.override_redraft_rule and not args.redraft_now:
+        print(f"  WARNING: {pass_count} passes since redraft baseline; the next --record will require --redraft-now or --override-redraft-rule.")
+    if not args.stranger_read_report and pass_count >= 2:
+        print("  WARNING: no --stranger-read-report supplied; from pass 3 onward, consider running scripts/stranger_read.py to catch clever prose the writer cannot see.")
     return 0
 
 
@@ -121,6 +202,15 @@ def main() -> int:
                     help="Read-aloud flatness check")
     ap.add_argument("--verdict", choices=["pass", "fail"], default="fail", help="Overall voice verdict")
     ap.add_argument("--notes", default="", help="Short free-text attestation notes")
+    ap.add_argument("--stranger-read-report", dest="stranger_read_report",
+                    help="Path to a stranger-read report (see scripts/stranger_read.py). "
+                         "Recommended from pass 3 onwards; catches clever prose the writer cannot see.")
+    ap.add_argument("--override-redraft-rule", dest="override_redraft_rule",
+                    help="Reason string. Forces --record through the 4-pass redraft ceiling. "
+                         "Recorded in the audit log for reviewer visibility.")
+    ap.add_argument("--redraft-now", dest="redraft_now", action="store_true",
+                    help="Signal that this record is the fresh baseline after a redraft. "
+                         "Your next commit subject MUST start with 'redraft:' to reset the counter.")
     args = ap.parse_args()
 
     if not args.slug and not args.file:
@@ -140,7 +230,7 @@ def main() -> int:
     raw = draft.read_text(encoding="utf-8")
 
     if args.record:
-        return do_record(slug, raw, args)
+        return do_record(slug, raw, args, draft)
 
     print_analysis(slug, analyse(raw))
     rec = record_path(slug)

@@ -21,6 +21,15 @@ Add an article-type overlay on top of this pack when relevant.
 - Distinguish verified facts from judgement, inference, and unresolved claims.
 - Do not invent first-hand testing, screenshots, customer experience, or feature certainty.
 
+## Rule priority (when two voice rules conflict)
+
+Payoff-intent-first (`editorial-os/24-payoff-intent-first.md`) beats voice cleverness (`docs/human-authorship-voice-engine.md` Rule F, asymmetrical editorial lines). If a compressed clever line would ask the reader to hold context they have not yet been given, cut the cleverness. The reader is a stressed director with reduced cognitive capacity; a metaphor about a route they have not been introduced to is cognitive load, not authored voice.
+
+Two hard consequences of this priority, checked mechanically by `article_audit.py`:
+
+- **Never reference jargon before its first introduction.** Every acronym, form number, statutory section, or invented shorthand (`DS01`, `MVL`, `CVL`, `BADR`, `£13 route`, `s216`, `bona vacantia`, etc.) must be introduced with a plain-English gloss or a link in the same paragraph, or a sentence adjacent to its first appearance. Later mentions are free.
+- **Never open a body paragraph with a meta-reference to the article itself.** Openings like "This page covers…", "In this section…", "Both readers get served below", "The routes below are divided by…", "Options are ordered by…" are banned across the whole body, not just P1–P3. Lead with the decision, the constraint, the recommendation, or the reader consequence.
+
 ## Reader service
 
 - Write for a real director under real pressure, not a vague audience.

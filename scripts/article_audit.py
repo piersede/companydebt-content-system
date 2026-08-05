@@ -93,12 +93,37 @@ GENERIC_ANCHOR_RE = re.compile(
 
 # editorial-os/16-pre-publish-gate.md Check 10 + feedback memory — banned opening patterns.
 BAD_OPENING_PATTERNS = [
-    r"this (page|article|guide) (explains|covers|tells|shows|will)",
-    r"this (page|article|guide) break.?s? down",
-    r"in this (page|article|guide)",
+    # Meta-openings from 24-payoff-intent-first.md \u00a72 (banned list, lines 71-85)
+    r"this (page|article|guide|section|post) (explains|covers|tells|shows|will|sets out)",
+    r"this (page|article|guide|section) break.?s? down",
+    r"in this (page|article|guide|section)",
+    r"this (page|article) is (for|about)",
+    # Article-object references (adversarial expansions \u2014 see paragraph as object)
+    r"^here('s| is) how (it|this) break",
+    r"^here('s| is) what we know",
+    r"^before you (decide|choose)",
+    r"^options are ordered by",
+    r"^the routes below are divided",
+    r"^these options don'?t fit the main categories",
+    r"^both readers get served (below|above|here)",
+    r"^the (routes?|options?) (below|covered here|outlined below|further down)",
+    # Filler and setup-first openings
     r"welcome to",
     r"let['\u2019]s look at",
-    r"this (page|article) is (for|about)",
+]
+
+# Meta-reference patterns that ban an article-as-object reference ANYWHERE in
+# body prose, not just the opening. Payoff-intent-first \u00a72 lines 86-93. These
+# are patterns where the sentence is about the article rather than about the
+# reader's decision. Applied per-paragraph, first-sentence only (a mid-paragraph
+# aside pointing to a later section is OK; leading with it is not).
+META_REFERENCE_FIRST_SENTENCE_PATTERNS = [
+    r"^this (page|article|guide|section|post) (covers|explains|will|sets out|breaks down)",
+    r"^in this (page|article|guide|section)",
+    r"^both readers get served (below|above|here)",
+    r"^(the )?(routes?|options?|steps?) (below|above|covered here|outlined below|further down|in this guide)",
+    r"^here('s| is) (how|what)",
+    r"^before you (decide|choose)",
 ]
 
 # Company Debt internal link hosts (staging or production).
@@ -390,6 +415,278 @@ def check_word_count(wc: int) -> CheckResult:
         passed=wc >= 800,
         detail=f"{wc} words",
         hard_fail=False,  # the gate has no explicit floor; flag as advisory.
+    )
+
+
+# Term-specific first-mention discipline. Each entry declares the acceptable
+# introductions for that term. Three valid intro paths:
+#   1. `full_form` (optional) \u2014 if the plain-English full form appears ANYWHERE
+#      in the prose before the term, the term is considered introduced.
+#   2. `glosses` \u2014 any of these regex shapes appearing within GLOSS_WINDOW_CHARS
+#      of the term's first mention counts as an inline gloss.
+#   3. `<a href>` link within the same window (a link to a definition page).
+#   4. Inline parenthetical of the form "Full Name (TERM)" adjacent to the term.
+# Term-specific glosses matter: a global gloss list produces false passes where
+# an unrelated but topical term nearby ("winding up a company") misreads as
+# introducing "\u00a313 route".
+JARGON_TERMS_REQUIRING_INTRO: dict[str, dict] = {
+    "DS01":                              {"full_form": "form DS01",                          "glosses": [r"\bstrike[- ]off", r"\bdissolution", r"\bcompanies house form"]},
+    "MVL":                               {"full_form": "Members' Voluntary Liquidation",     "glosses": [r"\bmembers['\u2019]? voluntary liquidation", r"\bsolvent liquidation"]},
+    "CVL":                               {"full_form": "Creditors' Voluntary Liquidation",   "glosses": [r"\bcreditors['\u2019]? voluntary liquidation", r"\binsolvent voluntary"]},
+    "BADR":                              {"full_form": "Business Asset Disposal Relief",     "glosses": [r"\bbusiness asset disposal relief"]},
+    "DLA":                               {"full_form": "director's loan account",            "glosses": [r"\bdirector['\u2019]?s? loan account"]},
+    "RPS":                               {"full_form": "Redundancy Payments Service",        "glosses": [r"\bredundancy payments service"]},
+    "the \u00a313 route":                     {"full_form": None,                                 "glosses": [r"\bstrike[- ]off", r"\bds01", r"\bdissolution"]},
+    "the \u00a318 route":                     {"full_form": None,                                 "glosses": [r"\bstrike[- ]off", r"\bds01", r"\bdissolution"]},
+    "\u00a325,000 rule":                      {"full_form": None,                                 "glosses": [r"\bstrike[- ]off", r"\bcapital treatment", r"\bctm36220"]},
+    "Section 216":                       {"full_form": None,                                 "glosses": [r"\binsolvency act", r"\bre[- ]use of.*name", r"\bphoenix"]},
+    "s216":                              {"full_form": "Section 216",                        "glosses": [r"\binsolvency act", r"\bre[- ]use of.*name", r"\bphoenix"]},
+    "s214":                              {"full_form": "Section 214",                        "glosses": [r"\binsolvency act", r"\bwrongful trading"]},
+    "s212":                              {"full_form": "Section 212",                        "glosses": [r"\binsolvency act", r"\bmisfeasance"]},
+    "bona vacantia":                     {"full_form": None,                                 "glosses": [r"\bcrown", r"\bpass(es|ed)? to the (state|crown)", r"\btreasury solicitor"]},
+    "Statement of Affairs":              {"full_form": None,                                 "glosses": [r"\basset.{0,20}liab", r"\bliquidator.*(prepare|file)", r"\bformal statement of the company"]},
+    "Personal Liability Notice":         {"full_form": None,                                 "glosses": [r"\bhmrc", r"\bpaye", r"\bnic", r"\bstatutory notice"]},
+    "Joint and Several Liability Notice":{"full_form": None,                                 "glosses": [r"\bhmrc", r"\bstatutory notice"]},
+    "Time to Pay":                       {"full_form": None,                                 "glosses": [r"\bhmrc", r"\binstal(l)?ment", r"\bpayment plan", r"\btax arrears"]},
+    "TTP":                               {"full_form": "Time to Pay",                        "glosses": [r"\btime to pay"]},
+    "CTM36220":                          {"full_form": None,                                 "glosses": [r"\bhmrc", r"\bcompany taxation manual", r"\bcapital treatment"]},
+    "CTM36300":                          {"full_form": None,                                 "glosses": [r"\bhmrc", r"\bcompany taxation manual", r"\banti[- ]phoenix"]},
+    # Note: "IP" is intentionally omitted because it is too ambiguous
+    # (IP address, intellectual property, insolvency practitioner). Rely on
+    # human review for that term.
+}
+
+GLOSS_WINDOW_CHARS = 240  # chars around first occurrence to look for an inline intro
+
+# Algorithmic shorthand detection. Patterns that look like invented shorthand
+# regardless of whether they're in the curated jargon list. Catches new
+# shorthand the writer coins ("the £3,500 exit", "the SDR route") so the gate
+# does not depend on the list being exhaustive.
+INVENTED_SHORTHAND_PATTERNS = [
+    # "the £<num> <noun>" — the shape that produced "the £13 route".
+    # Bare "£<num> <noun>" alone is intentionally not caught: "£13 online" and
+    # "£25,000 threshold" are normal fee/tax phrasing, not invented shorthand.
+    # The definite article is what turns a fee into a coined name.
+    r"\bthe £\d[\d,]*\s+[a-z]+\b",
+]
+
+# All-caps abbreviations of 3-6 chars that appear in body prose without either
+# an inline expansion or presence on either the jargon whitelist. Standard
+# words to ignore in the detector (would falsely match otherwise). Add
+# insolvency-corpus abbreviations here as they are formally introduced with
+# expansions in the JARGON_TERMS_REQUIRING_INTRO map.
+STANDARD_UPPER_TOKENS = {
+    "UK", "US", "USA", "EU", "PDF", "HTML", "CEO", "CFO", "CTO", "COO", "CIO",
+    "HR", "IT", "IP", "AGM", "AM", "PM", "OK", "TV", "URL", "GDP", "VAT",
+    "PAYE", "NIC", "HMRC", "PLC", "LTD", "LLP", "LP", "TAR", "COVID", "GP",
+    "SIC", "IPA", "ACCA", "ICAEW", "ICAS", "SRA", "FCA", "PRA",
+    "R3",  # Insolvency-industry body
+    "NI",  # Northern Ireland shorthand (used in jurisdiction notes)
+    "SME", "SMEs",
+    "FPS", "EPS",  # payroll submissions (PAYE-related)
+    "IA", "s84", "s122", "s124",  # Insolvency Act section prefixes used in citations
+    "MP", "AI",
+    # Weekday abbreviations
+    "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN",
+    # Insolvency-corpus abbreviations that are used across many pages and can
+    # reasonably be expected to be understood by the audience without an
+    # inline gloss on every mention. Add sparingly: a term belongs here only
+    # if introducing it every time would be more friction than help. When in
+    # doubt, put the term in JARGON_TERMS_REQUIRING_INTRO instead.
+    "BBL", "BBLS",  # Bounce Back Loan / Scheme (used across the closure cluster)
+    "CBILS",        # Coronavirus Business Interruption Loan Scheme
+    "CVA",          # Company Voluntary Arrangement (heading-level entity across the site)
+    "OR",           # Official Receiver
+}
+
+
+def check_algorithmic_shorthand(body: str) -> CheckResult:
+    """
+    Catch invented shorthand the writer coined that is not on the curated
+    jargon list. Two heuristics:
+
+    (a) 'the £<num> <noun>' pattern — this is the exact shape that produced
+        the '£13 route' failure. Any match must sit near a plain-English
+        gloss (checked crudely as the presence of 'strike-off', 'dissolve',
+        'route', 'process', or 'form' within 240 chars).
+    (b) Any all-caps token of 3-6 chars appearing in body prose that is not
+        in STANDARD_UPPER_TOKENS and not in JARGON_TERMS_REQUIRING_INTRO —
+        flag as potential invented shorthand.
+
+    Purpose: the curated jargon list will always lag reality. This check
+    catches new shorthand automatically at write time, forcing the writer
+    either to expand it, add it to the standard tokens if it is genuinely
+    plain English, or add it to the jargon map with a proper gloss.
+    """
+    # Strip asides, tables, headings and code blocks.
+    prose = re.sub(r"<aside\b[^>]*>.*?</aside>", " ", body, flags=re.I | re.S)
+    prose = re.sub(r"<table\b[^>]*>.*?</table>", " ", prose, flags=re.I | re.S)
+    prose = re.sub(r"<h[2-6][^>]*>.*?</h[2-6]>", " ", prose, flags=re.I | re.S)
+    prose = re.sub(r"<code\b[^>]*>.*?</code>", " ", prose, flags=re.I | re.S)
+    prose = re.sub(r"<a [^>]*>.*?</a>", " ", prose, flags=re.I | re.S)
+    plain = re.sub(r"<[^>]+>", " ", prose)
+
+    hits = []
+
+    # (a) invented-shorthand shape. Suppress matches whose currency-value
+    # component matches an existing curated jargon entry. E.g. the invented-
+    # shorthand regex greedily captures 'the £25,000 tax' as a substring of
+    # 'the £25,000 tax rule'; the '£25,000 rule' entry in the jargon map
+    # already covers that phrase (with its own gloss requirements under
+    # check 31), so re-flagging under check 32 is a duplicate.
+    jargon_lower = {t.lower() for t in JARGON_TERMS_REQUIRING_INTRO}
+    def _amount_in_jargon(snippet: str) -> bool:
+        amt = re.search(r"£\d[\d,]*", snippet)
+        if not amt:
+            return False
+        amt_str = amt.group(0)
+        return any(amt_str in jt for jt in jargon_lower)
+
+    for pat in INVENTED_SHORTHAND_PATTERNS:
+        for m in re.finditer(pat, plain, re.I):
+            snippet_lower = m.group(0).lower()
+            if any(jt in snippet_lower or snippet_lower in jt for jt in jargon_lower):
+                continue
+            if _amount_in_jargon(snippet_lower):
+                continue
+            start = max(0, m.start() - GLOSS_WINDOW_CHARS)
+            end = min(len(plain), m.end() + GLOSS_WINDOW_CHARS)
+            window = plain[start:end].lower()
+            # Very light gloss: any of these words nearby → the invented
+            # shorthand is at least anchored to a real concept.
+            anchors = [r"\bstrike[- ]off", r"\bdissolution", r"\bform\b",
+                       r"\bcompanies house", r"\binstal(l)?ment", r"\bctm"]
+            has_anchor = any(re.search(a, window) for a in anchors)
+            if not has_anchor:
+                hits.append(f"invented-shorthand shape: '{m.group(0).strip()}' with no plain-English anchor within {GLOSS_WINDOW_CHARS} chars")
+                break  # one instance per pattern is enough to flag
+
+    # (b) all-caps abbreviations not on standard whitelist and not in the
+    # curated jargon map (which are already covered by check 31).
+    jargon_upper = {t for t in JARGON_TERMS_REQUIRING_INTRO if t.isupper() and t.isalpha()}
+    for m in re.finditer(r"\b([A-Z]{3,6})\b", plain):
+        token = m.group(1)
+        if token in STANDARD_UPPER_TOKENS or token in jargon_upper:
+            continue
+        # Skip if it appears in an inline parenthetical expansion like
+        # "Redundancy Payments Service (RPS)" — the expansion IS the intro.
+        window_start = max(0, m.start() - 80)
+        left_context = plain[window_start:m.start()]
+        # Any capitalised multi-word noun-phrase immediately before + "(TOKEN)" pattern
+        if re.search(r"[A-Z][A-Za-z']*(?:\s+[A-Za-z']+){1,6}\s*\(\s*$", left_context):
+            continue
+        # Otherwise: unknown shorthand.
+        # Suppress duplicates.
+        entry = f"unknown all-caps token '{token}' — add to jargon map with a gloss, or to STANDARD_UPPER_TOKENS if genuinely plain English"
+        if entry not in hits:
+            hits.append(entry)
+
+    return CheckResult(
+        id="32", tier="T1",
+        name="No un-glossed invented shorthand or unknown abbreviations",
+        passed=len(hits) == 0,
+        detail=("; ".join(hits[:4])) if hits else "clean",
+    )
+
+
+def check_payoff_intent_first_meta_references(body: str) -> CheckResult:
+    """
+    editorial-os/24-payoff-intent-first.md \u00a72 (Meta-Opening Stripper):
+    ban paragraphs whose FIRST sentence primarily references the article as an
+    object rather than paying off reader intent. Applies to all body <p>, not
+    just P1\u2013P3, because the failure mode ('this page covers...' at P4,
+    'both readers get served below' at P2) has shipped in this repo.
+    """
+    # Strip asides (methodology/sources/callouts) \u2014 their structural sentences
+    # legitimately reference the article itself.
+    stripped = re.sub(r"<aside\b[^>]*>.*?</aside>", " ", body, flags=re.I | re.S)
+    paragraphs = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", stripped, re.S)
+    hits = []
+    for i, para in enumerate(paragraphs, start=1):
+        plain = re.sub(r"<[^>]+>", "", para).strip()
+        if not plain:
+            continue
+        # First sentence only.
+        m = re.match(r"[^.!?]+[.!?]?", plain)
+        first = (m.group(0) if m else plain).strip()
+        for pat in META_REFERENCE_FIRST_SENTENCE_PATTERNS:
+            if re.match(pat, first, re.I):
+                snippet = first[:110]
+                hits.append(f"P{i}: {snippet}")
+                break
+    return CheckResult(
+        id="30", tier="T1",
+        name="No meta-reference openings in body paragraphs (payoff-intent-first)",
+        passed=len(hits) == 0,
+        detail=(f"{len(hits)} paragraph(s) open with an article-object reference: "
+                + "; ".join(hits[:3])) if hits else "clean",
+    )
+
+
+def check_jargon_first_mention_intro(body: str) -> CheckResult:
+    """
+    First-mention discipline: for each jargon term in JARGON_TERMS_REQUIRING_INTRO,
+    the FIRST appearance in body prose must sit within GLOSS_WINDOW_CHARS of a
+    TERM-SPECIFIC gloss (regex shape) OR a link (<a href) to a definition page,
+    OR (for bare acronyms) an inline parenthetical alongside the full form.
+    Later mentions are unrestricted.
+
+    Term-specific glosses matter: sharing a global gloss list caused false
+    passes where an unrelated but topical term nearby ("winding up a company")
+    was misread as introducing "\u00a313 route".
+    """
+    # Strip asides, callouts, and tables \u2014 first mentions inside a summary card
+    # do not count as "the introduction" for the reader working through prose.
+    prose = re.sub(r"<aside\b[^>]*>.*?</aside>", " ", body, flags=re.I | re.S)
+    prose = re.sub(r"<table\b[^>]*>.*?</table>", " ", prose, flags=re.I | re.S)
+    prose = re.sub(r"<h[2-6][^>]*>.*?</h[2-6]>", " ", prose, flags=re.I | re.S)
+
+    hits = []
+    for term, spec in JARGON_TERMS_REQUIRING_INTRO.items():
+        full_form = spec.get("full_form")
+        gloss_shapes = spec.get("glosses", [])
+
+        # Find the first mention of the term itself.
+        if term.isupper() and term.isalpha():
+            pat = rf"\b{re.escape(term)}\b"
+            flags = 0
+        else:
+            pat = re.escape(term)
+            flags = re.I
+        m = re.search(pat, prose, flags)
+        if not m:
+            continue
+
+        # PATH 1: full form appears anywhere before the term's first mention.
+        if full_form:
+            ff_m = re.search(re.escape(full_form), prose[: m.start()], re.I)
+            if ff_m:
+                continue  # legit: reader has seen the full form already
+
+        # PATH 2 / 3 / 4: inline window checks.
+        start = max(0, m.start() - GLOSS_WINDOW_CHARS)
+        end = min(len(prose), m.end() + GLOSS_WINDOW_CHARS)
+        window = prose[start:end].lower()
+
+        has_gloss_shape = any(re.search(g, window) for g in gloss_shapes)
+        has_link = "<a " in window and "href" in window
+
+        # Inline-parenthetical intro: "Members' Voluntary Liquidation (MVL)".
+        term_esc = re.escape(term)
+        has_paren_intro = bool(re.search(rf"\([^()]{{0,3}}{term_esc}[^()]{{0,3}}\)", window, re.I))
+
+        if not (has_gloss_shape or has_link or has_paren_intro):
+            sent_start = prose.rfind(".", 0, m.start()) + 1
+            sent_end = prose.find(".", m.end())
+            if sent_end < 0:
+                sent_end = min(len(prose), m.end() + 120)
+            sent = re.sub(r"\s+", " ", prose[sent_start:sent_end]).strip()[:140]
+            hits.append(f"'{term}' first mention has no earlier full form or nearby gloss \u2014 {sent}")
+    return CheckResult(
+        id="31", tier="T1",
+        name="Jargon first-mention introduced with plain-English gloss or link",
+        passed=len(hits) == 0,
+        detail=("; ".join(hits[:3])) if hits else "clean",
     )
 
 
@@ -1110,6 +1407,9 @@ def audit_file(path: Path) -> ArticleAudit:
         check_zero_you_sections(raw),
         check_you_ceiling(raw),
         check_rhythm_variation(raw),
+        check_payoff_intent_first_meta_references(body),
+        check_jargon_first_mention_intro(body),
+        check_algorithmic_shorthand(body),
     ]
     return audit
 

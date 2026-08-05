@@ -140,6 +140,32 @@ Bake these in WHILE humanising so the output clears `article_audit.py`:
    never pre-flatten the voice to dodge the splitter.
 3. Re-read P1-P3 specifically for banned openings introduced during humanising.
 
+## Stranger-read step (mandatory from pass 3 onward)
+
+Before recording the voice audit on pass 3 or later, run an outside-eye check
+on the opening. The writer cannot see clever prose after several iterations;
+a fresh reader can. Two commands:
+
+    python scripts/stranger_read.py --slug <slug>
+
+This prints a persona-anchored prompt and writes a template file. Paste the
+prompt into a fresh agent (a new Agent tool call is fine; make sure it has
+not been in the drafting session). Take the agent's response verbatim and
+paste it into the template file under the `---` separator. Then:
+
+    python scripts/stranger_read.py --fill editorial-os/stranger-reads/<file>.md
+
+That validates the response (rejects empty stubs, requires at least two of the
+five numbered answers). Finally, reference the report in the audit record:
+
+    python scripts/voice_audit.py --slug <slug> --record ... \
+        --stranger-read-report editorial-os/stranger-reads/<file>.md
+
+If the stranger-read report flags a term the reader had to look up or a point
+where they would have closed the tab, fix the prose before recording the audit
+with a `pass` verdict. Do not record the audit with `pass` and known unresolved
+issues in the stranger-read report; that defeats the check.
+
 ## Definition of done (self-check before handing to gate)
 
 - **Part C is satisfied and re-read for:** >= 3 concrete scenes per 1,000 words
