@@ -238,7 +238,8 @@ body.page-template-insolvency-test .cd-itest-lede {
     font-size: var(--cdi-fs-md) !important;
     line-height: 1.55 !important;
     color: var(--cdi-grey) !important;
-    margin: 0 0 var(--cdi-sp-3) !important;
+    /* 20px = the uniform section-to-section gap on the capture step */
+    margin: 0 0 20px !important;
     font-weight: 400 !important;
 }
 body.page-template-insolvency-test .cd-itest-lede-sub {
@@ -439,18 +440,21 @@ body.page-template-insolvency-test .cd-itest-opt__sub {
     margin: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-callpref {
-    margin: 0 0 16px !important;
+    /* 20px below = the uniform section-to-section gap into the button. */
+    margin: 0 0 20px !important;
 }
 body.page-template-insolvency-test .cd-itest-callpref__q {
     display: block !important;
     font-size: var(--cdi-fs-sm) !important;
     font-weight: 700 !important;
     color: var(--cdi-navy) !important;
-    margin: 0 0 8px !important;
+    /* 10px = sub-element gap (label → first card). */
+    margin: 0 0 10px !important;
     line-height: 1.4 !important;
 }
 body.page-template-insolvency-test .cd-itest-callpref-options {
-    gap: 8px !important;
+    /* 10px = sub-element gap (card → card). */
+    gap: 10px !important;
     margin: 0 !important;
 }
 
@@ -501,8 +505,10 @@ body.page-template-insolvency-test .cd-itest-btn-primary--cta {
 
 body.page-template-insolvency-test .cd-itest-field-grid {
     display: grid !important;
+    /* 14px = internal field-to-field spacing (name → email); 20px below the
+       whole grid = section-to-section gap into the callpref block. */
     gap: 14px !important;
-    margin-bottom: var(--cdi-sp-2) !important;
+    margin: 0 0 20px !important;
 }
 body.page-template-insolvency-test .cd-itest-field {
     margin: 0 !important;
@@ -582,7 +588,9 @@ body.page-template-insolvency-test .cd-itest-capture-reassure {
     line-height: 1.5 !important;
     color: var(--cdi-text) !important;
     font-weight: 600 !important;
-    margin: var(--cdi-sp-3) 0 var(--cdi-sp-1) !important;
+    /* 20px above = uniform section gap (button → reassure).
+       8px below = related-paragraph gap (reassure → trust). */
+    margin: 20px 0 8px !important;
     padding: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-capture-trust {
@@ -591,11 +599,10 @@ body.page-template-insolvency-test .cd-itest-capture-trust {
     font-size: var(--cdi-fs-xs) !important;
     line-height: 1.55 !important;
     color: var(--cdi-grey) !important;
-    margin: 0 0 var(--cdi-sp-1) !important;
+    /* 8px = related-paragraph gap (trust → phone). */
+    margin: 0 auto 8px !important;
     padding: 0 !important;
     max-width: 560px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
 }
 body.page-template-insolvency-test .cd-itest-capture-phone {
     display: block !important;
