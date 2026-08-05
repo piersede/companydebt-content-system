@@ -2,11 +2,11 @@
 /**
  * Plugin Name: CD Insolvency Test — Zoho lead push
  * Description: Sends every submission of the Insolvency Test Gravity Form into Zoho CRM as a Lead. Deduplicates on email via Zoho's upsert. Persistent mu-plugin — not a throwaway.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Company Debt (Claude)
  *
  * How it works:
- * - Hooks gform_after_submission_<form_id> where <form_id> is read from
+ * - Hooks gform_entry_created for the form whose id is stored in
  *   wp_options['cd_insolvency_test_form_id'] (so staging and live can differ).
  * - Reads Zoho creds from wp_options (cd_zoho_client_id, cd_zoho_client_secret,
  *   cd_zoho_refresh_token, cd_zoho_api_domain, cd_zoho_accounts_domain).
@@ -17,6 +17,10 @@
  *   a new Lead or updates the existing one for that email.
  * - Errors are logged via error_log() and stored in the last-error option
  *   (cd_zoho_last_error) for diagnostics. Never blocks the GF submission.
+ * - On failure, sends an alert email to the site admin (throttled to one
+ *   per hour via a transient) so silent lead-loss can't run undetected.
+ * - Registers /wp-json/cd-itest/v1/abandon to receive abandonment beacons
+ *   from the template's pagehide handler.
  */
 
 // gform_entry_created fires ONCE per saved entry, with the full entry array.
@@ -24,6 +28,39 @@
 // endpoint — sometimes with $entry = NULL, sometimes with a partial entry.)
 // Using entry_created gives us a consistent, complete payload.
 add_action('gform_entry_created', 'cd_itest_zoho_push', 10, 2);
+
+// REST route for the pagehide abandonment beacon. Previously the beacon
+// POSTed to a route that didn't exist and hit WP's REST 404 handler.
+add_action('rest_api_init', function () {
+    register_rest_route('cd-itest/v1', '/abandon', array(
+        'methods'             => 'POST',
+        'callback'            => 'cd_itest_record_abandonment',
+        'permission_callback' => '__return_true',
+    ));
+});
+
+/**
+ * Persist an abandonment event server-side (for visitors whose browsers
+ * block dataLayer / GA4). Kept intentionally cheap — writes to a
+ * daily-rolling counter option, no per-event DB row.
+ */
+function cd_itest_record_abandonment($request) {
+    $body = $request->get_json_params();
+    if (!is_array($body)) $body = array();
+    $last_step = isset($body['last_step']) ? sanitize_key((string) $body['last_step']) : 'unknown';
+    $reached   = !empty($body['reached_capture']);
+
+    $today = gmdate('Y-m-d');
+    $counts = get_option('cd_itest_abandonment_counts', array());
+    if (!is_array($counts) || empty($counts['date']) || $counts['date'] !== $today) {
+        $counts = array('date' => $today, 'total' => 0, 'by_step' => array(), 'reached_capture' => 0);
+    }
+    $counts['total']++;
+    $counts['by_step'][$last_step] = (isset($counts['by_step'][$last_step]) ? $counts['by_step'][$last_step] : 0) + 1;
+    if ($reached) $counts['reached_capture']++;
+    update_option('cd_itest_abandonment_counts', $counts, false);
+    return new \WP_REST_Response(null, 204);
+}
 
 function cd_itest_zoho_push($entry, $form) {
     // Trace every hook invocation so we can tell whether we're being called at
@@ -34,7 +71,8 @@ function cd_itest_zoho_push($entry, $form) {
         'entry_type'  => gettype($entry),
         'entry_id'    => is_array($entry) ? (int) rgar($entry, 'id') : 'not-array',
         'entry_keys'  => is_array($entry) ? implode(',', array_slice(array_keys($entry), 0, 30)) : 'not-array',
-        'has_email'   => is_array($entry) ? (bool) rgar($entry, '2') : false,
+        // trim() so a whitespace-only "email" doesn't get counted as present.
+        'has_email'   => is_array($entry) ? (bool) trim((string) rgar($entry, '2')) : false,
     );
     update_option('cd_zoho_last_hook_trace', $trace, false);
 
@@ -153,12 +191,19 @@ function cd_itest_zoho_push($entry, $form) {
                         ),
                         'body' => $body,
                     ));
+                    if (is_wp_error($resp)) {
+                        cd_itest_zoho_record_error('retry_http_error', $resp->get_error_message(), array('entry_id' => $entry_id));
+                        return;
+                    }
                     $code = wp_remote_retrieve_response_code($resp);
                     $rbody = wp_remote_retrieve_body($resp);
                 }
             }
             if ($code < 200 || $code >= 300) {
-                cd_itest_zoho_record_error('non_2xx', "Zoho returned {$code}", array('body' => substr((string) $rbody, 0, 500)));
+                cd_itest_zoho_record_error('non_2xx', "Zoho returned {$code}", array(
+                    'entry_id' => $entry_id,
+                    'body'     => substr((string) $rbody, 0, 500),
+                ));
                 return;
             }
         }
@@ -231,4 +276,30 @@ function cd_itest_zoho_record_error($kind, $message, $extra = array()) {
     ), $extra);
     update_option('cd_zoho_last_error', $rec, false);
     error_log('[cd-insolvency-test-zoho] ' . $kind . ': ' . $message);
+
+    // Alert the admin so a silent lead-drop can't run undetected — throttled
+    // to one email per hour per error-kind so a persistent outage doesn't
+    // spam the inbox.
+    $throttle_key = 'cd_zoho_alert_sent__' . md5($kind);
+    if (get_transient($throttle_key)) return;
+    set_transient($throttle_key, 1, HOUR_IN_SECONDS);
+
+    $to = get_option('admin_email');
+    if (!$to) return;
+    $site = wp_parse_url(home_url(), PHP_URL_HOST);
+    $entry_id = isset($extra['entry_id']) ? (int) $extra['entry_id'] : 0;
+    $subject = '[' . $site . '] Insolvency Test → Zoho push failing (' . $kind . ')';
+    $body_lines = array(
+        'The Insolvency Test capture form is submitting successfully but the Zoho lead push is failing.',
+        '',
+        'Failure kind: ' . $kind,
+        'Message:      ' . $message,
+        'Time (UTC):   ' . gmdate('c'),
+        'Entry ID:     ' . ($entry_id ?: 'none'),
+        '',
+        'This alert is throttled to one email per hour per failure kind.',
+        'Diagnose via wp_options[cd_zoho_last_error] and the WP error log.',
+        'If the credentials are missing, run scripts/wp_set_zoho_options.py against this environment.',
+    );
+    wp_mail($to, $subject, implode("\n", $body_lines));
 }

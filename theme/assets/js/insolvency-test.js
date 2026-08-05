@@ -32,6 +32,14 @@
     var startedAt = 0;
     var reachedCapture = false;
     var submitted = false;
+    // Track which steps have already fired insolvency_test_step_complete so
+    // that a Back → forward cycle doesn't inflate GA4 funnel counts.
+    var stepCompleteFired = Object.create(null);
+    function fireStepComplete(step, answer) {
+        if (stepCompleteFired[step]) return;
+        stepCompleteFired[step] = true;
+        ga('insolvency_test_step_complete', { step: step, answer: answer });
+    }
 
     var STAGES = {
         intro: 0, cashflow: 0.20, warning: 0.40, position: 0.55,
@@ -84,8 +92,13 @@
             back.classList.remove('cd-itest-show');
         } else {
             pw.classList.add('cd-itest-show');
-            document.getElementById('cd-itest-progressFill').style.width = (STAGES[id] * 100) + '%';
+            var pct = Math.round(STAGES[id] * 100);
+            document.getElementById('cd-itest-progressFill').style.width = pct + '%';
             document.getElementById('cd-itest-progressLabel').textContent = LABELS[id] || '';
+            // Update the ARIA progressbar value so assistive tech reports
+            // the new percentage as the step advances.
+            var track = document.querySelector('.cd-itest-progress-track');
+            if (track) track.setAttribute('aria-valuenow', String(pct));
             back.classList.add('cd-itest-show');
         }
         // Panel min-height belongs to intro only; other screens size to content.
@@ -93,6 +106,13 @@
 
         try { window.scrollTo({ top: 0, behavior: 'instant' }); } catch (e) { window.scrollTo(0, 0); }
         if (id === 'capture') reachedCapture = true;
+
+        // Move focus to the new step's section so screen-reader users hear
+        // the new question announced. Each step section has tabindex="-1"
+        // in the template so this focus is programmatic-only (doesn't add
+        // the section to the visible tab order).
+        try { next.focus({ preventScroll: true }); }
+        catch (e) { next.focus(); }
     }
     function goBack() {
         if (stepHistory.length < 2) return;
@@ -136,7 +156,7 @@
         for (var i = 0; i < els.length; i++) {
             els[i].addEventListener('change', function (e) {
                 answers.cashflow = e.target.value;
-                ga('insolvency_test_step_complete', { step: 'cashflow', answer: e.target.value });
+                fireStepComplete('cashflow', e.target.value);
                 setTimeout(function () { goTo('warning'); }, 350);
             });
         }
@@ -146,7 +166,7 @@
         for (var i = 0; i < els.length; i++) {
             els[i].addEventListener('change', function (e) {
                 answers.position = e.target.value;
-                ga('insolvency_test_step_complete', { step: 'position', answer: e.target.value });
+                fireStepComplete('position', e.target.value);
                 setTimeout(function () {
                     // Conditional branch: only go to debtrange if the answers
                     // suggest debts might be significant.
@@ -164,7 +184,7 @@
         for (var i = 0; i < els.length; i++) {
             els[i].addEventListener('change', function (e) {
                 answers.debtRange = e.target.value;
-                ga('insolvency_test_step_complete', { step: 'debtrange', answer: e.target.value });
+                fireStepComplete('debtrange', e.target.value);
                 setTimeout(function () { goTo('risk'); }, 350);
             });
         }
@@ -192,14 +212,14 @@
                     document.querySelectorAll('input[name="cd_warning"]:checked'),
                     function (x) { return x.value; }
                 ).filter(function (v) { return v !== 'none'; });
-                ga('insolvency_test_step_complete', { step: 'warning', answer: answers.warning.join(',') || 'none' });
+                fireStepComplete('warning', answers.warning.join(',') || 'none');
                 goTo('position');
             } else if (which === 'risk') {
                 answers.risk = [].map.call(
                     document.querySelectorAll('input[name="cd_risk"]:checked'),
                     function (x) { return x.value; }
                 ).filter(function (v) { return v !== 'none'; });
-                ga('insolvency_test_step_complete', { step: 'risk', answer: answers.risk.join(',') || 'none' });
+                fireStepComplete('risk', answers.risk.join(',') || 'none');
                 goTo('capture');
             }
         }
@@ -407,8 +427,10 @@
             forceUrgent: result.forceUrgent,
             duration_ms: startedAt ? (Date.now() - startedAt) : 0
         }));
-        fd.append('input_8', location.href);
-        fd.append('input_9', document.referrer || '');
+        // Truncate the referrer to keep the Zoho Lead description readable —
+        // Ads gclid strings and some Bing referrers run into hundreds of chars.
+        fd.append('input_8', String(location.href).slice(0, 500));
+        fd.append('input_9', String(document.referrer || '').slice(0, 500));
 
         captureBtn.disabled = true;
         captureBtn.textContent = 'Sending…';

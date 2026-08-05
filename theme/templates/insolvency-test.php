@@ -17,9 +17,9 @@
 $cd_itest_form_id = (int) get_option( 'cd_insolvency_test_form_id', 0 );
 
 // Chris Andersen headshot — the same file used on the site's author pages.
-// Falls back to the theme placeholder if the file has been renamed on live.
-$cd_itest_chris_photo = 'https://' . $_SERVER['HTTP_HOST']
-    . '/wp-content/uploads/2022/06/Chris-Anderson-Insolvency-Practitioner-1-300x300.jpg';
+// Built from content_url() rather than $_SERVER['HTTP_HOST'] so an attacker
+// with control of the Host header can't swap in an off-site image URL.
+$cd_itest_chris_photo = content_url( '/uploads/2022/06/Chris-Anderson-Insolvency-Practitioner-1-300x300.jpg' );
 
 get_header();
 ?>
@@ -33,8 +33,10 @@ get_header();
 <?php else : ?>
 
 <div class="cd-itest-progress-wrap" id="cd-itest-progressWrap" style="display:none">
-    <div class="cd-itest-progress-track"><div class="cd-itest-progress-fill" id="cd-itest-progressFill"></div></div>
-    <div class="cd-itest-progress-label" id="cd-itest-progressLabel"></div>
+    <div class="cd-itest-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="cd-itest-progressLabel">
+        <div class="cd-itest-progress-fill" id="cd-itest-progressFill"></div>
+    </div>
+    <div class="cd-itest-progress-label" id="cd-itest-progressLabel" aria-live="polite"></div>
 </div>
 
 <button class="cd-itest-back-btn" id="cd-itest-backBtn" type="button" aria-label="Back to previous step">
@@ -45,7 +47,7 @@ get_header();
 <div class="cd-itest-panel cd-itest-panel--intro">
 
     <?php // ── STEP 0 · INTRO ─────────────────────────────────────────── ?>
-    <section class="cd-itest-step cd-itest-step--active" data-stage="0" id="cd-itest-step-intro" role="group" aria-label="Introduction">
+    <section class="cd-itest-step cd-itest-step--active" data-stage="0" id="cd-itest-step-intro" role="group" tabindex="-1" aria-label="Introduction">
         <h1 class="cd-itest-h1">Worried Your Company May Be Insolvent?</h1>
         <p class="cd-itest-lede">Answer a few short questions to receive a personalised initial result showing the warning signs that apply, how serious the position may be and what your company may need to do next.</p>
         <p class="cd-itest-lede-sub">Financial pressure does not always mean that a company is insolvent. This check helps you understand the position more clearly.</p>
@@ -72,7 +74,7 @@ get_header();
     </section>
 
     <?php // ── STEP 1 · CASHFLOW (auto-advance) ─────────────────────────── ?>
-    <section class="cd-itest-step" data-stage="1" id="cd-itest-step-cashflow" role="group" aria-label="Question 1 of 4: cashflow">
+    <section class="cd-itest-step" data-stage="1" id="cd-itest-step-cashflow" role="group" tabindex="-1" aria-label="Question 1 of 4: cashflow">
         <h2 class="cd-itest-q">Can the company currently pay its bills when they fall due?</h2>
         <?php // "Yes, comfortably" removed 2026-08-05 (Piers): a director in
               // that position would not have started this check, so offering
@@ -89,7 +91,7 @@ get_header();
     </section>
 
     <?php // ── STEP 2 · WARNING SIGNS (checkboxes + continue) ──────────── ?>
-    <section class="cd-itest-step" data-stage="2" id="cd-itest-step-warning" role="group" aria-label="Question 2 of 4: warning signs">
+    <section class="cd-itest-step" data-stage="2" id="cd-itest-step-warning" role="group" tabindex="-1" aria-label="Question 2 of 4: warning signs">
         <h2 class="cd-itest-q">Which of these are happening now?</h2>
         <p class="cd-itest-lede-sub">Select all that apply.</p>
         <ul class="cd-itest-options" id="cd-itest-opts-warning">
@@ -104,7 +106,7 @@ get_header();
     </section>
 
     <?php // ── STEP 3 · POSITION (auto-advance, conditional branch) ────── ?>
-    <section class="cd-itest-step" data-stage="3" id="cd-itest-step-position" role="group" aria-label="Question 3 of 4: financial position">
+    <section class="cd-itest-step" data-stage="3" id="cd-itest-step-position" role="group" tabindex="-1" aria-label="Question 3 of 4: financial position">
         <h2 class="cd-itest-q">Which Best Describes the Company&rsquo;s Overall Financial Position?</h2>
         <ul class="cd-itest-options" id="cd-itest-opts-position">
             <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-1" value="assets_more"><label for="cd-pos-1">The company&rsquo;s cash and assets are worth more than everything it owes</label></li>
@@ -115,7 +117,7 @@ get_header();
     </section>
 
     <?php // ── STEP 3b · DEBT RANGE (conditional, auto-advance) ────────── ?>
-    <section class="cd-itest-step" data-stage="3" id="cd-itest-step-debtrange" role="group" aria-label="Question 3 continued: debt range">
+    <section class="cd-itest-step" data-stage="3" id="cd-itest-step-debtrange" role="group" tabindex="-1" aria-label="Question 3 continued: debt range">
         <h2 class="cd-itest-q">Roughly how much does the company owe in total?</h2>
         <ul class="cd-itest-options" id="cd-itest-opts-debtrange">
             <li class="cd-itest-opt"><input type="radio" name="cd_debtrange" id="cd-dr-1" value="under10k"><label for="cd-dr-1">Under &pound;10,000</label></li>
@@ -129,7 +131,7 @@ get_header();
     </section>
 
     <?php // ── STEP 4 · RISK FACTORS (checkboxes + continue) ───────────── ?>
-    <section class="cd-itest-step" data-stage="4" id="cd-itest-step-risk" role="group" aria-label="Question 4 of 4: risk factors">
+    <section class="cd-itest-step" data-stage="4" id="cd-itest-step-risk" role="group" tabindex="-1" aria-label="Question 4 of 4: risk factors">
         <h2 class="cd-itest-q">Do any of these apply?</h2>
         <p class="cd-itest-lede-sub">Select all that apply.</p>
         <ul class="cd-itest-options" id="cd-itest-opts-risk">
@@ -152,7 +154,7 @@ get_header();
           // with two short reassurance lines directly under the CTA. The
           // practitioner attribution moved to the result page, where the
           // named authority actually earns its keep. ?>
-    <section class="cd-itest-step" data-stage="5" id="cd-itest-step-capture" role="group" aria-label="Your details">
+    <section class="cd-itest-step" data-stage="5" id="cd-itest-step-capture" role="group" tabindex="-1" aria-label="Your details">
         <h2 class="cd-itest-q">Your Result Is Ready</h2>
         <p class="cd-itest-lede">Enter your details to view your personalised result and receive a copy by email.</p>
 
@@ -197,8 +199,10 @@ get_header();
         </div>
 
         <button class="cd-itest-btn-primary" type="button" id="cd-itest-capture-submit">See My Result</button>
-        <p class="cd-itest-error" id="cd-itest-err-capture">Please add your name and a valid email address.</p>
-        <p class="cd-itest-error" id="cd-itest-err-network" style="display:none">We could not save your details just now. Please try again, or call <a href="tel:08000746757">0800 074 6757</a>.</p>
+        <?php // role="alert" so screen-reader users hear the validation message
+              // as soon as it appears (previously silent — WCAG 3.3.1). ?>
+        <p class="cd-itest-error" id="cd-itest-err-capture" role="alert" aria-live="assertive">Please add your name and a valid email address.</p>
+        <p class="cd-itest-error" id="cd-itest-err-network" role="alert" aria-live="assertive" style="display:none">We could not save your details just now. Please try again, or call <a href="tel:08000746757">0800 074 6757</a>.</p>
 
         <p class="cd-itest-capture-reassure">Your result will be sent immediately. A call will only be made if you request one.</p>
         <p class="cd-itest-capture-trust">Your details are treated confidentially. Company Debt has helped UK company directors since 2007, with formal insolvency work handled by licensed insolvency practitioners.</p>
@@ -206,7 +210,7 @@ get_header();
     </section>
 
     <?php // ── STEP 6 · RESULT (post-capture) ──────────────────────────── ?>
-    <section class="cd-itest-step" data-stage="6" id="cd-itest-step-result" role="group" aria-label="Your result">
+    <section class="cd-itest-step" data-stage="6" id="cd-itest-step-result" role="group" tabindex="-1" aria-label="Your result">
 
         <span class="cd-itest-result-badge" id="cd-itest-resultBadge"></span>
         <h2 class="cd-itest-result-title" id="cd-itest-resultTitle"></h2>
