@@ -412,33 +412,38 @@ body.page-template-insolvency-test .cd-itest-opt input:focus-visible + label {
     outline-offset: 2px !important;
 }
 
-/* Rich radio cards (capture step call-preference) — a visible radio circle
-   on the left, a title, and a subtitle. Otherwise these look like text
-   inputs and users don't realise they're selectable. */
+/* Rich radio cards (capture step call-preference) — a visible radio
+   circle on the left, a title, and a subtitle. Layout is a flex row:
+   [radio marker span] [body: title over subtitle]. Uses a real span
+   for the marker (rather than label::before) so no positioning trick
+   can be broken by a stray cascade rule. */
 body.page-template-insolvency-test .cd-itest-opt--rich label {
-    position: relative !important;
+    display: flex !important;
     align-items: flex-start !important;
-    padding: 14px 18px 14px 48px !important;
+    gap: 12px !important;
+    padding: 14px 18px !important;
     min-height: 0 !important;
     line-height: 1.4 !important;
-    display: block !important;
 }
-body.page-template-insolvency-test .cd-itest-opt--rich label::before {
-    content: '' !important;
-    position: absolute !important;
-    left: 16px !important;
-    top: 18px !important;
+body.page-template-insolvency-test .cd-itest-opt__radio {
+    display: block !important;
+    flex-shrink: 0 !important;
     width: 20px !important;
     height: 20px !important;
     border: 2px solid #c4cbd4 !important;
     border-radius: 50% !important;
     background: var(--cdi-white) !important;
     box-sizing: border-box !important;
+    margin-top: 2px !important;
     transition: border-color .15s, box-shadow .15s !important;
 }
-body.page-template-insolvency-test .cd-itest-opt--rich input:checked + label::before {
+body.page-template-insolvency-test .cd-itest-opt--rich input:checked + label .cd-itest-opt__radio {
     border-color: var(--cdi-orange) !important;
     box-shadow: inset 0 0 0 5px var(--cdi-orange) !important;
+}
+body.page-template-insolvency-test .cd-itest-opt__body {
+    display: block !important;
+    flex: 1 1 auto !important;
 }
 body.page-template-insolvency-test .cd-itest-opt__title {
     display: block !important;
@@ -446,7 +451,7 @@ body.page-template-insolvency-test .cd-itest-opt__title {
     font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     line-height: 1.3 !important;
-    margin: 0 0 3px !important;
+    margin: 0 0 2px !important;
 }
 body.page-template-insolvency-test .cd-itest-opt__sub {
     display: block !important;
@@ -454,19 +459,22 @@ body.page-template-insolvency-test .cd-itest-opt__sub {
     font-weight: 400 !important;
     color: var(--cdi-grey) !important;
     line-height: 1.4 !important;
+    margin: 0 !important;
 }
-body.page-template-insolvency-test .cd-itest-callpref { margin-bottom: 16px !important; }
+body.page-template-insolvency-test .cd-itest-callpref {
+    margin: 0 0 16px !important;
+}
 body.page-template-insolvency-test .cd-itest-callpref__q {
     display: block !important;
     font-size: var(--cdi-fs-sm) !important;
     font-weight: 700 !important;
     color: var(--cdi-navy) !important;
-    margin: 0 0 var(--cdi-sp-1) !important;
+    margin: 0 0 8px !important;
     line-height: 1.4 !important;
 }
 body.page-template-insolvency-test .cd-itest-callpref-options {
-    gap: 10px !important;
-    margin-bottom: 0 !important;
+    gap: 8px !important;
+    margin: 0 !important;
 }
 
 /* ================================================================== */
