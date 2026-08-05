@@ -29,6 +29,38 @@
 // Using entry_created gives us a consistent, complete payload.
 add_action('gform_entry_created', 'cd_itest_zoho_push', 10, 2);
 
+// Fix: when GF fires notifications from the REST /submissions endpoint, the
+// $entry passed to the notification pipeline is a stub without the saved
+// field values (verified live 2026-08-05: {form_title} + {admin_email}
+// resolve, but {entry_id}, {:1}, {Risk tier:6} and {all_fields} render
+// empty). Reload the entry from the DB and pre-resolve merge tags in
+// subject + message so the email arrives properly populated.
+add_filter('gform_notification', 'cd_itest_notification_entry_fix', 10, 3);
+function cd_itest_notification_entry_fix($notification, $form, $entry) {
+    $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
+    if (!$target_id || (int) $form['id'] !== $target_id) return $notification;
+
+    // If entry lacks field values, reload it fresh from the DB.
+    if (is_array($entry) && !empty($entry['id']) && empty($entry['2'])) {
+        $fresh = \GFAPI::get_entry((int) $entry['id']);
+        if (is_array($fresh)) $entry = $fresh;
+    }
+
+    // Pre-resolve merge tags with the properly-loaded entry so GF's
+    // downstream send path uses the resolved text as-is.
+    if (class_exists('GFCommon') && is_array($entry)) {
+        if (!empty($notification['subject'])) {
+            $notification['subject'] = \GFCommon::replace_variables(
+                $notification['subject'], $form, $entry, false, false, true, 'text');
+        }
+        if (!empty($notification['message'])) {
+            $notification['message'] = \GFCommon::replace_variables(
+                $notification['message'], $form, $entry, false, false, true, 'html');
+        }
+    }
+    return $notification;
+}
+
 // REST route for the pagehide abandonment beacon. Previously the beacon
 // POSTed to a route that didn't exist and hit WP's REST 404 handler.
 add_action('rest_api_init', function () {
@@ -325,17 +357,18 @@ function cd_itest_zoho_record_error($kind, $message, $extra = array()) {
  * api_domain, accounts_domain } }. Returns per-step status.
  */
 function cd_itest_bootstrap($request) {
-    if (get_option('cd_itest_bootstrap_done')) {
-        return new \WP_REST_Response(array(
-            'ok'    => false,
-            'error' => 'bootstrap already ran; option cd_itest_bootstrap_done set',
-        ), 409);
-    }
-
     $steps = array();
     $body  = $request->get_json_params();
     if (!is_array($body)) $body = array();
     $zoho  = isset($body['zoho']) && is_array($body['zoho']) ? $body['zoho'] : array();
+
+    $done_before = (bool) get_option('cd_itest_bootstrap_done');
+
+    // If the full bootstrap has already run, only the Zoho-credentials step
+    // may be re-executed as a top-up (in case the first bootstrap POST was
+    // sent with an empty zoho payload). Everything else is refused via 409
+    // to keep the endpoint from reconfiguring form/notifications/page later.
+    $zoho_only = $done_before;
 
     // Step 1: Zoho credentials (only set the ones supplied AND currently empty).
     $zoho_keys = array(
@@ -353,6 +386,16 @@ function cd_itest_bootstrap($request) {
         $zoho_set++;
     }
     $steps['zoho_options'] = "set={$zoho_set} skipped={$zoho_skipped}";
+
+    // Top-up mode: bootstrap has already run, we only touched Zoho options,
+    // return early without re-touching form/notifications/page.
+    if ($zoho_only) {
+        return new \WP_REST_Response(array(
+            'ok'    => true,
+            'mode'  => 'zoho-topup',
+            'steps' => $steps,
+        ), 200);
+    }
 
     if (!class_exists('GFAPI')) {
         $steps['gf_form']       = 'error: GFAPI missing';
