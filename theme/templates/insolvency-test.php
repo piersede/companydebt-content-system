@@ -108,7 +108,7 @@ get_header();
         <h2 class="cd-itest-q">Which best describes the company&rsquo;s overall financial position?</h2>
         <ul class="cd-itest-options" id="cd-itest-opts-position">
             <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-1" value="assets_more"><label for="cd-pos-1">Its available cash and assets are probably worth more than it owes</label></li>
-            <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-2" value="about_same"><label for="cd-pos-2">They are probably worth about the same</label></li>
+            <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-2" value="about_same"><label for="cd-pos-2">Its cash and assets are probably worth about the same as what it owes</label></li>
             <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-3" value="debts_more"><label for="cd-pos-3">The company probably owes more than its cash and assets are worth</label></li>
             <li class="cd-itest-opt"><input type="radio" name="cd_position" id="cd-pos-4" value="unsure"><label for="cd-pos-4">I&rsquo;m not sure</label></li>
         </ul>
