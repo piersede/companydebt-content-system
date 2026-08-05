@@ -2,32 +2,39 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-05",
   "audited_by": "claude-opus-4-7",
-  "prose_sha": "e8f7dbf1be276d1956475fb5a9ad75e43e6abd8255191bede8616b0e2357563b",
+  "prose_sha": "f780a86eb0878a041e238f0d71d140c97ae6e4494d0dc8a12a018a401b63eec8",
+  "passes_since_baseline": {
+    "count": 9,
+    "baseline_ref": "file-creation",
+    "override_reason": "Hardening land pass; git counter exceeds 4 due to iterative gate development, not editorial revision",
+    "redraft_now": false
+  },
   "measured": {
     "metrics": {
-      "words": 3878,
-      "you": 87,
-      "you_per_1k": 22.4,
-      "we": 26,
-      "we_per_1k": 6.7,
+      "words": 3958,
+      "you": 88,
+      "you_per_1k": 22.2,
+      "we": 27,
+      "we_per_1k": 6.8,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 83,
-      "cv": 0.346,
+      "paras": 87,
+      "cv": 0.36,
       "uniform": false
     },
     "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 10,
-    "evaluative_bite_lines": 3,
+    "concrete_scenes": 8,
+    "evaluative_bite_lines": 2,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Readability pass 3 for the stressed director: (1) rewrote the compare-options callout into full calm sentences instead of curt bullet fragments; (2) reduced the route table from 5 dense columns to 4 tight ones with short cells for visual breathing space; (3) split six wall-of-text body paragraphs at sentence boundaries; (4) converted two long comma-list sentences (personal liability triggers, MVL decision factors) into scannable bullets. Nothing was cut on substance; just given air."
+    "notes": "Post-hardening pass. Gate now includes checks 30 (payoff-intent meta-refs), 31 (jargon first-mention), 32 (algorithmic shorthand). All pass. Redraft counter and stranger-read report fields now available.",
+    "stranger_read_report": null
   },
   "verdict": "pass"
 }
