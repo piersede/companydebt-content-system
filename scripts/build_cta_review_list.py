@@ -59,6 +59,37 @@ NO_CTA_EXACT = {
 }
 NO_CTA_KINDS = {"post", "category", "testimonial"}
 
+# Decisions Piers has made explicitly. These override anything already in the completed
+# review, because the review was filled in before he saw these groups.
+PIERS_NO_CTA = (
+    ("/data/",           "insolvency figures and statistics (Piers, 2026-08-06)"),
+    ("/sample-letters/", "letter templates (Piers, 2026-08-06)"),
+)
+PIERS_NO_CTA_EXACT = {
+    "/debt-charities-uk/":                "debt charities support page (Piers, 2026-08-06)",
+    "/mental-health-debt-stress-support/": "mental-health support page (Piers, 2026-08-06)",
+}
+
+
+def piers_no_cta(path: str) -> str | None:
+    if path in PIERS_NO_CTA_EXACT:
+        return PIERS_NO_CTA_EXACT[path]
+    for prefix, reason in PIERS_NO_CTA:
+        if path.startswith(prefix):
+            return reason
+    return None
+
+
+def no_cta_row(path: str, reason: str, stamp: str) -> dict:
+    return {
+        "Page": path,
+        "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
+        "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
+        "Urgency modifier": "none", "Block size": "None",
+        "Alternative primary CTA": "None", "Confidence": "High",
+        "Reviewed": stamp, "Notes": f"no CTA: {reason}",
+    }
+
 
 def reason_no_cta(path: str, kind: str) -> str | None:
     if kind == "post":
@@ -71,6 +102,9 @@ def reason_no_cta(path: str, kind: str) -> str | None:
         return "about / navigation / legal / index page"
     if path.rstrip("/").endswith("-hub"):
         return "hub page — navigation"
+    # Piers, 2026-08-06: the insolvency figures and statistics pages get no CTA at all.
+    if path.startswith("/data/"):
+        return "insolvency figures and statistics"
     return None
 
 
@@ -80,30 +114,6 @@ def proposal(path: str) -> tuple[dict, str]:
     These are proposals. Each one is printed at the end so a human can overturn it.
     """
     row = {c: "" for c in COLUMNS}
-
-    if path.startswith("/sample-letters/"):
-        # Consumer-debt letter templates: "write off my debt", "tell a debt collector to
-        # stop contacting you". The reader is a person with a debt, not a company director,
-        # and the test asks whether THE COMPANY can pay its bills.
-        row.update({
-            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
-            "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
-            "Urgency modifier": "none", "Block size": "None",
-            "Alternative primary CTA": "Personal debt guidance", "Confidence": "Medium",
-        })
-        return row, "reads as personal debt, not company debt — confirm the audience"
-
-    if path.startswith("/data/"):
-        # Sector and topic statistics. Someone reading restaurant insolvency figures is
-        # often a restaurant director checking their own odds, but the page's job is data,
-        # so the test sits alongside it rather than leading.
-        row.update({
-            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
-            "Personal-risk context": "No", "Test fit": "Secondary", "Variant": "early_check",
-            "Urgency modifier": "none", "Block size": "Compact",
-            "Alternative primary CTA": "None", "Confidence": "Medium",
-        })
-        return row, "statistics page — test offered alongside the data, not as the point of the page"
 
     if path == "/close-my-company/":
         row.update({
@@ -122,15 +132,6 @@ def proposal(path: str) -> tuple[dict, str]:
             "Alternative primary CTA": "None", "Confidence": "Medium",
         })
         return row, "someone looking for an insolvency practitioner is usually past wondering whether there is a problem"
-
-    if path in ("/debt-charities-uk/", "/mental-health-debt-stress-support/"):
-        row.update({
-            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
-            "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
-            "Urgency modifier": "none", "Block size": "None",
-            "Alternative primary CTA": "Support signposting", "Confidence": "High",
-        })
-        return row, "support and signposting page — a sales CTA does not belong on it"
 
     row.update({
         "Primary audience": "Director", "Assumed state": "Uncertain", "Formal action": "None",
@@ -163,8 +164,13 @@ def main() -> None:
     if COMPLETED.exists():
         done = {r["Page"]: r for r in csv.DictReader(COMPLETED.open(encoding="utf-8-sig"))}
 
-    rows, proposals, carried, ruled = [], [], 0, 0
+    rows, proposals, carried, ruled, overridden = [], [], 0, 0, 0
     for path in sorted(live):
+        forced = piers_no_cta(path)
+        if forced:
+            rows.append(no_cta_row(path, forced, "decision 2026-08-06"))
+            overridden += 1
+            continue
         if path in done:
             rows.append({c: done[path].get(c, "") for c in COLUMNS})
             carried += 1
@@ -174,13 +180,7 @@ def main() -> None:
         row["Page"] = path
         reason = reason_no_cta(path, live[path])
         if reason:
-            row.update({
-                "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
-                "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
-                "Urgency modifier": "none", "Block size": "None",
-                "Alternative primary CTA": "None", "Confidence": "High",
-                "Reviewed": "rule 2026-08-06", "Notes": f"no CTA: {reason}",
-            })
+            row = no_cta_row(path, reason, "rule 2026-08-06")
             ruled += 1
         else:
             proposed, why = proposal(path)
@@ -200,6 +200,7 @@ def main() -> None:
 
     print(f"{len(rows)} pages -> {OUT.relative_to(ROOT)}")
     print(f"  carried over from the completed review: {carried}")
+    print(f"  no CTA by explicit decision:             {overridden}")
     print(f"  settled by the no-CTA rule:             {ruled}")
     print(f"  proposed, needs confirming:             {len(proposals)}")
     print("  variants:", dict(Counter(r["Variant"] for r in rows)))
