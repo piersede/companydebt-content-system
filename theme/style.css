@@ -10767,8 +10767,13 @@ body.cd-ttt-design
 /* CTA — big orange button with right arrow.
    font-size/padding/gap trimmed 20260806 -- "Check My Company's Position" is
    longer than the old "Start the 30-Second Test" and wrapped to two lines at
-   the previous 16px/18px/10px sizing. white-space:nowrap stops it wrapping;
-   the smaller sizing keeps it fitting rather than overflowing the button. */
+   the previous 16px/18px/10px sizing on the ~370px sidebar column. The
+   smaller sizing here fits it on one line at every card width actually used
+   (mobile-stacked 320-430px, and the ~370px desktop sidebar). Deliberately
+   NOT white-space:nowrap: at the narrower ~236px sidebar column that shows
+   up around the 768px tablet breakpoint the text no longer fits even at this
+   size, and nowrap made it spill outside the button instead of wrapping --
+   left to wrap normally there as a safe fallback. */
 #block-20 .cd-itest__cta {
   display: flex !important;
   align-items: center;
@@ -10784,7 +10789,6 @@ body.cd-ttt-design
   font-weight: 700 !important;
   text-decoration: none !important;
   text-align: center;
-  white-space: nowrap;
   box-sizing: border-box;
   transition: background-color 0.15s ease;
 }
