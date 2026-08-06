@@ -31,6 +31,8 @@ carefully and reversibly. Companion file: `cta-rollout-manifest.md` (per-page ma
 
 All 8 destinations verified 200 (2026-07-30). `/hmrc/` used directly (avoids the `/hmrc-tax-problems/` 301 hop).
 
+Wording logic for CTA 1 across the site: `cta-insolvency-test-wording-plan.md` (proposal, under review).
+
 **CTA 1 is now a designed block, not a text panel** (2026-08-06). Two variants ship from
 `mu-plugins/cd-cta-insolvency-test.php`: `[cd_test_cta]` (full card with the laptop visual)
 and `[cd_test_cta style="compact"]` (inline, text + button only). Design source and
