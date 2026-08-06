@@ -256,6 +256,79 @@
 	}
 }
 
+/* ------------------------------------------------------------------ *
+ * Phone and tablet — the supplied mobile design (390px handoff).
+ *
+ * This is a VIEWPORT query, not a container query, and it is last in the file
+ * on purpose. A narrow container on a desktop screen (the article column) keeps
+ * the side-by-side treatment above; a genuinely small screen gets this instead,
+ * where the laptop does move below the copy because there is no room beside it.
+ * Source: docs/design/insolvency-cta-blocks/mobile/
+ * ------------------------------------------------------------------ */
+@media (max-width: 900px) {
+	.cd-cta-shell.cd-cta-shell .cd-cta-full.cd-cta-full {
+		margin: 16px auto !important;
+		padding: 30px 24px 32px !important;
+		border-radius: 20px !important;
+	}
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__meta.cd-cta-full__meta {
+		display: grid !important;
+		gap: 10px;
+		margin: 0 0 32px !important;
+	}
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__eyebrow.cd-cta-full__eyebrow { font-size: 14px !important; line-height: 20px !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__timing.cd-cta-full__timing { font-size: 15px !important; line-height: 21px !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__main.cd-cta-full__main { grid-template-columns: 1fr; gap: 0; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__title.cd-cta-full__title {
+		font-size: clamp(40px, 8.5vw, 48px) !important;
+		line-height: 1.04 !important;
+		letter-spacing: -.025em !important;
+		margin: 0 0 22px !important;
+	}
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__body.cd-cta-full__body { font-size: 18px !important; line-height: 28px !important; margin: 0 0 12px !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__body.cd-cta-full__body:last-of-type { margin-bottom: 0 !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn.cd-cta-full__btn {
+		width: 100%;
+		min-width: 0;
+		min-height: 56px;
+		margin-top: 26px;
+		padding: 0 18px !important;
+		border-radius: 13px !important;
+		display: flex !important;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 17px !important;
+		line-height: 21px !important;
+		white-space: nowrap;
+	}
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn svg { width: 16px; height: 16px; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__reassure.cd-cta-full__reassure { margin: 14px 0 0 !important; font-size: 16px !important; line-height: 24px !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__visual { order: 99; margin-top: 30px; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__laptop.cd-cta-full__laptop { max-width: min(100%, 290px); }
+}
+@media (min-width: 480px) and (max-width: 900px) {
+	.cd-cta-shell.cd-cta-shell .cd-cta-full.cd-cta-full { padding-left: 32px !important; padding-right: 32px !important; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__meta.cd-cta-full__meta {
+		display: flex !important;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.cd-cta-shell.cd-cta-shell .cd-cta-compact.cd-cta-compact { width: 100%; max-width: 400px; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-compact__btn.cd-cta-compact__btn { width: 100%; justify-content: center; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-compact__reassure.cd-cta-compact__reassure { display: flex; flex-direction: column; gap: 4px; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-compact__reassure span { white-space: normal; }
+	.cd-cta-shell.cd-cta-shell .cd-cta-compact__reassure span:not(:last-child)::after { content: none; }
+}
+/* Smallest phones still in use (320-359px). The design's button keeps its label on
+   one line; the longer variant labels ("Check where the company stands") need a
+   point or two less to hold that promise without overflowing. */
+@media (max-width: 359px) {
+	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn.cd-cta-full__btn { font-size: 15px !important; padding: 0 14px !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn svg { transition: none; }
 	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn:hover svg { transform: none; }

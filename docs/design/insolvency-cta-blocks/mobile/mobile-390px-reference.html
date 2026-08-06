@@ -1,0 +1,295 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="image-slot.js"></script><style>
+:root{--navy:#002856;--navy-dark:#102a43;--orange:#ff6600;--text:#2a2a2e;--grey:#52606d;--bg:#f4f6f8;--border:rgba(0,40,86,.14);
+--sp-1:10px;--sp-2:20px;--sp-3:30px;--sp-4:40px;--sp-5:52px;--sp-6:64px;
+--fs-xs:13px;--fs-sm:15px;--fs-base:16px;--fs-md:18px;--fs-lg:24px;--fs-xl:32px}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text)}
+a{color:var(--navy)}
+a:hover{color:var(--orange)}
+
+/* ---------- Full Block (hero-card) ---------- */
+.hero-page-mock{width:1440px;background:#eef1f4;border-radius:8px;padding:1px}
+.cd-cta-full{width:calc(100% - 64px);max-width:1380px;margin:24px auto;background:#fbfcfd;border:1px solid var(--border);border-radius:22px;padding:54px 72px 52px}
+.cd-cta-full__meta{display:flex;align-items:center;gap:var(--sp-3);margin-bottom:35px;flex-wrap:wrap}
+.cd-cta-full__eyebrow{font-size:16px;line-height:22px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--orange);margin:0}
+.cd-cta-full__timing{display:inline-flex;align-items:center;gap:8px;font-size:16px;line-height:22px;font-weight:700;color:var(--grey)}
+.cd-cta-full__timing svg{color:var(--orange);flex-shrink:0}
+.cd-cta-full__main{display:grid;grid-template-columns:minmax(0,620px) minmax(380px,440px);justify-content:space-between;align-items:center;gap:72px}
+.cd-cta-full__content{min-width:0}
+.cd-cta-full__title{font-size:52px;line-height:1.08;letter-spacing:-.02em;font-weight:800;color:var(--navy);margin:0 0 24px}
+.cd-cta-full__body{font-size:21px;line-height:32px;font-weight:400;color:var(--grey);margin:0 0 10px;max-width:620px}
+.cd-cta-full__body:last-of-type{margin-bottom:38px}
+.cd-cta-full__btn{background:var(--orange);color:#fff;border:none;border-radius:12px;min-height:64px;width:fit-content;min-width:360px;padding:18px 28px;font-size:20px;line-height:24px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:11px}
+.cd-cta-full__btn:hover{background:#e65c00;color:#fff}
+.cd-cta-full__btn:hover svg{transform:translateX(3px)}
+.cd-cta-full__btn svg{transition:transform .15s}
+.cd-cta-full__reassure{font-size:16px;line-height:24px;color:var(--grey);margin:22px 0 0}
+.cd-cta-full__reassure strong{display:block;margin-top:4px;color:var(--navy);font-weight:650}
+.cd-cta-full__visual{display:flex;justify-content:center;align-self:center}
+.cd-cta-full__visual .laptop-img{max-width:430px}
+
+@media (max-width:900px){
+.hero-page-mock{width:100%;padding:0;background:none}
+.cd-cta-full{width:calc(100% - 32px);margin:16px auto;padding:30px 24px 32px;border-radius:20px}
+.cd-cta-full__meta{display:grid;gap:10px;margin-bottom:32px}
+.cd-cta-full__eyebrow{font-size:14px;line-height:20px}
+.cd-cta-full__timing{font-size:15px;line-height:21px}
+.cd-cta-full__main{grid-template-columns:1fr;gap:0}
+.cd-cta-full__title{font-size:clamp(40px,8.5vw,48px);line-height:1.04;letter-spacing:-.025em;margin:0 0 22px}
+.cd-cta-full__body{font-size:18px;line-height:28px;margin:0 0 12px}
+.cd-cta-full__body:last-of-type{margin-bottom:0}
+.cd-cta-full__btn{width:100%;min-width:0;min-height:56px;margin-top:26px;padding:0 18px;border-radius:13px;display:flex;align-items:center;justify-content:space-between;font-size:17px;line-height:21px;white-space:nowrap}
+.cd-cta-full__btn svg{width:16px;height:16px}
+.cd-cta-full__reassure{margin-top:14px;font-size:16px;line-height:24px}
+.cd-cta-full__visual{order:99;margin-top:30px}
+.cd-cta-full__visual .laptop-img{max-width:min(100%,290px)}
+}
+@media (min-width:480px) and (max-width:900px){
+.cd-cta-full{padding-inline:32px}
+.cd-cta-full__meta{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-2)}
+}
+
+/* ---------- Compact Block ---------- */
+.cd-cta-compact{width:640px;border:1px solid var(--border);border-radius:14px;padding:var(--sp-3) var(--sp-4);background:#fff}
+.cd-cta-compact__title{font-size:var(--fs-lg);font-weight:800;color:var(--navy);margin:0 0 var(--sp-1)}
+.cd-cta-compact__body{font-size:var(--fs-base);color:var(--grey);margin:0 0 var(--sp-3);max-width:480px}
+.cd-cta-compact__btn{background:var(--orange);color:#fff;border:none;border-radius:14px;padding:var(--sp-2) var(--sp-4);font-size:var(--fs-md);font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:var(--sp-1)}
+.cd-cta-compact__btn:hover{background:#e65c00;color:#fff}
+.cd-cta-compact__reassure{margin:var(--sp-2) 0 0;font-size:var(--fs-xs);color:var(--grey)}
+.cd-cta-compact__reassure strong{color:var(--navy);font-weight:800}
+.cd-cta-compact__reassure span{white-space:nowrap}
+.cd-cta-compact__reassure span:not(:last-child)::after{content:"·";margin:0 8px;color:var(--border)}
+
+@media (max-width:480px){
+.cd-cta-compact{width:100%;max-width:400px}
+.cd-cta-compact__btn{width:100%;justify-content:center}
+.cd-cta-compact__reassure{display:flex;flex-direction:column;gap:4px}
+.cd-cta-compact__reassure span:not(:last-child)::after{content:none}
+}
+
+.label{position:absolute;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8a94a3;top:-26px;left:0}
+.frame{position:relative}
+
+/* ---------- Laptop/Browser Variants ---------- */
+.v-card{width:100%;max-width:920px;background:#fbfcfd;border:1px solid var(--border);border-radius:14px;padding:var(--sp-4) var(--sp-5)}
+.v-card--crop{overflow:hidden;position:relative}
+.v-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-3);flex-wrap:wrap;gap:var(--sp-2)}
+.v-eyebrow{font-size:var(--fs-xs);font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--orange);margin:0}
+.v-badge{display:inline-flex;align-items:center;gap:var(--sp-1);font-size:var(--fs-xs);font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.v-badge svg{color:var(--orange);flex-shrink:0}
+.v-badge .sep{color:var(--orange);font-weight:800}
+.v-badge--stack{flex-direction:column;align-items:flex-start;gap:2px;text-align:left}
+.v-body{display:grid;grid-template-columns:56% 36%;gap:0 8%;align-items:start}
+.v-body--centered{align-items:start}
+.v-left{min-width:0}
+.v-title{font-size:var(--fs-xl);font-weight:800;color:var(--navy);line-height:1.3;margin:0 0 var(--sp-2)}
+.v-copy{font-size:var(--fs-md);color:var(--grey);margin:0 0 var(--sp-1);max-width:480px}
+.v-copy + .v-copy{margin-bottom:var(--sp-3)}
+.v-right{display:flex;justify-content:center;align-items:flex-start}
+.v-right--column{flex-direction:column;align-items:center;gap:var(--sp-2)}
+.v-right--bleed{justify-content:flex-end;position:absolute;right:-56px;top:var(--sp-4)}
+.v-reassure{font-size:var(--fs-sm);color:var(--grey);margin:0 0 6px}
+.v-reassure strong{display:block;color:var(--navy);font-weight:800}
+.v-btn{background:var(--orange);color:#fff;border:none;border-radius:14px;padding:var(--sp-2) var(--sp-4);font-size:var(--fs-md);font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:var(--sp-1);margin-top:var(--sp-2)}
+.v-btn:hover{background:#e65c00;color:#fff}
+.device{width:100%;max-width:320px}
+.laptop-unit{width:100%;max-width:320px}
+.laptop-img{width:100%;max-width:300px;display:block}
+.laptop-img--sm{max-width:270px}
+.laptop-img--crop{max-width:380px}
+.laptop-screen-wrap{background:#141a20;border-radius:14px 14px 3px 3px;padding:13px 13px 9px;position:relative;box-shadow:0 22px 40px -18px rgba(0,40,86,.4)}
+.laptop-screen-wrap::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:#333c45}
+.laptop-inner{background:#fbfcfd;border-radius:4px;padding:var(--sp-2)}
+.laptop-qtext{font-size:var(--fs-sm);font-weight:800;color:var(--navy);margin:0 0 var(--sp-2);line-height:1.4}
+.laptop-opt{border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;font-size:var(--fs-xs);color:var(--text);margin-bottom:8px;background:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.laptop-opt:last-child{margin-bottom:0}
+.laptop-deck{width:112%;margin:0 -6%;height:16px;background:linear-gradient(180deg,#e1e4e8,#b9bec5);border-radius:0 0 9px 9px;position:relative;box-shadow:0 12px 18px -10px rgba(0,40,86,.3)}
+.laptop-deck::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:64px;height:5px;background:#9aa0a8;border-radius:0 0 6px 6px}
+.device--sm{max-width:220px}
+.browser-frame{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 16px 28px -12px rgba(0,40,86,.28)}
+.browser-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:8px 10px;display:flex;gap:6px;align-items:center}
+.browser-bar span{width:8px;height:8px;border-radius:50%;background:#d6dde3}
+.browser-bar span:first-child{background:#ffb199}
+.browser-inner{padding:var(--sp-2)}
+.browser-qtext{font-size:var(--fs-sm);font-weight:800;color:var(--navy);margin:0 0 var(--sp-2);line-height:1.4}
+.browser-opt{border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;font-size:var(--fs-xs);color:var(--text);margin-bottom:8px;background:#fbfcfd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-opt:last-child{margin-bottom:0}
+
+@media (max-width:680px){
+.v-card{padding:var(--sp-3) var(--sp-2);border-radius:12px}
+.v-body,.v-body--centered{grid-template-columns:1fr!important;gap:var(--sp-3)}
+.v-right,.v-right--column,.v-right--bleed{position:static;right:auto;top:auto;justify-content:center;order:2;margin-top:var(--sp-1);margin-bottom:var(--sp-2)}
+.v-card--crop{overflow:visible}
+.v-title{font-size:27px}
+.v-copy{font-size:var(--fs-base);max-width:none}
+.laptop-img,.device{max-width:240px}
+.v-btn{width:100%;justify-content:center}
+}
+@media (max-width:400px){.v-head{flex-direction:column;align-items:flex-start;gap:var(--sp-1)}}
+
+@container (max-width:900px){
+.hero-page-mock{width:100%;padding:0;background:none}
+.cd-cta-full{width:calc(100% - 32px);margin:16px auto;padding:30px 24px 32px;border-radius:20px}
+.cd-cta-full__meta{display:grid;gap:10px;margin-bottom:32px}
+.cd-cta-full__eyebrow{font-size:14px;line-height:20px}
+.cd-cta-full__timing{font-size:15px;line-height:21px}
+.cd-cta-full__main{grid-template-columns:1fr;gap:0}
+.cd-cta-full__title{font-size:clamp(40px,8.5vw,48px);line-height:1.04;letter-spacing:-.025em;margin:0 0 22px}
+.cd-cta-full__body{font-size:18px;line-height:28px;margin:0 0 12px}
+.cd-cta-full__body:last-of-type{margin-bottom:0}
+.cd-cta-full__btn{width:100%;min-width:0;min-height:56px;margin-top:26px;padding:0 18px;border-radius:13px;display:flex;align-items:center;justify-content:space-between;font-size:17px;line-height:21px;white-space:nowrap}
+.cd-cta-full__btn svg{width:16px;height:16px}
+.cd-cta-full__reassure{margin-top:14px;font-size:16px;line-height:24px}
+.cd-cta-full__visual{order:99;margin-top:30px}
+.cd-cta-full__visual .laptop-img{max-width:min(100%,290px)}
+}
+@container (max-width:480px){
+.cd-cta-compact{width:100%;max-width:400px}
+.cd-cta-compact__btn{width:100%;justify-content:center}
+.cd-cta-compact__reassure{display:flex;flex-direction:column;gap:4px}
+.cd-cta-compact__reassure span:not(:last-child)::after{content:none}
+}
+@container (max-width:680px){
+.v-card{padding:var(--sp-3) var(--sp-2);border-radius:12px}
+.v-body,.v-body--centered{grid-template-columns:1fr!important;gap:var(--sp-3)}
+.v-right,.v-right--column,.v-right--bleed{position:static;right:auto;top:auto;justify-content:center;order:2;margin-top:var(--sp-1);margin-bottom:var(--sp-2)}
+.v-card--crop{overflow:visible}
+.v-title{font-size:27px}
+.v-copy{font-size:var(--fs-base);max-width:none}
+.laptop-img,.device{max-width:240px}
+.v-btn{width:100%;justify-content:center}
+}
+body{background:#e9edf1;margin:0;padding:24px 0}
+.mobile-frame{container-type:inline-size;width:390px;margin:0 auto;background:#fff;box-shadow:0 0 0 1px #ccc}
+.frame{position:static!important;margin:0 0 32px;padding:24px 0 0 12px;border-bottom:1px solid #dfe3e8}
+.label{position:static!important;display:block;margin:0 0 12px}
+.hero-page-mock{width:100%!important}
+</style></head><body><div class="mobile-frame">
+
+<div class="frame" style="left:60px;top:60px">
+<div class="label">Recommended Full Block</div>
+<div class="hero-page-mock" id="shot-full">
+<div class="cd-cta-full">
+<div class="cd-cta-full__meta">
+<p class="cd-cta-full__eyebrow">Free Online Test</p>
+<span class="cd-cta-full__timing"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>4 questions · 2 minutes</span>
+</div>
+<div class="cd-cta-full__main">
+<div class="cd-cta-full__content">
+<h3 class="cd-cta-full__title">Could Your Company Be Insolvent?</h3>
+<p class="cd-cta-full__body">Answer four short questions about cash flow and creditor pressure.</p>
+<p class="cd-cta-full__body">See which warning signs apply and what options may be available.</p>
+<a class="cd-cta-full__btn" href="Insolvency Test - Multi-Step Rebuild.html">Check my company's position<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<p class="cd-cta-full__reassure">See your result online and receive a copy by email. <strong>We only call if you ask.</strong></p>
+</div>
+<div class="cd-cta-full__visual">
+<img class="laptop-img" src="assets/laptop-mockup-cropped.png" alt="Laptop showing the insolvency test">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="frame" style="left:60px;top:520px">
+<div class="label">Compact Mid-Article Block</div>
+<div class="cd-cta-compact" id="shot-compact">
+<h3 class="cd-cta-compact__title">Not Sure Where Your Company Stands?</h3>
+<p class="cd-cta-compact__body">Answer four questions in about two minutes and see which warning signs apply and what your company may be able to do next.</p>
+<a class="cd-cta-compact__btn" href="Insolvency Test - Multi-Step Rebuild.html">Check My Company's Position →</a>
+<p class="cd-cta-compact__reassure"><span>Estimates are fine</span><span><strong>We only call if you ask us to</strong></span></p>
+</div>
+</div>
+
+<div class="frame" style="left:60px;top:980px">
+<div class="label">Version 1 — Small Laptop, Contained (preferred)</div>
+<div class="v-card" id="shot-v1">
+<div class="v-head">
+<p class="v-eyebrow">Free Online Test</p>
+<span class="v-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>4 Questions<span class="sep">·</span>About 2 Minutes</span>
+</div>
+<div class="v-body">
+<div class="v-left">
+<h3 class="v-title">Could Your Company Be Insolvent?</h3>
+<p class="v-copy">Answer four short questions about cash flow and creditor pressure.</p>
+<p class="v-copy">See which warning signs apply and which options may be available.</p>
+</div>
+<div class="v-right">
+<img class="laptop-img" src="assets/laptop-mockup-cropped.png" alt="Laptop showing the insolvency test">
+</div>
+</div>
+<p class="v-reassure">See your result online and receive a copy by email.<strong>We only call if you ask.</strong></p>
+<a class="v-btn" href="Insolvency Test - Multi-Step Rebuild.html">Check My Company's Position →</a>
+</div>
+</div>
+
+<div class="frame" style="left:60px;top:1420px">
+<div class="label">Version 2 — Browser Preview</div>
+<div class="v-card" id="shot-v2">
+<div class="v-head">
+<p class="v-eyebrow">Free Online Test</p>
+<span class="v-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>4 Questions<span class="sep">·</span>About 2 Minutes</span>
+</div>
+<div class="v-body">
+<div class="v-left">
+<h3 class="v-title">Could Your Company Be Insolvent?</h3>
+<p class="v-copy">Answer four short questions about cash flow and creditor pressure.</p>
+<p class="v-copy">See which warning signs apply and which options may be available.</p>
+</div>
+<div class="v-right">
+<div class="device browser-frame">
+<div class="browser-bar"><span></span><span></span><span></span></div>
+<div class="browser-inner">
+<p class="browser-qtext">Can the company pay its bills when they fall due?</p>
+<div class="browser-opt">Yes, with difficulty</div><div class="browser-opt">Some payments are late</div><div class="browser-opt">No, it can't pay</div><div class="browser-opt">Not sure</div>
+</div>
+</div>
+</div>
+</div>
+<p class="v-reassure">See your result online and receive a copy by email.<strong>We only call if you ask.</strong></p>
+<a class="v-btn" href="Insolvency Test - Multi-Step Rebuild.html">Check My Company's Position →</a>
+</div>
+</div>
+
+<div class="frame" style="left:60px;top:1860px">
+<div class="label">Version 3 — Laptop Floating in Open Space</div>
+<div class="v-card" id="shot-v3">
+<p class="v-eyebrow" style="margin-bottom:var(--sp-3)">Free Online Test</p>
+<div class="v-body v-body--centered">
+<div class="v-left">
+<h3 class="v-title">Could Your Company Be Insolvent?</h3>
+<p class="v-copy">Answer four short questions about cash flow and creditor pressure.</p>
+<p class="v-copy">See which warning signs apply and which options may be available.</p>
+</div>
+<div class="v-right v-right--column">
+<span class="v-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>4 Questions<span class="sep">·</span>About 2 Minutes</span>
+<img class="laptop-img laptop-img--sm" src="assets/laptop-mockup-cropped.png" alt="Laptop showing the insolvency test">
+</div>
+</div>
+<p class="v-reassure">See your result online and receive a copy by email.<strong>We only call if you ask.</strong></p>
+<a class="v-btn" href="Insolvency Test - Multi-Step Rebuild.html">Check My Company's Position →</a>
+</div>
+</div>
+
+<div class="frame" style="left:60px;top:2300px">
+<div class="label">Version 4 — Cropped at Far Right Edge</div>
+<div class="v-card v-card--crop" id="shot-v4">
+<div class="v-head">
+<p class="v-eyebrow">Free Online Test</p>
+<span class="v-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>4 Questions<span class="sep">·</span>About 2 Minutes</span>
+</div>
+<div class="v-body" style="grid-template-columns:65% 27%">
+<div class="v-left">
+<h3 class="v-title">Could Your Company Be Insolvent?</h3>
+<p class="v-copy">Answer four short questions about cash flow and creditor pressure.</p>
+<p class="v-copy">See which warning signs apply and which options may be available.</p>
+</div>
+<div class="v-right v-right--bleed">
+<img class="laptop-img laptop-img--crop" src="assets/laptop-mockup-cropped.png" alt="Laptop showing the insolvency test">
+</div>
+</div>
+<p class="v-reassure">See your result online and receive a copy by email.<strong>We only call if you ask.</strong></p>
+<a class="v-btn" href="Insolvency Test - Multi-Step Rebuild.html">Check My Company's Position →</a>
+</div>
+</div>
+
+</div></body></html>
