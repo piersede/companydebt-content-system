@@ -523,6 +523,13 @@ body.page-template-insolvency-test .cd-itest-field label {
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
 }
+/* "(optional)" hint alongside a field label — normal weight, muted, so the
+   label still reads as the label. */
+body.page-template-insolvency-test .cd-itest-field__optional {
+    font-weight: 400 !important;
+    color: var(--cdi-grey) !important;
+    font-size: var(--cdi-fs-xs) !important;
+}
 body.page-template-insolvency-test .cd-itest-field input[type=text],
 body.page-template-insolvency-test .cd-itest-field input[type=email],
 body.page-template-insolvency-test .cd-itest-field input[type=tel] {

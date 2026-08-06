@@ -234,15 +234,24 @@ function cd_itest_zoho_push($entry, $form) {
             return;
         }
 
-        // Zoho Lead mandatory Last_Name workaround: split first field on first space
-        // if it contains one, else use a sentinel so ops can tell these apart from
-        // regular leads.
+        // Zoho requires a Last_Name on every Lead. Prefer the optional surname
+        // field (10). If it's blank, fall back to splitting the first-name box
+        // on a space (people often type a full name there), and only as a last
+        // resort use a sentinel — which reads badly on a CRM record
+        // ("Karen (Insolvency Test)"), hence the surname field added 2026-08-06.
+        $surname    = trim((string) rgar($entry, '10'));
         $first_name = $first;
-        $last_name  = '(Insolvency Test)';
-        if (strpos($first, ' ') !== false) {
-            $parts = explode(' ', $first, 2);
+        $last_name  = '';
+
+        if ($surname !== '') {
+            $last_name = $surname;
+        } elseif (strpos($first, ' ') !== false) {
+            $parts      = explode(' ', $first, 2);
             $first_name = trim($parts[0]);
-            $last_name  = trim($parts[1]) ?: $last_name;
+            $last_name  = trim($parts[1]);
+        }
+        if ($last_name === '') {
+            $last_name = '(no surname given)';
         }
 
         // Compose description
@@ -601,6 +610,7 @@ function cd_itest_bootstrap($request) {
                     array('id' => 7, 'type' => 'textarea', 'label' => 'Quiz payload',   'isRequired' => false),
                     array('id' => 8, 'type' => 'text',     'label' => 'Landing page',   'isRequired' => false),
                     array('id' => 9, 'type' => 'text',     'label' => 'Referring page', 'isRequired' => false),
+                    array('id' => 10, 'type' => 'text',    'label' => 'Last name',      'isRequired' => false),
                 ),
                 'confirmations' => array(
                     'default' => array(
@@ -610,7 +620,7 @@ function cd_itest_bootstrap($request) {
                 ),
                 'notifications' => array(),
                 'useCurrentUserAsAuthor' => false,
-                'nextFieldId'   => 10,
+                'nextFieldId'   => 11,
             );
             $new_id = \GFAPI::add_form($spec);
             if (is_wp_error($new_id)) {

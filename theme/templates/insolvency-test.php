@@ -160,6 +160,10 @@ get_header();
 
         <div class="cd-itest-field-grid">
             <div class="cd-itest-field"><label for="cd-c-name">First name</label><input type="text" id="cd-c-name" autocomplete="given-name" placeholder="Jordan"></div>
+            <?php // Optional surname — Zoho requires a Last_Name on every Lead,
+                  // and without this the CRM record reads "Karen (Insolvency Test)".
+                  // Left optional so it can't add friction at the capture step. ?>
+            <div class="cd-itest-field"><label for="cd-c-lastname">Last name <span class="cd-itest-field__optional">(optional)</span></label><input type="text" id="cd-c-lastname" autocomplete="family-name" placeholder="Smith"></div>
             <div class="cd-itest-field"><label for="cd-c-email">Email address</label><input type="email" id="cd-c-email" autocomplete="email" placeholder="you@company.co.uk"></div>
         </div>
 

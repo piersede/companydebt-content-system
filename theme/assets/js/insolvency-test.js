@@ -392,6 +392,8 @@
         if (submitted) return;
 
         var name = document.getElementById('cd-c-name').value.trim();
+        var lastNameEl = document.getElementById('cd-c-lastname');
+        var lastName = lastNameEl ? lastNameEl.value.trim() : '';
         var email = document.getElementById('cd-c-email').value.trim();
         // callpref defaults to "no" (checked in HTML) so it's always present —
         // fall back to that if for any reason the DOM query misses.
@@ -430,6 +432,7 @@
         // 2026-08-05: that shape 400s on every field).
         var fd = new FormData();
         fd.append('input_1', name);
+        fd.append('input_10', lastName);
         fd.append('input_2', email);
         fd.append('input_3', callpref.value);
         fd.append('input_4', phone);
