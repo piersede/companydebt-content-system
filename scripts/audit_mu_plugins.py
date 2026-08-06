@@ -58,17 +58,20 @@ KEEP = {
     "cd-seo-meta-rest.php",
     "cd-server-render.php",
     "mu-plugin.php",
-    "acf_cta_reader_0ae4c9c987d34b08.php",
-    "acf_cta_v2_updater_28baade4858f4585.php",
-    "mu-cd-push-e696d84b6c16.php",
 }
 KEEP_PREFIXES = ("wpe-", "wpengine-", "slt-")  # WP Engine / security core
 
 HOOK = re.compile(r"add_(action|filter)\s*\(")
 GET = re.compile(r"\$_GET\[")
-EXIT = re.compile(r"\bexit\s*;")
+# A one-shot bails out early when its token is absent. Both spellings are used:
+# `exit;` and a bare top-level `return;`. Matching only exit missed two
+# unauthenticated admin endpoints that had been sitting in mu-plugins for weeks.
+BAIL = re.compile(r"^\s*(?:\}\s*)?(?:exit|return)\s*;", re.M)
 TOKEN = re.compile(r"\$_GET\['([a-z0-9_]+)'\]\s*!==?\s*'([^']{4,})'")
 B64 = re.compile(r"base64_decode\s*\(")
+# Privilege escalation with no login check. On its own this is enough to condemn a
+# file regardless of how it is shaped: it makes the request act as user 1.
+ELEVATE = re.compile(r"wp_set_current_user\s*\(\s*1\s*\)")
 
 
 def client():
@@ -90,10 +93,17 @@ def classify(sftp):
             kept.append(fn)
             continue
         body = sftp.open(f"{MU}/{fn}", "rb").read().decode("utf-8", "replace")
-        if GET.search(body) and EXIT.search(body) and len(HOOK.findall(body)) <= 2:
+
+        one_shot = GET.search(body) and BAIL.search(body) and len(HOOK.findall(body)) <= 2
+        elevates = bool(ELEVATE.search(body))
+        empty = len(body.strip()) < 10  # a 0-byte leftover from a push helper
+
+        if one_shot or elevates or empty:
             m = TOKEN.search(body)
-            throwaway.append((fn, a.st_size, f"{m.group(1)}={m.group(2)}" if m else "-",
-                              bool(B64.search(body))))
+            guard = f"{m.group(1)}={m.group(2)}" if m else ("empty file" if empty else "-")
+            if elevates:
+                guard += "  ** RUNS AS ADMIN, NO LOGIN CHECK **"
+            throwaway.append((fn, a.st_size, guard, bool(B64.search(body))))
         else:
             kept.append(fn)
     return throwaway, kept
