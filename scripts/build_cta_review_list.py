@@ -1,146 +1,223 @@
 #!/usr/bin/env python
-"""Build the CTA placement review list.
+"""Build the CTA placement review list for EVERY page on the site.
 
-Produces docs/cta-review-list.csv in the column format set out in section 12 of
-docs/cta-insolvency-test-wording-plan.md, ordered by the review order in section 13.
-
-The plan is explicit that page intent is decided by a human and that clusters and URL
-names are not decisions. So this script deliberately does NOT fill in the decision
-columns except where a page name is genuinely conclusive (enforcement wording, the
-solvent-closure cluster). Everything else is left blank with the confidence marked, so
-the reviewer is filling gaps rather than second-guessing a machine's guess.
-
-Re-run after the manifest changes:
     python scripts/build_cta_review_list.py
+
+Reads the site's own sitemap (staging) rather than an older roll-out list, so nothing is
+silently left out. The first version of this script inherited a previous list that had
+already dropped 77 pages and never contained the blog at all — 109 pages were never put
+in front of a reviewer, and "no CTA here" was an invisible assumption instead of a
+recorded decision.
+
+Decisions already made are carried over verbatim from
+docs/cta-review-list-completed.csv. Pages that page-type rules settle (blog, category,
+about, legal, navigation, hub, the test's own page) are filled in as "no CTA". Anything
+left is filled in with a proposal and listed at the end for a human to confirm.
+
+Output: docs/cta-review-list.csv
 """
 from __future__ import annotations
 
 import csv
+import os
 import re
+from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
+
+import requests
+from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST = ROOT / "docs" / "cta-rollout-manifest.md"
+COMPLETED = ROOT / "docs" / "cta-review-list-completed.csv"
 OUT = ROOT / "docs" / "cta-review-list.csv"
+BASE = "https://comdebstage.wpengine.com"
 
 COLUMNS = [
-    "Page",
-    "Primary audience",
-    "Assumed state",
-    "Formal action",
-    "Personal-risk context",
-    "Test fit",
-    "Variant",
-    "Urgency modifier",
-    "Block size",
-    "Alternative primary CTA",
-    "Confidence",
-    "Reviewed",
-    "Notes",
+    "Page", "Primary audience", "Assumed state", "Formal action", "Personal-risk context",
+    "Test fit", "Variant", "Urgency modifier", "Block size", "Alternative primary CTA",
+    "Confidence", "Reviewed", "Notes",
 ]
 
-# Section 13 review order. First match wins, so the more specific groups come first.
-PHASES: list[tuple[str, tuple[str, ...]]] = [
-    ("1.1 Winding-up petitions", ("winding-up-petition", "winding-up-order", "wind-up")),
-    ("1.2 Statutory demands and enforcement",
-     ("statutory-demand", "bailiff", "enforcement", "distraint", "high-court-writ",
-      "notice-of-enforcement", "ccj", "county-court-judgment")),
-    ("1.3 CVL and insolvent liquidation",
-     ("creditors-voluntary-liquidation", "/cvl", "compulsory-liquidation",
-      "voluntary-vs-compulsory", "liquidate", "liquidation-process", "liquidation-costs")),
-    ("1.4 Cannot-pay HMRC", ("cant-pay", "hmrc", "time-to-pay", "vat", "paye", "corporation-tax")),
-    ("1.5 Rescue and restructuring",
-     ("rescue", "administration", "cva", "restructur", "turnaround", "viability")),
-    ("1.6 Personal liability",
-     ("personal-guarantee", "directors-loan", "disqualif", "wrongful-trading", "misfeasance",
-      "personal-liability", "director-conduct", "overdrawn")),
-    ("2.1 Warning signs and insolvency tests",
-     ("warning-sign", "insolvency-test", "is-my-company-insolvent", "signs-of")),
-    ("2.2 Cash flow", ("cash-flow", "cashflow")),
-    ("2.3 Stopping trade", ("stop-trading", "ceasing-trade", "cease-trading", "stopped-trading")),
-    ("2.4 Director duties", ("director-duties", "duties-of", "directors-responsibilities")),
-    ("2.5 Creditor pressure", ("creditor", "supplier", "debt-collect", "county-court")),
-    ("2.6 Liquidation consequences", ("-in-liquidation", "what-happens-to", "after-liquidation")),
-]
-
-# The only two page groups where the page name really is conclusive.
-ENFORCEMENT = (
-    "winding-up-petition", "statutory-demand", "bailiff", "enforcement", "distraint",
-    "high-court-writ", "notice-of-enforcement", "ccj", "county-court-judgment",
-)
+# Piers, 2026-08-06: about pages, navigation pages, hub pages, terms-and-conditions type
+# pages and blog pages get no CTA. Everything else gets one.
+NO_CTA_EXACT = {
+    "/",                                 # homepage — navigation
+    "/about-us/",
+    "/meet-the-team/",
+    "/contact-us/",
+    "/cookie-policy/",
+    "/privacy-policy/",
+    "/terms-conditions/",
+    "/site-map/",
+    "/testimonials/",
+    "/insolvency-news-commentary/",      # news/blog
+    "/insolvency-calculator/",           # the test itself
+    "/data/",                            # index of the statistics pages
+    "/sample-letters/",                  # index of the letter templates
+    "/sector-specific-insolvency/",      # index of the sector pages
+}
+NO_CTA_KINDS = {"post", "category", "testimonial"}
 
 
-def read_manifest() -> list[tuple[str, str]]:
-    rows: list[tuple[str, str]] = []
-    for line in MANIFEST.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*(/[^|]*?)\s*\|\s*([A-Za-z-]+)\s*\|", line)
-        if m:
-            rows.append((m.group(1).strip(), m.group(2).strip()))
-    return [r for r in rows if r[1] not in ("EXCLUDE", "REVIEW")]
+def reason_no_cta(path: str, kind: str) -> str | None:
+    if kind == "post":
+        return "blog article"
+    if kind == "category":
+        return "category listing — navigation"
+    if kind == "testimonial":
+        return "testimonial page"
+    if path in NO_CTA_EXACT:
+        return "about / navigation / legal / index page"
+    if path.rstrip("/").endswith("-hub"):
+        return "hub page — navigation"
+    return None
 
 
-def phase_for(url: str) -> str:
-    for name, keys in PHASES:
-        if any(k in url for k in keys):
-            return name
-    return "3 Long tail"
+def proposal(path: str) -> tuple[dict, str]:
+    """A filled-in row plus the reason, for pages the page-type rules do not settle.
 
-
-def build_row(url: str, cluster: str) -> dict[str, str]:
+    These are proposals. Each one is printed at the end so a human can overturn it.
+    """
     row = {c: "" for c in COLUMNS}
-    row["Page"] = url
-    notes = [f"cluster: {cluster}"]
 
-    if cluster == "solvent-closure":
-        # Conclusive: the test's first question has no solvent answer (plan 6A, 7.1, 16).
-        row["Assumed state"] = "solvent"
-        row["Test fit"] = "none"
-        row["Variant"] = "none"
-        row["Block size"] = "compact"
-        row["Alternative primary CTA"] = "solvent closure"
-        row["Confidence"] = "high"
-        notes.append("test cannot serve a solvent company until its first question offers a solvent answer")
-    elif any(k in url for k in ENFORCEMENT):
-        # Conclusive on urgency only. The diagnostic state still needs a human.
-        row["Formal action"] = "active"
-        row["Urgency modifier"] = "urgent_action"
-        row["Test fit"] = "secondary"
-        row["Block size"] = "compact"
-        row["Alternative primary CTA"] = "direct advice"
-        row["Confidence"] = "medium"
-        notes.append("page name names a formal creditor action; confirm the reader has one rather than is researching one")
-    else:
-        row["Confidence"] = "low"
-        notes.append("needs a read of the page: audience, assumed state and test fit all undecided")
+    if path.startswith("/sample-letters/"):
+        # Consumer-debt letter templates: "write off my debt", "tell a debt collector to
+        # stop contacting you". The reader is a person with a debt, not a company director,
+        # and the test asks whether THE COMPANY can pay its bills.
+        row.update({
+            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
+            "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
+            "Urgency modifier": "none", "Block size": "None",
+            "Alternative primary CTA": "Personal debt guidance", "Confidence": "Medium",
+        })
+        return row, "reads as personal debt, not company debt — confirm the audience"
 
-    row["Notes"] = "; ".join(notes)
-    return row
+    if path.startswith("/data/"):
+        # Sector and topic statistics. Someone reading restaurant insolvency figures is
+        # often a restaurant director checking their own odds, but the page's job is data,
+        # so the test sits alongside it rather than leading.
+        row.update({
+            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
+            "Personal-risk context": "No", "Test fit": "Secondary", "Variant": "early_check",
+            "Urgency modifier": "none", "Block size": "Compact",
+            "Alternative primary CTA": "None", "Confidence": "Medium",
+        })
+        return row, "statistics page — test offered alongside the data, not as the point of the page"
+
+    if path == "/close-my-company/":
+        row.update({
+            "Primary audience": "Director", "Assumed state": "Uncertain", "Formal action": "None",
+            "Personal-risk context": "No", "Test fit": "Primary", "Variant": "early_check",
+            "Urgency modifier": "none", "Block size": "Large",
+            "Alternative primary CTA": "None", "Confidence": "Medium",
+        })
+        return row, "covers both solvent and insolvent closure, so the softer wording is the safe one"
+
+    if path == "/insolvency-practitioner/":
+        row.update({
+            "Primary audience": "Director", "Assumed state": "Serious distress", "Formal action": "None",
+            "Personal-risk context": "No", "Test fit": "Primary", "Variant": "serious_position",
+            "Urgency modifier": "none", "Block size": "Large",
+            "Alternative primary CTA": "None", "Confidence": "Medium",
+        })
+        return row, "someone looking for an insolvency practitioner is usually past wondering whether there is a problem"
+
+    if path in ("/debt-charities-uk/", "/mental-health-debt-stress-support/"):
+        row.update({
+            "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
+            "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
+            "Urgency modifier": "none", "Block size": "None",
+            "Alternative primary CTA": "Support signposting", "Confidence": "High",
+        })
+        return row, "support and signposting page — a sales CTA does not belong on it"
+
+    row.update({
+        "Primary audience": "Director", "Assumed state": "Uncertain", "Formal action": "None",
+        "Personal-risk context": "No", "Test fit": "Primary", "Variant": "early_check",
+        "Urgency modifier": "none", "Block size": "Large",
+        "Alternative primary CTA": "None", "Confidence": "Low",
+    })
+    return row, "no rule covers this page — the safe default, needs a read"
+
+
+def fetch_sitemap() -> dict[str, str]:
+    load_dotenv(ROOT / ".env")
+    auth = (os.environ["WP_BASIC_AUTH_USER"], os.environ["WP_BASIC_AUTH_PASS"])
+    ua = {"User-Agent": "Mozilla/5.0 CD-check"}
+    pages: dict[str, str] = {}
+    index = requests.get(f"{BASE}/sitemap_index.xml", auth=auth, timeout=60, headers=ua).text
+    for loc in re.findall(r"<loc>([^<]+)</loc>", index):
+        if "sitemap" not in loc:
+            continue
+        kind = loc.rsplit("/", 1)[-1].replace("-sitemap.xml", "")
+        body = requests.get(loc, auth=auth, timeout=60, headers=ua).text
+        for url in re.findall(r"<loc>([^<]+)</loc>", body):
+            pages[urlparse(url).path] = kind
+    return pages
 
 
 def main() -> None:
-    rows = []
-    for url, cluster in read_manifest():
-        row = build_row(url, cluster)
-        row["_phase"] = phase_for(url)
+    live = fetch_sitemap()
+    done = {}
+    if COMPLETED.exists():
+        done = {r["Page"]: r for r in csv.DictReader(COMPLETED.open(encoding="utf-8-sig"))}
+
+    rows, proposals, carried, ruled = [], [], 0, 0
+    for path in sorted(live):
+        if path in done:
+            rows.append({c: done[path].get(c, "") for c in COLUMNS})
+            carried += 1
+            continue
+
+        row = {c: "" for c in COLUMNS}
+        row["Page"] = path
+        reason = reason_no_cta(path, live[path])
+        if reason:
+            row.update({
+                "Primary audience": "Mixed", "Assumed state": "Uncertain", "Formal action": "None",
+                "Personal-risk context": "No", "Test fit": "None", "Variant": "none",
+                "Urgency modifier": "none", "Block size": "None",
+                "Alternative primary CTA": "None", "Confidence": "High",
+                "Reviewed": "rule 2026-08-06", "Notes": f"no CTA: {reason}",
+            })
+            ruled += 1
+        else:
+            proposed, why = proposal(path)
+            proposed["Page"] = path
+            proposed["Reviewed"] = "proposed"
+            proposed["Notes"] = f"proposal: {why}"
+            row = proposed
+            proposals.append((path, row["Variant"], row["Block size"], why))
         rows.append(row)
 
-    rows.sort(key=lambda r: (r["_phase"], r["Page"]))
-    phases = [r["_phase"] for r in rows]
+    stale = sorted(set(done) - set(live))
 
     with OUT.open("w", encoding="utf-8-sig", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=["Review phase"] + COLUMNS)
+        writer = csv.DictWriter(fh, fieldnames=COLUMNS)
         writer.writeheader()
-        for r in rows:
-            out = {"Review phase": r.pop("_phase")}
-            out.update(r)
-            writer.writerow(out)
+        writer.writerows(rows)
 
     print(f"{len(rows)} pages -> {OUT.relative_to(ROOT)}")
-    from collections import Counter
-    for phase, n in sorted(Counter(phases).items()):
-        print(f"  {n:4}  {phase}")
-    conf = Counter(r["Confidence"] for r in rows)
-    print("confidence:", dict(conf))
+    print(f"  carried over from the completed review: {carried}")
+    print(f"  settled by the no-CTA rule:             {ruled}")
+    print(f"  proposed, needs confirming:             {len(proposals)}")
+    print("  variants:", dict(Counter(r["Variant"] for r in rows)))
+    if stale:
+        print(f"\nin the old review but no longer on the site ({len(stale)}), dropped:")
+        for p in stale:
+            print("   ", p)
+    if proposals:
+        print("\nproposals to confirm or overturn:")
+        groups: dict[str, list[str]] = {}
+        for path, variant, size, why in proposals:
+            groups.setdefault(f"{variant} / {size or 'no block'} — {why}", []).append(path)
+        for why, paths in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+            print(f"\n  [{len(paths)}] {why}")
+            for p in paths[:4]:
+                print("       ", p)
+            if len(paths) > 4:
+                print(f"        ... and {len(paths) - 4} more")
 
 
 if __name__ == "__main__":
