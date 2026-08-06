@@ -88,17 +88,36 @@ function cd_test_cta_urgency_copy() {
 }
 
 /**
- * Reviewed page map: slug => array( variant, urgency ).
+ * Reviewed page map: slug => array( variant, urgency, block size, alternative primary CTA ).
  *
- * Only pages a human has actually reviewed belong here. Everything else falls to the
- * safe default. Plan sections 9 and 12: no automatic guessing from URL or title.
+ * Generated from the completed review list by scripts/build_cta_page_map.py. Only pages a
+ * human has actually reviewed are in it; everything else falls to the safe default. Plan
+ * sections 9 and 12: no automatic guessing from URL or title.
  *
- * @return array<string, array{0:string,1:string}>
+ * The file lives in the assets sub-folder rather than beside this one because WordPress
+ * auto-loads every .php directly inside mu-plugins, and this one is data, not a plugin.
+ *
+ * @return array<string, array{0:string,1:string,2:string,3:string}>
  */
 function cd_test_cta_page_map() {
-	return array(
-		'winding-up-petitions' => array( 'serious_position', 'urgent_action' ),
-	);
+	static $map = null;
+	if ( null !== $map ) { return $map; }
+	$file = __DIR__ . '/cd-cta-blocks/page-map.php';
+	$map  = is_readable( $file ) ? (array) require $file : array();
+	return $map;
+}
+
+/**
+ * The reviewed decision for the page being viewed, or null if it has not been reviewed.
+ *
+ * @return array{0:string,1:string,2:string,3:string}|null variant, urgency, size, alternative CTA
+ */
+function cd_test_cta_page_entry() {
+	if ( ! is_singular() ) { return null; }
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	if ( ! $slug ) { return null; }
+	$map = cd_test_cta_page_map();
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : null;
 }
 
 /** Plan section 9: the safe default is the less severe message, never the more severe. */
@@ -115,18 +134,14 @@ function cd_test_cta_resolve( $variant = '', $urgency = '' ) {
 		return array( $variant, ( 'urgent_action' === $urgency ) ? 'urgent_action' : '' );
 	}
 
-	if ( is_singular() ) {
-		$slug = get_post_field( 'post_name', get_queried_object_id() );
-		$map  = cd_test_cta_page_map();
-		if ( $slug && isset( $map[ $slug ] ) ) {
-			$mapped = $map[ $slug ];
-			// A reviewed page may be mapped to 'none' — the test does not serve its
-			// reader (solvent company, creditor or employee audience, or a company
-			// already deep inside a formal process). Plan section 7.
-			if ( 'none' === $mapped[0] ) { return array( 'none', '' ); }
-			if ( isset( $variants[ $mapped[0] ] ) ) {
-				return array( $mapped[0], ( 'urgent_action' === $urgency ) ? 'urgent_action' : $mapped[1] );
-			}
+	$entry = cd_test_cta_page_entry();
+	if ( $entry ) {
+		// A reviewed page may be mapped to 'none' — the test does not serve its reader
+		// (solvent company, creditor or employee audience, or a company already deep
+		// inside a formal process). Plan section 7.
+		if ( 'none' === $entry[0] ) { return array( 'none', '' ); }
+		if ( isset( $variants[ $entry[0] ] ) ) {
+			return array( $entry[0], ( 'urgent_action' === $urgency ) ? 'urgent_action' : $entry[1] );
 		}
 	}
 	return array( CD_TEST_CTA_DEFAULT, ( 'urgent_action' === $urgency ) ? 'urgent_action' : '' );
@@ -201,12 +216,17 @@ function cd_test_cta_track( $cta, $variant, $urgency, $size, $context ) {
 
 add_shortcode( 'cd_test_cta', function ( $atts ) {
 	$atts = shortcode_atts(
-		array( 'size' => 'large', 'style' => '', 'variant' => '', 'urgency' => '', 'context' => '' ),
+		array( 'size' => '', 'style' => '', 'variant' => '', 'urgency' => '', 'context' => '' ),
 		$atts,
 		'cd_test_cta'
 	);
-	// 'style' kept as an alias so the pilot page's existing markup keeps working.
+	// Size comes from the shortcode if it says; otherwise from the page's reviewed
+	// decision; otherwise large. 'style' is kept as an alias for older markup.
 	$size = $atts['style'] ? $atts['style'] : $atts['size'];
+	if ( ! $size ) {
+		$entry = cd_test_cta_page_entry();
+		if ( $entry && ! empty( $entry[2] ) ) { $size = $entry[2]; }
+	}
 	$size = ( 'compact' === $size ) ? 'compact' : 'large';
 
 	cd_test_cta_enqueue();
