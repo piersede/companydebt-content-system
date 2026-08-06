@@ -27,6 +27,15 @@ const CD_SOLVENT_CTA_URL = '/liquidation/members-voluntary-liquidation/';
 const CD_TEST_CTA_BUTTON = 'Check my company&rsquo;s position';
 
 /**
+ * One label on every non-urgent phone block. Section 10 asks for one action per CTA
+ * type, and the site now has exactly three: this, the urgent block's "Speak to an
+ * insolvency adviser now", and the test's own button. "Speak to an insolvency
+ * practitioner" was mine and it is a job title, not an invitation; this is Piers's
+ * wording and it is what a worried reader would actually click.
+ */
+const CD_ALT_CTA_BUTTON = 'Speak to an Adviser';
+
+/**
  * Wording set. Plan sections 3, 4, 5 and 17.
  *
  * Each entry may define large and compact copy. Where a variant is compact-only the
@@ -359,7 +368,7 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 			. 'Speak to a licensed insolvency practitioner about whether the company qualifies and what '
 			. 'the process involves.</p>'
 			. '<a class="cd-cta-compact__btn" href="tel:' . esc_attr( CD_ADVICE_CTA_TEL ) . '"' . $track . '>'
-			. 'Speak to an insolvency practitioner</a>'
+			. CD_ALT_CTA_BUTTON . '</a>'
 			. '<p class="cd-cta-compact__reassure"><span>Call 0800 074 6757</span>'
 			. '<span><strong>Confidential, and no obligation</strong></span></p>'
 			. '</div></div>';
@@ -429,7 +438,7 @@ function cd_cta_alt_wording() {
 			           . 'usually turns on the facts of that case and on who now controls the '
 			           . 'decision. Speak to a licensed insolvency practitioner about where '
 			           . 'things actually stand.',
-			'button'  => 'Speak to an insolvency practitioner',
+			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
 		// 6 pages. Rule 4: never imply we can rule on the reader's personal liability.
@@ -443,7 +452,7 @@ function cd_cta_alt_wording() {
 			           . 'what was drawn out and how the company was run in the months before. '
 			           . 'No general guide can settle that. Speak to a licensed insolvency '
 			           . 'practitioner about the company&rsquo;s position first.',
-			'button'  => 'Speak to an insolvency practitioner',
+			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
 		// 2 pages. A partnership or LLP is not a limited company, so the test does not apply,
@@ -455,8 +464,8 @@ function cd_cta_alt_wording() {
 			'title'   => 'Is the Business a Partnership or an LLP?',
 			'body'    => 'Partnership and LLP insolvency runs on different rules from a limited '
 			           . 'company, and the partners&rsquo; own position is part of the picture '
-			           . 'from the start. Speak to an insolvency practitioner who handles both.',
-			'button'  => 'Speak to an insolvency practitioner',
+			           . 'from the start. We handle both.',
+			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
 		// 3 pages, and the only label that sits on pages which DO get the test. Compact, so
@@ -468,7 +477,7 @@ function cd_cta_alt_wording() {
 			'title'   => 'Does the Structure Need Specialist Handling?',
 			'body'    => 'Charities, non-profits and group companies bring in trustees, '
 			           . 'intra-group debt and duties the standard route does not cover.',
-			'button'  => 'Speak to an insolvency practitioner',
+			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
 		// 9 pages. The reader is owed money. We are not selling insolvency work to a
@@ -516,6 +525,38 @@ function cd_cta_alt_wording() {
 }
 
 /**
+ * Per-page wording, layered over the block's default. Keyed by slug.
+ *
+ * This exists because of a real editorial failure. The first version of the
+ * process-advice block put one headline on 23 pages spanning company pensions, leases,
+ * director conduct and winding-up orders, and that headline -- "Questions About a
+ * Process Already Under Way?" -- was the internal filing label reworded. It spoke to
+ * none of those readers, and it also assumed liquidation had started when the page
+ * title alone never established that.
+ *
+ * A bucket in the review is a routing decision. It is not a reader. Where the bucket is
+ * broad, the page gets its own headline and body here and only inherits the shape,
+ * destination and button from the block.
+ *
+ * @return array<string, array{title?:string, body?:string, eyebrow?:string}>
+ */
+function cd_cta_page_copy() {
+	return array(
+
+		// Piers, 6 Aug 2026. Three different readers land here: someone weighing
+		// liquidation up and researching the consequences, someone already in it, and a
+		// director worried about their duties. The headline names the worry all three
+		// share instead of asserting which one they are.
+		'what-happens-after-company-liquidation' => array(
+			'eyebrow' => '',
+			'title'   => 'Concerned About What Happens After Liquidation?',
+			'body'    => 'Speak confidentially with an insolvency adviser about director duties, '
+			           . 'company debts, assets and what happens next.',
+		),
+	);
+}
+
+/**
  * Render one alternative CTA. Shared markup on purpose: these are seven wordings of the
  * same two cards, and a copy of the markup per block is seven places to fix a styling bug.
  */
@@ -523,6 +564,22 @@ function cd_cta_render_alt( $key, $context = '' ) {
 	$set = cd_cta_alt_wording();
 	if ( ! isset( $set[ $key ] ) ) { return ''; }
 	$c = $set[ $key ];
+
+	// Page-specific wording wins over the block default. Only the copy is overridden;
+	// shape, destination and button label stay with the block so the action stays
+	// consistent site-wide (plan section 10).
+	if ( is_singular() ) {
+		$slug = get_post_field( 'post_name', get_queried_object_id() );
+		$copy = cd_cta_page_copy();
+		if ( $slug && isset( $copy[ $slug ] ) ) {
+			$c = array_merge( $c, array_filter( $copy[ $slug ], 'strlen' ) );
+			// An explicitly empty eyebrow means "no eyebrow on this page", which
+			// array_filter has just dropped. Honour it.
+			if ( isset( $copy[ $slug ]['eyebrow'] ) && '' === $copy[ $slug ]['eyebrow'] ) {
+				unset( $c['eyebrow'] );
+			}
+		}
+	}
 
 	// A guide block pointing at the page it sits on helps nobody.
 	if ( isset( $c['url'] ) && cd_cta_points_here( $c['url'] ) ) { return ''; }
@@ -534,9 +591,11 @@ function cd_cta_render_alt( $key, $context = '' ) {
 	$track = cd_test_cta_track( $key, '', '', $size, $context );
 
 	if ( 'phone' === $c['shape'] ) {
+		$eyebrow = empty( $c['eyebrow'] ) ? ''
+			: '<p class="cd-cta-full__eyebrow">' . $c['eyebrow'] . '</p>';
 		return '<div class="cd-cta-shell"><div class="cd-cta-full cd-cta-full--advice cd-cta-full--guide">'
 			. '<div class="cd-cta-full__content">'
-			. '<p class="cd-cta-full__eyebrow">' . $c['eyebrow'] . '</p>'
+			. $eyebrow
 			. '<p class="cd-cta-full__title">' . $c['title'] . '</p>'
 			. '<p class="cd-cta-full__body">' . $c['body'] . '</p>'
 			. '<a class="cd-cta-full__btn" href="tel:' . esc_attr( $tel ) . '"' . $track . '>'

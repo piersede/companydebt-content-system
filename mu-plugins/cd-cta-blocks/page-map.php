@@ -282,7 +282,7 @@ return array(
 	'uk-insolvency-flowchart'                                                         => array( 'early_check', '', 'large', '' ), // /liquidation/uk-insolvency-flowchart/
 	'uk-insolvency-glossary'                                                          => array( 'none', '', 'none', '' ), // /liquidation/uk-insolvency-glossary/
 	'voluntary-vs-compulsory-liquidation'                                             => array( 'serious_position', '', 'large', '' ), // /liquidation/voluntary-vs-compulsory-liquidation/
-	'what-happens-after-company-liquidation'                                          => array( 'none', '', 'none', 'Process-specific advice' ), // /liquidation/what-happens-after-company-liquidation/
+	'what-happens-after-company-liquidation'                                          => array( 'serious_position', '', 'compact', 'Process-specific advice' ), // /liquidation/what-happens-after-company-liquidation/
 	'what-happens-if-a-creditor-takes-me-to-court'                                    => array( 'serious_position', 'urgent_action', 'compact', 'Direct advice' ), // /liquidation/what-happens-if-a-creditor-takes-me-to-court/
 	'what-happens-if-a-director-hides-company-assets'                                 => array( 'none', '', 'none', 'Process-specific advice' ), // /liquidation/what-happens-if-a-director-hides-company-assets/
 	'what-happens-if-a-director-resigns-before-liquidation'                           => array( 'personal_risk_secondary', '', 'compact', 'Direct advice' ), // /liquidation/what-happens-if-a-director-resigns-before-liquidation/
