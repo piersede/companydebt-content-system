@@ -146,21 +146,29 @@ add_action( 'wp_enqueue_scripts', function () {
 		|| has_shortcode( $content, 'cd_solvent_cta' )
 	);
 
-	// The theme also injects these blocks into the pages in its own CTA map, where the
-	// shortcode never appears in post content. Without this the injected block renders
-	// as unstyled plain text — which is exactly what happened the first time.
-	if ( ! $used && function_exists( 'cd_acta_map' ) ) {
-		$map  = cd_acta_map();
-		$used = isset( $map[ $id ] );
-	}
 	if ( ! $used ) { return; }
+	cd_test_cta_enqueue();
+} );
 
+/**
+ * Load the block CSS. Safe to call more than once, and called again from inside every
+ * block so that anything rendering a block programmatically — a template, a filter, a
+ * future placement system — gets the styling too.
+ *
+ * This exists because of a real failure: the CSS was gated on the shortcode appearing in
+ * post content, so blocks placed by a content filter rendered as unstyled plain text
+ * while every response still returned 200 with correct markup.
+ */
+function cd_test_cta_enqueue() {
+	static $done = false;
+	if ( $done || ! function_exists( 'wp_enqueue_style' ) ) { return; }
 	$file = __DIR__ . '/cd-cta-blocks/cta-blocks.css';
 	if ( ! is_readable( $file ) ) { return; }
+	$done = true;
 	wp_register_style( 'cd-test-cta', false, array(), null );
 	wp_enqueue_style( 'cd-test-cta' );
 	wp_add_inline_style( 'cd-test-cta', file_get_contents( $file ) );
-} );
+}
 
 /**
  * Inline icons — no extra request, no icon-font dependency. Safe here because plugin
@@ -201,6 +209,7 @@ add_shortcode( 'cd_test_cta', function ( $atts ) {
 	$size = $atts['style'] ? $atts['style'] : $atts['size'];
 	$size = ( 'compact' === $size ) ? 'compact' : 'large';
 
+	cd_test_cta_enqueue();
 	list( $key, $urgency ) = cd_test_cta_resolve( $atts['variant'], $atts['urgency'] );
 	if ( 'none' === $key ) { return ''; }
 
@@ -271,6 +280,7 @@ add_shortcode( 'cd_advice_cta', function ( $atts ) {
 		$atts,
 		'cd_advice_cta'
 	);
+	cd_test_cta_enqueue();
 	$tel   = CD_ADVICE_CTA_TEL;
 	$shown = '0800 074 6757';
 	$track = cd_test_cta_track( 'direct-advice', '', 'urgent_action', 'large', $atts['context'] );
@@ -294,6 +304,7 @@ add_shortcode( 'cd_advice_cta', function ( $atts ) {
  * into a distress answer. Plan sections 6A, 7.1 and 16.
  */
 add_shortcode( 'cd_solvent_cta', function ( $atts ) {
+	cd_test_cta_enqueue();
 	$atts  = shortcode_atts( array( 'context' => '' ), $atts, 'cd_solvent_cta' );
 	$track = cd_test_cta_track( 'solvent-closure', '', '', 'compact', $atts['context'] );
 
