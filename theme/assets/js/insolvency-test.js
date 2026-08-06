@@ -400,14 +400,28 @@
         var errNetwork = document.getElementById('cd-itest-err-network');
         errNetwork.style.display = 'none';
 
-        if (!name || !emailRe.test(email)) {
+        var phone    = document.getElementById('cd-c-phone').value.trim();
+        var calltime = (document.querySelector('input[name="cd_calltime"]:checked') || {}).value || '';
+
+        // A visitor who asks to be called but leaves the number blank is a
+        // lost callback — happened on a real urgent-tier lead 2026-08-06.
+        // Require a plausible number whenever they've chosen "Yes".
+        var wantsCall = callpref.value === 'yes';
+        var phoneDigits = phone.replace(/[^0-9]/g, '');
+        var phoneOk = !wantsCall || phoneDigits.length >= 10;
+
+        if (!name || !emailRe.test(email) || !phoneOk) {
+            errValidation.textContent = !phoneOk
+                ? 'Please add a phone number so we can call you — or choose “No, email only”.'
+                : 'Please add your name and a valid email address.';
             errValidation.classList.add('cd-itest-show');
+            if (!phoneOk) {
+                var phoneEl = document.getElementById('cd-c-phone');
+                if (phoneEl) { try { phoneEl.focus(); } catch (e) {} }
+            }
             return;
         }
         errValidation.classList.remove('cd-itest-show');
-
-        var phone    = document.getElementById('cd-c-phone').value.trim();
-        var calltime = (document.querySelector('input[name="cd_calltime"]:checked') || {}).value || '';
 
         var result = computeResult();
 
