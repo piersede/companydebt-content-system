@@ -36,11 +36,17 @@
  * --------------
  * These are the site's main lead emails, so a failure here must never mean
  * NO email. gform_entry_created runs BEFORE GF's own notification send, so:
- *   1. we send first and record success against the entry id;
+ *   1. we send first and record success against the FORM id for this request;
  *   2. the suppression filter only suppresses when that record exists.
  * If our send throws or the entry can't be reloaded, nothing is suppressed and
  * GF's native send proceeds exactly as it does today. Worst case is therefore
  * the current behaviour, never silence.
+ *
+ * The record is keyed on form id, not entry id: reading the entry id inside
+ * the suppression filter is unreliable precisely because of the fault being
+ * fixed. A first cut keyed on entry id never matched, so nothing was ever
+ * suppressed and every submission sent two emails — ours (correct) and GF's
+ * (empty). Caught on staging 2026-08-06 before it reached live.
  */
 
 if (!defined('ABSPATH')) { exit; }
@@ -69,8 +75,18 @@ function cd_gfn_owns_form($form) {
     return $id && in_array($id, cd_gfn_owned_form_ids(), true);
 }
 
-// Entry ids whose notifications we have successfully sent ourselves.
-$GLOBALS['cd_gfn_sent_ok']    = array();
+/*
+ * Form ids we have successfully emailed ourselves during THIS request.
+ *
+ * Keyed on form id, deliberately NOT on entry id. The whole fault being
+ * worked around is that GF hands its own send a broken entry context — so
+ * the entry id read inside the suppression filter is frequently 0. An
+ * earlier version of this plugin keyed on entry id and therefore never
+ * matched, never suppressed, and every submission produced TWO emails:
+ * ours (correct) and GF's (empty). Form id survives the broken context,
+ * and one request only ever handles one submission.
+ */
+$GLOBALS['cd_gfn_sent_forms']  = array();
 // True only while our own GFAPI::send_notifications() call is in flight.
 $GLOBALS['cd_gfn_in_our_send'] = false;
 
@@ -100,7 +116,7 @@ function cd_gfn_send_notifications($entry, $form) {
     try {
         \GFAPI::send_notifications($form, $fresh, 'form_submission');
         // Only now is it safe to suppress GF's own attempt.
-        $GLOBALS['cd_gfn_sent_ok'][$entry_id] = true;
+        $GLOBALS['cd_gfn_sent_forms'][(int) rgar($form, 'id')] = true;
         if (class_exists('GFCommon')) {
             \GFCommon::log_debug("[cd-gfn] sent notifications for entry {$entry_id} (form " . rgar($form, 'id') . ')');
         }
@@ -128,8 +144,10 @@ function cd_gfn_suppress_native($is_disabled, $notification, $form, $entry, $dat
     if (!cd_gfn_owns_form($form)) {
         return $is_disabled;               // not ours
     }
-    $entry_id = is_array($entry) ? absint(rgar($entry, 'id')) : 0;
-    if ($entry_id && !empty($GLOBALS['cd_gfn_sent_ok'][$entry_id])) {
+    // Keyed on form id — see the note by $cd_gfn_sent_forms. Reading the
+    // entry id here is unreliable precisely because of the fault we're fixing.
+    $form_id = (int) rgar($form, 'id');
+    if ($form_id && !empty($GLOBALS['cd_gfn_sent_forms'][$form_id])) {
         return true;                       // already emailed — suppress the duplicate
     }
     return $is_disabled;                   // we didn't send → let GF try
