@@ -725,13 +725,36 @@ one label, `Speak to an insolvency practitioner`; the urgent block keeps its own
 
 | Review label | Pages | Shape | Headline | Action |
 |---|---|---|---|---|
-| Process-specific advice | 23 | Large, phone | Questions About a Process Already Under Way? | Speak to an insolvency practitioner |
-| Personal-liability guidance | 6 | Large, phone | Worried About Your Own Exposure? | Speak to an insolvency practitioner |
-| Partnership advice | 2 | Large, phone | Is the Business a Partnership or an LLP? | Speak to an insolvency practitioner |
-| Specialist advice | 3 | Compact, phone | Does the Structure Need Specialist Handling? | Speak to an insolvency practitioner |
+| Company assets | 6 | Large, phone | Worried About What Happens to Company Assets? | Speak to an Adviser |
+| Process guidance | 8 | Large, phone | Unsure What the Process Will Ask of You? | Speak to an Adviser |
+| Personal-liability guidance | 12 | Large, phone | Worried About Your Own Exposure? | Speak to an Adviser |
 | Creditor guidance | 9 | Compact, link | Owed Money by an Insolvent Company? | `/insolvency/insolvent-company-owes-me-money/` |
 | HMRC affordability | 14 | Compact, link | Can the Company Afford What HMRC Is Asking For? | `/hmrc/hmrc-debt-enforcement-hub/` |
+| Failed CVA | 2 | Large, phone | Has Your CVA Failed or Started to Slip? | Speak to an Adviser |
+| Partnership advice | 2 | Large, phone | Is the Business a Partnership or an LLP? | Speak to an Adviser |
+| Charity advice | 2 | Compact, phone | Running a Charity That Cannot Pay Its Bills? | Speak to an Adviser |
+| Group company advice | 1 | Compact, phone | Liquidating One Company in a Group? | Speak to an Adviser |
 | Closure options | 1 | Compact, link | Not Sure Which Closure Route Fits? | `/closing-a-limited-company/` |
+
+### A Bucket in the Review Is Not a Reader
+
+The first version of this set had one block, "Process-specific advice", on 23 pages
+covering company pensions, leases, director conduct reports and winding-up orders. Its
+headline -- "Questions About a Process Already Under Way?" -- was the internal filing
+label reworded, and it also asserted that liquidation had begun when no page title
+establishes that. Rejected by Piers on 6 August 2026, correctly.
+
+Two rules came out of it, and they bind future additions to this set:
+
+1. **Never convert an internal label into public copy.** The review's column names are
+   routing keys. A headline names what the reader is afraid of.
+2. **Never let a page title stand in for the reader's state.** "What Happens After
+   Company Liquidation?" is read by someone weighing liquidation up, someone already in
+   it, and a director worried about their duties. That row is `Mixed`, not
+   `Already in process`.
+
+Where a routing group is broad, individual pages carry their own headline and body in
+`cd_cta_page_copy()` and inherit only the shape, destination and button label.
 
 ### Notes on Three of Them
 

@@ -427,17 +427,46 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 function cd_cta_alt_wording() {
 	return array(
 
-		// 23 pages. The reader is inside a liquidation, CVA or strike-off already, so the
-		// diagnostic question has been overtaken by events.
-		'process-advice' => array(
+		// The next three replace a single block that carried one headline across 23 pages
+		// spanning pensions, leases, conduct reports and winding-up orders. That grouping
+		// was a filing decision in the review, not a reader, and the headline it produced
+		// was the label reworded. These are sorted by what the reader is actually afraid
+		// of. Piers, 6 Aug 2026.
+
+		// 6 pages: bank account, pensions, property, vehicles, IP, leases. The fear is
+		// losing things, and not knowing what may still be touched.
+		'assets' => array(
+			'tag'     => 'cd_assets_cta',
+			'shape'   => 'phone',
+			'eyebrow' => 'Company Assets',
+			'title'   => 'Worried About What Happens to Company Assets?',
+			'body'    => 'Speak confidentially with an insolvency adviser about property, vehicles, '
+			           . 'equipment, contracts and bank accounts, and what a director can and '
+			           . 'cannot do with them.',
+			'button'  => CD_ALT_CTA_BUTTON,
+		),
+
+		// 7 pages: meetings, the statement of affairs, the document list, a liquidator's
+		// powers. The fear is an unfamiliar process and being caught out by it.
+		'process-guidance' => array(
 			'tag'     => 'cd_process_cta',
 			'shape'   => 'phone',
-			'eyebrow' => 'Process Already Under Way',
-			'title'   => 'Questions About a Process Already Under Way?',
-			'body'    => 'Once a company is in liquidation or a formal arrangement, the answer '
-			           . 'usually turns on the facts of that case and on who now controls the '
-			           . 'decision. Speak to a licensed insolvency practitioner about where '
-			           . 'things actually stand.',
+			'eyebrow' => 'What Happens Next',
+			'title'   => 'Unsure What the Process Will Ask of You?',
+			'body'    => 'Speak confidentially with an insolvency adviser about meetings, '
+			           . 'paperwork, deadlines, and what a liquidator can and cannot require '
+			           . 'of you.',
+			'button'  => CD_ALT_CTA_BUTTON,
+		),
+
+		// 2 pages. A specific event with a specific panic, so it gets its own words.
+		'cva-failed' => array(
+			'tag'     => 'cd_cva_cta',
+			'shape'   => 'phone',
+			'eyebrow' => 'When an Arrangement Collapses',
+			'title'   => 'Has Your CVA Failed or Started to Slip?',
+			'body'    => 'Speak confidentially with an insolvency adviser about where a collapsed '
+			           . 'arrangement leaves the company, and what options are still open.',
 			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
@@ -468,15 +497,31 @@ function cd_cta_alt_wording() {
 			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
-		// 3 pages, and the only label that sits on pages which DO get the test. Compact, so
-		// the page carries one dominant block rather than two.
-		'specialist' => array(
-			'tag'     => 'cd_specialist_cta',
+		// The two below replace one "Does the Structure Need Specialist Handling?" block.
+		// A charity and a group company are different problems with different readers, and
+		// "structure" and "specialist handling" were both filing words. Compact, because
+		// these three pages also carry the test and must not gain a second large block.
+
+		// 2 pages. The reader may be a trustee rather than a director.
+		'charity' => array(
+			'tag'     => 'cd_charity_cta',
 			'shape'   => 'phone_compact',
-			'eyebrow' => 'Specialist Structures',
-			'title'   => 'Does the Structure Need Specialist Handling?',
-			'body'    => 'Charities, non-profits and group companies bring in trustees, '
-			           . 'intra-group debt and duties the standard route does not cover.',
+			'eyebrow' => 'Charities and Non-Profits',
+			'title'   => 'Running a Charity That Cannot Pay Its Bills?',
+			'body'    => 'Speak confidentially with an insolvency adviser about trustee duties, '
+			           . 'restricted funds, and how charity insolvency differs from a '
+			           . 'company&rsquo;s.',
+			'button'  => CD_ALT_CTA_BUTTON,
+		),
+
+		// 1 page. The worry is what one liquidation does to the companies around it.
+		'group-company' => array(
+			'tag'     => 'cd_group_cta',
+			'shape'   => 'phone_compact',
+			'eyebrow' => 'Group Structures',
+			'title'   => 'Liquidating One Company in a Group?',
+			'body'    => 'Speak confidentially with an insolvency adviser about intra-group debts, '
+			           . 'guarantees, and the knock-on effect on the other companies.',
 			'button'  => CD_ALT_CTA_BUTTON,
 		),
 
@@ -670,14 +715,20 @@ function cd_cta_alternative_block( $alt ) {
 			return do_shortcode( '[cd_advice_cta]' );
 		case 'solvent closure':
 			return do_shortcode( '[cd_solvent_cta]' );
-		case 'process-specific advice':
-			return cd_cta_render_alt( 'process-advice' );
+		case 'company assets':
+			return cd_cta_render_alt( 'assets' );
+		case 'process guidance':
+			return cd_cta_render_alt( 'process-guidance' );
+		case 'failed cva':
+			return cd_cta_render_alt( 'cva-failed' );
 		case 'personal-liability guidance':
 			return cd_cta_render_alt( 'personal-liability' );
 		case 'partnership advice':
 			return cd_cta_render_alt( 'partnership' );
-		case 'specialist advice':
-			return cd_cta_render_alt( 'specialist' );
+		case 'charity advice':
+			return cd_cta_render_alt( 'charity' );
+		case 'group company advice':
+			return cd_cta_render_alt( 'group-company' );
 		case 'creditor guidance':
 			return cd_cta_render_alt( 'creditor' );
 		case 'hmrc affordability':
