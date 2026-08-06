@@ -18,6 +18,6 @@ PAGE_CONFIG = {
     'slug': "director-protection-hub",
     'page_type': "hub",
     'wp_page_id': 77396,
-    'title': "Director Protection Hub",
-    'verification_date': "14 July 2026",
+    'title': "Director Protection During Company Insolvency: How to Reduce Personal Risk",
+    'verification_date': "6 August 2026",
 }
