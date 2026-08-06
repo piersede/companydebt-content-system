@@ -8,6 +8,12 @@
       "port": 3333
     },
     {
+      "name": "repo-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8100", "--directory", "C:\\Users\\piers\\Projects\\Company Debt Content System"],
+      "port": 8100
+    },
+    {
       "name": "datahub-preview",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8099", "--directory", "C:\\Users\\piers\\Projects\\Company Debt Content System\\preview"],

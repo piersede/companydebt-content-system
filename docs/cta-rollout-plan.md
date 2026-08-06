@@ -13,7 +13,7 @@ carefully and reversibly. Companion file: `cta-rollout-manifest.md` (per-page ma
 ## The 3-CTA model
 | Slot | Role | Headline | Button | Destination |
 |---|---|---|---|---|
-| CTA 1 | Assessment (constant) | Not Sure Where the Company Stands? | Take the Free 30-Second Test | `/insolvency-calculator/` |
+| CTA 1 | Assessment (constant) | Could Your Company Be Insolvent? | Check My Company's Position | `/insolvency-calculator/` |
 | CTA 2 | Service (**category-driven** — see library) | varies | varies | cluster hub |
 | CTA 3 | Phone (constant) | Speak to a Licensed Insolvency Practitioner | Call 0800 074 6757 | `tel:08000746757` |
 
@@ -30,6 +30,13 @@ carefully and reversibly. Companion file: `cta-rollout-manifest.md` (per-page ma
 | general | Worried About Your Company? | Get Confidential Advice | `/company-rescue-solutions/` |
 
 All 8 destinations verified 200 (2026-07-30). `/hmrc/` used directly (avoids the `/hmrc-tax-problems/` 301 hop).
+
+**CTA 1 is now a designed block, not a text panel** (2026-08-06). Two variants ship from
+`mu-plugins/cd-cta-insolvency-test.php`: `[cd_test_cta]` (full card with the laptop visual)
+and `[cd_test_cta style="compact"]` (inline, text + button only). Design source and
+screenshots: `docs/design/insolvency-cta-blocks/`. The old "Free 30-Second Test" wording was
+wrong on both counts — the test asks 4 questions and its own page says it takes about two
+minutes. Piloted on `/winding-up-petitions/` (post 7687) on staging.
 
 ## Placement standard (from the pilot pattern — H2 boundaries)
 Injected into the content body, evenly distributed, never two adjacent:
