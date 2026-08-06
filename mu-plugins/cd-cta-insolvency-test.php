@@ -120,6 +120,10 @@ function cd_test_cta_resolve( $variant = '', $urgency = '' ) {
 		$map  = cd_test_cta_page_map();
 		if ( $slug && isset( $map[ $slug ] ) ) {
 			$mapped = $map[ $slug ];
+			// A reviewed page may be mapped to 'none' — the test does not serve its
+			// reader (solvent company, creditor or employee audience, or a company
+			// already deep inside a formal process). Plan section 7.
+			if ( 'none' === $mapped[0] ) { return array( 'none', '' ); }
 			if ( isset( $variants[ $mapped[0] ] ) ) {
 				return array( $mapped[0], ( 'urgent_action' === $urgency ) ? 'urgent_action' : $mapped[1] );
 			}
@@ -133,11 +137,22 @@ function cd_test_cta_resolve( $variant = '', $urgency = '' ) {
  */
 add_action( 'wp_enqueue_scripts', function () {
 	if ( ! is_singular() ) { return; }
-	$content = get_post_field( 'post_content', get_queried_object_id() );
-	if ( ! $content ) { return; }
-	$used = has_shortcode( $content, 'cd_test_cta' )
-	     || has_shortcode( $content, 'cd_advice_cta' )
-	     || has_shortcode( $content, 'cd_solvent_cta' );
+	$id      = get_queried_object_id();
+	$content = (string) get_post_field( 'post_content', $id );
+
+	$used = $content && (
+		   has_shortcode( $content, 'cd_test_cta' )
+		|| has_shortcode( $content, 'cd_advice_cta' )
+		|| has_shortcode( $content, 'cd_solvent_cta' )
+	);
+
+	// The theme also injects these blocks into the pages in its own CTA map, where the
+	// shortcode never appears in post content. Without this the injected block renders
+	// as unstyled plain text — which is exactly what happened the first time.
+	if ( ! $used && function_exists( 'cd_acta_map' ) ) {
+		$map  = cd_acta_map();
+		$used = isset( $map[ $id ] );
+	}
 	if ( ! $used ) { return; }
 
 	$file = __DIR__ . '/cd-cta-blocks/cta-blocks.css';

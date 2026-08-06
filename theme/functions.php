@@ -1571,6 +1571,9 @@ add_filter( 'the_content', function( $content ) {
 	// Never duplicate: if the page already carries a cd-cta block (hand-placed
 	// set, or a previous injection this render), leave it completely alone.
 	if ( strpos( $content, 'cd-cta__' ) !== false || strpos( $content, 'cd-cta--' ) !== false ) { return $content; }
+	// Same rule for the newer insolvency-test CTA blocks: if the page places one by
+	// hand, it owns its CTAs and nothing is injected.
+	if ( strpos( $content, 'cd-cta-shell' ) !== false ) { return $content; }
 
 	// top-level H2 open positions
 	if ( ! preg_match_all( '/<h2[ >]/i', $content, $m, PREG_OFFSET_CAPTURE ) ) { return $content; }
@@ -1584,13 +1587,41 @@ add_filter( 'the_content', function( $content ) {
 	$p3 = $off[ $n - 1 ];                 // before the last H2 (FAQ / related) -> CTA3 (phone)
 
 	$svc  = cd_acta_service( $map[ $id ] );
-	$cta1 = cd_acta_block( 'test', '30-Second Insolvency Check', 'Not Sure If Your Company Is Actually Insolvent?', 'Answer a few quick questions to see whether your company may be insolvent, and what to do next.', 'Check My Company', '/insolvency-calculator/', array( 'Free', 'Confidential', 'Regulated' ), 'assessment' );
+
+	// CTA 1 (assessment) is no longer a fixed string. It comes from the insolvency-test
+	// CTA plugin so the wording follows docs/cta-insolvency-test-wording-plan.md, which
+	// also decides whether this page should show the test at all. The old hard-coded
+	// block claimed a "30-Second Insolvency Check"; the test is four questions and about
+	// two minutes, so that wording was wrong on every page it appeared on.
+	$urgent = false;
+	if ( function_exists( 'cd_test_cta_resolve' ) ) {
+		list( $t_variant, $t_urgency ) = cd_test_cta_resolve();
+		$urgent = ( 'urgent_action' === $t_urgency );
+		if ( 'none' === $t_variant ) {
+			$cta1 = '';                                   // the test does not serve this page
+		} elseif ( $urgent ) {
+			$cta1 = do_shortcode( '[cd_advice_cta]' );    // deadline pages: direct contact leads
+		} else {
+			$cta1 = do_shortcode( '[cd_test_cta]' );
+		}
+	} else {
+		$cta1 = cd_acta_block( 'test', 'Free Online Test', 'Could Your Company Be Insolvent?', 'Answer four short questions to see which warning signs apply, how serious the position may be and how soon you may need to act.', 'Check my company&rsquo;s position', '/insolvency-calculator/', array( 'Free', 'Confidential', 'Regulated' ), 'assessment' );
+	}
+
 	$cta2 = cd_acta_block( 'service', $svc[0], $svc[1], $svc[2], $svc[3], $svc[4], array( $svc[5], $svc[6], $svc[7] ), $map[ $id ] );
-	$cta3 = cd_acta_block( 'phone', 'Free Director Helpline', 'Talk to a Licensed Insolvency Practitioner Today', 'Get straight through to a Licensed IP for a confidential, no-obligation conversation. We take HMRC and creditor pressure off you from the first call.', '0800 074 6757', 'tel:08000746757', array( 'Free call', 'UK based', 'Confidential' ), 'phone', false );
+
+	// CTA 3 is normally the phone block. On an urgent page the phone call is already the
+	// primary action in slot 1, so slot 3 carries the test as the secondary option
+	// instead of a second phone CTA.
+	if ( $urgent ) {
+		$cta3 = do_shortcode( '[cd_test_cta size="compact"]' );
+	} else {
+		$cta3 = cd_acta_block( 'phone', 'Free Director Helpline', 'Talk to a Licensed Insolvency Practitioner Today', 'Get straight through to a Licensed IP for a confidential, no-obligation conversation. We take HMRC and creditor pressure off you from the first call.', '0800 074 6757', 'tel:08000746757', array( 'Free call', 'UK based', 'Confidential' ), 'phone', false );
+	}
 
 	// insert LAST -> FIRST so earlier offsets stay valid
-	$content = substr( $content, 0, $p3 ) . $cta3 . substr( $content, $p3 );
-	$content = substr( $content, 0, $p2 ) . $cta2 . substr( $content, $p2 );
-	$content = substr( $content, 0, $p1 ) . $cta1 . substr( $content, $p1 );
+	if ( '' !== $cta3 ) { $content = substr( $content, 0, $p3 ) . $cta3 . substr( $content, $p3 ); }
+	if ( '' !== $cta2 ) { $content = substr( $content, 0, $p2 ) . $cta2 . substr( $content, $p2 ); }
+	if ( '' !== $cta1 ) { $content = substr( $content, 0, $p1 ) . $cta1 . substr( $content, $p1 ); }
 	return $content;
 }, 20 );
