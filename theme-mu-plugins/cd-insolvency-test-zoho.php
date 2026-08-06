@@ -30,106 +30,22 @@
 add_action('gform_entry_created', 'cd_itest_zoho_push', 10, 2);
 
 /*
- * NOTIFICATION REPAIR
- *
- * Symptom (live, 2026-08-05): submissions arriving via the GF REST
- * /submissions endpoint produced notification emails where form-level
- * merge tags resolved ({form_title}, {admin_email}) but every entry-level
- * tag was empty ({entry_id}, {:1}, {Risk tier:6}, {all_fields}).
- *
- * Cause: GF's background (asynchronous) notification processor runs in a
- * separate request and receives an entry object that hasn't been fully
- * hydrated from the DB.
- *
- * Fix, in two parts:
- *   1. Force notifications for this form to run synchronously, removing
- *      the separate-request boundary entirely.
- *   2. Rehydrate the entry at gform_entry_post_save — the native
- *      interception point that runs immediately after the entry is saved
- *      but BEFORE notifications and confirmations, and whose return value
- *      is used downstream.
- *
- * An earlier attempt used gform_notification to pre-resolve merge tags;
- * that runs too late — with background notifications the entry context
- * has already been serialised by then.
+ * Notification handling for this form now lives in the site-wide
+ * cd-gform-notification-fix.php mu-plugin (the same fault turned out to
+ * affect the contact forms too). All this plugin does is supply the
+ * plain-English answer summary for the email copy of the entry.
  */
-
-// 1. Disable asynchronous notifications for this form. GF exposes the
-//    filter per-form-id, so we register it dynamically once the form id
-//    is known.
-add_action('init', function () {
-    $form_id = (int) get_option('cd_insolvency_test_form_id', 0);
-    if (!$form_id) return;
-    add_filter("gform_is_asynchronous_notifications_enabled_{$form_id}", '__return_false', 99);
-}, 20);
-
-// 2. Suppress GF's own notification send for this form, then fire the
-//    notifications ourselves from gform_entry_created with a freshly
-//    loaded entry.
-//
-//    Proven necessary 2026-08-05: firing the SAME notifications on the
-//    SAME stored entry via POST /wp-json/gf/v2/entries/{id}/notifications
-//    produced a fully-populated email, while the automatic send during
-//    POST /wp-json/gf/v2/forms/46/submissions produced empty merge tags.
-//    So the entry is fine — only the timing of GF's own send on the
-//    /submissions path is broken. Rather than fight that pipeline, we
-//    take ownership of the send.
-//
-//    $cd_itest_manual_send guards against suppressing our OWN send.
-$GLOBALS['cd_itest_manual_send'] = false;
-
-add_filter('gform_disable_notification', 'cd_itest_suppress_native_notification', PHP_INT_MAX, 5);
-function cd_itest_suppress_native_notification($is_disabled, $notification, $form, $entry, $data = array()) {
-    if (!empty($GLOBALS['cd_itest_manual_send'])) {
-        return $is_disabled; // our own send in progress — let it through
-    }
+add_filter('cd_gfn_entry_for_notification', 'cd_itest_entry_for_notification', 10, 2);
+function cd_itest_entry_for_notification($entry, $form) {
     $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
-    if ($target_id && (int) rgar($form, 'id') === $target_id) {
-        return true; // suppress GF's automatic (broken-context) send
+    if (!$target_id || (int) rgar($form, 'id') !== $target_id) {
+        return $entry;
     }
-    return $is_disabled;
-}
-
-// Fire our own notifications once the entry is saved and readable. Runs
-// after the Zoho push (priority 10) so a Zoho failure can't block the
-// internal lead email.
-add_action('gform_entry_created', 'cd_itest_send_notifications_manually', 20, 2);
-function cd_itest_send_notifications_manually($entry, $form) {
-    $target_id = (int) get_option('cd_insolvency_test_form_id', 0);
-    if (!$target_id || (int) rgar($form, 'id') !== $target_id) return;
-
-    $entry_id = absint(rgar($entry, 'id'));
-    if (!$entry_id) {
-        cd_itest_zoho_record_error('notif_no_entry_id', 'Manual notification send: entry has no id');
-        return;
-    }
-
-    $fresh = \GFAPI::get_entry($entry_id);
-    if (is_wp_error($fresh)) {
-        cd_itest_zoho_record_error('notif_entry_reload_failed', $fresh->get_error_message(), array('entry_id' => $entry_id));
-        return;
-    }
-
-    // Swap the raw JSON payload for a plain-English summary in the copy of
-    // the entry we hand to the notification renderer. The STORED entry keeps
-    // the JSON (Zoho + any later analysis still get the machine-readable
-    // version — that push runs at priority 10 with its own copy).
-    $fresh['7'] = cd_itest_humanise_answers(rgar($fresh, '7'));
-
-    $GLOBALS['cd_itest_manual_send'] = true;
-    try {
-        $sent = \GFAPI::send_notifications($form, $fresh, 'form_submission');
-        if (class_exists('GFCommon')) {
-            \GFCommon::log_debug(sprintf(
-                '[cd-insolvency-test] manual notification send for entry %d: %s',
-                $entry_id, wp_json_encode($sent)
-            ));
-        }
-    } catch (\Throwable $e) {
-        cd_itest_zoho_record_error('notif_send_exception', $e->getMessage(), array('entry_id' => $entry_id));
-    } finally {
-        $GLOBALS['cd_itest_manual_send'] = false;
-    }
+    // Swap the raw JSON payload for a readable summary. Affects the EMAIL
+    // only — the stored entry and the Zoho push keep the machine-readable
+    // JSON (that push runs separately with its own copy of the entry).
+    $entry['7'] = cd_itest_humanise_answers(rgar($entry, '7'));
+    return $entry;
 }
 
 // REST route for the pagehide abandonment beacon. Previously the beacon
