@@ -1,394 +1,726 @@
-# Insolvency Test CTA — Wording Plan
+# Insolvency Test CTA — Revised Wording and Roll-out Plan
 
-**Status: proposal, for review.** Nothing below is deployed beyond the pilot page.
-Companion files: `cta-rollout-plan.md` (placement and roll-out phases),
-`cta-rollout-manifest.md` (per-page cluster mapping),
-`design/insolvency-cta-blocks/` (the design handoff and screenshots).
-
-Built and live on staging today: `/winding-up-petitions/` (post 7687), carrying the
-`formal_action` wording, picked up automatically from the page map.
-https://comdebstage.wpengine.com/winding-up-petitions/
+**Status:** Revised proposal for implementation  
+**Purpose:** Define when the insolvency test should appear, which wording it should use, and when another CTA should take priority  
+**Applies to:** Large CTA blocks, compact in-content CTA blocks, page-level mapping and tracking
 
 ---
 
-## 1. The rule that governs every wording
+## 1. Core Principle
 
-A headline may only promise what the result screen actually delivers:
+Every CTA must promise only what the result screen can deliver.
 
-- which warning signs apply,
-- how serious the position looks,
-- how soon to act,
-- which routes may fit (arrangement, restructuring, administration, CVL, or solvent
-  closure where the answers support it).
+The test can show:
 
-It delivers nothing petition-specific, nothing about personal liability, and no verdict.
-**If a wording cannot be honoured by the result screen, it does not ship.** This is the
-constraint that kills most "better converting" headline ideas, and it should.
+- which insolvency warning signs apply;
+- how serious the company’s position may be;
+- how quickly the director may need to act;
+- which broad options may fit, including an arrangement, restructuring, administration, CVL or solvent closure where the answers support it.
 
----
+The test does **not** provide:
 
-## 2. Why the topic clusters cannot drive this on their own
+- petition-specific advice;
+- a legal opinion;
+- a personal-liability assessment;
+- a definitive insolvency verdict;
+- confirmation that liquidation or closure is the correct route.
 
-The existing manifest sorts pages by subject — liquidation, HMRC, cash-flow and so on.
-The wording needs to track something different: where the reader already is.
-
-Those two do not line up. Pages about enforcement (statutory demands, bailiffs, writs,
-petitions) are spread across five clusters, including one filed under solvent closure
-(`/liquidation/ccj-when-going-insolvent/`, which looks mis-classified in the manifest and
-is worth fixing regardless).
-
-So the mapping is per page, not per cluster.
+Any wording that implies one of these outcomes must not be used.
 
 ---
 
-## 3. Two questions decide what a page gets
+## 2. The Main Change to the Original Logic
 
-### Question one: can this reader still act on the company?
+The original four variants mixed different kinds of information:
 
-If not, **the block does not go on that page at all.** This matters more than picking
-between wordings: sending the wrong reader to the test is worse than showing the right
-reader a flat headline. Three groups fail:
+- `unsure` described the reader’s knowledge;
+- `formal_action` described external urgency;
+- `closing` described a decision being considered;
+- `personal_risk` described the reader’s concern.
 
-| Group | Why | Roughly |
-|---|---|---|
-| Company already in a formal process (in liquidation, in administration) | The question the test answers has already been answered for them | ~13 pages |
-| Reader is not the director (creditor-facing, employee-facing) | The test asks whether *the company* can pay its bills. It is not their company | ~8 pages |
-| Company is solvent (MVL, strike-off) | The test's first question has no "yes, comfortably" answer, so it forces a healthy company into a distress answer and returns a slightly wrong result | 8 pages |
+These are not four distinct stages. A director can be facing formal action, considering closure and worried about personal liability at the same time.
 
-The solvent-company point is a genuine defect in the tool for that audience, not a
-presentation problem. Those readers belong on the members' voluntary liquidation pages.
+The revised system separates:
 
-### Question two: how far has it gone?
+1. **The company’s likely financial state**
+2. **The urgency of the situation**
+3. **The page’s subject and user intent**
+4. **Whether the test is suitable at all**
 
-For everyone else, one of four:
-
-| Reader's position | Big block headline | Small block headline | Button |
-|---|---|---|---|
-| **unsure** — suspects trouble, nothing formal yet *(default)* | Could Your Company Be Insolvent? | Not Sure Where Your Company Stands? | Check my company's position |
-| **formal_action** — demand, petition, judgment, bailiffs already in play | How Serious Is It, and What Is Still Open? | Where Does the Company Actually Stand? | Check where the company stands |
-| **closing** — already looking at closing the company | Is Closure the Right Route, or Is There Another? | Sure Closure Is the Right Step? | Check the company's position |
-| **personal_risk** — worried about personal liability | How Bad Is the Company's Position? | Worried About Where This Leaves You Personally? | Check the company's position |
-
-`personal_risk` is deliberately flat. The test assesses the company, not the director's
-exposure, so the headline stays on the company and the body says the earlier the position
-is clear the more room there is to act. Anything promising "see where you stand
-personally" would be a promise the test cannot keep.
+This produces two core diagnostic variants, one urgency modifier and one restricted secondary treatment.
 
 ---
 
-## 4. How a page gets its wording
+## 3. Revised Variant System
 
-In priority order:
+### Variant A: `early_check`
 
-1. What the page explicitly asks for — `[cd_test_cta variant="formal_action"]`
-2. The reviewed page map in `mu-plugins/cd-cta-insolvency-test.php`
-3. The neutral default, `unsure`
+Use where the reader may be experiencing financial pressure but has not necessarily concluded that the company is insolvent.
 
-**No guessing from page names, deliberately.** The cost runs both ways:
+Typical page intent:
 
-- Guessing too low — asking a director holding a petition whether the company might be
-  insolvent — reads as though we have not been listening.
-- Guessing too high — asking someone worried about a slow month whether closure is the
-  right route — is alarming, and could push a viable company toward a decision it does
-  not need to make.
+- cash-flow problems;
+- difficulty paying bills;
+- missed or late payments;
+- early HMRC arrears;
+- warning signs of insolvency;
+- general business rescue content;
+- uncertainty about whether the company can recover.
 
-An unreviewed page therefore gets the neutral wording, not a guess.
+#### Large Block
 
----
+**Eyebrow**
 
-## 5. What this needs from a human
+> FREE ONLINE TEST
 
-The table in section 8 lists all 230 pages with a suggested wording. **The suggestions
-come from scanning page names, so treat them as a starting point, not a decision.**
+**Headline**
 
-How much is actually settled by that scan:
+> Could Your Company Be Insolvent?
 
-| Suggested | Count | Confidence |
-|---|---|---|
-| unsure (the default) | 168 | Low — this is mostly "the scan could not tell" |
-| formal_action | 14 | Good — enforcement words in the page name are reliable |
-| NONE (already in a process) | 13 | Fair — needs checking |
-| personal_risk | 10 | Good — comes from the existing cluster |
-| closing | 9 | Low — under-counted, see below |
-| NONE (not the director) | 8 | Fair — needs checking |
-| NONE (solvent company) | 8 | Good — comes from the existing cluster |
+**Body**
 
-How crude the scan is, by example: the first version of it classed
-`/advice/writing-off-a-directors-loan-account/` as an enforcement page, because "writ"
-appears inside "writing". Corrected — but it is a fair illustration of why the third
-column is a suggestion and not a decision.
+> Answer four short questions to see which warning signs apply, how serious the position may be and how soon you may need to act.
 
-The 168 defaults are where the real review sits, and the 66-page liquidation cluster is
-the bulk of it. Those pages split between "thinking about closing" and "already in it" in
-a way the page name does not reveal, so `closing` is certainly under-counted at 9.
+> See which options may fit your company’s circumstances.
 
-Suggested approach: work down the liquidation cluster first, since it is the largest
-block of genuine decisions; the rest can stay on the default without embarrassment.
+**Button**
 
----
+> Check my company’s position
 
-## 6. Open questions for review
+**Reassurance**
 
-1. **Is four wordings the right number?** More gets us closer per page and harder to keep
-   honest and consistent. Fewer is blunter but easier to govern.
-2. **Do the three "no block" groups get nothing, or a softened block?** The argument for
-   nothing is that the test genuinely does not serve them. The argument for something is
-   that a page with no call to action converts at zero.
-3. **Should the two blocks on a page carry the same wording?** They do now — the small
-   block is the short form of the same idea. The alternative is a second angle lower down
-   the page.
-4. **Does the wording need a compliance read** before it goes site-wide, given the
-   `personal_risk` variant touches liability?
+> See your result online and receive a copy by email.  
+> **We only call if you ask.**
+
+#### Compact Block
+
+**Headline**
+
+> Not Sure Where Your Company Stands?
+
+**Body**
+
+> Use the two-minute test to check the warning signs and see how soon you may need to act.
+
+**Button**
+
+> Check my company’s position
 
 ---
 
-## 7. How we would know it is working
+### Variant B: `serious_position`
 
-Every button carries its wording in its tracking tag
-(`data-cd-cta="insolvency-test-full-formal-action"` and so on), so reporting will show
-which wording earns clicks on which kind of page. If the enforcement wording
-underperforms the default on enforcement pages, that is an answer rather than a matter of
-taste.
+Use where serious financial distress or insolvency is already likely, acknowledged or central to the page.
 
-Worth agreeing before roll-out: how long a page needs to run before its numbers mean
-anything, given the site sees roughly 22 UK clicks a day.
+Typical page intent:
+
+- insolvent liquidation;
+- CVL;
+- stopping trade;
+- trading while insolvent;
+- insolvency options;
+- rescue versus liquidation;
+- preparing for liquidation;
+- persistent creditor pressure;
+- consequences of company insolvency.
+
+#### Large Block
+
+**Eyebrow**
+
+> FREE ONLINE TEST
+
+**Headline**
+
+> How Serious Is Your Company’s Position?
+
+**Body**
+
+> Answer four short questions to see how urgent the situation may be and which options could fit your company’s circumstances.
+
+**Button**
+
+> Check my company’s position
+
+**Reassurance**
+
+> See your result online and receive a copy by email.  
+> **We only call if you ask.**
+
+#### Compact Block
+
+**Headline**
+
+> Check How Serious the Position May Be
+
+**Body**
+
+> Answer four short questions to see how urgent the situation may be and which broad options could fit.
+
+**Button**
+
+> Check my company’s position
 
 ---
 
-## 8. Per-page suggestions
+## 4. Urgency Modifier: `urgent_action`
 
-Ordered by suggested wording, defaults last. Correct the third column and add a note in
-the fourth where the suggestion is wrong.
+Formal creditor action is not a separate financial state. It is an urgency modifier.
 
-| Page | Cluster | Suggested wording | Confirmed? |
-|---|---|---|---|
-| /company-cash-flow-problems/challenge-a-statutory-demand/ | cash-flow | formal_action | |
-| /company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/ | cash-flow | formal_action | |
-| /hmrc/distraint-order-notice/ | hmrc | formal_action | |
-| /hmrc/hmrc-debt-enforcement-hub/ | hmrc | formal_action | |
-| /hmrc/hmrc-enforcement-action/ | hmrc | formal_action | |
-| /hmrc/notice-of-enforcement/ | hmrc | formal_action | |
-| /hmrc/what-can-hmrc-bailiffs-take/ | hmrc | formal_action | |
-| /hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/ | hmrc | formal_action | |
-| /insolvency/what-is-a-high-court-writ/ | general | formal_action | |
-| /liquidation/bailiffs-high-court-enforcement-officers/ | hmrc | formal_action | |
-| /liquidation/winding-up-petition-vs-compulsory-liquidation/ | liquidation | formal_action | |
-| /winding-up-petitions/ | liquidation | formal_action | |
-| /winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/ | hmrc | formal_action | |
-| /winding-up-petitions/what-is-a-winding-up-order/ | liquidation | formal_action | |
-| /bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/ | bounce-back | closing | |
-| /liquidation/can-i-liquidate-a-dormant-company/ | liquidation | closing | |
-| /liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/ | bounce-back | closing | |
-| /liquidation/can-you-liquidate-to-avoid-paying-suppliers/ | liquidation | closing | |
-| /liquidation/cant-afford-to-liquidate/ | liquidation | closing | |
-| /liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/ | liquidation | closing | |
-| /liquidation/creditors-voluntary-liquidation/ | liquidation | closing | |
-| /liquidation/cva-vs-strike-off-vs-liquidation/ | rescue | closing | |
-| /liquidation/should-i-close-my-company-or-try-to-save-it/ | liquidation | closing | |
-| /advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/ | director-liability | personal_risk | |
-| /advice/directors-disqualification/ | director-liability | personal_risk | |
-| /advice/directors-personal-guarantees/ | director-liability | personal_risk | |
-| /advice/misfeasance/ | director-liability | personal_risk | |
-| /advice/overdrawn-directors-loan-accounts/ | director-liability | personal_risk | |
-| /advice/personal-guarantee-insurance/ | director-liability | personal_risk | |
-| /advice/the-risks-of-signing-a-personal-guarantee/ | director-liability | personal_risk | |
-| /advice/unenforceable-personal-guarantee/ | director-liability | personal_risk | |
-| /advice/what-are-phoenix-companies/ | director-liability | personal_risk | |
-| /advice/writing-off-a-directors-loan-account/ | director-liability | personal_risk | |
-| /closing-a-limited-company/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/am-i-solvent/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/ccj-when-going-insolvent/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/company-restoration-after-liquidation/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/company-strike-off-and-dissolution/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/liquidation-vs-dissolution-strike-off/ | solvent-closure | NONE (solvent company) | |
-| /liquidation/redundancy-payments-for-directors-in-an-mvl/ | solvent-closure | NONE (solvent company) | |
-| /company-administration/ | rescue | NONE (already in a process) | |
-| /company-administration/light-touch-administration/ | rescue | NONE (already in a process) | |
-| /company-administration/notice-of-intention-to-appoint-administrators/ | rescue | NONE (already in a process) | |
-| /company-administration/vs-administrative-receivership/ | rescue | NONE (already in a process) | |
-| /company-administration/vs-cva/ | rescue | NONE (already in a process) | |
-| /liquidation/business-bank-account-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/company-property-and-real-estate-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/company-vehicles-and-equipment-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/compulsory-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/intellectual-property-and-trading-assets-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/leases-and-contracts-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/voluntary-vs-compulsory-liquidation/ | liquidation | NONE (already in a process) | |
-| /liquidation/what-happens-to-directors-in-liquidation/ | liquidation | NONE (already in a process) | |
-| /company-cash-flow-problems/cant-pay-staff-wages/ | cash-flow | NONE (not the director) | |
-| /company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/ | cash-flow | NONE (not the director) | |
-| /company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/ | rescue | NONE (not the director) | |
-| /director-redundancy/ | liquidation | NONE (not the director) | |
-| /liquidation/creditor-meetings-in-liquidation/ | liquidation | NONE (not the director) | |
-| /liquidation/hmrc-as-a-creditor-in-liquidation/ | hmrc | NONE (not the director) | |
-| /liquidation/paying-staff-but-not-hmrc-before-liquidation/ | hmrc | NONE (not the director) | |
-| /liquidation/what-happens-to-employees/ | liquidation | NONE (not the director) | |
-| /advantages-and-disadvantages/ | rescue | unsure | |
-| /advice/ | general | unsure | |
-| /advice/are-directors-personally-liable-for-company-debts/ | general | unsure | |
-| /advice/business-restructuring/ | rescue | unsure | |
-| /advice/can-a-director-be-made-bankrupt-if-a-business-fails/ | general | unsure | |
-| /advice/can-director-criminal-record/ | general | unsure | |
-| /advice/debt-management-guide/ | general | unsure | |
-| /advice/directors-duties-to-creditors/ | general | unsure | |
-| /advice/frozen-bank-account/ | general | unsure | |
-| /advice/funding-options-for-smes-in-the-uk/ | general | unsure | |
-| /advice/get-free-business-debt-advice/ | general | unsure | |
-| /advice/hmrcs-ir35-investigations-different/ | hmrc | unsure | |
-| /advice/how-to-legally-take-money-out-of-a-limited-company/ | general | unsure | |
-| /advice/insolvency-advice-for-directors/ | general | unsure | |
-| /advice/losing-house-if-company-goes-bust/ | general | unsure | |
-| /advice/personal-liability-for-cbils-loans/ | general | unsure | |
-| /advice/preventing-company-director-disputes/ | general | unsure | |
-| /advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/ | general | unsure | |
-| /advice/what-are-fixed-and-floating-charges/ | general | unsure | |
-| /advice/what-are-the-duties-and-responsibilities-of-a-company-director/ | general | unsure | |
-| /advice/what-is-a-directors-responsibility-for-accountancy-errors/ | general | unsure | |
-| /advice/what-is-limited-liability/ | general | unsure | |
-| /advice/what-is-the-companies-act-2006/ | general | unsure | |
-| /bounce-back-loan-support-hub/bounce-back-loan-fraud/ | bounce-back | unsure | |
-| /bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/ | bounce-back | unsure | |
-| /bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/ | bounce-back | unsure | |
-| /bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/ | bounce-back | unsure | |
-| /bounce-back-loan-support-hub/what-happens-if-i-default/ | bounce-back | unsure | |
-| /care-home-insolvency/ | liquidation | unsure | |
-| /charity-non-profit-insolvency/ | liquidation | unsure | |
-| /company-cash-flow-problems/ | cash-flow | unsure | |
-| /company-cash-flow-problems/biggest-struggles-for-small-business-owners/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-afford-to-repay-business-loan/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-pay-a-company-mortgage/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-pay-business-energy/ | cash-flow | unsure | |
-| /company-cash-flow-problems/cant-pay-business-rates/ | cash-flow | unsure | |
-| /company-cash-flow-problems/company-is-having-financial-difficulties/ | cash-flow | unsure | |
-| /company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/ | cash-flow | unsure | |
-| /company-rescue-solutions/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/ | rescue | unsure | |
-| /company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/ | rescue | unsure | |
-| /company-rescue-solutions/partnership-voluntary-arrangements/ | rescue | unsure | |
-| /company-rescue-solutions/pre-packs/ | rescue | unsure | |
-| /construction-insolvency/ | rescue | unsure | |
-| /county-court-judgements/ | hmrc | unsure | |
-| /energy-provider-insolvency/ | liquidation | unsure | |
-| /hmrc/ | hmrc | unsure | |
-| /hmrc/accelerated-payment-notices-apn/ | hmrc | unsure | |
-| /hmrc/can-hmrc-shut-down-my-business/ | hmrc | unsure | |
-| /hmrc/cant-pay-paye/ | hmrc | unsure | |
-| /hmrc/cant-pay-vat/ | hmrc | unsure | |
-| /hmrc/controlled-goods-agreement/ | hmrc | unsure | |
-| /hmrc/corporation-tax-penalties/ | hmrc | unsure | |
-| /hmrc/hmrc-compliance-checks/ | hmrc | unsure | |
-| /hmrc/hmrc-criminal-investigations/ | hmrc | unsure | |
-| /hmrc/hmrc-follower-notice/ | hmrc | unsure | |
-| /hmrc/hmrc-fraud-investigations/ | hmrc | unsure | |
-| /hmrc/hmrc-offices-contact-guide/ | hmrc | unsure | |
-| /hmrc/hmrc-penalties-investigations/ | hmrc | unsure | |
-| /hmrc/hmrc-tax-investigations/ | hmrc | unsure | |
-| /hmrc/hmrc-threatening-letters/ | hmrc | unsure | |
-| /hmrc/joint-and-several-liability-for-unpaid-vat/ | hmrc | unsure | |
-| /hmrc/pay-hmrc-or-suppliers-first/ | hmrc | unsure | |
-| /hmrc/personal-liability-notices/ | hmrc | unsure | |
-| /hmrc/problems-paying-corporation-tax-hmrc/ | hmrc | unsure | |
-| /hmrc/security-bond-notices/ | hmrc | unsure | |
-| /hmrc/security-bonds/ | hmrc | unsure | |
-| /hmrc/tax-penalties/ | hmrc | unsure | |
-| /hmrc/time-to-pay-hmrc/ | hmrc | unsure | |
-| /hmrc/understanding-hmrc-debt-collection/ | hmrc | unsure | |
-| /hmrc/vat-penalties/ | hmrc | unsure | |
-| /hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/ | hmrc | unsure | |
-| /hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/ | hmrc | unsure | |
-| /hmrc/what-happens-if-you-ignore-hmrc-letters/ | hmrc | unsure | |
-| /hospitality-restaurant-insolvency/ | rescue | unsure | |
-| /insolvency/ | general | unsure | |
-| /insolvency/antecedent-transactions/ | general | unsure | |
-| /insolvency/business-recovery-services/ | general | unsure | |
-| /insolvency/can-we-trade-out-of-insolvency/ | general | unsure | |
-| /insolvency/can-you-sell-your-insolvent-company/ | general | unsure | |
-| /insolvency/cease-trading/ | general | unsure | |
-| /insolvency/check-if-a-company-is-insolvent/ | general | unsure | |
-| /insolvency/creditor-negotiations/ | general | unsure | |
-| /insolvency/creditors-guides-to-insolvency-practitioners-fees/ | general | unsure | |
-| /insolvency/creditors-meeting/ | general | unsure | |
-| /insolvency/dealing-with-creditor-pressure/ | general | unsure | |
-| /insolvency/find-a-liquidator-near-me/ | general | unsure | |
-| /insolvency/how-to-reduce-insolvency-risk/ | general | unsure | |
-| /insolvency/how-to-save-a-struggling-business/ | general | unsure | |
-| /insolvency/insolvency-act-1986/ | general | unsure | |
-| /insolvency/insolvency-test/ | general | unsure | |
-| /insolvency/insolvent-company-investigations/ | general | unsure | |
-| /insolvency/insolvent-company-owes-me-money/ | general | unsure | |
-| /insolvency/limited-company-bankruptcy/ | general | unsure | |
-| /insolvency/lpa-receivership/ | rescue | unsure | |
-| /insolvency/personal-liability-spouses-business-debts/ | general | unsure | |
-| /insolvency/personally-liabilty-of-company-secretary/ | general | unsure | |
-| /insolvency/preferential-non-preferential-creditors/ | general | unsure | |
-| /insolvency/preferential-payments-during-insolvency/ | general | unsure | |
-| /insolvency/rescue-your-business-from-insolvency/ | rescue | unsure | |
-| /insolvency/retail-industry-insolvency-trends/ | general | unsure | |
-| /insolvency/secured-vs-unsecured-creditors/ | general | unsure | |
-| /insolvency/shareholders-liable-company-debts/ | general | unsure | |
-| /insolvency/statement-of-affairs/ | general | unsure | |
-| /insolvency/stop-or-avoid-insolvency/ | general | unsure | |
-| /insolvency/transactions-at-undervalue/ | general | unsure | |
-| /insolvency/validation-order/ | liquidation | unsure | |
-| /insolvency/what-are-the-warning-signs-of-an-insolvent-company/ | general | unsure | |
-| /insolvency/what-happens-if-a-company-cannot-pay-its-debts/ | general | unsure | |
-| /insolvency/what-is-a-creditor/ | general | unsure | |
-| /insolvency/what-is-a-freezing-order-or-injunction/ | general | unsure | |
-| /insolvency/what-is-an-individual-voluntary-arrangement/ | rescue | unsure | |
-| /insolvency/what-is-an-insolvency-practitioner/ | general | unsure | |
-| /insolvency/what-is-the-insolvency-service/ | general | unsure | |
-| /insolvency/what-is-wrongful-trading/ | general | unsure | |
-| /insolvency/what-to-do-about-customer-insolvency/ | general | unsure | |
-| /liquidation/ | liquidation | unsure | |
-| /liquidation/alternatives-to-company-liquidation/ | rescue | unsure | |
-| /liquidation/can-a-director-be-sued-personally-by-creditors/ | liquidation | unsure | |
-| /liquidation/can-a-supplier-force-my-company-into-liquidation/ | liquidation | unsure | |
-| /liquidation/can-directors-go-to-prison-for-company-debt/ | liquidation | unsure | |
-| /liquidation/can-directors-pay-themselves-before-liquidation/ | liquidation | unsure | |
-| /liquidation/can-i-choose-my-liquidator/ | hmrc | unsure | |
-| /liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/ | liquidation | unsure | |
-| /liquidation/company-pensions-and-liquidation/ | liquidation | unsure | |
-| /liquidation/director-conduct-review/ | liquidation | unsure | |
-| /liquidation/directors-conduct-report-2/ | liquidation | unsure | |
-| /liquidation/how-much-does-liquidation-cost/ | liquidation | unsure | |
-| /liquidation/how-to-challenge-a-liquidators-decisions-or-fees/ | liquidation | unsure | |
-| /liquidation/how-to-choose-the-right-insolvency-procedure/ | liquidation | unsure | |
-| /liquidation/how-to-prepare-for-company-liquidation/ | liquidation | unsure | |
-| /liquidation/how-to-prove-your-debt-in-company-liquidation/ | liquidation | unsure | |
-| /liquidation/insolvency-checklist/ | liquidation | unsure | |
-| /liquidation/insolvency-myths-debunked/ | liquidation | unsure | |
-| /liquidation/insolvency-vs-bankruptcy/ | liquidation | unsure | |
-| /liquidation/liquidating-a-charity-or-non-profit/ | liquidation | unsure | |
-| /liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/ | liquidation | unsure | |
-| /liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/ | liquidation | unsure | |
-| /liquidation/liquidating-a-limited-liability-partnership/ | liquidation | unsure | |
-| /liquidation/liquidation-deadlines-and-time-limits/ | liquidation | unsure | |
-| /liquidation/liquidation-hub/ | liquidation | unsure | |
-| /liquidation/liquidators-powers-and-duties/ | liquidation | unsure | |
-| /liquidation/list-of-liquidation-documents/ | liquidation | unsure | |
-| /liquidation/members-voluntary-liquidation/ | liquidation | unsure | |
-| /liquidation/seek-insolvency-advice-before-missing-payments/ | liquidation | unsure | |
-| /liquidation/timeline/ | liquidation | unsure | |
-| /liquidation/uk-insolvency-flowchart/ | liquidation | unsure | |
-| /liquidation/uk-insolvency-glossary/ | liquidation | unsure | |
-| /liquidation/what-happens-after-company-liquidation/ | liquidation | unsure | |
-| /liquidation/what-happens-if-a-creditor-takes-me-to-court/ | liquidation | unsure | |
-| /liquidation/what-happens-if-a-director-hides-company-assets/ | liquidation | unsure | |
-| /liquidation/what-happens-if-a-director-resigns-before-liquidation/ | liquidation | unsure | |
-| /liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/ | liquidation | unsure | |
-| /liquidation/what-happens-if-i-stop-paying-company-debts/ | liquidation | unsure | |
-| /liquidation/whats-the-risk-of-being-disqualified-as-a-director/ | liquidation | unsure | |
-| /liquidation/when-should-a-director-stop-trading/ | liquidation | unsure | |
-| /liquidation/which-creditors-get-paid-first/ | liquidation | unsure | |
-| /manufacturing-insolvency/ | liquidation | unsure | |
-| /professional-services-insolvency/ | liquidation | unsure | |
-| /receivership-mean-business/ | rescue | unsure | |
-| /transport-haulage-insolvency/ | liquidation | unsure | |
+Use it where the page concerns:
+
+- a winding-up petition;
+- a statutory demand;
+- bailiffs or High Court enforcement;
+- a notice of enforcement;
+- a controlled goods agreement;
+- a frozen company bank account caused by enforcement;
+- an imminent legal or creditor deadline.
+
+### Primary CTA on Urgent Pages
+
+The insolvency test must not be the main action where a director may be facing a deadline.
+
+The page’s primary CTA should be direct contact:
+
+**Headline**
+
+> Facing Formal Creditor Action?
+
+**Body**
+
+> Deadlines can be short. Speak to an insolvency adviser about the action already under way and the options that may still be available.
+
+**Button**
+
+> Speak to an insolvency adviser now
+
+The wording may be adjusted to match the specific action, provided the page can support the claim.
+
+### Secondary Test CTA on Urgent Pages
+
+The test may appear lower on the page as a secondary option.
+
+**Eyebrow**
+
+> TWO-MINUTE COMPANY CHECK
+
+**Headline**
+
+> How Urgent Is Your Company’s Position?
+
+**Body**
+
+> Check the wider warning signs, likely urgency and which broad options may fit your company’s circumstances.
+
+**Button**
+
+> Check my company’s position
+
+### Important Limitation
+
+Do not suggest that the test can assess the validity of a petition, stop enforcement, interpret a court order or give case-specific legal advice.
+
+---
+
+## 5. Personal-Risk Pages: `personal_risk_secondary`
+
+Personal-risk content is a page context, not a diagnostic state.
+
+The test assesses the company’s financial position. It does not assess whether a director is personally liable.
+
+On relevant pages, the test should therefore be:
+
+- secondary rather than primary;
+- clearly limited in scope;
+- positioned after the page has addressed the specific personal-risk question.
+
+Typical page intent:
+
+- personal guarantees;
+- overdrawn director’s loan accounts;
+- director disqualification;
+- misfeasance;
+- wrongful trading;
+- personal assets;
+- personal liability notices;
+- director conduct.
+
+### Compact Block Only
+
+**Eyebrow**
+
+> COMPANY POSITION CHECK
+
+**Headline**
+
+> First, Check the Company’s Financial Position
+
+**Body**
+
+> This test does not assess your personal liability. It can help show how serious the company’s position may be and how quickly action could be needed.
+
+**Button**
+
+> Check my company’s position
+
+### Do Not Use
+
+Do not use wording such as:
+
+- “See where you stand personally”
+- “Check your personal liability”
+- “Find out whether your assets are at risk”
+- “See whether you will be disqualified”
+
+The result screen cannot support those promises.
+
+---
+
+## 6. Closing and Liquidation Pages
+
+`closing` should not exist as a universal variant.
+
+Closing a company can mean three different things:
+
+### A. Solvent Closure
+
+Where the company is clearly solvent, do not show the current insolvency test.
+
+The tool’s first question does not currently offer a clearly solvent answer such as:
+
+> Yes, comfortably
+
+Until the test is changed, solvent readers should be sent to a dedicated solvent-closure CTA.
+
+Example:
+
+**Headline**
+
+> Looking to Close a Solvent Company?
+
+**Body**
+
+> Compare strike-off and members’ voluntary liquidation, including when each route may be suitable.
+
+**Button**
+
+> Explore solvent closure options
+
+### B. Considering Closure Because of Financial Problems
+
+Use either `early_check` or `serious_position`, depending on the actual page intent.
+
+Do not use:
+
+> Is Closure the Right Route, or Is There Another?
+
+The test cannot decide that closure is or is not the right route.
+
+### C. Already Preparing for Insolvent Liquidation
+
+Use `serious_position`.
+
+Do not challenge the reader with:
+
+> Sure Closure Is the Right Step?
+
+This sounds confrontational and undermines the page the reader has chosen to visit.
+
+---
+
+## 7. Pages Where the Test Should Not Appear
+
+Do not show the insolvency test where it is unlikely to serve the primary user.
+
+### 7.1 Solvent-Company Pages
+
+Examples include:
+
+- members’ voluntary liquidation;
+- solvent strike-off;
+- closing a solvent company;
+- tax-efficient distribution of retained profits.
+
+Use a solvent-closure CTA instead.
+
+### 7.2 Clearly Non-Director Pages
+
+Examples include pages primarily written for:
+
+- employees;
+- creditors owed money;
+- suppliers proving a debt;
+- customers of an insolvent company;
+- claimants challenging an insolvency practitioner.
+
+Do not exclude a page merely because its title mentions staff, creditors or suppliers. Review the actual primary audience.
+
+For example, a page about a company being unable to pay staff wages may still be primarily for the director.
+
+### 7.3 Pages for Companies Already Deep Inside a Formal Process
+
+Exclude the test where the reader is clearly dealing with the administration of an existing process rather than deciding what to do.
+
+Likely examples:
+
+- operating a bank account during liquidation;
+- dealing with company property already in liquidation;
+- assets, leases or contracts during liquidation;
+- what happens after liquidation;
+- challenging a liquidator’s fees or decisions;
+- proving a debt in an existing liquidation.
+
+Do **not** assume that all pages about administration or liquidation belong here.
+
+Pages such as the following are commonly read before a process begins and may still suit the test:
+
+- company administration;
+- administration versus CVA;
+- CVL;
+- voluntary versus compulsory liquidation;
+- preparing for liquidation;
+- what happens to directors in liquidation.
+
+### 7.4 Pages With No Clear Diagnostic Relevance
+
+Do not force the test onto purely informational pages where it interrupts rather than helps.
+
+Examples may include:
+
+- statutory definitions;
+- historical or regulatory explainers;
+- insolvency statistics;
+- professional fee guides written for creditors;
+- glossary pages.
+
+A compact CTA may still be suitable if the page has strong director intent, but this must be a manual decision.
+
+---
+
+## 8. Decision Logic
+
+Use the following order.
+
+### Step 1: Is the Primary Reader Acting for the Company?
+
+- **No:** Do not show the test.
+- **Yes or mixed:** Continue.
+
+### Step 2: Can the Test Provide a Useful Answer at This Point?
+
+- **No:** Use a more relevant CTA.
+- **Yes:** Continue.
+
+### Step 3: Is the Company Presented as Solvent?
+
+- **Yes:** Do not show the current test.
+- **No or unclear:** Continue.
+
+### Step 4: Is Serious Distress or Insolvency Already Assumed?
+
+- **No:** Use `early_check`.
+- **Yes:** Use `serious_position`.
+
+### Step 5: Is Formal Creditor Action Under Way?
+
+- **Yes:** Add `urgent_action`. Direct contact becomes the primary CTA and the test becomes secondary.
+- **No:** Keep the standard placement.
+
+### Step 6: Is the Page Mainly About Personal Exposure?
+
+- **Yes:** Use `personal_risk_secondary` only.
+- **No:** Use the normal large or compact block.
+
+### Step 7: Is the Page About Closing the Company?
+
+- Treat closure as context.
+- Do not assign a separate `closing` variant.
+- Choose `early_check`, `serious_position` or a solvent-closure CTA according to the actual user state.
+
+---
+
+## 9. Implementation Priority
+
+The final variant should be chosen in this order:
+
+1. Explicit shortcode override
+2. Reviewed page map
+3. Safe default
+4. No automatic guessing from the URL or page title
+
+Suggested shortcode examples:
+
+```text
+[cd_test_cta variant="early_check"]
+[cd_test_cta variant="serious_position"]
+[cd_test_cta variant="serious_position" urgency="urgent_action"]
+[cd_test_cta variant="personal_risk_secondary" size="compact"]
+[cd_test_cta variant="none"]
+```
+
+### Safe Default
+
+The safe default should be:
+
+```text
+early_check
+```
+
+This is preferable to automatically assigning a more severe message to an unreviewed page.
+
+However, the default should only be applied on page templates or content areas already approved for the test. It should not cause the block to appear automatically across every page.
+
+---
+
+## 10. Keep the Button Label Consistent
+
+Use the same test button throughout the site:
+
+> Check my company’s position
+
+Do not alternate between:
+
+- Check where the company stands
+- Check the company’s position
+- Check my position
+- Check how serious it is
+- See my result
+
+The headline and body should provide context. The button should provide one consistent action.
+
+This improves:
+
+- comprehension;
+- design consistency;
+- event tracking;
+- comparison between wording variants;
+- maintenance.
+
+The urgent direct-contact CTA is separate and may use:
+
+> Speak to an insolvency adviser now
+
+---
+
+## 11. Large and Compact Blocks Should Serve Different Moments
+
+Do not repeat the same CTA block twice with only a shorter headline.
+
+### Large Block
+
+Use where the test is a strong next step and closely matches the page’s main intent.
+
+Typical placement:
+
+- after the opening explanation;
+- after a key diagnostic section;
+- before a long options comparison.
+
+### Compact Block
+
+Use where the test is useful but secondary.
+
+Typical placement:
+
+- within a long article;
+- after warning signs or consequences;
+- on personal-risk pages;
+- below an urgent direct-contact CTA;
+- near the end of informational pages.
+
+A page should normally contain no more than:
+
+- one large test block; and
+- one compact reminder.
+
+Do not place two visually dominant test blocks on the same page.
+
+---
+
+## 12. Page Mapping Must Be Manually Reviewed
+
+Topic clusters and URL names are not reliable enough to determine the wording.
+
+Each page should be reviewed against its actual:
+
+- search intent;
+- opening copy;
+- primary audience;
+- assumed company state;
+- urgency;
+- most useful next step.
+
+### Revised Manifest Columns
+
+Use the following fields:
+
+| Field | Purpose |
+|---|---|
+| Page | URL |
+| Primary audience | Director, employee, creditor, mixed |
+| Assumed state | Uncertain, serious distress, solvent, already in process |
+| Formal action | None, possible, active |
+| Personal-risk context | Yes or no |
+| Test fit | Primary, secondary, none |
+| Variant | `early_check`, `serious_position`, `personal_risk_secondary`, `none` |
+| Urgency modifier | `urgent_action` or blank |
+| Block size | Large, compact, none |
+| Alternative primary CTA | Direct advice, solvent closure, creditor guidance or other |
+| Confidence | High, medium, low |
+| Reviewed | Name/date |
+| Notes | Reason for decision |
+
+### Pages That Require Immediate Reclassification Review
+
+The previous automated scan should not be trusted for pages such as:
+
+- `/company-administration/`
+- `/company-administration/vs-cva/`
+- `/liquidation/what-happens-to-directors-in-liquidation/`
+- `/company-cash-flow-problems/cant-pay-staff-wages/`
+- `/director-redundancy/`
+- `/liquidation/paying-staff-but-not-hmrc-before-liquidation/`
+- `/liquidation/ccj-when-going-insolvent/`
+
+These examples show why page titles and cluster labels cannot determine the reader’s position reliably.
+
+---
+
+## 13. Recommended First Review Order
+
+Review pages in this order:
+
+### Phase 1: Highest Commercial and Risk Value
+
+1. Winding-up petition pages
+2. Statutory demand and enforcement pages
+3. CVL and insolvent liquidation pages
+4. “Cannot pay” HMRC pages
+5. Company rescue and restructuring pages
+6. Personal-liability pages
+
+### Phase 2: High-Traffic Supporting Content
+
+1. Warning signs and insolvency tests
+2. Cash-flow problems
+3. Stopping trade
+4. Director duties
+5. Creditor pressure
+6. Liquidation consequences
+
+### Phase 3: Long-Tail and Informational Content
+
+Review the remaining pages manually. Do not bulk-assign them from the cluster name.
+
+---
+
+## 14. Tracking
+
+Track the diagnostic state, urgency and block size separately.
+
+Example:
+
+```html
+data-cd-cta="insolvency-test"
+data-cd-variant="serious_position"
+data-cd-urgency="urgent_action"
+data-cd-size="compact"
+data-cd-page-context="winding-up-petition"
+```
+
+Track at least:
+
+- CTA impression;
+- CTA click;
+- test start;
+- completion of question one;
+- test completion;
+- email submission;
+- callback request;
+- direct-call click on urgent pages.
+
+Do not judge performance from CTA clicks alone. A more aggressive headline may produce more clicks but fewer completed tests or poorer leads.
+
+Because individual pages may have low traffic, review results at variant level across groups of comparable pages.
+
+---
+
+## 15. Pilot Plan
+
+### Pilot Group
+
+Start with a small reviewed set:
+
+- 3–5 `early_check` pages;
+- 3–5 `serious_position` pages;
+- 2–3 urgent-action pages;
+- 2–3 personal-risk pages.
+
+### Before Launch
+
+Confirm:
+
+- the wording matches the result screen;
+- urgent pages retain direct contact as the primary action;
+- personal-risk pages carry the limitation;
+- solvent pages do not receive the test;
+- the mobile CTA fits on one line;
+- all tracking attributes are present.
+
+### After Launch
+
+Review:
+
+- CTA click-through rate;
+- test completion rate;
+- email completion rate;
+- callback-request rate;
+- lead quality;
+- performance by variant and page context.
+
+Do not roll out to all 230 pages until the page map has been manually reviewed.
+
+---
+
+## 16. Future Tool Improvement
+
+The test should eventually support a clearly solvent answer to its first question:
+
+> Yes, comfortably
+
+This would allow it to distinguish:
+
+- a healthy company exploring closure;
+- a company under pressure but not yet insolvent;
+- a company showing serious insolvency warning signs.
+
+Until that change is made, the test should remain excluded from solvent-closure pages.
+
+---
+
+## 17. Final Approved Wording Set
+
+| Use | Variant | Eyebrow | Headline | Button |
+|---|---|---|---|---|
+| Early or uncertain distress | `early_check` | Free online test | Could Your Company Be Insolvent? | Check my company’s position |
+| Likely or known distress | `serious_position` | Free online test | How Serious Is Your Company’s Position? | Check my company’s position |
+| Formal creditor action | `serious_position` + `urgent_action` | Two-minute company check | How Urgent Is Your Company’s Position? | Check my company’s position |
+| Personal-risk page | `personal_risk_secondary` | Company position check | First, Check the Company’s Financial Position | Check my company’s position |
+| Solvent closure | `none` | — | Use a solvent-closure CTA | Explore solvent closure options |
+| Non-director or unsuitable page | `none` | — | Use a page-specific CTA or no block | — |
+
+---
+
+## 18. Final Governance Rules
+
+1. The test must never promise a legal conclusion or personal-liability assessment.
+2. The button label remains consistent across all test variants.
+3. Formal-action pages use direct advice as the primary CTA.
+4. Personal-risk pages use the test only as a clearly limited secondary tool.
+5. Solvent-company pages do not receive the current test.
+6. Closing is page context, not a wording variant.
+7. Page intent is reviewed manually; clusters and URLs are not treated as decisions.
+8. Unreviewed approved placements default to `early_check`, not to a more severe message.
+9. A page should not carry two dominant test blocks.
+10. Roll-out decisions should be based on completed tests and lead quality, not clicks alone.

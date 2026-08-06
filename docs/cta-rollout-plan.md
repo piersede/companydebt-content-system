@@ -13,7 +13,7 @@ carefully and reversibly. Companion file: `cta-rollout-manifest.md` (per-page ma
 ## The 3-CTA model
 | Slot | Role | Headline | Button | Destination |
 |---|---|---|---|---|
-| CTA 1 | Assessment (constant) | Could Your Company Be Insolvent? | Check My Company's Position | `/insolvency-calculator/` |
+| CTA 1 | Assessment (**wording varies by page** — see the wording plan) | varies | Check my company's position | `/insolvency-calculator/` |
 | CTA 2 | Service (**category-driven** — see library) | varies | varies | cluster hub |
 | CTA 3 | Phone (constant) | Speak to a Licensed Insolvency Practitioner | Call 0800 074 6757 | `tel:08000746757` |
 
@@ -31,7 +31,11 @@ carefully and reversibly. Companion file: `cta-rollout-manifest.md` (per-page ma
 
 All 8 destinations verified 200 (2026-07-30). `/hmrc/` used directly (avoids the `/hmrc-tax-problems/` 301 hop).
 
-Wording logic for CTA 1 across the site: `cta-insolvency-test-wording-plan.md` (proposal, under review).
+Wording logic for CTA 1 across the site: `cta-insolvency-test-wording-plan.md` — **that
+document governs.** It also changes CTA 1 itself on some pages: where formal creditor
+action is under way the primary CTA becomes direct contact (`[cd_advice_cta]`) and the
+test drops to a compact secondary block, and on solvent-company pages the test is
+replaced entirely by `[cd_solvent_cta]`.
 
 **CTA 1 is now a designed block, not a text panel** (2026-08-06). Two variants ship from
 `mu-plugins/cd-cta-insolvency-test.php`: `[cd_test_cta]` (full card with the laptop visual)

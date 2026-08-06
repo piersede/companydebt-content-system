@@ -162,6 +162,29 @@
 	padding: 30px 40px !important;
 	background: #fff !important;
 }
+/* Compact eyebrow. Not in the design handoff — added for the two variants the wording
+   plan gives an eyebrow to (the urgent secondary block and the personal-risk block).
+   Matches the full block's eyebrow at the compact block's scale. Worth a design look. */
+.cd-cta-shell.cd-cta-shell .cd-cta-compact__eyebrow.cd-cta-compact__eyebrow {
+	font-size: 13px !important;
+	line-height: 18px !important;
+	font-weight: 800 !important;
+	letter-spacing: .03em !important;
+	text-transform: uppercase !important;
+	color: #ff6600 !important;
+	margin: 0 0 8px !important;
+}
+
+/* Direct-contact card. Same card as the test block, minus the laptop column and the
+   timing line — this is the primary action on an urgent page, not a two-minute check. */
+.cd-cta-shell.cd-cta-shell .cd-cta-full--advice.cd-cta-full--advice {
+	background: #fff6ef !important;
+	border-color: #ffd9b3 !important;
+}
+.cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__content { max-width: 760px; }
+.cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__body.cd-cta-full__body { margin-bottom: 30px !important; }
+.cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__reassure a { color: #002856 !important; text-decoration: underline !important; }
+
 .cd-cta-shell.cd-cta-shell .cd-cta-compact__title.cd-cta-compact__title {
 	font-size: 24px !important;
 	line-height: 1.25 !important;
@@ -327,6 +350,15 @@
    point or two less to hold that promise without overflowing. */
 @media (max-width: 359px) {
 	.cd-cta-shell.cd-cta-shell .cd-cta-full__btn.cd-cta-full__btn { font-size: 15px !important; padding: 0 14px !important; }
+}
+
+/* The test button puts its arrow at the far right on mobile, which is the design. The
+   advice button leads with a phone icon, so the same rule would push the icon and the
+   label to opposite ends. Keep that pair together. Last in the file so it wins. */
+.cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__btn.cd-cta-full__btn {
+	justify-content: center;
+	gap: 10px;
+	white-space: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {
