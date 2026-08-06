@@ -1,6 +1,6 @@
 ﻿Page,Primary audience,Assumed state,Formal action,Personal-risk context,Test fit,Variant,Urgency modifier,Block size,Alternative primary CTA,Confidence,Reviewed,Notes
-/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/about-us/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
+/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/about-us/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
 /advice/,Director,Uncertain,None,No,Secondary,early_check,none,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page is broader or more informational; use the test as a compact secondary check rather than the main action.
 /advice/are-directors-personally-liable-for-company-debts/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
 /advice/business-restructuring/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
@@ -33,30 +33,30 @@
 /advice/what-is-limited-liability/,Mixed,Uncertain,None,No,None,none,none,None,Page-specific guidance,High,ChatGPT — 6 Aug 2026,The page is general company information without a clear financial-distress decision; the test would be an interruption rather than help.
 /advice/what-is-the-companies-act-2006/,Mixed,Uncertain,None,No,None,none,none,None,Page-specific guidance,High,ChatGPT — 6 Aug 2026,The page is general company information without a clear financial-distress decision; the test would be an interruption rather than help.
 /advice/writing-off-a-directors-loan-account/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
-/articles/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: category listing — navigation
-/articles/124-pints-to-save-the-pub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/can-heathrow-survive-covid-19/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/debt-charities-for-consumers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/how-will-carillions-insolvency-effect-its-supply-chain/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/managing-debt-related-stress/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/paradise-papers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/pub-closures-in-the-uk/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/tescos-rated-worst-payer-uk-small-businesses/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/articles/the-orla-kiely-fashion-brand-shuts-up-shop/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/bounce-back-loan-support-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
+/articles/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: category listing — navigation
+/articles/124-pints-to-save-the-pub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/can-heathrow-survive-covid-19/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/debt-charities-for-consumers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/how-will-carillions-insolvency-effect-its-supply-chain/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/managing-debt-related-stress/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/paradise-papers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/pub-closures-in-the-uk/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/tescos-rated-worst-payer-uk-small-businesses/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/articles/the-orla-kiely-fashion-brand-shuts-up-shop/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/bounce-back-loan-support-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /bounce-back-loan-support-hub/bounce-back-loan-fraud/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
 /bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
 /bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
 /bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
 /bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
 /bounce-back-loan-support-hub/what-happens-if-i-default/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/business-insolvency/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: category listing — navigation
-/business-insolvency/articles-insights-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
+/business-insolvency/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: category listing — navigation
+/business-insolvency/articles-insights-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
 /care-home-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/case-studies-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
-/case-studies/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: category listing — navigation
-/case-studies/chinese-takeaway/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
+/case-studies-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
+/case-studies/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: category listing — navigation
+/case-studies/chinese-takeaway/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
 /charity-non-profit-insolvency/,Mixed,Serious distress,None,No,Secondary,serious_position,none,Compact,Specialist advice,Medium,ChatGPT — 6 Aug 2026,"The test can help establish financial severity, but specialist sector or procedure advice should remain the main action."
 /close-my-company/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,Medium,proposed,"proposal: covers both solvent and insolvent closure, so the softer wording is the safe one"
 /closing-a-limited-company/,Director,Solvent,None,No,None,none,none,None,Solvent closure,Medium,ChatGPT — 6 Aug 2026,Solvent or mixed solvent-closure intent; the current test lacks a clearly solvent answer and should not be used here.
@@ -79,7 +79,7 @@
 /company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/,Director,Serious distress,None,No,Secondary,serious_position,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,The page addresses a specific procedure or consequence; keep direct or page-specific advice primary and use the test as a compact diagnostic.
 /company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/,Mixed,Uncertain,None,No,None,none,none,None,Page-specific guidance,High,ChatGPT — 6 Aug 2026,The page is general company information without a clear financial-distress decision; the test would be an interruption rather than help.
-/company-rescue-recovery-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
+/company-rescue-recovery-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /company-rescue-solutions/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
 /company-rescue-solutions/company-voluntary-arrangement/,Director,Serious distress,None,No,Primary,serious_position,none,Large,None,High,ChatGPT — 6 Aug 2026,The page assumes material distress but not a completed process; the serious-position diagnostic is a strong primary next step.
 /company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
@@ -92,8 +92,8 @@
 /company-rescue-solutions/partnership-voluntary-arrangements/,Mixed,Serious distress,None,No,None,none,none,None,Partnership advice,High,ChatGPT — 6 Aug 2026,"The procedure is for a partnership, LLP or individual rather than a limited company, so the company test is not suitable."
 /company-rescue-solutions/pre-packs/,Director,Serious distress,None,No,Secondary,serious_position,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,The page addresses a specific procedure or consequence; keep direct or page-specific advice primary and use the test as a compact diagnostic.
 /construction-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/contact-us/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/cookie-policy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
+/contact-us/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/cookie-policy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
 /county-court-judgements/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /data/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: insolvency figures and statistics (Piers, 2026-08-06)"
 /data/administration-statistics/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: insolvency figures and statistics (Piers, 2026-08-06)"
@@ -126,11 +126,11 @@
 /data/uk-insolvency-statistics/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: insolvency figures and statistics (Piers, 2026-08-06)"
 /data/winding-up-petition-tracker/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: insolvency figures and statistics (Piers, 2026-08-06)"
 /debt-charities-uk/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: debt charities support page (Piers, 2026-08-06)"
-/debt-creditor-pressure-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
-/director-protection-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
+/debt-creditor-pressure-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
+/director-protection-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /director-redundancy/,Director,Serious distress,None,No,Secondary,serious_position,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,The page addresses a specific procedure or consequence; keep direct or page-specific advice primary and use the test as a compact diagnostic.
 /energy-provider-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/guides-resources-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
+/guides-resources-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /hmrc/,Director,Uncertain,None,No,Secondary,early_check,none,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page is broader or more informational; use the test as a compact secondary check rather than the main action.
 /hmrc/accelerated-payment-notices-apn/,Director,Uncertain,Possible,No,None,none,none,None,Page-specific advice,High,ChatGPT — 6 Aug 2026,"The page’s main task is legal, regulatory or tax-specific rather than assessing insolvency; use specialist page-specific advice."
 /hmrc/can-hmrc-shut-down-my-business/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
@@ -141,7 +141,7 @@
 /hmrc/distraint-order-notice/,Director,Serious distress,Active,No,Secondary,serious_position,urgent_action,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,"Formal action appears to be under way; direct advice should lead because deadlines may be short, with the test secondary."
 /hmrc/hmrc-compliance-checks/,Director,Uncertain,Possible,No,None,none,none,None,Page-specific advice,High,ChatGPT — 6 Aug 2026,"The page’s main task is legal, regulatory or tax-specific rather than assessing insolvency; use specialist page-specific advice."
 /hmrc/hmrc-criminal-investigations/,Director,Uncertain,Possible,No,None,none,none,None,Page-specific advice,High,ChatGPT — 6 Aug 2026,"The page’s main task is legal, regulatory or tax-specific rather than assessing insolvency; use specialist page-specific advice."
-/hmrc/hmrc-debt-enforcement-hub/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
+/hmrc/hmrc-debt-enforcement-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /hmrc/hmrc-enforcement-action/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /hmrc/hmrc-follower-notice/,Director,Uncertain,Possible,No,None,none,none,None,Page-specific advice,High,ChatGPT — 6 Aug 2026,"The page’s main task is legal, regulatory or tax-specific rather than assessing insolvency; use specialist page-specific advice."
 /hmrc/hmrc-fraud-investigations/,Director,Uncertain,Possible,No,None,none,none,None,Page-specific advice,High,ChatGPT — 6 Aug 2026,"The page’s main task is legal, regulatory or tax-specific rather than assessing insolvency; use specialist page-specific advice."
@@ -166,8 +166,8 @@
 /hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/,Director,Serious distress,Active,No,Secondary,serious_position,urgent_action,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,"Formal action appears to be under way; direct advice should lead because deadlines may be short, with the test secondary."
 /hmrc/what-happens-if-you-ignore-hmrc-letters/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /hospitality-restaurant-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/insolvency-calculator/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/insolvency-news-commentary/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
+/insolvency-calculator/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/insolvency-news-commentary/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
 /insolvency-practitioner/,Director,Serious distress,None,No,Primary,serious_position,none,Large,None,Medium,proposed,proposal: someone looking for an insolvency practitioner is usually past wondering whether there is a problem
 /insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
 /insolvency/antecedent-transactions/,Director,Serious distress,None,Yes,Secondary,personal_risk_secondary,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,Personal exposure is the page concern; the test must be secondary and explicitly limited to the company’s financial position.
@@ -256,7 +256,7 @@
 /liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/,Mixed,Serious distress,None,No,Secondary,serious_position,none,Compact,Specialist advice,Medium,ChatGPT — 6 Aug 2026,"The test can help establish financial severity, but specialist sector or procedure advice should remain the main action."
 /liquidation/liquidating-a-limited-liability-partnership/,Mixed,Serious distress,None,No,None,none,none,None,Partnership advice,High,ChatGPT — 6 Aug 2026,"The procedure is for a partnership, LLP or individual rather than a limited company, so the company test is not suitable."
 /liquidation/liquidation-deadlines-and-time-limits/,Director,Serious distress,None,No,Secondary,serious_position,none,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,The page addresses a specific procedure or consequence; keep direct or page-specific advice primary and use the test as a compact diagnostic.
-/liquidation/liquidation-hub/,Director,Serious distress,None,No,Primary,serious_position,none,Large,None,High,ChatGPT — 6 Aug 2026,The page assumes material distress but not a completed process; the serious-position diagnostic is a strong primary next step.
+/liquidation/liquidation-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
 /liquidation/liquidation-vs-dissolution-strike-off/,Director,Solvent,None,No,None,none,none,None,Closure options,High,ChatGPT — 6 Aug 2026,The page mixes solvent and insolvent closure intent; use a closure-specific route until the test can identify a comfortably solvent company.
 /liquidation/liquidators-powers-and-duties/,Director,Already in process,None,Yes,None,none,none,None,Process-specific advice,High,ChatGPT — 6 Aug 2026,The page concerns an existing insolvency process; the diagnostic question has already been overtaken by events.
 /liquidation/list-of-liquidation-documents/,Director,Already in process,None,Yes,None,none,none,None,Process-specific advice,High,ChatGPT — 6 Aug 2026,The page concerns an existing insolvency process; the diagnostic question has already been overtaken by events.
@@ -282,9 +282,9 @@
 /liquidation/which-creditors-get-paid-first/,Creditor,Already in process,None,No,None,none,none,None,Creditor guidance,High,ChatGPT — 6 Aug 2026,"The primary reader is a creditor rather than a director assessing their own company, so the company test is not suitable."
 /liquidation/winding-up-petition-vs-compulsory-liquidation/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /manufacturing-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
-/meet-the-team/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
+/meet-the-team/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
 /mental-health-debt-stress-support/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: mental-health support page (Piers, 2026-08-06)"
-/privacy-policy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
+/privacy-policy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
 /professional-services-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
 /receivership-mean-business/,Director,Serious distress,Possible,No,Secondary,serious_position,urgent_action,Compact,Direct advice,Medium,ChatGPT — 6 Aug 2026,The page concerns possible formal action; direct advice should lead and the test should remain a compact urgent secondary option.
 /sample-letters/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: letter templates (Piers, 2026-08-06)"
@@ -296,43 +296,43 @@
 /sample-letters/request-a-reduced-monthly-payment/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: letter templates (Piers, 2026-08-06)"
 /sample-letters/tell-debt-collector-to-stop-contacting-you/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: letter templates (Piers, 2026-08-06)"
 /sample-letters/write-off-my-debt/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,"no CTA: letter templates (Piers, 2026-08-06)"
-/sector-insolvency-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: hub page — navigation
-/sector-specific-insolvency/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/sectors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: category listing — navigation
-/sectors/automotive/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/carehomes/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/charity/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/childcare/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/cleaning-contractors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/construction/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/dry-cleaning-laundry/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/energy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/entertainment/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/events/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/gyms/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/haulage/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/hotels/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/insolvency-rescue-fish-chip-sector/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/insolvency-rescue-solutions-for-garden-centers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/leisure/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/manufacturing/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/professional-services/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/property/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/recruitment/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/restaurants/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/retail/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/schools/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/taxi-companies/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/sectors/travel/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/services-to/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: category listing — navigation
-/services-to/accountants/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/services-to/asset-based-and-other-lenders/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/services-to/banks/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/services-to/creditors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/services-to/solicitors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: blog article
-/site-map/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/terms-conditions/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: about / navigation / legal / index page
-/testimonials/,Mixed,Uncertain,None,No,None,none,none,None,None,High,rule 2026-08-06,no CTA: testimonial page
+/sector-insolvency-hub/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: hub page — navigation
+/sector-specific-insolvency/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/sectors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: category listing — navigation
+/sectors/automotive/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/carehomes/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/charity/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/childcare/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/cleaning-contractors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/construction/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/dry-cleaning-laundry/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/energy/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/entertainment/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/events/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/gyms/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/haulage/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/hotels/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/insolvency-rescue-fish-chip-sector/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/insolvency-rescue-solutions-for-garden-centers/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/leisure/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/manufacturing/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/professional-services/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/property/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/recruitment/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/restaurants/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/retail/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/schools/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/taxi-companies/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/sectors/travel/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/services-to/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: category listing — navigation
+/services-to/accountants/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/services-to/asset-based-and-other-lenders/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/services-to/banks/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/services-to/creditors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/services-to/solicitors/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: blog article
+/site-map/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/terms-conditions/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: about / navigation / legal / index page
+/testimonials/,Mixed,Uncertain,None,No,None,none,none,None,None,High,decision 2026-08-06,no CTA: testimonial page
 /transport-haulage-insolvency/,Director,Uncertain,None,No,Primary,early_check,none,Large,None,High,ChatGPT — 6 Aug 2026,Director is still assessing financial pressure; the test is a strong primary next step without implying a legal verdict.
 /winding-up-petitions/,Director,Serious distress,Active,No,Secondary,serious_position,urgent_action,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,"Formal action appears to be under way; direct advice should lead because deadlines may be short, with the test secondary."
 /winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/,Director,Serious distress,Active,No,Secondary,serious_position,urgent_action,Compact,Direct advice,High,ChatGPT — 6 Aug 2026,"Formal action appears to be under way; direct advice should lead because deadlines may be short, with the test secondary."

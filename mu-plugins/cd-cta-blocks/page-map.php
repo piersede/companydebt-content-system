@@ -154,7 +154,7 @@ return array(
 	'distraint-order-notice'                                                          => array( 'serious_position', 'urgent_action', 'compact', 'Direct advice' ), // /hmrc/distraint-order-notice/
 	'hmrc-compliance-checks'                                                          => array( 'none', '', 'none', 'Page-specific advice' ), // /hmrc/hmrc-compliance-checks/
 	'hmrc-criminal-investigations'                                                    => array( 'none', '', 'none', 'Page-specific advice' ), // /hmrc/hmrc-criminal-investigations/
-	'hmrc-debt-enforcement-hub'                                                       => array( 'serious_position', 'urgent_action', 'compact', 'Direct advice' ), // /hmrc/hmrc-debt-enforcement-hub/
+	'hmrc-debt-enforcement-hub'                                                       => array( 'none', '', 'none', '' ), // /hmrc/hmrc-debt-enforcement-hub/
 	'hmrc-enforcement-action'                                                         => array( 'serious_position', 'urgent_action', 'compact', 'Direct advice' ), // /hmrc/hmrc-enforcement-action/
 	'hmrc-follower-notice'                                                            => array( 'none', '', 'none', 'Page-specific advice' ), // /hmrc/hmrc-follower-notice/
 	'hmrc-fraud-investigations'                                                       => array( 'none', '', 'none', 'Page-specific advice' ), // /hmrc/hmrc-fraud-investigations/
@@ -269,7 +269,7 @@ return array(
 	'liquidating-a-group-company-or-holding-company-in-the-uk'                        => array( 'serious_position', '', 'compact', 'Specialist advice' ), // /liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/
 	'liquidating-a-limited-liability-partnership'                                     => array( 'none', '', 'none', 'Partnership advice' ), // /liquidation/liquidating-a-limited-liability-partnership/
 	'liquidation-deadlines-and-time-limits'                                           => array( 'serious_position', '', 'compact', 'Direct advice' ), // /liquidation/liquidation-deadlines-and-time-limits/
-	'liquidation-hub'                                                                 => array( 'serious_position', '', 'large', '' ), // /liquidation/liquidation-hub/
+	'liquidation-hub'                                                                 => array( 'none', '', 'none', '' ), // /liquidation/liquidation-hub/
 	'liquidation-vs-dissolution-strike-off'                                           => array( 'none', '', 'none', 'Closure options' ), // /liquidation/liquidation-vs-dissolution-strike-off/
 	'liquidators-powers-and-duties'                                                   => array( 'none', '', 'none', 'Process-specific advice' ), // /liquidation/liquidators-powers-and-duties/
 	'list-of-liquidation-documents'                                                   => array( 'none', '', 'none', 'Process-specific advice' ), // /liquidation/list-of-liquidation-documents/

@@ -166,7 +166,7 @@ def main() -> None:
 
     rows, proposals, carried, ruled, overridden = [], [], 0, 0, 0
     for path in sorted(live):
-        forced = piers_no_cta(path)
+        forced = piers_no_cta(path) or reason_no_cta(path, live[path])
         if forced:
             rows.append(no_cta_row(path, forced, "decision 2026-08-06"))
             overridden += 1
@@ -178,10 +178,8 @@ def main() -> None:
 
         row = {c: "" for c in COLUMNS}
         row["Page"] = path
-        reason = reason_no_cta(path, live[path])
-        if reason:
-            row = no_cta_row(path, reason, "rule 2026-08-06")
-            ruled += 1
+        if False:
+            pass
         else:
             proposed, why = proposal(path)
             proposed["Page"] = path

@@ -202,6 +202,18 @@ function cd_test_cta_icon( $which ) {
 	return sprintf( $open, 18, 18, '2.5' ) . '<path d="M5 12h14M13 6l6 6-6 6"></path></svg>';
 }
 
+/**
+ * True when a CTA would point at the page it is sitting on. Without this the
+ * solvent-closure block appears on the members' voluntary liquidation page inviting the
+ * reader to visit the members' voluntary liquidation page.
+ */
+function cd_cta_points_here( $url ) {
+	if ( ! $url || 0 === strpos( $url, 'tel:' ) ) { return false; }
+	$here = is_singular() ? wp_parse_url( get_permalink( get_queried_object_id() ), PHP_URL_PATH ) : '';
+	$there = wp_parse_url( $url, PHP_URL_PATH );
+	return $here && $there && untrailingslashit( $here ) === untrailingslashit( $there );
+}
+
 /** Tracking attributes. Plan section 14: state, urgency and size tracked separately. */
 function cd_test_cta_track( $cta, $variant, $urgency, $size, $context ) {
 	if ( '' === $context && is_singular() ) {
@@ -232,6 +244,7 @@ add_shortcode( 'cd_test_cta', function ( $atts ) {
 	cd_test_cta_enqueue();
 	list( $key, $urgency ) = cd_test_cta_resolve( $atts['variant'], $atts['urgency'] );
 	if ( 'none' === $key ) { return ''; }
+	if ( cd_cta_points_here( CD_TEST_CTA_URL ) ) { return ''; }
 
 	$v = cd_test_cta_variants()[ $key ];
 
@@ -326,6 +339,25 @@ add_shortcode( 'cd_advice_cta', function ( $atts ) {
 add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 	cd_test_cta_enqueue();
 	$atts  = shortcode_atts( array( 'context' => '' ), $atts, 'cd_solvent_cta' );
+
+	// On the members' voluntary liquidation page itself, "explore solvent closure
+	// options" would point at the page the reader is already on. An MVL is the one
+	// procedure here that is not about insolvency, so it gets its own CTA.
+	if ( cd_cta_points_here( CD_SOLVENT_CTA_URL ) ) {
+		$track = cd_test_cta_track( 'mvl-advice', '', '', 'compact', $atts['context'] );
+		return '<div class="cd-cta-shell"><div class="cd-cta-compact">'
+			. '<p class="cd-cta-compact__eyebrow">Solvent Company Closure</p>'
+			. '<p class="cd-cta-compact__title">Thinking About a Members&rsquo; Voluntary Liquidation?</p>'
+			. '<p class="cd-cta-compact__body">An MVL is for companies that can pay their debts in full. '
+			. 'Speak to a licensed insolvency practitioner about whether the company qualifies and what '
+			. 'the process involves.</p>'
+			. '<a class="cd-cta-compact__btn" href="tel:' . esc_attr( CD_ADVICE_CTA_TEL ) . '"' . $track . '>'
+			. 'Speak to an insolvency practitioner</a>'
+			. '<p class="cd-cta-compact__reassure"><span>Call 0800 074 6757</span>'
+			. '<span><strong>Confidential, and no obligation</strong></span></p>'
+			. '</div></div>';
+	}
+
 	$track = cd_test_cta_track( 'solvent-closure', '', '', 'compact', $atts['context'] );
 
 	return '<div class="cd-cta-shell"><div class="cd-cta-compact">'
@@ -336,3 +368,126 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 		. 'Explore solvent closure options <span aria-hidden="true">&rarr;</span></a>'
 		. '</div></div>';
 } );
+
+/* ---------------------------------------------------------------------------
+ * Placement
+ *
+ * The review decides WHAT each page gets. This decides WHERE it goes, following
+ * section 11 of the wording plan: the leading block sits after the opening
+ * explanation, the secondary one further down before the closing sections, and no
+ * page carries two dominant blocks.
+ *
+ * Only pages with a reviewed decision are touched. An unreviewed page gets nothing,
+ * which is the same rule the wording follows: silence beats a guess.
+ * ------------------------------------------------------------------------ */
+
+/**
+ * Alternative primary CTAs that exist as a block. Anything else in the review is a
+ * decision waiting on copy, and the page gets nothing rather than a stand-in.
+ */
+function cd_cta_alternative_block( $alt ) {
+	switch ( strtolower( trim( (string) $alt ) ) ) {
+		case 'direct advice':
+			return do_shortcode( '[cd_advice_cta]' );
+		case 'solvent closure':
+			return do_shortcode( '[cd_solvent_cta]' );
+	}
+	return '';
+}
+
+/**
+ * Remove the CTA blocks left over from earlier systems: the hand-placed .cd-cta panels
+ * and the Ultimate Blocks "Get a Quick and Easy Liquidation Quote" call-to-action.
+ *
+ * Done at render time on purpose. Rewriting the stored text of dozens of pages is a
+ * one-way operation on content nobody has a backup of; this is reversible by deleting
+ * one function. The stored text should still be cleaned up properly in its own pass.
+ */
+function cd_cta_strip_legacy( $content ) {
+	if ( false === strpos( $content, 'cd-cta:' )
+	  && false === strpos( $content, 'cd-cta--' )
+	  && false === strpos( $content, 'ub_call_to_action' ) ) {
+		return $content;
+	}
+	// The legacy blocks carry their own delimiting comments, so match those rather than
+	// anything class-based: the current blocks share the cd-cta prefix and must survive.
+	$content = preg_replace( '#<!--\s*cd-cta:[a-z-]+\s*-->.*?<!--\s*/cd-cta:[a-z-]+\s*-->#is', '', $content );
+	// Undelimited older panels: the wrapper is exactly "cd-cta cd-cta--<variant>".
+	$content = preg_replace( '#<div[^>]*class="cd-cta cd-cta--[^"]*"[^>]*>.*?</div>\s*</div>#is', '', $content );
+	// Ultimate Blocks "Get a Quick and Easy Liquidation Quote".
+	$content = preg_replace( '#<div[^>]*class="[^"]*ub_call_to_action[^"]*"[^>]*>.*?</div>\s*</div>#is', '', $content );
+	return $content;
+}
+
+// Runs late on purpose: these blocks are added by something further down the filter
+// chain than the placement below, so stripping them at the same time did nothing.
+add_filter( 'the_content', 'cd_cta_strip_legacy', 99 );
+
+add_filter( 'the_content', function ( $content ) {
+	if ( ! is_singular() || ! is_main_query() ) { return $content; }
+
+	// This theme renders the_content outside the formal loop, so in_the_loop() cannot
+	// gate here. Compare ids instead: related-post snippets carry a different one.
+	$id = get_queried_object_id();
+	if ( get_the_ID() && get_the_ID() !== $id ) { return $content; }
+
+	// Only a page that already places one of THESE blocks is left alone, to avoid
+	// rendering it twice. Legacy CTA markup does not veto the reviewed decision — it
+	// gets stripped below instead. (An earlier version of this guard also skipped on
+	// legacy markup, which silently blocked the roll-out on every page still carrying
+	// an old block. That was invented, not policy.)
+	if ( false !== strpos( $content, 'cd-cta-shell' ) ) { return $content; }
+
+	$entry = cd_test_cta_page_entry();
+	if ( ! $entry ) { return $content; }
+
+	list( $variant, $urgency, $size, $alt ) = array_pad( $entry, 4, '' );
+
+	$lead = '';   // after the opening explanation
+	$later = '';  // before the closing sections
+
+	if ( 'none' === $variant ) {
+		$lead = cd_cta_alternative_block( $alt );
+	} elseif ( 'urgent_action' === $urgency ) {
+		// Plan rule 3: on a deadline page direct contact leads and the test follows.
+		$lead  = cd_cta_alternative_block( $alt ? $alt : 'direct advice' );
+		$later = do_shortcode( '[cd_test_cta]' );
+	} elseif ( 'compact' === $size ) {
+		$later = do_shortcode( '[cd_test_cta]' );
+	} else {
+		$lead = do_shortcode( '[cd_test_cta]' );
+		$long = ( preg_match_all( '/<h2[ >]/i', $content ) >= 6 );
+		if ( $long ) {
+			// Plan section 11 allows one large block plus one compact reminder, and no
+			// more. On a long guide a single CTA a quarter of the way in is easy to
+			// scroll past and never see again.
+			$later = do_shortcode( '[cd_test_cta size="compact"]' );
+		}
+	}
+
+	if ( '' === $lead && '' === $later ) { return $content; }
+
+	if ( ! preg_match_all( '/<h2[ >]/i', $content, $m, PREG_OFFSET_CAPTURE ) ) {
+		return $content . $lead . $later;
+	}
+	$offsets = array();
+	foreach ( $m[0] as $hit ) { $offsets[] = $hit[1]; }
+	$count = count( $offsets );
+
+	$needed = ( '' !== $lead && '' !== $later ) ? 3 : 2;
+	if ( $count < $needed ) {
+		return $content . $lead . $later;
+	}
+
+	$lead_at  = $offsets[1];            // before the second H2, i.e. after the opening section
+	$later_at = $offsets[ $count - 1 ]; // before the last H2, usually the FAQ or related guides
+
+	// Insert the later one first so the earlier offset stays valid.
+	if ( '' !== $later ) {
+		$content = substr( $content, 0, $later_at ) . $later . substr( $content, $later_at );
+	}
+	if ( '' !== $lead ) {
+		$content = substr( $content, 0, $lead_at ) . $lead . substr( $content, $lead_at );
+	}
+	return $content;
+}, 20 );
