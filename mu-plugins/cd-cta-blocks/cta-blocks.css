@@ -185,6 +185,19 @@
 .cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__body.cd-cta-full__body { margin-bottom: 30px !important; }
 .cd-cta-shell.cd-cta-shell .cd-cta-full--advice .cd-cta-full__reassure a { color: #002856 !important; text-decoration: underline !important; }
 
+/* Non-urgent phone cards (a process already under way, personal risk, partnerships).
+   Same card as the urgent one, but the orange tint above reads as a deadline warning
+   and none of these pages carry a deadline. Calm blue-grey instead, and the eyebrow
+   needs its own spacing here because it sits directly above the headline rather than
+   in the two-column meta row the test block uses. */
+.cd-cta-shell.cd-cta-shell .cd-cta-full--guide.cd-cta-full--guide {
+	background: #f7f9fc !important;
+	border-color: rgba(0, 40, 86, .16) !important;
+}
+.cd-cta-shell.cd-cta-shell .cd-cta-full--guide .cd-cta-full__eyebrow.cd-cta-full__eyebrow {
+	margin: 0 0 14px !important;
+}
+
 .cd-cta-shell.cd-cta-shell .cd-cta-compact__title.cd-cta-compact__title {
 	font-size: 24px !important;
 	line-height: 1.25 !important;

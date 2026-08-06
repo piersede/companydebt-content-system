@@ -712,7 +712,61 @@ Until that change is made, the test should remain excluded from solvent-closure 
 
 ---
 
-## 18. Final Governance Rules
+## 18. Approved Alternative CTAs
+
+Section 17 leaves the `none` row as "use a page-specific CTA or no block". This is that
+set, approved 6 August 2026. Each is keyed to the review's **Alternative primary CTA**
+column, so the reviewed decision and the rendered block cannot drift apart.
+
+Two rules from section 1 govern all of them. A block promises only what its destination
+delivers, and no block implies a personal-liability verdict. Every telephone block uses
+one label, `Speak to an insolvency practitioner`; the urgent block keeps its own
+`Speak to an insolvency adviser now`.
+
+| Review label | Pages | Shape | Headline | Action |
+|---|---|---|---|---|
+| Process-specific advice | 23 | Large, phone | Questions About a Process Already Under Way? | Speak to an insolvency practitioner |
+| Personal-liability guidance | 6 | Large, phone | Worried About Your Own Exposure? | Speak to an insolvency practitioner |
+| Partnership advice | 2 | Large, phone | Is the Business a Partnership or an LLP? | Speak to an insolvency practitioner |
+| Specialist advice | 3 | Compact, phone | Does the Structure Need Specialist Handling? | Speak to an insolvency practitioner |
+| Creditor guidance | 9 | Compact, link | Owed Money by an Insolvent Company? | `/insolvency/insolvent-company-owes-me-money/` |
+| HMRC affordability | 14 | Compact, link | Can the Company Afford What HMRC Is Asking For? | `/hmrc/hmrc-debt-enforcement-hub/` |
+| Closure options | 1 | Compact, link | Not Sure Which Closure Route Fits? | `/closing-a-limited-company/` |
+
+### Notes on Three of Them
+
+**HMRC affordability** replaces the review's original "Page-specific advice" label on the
+14 tax-investigation and penalty pages. We do not defend tax investigations, so the block
+says nothing about the investigation. It addresses the affordability problem an
+investigation creates, which is our work. The fifteenth page under that label,
+`/insolvency/what-is-a-freezing-order-or-injunction/`, is live enforcement and takes the
+existing direct-advice CTA under section 4.
+
+**Personal-liability guidance** uses the telephone rather than a guide link, and its body
+states outright that no general guide settles whether a director is personally exposed.
+The conversation it offers is about the company's position. Rule 4 still holds.
+
+**Specialist advice** is the only label that appears on pages which also carry the test.
+Those three pages take the test as a compact secondary block and the specialist CTA as the
+lead, so no page gains a second dominant block (section 11).
+
+### Labels With No Block, By Decision
+
+Three reviewed labels render nothing. This is a decision, not an unfilled gap.
+
+- **Page-specific guidance** (14 pages: director duties, limited liability, the Companies
+  Act, the glossary, fixed and floating charges). The reader is not in trouble. Any CTA
+  interrupts rather than helps.
+- **Employee guidance** (1 page). Redundancy, notice and unpaid wages are claimed from the
+  Insolvency Service, not from us. There is nothing we can honestly offer.
+- **Personal debt guidance** (1 page, the IVA explainer). An individual's own debts are not
+  our work.
+
+The mental-health and debt-charity pages remain excluded from every CTA, as before.
+
+---
+
+## 19. Final Governance Rules
 
 1. The test must never promise a legal conclusion or personal-liability assessment.
 2. The button label remains consistent across all test variants.

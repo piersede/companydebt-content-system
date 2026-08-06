@@ -25,9 +25,22 @@ OUT = ROOT / "mu-plugins" / "cd-cta-blocks" / "page-map.php"
 VARIANTS = {"early_check", "serious_position", "personal_risk_secondary", "none"}
 SIZES = {"large", "compact", "none"}
 
-# Alternative primary CTAs that exist as a block today. Anything else is recorded in the
-# map but has nothing to render yet, and is reported at the end.
-BUILT = {"direct advice", "solvent closure", "none", ""}
+# Alternative primary CTAs that exist as a block today, and must stay in step with the
+# switch in cd_cta_alternative_block(). Anything else is recorded in the map but has
+# nothing to render yet, and is reported at the end.
+BUILT = {
+    "direct advice",
+    "solvent closure",
+    "process-specific advice",
+    "personal-liability guidance",
+    "partnership advice",
+    "specialist advice",
+    "creditor guidance",
+    "hmrc affordability",
+    "closure options",
+    "none",
+    "",
+}
 
 
 def norm(value: str) -> str:

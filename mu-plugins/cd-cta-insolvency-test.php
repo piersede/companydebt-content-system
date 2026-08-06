@@ -1,10 +1,13 @@
 <?php
 /**
  * Plugin Name: CD Insolvency Test CTA Blocks
- * Description: In-content CTA blocks for the insolvency test, plus the two CTAs that
- *              take priority over it. Implements docs/cta-insolvency-test-wording-plan.md.
- *              Shortcodes: [cd_test_cta], [cd_advice_cta], [cd_solvent_cta].
- * Version:     3.0.0
+ * Description: In-content CTA blocks for the insolvency test, plus the CTAs that take
+ *              priority over it on pages the test does not serve. Implements
+ *              docs/cta-insolvency-test-wording-plan.md.
+ *              Shortcodes: [cd_test_cta], [cd_advice_cta], [cd_solvent_cta],
+ *              [cd_process_cta], [cd_personal_liability_cta], [cd_partnership_cta],
+ *              [cd_specialist_cta], [cd_creditor_cta], [cd_hmrc_cta], [cd_closure_cta].
+ * Version:     3.1.0
  *
  * Governance rules from the plan that are ENFORCED HERE rather than left to discipline,
  * because a rule that depends on remembering it will be broken during a 230-page roll-out:
@@ -155,11 +158,15 @@ add_action( 'wp_enqueue_scripts', function () {
 	$id      = get_queried_object_id();
 	$content = (string) get_post_field( 'post_content', $id );
 
-	$used = $content && (
-		   has_shortcode( $content, 'cd_test_cta' )
-		|| has_shortcode( $content, 'cd_advice_cta' )
-		|| has_shortcode( $content, 'cd_solvent_cta' )
-	);
+	if ( ! $content ) { return; }
+
+	$tags = array( 'cd_test_cta', 'cd_advice_cta', 'cd_solvent_cta' );
+	foreach ( cd_cta_alt_wording() as $alt ) { $tags[] = $alt['tag']; }
+
+	$used = false;
+	foreach ( $tags as $tag ) {
+		if ( has_shortcode( $content, $tag ) ) { $used = true; break; }
+	}
 
 	if ( ! $used ) { return; }
 	cd_test_cta_enqueue();
@@ -370,6 +377,215 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 } );
 
 /* ---------------------------------------------------------------------------
+ * Alternative primary CTAs
+ *
+ * 187 reviewed pages are mapped to variant 'none': the insolvency test does not serve
+ * their reader. Each names an alternative primary CTA in the review, and those are
+ * defined below. Two rules from the plan shape every one of them.
+ *
+ * Section 1 — a CTA promises only what its destination can deliver. So the HMRC block
+ * says nothing about defending a tax investigation, which we do not do; it addresses
+ * the affordability problem an investigation creates, which we do. The personal-risk
+ * block offers a conversation about the COMPANY's position and states plainly that no
+ * general guide settles personal exposure (rules 1 and 4).
+ *
+ * Section 10 — one consistent label per CTA type. Every phone block says "Speak to an
+ * insolvency practitioner"; the urgent block keeps its own "Speak to an insolvency
+ * adviser now"; the test keeps CD_TEST_CTA_BUTTON.
+ *
+ * Three reviewed labels deliberately have NO block and render nothing:
+ *   - Page-specific guidance (14 low-intent pages: director duties, limited liability,
+ *     the Companies Act, the glossary). Any CTA there interrupts a reader who is not
+ *     in trouble.
+ *   - Employee guidance (1). Redundancy and unpaid wages are claimed from the
+ *     Insolvency Service, not from us. Nothing to sell, so nothing is shown.
+ *   - Personal debt guidance (1, the IVA page). An individual's own debt is not our
+ *     work.
+ * Decided by Piers, 6 Aug 2026. These are decisions, not gaps.
+ * ------------------------------------------------------------------------ */
+
+/**
+ * The alternative-CTA wording set, keyed by the review's own label so the review column
+ * and the block that renders from it cannot drift apart.
+ *
+ * shape 'phone'   — large card, telephone action. The primary action on the page.
+ * shape 'link'    — compact card pointing at a guide that already answers the question.
+ * shape 'phone_compact' — compact card, telephone action, for pages that already carry
+ *                   a test block and must not gain a second dominant one (section 11).
+ *
+ * @return array<string, array<string, string>>
+ */
+function cd_cta_alt_wording() {
+	return array(
+
+		// 23 pages. The reader is inside a liquidation, CVA or strike-off already, so the
+		// diagnostic question has been overtaken by events.
+		'process-advice' => array(
+			'tag'     => 'cd_process_cta',
+			'shape'   => 'phone',
+			'eyebrow' => 'Process Already Under Way',
+			'title'   => 'Questions About a Process Already Under Way?',
+			'body'    => 'Once a company is in liquidation or a formal arrangement, the answer '
+			           . 'usually turns on the facts of that case and on who now controls the '
+			           . 'decision. Speak to a licensed insolvency practitioner about where '
+			           . 'things actually stand.',
+			'button'  => 'Speak to an insolvency practitioner',
+		),
+
+		// 6 pages. Rule 4: never imply we can rule on the reader's personal liability.
+		// The body says so outright rather than leaving it to be inferred.
+		'personal-liability' => array(
+			'tag'     => 'cd_personal_liability_cta',
+			'shape'   => 'phone',
+			'eyebrow' => 'Director Personal Risk',
+			'title'   => 'Worried About Your Own Exposure?',
+			'body'    => 'Whether a director is personally exposed depends on what was signed, '
+			           . 'what was drawn out and how the company was run in the months before. '
+			           . 'No general guide can settle that. Speak to a licensed insolvency '
+			           . 'practitioner about the company&rsquo;s position first.',
+			'button'  => 'Speak to an insolvency practitioner',
+		),
+
+		// 2 pages. A partnership or LLP is not a limited company, so the test does not apply,
+		// but the work is still ours.
+		'partnership' => array(
+			'tag'     => 'cd_partnership_cta',
+			'shape'   => 'phone',
+			'eyebrow' => 'Partnerships and LLPs',
+			'title'   => 'Is the Business a Partnership or an LLP?',
+			'body'    => 'Partnership and LLP insolvency runs on different rules from a limited '
+			           . 'company, and the partners&rsquo; own position is part of the picture '
+			           . 'from the start. Speak to an insolvency practitioner who handles both.',
+			'button'  => 'Speak to an insolvency practitioner',
+		),
+
+		// 3 pages, and the only label that sits on pages which DO get the test. Compact, so
+		// the page carries one dominant block rather than two.
+		'specialist' => array(
+			'tag'     => 'cd_specialist_cta',
+			'shape'   => 'phone_compact',
+			'eyebrow' => 'Specialist Structures',
+			'title'   => 'Does the Structure Need Specialist Handling?',
+			'body'    => 'Charities, non-profits and group companies bring in trustees, '
+			           . 'intra-group debt and duties the standard route does not cover.',
+			'button'  => 'Speak to an insolvency practitioner',
+		),
+
+		// 9 pages. The reader is owed money. We are not selling insolvency work to a
+		// creditor, so this points at the guide written for them and nothing else.
+		'creditor' => array(
+			'tag'     => 'cd_creditor_cta',
+			'shape'   => 'link',
+			'eyebrow' => 'Owed Money?',
+			'title'   => 'Owed Money by an Insolvent Company?',
+			'body'    => 'Where your claim sits in the queue, what to submit and what you are '
+			           . 'realistically likely to recover depend on the type of debt and the '
+			           . 'procedure the company is in.',
+			'button'  => 'Read the guide for creditors',
+			'url'     => '/insolvency/insolvent-company-owes-me-money/',
+		),
+
+		// 14 pages: tax investigations, penalties, compliance checks, security bonds. We do
+		// not defend investigations. We do handle a company that cannot pay what comes out
+		// of one, and that is the only thing this promises.
+		'hmrc-affordability' => array(
+			'tag'     => 'cd_hmrc_cta',
+			'shape'   => 'link',
+			'eyebrow' => 'If the Bill Cannot Be Paid',
+			'title'   => 'Can the Company Afford What HMRC Is Asking For?',
+			'body'    => 'A penalty, assessment or settlement often lands on a company with no '
+			           . 'spare cash. Time to Pay, and what happens if HMRC turns it down, are '
+			           . 'set out across our HMRC debt guides.',
+			'button'  => 'See the HMRC debt options',
+			'url'     => '/hmrc/hmrc-debt-enforcement-hub/',
+		),
+
+		// 1 page. Mixed solvent and insolvent closure intent, so neither the test nor the
+		// solvent-closure block fits; the comparison guide does.
+		'closure-options' => array(
+			'tag'    => 'cd_closure_cta',
+			'shape'  => 'link',
+			'title'  => 'Not Sure Which Closure Route Fits?',
+			'body'   => 'Strike-off, members&rsquo; voluntary liquidation and creditors&rsquo; '
+			          . 'voluntary liquidation each suit a different financial position. Compare '
+			          . 'them before you choose.',
+			'button' => 'Compare closure options',
+			'url'    => '/closing-a-limited-company/',
+		),
+	);
+}
+
+/**
+ * Render one alternative CTA. Shared markup on purpose: these are seven wordings of the
+ * same two cards, and a copy of the markup per block is seven places to fix a styling bug.
+ */
+function cd_cta_render_alt( $key, $context = '' ) {
+	$set = cd_cta_alt_wording();
+	if ( ! isset( $set[ $key ] ) ) { return ''; }
+	$c = $set[ $key ];
+
+	// A guide block pointing at the page it sits on helps nobody.
+	if ( isset( $c['url'] ) && cd_cta_points_here( $c['url'] ) ) { return ''; }
+
+	cd_test_cta_enqueue();
+	$tel   = CD_ADVICE_CTA_TEL;
+	$shown = '0800 074 6757';
+	$size  = ( 'phone' === $c['shape'] ) ? 'large' : 'compact';
+	$track = cd_test_cta_track( $key, '', '', $size, $context );
+
+	if ( 'phone' === $c['shape'] ) {
+		return '<div class="cd-cta-shell"><div class="cd-cta-full cd-cta-full--advice cd-cta-full--guide">'
+			. '<div class="cd-cta-full__content">'
+			. '<p class="cd-cta-full__eyebrow">' . $c['eyebrow'] . '</p>'
+			. '<p class="cd-cta-full__title">' . $c['title'] . '</p>'
+			. '<p class="cd-cta-full__body">' . $c['body'] . '</p>'
+			. '<a class="cd-cta-full__btn" href="tel:' . esc_attr( $tel ) . '"' . $track . '>'
+			. cd_test_cta_icon( 'phone' ) . $c['button'] . '</a>'
+			. '<p class="cd-cta-full__reassure">Call <a href="tel:' . esc_attr( $tel ) . '">' . $shown . '</a>. '
+			. '<strong>Confidential, and no obligation.</strong></p>'
+			. '</div>'
+			. '</div></div>';
+	}
+
+	$out = '<div class="cd-cta-shell"><div class="cd-cta-compact">';
+	if ( ! empty( $c['eyebrow'] ) ) {
+		$out .= '<p class="cd-cta-compact__eyebrow">' . $c['eyebrow'] . '</p>';
+	}
+	$out .= '<p class="cd-cta-compact__title">' . $c['title'] . '</p>'
+	      . '<p class="cd-cta-compact__body">' . $c['body'] . '</p>';
+
+	if ( 'phone_compact' === $c['shape'] ) {
+		$out .= '<a class="cd-cta-compact__btn" href="tel:' . esc_attr( $tel ) . '"' . $track . '>'
+		      . $c['button'] . '</a>'
+		      . '<p class="cd-cta-compact__reassure"><span>Call ' . $shown . '</span>'
+		      . '<span><strong>Confidential, and no obligation</strong></span></p>';
+	} else {
+		$out .= '<a class="cd-cta-compact__btn" href="' . esc_url( $c['url'] ) . '"' . $track . '>'
+		      . $c['button'] . ' <span aria-hidden="true">&rarr;</span></a>';
+	}
+
+	return $out . '</div></div>';
+}
+
+/**
+ * One shortcode per alternative CTA, registered from the wording set so adding a block
+ * means adding one entry above rather than editing in two places.
+ *
+ * [cd_process_cta] [cd_personal_liability_cta] [cd_partnership_cta] [cd_specialist_cta]
+ * [cd_creditor_cta] [cd_hmrc_cta] [cd_closure_cta]
+ */
+foreach ( cd_cta_alt_wording() as $cd_alt_key => $cd_alt ) {
+	add_shortcode(
+		$cd_alt['tag'],
+		function ( $atts ) use ( $cd_alt_key ) {
+			$atts = shortcode_atts( array( 'context' => '' ), $atts, 'cd_alt_cta' );
+			return cd_cta_render_alt( $cd_alt_key, $atts['context'] );
+		}
+	);
+}
+unset( $cd_alt_key, $cd_alt );
+
+/* ---------------------------------------------------------------------------
  * Placement
  *
  * The review decides WHAT each page gets. This decides WHERE it goes, following
@@ -382,8 +598,12 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
  * ------------------------------------------------------------------------ */
 
 /**
- * Alternative primary CTAs that exist as a block. Anything else in the review is a
- * decision waiting on copy, and the page gets nothing rather than a stand-in.
+ * The review's "Alternative primary CTA" column, mapped to the block that renders it.
+ *
+ * Three labels map to '' on purpose, not for want of copy: the 14 low-intent guidance
+ * pages, the employee page and the IVA page were reviewed and decided to get nothing.
+ * See the note above cd_cta_alt_wording(). Anything not listed at all is an unreviewed
+ * label and gets nothing rather than a stand-in.
  */
 function cd_cta_alternative_block( $alt ) {
 	switch ( strtolower( trim( (string) $alt ) ) ) {
@@ -391,6 +611,20 @@ function cd_cta_alternative_block( $alt ) {
 			return do_shortcode( '[cd_advice_cta]' );
 		case 'solvent closure':
 			return do_shortcode( '[cd_solvent_cta]' );
+		case 'process-specific advice':
+			return cd_cta_render_alt( 'process-advice' );
+		case 'personal-liability guidance':
+			return cd_cta_render_alt( 'personal-liability' );
+		case 'partnership advice':
+			return cd_cta_render_alt( 'partnership' );
+		case 'specialist advice':
+			return cd_cta_render_alt( 'specialist' );
+		case 'creditor guidance':
+			return cd_cta_render_alt( 'creditor' );
+		case 'hmrc affordability':
+			return cd_cta_render_alt( 'hmrc-affordability' );
+		case 'closure options':
+			return cd_cta_render_alt( 'closure-options' );
 	}
 	return '';
 }
@@ -453,6 +687,16 @@ add_filter( 'the_content', function ( $content ) {
 		$lead  = cd_cta_alternative_block( $alt ? $alt : 'direct advice' );
 		$later = do_shortcode( '[cd_test_cta]' );
 	} elseif ( 'compact' === $size ) {
+		// A page can be reviewed as "the test helps, but something else should lead". The
+		// three charity, non-profit and group-company pages are the only ones: the test
+		// establishes severity, specialist advice remains the main action. 'Direct advice'
+		// is excluded here on purpose — on a non-urgent page it is the fallback recorded
+		// against most of the corpus, and promoting it would silently add a phone card to
+		// eighty pages nobody reviewed for one.
+		$leader = ( $alt && 'direct advice' !== strtolower( trim( $alt ) ) )
+			? cd_cta_alternative_block( $alt )
+			: '';
+		if ( '' !== $leader ) { $lead = $leader; }
 		$later = do_shortcode( '[cd_test_cta]' );
 	} else {
 		$lead = do_shortcode( '[cd_test_cta]' );
