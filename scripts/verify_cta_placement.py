@@ -96,13 +96,20 @@ def expected(row: dict) -> set[str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="check every reviewed page")
+    ap.add_argument("--live", action="store_true",
+                    help="check companydebt.com instead of staging (read-only)")
     ap.add_argument("--workers", type=int, default=8)
     args = ap.parse_args()
 
-    base = os.environ["WP_STAGING_URL"].rstrip("/")
     s = requests.Session()
-    s.auth = (os.environ["WP_BASIC_AUTH_USER"], os.environ["WP_BASIC_AUTH_PASS"])
     s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) cd-cta-verify"
+    if args.live:
+        base = os.environ.get("CD_LIVE_URL", "https://www.companydebt.com").rstrip("/")
+    else:
+        base = os.environ["WP_STAGING_URL"].rstrip("/")
+        s.auth = (os.environ["WP_BASIC_AUTH_USER"], os.environ["WP_BASIC_AUTH_PASS"])
+    print(f"checking {base}")
+    print()
 
     rows = list(csv.DictReader(CSV.open(encoding="utf-8-sig")))
     if not args.all:
