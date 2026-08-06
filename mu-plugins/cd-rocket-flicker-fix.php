@@ -47,20 +47,20 @@ function cd_itest_v2_markup( $href ) {
 	};
 
 	return '<div class="cd-itest">'
-		. '<div class="cd-itest__eyebrow">30-SECOND TEST</div>'
-		. '<div class="cd-itest__headline">Is Your Company Insolvent?</div>'
-		. '<p class="cd-itest__subhead">Answer 5 quick questions and get an instant assessment.</p>'
-		. '<div class="cd-itest__mockup" role="img" aria-label="Insolvency test preview"></div>'
+		. '<div class="cd-itest__eyebrow">FREE 2-MINUTE TEST</div>'
+		. '<div class="cd-itest__headline">Check Your Company\'s Financial Position</div>'
+		. '<p class="cd-itest__subhead">Answer four short questions to see how serious the position may be and which options could fit.</p>'
+		. '<div class="cd-itest__mockup" role="img" aria-label="Financial position test preview"></div>'
 		. '<ul class="cd-itest__benefits">'
-			. $benefit( 'Instant assessment', 'See your result immediately' )
-			. $benefit( 'Recommended next steps', 'Clear guidance tailored to you' )
-			. $benefit( 'Free expert guidance', 'Speak to our specialists' )
+			. $benefit( 'See the warning signs', 'Find out which signs apply to your company.' )
+			. $benefit( 'Understand the urgency', 'See how soon you may need to act.' )
+			. $benefit( 'Explore possible options', 'See which routes may fit your circumstances.' )
 		. '</ul>'
-		. '<a class="cd-itest__cta" href="' . esc_url( $href ) . '"><span>Start the 30-Second Test</span>'
+		. '<a class="cd-itest__cta" href="' . esc_url( $href ) . '"><span>Check My Company\'s Position</span>'
 			. '<span class="cd-itest__cta-arrow">' . $ico_arrow . '</span></a>'
 		. '<ul class="cd-itest__trust">'
-			. $trust( $ico_lock, 'No signup required' )
-			. $trust( $ico_shield, '100% confidential' )
+			. $trust( $ico_shield, 'Confidential' )
+			. $trust( $ico_lock, 'We only call if you ask' )
 		. '</ul>'
 		. '</div>';
 }
