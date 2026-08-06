@@ -21,8 +21,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "docs" / "cta-rollout-manifest.md"
-DRAFTS = ROOT / "drafts"
-THEME_FUNCTIONS = ROOT / "theme" / "functions.php"
 OUT = ROOT / "docs" / "cta-review-list.csv"
 
 COLUMNS = [
@@ -81,24 +79,6 @@ def read_manifest() -> list[tuple[str, str]]:
     return [r for r in rows if r[1] not in ("EXCLUDE", "REVIEW")]
 
 
-def previously_injected_slugs() -> set[str]:
-    """Slugs of the 54 pages the removed injector used to place CTAs on.
-
-    The injector's map was keyed by post id; drafts are named <id>_<slug>.html.
-    """
-    text = THEME_FUNCTIONS.read_text(encoding="utf-8")
-    m = re.search(r"function cd_acta_map\(\)\s*\{.*?return array\((.*?)\);", text, re.S)
-    if not m:
-        return set()
-    ids = {int(x) for x in re.findall(r"(\d+)\s*=>", m.group(1))}
-    slugs = set()
-    for path in DRAFTS.glob("*.html"):
-        head, _, rest = path.stem.partition("_")
-        if head.isdigit() and int(head) in ids:
-            slugs.add(rest)
-    return slugs
-
-
 def phase_for(url: str) -> str:
     for name, keys in PHASES:
         if any(k in url for k in keys):
@@ -106,12 +86,10 @@ def phase_for(url: str) -> str:
     return "3 Long tail"
 
 
-def build_row(url: str, cluster: str, injected: bool) -> dict[str, str]:
+def build_row(url: str, cluster: str) -> dict[str, str]:
     row = {c: "" for c in COLUMNS}
     row["Page"] = url
     notes = [f"cluster: {cluster}"]
-    if injected:
-        notes.append("carried the old injected CTA set")
 
     if cluster == "solvent-closure":
         # Conclusive: the test's first question has no solvent answer (plan 6A, 7.1, 16).
@@ -140,11 +118,9 @@ def build_row(url: str, cluster: str, injected: bool) -> dict[str, str]:
 
 
 def main() -> None:
-    injected = previously_injected_slugs()
     rows = []
     for url, cluster in read_manifest():
-        slug = url.strip("/").split("/")[-1]
-        row = build_row(url, cluster, slug in injected)
+        row = build_row(url, cluster)
         row["_phase"] = phase_for(url)
         rows.append(row)
 
@@ -165,7 +141,6 @@ def main() -> None:
         print(f"  {n:4}  {phase}")
     conf = Counter(r["Confidence"] for r in rows)
     print("confidence:", dict(conf))
-    print(f"previously carried a CTA: {sum(1 for r in rows if 'old injected' in r['Notes'])}")
 
 
 if __name__ == "__main__":
