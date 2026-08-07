@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 const CD_TEST_CTA_URL    = '/insolvency-calculator/';
 const CD_ADVICE_CTA_TEL  = '08000746757';
+// No longer a destination. Since the solvent CTA became a phone call rather than a link
+// to a guide, this is only used to detect that the reader is ON the MVL page, which gets
+// its own wording. Do not turn it back into an href without re-reading plan section 1.
 const CD_SOLVENT_CTA_URL = '/liquidation/members-voluntary-liquidation/';
 
 /** One action, one label, every test block. Plan section 10. */
@@ -382,14 +385,35 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 			. '</div></div>';
 	}
 
+	// The other five solvent pages. Wording by Piers, 6 Aug 2026, and it is deliberately
+	// a phone CTA rather than a link to another guide.
+	//
+	// The link version was wrong twice over. It promised "compare strike-off and members'
+	// voluntary liquidation" but pointed at the MVL guide, which explains one route and
+	// compares nothing, so it broke the plan's first rule. And pointing it at the
+	// comparison guide instead would have made it vanish from /closing-a-limited-company/,
+	// which is that very guide.
+	//
+	// Neither problem exists once it stops being a link. The deeper point is commercial:
+	// this reader may be a director sitting on substantial retained profits, and what is
+	// worth offering them is an insolvency practitioner, not another article. The wording
+	// works on all five pages, including for someone who came looking at strike-off and
+	// has not yet realised an MVL may be the better route for the value in the company.
 	$track = cd_test_cta_track( 'solvent-closure', '', '', 'compact', $atts['context'] );
 
 	return '<div class="cd-cta-shell"><div class="cd-cta-compact">'
-		. '<p class="cd-cta-compact__title">Looking to Close a Solvent Company?</p>'
-		. '<p class="cd-cta-compact__body">Compare strike-off and members&rsquo; voluntary liquidation, '
-		. 'including when each route may be suitable.</p>'
-		. '<a class="cd-cta-compact__btn" href="' . esc_url( CD_SOLVENT_CTA_URL ) . '"' . $track . '>'
-		. 'Explore solvent closure options <span aria-hidden="true">&rarr;</span></a>'
+		. '<p class="cd-cta-compact__eyebrow">Solvent Company Closure</p>'
+		. '<p class="cd-cta-compact__title">Closing a Solvent Company?</p>'
+		. '<p class="cd-cta-compact__body">If your company has retained profits or assets, a '
+		. 'Members&rsquo; Voluntary Liquidation may be a tax-efficient way to close and distribute '
+		. 'the remaining value.</p>'
+		. '<p class="cd-cta-compact__body">Speak directly with an experienced licensed insolvency '
+		. 'practitioner about whether an MVL is suitable, what it will cost and how the process '
+		. 'works.</p>'
+		. '<a class="cd-cta-compact__btn" href="tel:' . esc_attr( CD_ADVICE_CTA_TEL ) . '"' . $track . '>'
+		. 'Discuss Your Closure Options <span aria-hidden="true">&rarr;</span></a>'
+		. '<p class="cd-cta-compact__reassure"><span>Call 0800 074 6757</span>'
+		. '<span><strong>Confidential, and no obligation</strong></span></p>'
 		. '</div></div>';
 } );
 
