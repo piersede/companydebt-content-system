@@ -137,7 +137,7 @@ PAGES = [
         "parent": "data",
         "template": TEMPLATE,
         "seo_title": "Furniture Manufacturing Insolvency Statistics (UK)",
-        "meta": "UK furniture manufacturing insolvency statistics: company insolvencies among furniture manufacturers since 2016, the monthly trend since 2023 and the sector's share of all company insolvencies.",
+        "meta": "UK furniture manufacturing insolvency statistics: company insolvencies among furniture manufacturers since 2016, the monthly trend over the same period and the sector's share of all company insolvencies.",
         "content": "",
     },
     {
