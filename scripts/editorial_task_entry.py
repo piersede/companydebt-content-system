@@ -3,8 +3,17 @@
 from __future__ import annotations
 
 import argparse
+import io
 import json
+import sys
 from pathlib import Path
+
+# UTF-8 stdout on Windows
+if sys.platform == "win32":
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    except Exception:
+        pass
 
 from build_page import load_page_config
 from page_runtime_metadata import resolve_page_runtime_metadata

@@ -18,7 +18,7 @@ flagship's shared CSS/chrome (masthead, source strip, methodology, final CTA)
 and the shared line-chart engine.
 
 Data: data/insolvency-statistics/sector_series.json "groups" (all ~272
-3-digit SIC groups, annual since 2016 + monthly since 2023; built by
+3-digit SIC groups, annual + monthly over the full published span; built by
 scripts/datahub/parse_sector_series.py) + release_metadata.json.
 
 Usage:
@@ -6621,10 +6621,13 @@ def chart_block(cfg: dict, c: dict, f: dict) -> str:
     ser = c["ser"]
     g = f["group"]
     months = f["months"]
+    # Span read from the data, not hardcoded, so the chart and the caption stay
+    # in step after each refresh extends the series.
+    monthly_span = f"from January {months[0][:4]} to {month_full(months[-1])}"
     line = build_line_chart(
         months, g["monthly"], chart_id=f"{cfg['sic_code']}-monthly",
         title=f"Monthly insolvencies among {cfg['plural']}, England and Wales",
-        desc=f"Monthly company insolvencies among {cfg['plural']}, England and Wales, since January 2023.",
+        desc=f"Monthly company insolvencies among {cfg['plural']}, England and Wales, {monthly_span}.",
     )
     return dedent(f"""\
     <section class="cd-section cd-w-wide" id="trend">
@@ -6633,7 +6636,7 @@ def chart_block(cfg: dict, c: dict, f: dict) -> str:
         <p class="cd-section-intro">{cfg['related']}</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--longrun">{line}</div>
-        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Monthly insolvencies among {cfg['plural']}, England and Wales, {monthly_span}.</strong> Not seasonally adjusted. Source: Insolvency Service ({cfg.get('source_table', 'Table A1b')}).</figcaption>
       </figure>
     </section>""")
 

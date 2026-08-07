@@ -6,8 +6,8 @@ methodology, CTA) and the shared chart engine, like procedure_stats.py.
 Data:
   - data/insolvency-statistics/sector_breakdown.json  (latest rolling-12m by SIC
     section; drives the ranked bar chart)
-  - data/insolvency-statistics/sector_series.json     (annual 2016-2025 + monthly
-    2023-> by section, incl. Construction sub-sectors; built by
+  - data/insolvency-statistics/sector_series.json     (annual + monthly by
+    section over the full published span, incl. Construction sub-sectors; built by
     scripts/datahub/parse_sector_series.py)
 
 Industry data is published quarterly (Jan/Apr/Jul/Oct) and is annual +
@@ -34,6 +34,16 @@ from build_insolvency_dashboard import (  # noqa: E402
     DASHBOARD_CSS, masthead_block, srcstrip_block, methodology_block, final_cta_block,
 )
 from build_insolvency_charts import build_line_chart, build_sector_bars, format_number  # noqa: E402
+
+MONTH_FULL = ["January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December"]
+
+
+def month_full(period: str) -> str:
+    """'2026-05' -> 'May 2026'."""
+    y, m = period.split("-")
+    return f"{MONTH_FULL[int(m) - 1]} {y}"
+
 
 DATA = ROOT / "data" / "insolvency-statistics"
 DRAFTS = ROOT / "drafts"
@@ -260,11 +270,16 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
     # rank among sections in latest 12m breakdown
     rank = next((i + 1 for i, s in enumerate(brk["sections"]) if s["code"] == "F"), 1)
 
-    # Monthly construction line chart (2023->), native to build_line_chart.
+    # Monthly construction line chart. The span is taken from the data, not
+    # hardcoded, so the chart and the prose around it stay in step after each
+    # monthly refresh extends the series.
+    monthly_from_year = months[0][:4]
+    monthly_to = month_full(months[-1])
+    monthly_span = f"from January {monthly_from_year} to {monthly_to}"
     line = build_line_chart(
         months, f["monthly"], chart_id="construction-monthly",
         title="Monthly construction company insolvencies, England and Wales",
-        desc="Monthly company insolvencies in the construction sector, England and Wales, since January 2023.",
+        desc=f"Monthly company insolvencies in the construction sector, England and Wales, {monthly_span}.",
     )
 
     # Sub-sector divisions (41/42/43) latest annual.
@@ -288,7 +303,7 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
       <div class="cd-hero">
       <div class="cd-hero__copy">
         <h1><span class="cd-h1__line" style="white-space: normal;">UK Construction Insolvency</span> <span class="cd-h1__line" style="white-space: normal;">Statistics</span></h1>
-        <p class="cd-lede">Construction has the most company insolvencies of any UK industry. There were {format_number(latest_annual)} construction company insolvencies in {years[li]}, around {share}% of all company insolvencies that year. This page tracks the construction trend since 2016, the monthly series since 2023 and the split across building, civil engineering and specialised trades.</p>
+        <p class="cd-lede">Construction has the most company insolvencies of any UK industry. There were {format_number(latest_annual)} construction company insolvencies in {years[li]}, around {share}% of all company insolvencies that year. This page tracks the construction trend since {years[0]}, the monthly series from January {monthly_from_year} to {monthly_to} and the split across building, civil engineering and specialised trades.</p>
         {meta_grid(meta)}
         <p class="cd-official-badge"><span aria-hidden="true"></span>{meta['status']}</p>
       </div>
@@ -315,11 +330,11 @@ def build_construction(brk: dict, ser: dict, meta: dict) -> str:
 
     chart = dedent(f"""\
     <section class="cd-section cd-w-wide" id="trend">
-      <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Monthly construction insolvencies since 2023</h2>
-        <p class="cd-section-intro">Company insolvencies in the construction sector, England and Wales. Monthly figures are available from January 2023; the longer view is annual (see below). Construction is the largest sector across the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>; supplier cash-flow pressure is tracked in the <a href="/data/payment-practices-late-payment/">late payment statistics</a>.</p></div>
+      <div class="cd-section-head"><p class="cd-eyebrow">Trend</p><h2>Monthly construction insolvencies since {monthly_from_year}</h2>
+        <p class="cd-section-intro">Company insolvencies in the construction sector, England and Wales. Monthly figures run from January {monthly_from_year} to {monthly_to}; the annual totals below give the same period at a glance. Construction is the largest sector across the <a href="/data/company-insolvencies-by-sector/">company insolvencies by sector</a> data and the <a href="/data/uk-insolvency-statistics/">UK company insolvency statistics</a>; supplier cash-flow pressure is tracked in the <a href="/data/payment-practices-late-payment/">late payment statistics</a>.</p></div>
       <figure class="cd-chart-figure">
         <div class="cd-chart-panel cd-chart-panel--longrun">{line}</div>
-        <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, since January 2023.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
+        <figcaption class="cd-figcaption"><strong>Monthly construction company insolvencies, England and Wales, {monthly_span}.</strong> Not seasonally adjusted. Source: Insolvency Service (Table A1b).</figcaption>
       </figure>
     </section>""")
 
