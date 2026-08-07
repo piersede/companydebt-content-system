@@ -12,12 +12,39 @@ undoing work.
 Credentials existing is not permission. Staging pushes are the opposite -
 those are pre-approved and need no asking.
 
-## The thing everyone asks for, and why it does not exist
+## The standard route: WP Engine Custom push
 
-"Just push the whole staging site live, but keep the Gravity Forms entries."
+For a batch of work, the agreed process is a **Custom** push with the Gravity
+Forms tables excluded - not per-page pushing, and not the blanket copy. Full
+procedure: `docs/wpe-custom-push-deployment.md`.
 
-That is not an available operation. Page content and form entries live in the
-**same database**. WP Engine's environment copy gives two choices:
+Staging → Actions → Push to → Production → Custom; select database tables;
+deselect every `*_gf_*` table; protect `wp_options` too.
+
+**Its precondition is absolute.** A selective push replaces whole tables - it
+does not merge. Anything edited on production since the last clone is destroyed
+silently. So: all work happens on staging, production is never edited directly,
+and production is pulled to staging at the start of each batch. Verify before
+pushing:
+
+```bash
+python scripts/push_site_content_live.py --changed-only   # read-only
+python scripts/sync_staging_from_live.py --confirm        # if live is ahead
+```
+
+The file-system half is destructive with no exclusions: any media uploaded on
+production since the clone is lost, not just form uploads.
+
+Per-page pushing (below) remains right for one or two pages and for anything
+urgent.
+
+## The thing that still does not exist
+
+"Push the whole staging site live with the blanket copy, but keep the Gravity
+Forms entries."
+
+The *all-tables* copy cannot do that. Page content and form entries live in the
+**same database**, and it gives two choices:
 
 | Copy option | Page content | Form entries, users, comments |
 |---|---|---|
