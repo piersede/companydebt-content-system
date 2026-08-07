@@ -359,16 +359,24 @@ add_shortcode( 'cd_solvent_cta', function ( $atts ) {
 	// On the members' voluntary liquidation page itself, "explore solvent closure
 	// options" would point at the page the reader is already on. An MVL is the one
 	// procedure here that is not about insolvency, so it gets its own CTA.
+	//
+	// Wording by Piers, 6 Aug 2026. The version before it opened by explaining what an
+	// MVL is to a director already reading the MVL page, and led on qualifying rather
+	// than on the reason anyone is there: retained profits they want out. It also gets
+	// its own button. Section 10 asks for one label per CTA type, not one label
+	// everywhere, and it already makes that exception for the urgent block; an MVL
+	// specialist is a genuinely different ask from general insolvency advice.
 	if ( cd_cta_points_here( CD_SOLVENT_CTA_URL ) ) {
 		$track = cd_test_cta_track( 'mvl-advice', '', '', 'compact', $atts['context'] );
 		return '<div class="cd-cta-shell"><div class="cd-cta-compact">'
-			. '<p class="cd-cta-compact__eyebrow">Solvent Company Closure</p>'
-			. '<p class="cd-cta-compact__title">Thinking About a Members&rsquo; Voluntary Liquidation?</p>'
-			. '<p class="cd-cta-compact__body">An MVL is for companies that can pay their debts in full. '
-			. 'Speak to a licensed insolvency practitioner about whether the company qualifies and what '
-			. 'the process involves.</p>'
+			. '<p class="cd-cta-compact__eyebrow">Members&rsquo; Voluntary Liquidation</p>'
+			. '<p class="cd-cta-compact__title">Expert MVL Advice for Solvent Company Directors</p>'
+			. '<p class="cd-cta-compact__body">If your company has significant retained profits, an MVL '
+			. 'can be an efficient way to close the business and return funds to shareholders. Speak '
+			. 'directly with an experienced licensed insolvency practitioner about the process, costs '
+			. 'and whether an MVL is the right route for your company.</p>'
 			. '<a class="cd-cta-compact__btn" href="tel:' . esc_attr( CD_ADVICE_CTA_TEL ) . '"' . $track . '>'
-			. CD_ALT_CTA_BUTTON . '</a>'
+			. 'Speak to an MVL Specialist <span aria-hidden="true">&rarr;</span></a>'
 			. '<p class="cd-cta-compact__reassure"><span>Call 0800 074 6757</span>'
 			. '<span><strong>Confidential, and no obligation</strong></span></p>'
 			. '</div></div>';
