@@ -1,61 +1,7 @@
 {
-  "pushed": [
-    {
-      "path": "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
-      "id": 79322,
-      "bytes": 26417,
-      "url_fixes": 1
-    },
-    {
-      "path": "/director-protection-hub/",
-      "id": 77396,
-      "bytes": 42140,
-      "url_fixes": 0
-    },
-    {
-      "path": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
-      "id": 67438,
-      "bytes": 41156,
-      "url_fixes": 9
-    },
-    {
-      "path": "/closing-a-limited-company/",
-      "id": 65614,
-      "bytes": 64128,
-      "url_fixes": 0
-    },
-    {
-      "path": "/liquidation/creditors-voluntary-liquidation/",
-      "id": 7674,
-      "bytes": 47689,
-      "url_fixes": 0
-    },
-    {
-      "path": "/liquidation/what-happens-to-directors-in-liquidation/",
-      "id": 46222,
-      "bytes": 50398,
-      "url_fixes": 1
-    },
-    {
-      "path": "/winding-up-petitions/",
-      "id": 7687,
-      "bytes": 50420,
-      "url_fixes": 0
-    },
-    {
-      "path": "/liquidation/",
-      "id": 7669,
-      "bytes": 43476,
-      "url_fixes": 1
-    }
-  ],
-  "identical": 311,
-  "skipped": [
-    [
-      "/business-debt-advice/",
-      "id 26218 is 'business-debt-advice' on staging, 'business-debt-advice-archived-26218' on live"
-    ]
-  ],
+  "pushed": [],
+  "identical": 40,
+  "skipped": [],
   "failed": [],
-  "confirmed": true
+  "confirmed": false
 }
