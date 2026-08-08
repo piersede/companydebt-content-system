@@ -2,39 +2,39 @@
   "slug": "liquidation",
   "audited_at": "2026-08-08",
   "audited_by": "claude-opus-5",
-  "prose_sha": "36ce66a9139fe5e3cc6a9409616e0dc2fcb63b538b514dbdd541b8a68e31f7e8",
+  "prose_sha": "afdd1c1ed5796c77cc5ccea80037167bdf17660af769a797f96ccba3245d7871",
   "passes_since_baseline": {
-    "count": 7,
+    "count": 8,
     "baseline_ref": "file-creation",
-    "override_reason": "Preservation-first mandate; owner-directed defensive pass. Cell-length trim only.",
+    "override_reason": "Preservation-first mandate; the master brief bars a rebuild. This is the humanise stage applied to the corrected page, per runtime-packs/stages/humanise.md, not iterative style patching.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3706,
-      "you": 72,
-      "you_per_1k": 19.4,
-      "we": 23,
-      "we_per_1k": 6.2,
+      "words": 3771,
+      "you": 84,
+      "you_per_1k": 22.3,
+      "we": 21,
+      "we_per_1k": 5.6,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 103,
-      "cv": 0.458,
+      "paras": 108,
+      "cv": 0.454,
       "uniform": false
     },
-    "scene_proxy": 2
+    "scene_proxy": 3
   },
   "attested": {
-    "concrete_scenes": 5,
-    "evaluative_bite_lines": 4,
+    "concrete_scenes": 11,
+    "evaluative_bite_lines": 3,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Owner review pass. Six unsupported frequency claims (most/rarely/almost always) inherited from the earlier version replaced with option-and-consequence statements that make the same commercial point without inventing a rate. Opening softened to the At-a-Glance formulation: voluntary action keeps timing and IP choice, it does not settle the conduct question. Preference test, records wording, payment-risk wording and the strike-off sentence pulled back from absolutes. Voice deliberately quieter than the previous pass: the October/March calls and the bank ringing the home phone carry the scenes, and the bite now sits in restraint rather than frequency assertions. Reads as a practitioner being careful, the right register for a page this exposed.",
-    "stranger_read_report": null
+    "notes": "Full humanise pass per the stage pack, Part A/B/C. Owner flagged the opening as AI-shaped ('For most directors who land here, the abstract definition is not what matters'), which was meta-reference to the reader as page-visitor. Two stranger reads run. First said the reader would leave during four sentences of definition before anyone spoke to them like a person; fixed by trimming the definition to its extractable core and moving the recognition line up. Second flagged 'conduct question', 'Official Receiver' and the scope note; all three rewritten in plain words. Also removed three aphorism-label repeats, the 'Most directors reading this page' callout title, and the remaining outcome-rate claims in the FAQs and callouts that were the same class the owner had already had removed from the body. Scenes now carry the page: the letter on the table, the October call a fortnight after the accountant flagged the VAT return, the March call with a petition served, the loan from the father-in-law, the auctioneer, the bank ringing the home phone, telling the staff. Warmth at the top ('braced for a telling-off') and at the decision point ('you do not need the accounts tidied up before you make that call'), deliberately different lines to avoid a repeat device.",
+    "stranger_read_report": "editorial-os/stranger-reads/liquidation_2026-08-08T183132Z.md"
   },
   "verdict": "pass"
 }
