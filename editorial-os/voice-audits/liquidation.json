@@ -1,0 +1,40 @@
+{
+  "slug": "liquidation",
+  "audited_at": "2026-08-08",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "b749055bebe15f03dbb0d554f6ddf605890ecc54874d369290f151c9b93c3d87",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": "Preservation-first mandate: /liquidation/ is a first-page ranking asset for the head term and the 2026-08-08 master brief expressly forbids a rebuild or redraft. This pass is factual/legal correction only (15 items), not iterative style patching, so the redraft trigger does not apply.",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 3724,
+      "you": 76,
+      "you_per_1k": 20.4,
+      "we": 25,
+      "we_per_1k": 6.7,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 103,
+      "cv": 0.455,
+      "uniform": false
+    },
+    "scene_proxy": 2
+  },
+  "attested": {
+    "concrete_scenes": 7,
+    "evaluative_bite_lines": 5,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Read in full after correcting 15 legal/fee errors. Practitioner we intact (October vs March calls, cases we handle, the bank that financed the fit-out ringing the home phone, the supplier six months out of pocket). Warmth held at the decision point (keeps them up the night before). Bite retained and sharpened where corrections landed: 'What we will not tell you is that it covers the fee', 'worth twenty minutes of advice before you reserve a name', 'Both are payable; they are not alternatives'. Long corrected paragraphs split to 2-3 lines to hold density. No em dashes, no US consultant register, no invented casework.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}
