@@ -2,18 +2,18 @@
   "slug": "liquidation-deadlines-and-time-limits",
   "audited_at": "2026-08-08",
   "audited_by": "claude-opus-5",
-  "prose_sha": "e119b5a34244a804a173e0fab78539fc81513218ea5a0405765a3bccc9095a78",
+  "prose_sha": "bafbc0e977e3bc0983f6c8a94c796d865e47cdcd5befe7c7206bafdd65a364a1",
   "passes_since_baseline": {
-    "count": 1,
+    "count": 2,
     "baseline_ref": "file-creation",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 1932,
-      "you": 50,
-      "you_per_1k": 25.9,
+      "words": 1947,
+      "you": 48,
+      "you_per_1k": 24.7,
       "we": 13,
       "we_per_1k": 6.7,
       "i": 0,
@@ -21,8 +21,8 @@
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 47,
-      "cv": 0.287,
+      "paras": 48,
+      "cv": 0.281,
       "uniform": true
     },
     "scene_proxy": 1
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Correction pass, not a redraft: statement of affairs now reflects Official Receiver discretion and the 21 days running from the notice (s.131); final meeting replaced with final account and the fixed three-month tail (s.201); rule 6.14 three-business-day minimum and the s.85 Gazette notice added; Related Guides section added linking to the timeline authority. Full-page voice read done afterwards. Existing scenes preserved: bank freeze within hours of gazetting, creditors still gathering paperwork when the dividend is declared, 14 days passing while a director deals with staff and their own anxiety. Practitioner we is genuine throughout. One instance of the self-announcing honesty shape at the wrongful-trading close, left as a single use.",
+    "notes": "Second correction pass. Removed the incorrect 21-day petition service claim; the minimum gap is set by the rule 7.10 advertising window, which the next paragraph already states correctly. No voice changes. Scenes and practitioner voice unchanged from the previous audit.",
     "stranger_read_report": null
   },
   "verdict": "pass"

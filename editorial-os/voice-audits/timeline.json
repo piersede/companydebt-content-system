@@ -2,38 +2,38 @@
   "slug": "timeline",
   "audited_at": "2026-08-08",
   "audited_by": "claude-opus-5",
-  "prose_sha": "94090bf7a15f864e366e4a203c9f02d8851202d755dd5f11d589e4f46c9cc7b7",
+  "prose_sha": "3d613f1ac926fa17a61f960b3605e18bb975f9077646fc7214952889038e4cad",
   "passes_since_baseline": {
-    "count": 3,
+    "count": 4,
     "baseline_ref": "file-creation",
-    "override_reason": null,
+    "override_reason": "Targeted correction pass on prose written fresh this session, not accumulated redrafting; changes reduce prose and soften unsupported absolutes rather than layering new edits over old",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 1938,
-      "you": 38,
-      "you_per_1k": 19.6,
-      "we": 12,
-      "we_per_1k": 6.2,
+      "words": 1990,
+      "you": 31,
+      "you_per_1k": 15.6,
+      "we": 11,
+      "we_per_1k": 5.5,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 66,
-      "cv": 0.3,
-      "uniform": false
+      "paras": 64,
+      "cv": 0.275,
+      "uniform": true
     },
-    "scene_proxy": 3
+    "scene_proxy": 2
   },
   "attested": {
-    "concrete_scenes": 9,
+    "concrete_scenes": 7,
     "evaluative_bite_lines": 3,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full rewrite to the three-clock framework. Scenes: bank statement reconstruction, calls to the mobile stopping, shareholder house purchase, petition arriving while someone is on holiday plus the frozen wages run, the loan account found in month seven, transactions half forgotten, the van sold to a brother-in-law, directors calling 18 months on about a company still listed. Practitioner we carries the appointment range, the delay patterns and the involvement section. Persona warmth at the top (lying awake) and at the decision point (a different life from running a failing company). Asymmetrical lines: most winnable stage most often wasted; enter in a fortnight, close in two years; official data and a practitioner estimate are not the same kind of fact. Whole-page repetition scan run: reduced 'It is the' from 3 to 2 instances. No em dashes.",
+    "notes": "Editorial correction pass following review. Softened absolutes (creditor pressure stopping, tax as the cause, silence read as obstruction, involvement measured in weeks). Stopped converting historical government medians into forecasts. Rebuilt the summary table so CVL and MVL figures sit in an official-case-evidence column rather than being compared as like intervals. Corrected the petition timetable to the rule 7.10 advertising window after finding no 21-day service requirement exists. Aligned first-person voice with the advisory referral role. Trimmed the involvement section and the winding-up petition passage. Scenes retained: reconstructing nine months of bank statements, shareholders funding a house purchase, transactions half forgotten, the van sold to a brother-in-law, the loan account found in month seven, directors returning at eighteen months.",
     "stranger_read_report": null
   },
   "verdict": "pass"
