@@ -1,0 +1,40 @@
+{
+  "slug": "liquidating-a-company-with-no-assets-or-bank-account-uk",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "627601153236ae64f08a53b2f99a4f8460869717e6fed68f86d39614f7d7e283",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": null,
+    "redraft_now": true
+  },
+  "measured": {
+    "metrics": {
+      "words": 2071,
+      "you": 42,
+      "you_per_1k": 20.3,
+      "we": 10,
+      "we_per_1k": 4.8,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 56,
+      "cv": 0.289,
+      "uniform": true
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 1,
+    "evaluative_bite_lines": 5,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Full redraft from spec, not a patch. The page was under-humanised rather than over: a legal memo in note form, dense with bare section numbers, with almost no reader service. Opening manufactured-hook quote replaced with the actual insight, that the exposures following an insolvent company are personal and do not shrink with the company's bank balance. Every statute reference now carries its consequence. Removed as unsupported or wrong: a 60-80% disqualification probability attributed to a BBL audit programme (no such published figure exists), 'over 1,500 directors disqualified' replaced with the Insolvency Service's actual 2025-26 totals (1,153 disqualifications, 773 Covid-related), contribution orders of \u00a330k-500k+ called not unusual, 30-60p settlement figures stated twice as typical, and a claim that free diagnostic calls are mandated by s.388 IA 1986 and the 2005 regulations, which they are not. Corrected: the practical-steps list still said statement of affairs Form 4.19 within 7 days (now s.99 with the r.6.14 deadline), the redundancy maximum was \u00a321,000 (now \u00a3751 weekly cap, \u00a322,530 maximum, verified against gov.uk), and the CVL fee was \u00a34-7k against the current \u00a33,500 plus VAT. Added Related Guides. No invented casework: practitioner voice limited to what the practice actually does. One scene only, deliberately.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}
