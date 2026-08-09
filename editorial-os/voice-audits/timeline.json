@@ -2,38 +2,38 @@
   "slug": "timeline",
   "audited_at": "2026-08-09",
   "audited_by": "claude-opus-5",
-  "prose_sha": "5d1e3de91d98fefe7235b720b961299238dec24d8b7df9a89ed67f21d6d1ce14",
+  "prose_sha": "6a817a306d38c30ac4ce677e4eefffaf9484dfe17e062936833e6bb108865a93",
   "passes_since_baseline": {
-    "count": 7,
+    "count": 8,
     "baseline_ref": "file-creation",
-    "override_reason": "Regulated-status correction only; no voice or structural change",
+    "override_reason": "Reduction pass against the new over-humanising rule; removes material rather than layering new prose",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2285,
-      "you": 47,
-      "you_per_1k": 20.6,
-      "we": 15,
-      "we_per_1k": 6.6,
+      "words": 2280,
+      "you": 46,
+      "you_per_1k": 20.2,
+      "we": 12,
+      "we_per_1k": 5.3,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
       "paras": 68,
-      "cv": 0.282,
+      "cv": 0.278,
       "uniform": true
     },
     "scene_proxy": 2
   },
   "attested": {
-    "concrete_scenes": 4,
+    "concrete_scenes": 2,
     "evaluative_bite_lines": 5,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Corrects a regulated-status error I introduced earlier in the session. The page described Company Debt as an advisory firm that refers directors to licensed insolvency practitioners. Company Debt IS a licensed UK insolvency practice, so that wording misstates the firm's regulated status. Fixed in three places: the 10 to 21 day range is now across the cases we handle, the methodology attributes it to our own insolvency practitioners, and the disclosure says the practice advises and takes appointments rather than refers. Also restores 'in the cases we handle' on the delay section, which is accurate and earned rather than a claim needing support. No other prose changed.",
+    "notes": "Halving pass against the over-humanising rule. Removed nine manufactured devices, all invented specificity or filler: rebuilding nine months of bank statements, shareholders funding a house purchase, the loan account found in month seven, the van sold to a brother-in-law last spring, 'we have seen that happen more than once', 'somebody writing it down', 'the question behind the question', 'the single most effective thing', and a duplicate of the Companies-House-panic observation that already appears in its proper section. Replaced with material derived from facts already on the page rather than from claimed experience: that debt size barely affects appointment speed while missing records and disagreeing shareholders do; that most MVL money reaches shareholders long before the 338-day median has run; that a long case is not the same as a demanding one; that the options before a petition is issued are wider than after. Deliberate devices remaining are the sourced Insolvency Service judgement, the seven-day adverts warning, one practitioner observation about directors checking Companies House at eighteen months, and the undisclosed-loan-account insight. Scene count deliberately low: the two remaining are genuine, and the old three-per-thousand quota has been removed from the pack as the cause of the invention.",
     "stranger_read_report": null
   },
   "verdict": "pass"
