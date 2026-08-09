@@ -1,39 +1,39 @@
 {
   "slug": "liquidation",
-  "audited_at": "2026-08-08",
+  "audited_at": "2026-08-09",
   "audited_by": "claude-opus-5",
-  "prose_sha": "afdd1c1ed5796c77cc5ccea80037167bdf17660af769a797f96ccba3245d7871",
+  "prose_sha": "07402241a1c1fc4841f4e205ed889771219eb43f926027149c9561e6e48bfdfc",
   "passes_since_baseline": {
-    "count": 8,
+    "count": 9,
     "baseline_ref": "file-creation",
-    "override_reason": "Preservation-first mandate; the master brief bars a rebuild. This is the humanise stage applied to the corrected page, per runtime-packs/stages/humanise.md, not iterative style patching.",
+    "override_reason": "Preservation-first mandate; master brief bars a rebuild. Part D of the humanise pack applied to the corrected page.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3771,
-      "you": 84,
-      "you_per_1k": 22.3,
-      "we": 21,
-      "we_per_1k": 5.6,
+      "words": 4031,
+      "you": 91,
+      "you_per_1k": 22.6,
+      "we": 22,
+      "we_per_1k": 5.5,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 108,
-      "cv": 0.454,
+      "paras": 124,
+      "cv": 0.401,
       "uniform": false
     },
     "scene_proxy": 3
   },
   "attested": {
     "concrete_scenes": 11,
-    "evaluative_bite_lines": 3,
+    "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full humanise pass per the stage pack, Part A/B/C. Owner flagged the opening as AI-shaped ('For most directors who land here, the abstract definition is not what matters'), which was meta-reference to the reader as page-visitor. Two stranger reads run. First said the reader would leave during four sentences of definition before anyone spoke to them like a person; fixed by trimming the definition to its extractable core and moving the recognition line up. Second flagged 'conduct question', 'Official Receiver' and the scope note; all three rewritten in plain words. Also removed three aphorism-label repeats, the 'Most directors reading this page' callout title, and the remaining outcome-rate claims in the FAQs and callouts that were the same class the owner had already had removed from the body. Scenes now carry the page: the letter on the table, the October call a fortnight after the accountant flagged the VAT return, the March call with a petition served, the loan from the father-in-law, the auctioneer, the bank ringing the home phone, telling the staff. Warmth at the top ('braced for a telling-off') and at the decision point ('you do not need the accounts tidied up before you make that call'), deliberately different lines to avoid a repeat device.",
+    "notes": "Part D (Which?-style register) applied. The previous pass satisfied Parts A and C but described without judging, which is the Part D failure. Changes: the cost section now takes a view instead of listing charges. We checked the Fees Order on 8 August and state the consequence: a compulsory liquidation carries the 6,000 administration fee AND the 7,200 general fee, both payable, so 13,200 leaves the estate before a creditor sees anything, plus 15% of realisations, against 4,000 to 5,000 for a CVL. The arithmetic is named as not close. Hanging figures now carry consequences: the 800 preferential wage limit (the excess ranks unsecured and will not come back), the 15% realisations fee (the better the assets the more it bites), 2 to 15 years disqualification (published, searchable by your bank, and longer than most business plans). Strike-off gets the sceptical treatment a director actually needs: 13 pounds against 4,000 does not look like a decision, which is why it catches people out, and the 13 buys a filing not an outcome. Market scepticism sharpened on the debt-write-off cold callers: treat the language as marketing, they are selling a feeling rather than an outcome. Long paragraphs then split to the 150-250 target per Part B sequence, humanise first, split second. Opening materially unchanged since the recorded stranger read.",
     "stranger_read_report": "editorial-os/stranger-reads/liquidation_2026-08-08T183132Z.md"
   },
   "verdict": "pass"
