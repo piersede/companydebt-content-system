@@ -1,0 +1,40 @@
+{
+  "slug": "what-is-a-creditor",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "08d810567c47849e672b5849d1f671a9ad5283d11f71babd4cc871cea042df91",
+  "passes_since_baseline": {
+    "count": 5,
+    "baseline_ref": "file-creation",
+    "override_reason": "Light correction pass; one timing figure, three unexpanded citations and reader address in the FAQ",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 1178,
+      "you": 13,
+      "you_per_1k": 11.0,
+      "we": 6,
+      "we_per_1k": 5.1,
+      "i": 2,
+      "i_per_1k": 1.7
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 32,
+      "cv": 0.452,
+      "uniform": false
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 1,
+    "evaluative_bite_lines": 3,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Read in full. A reference page rather than an advice page, and it reads correctly as one: precise on the creditor hierarchy, set-off and proof of debt, without manufactured colour. Nothing to strip. Corrections: distribution timing was 12 to 18 months, now 6 to 12 months from appointment to match the cluster; the Sequana citation carried three unexpanded abbreviations in one line, now named as the Supreme Court's 2022 decision, which is what a reader needs. The FAQ ran over 200 words without addressing the reader at all, so two answers now speak to the creditor directly, which is who is reading them. One over-long paragraph split. Related Guides added. Scene count is 1 and that is right for this page: inventing scenes for a definitional reference would be the failure the skill warns about.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

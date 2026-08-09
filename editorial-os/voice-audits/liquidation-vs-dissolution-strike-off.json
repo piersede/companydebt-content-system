@@ -1,0 +1,40 @@
+{
+  "slug": "liquidation-vs-dissolution-strike-off",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "6a1dbbe572ca86e50b2e25c3bf1deaa34a2fc833f8d1b97b70b242f10b0a4825",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": "Factual correction pass, not accumulated styling; five wrong figures fixed and one invented anecdote removed, prose otherwise unchanged",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 1593,
+      "you": 47,
+      "you_per_1k": 29.5,
+      "we": 8,
+      "we_per_1k": 5.0,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 42,
+      "cv": 0.333,
+      "uniform": false
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 2,
+    "evaluative_bite_lines": 4,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Correction pass with light voice work. Five factual errors fixed: Business Asset Disposal Relief given as 10% when it has been 18% since 6 April 2026; the CVL fee 'from around \u00a35,000' against the current \u00a33,500 plus VAT, in both the body and the comparison table; the strike-off fee given as \u00a310 in one paragraph and \u00a313 in another; CVL timing 12 to 18 months where the cluster now separates appointment, active work and dissolution; and the comparison table calling director investigation 'discretionary in voluntary' when a conduct report is filed on every director of every insolvent liquidation. Voice: removed an invented anecdote about directors spending \u00a330,000 defending a restoration application that a \u00a35,000 CVL would have resolved, which was fabricated casework built on the wrong fee. Removed a duplicated 'we see this' construction in the opening and a meta-reference paragraph describing what the page does. Added Related Guides. Remaining practitioner observations describe a general pattern rather than specific cases.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

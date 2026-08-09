@@ -1,0 +1,40 @@
+{
+  "slug": "limited-company-bankruptcy",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "9a4416c1807eb46a0c371b086c999a0ab1ad59136553d4a425c7a2e50b7e9f3b",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": "Light correction pass; one wrong timing figure and a repeated emphasis device",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 846,
+      "you": 28,
+      "you_per_1k": 33.1,
+      "we": 9,
+      "we_per_1k": 10.6,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 24,
+      "cv": 0.383,
+      "uniform": false
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 1,
+    "evaluative_bite_lines": 4,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Read in full. The page does one job well: correcting a vocabulary error that leads directors to the wrong advice, then showing that personal exposure comes from guarantees, loan accounts and conduct rather than from the company's insolvency. That is genuine practitioner material and is left intact. Corrections: the comparison table gave CVL duration as 12 to 18 months, now split into the liquidator's work and the statutory wait to match the cluster; 'PLN' was used without expansion. Voice: 'We stress' appeared twice within thirty lines as emphasis standing in for information, so both are replaced with the substance, and a meta-reference to what the page focuses on is now a plain hand-off. The you-density sits above the advisory ceiling at 33 per 1,000, which suits a page whose whole subject is the reader's personal position rather than the company's. Related Guides added.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

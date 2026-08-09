@@ -1,0 +1,40 @@
+{
+  "slug": "should-i-close-my-company-or-try-to-save-it",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "d12dbb332b9b499e3c13ce7ccc0a6888e4574c366322c228f83b3b475a8fe71d",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": "Light correction pass; one wrong fee and two decorative lines",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 1553,
+      "you": 46,
+      "you_per_1k": 29.6,
+      "we": 9,
+      "we_per_1k": 5.8,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 46,
+      "cv": 0.397,
+      "uniform": false
+    },
+    "scene_proxy": 1
+  },
+  "attested": {
+    "concrete_scenes": 2,
+    "evaluative_bite_lines": 5,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Read in full. This page is in good shape: the two five-signal sections are genuine practitioner material of the kind the skill asks for, built on what makes a business saveable rather than on feeling. Left intact. Corrections: the comparison table gave the CVL cost as 'from \u00a35k' against the current \u00a33,500 plus VAT, and the CVL timing has been aligned with the cluster. Voice: removed 'more manageable than it feels at 2am', which is borrowed empathy that would sit unchanged on any debt page, and a sentimental line about respecting directors who fight and those who know when the fight is over, replaced with the practical point that continuing past that stage changes your exposure rather than the outcome. Related Guides added.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

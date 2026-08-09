@@ -1,0 +1,40 @@
+{
+  "slug": "liquidating-a-limited-liability-partnership",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "5969319454d47377cbce20fa0ae6d8818c9d04233016905e82174a14a15c9778",
+  "passes_since_baseline": {
+    "count": 5,
+    "baseline_ref": "file-creation",
+    "override_reason": "Same correction pass; a second instance of the wrong CVL fee was missed on the first sweep and is now fixed",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 2313,
+      "you": 68,
+      "you_per_1k": 29.4,
+      "we": 12,
+      "we_per_1k": 5.2,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 59,
+      "cv": 0.295,
+      "uniform": true
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 1,
+    "evaluative_bite_lines": 4,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Re-recorded after catching a second instance of the wrong CVL fee, 'starts from around \u00a35,000', in the costs section. Both are now \u00a33,500 plus VAT with disbursements. Otherwise as previously recorded: removed the invented anecdote about a negligence claim crystallising on a Thursday afternoon before the partners finished their coffee, the meta-reference opening, and a repetitive emphasis pair; corrected the CVL duration to match the cluster; added Related Guides and reader address in the costs section.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}
