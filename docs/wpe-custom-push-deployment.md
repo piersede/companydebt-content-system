@@ -61,6 +61,47 @@ staging lacks. **Pull production to staging first**, or the push destroys it:
 python scripts/sync_staging_from_live.py --confirm
 ```
 
+## Two traps in the direction check itself (found 2026-08-09)
+
+The check below is the guard the whole procedure rests on. It has two blind
+spots, both of which report "safe" when the push is not.
+
+### 1. It compares a snapshot, not staging
+
+`push_site_content_live.py` does not read staging. It reads `content_cache.json`,
+which only changes when `build_content_cache.py` is run. On 2026-08-09 that file
+was two days stale, and the check reported **all 319 pages identical, nothing to
+push** while live was in fact 202 pages behind. Nothing errored.
+
+**Always rebuild the cache first, or the answer is meaningless:**
+
+```bash
+python scripts/build_content_cache.py          # refresh staging snapshot
+python scripts/push_site_content_live.py --changed-only   # then compare
+```
+
+### 2. "live is newer" only catches one narrow case
+
+`classify()` reports `live-newer` only when the two sides are identical *once the
+CTA arrow is normalised away*. Any page where live carries other work staging
+lacks is classed `staging-differs` and queued for push. On 2026-08-09 the check
+reported `skipped: 0` — no page held back — while a sample of 36 of the 202
+queued pages showed **35 would have lost content**: 185 heading anchor ids and
+198 `cd-cta` blocks, including the "30-Second Insolvency Check" call to action
+pointing at `/insolvency-calculator/`.
+
+So `skipped: 0` does **not** mean live is safe. Check the sizes: a page where
+staging is thousands of bytes smaller than live, at 86-95% similarity, is a page
+where live holds work staging never received. Diff one before trusting the run.
+
+### The consequence for a content-only sweep
+
+When the change is wording only, neither a table push nor a whole-page content
+push is the right tool: both replace the page wholesale and take the live-only
+work with it. Either pull production to staging first, re-apply the change, and
+then push — or apply the wording change to live surgically, replacing only the
+affected sentences and leaving the rest of each page alone.
+
 ## The file-system limitation
 
 A file-system copy is destructive and WP Engine offers no per-file exclusions:
