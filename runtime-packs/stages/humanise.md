@@ -106,6 +106,51 @@ content writer. The reader should feel there is a knowledgeable person behind
 every sentence who has examined the subject, noticed things, questioned claims
 and reached a view.
 
+### The governing rule: human through insight, not decoration
+
+Read this before the eight points below, because it overrides all of them.
+Every one of the eight can be satisfied by decoration, and decoration is the
+failure this rule exists to stop.
+
+**Do not confuse "human" with conversational or emotional writing.** Before
+writing a paragraph, identify the specific observation an experienced
+practitioner would make that a generic writer would miss. Build the paragraph
+around that observation. If there isn't one, the paragraph is padding, and no
+amount of rhythm or warmth will fix it.
+
+**Ban the surface techniques that read as trying to sound human:**
+
+- manufactured hooks: "Ask X and you'll hear...", "There are two kinds of...",
+  provocative opener followed by a neat reveal
+- neat reversals and clever final clauses: "and nobody tells you which one you
+  asked", "not a participant, a witness"
+- dramatic one-line paragraphs used for effect rather than to carry a fact
+- borrowed empathy: "the thing keeping you awake at night", "we know this is
+  stressful". Generic emotional phrasing that would sit unchanged on a debt,
+  legal, medical or divorce page is not warmth, it is filler
+- the pattern provocative statement, then neat explanation, then clever closer.
+  This is the single most recognisable AI paragraph shape
+
+**An expert usually writes more plainly, because the interesting thing is what
+they know.** Prefer "There are actually two different timelines here" over "You
+may hear anything from ten days to five years, and both answers are right." The
+first sounds like somebody explaining something. The second sounds like somebody
+writing content.
+
+**Do not add empathy. Demonstrate understanding instead**, by identifying what
+the reader is actually trying to find out. On the liquidation timing page the
+useful observation is not that directors are worried. It is that when a director
+asks how long liquidation takes, they usually mean "when am I no longer
+responsible for dealing with this?", while every published duration figure
+describes the much longer legal process. Naming that is more empathetic than any
+sentence about lying awake.
+
+**The test.** Every few paragraphs the reader should think: that is exactly what
+I was actually wondering. Remove any clever phrasing that does not add
+knowledge. If a sentence would survive being rewritten flatly, rewrite it
+flatly and see whether anything was lost. Usually only the writer loses
+something.
+
 1. **Have a point of view.** Do not present advantages and disadvantages
    symmetrically. Assess them. Say what matters, what does not, what is poor
    value, what is unusually good, what is misleading, and what you would
@@ -239,6 +284,13 @@ issues in the stranger-read report; that defeats the check.
   detail is concrete; the research is visible; the texture is uneven in the way
   human prose is. If a reader could not tell what the writer thinks, the pass
   is not done.
+- **Part D's governing rule is satisfied, checked separately and last.** Re-read
+  every paragraph asking: what does this know that a generic writer would not?
+  Then hunt the specific tells: manufactured hooks, neat reversals, clever
+  final clauses, dramatic one-line paragraphs, borrowed empathy. A page can
+  satisfy all eight Part D points and still fail here, and this is the failure
+  reviewers actually notice. Imitating human prose is the error; imitating
+  human thought is the target.
 - **Part C is satisfied and re-read for:** >= 3 concrete scenes per 1,000 words
   (one per major section), earned practitioner "we" carrying the driver and
   distinctive sections, persona warmth near the top and at the decision point,

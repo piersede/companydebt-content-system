@@ -2,38 +2,38 @@
   "slug": "timeline",
   "audited_at": "2026-08-09",
   "audited_by": "claude-opus-5",
-  "prose_sha": "3ef52e1f61d87d25007014f7f3d96e664dbe39f32f2e771992686eb98b95eade",
+  "prose_sha": "051d59284a76fa96618ea404b19cb134dda1a25190812f85ad7c57f07b26e479",
   "passes_since_baseline": {
-    "count": 5,
+    "count": 6,
     "baseline_ref": "file-creation",
-    "override_reason": null,
-    "redraft_now": true
+    "override_reason": "Voice-only pass against the new governing rule in Part D; no facts, structure or citations touched",
+    "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2240,
-      "you": 56,
-      "you_per_1k": 25.0,
-      "we": 18,
-      "we_per_1k": 8.0,
+      "words": 2290,
+      "you": 47,
+      "you_per_1k": 20.5,
+      "we": 14,
+      "we_per_1k": 6.1,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 70,
-      "cv": 0.283,
+      "paras": 68,
+      "cv": 0.282,
       "uniform": true
     },
-    "scene_proxy": 4
+    "scene_proxy": 2
   },
   "attested": {
-    "concrete_scenes": 8,
+    "concrete_scenes": 7,
     "evaluative_bite_lines": 5,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full redraft from spec against the new Part D (Which?-style register), not a patch on the previous version. The gap it fixes: the page was accurate and evidence-controlled but had no point of view. Now it takes one, sourced rather than asserted: the Insolvency Service's own researchers concluded the CVL process does not seem efficient on the time measure, and the report's own comparisons (administration's initial 12 months, Australian procedures at 5 months to a year) are used to frame the 712-day median. Scepticism aimed at the market as well as at rival pages: the seven-day liquidation adverts are called out as measuring only the first clock, and the stale final-meeting wording is named as still circulating. Consequences drawn rather than left hanging: what a two-year case actually costs the reader, including that they are not generally barred from starting again. Work shown: we checked, we looked and found no compulsory median, we compared our own guides and corrected the ones that disagreed. British texture restored sparingly (sadly, unsurprisingly, one rhetorical question) after the previous correction pass stripped it. Scenes: rebuilding nine months of bank statements, the day-eight question, the house purchase, transactions half forgotten, the van sold to a brother-in-law, the loan account found in month seven, directors returning at eighteen months, checking Companies House assuming something is wrong. Whole-page repetition scan run: reduced 'honest' from 3 to 1 and varied the 'This is the' construction. No em dashes. Practitioner voice kept inside the advisory referral role throughout.",
+    "notes": "Applied the new governing rule: human through insight, not decoration. The previous version imitated human prose rather than human thought. Opening rebuilt on Piers's model, leading with the observation that the question contains two different timelines and directors nearly always mean the first. Removed throughout: the manufactured hook, the provocative-statement-then-clever-closer shape, borrowed empathy (the lying-awake line), the 'not a participant, a witness' reversal, decorative adverbs (sadly, unsurprisingly), and clever closers such as 'neither waits politely for it to finish' and 'the mistake this page exists to stop you making'. Each replaced with the observation it was dressing up: why the two table columns are not comparable, what actually decides where you land in the 10-21 day range, that adverts quote the first stage only, that an undisclosed loan account changes how the liquidator reads the rest of the file, that the eighteen-month panic is the three-month tail nobody mentioned. Two short paragraphs kept because each carries a fact rather than effect. Four remaining 'X, not Y' constructions all distinguish two real things and are the page's actual subject. Checked: two question marks, both headings. No em dashes.",
     "stranger_read_report": null
   },
   "verdict": "pass"
