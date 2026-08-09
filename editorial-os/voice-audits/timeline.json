@@ -1,39 +1,39 @@
 {
   "slug": "timeline",
-  "audited_at": "2026-08-08",
+  "audited_at": "2026-08-09",
   "audited_by": "claude-opus-5",
-  "prose_sha": "3d613f1ac926fa17a61f960b3605e18bb975f9077646fc7214952889038e4cad",
+  "prose_sha": "3ef52e1f61d87d25007014f7f3d96e664dbe39f32f2e771992686eb98b95eade",
   "passes_since_baseline": {
-    "count": 4,
+    "count": 5,
     "baseline_ref": "file-creation",
-    "override_reason": "Targeted correction pass on prose written fresh this session, not accumulated redrafting; changes reduce prose and soften unsupported absolutes rather than layering new edits over old",
-    "redraft_now": false
+    "override_reason": null,
+    "redraft_now": true
   },
   "measured": {
     "metrics": {
-      "words": 1990,
-      "you": 31,
-      "you_per_1k": 15.6,
-      "we": 11,
-      "we_per_1k": 5.5,
+      "words": 2240,
+      "you": 56,
+      "you_per_1k": 25.0,
+      "we": 18,
+      "we_per_1k": 8.0,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 64,
-      "cv": 0.275,
+      "paras": 70,
+      "cv": 0.283,
       "uniform": true
     },
-    "scene_proxy": 2
+    "scene_proxy": 4
   },
   "attested": {
-    "concrete_scenes": 7,
-    "evaluative_bite_lines": 3,
+    "concrete_scenes": 8,
+    "evaluative_bite_lines": 5,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Editorial correction pass following review. Softened absolutes (creditor pressure stopping, tax as the cause, silence read as obstruction, involvement measured in weeks). Stopped converting historical government medians into forecasts. Rebuilt the summary table so CVL and MVL figures sit in an official-case-evidence column rather than being compared as like intervals. Corrected the petition timetable to the rule 7.10 advertising window after finding no 21-day service requirement exists. Aligned first-person voice with the advisory referral role. Trimmed the involvement section and the winding-up petition passage. Scenes retained: reconstructing nine months of bank statements, shareholders funding a house purchase, transactions half forgotten, the van sold to a brother-in-law, the loan account found in month seven, directors returning at eighteen months.",
+    "notes": "Full redraft from spec against the new Part D (Which?-style register), not a patch on the previous version. The gap it fixes: the page was accurate and evidence-controlled but had no point of view. Now it takes one, sourced rather than asserted: the Insolvency Service's own researchers concluded the CVL process does not seem efficient on the time measure, and the report's own comparisons (administration's initial 12 months, Australian procedures at 5 months to a year) are used to frame the 712-day median. Scepticism aimed at the market as well as at rival pages: the seven-day liquidation adverts are called out as measuring only the first clock, and the stale final-meeting wording is named as still circulating. Consequences drawn rather than left hanging: what a two-year case actually costs the reader, including that they are not generally barred from starting again. Work shown: we checked, we looked and found no compulsory median, we compared our own guides and corrected the ones that disagreed. British texture restored sparingly (sadly, unsurprisingly, one rhetorical question) after the previous correction pass stripped it. Scenes: rebuilding nine months of bank statements, the day-eight question, the house purchase, transactions half forgotten, the van sold to a brother-in-law, the loan account found in month seven, directors returning at eighteen months, checking Companies House assuming something is wrong. Whole-page repetition scan run: reduced 'honest' from 3 to 1 and varied the 'This is the' construction. No em dashes. Practitioner voice kept inside the advisory referral role throughout.",
     "stranger_read_report": null
   },
   "verdict": "pass"
