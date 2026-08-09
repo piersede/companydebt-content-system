@@ -2,103 +2,151 @@
   "_comment": "Single source of truth for statutory fees and caps cited across the site. Every figure here is verified against a primary source. If a fee changes, change it HERE and re-run scripts/check_statutory_fees.py to find every page that still carries the old value. Do not hard-code these numbers into new pages without adding them here first.",
   "_last_verified": "2026-07-14",
   "_verified_by": "Claude Code, against gov.uk / legislation.gov.uk primary sources",
-
   "winding_up_petition_court_fee": {
     "value": "£352",
-    "superseded": ["£343", "£302", "£280"],
+    "superseded": [
+      "£343",
+      "£302",
+      "£280"
+    ],
     "description": "Court fee for entering a winding-up petition (companies only).",
     "source_url": "https://www.gov.uk/government/publications/fees-in-the-civil-and-family-courts-main-fees-ex50/civil-court-fees-ex50",
     "source_name": "HMCTS civil court fees (EX50)",
     "source_updated": "2026-07-13"
   },
-
   "winding_up_petition_deposit": {
     "value": "£2,600",
-    "superseded": [],
-    "description": "Petition deposit payable to the Insolvency Service on a winding-up petition (other than under s.124A).",
+    "superseded": [
+      "£2,400",
+      "£1,600"
+    ],
+    "description": "Petition deposit payable to the Insolvency Service on a winding-up petition (other than under s.124A). Superseded list added 2026-08-09 after £2,400 was found on a live page; the entry previously had no superseded values, so no amount of drift was detectable.",
     "source_url": "https://www.legislation.gov.uk/uksi/2016/692",
     "source_name": "Insolvency Proceedings (Fees) Order 2016, as amended 2024",
     "source_updated": "2025-01-09"
   },
-
   "strike_off_ds01_online": {
     "value": "£13",
-    "superseded": ["£10", "£33"],
+    "superseded": [
+      "£10",
+      "£33"
+    ],
     "description": "Companies House fee to apply for voluntary strike-off (DS01) online.",
     "source_url": "https://www.gov.uk/government/publications/companies-house-fees/companies-house-fees",
     "source_name": "Companies House fees",
     "source_updated": "2026-07-02"
   },
-
   "strike_off_ds01_paper": {
     "value": "£18",
-    "superseded": ["£10", "£33"],
+    "superseded": [
+      "£10",
+      "£33"
+    ],
     "description": "Companies House fee to apply for voluntary strike-off (DS01) by paper.",
     "source_url": "https://www.gov.uk/government/publications/companies-house-fees/companies-house-fees",
     "source_name": "Companies House fees",
     "source_updated": "2026-07-02"
   },
-
   "statutory_weekly_pay_cap": {
     "value": "£751",
-    "superseded": ["£719", "£700", "£643"],
+    "superseded": [
+      "£719",
+      "£700",
+      "£643"
+    ],
     "description": "Statutory weekly pay cap used for redundancy, arrears, notice and holiday pay claims. Effective 6 April 2026.",
     "source_url": "https://www.gov.uk/calculate-your-redundancy-pay",
     "source_name": "Employment Rights (Increase of Limits) Order 2026",
     "source_updated": "2026-04-06"
   },
-
   "statutory_redundancy_maximum": {
     "value": "£22,530",
-    "superseded": ["£21,570", "£19,290"],
+    "superseded": [
+      "£21,570",
+      "£19,290"
+    ],
     "description": "Maximum statutory redundancy payment (£751 weekly cap x 30 weeks).",
     "source_url": "https://www.gov.uk/calculate-your-redundancy-pay",
     "source_name": "Derived from the statutory weekly pay cap",
     "source_updated": "2026-04-06"
   },
-
   "_commercial_fees_comment": "NOT statutory. These are Company Debt's own prices, so they are not verifiable against gov.uk. They are here because they drifted just as badly: the CVL fee was published as £4,000-£6,000 on four pages and £4,000-£7,000 on another, and disbursements as both £500-£1,000 and £500-£1,500. Owner set the canonical values on 2026-07-14.",
-
   "cvl_practitioner_fee": {
     "value": "£3,500",
     "superseded": [],
-    "drift_patterns": ["£4,000\\s*(?:–|-|to)\\s*£7,000", "£4,000\\s*(?:–|-|to)\\s*£6,000", "£4[\\s-]*(?:–|-|to)?[\\s-]*£7\\s*k"],
-    "description": "Company Debt CVL practitioner fee, plus VAT, standard fixed fee for a straightforward case. Changed from a £4,000-£7,000 range to a flat £3,500 on 2026-07-15 (owner). Note: £4,000-£5,000 is NOT a drift pattern here - it is the current all-in figure (see cvl_all_in). Drift regex widened 2026-07-15 to also catch the '£4-£7k' shorthand range that appeared on some pages.",
+    "drift_patterns": [
+      "£4,000\\s*(?:–|-|to)\\s*£7,000",
+      "£4,000\\s*(?:–|-|to)\\s*£6,000",
+      "£4[\\s-]*(?:–|-|to)?[\\s-]*£7\\s*k",
+      "£4[\\s-]*(?:–|-|to)[\\s-]*7\\s*k"
+    ],
+    "description": "Company Debt CVL practitioner fee, plus VAT, standard fixed fee for a straightforward case. Changed from a £4,000-£7,000 range to a flat £3,500 on 2026-07-15 (owner). Note: £4,000-£5,000 is NOT a drift pattern here - it is the current all-in figure (see cvl_all_in). Drift regex widened 2026-07-15 to also catch the '£4-£7k' shorthand range that appeared on some pages. Widened 2026-08-09: the flat-fee change left bare-figure survivors ('from around £5,000', '£5,000 or more', '£5,000 upfront', 'starts from around £5,000') on five pages that the range-only patterns could not see, plus a '£4-7k' shorthand with no second currency symbol. Bare £5,000 is gated on CVL context and excluded near CVA or administration, where it is a legitimate figure.",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
-    "source_updated": "2026-07-15"
+    "source_updated": "2026-07-15",
+    "drift_patterns_in_context": [
+      "from\\s+(?:around\\s+|about\\s+)?£5,000",
+      "£5,000\\s+(?:or\\s+more|upfront|upward|plus)",
+      "starts?\\s+from\\s+(?:around\\s+)?£5,000",
+      "costs?\\s+£5,000",
+      "from\\s+£5k\\b",
+      "£5k\\b(?=[^.]{0,40}(?:CVL|liquidat))"
+    ],
+    "context_required": "CVL|creditors'?\\s*voluntary|liquidat",
+    "context_forbidden": "CVA|company voluntary arrangement|administration|administrator"
   },
-
   "cvl_disbursements": {
     "value": "£500 to £1,500",
     "superseded": [],
-    "drift_patterns": ["£500\\s*(?:–|-|to)\\s*£1,000(?=\\s*(?:in\\s*)?disbursement)"],
+    "drift_patterns": [
+      "£500\\s*(?:–|-|to)\\s*£1,000(?=\\s*(?:in\\s*)?disbursement)"
+    ],
     "description": "Bond, Gazette notices, Companies House filing, statutory mailings.",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
     "source_updated": "2026-07-14"
   },
-
   "cvl_all_in": {
     "value": "£4,000 to £5,000",
     "superseded": [],
-    "drift_patterns": ["£5,000\\s*(?:–|-|to|and)\\s*£9,000"],
+    "drift_patterns": [
+      "£5,000\\s*(?:–|-|to|and)\\s*£9,000"
+    ],
     "description": "Derived: £3,500 fixed fee + £500-£1,500 disbursements. Was £5,000-£9,000 when the fee was a £4,000-£7,000 range.",
     "source_url": null,
     "source_name": "Derived from Company Debt pricing",
     "source_updated": "2026-07-15"
   },
-
   "mvl_practitioner_fee": {
     "value": "£3,500",
     "superseded": [],
-    "drift_patterns": ["MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "£2,000\\s*(?:–|-|to)\\s*£4,000", "MVL[^.<>]{0,40}£3,000\\s*(?:–|-|to)\\s*£5,000", "£3,000\\s*(?:–|-|to)\\s*£5,000[^.<>]{0,40}(?:MVL|plus VAT)", "MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000", "MVL[^.<>]{0,25}£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k", "£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k[^.<>]{0,25}(?:MVL|IP fee)"],
+    "drift_patterns": [
+      "MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000",
+      "£2,000\\s*(?:–|-|to)\\s*£4,000",
+      "MVL[^.<>]{0,40}£3,000\\s*(?:–|-|to)\\s*£5,000",
+      "£3,000\\s*(?:–|-|to)\\s*£5,000[^.<>]{0,40}(?:MVL|plus VAT)",
+      "MVL[^.<>]{0,40}£2,000\\s*(?:–|-|to)\\s*£5,000",
+      "MVL[^.<>]{0,25}£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k",
+      "£2[\\s-]*(?:–|-|to)?[\\s-]*£5\\s*k[^.<>]{0,25}(?:MVL|IP fee)"
+    ],
     "description": "Company Debt MVL practitioner fee, plus VAT, standard fixed fee for a solvent company. Changed from a £2,000-£4,000 range to a flat £3,500 on 2026-07-15 (owner). Drift regex widened 2026-07-15: several MVL pages carried the fee as a £3,000-£5,000, £2,000-£5,000 or '£2-£5k' range, which the original £2,000-£4,000 pattern did not catch, so check_statutory_fees.py let them through. The new variants are deliberately gated to MVL/IP-fee context, because a bare £2,000-£5,000 or £3,000-£5,000 range also legitimately describes PGI premiums, pre-pack evaluator fees and legal-challenge costs - a context-free pattern flagged those as false positives, and a guard that cries wolf gets ignored.",
     "source_url": null,
     "source_name": "Company Debt pricing (owner-confirmed)",
     "source_updated": "2026-07-15"
   },
-
+  "badr_rate": {
+    "value": "18%",
+    "superseded": [],
+    "drift_patterns_in_context": [
+      "\\b10\\s*%",
+      "\\b14\\s*%"
+    ],
+    "context_required": "business asset disposal|BADR|entrepreneurs'? relief",
+    "description": "Business Asset Disposal Relief CGT rate on qualifying gains within the £1m lifetime limit. 10% until 5 April 2025, 14% for 2025/26, 18% for disposals on or after 6 April 2026. Added 2026-08-09: three pages still said 10%, understating the tax by eight points on exactly the MVL-versus-dissolution decision they exist to inform, while two other pages already said 18%. A partial migration nothing was checking. Historical framing ('risen from 14%', 'before that, 10%') is allowed by the HISTORICAL guard in the checker.",
+    "source_url": "https://www.gov.uk/business-asset-disposal-relief",
+    "source_name": "GOV.UK, Business Asset Disposal Relief",
+    "source_updated": "2026-08-09"
+  },
   "preferential_wages_limit": {
     "value": "£800",
     "superseded": [],
@@ -107,7 +155,6 @@
     "source_name": "Insolvency Act 1986, Schedule 6",
     "source_updated": "2026-07-14"
   },
-
   "prohibited_name_period_years": {
     "value": "5",
     "superseded": [],
@@ -116,7 +163,6 @@
     "source_name": "Insolvency Act 1986, s.216",
     "source_updated": "2026-07-17"
   },
-
   "disqualification_range_years": {
     "value": "2 to 15",
     "superseded": [],
@@ -125,7 +171,6 @@
     "source_name": "Company Directors Disqualification Act 1986, s.6",
     "source_updated": "2026-07-17"
   },
-
   "official_cvl_count_2025": {
     "value": "18,525",
     "total_registered_insolvencies_2025": "23,938",
@@ -135,7 +180,6 @@
     "source_name": "The Insolvency Service, Company Insolvency Statistics",
     "source_updated": "2026-07-17"
   },
-
   "creditor_decision_and_filing_deadlines": {
     "value": "15 days (Companies House) / 14 days (Gazette)",
     "superseded": [],
@@ -146,7 +190,6 @@
     "source_name": "Insolvency (England and Wales) Rules 2016",
     "source_updated": "2026-07-17"
   },
-
   "_banned_claims": {
     "_comment": "Figures that must NOT appear anywhere on the site. Each was traced to an unverifiable origin. scripts/check_statutory_fees.py fails any page containing them.",
     "director_redundancy_average": {

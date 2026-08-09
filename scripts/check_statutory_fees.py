@@ -48,7 +48,12 @@ SCALE = re.compile(r"^\s*(million|billion|m\b|bn\b|k\b)", re.I)
 # gets ignored. Only flag a superseded value asserted as the CURRENT figure.
 HISTORICAL = re.compile(
     r"previous|up from|was\s|prior|until|last year|earlier|former|"
-    r"20\d\d/\d\d|in 20\d\d|replaced|superseded|before 6 April",
+    r"20\d\d/\d\d|in 20\d\d|replaced|superseded|before 6 April|"
+    # Rate changes get narrated as a progression ("18%, having risen from 14%
+    # and, before that, 10%"). Without these the guard flags the very sentence
+    # that documents the change correctly.
+    r"risen from|rose from|increased from|reduced from|down from|before that|"
+    r"used to be|historically|no longer",
     re.I,
 )
 
@@ -60,6 +65,16 @@ def _is_false_positive(text: str, m: re.Match[str]) -> bool:
     # Look behind and ahead for historical framing in the same sentence-ish window.
     window = text[max(0, m.start() - 110): m.end() + 60]
     return bool(HISTORICAL.search(window))
+
+
+def _rel(path: pathlib.Path) -> str:
+    # --path can point outside the repo (a scratch directory of test fixtures,
+    # a checkout elsewhere). relative_to raises there, which crashed the whole
+    # scan rather than reporting a finding.
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def load_fees() -> dict:
@@ -104,7 +119,7 @@ def scan_file(path: pathlib.Path, fees: dict) -> list[dict]:
                 if "strike_off" in key:
                     expected = "£13 online / £18 paper"
                 hits.append({
-                    "file": str(path.relative_to(ROOT)),
+                    "file": _rel(path),
                     "line": line,
                     "type": "superseded_fee",
                     "key": key,
@@ -116,23 +131,45 @@ def scan_file(path: pathlib.Path, fees: dict) -> list[dict]:
     # Commercial (non-statutory) fees drift too. The CVL fee was published as
     # £4,000-£6,000 on four pages and £4,000-£7,000 on a fifth. These are regex
     # because the drift is a range, not a single token.
+    #
+    # Two tiers, because the drift is not always a distinctive range. The CVL fee
+    # also appeared as a bare "from around £5,000", "£5,000 or more" and "£5,000
+    # upfront", and a bare £5,000 is a perfectly legitimate figure for a CVA or an
+    # administration. Tier 2 patterns therefore only fire when the surrounding text
+    # is talking about the procedure the fee belongs to, and not about a different
+    # one. Without that gate the check either misses the drift or cries wolf, and
+    # a guard that cries wolf gets switched off.
     for key, entry in fees.items():
         if key.startswith("_"):
             continue
-        for pat in entry.get("drift_patterns", []):
+        ctx_required = entry.get("context_required")
+        ctx_forbidden = entry.get("context_forbidden")
+        tiers = [(p, False) for p in entry.get("drift_patterns", [])]
+        tiers += [(p, True) for p in entry.get("drift_patterns_in_context", [])]
+
+        for pat, needs_ctx in tiers:
             for m in re.finditer(pat, text, re.I):
                 line = text.count("\n", 0, m.start()) + 1
                 if (line, key) in seen:
                     continue
+                ctx = text[max(0, m.start() - 120): m.end() + 100].replace("\n", " ")
+                if needs_ctx:
+                    if ctx_required and not re.search(ctx_required, ctx, re.I):
+                        continue
+                    if ctx_forbidden and re.search(ctx_forbidden, ctx, re.I):
+                        continue
+                # A superseded figure quoted as history is documentation, not drift.
+                if _is_false_positive(text, m):
+                    continue
                 seen.add((line, key))
                 hits.append({
-                    "file": str(path.relative_to(ROOT)),
+                    "file": _rel(path),
                     "line": line,
                     "type": "fee_drift",
                     "key": key,
                     "found": re.sub(r"<[^>]+>", "", m.group(0))[:40],
                     "expected": entry["value"],
-                    "context": text[max(0, m.start() - 80): m.end() + 60].replace("\n", " ").strip(),
+                    "context": ctx.strip(),
                 })
 
     banned = fees.get("_banned_claims", {})
@@ -161,7 +198,7 @@ def scan_file(path: pathlib.Path, fees: dict) -> list[dict]:
                     continue
                 banned_lines.add(line)
                 hits.append({
-                    "file": str(path.relative_to(ROOT)),
+                    "file": _rel(path),
                     "line": line,
                     "type": "banned_claim",
                     "key": bkey,
@@ -213,7 +250,7 @@ def main() -> int:
     for fname, hits in sorted(by_file.items()):
         print(f"  {fname}")
         for h in hits:
-            arrow = "->" if h["type"] == "superseded_fee" else "REMOVE:"
+            arrow = "REMOVE:" if h["type"] == "banned_claim" else "->"
             print(f"    L{h['line']:<5} [{h['type']}] {h['found']} {arrow} {h['expected']}")
     print(f"\nSource of truth: data/statutory_fees.json")
     return 1
