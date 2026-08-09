@@ -229,8 +229,12 @@ claim, that is a revise-stage change and it needs a source.
   supports the judgement, quote the source and let it carry the weight. The
   strongest line on the timeline page is the Insolvency Service's own conclusion
   that the process "does not seem to be efficient", not anything invented.
-- **Keep first person inside Company Debt's actual role**: an advisory firm that
-  refers to licensed practitioners, not the appointed practice.
+- **Company Debt is a licensed UK insolvency practice.** Never write that it
+  refers, connects or introduces directors to insolvency practitioners, and
+  treat that wording as a defect wherever you find it. Our own licensed
+  practitioners advise directors and take appointments. This makes "in the cases
+  we handle" accurate and earned rather than a claim to check, but it does not
+  license invented casework: the constraint above still applies.
 
 ## Running the pass
 
