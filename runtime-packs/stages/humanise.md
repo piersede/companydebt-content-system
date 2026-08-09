@@ -63,12 +63,24 @@ Load alongside: `editorial-os/17-audience-and-persona.md`,
 
 Four things must be present, verifiable by re-reading before the gate:
 
-1. **Concrete scenes (>= 3 per 1,000 words).** A scene is a specific, recognisable
-   moment in the reader's actual world, not a category label. "The fuel card
-   declined at the pump on a Monday, and by Friday two trucks had not moved"
-   beats "cashflow pressure mounts". If the page can be understood without
-   picturing a single real moment, it has none, and it fails. One scene per major
-   section minimum.
+1. **Concrete detail where it earns its place. No quota.** This rule previously
+   demanded three scenes per 1,000 words and one per major section. That was
+   wrong and it caused active harm: on a 3,000-word page it mandates ten
+   scenes, no page holds ten genuine ones, and the pass invents the shortfall.
+   Fabricated colour (the loan from a father-in-law, the midnight search, the
+   bank ringing the home phone) is what makes a page read as over-humanised,
+   and it is an evidence problem as well as a voice one.
+
+   The test is not how many, it is where the detail comes from. Specificity
+   reads as human only when it arises from knowledge. Ask of each one: does
+   this reveal something a practitioner knows, or does it merely show that the
+   writer can write? Keep the first. Cut the second, however good it sounds.
+
+   Prefer practitioner knowledge to invented scenes every time. Not "the bank
+   which financed the fit-out starts ringing the home phone", but "personal
+   guarantees sit outside the liquidation, so once the company cannot meet the
+   guaranteed debt the lender can pursue the director personally, which is why
+   we ask about guarantees at the first conversation rather than later".
 
 2. **Earned practitioner "we" (the lived-caseload voice).** Company Debt IS an
    insolvency practice, so "in the cases we handle", "by the time a director

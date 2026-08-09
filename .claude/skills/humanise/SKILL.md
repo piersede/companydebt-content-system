@@ -25,14 +25,93 @@ practitioner notice here that a generic writer would miss?** Build the paragraph
 on that. If there is no answer, the paragraph is padding and no amount of
 rhythm, warmth or British texture will save it.
 
+There are two ways to fail this, and the second is what you get from fixing the
+first too enthusiastically. **Under-humanised** prose dresses up thin content
+with hooks and flourishes. **Over-humanised** prose manufactures anecdotes and
+emotional detail at such a rate that the technique itself becomes the pattern.
+Both are the same underlying fault: reaching for a writing device where an
+observation should be.
+
 An expert usually writes more plainly, because the interesting thing is what
-they know.
+they know. **This skill needs judgement, not rule-following.** Every instruction
+below can be complied with mechanically and produce a worse page. If you find
+yourself inserting a scene because a section lacks one, stop: that is the
+failure, not the fix.
 
 > Prefer: "There are actually two different timelines here."
 > Over: "You may hear anything from ten days to five years, and both answers are right."
 
 The first sounds like somebody explaining something. The second sounds like
 somebody writing content.
+
+## The opposite failure: over-humanising
+
+Fixing the first fault badly produces the second, and the second is harder to
+see because every individual sentence looks good.
+
+**Humanising devices used often enough become their own AI pattern.** Anecdote,
+punchy contrast, emotional detail, clever closer: any one of them works. When
+nearly every section carries one, the technique becomes visible and the page
+reads as performed rather than written.
+
+Three specific ways this goes wrong.
+
+**Every paragraph tries to be memorable.** "It buys you no credit on conduct."
+"The arithmetic is not close." "The £13 buys a filing, not an outcome." Fine
+sentences individually; as a habit, a tell. A real expert does not continually
+produce quotable lines. Most of the time they just explain something clearly.
+Use emphasis only where the point deserves it, and let ordinary prose sit
+between.
+
+**Fictional detail is passed off as insight.** This is the serious one. Do not
+invent a representative director, a month, a phone call, a supplier, a
+father-in-law's loan, a fit-out, or a midnight search. Invented colour is not
+knowledge, and claiming casework the firm cannot stand behind is an evidence
+failure as much as a voice one. Replace the scene with what the practitioner
+actually knows:
+
+> Not: "The bank which financed the fit-out starts ringing the home phone rather than the office."
+>
+> But: "Personal guarantees sit outside the liquidation. Once the company can no longer meet the guaranteed debt, the lender can pursue the director personally. It is why we ask about guarantees at the first conversation rather than once the liquidation is under way."
+
+**Emotional empathy is used as proof of humanity.** Telling the reader what
+they dread, fear, or ring about at midnight starts to feel engineered. Answer
+the question the worried person actually has instead:
+
+> Not: "Telling the staff is the part directors dread."
+>
+> But: "Directors usually want to know whether to tell employees before or after the liquidator is appointed. It depends on whether the business is still trading and how the appointment is being handled, so agree the timing with the proposed liquidator first."
+
+**Modulate the intensity.** The strongest pages are not uniformly vivid. Some
+passages should be plainly factual: "A CVL normally takes two to four weeks to
+arrange. The liquidation itself can then run for 12 to 18 months or longer,
+particularly where there are assets to realise or conduct issues to
+investigate." That quiet prose is what gives the sharper observations around it
+credibility. A page held at one editorial intensity throughout is the tell.
+
+**Working target on a rewrite: cut the deliberate humanising devices by about
+half and replace them with practitioner-specific observations.** Do not add
+colour where knowledge does the job.
+
+## The material that should replace it
+
+This is where the real information gain lives, and it is what an experienced
+adviser has that a copywriter does not:
+
+- what directors commonly misunderstand
+- which apparently important issue rarely matters in practice
+- which small detail changes the advice
+- what an insolvency practitioner asks about first, and why
+- what usually delays a case
+- where directors worry unnecessarily
+- where they are too relaxed
+- what looks sensible but creates a problem later
+- when two apparently similar companies need completely different advice
+
+One example beats any invented anecdote: "The size of the debt is not usually
+what decides whether a CVL takes three weeks or six. Missing records, disputed
+assets and shareholders who cannot agree are far more likely to slow the
+appointment down." That is somebody who has done the job.
 
 ## Diagnosing a page
 
@@ -51,6 +130,17 @@ Read it and mark every instance of these. They are the tells:
 Borrowed empathy is the hardest to see. The test: would this sentence sit
 unchanged on a debt, legal, medical or divorce page? Then it is filler, however
 kind it sounds.
+
+Also count the devices. Frequency is itself a tell, so tally the anecdotes,
+punchy contrasts, emotional details and clever closers across the whole page.
+If most sections carry one, the page is over-humanised even where each instance
+survives on its own.
+
+**The test that settles every colourful sentence.** Could a generic copywriter
+have written this? If it is only a metaphor, a dramatised scenario, an emotional
+observation, a rhetorical flourish or a clever contrast, cut it unless it
+genuinely improves comprehension. The target is not more human-sounding copy.
+It is calm, experienced professional thinking made visible on the page.
 
 ## The rewrite method
 
