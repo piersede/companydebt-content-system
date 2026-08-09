@@ -1,0 +1,40 @@
+{
+  "slug": "liquidation-deadlines-and-time-limits",
+  "audited_at": "2026-08-08",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "bafbc0e977e3bc0983f6c8a94c796d865e47cdcd5befe7c7206bafdd65a364a1",
+  "passes_since_baseline": {
+    "count": 2,
+    "baseline_ref": "file-creation",
+    "override_reason": null,
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 1947,
+      "you": 48,
+      "you_per_1k": 24.7,
+      "we": 13,
+      "we_per_1k": 6.7,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 48,
+      "cv": 0.281,
+      "uniform": true
+    },
+    "scene_proxy": 1
+  },
+  "attested": {
+    "concrete_scenes": 5,
+    "evaluative_bite_lines": 3,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Second correction pass. Removed the incorrect 21-day petition service claim; the minimum gap is set by the rule 7.10 advertising window, which the next paragraph already states correctly. No voice changes. Scenes and practitioner voice unchanged from the previous audit.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

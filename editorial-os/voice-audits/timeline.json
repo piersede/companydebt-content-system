@@ -1,0 +1,40 @@
+{
+  "slug": "timeline",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "051d59284a76fa96618ea404b19cb134dda1a25190812f85ad7c57f07b26e479",
+  "passes_since_baseline": {
+    "count": 6,
+    "baseline_ref": "file-creation",
+    "override_reason": "Voice-only pass against the new governing rule in Part D; no facts, structure or citations touched",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 2290,
+      "you": 47,
+      "you_per_1k": 20.5,
+      "we": 14,
+      "we_per_1k": 6.1,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 68,
+      "cv": 0.282,
+      "uniform": true
+    },
+    "scene_proxy": 2
+  },
+  "attested": {
+    "concrete_scenes": 7,
+    "evaluative_bite_lines": 5,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Applied the new governing rule: human through insight, not decoration. The previous version imitated human prose rather than human thought. Opening rebuilt on Piers's model, leading with the observation that the question contains two different timelines and directors nearly always mean the first. Removed throughout: the manufactured hook, the provocative-statement-then-clever-closer shape, borrowed empathy (the lying-awake line), the 'not a participant, a witness' reversal, decorative adverbs (sadly, unsurprisingly), and clever closers such as 'neither waits politely for it to finish' and 'the mistake this page exists to stop you making'. Each replaced with the observation it was dressing up: why the two table columns are not comparable, what actually decides where you land in the 10-21 day range, that adverts quote the first stage only, that an undisclosed loan account changes how the liquidator reads the rest of the file, that the eighteen-month panic is the three-month tail nobody mentioned. Two short paragraphs kept because each carries a fact rather than effect. Four remaining 'X, not Y' constructions all distinguish two real things and are the page's actual subject. Checked: two question marks, both headings. No em dashes.",
+    "stranger_read_report": null
+  },
+  "verdict": "pass"
+}

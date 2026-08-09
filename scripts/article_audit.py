@@ -449,6 +449,7 @@ JARGON_TERMS_REQUIRING_INTRO: dict[str, dict] = {
     "Joint and Several Liability Notice":{"full_form": None,                                 "glosses": [r"\bhmrc", r"\bstatutory notice"]},
     "Time to Pay":                       {"full_form": None,                                 "glosses": [r"\bhmrc", r"\binstal(l)?ment", r"\bpayment plan", r"\btax arrears"]},
     "TTP":                               {"full_form": "Time to Pay",                        "glosses": [r"\btime to pay"]},
+    "CIS":                               {"full_form": "Construction Industry Scheme",       "glosses": [r"\bconstruction industry scheme", r"\bsubcontractor"]},
     "CTM36220":                          {"full_form": None,                                 "glosses": [r"\bhmrc", r"\bcompany taxation manual", r"\bcapital treatment"]},
     "CTM36300":                          {"full_form": None,                                 "glosses": [r"\bhmrc", r"\bcompany taxation manual", r"\banti[- ]phoenix"]},
     # Note: "IP" is intentionally omitted because it is too ambiguous

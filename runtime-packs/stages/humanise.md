@@ -63,12 +63,24 @@ Load alongside: `editorial-os/17-audience-and-persona.md`,
 
 Four things must be present, verifiable by re-reading before the gate:
 
-1. **Concrete scenes (>= 3 per 1,000 words).** A scene is a specific, recognisable
-   moment in the reader's actual world, not a category label. "The fuel card
-   declined at the pump on a Monday, and by Friday two trucks had not moved"
-   beats "cashflow pressure mounts". If the page can be understood without
-   picturing a single real moment, it has none, and it fails. One scene per major
-   section minimum.
+1. **Concrete detail where it earns its place. No quota.** This rule previously
+   demanded three scenes per 1,000 words and one per major section. That was
+   wrong and it caused active harm: on a 3,000-word page it mandates ten
+   scenes, no page holds ten genuine ones, and the pass invents the shortfall.
+   Fabricated colour (the loan from a father-in-law, the midnight search, the
+   bank ringing the home phone) is what makes a page read as over-humanised,
+   and it is an evidence problem as well as a voice one.
+
+   The test is not how many, it is where the detail comes from. Specificity
+   reads as human only when it arises from knowledge. Ask of each one: does
+   this reveal something a practitioner knows, or does it merely show that the
+   writer can write? Keep the first. Cut the second, however good it sounds.
+
+   Prefer practitioner knowledge to invented scenes every time. Not "the bank
+   which financed the fit-out starts ringing the home phone", but "personal
+   guarantees sit outside the liquidation, so once the company cannot meet the
+   guaranteed debt the lender can pursue the director personally, which is why
+   we ask about guarantees at the first conversation rather than later".
 
 2. **Earned practitioner "we" (the lived-caseload voice).** Company Debt IS an
    insolvency practice, so "in the cases we handle", "by the time a director
@@ -97,6 +109,117 @@ Four things must be present, verifiable by re-reading before the gate:
 The mechanical gate does NOT measure any of this. A 23/25 or 24/25 score with
 these four absent is a FAIL for the purpose of this pass. Re-read for all four
 before handing to the gate; if any is missing, the pass is not finished.
+
+## Part D -- Which?-style editorial voice (the register, MANDATORY)
+
+Parts A and C say what markers must be present. This part says what the page
+should SOUND like. Write as an experienced British consumer journalist, not a
+content writer. The reader should feel there is a knowledgeable person behind
+every sentence who has examined the subject, noticed things, questioned claims
+and reached a view.
+
+### The governing rule: human through insight, not decoration
+
+Read this before the eight points below, because it overrides all of them.
+Every one of the eight can be satisfied by decoration, and decoration is the
+failure this rule exists to stop.
+
+**Do not confuse "human" with conversational or emotional writing.** Before
+writing a paragraph, identify the specific observation an experienced
+practitioner would make that a generic writer would miss. Build the paragraph
+around that observation. If there isn't one, the paragraph is padding, and no
+amount of rhythm or warmth will fix it.
+
+**Ban the surface techniques that read as trying to sound human:**
+
+- manufactured hooks: "Ask X and you'll hear...", "There are two kinds of...",
+  provocative opener followed by a neat reveal
+- neat reversals and clever final clauses: "and nobody tells you which one you
+  asked", "not a participant, a witness"
+- dramatic one-line paragraphs used for effect rather than to carry a fact
+- borrowed empathy: "the thing keeping you awake at night", "we know this is
+  stressful". Generic emotional phrasing that would sit unchanged on a debt,
+  legal, medical or divorce page is not warmth, it is filler
+- the pattern provocative statement, then neat explanation, then clever closer.
+  This is the single most recognisable AI paragraph shape
+
+**An expert usually writes more plainly, because the interesting thing is what
+they know.** Prefer "There are actually two different timelines here" over "You
+may hear anything from ten days to five years, and both answers are right." The
+first sounds like somebody explaining something. The second sounds like somebody
+writing content.
+
+**Do not add empathy. Demonstrate understanding instead**, by identifying what
+the reader is actually trying to find out. On the liquidation timing page the
+useful observation is not that directors are worried. It is that when a director
+asks how long liquidation takes, they usually mean "when am I no longer
+responsible for dealing with this?", while every published duration figure
+describes the much longer legal process. Naming that is more empathetic than any
+sentence about lying awake.
+
+**The test.** Every few paragraphs the reader should think: that is exactly what
+I was actually wondering. Remove any clever phrasing that does not add
+knowledge. If a sentence would survive being rewritten flatly, rewrite it
+flatly and see whether anything was lost. Usually only the writer loses
+something.
+
+1. **Have a point of view.** Do not present advantages and disadvantages
+   symmetrically. Assess them. Say what matters, what does not, what is poor
+   value, what is unusually good, what is misleading, and what you would
+   choose. Be willing to say "avoid", "poor", "rip-off" or "marketing hype"
+   where the evidence justifies it. Expertise is judgement, not endless
+   qualification.
+
+2. **Turn facts into consequences.** Never leave a figure, fee, feature or rule
+   hanging. The pattern is fact, then interpretation, then practical
+   consequence: what the reader will pay, notice, gain, lose, have to do, or
+   regret. The purpose of the information matters more than displaying it.
+
+3. **Concrete detail beats abstract adjectives.** Ban "excellent
+   functionality", "competitive pricing", "robust features", "good customer
+   experience". Describe the actual thing. Specific detail is what makes a
+   writer look like they met the real world rather than synthesised other web
+   pages.
+
+4. **Show the work.** Authority comes from visible effort: we checked, we
+   compared, we calculated, we found, we asked. Never manufacture first-hand
+   experience, but where genuine research or analysis has been done, expose
+   some of the process. "We" must mean an organisation doing something, not a
+   corporate pronoun.
+
+5. **Speak directly to the reader.** Use "you" freely. Do not describe an
+   abstract "consumer" when you can say what this reader pays or what happens
+   when their circumstances change. Second person turns information into
+   advice.
+
+6. **Allow small signs of personality.** Natural British expressions where they
+   genuinely fit: eye-watering, whittle down, stung, bide your time. Occasional
+   "sadly", "unsurprisingly", or a short rhetorical question showing the
+   writer's reaction. Do not sprinkle idioms mechanically. One precise,
+   slightly colloquial phrase beats paragraphs of forced chumminess.
+
+7. **Warm towards the reader, sceptical towards the market.** A knowledgeable,
+   sceptical friend on the reader's side: understanding their confusion, cost
+   and risk, while interrogating provider claims, marketing language and
+   inconvenient terms. Evidence-led scepticism, not cynicism.
+
+8. **Do not polish away the texture.** Mix short conclusions with longer
+   explanatory sentences. Ask the occasional obvious question. Make a judgement
+   and then explain it. Avoid mechanically balanced paragraphs, repetitive
+   sentence structures, compulsory three-item lists, constant
+   however/furthermore/additionally, and summaries that repeat what was just
+   said.
+
+The failure mode this part exists to prevent: trying to "sound human" by
+becoming chatty. This voice sounds human because somebody appears to have done
+the work, understood the reader's problem, and formed an opinion. Institutional
+evidence gives the writing authority; personal judgement gives it life.
+
+Note the interaction with the evidence rules. A point of view is not a licence
+for unsupported absolutes. "Avoid" and "poor value" must be earned by the
+evidence on the page, and a practitioner judgement must still be labelled as
+one. Judgement with its basis shown is the target; judgement asserted flatly is
+the thing reviewers send back.
 
 ## Part B -- gate-aware constraints (the "how", so it passes first time)
 
@@ -168,6 +291,18 @@ issues in the stranger-read report; that defeats the check.
 
 ## Definition of done (self-check before handing to gate)
 
+- **Part D is satisfied:** the page takes a view rather than balancing
+  symmetrically; every figure carries its consequence for the reader; the
+  detail is concrete; the research is visible; the texture is uneven in the way
+  human prose is. If a reader could not tell what the writer thinks, the pass
+  is not done.
+- **Part D's governing rule is satisfied, checked separately and last.** Re-read
+  every paragraph asking: what does this know that a generic writer would not?
+  Then hunt the specific tells: manufactured hooks, neat reversals, clever
+  final clauses, dramatic one-line paragraphs, borrowed empathy. A page can
+  satisfy all eight Part D points and still fail here, and this is the failure
+  reviewers actually notice. Imitating human prose is the error; imitating
+  human thought is the target.
 - **Part C is satisfied and re-read for:** >= 3 concrete scenes per 1,000 words
   (one per major section), earned practitioner "we" carrying the driver and
   distinctive sections, persona warmth near the top and at the decision point,

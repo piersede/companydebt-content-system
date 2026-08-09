@@ -20,6 +20,7 @@ Exit code 1 if any violation is found, so it can gate a build.
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import pathlib
 import re
@@ -68,7 +69,11 @@ def load_fees() -> dict:
 
 
 def scan_file(path: pathlib.Path, fees: dict) -> list[dict]:
-    text = path.read_text(encoding="utf-8", errors="replace")
+    # Drafts write money as HTML entities (&#163;343), so a raw read never matched a
+    # single "£" pattern in this file and the check passed on pages carrying every
+    # stale fee we have. Unescape first. Offsets shift, but nothing here reports
+    # character positions - only line numbers, recomputed below from the same text.
+    text = html.unescape(path.read_text(encoding="utf-8", errors="replace"))
     hits: list[dict] = []
     # File-scoped: £33 is superseded for BOTH the online and paper DS01 keys, so a
     # per-entry set would still report every strike-off hit twice.

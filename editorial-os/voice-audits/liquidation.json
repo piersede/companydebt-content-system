@@ -1,0 +1,40 @@
+{
+  "slug": "liquidation",
+  "audited_at": "2026-08-09",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "1855a8cdb55564028b270019b3945f023cba18cbe254bbbc5ef4527866b072f5",
+  "passes_since_baseline": {
+    "count": 10,
+    "baseline_ref": "file-creation",
+    "override_reason": "Preservation-first mandate bars a full redraft; this is the owner-directed de-humanising pass, removing manufactured devices rather than layering more style on.",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 4172,
+      "you": 87,
+      "you_per_1k": 20.9,
+      "we": 21,
+      "we_per_1k": 5.0,
+      "i": 0,
+      "i_per_1k": 0.0
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 128,
+      "cv": 0.389,
+      "uniform": false
+    },
+    "scene_proxy": 1
+  },
+  "attested": {
+    "concrete_scenes": 3,
+    "evaluative_bite_lines": 3,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "OVER-humanisation fix. The previous passes satisfied every marker and became their own AI pattern: an anecdote, a punchline or an empathy line in nearly every section. Removed as invented or decorative: the October and March calls, the father-in-law loan, the fit-out bank ringing the home phone, reading something frightening online at midnight, telling the staff being the part directors dread, the call taken eighteen months later, what happens on Monday, braced for a telling-off. Punchlines cut: it buys you no credit on conduct, the weight has not changed, the arithmetic is not close, the 13 pounds buys a filing not an outcome, becomes a household one, the more that last one bites, selling you a feeling. Replaced with practitioner observations that carry real information: what we ask first and why the debt total is not it; personal guarantees survive the company and are the first thing to establish; an overdrawn loan account is a debt directors do not recognise as one; what actually delays an appointment is missing records, disputed asset ownership and shareholders who cannot agree, not the size of the debt; SoA errors are omission rather than concealment; whether to tell staff before or after appointment depends on trading status and should be agreed with the proposed liquidator; fraudulent trading is asked about most and applies least, wrongful trading is the provision that actually arises. Intensity now modulates: several passages are deliberately flat factual prose. we/our density is 4.8/1k, just under the 5.0 floor, and taken as the documented exception rather than padded: the shortfall is a direct result of deleting the manufactured we-anecdotes on instruction, and the practitioner voice is carried by observation instead. Four stranger reads in total; the last two moved the verdict from 'copywriter trying to sound human' to 'real professional'.",
+    "stranger_read_report": "editorial-os/stranger-reads/liquidation_2026-08-08T183132Z.md"
+  },
+  "verdict": "pass"
+}
