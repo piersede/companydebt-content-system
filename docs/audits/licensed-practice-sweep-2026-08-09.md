@@ -229,10 +229,16 @@ I have not touched those sentences on live.
 
 ---
 
-## 7. One other thing you should know
+## 7. Leftover script on staging — removed
 
-There is a leftover one-shot script on the staging server from an earlier session:
-`wp-content/mu-plugins/mu-cd-push-f9cf70c59dbf.php`. It is not mine — every file this sweep created was
-removed and I verified the directory afterwards. It is the kind of file that runs on every page request
-and is guarded only by a fixed token, so it should be cleared before any code goes live. Say the word and
-I will remove it.
+There was a leftover one-shot script on the staging server from an earlier session that day:
+`wp-content/mu-plugins/mu-cd-push-f9cf70c59dbf.php`. It was a page-updating script that failed to
+delete itself after running; its data file was already gone, so it could not have changed anything, but
+it ran on every page request and was guarded only by a fixed token.
+
+Removed on 9 August 2026, with a copy archived to
+`docs/archive/mu-plugin-leftovers/mu-cd-push-f9cf70c59dbf.php`. The folder was re-listed afterwards
+(nothing of that kind left), five staging pages were re-fetched and render normally with no errors, and
+the old trigger address now does nothing.
+
+Every file this sweep itself created was removed and verified gone.
