@@ -4,7 +4,7 @@
   "audited_by": "claude-opus-5",
   "prose_sha": "c495e58f4ae8b99f7a20f17f3d30bb102f6867692fb2c9afb5a8adc10b8f073f",
   "passes_since_baseline": {
-    "count": 9,
+    "count": 10,
     "baseline_ref": "file-creation",
     "override_reason": "Stranger-read remediation; every change traces to a specific finding in the report",
     "redraft_now": false
@@ -33,8 +33,15 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Stranger read run at last, by a fresh agent with no knowledge of the drafting session, and it found five real problems. All fixed before recording this pass. (1) The reader could not parse the 712/620-day table cell after three attempts; it now reads 'half took longer than 712 days from appointment to the company being struck off' and the 620-day split has gone from the table. (2) They did not know which route was theirs: the page never said. A three-item list now identifies the reader's own situation before any number appears, which is the single most useful change on the page. (3) They nearly closed the tab at 'closer to two years'; the reassurance that the second timescale is the liquidator's and not theirs now sits immediately after it rather than two sentences later. (4) 'Conduct investigation' was dropped in unexplained and worried them most; both instances are now plain English. (5) They said nothing acknowledged their situation. Answered with a fact rather than sympathy: 18,525 companies went through a CVL in 2025, sourced to the Insolvency Service and added to the sources list. Also demoted the not-comparable caveat, which the reader explicitly did not care about, to a reading note after the table.",
+    "notes": "Stranger read run by a fresh agent with no knowledge of the drafting session; five real problems found and all fixed before this pass was recorded. (1) The reader could not parse the 712/620-day table cell after three attempts; it now reads 'half took longer than 712 days from appointment to the company being struck off'. (2) They did not know which route was theirs, because the page never said; a three-item list now identifies the reader's own situation before any number appears. (3) They nearly closed the tab at 'closer to two years'; the reassurance that the second timescale is the liquidator's rather than theirs now sits immediately after it. (4) 'Conduct investigation' was unexplained and worried them most; both instances are now plain English. (5) Nothing acknowledged their situation, answered with a sourced fact rather than sympathy: 18,525 CVLs in 2025. Also demoted the not-comparable caveat, which the reader explicitly did not care about.",
     "stranger_read_report": "editorial-os/stranger-reads/timeline_2026-08-10T041011Z.md"
+  },
+  "stranger_read": {
+    "path": "editorial-os\\stranger-reads\\timeline_2026-08-10T041011Z.md",
+    "requested": "2026-08-10T041011Z",
+    "prose_sha_at_request": "fc322e1b926d9b74c58a939927f89d238818d2eeb451dc2ed73c3c4f275fefef",
+    "numbered_answers": 5,
+    "override_reason": null
   },
   "verdict": "pass"
 }

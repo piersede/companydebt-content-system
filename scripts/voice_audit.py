@@ -44,6 +44,16 @@ AUDIT_DIR = REPO / "editorial-os" / "voice-audits"
 # its message (or since the file was created if there is no such marker).
 REDRAFT_PASS_CEILING = 4
 
+# From this pass onward a 'pass' verdict needs an outside-eye read attached.
+# It was advisory for months and got skipped every single time, including on the
+# page the whole rule exists to protect. When it was finally run on the
+# liquidation timeline page at pass 8, a fresh reader found five problems in the
+# opening 500 words that eight rounds of self-review had missed, one of them
+# structural: the page never told the reader which of the three routes was
+# theirs. The writer cannot see this. That is the entire point, and a warning
+# nobody acts on is not a check.
+STRANGER_READ_PASS_FLOOR = 3
+
 
 def count_passes_since_redraft(draft_path: Path) -> tuple[int, str]:
     """
@@ -146,6 +156,31 @@ def do_record(slug: str, raw: str, args, draft_path: Path) -> int:
         )
         return 3
 
+    # Outside-eye read. Required for a 'pass' from STRANGER_READ_PASS_FLOOR on.
+    stranger = None
+    if args.stranger_read_report:
+        ok, stranger, why = validate_stranger_read(args.stranger_read_report, slug)
+        if not ok:
+            print(f"ERROR: --stranger-read-report {args.stranger_read_report}: {why}", file=sys.stderr)
+            return 4
+    needs_stranger = (
+        args.verdict == "pass"
+        and pass_count >= STRANGER_READ_PASS_FLOOR
+        and not args.override_stranger_read
+    )
+    if needs_stranger and not stranger:
+        print(
+            f"ERROR: {pass_count} passes on this draft; a 'pass' verdict now requires an\n"
+            f"outside-eye read. You cannot see your own clever prose after this many rounds.\n"
+            f"  1. python scripts/stranger_read.py --slug {slug}\n"
+            f"  2. paste the prompt to a FRESH agent that has not been in this session\n"
+            f"  3. paste its answer verbatim into the template, then --fill it\n"
+            f"  4. re-run this with --stranger-read-report <path>\n"
+            f"  Or --override-stranger-read REASON to force it, with the reason recorded.",
+            file=sys.stderr,
+        )
+        return 4
+
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     record = {
         "slug": slug,
@@ -173,6 +208,13 @@ def do_record(slug: str, raw: str, args, draft_path: Path) -> int:
             "notes": args.notes,
             "stranger_read_report": args.stranger_read_report or None,
         },
+        "stranger_read": {
+            "path": stranger["path"] if stranger else None,
+            "requested": stranger["requested"] if stranger else None,
+            "prose_sha_at_request": stranger["prose_sha"] if stranger else None,
+            "numbered_answers": stranger["numbered"] if stranger else 0,
+            "override_reason": args.override_stranger_read or None,
+        },
         "verdict": args.verdict,
     }
     record_path(slug).write_text(json.dumps(record, indent=2), encoding="utf-8")
@@ -183,9 +225,58 @@ def do_record(slug: str, raw: str, args, draft_path: Path) -> int:
         print("  NOTE: verdict is not 'pass' -- the gate will still fail until it is.")
     if pass_count >= REDRAFT_PASS_CEILING - 1 and not args.override_redraft_rule and not args.redraft_now:
         print(f"  WARNING: {pass_count} passes since redraft baseline; the next --record will require --redraft-now or --override-redraft-rule.")
-    if not args.stranger_read_report and pass_count >= 2:
-        print("  WARNING: no --stranger-read-report supplied; from pass 3 onward, consider running scripts/stranger_read.py to catch clever prose the writer cannot see.")
+    if stranger:
+        print(f"  stranger read: {stranger['path']} ({stranger['numbered']}/5 answered)")
+    elif args.override_stranger_read:
+        print(f"  stranger read: OVERRIDDEN -- {args.override_stranger_read}")
+    elif pass_count == STRANGER_READ_PASS_FLOOR - 1:
+        print(f"  WARNING: at {pass_count} passes. The next --record will REQUIRE a stranger read "
+              f"(scripts/stranger_read.py) before a 'pass' verdict is accepted.")
     return 0
+
+
+def validate_stranger_read(raw: str, slug: str) -> tuple[bool, dict | None, str]:
+    """Confirm a stranger-read report is real, filled in, and for THIS page.
+
+    Pointing the flag at an empty template, or at another page's report, would
+    satisfy a naive presence check while defeating the purpose entirely.
+    """
+    path = Path(raw)
+    if not path.is_absolute():
+        path = (REPO / raw).resolve()
+    if not path.exists():
+        return False, None, "file not found"
+
+    text = path.read_text(encoding="utf-8", errors="replace")
+    header, _, body = text.partition("\n---\n")
+    response = body.strip()
+    if not response:
+        return False, None, "template is still empty; paste the reader's answer below the --- line"
+
+    # The template names the slug it was generated for.
+    if slug not in header:
+        return False, None, f"report was generated for a different page (expected slug '{slug}')"
+
+    numbered = sum(1 for n in ("1.", "2.", "3.", "4.", "5.") if n in response)
+    if numbered < 2:
+        return False, None, "response does not answer at least two of the five questions"
+    if len(response) < 200:
+        return False, None, "response is too short to be a genuine read"
+
+    requested = ""
+    prose_sha = ""
+    for line in header.splitlines():
+        if line.lower().startswith("requested:"):
+            requested = line.split(":", 1)[1].strip()
+        if "sha at time of request" in line.lower():
+            prose_sha = line.split(":", 1)[1].strip()
+
+    return True, {
+        "path": str(path.relative_to(REPO)) if str(path).startswith(str(REPO)) else str(path),
+        "requested": requested or None,
+        "prose_sha": prose_sha or None,
+        "numbered": numbered,
+    }, ""
 
 
 def main() -> int:
@@ -202,6 +293,10 @@ def main() -> int:
                     help="Read-aloud flatness check")
     ap.add_argument("--verdict", choices=["pass", "fail"], default="fail", help="Overall voice verdict")
     ap.add_argument("--notes", default="", help="Short free-text attestation notes")
+    ap.add_argument("--override-stranger-read", dest="override_stranger_read", metavar="REASON",
+                    help="Force a 'pass' verdict past the stranger-read gate. The reason is "
+                         "recorded in the audit file. Use sparingly: the gate exists because "
+                         "the writer cannot see their own prose after several passes.")
     ap.add_argument("--stranger-read-report", dest="stranger_read_report",
                     help="Path to a stranger-read report (see scripts/stranger_read.py). "
                          "Recommended from pass 3 onwards; catches clever prose the writer cannot see.")
