@@ -1,0 +1,707 @@
+{
+ "total_urls": 331,
+ "sampled": 70,
+ "errors": 0,
+ "rows": [
+  {
+   "u": "/liquidation/compulsory-liquidation/",
+   "L": 28178,
+   "S": 28179,
+   "d": 1,
+   "lid": 12,
+   "sid": 12,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/sample-letters/hold-action-on-my-account/",
+   "L": 21503,
+   "S": 20888,
+   "d": -615,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/liquidation/how-much-does-liquidation-cost/",
+   "L": 27984,
+   "S": 27985,
+   "d": 1,
+   "lid": 12,
+   "sid": 12,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+   "L": 14392,
+   "S": 13835,
+   "d": -557,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/sectors/construction/",
+   "L": 23294,
+   "S": 23299,
+   "d": 5,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/cleaning-company-insolvency-statistics/",
+   "L": 22131,
+   "S": 21759,
+   "d": -372,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/administration-statistics/",
+   "L": 7933,
+   "S": 7560,
+   "d": -373,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/liquidation/timeline/",
+   "L": 15752,
+   "S": 24061,
+   "d": 8309,
+   "lid": 8,
+   "sid": 12,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/liquidation/insolvency-checklist/",
+   "L": 20571,
+   "S": 19766,
+   "d": -805,
+   "lid": 11,
+   "sid": 11,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/services-to/banks/",
+   "L": 2675,
+   "S": 2653,
+   "d": -22,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/sectors/recruitment/",
+   "L": 17873,
+   "S": 17882,
+   "d": 9,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/amusement-recreation-insolvency-statistics/",
+   "L": 18103,
+   "S": 18103,
+   "d": 0,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+   "L": 10819,
+   "S": 10271,
+   "d": -548,
+   "lid": 6,
+   "sid": 6,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+   "L": 19906,
+   "S": 19907,
+   "d": 1,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 11,
+   "scta": 11
+  },
+  {
+   "u": "/hmrc/time-to-pay-hmrc/",
+   "L": 17763,
+   "S": 17754,
+   "d": -9,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+   "L": 17806,
+   "S": 17807,
+   "d": 1,
+   "lid": 12,
+   "sid": 12,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+   "L": 21388,
+   "S": 21395,
+   "d": 7,
+   "lid": 11,
+   "sid": 11,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/liquidation/when-should-a-director-stop-trading/",
+   "L": 17761,
+   "S": 17029,
+   "d": -732,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 24,
+   "scta": 24
+  },
+  {
+   "u": "/services-to/solicitors/",
+   "L": 3012,
+   "S": 2990,
+   "d": -22,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/overdrawn-directors-loan-accounts/",
+   "L": 17918,
+   "S": 17926,
+   "d": 8,
+   "lid": 8,
+   "sid": 8,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/sectors/events/",
+   "L": 19446,
+   "S": 19455,
+   "d": 9,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/insolvency/what-is-a-high-court-writ/",
+   "L": 18950,
+   "S": 18951,
+   "d": 1,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/sectors/restaurants/",
+   "L": 17687,
+   "S": 17696,
+   "d": 9,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+   "L": 24242,
+   "S": 24073,
+   "d": -169,
+   "lid": 8,
+   "sid": 8,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/sectors/travel/",
+   "L": 20950,
+   "S": 20955,
+   "d": 5,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/can-director-criminal-record/",
+   "L": 14158,
+   "S": 14132,
+   "d": -26,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+   "L": 14882,
+   "S": 13754,
+   "d": -1128,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/advice/what-is-limited-liability/",
+   "L": 22644,
+   "S": 22651,
+   "d": 7,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+   "L": 13076,
+   "S": 12423,
+   "d": -653,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/insolvency-advice-for-directors/",
+   "L": 17324,
+   "S": 17325,
+   "d": 1,
+   "lid": 8,
+   "sid": 8,
+   "lcta": 24,
+   "scta": 24
+  },
+  {
+   "u": "/debt-charities-uk/",
+   "L": 18319,
+   "S": 18194,
+   "d": -125,
+   "lid": 10,
+   "sid": 10,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/sectors/hotels/",
+   "L": 18287,
+   "S": 18299,
+   "d": 12,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/get-free-business-debt-advice/",
+   "L": 11122,
+   "S": 11144,
+   "d": 22,
+   "lid": 6,
+   "sid": 6,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+   "L": 16611,
+   "S": 17901,
+   "d": 1290,
+   "lid": 9,
+   "sid": 10,
+   "lcta": 11,
+   "scta": 11
+  },
+  {
+   "u": "/insolvency/antecedent-transactions/",
+   "L": 22405,
+   "S": 21818,
+   "d": -587,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/liquidation/company-property-and-real-estate-in-liquidation/",
+   "L": 23238,
+   "S": 23239,
+   "d": 1,
+   "lid": 12,
+   "sid": 12,
+   "lcta": 11,
+   "scta": 11
+  },
+  {
+   "u": "/sectors/energy/",
+   "L": 20387,
+   "S": 20394,
+   "d": 7,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/construction-insolvency-statistics/",
+   "L": 5436,
+   "S": 5436,
+   "d": 0,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/liquidation/voluntary-vs-compulsory-liquidation/",
+   "L": 17813,
+   "S": 17725,
+   "d": -88,
+   "lid": 7,
+   "sid": 8,
+   "lcta": 24,
+   "scta": 24
+  },
+  {
+   "u": "/data/sports-facility-insolvency-statistics/",
+   "L": 18749,
+   "S": 18749,
+   "d": 0,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/transport-haulage-insolvency/",
+   "L": 24381,
+   "S": 23489,
+   "d": -892,
+   "lid": 8,
+   "sid": 8,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/hmrc/personal-liability-notices/",
+   "L": 14510,
+   "S": 14307,
+   "d": -203,
+   "lid": 10,
+   "sid": 9,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/liquidation/liquidators-powers-and-duties/",
+   "L": 19904,
+   "S": 19097,
+   "d": -807,
+   "lid": 8,
+   "sid": 8,
+   "lcta": 11,
+   "scta": 11
+  },
+  {
+   "u": "/advantages-and-disadvantages/",
+   "L": 20774,
+   "S": 20260,
+   "d": -514,
+   "lid": 9,
+   "sid": 8,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/articles/tescos-rated-worst-payer-uk-small-businesses/",
+   "L": 3888,
+   "S": 3888,
+   "d": 0,
+   "lid": 3,
+   "sid": 3,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/liquidation/cva-vs-strike-off-vs-liquidation/",
+   "L": 18878,
+   "S": 18852,
+   "d": -26,
+   "lid": 10,
+   "sid": 10,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/hmrc/hmrc-fraud-investigations/",
+   "L": 16436,
+   "S": 16437,
+   "d": 1,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/liquidation/",
+   "L": 33406,
+   "S": 43841,
+   "d": 10435,
+   "lid": 11,
+   "sid": 11,
+   "lcta": 24,
+   "scta": 24
+  },
+  {
+   "u": "/professional-services-insolvency/",
+   "L": 30085,
+   "S": 29091,
+   "d": -994,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 25,
+   "scta": 25
+  },
+  {
+   "u": "/articles/pub-closures-in-the-uk/",
+   "L": 23565,
+   "S": 23565,
+   "d": 0,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/hmrc/accelerated-payment-notices-apn/",
+   "L": 15107,
+   "S": 14500,
+   "d": -607,
+   "lid": 10,
+   "sid": 9,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+   "L": 12986,
+   "S": 12666,
+   "d": -320,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/data/retail-insolvency-statistics/",
+   "L": 17864,
+   "S": 17864,
+   "d": 0,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+   "L": 13862,
+   "S": 13558,
+   "d": -304,
+   "lid": 10,
+   "sid": 9,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/articles/124-pints-to-save-the-pub/",
+   "L": 3776,
+   "S": 3401,
+   "d": -375,
+   "lid": 1,
+   "sid": 1,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/sample-letters/i-have-no-knowledge-of-this-debt/",
+   "L": 22282,
+   "S": 21797,
+   "d": -485,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/case-studies/chinese-takeaway/",
+   "L": 12034,
+   "S": 10930,
+   "d": -1104,
+   "lid": 5,
+   "sid": 5,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/insolvency/what-is-the-insolvency-service/",
+   "L": 15955,
+   "S": 15956,
+   "d": 1,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/hmrc/notice-of-enforcement/",
+   "L": 12876,
+   "S": 12403,
+   "d": -473,
+   "lid": 8,
+   "sid": 7,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/insolvency/validation-order/",
+   "L": 16259,
+   "S": 15441,
+   "d": -818,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 17,
+   "scta": 17
+  },
+  {
+   "u": "/advice/writing-off-a-directors-loan-account/",
+   "L": 16187,
+   "S": 15259,
+   "d": -928,
+   "lid": 8,
+   "sid": 7,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+   "L": 12990,
+   "S": 12898,
+   "d": -92,
+   "lid": 8,
+   "sid": 9,
+   "lcta": 8,
+   "scta": 8
+  },
+  {
+   "u": "/",
+   "L": 11273,
+   "S": 11281,
+   "d": 8,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/management-consultancy-insolvency-statistics/",
+   "L": 20602,
+   "S": 20230,
+   "d": -372,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/data/hotel-insolvency-statistics/",
+   "L": 23966,
+   "S": 23966,
+   "d": 0,
+   "lid": 0,
+   "sid": 0,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/advice/unenforceable-personal-guarantee/",
+   "L": 17853,
+   "S": 17011,
+   "d": -842,
+   "lid": 7,
+   "sid": 7,
+   "lcta": 11,
+   "scta": 11
+  },
+  {
+   "u": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+   "L": 23407,
+   "S": 23381,
+   "d": -26,
+   "lid": 11,
+   "sid": 11,
+   "lcta": 24,
+   "scta": 24
+  },
+  {
+   "u": "/insolvency/secured-vs-unsecured-creditors/",
+   "L": 28491,
+   "S": 28492,
+   "d": 1,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 7,
+   "scta": 7
+  },
+  {
+   "u": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+   "L": 16592,
+   "S": 15973,
+   "d": -619,
+   "lid": 9,
+   "sid": 9,
+   "lcta": 0,
+   "scta": 0
+  },
+  {
+   "u": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+   "L": 24146,
+   "S": 25186,
+   "d": 1040,
+   "lid": 10,
+   "sid": 11,
+   "lcta": 17,
+   "scta": 17
+  }
+ ]
+}

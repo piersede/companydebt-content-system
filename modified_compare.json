@@ -1,0 +1,2281 @@
+{
+ "live": {
+  "80718": [
+   "thank-you",
+   "2026-07-31T10:28:48"
+  ],
+  "80717": [
+   "quick-quote-options",
+   "2026-07-27T08:20:42"
+  ],
+  "80679": [
+   "retail-insolvency-statistics",
+   "2026-08-07T12:05:21"
+  ],
+  "80604": [
+   "freight-forwarding-logistics-insolvency-statistics",
+   "2026-08-07T12:05:14"
+  ],
+  "80601": [
+   "real-estate-letting-investment-insolvency-statistics",
+   "2026-08-07T12:05:07"
+  ],
+  "80597": [
+   "amusement-recreation-insolvency-statistics",
+   "2026-08-07T12:04:59"
+  ],
+  "80596": [
+   "creative-arts-entertainment-insolvency-statistics",
+   "2026-08-07T12:04:52"
+  ],
+  "80593": [
+   "medical-dental-practice-insolvency-statistics",
+   "2026-08-07T12:04:46"
+  ],
+  "80590": [
+   "sports-facility-insolvency-statistics",
+   "2026-08-07T12:04:40"
+  ],
+  "80587": [
+   "personal-care-services-insolvency-statistics",
+   "2026-08-07T12:04:35"
+  ],
+  "80584": [
+   "architectural-engineering-insolvency-statistics",
+   "2026-08-07T12:04:29"
+  ],
+  "80581": [
+   "management-consultancy-insolvency-statistics",
+   "2026-08-07T12:04:23"
+  ],
+  "80578": [
+   "it-consultancy-insolvency-statistics",
+   "2026-08-07T12:04:17"
+  ],
+  "80260": [
+   "estate-agency-insolvency-statistics",
+   "2026-08-07T12:04:11"
+  ],
+  "80141": [
+   "hotel-insolvency-statistics",
+   "2026-08-07T12:04:05"
+  ],
+  "80140": [
+   "cleaning-company-insolvency-statistics",
+   "2026-08-07T12:03:57"
+  ],
+  "80139": [
+   "motor-vehicle-repair-insolvency-statistics",
+   "2026-08-07T12:03:49"
+  ],
+  "80138": [
+   "temporary-staffing-agency-insolvency-statistics",
+   "2026-08-07T12:03:42"
+  ],
+  "80137": [
+   "recruitment-agency-insolvency-statistics",
+   "2026-08-07T12:03:36"
+  ],
+  "80136": [
+   "road-haulage-insolvency-statistics",
+   "2026-08-07T12:03:29"
+  ],
+  "80135": [
+   "pub-and-bar-insolvency-statistics",
+   "2026-07-13T16:16:00"
+  ],
+  "80134": [
+   "restaurant-insolvency-statistics",
+   "2026-08-07T12:03:21"
+  ],
+  "80098": [
+   "furniture-insolvency-statistics",
+   "2026-08-07T12:12:24"
+  ],
+  "79856": [
+   "construction-insolvency-statistics",
+   "2026-08-07T07:45:16"
+  ],
+  "79855": [
+   "company-insolvencies-by-sector",
+   "2026-07-23T10:47:19"
+  ],
+  "79854": [
+   "administration-statistics",
+   "2026-07-23T07:13:42"
+  ],
+  "79853": [
+   "compulsory-liquidation-statistics",
+   "2026-07-23T07:13:29"
+  ],
+  "79852": [
+   "cvl-statistics",
+   "2026-07-23T07:13:15"
+  ],
+  "79850": [
+   "payment-practices-late-payment",
+   "2026-07-23T07:14:09"
+  ],
+  "79848": [
+   "dissolutions-vs-insolvencies",
+   "2026-07-20T07:36:45"
+  ],
+  "79847": [
+   "winding-up-petition-tracker",
+   "2026-07-23T07:13:56"
+  ],
+  "79846": [
+   "company-insolvency",
+   "2026-06-18T18:18:18"
+  ],
+  "79845": [
+   "data",
+   "2026-07-20T07:56:09"
+  ],
+  "79808": [
+   "cookie-policy",
+   "2026-05-22T10:11:14"
+  ],
+  "79615": [
+   "can-a-supplier-force-my-company-into-liquidation",
+   "2026-07-15T14:50:29"
+  ],
+  "79606": [
+   "what-happens-if-a-creditor-takes-me-to-court",
+   "2026-07-15T14:50:39"
+  ],
+  "79596": [
+   "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement",
+   "2026-07-15T14:50:47"
+  ],
+  "79588": [
+   "what-happens-if-you-ignore-hmrc-letters",
+   "2026-07-15T14:50:19"
+  ],
+  "79580": [
+   "can-hmrc-shut-down-my-business",
+   "2026-07-15T14:47:44"
+  ],
+  "79571": [
+   "what-happens-if-hmrc-sends-bailiffs-to-a-business",
+   "2026-07-15T14:49:58"
+  ],
+  "79563": [
+   "what-happens-if-hmrc-freezes-your-business-bank-account",
+   "2026-07-15T14:50:40"
+  ],
+  "79553": [
+   "can-directors-pay-themselves-before-liquidation",
+   "2026-07-15T14:47:22"
+  ],
+  "79545": [
+   "what-happens-if-a-director-transfers-assets-before-insolvency",
+   "2026-07-15T14:49:16"
+  ],
+  "79537": [
+   "can-a-director-be-sued-personally-by-creditors",
+   "2026-07-15T14:47:31"
+  ],
+  "79529": [
+   "what-happens-if-a-director-hides-company-assets",
+   "2026-07-15T14:49:17"
+  ],
+  "79515": [
+   "can-directors-go-to-prison-for-company-debt",
+   "2026-07-15T14:51:04"
+  ],
+  "79507": [
+   "what-happens-if-i-stop-paying-company-debts",
+   "2026-07-15T14:50:10"
+  ],
+  "79498": [
+   "pay-hmrc-or-suppliers-first",
+   "2026-07-15T14:49:11"
+  ],
+  "79489": [
+   "seek-insolvency-advice-before-missing-payments",
+   "2026-07-15T14:50:15"
+  ],
+  "79480": [
+   "when-should-a-director-stop-trading",
+   "2026-07-15T14:49:01"
+  ],
+  "79472": [
+   "should-i-close-my-company-or-try-to-save-it",
+   "2026-07-15T14:46:45"
+  ],
+  "79463": [
+   "insolvency-myths-debunked",
+   "2026-07-15T14:50:07"
+  ],
+  "79455": [
+   "insolvency-vs-bankruptcy",
+   "2026-07-15T14:49:19"
+  ],
+  "79445": [
+   "list-of-liquidation-documents",
+   "2026-07-15T14:47:43"
+  ],
+  "79436": [
+   "directors-responsibilities-after-a-company-is-struck-off",
+   "2026-07-15T14:48:32"
+  ],
+  "79423": [
+   "insolvency-checklist",
+   "2026-07-15T14:45:49"
+  ],
+  "79412": [
+   "uk-insolvency-flowchart",
+   "2026-07-15T14:48:55"
+  ],
+  "79404": [
+   "uk-insolvency-glossary",
+   "2026-07-15T14:49:41"
+  ],
+  "79396": [
+   "director-conduct-review",
+   "2026-07-15T14:51:08"
+  ],
+  "79387": [
+   "use-a-cva-to-close-a-company",
+   "2026-07-15T14:49:14"
+  ],
+  "79379": [
+   "business-bank-account-in-liquidation",
+   "2026-07-15T14:47:56"
+  ],
+  "79369": [
+   "director-guarantees-in-a-cva",
+   "2026-07-15T14:48:58"
+  ],
+  "79360": [
+   "ccj-when-going-insolvent",
+   "2026-07-15T14:50:13"
+  ],
+  "79351": [
+   "can-i-choose-my-liquidator",
+   "2026-07-15T14:49:48"
+  ],
+  "79342": [
+   "hmrc-as-a-creditor-in-liquidation",
+   "2026-07-15T14:47:01"
+  ],
+  "79332": [
+   "what-happens-if-a-cva-fails-mid-term",
+   "2026-07-15T14:50:32"
+  ],
+  "79322": [
+   "winding-up-petition-vs-compulsory-liquidation",
+   "2026-08-07T13:05:38"
+  ],
+  "79313": [
+   "light-touch-administration",
+   "2026-07-15T14:49:29"
+  ],
+  "79304": [
+   "cva-vs-strike-off-vs-liquidation",
+   "2026-07-15T14:46:18"
+  ],
+  "79295": [
+   "company-voluntary-arrangement-vs-administration-which-to-choose",
+   "2026-06-17T08:45:18"
+  ],
+  "79285": [
+   "liquidating-a-group-company-or-holding-company-in-the-uk",
+   "2026-07-15T14:47:50"
+  ],
+  "79276": [
+   "can-you-liquidate-to-avoid-paying-suppliers",
+   "2026-07-15T14:49:33"
+  ],
+  "79266": [
+   "can-i-liquidate-a-dormant-company",
+   "2026-07-15T14:48:35"
+  ],
+  "79256": [
+   "liquidating-a-company-with-no-assets-or-bank-account-uk",
+   "2026-07-15T14:46:59"
+  ],
+  "79246": [
+   "can-i-liquidate-my-company-with-a-bounce-back-loan",
+   "2026-07-15T14:50:55"
+  ],
+  "79236": [
+   "can-i-start-a-new-company-after-liquidating-my-old-one",
+   "2026-07-15T14:51:06"
+  ],
+  "78835": [
+   "whats-the-risk-of-being-disqualified-as-a-director",
+   "2026-07-15T14:50:52"
+  ],
+  "78851": [
+   "voluntary-liquidation",
+   "2026-06-11T05:04:55"
+  ],
+  "78825": [
+   "paying-staff-but-not-hmrc-before-liquidation",
+   "2026-07-15T14:48:13"
+  ],
+  "78812": [
+   "redundancy-payments-for-directors-in-an-mvl",
+   "2026-07-15T14:47:04"
+  ],
+  "78797": [
+   "what-happens-if-a-director-resigns-before-liquidation",
+   "2026-07-15T14:51:03"
+  ],
+  "78781": [
+   "can-i-be-sued-after-my-company-is-dissolved",
+   "2026-07-15T14:47:15"
+  ],
+  "78771": [
+   "liquidating-a-charity-or-non-profit",
+   "2026-07-15T14:51:09"
+  ],
+  "78756": [
+   "liquidating-a-limited-liability-partnership",
+   "2026-07-15T14:45:59"
+  ],
+  "78707": [
+   "company-restoration-after-liquidation",
+   "2026-07-15T14:46:24"
+  ],
+  "78690": [
+   "liquidation-deadlines-and-time-limits",
+   "2026-07-15T14:47:53"
+  ],
+  "78673": [
+   "liquidators-powers-and-duties",
+   "2026-07-15T14:48:59"
+  ],
+  "78654": [
+   "how-to-challenge-a-liquidators-decisions-or-fees",
+   "2026-07-15T14:50:05"
+  ],
+  "78635": [
+   "creditor-meetings-in-liquidation",
+   "2026-07-15T14:46:54"
+  ],
+  "78613": [
+   "how-to-prove-your-debt-in-company-liquidation",
+   "2026-07-15T14:49:55"
+  ],
+  "78596": [
+   "company-vehicles-and-equipment-in-liquidation",
+   "2026-07-15T14:46:27"
+  ],
+  "78578": [
+   "intellectual-property-and-trading-assets-in-liquidation",
+   "2026-07-15T14:46:03"
+  ],
+  "78560": [
+   "company-property-and-real-estate-in-liquidation",
+   "2026-07-15T14:45:25"
+  ],
+  "78191": [
+   "leases-and-contracts-in-liquidation",
+   "2026-07-15T14:46:08"
+  ],
+  "78163": [
+   "company-pensions-and-liquidation",
+   "2026-07-15T14:47:39"
+  ],
+  "78129": [
+   "directors-conduct-report-2",
+   "2026-06-13T14:42:22"
+  ],
+  "78102": [
+   "how-to-choose-the-right-insolvency-procedure",
+   "2026-07-15T14:49:08"
+  ],
+  "77916": [
+   "voluntary-vs-compulsory-liquidation",
+   "2026-07-15T14:47:10"
+  ],
+  "77883": [
+   "liquidation-vs-dissolution-strike-off",
+   "2026-07-16T09:16:04"
+  ],
+  "77814": [
+   "how-to-prepare-for-company-liquidation",
+   "2026-07-15T14:50:59"
+  ],
+  "77960": [
+   "cant-afford-to-liquidate",
+   "2026-07-15T14:46:11"
+  ],
+  "77739": [
+   "which-creditors-get-paid-first",
+   "2026-07-16T09:15:38"
+  ],
+  "77699": [
+   "",
+   "2025-10-24T08:33:35"
+  ],
+  "77693": [
+   "insolvency-news-commentary",
+   "2026-07-16T09:30:46"
+  ],
+  "77684": [
+   "debt-charities-uk",
+   "2026-07-15T14:46:57"
+  ],
+  "77681": [
+   "mental-health-debt-stress-support",
+   "2026-07-15T14:50:54"
+  ],
+  "77401": [
+   "sector-specific-insolvency",
+   "2026-07-15T14:49:24"
+  ],
+  "77399": [
+   "uk-insolvency-statistics",
+   "2026-07-23T16:44:00"
+  ],
+  "77396": [
+   "director-protection-hub",
+   "2026-08-07T13:07:29"
+  ],
+  "77372": [
+   "company-rescue-recovery-hub",
+   "2026-07-15T14:38:14"
+  ],
+  "77339": [
+   "guides-resources-hub",
+   "2026-05-23T18:51:21"
+  ],
+  "77205": [
+   "hmrc-debt-enforcement-hub",
+   "2026-07-15T14:49:22"
+  ],
+  "77278": [
+   "company-strike-off-and-dissolution",
+   "2026-07-15T14:47:38"
+  ],
+  "77248": [
+   "sector-insolvency-hub",
+   "2026-05-23T18:51:44"
+  ],
+  "77218": [
+   "charity-non-profit-insolvency",
+   "2026-07-15T14:51:13"
+  ],
+  "77216": [
+   "hospitality-restaurant-insolvency",
+   "2026-07-15T14:50:03"
+  ],
+  "77207": [
+   "manufacturing-insolvency",
+   "2026-07-15T14:49:50"
+  ],
+  "77186": [
+   "care-home-insolvency",
+   "2026-07-15T14:48:29"
+  ],
+  "77181": [
+   "energy-provider-insolvency",
+   "2026-07-15T14:49:39"
+  ],
+  "77175": [
+   "professional-services-insolvency",
+   "2026-07-15T14:51:11"
+  ],
+  "77162": [
+   "hmrc-enforcement-action",
+   "2026-07-15T14:50:17"
+  ],
+  "77161": [
+   "transport-haulage-insolvency",
+   "2026-07-15T14:49:09"
+  ],
+  "77157": [
+   "construction-insolvency",
+   "2026-07-15T14:49:03"
+  ],
+  "77146": [
+   "debt-creditor-pressure-hub",
+   "2026-07-15T14:50:36"
+  ],
+  "77097": [
+   "bailiffs-high-court-enforcement-officers",
+   "2026-07-15T14:45:32"
+  ],
+  "76920": [
+   "hmrc-penalties-investigations",
+   "2026-07-15T14:46:22"
+  ],
+  "76904": [
+   "am-i-solvent",
+   "2026-07-15T14:47:36"
+  ],
+  "76843": [
+   "prize-draw-terms-conditions",
+   "2026-04-16T13:25:42"
+  ],
+  "76803": [
+   "",
+   "2025-09-09T15:11:05"
+  ],
+  "76609": [
+   "company-cannot-pay-its-debts",
+   "2025-07-15T09:44:01"
+  ],
+  "76567": [
+   "what-can-bailiffs-seize-from-a-limited-company",
+   "2025-08-18T11:46:19"
+  ],
+  "76323": [
+   "insolvency-advice-for-directors",
+   "2026-07-15T14:48:05"
+  ],
+  "76268": [
+   "can-hmrc-force-my-company-into-liquidation",
+   "2025-09-09T09:20:03"
+  ],
+  "75195": [
+   "if-a-company-goes-into-liquidation-can-i-get-my-money-back",
+   "2025-09-09T09:45:04"
+  ],
+  "75111": [
+   "overdrawn-directors-loan-accounts",
+   "2026-07-07T13:53:39"
+  ],
+  "75103": [
+   "how-to-appoint-a-liquidator",
+   "2025-09-09T09:40:57"
+  ],
+  "74891": [
+   "secured-vs-unsecured-creditors",
+   "2026-07-15T11:39:20"
+  ],
+  "74578": [
+   "how-is-an-insolvency-practitioner-appointed",
+   "2025-09-11T09:27:24"
+  ],
+  "74563": [
+   "practitioner-vs-supervisor-of-cva",
+   "2025-09-11T09:38:42"
+  ],
+  "74556": [
+   "practitioner-vs-administrator",
+   "2025-09-11T09:36:53"
+  ],
+  "74439": [
+   "notice-of-intention-to-appoint-administrators",
+   "2026-06-13T14:42:39"
+  ],
+  "74421": [
+   "what-is-an-administration-sale",
+   "2025-09-09T12:44:04"
+  ],
+  "74390": [
+   "when-a-cva-fails",
+   "2026-07-15T14:49:53"
+  ],
+  "74382": [
+   "when-employers-cant-afford-redundancy-payments",
+   "2026-07-15T14:46:26"
+  ],
+  "74372": [
+   "cant-pay-a-company-mortgage",
+   "2026-07-15T14:45:35"
+  ],
+  "74264": [
+   "challenge-a-statutory-demand",
+   "2026-07-15T14:45:45"
+  ],
+  "73778": [
+   "alternatives-to-company-liquidation",
+   "2026-07-15T14:38:13"
+  ],
+  "72101": [
+   "what-happens-if-my-time-to-pay-arrangement-fails",
+   "2025-09-18T09:49:08"
+  ],
+  "72086": [
+   "",
+   "2024-05-03T08:45:47"
+  ],
+  "71514": [
+   "directors-duties-to-creditors",
+   "2026-07-15T14:45:39"
+  ],
+  "71483": [
+   "what-is-a-declaration-of-solvency",
+   "2025-09-09T10:27:19"
+  ],
+  "71418": [
+   "winding-up-a-limited-company",
+   "2025-09-12T11:43:24"
+  ],
+  "71364": [
+   "difference-between-a-liquidator-and-an-official-receiver",
+   "2025-09-09T10:38:34"
+  ],
+  "71246": [
+   "what-are-a-directors-duties-in-insolvency",
+   "2025-09-11T09:48:42"
+  ],
+  "71084": [
+   "can-you-liquidate-a-company-yourself",
+   "2025-09-09T09:21:49"
+  ],
+  "70821": [
+   "how-can-you-stop-a-wup",
+   "2025-09-11T09:55:08"
+  ],
+  "70791": [
+   "how-to-set-aside",
+   "2025-09-11T09:55:02"
+  ],
+  "70781": [
+   "statutory-demand-vs-wup",
+   "2025-09-11T09:50:35"
+  ],
+  "70501": [
+   "preferential-payments-during-insolvency",
+   "2026-07-15T14:49:27"
+  ],
+  "70433": [
+   "does-liquidation-write-off-company-debt",
+   "2025-09-09T09:36:57"
+  ],
+  "70002": [
+   "alternatives-to-liquidation",
+   "2025-09-09T10:14:01"
+  ],
+  "69919": [
+   "what-happens-to-company-assets",
+   "2025-09-09T09:56:55"
+  ],
+  "69307": [
+   "what-to-do-if-you-cant-repay",
+   "2025-09-09T13:47:45"
+  ],
+  "68736": [
+   "company-is-having-financial-difficulties",
+   "2026-07-15T14:47:21"
+  ],
+  "68387": [
+   "insolvent-company-investigations",
+   "2026-07-15T14:49:12"
+  ],
+  "68356": [
+   "advantages-and-disadvantages",
+   "2026-07-15T11:37:10"
+  ],
+  "68221": [
+   "get-free-business-debt-advice",
+   "2026-07-16T09:32:17"
+  ],
+  "68216": [
+   "what-is-a-directors-responsibility-for-accountancy-errors",
+   "2026-07-15T14:49:56"
+  ],
+  "68207": [
+   "are-directors-personally-liable-for-company-debts",
+   "2026-07-15T14:47:02"
+  ],
+  "68211": [
+   "what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest",
+   "2026-07-15T14:48:08"
+  ],
+  "68192": [
+   "preventing-company-director-disputes",
+   "2026-07-15T14:49:20"
+  ],
+  "68189": [
+   "how-to-legally-take-money-out-of-a-limited-company",
+   "2026-07-15T14:47:28"
+  ],
+  "68183": [
+   "funding-options-for-smes-in-the-uk",
+   "2026-07-15T14:48:30"
+  ],
+  "68180": [
+   "directors-personal-guarantees",
+   "2026-07-15T14:38:15"
+  ],
+  "68160": [
+   "",
+   "2024-03-21T11:56:42"
+  ],
+  "68153": [
+   "advice",
+   "2026-06-13T14:45:56"
+  ],
+  "68134": [
+   "creditor-negotiations",
+   "2026-07-15T14:48:02"
+  ],
+  "68130": [
+   "business-recovery-services",
+   "2026-08-07T12:39:23"
+  ],
+  "68128": [
+   "what-can-bailiffs-take-from-a-limited-company",
+   "2025-09-22T12:19:44"
+  ],
+  "68126": [
+   "how-to-communicate-effectively-with-creditors",
+   "2025-09-11T09:30:03"
+  ],
+  "68123": [
+   "what-are-the-warning-signs-of-an-insolvent-company",
+   "2026-07-15T14:50:34"
+  ],
+  "68120": [
+   "can-you-sell-your-insolvent-company",
+   "2026-07-15T14:50:12"
+  ],
+  "68117": [
+   "how-to-save-a-struggling-business",
+   "2026-07-15T14:48:33"
+  ],
+  "68115": [
+   "rescue-your-business-from-insolvency",
+   "2026-07-15T14:50:08"
+  ],
+  "68111": [
+   "what-to-do-about-customer-insolvency",
+   "2026-07-15T14:45:40"
+  ],
+  "68108": [
+   "how-to-reduce-insolvency-risk",
+   "2026-07-15T14:49:37"
+  ],
+  "68101": [
+   "dealing-with-creditor-pressure",
+   "2026-07-15T14:48:15"
+  ],
+  "68076": [
+   "county-court-judgements",
+   "2026-07-08T12:04:40"
+  ],
+  "67962": [
+   "what-is-a-statutory-demand-against-a-company",
+   "2026-07-15T14:48:19"
+  ],
+  "67960": [
+   "cant-afford-to-pay-suppliers-what-are-the-options",
+   "2026-07-15T14:48:27"
+  ],
+  "67957": [
+   "why-debt-is-not-always-a-bad-thing-for-your-business",
+   "2026-07-15T14:50:57"
+  ],
+  "67828": [
+   "accelerated-payment-notices-apn",
+   "2026-07-15T14:49:44"
+  ],
+  "67809": [
+   "hmrc",
+   "2026-07-16T09:15:31"
+  ],
+  "67757": [
+   "transactions-at-undervalue",
+   "2026-07-15T14:49:51"
+  ],
+  "67747": [
+   "antecedent-transactions",
+   "2026-07-15T14:48:47"
+  ],
+  "67706": [
+   "how-can-i-stop-a-creditor-putting-my-company-into-liquidation",
+   "2025-09-09T09:38:05"
+  ],
+  "67683": [
+   "dissolved-vs-dormant",
+   "2025-09-12T11:38:24"
+  ],
+  "67654": [
+   "how-to-close-without-paying-tax",
+   "2025-09-12T11:22:52"
+  ],
+  "67535": [
+   "pros-and-cons",
+   "2026-07-15T14:47:19"
+  ],
+  "67505": [
+   "can-a-director-be-made-bankrupt-if-a-business-fails",
+   "2026-07-15T14:46:48"
+  ],
+  "67438": [
+   "dealing-with-an-hmrc-winding-up-petition",
+   "2026-08-07T13:09:58"
+  ],
+  "67418": [
+   "whats-the-winding-up-petition-process",
+   "2025-09-11T09:44:59"
+  ],
+  "67370": [
+   "what-is-a-winding-up-order",
+   "2026-07-15T14:51:15"
+  ],
+  "67260": [
+   "solvent",
+   "2025-09-09T10:27:53"
+  ],
+  "66786": [
+   "what-is-wrongful-trading",
+   "2026-07-15T14:48:48"
+  ],
+  "65807": [
+   "are-liquidation-and-insolvency-the-same-thing",
+   "2025-09-09T09:19:30"
+  ],
+  "65614": [
+   "closing-a-limited-company",
+   "2026-08-07T13:10:09"
+  ],
+  "65593": [
+   "directors-disqualification",
+   "2026-07-15T14:49:06"
+  ],
+  "65483": [
+   "company-administration",
+   "2026-07-15T14:45:19"
+  ],
+  "65238": [
+   "what-happens-after-company-liquidation",
+   "2026-07-15T14:50:49"
+  ],
+  "65224": [
+   "difference-between-bankruptcy-and-liquidation",
+   "2025-09-09T10:30:08"
+  ],
+  "65202": [
+   "what-happens-when-a-company-goes-into-liquidation",
+   "2023-10-25T08:45:32"
+  ],
+  "65063": [
+   "",
+   "2023-10-17T13:42:41"
+  ],
+  "64796": [
+   "can-you-write-off-a-bounce-back-loan",
+   "2025-09-09T13:46:57"
+  ],
+  "64762": [
+   "overdrawn-directors-loan-account-during-liquidation",
+   "2025-09-09T10:43:39"
+  ],
+  "64733": [
+   "can-i-close-a-limited-company-with-debts-and-start-again",
+   "2023-10-25T10:05:11"
+  ],
+  "52954": [
+   "",
+   "2023-02-25T19:50:00"
+  ],
+  "61864": [
+   "voluntary-vs-compulsory",
+   "2025-09-09T09:54:56"
+  ],
+  "55706": [
+   "",
+   "2022-11-28T14:48:20"
+  ],
+  "27054": [
+   "",
+   "2022-11-28T14:48:10"
+  ],
+  "52777": [
+   "",
+   "2022-11-28T14:48:10"
+  ],
+  "26415": [
+   "",
+   "2022-11-28T14:48:07"
+  ],
+  "32657": [
+   "",
+   "2022-11-28T14:47:54"
+  ],
+  "47310": [
+   "",
+   "2022-11-28T14:47:48"
+  ],
+  "58601": [
+   "cant-pay-business-energy",
+   "2026-06-13T14:43:16"
+  ],
+  "58149": [
+   "what-is-a-creditors-voluntary-liquidation",
+   "2024-09-25T15:29:05"
+  ],
+  "57942": [
+   "stressed-directors-guide",
+   "2026-06-03T14:09:02"
+  ],
+  "57472": [
+   "contact-us",
+   "2026-06-02T15:50:59"
+  ],
+  "55381": [
+   "writing-off-a-directors-loan-account",
+   "2026-07-15T14:45:28"
+  ],
+  "55052": [
+   "home-2022",
+   "2026-07-24T08:19:10"
+  ],
+  "54552": [
+   "quick-quote",
+   "2026-06-10T19:36:24"
+  ],
+  "54297": [
+   "bounce-back-loans",
+   "2025-09-09T13:48:22"
+  ],
+  "54064": [
+   "express-liquidation",
+   "2026-05-23T18:51:18"
+  ],
+  "53942": [
+   "insolvency-calculator",
+   "2026-08-05T19:33:55"
+  ],
+  "53651": [
+   "meet-our-team",
+   "2022-11-28T14:48:15"
+  ],
+  "53625": [
+   "can-i-lose-my-house-with-a-bounce-back-loan",
+   "2026-07-15T14:48:52"
+  ],
+  "53183": [
+   "write-off-my-debt",
+   "2026-07-15T14:46:16"
+  ],
+  "53187": [
+   "cease-trading-template",
+   "2026-07-15T14:46:14"
+  ],
+  "53253": [
+   "sample-letters",
+   "2026-06-13T14:45:59"
+  ],
+  "53243": [
+   "tell-debt-collector-to-stop-contacting-you",
+   "2026-07-15T14:46:01"
+  ],
+  "53189": [
+   "appeal-to-strike-off-template-letter",
+   "2022-11-28T14:47:47"
+  ],
+  "53185": [
+   "i-need-more-information-about-this-debt",
+   "2026-06-13T14:40:18"
+  ],
+  "53174": [
+   "request-a-reduced-monthly-payment",
+   "2026-07-15T14:48:50"
+  ],
+  "53166": [
+   "i-cannot-afford-to-repay-my-debt",
+   "2026-07-15T14:46:09"
+  ],
+  "53158": [
+   "hold-action-on-my-account",
+   "2026-07-15T14:50:42"
+  ],
+  "53159": [
+   "i-have-no-knowledge-of-this-debt",
+   "2026-07-15T14:48:38"
+  ],
+  "53061": [
+   "time-to-pay-vat",
+   "2023-10-17T10:57:51"
+  ],
+  "52920": [
+   "how-can-i-find-a-local-insolvency-practitioner",
+   "2022-11-28T14:48:06"
+  ],
+  "52912": [
+   "can-i-write-off-a-directors-loan-account",
+   "2022-11-28T14:47:53"
+  ],
+  "52808": [
+   "find-a-liquidator-near-me",
+   "2026-07-15T14:45:53"
+  ],
+  "52771": [
+   "what-is-the-companies-act-2006",
+   "2026-07-15T14:45:42"
+  ],
+  "52352": [
+   "debt-resources",
+   "2024-03-27T14:52:06"
+  ],
+  "52210": [
+   "what-happens-if-you-cant-pay-paye-because-of-covid",
+   "2022-05-31T10:11:57"
+  ],
+  "52193": [
+   "cant-pay-corporation-tax-due-to-covid",
+   "2022-11-28T14:47:56"
+  ],
+  "52189": [
+   "can-hmrc-debts-be-written-off",
+   "2025-09-15T13:55:47"
+  ],
+  "52086": [
+   "i-owe-hmrc-money-what-will-happen",
+   "2022-11-28T14:48:11"
+  ],
+  "52044": [
+   "is-my-company-insolvent",
+   "2022-11-28T14:48:13"
+  ],
+  "51983": [
+   "close-a-business-in-the-uk",
+   "2022-04-29T17:02:19"
+  ],
+  "51978": [
+   "compulsory-winding-up",
+   "2023-10-24T15:29:15"
+  ],
+  "51947": [
+   "hmrc-arrears-advice",
+   "2022-11-28T14:48:04"
+  ],
+  "51154": [
+   "what-is-a-nudge-letter-from-hmrc",
+   "2025-09-15T14:12:50"
+  ],
+  "50913": [
+   "cant-pay-vat-because-of-covid-19-what-are-your-options",
+   "2022-11-28T14:47:55"
+  ],
+  "50819": [
+   "cant-pay-coronavirus-business-interruption-loan-cbils",
+   "2026-07-15T14:49:04"
+  ],
+  "50764": [
+   "what-happens-to-my-cbils-loan-during-liquidation",
+   "2025-09-09T10:04:16"
+  ],
+  "50760": [
+   "what-happens-if-my-company-cant-repay-its-cbils-loan",
+   "2025-09-18T12:32:23"
+  ],
+  "50629": [
+   "personal-liability-for-cbils-loans",
+   "2026-07-15T14:49:34"
+  ],
+  "49665": [
+   "accreditations",
+   "2026-05-22T10:15:10"
+  ],
+  "49618": [
+   "creditors-meeting",
+   "2026-07-15T14:47:11"
+  ],
+  "49072": [
+   "charge-out-rates",
+   "2026-04-16T13:26:41"
+  ],
+  "49058": [
+   "useful-publications",
+   "2026-05-22T10:15:13"
+  ],
+  "49042": [
+   "legal",
+   "2026-05-22T10:15:15"
+  ],
+  "49024": [
+   "complaints-procedure",
+   "2026-04-16T13:26:41"
+  ],
+  "48662": [
+   "fraudulent-trading",
+   "2022-06-24T09:42:57"
+  ],
+  "48488": [
+   "can-i-top-up-my-bounce-back-loan",
+   "2022-11-28T14:47:53"
+  ],
+  "48170": [
+   "creditors-guides-to-insolvency-practitioners-fees",
+   "2026-07-16T09:16:13"
+  ],
+  "47772": [
+   "insolvency-act-1986",
+   "2026-07-08T11:22:10"
+  ],
+  "47550": [
+   "what-is-the-insolvency-service",
+   "2026-07-15T14:48:42"
+  ],
+  "47315": [
+   "what-is-provisional-liquidation",
+   "2025-09-09T09:49:10"
+  ],
+  "7674": [
+   "creditors-voluntary-liquidation",
+   "2026-08-07T13:11:33"
+  ],
+  "47116": [
+   "limited-company-liquidation",
+   "2022-11-28T14:47:58"
+  ],
+  "46933": [
+   "what-is-the-official-receiver",
+   "2025-09-09T10:38:01"
+  ],
+  "46724": [
+   "what-happens-to-the-shares-of-a-company-that-has-been-liquidated",
+   "2025-09-09T10:14:38"
+  ],
+  "46674": [
+   "what-is-a-creditor",
+   "2026-07-15T14:50:21"
+  ],
+  "46579": [
+   "bounce-back-loan-fraud",
+   "2026-07-15T14:46:38"
+  ],
+  "46493": [
+   "can-i-close-my-business",
+   "2025-09-09T13:47:17"
+  ],
+  "46433": [
+   "liquidation-value",
+   "2025-09-09T09:48:33"
+  ],
+  "46222": [
+   "what-happens-to-directors-in-liquidation",
+   "2026-08-07T13:11:43"
+  ],
+  "46156": [
+   "can-you-liquidate-a-company-for-free",
+   "2025-09-09T09:45:44"
+  ],
+  "46152": [
+   "liquidated-companies-list",
+   "2025-09-09T09:46:05"
+  ],
+  "46091": [
+   "can-i-start-a-new-company-after-liquidation",
+   "2025-09-09T09:21:17"
+  ],
+  "44709": [
+   "home-gutenberg",
+   "2022-11-28T14:47:57"
+  ],
+  "44563": [
+   "features",
+   "2025-09-11T09:24:21"
+  ],
+  "45771": [
+   "content-usage-guidelines",
+   "2026-05-22T10:15:28"
+  ],
+  "44055": [
+   "cant-pay-staff-wages",
+   "2026-07-15T14:46:06"
+  ],
+  "44039": [
+   "time-to-pay-corporation-tax",
+   "2022-11-28T14:47:52"
+  ],
+  "43985": [
+   "close-a-limited-company-with-debts",
+   "2025-09-12T11:23:01"
+  ],
+  "43917": [
+   "cant-afford-to-repay-business-loan",
+   "2026-07-15T14:48:10"
+  ],
+  "43816": [
+   "costs-of-closing-a-company",
+   "2025-09-12T11:38:22"
+  ],
+  "43758": [
+   "bounce-back-loan-support-hub",
+   "2026-06-13T14:45:57"
+  ],
+  "43745": [
+   "dissolving-a-company-with-bounce-back-loan",
+   "2026-07-15T14:46:30"
+  ],
+  "43675": [
+   "what-happens-if-i-default",
+   "2026-07-15T11:37:02"
+  ],
+  "43654": [
+   "can-hmrc-chase-a-dissolved-company",
+   "2025-09-12T11:55:06"
+  ],
+  "43580": [
+   "directors-liability-for-bounce-back-loans",
+   "2026-07-15T14:48:37"
+  ],
+  "43522": [
+   "unenforceable-personal-guarantee",
+   "2026-06-13T14:40:24"
+  ],
+  "43518": [
+   "cant-get-a-business-loan",
+   "2025-09-19T08:39:04"
+  ],
+  "42739": [
+   "what-happens-if-a-company-cannot-pay-its-debts",
+   "2026-07-15T14:46:51"
+  ],
+  "27019": [
+   "",
+   "2020-09-30T14:37:36"
+  ],
+  "29144": [
+   "",
+   "2020-09-30T14:37:36"
+  ],
+  "41082": [
+   "can-personal-assets-of-directors-be-seized-from-a-ltd-company",
+   "2026-07-15T14:47:33"
+  ],
+  "40275": [
+   "bankruptcy",
+   "2022-06-01T09:31:46"
+  ],
+  "40027": [
+   "liquidating-a-company-in-scotland",
+   "2025-09-09T09:46:33"
+  ],
+  "39500": [
+   "what-is-a-high-court-writ",
+   "2026-07-15T14:48:21"
+  ],
+  "38597": [
+   "losing-house-if-company-goes-bust",
+   "2026-07-15T14:46:35"
+  ],
+  "37481": [
+   "high-court-enforcement-officers",
+   "2025-09-22T12:18:45"
+  ],
+  "35153": [
+   "winding-up-a-company-limited-by-guarantee",
+   "2025-09-11T09:45:07"
+  ],
+  "34541": [
+   "debt-help-company",
+   "2022-11-28T14:48:00"
+  ],
+  "34152": [
+   "capital-distribution-on-winding-up",
+   "2025-09-09T10:29:08"
+  ],
+  "31237": [
+   "cant-pay-a-commercial-lease-or-rent",
+   "2026-07-15T14:47:08"
+  ],
+  "31199": [
+   "business-restructuring",
+   "2026-07-15T14:45:43"
+  ],
+  "29543": [
+   "lpa-receivership",
+   "2026-07-15T14:47:34"
+  ],
+  "29189": [
+   "cash-grants-coronavirus",
+   "2022-11-28T14:47:56"
+  ],
+  "28761": [
+   "corporation-tax-penalties",
+   "2026-07-15T14:46:37"
+  ],
+  "28661": [
+   "ir35-contractor",
+   "2025-09-12T11:22:57"
+  ],
+  "28545": [
+   "personally-liabilty-of-company-secretary",
+   "2026-07-15T14:47:13"
+  ],
+  "28526": [
+   "personal-liability-spouses-business-debts",
+   "2026-06-13T14:43:42"
+  ],
+  "26902": [
+   "biggest-struggles-for-small-business-owners",
+   "2026-06-13T14:43:44"
+  ],
+  "26888": [
+   "stop-or-avoid-insolvency",
+   "2026-07-15T14:50:22"
+  ],
+  "26758": [
+   "what-to-do-when-your-business-is-in-trouble",
+   "2022-11-10T10:40:39"
+  ],
+  "26347": [
+   "cant-pay-business-rates",
+   "2026-07-15T14:46:40"
+  ],
+  "26335": [
+   "first-gazette-notice-for-compulsory-strike-off",
+   "2025-09-12T11:38:20"
+  ],
+  "26298": [
+   "misfeasance",
+   "2026-07-15T14:47:16"
+  ],
+  "26279": [
+   "cease-trading",
+   "2026-07-08T11:22:09"
+  ],
+  "26234": [
+   "debt-management-guide",
+   "2026-07-15T14:45:37"
+  ],
+  "26218": [
+   "business-debt-advice-archived-26218",
+   "2026-07-09T14:34:10"
+  ],
+  "26139": [
+   "company-cash-flow-problems",
+   "2026-06-13T14:45:00"
+  ],
+  "25310": [
+   "validation-order",
+   "2026-07-15T14:48:11"
+  ],
+  "24780": [
+   "personal-guarantee-insurance",
+   "2026-06-22T16:36:45"
+  ],
+  "8414": [
+   "time-to-pay-hmrc",
+   "2026-07-07T13:53:48"
+  ],
+  "24801": [
+   "feedback",
+   "2026-04-16T13:27:20"
+  ],
+  "24760": [
+   "what-are-fixed-and-floating-charges",
+   "2026-07-15T14:47:41"
+  ],
+  "24635": [
+   "invoice-factoring-vs-sales-ledger-financing",
+   "2022-11-28T14:48:13"
+  ],
+  "24572": [
+   "insolvency-advice",
+   "2025-09-11T09:36:04"
+  ],
+  "24434": [
+   "what-is-a-freezing-order-or-injunction",
+   "2026-07-15T14:45:56"
+  ],
+  "24402": [
+   "what-are-the-duties-and-responsibilities-of-a-company-director",
+   "2026-07-15T14:46:13"
+  ],
+  "24328": [
+   "whats-the-cheapest-way-to-liquidate-a-company",
+   "2023-04-03T10:53:43"
+  ],
+  "24316": [
+   "what-is-an-insolvent-business",
+   "2022-05-30T13:03:26"
+  ],
+  "7687": [
+   "winding-up-petitions",
+   "2026-08-07T13:13:14"
+  ],
+  "24124": [
+   "what-happens-to-the-directors",
+   "2023-10-24T10:15:39"
+  ],
+  "24080": [
+   "can-we-trade-out-of-insolvency",
+   "2026-07-15T14:49:26"
+  ],
+  "17686": [
+   "insolvency",
+   "2026-07-07T13:53:52"
+  ],
+  "24032": [
+   "accessibility",
+   "2026-05-22T10:16:27"
+  ],
+  "23993": [
+   "advantages-and-disadvantages",
+   "2022-05-31T09:57:06"
+  ],
+  "23981": [
+   "fees-and-charges",
+   "2022-05-30T13:37:20"
+  ],
+  "23966": [
+   "reasons-businesses-fail",
+   "2025-09-11T09:59:37"
+  ],
+  "23860": [
+   "effects-of-liquidation-on-a-company",
+   "2025-09-09T09:55:31"
+  ],
+  "23841": [
+   "trading-while-insolvent",
+   "2025-09-11T09:40:18"
+  ],
+  "9443": [
+   "cant-pay-vat",
+   "2026-07-16T09:16:00"
+  ],
+  "23709": [
+   "what-happens-to-debts-once-a-company-is-dissolved",
+   "2025-09-12T11:57:20"
+  ],
+  "23705": [
+   "what-is-asset-liquidation",
+   "2025-09-09T09:47:03"
+  ],
+  "23698": [
+   "how-much-does-liquidation-cost",
+   "2026-07-15T12:37:00"
+  ],
+  "23688": [
+   "purchase-order-finance",
+   "2022-05-30T15:49:52"
+  ],
+  "23682": [
+   "reverse-factoring",
+   "2022-05-31T08:45:41"
+  ],
+  "23670": [
+   "recourse-and-non-recourse",
+   "2022-05-30T13:38:06"
+  ],
+  "23471": [
+   "case-studies-hub",
+   "2026-05-23T12:36:53"
+  ],
+  "23017": [
+   "meet-the-team",
+   "2026-06-02T14:43:52"
+  ],
+  "22899": [
+   "privacy-policy",
+   "2026-06-10T19:35:41"
+  ],
+  "22785": [
+   "the-risks-of-signing-a-personal-guarantee",
+   "2026-07-15T14:49:43"
+  ],
+  "22769": [
+   "fees-and-costs-of-an-insolvency-practitioner",
+   "2025-09-11T09:28:29"
+  ],
+  "22761": [
+   "dissolving-a-business-partnership",
+   "2025-09-12T11:55:02"
+  ],
+  "22723": [
+   "limited-liability-partnership",
+   "2025-09-11T09:45:12"
+  ],
+  "22707": [
+   "7-day-warning-letter",
+   "2025-09-15T13:55:41"
+  ],
+  "22554": [
+   "limited-company-bankruptcy",
+   "2026-07-14T09:33:18"
+  ],
+  "22487": [
+   "insolvency-advice",
+   "2023-02-26T14:28:46"
+  ],
+  "22277": [
+   "insolvent-company-owes-me-money",
+   "2026-07-16T09:16:09"
+  ],
+  "22256": [
+   "how-do-i-liquidate-my-limited-company",
+   "2025-09-09T09:41:38"
+  ],
+  "22117": [
+   "dissolving-striking-off-closure",
+   "2022-06-01T11:09:03"
+  ],
+  "22075": [
+   "liquidation-hub",
+   "2026-05-23T18:51:38"
+  ],
+  "21666": [
+   "paye",
+   "2023-02-26T14:31:45"
+  ],
+  "21628": [
+   "tax-problems-affect-you-faqs",
+   "2023-02-26T14:17:56"
+  ],
+  "21622": [
+   "departments-processes-forms",
+   "2023-02-26T14:14:48"
+  ],
+  "21587": [
+   "penalties-surcharges",
+   "2023-02-25T21:06:23"
+  ],
+  "21396": [
+   "advantages-disadvantages-liquidating-limited-company",
+   "2025-09-09T09:18:58"
+  ],
+  "65004": [
+   "",
+   "2023-10-17T08:31:13"
+  ],
+  "21122": [
+   "shareholders-liable-company-debts",
+   "2026-07-08T09:29:15"
+  ],
+  "21011": [
+   "what-is-limited-liability",
+   "2026-07-15T14:46:56"
+  ],
+  "20752": [
+   "london-insolvency-practitioners",
+   "2022-11-28T14:47:45"
+  ],
+  "7669": [
+   "liquidation",
+   "2026-08-07T13:13:55"
+  ],
+  "20736": [
+   "manchester-insolvency-practitioner",
+   "2023-02-03T16:16:59"
+  ],
+  "20730": [
+   "horsham-insolvency-practitioners",
+   "2025-09-09T09:04:26"
+  ],
+  "20727": [
+   "reading-insolvency-practitioners",
+   "2025-09-09T09:07:14"
+  ],
+  "20719": [
+   "chelmsford-insolvency-practitioners",
+   "2025-09-09T09:03:50"
+  ],
+  "20714": [
+   "north-london-insolvency-practitioners",
+   "2025-09-09T09:08:17"
+  ],
+  "20708": [
+   "kent-insolvency-practitioner",
+   "2025-09-09T09:04:56"
+  ],
+  "20686": [
+   "can-county-court-judgment-ccj-affect-getting-job",
+   "2025-09-22T11:15:10"
+  ],
+  "20681": [
+   "can-director-criminal-record",
+   "2026-06-13T14:44:07"
+  ],
+  "20665": [
+   "understanding-county-court-judgments-affects-credit",
+   "2025-09-22T11:16:22"
+  ],
+  "20650": [
+   "removing-county-court-judgment-ccj",
+   "2025-09-22T11:17:26"
+  ],
+  "20646": [
+   "recognise-signs-wrongful-trading",
+   "2022-11-28T14:48:10"
+  ],
+  "20632": [
+   "liquidate-registered-charity",
+   "2025-09-09T09:38:30"
+  ],
+  "20580": [
+   "company-strike-off",
+   "2025-09-12T11:57:29"
+  ],
+  "20572": [
+   "companies-house-striking-off",
+   "2022-03-16T15:49:22"
+  ],
+  "20560": [
+   "mvl-vs-dissolution",
+   "2025-09-09T09:48:07"
+  ],
+  "20435": [
+   "partnership-voluntary-arrangements",
+   "2026-07-15T14:51:01"
+  ],
+  "20428": [
+   "vs-liquidation",
+   "2026-07-15T14:49:36"
+  ],
+  "20380": [
+   "making-employees-redundant-cva",
+   "2026-07-15T14:45:48"
+  ],
+  "20343": [
+   "invoice-finance-compared-overdraft",
+   "2022-05-30T13:34:22"
+  ],
+  "20339": [
+   "accounts-receivable-finance-guide",
+   "2022-05-31T10:02:35"
+  ],
+  "20326": [
+   "spot-factoring",
+   "2022-05-31T08:41:54"
+  ],
+  "20268": [
+   "retail-industry-insolvency-trends",
+   "2026-07-15T14:50:24"
+  ],
+  "17702": [
+   "centrebind-liquidation",
+   "2025-09-09T10:15:04"
+  ],
+  "17591": [
+   "whats-contained-in-an-soa",
+   "2025-09-09T09:56:23"
+  ],
+  "17585": [
+   "liquidator-get-approval-liquidation-fees",
+   "2025-09-09T09:39:53"
+  ],
+  "17570": [
+   "101010-rule-creditors-voluntary-liquidation",
+   "2023-10-25T09:50:18"
+  ],
+  "17568": [
+   "timeline",
+   "2026-07-15T14:50:27"
+  ],
+  "17561": [
+   "invoice-discounting-agreements-essential-guide-insolvency-practitioners-administrators",
+   "2022-11-28T14:48:13"
+  ],
+  "17558": [
+   "security-requirements-insolvent-business-considering-invoice-factoring",
+   "2022-05-31T10:59:42"
+  ],
+  "17511": [
+   "invoice-factoring-improves-cash-flow-insolvent-businesses",
+   "2022-05-31T08:42:41"
+  ],
+  "17545": [
+   "invoice-factoring",
+   "2022-05-31T09:15:18"
+  ],
+  "16925": [
+   "whats-timeframe-issuing-winding-petition-scotland",
+   "2022-05-30T13:17:33"
+  ],
+  "16662": [
+   "what-is-an-individual-voluntary-arrangement",
+   "2026-07-16T09:16:18"
+  ],
+  "16608": [
+   "i-need-witness-statement-winding-petition",
+   "2023-10-24T15:31:45"
+  ],
+  "16593": [
+   "get-injunction-winding-petition",
+   "2022-10-31T15:09:20"
+  ],
+  "16565": [
+   "hmrc-offices-contact-guide",
+   "2026-07-15T14:48:06"
+  ],
+  "16560": [
+   "understanding-tax-credits-overpayments-hmrc",
+   "2022-08-10T08:29:12"
+  ],
+  "16551": [
+   "bill-pay",
+   "2022-05-30T12:53:12"
+  ],
+  "16545": [
+   "what-is-the-government-gateway",
+   "2022-05-30T12:50:03"
+  ],
+  "16502": [
+   "just-equitable-grounds-mean-winding-petition",
+   "2025-09-11T09:50:41"
+  ],
+  "16424": [
+   "serious-vat-problems",
+   "2025-09-12T10:36:56"
+  ],
+  "16353": [
+   "hmrc-follower-notice",
+   "2026-07-15T14:50:45"
+  ],
+  "16276": [
+   "what-hmrc-tax-surcharges-apply-to-self-assessment",
+   "2022-05-30T12:48:09"
+  ],
+  "16266": [
+   "form-used-appealing-hmrc-tax-surcharge",
+   "2022-10-04T08:00:03"
+  ],
+  "16175": [
+   "appealing-hmrc-penalty",
+   "2025-09-11T15:48:19"
+  ],
+  "16145": [
+   "hmrcs-connect-computer-system",
+   "2025-09-22T17:15:13"
+  ],
+  "16137": [
+   "expenses-reduce-tax-amounts-company-owes-hmrc",
+   "2022-10-04T08:03:43"
+  ],
+  "16106": [
+   "vs-administrative-receivership",
+   "2026-07-15T14:45:58"
+  ],
+  "15207": [
+   "timeline",
+   "2025-09-09T12:43:32"
+  ],
+  "15203": [
+   "check-if-a-company-is-insolvent",
+   "2026-07-15T14:47:46"
+  ],
+  "15167": [
+   "hmrc-securities-team",
+   "2025-09-12T10:54:33"
+  ],
+  "15162": [
+   "can-hmrc-hold-company-director-responsible-unpaid-tax",
+   "2025-09-11T15:44:17"
+  ],
+  "15141": [
+   "vs-cva",
+   "2026-07-15T14:48:22"
+  ],
+  "17513": [
+   "invoice-finance",
+   "2022-05-30T13:37:42"
+  ],
+  "8408": [
+   "problems-paying-corporation-tax-hmrc",
+   "2026-07-23T14:05:00"
+  ],
+  "7676": [
+   "members-voluntary-liquidation",
+   "2026-07-16T09:30:34"
+  ],
+  "15029": [
+   "impact-retention-title-administration",
+   "2022-06-01T10:48:53"
+  ],
+  "7691": [
+   "hmrc-tax-problems",
+   "2025-09-12T10:45:49"
+  ],
+  "15010": [
+   "what-happens-to-employees",
+   "2026-07-15T14:45:21"
+  ],
+  "14982": [
+   "careless-deliberate-deliberate-concealed",
+   "2025-09-12T10:37:03"
+  ],
+  "14914": [
+   "director-redundancy",
+   "2026-07-15T14:46:49"
+  ],
+  "14912": [
+   "vat-penalties",
+   "2026-07-15T14:48:45"
+  ],
+  "14831": [
+   "how-far-back-can-hmrc-investigate-tax-affairs",
+   "2025-09-22T15:02:58"
+  ],
+  "14796": [
+   "unique-taxpayer-reference-utr-hmrc",
+   "2022-05-30T12:49:02"
+  ],
+  "14775": [
+   "tax-penalties",
+   "2026-07-15T14:47:55"
+  ],
+  "14672": [
+   "cookie-policy-company-debt",
+   "2026-04-16T13:27:37"
+  ],
+  "14623": [
+   "im-self-employed-can-i-investigated-hmrc",
+   "2022-11-28T14:48:05"
+  ],
+  "14619": [
+   "hmrcs-ir35-investigations-different",
+   "2026-06-13T14:45:36"
+  ],
+  "14462": [
+   "hmrc-criminal-investigation-team-different",
+   "2022-11-28T14:48:05"
+  ],
+  "14460": [
+   "hmrc-criminal-investigations",
+   "2026-07-15T14:50:43"
+  ],
+  "14444": [
+   "can-i-appeal-notice-requirement-provide-security-bond",
+   "2022-08-11T14:21:11"
+  ],
+  "14442": [
+   "hmrc-joint-several-liability-mean",
+   "2025-09-12T10:45:54"
+  ],
+  "14384": [
+   "pln-made-personally-liable-hmrc",
+   "2022-04-27T07:28:00"
+  ],
+  "14377": [
+   "received-pln-notify",
+   "2022-05-26T12:13:20"
+  ],
+  "14172": [
+   "accountant-director-responsible-pln",
+   "2022-05-26T10:49:29"
+  ],
+  "14180": [
+   "hmrc-debt-management-can-help",
+   "2025-09-12T10:03:42"
+  ],
+  "14178": [
+   "vat-paye-treated-differently-hmrc",
+   "2022-05-31T14:19:48"
+  ],
+  "14174": [
+   "personally-liable-security-bond",
+   "2022-05-30T10:20:49"
+  ],
+  "14139": [
+   "tax-types-can-affected-pln",
+   "2022-05-26T12:16:08"
+  ],
+  "14133": [
+   "hmrc-departments-request-pln",
+   "2022-05-26T12:16:32"
+  ],
+  "14135": [
+   "hmrc-compliance-team",
+   "2025-09-09T11:20:43"
+  ],
+  "14158": [
+   "hmrc-fraud-investigations",
+   "2026-07-15T14:46:42"
+  ],
+  "14154": [
+   "employees-maternity-pay-hmrc-company-insolvent",
+   "2025-09-11T15:41:25"
+  ],
+  "14146": [
+   "interest-rates-late-paye",
+   "2025-09-09T13:14:53"
+  ],
+  "14141": [
+   "calculate-paye-vat-corporation-tax-hmrc",
+   "2022-05-30T10:20:26"
+  ],
+  "14165": [
+   "i-need-register-vat-happens-i-dont",
+   "2022-04-29T16:38:56"
+  ],
+  "14163": [
+   "pay-value-added-tax-vat-hmrc",
+   "2022-04-29T16:39:23"
+  ],
+  "13936": [
+   "complaints",
+   "2026-05-23T20:47:37"
+  ],
+  "13895": [
+   "advertised-gazette-cvl",
+   "2025-09-09T10:29:42"
+  ],
+  "13891": [
+   "directors-conduct-report",
+   "2025-09-09T10:44:04"
+  ],
+  "13808": [
+   "landlords-affected-cvl",
+   "2025-09-09T09:37:33"
+  ],
+  "13778": [
+   "what-is-a-liquidation-committee",
+   "2025-09-09T10:15:26"
+  ],
+  "13770": [
+   "shareholders-dispute-cvl",
+   "2025-09-09T10:13:18"
+  ],
+  "13766": [
+   "preferential-non-preferential-creditors",
+   "2026-06-13T14:41:27"
+  ],
+  "13740": [
+   "is-my-personal-credit-rating-affected",
+   "2025-09-09T09:36:29"
+  ],
+  "11788": [
+   "frozen-bank-account",
+   "2026-07-15T14:47:06"
+  ],
+  "13600": [
+   "insolvency-test",
+   "2026-07-15T14:46:32"
+  ],
+  "13554": [
+   "pre-pack-or-cva",
+   "2026-06-17T08:47:59"
+  ],
+  "13513": [
+   "statement-of-affairs",
+   "2026-07-15T14:46:34"
+  ],
+  "13498": [
+   "compulsory-liquidation-investigations",
+   "2022-05-31T14:00:25"
+  ],
+  "13469": [
+   "careers",
+   "2026-04-16T13:27:41"
+  ],
+  "13065": [
+   "about-us",
+   "2026-07-31T13:13:50"
+  ],
+  "13029": [
+   "understanding-hmrc-debt-collection",
+   "2026-07-15T14:48:03"
+  ],
+  "12984": [
+   "hmrc-objection-striking-off",
+   "2025-09-12T11:55:00"
+  ],
+  "12979": [
+   "what-can-hmrc-bailiffs-take",
+   "2026-07-15T14:47:51"
+  ],
+  "12958": [
+   "controlled-goods-agreement",
+   "2026-07-02T09:14:16"
+  ],
+  "8358": [
+   "what-is-an-insolvency-practitioner",
+   "2026-07-15T14:46:29"
+  ],
+  "11912": [
+   "advantages-disadvantages",
+   "2025-09-09T10:12:49"
+  ],
+  "11883": [
+   "ive-received-a-winding-up-order-from-hmrc-what-should-i-do",
+   "2022-05-30T13:15:46"
+  ],
+  "11644": [
+   "notice-of-enforcement",
+   "2026-07-15T14:50:51"
+  ],
+  "11538": [
+   "paye-penalties",
+   "2025-09-12T10:03:19"
+  ],
+  "11516": [
+   "joint-and-several-liability-for-unpaid-vat",
+   "2026-07-15T14:46:19"
+  ],
+  "11469": [
+   "what-is-the-role-of-a-liquidator-in-company-liquidation",
+   "2025-09-09T10:37:38"
+  ],
+  "11384": [
+   "hmrc-tax-investigations",
+   "2026-06-13T14:40:40"
+  ],
+  "11320": [
+   "the-difference-between-solvent-and-insolvent-company-liquidation",
+   "2025-09-09T09:47:42"
+  ],
+  "11229": [
+   "security-bonds",
+   "2026-07-16T09:18:53"
+  ],
+  "11228": [
+   "what-are-phoenix-companies",
+   "2026-07-15T14:45:55"
+  ],
+  "11219": [
+   "can-you-negotiate-with-hmrc",
+   "2025-09-11T15:48:26"
+  ],
+  "11193": [
+   "hmrc-compliance-checks",
+   "2026-07-15T14:47:26"
+  ],
+  "11176": [
+   "hmrc-personal-liability-notices-the-process-and-potential-impact",
+   "2022-05-26T10:51:56"
+  ],
+  "10930": [
+   "distraint-order-notice",
+   "2026-07-15T14:46:46"
+  ],
+  "10696": [
+   "company-liquidation-what-is-the-value-of-your-intellectual-property",
+   "2025-09-09T10:39:12"
+  ],
+  "10564": [
+   "security-bond-notices",
+   "2026-07-15T14:50:02"
+  ],
+  "10562": [
+   "personal-liability-notices",
+   "2026-07-16T09:19:33"
+  ],
+  "9874": [
+   "terms-conditions",
+   "2026-04-16T13:28:01"
+  ],
+  "9715": [
+   "site-map",
+   "2023-07-21T20:17:02"
+  ],
+  "9702": [
+   "receivership-mean-business",
+   "2026-07-15T14:48:24"
+  ],
+  "9616": [
+   "liquidation-vs-administration",
+   "2025-09-09T10:39:33"
+  ],
+  "8433": [
+   "winding-up-a-limited-company",
+   "2022-06-01T09:36:36"
+  ],
+  "8396": [
+   "pre-packs",
+   "2026-07-15T14:49:59"
+  ],
+  "8350": [
+   "hmrc-threatening-letters",
+   "2026-06-13T14:44:42"
+  ],
+  "8324": [
+   "cant-pay-paye",
+   "2026-07-08T12:04:42"
+  ],
+  "7685": [
+   "company-voluntary-arrangement",
+   "2026-07-16T09:16:23"
+  ],
+  "7680": [
+   "compulsory-liquidation",
+   "2026-07-15T14:38:11"
+  ],
+  "7665": [
+   "company-rescue-solutions",
+   "2026-07-15T14:49:31"
+  ],
+  "8571": [
+   "types-of-liquidation",
+   "2025-09-09T10:39:53"
+  ],
+  "79841": [
+   "",
+   "2026-06-04T13:27:42"
+  ],
+  "77694": [
+   "articles-insights-hub",
+   "2026-07-02T09:02:49"
+  ],
+  "76768": [
+   "",
+   "2025-09-09T11:03:06"
+  ],
+  "67898": [
+   "managing-debt-related-stress",
+   "2026-07-02T08:55:54"
+  ],
+  "67892": [
+   "debt-charities-for-consumers",
+   "2026-07-02T10:06:20"
+  ],
+  "57661": [
+   "35-of-charities-fear-insolvency-due-to-cost-of-living-crisis",
+   "2026-07-02T10:06:16"
+  ],
+  "55751": [
+   "insolvency-rescue-fish-chip-sector",
+   "2026-07-12T18:12:51"
+  ],
+  "52222": [
+   "insolvency-rescue-solutions-for-garden-centers",
+   "2026-07-12T18:12:47"
+  ],
+  "51087": [
+   "creditors",
+   "2026-05-22T10:10:10"
+  ],
+  "50894": [
+   "asset-based-and-other-lenders",
+   "2026-05-22T10:10:12"
+  ],
+  "50889": [
+   "banks",
+   "2026-05-22T10:10:14"
+  ],
+  "50825": [
+   "solicitors",
+   "2026-05-23T18:51:45"
+  ],
+  "50710": [
+   "accountants",
+   "2026-05-22T10:10:19"
+  ],
+  "49810": [
+   "property",
+   "2026-07-12T18:11:59"
+  ],
+  "49831": [
+   "manufacturing",
+   "2026-07-12T18:12:07"
+  ],
+  "49820": [
+   "professional-services",
+   "2026-07-12T18:12:03"
+  ],
+  "49839": [
+   "leisure",
+   "2026-07-12T18:12:11"
+  ],
+  "49849": [
+   "dry-cleaning-laundry",
+   "2026-07-12T18:12:15"
+  ],
+  "49856": [
+   "hotels",
+   "2026-07-12T18:12:19"
+  ],
+  "49866": [
+   "haulage",
+   "2026-07-12T18:12:23"
+  ],
+  "49873": [
+   "gyms",
+   "2026-07-12T18:12:27"
+  ],
+  "49880": [
+   "events",
+   "2026-07-12T17:55:07"
+  ],
+  "49890": [
+   "entertainment",
+   "2026-07-12T18:12:31"
+  ],
+  "49898": [
+   "energy",
+   "2026-07-12T18:12:35"
+  ],
+  "49906": [
+   "schools",
+   "2026-07-12T18:12:39"
+  ],
+  "49699": [
+   "travel",
+   "2026-07-12T18:32:02"
+  ],
+  "49706": [
+   "taxi-companies",
+   "2026-07-12T18:11:35"
+  ],
+  "49717": [
+   "retail",
+   "2026-07-12T18:11:39"
+  ],
+  "49727": [
+   "restaurants",
+   "2026-07-12T18:11:43"
+  ],
+  "49739": [
+   "recruitment",
+   "2026-07-12T18:11:47"
+  ],
+  "49778": [
+   "construction",
+   "2026-07-12T18:11:55"
+  ],
+  "49767": [
+   "cleaning-contractors",
+   "2026-07-12T18:32:07"
+  ],
+  "49694": [
+   "childcare",
+   "2026-07-12T18:11:31"
+  ],
+  "49550": [
+   "charity",
+   "2026-07-12T18:11:27"
+  ],
+  "48758": [
+   "automotive",
+   "2026-07-12T18:11:19"
+  ],
+  "45670": [
+   "124-pints-to-save-the-pub",
+   "2026-06-10T19:34:27"
+  ],
+  "49488": [
+   "carehomes",
+   "2026-07-12T18:11:23"
+  ],
+  "44691": [
+   "can-heathrow-survive-covid-19",
+   "2026-06-10T19:36:20"
+  ],
+  "47451": [
+   "chinese-takeaway",
+   "2026-07-02T09:47:18"
+  ],
+  "23214": [
+   "the-orla-kiely-fashion-brand-shuts-up-shop",
+   "2026-05-23T20:43:23"
+  ],
+  "24589": [
+   "pub-closures-in-the-uk",
+   "2026-07-22T11:30:40"
+  ],
+  "20594": [
+   "how-will-carillions-insolvency-effect-its-supply-chain",
+   "2026-05-23T18:59:05"
+  ],
+  "20346": [
+   "paradise-papers",
+   "2026-05-19T10:30:33"
+  ],
+  "16861": [
+   "",
+   "2017-04-20T16:17:07"
+  ],
+  "11247": [
+   "company-administration",
+   "2024-03-28T11:30:13"
+  ],
+  "13520": [
+   "tescos-rated-worst-payer-uk-small-businesses",
+   "2024-06-18T11:40:51"
+  ]
+ },
+ "staging": {}
+}
