@@ -1,3 +1,9 @@
+> **SUPERSEDED AND WRONG.** The 183,000-character figure below is an artefact
+> of two bugs in the measurement, not a property of the site. See
+> `2026-08-09-custom-push-cleared.md`. Kept for the record of how the error was
+> made: a non-greedy `<main>` match that truncated pages, and comparing the two
+> sides with different normalisation rules.
+
 # Custom push staging → production, 2026-08-09: BLOCKED, do not run
 
 **Verdict: do not select `wp_posts` in a Custom push today.** Staging is behind

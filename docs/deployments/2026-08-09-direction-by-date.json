@@ -1,0 +1,1234 @@
+[
+ {
+  "u": "/advantages-and-disadvantages/",
+  "live": "2026-07-15T12:37:10",
+  "stg": "2026-08-09T09:25:23",
+  "lost": 62,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/business-restructuring/",
+  "live": "2026-07-15T15:45:43",
+  "stg": "2026-08-09T09:21:53",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+  "live": "2026-07-15T15:47:33",
+  "stg": "2026-08-09T09:22:03",
+  "lost": 78,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/debt-management-guide/",
+  "live": "2026-07-15T15:45:37",
+  "stg": "2026-08-09T09:21:32",
+  "lost": 95,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/directors-disqualification/",
+  "live": "2026-07-15T15:49:06",
+  "stg": "2026-08-09T09:23:44",
+  "lost": 51,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/directors-duties-to-creditors/",
+  "live": "2026-07-15T15:45:39",
+  "stg": "2026-08-09T09:25:35",
+  "lost": 26,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/funding-options-for-smes-in-the-uk/",
+  "live": "2026-07-15T15:48:30",
+  "stg": "2026-08-09T09:24:58",
+  "lost": 56,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/hmrcs-ir35-investigations-different/",
+  "live": "2026-06-13T15:45:36",
+  "stg": "2026-08-09T09:20:23",
+  "lost": 62,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+  "live": "2026-07-15T15:47:28",
+  "stg": "2026-08-09T09:25:02",
+  "lost": 539,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/losing-house-if-company-goes-bust/",
+  "live": "2026-07-15T15:46:35",
+  "stg": "2026-08-09T09:22:00",
+  "lost": 30,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/misfeasance/",
+  "live": "2026-07-15T15:47:16",
+  "stg": "2026-08-09T09:21:35",
+  "lost": 70,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/overdrawn-directors-loan-accounts/",
+  "live": "2026-07-07T14:53:39",
+  "stg": "2026-08-08T19:12:55",
+  "lost": 158,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/personal-guarantee-insurance/",
+  "live": "2026-06-22T17:36:45",
+  "stg": "2026-08-09T09:21:17",
+  "lost": 30,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/personal-liability-for-cbils-loans/",
+  "live": "2026-07-15T15:49:34",
+  "stg": "2026-08-09T09:22:47",
+  "lost": 98,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/preventing-company-director-disputes/",
+  "live": "2026-07-15T15:49:20",
+  "stg": "2026-08-09T09:25:05",
+  "lost": 82,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/unenforceable-personal-guarantee/",
+  "live": "2026-06-13T15:40:24",
+  "stg": "2026-08-09T09:22:10",
+  "lost": 203,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+  "live": "2026-07-15T15:48:08",
+  "stg": "2026-08-09T09:25:09",
+  "lost": 49,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/what-are-phoenix-companies/",
+  "live": "2026-07-15T15:45:55",
+  "stg": "2026-08-09T09:19:42",
+  "lost": 64,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+  "live": "2026-07-15T15:46:13",
+  "stg": "2026-08-09T09:21:14",
+  "lost": 37,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+  "live": "2026-07-15T15:49:56",
+  "stg": "2026-08-09T09:25:13",
+  "lost": 39,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/what-is-the-companies-act-2006/",
+  "live": "2026-07-15T15:45:42",
+  "stg": "2026-08-09T09:22:55",
+  "lost": 18,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/advice/writing-off-a-directors-loan-account/",
+  "live": "2026-07-15T15:45:28",
+  "stg": "2026-08-09T09:23:31",
+  "lost": 396,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/articles/124-pints-to-save-the-pub/",
+  "live": "2026-06-10T20:34:27",
+  "stg": "2026-08-07T13:20:32",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/articles/debt-charities-for-consumers/",
+  "live": "2026-07-02T11:06:20",
+  "stg": "2026-08-07T13:19:29",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+  "live": "2026-05-23T19:59:05",
+  "stg": "2026-05-23T19:59:05",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/articles/paradise-papers/",
+  "live": "2026-05-19T11:30:33",
+  "stg": "2026-05-19T11:30:33",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+  "live": "2026-07-15T15:48:52",
+  "stg": "2026-08-09T09:23:27",
+  "lost": 323,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+  "live": "2026-07-15T15:49:04",
+  "stg": "2026-08-09T09:22:51",
+  "lost": 63,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+  "live": "2026-07-15T15:48:37",
+  "stg": "2026-08-09T09:22:15",
+  "lost": 91,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/case-studies/chinese-takeaway/",
+  "live": "2026-07-02T10:47:18",
+  "stg": "2026-08-09T09:22:43",
+  "lost": 96,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/charity-non-profit-insolvency/",
+  "live": "2026-07-15T15:51:13",
+  "stg": "2026-08-09T09:26:35",
+  "lost": 26,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-administration/vs-administrative-receivership/",
+  "live": "2026-07-15T15:45:58",
+  "stg": "2026-08-09T09:20:33",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-administration/vs-cva/",
+  "live": "2026-07-15T15:48:22",
+  "stg": "2026-08-09T09:20:26",
+  "lost": 109,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/",
+  "live": "2026-06-13T15:45:00",
+  "stg": "2026-08-09T09:21:25",
+  "lost": 172,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+  "live": "2026-06-13T15:43:44",
+  "stg": "2026-08-09T09:21:42",
+  "lost": 151,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+  "live": "2026-07-15T15:48:10",
+  "stg": "2026-08-09T09:22:24",
+  "lost": 74,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+  "live": "2026-07-15T15:45:35",
+  "stg": "2026-08-09T09:25:42",
+  "lost": 64,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-staff-wages/",
+  "live": "2026-07-15T15:46:06",
+  "stg": "2026-08-09T09:22:28",
+  "lost": 57,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+  "live": "2026-07-15T15:47:21",
+  "stg": "2026-08-09T09:25:27",
+  "lost": 71,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+  "live": "2026-07-15T15:48:19",
+  "stg": "2026-08-09T09:24:29",
+  "lost": 44,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+  "live": "2026-07-15T15:50:57",
+  "stg": "2026-08-09T09:24:26",
+  "lost": 38,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/",
+  "live": "2026-07-15T15:49:31",
+  "stg": "2026-08-09T09:25:54",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+  "live": "2026-07-15T15:45:48",
+  "stg": "2026-08-09T09:20:47",
+  "lost": 69,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+  "live": "2026-07-15T15:47:19",
+  "stg": "2026-08-09T09:24:07",
+  "lost": 15,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+  "live": "2026-07-15T15:49:14",
+  "stg": "2026-08-09T09:29:05",
+  "lost": 13,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+  "live": "2026-07-15T15:49:36",
+  "stg": "2026-08-09T09:20:51",
+  "lost": 85,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+  "live": "2026-07-15T15:50:32",
+  "stg": "2026-08-09T09:28:44",
+  "lost": 67,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+  "live": "2026-07-15T15:49:53",
+  "stg": "2026-08-09T09:25:46",
+  "lost": 27,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/company-rescue-solutions/pre-packs/",
+  "live": "2026-07-15T15:49:59",
+  "stg": "2026-08-09T09:30:45",
+  "lost": 182,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/data/administration-statistics/",
+  "live": "2026-07-23T08:13:42",
+  "stg": "2026-07-23T08:13:42",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/data/cleaning-company-insolvency-statistics/",
+  "live": "2026-08-07T13:03:57",
+  "stg": "2026-08-07T08:19:53",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/creative-arts-entertainment-insolvency-statistics/",
+  "live": "2026-08-07T13:04:52",
+  "stg": "2026-08-07T08:22:46",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/furniture-insolvency-statistics/",
+  "live": "2026-08-07T13:12:24",
+  "stg": "2026-08-07T08:18:32",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/it-consultancy-insolvency-statistics/",
+  "live": "2026-08-07T13:04:17",
+  "stg": "2026-08-07T08:20:39",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/management-consultancy-insolvency-statistics/",
+  "live": "2026-08-07T13:04:23",
+  "stg": "2026-08-07T08:21:08",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/personal-care-services-insolvency-statistics/",
+  "live": "2026-08-07T13:04:35",
+  "stg": "2026-08-07T08:21:53",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/real-estate-letting-investment-insolvency-statistics/",
+  "live": "2026-08-07T13:05:07",
+  "stg": "2026-08-07T08:23:23",
+  "lost": 58,
+  "live_newer": true,
+  "unknown": false
+ },
+ {
+  "u": "/data/winding-up-petition-tracker/",
+  "live": "2026-07-23T08:13:56",
+  "stg": "2026-07-23T08:13:56",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/debt-charities-uk/",
+  "live": "2026-07-15T15:46:57",
+  "stg": "2026-08-07T13:25:42",
+  "lost": 12,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/debt-creditor-pressure-hub/",
+  "live": "2026-07-15T15:50:36",
+  "stg": "2026-08-09T09:26:09",
+  "lost": 221,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/director-protection-hub/",
+  "live": "2026-08-07T14:07:29",
+  "stg": "2026-08-09T09:26:43",
+  "lost": 1346,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/energy-provider-insolvency/",
+  "live": "2026-07-15T15:49:39",
+  "stg": "2026-08-09T09:26:24",
+  "lost": 165,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/accelerated-payment-notices-apn/",
+  "live": "2026-07-15T15:49:44",
+  "stg": "2026-08-09T09:24:21",
+  "lost": 73,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/cant-pay-paye/",
+  "live": "2026-07-08T13:04:42",
+  "stg": "2026-08-09T09:30:37",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/corporation-tax-penalties/",
+  "live": "2026-07-15T15:46:37",
+  "stg": "2026-08-09T09:21:49",
+  "lost": 48,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/distraint-order-notice/",
+  "live": "2026-07-15T15:46:46",
+  "stg": "2026-08-09T09:19:34",
+  "lost": 78,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-compliance-checks/",
+  "live": "2026-07-15T15:47:26",
+  "stg": "2026-08-09T09:19:38",
+  "lost": 14,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-criminal-investigations/",
+  "live": "2026-07-15T15:50:43",
+  "stg": "2026-08-09T09:20:19",
+  "lost": 63,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-debt-enforcement-hub/",
+  "live": "2026-07-15T15:49:22",
+  "stg": "2026-08-09T09:26:28",
+  "lost": 81,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-follower-notice/",
+  "live": "2026-07-15T15:50:45",
+  "stg": "2026-08-09T09:20:37",
+  "lost": 77,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-penalties-investigations/",
+  "live": "2026-07-15T15:46:22",
+  "stg": "2026-08-09T09:26:05",
+  "lost": 29,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/hmrc-threatening-letters/",
+  "live": "2026-06-13T15:44:42",
+  "stg": "2026-08-09T09:30:41",
+  "lost": 105,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+  "live": "2026-07-15T15:46:19",
+  "stg": "2026-08-09T09:19:54",
+  "lost": 35,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/notice-of-enforcement/",
+  "live": "2026-07-15T15:50:51",
+  "stg": "2026-08-09T09:19:58",
+  "lost": 115,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/pay-hmrc-or-suppliers-first/",
+  "live": "2026-07-15T15:49:11",
+  "stg": "2026-08-09T09:29:47",
+  "lost": 36,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/personal-liability-notices/",
+  "live": "2026-07-16T10:19:33",
+  "stg": "2026-08-09T09:19:27",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/security-bond-notices/",
+  "live": "2026-07-15T15:50:02",
+  "stg": "2026-08-09T09:19:31",
+  "lost": 14,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/security-bonds/",
+  "live": "2026-07-16T10:18:53",
+  "stg": "2026-08-09T09:19:45",
+  "lost": 67,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/time-to-pay-hmrc/",
+  "live": "2026-07-07T14:53:48",
+  "stg": "2026-08-09T09:30:52",
+  "lost": 126,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/what-can-hmrc-bailiffs-take/",
+  "live": "2026-07-15T15:47:51",
+  "stg": "2026-08-09T09:20:05",
+  "lost": 85,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+  "live": "2026-07-15T15:50:40",
+  "stg": "2026-08-09T09:30:10",
+  "lost": 76,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+  "live": "2026-07-15T15:50:47",
+  "stg": "2026-08-09T09:30:25",
+  "lost": 86,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+  "live": "2026-07-15T15:49:58",
+  "stg": "2026-08-09T09:30:14",
+  "lost": 72,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency-news-commentary/",
+  "live": "2026-07-16T10:30:46",
+  "stg": "2026-08-09T09:26:50",
+  "lost": 43,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/antecedent-transactions/",
+  "live": "2026-07-15T15:48:47",
+  "stg": "2026-08-09T09:24:12",
+  "lost": 91,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/can-we-trade-out-of-insolvency/",
+  "live": "2026-07-15T15:49:26",
+  "stg": "2026-08-09T09:21:10",
+  "lost": 70,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/can-you-sell-your-insolvent-company/",
+  "live": "2026-07-15T15:50:12",
+  "stg": "2026-08-09T09:24:44",
+  "lost": 59,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/creditor-negotiations/",
+  "live": "2026-07-15T15:48:02",
+  "stg": "2026-08-09T09:24:51",
+  "lost": 96,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/dealing-with-creditor-pressure/",
+  "live": "2026-07-15T15:48:15",
+  "stg": "2026-08-09T09:24:33",
+  "lost": 100,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/find-a-liquidator-near-me/",
+  "live": "2026-07-15T15:45:53",
+  "stg": "2026-08-09T09:22:59",
+  "lost": 325,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/how-to-save-a-struggling-business/",
+  "live": "2026-07-15T15:48:33",
+  "stg": "2026-08-09T09:24:40",
+  "lost": 179,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/insolvency-test/",
+  "live": "2026-07-15T15:46:32",
+  "stg": "2026-08-09T09:20:16",
+  "lost": 841,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/limited-company-bankruptcy/",
+  "live": "2026-07-14T10:33:18",
+  "stg": "2026-08-09T17:36:36",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/personally-liabilty-of-company-secretary/",
+  "live": "2026-07-15T15:47:13",
+  "stg": "2026-08-09T09:21:46",
+  "lost": 76,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/preferential-payments-during-insolvency/",
+  "live": "2026-07-15T15:49:27",
+  "stg": "2026-08-09T09:25:31",
+  "lost": 113,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/statement-of-affairs/",
+  "live": "2026-07-15T15:46:34",
+  "stg": "2026-08-09T09:20:12",
+  "lost": 115,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/stop-or-avoid-insolvency/",
+  "live": "2026-07-15T15:50:22",
+  "stg": "2026-08-09T09:21:38",
+  "lost": 45,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/transactions-at-undervalue/",
+  "live": "2026-07-15T15:49:51",
+  "stg": "2026-08-09T09:24:17",
+  "lost": 103,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/validation-order/",
+  "live": "2026-07-15T15:48:11",
+  "stg": "2026-08-09T09:21:21",
+  "lost": 113,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+  "live": "2026-07-15T15:50:34",
+  "stg": "2026-08-09T09:24:47",
+  "lost": 125,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+  "live": "2026-07-15T15:46:51",
+  "stg": "2026-08-09T09:22:07",
+  "lost": 205,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/what-is-a-creditor/",
+  "live": "2026-07-15T15:50:21",
+  "stg": "2026-08-09T17:38:02",
+  "lost": 33,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+  "live": "2026-07-16T10:16:18",
+  "stg": "2026-08-09T09:20:44",
+  "lost": 85,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/insolvency/what-is-wrongful-trading/",
+  "live": "2026-07-15T15:48:48",
+  "stg": "2026-08-09T09:23:48",
+  "lost": 167,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/",
+  "live": "2026-08-07T14:13:55",
+  "stg": "2026-08-09T17:16:30",
+  "lost": 163,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/alternatives-to-company-liquidation/",
+  "live": "2026-07-15T15:38:13",
+  "stg": "2026-08-09T09:25:38",
+  "lost": 130,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/business-bank-account-in-liquidation/",
+  "live": "2026-07-15T15:47:56",
+  "stg": "2026-08-09T09:29:02",
+  "lost": 95,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+  "live": "2026-07-15T15:47:31",
+  "stg": "2026-08-09T09:30:03",
+  "lost": 130,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+  "live": "2026-07-15T15:50:29",
+  "stg": "2026-08-09T09:30:33",
+  "lost": 44,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/can-directors-go-to-prison-for-company-debt/",
+  "live": "2026-07-15T15:51:04",
+  "stg": "2026-08-09T09:29:55",
+  "lost": 117,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+  "live": "2026-07-15T15:50:55",
+  "stg": "2026-08-09T09:28:11",
+  "lost": 55,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+  "live": "2026-07-15T15:51:06",
+  "stg": "2026-08-09T09:28:07",
+  "lost": 15,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/ccj-when-going-insolvent/",
+  "live": "2026-07-15T15:50:13",
+  "stg": "2026-08-09T09:28:55",
+  "lost": 66,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/creditor-meetings-in-liquidation/",
+  "live": "2026-07-15T15:46:54",
+  "stg": "2026-08-09T09:27:27",
+  "lost": 39,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/creditors-voluntary-liquidation/",
+  "live": "2026-08-07T14:11:33",
+  "stg": "2026-08-09T09:38:52",
+  "lost": 87,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/directors-conduct-report-2/",
+  "live": "2026-06-13T15:42:22",
+  "stg": "2026-08-09T09:27:13",
+  "lost": 12,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+  "live": "2026-07-15T15:50:05",
+  "stg": "2026-08-09T09:27:31",
+  "lost": 47,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+  "live": "2026-07-15T15:49:55",
+  "stg": "2026-08-09T09:27:24",
+  "lost": 36,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/insolvency-checklist/",
+  "live": "2026-07-15T15:45:49",
+  "stg": "2026-08-09T09:29:16",
+  "lost": 65,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/insolvency-vs-bankruptcy/",
+  "live": "2026-07-15T15:49:19",
+  "stg": "2026-08-09T09:29:24",
+  "lost": 46,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+  "live": "2026-07-15T15:46:03",
+  "stg": "2026-08-09T09:27:20",
+  "lost": 63,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/leases-and-contracts-in-liquidation/",
+  "live": "2026-07-15T15:46:08",
+  "stg": "2026-08-09T09:27:16",
+  "lost": 167,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidating-a-charity-or-non-profit/",
+  "live": "2026-07-15T15:51:09",
+  "stg": "2026-08-09T09:27:45",
+  "lost": 78,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+  "live": "2026-07-15T15:46:59",
+  "stg": "2026-08-09T09:31:22",
+  "lost": 293,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+  "live": "2026-07-15T15:47:50",
+  "stg": "2026-08-09T09:28:26",
+  "lost": 103,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidating-a-limited-liability-partnership/",
+  "live": "2026-07-15T15:45:59",
+  "stg": "2026-08-09T17:39:22",
+  "lost": 153,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidation-deadlines-and-time-limits/",
+  "live": "2026-07-15T15:47:53",
+  "stg": "2026-08-09T09:27:38",
+  "lost": 236,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidation-vs-dissolution-strike-off/",
+  "live": "2026-07-16T10:16:04",
+  "stg": "2026-08-09T17:21:54",
+  "lost": 30,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/liquidators-powers-and-duties/",
+  "live": "2026-07-15T15:48:59",
+  "stg": "2026-08-09T09:27:35",
+  "lost": 53,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/list-of-liquidation-documents/",
+  "live": "2026-07-15T15:47:43",
+  "stg": "2026-08-09T09:29:20",
+  "lost": 71,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+  "live": "2026-07-15T15:50:15",
+  "stg": "2026-08-09T09:29:39",
+  "lost": 37,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+  "live": "2026-07-15T15:46:45",
+  "stg": "2026-08-09T17:35:34",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/timeline/",
+  "live": "2026-07-15T15:50:27",
+  "stg": "2026-08-10T05:14:07",
+  "lost": 120,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/uk-insolvency-glossary/",
+  "live": "2026-07-15T15:49:41",
+  "stg": "2026-08-09T09:29:09",
+  "lost": 21,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/voluntary-vs-compulsory-liquidation/",
+  "live": "2026-07-15T15:47:10",
+  "stg": "2026-08-09T17:33:35",
+  "lost": 79,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-after-company-liquidation/",
+  "live": "2026-07-15T15:50:49",
+  "stg": "2026-08-09T09:23:35",
+  "lost": 106,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+  "live": "2026-07-15T15:50:39",
+  "stg": "2026-08-09T09:30:29",
+  "lost": 56,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-hides-company-assets/",
+  "live": "2026-07-15T15:49:17",
+  "stg": "2026-08-09T09:29:59",
+  "lost": 98,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+  "live": "2026-07-15T15:51:03",
+  "stg": "2026-08-09T09:27:49",
+  "lost": 192,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+  "live": "2026-07-15T15:49:16",
+  "stg": "2026-08-09T09:30:06",
+  "lost": 133,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+  "live": "2026-07-15T15:50:10",
+  "stg": "2026-08-09T09:29:51",
+  "lost": 55,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/what-happens-to-employees/",
+  "live": "2026-07-15T15:45:21",
+  "stg": "2026-08-08T19:12:40",
+  "lost": 25,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+  "live": "2026-07-15T15:50:52",
+  "stg": "2026-08-09T09:28:00",
+  "lost": 69,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/liquidation/when-should-a-director-stop-trading/",
+  "live": "2026-07-15T15:49:01",
+  "stg": "2026-08-09T09:29:35",
+  "lost": 41,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/manufacturing-insolvency/",
+  "live": "2026-07-15T15:49:50",
+  "stg": "2026-08-09T09:26:32",
+  "lost": 283,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/mental-health-debt-stress-support/",
+  "live": "2026-07-15T15:50:54",
+  "stg": "2026-08-09T09:26:46",
+  "lost": 63,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/professional-services-insolvency/",
+  "live": "2026-07-15T15:51:11",
+  "stg": "2026-08-09T09:26:21",
+  "lost": 102,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sample-letters/cease-trading-template/",
+  "live": "2026-07-15T15:46:14",
+  "stg": "2026-08-09T09:23:22",
+  "lost": 139,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sample-letters/hold-action-on-my-account/",
+  "live": "2026-07-15T15:50:42",
+  "stg": "2026-08-09T09:23:03",
+  "lost": 103,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+  "live": "2026-07-15T15:46:09",
+  "stg": "2026-08-09T09:23:12",
+  "lost": 103,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sample-letters/i-need-more-information-about-this-debt/",
+  "live": "2026-06-13T15:40:18",
+  "stg": "2026-08-09T09:23:17",
+  "lost": 18,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+  "live": "2026-07-15T15:46:01",
+  "stg": "2026-08-07T13:31:28",
+  "lost": 12,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/sectors/automotive/",
+  "live": "2026-07-12T19:11:19",
+  "stg": "2026-07-12T19:11:19",
+  "lost": 58,
+  "live_newer": false,
+  "unknown": false
+ },
+ {
+  "u": "/transport-haulage-insolvency/",
+  "live": "2026-07-15T15:49:09",
+  "stg": "2026-08-09T09:26:13",
+  "lost": 124,
+  "live_newer": false,
+  "unknown": false
+ }
+]

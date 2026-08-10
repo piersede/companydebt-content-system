@@ -1,0 +1,2740 @@
+[
+ {
+  "u": "/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/about-us/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advantages-and-disadvantages/",
+  "ratio": 0.981,
+  "lost_words": 62,
+  "runs": 1,
+  "samples": [
+   "related guides what is a pre pack administration the process in full and how the sale is structured company administration the wider procedure a pre p"
+  ]
+ },
+ {
+  "u": "/advice/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/are-directors-personally-liable-for-company-debts/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/business-restructuring/",
+  "ratio": 0.967,
+  "lost_words": 41,
+  "runs": 3,
+  "samples": [
+   "including cross class cram down of dissenting creditor classes sanctioned by the court",
+   "introduced the standalone moratorium and the part 26a restructuring plan as permanent rescue tools"
+  ]
+ },
+ {
+  "u": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/can-director-criminal-record/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+  "ratio": 0.922,
+  "lost_words": 78,
+  "runs": 3,
+  "samples": [
+   "company position check first check the company s financial position this test does not assess your personal liability it can help show how serious the",
+   "social security contributions and benefits act 1992 s 121c statutory basis for"
+  ]
+ },
+ {
+  "u": "/advice/debt-management-guide/",
+  "ratio": 0.962,
+  "lost_words": 95,
+  "runs": 6,
+  "samples": [
+   "how to negotiate instalment arrangements for paye vat and corporation tax before hmrc escalates to enforcement",
+   "statutory framework for directors duties under sections 171 177 including the duty to promote success and consider creditors when solvency is in doubt"
+  ]
+ },
+ {
+  "u": "/advice/directors-disqualification/",
+  "ratio": 0.97,
+  "lost_words": 51,
+  "runs": 3,
+  "samples": [
+   "primary statute governing disqualification orders undertakings and the 2 to 15 year ban range",
+   "wrongful trading s 214 preferences s 239 transactions at undervalue s 238 and the s 216 restriction on re use of company names"
+  ]
+ },
+ {
+  "u": "/advice/directors-duties-to-creditors/",
+  "ratio": 0.967,
+  "lost_words": 26,
+  "runs": 2,
+  "samples": [
+   "s success modified once insolvency is in sight to require regard for creditors",
+   "on duties conduct reporting and what happens when a company enters formal insolvency"
+  ]
+ },
+ {
+  "u": "/advice/directors-personal-guarantees/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/frozen-bank-account/",
+  "ratio": 0.993,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/funding-options-for-smes-in-the-uk/",
+  "ratio": 0.972,
+  "lost_words": 56,
+  "runs": 4,
+  "samples": [
+   "government backed lending facility supporting sme borrowing where conventional refinance routes have closed",
+   "guidance on negotiating instalment plans for vat paye and corporation tax arrears before enforcement"
+  ]
+ },
+ {
+  "u": "/advice/get-free-business-debt-advice/",
+  "ratio": 0.989,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/hmrcs-ir35-investigations-different/",
+  "ratio": 0.951,
+  "lost_words": 62,
+  "runs": 4,
+  "samples": [
+   "and hmrc s authority to recover paye and nics from disguised employment",
+   "hmrc s online status checker inconsistent cest results are a primary trigger for ir35 enquiries"
+  ]
+ },
+ {
+  "u": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+  "ratio": 0.864,
+  "lost_words": 539,
+  "runs": 1,
+  "samples": [
+   "your next step on taking money out of a limited company if the company is solvent and the question is pure tax efficiency the right conversation is wi"
+  ]
+ },
+ {
+  "u": "/advice/insolvency-advice-for-directors/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/losing-house-if-company-goes-bust/",
+  "ratio": 0.955,
+  "lost_words": 30,
+  "runs": 2,
+  "samples": [
+   "against your property including the second charges banks take under personal guarantees",
+   "the trustee s powers over the bankrupt s home and the twelve month window before a sale application"
+  ]
+ },
+ {
+  "u": "/advice/misfeasance/",
+  "ratio": 0.961,
+  "lost_words": 70,
+  "runs": 4,
+  "samples": [
+   "the statutory route for liquidators to recover losses from directors who breached duty s212 misfeasance or kept trading when insolvent s214",
+   "whose breach is enforced through a s212 misfeasance claim including reasonable care conflicts and acting within powers"
+  ]
+ },
+ {
+  "u": "/advice/overdrawn-directors-loan-accounts/",
+  "ratio": 0.94,
+  "lost_words": 158,
+  "runs": 1,
+  "samples": [
+   "related guides are directors personally liable for company debts full survey of the six routes to personal liability including overdrawn dlas which cr"
+  ]
+ },
+ {
+  "u": "/advice/personal-guarantee-insurance/",
+  "ratio": 0.95,
+  "lost_words": 30,
+  "runs": 2,
+  "samples": [
+   "events that trigger most personal guarantee calls including the moment a creditor can pursue the director personally",
+   "attached to cbils recovery loan scheme and growth guarantee facilities directors commonly insure"
+  ]
+ },
+ {
+  "u": "/advice/personal-liability-for-cbils-loans/",
+  "ratio": 0.939,
+  "lost_words": 98,
+  "runs": 5,
+  "samples": [
+   "official scheme terms including the 250 000 threshold above which personal guarantees were permitted and the prohibition on taking security over a pri",
+   "guidance confirming the 80 government guarantee runs to the lender not the borrower"
+  ]
+ },
+ {
+  "u": "/advice/preventing-company-director-disputes/",
+  "ratio": 0.956,
+  "lost_words": 82,
+  "runs": 5,
+  "samples": [
+   "statutory route for a minority director or shareholder to petition the court where company affairs are conducted unfairly against their interests",
+   "codified general duties including acting within powers promoting company success and disclosing conflicts of interest"
+  ]
+ },
+ {
+  "u": "/advice/the-risks-of-signing-a-personal-guarantee/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/unenforceable-personal-guarantee/",
+  "ratio": 0.918,
+  "lost_words": 203,
+  "runs": 7,
+  "samples": [
+   "where relevant the personal insolvency route if you have received a demand the two things we would tell you to do before you reply are pull the origin",
+   "statutory basis for rescinding a guarantee where the lender made a material false statement that induced the director to sign"
+  ]
+ },
+ {
+  "u": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+  "ratio": 0.972,
+  "lost_words": 49,
+  "runs": 3,
+  "samples": [
+   "including the duty to avoid conflicts s175 not accept third party benefits s176 and declare interest in proposed transactions s177",
+   "route used by liquidators to recover personal losses caused by breach of conflict and disclosure duties"
+  ]
+ },
+ {
+  "u": "/advice/what-are-fixed-and-floating-charges/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/what-are-phoenix-companies/",
+  "ratio": 0.96,
+  "lost_words": 64,
+  "runs": 4,
+  "samples": [
+   "the provision used to challenge phoenix asset sales priced below open market value",
+   "requires independent evaluator review before a pre pack sale to connected parties including phoenix buyers"
+  ]
+ },
+ {
+  "u": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+  "ratio": 0.97,
+  "lost_words": 37,
+  "runs": 2,
+  "samples": [
+   "of directors including the duty to promote the success of the company and the shift to creditor interests when insolvency is in prospect",
+   "statutory framework for disqualification orders following conduct reports from liquidators and the insolvency service"
+  ]
+ },
+ {
+  "u": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+  "ratio": 0.958,
+  "lost_words": 39,
+  "runs": 3,
+  "samples": [
+   "of knowingly or recklessly delivering false or misleading statements to the registrar",
+   "claims a liquidator can bring against directors who approved inaccurate accounts and caused loss"
+  ]
+ },
+ {
+  "u": "/advice/what-is-limited-liability/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/advice/what-is-the-companies-act-2006/",
+  "ratio": 0.963,
+  "lost_words": 18,
+  "runs": 1,
+  "samples": [
+   "the route by which conduct breaching companies act duties can lead to disqualification of two to fifteen years"
+  ]
+ },
+ {
+  "u": "/advice/writing-off-a-directors-loan-account/",
+  "ratio": 0.863,
+  "lost_words": 396,
+  "runs": 7,
+  "samples": [
+   "writing off an overdrawn director s loan account faqs is there a time limit for writing off a director s loan no statutory deadline but hmrc pays atte",
+   "the s455 charge on loans to participators and the s458 repayment relief that drive the corporation tax cost of an unrepaid director s loan"
+  ]
+ },
+ {
+  "u": "/articles/124-pints-to-save-the-pub/",
+  "ratio": 0.942,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+  "ratio": 0.991,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/articles/can-heathrow-survive-covid-19/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/articles/debt-charities-for-consumers/",
+  "ratio": 0.975,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/articles/how-will-carillions-insolvency-effect-its-supply-chain/",
+  "ratio": 0.981,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/articles/managing-debt-related-stress/",
+  "ratio": 0.994,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/articles/paradise-papers/",
+  "ratio": 0.977,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/articles/pub-closures-in-the-uk/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/articles/tescos-rated-worst-payer-uk-small-businesses/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/articles/the-orla-kiely-fashion-brand-shuts-up-shop/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+  "ratio": 0.846,
+  "lost_words": 323,
+  "runs": 6,
+  "samples": [
+   "a bounce back loan for most directors the honest answer we give to can i lose my house is no provided your loan was used for the business your applica",
+   "cover the misfeasance wrongful trading fraudulent trading and antecedent transaction claims that can pierce limited liability and reach a director s h"
+  ]
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+  "ratio": 0.958,
+  "lost_words": 63,
+  "runs": 4,
+  "samples": [
+   "eligibility criteria lender accreditation and the 80 government guarantee mechanics underpinning every cbils facility",
+   "liability for directors who continue trading after cbils repayment becomes unsustainable and insolvency is unavoidable"
+  ]
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+  "ratio": 0.915,
+  "lost_words": 91,
+  "runs": 5,
+  "samples": [
+   "how quickly action could be needed check my company s position estimates are fine we only call if you ask us to methodology",
+   "criminal framework engaged where a bbl application involved knowingly inflated turnover a duplicate loan or a non trading company"
+  ]
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/business-insolvency/articles-insights-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/care-home-insolvency/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/case-studies-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/case-studies/chinese-takeaway/",
+  "ratio": 0.942,
+  "lost_words": 96,
+  "runs": 5,
+  "samples": [
+   "route the director used to place the takeaway into liquidation on his own terms with a licensed practitioner of his choice",
+   "that confirmed the takeaway was insolvent once hmrc s anticipated vat and paye assessment landed on top of trading liabilities"
+  ]
+ },
+ {
+  "u": "/charity-non-profit-insolvency/",
+  "ratio": 0.984,
+  "lost_words": 26,
+  "runs": 2,
+  "samples": [
+   "regulator with statutory inquiry powers that run parallel to formal insolvency procedures",
+   "trustees obligation to report insolvency fraud or significant financial loss promptly to the commission"
+  ]
+ },
+ {
+  "u": "/closing-a-limited-company/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-administration/",
+  "ratio": 0.978,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-administration/light-touch-administration/",
+  "ratio": 0.979,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-administration/notice-of-intention-to-appoint-administrators/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-administration/vs-administrative-receivership/",
+  "ratio": 0.963,
+  "lost_words": 41,
+  "runs": 3,
+  "samples": [
+   "including the receiver s powers duties and reporting obligations to the secured creditor",
+   "for floating charges created on or after 15 september 2003 with limited exceptions"
+  ]
+ },
+ {
+  "u": "/company-administration/vs-cva/",
+  "ratio": 0.958,
+  "lost_words": 109,
+  "runs": 7,
+  "samples": [
+   "statutory framework for cva proposals nominee duties and creditor decision procedures referenced throughout this comparison",
+   "governs administrator appointment the automatic moratorium and the three statutory purposes that frame the administration route"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/",
+  "ratio": 0.9,
+  "lost_words": 172,
+  "runs": 5,
+  "samples": [
+   "see how soon you may need to act check my company s position estimates are fine we only call if you ask us to methodology",
+   "the duty that pivots from shareholders to creditors as a whole the moment your business fails the cash flow test"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+  "ratio": 0.915,
+  "lost_words": 151,
+  "runs": 7,
+  "samples": [
+   "see how soon you may need to act check my company s position estimates are fine we only call if you ask us to methodology",
+   "the seven statutory duties owner managers must satisfy including the duty to promote success and the duty to exercise reasonable care skill and dilige"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+  "ratio": 0.915,
+  "lost_words": 74,
+  "runs": 3,
+  "samples": [
+   "see how soon you may need to act check my company s position estimates are fine we only call if you ask us to methodology",
+   "directors duty to promote the success of the company and the point at which that duty shifts to consider creditor interests once loan default becomes "
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+  "ratio": 0.936,
+  "lost_words": 64,
+  "runs": 3,
+  "samples": [
+   "see how soon you may need to act check my company s position estimates are fine we only call if you ask us to methodology",
+   "the duty that shifts from shareholders to creditors as a whole once the company crosses the insolvency line central to defending a mortgage distress t"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-business-energy/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-business-rates/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/cant-pay-staff-wages/",
+  "ratio": 0.95,
+  "lost_words": 57,
+  "runs": 3,
+  "samples": [
+   "which broad options could fit check my company s position estimates are fine we only call if you ask us to methodology",
+   "the director duty shift to creditors as a whole triggered the moment payroll cannot be funded with confidence"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+  "ratio": 0.951,
+  "lost_words": 71,
+  "runs": 3,
+  "samples": [
+   "see how soon you may need to act check my company s position estimates are fine we only call if you ask us to methodology",
+   "the framework under which conduct in the months before insolvency is reviewed and unfit conduct findings produce disqualification orders of two to fif"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+  "ratio": 0.851,
+  "lost_words": 44,
+  "runs": 1,
+  "samples": [
+   "two minute company check how urgent is your company s position check the wider warning signs likely urgency and which broad options may fit your compa"
+  ]
+ },
+ {
+  "u": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+  "ratio": 0.967,
+  "lost_words": 38,
+  "runs": 3,
+  "samples": [
+   "cited as the point at which good debt tips into formal insolvency territory",
+   "england base rate plus 4 charged on overdue vat paye and corporation"
+  ]
+ },
+ {
+  "u": "/company-rescue-recovery-hub/",
+  "ratio": 0.988,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-rescue-solutions/",
+  "ratio": 0.97,
+  "lost_words": 41,
+  "runs": 1,
+  "samples": [
+   "not sure where your company stands use the two minute test to check the warning signs and see how soon you may need to act check my company s position"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+  "ratio": 0.985,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+  "ratio": 0.982,
+  "lost_words": 69,
+  "runs": 4,
+  "samples": [
+   "claim route employees use when a cva company cannot fund their statutory entitlements",
+   "duty triggering 30 or 45 day minimum periods where 20 or more redundancies are proposed at one establishment"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+  "ratio": 0.976,
+  "lost_words": 15,
+  "runs": 1,
+  "samples": [
+   "including the proposal nominee s report and the binding effect on unsecured creditors once approved"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+  "ratio": 0.993,
+  "lost_words": 13,
+  "runs": 1,
+  "samples": [
+   "we receive fees when directors proceed with insolvency practitioners through our referral network"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+  "ratio": 0.986,
+  "lost_words": 85,
+  "runs": 5,
+  "samples": [
+   "raising hmrc s ranking in cvl distributions and shaping creditor returns in cva modelling",
+   "procedural rules for cva meetings nominee reports cvl deemed consent decisions and statement of affairs requirements"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+  "ratio": 0.97,
+  "lost_words": 67,
+  "runs": 4,
+  "samples": [
+   "liability exposing directors personally where trading continues after cva failure with no reasonable prospect of avoiding insolvent liquidation",
+   "framework including the rescue route a supervisor may take instead of immediate liquidation when cva fails"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+  "ratio": 0.991,
+  "lost_words": 27,
+  "runs": 1,
+  "samples": [
+   "company debt may receive a referral fee when directors proceed with an insolvency practitioner or adviser introduced through our service this does not"
+  ]
+ },
+ {
+  "u": "/company-rescue-solutions/partnership-voluntary-arrangements/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/company-rescue-solutions/pre-packs/",
+  "ratio": 0.971,
+  "lost_words": 182,
+  "runs": 7,
+  "samples": [
+   "a pre pack administration is a sale of the company s business and assets negotiated before the administrator s formal appointment under schedule b1 ia",
+   "statutory framework for administration appointments administrator powers and the purpose hierarchy underpinning every pre pack sale"
+  ]
+ },
+ {
+  "u": "/construction-insolvency/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/contact-us/",
+  "ratio": 0.987,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/cookie-policy/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/county-court-judgements/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/",
+  "ratio": 0.538,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/administration-statistics/",
+  "ratio": 0.979,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/amusement-recreation-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/architectural-engineering-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/cleaning-company-insolvency-statistics/",
+  "ratio": 0.992,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/company-insolvencies-by-sector/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/compulsory-liquidation-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/construction-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/creative-arts-entertainment-insolvency-statistics/",
+  "ratio": 0.991,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/cvl-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/dissolutions-vs-insolvencies/",
+  "ratio": 0.567,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/estate-agency-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/freight-forwarding-logistics-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/furniture-insolvency-statistics/",
+  "ratio": 0.992,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/hotel-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/it-consultancy-insolvency-statistics/",
+  "ratio": 0.992,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/management-consultancy-insolvency-statistics/",
+  "ratio": 0.991,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/medical-dental-practice-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/motor-vehicle-repair-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/payment-practices-late-payment/",
+  "ratio": 0.593,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/personal-care-services-insolvency-statistics/",
+  "ratio": 0.991,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/real-estate-letting-investment-insolvency-statistics/",
+  "ratio": 0.991,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/data/recruitment-agency-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/restaurant-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/retail-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/road-haulage-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/sports-facility-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/temporary-staffing-agency-insolvency-statistics/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/uk-insolvency-statistics/",
+  "ratio": 0.987,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/data/winding-up-petition-tracker/",
+  "ratio": 0.981,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/debt-charities-uk/",
+  "ratio": 0.994,
+  "lost_words": 12,
+  "runs": 1,
+  "samples": [
+   "acts as a referral service connecting directors with licensed insolvency practitioners it"
+  ]
+ },
+ {
+  "u": "/debt-creditor-pressure-hub/",
+  "ratio": 0.947,
+  "lost_words": 221,
+  "runs": 7,
+  "samples": [
+   "creditor pressure on a uk limited company escalates predictably chase letters and dca referral statutory demand under section 123 1 a ia 1986 750 21 d",
+   "primary statute behind the section 123 statutory demand winding up petitions and the director liability claims that anchor four of the five pressure c"
+  ]
+ },
+ {
+  "u": "/director-protection-hub/",
+  "ratio": 0.14,
+  "lost_words": 1346,
+  "runs": 19,
+  "samples": [
+   "renewal you may also be reading this six months after a procedure closed when the liquidator s letter requesting the board minutes for the previous ei",
+   "the director s personal exposure is materially different from the wider corporate exposure and the protective record runs through the boardroom rather"
+  ]
+ },
+ {
+  "u": "/director-redundancy/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/energy-provider-insolvency/",
+  "ratio": 0.979,
+  "lost_words": 165,
+  "runs": 10,
+  "samples": [
+   "cash flow and balance sheet insolvency tests void dispositions wrongful trading liability and preference claims against energy supplier directors",
+   "statutory basis for gas supplier licensing and ofgem s powers to revoke a licence or appoint a supplier of last resort"
+  ]
+ },
+ {
+  "u": "/guides-resources-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/accelerated-payment-notices-apn/",
+  "ratio": 0.935,
+  "lost_words": 73,
+  "runs": 3,
+  "samples": [
+   "the disclosure of tax avoidance schemes rules that define when arrangements are notifiable triggering condition b for apn issue the most common route ",
+   "the gaar framework and advisory panel opinion process that underpins condition c for apn issue against arrangements deemed not reasonable tax planning"
+  ]
+ },
+ {
+  "u": "/hmrc/can-hmrc-shut-down-my-business/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/cant-pay-paye/",
+  "ratio": 0.841,
+  "lost_words": 41,
+  "runs": 1,
+  "samples": [
+   "not sure where your company stands use the two minute test to check the warning signs and see how soon you may need to act check my company s position"
+  ]
+ },
+ {
+  "u": "/hmrc/cant-pay-vat/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/controlled-goods-agreement/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/corporation-tax-penalties/",
+  "ratio": 0.972,
+  "lost_words": 48,
+  "runs": 3,
+  "samples": [
+   "penalties applied where a company does not tell hmrc it is chargeable to corporation tax",
+   "on how inaccuracy penalties are calculated mitigated and suspended during a compliance check"
+  ]
+ },
+ {
+  "u": "/hmrc/distraint-order-notice/",
+  "ratio": 0.976,
+  "lost_words": 78,
+  "runs": 4,
+  "samples": [
+   "the statutory framework governing taking control of goods including the notice of enforcement agent powers and forced entry rules at business premises",
+   "procedural rules setting the 7 day notice period exempt goods thresholds and controlled goods agreement requirements"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-compliance-checks/",
+  "ratio": 0.968,
+  "lost_words": 14,
+  "runs": 1,
+  "samples": [
+   "hmrc relies on to issue compliance check notices demand documents and inspect business premises"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-criminal-investigations/",
+  "ratio": 0.976,
+  "lost_words": 63,
+  "runs": 3,
+  "samples": [
+   "governs arrest search warrants and the under caution interview procedure hmrc s fraud investigation service follows once a case crosses into criminal ",
+   "statutory basis for prosecuting fraud by false representation or failure to disclose the charges most often used in hmrc tax fraud cases"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-debt-enforcement-hub/",
+  "ratio": 0.963,
+  "lost_words": 81,
+  "runs": 5,
+  "samples": [
+   "the power hmrc uses to lift funds straight from company bank accounts",
+   "procedural framework for taking control of goods the modern distraint regime certified enforcement agents operate under"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-enforcement-action/",
+  "ratio": 0.993,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/hmrc-follower-notice/",
+  "ratio": 0.978,
+  "lost_words": 77,
+  "runs": 3,
+  "samples": [
+   "primary legislation creating follower notices and accelerated payment notices including conditions a d the 90 day corrective action window and the up ",
+   "official policy on when hmrc issues a notice how to take corrective action and the limited representation routes available before penalties bite"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-fraud-investigations/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/hmrc-offices-contact-guide/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/hmrc-penalties-investigations/",
+  "ratio": 0.96,
+  "lost_words": 29,
+  "runs": 2,
+  "samples": [
+   "that formally end an enquiry and trigger the 30 day window to appeal hmrc s conclusions",
+   "factsheets covering cop8 cop9 civil and criminal investigations and director rights during checks"
+  ]
+ },
+ {
+  "u": "/hmrc/hmrc-tax-investigations/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/hmrc-threatening-letters/",
+  "ratio": 0.902,
+  "lost_words": 105,
+  "runs": 5,
+  "samples": [
+   "which broad options may fit your company s circumstances check my company s position estimates are fine we only call if you ask us to methodology",
+   "allowing hmrc to take established debts over 1 000 from company bank accounts without a court order"
+  ]
+ },
+ {
+  "u": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+  "ratio": 0.935,
+  "lost_words": 35,
+  "runs": 2,
+  "samples": [
+   "how quickly action could be needed check my company s position estimates are fine we only call if you ask us to methodology",
+   "including the due diligence expectations that determine whether you should have known"
+  ]
+ },
+ {
+  "u": "/hmrc/notice-of-enforcement/",
+  "ratio": 0.904,
+  "lost_words": 115,
+  "runs": 5,
+  "samples": [
+   "which broad options may fit your company s circumstances check my company s position estimates are fine we only call if you ask us to methodology",
+   "the statutory framework for taking control of goods including paragraph 60 third party claims relied on in the challenge section"
+  ]
+ },
+ {
+  "u": "/hmrc/pay-hmrc-or-suppliers-first/",
+  "ratio": 0.98,
+  "lost_words": 36,
+  "runs": 2,
+  "samples": [
+   "defines the directors duty to promote success which shifts to creditors as a whole once a company is approaching insolvency",
+   "for vat paye and nics collected from third parties reordering the insolvency waterfall from december 2020"
+  ]
+ },
+ {
+  "u": "/hmrc/personal-liability-notices/",
+  "ratio": 0.951,
+  "lost_words": 41,
+  "runs": 2,
+  "samples": [
+   "which broad options may fit your company s circumstances check my company s position estimates are fine we only call if you ask us to methodology",
+   "the disqualification framework that frequently runs in tandem with pln proceedings where conduct findings overlap"
+  ]
+ },
+ {
+  "u": "/hmrc/problems-paying-corporation-tax-hmrc/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/security-bond-notices/",
+  "ratio": 0.974,
+  "lost_words": 14,
+  "runs": 1,
+  "samples": [
+   "underpins nic security demands typically issued alongside a paye nor under combined hmrc enforcement"
+  ]
+ },
+ {
+  "u": "/hmrc/security-bonds/",
+  "ratio": 0.965,
+  "lost_words": 67,
+  "runs": 4,
+  "samples": [
+   "underpins extension of the paye security regime to national insurance contributions and related employer obligations",
+   "relevant to phoenix and prior failure triggers hmrc cites when assessing director conduct before issuing a notice of requirement"
+  ]
+ },
+ {
+  "u": "/hmrc/tax-penalties/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/time-to-pay-hmrc/",
+  "ratio": 0.952,
+  "lost_words": 126,
+  "runs": 1,
+  "samples": [
+   "related guides hmrc tax debt hub overview of the hmrc debt collection process and the routes available at each stage cannot pay vat vat specific ttp g"
+  ]
+ },
+ {
+  "u": "/hmrc/understanding-hmrc-debt-collection/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/vat-penalties/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hmrc/what-can-hmrc-bailiffs-take/",
+  "ratio": 0.967,
+  "lost_words": 85,
+  "runs": 5,
+  "samples": [
+   "the statutory procedure certified enforcement agents must follow when taking control of goods for hmrc debts",
+   "including tools of the trade up to 1 350 and items necessary for basic domestic needs"
+  ]
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+  "ratio": 0.971,
+  "lost_words": 76,
+  "runs": 5,
+  "samples": [
+   "power to take established tax debts straight from a company s bank account",
+   "applied to funds suspected of being proceeds of crime or unlawful conduct"
+  ]
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+  "ratio": 0.966,
+  "lost_words": 86,
+  "runs": 4,
+  "samples": [
+   "the power hmrc uses to lift tax owed straight from a company bank account once a ttp is refused",
+   "procedural rules governing hmrc distraint visits to seize company assets after a ttp rejection escalates to enforcement"
+  ]
+ },
+ {
+  "u": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+  "ratio": 0.968,
+  "lost_words": 72,
+  "runs": 4,
+  "samples": [
+   "the statutory basis for taking control of goods defining the powers and limits of certified enforcement agents acting for hmrc",
+   "procedural rules behind the notice of enforcement the 7 clear days controlled goods agreements and the route to sale"
+  ]
+ },
+ {
+  "u": "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+  "ratio": 0.993,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/hospitality-restaurant-insolvency/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency-calculator/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency-news-commentary/",
+  "ratio": 0.964,
+  "lost_words": 43,
+  "runs": 3,
+  "samples": [
+   "monthly and quarterly data underpinning the volume procedure split and cvl dominance figures cited on this page",
+   "q1 2024 release recording 5 209 company insolvencies the highest quarterly figure since 2003"
+  ]
+ },
+ {
+  "u": "/insolvency/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/antecedent-transactions/",
+  "ratio": 0.985,
+  "lost_words": 91,
+  "runs": 1,
+  "samples": [
+   "antecedent transactions are the pre liquidation deals a uk liquidator can unwind under the insolvency act 1986 there are four named heads preferences "
+  ]
+ },
+ {
+  "u": "/insolvency/business-recovery-services/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/can-we-trade-out-of-insolvency/",
+  "ratio": 0.981,
+  "lost_words": 70,
+  "runs": 4,
+  "samples": [
+   "the personal liability test directors must meet when continuing to trade once insolvency becomes unavoidable",
+   "directors duty to promote company success with the creditor interest shift that applies once insolvency is imminent or probable"
+  ]
+ },
+ {
+  "u": "/insolvency/can-you-sell-your-insolvent-company/",
+  "ratio": 0.979,
+  "lost_words": 59,
+  "runs": 4,
+  "samples": [
+   "cash flow and balance sheet tests void dispositions after petition transactions at undervalue preferences and the administration framework",
+   "procedural rules for administration appointments asset sales in liquidation and creditor notification"
+  ]
+ },
+ {
+  "u": "/insolvency/cease-trading/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/check-if-a-company-is-insolvent/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/creditor-negotiations/",
+  "ratio": 0.903,
+  "lost_words": 96,
+  "runs": 2,
+  "samples": [
+   "creditor negotiations are the informal route a uk director takes before a formal insolvency procedure starts the realistic options are an hmrc time to",
+   "is connected a relative s company a director s loan a personally guaranteed lender"
+  ]
+ },
+ {
+  "u": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/creditors-meeting/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/dealing-with-creditor-pressure/",
+  "ratio": 0.974,
+  "lost_words": 100,
+  "runs": 2,
+  "samples": [
+   "related guides debt and creditor pressure hub routes by creditor type hmrc supplier bank court personal guarantee company rescue solutions hub compari",
+   "check how serious the position may be answer four short questions to see how urgent the situation may be and which broad options could fit check my co"
+  ]
+ },
+ {
+  "u": "/insolvency/find-a-liquidator-near-me/",
+  "ratio": 0.907,
+  "lost_words": 325,
+  "runs": 4,
+  "samples": [
+   "almost no uk company needs a geographically local insolvency practitioner the licence is national granted by one of four recognised professional bodie",
+   "three actions before you instruct request three named insolvency practitioners with their current caseloads from anyone you speak to verify each on th"
+  ]
+ },
+ {
+  "u": "/insolvency/how-to-reduce-insolvency-risk/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/how-to-save-a-struggling-business/",
+  "ratio": 0.959,
+  "lost_words": 179,
+  "runs": 6,
+  "samples": [
+   "saving a uk limited company with cash trouble starts with the section 123 ia 1986 test is the company actually insolvent or is this a temporary cash g",
+   "the statutory test directors must clear once they know or ought to know there is no reasonable prospect of avoiding insolvent liquidation"
+  ]
+ },
+ {
+  "u": "/insolvency/insolvency-act-1986/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/insolvency-test/",
+  "ratio": 0.262,
+  "lost_words": 841,
+  "runs": 9,
+  "samples": [
+   "supreme court in eurosail 2013 explained the scope the test is commercial not accounting",
+   "that will arise in the reasonably foreseeable future realisable asset values not book value fixed assets at auction value stock at net realisable rece"
+  ]
+ },
+ {
+  "u": "/insolvency/insolvent-company-investigations/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/insolvent-company-owes-me-money/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/limited-company-bankruptcy/",
+  "ratio": 0.952,
+  "lost_words": 41,
+  "runs": 1,
+  "samples": [
+   "not sure where your company stands use the two minute test to check the warning signs and see how soon you may need to act check my company s position"
+  ]
+ },
+ {
+  "u": "/insolvency/lpa-receivership/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/personal-liability-spouses-business-debts/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/personally-liabilty-of-company-secretary/",
+  "ratio": 0.986,
+  "lost_words": 76,
+  "runs": 1,
+  "samples": [
+   "a uk company secretary has limited statutory liability for company debts the companies act 2006 imposes filing and compliance duties but day to day in"
+  ]
+ },
+ {
+  "u": "/insolvency/preferential-non-preferential-creditors/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/preferential-payments-during-insolvency/",
+  "ratio": 0.973,
+  "lost_words": 113,
+  "runs": 6,
+  "samples": [
+   "statutory tests for preferences the lookback period connected party presumptions court powers to unwind and adjacent claims including wrongful trading",
+   "insolvency service reporting duty on conduct the route from a preference finding to disqualification proceedings against the director"
+  ]
+ },
+ {
+  "u": "/insolvency/rescue-your-business-from-insolvency/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/retail-industry-insolvency-trends/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/secured-vs-unsecured-creditors/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/shareholders-liable-company-debts/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/statement-of-affairs/",
+  "ratio": 0.969,
+  "lost_words": 115,
+  "runs": 6,
+  "samples": [
+   "statutory basis for the statement of affairs directors duty to deliver it false declaration offences and the order of distribution",
+   "prescribed form content requirements and deadlines for delivering the statement of affairs in cvl compulsory liquidation and administration"
+  ]
+ },
+ {
+  "u": "/insolvency/stop-or-avoid-insolvency/",
+  "ratio": 0.984,
+  "lost_words": 45,
+  "runs": 3,
+  "samples": [
+   "giving viable companies a 20 business day payment holiday from most creditor action",
+   "procedural rules for cva proposals moratorium filings and administration appointments referenced throughout this guide"
+  ]
+ },
+ {
+  "u": "/insolvency/transactions-at-undervalue/",
+  "ratio": 0.977,
+  "lost_words": 103,
+  "runs": 5,
+  "samples": [
+   "the core transaction at undervalue provision gifts no consideration disposals and transactions where what the company received was significantly less ",
+   "sister provision targeting payments and security granted with a desire to improve a creditor s position often pleaded alongside s 238"
+  ]
+ },
+ {
+  "u": "/insolvency/validation-order/",
+  "ratio": 0.974,
+  "lost_words": 113,
+  "runs": 7,
+  "samples": [
+   "the statutory basis for void dispositions after a winding up petition and the framework validation orders operate within",
+   "procedural rules governing validation applications evidence requirements and service in the companies court"
+  ]
+ },
+ {
+  "u": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+  "ratio": 0.975,
+  "lost_words": 125,
+  "runs": 5,
+  "samples": [
+   "section 123 sets the cash flow and balance sheet tests that decide when a company is insolvent section 214 imposes personal liability on directors for",
+   "codifies the directors duty that shifts from shareholder benefit to creditor interest once insolvency becomes probable as applied to the warning sign "
+  ]
+ },
+ {
+  "u": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+  "ratio": 0.947,
+  "lost_words": 205,
+  "runs": 2,
+  "samples": [
+   "when a uk limited company cannot pay its debts as they fall due it is technically insolvent under section 123 of the insolvency act 1986 from that poi",
+   "related guides for when the company cannot pay how to save a struggling business operational triage when the gap is genuinely short term rescue your b"
+  ]
+ },
+ {
+  "u": "/insolvency/what-is-a-creditor/",
+  "ratio": 0.962,
+  "lost_words": 33,
+  "runs": 2,
+  "samples": [
+   "set the order of priority and ring fence a prescribed part for unsecured creditors",
+   "raised the prescribed part cap to 800 000 the slice reserved for unsecured creditors out of floating charge realisations"
+  ]
+ },
+ {
+  "u": "/insolvency/what-is-a-freezing-order-or-injunction/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/what-is-a-high-court-writ/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/what-is-an-individual-voluntary-arrangement/",
+  "ratio": 0.977,
+  "lost_words": 85,
+  "runs": 5,
+  "samples": [
+   "sections 252 263g governing the iva framework including the 75 creditor approval threshold and the s 276 bankruptcy fallback on default",
+   "procedural rules for iva proposals nominee reports creditor meetings and supervisor conduct"
+  ]
+ },
+ {
+  "u": "/insolvency/what-is-an-insolvency-practitioner/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/what-is-the-insolvency-service/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/insolvency/what-is-wrongful-trading/",
+  "ratio": 0.963,
+  "lost_words": 167,
+  "runs": 11,
+  "samples": [
+   "the statutory test imposing personal liability on directors who continue trading with no reasonable prospect of avoiding insolvent liquidation",
+   "parallel provision extending the s 214 liability framework to companies entering insolvent administration"
+  ]
+ },
+ {
+  "u": "/insolvency/what-to-do-about-customer-insolvency/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/",
+  "ratio": 0.649,
+  "lost_words": 163,
+  "runs": 7,
+  "samples": [
+   "all three we speak to directors in this position every week the ones who come through cleanest are usually those who pick up the phone before a credit",
+   "employees up to 800 per person and hmrc for vat paye employee nic cis and student loan deductions hmrc s preferential status restored from 1 december "
+  ]
+ },
+ {
+  "u": "/liquidation/alternatives-to-company-liquidation/",
+  "ratio": 0.959,
+  "lost_words": 130,
+  "runs": 8,
+  "samples": [
+   "our main guide to how company liquidation works sets out what the route you are trying to avoid actually involves",
+   "working out whether the company is solvent is the first test because it decides which of these routes is even open to you"
+  ]
+ },
+ {
+  "u": "/liquidation/am-i-solvent/",
+  "ratio": 0.988,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/bailiffs-high-court-enforcement-officers/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/business-bank-account-in-liquidation/",
+  "ratio": 0.887,
+  "lost_words": 95,
+  "runs": 5,
+  "samples": [
+   "where set off leaves the estate empty our guide to liquidating a company with no assets explains how the process still works",
+   "where the company owns premises our guide to what happens to company property explains how those assets are dealt with"
+  ]
+ },
+ {
+  "u": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+  "ratio": 0.96,
+  "lost_words": 130,
+  "runs": 5,
+  "samples": [
+   "contents quick answer if you re worried about your personal exposure why uk limited companies normally shield their directors when a creditor can sue ",
+   "our guide to a director s position in liquidation sets out where directors stand once a liquidator is appointed"
+  ]
+ },
+ {
+  "u": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+  "ratio": 0.953,
+  "lost_words": 44,
+  "runs": 1,
+  "samples": [
+   "two minute company check how urgent is your company s position check the wider warning signs likely urgency and which broad options may fit your compa"
+  ]
+ },
+ {
+  "u": "/liquidation/can-directors-go-to-prison-for-company-debt/",
+  "ratio": 0.956,
+  "lost_words": 117,
+  "runs": 7,
+  "samples": [
+   "for the wider picture of where directors stand once a company fails see our guide to what happens to directors in liquidation",
+   "our guide on personal claims against a director covers how that civil exposure can reach you directly"
+  ]
+ },
+ {
+  "u": "/liquidation/can-directors-pay-themselves-before-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/can-i-choose-my-liquidator/",
+  "ratio": 0.991,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/can-i-liquidate-a-dormant-company/",
+  "ratio": 0.957,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+  "ratio": 0.981,
+  "lost_words": 55,
+  "runs": 2,
+  "samples": [
+   "our guide on what happens to directors in liquidation sets out the full position once a liquidator is in place",
+   "for directors with a clean bbl profile liquidation is rarely the end of the road our guide on starting a new company after liquidation covers the rule"
+  ]
+ },
+ {
+  "u": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+  "ratio": 0.984,
+  "lost_words": 15,
+  "runs": 1,
+  "samples": [
+   "our guide to a director s position in liquidation sets out what that review involves"
+  ]
+ },
+ {
+  "u": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/cant-afford-to-liquidate/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/ccj-when-going-insolvent/",
+  "ratio": 0.949,
+  "lost_words": 66,
+  "runs": 4,
+  "samples": [
+   "for the wider picture of how company liquidation works our liquidation hub sets out each route in detail",
+   "section 126 on stay of proceedings in voluntary liquidation section 130 on stay in compulsory liquidation"
+  ]
+ },
+ {
+  "u": "/liquidation/company-pensions-and-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-property-and-real-estate-in-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-restoration-after-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-strike-off-and-dissolution/",
+  "ratio": 0.99,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/compulsory-liquidation/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/creditor-meetings-in-liquidation/",
+  "ratio": 0.981,
+  "lost_words": 39,
+  "runs": 2,
+  "samples": [
+   "our guide on submitting a claim in a liquidation sets out how to complete a proof of debt and what evidence to attach",
+   "our guide to what a liquidator does explains the conduct the committee is there to oversee"
+  ]
+ },
+ {
+  "u": "/liquidation/creditors-voluntary-liquidation/",
+  "ratio": 0.914,
+  "lost_words": 87,
+  "runs": 4,
+  "samples": [
+   "are not the first director to sit with it and what comes next is a sequence of decisions you take with your ip not alone",
+   "is the part directors dread here a public record they picture a neighbour a supplier s credit controller or a future employer stumbling across"
+  ]
+ },
+ {
+  "u": "/liquidation/cva-vs-strike-off-vs-liquidation/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/director-conduct-review/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/directors-conduct-report-2/",
+  "ratio": 0.987,
+  "lost_words": 12,
+  "runs": 1,
+  "samples": [
+   "obliges liquidators to file a conduct report on every director section 6"
+  ]
+ },
+ {
+  "u": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+  "ratio": 0.938,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/how-much-does-liquidation-cost/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+  "ratio": 0.981,
+  "lost_words": 47,
+  "runs": 3,
+  "samples": [
+   "our guide to what a liquidator does sets out the duties a challenge is measured against",
+   "our guide on choosing your liquidator explains how much say creditors and directors have over who is appointed"
+  ]
+ },
+ {
+  "u": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/how-to-prepare-for-company-liquidation/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+  "ratio": 0.975,
+  "lost_words": 36,
+  "runs": 2,
+  "samples": [
+   "how much you eventually recover depends on the order creditors are paid since unsecured proofs sit behind secured and preferential claims",
+   "our guide to what a liquidator does sets out the wider role behind this adjudication"
+  ]
+ },
+ {
+  "u": "/liquidation/insolvency-checklist/",
+  "ratio": 0.971,
+  "lost_words": 65,
+  "runs": 4,
+  "samples": [
+   "our guide to common insolvency myths tackles the false beliefs that lead directors to trade on too long",
+   "our guide on speaking to an insolvency practitioner early explains why timing this call ahead of a missed payment protects your position"
+  ]
+ },
+ {
+  "u": "/liquidation/insolvency-myths-debunked/",
+  "ratio": 0.991,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/insolvency-vs-bankruptcy/",
+  "ratio": 0.961,
+  "lost_words": 46,
+  "runs": 1,
+  "samples": [
+   "if your company is insolvent the next decision is how to close it and that is a separate comparison again our guide on the difference between liquidat"
+  ]
+ },
+ {
+  "u": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+  "ratio": 0.972,
+  "lost_words": 63,
+  "runs": 3,
+  "samples": [
+   "our guide to leases and contracts in liquidation covers how the liquidator handles ongoing agreements and the s 178 disclaimer power",
+   "physical trading assets are realised separately our guide to vehicles and equipment in a liquidation covers how hardware plant and machinery are value"
+  ]
+ },
+ {
+  "u": "/liquidation/leases-and-contracts-in-liquidation/",
+  "ratio": 0.953,
+  "lost_words": 167,
+  "runs": 8,
+  "samples": [
+   "our main guide explains how company liquidation works from the resolution to wind up through to dissolution",
+   "disclaimer is only one part of the liquidator s role which our dedicated guide sets out in full"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidating-a-charity-or-non-profit/",
+  "ratio": 0.979,
+  "lost_words": 78,
+  "runs": 5,
+  "samples": [
+   "other non standard entities follow their own rules and our guide to liquidating an llp covers one common example",
+   "where a charity is solvent and simply closing a members voluntary liquidation is usually the appropriate route"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+  "ratio": 0.408,
+  "lost_words": 293,
+  "runs": 11,
+  "samples": [
+   "my company has no money and no bank account can i just walk away is the question we hear constantly the short answer is no the longer answer is the on",
+   "you can fund the procedure yourself claim director redundancy via the redundancy payments service or accept a creditor petition into compulsory liquid"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+  "ratio": 0.966,
+  "lost_words": 103,
+  "runs": 6,
+  "samples": [
+   "at that point the holding company may have nothing left to realise and our guide on liquidating a company with no assets explains how that situation i",
+   "and an insolvent entity will usually be closed through a creditors voluntary liquidation"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidating-a-limited-liability-partnership/",
+  "ratio": 0.929,
+  "lost_words": 153,
+  "runs": 8,
+  "samples": [
+   "we have written this page to explain how liquidating an llp works under uk law what distinguishes it from standard company liquidation and where",
+   "same principle holds where the llp sits inside a wider structure as our guide to liquidating a group company explains the"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidation-deadlines-and-time-limits/",
+  "ratio": 0.868,
+  "lost_words": 236,
+  "runs": 12,
+  "samples": [
+   "our overview of how company liquidation works sets out the wider process these deadlines sit within",
+   "our guide to preparing for liquidation covers the steps to take before the clock starts running"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidation-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/liquidation-vs-dissolution-strike-off/",
+  "ratio": 0.919,
+  "lost_words": 30,
+  "runs": 1,
+  "samples": [
+   "this page compares the two routes directly explains where each one works and where it does not and helps you decide which closure path actually fits y"
+  ]
+ },
+ {
+  "u": "/liquidation/liquidators-powers-and-duties/",
+  "ratio": 0.973,
+  "lost_words": 53,
+  "runs": 3,
+  "samples": [
+   "our guide on what to do if you disagree with a liquidator s decision or fees sets out the formal routes available",
+   "reports on every director and decides whether to pursue disqualification or compensation orders"
+  ]
+ },
+ {
+  "u": "/liquidation/list-of-liquidation-documents/",
+  "ratio": 0.965,
+  "lost_words": 71,
+  "runs": 4,
+  "samples": [
+   "our guide on how to prepare for liquidation sets out the wider steps to take before the process begins",
+   "the completed statement is then put before creditors and our guide explains what happens at the creditors meeting where the liquidator is formally app"
+  ]
+ },
+ {
+  "u": "/liquidation/members-voluntary-liquidation/",
+  "ratio": 0.989,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+  "ratio": 0.983,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/seek-insolvency-advice-before-missing-payments/",
+  "ratio": 0.968,
+  "lost_words": 37,
+  "runs": 2,
+  "samples": [
+   "even if you fear the company cannot afford to liquidate the initial conversation is still free and still worth having",
+   "where liquidation is the answer our overview of how company liquidation works explains what the process involves"
+  ]
+ },
+ {
+  "u": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+  "ratio": 0.959,
+  "lost_words": 41,
+  "runs": 1,
+  "samples": [
+   "not sure where your company stands use the two minute test to check the warning signs and see how soon you may need to act check my company s position"
+  ]
+ },
+ {
+  "u": "/liquidation/timeline/",
+  "ratio": 0.168,
+  "lost_words": 120,
+  "runs": 3,
+  "samples": [
+   "s affairs and how quickly you cooperate with the liquidator we find that the single biggest factor in how long liquidation takes",
+   "cannot be expedited months 6 to 24 asset realisation and distribution if assets exist the liquidator whether the official receiver or a private ip rea"
+  ]
+ },
+ {
+  "u": "/liquidation/uk-insolvency-flowchart/",
+  "ratio": 0.989,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/uk-insolvency-glossary/",
+  "ratio": 0.968,
+  "lost_words": 21,
+  "runs": 1,
+  "samples": [
+   "if you want a practical companion to these definitions our insolvency checklist sets out the steps a director should not miss"
+  ]
+ },
+ {
+  "u": "/liquidation/voluntary-vs-compulsory-liquidation/",
+  "ratio": 0.889,
+  "lost_words": 79,
+  "runs": 4,
+  "samples": [
+   "our guide explains how a winding up petition becomes compulsory liquidation at each stage",
+   "check how serious the position may be answer four short questions to see how urgent the situation may be and which broad options could fit check my co"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-after-company-liquidation/",
+  "ratio": 0.95,
+  "lost_words": 106,
+  "runs": 6,
+  "samples": [
+   "if you are still working out whether formal company liquidation is the right route our liquidation hub sets out the process before this stage is reach",
+   "our guide to a director s position in liquidation covers how conduct is examined once a liquidator is appointed"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+  "ratio": 0.965,
+  "lost_words": 56,
+  "runs": 3,
+  "samples": [
+   "our guide to a ccj against the company covers what that judgement means when the company is already insolvent",
+   "choosing to act before a creditor forces liquidation keeps that report on better footing and leaves you in control of the route"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-hides-company-assets/",
+  "ratio": 0.963,
+  "lost_words": 98,
+  "runs": 6,
+  "samples": [
+   "our guide explains how the liquidator s review of director conduct examines exactly this kind of transaction",
+   "where assets cannot be traced the exposure shifts onto you our guide explains how a director can be sued personally through a misfeasance claim"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+  "ratio": 0.957,
+  "lost_words": 192,
+  "runs": 9,
+  "samples": [
+   "for the wider picture of how a director is affected by liquidation including the position of directors still in post see our companion guide",
+   "our guide on when a director should stop trading explains the threshold that matters here"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+  "ratio": 0.943,
+  "lost_words": 133,
+  "runs": 8,
+  "samples": [
+   "our guide on concealing company assets covers the separate more serious territory of deliberately keeping assets from the liquidator",
+   "our guide on director payments before liquidation covers when taking money out ahead of creditors becomes a preference"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+  "ratio": 0.96,
+  "lost_words": 55,
+  "runs": 4,
+  "samples": [
+   "our guide to what happens after liquidation sets out where that leaves you and the company",
+   "including asset transfers made for less than worth in the run up to insolvency"
+  ]
+ },
+ {
+  "u": "/liquidation/what-happens-to-directors-in-liquidation/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/what-happens-to-employees/",
+  "ratio": 0.934,
+  "lost_words": 25,
+  "runs": 1,
+  "samples": [
+   "director who holds a genuine contract of employment can claim too and our guide to redundancy payments for directors sets out the qualifying condition"
+  ]
+ },
+ {
+  "u": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+  "ratio": 0.969,
+  "lost_words": 69,
+  "runs": 3,
+  "samples": [
+   "disqualification is a separate risk from the wider question of how a director is affected by liquidation but the two are closely linked because the li",
+   "our guide explains when a liquidator reviews what the directors did and how that report is compiled"
+  ]
+ },
+ {
+  "u": "/liquidation/when-should-a-director-stop-trading/",
+  "ratio": 0.966,
+  "lost_words": 41,
+  "runs": 2,
+  "samples": [
+   "our guide on getting insolvency advice early explains why timing that call before a missed payment matters so much",
+   "our guide to where directors stand in liquidation sets out the full range of consequences a director faces once the company closes"
+  ]
+ },
+ {
+  "u": "/liquidation/which-creditors-get-paid-first/",
+  "ratio": 0.996,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/manufacturing-insolvency/",
+  "ratio": 0.959,
+  "lost_words": 283,
+  "runs": 9,
+  "samples": [
+   "manufacturing insolvency has three sector specific overlays no other industry shares first working capital tied up in wip and raw materials that lose ",
+   "not sure where your company stands use the two minute test to check the warning signs and see how soon you may need to act check my company s position"
+  ]
+ },
+ {
+  "u": "/meet-the-team/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/mental-health-debt-stress-support/",
+  "ratio": 0.966,
+  "lost_words": 63,
+  "runs": 4,
+  "samples": [
+   "how the 60 day standard moratorium and treatment linked mental health moratorium operate",
+   "the personal liability test directors face if they keep trading past the point of no reasonable prospect"
+  ]
+ },
+ {
+  "u": "/privacy-policy/",
+  "ratio": 0.995,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/professional-services-insolvency/",
+  "ratio": 0.977,
+  "lost_words": 102,
+  "runs": 7,
+  "samples": [
+   "over a solicitor s practice including immediate seizure of client money and files",
+   "which set the client account ringfence and trigger personal liability on any shortfall"
+  ]
+ },
+ {
+  "u": "/receivership-mean-business/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sample-letters/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sample-letters/cease-trading-template/",
+  "ratio": 0.977,
+  "lost_words": 139,
+  "runs": 8,
+  "samples": [
+   "personal liability where directors continue trading after they knew or ought to have known insolvent liquidation was unavoidable",
+   "clawback regime for payments to connected creditors made before cease trading that put them ahead of the general body"
+  ]
+ },
+ {
+  "u": "/sample-letters/hold-action-on-my-account/",
+  "ratio": 0.975,
+  "lost_words": 103,
+  "runs": 6,
+  "samples": [
+   "the forbearance rules a regulated lender weighs when deciding whether to pause collection for 30 days handbook",
+   "conduct standards covering the free debt advisers a hold action letter directs you towards handbook"
+  ]
+ },
+ {
+  "u": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+  "ratio": 0.973,
+  "lost_words": 103,
+  "runs": 7,
+  "samples": [
+   "rules that require regulated lenders to take a hardship request seriously and consider freezing interest or holding enforcement",
+   "relevant when a third party helps you draft or negotiate the letter"
+  ]
+ },
+ {
+  "u": "/sample-letters/i-have-no-knowledge-of-this-debt/",
+  "ratio": 0.976,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sample-letters/i-need-more-information-about-this-debt/",
+  "ratio": 0.982,
+  "lost_words": 18,
+  "runs": 1,
+  "samples": [
+   "free escalation route if a regulated lender ignores a s 77 78 request or continues enforcement action improperly"
+  ]
+ },
+ {
+  "u": "/sample-letters/request-a-reduced-monthly-payment/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+  "ratio": 0.996,
+  "lost_words": 12,
+  "runs": 1,
+  "samples": [
+   "and we do not earn referral fees from fos or ico complaints"
+  ]
+ },
+ {
+  "u": "/sample-letters/write-off-my-debt/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sector-insolvency-hub/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sector-specific-insolvency/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/automotive/",
+  "ratio": 0.99,
+  "lost_words": 58,
+  "runs": 1,
+  "samples": [
+   "contact us get called back by an expert let us explain your options practical solutions to your situation we re licensed and regulated our advice is f"
+  ]
+ },
+ {
+  "u": "/sectors/carehomes/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/charity/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/childcare/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/cleaning-contractors/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/construction/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/dry-cleaning-laundry/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/energy/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/entertainment/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/events/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/gyms/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/haulage/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/hotels/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/insolvency-rescue-fish-chip-sector/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/insolvency-rescue-solutions-for-garden-centers/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/leisure/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/manufacturing/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/professional-services/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/property/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/recruitment/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/restaurants/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/retail/",
+  "ratio": 0.999,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/schools/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/taxi-companies/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/sectors/travel/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/services-to/accountants/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/services-to/asset-based-and-other-lenders/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/services-to/banks/",
+  "ratio": 0.992,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/services-to/creditors/",
+  "ratio": 0.99,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/services-to/solicitors/",
+  "ratio": 0.993,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/site-map/",
+  "ratio": 0.987,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/terms-conditions/",
+  "ratio": 1.0,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/transport-haulage-insolvency/",
+  "ratio": 0.979,
+  "lost_words": 124,
+  "runs": 7,
+  "samples": [
+   "statutory basis for the operator s licence financial standing requirement and traffic commissioner powers of suspension or revocation",
+   "wrongful trading liability transactions at undervalue preferences and preferential creditor ranking that bite hard in haulage failures"
+  ]
+ },
+ {
+  "u": "/winding-up-petitions/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
+  "ratio": 0.997,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ },
+ {
+  "u": "/winding-up-petitions/what-is-a-winding-up-order/",
+  "ratio": 0.998,
+  "lost_words": 0,
+  "runs": 0,
+  "samples": []
+ }
+]
