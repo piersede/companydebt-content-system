@@ -147,7 +147,13 @@ def cmd_fill(args) -> int:
     if numbered < 2:
         print(f"ERROR: response does not answer at least two of the numbered questions.", file=sys.stderr)
         return 3
-    print(f"Report validated: {path.relative_to(REPO)}")
+    # A relative --fill path (the obvious way to type it) blew up here on
+    # relative_to, after all the validation had already passed.
+    try:
+        shown = path.resolve().relative_to(REPO)
+    except ValueError:
+        shown = path
+    print(f"Report validated: {shown}")
     print(f"  response length: {len(response)} chars")
     print(f"  numbered answers detected: {numbered} of 5")
     print("Pass the file to voice_audit.py with --stranger-read-report <path>")
