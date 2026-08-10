@@ -136,7 +136,31 @@ def main() -> int:
     ap.add_argument("--path", nargs="*", help="only paths containing these strings")
     ap.add_argument("--pause", type=float, default=1.2)
     ap.add_argument("--report", default="staging_sync_report.json")
+    ap.add_argument("--dates", default="staging_modified.json",
+                    help="JSON of staging last-modified dates; any page newer on "
+                         "staging than on live is held, whatever its word count")
+    ap.add_argument("--ignore-dates", action="store_true",
+                    help="skip the date guard (word counts only - can overwrite "
+                         "staging edits that TRIMMED text)")
     args = ap.parse_args()
+
+    # Word counts alone cannot tell which side is newer. An edit that trims text
+    # leaves staging SMALLER than live, which decide() reads as "live is newer"
+    # and overwrites - destroying the newer work. On 2026-08-09 that would have
+    # replaced five same-day staging pages with copies from July. Dates settle it.
+    stage_dates: dict[int, str] = {}
+    if not args.ignore_dates:
+        dpath = Path(args.dates)
+        if not dpath.is_absolute():
+            dpath = ROOT / dpath
+        if dpath.exists():
+            for row in json.loads(dpath.read_text(encoding="utf-8")):
+                stage_dates[int(row["ID"])] = str(row["post_modified_gmt"]).replace(" ", "T")
+            print(f"date guard: {len(stage_dates)} staging dates loaded from {dpath.name}")
+        else:
+            print(f"WARNING: no {dpath.name} - falling back to word counts alone.\n"
+                  f"         Staging edits that trimmed text can be overwritten.\n"
+                  f"         Regenerate it before trusting this run.")
 
     cache = json.loads(CACHE.read_text(encoding="utf-8"))
     items = list(cache.items())
@@ -173,6 +197,14 @@ def main() -> int:
         if d.get("slug") and meta.get("slug") and d["slug"] != meta["slug"]:
             held.append((path, f"id {pid} is a different page on each site"))
             print(f"  HOLD  {path}  id points at different pages")
+            time.sleep(args.pause)
+            continue
+
+        s_mod = stage_dates.get(int(pid) if pid else -1)
+        l_mod = str(d.get("modified_gmt") or "").replace(" ", "T")
+        if s_mod and l_mod and s_mod > l_mod:
+            held.append((path, f"staging is newer ({s_mod} vs live {l_mod})"))
+            print(f"  hold  {path}  staging newer: {s_mod} vs live {l_mod}")
             time.sleep(args.pause)
             continue
 

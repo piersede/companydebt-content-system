@@ -1,0 +1,4618 @@
+[
+ {
+  "ID": "8571",
+  "post_name": "types-of-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:39:53",
+  "len": "13949"
+ },
+ {
+  "ID": "8433",
+  "post_name": "winding-up-a-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-06-01 09:36:36",
+  "len": "9810"
+ },
+ {
+  "ID": "9616",
+  "post_name": "liquidation-vs-administration",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:39:33",
+  "len": "10233"
+ },
+ {
+  "ID": "10696",
+  "post_name": "company-liquidation-what-is-the-value-of-your-intellectual-property",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:39:12",
+  "len": "9556"
+ },
+ {
+  "ID": "11176",
+  "post_name": "hmrc-personal-liability-notices-the-process-and-potential-impact",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-26 10:51:56",
+  "len": "5177"
+ },
+ {
+  "ID": "11219",
+  "post_name": "can-you-negotiate-with-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 15:48:26",
+  "len": "8724"
+ },
+ {
+  "ID": "11320",
+  "post_name": "the-difference-between-solvent-and-insolvent-company-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:47:42",
+  "len": "9828"
+ },
+ {
+  "ID": "11469",
+  "post_name": "what-is-the-role-of-a-liquidator-in-company-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:37:38",
+  "len": "15357"
+ },
+ {
+  "ID": "11538",
+  "post_name": "paye-penalties",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:03:19",
+  "len": "6566"
+ },
+ {
+  "ID": "11883",
+  "post_name": "ive-received-a-winding-up-order-from-hmrc-what-should-i-do",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:15:46",
+  "len": "1376"
+ },
+ {
+  "ID": "11912",
+  "post_name": "advantages-disadvantages",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:12:49",
+  "len": "12304"
+ },
+ {
+  "ID": "12984",
+  "post_name": "hmrc-objection-striking-off",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:55:00",
+  "len": "11758"
+ },
+ {
+  "ID": "13498",
+  "post_name": "compulsory-liquidation-investigations",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 14:00:25",
+  "len": "5074"
+ },
+ {
+  "ID": "13554",
+  "post_name": "pre-pack-or-cva",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-06-17 08:47:59",
+  "len": "18354"
+ },
+ {
+  "ID": "13740",
+  "post_name": "is-my-personal-credit-rating-affected",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:36:29",
+  "len": "9754"
+ },
+ {
+  "ID": "13770",
+  "post_name": "shareholders-dispute-cvl",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:13:18",
+  "len": "6512"
+ },
+ {
+  "ID": "13778",
+  "post_name": "what-is-a-liquidation-committee",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:15:26",
+  "len": "9741"
+ },
+ {
+  "ID": "13808",
+  "post_name": "landlords-affected-cvl",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:37:33",
+  "len": "6551"
+ },
+ {
+  "ID": "13891",
+  "post_name": "directors-conduct-report",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:44:04",
+  "len": "11174"
+ },
+ {
+  "ID": "13895",
+  "post_name": "advertised-gazette-cvl",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:29:42",
+  "len": "3318"
+ },
+ {
+  "ID": "14163",
+  "post_name": "pay-value-added-tax-vat-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-04-29 16:39:23",
+  "len": "3250"
+ },
+ {
+  "ID": "14165",
+  "post_name": "i-need-register-vat-happens-i-dont",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-04-29 16:38:56",
+  "len": "3387"
+ },
+ {
+  "ID": "14141",
+  "post_name": "calculate-paye-vat-corporation-tax-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 10:20:26",
+  "len": "3467"
+ },
+ {
+  "ID": "14146",
+  "post_name": "interest-rates-late-paye",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 13:14:53",
+  "len": "3847"
+ },
+ {
+  "ID": "14154",
+  "post_name": "employees-maternity-pay-hmrc-company-insolvent",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 15:41:25",
+  "len": "3845"
+ },
+ {
+  "ID": "14135",
+  "post_name": "hmrc-compliance-team",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 11:20:43",
+  "len": "12413"
+ },
+ {
+  "ID": "14133",
+  "post_name": "hmrc-departments-request-pln",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-26 12:16:32",
+  "len": "3233"
+ },
+ {
+  "ID": "14139",
+  "post_name": "tax-types-can-affected-pln",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-26 12:16:08",
+  "len": "3759"
+ },
+ {
+  "ID": "14174",
+  "post_name": "personally-liable-security-bond",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 10:20:49",
+  "len": "1906"
+ },
+ {
+  "ID": "14178",
+  "post_name": "vat-paye-treated-differently-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 14:19:48",
+  "len": "4250"
+ },
+ {
+  "ID": "14180",
+  "post_name": "hmrc-debt-management-can-help",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:03:42",
+  "len": "9296"
+ },
+ {
+  "ID": "14172",
+  "post_name": "accountant-director-responsible-pln",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-26 10:49:29",
+  "len": "5595"
+ },
+ {
+  "ID": "14377",
+  "post_name": "received-pln-notify",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-26 12:13:20",
+  "len": "4147"
+ },
+ {
+  "ID": "14384",
+  "post_name": "pln-made-personally-liable-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-04-27 07:28:00",
+  "len": "4316"
+ },
+ {
+  "ID": "14442",
+  "post_name": "hmrc-joint-several-liability-mean",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:45:54",
+  "len": "3861"
+ },
+ {
+  "ID": "14444",
+  "post_name": "can-i-appeal-notice-requirement-provide-security-bond",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-08-11 14:21:11",
+  "len": "2022"
+ },
+ {
+  "ID": "14462",
+  "post_name": "hmrc-criminal-investigation-team-different",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:05",
+  "len": "3372"
+ },
+ {
+  "ID": "14623",
+  "post_name": "im-self-employed-can-i-investigated-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:05",
+  "len": "2481"
+ },
+ {
+  "ID": "14796",
+  "post_name": "unique-taxpayer-reference-utr-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 12:49:02",
+  "len": "1755"
+ },
+ {
+  "ID": "14831",
+  "post_name": "how-far-back-can-hmrc-investigate-tax-affairs",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 15:02:58",
+  "len": "13273"
+ },
+ {
+  "ID": "14982",
+  "post_name": "careless-deliberate-deliberate-concealed",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:37:03",
+  "len": "10841"
+ },
+ {
+  "ID": "7691",
+  "post_name": "hmrc-tax-problems",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:45:49",
+  "len": "11451"
+ },
+ {
+  "ID": "15029",
+  "post_name": "impact-retention-title-administration",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-06-01 10:48:53",
+  "len": "2437"
+ },
+ {
+  "ID": "17513",
+  "post_name": "invoice-finance",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:37:42",
+  "len": "8583"
+ },
+ {
+  "ID": "15162",
+  "post_name": "can-hmrc-hold-company-director-responsible-unpaid-tax",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 15:44:17",
+  "len": "8579"
+ },
+ {
+  "ID": "15167",
+  "post_name": "hmrc-securities-team",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:54:33",
+  "len": "4841"
+ },
+ {
+  "ID": "15207",
+  "post_name": "timeline",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 12:43:32",
+  "len": "7764"
+ },
+ {
+  "ID": "16137",
+  "post_name": "expenses-reduce-tax-amounts-company-owes-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-10-04 08:03:43",
+  "len": "4211"
+ },
+ {
+  "ID": "16145",
+  "post_name": "hmrcs-connect-computer-system",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 17:15:13",
+  "len": "3891"
+ },
+ {
+  "ID": "16175",
+  "post_name": "appealing-hmrc-penalty",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 15:48:19",
+  "len": "18607"
+ },
+ {
+  "ID": "16266",
+  "post_name": "form-used-appealing-hmrc-tax-surcharge",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-10-04 08:00:03",
+  "len": "5277"
+ },
+ {
+  "ID": "16276",
+  "post_name": "what-hmrc-tax-surcharges-apply-to-self-assessment",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 12:48:09",
+  "len": "2752"
+ },
+ {
+  "ID": "16424",
+  "post_name": "serious-vat-problems",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 10:36:56",
+  "len": "6661"
+ },
+ {
+  "ID": "16502",
+  "post_name": "just-equitable-grounds-mean-winding-petition",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:50:41",
+  "len": "8961"
+ },
+ {
+  "ID": "16545",
+  "post_name": "what-is-the-government-gateway",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 12:50:03",
+  "len": "4315"
+ },
+ {
+  "ID": "16551",
+  "post_name": "bill-pay",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 12:53:12",
+  "len": "2680"
+ },
+ {
+  "ID": "16560",
+  "post_name": "understanding-tax-credits-overpayments-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-08-10 08:29:12",
+  "len": "3592"
+ },
+ {
+  "ID": "16593",
+  "post_name": "get-injunction-winding-petition",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-10-31 15:09:20",
+  "len": "4322"
+ },
+ {
+  "ID": "16608",
+  "post_name": "i-need-witness-statement-winding-petition",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-24 15:31:45",
+  "len": "4556"
+ },
+ {
+  "ID": "16925",
+  "post_name": "whats-timeframe-issuing-winding-petition-scotland",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:17:33",
+  "len": "3733"
+ },
+ {
+  "ID": "17545",
+  "post_name": "invoice-factoring",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 09:15:18",
+  "len": "9126"
+ },
+ {
+  "ID": "17511",
+  "post_name": "invoice-factoring-improves-cash-flow-insolvent-businesses",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 08:42:41",
+  "len": "5215"
+ },
+ {
+  "ID": "17558",
+  "post_name": "security-requirements-insolvent-business-considering-invoice-factoring",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 10:59:42",
+  "len": "5370"
+ },
+ {
+  "ID": "17561",
+  "post_name": "invoice-discounting-agreements-essential-guide-insolvency-practitioners-administrators",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:13",
+  "len": "4978"
+ },
+ {
+  "ID": "17570",
+  "post_name": "101010-rule-creditors-voluntary-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-25 09:50:18",
+  "len": "3653"
+ },
+ {
+  "ID": "17585",
+  "post_name": "liquidator-get-approval-liquidation-fees",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:39:53",
+  "len": "4929"
+ },
+ {
+  "ID": "17591",
+  "post_name": "whats-contained-in-an-soa",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:56:23",
+  "len": "6734"
+ },
+ {
+  "ID": "17702",
+  "post_name": "centrebind-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:15:04",
+  "len": "6469"
+ },
+ {
+  "ID": "20326",
+  "post_name": "spot-factoring",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 08:41:54",
+  "len": "6477"
+ },
+ {
+  "ID": "20339",
+  "post_name": "accounts-receivable-finance-guide",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 10:02:35",
+  "len": "6542"
+ },
+ {
+  "ID": "20343",
+  "post_name": "invoice-finance-compared-overdraft",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:34:22",
+  "len": "9193"
+ },
+ {
+  "ID": "20560",
+  "post_name": "mvl-vs-dissolution",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:48:07",
+  "len": "12561"
+ },
+ {
+  "ID": "20572",
+  "post_name": "companies-house-striking-off",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-03-16 15:49:22",
+  "len": "8414"
+ },
+ {
+  "ID": "20580",
+  "post_name": "company-strike-off",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:57:29",
+  "len": "21729"
+ },
+ {
+  "ID": "20632",
+  "post_name": "liquidate-registered-charity",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:38:30",
+  "len": "11635"
+ },
+ {
+  "ID": "20646",
+  "post_name": "recognise-signs-wrongful-trading",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:10",
+  "len": "8549"
+ },
+ {
+  "ID": "20650",
+  "post_name": "removing-county-court-judgment-ccj",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 11:17:26",
+  "len": "8252"
+ },
+ {
+  "ID": "20665",
+  "post_name": "understanding-county-court-judgments-affects-credit",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 11:16:22",
+  "len": "3127"
+ },
+ {
+  "ID": "20686",
+  "post_name": "can-county-court-judgment-ccj-affect-getting-job",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 11:15:10",
+  "len": "6492"
+ },
+ {
+  "ID": "20708",
+  "post_name": "kent-insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:04:56",
+  "len": "6530"
+ },
+ {
+  "ID": "20714",
+  "post_name": "north-london-insolvency-practitioners",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:08:17",
+  "len": "4049"
+ },
+ {
+  "ID": "20719",
+  "post_name": "chelmsford-insolvency-practitioners",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:03:50",
+  "len": "4511"
+ },
+ {
+  "ID": "20727",
+  "post_name": "reading-insolvency-practitioners",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:07:14",
+  "len": "4253"
+ },
+ {
+  "ID": "20730",
+  "post_name": "horsham-insolvency-practitioners",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:04:26",
+  "len": "4620"
+ },
+ {
+  "ID": "20736",
+  "post_name": "manchester-insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-03 16:16:59",
+  "len": "5445"
+ },
+ {
+  "ID": "20752",
+  "post_name": "london-insolvency-practitioners",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:45",
+  "len": "4309"
+ },
+ {
+  "ID": "65004",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-17 08:31:13",
+  "len": "8710"
+ },
+ {
+  "ID": "21396",
+  "post_name": "advantages-disadvantages-liquidating-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:18:58",
+  "len": "8973"
+ },
+ {
+  "ID": "21587",
+  "post_name": "penalties-surcharges",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-25 21:06:23",
+  "len": "7867"
+ },
+ {
+  "ID": "21622",
+  "post_name": "departments-processes-forms",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-26 14:14:48",
+  "len": "6785"
+ },
+ {
+  "ID": "21628",
+  "post_name": "tax-problems-affect-you-faqs",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-26 14:17:56",
+  "len": "7538"
+ },
+ {
+  "ID": "21666",
+  "post_name": "paye",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-26 14:31:45",
+  "len": "3771"
+ },
+ {
+  "ID": "22117",
+  "post_name": "dissolving-striking-off-closure",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-06-01 11:09:03",
+  "len": "0"
+ },
+ {
+  "ID": "22256",
+  "post_name": "how-do-i-liquidate-my-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:41:38",
+  "len": "22615"
+ },
+ {
+  "ID": "22487",
+  "post_name": "insolvency-advice",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-26 14:28:46",
+  "len": "14197"
+ },
+ {
+  "ID": "22707",
+  "post_name": "7-day-warning-letter",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-15 13:55:41",
+  "len": "9845"
+ },
+ {
+  "ID": "22723",
+  "post_name": "limited-liability-partnership",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:45:12",
+  "len": "14957"
+ },
+ {
+  "ID": "22761",
+  "post_name": "dissolving-a-business-partnership",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:55:02",
+  "len": "11601"
+ },
+ {
+  "ID": "22769",
+  "post_name": "fees-and-costs-of-an-insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:28:29",
+  "len": "14104"
+ },
+ {
+  "ID": "23670",
+  "post_name": "recourse-and-non-recourse",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:38:06",
+  "len": "4838"
+ },
+ {
+  "ID": "23682",
+  "post_name": "reverse-factoring",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 08:45:41",
+  "len": "4973"
+ },
+ {
+  "ID": "23688",
+  "post_name": "purchase-order-finance",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 15:49:52",
+  "len": "5547"
+ },
+ {
+  "ID": "23705",
+  "post_name": "what-is-asset-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:47:03",
+  "len": "10752"
+ },
+ {
+  "ID": "23709",
+  "post_name": "what-happens-to-debts-once-a-company-is-dissolved",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:57:20",
+  "len": "16261"
+ },
+ {
+  "ID": "23841",
+  "post_name": "trading-while-insolvent",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:40:18",
+  "len": "17161"
+ },
+ {
+  "ID": "23860",
+  "post_name": "effects-of-liquidation-on-a-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:55:31",
+  "len": "4663"
+ },
+ {
+  "ID": "23966",
+  "post_name": "reasons-businesses-fail",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:59:37",
+  "len": "20020"
+ },
+ {
+  "ID": "23981",
+  "post_name": "fees-and-charges",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:37:20",
+  "len": "8436"
+ },
+ {
+  "ID": "23993",
+  "post_name": "advantages-and-disadvantages",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 09:57:06",
+  "len": "7466"
+ },
+ {
+  "ID": "24124",
+  "post_name": "what-happens-to-the-directors",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-24 10:15:39",
+  "len": "10276"
+ },
+ {
+  "ID": "24316",
+  "post_name": "what-is-an-insolvent-business",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-30 13:03:26",
+  "len": "3966"
+ },
+ {
+  "ID": "24328",
+  "post_name": "whats-the-cheapest-way-to-liquidate-a-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-04-03 10:53:43",
+  "len": "4713"
+ },
+ {
+  "ID": "24572",
+  "post_name": "insolvency-advice",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:36:04",
+  "len": "17190"
+ },
+ {
+  "ID": "24635",
+  "post_name": "invoice-factoring-vs-sales-ledger-financing",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:13",
+  "len": "10314"
+ },
+ {
+  "ID": "26218",
+  "post_name": "business-debt-advice-archived-26218",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-08-09 08:21:28",
+  "len": "17023"
+ },
+ {
+  "ID": "26335",
+  "post_name": "first-gazette-notice-for-compulsory-strike-off",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:38:20",
+  "len": "15854"
+ },
+ {
+  "ID": "26758",
+  "post_name": "what-to-do-when-your-business-is-in-trouble",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-10 10:40:39",
+  "len": "7939"
+ },
+ {
+  "ID": "28661",
+  "post_name": "ir35-contractor",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:22:57",
+  "len": "14064"
+ },
+ {
+  "ID": "29189",
+  "post_name": "cash-grants-coronavirus",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:56",
+  "len": "1916"
+ },
+ {
+  "ID": "34152",
+  "post_name": "capital-distribution-on-winding-up",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:29:08",
+  "len": "12052"
+ },
+ {
+  "ID": "34541",
+  "post_name": "debt-help-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:00",
+  "len": "7893"
+ },
+ {
+  "ID": "35153",
+  "post_name": "winding-up-a-company-limited-by-guarantee",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:45:07",
+  "len": "5926"
+ },
+ {
+  "ID": "37481",
+  "post_name": "high-court-enforcement-officers",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 12:18:45",
+  "len": "15852"
+ },
+ {
+  "ID": "40027",
+  "post_name": "liquidating-a-company-in-scotland",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:46:33",
+  "len": "8603"
+ },
+ {
+  "ID": "40275",
+  "post_name": "bankruptcy",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-06-01 09:31:46",
+  "len": "8173"
+ },
+ {
+  "ID": "27019",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2020-09-30 14:37:36",
+  "len": "347"
+ },
+ {
+  "ID": "29144",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2020-09-30 14:37:36",
+  "len": "4968"
+ },
+ {
+  "ID": "43518",
+  "post_name": "cant-get-a-business-loan",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-19 08:39:04",
+  "len": "15359"
+ },
+ {
+  "ID": "43654",
+  "post_name": "can-hmrc-chase-a-dissolved-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:55:06",
+  "len": "9489"
+ },
+ {
+  "ID": "43816",
+  "post_name": "costs-of-closing-a-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:38:22",
+  "len": "17492"
+ },
+ {
+  "ID": "43985",
+  "post_name": "close-a-limited-company-with-debts",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:23:01",
+  "len": "21619"
+ },
+ {
+  "ID": "44039",
+  "post_name": "time-to-pay-corporation-tax",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:52",
+  "len": "2724"
+ },
+ {
+  "ID": "44563",
+  "post_name": "features",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:24:21",
+  "len": "0"
+ },
+ {
+  "ID": "44709",
+  "post_name": "home-gutenberg",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:57",
+  "len": "18954"
+ },
+ {
+  "ID": "46091",
+  "post_name": "can-i-start-a-new-company-after-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:21:17",
+  "len": "12273"
+ },
+ {
+  "ID": "46152",
+  "post_name": "liquidated-companies-list",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:46:05",
+  "len": "2674"
+ },
+ {
+  "ID": "46156",
+  "post_name": "can-you-liquidate-a-company-for-free",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:45:44",
+  "len": "12489"
+ },
+ {
+  "ID": "46433",
+  "post_name": "liquidation-value",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:48:33",
+  "len": "7876"
+ },
+ {
+  "ID": "46493",
+  "post_name": "can-i-close-my-business",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 13:47:17",
+  "len": "17506"
+ },
+ {
+  "ID": "46724",
+  "post_name": "what-happens-to-the-shares-of-a-company-that-has-been-liquidated",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:14:38",
+  "len": "8482"
+ },
+ {
+  "ID": "46933",
+  "post_name": "what-is-the-official-receiver",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:38:01",
+  "len": "13036"
+ },
+ {
+  "ID": "47116",
+  "post_name": "limited-company-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:58",
+  "len": "5525"
+ },
+ {
+  "ID": "47315",
+  "post_name": "what-is-provisional-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:49:10",
+  "len": "8847"
+ },
+ {
+  "ID": "48488",
+  "post_name": "can-i-top-up-my-bounce-back-loan",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:53",
+  "len": "4972"
+ },
+ {
+  "ID": "48662",
+  "post_name": "fraudulent-trading",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-06-24 09:42:57",
+  "len": "7931"
+ },
+ {
+  "ID": "50760",
+  "post_name": "what-happens-if-my-company-cant-repay-its-cbils-loan",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-18 12:32:23",
+  "len": "10093"
+ },
+ {
+  "ID": "50764",
+  "post_name": "what-happens-to-my-cbils-loan-during-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:04:16",
+  "len": "8208"
+ },
+ {
+  "ID": "50913",
+  "post_name": "cant-pay-vat-because-of-covid-19-what-are-your-options",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:55",
+  "len": "5728"
+ },
+ {
+  "ID": "51154",
+  "post_name": "what-is-a-nudge-letter-from-hmrc",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-15 14:12:50",
+  "len": "15829"
+ },
+ {
+  "ID": "51947",
+  "post_name": "hmrc-arrears-advice",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:04",
+  "len": "4173"
+ },
+ {
+  "ID": "51978",
+  "post_name": "compulsory-winding-up",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-24 15:29:15",
+  "len": "9299"
+ },
+ {
+  "ID": "51983",
+  "post_name": "close-a-business-in-the-uk",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-04-29 17:02:19",
+  "len": "7813"
+ },
+ {
+  "ID": "52044",
+  "post_name": "is-my-company-insolvent",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:13",
+  "len": "2367"
+ },
+ {
+  "ID": "52086",
+  "post_name": "i-owe-hmrc-money-what-will-happen",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:11",
+  "len": "12687"
+ },
+ {
+  "ID": "52189",
+  "post_name": "can-hmrc-debts-be-written-off",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-15 13:55:47",
+  "len": "13604"
+ },
+ {
+  "ID": "52193",
+  "post_name": "cant-pay-corporation-tax-due-to-covid",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:56",
+  "len": "7936"
+ },
+ {
+  "ID": "52210",
+  "post_name": "what-happens-if-you-cant-pay-paye-because-of-covid",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-05-31 10:11:57",
+  "len": "12562"
+ },
+ {
+  "ID": "52352",
+  "post_name": "debt-resources",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2024-03-27 14:52:06",
+  "len": "815"
+ },
+ {
+  "ID": "52912",
+  "post_name": "can-i-write-off-a-directors-loan-account",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:53",
+  "len": "10104"
+ },
+ {
+  "ID": "52920",
+  "post_name": "how-can-i-find-a-local-insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:06",
+  "len": "8946"
+ },
+ {
+  "ID": "53061",
+  "post_name": "time-to-pay-vat",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-17 10:57:51",
+  "len": "3564"
+ },
+ {
+  "ID": "53189",
+  "post_name": "appeal-to-strike-off-template-letter",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:47",
+  "len": "2701"
+ },
+ {
+  "ID": "53651",
+  "post_name": "meet-our-team",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:15",
+  "len": "2371"
+ },
+ {
+  "ID": "54297",
+  "post_name": "bounce-back-loans",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 13:48:22",
+  "len": "18315"
+ },
+ {
+  "ID": "58149",
+  "post_name": "what-is-a-creditors-voluntary-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2024-09-25 15:29:05",
+  "len": "13828"
+ },
+ {
+  "ID": "47310",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:48",
+  "len": "0"
+ },
+ {
+  "ID": "32657",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:47:54",
+  "len": "342"
+ },
+ {
+  "ID": "26415",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:07",
+  "len": "2107"
+ },
+ {
+  "ID": "27054",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:10",
+  "len": "117"
+ },
+ {
+  "ID": "52777",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:10",
+  "len": "289"
+ },
+ {
+  "ID": "55706",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2022-11-28 14:48:20",
+  "len": "14725"
+ },
+ {
+  "ID": "61864",
+  "post_name": "voluntary-vs-compulsory",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:54:56",
+  "len": "9450"
+ },
+ {
+  "ID": "52954",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-02-25 19:50:00",
+  "len": "790"
+ },
+ {
+  "ID": "64733",
+  "post_name": "can-i-close-a-limited-company-with-debts-and-start-again",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-25 10:05:11",
+  "len": "14840"
+ },
+ {
+  "ID": "64762",
+  "post_name": "overdrawn-directors-loan-account-during-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:43:39",
+  "len": "11345"
+ },
+ {
+  "ID": "64796",
+  "post_name": "can-you-write-off-a-bounce-back-loan",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 13:46:57",
+  "len": "18173"
+ },
+ {
+  "ID": "65063",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "0000-00-00 00:00:00",
+  "len": "9061"
+ },
+ {
+  "ID": "65202",
+  "post_name": "what-happens-when-a-company-goes-into-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2023-10-25 08:45:32",
+  "len": "5912"
+ },
+ {
+  "ID": "65224",
+  "post_name": "difference-between-bankruptcy-and-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:30:08",
+  "len": "12071"
+ },
+ {
+  "ID": "65807",
+  "post_name": "are-liquidation-and-insolvency-the-same-thing",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:19:30",
+  "len": "12185"
+ },
+ {
+  "ID": "67260",
+  "post_name": "solvent",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:27:53",
+  "len": "9244"
+ },
+ {
+  "ID": "67418",
+  "post_name": "whats-the-winding-up-petition-process",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:44:59",
+  "len": "10089"
+ },
+ {
+  "ID": "67654",
+  "post_name": "how-to-close-without-paying-tax",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:22:52",
+  "len": "14822"
+ },
+ {
+  "ID": "67683",
+  "post_name": "dissolved-vs-dormant",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:38:24",
+  "len": "5747"
+ },
+ {
+  "ID": "67706",
+  "post_name": "how-can-i-stop-a-creditor-putting-my-company-into-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:38:05",
+  "len": "14035"
+ },
+ {
+  "ID": "68126",
+  "post_name": "how-to-communicate-effectively-with-creditors",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:30:03",
+  "len": "4115"
+ },
+ {
+  "ID": "68128",
+  "post_name": "what-can-bailiffs-take-from-a-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-22 12:19:44",
+  "len": "11373"
+ },
+ {
+  "ID": "68160",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2024-03-21 11:56:42",
+  "len": "0"
+ },
+ {
+  "ID": "69307",
+  "post_name": "what-to-do-if-you-cant-repay",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 13:47:45",
+  "len": "14894"
+ },
+ {
+  "ID": "69919",
+  "post_name": "what-happens-to-company-assets",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:56:55",
+  "len": "12154"
+ },
+ {
+  "ID": "70002",
+  "post_name": "alternatives-to-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:14:01",
+  "len": "11628"
+ },
+ {
+  "ID": "70433",
+  "post_name": "does-liquidation-write-off-company-debt",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:36:57",
+  "len": "10211"
+ },
+ {
+  "ID": "70781",
+  "post_name": "statutory-demand-vs-wup",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:50:35",
+  "len": "7993"
+ },
+ {
+  "ID": "70791",
+  "post_name": "how-to-set-aside",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:55:02",
+  "len": "9672"
+ },
+ {
+  "ID": "70821",
+  "post_name": "how-can-you-stop-a-wup",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:55:08",
+  "len": "6308"
+ },
+ {
+  "ID": "71084",
+  "post_name": "can-you-liquidate-a-company-yourself",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:21:49",
+  "len": "14900"
+ },
+ {
+  "ID": "71246",
+  "post_name": "what-are-a-directors-duties-in-insolvency",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:48:42",
+  "len": "11534"
+ },
+ {
+  "ID": "71364",
+  "post_name": "difference-between-a-liquidator-and-an-official-receiver",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:38:34",
+  "len": "8112"
+ },
+ {
+  "ID": "71418",
+  "post_name": "winding-up-a-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-12 11:43:24",
+  "len": "11676"
+ },
+ {
+  "ID": "71483",
+  "post_name": "what-is-a-declaration-of-solvency",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 10:27:19",
+  "len": "6820"
+ },
+ {
+  "ID": "72086",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2024-05-03 08:45:47",
+  "len": "0"
+ },
+ {
+  "ID": "72101",
+  "post_name": "what-happens-if-my-time-to-pay-arrangement-fails",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-18 09:49:08",
+  "len": "6684"
+ },
+ {
+  "ID": "74421",
+  "post_name": "what-is-an-administration-sale",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 12:44:04",
+  "len": "7844"
+ },
+ {
+  "ID": "74556",
+  "post_name": "practitioner-vs-administrator",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:36:53",
+  "len": "8011"
+ },
+ {
+  "ID": "74563",
+  "post_name": "practitioner-vs-supervisor-of-cva",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:38:42",
+  "len": "6285"
+ },
+ {
+  "ID": "74578",
+  "post_name": "how-is-an-insolvency-practitioner-appointed",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-11 09:27:24",
+  "len": "12565"
+ },
+ {
+  "ID": "75103",
+  "post_name": "how-to-appoint-a-liquidator",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:40:57",
+  "len": "6533"
+ },
+ {
+  "ID": "75195",
+  "post_name": "if-a-company-goes-into-liquidation-can-i-get-my-money-back",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:45:04",
+  "len": "6971"
+ },
+ {
+  "ID": "76268",
+  "post_name": "can-hmrc-force-my-company-into-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 09:20:03",
+  "len": "11838"
+ },
+ {
+  "ID": "76567",
+  "post_name": "what-can-bailiffs-seize-from-a-limited-company",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-08-18 11:46:19",
+  "len": "18912"
+ },
+ {
+  "ID": "76609",
+  "post_name": "company-cannot-pay-its-debts",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-07-15 09:44:01",
+  "len": "16944"
+ },
+ {
+  "ID": "76803",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 15:11:05",
+  "len": "0"
+ },
+ {
+  "ID": "77699",
+  "post_name": "",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "0000-00-00 00:00:00",
+  "len": "30928"
+ },
+ {
+  "ID": "78851",
+  "post_name": "voluntary-liquidation",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-08-09 08:28:04",
+  "len": "23637"
+ },
+ {
+  "ID": "79295",
+  "post_name": "company-voluntary-arrangement-vs-administration-which-to-choose",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-08-09 08:28:29",
+  "len": "14270"
+ },
+ {
+  "ID": "79846",
+  "post_name": "company-insolvency",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-06-18 18:18:18",
+  "len": "31414"
+ },
+ {
+  "ID": "80135",
+  "post_name": "pub-and-bar-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "draft",
+  "post_modified_gmt": "2026-07-13 16:16:00",
+  "len": "60052"
+ },
+ {
+  "ID": "44196",
+  "post_name": "stressed-directors-guide-1",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:01",
+  "len": "1981"
+ },
+ {
+  "ID": "50349",
+  "post_name": "test-calck",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:22",
+  "len": "58"
+ },
+ {
+  "ID": "53147",
+  "post_name": "sample-letter-full-width",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:19",
+  "len": "3382"
+ },
+ {
+  "ID": "53149",
+  "post_name": "sample-letter",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:19",
+  "len": "3382"
+ },
+ {
+  "ID": "53152",
+  "post_name": "short-letter",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:20",
+  "len": "971"
+ },
+ {
+  "ID": "59913",
+  "post_name": "what-are-the-best-invoice-finance-companies-in-the-uk-2",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2022-11-28 14:48:25",
+  "len": "12109"
+ },
+ {
+  "ID": "67428",
+  "post_name": "insolvency-test-sidebar-cta",
+  "post_type": "page",
+  "post_status": "private",
+  "post_modified_gmt": "2024-02-26 09:39:32",
+  "len": "839"
+ },
+ {
+  "ID": "7665",
+  "post_name": "company-rescue-solutions",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:54",
+  "len": "29261"
+ },
+ {
+  "ID": "7680",
+  "post_name": "compulsory-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:38:39",
+  "len": "37399"
+ },
+ {
+  "ID": "7685",
+  "post_name": "company-voluntary-arrangement",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:01",
+  "len": "19438"
+ },
+ {
+  "ID": "8324",
+  "post_name": "cant-pay-paye",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:37",
+  "len": "20123"
+ },
+ {
+  "ID": "8350",
+  "post_name": "hmrc-threatening-letters",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:41",
+  "len": "16957"
+ },
+ {
+  "ID": "8396",
+  "post_name": "pre-packs",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:45",
+  "len": "34632"
+ },
+ {
+  "ID": "9702",
+  "post_name": "receivership-mean-business",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:38:23",
+  "len": "23438"
+ },
+ {
+  "ID": "9715",
+  "post_name": "site-map",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2023-07-21 20:17:02",
+  "len": "164"
+ },
+ {
+  "ID": "9874",
+  "post_name": "terms-conditions",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-04-16 13:28:01",
+  "len": "11870"
+ },
+ {
+  "ID": "10562",
+  "post_name": "personal-liability-notices",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:27",
+  "len": "20240"
+ },
+ {
+  "ID": "10564",
+  "post_name": "security-bond-notices",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:31",
+  "len": "17990"
+ },
+ {
+  "ID": "10930",
+  "post_name": "distraint-order-notice",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:34",
+  "len": "17528"
+ },
+ {
+  "ID": "11193",
+  "post_name": "hmrc-compliance-checks",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:38",
+  "len": "22975"
+ },
+ {
+  "ID": "11228",
+  "post_name": "what-are-phoenix-companies",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:42",
+  "len": "18227"
+ },
+ {
+  "ID": "11229",
+  "post_name": "security-bonds",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:45",
+  "len": "19051"
+ },
+ {
+  "ID": "11384",
+  "post_name": "hmrc-tax-investigations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:49",
+  "len": "21765"
+ },
+ {
+  "ID": "11516",
+  "post_name": "joint-and-several-liability-for-unpaid-vat",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:54",
+  "len": "19490"
+ },
+ {
+  "ID": "11644",
+  "post_name": "notice-of-enforcement",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:19:58",
+  "len": "17101"
+ },
+ {
+  "ID": "8358",
+  "post_name": "what-is-an-insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:37:40",
+  "len": "25910"
+ },
+ {
+  "ID": "12958",
+  "post_name": "controlled-goods-agreement",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-02 09:14:16",
+  "len": "20956"
+ },
+ {
+  "ID": "12979",
+  "post_name": "what-can-hmrc-bailiffs-take",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:05",
+  "len": "21807"
+ },
+ {
+  "ID": "13029",
+  "post_name": "understanding-hmrc-debt-collection",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:09",
+  "len": "18693"
+ },
+ {
+  "ID": "13065",
+  "post_name": "about-us",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:37:26",
+  "len": "14625"
+ },
+ {
+  "ID": "13469",
+  "post_name": "careers",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-04-16 13:27:41",
+  "len": "783"
+ },
+ {
+  "ID": "13513",
+  "post_name": "statement-of-affairs",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:12",
+  "len": "20642"
+ },
+ {
+  "ID": "13600",
+  "post_name": "insolvency-test",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:16",
+  "len": "22907"
+ },
+ {
+  "ID": "11788",
+  "post_name": "frozen-bank-account",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:02",
+  "len": "16867"
+ },
+ {
+  "ID": "13766",
+  "post_name": "preferential-non-preferential-creditors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:41:27",
+  "len": "23761"
+ },
+ {
+  "ID": "13936",
+  "post_name": "complaints",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 20:47:37",
+  "len": "998"
+ },
+ {
+  "ID": "14158",
+  "post_name": "hmrc-fraud-investigations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:37:05",
+  "len": "25534"
+ },
+ {
+  "ID": "14460",
+  "post_name": "hmrc-criminal-investigations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:19",
+  "len": "23611"
+ },
+ {
+  "ID": "14619",
+  "post_name": "hmrcs-ir35-investigations-different",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:23",
+  "len": "13236"
+ },
+ {
+  "ID": "14672",
+  "post_name": "cookie-policy-company-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:36:54",
+  "len": "6901"
+ },
+ {
+  "ID": "14775",
+  "post_name": "tax-penalties",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:36:51",
+  "len": "21462"
+ },
+ {
+  "ID": "14912",
+  "post_name": "vat-penalties",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:36:46",
+  "len": "22639"
+ },
+ {
+  "ID": "14914",
+  "post_name": "director-redundancy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:36:42",
+  "len": "21726"
+ },
+ {
+  "ID": "15010",
+  "post_name": "what-happens-to-employees",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-08 18:12:40",
+  "len": "26099"
+ },
+ {
+  "ID": "7676",
+  "post_name": "members-voluntary-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:57",
+  "len": "48599"
+ },
+ {
+  "ID": "8408",
+  "post_name": "problems-paying-corporation-tax-hmrc",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:48",
+  "len": "28286"
+ },
+ {
+  "ID": "15141",
+  "post_name": "vs-cva",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:26",
+  "len": "11564"
+ },
+ {
+  "ID": "15203",
+  "post_name": "check-if-a-company-is-insolvent",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:30",
+  "len": "17725"
+ },
+ {
+  "ID": "16106",
+  "post_name": "vs-administrative-receivership",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:33",
+  "len": "13401"
+ },
+ {
+  "ID": "16353",
+  "post_name": "hmrc-follower-notice",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:37",
+  "len": "19169"
+ },
+ {
+  "ID": "16565",
+  "post_name": "hmrc-offices-contact-guide",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:40",
+  "len": "15270"
+ },
+ {
+  "ID": "16662",
+  "post_name": "what-is-an-individual-voluntary-arrangement",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:44",
+  "len": "20748"
+ },
+ {
+  "ID": "17568",
+  "post_name": "timeline",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:18:27",
+  "len": "28358"
+ },
+ {
+  "ID": "20268",
+  "post_name": "retail-industry-insolvency-trends",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:55",
+  "len": "36392"
+ },
+ {
+  "ID": "20380",
+  "post_name": "making-employees-redundant-cva",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:47",
+  "len": "30162"
+ },
+ {
+  "ID": "20428",
+  "post_name": "vs-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:51",
+  "len": "34665"
+ },
+ {
+  "ID": "20435",
+  "post_name": "partnership-voluntary-arrangements",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:54",
+  "len": "38381"
+ },
+ {
+  "ID": "20681",
+  "post_name": "can-director-criminal-record",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:20:58",
+  "len": "18205"
+ },
+ {
+  "ID": "7669",
+  "post_name": "liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:16:30",
+  "len": "56621"
+ },
+ {
+  "ID": "21011",
+  "post_name": "what-is-limited-liability",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:34",
+  "len": "33094"
+ },
+ {
+  "ID": "21122",
+  "post_name": "shareholders-liable-company-debts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-08 09:29:15",
+  "len": "41278"
+ },
+ {
+  "ID": "22075",
+  "post_name": "liquidation-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 18:51:38",
+  "len": "24"
+ },
+ {
+  "ID": "22277",
+  "post_name": "insolvent-company-owes-me-money",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:27",
+  "len": "25508"
+ },
+ {
+  "ID": "22554",
+  "post_name": "limited-company-bankruptcy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:36:36",
+  "len": "17604"
+ },
+ {
+  "ID": "22785",
+  "post_name": "the-risks-of-signing-a-personal-guarantee",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:06",
+  "len": "31233"
+ },
+ {
+  "ID": "22899",
+  "post_name": "privacy-policy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:16",
+  "len": "9703"
+ },
+ {
+  "ID": "23017",
+  "post_name": "meet-the-team",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-02 14:43:52",
+  "len": "90"
+ },
+ {
+  "ID": "23471",
+  "post_name": "case-studies-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 12:36:53",
+  "len": "7535"
+ },
+ {
+  "ID": "23698",
+  "post_name": "how-much-does-liquidation-cost",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:09",
+  "len": "40391"
+ },
+ {
+  "ID": "9443",
+  "post_name": "cant-pay-vat",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:35:04",
+  "len": "30311"
+ },
+ {
+  "ID": "24032",
+  "post_name": "accessibility",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:16:27",
+  "len": "2912"
+ },
+ {
+  "ID": "17686",
+  "post_name": "insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:34:59",
+  "len": "21666"
+ },
+ {
+  "ID": "24080",
+  "post_name": "can-we-trade-out-of-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:10",
+  "len": "19931"
+ },
+ {
+  "ID": "7687",
+  "post_name": "winding-up-petitions",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-06 16:11:35",
+  "len": "50432"
+ },
+ {
+  "ID": "24402",
+  "post_name": "what-are-the-duties-and-responsibilities-of-a-company-director",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:14",
+  "len": "19018"
+ },
+ {
+  "ID": "24434",
+  "post_name": "what-is-a-freezing-order-or-injunction",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:34:44",
+  "len": "28195"
+ },
+ {
+  "ID": "24760",
+  "post_name": "what-are-fixed-and-floating-charges",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:34:39",
+  "len": "20563"
+ },
+ {
+  "ID": "24801",
+  "post_name": "feedback",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-04-16 13:27:20",
+  "len": "57"
+ },
+ {
+  "ID": "8414",
+  "post_name": "time-to-pay-hmrc",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:52",
+  "len": "21650"
+ },
+ {
+  "ID": "24780",
+  "post_name": "personal-guarantee-insurance",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:17",
+  "len": "16356"
+ },
+ {
+  "ID": "25310",
+  "post_name": "validation-order",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:21",
+  "len": "20443"
+ },
+ {
+  "ID": "26139",
+  "post_name": "company-cash-flow-problems",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:25",
+  "len": "21118"
+ },
+ {
+  "ID": "26234",
+  "post_name": "debt-management-guide",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:32",
+  "len": "16548"
+ },
+ {
+  "ID": "26279",
+  "post_name": "cease-trading",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-08 11:22:09",
+  "len": "35784"
+ },
+ {
+  "ID": "26298",
+  "post_name": "misfeasance",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:35",
+  "len": "18630"
+ },
+ {
+  "ID": "26347",
+  "post_name": "cant-pay-business-rates",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:34:00",
+  "len": "25356"
+ },
+ {
+  "ID": "26888",
+  "post_name": "stop-or-avoid-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:38",
+  "len": "20184"
+ },
+ {
+  "ID": "26902",
+  "post_name": "biggest-struggles-for-small-business-owners",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:42",
+  "len": "24360"
+ },
+ {
+  "ID": "28526",
+  "post_name": "personal-liability-spouses-business-debts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:43:42",
+  "len": "23688"
+ },
+ {
+  "ID": "28545",
+  "post_name": "personally-liabilty-of-company-secretary",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:46",
+  "len": "27859"
+ },
+ {
+  "ID": "28761",
+  "post_name": "corporation-tax-penalties",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:49",
+  "len": "26717"
+ },
+ {
+  "ID": "29543",
+  "post_name": "lpa-receivership",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:33:43",
+  "len": "28272"
+ },
+ {
+  "ID": "31199",
+  "post_name": "business-restructuring",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:53",
+  "len": "18118"
+ },
+ {
+  "ID": "31237",
+  "post_name": "cant-pay-a-commercial-lease-or-rent",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:21:56",
+  "len": "24981"
+ },
+ {
+  "ID": "38597",
+  "post_name": "losing-house-if-company-goes-bust",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:00",
+  "len": "16839"
+ },
+ {
+  "ID": "39500",
+  "post_name": "what-is-a-high-court-writ",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:33:28",
+  "len": "26847"
+ },
+ {
+  "ID": "41082",
+  "post_name": "can-personal-assets-of-directors-be-seized-from-a-ltd-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:03",
+  "len": "19029"
+ },
+ {
+  "ID": "42739",
+  "post_name": "what-happens-if-a-company-cannot-pay-its-debts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:07",
+  "len": "29098"
+ },
+ {
+  "ID": "43522",
+  "post_name": "unenforceable-personal-guarantee",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:10",
+  "len": "22487"
+ },
+ {
+  "ID": "43580",
+  "post_name": "directors-liability-for-bounce-back-loans",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:15",
+  "len": "19630"
+ },
+ {
+  "ID": "43675",
+  "post_name": "what-happens-if-i-default",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:19",
+  "len": "33394"
+ },
+ {
+  "ID": "43745",
+  "post_name": "dissolving-a-company-with-bounce-back-loan",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:33:07",
+  "len": "22170"
+ },
+ {
+  "ID": "43758",
+  "post_name": "bounce-back-loan-support-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:45:57",
+  "len": "2504"
+ },
+ {
+  "ID": "43917",
+  "post_name": "cant-afford-to-repay-business-loan",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:24",
+  "len": "20474"
+ },
+ {
+  "ID": "44055",
+  "post_name": "cant-pay-staff-wages",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:28",
+  "len": "20106"
+ },
+ {
+  "ID": "45771",
+  "post_name": "content-usage-guidelines",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:32:51",
+  "len": "2792"
+ },
+ {
+  "ID": "46222",
+  "post_name": "what-happens-to-directors-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-30 18:47:37",
+  "len": "48747"
+ },
+ {
+  "ID": "46579",
+  "post_name": "bounce-back-loan-fraud",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:33",
+  "len": "38570"
+ },
+ {
+  "ID": "46674",
+  "post_name": "what-is-a-creditor",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:38:02",
+  "len": "20875"
+ },
+ {
+  "ID": "7674",
+  "post_name": "creditors-voluntary-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:38:52",
+  "len": "48138"
+ },
+ {
+  "ID": "47550",
+  "post_name": "what-is-the-insolvency-service",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:32:37",
+  "len": "23985"
+ },
+ {
+  "ID": "47772",
+  "post_name": "insolvency-act-1986",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-08 11:22:10",
+  "len": "27637"
+ },
+ {
+  "ID": "48170",
+  "post_name": "creditors-guides-to-insolvency-practitioners-fees",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:32:32",
+  "len": "37871"
+ },
+ {
+  "ID": "49024",
+  "post_name": "complaints-procedure",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:32:29",
+  "len": "3514"
+ },
+ {
+  "ID": "49042",
+  "post_name": "legal",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:15:15",
+  "len": "1513"
+ },
+ {
+  "ID": "49058",
+  "post_name": "useful-publications",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:15:13",
+  "len": "575"
+ },
+ {
+  "ID": "49072",
+  "post_name": "charge-out-rates",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-04-16 13:26:41",
+  "len": "1428"
+ },
+ {
+  "ID": "49618",
+  "post_name": "creditors-meeting",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:32:19",
+  "len": "29129"
+ },
+ {
+  "ID": "49665",
+  "post_name": "accreditations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:15:10",
+  "len": "4266"
+ },
+ {
+  "ID": "50629",
+  "post_name": "personal-liability-for-cbils-loans",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:47",
+  "len": "10992"
+ },
+ {
+  "ID": "50819",
+  "post_name": "cant-pay-coronavirus-business-interruption-loan-cbils",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:51",
+  "len": "11469"
+ },
+ {
+  "ID": "52771",
+  "post_name": "what-is-the-companies-act-2006",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:55",
+  "len": "17874"
+ },
+ {
+  "ID": "52808",
+  "post_name": "find-a-liquidator-near-me",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:59",
+  "len": "30126"
+ },
+ {
+  "ID": "53159",
+  "post_name": "i-have-no-knowledge-of-this-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:08",
+  "len": "27939"
+ },
+ {
+  "ID": "53158",
+  "post_name": "hold-action-on-my-account",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:03",
+  "len": "26510"
+ },
+ {
+  "ID": "53166",
+  "post_name": "i-cannot-afford-to-repay-my-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:12",
+  "len": "25583"
+ },
+ {
+  "ID": "53174",
+  "post_name": "request-a-reduced-monthly-payment",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:31:35",
+  "len": "33962"
+ },
+ {
+  "ID": "53185",
+  "post_name": "i-need-more-information-about-this-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:17",
+  "len": "31009"
+ },
+ {
+  "ID": "53243",
+  "post_name": "tell-debt-collector-to-stop-contacting-you",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:31:28",
+  "len": "28560"
+ },
+ {
+  "ID": "53253",
+  "post_name": "sample-letters",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:45:59",
+  "len": "2819"
+ },
+ {
+  "ID": "53187",
+  "post_name": "cease-trading-template",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:22",
+  "len": "30526"
+ },
+ {
+  "ID": "53183",
+  "post_name": "write-off-my-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:31:18",
+  "len": "21868"
+ },
+ {
+  "ID": "53625",
+  "post_name": "can-i-lose-my-house-with-a-bounce-back-loan",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:27",
+  "len": "19615"
+ },
+ {
+  "ID": "53942",
+  "post_name": "insolvency-calculator",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-05 10:52:38",
+  "len": "78"
+ },
+ {
+  "ID": "54064",
+  "post_name": "express-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:31:08",
+  "len": "17245"
+ },
+ {
+  "ID": "54552",
+  "post_name": "quick-quote",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:31:02",
+  "len": "15737"
+ },
+ {
+  "ID": "55052",
+  "post_name": "home-2022",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:30:58",
+  "len": "25183"
+ },
+ {
+  "ID": "55381",
+  "post_name": "writing-off-a-directors-loan-account",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:31",
+  "len": "19523"
+ },
+ {
+  "ID": "57472",
+  "post_name": "contact-us",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-02 15:50:59",
+  "len": "3019"
+ },
+ {
+  "ID": "57942",
+  "post_name": "stressed-directors-guide",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:30:47",
+  "len": "3036"
+ },
+ {
+  "ID": "58601",
+  "post_name": "cant-pay-business-energy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:43:16",
+  "len": "29229"
+ },
+ {
+  "ID": "65238",
+  "post_name": "what-happens-after-company-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:35",
+  "len": "17826"
+ },
+ {
+  "ID": "65483",
+  "post_name": "company-administration",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:40",
+  "len": "27312"
+ },
+ {
+  "ID": "65593",
+  "post_name": "directors-disqualification",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:44",
+  "len": "20661"
+ },
+ {
+  "ID": "65614",
+  "post_name": "closing-a-limited-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-08 18:12:48",
+  "len": "62045"
+ },
+ {
+  "ID": "66786",
+  "post_name": "what-is-wrongful-trading",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:48",
+  "len": "23264"
+ },
+ {
+  "ID": "67370",
+  "post_name": "what-is-a-winding-up-order",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:30:24",
+  "len": "21096"
+ },
+ {
+  "ID": "67438",
+  "post_name": "dealing-with-an-hmrc-winding-up-petition",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:23:56",
+  "len": "38547"
+ },
+ {
+  "ID": "67505",
+  "post_name": "can-a-director-be-made-bankrupt-if-a-business-fails",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:01",
+  "len": "16862"
+ },
+ {
+  "ID": "67535",
+  "post_name": "pros-and-cons",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:07",
+  "len": "28958"
+ },
+ {
+  "ID": "67747",
+  "post_name": "antecedent-transactions",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:12",
+  "len": "31049"
+ },
+ {
+  "ID": "67757",
+  "post_name": "transactions-at-undervalue",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:17",
+  "len": "24228"
+ },
+ {
+  "ID": "67809",
+  "post_name": "hmrc",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:30:03",
+  "len": "23854"
+ },
+ {
+  "ID": "67828",
+  "post_name": "accelerated-payment-notices-apn",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:21",
+  "len": "20368"
+ },
+ {
+  "ID": "67957",
+  "post_name": "why-debt-is-not-always-a-bad-thing-for-your-business",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:26",
+  "len": "19295"
+ },
+ {
+  "ID": "67960",
+  "post_name": "cant-afford-to-pay-suppliers-what-are-the-options",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:29:51",
+  "len": "22931"
+ },
+ {
+  "ID": "67962",
+  "post_name": "what-is-a-statutory-demand-against-a-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:29",
+  "len": "25747"
+ },
+ {
+  "ID": "68076",
+  "post_name": "county-court-judgements",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:29:43",
+  "len": "21930"
+ },
+ {
+  "ID": "68101",
+  "post_name": "dealing-with-creditor-pressure",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:33",
+  "len": "44339"
+ },
+ {
+  "ID": "68108",
+  "post_name": "how-to-reduce-insolvency-risk",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:29:36",
+  "len": "36595"
+ },
+ {
+  "ID": "68111",
+  "post_name": "what-to-do-about-customer-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:29:32",
+  "len": "25993"
+ },
+ {
+  "ID": "68115",
+  "post_name": "rescue-your-business-from-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:37",
+  "len": "47119"
+ },
+ {
+  "ID": "68117",
+  "post_name": "how-to-save-a-struggling-business",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:40",
+  "len": "27449"
+ },
+ {
+  "ID": "68120",
+  "post_name": "can-you-sell-your-insolvent-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:44",
+  "len": "21146"
+ },
+ {
+  "ID": "68123",
+  "post_name": "what-are-the-warning-signs-of-an-insolvent-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:47",
+  "len": "21502"
+ },
+ {
+  "ID": "68130",
+  "post_name": "business-recovery-services",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-03 07:49:38",
+  "len": "36963"
+ },
+ {
+  "ID": "68134",
+  "post_name": "creditor-negotiations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:51",
+  "len": "50950"
+ },
+ {
+  "ID": "68153",
+  "post_name": "advice",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-06-13 14:45:56",
+  "len": "9107"
+ },
+ {
+  "ID": "68180",
+  "post_name": "directors-personal-guarantees",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:55",
+  "len": "17096"
+ },
+ {
+  "ID": "68183",
+  "post_name": "funding-options-for-smes-in-the-uk",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:24:58",
+  "len": "18050"
+ },
+ {
+  "ID": "68189",
+  "post_name": "how-to-legally-take-money-out-of-a-limited-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:02",
+  "len": "37695"
+ },
+ {
+  "ID": "68192",
+  "post_name": "preventing-company-director-disputes",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:05",
+  "len": "12133"
+ },
+ {
+  "ID": "68211",
+  "post_name": "what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:09",
+  "len": "14527"
+ },
+ {
+  "ID": "68207",
+  "post_name": "are-directors-personally-liable-for-company-debts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-08 18:12:51",
+  "len": "44492"
+ },
+ {
+  "ID": "68216",
+  "post_name": "what-is-a-directors-responsibility-for-accountancy-errors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:13",
+  "len": "13168"
+ },
+ {
+  "ID": "68221",
+  "post_name": "get-free-business-debt-advice",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:16",
+  "len": "14826"
+ },
+ {
+  "ID": "68356",
+  "post_name": "advantages-and-disadvantages",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:23",
+  "len": "23286"
+ },
+ {
+  "ID": "68387",
+  "post_name": "insolvent-company-investigations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:28:28",
+  "len": "27447"
+ },
+ {
+  "ID": "68736",
+  "post_name": "company-is-having-financial-difficulties",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:27",
+  "len": "22727"
+ },
+ {
+  "ID": "70501",
+  "post_name": "preferential-payments-during-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:31",
+  "len": "23029"
+ },
+ {
+  "ID": "71514",
+  "post_name": "directors-duties-to-creditors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:35",
+  "len": "18791"
+ },
+ {
+  "ID": "73778",
+  "post_name": "alternatives-to-company-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:38",
+  "len": "17227"
+ },
+ {
+  "ID": "74264",
+  "post_name": "challenge-a-statutory-demand",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:28:08",
+  "len": "25807"
+ },
+ {
+  "ID": "74372",
+  "post_name": "cant-pay-a-company-mortgage",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:42",
+  "len": "24135"
+ },
+ {
+  "ID": "74382",
+  "post_name": "when-employers-cant-afford-redundancy-payments",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:28:00",
+  "len": "26385"
+ },
+ {
+  "ID": "74390",
+  "post_name": "when-a-cva-fails",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:46",
+  "len": "33405"
+ },
+ {
+  "ID": "74439",
+  "post_name": "notice-of-intention-to-appoint-administrators",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:25:50",
+  "len": "15468"
+ },
+ {
+  "ID": "74891",
+  "post_name": "secured-vs-unsecured-creditors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:27:51",
+  "len": "34121"
+ },
+ {
+  "ID": "75111",
+  "post_name": "overdrawn-directors-loan-accounts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-08 18:12:55",
+  "len": "21440"
+ },
+ {
+  "ID": "76323",
+  "post_name": "insolvency-advice-for-directors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:27:44",
+  "len": "25263"
+ },
+ {
+  "ID": "76843",
+  "post_name": "prize-draw-terms-conditions",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-04-16 13:25:42",
+  "len": "3547"
+ },
+ {
+  "ID": "76904",
+  "post_name": "am-i-solvent",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:27:38",
+  "len": "32624"
+ },
+ {
+  "ID": "76920",
+  "post_name": "hmrc-penalties-investigations",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:05",
+  "len": "21851"
+ },
+ {
+  "ID": "77097",
+  "post_name": "bailiffs-high-court-enforcement-officers",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:27:30",
+  "len": "36553"
+ },
+ {
+  "ID": "77146",
+  "post_name": "debt-creditor-pressure-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:09",
+  "len": "32371"
+ },
+ {
+  "ID": "77157",
+  "post_name": "construction-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:27:20",
+  "len": "43271"
+ },
+ {
+  "ID": "77161",
+  "post_name": "transport-haulage-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:13",
+  "len": "26240"
+ },
+ {
+  "ID": "77162",
+  "post_name": "hmrc-enforcement-action",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:17",
+  "len": "22286"
+ },
+ {
+  "ID": "77175",
+  "post_name": "professional-services-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:21",
+  "len": "35687"
+ },
+ {
+  "ID": "77181",
+  "post_name": "energy-provider-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:24",
+  "len": "38436"
+ },
+ {
+  "ID": "77186",
+  "post_name": "care-home-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:26:50",
+  "len": "38588"
+ },
+ {
+  "ID": "77207",
+  "post_name": "manufacturing-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:32",
+  "len": "48726"
+ },
+ {
+  "ID": "77216",
+  "post_name": "hospitality-restaurant-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:26:35",
+  "len": "49620"
+ },
+ {
+  "ID": "77218",
+  "post_name": "charity-non-profit-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:35",
+  "len": "31444"
+ },
+ {
+  "ID": "77248",
+  "post_name": "sector-insolvency-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 18:51:44",
+  "len": "24"
+ },
+ {
+  "ID": "77278",
+  "post_name": "company-strike-off-and-dissolution",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:26:22",
+  "len": "32782"
+ },
+ {
+  "ID": "77205",
+  "post_name": "hmrc-debt-enforcement-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:28",
+  "len": "17515"
+ },
+ {
+  "ID": "77339",
+  "post_name": "guides-resources-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 18:51:21",
+  "len": "24"
+ },
+ {
+  "ID": "77372",
+  "post_name": "company-rescue-recovery-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:39",
+  "len": "36629"
+ },
+ {
+  "ID": "77396",
+  "post_name": "director-protection-hub",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:43",
+  "len": "53670"
+ },
+ {
+  "ID": "77399",
+  "post_name": "uk-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:25:57",
+  "len": "539506"
+ },
+ {
+  "ID": "77401",
+  "post_name": "sector-specific-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:25:52",
+  "len": "40260"
+ },
+ {
+  "ID": "77681",
+  "post_name": "mental-health-debt-stress-support",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:46",
+  "len": "28897"
+ },
+ {
+  "ID": "77684",
+  "post_name": "debt-charities-uk",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:25:42",
+  "len": "24986"
+ },
+ {
+  "ID": "77693",
+  "post_name": "insolvency-news-commentary",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:50",
+  "len": "19433"
+ },
+ {
+  "ID": "77739",
+  "post_name": "which-creditors-get-paid-first",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:25:34",
+  "len": "25270"
+ },
+ {
+  "ID": "77960",
+  "post_name": "cant-afford-to-liquidate",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:05",
+  "len": "26123"
+ },
+ {
+  "ID": "77814",
+  "post_name": "how-to-prepare-for-company-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:26:54",
+  "len": "38271"
+ },
+ {
+  "ID": "77883",
+  "post_name": "liquidation-vs-dissolution-strike-off",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:21:54",
+  "len": "19519"
+ },
+ {
+  "ID": "77916",
+  "post_name": "voluntary-vs-compulsory-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:33:35",
+  "len": "20366"
+ },
+ {
+  "ID": "78102",
+  "post_name": "how-to-choose-the-right-insolvency-procedure",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:09",
+  "len": "30133"
+ },
+ {
+  "ID": "78129",
+  "post_name": "directors-conduct-report-2",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:13",
+  "len": "21641"
+ },
+ {
+  "ID": "78163",
+  "post_name": "company-pensions-and-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:25:09",
+  "len": "38249"
+ },
+ {
+  "ID": "78191",
+  "post_name": "leases-and-contracts-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:16",
+  "len": "24078"
+ },
+ {
+  "ID": "78560",
+  "post_name": "company-property-and-real-estate-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:24:58",
+  "len": "37460"
+ },
+ {
+  "ID": "78578",
+  "post_name": "intellectual-property-and-trading-assets-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:20",
+  "len": "22251"
+ },
+ {
+  "ID": "78596",
+  "post_name": "company-vehicles-and-equipment-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:24:47",
+  "len": "29935"
+ },
+ {
+  "ID": "78613",
+  "post_name": "how-to-prove-your-debt-in-company-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:24",
+  "len": "16140"
+ },
+ {
+  "ID": "78635",
+  "post_name": "creditor-meetings-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:27",
+  "len": "22512"
+ },
+ {
+  "ID": "78654",
+  "post_name": "how-to-challenge-a-liquidators-decisions-or-fees",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:31",
+  "len": "27060"
+ },
+ {
+  "ID": "78673",
+  "post_name": "liquidators-powers-and-duties",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:35",
+  "len": "28127"
+ },
+ {
+  "ID": "78690",
+  "post_name": "liquidation-deadlines-and-time-limits",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:38",
+  "len": "19996"
+ },
+ {
+  "ID": "78707",
+  "post_name": "company-restoration-after-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:24:20",
+  "len": "33990"
+ },
+ {
+  "ID": "78756",
+  "post_name": "liquidating-a-limited-liability-partnership",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:39:22",
+  "len": "24150"
+ },
+ {
+  "ID": "78771",
+  "post_name": "liquidating-a-charity-or-non-profit",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:45",
+  "len": "30494"
+ },
+ {
+  "ID": "78781",
+  "post_name": "can-i-be-sued-after-my-company-is-dissolved",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:24:08",
+  "len": "27944"
+ },
+ {
+  "ID": "78797",
+  "post_name": "what-happens-if-a-director-resigns-before-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:49",
+  "len": "20146"
+ },
+ {
+  "ID": "78812",
+  "post_name": "redundancy-payments-for-directors-in-an-mvl",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:53",
+  "len": "26033"
+ },
+ {
+  "ID": "78825",
+  "post_name": "paying-staff-but-not-hmrc-before-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:27:56",
+  "len": "22737"
+ },
+ {
+  "ID": "78835",
+  "post_name": "whats-the-risk-of-being-disqualified-as-a-director",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:00",
+  "len": "28123"
+ },
+ {
+  "ID": "79236",
+  "post_name": "can-i-start-a-new-company-after-liquidating-my-old-one",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:07",
+  "len": "24205"
+ },
+ {
+  "ID": "79246",
+  "post_name": "can-i-liquidate-my-company-with-a-bounce-back-loan",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:11",
+  "len": "26101"
+ },
+ {
+  "ID": "79256",
+  "post_name": "liquidating-a-company-with-no-assets-or-bank-account-uk",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:31:22",
+  "len": "25956"
+ },
+ {
+  "ID": "79266",
+  "post_name": "can-i-liquidate-a-dormant-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:19",
+  "len": "29759"
+ },
+ {
+  "ID": "79276",
+  "post_name": "can-you-liquidate-to-avoid-paying-suppliers",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:22",
+  "len": "24196"
+ },
+ {
+  "ID": "79285",
+  "post_name": "liquidating-a-group-company-or-holding-company-in-the-uk",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:26",
+  "len": "26532"
+ },
+ {
+  "ID": "79304",
+  "post_name": "cva-vs-strike-off-vs-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:33",
+  "len": "23970"
+ },
+ {
+  "ID": "79313",
+  "post_name": "light-touch-administration",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:36",
+  "len": "15735"
+ },
+ {
+  "ID": "79322",
+  "post_name": "winding-up-petition-vs-compulsory-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:40",
+  "len": "25467"
+ },
+ {
+  "ID": "79332",
+  "post_name": "what-happens-if-a-cva-fails-mid-term",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:44",
+  "len": "20716"
+ },
+ {
+  "ID": "79342",
+  "post_name": "hmrc-as-a-creditor-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:48",
+  "len": "24082"
+ },
+ {
+  "ID": "79351",
+  "post_name": "can-i-choose-my-liquidator",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:51",
+  "len": "22080"
+ },
+ {
+  "ID": "79360",
+  "post_name": "ccj-when-going-insolvent",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:55",
+  "len": "15429"
+ },
+ {
+  "ID": "79369",
+  "post_name": "director-guarantees-in-a-cva",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:28:58",
+  "len": "31090"
+ },
+ {
+  "ID": "79379",
+  "post_name": "business-bank-account-in-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:02",
+  "len": "31904"
+ },
+ {
+  "ID": "79387",
+  "post_name": "use-a-cva-to-close-a-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:05",
+  "len": "30506"
+ },
+ {
+  "ID": "79396",
+  "post_name": "director-conduct-review",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:22:46",
+  "len": "30573"
+ },
+ {
+  "ID": "79404",
+  "post_name": "uk-insolvency-glossary",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:09",
+  "len": "20628"
+ },
+ {
+  "ID": "79412",
+  "post_name": "uk-insolvency-flowchart",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:13",
+  "len": "13076"
+ },
+ {
+  "ID": "79423",
+  "post_name": "insolvency-checklist",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:16",
+  "len": "24794"
+ },
+ {
+  "ID": "79436",
+  "post_name": "directors-responsibilities-after-a-company-is-struck-off",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:22:31",
+  "len": "28016"
+ },
+ {
+  "ID": "79445",
+  "post_name": "list-of-liquidation-documents",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:20",
+  "len": "23363"
+ },
+ {
+  "ID": "79455",
+  "post_name": "insolvency-vs-bankruptcy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:24",
+  "len": "13248"
+ },
+ {
+  "ID": "79463",
+  "post_name": "insolvency-myths-debunked",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:27",
+  "len": "15782"
+ },
+ {
+  "ID": "79472",
+  "post_name": "should-i-close-my-company-or-try-to-save-it",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 16:35:34",
+  "len": "19506"
+ },
+ {
+  "ID": "79480",
+  "post_name": "when-should-a-director-stop-trading",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:35",
+  "len": "21308"
+ },
+ {
+  "ID": "79489",
+  "post_name": "seek-insolvency-advice-before-missing-payments",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:39",
+  "len": "17364"
+ },
+ {
+  "ID": "79498",
+  "post_name": "pay-hmrc-or-suppliers-first",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:47",
+  "len": "19495"
+ },
+ {
+  "ID": "79507",
+  "post_name": "what-happens-if-i-stop-paying-company-debts",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:51",
+  "len": "21031"
+ },
+ {
+  "ID": "79515",
+  "post_name": "can-directors-go-to-prison-for-company-debt",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:55",
+  "len": "16773"
+ },
+ {
+  "ID": "79529",
+  "post_name": "what-happens-if-a-director-hides-company-assets",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:29:59",
+  "len": "20383"
+ },
+ {
+  "ID": "79537",
+  "post_name": "can-a-director-be-sued-personally-by-creditors",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:03",
+  "len": "31359"
+ },
+ {
+  "ID": "79545",
+  "post_name": "what-happens-if-a-director-transfers-assets-before-insolvency",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:06",
+  "len": "16506"
+ },
+ {
+  "ID": "79553",
+  "post_name": "can-directors-pay-themselves-before-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:21:34",
+  "len": "41371"
+ },
+ {
+  "ID": "79563",
+  "post_name": "what-happens-if-hmrc-freezes-your-business-bank-account",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:10",
+  "len": "23065"
+ },
+ {
+  "ID": "79571",
+  "post_name": "what-happens-if-hmrc-sends-bailiffs-to-a-business",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:14",
+  "len": "18033"
+ },
+ {
+  "ID": "79580",
+  "post_name": "can-hmrc-shut-down-my-business",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:18",
+  "len": "24749"
+ },
+ {
+  "ID": "79588",
+  "post_name": "what-happens-if-you-ignore-hmrc-letters",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:22",
+  "len": "19088"
+ },
+ {
+  "ID": "79596",
+  "post_name": "what-happens-if-hmrc-rejects-your-time-to-pay-arrangement",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:25",
+  "len": "20661"
+ },
+ {
+  "ID": "79606",
+  "post_name": "what-happens-if-a-creditor-takes-me-to-court",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:29",
+  "len": "20624"
+ },
+ {
+  "ID": "79615",
+  "post_name": "can-a-supplier-force-my-company-into-liquidation",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:30:33",
+  "len": "32602"
+ },
+ {
+  "ID": "79808",
+  "post_name": "cookie-policy",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:11:14",
+  "len": "3659"
+ },
+ {
+  "ID": "79845",
+  "post_name": "data",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-20 07:56:09",
+  "len": "36152"
+ },
+ {
+  "ID": "79847",
+  "post_name": "winding-up-petition-tracker",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 07:13:56",
+  "len": "42839"
+ },
+ {
+  "ID": "79848",
+  "post_name": "dissolutions-vs-insolvencies",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-20 07:36:45",
+  "len": "42394"
+ },
+ {
+  "ID": "79850",
+  "post_name": "payment-practices-late-payment",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 07:14:09",
+  "len": "41645"
+ },
+ {
+  "ID": "79852",
+  "post_name": "cvl-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 07:13:15",
+  "len": "86887"
+ },
+ {
+  "ID": "79853",
+  "post_name": "compulsory-liquidation-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 07:13:29",
+  "len": "86743"
+ },
+ {
+  "ID": "79854",
+  "post_name": "administration-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 07:13:42",
+  "len": "86920"
+ },
+ {
+  "ID": "79855",
+  "post_name": "company-insolvencies-by-sector",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-23 10:47:19",
+  "len": "62288"
+ },
+ {
+  "ID": "79856",
+  "post_name": "construction-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:17:16",
+  "len": "67297"
+ },
+ {
+  "ID": "80098",
+  "post_name": "furniture-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:18:32",
+  "len": "89831"
+ },
+ {
+  "ID": "80134",
+  "post_name": "restaurant-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:18:45",
+  "len": "78111"
+ },
+ {
+  "ID": "80136",
+  "post_name": "road-haulage-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:18:57",
+  "len": "80731"
+ },
+ {
+  "ID": "80137",
+  "post_name": "recruitment-agency-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:19:16",
+  "len": "90184"
+ },
+ {
+  "ID": "80138",
+  "post_name": "temporary-staffing-agency-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:19:30",
+  "len": "83380"
+ },
+ {
+  "ID": "80139",
+  "post_name": "motor-vehicle-repair-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:19:43",
+  "len": "89383"
+ },
+ {
+  "ID": "80140",
+  "post_name": "cleaning-company-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:19:53",
+  "len": "90648"
+ },
+ {
+  "ID": "80141",
+  "post_name": "hotel-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:20:06",
+  "len": "93184"
+ },
+ {
+  "ID": "80260",
+  "post_name": "estate-agency-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:20:22",
+  "len": "91488"
+ },
+ {
+  "ID": "80578",
+  "post_name": "it-consultancy-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:20:39",
+  "len": "88344"
+ },
+ {
+  "ID": "80581",
+  "post_name": "management-consultancy-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:21:08",
+  "len": "87827"
+ },
+ {
+  "ID": "80584",
+  "post_name": "architectural-engineering-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:21:34",
+  "len": "87060"
+ },
+ {
+  "ID": "80587",
+  "post_name": "personal-care-services-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:21:53",
+  "len": "84806"
+ },
+ {
+  "ID": "80590",
+  "post_name": "sports-facility-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:22:13",
+  "len": "86245"
+ },
+ {
+  "ID": "80593",
+  "post_name": "medical-dental-practice-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:22:31",
+  "len": "86498"
+ },
+ {
+  "ID": "80596",
+  "post_name": "creative-arts-entertainment-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:22:46",
+  "len": "86014"
+ },
+ {
+  "ID": "80597",
+  "post_name": "amusement-recreation-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:23:04",
+  "len": "85500"
+ },
+ {
+  "ID": "80601",
+  "post_name": "real-estate-letting-investment-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:23:23",
+  "len": "87362"
+ },
+ {
+  "ID": "80604",
+  "post_name": "freight-forwarding-logistics-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:23:39",
+  "len": "91694"
+ },
+ {
+  "ID": "80679",
+  "post_name": "retail-insolvency-statistics",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 07:23:52",
+  "len": "86038"
+ },
+ {
+  "ID": "80717",
+  "post_name": "quick-quote-options",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-27 08:20:42",
+  "len": "0"
+ },
+ {
+  "ID": "80719",
+  "post_name": "close-my-company",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-29 09:04:34",
+  "len": "0"
+ },
+ {
+  "ID": "80727",
+  "post_name": "insolvency-practitioner",
+  "post_type": "page",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-30 09:19:37",
+  "len": "0"
+ },
+ {
+  "ID": "11247",
+  "post_name": "company-administration",
+  "post_type": "post",
+  "post_status": "draft",
+  "post_modified_gmt": "2024-03-28 11:30:13",
+  "len": "26061"
+ },
+ {
+  "ID": "16861",
+  "post_name": "",
+  "post_type": "post",
+  "post_status": "draft",
+  "post_modified_gmt": "2017-04-20 16:17:07",
+  "len": "0"
+ },
+ {
+  "ID": "76768",
+  "post_name": "",
+  "post_type": "post",
+  "post_status": "draft",
+  "post_modified_gmt": "2025-09-09 11:03:06",
+  "len": "0"
+ },
+ {
+  "ID": "79841",
+  "post_name": "",
+  "post_type": "post",
+  "post_status": "draft",
+  "post_modified_gmt": "0000-00-00 00:00:00",
+  "len": "657"
+ },
+ {
+  "ID": "13520",
+  "post_name": "tescos-rated-worst-payer-uk-small-businesses",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2024-06-18 11:40:51",
+  "len": "3345"
+ },
+ {
+  "ID": "20346",
+  "post_name": "paradise-papers",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-19 10:30:33",
+  "len": "6638"
+ },
+ {
+  "ID": "20594",
+  "post_name": "how-will-carillions-insolvency-effect-its-supply-chain",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 18:59:05",
+  "len": "9890"
+ },
+ {
+  "ID": "24589",
+  "post_name": "pub-closures-in-the-uk",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:20:45",
+  "len": "41845"
+ },
+ {
+  "ID": "23214",
+  "post_name": "the-orla-kiely-fashion-brand-shuts-up-shop",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 20:43:23",
+  "len": "3798"
+ },
+ {
+  "ID": "47451",
+  "post_name": "chinese-takeaway",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-09 08:22:43",
+  "len": "12014"
+ },
+ {
+  "ID": "44691",
+  "post_name": "can-heathrow-survive-covid-19",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:20:38",
+  "len": "9632"
+ },
+ {
+  "ID": "49488",
+  "post_name": "carehomes",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:23",
+  "len": "18885"
+ },
+ {
+  "ID": "45670",
+  "post_name": "124-pints-to-save-the-pub",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:20:32",
+  "len": "3020"
+ },
+ {
+  "ID": "48758",
+  "post_name": "automotive",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:19",
+  "len": "19332"
+ },
+ {
+  "ID": "49550",
+  "post_name": "charity",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:27",
+  "len": "20912"
+ },
+ {
+  "ID": "49694",
+  "post_name": "childcare",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:31",
+  "len": "21124"
+ },
+ {
+  "ID": "49767",
+  "post_name": "cleaning-contractors",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:32:07",
+  "len": "21271"
+ },
+ {
+  "ID": "49778",
+  "post_name": "construction",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:55",
+  "len": "26836"
+ },
+ {
+  "ID": "49739",
+  "post_name": "recruitment",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:47",
+  "len": "19012"
+ },
+ {
+  "ID": "49727",
+  "post_name": "restaurants",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:43",
+  "len": "18804"
+ },
+ {
+  "ID": "49717",
+  "post_name": "retail",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:39",
+  "len": "18911"
+ },
+ {
+  "ID": "49706",
+  "post_name": "taxi-companies",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:35",
+  "len": "20824"
+ },
+ {
+  "ID": "49699",
+  "post_name": "travel",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:32:02",
+  "len": "21889"
+ },
+ {
+  "ID": "49906",
+  "post_name": "schools",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:39",
+  "len": "21872"
+ },
+ {
+  "ID": "49898",
+  "post_name": "energy",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:35",
+  "len": "21959"
+ },
+ {
+  "ID": "49890",
+  "post_name": "entertainment",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:31",
+  "len": "21360"
+ },
+ {
+  "ID": "49880",
+  "post_name": "events",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 17:55:07",
+  "len": "20631"
+ },
+ {
+  "ID": "49873",
+  "post_name": "gyms",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:27",
+  "len": "18745"
+ },
+ {
+  "ID": "49866",
+  "post_name": "haulage",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:23",
+  "len": "20883"
+ },
+ {
+  "ID": "49856",
+  "post_name": "hotels",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:19",
+  "len": "19697"
+ },
+ {
+  "ID": "49849",
+  "post_name": "dry-cleaning-laundry",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:15",
+  "len": "21872"
+ },
+ {
+  "ID": "49839",
+  "post_name": "leisure",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:11",
+  "len": "20535"
+ },
+ {
+  "ID": "49820",
+  "post_name": "professional-services",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:03",
+  "len": "20356"
+ },
+ {
+  "ID": "49831",
+  "post_name": "manufacturing",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:07",
+  "len": "21731"
+ },
+ {
+  "ID": "49810",
+  "post_name": "property",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:11:59",
+  "len": "22336"
+ },
+ {
+  "ID": "50710",
+  "post_name": "accountants",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:10:19",
+  "len": "657"
+ },
+ {
+  "ID": "50825",
+  "post_name": "solicitors",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-23 18:51:45",
+  "len": "979"
+ },
+ {
+  "ID": "50889",
+  "post_name": "banks",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:10:14",
+  "len": "438"
+ },
+ {
+  "ID": "50894",
+  "post_name": "asset-based-and-other-lenders",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:10:12",
+  "len": "595"
+ },
+ {
+  "ID": "51087",
+  "post_name": "creditors",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-05-22 10:10:10",
+  "len": "498"
+ },
+ {
+  "ID": "52222",
+  "post_name": "insolvency-rescue-solutions-for-garden-centers",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:47",
+  "len": "19612"
+ },
+ {
+  "ID": "55751",
+  "post_name": "insolvency-rescue-fish-chip-sector",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-12 18:12:51",
+  "len": "20784"
+ },
+ {
+  "ID": "57661",
+  "post_name": "35-of-charities-fear-insolvency-due-to-cost-of-living-crisis",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:19:34",
+  "len": "3043"
+ },
+ {
+  "ID": "67892",
+  "post_name": "debt-charities-for-consumers",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:19:29",
+  "len": "21148"
+ },
+ {
+  "ID": "67898",
+  "post_name": "managing-debt-related-stress",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-08-07 12:19:23",
+  "len": "10764"
+ },
+ {
+  "ID": "77694",
+  "post_name": "articles-insights-hub",
+  "post_type": "post",
+  "post_status": "publish",
+  "post_modified_gmt": "2026-07-02 09:02:49",
+  "len": "2887"
+ }
+]

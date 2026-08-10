@@ -1,1208 +1,1061 @@
 {
   "synced": [
     {
-      "path": "/articles/managing-debt-related-stress/",
-      "id": 67898,
+      "path": "/services-to/creditors/",
+      "id": 51087,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/articles/debt-charities-for-consumers/",
-      "id": 67892,
+      "path": "/services-to/asset-based-and-other-lenders/",
+      "id": 50894,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
-      "id": 57661,
+      "path": "/services-to/banks/",
+      "id": 50889,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/articles/124-pints-to-save-the-pub/",
-      "id": 45670,
+      "path": "/services-to/solicitors/",
+      "id": 50825,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/articles/can-heathrow-survive-covid-19/",
-      "id": 44691,
+      "path": "/services-to/accountants/",
+      "id": 50710,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/articles/pub-closures-in-the-uk/",
-      "id": 24589,
+      "path": "/insolvency/business-recovery-services/",
+      "id": 68130,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
-      "id": 79615,
+      "path": "/company-cash-flow-problems/cant-pay-business-energy/",
+      "id": 58601,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
     },
     {
-      "path": "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
-      "id": 79606,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
-      "id": 79596,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
-      "id": 79588,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/can-hmrc-shut-down-my-business/",
-      "id": 79580,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
-      "id": 79571,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
-      "id": 79563,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-directors-pay-themselves-before-liquidation/",
-      "id": 79553,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
-      "id": 79545,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-a-director-be-sued-personally-by-creditors/",
-      "id": 79537,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-if-a-director-hides-company-assets/",
-      "id": 79529,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-directors-go-to-prison-for-company-debt/",
-      "id": 79515,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-if-i-stop-paying-company-debts/",
-      "id": 79507,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/pay-hmrc-or-suppliers-first/",
-      "id": 79498,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/seek-insolvency-advice-before-missing-payments/",
-      "id": 79489,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/when-should-a-director-stop-trading/",
-      "id": 79480,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/should-i-close-my-company-or-try-to-save-it/",
-      "id": 79472,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/insolvency-myths-debunked/",
-      "id": 79463,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/insolvency-vs-bankruptcy/",
-      "id": 79455,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/list-of-liquidation-documents/",
-      "id": 79445,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
-      "id": 79436,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/insolvency-checklist/",
-      "id": 79423,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/uk-insolvency-flowchart/",
-      "id": 79412,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/uk-insolvency-glossary/",
-      "id": 79404,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/director-conduct-review/",
-      "id": 79396,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
-      "id": 79387,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/business-bank-account-in-liquidation/",
-      "id": 79379,
-      "reason": "live has 31 more words and 9 more heading anchors"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
-      "id": 79369,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/ccj-when-going-insolvent/",
-      "id": 79360,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-i-choose-my-liquidator/",
-      "id": 79351,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/hmrc-as-a-creditor-in-liquidation/",
-      "id": 79342,
-      "reason": "live has 61 more words"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
-      "id": 79332,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-administration/light-touch-administration/",
-      "id": 79313,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/cva-vs-strike-off-vs-liquidation/",
-      "id": 79304,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
-      "id": 79285,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
-      "id": 79276,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-i-liquidate-a-dormant-company/",
-      "id": 79266,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
-      "id": 79256,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
-      "id": 79246,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
-      "id": 79236,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
-      "id": 78835,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/voluntary-liquidation/",
-      "id": 78851,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
-      "id": 78825,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
-      "id": 78812,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
-      "id": 78797,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
-      "id": 78781,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidating-a-charity-or-non-profit/",
-      "id": 78771,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidating-a-limited-liability-partnership/",
-      "id": 78756,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-restoration-after-liquidation/",
-      "id": 78707,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidation-deadlines-and-time-limits/",
-      "id": 78690,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/liquidators-powers-and-duties/",
-      "id": 78673,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
-      "id": 78654,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/creditor-meetings-in-liquidation/",
-      "id": 78635,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
-      "id": 78613,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
-      "id": 78596,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
-      "id": 78578,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-property-and-real-estate-in-liquidation/",
-      "id": 78560,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/leases-and-contracts-in-liquidation/",
-      "id": 78191,
-      "reason": "live has 260 more words and 11 more heading anchors"
-    },
-    {
-      "path": "/liquidation/company-pensions-and-liquidation/",
-      "id": 78163,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/how-to-choose-the-right-insolvency-procedure/",
-      "id": 78102,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/voluntary-vs-compulsory-liquidation/",
-      "id": 77916,
-      "reason": "live has 119 more words and 7 more heading anchors"
-    },
-    {
-      "path": "/liquidation/liquidation-vs-dissolution-strike-off/",
-      "id": 77883,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/how-to-prepare-for-company-liquidation/",
-      "id": 77814,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/cant-afford-to-liquidate/",
-      "id": 77960,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/which-creditors-get-paid-first/",
-      "id": 77739,
-      "reason": "live has 94 more words and 12 more heading anchors"
-    },
-    {
-      "path": "/insolvency-news-commentary/",
-      "id": 77693,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/debt-charities-uk/",
-      "id": 77684,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/mental-health-debt-stress-support/",
-      "id": 77681,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sector-specific-insolvency/",
-      "id": 77401,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/uk-insolvency-statistics/",
-      "id": 77399,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-recovery-hub/",
-      "id": 77372,
-      "reason": "live has 67 more words"
-    },
-    {
-      "path": "/hmrc/hmrc-debt-enforcement-hub/",
-      "id": 77205,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/company-strike-off-and-dissolution/",
-      "id": 77278,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/charity-non-profit-insolvency/",
-      "id": 77218,
-      "reason": "live has 119 more words and 8 more heading anchors"
-    },
-    {
-      "path": "/hospitality-restaurant-insolvency/",
-      "id": 77216,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/manufacturing-insolvency/",
-      "id": 77207,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/care-home-insolvency/",
-      "id": 77186,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/energy-provider-insolvency/",
-      "id": 77181,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/professional-services-insolvency/",
-      "id": 77175,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-enforcement-action/",
-      "id": 77162,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/transport-haulage-insolvency/",
-      "id": 77161,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/construction-insolvency/",
-      "id": 77157,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/debt-creditor-pressure-hub/",
-      "id": 77146,
-      "reason": "live has 197 more words and 5 more heading anchors"
-    },
-    {
-      "path": "/liquidation/bailiffs-high-court-enforcement-officers/",
-      "id": 77097,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-penalties-investigations/",
-      "id": 76920,
-      "reason": "live has 130 more words and 9 more heading anchors"
-    },
-    {
-      "path": "/liquidation/am-i-solvent/",
-      "id": 76904,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/insolvency-advice-for-directors/",
-      "id": 76323,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/secured-vs-unsecured-creditors/",
-      "id": 74891,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
-      "id": 74390,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
-      "id": 74382,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
-      "id": 74372,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/challenge-a-statutory-demand/",
-      "id": 74264,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/alternatives-to-company-liquidation/",
-      "id": 73778,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/directors-duties-to-creditors/",
-      "id": 71514,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/preferential-payments-during-insolvency/",
-      "id": 70501,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/company-is-having-financial-difficulties/",
-      "id": 68736,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/insolvent-company-investigations/",
-      "id": 68387,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
-      "id": 68356,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/get-free-business-debt-advice/",
-      "id": 68221,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
-      "id": 68216,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/are-directors-personally-liable-for-company-debts/",
-      "id": 68207,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
-      "id": 68211,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/preventing-company-director-disputes/",
-      "id": 68192,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/how-to-legally-take-money-out-of-a-limited-company/",
-      "id": 68189,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/funding-options-for-smes-in-the-uk/",
-      "id": 68183,
-      "reason": "live has 119 more words and 7 more heading anchors"
-    },
-    {
-      "path": "/advice/directors-personal-guarantees/",
-      "id": 68180,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/creditor-negotiations/",
-      "id": 68134,
-      "reason": "live has 23 more words and 9 more heading anchors"
-    },
-    {
-      "path": "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
-      "id": 68123,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/can-you-sell-your-insolvent-company/",
-      "id": 68120,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/how-to-save-a-struggling-business/",
-      "id": 68117,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/rescue-your-business-from-insolvency/",
-      "id": 68115,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-to-do-about-customer-insolvency/",
-      "id": 68111,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/how-to-reduce-insolvency-risk/",
-      "id": 68108,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/dealing-with-creditor-pressure/",
-      "id": 68101,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/county-court-judgements/",
-      "id": 68076,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
-      "id": 67962,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
-      "id": 67960,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
-      "id": 67957,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/accelerated-payment-notices-apn/",
-      "id": 67828,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/",
-      "id": 67809,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/transactions-at-undervalue/",
-      "id": 67757,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/antecedent-transactions/",
-      "id": 67747,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
-      "id": 67535,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
-      "id": 67505,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/winding-up-petitions/what-is-a-winding-up-order/",
-      "id": 67370,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-wrongful-trading/",
-      "id": 66786,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/directors-disqualification/",
-      "id": 65593,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-administration/",
-      "id": 65483,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-after-company-liquidation/",
-      "id": 65238,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/stressed-directors-guide/",
-      "id": 57942,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/writing-off-a-directors-loan-account/",
-      "id": 55381,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/",
-      "id": 55052,
-      "reason": "live has 26 more words"
-    },
-    {
-      "path": "/quick-quote/",
-      "id": 54552,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/express-liquidation/",
-      "id": 54064,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
-      "id": 53625,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/write-off-my-debt/",
-      "id": 53183,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/cease-trading-template/",
-      "id": 53187,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
-      "id": 53243,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/request-a-reduced-monthly-payment/",
-      "id": 53174,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/i-cannot-afford-to-repay-my-debt/",
-      "id": 53166,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/hold-action-on-my-account/",
-      "id": 53158,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/sample-letters/i-have-no-knowledge-of-this-debt/",
-      "id": 53159,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/find-a-liquidator-near-me/",
-      "id": 52808,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-is-the-companies-act-2006/",
-      "id": 52771,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
-      "id": 50819,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/personal-liability-for-cbils-loans/",
-      "id": 50629,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/creditors-meeting/",
-      "id": 49618,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/complaints-procedure/",
-      "id": 49024,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
-      "id": 48170,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-the-insolvency-service/",
-      "id": 47550,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-a-creditor/",
-      "id": 46674,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
-      "id": 46579,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/content-usage-guidelines/",
-      "id": 45771,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-pay-staff-wages/",
-      "id": 44055,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
-      "id": 43917,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
-      "id": 43745,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/what-happens-if-i-default/",
-      "id": 43675,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
-      "id": 43580,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/unenforceable-personal-guarantee/",
-      "id": 43522,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
-      "id": 42739,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
-      "id": 41082,
-      "reason": "live has 116 more words and 7 more heading anchors"
-    },
-    {
-      "path": "/insolvency/what-is-a-high-court-writ/",
-      "id": 39500,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/losing-house-if-company-goes-bust/",
-      "id": 38597,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
-      "id": 31237,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/business-restructuring/",
-      "id": 31199,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/lpa-receivership/",
-      "id": 29543,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/corporation-tax-penalties/",
-      "id": 28761,
-      "reason": "live has 120 more words and 8 more heading anchors"
-    },
-    {
-      "path": "/insolvency/personally-liabilty-of-company-secretary/",
-      "id": 28545,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/stop-or-avoid-insolvency/",
-      "id": 26888,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-cash-flow-problems/cant-pay-business-rates/",
-      "id": 26347,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/misfeasance/",
-      "id": 26298,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/debt-management-guide/",
-      "id": 26234,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/validation-order/",
-      "id": 25310,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/personal-guarantee-insurance/",
-      "id": 24780,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-are-fixed-and-floating-charges/",
-      "id": 24760,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-a-freezing-order-or-injunction/",
-      "id": 24434,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
-      "id": 24402,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/can-we-trade-out-of-insolvency/",
-      "id": 24080,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/",
-      "id": 17686,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/cant-pay-vat/",
-      "id": 9443,
-      "reason": "live has 1673 more words"
-    },
-    {
-      "path": "/liquidation/how-much-does-liquidation-cost/",
-      "id": 23698,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
+      "path": "/liquidation/what-happens-to-directors-in-liquidation/",
+      "id": 46222,
+      "reason": "live has 16 more heading anchors"
     },
     {
-      "path": "/privacy-policy/",
-      "id": 22899,
+      "path": "/hmrc/controlled-goods-agreement/",
+      "id": 12958,
       "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/the-risks-of-signing-a-personal-guarantee/",
-      "id": 22785,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/insolvent-company-owes-me-money/",
-      "id": 22277,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-is-limited-liability/",
-      "id": 21011,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/partnership-voluntary-arrangements/",
-      "id": 20435,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
-      "id": 20428,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
-      "id": 20380,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/retail-industry-insolvency-trends/",
-      "id": 20268,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/timeline/",
-      "id": 17568,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-an-individual-voluntary-arrangement/",
-      "id": 16662,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-offices-contact-guide/",
-      "id": 16565,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-follower-notice/",
-      "id": 16353,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-administration/vs-administrative-receivership/",
-      "id": 16106,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/check-if-a-company-is-insolvent/",
-      "id": 15203,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-administration/vs-cva/",
-      "id": 15141,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/members-voluntary-liquidation/",
-      "id": 7676,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/what-happens-to-employees/",
-      "id": 15010,
-      "reason": "live has 7 more heading anchors"
-    },
-    {
-      "path": "/director-redundancy/",
-      "id": 14914,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/vat-penalties/",
-      "id": 14912,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/tax-penalties/",
-      "id": 14775,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/cookie-policy-company-debt/",
-      "id": 14672,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-criminal-investigations/",
-      "id": 14460,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-fraud-investigations/",
-      "id": 14158,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/frozen-bank-account/",
-      "id": 11788,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/insolvency-test/",
-      "id": 13600,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/statement-of-affairs/",
-      "id": 13513,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/about-us/",
-      "id": 13065,
-      "reason": "live has 327 more words"
-    },
-    {
-      "path": "/hmrc/understanding-hmrc-debt-collection/",
-      "id": 13029,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/what-can-hmrc-bailiffs-take/",
-      "id": 12979,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/insolvency/what-is-an-insolvency-practitioner/",
-      "id": 8358,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/notice-of-enforcement/",
-      "id": 11644,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/joint-and-several-liability-for-unpaid-vat/",
-      "id": 11516,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-tax-investigations/",
-      "id": 11384,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/security-bonds/",
-      "id": 11229,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/advice/what-are-phoenix-companies/",
-      "id": 11228,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/hmrc-compliance-checks/",
-      "id": 11193,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/distraint-order-notice/",
-      "id": 10930,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/security-bond-notices/",
-      "id": 10564,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/personal-liability-notices/",
-      "id": 10562,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/receivership-mean-business/",
-      "id": 9702,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/pre-packs/",
-      "id": 8396,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/hmrc/cant-pay-paye/",
-      "id": 8324,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/company-voluntary-arrangement/",
-      "id": 7685,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/liquidation/compulsory-liquidation/",
-      "id": 7680,
-      "reason": "live is newer (cosmetic drift, e.g. CTA arrows)"
-    },
-    {
-      "path": "/company-rescue-solutions/",
-      "id": 7665,
-      "reason": "live has 59 more words"
     }
   ],
   "held": [
     [
+      "/articles/managing-debt-related-stress/",
+      "staging is newer (2026-08-07T12:19:23 vs live 2026-07-02T08:55:54)"
+    ],
+    [
+      "/articles/debt-charities-for-consumers/",
+      "staging is newer (2026-08-07T12:19:29 vs live 2026-07-02T10:06:20)"
+    ],
+    [
+      "/articles/35-of-charities-fear-insolvency-due-to-cost-of-living-crisis/",
+      "staging is newer (2026-08-07T12:19:34 vs live 2026-07-02T10:06:16)"
+    ],
+    [
+      "/articles/124-pints-to-save-the-pub/",
+      "staging is newer (2026-08-07T12:20:32 vs live 2026-06-10T19:34:27)"
+    ],
+    [
+      "/articles/can-heathrow-survive-covid-19/",
+      "staging is newer (2026-08-07T12:20:38 vs live 2026-06-10T19:36:20)"
+    ],
+    [
+      "/case-studies/chinese-takeaway/",
+      "staging is newer (2026-08-09T08:22:43 vs live 2026-07-02T09:47:18)"
+    ],
+    [
+      "/articles/pub-closures-in-the-uk/",
+      "staging is newer (2026-08-07T12:20:45 vs live 2026-07-22T11:30:40)"
+    ],
+    [
+      "/liquidation/can-a-supplier-force-my-company-into-liquidation/",
+      "staging is newer (2026-08-09T08:30:33 vs live 2026-07-15T14:50:29)"
+    ],
+    [
+      "/liquidation/what-happens-if-a-creditor-takes-me-to-court/",
+      "staging is newer (2026-08-09T08:30:29 vs live 2026-07-15T14:50:39)"
+    ],
+    [
+      "/hmrc/what-happens-if-hmrc-rejects-your-time-to-pay-arrangement/",
+      "staging is newer (2026-08-09T08:30:25 vs live 2026-07-15T14:50:47)"
+    ],
+    [
+      "/hmrc/what-happens-if-you-ignore-hmrc-letters/",
+      "staging is newer (2026-08-09T08:30:22 vs live 2026-07-15T14:50:19)"
+    ],
+    [
+      "/hmrc/can-hmrc-shut-down-my-business/",
+      "staging is newer (2026-08-09T08:30:18 vs live 2026-07-15T14:47:44)"
+    ],
+    [
+      "/hmrc/what-happens-if-hmrc-sends-bailiffs-to-a-business/",
+      "staging is newer (2026-08-09T08:30:14 vs live 2026-07-15T14:49:58)"
+    ],
+    [
+      "/hmrc/what-happens-if-hmrc-freezes-your-business-bank-account/",
+      "staging is newer (2026-08-09T08:30:10 vs live 2026-07-15T14:50:40)"
+    ],
+    [
+      "/liquidation/can-directors-pay-themselves-before-liquidation/",
+      "staging is newer (2026-08-07T12:21:34 vs live 2026-07-15T14:47:22)"
+    ],
+    [
+      "/liquidation/what-happens-if-a-director-transfers-assets-before-insolvency/",
+      "staging is newer (2026-08-09T08:30:06 vs live 2026-07-15T14:49:16)"
+    ],
+    [
+      "/liquidation/can-a-director-be-sued-personally-by-creditors/",
+      "staging is newer (2026-08-09T08:30:03 vs live 2026-07-15T14:47:31)"
+    ],
+    [
+      "/liquidation/what-happens-if-a-director-hides-company-assets/",
+      "staging is newer (2026-08-09T08:29:59 vs live 2026-07-15T14:49:17)"
+    ],
+    [
+      "/liquidation/can-directors-go-to-prison-for-company-debt/",
+      "staging is newer (2026-08-09T08:29:55 vs live 2026-07-15T14:51:04)"
+    ],
+    [
+      "/liquidation/what-happens-if-i-stop-paying-company-debts/",
+      "staging is newer (2026-08-09T08:29:51 vs live 2026-07-15T14:50:10)"
+    ],
+    [
+      "/hmrc/pay-hmrc-or-suppliers-first/",
+      "staging is newer (2026-08-09T08:29:47 vs live 2026-07-15T14:49:11)"
+    ],
+    [
+      "/liquidation/seek-insolvency-advice-before-missing-payments/",
+      "staging is newer (2026-08-09T08:29:39 vs live 2026-07-15T14:50:15)"
+    ],
+    [
+      "/liquidation/when-should-a-director-stop-trading/",
+      "staging is newer (2026-08-09T08:29:35 vs live 2026-07-15T14:49:01)"
+    ],
+    [
+      "/liquidation/should-i-close-my-company-or-try-to-save-it/",
+      "staging is newer (2026-08-09T16:35:34 vs live 2026-07-15T14:46:45)"
+    ],
+    [
+      "/liquidation/insolvency-myths-debunked/",
+      "staging is newer (2026-08-09T08:29:27 vs live 2026-07-15T14:50:07)"
+    ],
+    [
+      "/liquidation/insolvency-vs-bankruptcy/",
+      "staging is newer (2026-08-09T08:29:24 vs live 2026-07-15T14:49:19)"
+    ],
+    [
+      "/liquidation/list-of-liquidation-documents/",
+      "staging is newer (2026-08-09T08:29:20 vs live 2026-07-15T14:47:43)"
+    ],
+    [
+      "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+      "staging is newer (2026-08-07T12:22:31 vs live 2026-07-15T14:48:32)"
+    ],
+    [
+      "/liquidation/insolvency-checklist/",
+      "staging is newer (2026-08-09T08:29:16 vs live 2026-07-15T14:45:49)"
+    ],
+    [
+      "/liquidation/uk-insolvency-flowchart/",
+      "staging is newer (2026-08-09T08:29:13 vs live 2026-07-15T14:48:55)"
+    ],
+    [
+      "/liquidation/uk-insolvency-glossary/",
+      "staging is newer (2026-08-09T08:29:09 vs live 2026-07-15T14:49:41)"
+    ],
+    [
+      "/liquidation/director-conduct-review/",
+      "staging is newer (2026-08-07T12:22:46 vs live 2026-07-15T14:51:08)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/use-a-cva-to-close-a-company/",
+      "staging is newer (2026-08-09T08:29:05 vs live 2026-07-15T14:49:14)"
+    ],
+    [
+      "/liquidation/business-bank-account-in-liquidation/",
+      "staging is newer (2026-08-09T08:29:02 vs live 2026-07-15T14:47:56)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/director-guarantees-in-a-cva/",
+      "staging is newer (2026-08-09T08:28:58 vs live 2026-07-15T14:48:58)"
+    ],
+    [
+      "/liquidation/ccj-when-going-insolvent/",
+      "staging is newer (2026-08-09T08:28:55 vs live 2026-07-15T14:50:13)"
+    ],
+    [
+      "/liquidation/can-i-choose-my-liquidator/",
+      "staging is newer (2026-08-09T08:28:51 vs live 2026-07-15T14:49:48)"
+    ],
+    [
+      "/liquidation/hmrc-as-a-creditor-in-liquidation/",
+      "staging is newer (2026-08-09T08:28:48 vs live 2026-07-15T14:47:01)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/what-happens-if-a-cva-fails-mid-term/",
+      "staging is newer (2026-08-09T08:28:44 vs live 2026-07-15T14:50:32)"
+    ],
+    [
       "/liquidation/winding-up-petition-vs-compulsory-liquidation/",
-      "staging has 170 more words - staging work, leave for review"
+      "staging is newer (2026-08-09T08:28:40 vs live 2026-08-07T13:05:38)"
+    ],
+    [
+      "/company-administration/light-touch-administration/",
+      "staging is newer (2026-08-09T08:28:36 vs live 2026-07-15T14:49:29)"
+    ],
+    [
+      "/liquidation/cva-vs-strike-off-vs-liquidation/",
+      "staging is newer (2026-08-09T08:28:33 vs live 2026-07-15T14:46:18)"
+    ],
+    [
+      "/company-administration/company-voluntary-arrangement-vs-administration-which-to-choose/",
+      "staging is newer (2026-08-09T08:28:29 vs live 2026-06-17T08:45:18)"
+    ],
+    [
+      "/liquidation/liquidating-a-group-company-or-holding-company-in-the-uk/",
+      "staging is newer (2026-08-09T08:28:26 vs live 2026-07-15T14:47:50)"
+    ],
+    [
+      "/liquidation/can-you-liquidate-to-avoid-paying-suppliers/",
+      "staging is newer (2026-08-09T08:28:22 vs live 2026-07-15T14:49:33)"
+    ],
+    [
+      "/liquidation/can-i-liquidate-a-dormant-company/",
+      "staging is newer (2026-08-09T08:28:19 vs live 2026-07-15T14:48:35)"
+    ],
+    [
+      "/liquidation/liquidating-a-company-with-no-assets-or-bank-account-uk/",
+      "staging is newer (2026-08-09T08:31:22 vs live 2026-07-15T14:46:59)"
+    ],
+    [
+      "/liquidation/can-i-liquidate-my-company-with-a-bounce-back-loan/",
+      "staging is newer (2026-08-09T08:28:11 vs live 2026-07-15T14:50:55)"
+    ],
+    [
+      "/liquidation/can-i-start-a-new-company-after-liquidating-my-old-one/",
+      "staging is newer (2026-08-09T08:28:07 vs live 2026-07-15T14:51:06)"
+    ],
+    [
+      "/liquidation/whats-the-risk-of-being-disqualified-as-a-director/",
+      "staging is newer (2026-08-09T08:28:00 vs live 2026-07-15T14:50:52)"
+    ],
+    [
+      "/liquidation/voluntary-liquidation/",
+      "staging is newer (2026-08-09T08:28:04 vs live 2026-06-11T05:04:55)"
+    ],
+    [
+      "/liquidation/paying-staff-but-not-hmrc-before-liquidation/",
+      "staging is newer (2026-08-09T08:27:56 vs live 2026-07-15T14:48:13)"
+    ],
+    [
+      "/liquidation/redundancy-payments-for-directors-in-an-mvl/",
+      "staging is newer (2026-08-09T08:27:53 vs live 2026-07-15T14:47:04)"
+    ],
+    [
+      "/liquidation/what-happens-if-a-director-resigns-before-liquidation/",
+      "staging is newer (2026-08-09T08:27:49 vs live 2026-07-15T14:51:03)"
+    ],
+    [
+      "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+      "staging is newer (2026-08-07T12:24:08 vs live 2026-07-15T14:47:15)"
+    ],
+    [
+      "/liquidation/liquidating-a-charity-or-non-profit/",
+      "staging is newer (2026-08-09T08:27:45 vs live 2026-07-15T14:51:09)"
+    ],
+    [
+      "/liquidation/liquidating-a-limited-liability-partnership/",
+      "staging is newer (2026-08-09T16:39:22 vs live 2026-07-15T14:45:59)"
+    ],
+    [
+      "/liquidation/company-restoration-after-liquidation/",
+      "staging is newer (2026-08-07T12:24:20 vs live 2026-07-15T14:46:24)"
+    ],
+    [
+      "/liquidation/liquidation-deadlines-and-time-limits/",
+      "staging is newer (2026-08-09T08:27:38 vs live 2026-07-15T14:47:53)"
+    ],
+    [
+      "/liquidation/liquidators-powers-and-duties/",
+      "staging is newer (2026-08-09T08:27:35 vs live 2026-07-15T14:48:59)"
+    ],
+    [
+      "/liquidation/how-to-challenge-a-liquidators-decisions-or-fees/",
+      "staging is newer (2026-08-09T08:27:31 vs live 2026-07-15T14:50:05)"
+    ],
+    [
+      "/liquidation/creditor-meetings-in-liquidation/",
+      "staging is newer (2026-08-09T08:27:27 vs live 2026-07-15T14:46:54)"
+    ],
+    [
+      "/liquidation/how-to-prove-your-debt-in-company-liquidation/",
+      "staging is newer (2026-08-09T08:27:24 vs live 2026-07-15T14:49:55)"
+    ],
+    [
+      "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+      "staging is newer (2026-08-07T12:24:47 vs live 2026-07-15T14:46:27)"
+    ],
+    [
+      "/liquidation/intellectual-property-and-trading-assets-in-liquidation/",
+      "staging is newer (2026-08-09T08:27:20 vs live 2026-07-15T14:46:03)"
+    ],
+    [
+      "/liquidation/company-property-and-real-estate-in-liquidation/",
+      "staging is newer (2026-08-07T12:24:58 vs live 2026-07-15T14:45:25)"
+    ],
+    [
+      "/liquidation/leases-and-contracts-in-liquidation/",
+      "staging is newer (2026-08-09T08:27:16 vs live 2026-07-15T14:46:08)"
+    ],
+    [
+      "/liquidation/company-pensions-and-liquidation/",
+      "staging is newer (2026-08-07T12:25:09 vs live 2026-07-15T14:47:39)"
+    ],
+    [
+      "/liquidation/directors-conduct-report-2/",
+      "staging is newer (2026-08-09T08:27:13 vs live 2026-06-13T14:42:22)"
+    ],
+    [
+      "/liquidation/how-to-choose-the-right-insolvency-procedure/",
+      "staging is newer (2026-08-09T08:27:09 vs live 2026-07-15T14:49:08)"
+    ],
+    [
+      "/liquidation/voluntary-vs-compulsory-liquidation/",
+      "staging is newer (2026-08-09T16:33:35 vs live 2026-07-15T14:47:10)"
+    ],
+    [
+      "/liquidation/liquidation-vs-dissolution-strike-off/",
+      "staging is newer (2026-08-09T16:21:54 vs live 2026-07-16T09:16:04)"
+    ],
+    [
+      "/liquidation/how-to-prepare-for-company-liquidation/",
+      "staging is newer (2026-08-09T08:26:54 vs live 2026-07-15T14:50:59)"
+    ],
+    [
+      "/liquidation/cant-afford-to-liquidate/",
+      "staging is newer (2026-08-09T08:27:05 vs live 2026-07-15T14:46:11)"
+    ],
+    [
+      "/liquidation/which-creditors-get-paid-first/",
+      "staging is newer (2026-08-07T12:25:34 vs live 2026-07-16T09:15:38)"
+    ],
+    [
+      "/insolvency-news-commentary/",
+      "staging is newer (2026-08-09T08:26:50 vs live 2026-07-16T09:30:46)"
+    ],
+    [
+      "/debt-charities-uk/",
+      "staging is newer (2026-08-07T12:25:42 vs live 2026-07-15T14:46:57)"
+    ],
+    [
+      "/mental-health-debt-stress-support/",
+      "staging is newer (2026-08-09T08:26:46 vs live 2026-07-15T14:50:54)"
+    ],
+    [
+      "/sector-specific-insolvency/",
+      "staging is newer (2026-08-07T12:25:52 vs live 2026-07-15T14:49:24)"
+    ],
+    [
+      "/uk-insolvency-statistics/",
+      "staging is newer (2026-08-07T12:25:57 vs live 2026-07-23T16:44:00)"
     ],
     [
       "/director-protection-hub/",
-      "staging has 90 more words - staging work, leave for review"
+      "staging is newer (2026-08-09T08:26:43 vs live 2026-08-07T13:07:29)"
     ],
     [
-      "/insolvency/business-recovery-services/",
-      "staging has 319 more words - staging work, leave for review"
+      "/company-rescue-recovery-hub/",
+      "staging is newer (2026-08-09T08:26:39 vs live 2026-07-15T14:38:14)"
+    ],
+    [
+      "/hmrc/hmrc-debt-enforcement-hub/",
+      "staging is newer (2026-08-09T08:26:28 vs live 2026-07-15T14:49:22)"
+    ],
+    [
+      "/liquidation/company-strike-off-and-dissolution/",
+      "staging is newer (2026-08-07T12:26:22 vs live 2026-07-15T14:47:38)"
+    ],
+    [
+      "/charity-non-profit-insolvency/",
+      "staging is newer (2026-08-09T08:26:35 vs live 2026-07-15T14:51:13)"
+    ],
+    [
+      "/hospitality-restaurant-insolvency/",
+      "staging is newer (2026-08-07T12:26:35 vs live 2026-07-15T14:50:03)"
+    ],
+    [
+      "/manufacturing-insolvency/",
+      "staging is newer (2026-08-09T08:26:32 vs live 2026-07-15T14:49:50)"
+    ],
+    [
+      "/care-home-insolvency/",
+      "staging is newer (2026-08-07T12:26:50 vs live 2026-07-15T14:48:29)"
+    ],
+    [
+      "/energy-provider-insolvency/",
+      "staging is newer (2026-08-09T08:26:24 vs live 2026-07-15T14:49:39)"
+    ],
+    [
+      "/professional-services-insolvency/",
+      "staging is newer (2026-08-09T08:26:21 vs live 2026-07-15T14:51:11)"
+    ],
+    [
+      "/hmrc/hmrc-enforcement-action/",
+      "staging is newer (2026-08-09T08:26:17 vs live 2026-07-15T14:50:17)"
+    ],
+    [
+      "/transport-haulage-insolvency/",
+      "staging is newer (2026-08-09T08:26:13 vs live 2026-07-15T14:49:09)"
+    ],
+    [
+      "/construction-insolvency/",
+      "staging is newer (2026-08-07T12:27:20 vs live 2026-07-15T14:49:03)"
+    ],
+    [
+      "/debt-creditor-pressure-hub/",
+      "staging is newer (2026-08-09T08:26:09 vs live 2026-07-15T14:50:36)"
+    ],
+    [
+      "/liquidation/bailiffs-high-court-enforcement-officers/",
+      "staging is newer (2026-08-07T12:27:30 vs live 2026-07-15T14:45:32)"
+    ],
+    [
+      "/hmrc/hmrc-penalties-investigations/",
+      "staging is newer (2026-08-09T08:26:05 vs live 2026-07-15T14:46:22)"
+    ],
+    [
+      "/liquidation/am-i-solvent/",
+      "staging is newer (2026-08-07T12:27:38 vs live 2026-07-15T14:47:36)"
+    ],
+    [
+      "/advice/insolvency-advice-for-directors/",
+      "staging is newer (2026-08-07T12:27:44 vs live 2026-07-15T14:48:05)"
+    ],
+    [
+      "/advice/overdrawn-directors-loan-accounts/",
+      "staging is newer (2026-08-08T18:12:55 vs live 2026-07-07T13:53:39)"
+    ],
+    [
+      "/insolvency/secured-vs-unsecured-creditors/",
+      "staging is newer (2026-08-07T12:27:51 vs live 2026-07-15T11:39:20)"
+    ],
+    [
+      "/company-administration/notice-of-intention-to-appoint-administrators/",
+      "staging is newer (2026-08-09T08:25:50 vs live 2026-06-13T14:42:39)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/when-a-cva-fails/",
+      "staging is newer (2026-08-09T08:25:46 vs live 2026-07-15T14:49:53)"
+    ],
+    [
+      "/company-cash-flow-problems/when-employers-cant-afford-redundancy-payments/",
+      "staging is newer (2026-08-07T12:28:00 vs live 2026-07-15T14:46:26)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-pay-a-company-mortgage/",
+      "staging is newer (2026-08-09T08:25:42 vs live 2026-07-15T14:45:35)"
+    ],
+    [
+      "/company-cash-flow-problems/challenge-a-statutory-demand/",
+      "staging is newer (2026-08-07T12:28:08 vs live 2026-07-15T14:45:45)"
+    ],
+    [
+      "/liquidation/alternatives-to-company-liquidation/",
+      "staging is newer (2026-08-09T08:25:38 vs live 2026-07-15T14:38:13)"
+    ],
+    [
+      "/advice/directors-duties-to-creditors/",
+      "staging is newer (2026-08-09T08:25:35 vs live 2026-07-15T14:45:39)"
+    ],
+    [
+      "/insolvency/preferential-payments-during-insolvency/",
+      "staging is newer (2026-08-09T08:25:31 vs live 2026-07-15T14:49:27)"
+    ],
+    [
+      "/company-cash-flow-problems/company-is-having-financial-difficulties/",
+      "staging is newer (2026-08-09T08:25:27 vs live 2026-07-15T14:47:21)"
+    ],
+    [
+      "/insolvency/insolvent-company-investigations/",
+      "staging is newer (2026-08-07T12:28:28 vs live 2026-07-15T14:49:12)"
+    ],
+    [
+      "/what-is-a-pre-pack-administration/advantages-and-disadvantages/",
+      "staging is newer (2026-08-09T08:25:23 vs live 2026-07-15T11:37:10)"
+    ],
+    [
+      "/advice/get-free-business-debt-advice/",
+      "staging is newer (2026-08-09T08:25:16 vs live 2026-07-16T09:32:17)"
+    ],
+    [
+      "/advice/what-is-a-directors-responsibility-for-accountancy-errors/",
+      "staging is newer (2026-08-09T08:25:13 vs live 2026-07-15T14:49:56)"
+    ],
+    [
+      "/advice/are-directors-personally-liable-for-company-debts/",
+      "staging is newer (2026-08-08T18:12:51 vs live 2026-07-15T14:47:02)"
+    ],
+    [
+      "/advice/what-are-a-company-directors-duties-to-avoid-and-disclose-conflicts-of-interest/",
+      "staging is newer (2026-08-09T08:25:09 vs live 2026-07-15T14:48:08)"
+    ],
+    [
+      "/advice/preventing-company-director-disputes/",
+      "staging is newer (2026-08-09T08:25:05 vs live 2026-07-15T14:49:20)"
+    ],
+    [
+      "/advice/how-to-legally-take-money-out-of-a-limited-company/",
+      "staging is newer (2026-08-09T08:25:02 vs live 2026-07-15T14:47:28)"
+    ],
+    [
+      "/advice/funding-options-for-smes-in-the-uk/",
+      "staging is newer (2026-08-09T08:24:58 vs live 2026-07-15T14:48:30)"
+    ],
+    [
+      "/advice/directors-personal-guarantees/",
+      "staging is newer (2026-08-09T08:24:55 vs live 2026-07-15T14:38:15)"
+    ],
+    [
+      "/insolvency/creditor-negotiations/",
+      "staging is newer (2026-08-09T08:24:51 vs live 2026-07-15T14:48:02)"
+    ],
+    [
+      "/insolvency/what-are-the-warning-signs-of-an-insolvent-company/",
+      "staging is newer (2026-08-09T08:24:47 vs live 2026-07-15T14:50:34)"
+    ],
+    [
+      "/insolvency/can-you-sell-your-insolvent-company/",
+      "staging is newer (2026-08-09T08:24:44 vs live 2026-07-15T14:50:12)"
+    ],
+    [
+      "/insolvency/how-to-save-a-struggling-business/",
+      "staging is newer (2026-08-09T08:24:40 vs live 2026-07-15T14:48:33)"
+    ],
+    [
+      "/insolvency/rescue-your-business-from-insolvency/",
+      "staging is newer (2026-08-09T08:24:37 vs live 2026-07-15T14:50:08)"
+    ],
+    [
+      "/insolvency/what-to-do-about-customer-insolvency/",
+      "staging is newer (2026-08-07T12:29:32 vs live 2026-07-15T14:45:40)"
+    ],
+    [
+      "/insolvency/how-to-reduce-insolvency-risk/",
+      "staging is newer (2026-08-07T12:29:36 vs live 2026-07-15T14:49:37)"
+    ],
+    [
+      "/insolvency/dealing-with-creditor-pressure/",
+      "staging is newer (2026-08-09T08:24:33 vs live 2026-07-15T14:48:15)"
+    ],
+    [
+      "/county-court-judgements/",
+      "staging is newer (2026-08-07T12:29:43 vs live 2026-07-08T12:04:40)"
+    ],
+    [
+      "/company-cash-flow-problems/what-is-a-statutory-demand-against-a-company/",
+      "staging is newer (2026-08-09T08:24:29 vs live 2026-07-15T14:48:19)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-afford-to-pay-suppliers-what-are-the-options/",
+      "staging is newer (2026-08-07T12:29:51 vs live 2026-07-15T14:48:27)"
+    ],
+    [
+      "/company-cash-flow-problems/why-debt-is-not-always-a-bad-thing-for-your-business/",
+      "staging is newer (2026-08-09T08:24:26 vs live 2026-07-15T14:50:57)"
+    ],
+    [
+      "/hmrc/accelerated-payment-notices-apn/",
+      "staging is newer (2026-08-09T08:24:21 vs live 2026-07-15T14:49:44)"
+    ],
+    [
+      "/hmrc/",
+      "staging is newer (2026-08-07T12:30:03 vs live 2026-07-16T09:15:31)"
+    ],
+    [
+      "/insolvency/transactions-at-undervalue/",
+      "staging is newer (2026-08-09T08:24:17 vs live 2026-07-15T14:49:51)"
+    ],
+    [
+      "/insolvency/antecedent-transactions/",
+      "staging is newer (2026-08-09T08:24:12 vs live 2026-07-15T14:48:47)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/pros-and-cons/",
+      "staging is newer (2026-08-09T08:24:07 vs live 2026-07-15T14:47:19)"
+    ],
+    [
+      "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+      "staging is newer (2026-08-09T08:24:01 vs live 2026-07-15T14:46:48)"
     ],
     [
       "/winding-up-petitions/dealing-with-an-hmrc-winding-up-petition/",
-      "staging has 534 more words - staging work, leave for review"
+      "staging is newer (2026-08-09T08:23:56 vs live 2026-08-07T13:09:58)"
+    ],
+    [
+      "/winding-up-petitions/what-is-a-winding-up-order/",
+      "staging is newer (2026-08-07T12:30:24 vs live 2026-07-15T14:51:15)"
+    ],
+    [
+      "/insolvency/what-is-wrongful-trading/",
+      "staging is newer (2026-08-09T08:23:48 vs live 2026-07-15T14:48:48)"
     ],
     [
       "/closing-a-limited-company/",
-      "staging has 3513 more words - staging work, leave for review"
+      "staging is newer (2026-08-08T18:12:48 vs live 2026-08-07T13:10:09)"
+    ],
+    [
+      "/advice/directors-disqualification/",
+      "staging is newer (2026-08-09T08:23:44 vs live 2026-07-15T14:49:06)"
+    ],
+    [
+      "/company-administration/",
+      "staging is newer (2026-08-09T08:23:40 vs live 2026-07-15T14:45:19)"
+    ],
+    [
+      "/liquidation/what-happens-after-company-liquidation/",
+      "staging is newer (2026-08-09T08:23:35 vs live 2026-07-15T14:50:49)"
+    ],
+    [
+      "/stressed-directors-guide/",
+      "staging is newer (2026-08-07T12:30:47 vs live 2026-06-03T14:09:02)"
+    ],
+    [
+      "/advice/writing-off-a-directors-loan-account/",
+      "staging is newer (2026-08-09T08:23:31 vs live 2026-07-15T14:45:28)"
+    ],
+    [
+      "/",
+      "staging is newer (2026-08-07T12:30:58 vs live 2026-07-24T08:19:10)"
+    ],
+    [
+      "/quick-quote/",
+      "staging is newer (2026-08-07T12:31:02 vs live 2026-06-10T19:36:24)"
+    ],
+    [
+      "/express-liquidation/",
+      "staging is newer (2026-08-07T12:31:08 vs live 2026-05-23T18:51:18)"
+    ],
+    [
+      "/bounce-back-loan-support-hub/can-i-lose-my-house-with-a-bounce-back-loan/",
+      "staging is newer (2026-08-09T08:23:27 vs live 2026-07-15T14:48:52)"
+    ],
+    [
+      "/sample-letters/write-off-my-debt/",
+      "staging is newer (2026-08-07T12:31:18 vs live 2026-07-15T14:46:16)"
+    ],
+    [
+      "/sample-letters/cease-trading-template/",
+      "staging is newer (2026-08-09T08:23:22 vs live 2026-07-15T14:46:14)"
+    ],
+    [
+      "/sample-letters/tell-debt-collector-to-stop-contacting-you/",
+      "staging is newer (2026-08-07T12:31:28 vs live 2026-07-15T14:46:01)"
+    ],
+    [
+      "/sample-letters/i-need-more-information-about-this-debt/",
+      "staging is newer (2026-08-09T08:23:17 vs live 2026-06-13T14:40:18)"
+    ],
+    [
+      "/sample-letters/request-a-reduced-monthly-payment/",
+      "staging is newer (2026-08-07T12:31:35 vs live 2026-07-15T14:48:50)"
+    ],
+    [
+      "/sample-letters/i-cannot-afford-to-repay-my-debt/",
+      "staging is newer (2026-08-09T08:23:12 vs live 2026-07-15T14:46:09)"
+    ],
+    [
+      "/sample-letters/hold-action-on-my-account/",
+      "staging is newer (2026-08-09T08:23:03 vs live 2026-07-15T14:50:42)"
+    ],
+    [
+      "/sample-letters/i-have-no-knowledge-of-this-debt/",
+      "staging is newer (2026-08-09T08:23:08 vs live 2026-07-15T14:48:38)"
+    ],
+    [
+      "/insolvency/find-a-liquidator-near-me/",
+      "staging is newer (2026-08-09T08:22:59 vs live 2026-07-15T14:45:53)"
+    ],
+    [
+      "/advice/what-is-the-companies-act-2006/",
+      "staging is newer (2026-08-09T08:22:55 vs live 2026-07-15T14:45:42)"
+    ],
+    [
+      "/bounce-back-loan-support-hub/cant-pay-coronavirus-business-interruption-loan-cbils/",
+      "staging is newer (2026-08-09T08:22:51 vs live 2026-07-15T14:49:04)"
+    ],
+    [
+      "/advice/personal-liability-for-cbils-loans/",
+      "staging is newer (2026-08-09T08:22:47 vs live 2026-07-15T14:49:34)"
+    ],
+    [
+      "/insolvency/creditors-meeting/",
+      "staging is newer (2026-08-07T12:32:19 vs live 2026-07-15T14:47:11)"
+    ],
+    [
+      "/complaints-procedure/",
+      "staging is newer (2026-08-07T12:32:29 vs live 2026-04-16T13:26:41)"
+    ],
+    [
+      "/insolvency/creditors-guides-to-insolvency-practitioners-fees/",
+      "staging is newer (2026-08-07T12:32:32 vs live 2026-07-16T09:16:13)"
+    ],
+    [
+      "/insolvency/what-is-the-insolvency-service/",
+      "staging is newer (2026-08-07T12:32:37 vs live 2026-07-15T14:48:42)"
     ],
     [
       "/liquidation/creditors-voluntary-liquidation/",
-      "staging has 84 more words - staging work, leave for review"
+      "staging is newer (2026-08-09T08:38:52 vs live 2026-08-07T13:11:33)"
     ],
     [
-      "/liquidation/what-happens-to-directors-in-liquidation/",
-      "staging has 2233 more words - staging work, leave for review"
+      "/insolvency/what-is-a-creditor/",
+      "staging is newer (2026-08-09T16:38:02 vs live 2026-07-15T14:50:21)"
     ],
     [
-      "/business-debt-advice/",
-      "id 26218 is a different page on each site"
+      "/bounce-back-loan-support-hub/bounce-back-loan-fraud/",
+      "staging is newer (2026-08-09T08:22:33 vs live 2026-07-15T14:46:38)"
     ],
     [
-      "/winding-up-petitions/",
-      "staging has 2505 more words - staging work, leave for review"
+      "/content-usage-guidelines/",
+      "staging is newer (2026-08-07T12:32:51 vs live 2026-05-22T10:15:28)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-pay-staff-wages/",
+      "staging is newer (2026-08-09T08:22:28 vs live 2026-07-15T14:46:06)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-afford-to-repay-business-loan/",
+      "staging is newer (2026-08-09T08:22:24 vs live 2026-07-15T14:48:10)"
+    ],
+    [
+      "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+      "staging is newer (2026-08-07T12:33:07 vs live 2026-07-15T14:46:30)"
+    ],
+    [
+      "/bounce-back-loan-support-hub/what-happens-if-i-default/",
+      "staging is newer (2026-08-09T08:22:19 vs live 2026-07-15T11:37:02)"
+    ],
+    [
+      "/bounce-back-loan-support-hub/directors-liability-for-bounce-back-loans/",
+      "staging is newer (2026-08-09T08:22:15 vs live 2026-07-15T14:48:37)"
+    ],
+    [
+      "/advice/unenforceable-personal-guarantee/",
+      "staging is newer (2026-08-09T08:22:10 vs live 2026-06-13T14:40:24)"
+    ],
+    [
+      "/insolvency/what-happens-if-a-company-cannot-pay-its-debts/",
+      "staging is newer (2026-08-09T08:22:07 vs live 2026-07-15T14:46:51)"
+    ],
+    [
+      "/advice/can-personal-assets-of-directors-be-seized-from-a-ltd-company/",
+      "staging is newer (2026-08-09T08:22:03 vs live 2026-07-15T14:47:33)"
+    ],
+    [
+      "/insolvency/what-is-a-high-court-writ/",
+      "staging is newer (2026-08-07T12:33:28 vs live 2026-07-15T14:48:21)"
+    ],
+    [
+      "/advice/losing-house-if-company-goes-bust/",
+      "staging is newer (2026-08-09T08:22:00 vs live 2026-07-15T14:46:35)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-pay-a-commercial-lease-or-rent/",
+      "staging is newer (2026-08-09T08:21:56 vs live 2026-07-15T14:47:08)"
+    ],
+    [
+      "/advice/business-restructuring/",
+      "staging is newer (2026-08-09T08:21:53 vs live 2026-07-15T14:45:43)"
+    ],
+    [
+      "/insolvency/lpa-receivership/",
+      "staging is newer (2026-08-07T12:33:43 vs live 2026-07-15T14:47:34)"
+    ],
+    [
+      "/hmrc/corporation-tax-penalties/",
+      "staging is newer (2026-08-09T08:21:49 vs live 2026-07-15T14:46:37)"
+    ],
+    [
+      "/insolvency/personally-liabilty-of-company-secretary/",
+      "staging is newer (2026-08-09T08:21:46 vs live 2026-07-15T14:47:13)"
+    ],
+    [
+      "/company-cash-flow-problems/biggest-struggles-for-small-business-owners/",
+      "staging is newer (2026-08-09T08:21:42 vs live 2026-06-13T14:43:44)"
+    ],
+    [
+      "/insolvency/stop-or-avoid-insolvency/",
+      "staging is newer (2026-08-09T08:21:38 vs live 2026-07-15T14:50:22)"
+    ],
+    [
+      "/company-cash-flow-problems/cant-pay-business-rates/",
+      "staging is newer (2026-08-07T12:34:00 vs live 2026-07-15T14:46:40)"
+    ],
+    [
+      "/advice/misfeasance/",
+      "staging is newer (2026-08-09T08:21:35 vs live 2026-07-15T14:47:16)"
+    ],
+    [
+      "/advice/debt-management-guide/",
+      "staging is newer (2026-08-09T08:21:32 vs live 2026-07-15T14:45:37)"
+    ],
+    [
+      "/company-cash-flow-problems/",
+      "staging is newer (2026-08-09T08:21:25 vs live 2026-06-13T14:45:00)"
+    ],
+    [
+      "/insolvency/validation-order/",
+      "staging is newer (2026-08-09T08:21:21 vs live 2026-07-15T14:48:11)"
+    ],
+    [
+      "/advice/personal-guarantee-insurance/",
+      "staging is newer (2026-08-09T08:21:17 vs live 2026-06-22T16:36:45)"
+    ],
+    [
+      "/hmrc/time-to-pay-hmrc/",
+      "staging is newer (2026-08-09T08:30:52 vs live 2026-07-07T13:53:48)"
+    ],
+    [
+      "/advice/what-are-fixed-and-floating-charges/",
+      "staging is newer (2026-08-07T12:34:39 vs live 2026-07-15T14:47:41)"
+    ],
+    [
+      "/insolvency/what-is-a-freezing-order-or-injunction/",
+      "staging is newer (2026-08-07T12:34:44 vs live 2026-07-15T14:45:56)"
+    ],
+    [
+      "/advice/what-are-the-duties-and-responsibilities-of-a-company-director/",
+      "staging is newer (2026-08-09T08:21:14 vs live 2026-07-15T14:46:13)"
+    ],
+    [
+      "/insolvency/can-we-trade-out-of-insolvency/",
+      "staging is newer (2026-08-09T08:21:10 vs live 2026-07-15T14:49:26)"
+    ],
+    [
+      "/insolvency/",
+      "staging is newer (2026-08-07T12:34:59 vs live 2026-07-07T13:53:52)"
+    ],
+    [
+      "/hmrc/cant-pay-vat/",
+      "staging is newer (2026-08-07T12:35:04 vs live 2026-07-16T09:16:00)"
+    ],
+    [
+      "/liquidation/how-much-does-liquidation-cost/",
+      "staging is newer (2026-08-07T12:35:09 vs live 2026-07-15T12:37:00)"
+    ],
+    [
+      "/privacy-policy/",
+      "staging is newer (2026-08-07T12:35:16 vs live 2026-06-10T19:35:41)"
+    ],
+    [
+      "/advice/the-risks-of-signing-a-personal-guarantee/",
+      "staging is newer (2026-08-09T08:21:06 vs live 2026-07-15T14:49:43)"
+    ],
+    [
+      "/insolvency/limited-company-bankruptcy/",
+      "staging is newer (2026-08-09T16:36:36 vs live 2026-07-14T09:33:18)"
+    ],
+    [
+      "/insolvency/insolvent-company-owes-me-money/",
+      "staging is newer (2026-08-07T12:35:27 vs live 2026-07-16T09:16:09)"
+    ],
+    [
+      "/advice/what-is-limited-liability/",
+      "staging is newer (2026-08-07T12:35:34 vs live 2026-07-15T14:46:56)"
     ],
     [
       "/liquidation/",
-      "staging has 330 more words - staging work, leave for review"
+      "staging is newer (2026-08-09T16:16:30 vs live 2026-08-07T13:13:55)"
+    ],
+    [
+      "/advice/can-director-criminal-record/",
+      "staging is newer (2026-08-09T08:20:58 vs live 2026-06-13T14:44:07)"
+    ],
+    [
+      "/company-rescue-solutions/partnership-voluntary-arrangements/",
+      "staging is newer (2026-08-09T08:20:54 vs live 2026-07-15T14:51:01)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/vs-liquidation/",
+      "staging is newer (2026-08-09T08:20:51 vs live 2026-07-15T14:49:36)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/making-employees-redundant-cva/",
+      "staging is newer (2026-08-09T08:20:47 vs live 2026-07-15T14:45:48)"
+    ],
+    [
+      "/insolvency/retail-industry-insolvency-trends/",
+      "staging is newer (2026-08-07T12:35:55 vs live 2026-07-15T14:50:24)"
+    ],
+    [
+      "/liquidation/timeline/",
+      "staging is newer (2026-08-09T08:18:27 vs live 2026-07-15T14:50:27)"
+    ],
+    [
+      "/insolvency/what-is-an-individual-voluntary-arrangement/",
+      "staging is newer (2026-08-09T08:20:44 vs live 2026-07-16T09:16:18)"
+    ],
+    [
+      "/hmrc/hmrc-offices-contact-guide/",
+      "staging is newer (2026-08-09T08:20:40 vs live 2026-07-15T14:48:06)"
+    ],
+    [
+      "/hmrc/hmrc-follower-notice/",
+      "staging is newer (2026-08-09T08:20:37 vs live 2026-07-15T14:50:45)"
+    ],
+    [
+      "/company-administration/vs-administrative-receivership/",
+      "staging is newer (2026-08-09T08:20:33 vs live 2026-07-15T14:45:58)"
+    ],
+    [
+      "/insolvency/check-if-a-company-is-insolvent/",
+      "staging is newer (2026-08-09T08:20:30 vs live 2026-07-15T14:47:46)"
+    ],
+    [
+      "/company-administration/vs-cva/",
+      "staging is newer (2026-08-09T08:20:26 vs live 2026-07-15T14:48:22)"
+    ],
+    [
+      "/hmrc/problems-paying-corporation-tax-hmrc/",
+      "staging is newer (2026-08-09T08:30:48 vs live 2026-07-23T14:05:00)"
+    ],
+    [
+      "/liquidation/members-voluntary-liquidation/",
+      "staging is newer (2026-08-09T08:25:57 vs live 2026-07-16T09:30:34)"
+    ],
+    [
+      "/liquidation/what-happens-to-employees/",
+      "staging is newer (2026-08-08T18:12:40 vs live 2026-07-15T14:45:21)"
+    ],
+    [
+      "/director-redundancy/",
+      "staging is newer (2026-08-07T12:36:42 vs live 2026-07-15T14:46:49)"
+    ],
+    [
+      "/hmrc/vat-penalties/",
+      "staging is newer (2026-08-07T12:36:46 vs live 2026-07-15T14:48:45)"
+    ],
+    [
+      "/hmrc/tax-penalties/",
+      "staging is newer (2026-08-07T12:36:51 vs live 2026-07-15T14:47:55)"
+    ],
+    [
+      "/cookie-policy-company-debt/",
+      "staging is newer (2026-08-07T12:36:54 vs live 2026-04-16T13:27:37)"
+    ],
+    [
+      "/advice/hmrcs-ir35-investigations-different/",
+      "staging is newer (2026-08-09T08:20:23 vs live 2026-06-13T14:45:36)"
+    ],
+    [
+      "/hmrc/hmrc-criminal-investigations/",
+      "staging is newer (2026-08-09T08:20:19 vs live 2026-07-15T14:50:43)"
+    ],
+    [
+      "/hmrc/hmrc-fraud-investigations/",
+      "staging is newer (2026-08-07T12:37:05 vs live 2026-07-15T14:46:42)"
+    ],
+    [
+      "/advice/frozen-bank-account/",
+      "staging is newer (2026-08-09T08:20:02 vs live 2026-07-15T14:47:06)"
+    ],
+    [
+      "/insolvency/insolvency-test/",
+      "staging is newer (2026-08-09T08:20:16 vs live 2026-07-15T14:46:32)"
+    ],
+    [
+      "/insolvency/statement-of-affairs/",
+      "staging is newer (2026-08-09T08:20:12 vs live 2026-07-15T14:46:34)"
+    ],
+    [
+      "/about-us/",
+      "staging is newer (2026-08-07T12:37:26 vs live 2026-07-31T13:13:50)"
+    ],
+    [
+      "/hmrc/understanding-hmrc-debt-collection/",
+      "staging is newer (2026-08-09T08:20:09 vs live 2026-07-15T14:48:03)"
+    ],
+    [
+      "/hmrc/what-can-hmrc-bailiffs-take/",
+      "staging is newer (2026-08-09T08:20:05 vs live 2026-07-15T14:47:51)"
+    ],
+    [
+      "/insolvency/what-is-an-insolvency-practitioner/",
+      "staging is newer (2026-08-07T12:37:40 vs live 2026-07-15T14:46:29)"
+    ],
+    [
+      "/hmrc/notice-of-enforcement/",
+      "staging is newer (2026-08-09T08:19:58 vs live 2026-07-15T14:50:51)"
+    ],
+    [
+      "/hmrc/joint-and-several-liability-for-unpaid-vat/",
+      "staging is newer (2026-08-09T08:19:54 vs live 2026-07-15T14:46:19)"
+    ],
+    [
+      "/hmrc/hmrc-tax-investigations/",
+      "staging is newer (2026-08-09T08:19:49 vs live 2026-06-13T14:40:40)"
+    ],
+    [
+      "/hmrc/security-bonds/",
+      "staging is newer (2026-08-09T08:19:45 vs live 2026-07-16T09:18:53)"
+    ],
+    [
+      "/advice/what-are-phoenix-companies/",
+      "staging is newer (2026-08-09T08:19:42 vs live 2026-07-15T14:45:55)"
+    ],
+    [
+      "/hmrc/hmrc-compliance-checks/",
+      "staging is newer (2026-08-09T08:19:38 vs live 2026-07-15T14:47:26)"
+    ],
+    [
+      "/hmrc/distraint-order-notice/",
+      "staging is newer (2026-08-09T08:19:34 vs live 2026-07-15T14:46:46)"
+    ],
+    [
+      "/hmrc/security-bond-notices/",
+      "staging is newer (2026-08-09T08:19:31 vs live 2026-07-15T14:50:02)"
+    ],
+    [
+      "/hmrc/personal-liability-notices/",
+      "staging is newer (2026-08-09T08:19:27 vs live 2026-07-16T09:19:33)"
+    ],
+    [
+      "/receivership-mean-business/",
+      "staging is newer (2026-08-07T12:38:23 vs live 2026-07-15T14:48:24)"
+    ],
+    [
+      "/company-rescue-solutions/pre-packs/",
+      "staging is newer (2026-08-09T08:30:45 vs live 2026-07-15T14:49:59)"
+    ],
+    [
+      "/hmrc/hmrc-threatening-letters/",
+      "staging is newer (2026-08-09T08:30:41 vs live 2026-06-13T14:44:42)"
+    ],
+    [
+      "/hmrc/cant-pay-paye/",
+      "staging is newer (2026-08-09T08:30:37 vs live 2026-07-08T12:04:42)"
+    ],
+    [
+      "/company-rescue-solutions/company-voluntary-arrangement/",
+      "staging is newer (2026-08-09T08:26:01 vs live 2026-07-16T09:16:23)"
+    ],
+    [
+      "/liquidation/compulsory-liquidation/",
+      "staging is newer (2026-08-07T12:38:39 vs live 2026-07-15T14:38:11)"
+    ],
+    [
+      "/company-rescue-solutions/",
+      "staging is newer (2026-08-09T08:25:54 vs live 2026-07-15T14:49:31)"
     ]
   ],
-  "identical": 78,
+  "identical": 58,
   "failed": []
 }
