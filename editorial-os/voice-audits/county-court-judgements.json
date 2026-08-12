@@ -2,45 +2,45 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "bc7a164fd77bd13b890c73f084802da2eecf2f438e7f8c2db6fd24a93971963a",
+  "prose_sha": "7b4355f3b529cf14f3a124cbdd6355078a7668c6033019b97ade8a3183b7e3cf",
   "passes_since_baseline": {
-    "count": 2,
+    "count": 3,
     "baseline_ref": "file-creation",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3705,
-      "you": 70,
-      "you_per_1k": 18.9,
-      "we": 24,
-      "we_per_1k": 6.5,
+      "words": 4133,
+      "you": 85,
+      "you_per_1k": 20.6,
+      "we": 16,
+      "we_per_1k": 3.9,
       "i": 5,
-      "i_per_1k": 1.3
+      "i_per_1k": 1.2
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 101,
-      "cv": 0.326,
+      "paras": 109,
+      "cv": 0.347,
       "uniform": false
     },
     "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 13,
-    "evaluative_bite_lines": 5,
+    "concrete_scenes": 12,
+    "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Director-liability rebuild. Opens on the reader's real question (does it follow me home) and answers in the second paragraph. Practitioner we is earned throughout: weekend assuming the worst, dig out the actual documents, former-registered-office search that turns up the unknown judgment, supplier squeeze as the real emergency. Warmth at the top and again at the decision point. Asymmetrical lines: 'It is not the judgment that engages the test. It is the failed attempt to enforce it' and 'reached by carrying on, not by getting the judgment'. Four legal overstatements corrected (CPR 13.2 vs 13.3, CCJ not proof of insolvency, s.239 desire test not the look-back window, N245 limited to the warrant and payment terms). Enforcement presented as creditor options, not a fixed sequence. No invented casework.",
-    "stranger_read_report": null
+    "notes": "Which?-register pass. Point of view added where evidence carries it: published advice on set-aside is wrong, and the page says so. Work-showing we is now organisational and true (we read CPR 13.2/13.3, s.239 and s.1139 against the primary sources, not summaries); decorative we removed. Stranger read acted on: cut the writerly 'follows them home', cut the prose contents list, and removed the forward reference to the 30-day window that implied a missed deadline before explaining it. Lender criteria downgraded to named illustrations pending direct confirmation, because neither lender page could be opened to verify. Table still needs sideways drag on a phone; scrolls in its own container, page does not.",
+    "stranger_read_report": "editorial-os/stranger-reads/county-court-judgements_2026-08-12T142809Z.md"
   },
   "stranger_read": {
-    "path": null,
-    "requested": null,
-    "prose_sha_at_request": null,
-    "numbered_answers": 0,
+    "path": "editorial-os\\stranger-reads\\county-court-judgements_2026-08-12T142809Z.md",
+    "requested": "2026-08-12T142809Z",
+    "prose_sha_at_request": "69ed3751dc5c4710b62655f69d1284dd930c62b20c168de771d16cd4ed9b6dd5",
+    "numbered_answers": 5,
     "override_reason": null
   },
   "verdict": "pass"
