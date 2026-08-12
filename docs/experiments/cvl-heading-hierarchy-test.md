@@ -53,11 +53,45 @@ Detail:
 - Two intro paragraphs (HMRC arrears / Time to Pay, and wrongful trading / timing) were
   moved verbatim out of the opening into "Is CVL the Right Route". Nothing was rewritten.
 
+## Second change, same date: Related Guides
+
+Made 12 August 2026, on Piers's instruction, after the heading work. It is a second
+variable on the same date. Both changes go live together, so the test cannot separate
+their effects. Judge them as one intervention.
+
+Removed:
+
+- Members' Voluntary Liquidation. It closes a *solvent* company. It has no business being
+  offered as further reading to a director whose company cannot pay its debts.
+
+Added:
+
+- `/data/cvl-statistics/` and `/data/compulsory-liquidation-statistics/`
+- `/data/uk-insolvency-statistics/`
+- `/liquidation/how-much-does-liquidation-cost/`, which the page had never linked to
+  anywhere despite carrying a costs section. Cost is the question directors ask first.
+
+All four were confirmed live (200, no redirect) before linking. Note that
+`/uk-insolvency-statistics/` now 301s to `/data/uk-insolvency-statistics/`, so the link
+uses the destination directly.
+
+The two Members' Voluntary Liquidation links in the *body* were kept. They sit in the
+route-selection table and the alternatives section, where the job is to send a solvent
+reader somewhere better. That is the opposite of a Related Guides entry.
+
 ## What deliberately did NOT change
 
-Title tag, H1, URL, body copy below the opening sections, FAQs, schema, internal links,
-anchor ids, and no link-building was started. If any of these change before the decision
-point, record the date and what changed, because the test is then no longer clean.
+Title tag, H1, URL, body copy below the opening sections, FAQs, schema, anchor ids, and
+no link-building was started. If any of these change before the decision point, record
+the date and what changed, because the test is then no longer clean.
+
+## Open inconsistency, not fixed
+
+The body calls the insolvency tool a "two-minute insolvency test" twice. Related Guides
+calls it the "30-Second Insolvency Test", which matches the live page title. The tool was
+rebuilt as a multi-step guided test in August 2026, so it is not obvious which duration is
+now true. Left alone rather than guessed at. Somebody should time it and make the page
+say one thing.
 
 ## Baseline: 90 days, 13 May to 10 August 2026, UK
 
