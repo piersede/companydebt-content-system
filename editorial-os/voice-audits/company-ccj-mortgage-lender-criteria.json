@@ -2,38 +2,38 @@
   "slug": "company-ccj-mortgage-lender-criteria",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "5cc886d897dc7e07a72c07799371e6d941eed1451c1f3372c0228ecb741beb4d",
+  "prose_sha": "cb31a8ba62746ed81110170f3a7af7d989b66ab17144f0c181fc6252b03c45c1",
   "passes_since_baseline": {
-    "count": 0,
+    "count": 1,
     "baseline_ref": "file-creation",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 1675,
-      "you": 43,
-      "you_per_1k": 25.7,
-      "we": 17,
-      "we_per_1k": 10.1,
+      "words": 2008,
+      "you": 56,
+      "you_per_1k": 27.9,
+      "we": 21,
+      "we_per_1k": 10.5,
       "i": 9,
-      "i_per_1k": 5.4
+      "i_per_1k": 4.5
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 51,
-      "cv": 0.425,
+      "paras": 57,
+      "cv": 0.427,
       "uniform": false
     },
-    "scene_proxy": 1
+    "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 7,
-    "evaluative_bite_lines": 6,
+    "concrete_scenes": 8,
+    "evaluative_bite_lines": 9,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "New page, first pass. Persona read done by hand after the mechanical gate. Concrete scenes: the reader mid-application with a clean file and a company judgment; directors clearing a judgment and then answering a declaration wrongly; the broker pulling criteria in minutes; the form and the declaration as the real test; looking at the company before the house; our own corrected error on the main CCJ guide; the fear of not seeing the decline coming. Bite lines: a clean file is good news and it is not a defence; one is a question you answer and discuss, the other is a decline you argue your way out of with paperwork; we would rather pull the row than show a number we have not stood behind; we would rather show you a gap than guess at a row; read down the column and a number keeps reappearing. Practitioner we is earned, not decorative: in the cases we handle, and the admission that we got the Barclays book wrong ourselves. Warmth added at the decision point after the first read found that section technically correct but cold. No invented casework.",
+    "notes": "Reviewer-directed pass. Two evidence corrections: the headline finding no longer says eleven lenders do not ask, it says we found no published criterion, and the page now states plainly that absence of a published rule proves nothing about what an underwriter asks on the day. Removed the 3 to 11 versus 2 to 12 line, which did not hold up; replaced with the simple point that two of the three explicit policies come from one banking group. Which?-style register strengthened per humanise Part D: judgement added where the evidence supports it (Barclays is the one to take seriously, clear the judgment before you apply), facts turned into consequences (a 600 pound phone-bill judgment puts you outside six lenders' criteria), concrete detail replacing abstraction (a 300 pound judgment counts, a 5 percent stake counts), work shown (we checked this one twice because we did not believe it either, plus the heading position of the Barclays rule), one piece of British texture (eye-wateringly small numbers), and scepticism aimed at the market rather than the reader (the only firm to think about this in public concluded company judgments mattered above 5,000 pounds). Barclays residential claim re-verified today: the rule sits 658 characters after the Adverse credit history Residential heading, inside the must-be-declined list, with no buy-to-let wording within 2,500 characters. Wording described as near-identical rather than identical, because the two books differ in punctuation and in writing 5000 versus 5,000. No invented casework.",
     "stranger_read_report": null
   },
   "stranger_read": {

@@ -29,7 +29,7 @@
       "value_threshold": "More than GBP 5,000, outstanding judgments in total",
       "lookback": "None stated for the company-judgment trigger (the 3-year window applies to the applicant's own satisfied CCJs)",
       "satisfied_vs_outstanding": "Yes. The trigger is 'outstanding' judgments. Applications can still be considered where documentary evidence of a settled dispute is provided.",
-      "residential_vs_btl": "Appears in BOTH books, in materially identical wording",
+      "residential_vs_btl": "Appears in BOTH books in near-identical wording. The residential book punctuates the clause and writes GBP 5,000; this buy-to-let book writes GBP 5000.",
       "outcome": "Automatic decline trigger. It sits in the 'Adverse credit as detailed below must be declined' list, with a documentary-evidence exception.",
       "verbatim": "If it is identified that a Limited Company in which an applicant has greater than 15% shareholding has any outstanding judgements totalling more than GBP 5000 ... Applications can be considered where the above is identified but only where documentary evidence of a settled dispute has been provided by the customer.",
       "source_url": "https://intermediaries.uk.barclays/home/lending-criteria/buy-to-let/about-your-buy-to-let-client/",
@@ -44,12 +44,14 @@
       "value_threshold": "More than GBP 5,000, outstanding judgments in total",
       "lookback": "None stated for the company-judgment trigger",
       "satisfied_vs_outstanding": "Yes. Trigger is 'outstanding'. Documentary evidence of a settled dispute can rescue the application.",
-      "residential_vs_btl": "Residential",
+      "residential_vs_btl": "Residential. The same criterion appears in the buy-to-let book in near-identical wording (punctuation differs, and the buy-to-let book writes GBP 5000 rather than GBP 5,000).",
       "outcome": "Automatic decline trigger, in the 'must be declined' list, with a documentary-evidence exception.",
       "verbatim": "If it is identified that a limited company, in which an applicant has greater than 15% shareholding, has any outstanding judgements totaling more than GBP 5,000 ... Applications can be considered where the above is identified but only where documentary evidence of a settled dispute has been provided by the customer.",
       "source_url": "https://intermediaries.uk.barclays/home/lending-criteria/residential/about-your-residential-client/",
       "date_checked": "2026-08-12",
-      "correction_flag": "CONTRADICTS THE LIVE CCJ PAGE. /county-court-judgements/ currently says the Barclays rule is 'a buy-to-let rule, not a residential one'. As checked on 2026-08-12 the same rule appears in the residential criteria. The live sentence needs correcting."
+      "correction_flag": "RESOLVED 12 Aug 2026. /county-court-judgements/ previously said the Barclays rule was 'a buy-to-let rule, not a residential one'. That was wrong and has been corrected. Do not reintroduce it.",
+      "reverification": "Re-verified 12 Aug 2026 after reviewer challenge. On the residential URL the rule sits 658 characters after the heading \"Adverse credit history - Residential\", inside the \"must be declined\" list, with no buy-to-let wording within the preceding 2,500 characters. The residential claim is sound.",
+      "personal_ccj_threshold_note": "Barclays personal satisfied-CCJ limit is GBP 200, the strictest in the sample, against a company-judgment threshold of GBP 5,000."
     },
     {
       "lender": "Nationwide Building Society",
@@ -269,11 +271,12 @@
   ],
   "pattern_findings": {
     "who_asks": "Three brands ask about company judgments, and they belong to two banking groups. Halifax and BM Solutions are both Lloyds Banking Group and share near-identical wording. Barclays asks in both its residential and its buy-to-let books.",
-    "who_is_silent": "Eleven of the fourteen publish no company-judgment criterion at all. Their published CCJ rules are written around the applicant's personal credit record.",
+    "who_is_silent": "Eleven of the fourteen publish no company-judgment criterion. That is an absence of a published rule, not evidence that those lenders never ask. Their published CCJ rules are written around the applicant's personal credit record, and underwriting discretion sits behind every published criterion.",
     "where_thresholds_cluster": "Personal CCJ value limits cluster tightly at GBP 500. HSBC, Virgin Money, Skipton, Coventry, Leeds and The Mortgage Works all use GBP 500 or lower. Look-back windows cluster at 3 years and 6 years. The only company-judgment value threshold found is Barclays at GBP 5,000, ten times the common personal limit.",
     "shareholding": "Only Barclays sets a shareholding floor, at more than 15%. The Lloyds group question has no shareholding floor at all but is tied to the applicant being self-employed.",
     "decline_versus_disclose": "The two approaches are genuinely different. Barclays treats a qualifying company judgment as a decline trigger, escapable only with documentary evidence of a settled dispute. Lloyds group treats it as a disclosure question feeding credit scoring and manual review.",
     "satisfied_versus_outstanding": "Barclays keys its company rule to outstanding judgments, so satisfying the judgment moves the case. The Lloyds group question does not distinguish, so a satisfied company CCJ still has to be declared.",
-    "residential_versus_btl": "The split is not as clean as commonly assumed. Barclays applies the same company-judgment rule in both books. Lloyds group asks in residential (Halifax) and in buy-to-let (BM Solutions), including its limited company range."
-  }
+    "residential_versus_btl": "The split is not as clean as commonly assumed. Barclays carries the same company-judgment criterion in both books in near-identical wording. Lloyds group asks in residential (Halifax) and in buy-to-let (BM Solutions), including its limited company range."
+  },
+  "evidence_caveat": "Rows marked 'No published criterion' record what we could not find in published intermediary criteria. Absence of a published rule is not proof that a lender will never ask about company judgments in an application, in underwriting, or on a case-specific referral. Do not report these rows as 'the lender does not ask'."
 }

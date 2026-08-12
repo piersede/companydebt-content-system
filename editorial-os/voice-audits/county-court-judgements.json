@@ -2,27 +2,27 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "f72a95a19ef32b74a6038a63f14efeafaa0864792643d223333794061be049a7",
+  "prose_sha": "56267c8fb2dde6f006cef1640261f638e7cf9a7e3b1c5d15e0d041562a6f0855",
   "passes_since_baseline": {
-    "count": 7,
+    "count": 8,
     "baseline_ref": "file-creation",
-    "override_reason": "Same correction cycle as earlier today. Adds a link to the new 14-lender study and replaces the two-lender caveat with the actual finding. No voice patching.",
+    "override_reason": "Reviewer-directed intent separation, not a voice pass. The mortgage section is deliberately condensed so the main page keeps a concise answer and the detailed lender analysis moves to the new study page. A redraft would discard reviewer-approved text across the other nine sections.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4179,
-      "you": 84,
-      "you_per_1k": 20.1,
-      "we": 19,
-      "we_per_1k": 4.5,
+      "words": 4015,
+      "you": 80,
+      "you_per_1k": 19.9,
+      "we": 21,
+      "we_per_1k": 5.2,
       "i": 5,
       "i_per_1k": 1.2
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 111,
-      "cv": 0.345,
+      "paras": 107,
+      "cv": 0.352,
       "uniform": false
     },
     "scene_proxy": 1
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Second edit of the same cycle. Links the new lender criteria study, and replaces 'those are two lenders' with the real ratio: three of 14 ask, eleven publish nothing. Halifax and Barclays named examples kept in place as instructed. Methodology block now points at the study and states that it is re-checked on a schedule.",
+    "notes": "Piers directed intent separation between this page and the new lender study. The mortgage section now gives the concise answer, names Halifax and Barclays as brief illustrations, and hands the lender-by-lender detail to the study. Removed the extended Barclays analysis, the residential versus buy-to-let detail and the satisfied-judgment discussion, all of which now live on the study page. Evidence wording corrected in line with the study: the other eleven publish no company-judgment rule, which is not the same as promising never to ask. Check 04 we-density now passes at 5.1 per 1k, having failed on this page since before today.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Scope is the Barclays correction plus one linked paragraph in the mortgage section and one methodology sentence. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session."
+    "override_reason": "Scope is one section of the page. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session, twice."
   },
   "verdict": "pass"
 }
