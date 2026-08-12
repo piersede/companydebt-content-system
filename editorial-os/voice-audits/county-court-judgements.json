@@ -2,27 +2,27 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "83c38cd980492b8107a775f97df4eab57f89b38ee501cbe2f407ac7bb973b2ea",
+  "prose_sha": "f72a95a19ef32b74a6038a63f14efeafaa0864792643d223333794061be049a7",
   "passes_since_baseline": {
-    "count": 6,
+    "count": 7,
     "baseline_ref": "file-creation",
-    "override_reason": "Correction of a verified factual error on a live YMYL page, not a voice pass. One paragraph replaced by two, in the register already approved at pass 4. A full redraft would discard reviewer-approved text to fix one wrong sentence.",
+    "override_reason": "Same correction cycle as earlier today. Adds a link to the new 14-lender study and replaces the two-lender caveat with the actual finding. No voice patching.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4130,
-      "you": 83,
+      "words": 4179,
+      "you": 84,
       "you_per_1k": 20.1,
-      "we": 17,
-      "we_per_1k": 4.1,
+      "we": 19,
+      "we_per_1k": 4.5,
       "i": 5,
       "i_per_1k": 1.2
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 110,
-      "cv": 0.346,
+      "paras": 111,
+      "cv": 0.345,
       "uniform": false
     },
     "scene_proxy": 1
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Single factual correction. The live page said the Barclays 15 percent / 5,000 company-judgment rule was buy-to-let only. Checked the Barclays intermediary criteria on 12 Aug 2026: the same wording appears in the residential book, and it sits in the must-be-declined list rather than being a disclosure question. Replaced one paragraph with two: the decline framing, then the settled-dispute escape route. No voice patching.",
+    "notes": "Second edit of the same cycle. Links the new lender criteria study, and replaces 'those are two lenders' with the real ratio: three of 14 ask, eleven publish nothing. Halifax and Barclays named examples kept in place as instructed. Methodology block now points at the study and states that it is re-checked on a schedule.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Scope is two paragraphs of factual correction. The stranger read of 12 Aug 2026 covers the remaining prose, which is byte-identical. Flagged to the human reviewer in-session so he can call for a full outside read before the live push if he wants one."
+    "override_reason": "Scope is the Barclays correction plus one linked paragraph in the mortgage section and one methodology sentence. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session."
   },
   "verdict": "pass"
 }

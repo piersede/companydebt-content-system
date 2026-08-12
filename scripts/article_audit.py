@@ -489,6 +489,7 @@ STANDARD_UPPER_TOKENS = {
     "FPS", "EPS",  # payroll submissions (PAYE-related)
     "IA", "s84", "s122", "s124",  # Insolvency Act section prefixes used in citations
     "MP", "AI",
+    "HSBC",  # bank proper noun; the letters are the brand, there is no fuller form to gloss
     # Weekday abbreviations
     "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN",
     # Insolvency-corpus abbreviations that are used across many pages and can

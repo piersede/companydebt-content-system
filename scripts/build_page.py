@@ -348,6 +348,7 @@ PAGE_REGISTRY = {
     'charity-non-profit-insolvency': 'cc_builder.data.pages.charity_non_profit_insolvency',
     'chinese-takeaway': 'cc_builder.data.pages.chinese_takeaway',
     'closing-a-limited-company': 'cc_builder.data.pages.closing_a_limited_company',
+    'company-ccj-mortgage-lender-criteria': 'cc_builder.data.pages.company_ccj_mortgage_lender_criteria',
     'company-rescue-recovery-hub': 'cc_builder.data.pages.company_rescue_recovery_hub',
     'construction-insolvency': 'cc_builder.data.pages.construction_insolvency',
     'county-court-judgements': 'cc_builder.data.pages.county_court_judgements',

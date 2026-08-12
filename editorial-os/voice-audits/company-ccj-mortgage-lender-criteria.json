@@ -1,0 +1,47 @@
+{
+  "slug": "company-ccj-mortgage-lender-criteria",
+  "audited_at": "2026-08-12",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "5cc886d897dc7e07a72c07799371e6d941eed1451c1f3372c0228ecb741beb4d",
+  "passes_since_baseline": {
+    "count": 0,
+    "baseline_ref": "file-creation",
+    "override_reason": null,
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 1675,
+      "you": 43,
+      "you_per_1k": 25.7,
+      "we": 17,
+      "we_per_1k": 10.1,
+      "i": 9,
+      "i_per_1k": 5.4
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 51,
+      "cv": 0.425,
+      "uniform": false
+    },
+    "scene_proxy": 1
+  },
+  "attested": {
+    "concrete_scenes": 7,
+    "evaluative_bite_lines": 6,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "New page, first pass. Persona read done by hand after the mechanical gate. Concrete scenes: the reader mid-application with a clean file and a company judgment; directors clearing a judgment and then answering a declaration wrongly; the broker pulling criteria in minutes; the form and the declaration as the real test; looking at the company before the house; our own corrected error on the main CCJ guide; the fear of not seeing the decline coming. Bite lines: a clean file is good news and it is not a defence; one is a question you answer and discuss, the other is a decline you argue your way out of with paperwork; we would rather pull the row than show a number we have not stood behind; we would rather show you a gap than guess at a row; read down the column and a number keeps reappearing. Practitioner we is earned, not decorative: in the cases we handle, and the admission that we got the Barclays book wrong ourselves. Warmth added at the decision point after the first read found that section technically correct but cold. No invented casework.",
+    "stranger_read_report": null
+  },
+  "stranger_read": {
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
+    "override_reason": null
+  },
+  "verdict": "pass"
+}
