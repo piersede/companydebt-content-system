@@ -1,28 +1,28 @@
 {
   "slug": "creditors-voluntary-liquidation",
-  "audited_at": "2026-08-09",
+  "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "628e3c4cd3ae623506fe94db9a483dfd1f6c5a7c86086e4502e28745bbbef292",
+  "prose_sha": "22aab70ff046aeb54eb3d1bcf70f91a2f964e4b75fa5fa363a4422919347926a",
   "passes_since_baseline": {
-    "count": 10,
+    "count": 11,
     "baseline_ref": "file-creation",
-    "override_reason": "Targeted voice pass removing nine manufactured devices and reconciling the timing claims; removes material rather than layering new prose. Flagging that this page is now at the patch threshold: the next substantive change should be a redraft from spec, not another pass.",
+    "override_reason": "Not a voice patch. Controlled single-variable ranking test: the top-level H2 hierarchy was reordered to match the three sibling liquidation pages and nothing else was allowed to change. A redraft from spec would move many variables at once and destroy the test. Existing body prose was moved, not rewritten.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3224,
-      "you": 43,
-      "you_per_1k": 13.3,
-      "we": 20,
-      "we_per_1k": 6.2,
+      "words": 3455,
+      "you": 48,
+      "you_per_1k": 13.9,
+      "we": 23,
+      "we_per_1k": 6.7,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 119,
-      "cv": 0.68,
+      "paras": 125,
+      "cv": 0.662,
       "uniform": false
     },
     "scene_proxy": 1
@@ -33,8 +33,15 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Voice pass against the over-humanising rule, plus the cluster timing reconciliation. Removed nine manufactured moments, most of them emotional rather than informative: the brown HMRC envelope and quiet dread in the opening, the Gazette notice imagined being seen by a neighbour or future employer, the hand-over feeling abrupt after years of carrying the thing, directors pulling records together at the kitchen table the night before, someone staring at a business account that will not cover wages, the debt that keeps a director awake, where a director's real fear sits, the quiet fear that asking questions puts you on HMRC's radar, and the fear of never using the trading name again. Each replaced with the useful thing it was dressing: who actually monitors Gazette notices, that creditors should be redirected to the liquidator from appointment day, that what matters before the first call is knowing which records are genuinely missing, that the largest debt is rarely the one causing difficulty afterwards, and that the first column of the risk table applies to every director regardless of conduct. The employees section used almost the exact phrasing flagged as borrowed empathy, so it now answers the practical question: whether to tell staff before or after appointment, agreed with the proposed liquidator. Timing reconciled with the timeline page: 6-12 and 12-24 months are now labelled the liquidator's active work rather than time to dissolution, with the statutory three months and the 712-day median added.",
+    "notes": "Structural pass only: top-level H2 hierarchy reordered to match the three sibling liquidation pages (at-a-glance H2 over the existing key-facts panel, new definitional 'What Is a CVL?' H2, process section retitled and promoted, right-route and when-to-consider sections moved below). No existing body prose rewritten. The HMRC-arrears/Time-to-Pay lead-in and the wrongful-trading timing paragraph were moved verbatim out of the opening into the right-route section. Only new prose is the five-paragraph definition section, at the legal-concept level, with one earned practitioner line ('we file that report on every case we take') and one asymmetrical line ('Voluntary is the word doing the work here'). No new internal links, no title/H1/schema/FAQ change.",
     "stranger_read_report": null
+  },
+  "stranger_read": {
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
+    "override_reason": "Outstanding, not waived. Only about 250 words of new prose exist in this pass (the definition section); the remaining ~5,000 words are byte-identical to the version that passed on 2026-08-09. Recording so the structural test is not blocked. An outside-eye read should be run before this goes to production."
   },
   "verdict": "pass"
 }
