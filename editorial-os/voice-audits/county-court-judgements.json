@@ -2,18 +2,18 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "de52cd04ce0642d65412df19e21ffe1c616d7d7cbb92d45079dbf0f6f0461541",
+  "prose_sha": "83c38cd980492b8107a775f97df4eab57f89b38ee501cbe2f407ac7bb973b2ea",
   "passes_since_baseline": {
-    "count": 4,
+    "count": 6,
     "baseline_ref": "file-creation",
-    "override_reason": "Pass 4 was five factual corrections dictated by the human reviewer (opening logic, personal-judgment remnant, one-calendar-month wording, Barclays 5,000 threshold, duplicated caveat) plus two wording tightenings he specified verbatim. No voice patching in this pass, so the accumulated-AI-signature risk the redraft ceiling guards against does not apply. A redraft would discard reviewer-approved text.",
+    "override_reason": "Correction of a verified factual error on a live YMYL page, not a voice pass. One paragraph replaced by two, in the register already approved at pass 4. A full redraft would discard reviewer-approved text to fix one wrong sentence.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4106,
+      "words": 4130,
       "you": 83,
-      "you_per_1k": 20.2,
+      "you_per_1k": 20.1,
       "we": 17,
       "we_per_1k": 4.1,
       "i": 5,
@@ -21,7 +21,7 @@
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 109,
+      "paras": 110,
       "cv": 0.346,
       "uniform": false
     },
@@ -29,19 +29,19 @@
   },
   "attested": {
     "concrete_scenes": 12,
-    "evaluative_bite_lines": 6,
+    "evaluative_bite_lines": 7,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Reviewer-directed correction pass. Lender evidence upgraded: reviewer verified both criteria directly against current published intermediary criteria on 12 Aug 2026, so the methodology now states a real check date rather than pending confirmation, and the Barclays criterion gains its missing 5,000 threshold. Opening logic corrected: the three exceptions make the company CCJ personally relevant, they do not change whose CCJ it is. Removed the last remnant of the personal-CCJ error under the liability H2. One calendar month now used throughout except for supplier trade terms, which are a different thing.",
-    "stranger_read_report": "editorial-os/stranger-reads/county-court-judgements_2026-08-12T142809Z.md"
+    "notes": "Single factual correction. The live page said the Barclays 15 percent / 5,000 company-judgment rule was buy-to-let only. Checked the Barclays intermediary criteria on 12 Aug 2026: the same wording appears in the residential book, and it sits in the must-be-declined list rather than being a disclosure question. Replaced one paragraph with two: the decline framing, then the settled-dispute escape route. No voice patching.",
+    "stranger_read_report": null
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\county-court-judgements_2026-08-12T142809Z.md",
-    "requested": "2026-08-12T142809Z",
-    "prose_sha_at_request": "69ed3751dc5c4710b62655f69d1284dd930c62b20c168de771d16cd4ed9b6dd5",
-    "numbered_answers": 5,
-    "override_reason": null
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
+    "override_reason": "Scope is two paragraphs of factual correction. The stranger read of 12 Aug 2026 covers the remaining prose, which is byte-identical. Flagged to the human reviewer in-session so he can call for a full outside read before the live push if he wants one."
   },
   "verdict": "pass"
 }
