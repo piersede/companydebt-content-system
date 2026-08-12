@@ -2,38 +2,38 @@
   "slug": "creditors-voluntary-liquidation",
   "audited_at": "2026-08-12",
   "audited_by": "claude-opus-5",
-  "prose_sha": "22aab70ff046aeb54eb3d1bcf70f91a2f964e4b75fa5fa363a4422919347926a",
+  "prose_sha": "332cab1aa9ae0f690c9b813f6af8d9ca387fee4d521f462f630f6cdcf95fc9fb",
   "passes_since_baseline": {
-    "count": 11,
+    "count": 12,
     "baseline_ref": "file-creation",
-    "override_reason": "Not a voice patch. Controlled single-variable ranking test: the top-level H2 hierarchy was reordered to match the three sibling liquidation pages and nothing else was allowed to change. A redraft from spec would move many variables at once and destroy the test. Existing body prose was moved, not rewritten.",
+    "override_reason": "Not a voice patch on existing prose. Controlled single-variable ranking test: the H2 hierarchy was reordered and one new section written. A redraft from spec would move many variables at once and destroy the test.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 3455,
-      "you": 48,
-      "you_per_1k": 13.9,
-      "we": 23,
-      "we_per_1k": 6.7,
+      "words": 3562,
+      "you": 56,
+      "you_per_1k": 15.7,
+      "we": 22,
+      "we_per_1k": 6.2,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 125,
-      "cv": 0.662,
+      "paras": 129,
+      "cv": 0.65,
       "uniform": false
     },
     "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 1,
-    "evaluative_bite_lines": 4,
+    "concrete_scenes": 2,
+    "evaluative_bite_lines": 7,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Structural pass only: top-level H2 hierarchy reordered to match the three sibling liquidation pages (at-a-glance H2 over the existing key-facts panel, new definitional 'What Is a CVL?' H2, process section retitled and promoted, right-route and when-to-consider sections moved below). No existing body prose rewritten. The HMRC-arrears/Time-to-Pay lead-in and the wrongful-trading timing paragraph were moved verbatim out of the opening into the right-route section. Only new prose is the five-paragraph definition section, at the legal-concept level, with one earned practitioner line ('we file that report on every case we take') and one asymmetrical line ('Voluntary is the word doing the work here'). No new internal links, no title/H1/schema/FAQ change.",
+    "notes": "Which?-register pass on the new 'What Is a CVL?' section, per humanise.md Part D. The first draft of that section failed Part D's governing rule: it opened with a clever label ('Voluntary is the word doing the work here'), presented the facts flat with no consequence attached, and set the three liquidation routes out symmetrically with no view taken. Rewritten so each paragraph is built on a practitioner observation rather than a definition: 'voluntary does not mean optional, what is voluntary is who moves first'; the concrete gain from moving first (timing, choice of IP, arriving with records in order rather than handing them to an Official Receiver you have never spoken to); the sceptical counterweight that a CVL does not buy a gentler conduct review, sourced honestly to what directors ask us on first calls; the statutory payment order 'rarely the order creditors expect'; guarantees and director loan accounts surviving the company by years, with the practitioner note that we ask about guarantees at the first conversation; and a stated view that if both routes are open there is very little to be said for waiting for the petition. Whole-page device scan run afterwards: no aphorism labels, no self-announced honesty, no em dashes, no repeated contrastive shape. Rest of the page unchanged and already carries the register.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Outstanding, not waived. Only about 250 words of new prose exist in this pass (the definition section); the remaining ~5,000 words are byte-identical to the version that passed on 2026-08-09. Recording so the structural test is not blocked. An outside-eye read should be run before this goes to production."
+    "override_reason": "Outstanding, not waived. About 350 words of new prose; the remaining ~5,000 are byte-identical to the version that passed on 2026-08-09. An outside-eye read should be run before this goes to production."
   },
   "verdict": "pass"
 }
