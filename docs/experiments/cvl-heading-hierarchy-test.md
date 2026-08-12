@@ -2,8 +2,10 @@
 
 **Page:** https://www.companydebt.com/liquidation/creditors-voluntary-liquidation/ (WP 7674)
 **Change made:** 12 August 2026 (staging)
-**Went live:** _not yet_
-**Decision point:** 90 days after the change reaches production
+**Went live:** 12 August 2026, page 7674 pushed over the REST API, all three cache
+layers purged, live page re-rendered and verified at 325,878 bytes
+**Decision point:** 10 November 2026
+**First weekly check due:** 19 August 2026
 
 ---
 
@@ -158,3 +160,13 @@ licensed practices in the top 20, and the effort belongs where the cluster alrea
   rule (a redraft would move many variables and destroy the test) and the outside-eye read
   (outstanding, not waived). An outside-eye read should be run before this goes to production.
 - `article_audit.py`: 32/32 PASS. `check_statutory_fees.py`: clean.
+- `push_site_content_live.py --changed-only` reported this page as "already identical"
+  to live when it was nothing of the sort. It compares against `content_cache.json`,
+  which was stale. Rebuilding that cache crawls the whole site, so the single page went
+  live via `publish_to_live.py --id 7674` instead. Anyone doing a bulk push must refresh
+  the cache first, or the script will silently skip pages that genuinely need pushing.
+- Went live without two things that would normally come first: an outside-eye read of the
+  new prose, and named insolvency-practitioner sign-off on the new "What Is a CVL?"
+  section. Piers instructed the push with both flagged. The new section describes standard
+  statutory procedure already covered elsewhere on the same page, so the exposure is low,
+  but both should still be closed retrospectively.
