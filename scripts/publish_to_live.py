@@ -41,7 +41,21 @@ import requests
 from dotenv import load_dotenv
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-load_dotenv(ROOT / ".env")
+
+# .env sits at the top of the main checkout. When this runs from a git worktree
+# under .claude/worktrees/<name>/, ROOT is the worktree and holds no .env, so
+# the credentials came back empty and the script aborted claiming they were
+# missing from a file it had never looked at. Walk up until one is found.
+def _load_env() -> None:
+    for candidate in (ROOT, *ROOT.parents):
+        env = candidate / ".env"
+        if env.is_file():
+            load_dotenv(env)
+            return
+    load_dotenv(ROOT / ".env")  # keep the original behaviour if none found
+
+
+_load_env()
 
 # The live WAF rejects the default requests user-agent; WP rejects some writes
 # without a same-origin Referer/Origin.

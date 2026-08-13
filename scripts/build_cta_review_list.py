@@ -143,7 +143,10 @@ def proposal(path: str) -> tuple[dict, str]:
 
 
 def fetch_sitemap() -> dict[str, str]:
-    load_dotenv(ROOT / ".env")
+    import sys as _sys, pathlib as _pl
+    _sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+    from _env import load_env as _load_env
+    _load_env()
     auth = (os.environ["WP_BASIC_AUTH_USER"], os.environ["WP_BASIC_AUTH_PASS"])
     ua = {"User-Agent": "Mozilla/5.0 CD-check"}
     pages: dict[str, str] = {}

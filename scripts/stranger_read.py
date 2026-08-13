@@ -38,11 +38,40 @@ REPO = SCRIPTS_DIR.parent
 REPORTS_DIR = REPO / "editorial-os" / "stranger-reads"
 
 
+# WARNING TO FUTURE MAINTAINERS -- do not "restore" the old question 5.
+#
+# Until 2026-08-13 question 5 read:
+#     "Did the page acknowledge how you feel before it gave you rules to
+#      follow?"
+#
+# That question actively trained the failure this whole gate exists to catch.
+# On the company-ccj-mortgage-lender-criteria page the chain was documented in
+# editorial-os/stranger-reads/company-ccj-mortgage-lender-criteria_2026-08-13T042755Z.md:
+#
+#   round 1, Q5 -> "No. Not a word."
+#   the writer responded by inventing a scene: "If you are reading this late,
+#   with an application already moving and a letter on the desk you did not
+#   want..."
+#   round 3, Q5 -> "'a letter on the desk you did not want' - that got me.
+#   That's my actual desk."
+#
+# The gate rewarded a fabricated evening, a fabricated letter and a fabricated
+# emotional state. That is precisely what humanise.md Part D and
+# 15-good-vs-bad-examples.md ban as borrowed empathy and performance. Two
+# governance artefacts were pulling in opposite directions, and the mechanical
+# one won.
+#
+# Question 5 now detects performance instead of rewarding it. Question 6 tests
+# for synthetic expertise, which is the other half of the same failure.
 PERSONA_PROMPT = """You are a UK limited-company director.
 
 You have not slept properly for the last week. HMRC has sent a letter you do
 not fully understand. Your bookkeeper is not answering emails today. You have
 opened this page for the first time on your phone at 11:40pm.
+
+That is your situation. It is NOT something the page is supposed to know, guess
+at or describe back to you. A page that invents your evening has not understood
+you, it has flattered you. Judge it on whether it answers your question.
 
 Read the opening 500 words of the page below, then answer these questions
 briefly and honestly:
@@ -52,10 +81,16 @@ briefly and honestly:
 3. At which point, if any, would you have closed the tab?
 4. If a friend asked you 'what does this page tell me to do?' after your
    first read, what would you say?
-5. Did the page acknowledge how you feel before it gave you rules to follow?
+5. Did any sentence feel written to make you feel something rather than to
+   tell you something? Quote it. Include anything that describes your mood,
+   your evening, your kitchen table or what is keeping you awake.
+6. Does the page claim anything about what 'most' people do, what 'usually'
+   happens, or what the writer has 'often seen', that it does not show you
+   evidence for? Quote it.
 
 Answer as the director, not as an editor. Do not soften your answer to be
-polite. If the opening is fine, say so plainly.
+polite. Do not give the page credit for sympathising with you: you came here
+for an answer, not for company. If the opening is fine, say so plainly.
 
 ---
 
@@ -71,7 +106,7 @@ Requested: {timestamp}
 
 Paste the responding agent's text below the line, verbatim. Do NOT edit it.
 The auditor validates that the response contains substantive answers to the
-five persona questions. Empty responses or template stubs are rejected.
+six persona questions. Empty responses or template stubs are rejected.
 
 ---
 
@@ -141,9 +176,9 @@ def cmd_fill(args) -> int:
     if len(response) < 120:
         print(f"ERROR: response is too short ({len(response)} chars); a stranger-read pass needs substantive answers.", file=sys.stderr)
         return 3
-    # Ensure at least a mention of two of the five question numbers so we know
+    # Ensure at least a mention of two of the six question numbers so we know
     # the responder actually answered rather than commenting freely.
-    numbered = sum(1 for n in ("1.", "2.", "3.", "4.", "5.") if n in response)
+    numbered = sum(1 for n in ("1.", "2.", "3.", "4.", "5.", "6.") if n in response)
     if numbered < 2:
         print(f"ERROR: response does not answer at least two of the numbered questions.", file=sys.stderr)
         return 3
@@ -155,7 +190,7 @@ def cmd_fill(args) -> int:
         shown = path
     print(f"Report validated: {shown}")
     print(f"  response length: {len(response)} chars")
-    print(f"  numbered answers detected: {numbered} of 5")
+    print(f"  numbered answers detected: {numbered} of 6")
     print("Pass the file to voice_audit.py with --stranger-read-report <path>")
     return 0
 

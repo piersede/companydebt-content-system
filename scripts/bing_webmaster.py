@@ -33,7 +33,10 @@ from collections import defaultdict
 from dotenv import load_dotenv
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-load_dotenv(ROOT / ".env")
+import sys as _sys, pathlib as _pl
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+from _env import load_env as _load_env
+_load_env()
 BASE = "https://ssl.bing.com/webmaster/api.svc/json/"
 
 

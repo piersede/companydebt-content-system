@@ -1,0 +1,47 @@
+{
+  "slug": "company-ccj-mortgage-lender-criteria",
+  "audited_at": "2026-08-13",
+  "audited_by": "claude-opus-5",
+  "prose_sha": "bf0d1c5bbd9eb525f5fd4e91091103b380dd0d27bcda7554b097c92a0693fed8",
+  "passes_since_baseline": {
+    "count": 4,
+    "baseline_ref": "file-creation",
+    "override_reason": "Reviewer-directed rewrite against the new Part E classification. Piers supplied the specification; this pass applies it rather than patching sentences.",
+    "redraft_now": false
+  },
+  "measured": {
+    "metrics": {
+      "words": 2227,
+      "you": 32,
+      "you_per_1k": 14.4,
+      "we": 14,
+      "we_per_1k": 6.3,
+      "i": 11,
+      "i_per_1k": 4.9
+    },
+    "sections_over_200w_without_you": [],
+    "rhythm": {
+      "paras": 66,
+      "cv": 0.331,
+      "uniform": false
+    },
+    "scene_proxy": 0
+  },
+  "attested": {
+    "concrete_scenes": 4,
+    "evaluative_bite_lines": 3,
+    "tone_modulation": "pass",
+    "rhythm_varied": "pass",
+    "read_aloud_ok": "pass",
+    "notes": "Rewritten against the F/D/E/J/P classification now recorded as humanise Part E. Cut, as P-class: the invented evening and letter on the desk; the manufactured fear paragraph; every tonight/tomorrow framing; the unsupported outcome claims (rarely sinks an application, plenty of directors, by the time a director calls us, we have never seen this improve); the lender mind-reading (lenders evidently accept, character test not solvency test, the rule is aimed somewhere specific); the urgency headings (The One Lender That Can Stop You, What to Check Tonight and Ask Tomorrow); and the quotable closers (the form is the thing you sign, only you can answer it in a box under a declaration you sign, the house depends on it more than the application). Scene and bite counts are deliberately low now and that is the point: what remains is F, D and labelled J. The load-bearing additions are D-class comparisons, for example that both Barclays thresholds must be met together so a 10 percent holding or a 4,000 pound judgment falls outside, and that six lenders cap personal CCJs at 500 pounds or below while the only published company threshold starts above 5,000. Domain boundary now explicit: insolvency consequences stated with practitioner authority, mortgage outcomes referred to the criteria or the broker.",
+    "stranger_read_report": "editorial-os/stranger-reads/company-ccj-mortgage-lender-criteria_2026-08-13T042755Z.md"
+  },
+  "stranger_read": {
+    "path": "editorial-os\\stranger-reads\\company-ccj-mortgage-lender-criteria_2026-08-13T042755Z.md",
+    "requested": "2026-08-13T042755Z",
+    "prose_sha_at_request": "6e7f3ce86ed14c75d9bd085f845c6619eecab99dc442d1a3a312672c3a78da74",
+    "numbered_answers": 5,
+    "override_reason": null
+  },
+  "verdict": "pass"
+}

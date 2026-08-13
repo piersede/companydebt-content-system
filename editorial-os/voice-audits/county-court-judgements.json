@@ -1,47 +1,47 @@
 {
   "slug": "county-court-judgements",
-  "audited_at": "2026-08-12",
+  "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "de52cd04ce0642d65412df19e21ffe1c616d7d7cbb92d45079dbf0f6f0461541",
+  "prose_sha": "d3d6f20c60d32d9d3c8372f58b819653899ed563da13900de047c1b35e067d0d",
   "passes_since_baseline": {
-    "count": 4,
+    "count": 11,
     "baseline_ref": "file-creation",
-    "override_reason": "Pass 4 was five factual corrections dictated by the human reviewer (opening logic, personal-judgment remnant, one-calendar-month wording, Barclays 5,000 threshold, duplicated caveat) plus two wording tightenings he specified verbatim. No voice patching in this pass, so the accumulated-AI-signature risk the redraft ceiling guards against does not apply. A redraft would discard reviewer-approved text.",
+    "override_reason": "Same reviewer cycle. Mortgage section rewritten against Part E; the other nine sections are reviewer-approved text.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4106,
-      "you": 83,
-      "you_per_1k": 20.2,
-      "we": 17,
-      "we_per_1k": 4.1,
+      "words": 4024,
+      "you": 81,
+      "you_per_1k": 20.1,
+      "we": 21,
+      "we_per_1k": 5.2,
       "i": 5,
       "i_per_1k": 1.2
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 109,
+      "paras": 107,
       "cv": 0.346,
       "uniform": false
     },
     "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 12,
+    "concrete_scenes": 11,
     "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Reviewer-directed correction pass. Lender evidence upgraded: reviewer verified both criteria directly against current published intermediary criteria on 12 Aug 2026, so the methodology now states a real check date rather than pending confirmation, and the Barclays criterion gains its missing 5,000 threshold. Opening logic corrected: the three exceptions make the company CCJ personally relevant, they do not change whose CCJ it is. Removed the last remnant of the personal-CCJ error under the liability H2. One calendar month now used throughout except for supplier trade terms, which are a different thing.",
-    "stranger_read_report": "editorial-os/stranger-reads/county-court-judgements_2026-08-12T142809Z.md"
+    "notes": "Mortgage section rewritten against the Part E classification. Removed the punchline chain (what that means for you is a form not a credit report; an inaccurate declaration is a worse problem than the judgment ever was; it is unglamorous because it works) and the unsupported opener (not through the route most directors expect). What remains states the distinction between the credit search and the application form, names the three lenders that address company judgments, and refers detail to the study. Ends on the practical instruction rather than a closing line.",
+    "stranger_read_report": null
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\county-court-judgements_2026-08-12T142809Z.md",
-    "requested": "2026-08-12T142809Z",
-    "prose_sha_at_request": "69ed3751dc5c4710b62655f69d1284dd930c62b20c168de771d16cd4ed9b6dd5",
-    "numbered_answers": 5,
-    "override_reason": null
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
+    "override_reason": "Stranger read run properly on the linked study page, four rounds, report on file. This page's mortgage section is a summary of it and was rewritten to the same specification. Rest of prose unchanged since 12 Aug 2026."
   },
   "verdict": "pass"
 }

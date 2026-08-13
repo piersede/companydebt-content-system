@@ -33,8 +33,10 @@ import paramiko
 from dotenv import load_dotenv
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-load_dotenv(ROOT / ".env")
-
+import sys as _sys, pathlib as _pl
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+from _env import load_env as _load_env
+_load_env()
 MU = "wp-content/mu-plugins"
 
 # Real functionality. Never deleted. Add to this list, never remove from it
