@@ -1,19 +1,19 @@
 {
   "slug": "county-court-judgements",
-  "audited_at": "2026-08-12",
+  "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "56267c8fb2dde6f006cef1640261f638e7cf9a7e3b1c5d15e0d041562a6f0855",
+  "prose_sha": "e8073afe0f3101319d13b8df0a75108d545597ac0f704c9b355700f3cd165874",
   "passes_since_baseline": {
-    "count": 8,
+    "count": 9,
     "baseline_ref": "file-creation",
-    "override_reason": "Reviewer-directed intent separation, not a voice pass. The mortgage section is deliberately condensed so the main page keeps a concise answer and the detailed lender analysis moves to the new study page. A redraft would discard reviewer-approved text across the other nine sections.",
+    "override_reason": "Same reviewer cycle. One section rewritten to match the register of the linked study; the other nine sections are reviewer-approved text a redraft would discard.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4015,
-      "you": 80,
-      "you_per_1k": 19.9,
+      "words": 4045,
+      "you": 84,
+      "you_per_1k": 20.8,
       "we": 21,
       "we_per_1k": 5.2,
       "i": 5,
@@ -21,8 +21,8 @@
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 107,
-      "cv": 0.352,
+      "paras": 108,
+      "cv": 0.354,
       "uniform": false
     },
     "scene_proxy": 1
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Piers directed intent separation between this page and the new lender study. The mortgage section now gives the concise answer, names Halifax and Barclays as brief illustrations, and hands the lender-by-lender detail to the study. Removed the extended Barclays analysis, the residential versus buy-to-let detail and the satisfied-judgment discussion, all of which now live on the study page. Evidence wording corrected in line with the study: the other eleven publish no company-judgment rule, which is not the same as promising never to ask. Check 04 we-density now passes at 5.1 per 1k, having failed on this page since before today.",
+    "notes": "Mortgage section rewritten in the Which? register to match the study page. Opens on the answer rather than a throat-clearing line about honest answers. States the mechanism the reader needs, that the lender runs a search and asks a separate question, and that the declaration rather than the credit report is where the exposure sits. Keeps Halifax and Barclays as brief named illustrations and hands the lender-by-lender detail to the study.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Scope is one section of the page. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session, twice."
+    "override_reason": "Scope remains the mortgage section only. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session three times now."
   },
   "verdict": "pass"
 }

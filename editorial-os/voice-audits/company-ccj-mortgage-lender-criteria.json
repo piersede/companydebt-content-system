@@ -1,39 +1,39 @@
 {
   "slug": "company-ccj-mortgage-lender-criteria",
-  "audited_at": "2026-08-12",
+  "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "cb31a8ba62746ed81110170f3a7af7d989b66ab17144f0c181fc6252b03c45c1",
+  "prose_sha": "24e63c1d768e19a0acf0b5b151cf1d8913bb9199cadc2a11fa7e61c4d97fbc26",
   "passes_since_baseline": {
-    "count": 1,
+    "count": 2,
     "baseline_ref": "file-creation",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2008,
-      "you": 56,
-      "you_per_1k": 27.9,
-      "we": 21,
+      "words": 2093,
+      "you": 51,
+      "you_per_1k": 24.4,
+      "we": 22,
       "we_per_1k": 10.5,
-      "i": 9,
-      "i_per_1k": 4.5
+      "i": 8,
+      "i_per_1k": 3.8
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 57,
-      "cv": 0.427,
+      "paras": 59,
+      "cv": 0.375,
       "uniform": false
     },
-    "scene_proxy": 0
+    "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 8,
-    "evaluative_bite_lines": 9,
+    "concrete_scenes": 7,
+    "evaluative_bite_lines": 8,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Reviewer-directed pass. Two evidence corrections: the headline finding no longer says eleven lenders do not ask, it says we found no published criterion, and the page now states plainly that absence of a published rule proves nothing about what an underwriter asks on the day. Removed the 3 to 11 versus 2 to 12 line, which did not hold up; replaced with the simple point that two of the three explicit policies come from one banking group. Which?-style register strengthened per humanise Part D: judgement added where the evidence supports it (Barclays is the one to take seriously, clear the judgment before you apply), facts turned into consequences (a 600 pound phone-bill judgment puts you outside six lenders' criteria), concrete detail replacing abstraction (a 300 pound judgment counts, a 5 percent stake counts), work shown (we checked this one twice because we did not believe it either, plus the heading position of the Barclays rule), one piece of British texture (eye-wateringly small numbers), and scepticism aimed at the market rather than the reader (the only firm to think about this in public concluded company judgments mattered above 5,000 pounds). Barclays residential claim re-verified today: the rule sits 658 characters after the Adverse credit history Residential heading, inside the must-be-declined list, with no buy-to-let wording within 2,500 characters. Wording described as near-identical rather than identical, because the two books differ in punctuation and in writing 5000 versus 5,000. No invented casework.",
+    "notes": "Full-page rewrite in the Which? register per humanise Part D, after Piers said the earlier pass had only patched four sections. Removed the devices Part A names: the self-announcing 'here is the trap, stated plainly', the dramatic one-line reveal on the 500 pound figure, the neat reversal 'it is a reasonable assumption, it is also wrong', the balanced 'one is a question, the other is a decline' pair, and the fragment 'not referred, declined'. Scanned the whole page for repeated rhetorical shapes afterwards: the that-is-the-X label now appears once, the aphorism label once, sentence-initial So once. Opening no longer uses a hook-and-reveal; it opens on the market observation that lenders publish criteria for brokers rather than borrowers, which is why the reader could not find an answer. The organising practitioner insight is now stated where it belongs: credit reference data is organised around people, the application form is organised around what the applicant knows, and a company judgment falls in the gap between the search and the declaration. Judgement added where evidence supports it: Barclays should change your plans, clear it before applying, sort the company before the house, pay inside the one-month window. Facts carry consequences throughout. FAQ answers now end on a consequence rather than a fact. you-density was over the 30 per 1k ceiling after the rewrite and was brought back by removing four redundant second-person constructions rather than by cutting reader-facing content. No invented casework.",
     "stranger_read_report": null
   },
   "stranger_read": {
