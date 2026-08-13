@@ -696,6 +696,17 @@ def check_fabricated_reader_context(body: str) -> CheckResult:
     humanise.md Part D bans "borrowed empathy". 15-good-vs-bad-examples.md
     prefers the working-day consequence to the manufactured scene. This check
     is the mechanical half of both.
+
+    HARD FAIL BY DECISION, not by oversight. When this shipped on 2026-08-13 it
+    failed 40 of the 311 drafts then in the repo, nearly all of them on an
+    "If you are reading this..." opening. Piers was shown that number and chose
+    hard fail anyway, on the basis that the gate only runs when somebody is
+    already working on a page: nothing broke that day, and the corpus cleans
+    itself one sentence at a time as pages are touched.
+
+    So if you have arrived here because an old page you barely changed now
+    fails this check: that is the intended behaviour. Fix the sentence. Do not
+    downgrade the check to T2, and do not add the page to an exemption list.
     """
     hits = []
     for i, plain in enumerate(_body_paragraphs_plain(body), start=1):
