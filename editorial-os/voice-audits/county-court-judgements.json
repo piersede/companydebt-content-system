@@ -2,18 +2,18 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "489f70512bb721c2b04cfab4ee13cb3513325cc9b3aae58bc5fb8e094f96e2fa",
+  "prose_sha": "d3d6f20c60d32d9d3c8372f58b819653899ed563da13900de047c1b35e067d0d",
   "passes_since_baseline": {
-    "count": 10,
+    "count": 11,
     "baseline_ref": "file-creation",
-    "override_reason": "Same reviewer cycle. Vocabulary aligned with the study page after the stranger read flagged paid/satisfied/settled drift; the rest is reviewer-approved text.",
+    "override_reason": "Same reviewer cycle. Mortgage section rewritten against Part E; the other nine sections are reviewer-approved text.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4069,
-      "you": 86,
-      "you_per_1k": 21.1,
+      "words": 4024,
+      "you": 81,
+      "you_per_1k": 20.1,
       "we": 21,
       "we_per_1k": 5.2,
       "i": 5,
@@ -21,19 +21,19 @@
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 108,
-      "cv": 0.355,
+      "paras": 107,
+      "cv": 0.346,
       "uniform": false
     },
     "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 12,
-    "evaluative_bite_lines": 7,
+    "concrete_scenes": 11,
+    "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Vocabulary aligned with the study page after the outside reader flagged that paid, satisfied, settled and cleared were being used interchangeably. Replaced 'an explicit company-judgment criterion' with plain wording, and 'publish no company-judgment rule at all' with 'do not say either way', both of which the reader called our language rather than his.",
+    "notes": "Mortgage section rewritten against the Part E classification. Removed the punchline chain (what that means for you is a form not a credit report; an inaccurate declaration is a worse problem than the judgment ever was; it is unglamorous because it works) and the unsupported opener (not through the route most directors expect). What remains states the distinction between the credit search and the application form, names the three lenders that address company judgments, and refers detail to the study. Ends on the practical instruction rather than a closing line.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "The stranger read was run properly on the study page, which now carries the detailed lender analysis. This page's mortgage section is a summary that mirrors it. Rest of prose unchanged since the 12 Aug 2026 read."
+    "override_reason": "Stranger read run properly on the linked study page, four rounds, report on file. This page's mortgage section is a summary of it and was rewritten to the same specification. Rest of prose unchanged since 12 Aug 2026."
   },
   "verdict": "pass"
 }

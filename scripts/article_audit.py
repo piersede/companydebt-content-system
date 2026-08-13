@@ -126,6 +126,51 @@ META_REFERENCE_FIRST_SENTENCE_PATTERNS = [
     r"^before you (decide|choose)",
 ]
 
+# --- Performance-prose detection (checks 33-35) ------------------------------
+#
+# Added 2026-08-13 after the company-ccj-mortgage-lender-criteria page scored
+# 32/32 four separate times while a human reviewer read it as obviously
+# machine-written. Every existing check measured density, structure or banned
+# tokens. None measured whether the page was inventing things about the reader
+# or asserting experience it could not evidence, which is what the reviewer
+# actually objected to. See editorial-os/15-good-vs-bad-examples.md and
+# runtime-packs/stages/humanise.md Part D.
+
+# Things the page cannot know about the person reading it. Asserting them is
+# fabrication, not empathy. The failure that prompted this: "If you are reading
+# this late, with an application already moving and a letter on the desk you
+# did not want".
+FABRICATED_READER_CONTEXT_PATTERNS = [
+    r"\bif you(?:'re| are) reading this\b",
+    r"\b(?:letter|envelope|paperwork) on (?:the|your) (?:desk|table|kitchen table)\b",
+    r"\bkeeping you awake\b|\bkeeps you awake\b|\blying awake\b|\bsleepless\b",
+    r"\byou have(?:n't| not) slept\b",
+    r"\bthe fear here is\b|\bwhat you(?:'re| are) (?:really )?afraid of\b",
+    r"\byou(?:'ve| have) (?:probably )?spent (?:the |a )?(?:weekend|night|evening)\b",
+    r"\bsitting up (?:at|late)\b",
+    r"\bwe know (?:this|how) (?:is|hard|stressful|difficult)\b",
+    r"\byour kitchen table\b",
+]
+
+# Claims about typical outcomes, frequencies or the writer's own caseload.
+# These are legitimate ONLY as documented experience, a consequence of cited
+# criteria, or clearly-labelled editorial judgement (see 15-good-vs-bad-examples
+# "Unsupported claims" and "Fake certainty vs controlled flag"). The gate cannot
+# verify which, so it surfaces them for a conscious decision rather than failing
+# the page outright.
+UNSUPPORTED_GENERALISATION_PATTERNS = [
+    r"\bmost (?:directors|people|applicants|readers|clients|borrowers)\b",
+    r"\bplenty of (?:directors|people|applicants|clients)\b",
+    r"\brarely (?:sinks|stops|matters|causes)\b",
+    r"\bwe(?:'ve| have) never seen\b|\bwe (?:often|rarely|usually) see\b",
+    r"\bin (?:our|the) experience\b",
+    r"\bin the cases we handle\b",
+    r"\bby the time a (?:director|client|customer) (?:calls|contacts|rings)\b",
+    r"\bnine times out of ten\b|\bmore often than not\b",
+    r"\busually turns out\b|\bin most cases\b",
+    r"\b(?:lenders|banks|underwriters) (?:evidently|clearly|obviously) (?:accept|know|think|believe)\b",
+]
+
 # Company Debt internal link hosts (staging or production).
 INTERNAL_HOSTS = ("companydebt.com", "comdebstage.wpengine.com")
 
@@ -163,6 +208,9 @@ class ArticleAudit:
     template: str
     word_count: int
     checks: list[CheckResult] = field(default_factory=list)
+    # Body HTML, kept so print_report can surface non-scored human-review
+    # listings (see list_candidate_closing_lines).
+    body: str = ""
 
     @property
     def score(self) -> int:
@@ -625,6 +673,98 @@ def check_payoff_intent_first_meta_references(body: str) -> CheckResult:
         detail=(f"{len(hits)} paragraph(s) open with an article-object reference: "
                 + "; ".join(hits[:3])) if hits else "clean",
     )
+
+
+def _body_paragraphs_plain(body: str) -> list[str]:
+    """Body <p> text with asides stripped; shared by the performance checks."""
+    stripped = re.sub(r"<aside\b[^>]*>.*?</aside>", " ", body, flags=re.I | re.S)
+    out = []
+    for para in re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", stripped, re.S):
+        plain = re.sub(r"<[^>]+>", "", para).strip()
+        if plain:
+            out.append(plain)
+    return out
+
+
+def check_fabricated_reader_context(body: str) -> CheckResult:
+    """
+    Check 33. The page must not assert facts about the reader's circumstances,
+    surroundings or emotional state. It does not know them, and inventing them
+    is the single most reliable way to make a page read as machine-written
+    while appearing warm.
+
+    humanise.md Part D bans "borrowed empathy". 15-good-vs-bad-examples.md
+    prefers the working-day consequence to the manufactured scene. This check
+    is the mechanical half of both.
+    """
+    hits = []
+    for i, plain in enumerate(_body_paragraphs_plain(body), start=1):
+        for pat in FABRICATED_READER_CONTEXT_PATTERNS:
+            m = re.search(pat, plain, re.I)
+            if m:
+                hits.append(f"P{i}: ...{plain[max(0, m.start() - 25):m.start() + 55]}...")
+                break
+    return CheckResult(
+        id="33", tier="T1",
+        name="No fabricated reader context (invented scene, mood or evening)",
+        passed=len(hits) == 0,
+        detail=(f"{len(hits)} paragraph(s) assert something about the reader the page "
+                f"cannot know: " + "; ".join(hits[:3])) if hits else "clean",
+    )
+
+
+def list_generalisation_claims(body: str, limit: int = 6) -> list[str]:
+    """Surface claims about typical outcomes, frequencies or the writer's own
+    caseload. Deliberately NOT a scored check.
+
+    Each such claim must be documented experience, a consequence of the cited
+    criteria, or clearly-labelled editorial judgement; otherwise it is borrowed
+    authority and should be cut. That distinction is about whether the claim is
+    true, which a regex cannot decide.
+
+    Scoring it was tried and reverted on 2026-08-13. Run across all 311 drafts
+    it flagged 220 of them, dominated by "in our experience" and "in the cases
+    we handle" -- which is the earned practitioner voice humanise.md Part C
+    positively requires. A gate that fails the corpus for speaking in its own
+    mandated voice teaches writers to strip the voice, which is the opposite of
+    the intent. Listed for a human instead.
+    """
+    out = []
+    for plain in _body_paragraphs_plain(body):
+        for pat in UNSUPPORTED_GENERALISATION_PATTERNS:
+            m = re.search(pat, plain, re.I)
+            if m:
+                out.append(plain[max(0, m.start() - 20):m.start() + 70].strip())
+                break
+        if len(out) >= limit:
+            break
+    return out
+
+
+def list_candidate_closing_lines(body: str, limit: int = 6) -> list[str]:
+    """Surface paragraph-closing lines that MAY be the fact, interpretation,
+    quotable-closer formula. This is deliberately NOT a scored check.
+
+    Calibrated 2026-08-13 against the rejected and accepted drafts of
+    company-ccj-mortgage-lender-criteria. The best length-based proxy split
+    them 22% vs 9%, which is not a usable threshold: anything that failed the
+    rejected draft would be fitted to two examples and would misfire
+    elsewhere. "Too many finished-sounding lines" is a semantic judgement, and
+    a gate that pretends to score it hands back a green number in place of the
+    judgement it cannot make. That substitution is the exact failure this
+    module is being patched for, so the lines are listed for a human instead.
+    """
+    out = []
+    for plain in _body_paragraphs_plain(body):
+        if len(plain.split()) < 25:
+            continue
+        sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", plain) if x.strip()]
+        if len(sents) < 2:
+            continue
+        last, prev = len(sents[-1].split()), len(sents[-2].split())
+        if last <= 12 and prev >= last:
+            out.append(sents[-1])
+    return out[:limit]
 
 
 def check_jargon_first_mention_intro(body: str) -> CheckResult:
@@ -1379,6 +1519,7 @@ def audit_file(path: Path) -> ArticleAudit:
         featured_media=meta["featured_media"],
         template=meta["template"],
         word_count=wc,
+        body=body,
     )
 
     audit.checks = [
@@ -1414,6 +1555,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_payoff_intent_first_meta_references(body),
         check_jargon_first_mention_intro(body),
         check_algorithmic_shorthand(body),
+        check_fabricated_reader_context(body),
     ]
     return audit
 
@@ -1460,6 +1602,24 @@ def print_report(a: ArticleAudit) -> None:
     print("  must still be reviewed against editorial-os/16-pre-publish-gate.md")
     print("  §Check 1a, §Check 12a, §Check 13a.")
     print()
+
+    claims = list_generalisation_claims(a.body)
+    if claims:
+        print("  Claims about typical outcomes, for a human read (NOT scored):")
+        print("  Each must be documented experience, a consequence of the cited")
+        print("  criteria, or labelled judgement. If none of those, cut it.")
+        for line in claims:
+            print(f"    - {line[:100]}")
+        print()
+
+    closers = list_candidate_closing_lines(a.body)
+    if closers:
+        print("  Paragraph-closing lines, for a human read (NOT scored):")
+        print("  A page that lands every paragraph reads as written-to-sound-authored.")
+        print("  Ask of each: does it add information, or only interpretation?")
+        for line in closers:
+            print(f"    - {line[:100]}")
+        print()
 
 
 def main() -> int:

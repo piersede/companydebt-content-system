@@ -92,12 +92,33 @@ Four things must be present, verifiable by re-reading before the gate:
    the page reaches a natural we/our density near the 5/1k floor -- reached by
    genuine practitioner observation, never by padding.
 
-3. **Warmth from recognition of reader stress (persona connection).** The reader
-   is a director under real pressure (see 17-persona: shame, the guarantee on the
-   house, the sleepless night, the brown HMRC envelope). Acknowledge that reality
-   before or alongside the legal content, at least once near the top and once at
-   the decision point. Calm, specific, non-judgemental. Never pep, never
-   authority-first credentials over understanding.
+3. **Warmth shown by removing the problem, never by describing the feeling.**
+   The reader is a director under real pressure (see 17-persona: shame, the
+   guarantee on the house, the brown HMRC envelope). That is context for YOU.
+   It is not material to write back at them.
+
+   **Rewritten 2026-08-13.** This item previously said "acknowledge that
+   reality... at least once near the top and once at the decision point". That
+   instruction produced exactly the failure it was meant to prevent. On
+   company-ccj-mortgage-lender-criteria it generated "If you are reading this
+   late, with an application already moving and a letter on the desk you did
+   not want" -- an invented evening, an invented letter and an invented mood,
+   none of which the page could know. A reviewer cut all of it.
+
+   You do not know the time of day, what is on the reader's desk, whether they
+   have slept, or what they are afraid of. Asserting any of it is fabrication
+   wearing empathy's clothes, and it is indistinguishable from the same
+   sentence on a divorce or medical page.
+
+   Demonstrate understanding instead, by naming what they are actually trying
+   to find out and answering it early. On this page the useful move was not
+   "we know this is frightening" but telling the reader the judgment does not
+   reach their personal credit file, and then that a lender may still ask.
+   Prevention beats sympathy: "establish whether the lender asks before you
+   apply" does more for a worried director than any sentence about worry.
+
+   Test: could this sentence appear unchanged on a page about a different
+   crisis entirely? If yes, it is filler. Cut it.
 
 4. **Asymmetrical editorial lines (1-3 per page) and tonal modulation.** Include
    at least one line that could only be written by someone who has thought hard
@@ -221,6 +242,80 @@ evidence on the page, and a practitioner judgement must still be labelled as
 one. Judgement with its basis shown is the target; judgement asserted flatly is
 the thing reviewers send back.
 
+## Part E -- the sentence classification (MANDATORY, run last)
+
+Added 2026-08-13 after four failed humanise passes on one page. Parts A, C and
+D describe what good looks like. This part is the mechanical way to find what
+is wrong, and it is the fastest of the lot. Do it as a separate pass with the
+draft in front of you, not from memory.
+
+Classify every substantive sentence:
+
+| Code | Meaning |
+|------|---------|
+| **F** | **Fact.** Directly supported by the research or the cited source. |
+| **D** | **Derived insight.** Follows logically from two or more facts on the page. |
+| **E** | **Established experience.** Genuine Company Debt practitioner knowledge that could be defended if challenged. |
+| **J** | **Editorial judgement.** A reasoned conclusion with its basis visible in the sentence. |
+| **P** | **Performance.** Anecdote, drama, assumed emotion, clever line or invented scenario, present mainly to make the page feel human. |
+
+Keep F, D, E and carefully-used J. **Cut most P.**
+
+D is where the value usually sits and it is the class most often missing.
+"Two of the three sit inside the same banking group, so the sample contains two
+independently established approaches rather than three" is D: nobody told us
+that, it fell out of the comparison. A page rich in F and thin in D is a data
+dump. A page rich in P is a performance.
+
+### The four questions that produce the classification
+
+Ask them section by section, not sentence by sentence, or you will polish
+individual lines and miss the shape:
+
+1. **What did the research actually establish?** Write that first.
+2. **What is the non-obvious distinction?** This is nearly always where the
+   human value is.
+3. **What practical consequence follows?** What to check, disclose, compare or
+   ask.
+4. **Is anything here only because it sounds vivid?** Delete it.
+
+### Specific P-class failures, with the fix
+
+- **Inventing the reader's circumstances.** Their evening, their desk, their
+  mood, the time on their phone. You do not know any of it. Fix: answer the
+  question earlier instead.
+- **Turning plausible experience into fact.** "Rarely sinks an application",
+  "plenty of directors", "most directors get this wrong". Unless it is F, D, E
+  or labelled J, remove it. Sounding like experience is not having it.
+- **Mind-reading the subject.** "Lenders evidently accept that...", "the rule
+  is aimed at...". Published criteria show WHAT, not WHY. Fix: compare two
+  criteria and state the difference, which is stronger anyway.
+- **Manufacturing stakes in headings.** "The One Lender That Can Stop You" is a
+  content headline. "Barclays Has a Specific Company-CCJ Decline Rule" is an
+  expert one. Let the facts carry the urgency.
+- **Landing every paragraph.** Fact, then dramatic interpretation, then
+  quotable closer. Each one works alone; stacked, they are the clearest
+  signature of prose written to sound authored. Let most sections end quietly
+  when the explanation is finished.
+
+### Keep the domain boundary visible
+
+Where the page speaks on insolvency -- winding-up petitions, personal
+guarantees, what happens when a company cannot satisfy a judgment -- Company
+Debt has practitioner authority and should use it. Where it speaks on another
+trade's territory -- whether a mortgage will be approved, how an underwriter
+will behave, what a lender will accept -- ground the statement in the published
+criteria or send the reader to their broker. Holding that line makes the page
+sound more expert, not less.
+
+### The standard
+
+Do not aim for the reader thinking "this writer understands how stressful this
+is". Aim for: **"they have actually checked this, they noticed the distinction I
+was missing, and now I know what to ask."**
+
+The research creates the personality. The writer does not add one on top.
+
 ## Part B -- gate-aware constraints (the "how", so it passes first time)
 
 Bake these in WHILE humanising so the output clears `article_audit.py`:
@@ -303,12 +398,21 @@ issues in the stranger-read report; that defeats the check.
   satisfy all eight Part D points and still fail here, and this is the failure
   reviewers actually notice. Imitating human prose is the error; imitating
   human thought is the target.
-- **Part C is satisfied and re-read for:** >= 3 concrete scenes per 1,000 words
-  (one per major section), earned practitioner "we" carrying the driver and
-  distinctive sections, persona warmth near the top and at the decision point,
-  and 1-3 asymmetrical editorial lines with tone modulated by section. If a
-  reader could not tell an experienced practitioner wrote this to them
-  specifically, the pass is NOT done, whatever the gate score says.
+- **Part C is satisfied and re-read for:** concrete detail that comes from
+  knowledge rather than invention (no quota -- see Part C item 1, and do not
+  reinstate one), earned practitioner "we" carrying the driver and distinctive
+  sections, understanding shown by answering the reader's real question rather
+  than by describing their feelings, and 1-3 asymmetrical editorial lines with
+  tone modulated by section. If a reader could not tell an experienced
+  practitioner wrote this to them specifically, the pass is NOT done, whatever
+  the gate score says.
+
+  This bullet demanded ">= 3 concrete scenes per 1,000 words (one per major
+  section)" until 2026-08-13, contradicting Part C item 1 on the same page,
+  which had already removed the quota as actively harmful. On a 3,000-word
+  page the quota demands nine scenes, no page holds nine genuine ones, and the
+  pass invents the shortfall. Both halves of the contradiction now agree: the
+  test is where the detail comes from, never how much of it there is.
 - Reads as authored: concrete detail, earned judgement, varied cadence, a few
   asymmetrical lines. It would not be mistaken for AI-balanced copy.
 - Checked for REPEATED rhetorical devices across the whole page (aphorism
