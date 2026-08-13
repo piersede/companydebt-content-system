@@ -33,7 +33,10 @@ import requests
 from dotenv import load_dotenv
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-load_dotenv(ROOT / ".env")
+import sys as _sys, pathlib as _pl
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+from _env import load_env as _load_env
+_load_env()
 REMOTE_DIR = "wp-content/mu-plugins"
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 

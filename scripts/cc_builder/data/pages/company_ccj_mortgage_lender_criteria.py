@@ -15,8 +15,12 @@ Maintenance cadence agreed with Piers on 12 August 2026:
   - Halifax, BM Solutions and Barclays  -> re-check monthly
   - the remaining 11 lenders            -> re-check every 6 months
 
-Staging page id is 81464. There is no live page yet; a live page must be
-created separately when this is cleared for publication.
+Page ids differ by environment: staging 81464, LIVE 81458. `wp_page_id` below
+is the staging id, because `build_page.py --publish` targets staging. For a
+live push use `publish_to_live.py --id 81458`.
+
+Went live 13 August 2026 after practitioner sign-off, together with the
+corrected mortgage section on /county-court-judgements/ (live id 68076).
 
 Slim config -- only the fields the Bernstein pipeline and runtime-pack router
 read. Content is read directly from

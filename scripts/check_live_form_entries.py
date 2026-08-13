@@ -31,8 +31,10 @@ from dotenv import load_dotenv
 from requests_oauthlib import OAuth1
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-load_dotenv(ROOT / ".env")
-
+import sys as _sys, pathlib as _pl
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+from _env import load_env as _load_env
+_load_env()
 # The live WAF rejects the default requests user-agent.
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
