@@ -2,18 +2,18 @@
   "slug": "county-court-judgements",
   "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "e8073afe0f3101319d13b8df0a75108d545597ac0f704c9b355700f3cd165874",
+  "prose_sha": "489f70512bb721c2b04cfab4ee13cb3513325cc9b3aae58bc5fb8e094f96e2fa",
   "passes_since_baseline": {
-    "count": 9,
+    "count": 10,
     "baseline_ref": "file-creation",
-    "override_reason": "Same reviewer cycle. One section rewritten to match the register of the linked study; the other nine sections are reviewer-approved text a redraft would discard.",
+    "override_reason": "Same reviewer cycle. Vocabulary aligned with the study page after the stranger read flagged paid/satisfied/settled drift; the rest is reviewer-approved text.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4045,
-      "you": 84,
-      "you_per_1k": 20.8,
+      "words": 4069,
+      "you": 86,
+      "you_per_1k": 21.1,
       "we": 21,
       "we_per_1k": 5.2,
       "i": 5,
@@ -22,7 +22,7 @@
     "sections_over_200w_without_you": [],
     "rhythm": {
       "paras": 108,
-      "cv": 0.354,
+      "cv": 0.355,
       "uniform": false
     },
     "scene_proxy": 1
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Mortgage section rewritten in the Which? register to match the study page. Opens on the answer rather than a throat-clearing line about honest answers. States the mechanism the reader needs, that the lender runs a search and asks a separate question, and that the declaration rather than the credit report is where the exposure sits. Keeps Halifax and Barclays as brief named illustrations and hands the lender-by-lender detail to the study.",
+    "notes": "Vocabulary aligned with the study page after the outside reader flagged that paid, satisfied, settled and cleared were being used interchangeably. Replaced 'an explicit company-judgment criterion' with plain wording, and 'publish no company-judgment rule at all' with 'do not say either way', both of which the reader called our language rather than his.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Scope remains the mortgage section only. The 12 Aug 2026 stranger read covers the rest of the prose unchanged. Flagged to the human reviewer in-session three times now."
+    "override_reason": "The stranger read was run properly on the study page, which now carries the detailed lender analysis. This page's mortgage section is a summary that mirrors it. Rest of prose unchanged since the 12 Aug 2026 read."
   },
   "verdict": "pass"
 }

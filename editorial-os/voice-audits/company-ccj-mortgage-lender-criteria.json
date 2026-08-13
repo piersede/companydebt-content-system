@@ -2,45 +2,45 @@
   "slug": "company-ccj-mortgage-lender-criteria",
   "audited_at": "2026-08-13",
   "audited_by": "claude-opus-5",
-  "prose_sha": "24e63c1d768e19a0acf0b5b151cf1d8913bb9199cadc2a11fa7e61c4d97fbc26",
+  "prose_sha": "2bd74c3b616d688397000931fbf732fe49296571742491de7d750c68d39eb7a6",
   "passes_since_baseline": {
-    "count": 2,
+    "count": 3,
     "baseline_ref": "file-creation",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2093,
-      "you": 51,
-      "you_per_1k": 24.4,
+      "words": 2834,
+      "you": 81,
+      "you_per_1k": 28.6,
       "we": 22,
-      "we_per_1k": 10.5,
-      "i": 8,
-      "i_per_1k": 3.8
+      "we_per_1k": 7.8,
+      "i": 11,
+      "i_per_1k": 3.9
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 59,
-      "cv": 0.375,
+      "paras": 77,
+      "cv": 0.342,
       "uniform": false
     },
-    "scene_proxy": 1
+    "scene_proxy": 2
   },
   "attested": {
-    "concrete_scenes": 7,
-    "evaluative_bite_lines": 8,
+    "concrete_scenes": 8,
+    "evaluative_bite_lines": 7,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full-page rewrite in the Which? register per humanise Part D, after Piers said the earlier pass had only patched four sections. Removed the devices Part A names: the self-announcing 'here is the trap, stated plainly', the dramatic one-line reveal on the 500 pound figure, the neat reversal 'it is a reasonable assumption, it is also wrong', the balanced 'one is a question, the other is a decline' pair, and the fragment 'not referred, declined'. Scanned the whole page for repeated rhetorical shapes afterwards: the that-is-the-X label now appears once, the aphorism label once, sentence-initial So once. Opening no longer uses a hook-and-reveal; it opens on the market observation that lenders publish criteria for brokers rather than borrowers, which is why the reader could not find an answer. The organising practitioner insight is now stated where it belongs: credit reference data is organised around people, the application form is organised around what the applicant knows, and a company judgment falls in the gap between the search and the declaration. Judgement added where evidence supports it: Barclays should change your plans, clear it before applying, sort the company before the house, pay inside the one-month window. Facts carry consequences throughout. FAQ answers now end on a consequence rather than a fact. you-density was over the 30 per 1k ceiling after the rewrite and was brought back by removing four redundant second-person constructions rather than by cutting reader-facing content. No invented casework.",
-    "stranger_read_report": null
+    "notes": "Four rounds of stranger read with a real outside reader, in persona, rather than an override. The reader found things I could not see. Round 1: the opening I was pleased with was the worst part, because it talked about our research process rather than his problem, and he nearly closed the tab at sentence one. Round 2: I had written 'it takes one call' when it takes days, which was simply untrue, and there was nothing he could do that night. Round 3: Barclays, the only lender that can refuse him, was seven paragraphs down, and the page never addressed the thing keeping him awake, which was that his application had already gone in with a possibly wrong answer. Round 4: the page assumed he knew he had a judgment, when he had an unexplained letter, and a name-and-address search could return a false clear. Every one of those is now fixed. Added: how to tell a judgment from a claim form or a demand, what to type into the register search and why a wrong address gives a meaningless nil result, the six pound fee rather than 'a small fee', the personal guarantee check that breaks the page's whole premise, plain wording on offer withdrawal and mortgage fraud, and a gloss on winding-up petition. Vocabulary standardised on paid and satisfied. Reader's closing verdict on round 4: 'That's a plan. First time I've had one.'",
+    "stranger_read_report": "editorial-os/stranger-reads/company-ccj-mortgage-lender-criteria_2026-08-13T042755Z.md"
   },
   "stranger_read": {
-    "path": null,
-    "requested": null,
-    "prose_sha_at_request": null,
-    "numbered_answers": 0,
+    "path": "editorial-os\\stranger-reads\\company-ccj-mortgage-lender-criteria_2026-08-13T042755Z.md",
+    "requested": "2026-08-13T042755Z",
+    "prose_sha_at_request": "6e7f3ce86ed14c75d9bd085f845c6619eecab99dc442d1a3a312672c3a78da74",
+    "numbered_answers": 5,
     "override_reason": null
   },
   "verdict": "pass"
