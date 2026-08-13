@@ -353,9 +353,9 @@ SECTORS = {
             ("It is more serious when the margin no longer covers the "
              "overhead at any realistic volume, or when one customer has "
              "grown too large to lose and knows it."),
-            ('If you are reading this with a wage run coming and a payment that has '
-             'not landed, the thing worth knowing is that the earlier you speak to '
-             'someone, the more room there is to move: supplier terms renegotiated, '
+            ('The wage run falls due whether or not the customer has paid, and in '
+             'furniture manufacturing that gap is measured in weeks. The earlier you '
+             'speak to someone, the more room there is to move: supplier terms renegotiated, '
              'the debtor book refinanced, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
              'a rescue procedure such as a '
@@ -1031,9 +1031,9 @@ SECTORS = {
              "quarters, when a rebate wave is coming and the commission on it has "
              "already been paid, or when the office lease is the biggest single "
              "thing keeping the company alive on paper and dead in practice."),
-            ('If you are reading this having just worked out that this quarter will '
-             'not cover payroll, the useful thing to know is that the earlier you '
-             'speak to someone, the more room there is to move: the lease '
+            ('An agency pays its contractors long before the client settles the '
+             'invoice, so a quarter that will not cover payroll arrives with little '
+             'warning. The earlier you speak to someone, the more room there is to move: the lease '
              'renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
              'a rescue procedure such as a '
@@ -1304,8 +1304,8 @@ SECTORS = {
              "it is fixable. It is more serious when the margin no longer covers "
              "on-costs and overheads, when invoices are being knocked back by the "
              "funder, or when one client has grown too big to lose."),
-            ('If you are reading this with a payroll due and no obvious way to '
-             'fund it, the thing worth knowing is that the earlier you speak to '
+            ('Temp payroll goes out weekly and client payment runs do not, so the '
+             'funding gap is structural rather than a one-off. The earlier you speak to '
              'someone, the more room there is to move: terms renegotiated, the '
              'debtor book refinanced, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -1626,9 +1626,9 @@ SECTORS = {
              "quarters, or when you are turning work away because you cannot buy "
              "the parts to do it. That is the point at which a garage is winding "
              "itself down, whether anyone has said so out loud or not."),
-            ('If you are reading this with a stop on the parts account and a VAT '
-             'bill due, the useful thing to know is that the earlier you speak to '
-             'someone, the more room there is to move: terms renegotiated, an '
+            ('A stop on the parts account and a VAT quarter tend to land in the '
+             'same month, and the first stops the work that would pay the second. '
+             'The earlier you speak to someone, the more room there is to move: terms renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, or '
              'a rescue procedure such as a '
              '<a href="/company-rescue-solutions/company-voluntary-arrangement/">Company '
@@ -3077,8 +3077,8 @@ SECTORS = {
              "carrying a working-capital gap or an HMRC arrears bill built up "
              "during a slow quarter, and both of those are usually fixable if "
              "addressed early enough."),
-            ('If you are reading this with a payment run coming and a client '
-             'invoice that has not landed, the thing worth knowing is that the '
+            ('Salaries run monthly; client invoices settle when the client decides, '
+             'and one large account can set the whole month. The '
              'earlier you speak to someone, the more room there is to move: '
              'supplier or lender terms renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -3398,8 +3398,8 @@ SECTORS = {
              "carrying a working-capital gap created by a delayed client payment "
              "or a slow contract-renewal cycle, and that is usually fixable if it "
              "is addressed early."),
-            ('If you are reading this with a payment run coming and a client '
-             'milestone that has not landed, the thing worth knowing is that the '
+            ('Milestone billing means the work is delivered long before the money '
+             'arrives, and the payment run does not wait for it. The '
              'earlier you speak to someone, the more room there is to move: '
              'supplier or lender terms renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -3701,9 +3701,9 @@ SECTORS = {
              "businesses carrying an insurance-driven cash shock or a delayed "
              "project payment, and that is usually fixable if it is addressed "
              "early."),
-            ('If you are reading this with a premium renewal or a payment run '
-             'coming and the cash is not there, the thing worth knowing is that '
-             'the earlier you speak to someone, the more room there is to move: '
+            ('Professional indemnity renewals and payment runs fall on their own '
+             'dates, not on the dates the fees come in. '
+             'The earlier you speak to someone, the more room there is to move: '
              'supplier or lender terms renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
              'or a rescue procedure such as a '
@@ -3977,8 +3977,8 @@ SECTORS = {
             ("Plenty of salons and clinics in difficulty are sound businesses "
              "carrying a rates shock or a PAYE arrears bill built up during a "
              "slow patch, and both are usually fixable if addressed early."),
-            ('If you are reading this with a wage run coming and the takings '
-             'are not there, the thing worth knowing is that the earlier you '
+            ('Rent and wages are fixed in this trade and the takings are not, so a '
+             'few quiet weeks show up straight away. The earlier you '
              'speak to someone, the more room there is to move: rent '
              'renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -4273,8 +4273,8 @@ SECTORS = {
              "sound operations carrying an energy-cost shock or a funding "
              "gap left by a council decision, and both are usually fixable "
              "if addressed early."),
-            ('If you are reading this with an energy bill or a wage run '
-             'coming and the cash is not there, the thing worth knowing is '
+            ('Energy standing charges and wages carry on through the quiet '
+             'weeks, whatever the bookings do. The thing worth knowing is '
              'that the earlier you speak to someone, the more room there is '
              'to move: supplier or lender terms renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -4581,8 +4581,8 @@ SECTORS = {
              "businesses carrying a funding-transition gap or a partner "
              "departure they have not yet resolved, and that is usually "
              "fixable if addressed early."),
-            ('If you are reading this with a payroll or pension-scheme '
-             'payment coming and the cash is not there, the thing worth '
+            ('Payroll and pension-scheme contributions fall due on fixed '
+             'dates whatever the month has brought in. The thing worth '
              'knowing is that the earlier you speak to someone, the more '
              'room there is to move: an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -4873,8 +4873,8 @@ SECTORS = {
              "artistically sound operations carrying a rates shock or a "
              "quiet-booking-run cash gap, and both are usually fixable if "
              "addressed early."),
-            ('If you are reading this with a wage run or a rates payment '
-             'coming and the takings are not there, the thing worth knowing '
+            ('Wages and business rates arrive on their own schedule, and box '
+             'office income does not. The thing worth knowing '
              'is that the earlier you speak to someone, the more room there '
              'is to move: a lease renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -5163,8 +5163,8 @@ SECTORS = {
              "are otherwise sound operations carrying a weak-season cash "
              "gap or a cost step-up they have not yet priced in, and both "
              "are usually fixable if addressed early."),
-            ('If you are reading this heading into a quiet season with a '
-             'payment run coming and the cash is not there, the thing worth '
+            ('Seasonal trade means the quiet months still carry the same '
+             'finance payments as the busy ones. The thing worth '
              'knowing is that the earlier you speak to someone, the more '
              'room there is to move: finance restructured, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -5464,8 +5464,8 @@ SECTORS = {
              "otherwise sound businesses carrying a refinancing-timing "
              "problem or a compliance cost they have not yet funded, and "
              "both are usually fixable if addressed early."),
-            ('If you are reading this with a refinancing date approaching '
-             'and the numbers do not work, the thing worth knowing is that '
+            ('A refinancing date is fixed years in advance; the valuation '
+             'and the rent roll that have to support it are not. The thing worth knowing is that '
              'the earlier you speak to someone, the more room there is to '
              'move: terms renegotiated with a lender, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
@@ -6132,8 +6132,8 @@ SECTORS = {
              "businesses carrying a small number of loss-making leases or "
              "a stock-funding gap, and both are usually fixable if "
              "addressed early."),
-            ('If you are reading this with a rent quarter-day or a '
-             'supplier payment coming and the cash is not there, the thing '
+            ('Rent quarter-days and supplier payment runs do not move with '
+             'the takings, which is why a soft quarter bites so fast. The thing '
              'worth knowing is that the earlier you speak to someone, the '
              'more room there is to move: a lease renegotiated, an '
              '<a href="/hmrc/time-to-pay-hmrc/">HMRC Time to Pay arrangement</a>, '
