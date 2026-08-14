@@ -42,6 +42,17 @@ def month_label(period: str) -> str:
     return f"{MONTHS[int(m) - 1]} {y}"
 
 
+def date_label(stamp: str) -> str:
+    """'2026-07-18' -> '18 July 2026'.
+
+    The active-company count is a point-in-time read of the live register, not a
+    monthly statistic. Labelling it with the insolvency reporting month claimed a
+    date the data does not support, so the card carries the retrieval date.
+    """
+    y, m, d = stamp.split("-")
+    return f"{int(d)} {MONTHS[int(m) - 1]} {y}"
+
+
 def load_figures() -> dict:
     md = json.loads((DATA / "insolvency-statistics" / "release_metadata.json").read_text(encoding="utf-8"))
     rate = json.loads((DATA / "insolvency-statistics" / "rate_series.json").read_text(encoding="utf-8"))
@@ -62,7 +73,7 @@ def load_figures() -> dict:
         "petitions": petitions,
         "pet_period": month_label(gz_month),
         "active": active,
-        "act_period": month_label(ch["month"]),
+        "act_period": date_label(ch["retrieved_at"]),
         "series_year": ins_period.split()[-1],
     }
 
@@ -140,7 +151,7 @@ def inject_data(html: str, f: dict) -> str:
     html = _sub(html, '<b>Advertised in May 2026</b>The Gazette',
                 f'<b>Advertised in {f["pet_period"]}</b>The Gazette')
     html = _sub(html, '<b>The register, May 2026</b>Companies House',
-                f'<b>The register, {f["act_period"]}</b>Companies House')
+                f'<b>Active on the UK register, {f["act_period"]}</b>Companies House')
     # Colophon series year
     html = _sub(html, '<dt>Series</dt><dd>2026</dd>',
                 f'<dt>Series</dt><dd>{f["series_year"]}</dd>')

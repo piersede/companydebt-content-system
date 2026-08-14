@@ -79,8 +79,8 @@ function cd_datahub_seo_meta( $slug ) {
             'desc'  => 'Official, citable UK company insolvency data for journalists, lenders, accountants and directors: latest headline figures and a directory of every data page.',
         ),
         'uk-insolvency-statistics' => array(
-            'title' => 'UK Company Insolvency Statistics: Latest Monthly Data',
-            'desc'  => 'Latest UK insolvency statistics: monthly headline counts, the 12-month rolling rate, procedure mix and sector breakdown, from the Insolvency Service.',
+            'title' => 'UK Company Insolvency Statistics: Latest Monthly Figures',
+            'desc'  => 'UK company insolvency statistics, updated monthly from Insolvency Service data: headline count, procedure mix, sector breakdown and trends since 2000.',
         ),
         'winding-up-petition-tracker' => array(
             'title' => 'Winding-Up Petition Statistics (UK): Monthly Gazette Data',

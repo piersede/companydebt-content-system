@@ -201,7 +201,7 @@ def monthly_chart_block(charts: dict) -> str:
         <div>
           <p class="cd-eyebrow">Trend</p>
           <h2>Monthly company insolvencies by procedure</h2>
-          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations spiked in June after another connected real-estate cluster — the third such episode this year, following clusters in March and April.</p>
+          <p class="cd-section-intro">CVLs remain the largest share of the total. Administrations spiked in June after another connected real-estate cluster, the third such episode this year, following clusters in March and April.</p>
         </div>
         <div class="cd-chart-controls" role="tablist" aria-label="Time range">
           <span class="cd-chart-controls__label">View range</span>
@@ -248,7 +248,7 @@ def longrun_block(charts: dict) -> str:
         </figure>
         <aside class="cd-side-notes" aria-label="Key context">
           <h3 class="cd-side-notes__title">What this means</h3>
-          <p class="cd-side-note__d">Current volumes are roughly equal to 2008–09 recession levels — but the insolvency rate is half that recession peak, because the active company register has more than doubled since.</p>
+          <p class="cd-side-note__d">Current volumes are roughly equal to 2008–09 recession levels. The insolvency rate is half that recession peak, because the active company register has more than doubled since.</p>
           <p class="cd-side-note__d">The 2020–21 dip is the Covid support effect, not a real improvement in trading conditions: government support suppressed formal procedures sharply, then volumes rebounded.</p>
           <p class="cd-side-note__d">The 2022–24 climb tracks the unwinding of Covid support, HMRC's return to active enforcement, and a wave of CVL filings catching up with companies that had stopped trading earlier.</p>
         </aside>
@@ -269,7 +269,7 @@ def rate_block(charts: dict, latest_rate: float) -> str:
       <div class="cd-rate-grid">
         <div class="cd-rate-text">
           <p class="cd-section-intro">In the 12 months to 30 June 2026, the company insolvency rate in England and Wales was {latest_rate} per 10,000 companies on the effective register. That is equal to one in 198 companies entering insolvency.</p>
-          <p>The rate was lower than the 52.4 per 10,000 recorded for the 12 months to June 2025, and has fallen from a post-pandemic peak of around 57.3 in late 2023.</p>
+          <p>The rate was lower than the 52.4 per 10,000 recorded for the 12 months to June 2025, and below the post-pandemic high of 57.6 per 10,000 in the 12 months ending February 2024.</p>
           <div class="cd-callout-card">
             <div class="cd-callout-card__row">
               <span class="cd-callout-card__k">June 2026</span>
@@ -299,7 +299,7 @@ def procedure_cards_block() -> str:
     rows = [
         ("CVLs", "1,364", "Main procedure. 74% of all insolvencies.",
          "CVL statistics", "/data/cvl-statistics/"),
-        ("Compulsory liquidations", "276", "Down 2% on May 2026. HMRC-led petitions.",
+        ("Compulsory liquidations", "276", "Down 2% on May 2026. Court-ordered liquidations.",
          "Compulsory liquidation statistics", "/data/compulsory-liquidation-statistics/"),
         ("Administrations", "191", "Up 45% after June's real-estate cluster.",
          "Administration statistics", "/data/administration-statistics/"),
@@ -522,15 +522,15 @@ def faq_block() -> str:
         ),
         (
             "What is the current UK company insolvency rate?",
-            "The 12-month rolling company insolvency rate for England and Wales was 50.5 per 10,000 active companies in the year to June 2026 — equal to one in 198 companies. The rate is lower than the 52.4 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
+            "The 12-month rolling company insolvency rate for England and Wales was 50.5 per 10,000 active companies in the year to June 2026, equal to one in 198 companies. The rate is lower than the 52.4 per 10,000 recorded a year earlier, and well below the 113.1 per 10,000 peak of the 2008–09 recession."
         ),
         (
             "Which procedure accounts for the most UK company insolvencies?",
-            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,364 CVLs in June 2026 — 74% of all company insolvencies for the month. Compulsory liquidations (276) and administrations (191) followed, with a small number of CVAs (14) and no receiverships."
+            "Creditors' Voluntary Liquidations (CVLs) account for the largest share. There were 1,364 CVLs in June 2026, 74% of all company insolvencies for the month. Compulsory liquidations (276) and administrations (191) followed, with a small number of CVAs (14) and no receiverships."
         ),
         (
             "Which UK sectors have the most company insolvencies?",
-            "Across the 12 months to June 2026, construction (3,805, 17%), wholesale and retail (3,463, 15%), and accommodation and food services (3,233, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates — larger sectors have more registered companies and so tend to have more insolvencies."
+            "Across the 12 months to June 2026, construction (3,805, 17%), wholesale and retail (3,463, 15%), and accommodation and food services (3,233, 14%) had the largest counts. Administrative services, professional services and manufacturing followed. These are volumes, not failure rates. Larger sectors have more registered companies and so tend to have more insolvencies."
         ),
         (
             "When is the next UK insolvency statistics release?",
@@ -538,7 +538,7 @@ def faq_block() -> str:
         ),
         (
             "Where does this UK insolvency data come from?",
-            "Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures — we do not produce them."
+            "Company insolvency data is published by the Insolvency Service as accredited official statistics, sourced mainly from Companies House. Compulsory liquidations for England and Wales come from the Insolvency Service directly; Northern Ireland compulsory liquidation data comes from the Department for the Economy. CompanyDebt presents the published figures. We do not produce them."
         ),
     ]
     items_html = "".join(

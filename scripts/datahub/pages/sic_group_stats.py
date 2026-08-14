@@ -5369,13 +5369,14 @@ SECTORS = {
                 "h3": "Energy-efficiency rules are turning some landlords into sellers",
                 "body": [
                     ("Private rented properties in England and Wales must "
-                     "reach an EPC C rating by 1 October 2030, and "
-                     "government data puts the average compliance cost at "
-                     "£6,864 per property, capped at £10,000 over ten "
-                     "years. For many landlords, 2026 has become what the "
-                     "industry is calling the crunch point: the year they "
-                     "weigh the cost of upgrading an older property against "
-                     "simply selling it."),
+                     "reach an EPC C rating by 1 October 2030. The "
+                     "government's January 2026 impact assessment models "
+                     "average landlord spend at about £5,400 per property, "
+                     "with a £10,000 cost cap."),
+                    ("The present legal minimum is still EPC E until a "
+                     "property has to meet the higher standard. For many "
+                     "landlords the decision falls due in the next few "
+                     "years: upgrade an older property, or sell it."),
                     ("A sale does not remove the obligation, it passes it to "
                      "the buyer, who prices the future upgrade cost into "
                      "their offer. That discount can be the difference "
@@ -5950,8 +5951,9 @@ SECTORS = {
              "gentler pace: 1,808 cases for the year to June 2026 against "
              "1,893 for the year to June 2025, down 4.5%, against a 5.4% "
              "fall for the section overall."),
-            ("Both measures now point the same way, after three years in "
-             "which retail insolvencies only climbed."),
+            ("Retail insolvencies fell sharply from the 2023 peak in 2024, "
+             "edged up again in 2025, and are now falling more clearly in "
+             "the first half of 2026."),
         ],
         "divergence": {
             "heading": "Nine very different retail trades, one shared direction",
@@ -5962,7 +5964,8 @@ SECTORS = {
                  "fortunes in 2026. Household equipment retail, covering "
                  "furniture and homeware specialists, is the only one "
                  "rising, up 5.3% year to date."),
-                ("Every other sub-sector fell. Information and "
+                ("Seven of the nine sub-sectors fell and automotive fuel "
+                 "retail was unchanged. Information and "
                  "communication equipment retail fell hardest, down 57.7%, "
                  "though from a small base of a few dozen cases a year. "
                  "Market stalls fell 41.7%, also from a small base."),
@@ -6002,8 +6005,8 @@ SECTORS = {
              "peak of 2,218 in 2023, a 23% jump in a single year, as energy "
              "costs, business rates and post-pandemic cost inflation landed "
              "on the sector at once."),
-            ("2024 and 2025 both eased from that peak, to 1,921 and 1,962, "
-             "and 2026's opening months have continued the retreat. Five "
+            ("2024 fell back to 1,921, then 2025 edged up again to 1,962, "
+             "and 2026's opening months have resumed the retreat. Five "
              "years on from the pandemic, retail remains 50% above its 2019 "
              "level, but the worst of the recent wave looks to be behind "
              "it."),
@@ -6050,19 +6053,21 @@ SECTORS = {
                      "hospitality and leisure premises with a rateable "
                      "value below £500,000, reducing the fixed-cost burden "
                      "for many smaller and mid-sized stores."),
-                    ("Larger premises in prime locations have not seen the "
-                     "same relief: some operators reported rateable-value "
-                     "increases of up to 400% at the 2026 revaluation, "
-                     "keeping pressure concentrated at the top of the "
-                     "market even as it eases lower down."),
+                    ("Larger premises above that threshold do not get the "
+                     "same relief. Retail rateable values rose by about "
+                     "9.3% on average at the 2026 revaluation, so the "
+                     "pressure sits more heavily at the top of the market "
+                     "even as it eases lower down."),
                 ],
             },
             {
                 "h3": "The shift to online continues to shrink the physical store estate",
                 "body": [
-                    ("More than 13,000 chain stores closed across Great "
-                     "Britain in 2025 alone, continuing a run that saw a "
-                     "net loss of roughly 3,800 chain stores in 2024. Much "
+                    ("Around 12,800 chain stores closed across Great "
+                     "Britain in 2024, against roughly 9,000 openings, a "
+                     "net loss of about 3,800 outlets. That count covers "
+                     "retail, leisure and service outlets, not company "
+                     "insolvencies. Much "
                      "of this contraction happens through lease expiry and "
                      "quiet closure, not formal insolvency."),
                     ("That matters for reading this page: a shrinking store "

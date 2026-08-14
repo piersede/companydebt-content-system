@@ -11,8 +11,8 @@ LIMIT = 155
 
 FIXES = {
     "uk-insolvency-statistics":
-        "Latest UK insolvency statistics: monthly headline counts, the 12-month "
-        "rolling rate, procedure mix and sector breakdown, from the Insolvency Service.",
+        "UK company insolvency statistics, updated monthly from Insolvency Service "
+        "data: headline count, procedure mix, sector breakdown and trends since 2000.",
     "company-insolvencies-by-sector":
         "UK company insolvencies by sector: which industries have the most, annual "
         "trends since 2016 and the latest 12-month breakdown across all SIC sections.",
