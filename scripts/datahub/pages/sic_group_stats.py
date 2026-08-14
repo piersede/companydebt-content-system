@@ -149,9 +149,9 @@ SECTORS = {
              "between 92 and 111 from 2016 to 2019, eased to 102 in 2020, then "
              "collapsed to 58 in 2021, when government support and the restrictions "
              "on creditors held the normal insolvency cycle in check."),
-            ("Then the bill arrived. 129 in 2022, and 163 in 2023, the worst year in "
-             "the series and close to triple the 2021 low. The pandemic did not "
-             "spare these companies. It postponed them."),
+            ("The figures then rose sharply as that support and those creditor "
+             "restrictions ended: 129 in 2022, and 163 in 2023, the worst year in "
+             "the series and close to triple the 2021 low."),
             ("What has happened since is the part that matters now. 139 in "
              "2024, 143 in 2025: down 12% from the 2023 peak and then stuck."),
             ("Three years past the worst of it, furniture is still running "
@@ -280,8 +280,8 @@ SECTORS = {
             ("The version we hear most often happens on a Friday: a big "
              "customer's payment run slips by a week, and the wage run, a "
              "timber invoice and a VAT payment all land in the same seven "
-             "days. Most firms survive that once. The third time finishes "
-             "them."),
+             "days. A business can usually absorb that once. Repeated often "
+             "enough, it is the kind of squeeze that ends in insolvency."),
             ("We would not start with turnover. We would look at gross "
              "margin after materials and labour, how much cash is asleep in "
              "timber and work in progress, how long the debtor book "
@@ -771,8 +771,9 @@ SECTORS = {
         "exclusion_note": ("Agencies supplying workers on a temporary basis (SIC "
                            "782) and longer-term human resources provision (SIC "
                            "783) are recorded separately."),
-        "hero_note": ("That is the sharpest fall on any of our sector pages, but "
-                      "from the worst run permanent recruitment has ever had: "
+        "hero_note": ("That is one of the sharpest falls among the sector pages "
+                      "in this June 2026 release, but it comes from the worst "
+                      "run permanent recruitment has had in this series: "
                       "2025 closed at 345 insolvencies, a series record. The "
                       "direction has turned; the level has not finished falling."),
         "key_findings": True,
@@ -810,10 +811,10 @@ SECTORS = {
                  "insolvencies in the first half of 2026, down from 60.5% a "
                  "year earlier. Its share of the wider administrative and "
                  "support services section fell too, from 14.0% to 13.1%."),
-                ("The reason sits in the trade data, not the insolvency "
-                 "data: employers have been buying temporary staff instead "
-                 "of permanent ones. Good for the temp desk, bad for the "
-                 "permanent desk."),
+                ("Hiring surveys over the same period show employers leaning "
+                 "towards temporary staff rather than permanent hires. That "
+                 "is market context for the split, not a measured cause of "
+                 "these insolvencies."),
                 ('The other half of this story is on our '
                  '<a href="/data/temporary-staffing-agency-insolvency-statistics/">temporary '
                  'staffing agency insolvency statistics</a> page.'),
@@ -1228,12 +1229,13 @@ SECTORS = {
                      "KPMG and REC UK Report on Jobs found temporary billings grew "
                      "in June 2026 at their quickest rate since April 2023, while "
                      "permanent placements kept falling."),
-                    ("That sounds like good news, and for trading it is. It is also "
-                     "the exact pattern that gets agencies into trouble. More temp "
-                     "shifts mean more workers to pay on Friday and more invoices "
-                     "sitting on somebody's desk. Billings go up, the bank balance "
-                     "does not, and the agency feels busy right up until the moment "
-                     "it cannot make payroll."),
+                    ("That is good news for trading, but it carries a funding "
+                     "risk. More temp shifts mean more workers to pay on Friday "
+                     "and more invoices still waiting to be settled."),
+                    ("Growth can therefore increase the short-term funding "
+                     "requirement, because payroll goes out before client "
+                     "invoices come in. Billings can rise while the bank "
+                     "balance does not."),
                     ("The REC survey is UK-wide market context. It is not where the "
                      "England and Wales insolvency counts come from."),
                 ],
@@ -2833,6 +2835,12 @@ SECTORS = {
                               "and IT services sold to other businesses, including bespoke "
                               "software development, systems integration and IT project "
                               "consultancy"),
+        "scope_note": ("The official category is SIC 620, computer programming, "
+                       "consultancy and related activities. That is broader than "
+                       "IT consultancy alone. It also covers software development "
+                       "businesses and other related computer services, so not "
+                       "every insolvency here is a consultancy or project-services "
+                       "company."),
         "exclusion_note": ("Telecommunications providers, data processing and hosting "
                            "companies, and IT retailers are recorded under separate codes "
                            "and are not included here."),
@@ -3791,6 +3799,12 @@ SECTORS = {
         "scope_description": ("hairdressing, beauty, wellbeing, funeral and personal "
                               "laundry services, a mixed group that cannot be split "
                               "further"),
+        "scope_note": ("The official figures cover the whole of SIC 960, Other "
+                       "personal service activities. That is a good deal broader "
+                       "than hair and beauty. It also takes in wellbeing, funeral "
+                       "services and personal laundry, and the published data "
+                       "cannot be split further, so these numbers should not be "
+                       "read as a salon-only count."),
         "exclusion_note": "Gyms, business dry cleaning and industrial laundry are recorded separately.",
         "hero_note": ("Personal care services insolvencies have fallen for two "
                       "straight years, from a 2023 peak of 1,286 to 993 in 2025, "
@@ -4216,11 +4230,12 @@ SECTORS = {
             },
         ],
         "practitioner_view": [
-            ("In the sports and leisure cases we see, the trigger is almost "
-             "always a fixed cost that has moved a long way in a short time, "
-             "an energy contract renewing at several times its previous "
-             "rate, or a council subsidy or lease that has been cut or not "
-             "renewed, rather than a sudden drop in members."),
+            ("When we are asked to look at a sports or leisure operator, the "
+             "pressure usually shows in a fixed cost that has moved a long "
+             "way in a short time, rather than in a sudden drop in members."),
+            ("That is often an energy contract renewing at several times its "
+             "previous rate, or a council subsidy or lease that has been cut "
+             "or not renewed."),
             ("Membership income is sticky in ways that can mislead a "
              "director. People do not cancel a gym or club membership as "
              "quickly as spending falls elsewhere, so the revenue line can "
@@ -4687,9 +4702,10 @@ SECTORS = {
              "months of 2025, a rise of 17.2%. Arts, entertainment and "
              "recreation as a whole rose a slower 2.3% over the same "
              "months."),
-            ("This trade, at 28% of the section, is rising more than seven "
-             "times as fast as the section around it. These are Company "
-             "Debt calculations from Insolvency Service Table A1b data."),
+            ("So this trade, at 28% of the section, rose 17.2% while the "
+             "section rose 2.3%. Both are small counts, so read the gap "
+             "with care. These are Company Debt calculations from "
+             "Insolvency Service Table A1b data."),
             ("The rolling 12-month figure confirms the acceleration. At 139 "
              "cases for the year to June 2026 against 121 for the year to "
              "June 2025, insolvencies rose 14.9%, against a 7.6% rise for "
@@ -5405,12 +5421,12 @@ SECTORS = {
             },
         ],
         "practitioner_view": [
-            ("In the real estate letting cases we see, the trigger is "
-             "almost always a refinancing date, not a sudden loss of "
-             "tenants. A portfolio can be fully let and still fail a "
-             "lender's renewed stress test, because the test itself, not "
-             "the rent roll, is what has changed since the loan was first "
-             "written."),
+            ("When we are asked to look at a lettings business, a refinancing "
+             "date is usually where the pressure shows first, rather than a "
+             "sudden loss of tenants."),
+            ("A portfolio can be fully let and still fail a lender's renewed "
+             "stress test, because the test itself, not the rent roll, is "
+             "what has changed since the loan was first written."),
             ("Personal guarantees are common in this trade, particularly on "
              "smaller portfolios, and they are rarely the first thing a "
              "director raises on a call. They are almost always the thing "
@@ -6013,14 +6029,13 @@ SECTORS = {
         ],
         "annual_intro": (
             "The shape of the last decade is a sharp post-pandemic surge "
-            "that peaked in 2023, followed by two years of easing that "
-            "2026 has so far continued."
+            "that peaked in 2023, a clear fall in 2024, a small rise again "
+            "in 2025, and a firmer decline through the first half of 2026."
         ),
         "latest_note": (
             "Both the year-to-date and rolling 12-month figures are down "
-            "on the year before, and by more than most other trades on "
-            "this site. This reads as a genuine retreat from the 2023 "
-            "peak, not just a quieter few months."
+            "on the year before. This reads as a genuine retreat from the "
+            "2023 peak, not just a quieter few months."
         ),
         "pressure_heading": "Why retail insolvencies surged, and why they are now easing",
         "pressure_caveat_in_intro": True,
@@ -6079,11 +6094,11 @@ SECTORS = {
             },
         ],
         "practitioner_view": [
-            ("In the retail cases we see, the trigger is almost always a "
-             "lease or a stock-funding facility, not a single bad trading "
-             "month. A shop can have a full till most days and still be "
-             "insolvent once rent, rates and the National Living Wage are "
-             "covered."),
+            ("When we are asked to look at a retailer, the lease and any "
+             "stock-funding facility are usually where the pressure shows "
+             "first, rather than a single bad trading month."),
+            ("A shop can have a full till most days and still be insolvent "
+             "once rent, rates and the National Living Wage are covered."),
             ("Multi-site retailers fail differently to single shops. One "
              "loss-making unit rarely brings a chain down on its own, but a "
              "lease renewal or a landlord refusing a rent-free period at "
@@ -7158,8 +7173,25 @@ def annual_block(cfg: dict, c: dict, f: dict, sf: dict) -> str:
     </section>""")
 
 
+# Standard revisions caveat, appended to every page's notes. The Insolvency
+# Service records industry later for some compulsory liquidations, so the most
+# recent months carry more unknown-industry cases than older ones. That matters
+# most when a reader is looking at a single latest month, which is exactly what
+# these pages invite. Pages that already make the point in their own words are
+# left alone rather than saying it twice.
+UNKNOWN_SIC_NOTE = (
+    "Recent industry figures can be revised as SIC information is added. The "
+    "Insolvency Service reports more cases with unknown industry in recent "
+    "months, because industry information for compulsory liquidations is "
+    "sometimes recorded later."
+)
+
+
 def context_block(cfg: dict) -> str:
-    notes = "".join(f"<p class=\"cd-side-note__d\">{n}</p>" for n in cfg["notes"])
+    page_notes = list(cfg["notes"])
+    if not any("unknown" in n.lower() for n in page_notes):
+        page_notes.append(UNKNOWN_SIC_NOTE)
+    notes = "".join(f"<p class=\"cd-side-note__d\">{n}</p>" for n in page_notes)
     return dedent(f"""\
     <section class="cd-section cd-w-standard" id="about">
       <div class="cd-section-head">

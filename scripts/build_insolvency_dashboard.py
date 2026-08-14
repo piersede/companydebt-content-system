@@ -455,8 +455,20 @@ def nations_block(nations: dict) -> str:
 
 # ── Methodology (full-bleed band) ─────────────────────────────────────────
 
-def methodology_block() -> str:
-    return dedent("""\
+def methodology_block(include_industry_limit: bool = True) -> str:
+    """Shared methodology band.
+
+    The industry-breakdown bullet only belongs on pages that actually show a
+    sector split. The procedure pages (CVL, compulsory, administration) import
+    this block but carry no industry table, so it reads as an irrelevant caveat
+    there and they pass include_industry_limit=False.
+    """
+    industry_limit = (
+        "          <li>Table 1c industry totals by three-digit SIC are published monthly, "
+        "through the latest headline month; the breakdown by insolvency procedure within "
+        "each industry is published quarterly.</li>\n" if include_industry_limit else ""
+    )
+    return dedent(f"""\
     <div class="cd-bleed cd-method-band">
       <section class="cd-method-inner" id="method">
         <div class="cd-section-head">
@@ -469,8 +481,7 @@ def methodology_block() -> str:
         <h3>Data limitations</h3>
         <ul class="cd-limits">
           <li>The latest month is provisional and can be revised.</li>
-          <li>Table 1c industry totals by three-digit SIC are published monthly, through the latest headline month; the breakdown by insolvency procedure within each industry is published quarterly.</li>
-          <li>Industry is based on self-reported SIC codes.</li>
+{industry_limit}          <li>Industry is based on self-reported SIC codes.</li>
           <li>Registered office addresses are not a reliable guide to where a company traded.</li>
           <li>Solvent company closures are not included.</li>
         </ul>

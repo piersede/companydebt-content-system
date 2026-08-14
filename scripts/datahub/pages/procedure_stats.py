@@ -69,7 +69,9 @@ PROCEDURES = {
             "CVLs move with the broader economy: when more companies stop trading, "
             "more directors place them into liquidation.",
             "The count is a volume, not a failure rate. The rate per 10,000 companies "
-            "adjusts for the size of the active register, which has grown over time.",
+            "is a 12-month rolling figure, not the chance of a company failing in the "
+            "latest month, and it adjusts for the size of the active register, which "
+            "has grown over time.",
         ],
         "citation": ("CompanyDebt. (2026). UK CVL Statistics. CompanyDebt.com. Data "
                      "sourced from the Insolvency Service and Companies House company "
@@ -99,9 +101,12 @@ PROCEDURES = {
                         "enforcement after the pandemic."),
         "notes": [
             "Compulsory liquidations follow legal action, so they reflect creditor "
-            "and HMRC enforcement as much as underlying trading conditions.",
+            "enforcement and court activity as well as underlying trading "
+            "conditions. The published statistics do not break the figures down by "
+            "who brought the petition.",
             "The count is a volume, not a failure rate. The rate per 10,000 companies "
-            "adjusts for the size of the active register.",
+            "is a 12-month rolling figure, not the chance of a company failing in the "
+            "latest month, and it adjusts for the size of the active register.",
         ],
         "citation": ("CompanyDebt. (2026). UK Compulsory Liquidation Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service and "
@@ -134,9 +139,11 @@ PROCEDURES = {
         "notes": [
             "Monthly administration volumes are small, so a single cluster of "
             "connected companies can move the figure sharply. Read month-to-month "
-            "changes with care.",
+            "changes with care, and do not treat a single cluster as evidence of a "
+            "general trend in administrations.",
             "The count is a volume, not a failure rate. The rate per 10,000 companies "
-            "adjusts for the size of the active register.",
+            "is a 12-month rolling figure, not the chance of a company failing in the "
+            "latest month, and it adjusts for the size of the active register.",
         ],
         "citation": ("CompanyDebt. (2026). UK Company Administration Statistics. "
                      "CompanyDebt.com. Data sourced from the Insolvency Service and "
@@ -374,7 +381,7 @@ def assemble(slug: str, c: dict) -> str:
         trend_block(cfg, c),
         context_block(cfg),
         table_block(cfg, c),
-        methodology_block(),
+        methodology_block(include_industry_limit=False),
         source_block(cfg, meta),
         final_cta_block(),
         '</div>',
