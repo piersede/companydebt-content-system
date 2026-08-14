@@ -1746,21 +1746,22 @@ SECTORS = {
              "insolvencies climbed from 46.5% to 55.6% in a single year."),
         ],
         "divergence": {
-            "heading": "Cleaning is the only part of building services not improving",
+            "heading": "Cleaning is improving much more slowly than the rest of building services",
             "caption": "Cleaning contractors against the rest of the building-services trade",
             "intro": [
                 ("Cleaning sits in SIC division 81 alongside landscaping and "
                  "combined facilities support: broadly the same customers, "
                  "the same tenders, often the same procurement departments. "
-                 "Those neighbours have had a strong year. Cleaning has "
-                 "barely moved."),
+                "Those neighbours have improved sharply. Cleaning has "
+                 "improved too, but far less."),
                 ("Landscape services fell 33.3% and facilities support fell "
-                 "40.9%, while cleaning eased only 6.8%. The obvious "
-                 "question is what cleaning has that the others do not."),
-                ("The most likely answer is the shape of its cost base: "
-                 "cleaning is the most labour-intensive of the three, with "
-                 "the largest number of part-time, hourly-paid people per "
-                 "pound of turnover."),
+                 "40.9%, while cleaning eased 6.8%. All three are down; the "
+                 "question is why cleaning is down so much less."),
+                ("One factor that may help explain the gap is the shape of "
+                 "the cost base. Cleaning is the most labour-intensive of "
+                 "the three, with the largest number of part-time, "
+                 "hourly-paid people per pound of turnover. The insolvency "
+                 "data cannot establish that as the cause."),
                 ("That matters because the two costs that have moved most "
                  "since 2024 are the hourly wage floor and the employer "
                  "National Insurance charged on it. A trade built almost "
@@ -3178,7 +3179,7 @@ SECTORS = {
         "key_findings": True,
         "extra_findings": [
             {"value": "68% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "670 vs 398"},
-            {"value": "33%", "label": "of professional & technical insolvencies", "sub": "the largest single trade in the section"},
+            {"value": "34.9%", "label": "of professional & technical insolvencies", "sub": "the largest single trade in the section"},
         ],
         "comparison_intro": [
             ("There were 317 management consultancy insolvencies between "
@@ -3967,7 +3968,7 @@ SECTORS = {
             "treatment is generally understood to be the largest part of this "
             "group.",
             "This trade group is effectively the whole of other service "
-            "activities in the official statistics, at 94% of the section's "
+            "activities in the official statistics, at 95.2% of the section's "
             "insolvencies, so the section-level comparison above tells you "
             "very little beyond what this page already shows.",
             "These are company counts, not the number of salons, therapists or "
@@ -4086,14 +4087,14 @@ SECTORS = {
         "key_findings": True,
         "extra_findings": [
             {"value": "29% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "195 vs 151"},
-            {"value": "42%", "label": "of arts, entertainment & recreation insolvencies", "sub": "the largest single trade in the section"},
+            {"value": "44.0%", "label": "of arts, entertainment & recreation insolvencies", "sub": "the largest single trade in the section"},
         ],
         "comparison_intro": [
             ("There were 96 sports club and facility insolvencies between "
              "January and June 2026, against 90 in the same six months of "
              "2025, a rise of 6.7%. Arts, entertainment and recreation as a "
              "whole rose a slower 2.3%, from 213 to 218."),
-            ("Sports facilities, at 42% of the section, are now rising "
+            ("Sports facilities, at 44.0% of the section, are now rising "
              "noticeably faster than the section around them. These are "
              "Company Debt calculations from Insolvency Service Table A1b "
              "data."),
@@ -4118,7 +4119,7 @@ SECTORS = {
                  "percentage change to mean very much on their own."),
                 ("Sports facilities, up 6.7% year to date, are now rising "
                  "faster than the section as a whole, which rose 2.3%. At "
-                 "42% of the section's total, that puts sports ahead of, not "
+                 "44.0% of the section's total, that puts sports ahead of, not "
                  "just in line with, the wider trend."),
                 ("It still makes this trade useful context for reading the "
                  "section-level figure elsewhere on this site, even though "
@@ -4265,7 +4266,7 @@ SECTORS = {
             "and recreation, alongside amusement and recreation activities "
             "and creative, arts and entertainment activities, which are "
             "recorded separately.",
-            "This is the largest single trade in its section, at 42% of "
+            "This is the largest single trade in its section, at 44.0% of "
             "arts, entertainment and recreation insolvencies, so its own "
             "trajectory does a good deal to shape the section total, though "
             "less completely than in some other pages in this series.",
@@ -4694,7 +4695,7 @@ SECTORS = {
         "key_findings": True,
         "extra_findings": [
             {"value": "65% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "129 vs 78"},
-            {"value": "28%", "label": "of arts, entertainment & recreation insolvencies", "sub": "second-largest trade in the section"},
+            {"value": "31.2%", "label": "of arts, entertainment & recreation insolvencies", "sub": "second-largest trade in the section"},
         ],
         "comparison_intro": [
             ("There were 68 creative, arts and entertainment insolvencies "
@@ -4702,7 +4703,7 @@ SECTORS = {
              "months of 2025, a rise of 17.2%. Arts, entertainment and "
              "recreation as a whole rose a slower 2.3% over the same "
              "months."),
-            ("So this trade, at 28% of the section, rose 17.2% while the "
+            ("So this trade, at 31.2% of the section, rose 17.2% while the "
              "section rose 2.3%. Both are small counts, so read the gap "
              "with care. These are Company Debt calculations from "
              "Insolvency Service Table A1b data."),
@@ -4727,7 +4728,7 @@ SECTORS = {
                  "well above the section's own 2.3% rise."),
                 ("That gap matters because creative and performing arts is "
                  "not a small trade inside this section, it is the "
-                 "second-largest, at 28% of the total. A trade this size "
+                 "second-largest, at 31.2% of the total. A trade this size "
                  "rising several times faster than its neighbours is not "
                  "noise."),
                 ("The distinctive pressures on live music, theatre and "
@@ -4862,7 +4863,7 @@ SECTORS = {
             "It sits within arts, entertainment and recreation, alongside "
             "sports activities and amusement and recreation activities, "
             "recorded separately.",
-            "This is the second-largest trade in its section, at 28% of "
+            "This is the second-largest trade in its section, at 31.2% of "
             "arts, entertainment and recreation insolvencies, and it is "
             "rising several times faster than the section average, so its "
             "own trajectory increasingly shapes the section total.",
@@ -5277,7 +5278,7 @@ SECTORS = {
         "key_findings": True,
         "extra_findings": [
             {"value": "62% above 2019", "label": "2025 vs the pre-pandemic year", "sub": "289 vs 179"},
-            {"value": "37%", "label": "of real estate section insolvencies", "sub": "the largest single trade in the section"},
+            {"value": "22.7%", "label": "of real estate section insolvencies", "sub": "second to property trading, which is now 60.5%"},
         ],
         "comparison_intro": [
             ("There were 136 real estate letting and investment "
@@ -5295,9 +5296,11 @@ SECTORS = {
             ("The rolling 12-month figure confirms this trade's own, much "
              "calmer picture: 274 cases for the year to June 2026 against "
              "280 a year earlier, down a modest 2.1%."),
-            ("Real estate letting and investment, the largest single trade "
-             "in its section at 37% of the total, is not where the "
-             "section's headline number is coming from."),
+            ("The bulk administrations have changed the shape of the section. "
+             "Letting and investment is 22.7% of real estate insolvencies so "
+             "far in 2026, behind property trading on 60.5%."),
+            ("In a normal period this trade is the larger of the two. It is "
+             "not where the section's headline number is coming from now."),
         ],
         "spike_correction": {
             "heading": "Was the 2026 real estate insolvency spike caused by landlords?",
@@ -5456,11 +5459,11 @@ SECTORS = {
             "companies. Companies that buy and sell property in their own "
             "name, and estate agencies acting for clients on a fee basis, "
             "are recorded under separate codes within the same section.",
-            "This is the largest single trade in the real estate section, "
-            "at 37% of the section's insolvencies, but it was not the "
-            "source of the large spring 2026 spike in the section total; "
-            "that was concentrated in property-trading companies (SIC 681), "
-            "covered above.",
+            "This trade is 22.7% of the real estate section's insolvencies "
+            "so far in 2026. It normally runs ahead of property trading, but "
+            "the spring 2026 bulk administrations have put property-trading "
+            "companies (SIC 681) on 60.5% for the period. The spike was not "
+            "sourced from this trade; it is covered above.",
             "These are company counts, not the number of properties, units "
             "or tenants affected. A single insolvent company may hold one "
             "property or an entire portfolio.",
