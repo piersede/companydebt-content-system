@@ -2,44 +2,44 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "78e1ff81b9547cb246c743fcf1481546c4f658539c9fe2df1daeb050f50e770e",
+  "prose_sha": "459364e71657fa995342589e0d5280d9b9c0b9ad8010c5143add8fc8626e0ce2",
   "passes_since_baseline": {
-    "count": 4,
+    "count": 5,
     "baseline_ref": "250e54be6ea0",
-    "override_reason": "Same continuous voice pass, extended after reading editorial-os/docs/human-authorship-voice-engine.md in full, which the first round of this pass had not loaded. Not a fresh fifth patch on settled prose: roughly forty paragraphs were rewritten in this session. Recording so the deeper pass is not lost. The NEXT pass on this page does need a genuine redraft of the weak sections from spec.",
+    "override_reason": "Same session, third round of one continuous pass, driven by the first genuine full-page cold read this page has ever had. stranger_read.py only ever feeds a reader the opening 500 words, so the two earlier reads covered 7 percent of the page and neither saw the second half. Recording so the full-page findings are not lost. A fresh redraft from spec is still owed on this page and the shape problem below cannot be fixed by any further voice pass.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4846,
-      "you": 103,
-      "you_per_1k": 21.3,
-      "we": 37,
-      "we_per_1k": 7.6,
+      "words": 5124,
+      "you": 120,
+      "you_per_1k": 23.4,
+      "we": 34,
+      "we_per_1k": 6.6,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 137,
-      "cv": 0.408,
+      "paras": 142,
+      "cv": 0.416,
       "uniform": false
     },
     "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 13,
-    "evaluative_bite_lines": 8,
+    "concrete_scenes": 12,
+    "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Second round of the same pass, run against the canonical voice engine doc rather than the stage pack alone. Three of its rules were under-delivered first time round. Rule C (a lived-reality anchor in every major section) failed in four sections: Compare Your Closure Options, The Pre-Closure Checklist, When Can You Become Personally Liable, and the cost section. Each now carries one drawn from practice, not invention: which of the six positions the director is actually in being the unsettled question, the two checklist steps nobody chases you for, guarantees and loan accounts being what actually costs directors money while conduct claims are what they fear, and the funding column deciding options as much as the route does. The doc's enforcement rule 'zero you in any section longer than 200 words means that section is not serving the reader' failed in the cost and timescale sections, which had literally no you or your across 275 and 266 words; article_audit check 27 passed both, so this is a gap the mechanical gate does not see. Both now translate to reader consequence: who the fee falls to when the company cannot fund a CVL, and the appointment being the date that matters because that is when creditor letters stop arriving at your address. Rule J (the ending compresses the real decision and states what is left unsolved) failed: the page ended on a four-step action list. It now closes by naming what closing does and does not achieve, including that no practitioner, ourselves included, can make a guarantee or a loan account balance disappear. Variation moves added per the rhythm section: one rhetorical question that mirrors the reader's real question ('So will anyone actually chase it?') and one earned attitude transition. Rule H institutional we strengthened by surfacing verification labour that was previously confined to the disclosure box: we went to the Insolvency Service's own MVL review rather than trade averages. HONEST SHORTFALL, recorded rather than papered over: the doc's pronoun table targets we/our at 10-15 per 1,000 words. The page is at 7.6, up from 6.1. The floor of 5 is comfortably met and every instance shows method, caseload or judgement, but the target is not met. Padding to reach it would breach Rule H and the stage pack's explicit ban on hollow we, so it is left short and reported. Rule B checked for floating evaluative labels: none (the only hit was 'bond premium', a technical term). Stranger-read report is the same one, and remains valid: this round did not change the opening it reviewed. Its one open point also stands, that the page gives no practitioner fee figure to decide on.",
-    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T120019Z.md"
+    "notes": "FIRST FULL-PAGE COLD READ. The two earlier reads this session used stranger_read.py, which only ever extracts the opening 500 words; they covered 500 of 7,692 and neither read the second half. This one gave a fresh reader the whole rendered page and asked specifically about the middle and the end. It found more than both earlier reads combined, and most of what it caught was written by me earlier today. Fixed: the answer the reader arrived with (closing does not touch a guarantee you signed or a director loan balance) sat at the very bottom after four thousand words aimed at wealthier readers, and is now stated in the opening with a link to the guarantees guide; the reader said put it near the top and I would have trusted the rest. The instruction to hunt for your signature on a guarantee did not say what a guarantee looks like, so it now describes the document and the tell (signed in your own name rather than for the company) and links to the enforcement guides. The reader came worried about their house and the words house and home appeared nowhere: the section now states that a guarantee makes the debt yours personally and that some guarantees additionally carry a charge over property, without asserting anything about enforcement that the page cannot support. The employees section never answered the reader's actual question, whether staff get paid and whether the shortfall becomes the director's debt; it now does. Six load-bearing terms were used unexplained and the gate's jargon check passed all of them: the Gazette (which I had built a key insight on top of), the Official Receiver, statutory demand, dilapidations, bond premium, and the payroll return acronyms. IP was used for insolvency practitioner in a table before any definition AND for intellectual property twice in the same page; the abbreviation is now defined on first full mention and the intellectual-property uses are spelled out. The 13 pound claim contradicted the cost table, which adds accountant fees and VAT, so it now says the 13 pounds is the filing and not the closure. A signpost now tells an insolvent reader that the two solvent sections do not apply, because that is where the reader put the phone down. Performance lines cut, nearly all of them mine from earlier today: the reason is mechanical rather than moral, nobody chooses it, the invisible ones, you paid the accountant to file the return that generated it, nothing chases you for either, the useful call is todays, and conduct claims are the ones directors worry about, which asserted a fear the reader said was simply wrong. Repetition thinned where the reader counted it. IMPORTANT REVERSAL: the reader counted eight or nine sections opening with a variant of directors call us and said it stops reading as experience and starts reading as advertising. Several of those were added by me in the previous round to lift we-density toward the voice engine's 10-15 target. Two removed. The reader's verdict beats the number, and the density target should not be chased on this page. TWO THINGS A VOICE PASS CANNOT FIX, both escalated to the owner rather than papered over: first, the page still gives no cost figure for a CVL, which is the route this reader was obviously heading for, so every number on the page is for the solvent case; second, the page's shape puts two sections of tax relief detail for shareholders with up to a million pounds of gains between a distressed reader and what they need, and a signpost is a patch on a structural problem.",
+    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T131108Z.md"
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T120019Z.md",
-    "requested": "2026-08-17T120019Z",
-    "prose_sha_at_request": "72e5279c15eb70abc03205f2978f8b4236328bcaf43007ec6326270d34cdd393",
+    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T131108Z.md",
+    "requested": "2026-08-17T131108Z",
+    "prose_sha_at_request": "6a6d22c8d185df91543b3257be2372f6a1e68f845ceb23c3135f2de464dd90e1",
     "numbered_answers": 5,
     "override_reason": null
   },
