@@ -1,19 +1,19 @@
 {
   "slug": "director-protection-hub",
-  "audited_at": "2026-08-06",
+  "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "3c72cb50a501eed1eb7858c479ca2889fa3ec515e0220e73248304c64d9f0733",
+  "prose_sha": "babaa323de7d2d757227ac2d71c95f99ea351f502ff857b56c5f65f8fddeae87",
   "passes_since_baseline": {
-    "count": 9,
-    "baseline_ref": "file-creation",
+    "count": 1,
+    "baseline_ref": "199d00e8c3f2",
     "override_reason": null,
-    "redraft_now": true
+    "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 5320,
+      "words": 5318,
       "you": 129,
-      "you_per_1k": 24.2,
+      "you_per_1k": 24.3,
       "we": 24,
       "we_per_1k": 4.5,
       "i": 3,
@@ -33,8 +33,15 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full rebuild on a problem-led structure, written fresh from spec rather than patched. Part C checked directly: 19 concrete scenes across 5646 words (3.4/1k), at least one per major section, drawn from real director situations rather than category labels (the van into a spouse name, the trailer that left the yard without an invoice, the deposit taken on Friday and the supplier at credit control on Monday, the envelope from a lender nobody had thought about since the machine was delivered). Practitioner we is earned and company-authored throughout (in the cases we handle, by the time a director calls us, the pattern we see, we settle them more often than directors expect), 5.2/1k. Persona warmth present at the top (the failure follows them home; not through dishonesty but through instinct) and again at the decision point (carrying it alone for months, rehearsing worst cases at four in the morning). Four asymmetrical editorial lines including Being wrong twice reads far worse than not knowing once, and Companies fail. That is all it is. Whole-page repetition scan run and acted on: five uses of the than-X-suggests comparative cut to one, three in-our-experience cut to one, duplicate the-pattern-we-see, which-is-why, the-one-that and other-way-round constructions varied, It-is sentence openers reduced. Stranger read run on the opening and all seven flagged issues fixed before this record: routes-through-it and money-you-owe-the-company rewritten in plain terms, loan account and licensed insolvency practitioner glossed on first use, unfairly-favoured made concrete, the Sequana section rebuilt to lead with plain meaning ahead of the case reference because that is where the reader checked out, and the reassurance the reader explicitly asked for added. Tone modulated by section: firmer on stop-doing, calmer and more protective on liability and home risk, more precise and sceptical on the tax and phoenix sections.",
-    "stranger_read_report": "C:/Users/piers/Projects/Company Debt Content System/.claude/worktrees/charming-sanderson-302bfa/editorial-os/stranger-reads/director-protection-hub_2026-08-06T191831Z.md"
+    "notes": "Carried forward from the 2026-08-06 record. Prose is byte-identical to that pass except one clause: 'If you are reading this before signing anything' became 'Before you sign anything', which removes an assertion about the reader the page cannot make (article_audit check 33) and puts the negotiating point first. Nothing else changed, so the scene count, practitioner we, tone modulation and rhythm findings in the 2026-08-06 attestation still describe this prose. Re-read the edited paragraph in place to confirm the sentence still lands.",
+    "stranger_read_report": "editorial-os/stranger-reads/director-protection-hub_2026-08-06T191831Z.md"
+  },
+  "stranger_read": {
+    "path": "editorial-os\\stranger-reads\\director-protection-hub_2026-08-06T191831Z.md",
+    "requested": "2026-08-06T191831Z",
+    "prose_sha_at_request": "9381e8d263fd1e31d983d32f2083f8136c302757fb6802a73b179e707f78abd4",
+    "numbered_answers": 5,
+    "override_reason": null
   },
   "verdict": "pass"
 }
