@@ -1,0 +1,19 @@
+Dataset,"List of company insolvencies, Great Britain, 1 January 2012 to 30 April 2024"
+Coverage,"England, Wales and Scotland"
+Release date,23/05/2024
+Licence,Open Government Licence 3.0
+More information,https://www.gov.uk/government/statistics/record-level-data-for-england-wales-and-scotland-company-insolvency-statistics-january-2012-to-april-2024
+,
+,
+Variable,Description
+company_number,The company registration number on the Companies House register. Leading zeros have been removed.
+company_name,"The name of the company in the Insolvency Service administrative system, for compulsory liquidations, or on the Companies House register for other insolvency types"
+register_location,Either 'England/Wales' or 'Scotland' depending on where the company is registered with Companies House.
+case_type,"The insolvency type. Possible values are 'Compulsory Liquidation', 'Creditors Voluntary Liquidation', 'In Administration', 'Corporate Voluntary Arrangement', 'Administrative Receiver', 'Administration to CVL'  and 'Moratorium'."
+month_registered,"The month and year in which the insolvency was registered with Companies House, except for Compulsory Liquidations, where it is the date of the court order. Has the format YYYY-MM."
+sic07_1_digit,The letter corresponding to the sector of the primary SIC2007 code of the company as listed on the Insolvency Service administrative system for compulsory liquidations or on the Companies House register for other insolvency types. 
+sic07_2_digit,SIC2007 two digit code of the company as listed on the Insolvency Service administrative system for compulsory liquidations or on the Companies House register for other insolvency types. Leading zeros are omitted.
+sic07_3_digit,SIC2007 three digit code of the company as listed on the Insolvency Service administrative system for compulsory liquidations or on the Companies House register for other insolvency types. Leading zeros are omitted.
+sic07_4_digit,SIC2007 four digit code of the company as listed on the Insolvency Service administrative system for compulsory liquidations or on the Companies House register for other insolvency types. Leading zeros are omitted.
+sic07_5_digit,SIC2007 five digit code of the company as listed on the Insolvency Service administrative system for compulsory liquidations or on the Companies House register for other insolvency types. Leading zeros are omitted.
+isBulk,Whether the insolvency is classified as a bulk insolvency (see the Glossary in the accompanying Excel data tables for more information).
