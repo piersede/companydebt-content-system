@@ -171,9 +171,10 @@ get_header();
 
         <div class="cd-itest-field cd-itest-callpref">
             <label class="cd-itest-callpref__q">Would You Like Someone to Talk Through Your Result?</label>
-            <?php // Radio circles dropped 2026-08-05 (Piers) — looked out of
-                  // place. Selection state now conveyed solely through the
-                  // orange border + warm background on the chosen card. ?>
+            <?php // Rendered as radio buttons (Theo 2026-08-17) — reverses the
+                  // 2026-08-05 (Piers) "drop the circles" change. The circle is
+                  // drawn on the label via CSS; the input stays a full-card
+                  // click target. ?>
             <ul class="cd-itest-options cd-itest-callpref-options">
                 <li class="cd-itest-opt cd-itest-opt--rich">
                     <input type="radio" name="cd_callpref" id="cd-cp-yes" value="yes">
