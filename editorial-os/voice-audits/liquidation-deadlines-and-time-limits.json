@@ -2,27 +2,27 @@
   "slug": "liquidation-deadlines-and-time-limits",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "94c4fc7f4e8ba95c4e15b1e932749e155addef25e1d026ca970259e154cfaa0b",
+  "prose_sha": "725b83660082fc2b9e7b76bdb41abffd4724cf690922a2aec0583dffb1e0f28f",
   "passes_since_baseline": {
-    "count": 8,
-    "baseline_ref": "file-creation",
+    "count": 0,
+    "baseline_ref": "fd0ce1a0333b",
     "override_reason": null,
-    "redraft_now": true
+    "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2046,
-      "you": 54,
-      "you_per_1k": 26.4,
+      "words": 2190,
+      "you": 61,
+      "you_per_1k": 27.9,
       "we": 10,
-      "we_per_1k": 4.9,
+      "we_per_1k": 4.6,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 66,
-      "cv": 0.431,
+      "paras": 70,
+      "cv": 0.448,
       "uniform": false
     },
     "scene_proxy": 2
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "FROM-SCRATCH REDRAFT, replacing the patched draft that had reached seven passes. Written against writer-core, the legal-compliance overlay and the process_guide spec from editorial_task_entry, none of which the earlier patching passes had loaded. Prose is new throughout; the verified legal content was carried across deliberately and not re-derived: s131 21 days running from the notice and not the winding-up order, the Official Receiver's discretion to require a statement of affairs at all, no fixed 21-day petition service period with the 21 days belonging to a statutory demand, rule 6.14's three-business-day floor and 14-day ceiling, s85, s201, s214, s239 with the six-month and two-year connected-party lookbacks, Form 600, and the 2016 Rules replacing the final meeting. Three things the previous version never had: a Quick Answer that branches by where the reader actually stands (nothing started / resolution passed / petition served), which both earlier stranger reads had asked for; the two callout components this page class expects (Timeline Reality on the three-day floor inside the 14-day window, What Most Directors Miss on the s131 clock starting at the notice); and bold on decision-critical chunks at 6.2% density with every H2 covered, against a spec of 2-6% and a ceiling of 8% that the old page had never met. Writer-core's rule priority, that payoff-intent-first beats voice cleverness, drove the biggest correction: the third stranger read found roughly 120 words of consequences before the first instruction, so the lead was reordered to give the instruction second and the consequences after it. It also caught a withheld-mystery construction about the undated deadline, now named as wrongful trading in the same sentence, and two unglossed terms, 'decision procedure' and 'statement of truth', both now explained at first use. The claim that the decision date can fall anywhere in the 14 days now shows its basis (the three-business-day minimum) rather than asserting it. Unevidenced 'directors tend to' framing cut. First draft of this redraft swung too far into third person and dropped 'you' to 1.5/1k against a floor of 8; direct address restored where the obligation is genuinely the reader's and kept impersonal for the liquidator's own duties, landing at 26.4/1k. Body-level we/our/us is 4.9/1k against the voice-engine minimum of 5.0; gate check 04 passes, and the practitioner voice is carried by method rather than padding (what we would want to see before advising on timing, what we most often see counted from the wrong document, what we ask about first when taking a case on). Rhythm cv 0.431, the strongest of any version. Protected sentence 'The honest question is whether that date has already passed' carried across intact. FAQ panel titles restored to single-backslash escaped form after I wrote them raw in the first cut of this redraft.",
+    "notes": "Plain-English pass on the redraft, after the operator caught 'wrongful trading' being named in the lead with no explanation. That was the worse version of the fault: the previous pass had moved the term earlier to stop the reader scrolling for it, but moved it without a gloss. A full first-mention sweep of the page found the same failure on six more terms the gate does not check, because check 31 only tests a fixed curated list. All now explained in plain English at first use: wrongful trading (carrying on past the point insolvent liquidation could not be avoided, and a court can order you to pay company debts from your own money); conduct matter (a formal note on your behaviour as a director, counting against you if anyone later asks whether you should be banned from running a company); deemed consent (the proposal goes through automatically unless enough creditors object in time); contributory (a shareholder who could still be asked to pay up on their shares); secured charge (a debt carrying a legal claim over a particular company asset); the Gazette (the government's official journal of public notices); proof of debt (the form setting out what a creditor is owed and why). Four further trade words removed rather than glossed, because plain words do the job: dividend, distribution, last date for proving, and realised. Paragraph splits kept every paragraph under 400 characters and rhythm improved to cv 0.449. Bold density 4.7%, inside the 2-6% aim. you 27.9/1k, under the ceiling but still above the 15-20 target and worth watching. Body-level we/our/us 4.6/1k with gate check 04 passing; not padded, and the practitioner voice remains carried by method. Protected sentence intact. No facts, headings or links changed by this pass.",
     "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-17T132032Z.md"
   },
   "stranger_read": {
