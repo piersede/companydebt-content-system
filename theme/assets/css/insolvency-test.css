@@ -218,7 +218,7 @@ body.page-template-insolvency-test .cd-itest-h1 {
     font-size: var(--cdi-fs-xl) !important;
     line-height: 1.25 !important;
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     margin: 0 0 var(--cdi-sp-2) !important;
     padding: 0 !important;
     letter-spacing: -0.01em !important;
@@ -231,7 +231,7 @@ body.page-template-insolvency-test .cd-itest-q {
     font-size: var(--cdi-fs-lg) !important;
     line-height: 1.35 !important;
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     margin: 0 0 var(--cdi-sp-3) !important;
     padding: 0 !important;
 }
@@ -473,7 +473,7 @@ body.page-template-insolvency-test .cd-itest-btn-primary {
     padding: var(--cdi-sp-2) var(--cdi-sp-4) !important;
     font-size: var(--cdi-fs-md) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     font-family: var(--cdi-font) !important;
     text-align: center !important;
     text-decoration: none !important;
@@ -675,7 +675,7 @@ body.page-template-insolvency-test .cd-itest-result-badge {
     display: inline-block !important;
     padding: var(--cdi-sp-1) var(--cdi-sp-2) !important;
     border-radius: 999px !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     font-size: var(--cdi-fs-sm) !important;
     line-height: 1.4 !important;
     letter-spacing: .02em !important;
@@ -690,7 +690,7 @@ body.page-template-insolvency-test .cd-itest-result-title {
     display: block !important;
     font-size: var(--cdi-fs-lg) !important;
     line-height: 1.35 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
@@ -754,7 +754,7 @@ body.page-template-insolvency-test .cd-itest-result-section__note {
 body.page-template-insolvency-test .cd-itest-steps-ol { list-style: decimal !important; }
 body.page-template-insolvency-test .cd-itest-steps-ol li::marker {
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
 }
 
 /* Callout panels — personal guarantee (warm) + creditor duty (warn).
@@ -775,7 +775,7 @@ body.page-template-insolvency-test .cd-itest-callout__title {
     display: block !important;
     font-size: var(--cdi-fs-sm) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
@@ -804,7 +804,7 @@ body.page-template-insolvency-test .cd-itest-cta-block h3 {
     display: block !important;
     font-size: var(--cdi-fs-md) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-2) !important;
     padding: 0 !important;
