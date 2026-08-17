@@ -52,17 +52,17 @@ get_header();
         <p class="cd-itest-lede">Answer a few short questions to receive a personalised initial result showing the warning signs that apply, how serious the position may be and what your company may need to do next.</p>
         <p class="cd-itest-lede-sub">Financial pressure does not always mean that a company is insolvent. This check helps you understand the position more clearly.</p>
         <ul class="cd-itest-trust-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Takes around two minutes</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Estimates are fine &mdash; no accounts required</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Your answers are treated confidentially</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No credit check or Companies House search</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>Takes around two minutes</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>Estimates are fine, no accounts required</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Your answers are treated confidentially</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>No credit check or Companies House search</li>
         </ul>
         <?php // Checklist leads directly into the CTA — no boxed panel between
               // the reassurance points and the button. The Reviews.io line
               // moved to the bottom of the screen as a small unboxed line
               // (below reg-line, above the disclaimer). ?>
         <div class="cd-itest-cta-row">
-            <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position</button>
+            <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position <span class="cd-itest-btn-arrow" aria-hidden="true">&rarr;</span></button>
             <p class="cd-itest-value-reassure">Takes around two minutes &middot; Personalised result &middot; No obligation</p>
             <p class="cd-itest-phone-alt">Prefer to speak to someone now? Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
         </div>

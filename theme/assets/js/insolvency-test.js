@@ -414,7 +414,7 @@
 
         if (!name || !emailRe.test(email) || !phoneOk) {
             errValidation.textContent = !phoneOk
-                ? 'Please add a phone number so we can call you — or choose “No, email only”.'
+                ? 'Please add a phone number so we can call you, or choose “No, email only”.'
                 : 'Please add your name and a valid email address.';
             errValidation.classList.add('cd-itest-show');
             if (!phoneOk) {
@@ -478,7 +478,7 @@
                     '. An adviser will call you' + (calltime ? ' ' + calltime.toLowerCase() : '') + '.</span>';
             } else {
                 banner.innerHTML = tick + '<span>Your result has been sent to ' + escapeHtml(email) +
-                    '. You selected email only — we will not call unless you request one.</span>';
+                    '. You selected email only, we will not call unless you request one.</span>';
             }
             banner.classList.add('cd-itest-show');
 

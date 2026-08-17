@@ -225,7 +225,7 @@ body.page-template-insolvency-test .cd-itest-h1 {
     letter-spacing: -0.01em !important;
     max-width: 100% !important;
     width: 100% !important;
-    text-align: left !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-q {
     display: block !important;
@@ -235,6 +235,7 @@ body.page-template-insolvency-test .cd-itest-q {
     font-weight: 700 !important;
     margin: 0 0 var(--cdi-sp-3) !important;
     padding: 0 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-lede {
     display: block !important;
@@ -329,8 +330,10 @@ body.page-template-insolvency-test .cd-itest-trust-list li {
 }
 body.page-template-insolvency-test .cd-itest-trust-list li svg {
     flex-shrink: 0 !important;
+    width: 18px !important;
+    height: 18px !important;
     color: var(--cdi-navy) !important;
-    opacity: .55 !important;
+    opacity: 1 !important;
 }
 
 /* Small unboxed Reviews.io line — sits at the bottom of the intro (above
@@ -493,8 +496,14 @@ body.page-template-insolvency-test .cd-itest-btn-primary:disabled {
     cursor: not-allowed !important;
 }
 body.page-template-insolvency-test .cd-itest-btn-primary--intro {
-    width: 78% !important;
+    width: auto !important;
     align-self: center !important;
+    padding: 13px 30px !important;
+    font-size: var(--cdi-fs-base) !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-arrow {
+    display: inline-block !important;
+    margin-left: 7px !important;
 }
 body.page-template-insolvency-test .cd-itest-btn-primary--cta {
     width: auto !important;
@@ -695,6 +704,7 @@ body.page-template-insolvency-test .cd-itest-result-title {
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-result-urgency {
     display: block !important;
