@@ -57,7 +57,6 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-orange-dk: #e65c00;
     --cdi-text:      #2a2a2e;
     --cdi-grey:      #52606d;
-    --cdi-bg:        #e8eef7;
     --cdi-border:    rgba(0, 40, 86, .14);
     --cdi-white:     #ffffff;
 
@@ -121,7 +120,10 @@ body.page-template-insolvency-test .cd-itest-main *::after {
 }
 
 /* Page background — the site's page-wrapper otherwise shows through white */
-body.page-template-insolvency-test { background: var(--cdi-bg) !important; }
+/* --cdi-bg is defined here on the body itself (not only on the descendant
+   .cd-itest-main) so this rule can resolve it — a child's custom property does
+   not cascade up to its parent. Descendants still inherit this value. */
+body.page-template-insolvency-test { --cdi-bg: #e8eef7; background: var(--cdi-bg) !important; }
 
 /* Progress bar (above the panel). Hidden by default — only shown between
    the cashflow and risk steps, toggled by JS via .cd-itest-show. */
