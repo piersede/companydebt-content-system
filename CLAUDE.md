@@ -61,7 +61,7 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 - Treat `editorial-os/` as canonical governance, not default runtime payload.
 - Use `runtime-packs/` as the compact execution layer.
 - Consult canonical governance only when the runtime layer is insufficient or a rule conflict appears.
-- For page-specific drafting, review, or rewrite work, run `python scripts/editorial_task_entry.py --page <slug> --task <task>` first and treat that packet as the default working context.
+- For page-specific drafting, review, or rewrite work, run `python scripts/editorial_task_entry.py --page <slug> --task <task>` first and treat that packet as the default working context. This is mandatory, not a shortcut worth skipping when the task looks small: see the Bernstein hard stop below.
 - For research-heavy work, distill large research files first with `python scripts/distill_research.py --slug <slug> <source-files...>`.
 - For rewrite work, prepare a compact packet with `python scripts/prepare_revision_packet.py --page <slug> --task rewrite --notes <note-files...>`.
 - Use `EDITORIAL-OPERATOR-PLAYBOOK.md` as the default human workflow guide inside Claude.
@@ -77,6 +77,11 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 
 ## Hard stops
 
+- **All content writing goes through the Bernstein pipeline. This is not routing advice, it is a condition of the work.** No page may be drafted, rewritten, or have its prose edited outside the pipeline stages. Start with `python scripts/editorial_task_entry.py --page <slug> --task <task>`, run the stages, and load the stage pack for each one you run. `review` and `humanise` are not optional, and `adversarial-review`, `trust-pass` and `final-polish` exist because the mechanical gate cannot see what they catch.
+  - Passing `article_audit.py` is **not** evidence that the pipeline ran. The mechanical gate and the pipeline are different things. A page can score full marks and still never have been reviewed.
+  - Record the run with `python scripts/bernstein_attest.py --slug <slug> --record --by <model> --stages ... --notes "..."`. That record is tracked in git; `editorial-os/bernstein-state/` is gitignored and proves nothing to anyone else.
+  - `article_audit.py` check 34 enforces this. It fails when the attestation is absent, or when the prose changed after it was written. Pages predating the check are grandfathered by prose hash in `editorial-os/bernstein-runs/_baseline.json` and lose that exemption the moment their prose is edited.
+  - Why this is a hard stop: on 2026-08-17 a full redraft of `closing-a-limited-company` was written, scored 33/33 and pushed to staging without a single stage being opened. Fifteen unresolved back-references survived to the operator. The rule already existed as routing guidance and was skipped anyway, so it now has a checker behind it.
 - Do not bypass evidence rules, disclosure rules, or pre-publish gates.
 - Do not flatten unfairness, cost, or risk into neutral filler.
 - Do not treat token savings as success if output quality drops.

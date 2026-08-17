@@ -46,6 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import voice_metrics as vm  # noqa: E402
 
 VOICE_AUDIT_DIR = Path(__file__).resolve().parent.parent / "editorial-os" / "voice-audits"
+BERNSTEIN_RUNS_DIR = Path(__file__).resolve().parent.parent / "editorial-os" / "bernstein-runs"
 
 # Force UTF-8 stdout on Windows so emoji squares render without a charmap crash.
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
@@ -1482,6 +1483,57 @@ def check_voice_audit(raw: str, slug: str) -> CheckResult:
                        detail=f"audited {data.get('audited_at')} by {data.get('audited_by')}")
 
 
+# ---------------------------------------------------------------------------
+# Check 34 exists because the Bernstein requirement was skippable in practice.
+# editorial-os/bernstein-state/ is gitignored, so whether a page ever went
+# through the pipeline left no trace in git, in a worktree, or in review. On
+# 2026-08-17 a full redraft was written, scored 33/33 and pushed to staging with
+# no stage ever opened, and afterwards nothing could show it. The fix is the one
+# that already works for the voice audit: a TRACKED attestation, hashed against
+# the prose, so any later edit invalidates it. Pages predating the check are
+# grandfathered by prose hash (editorial-os/bernstein-runs/_baseline.json) and
+# lose that exemption the moment their prose changes.
+# ---------------------------------------------------------------------------
+
+def check_bernstein_pipeline(raw: str, slug: str) -> CheckResult:
+    name = "Bernstein pipeline attested and current"
+    fix = (f"run the pipeline stages, then: python scripts/bernstein_attest.py "
+           f"--slug {slug} --record --by <model> --stages review,humanise,gate --notes \"...\"")
+    required = ["review", "humanise", "gate"]
+    rec = BERNSTEIN_RUNS_DIR / f"{slug}.json"
+    if rec.exists():
+        try:
+            data = json.loads(rec.read_text(encoding="utf-8"))
+        except Exception as e:  # noqa: BLE001
+            return CheckResult(id="34", tier="T1", name=name, passed=False,
+                               detail=f"attestation unreadable: {e}")
+        if data.get("prose_sha") != vm.prose_sha(raw):
+            return CheckResult(id="34", tier="T1", name=name, passed=False,
+                               detail=("attestation STALE (prose changed after the pipeline ran) "
+                                       f"— re-{fix}"))
+        missing = [st for st in required if st not in (data.get("stages_completed") or [])]
+        if missing:
+            return CheckResult(id="34", tier="T1", name=name, passed=False,
+                               detail=f"missing required stage(s): {', '.join(missing)}")
+        return CheckResult(id="34", tier="T1", name=name, passed=True,
+                           detail=f"attested {data.get('attested_at')} by {data.get('attested_by')}")
+    baseline_file = BERNSTEIN_RUNS_DIR / "_baseline.json"
+    if baseline_file.exists():
+        try:
+            pages = json.loads(baseline_file.read_text(encoding="utf-8")).get("pages", {})
+        except Exception:  # noqa: BLE001
+            pages = {}
+        if slug in pages:
+            if pages[slug] == vm.prose_sha(raw):
+                return CheckResult(id="34", tier="T1", name=name, passed=True,
+                                   detail="grandfathered (predates the check, prose unchanged)")
+            return CheckResult(id="34", tier="T1", name=name, passed=False,
+                               detail=("prose edited since the grandfather baseline, so this page "
+                                       f"now needs a real pipeline run — {fix}"))
+    return CheckResult(id="34", tier="T1", name=name, passed=False,
+                       detail=f"no Bernstein attestation for '{slug}' — {fix}")
+
+
 def check_zero_you_sections(raw: str) -> CheckResult:
     name = "No 200w+ section without 'you' (voice engine)"
     offenders = vm.sections_over_200w_without_you(raw)
@@ -1560,6 +1612,7 @@ def audit_file(path: Path) -> ArticleAudit:
         check_table_cell_brevity(body),
         check_h3_density_per_h2(body),
         check_voice_audit(raw, slug),
+        check_bernstein_pipeline(raw, slug),
         check_zero_you_sections(raw),
         check_you_ceiling(raw),
         check_rhythm_variation(raw),
