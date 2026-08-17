@@ -31,9 +31,13 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-# Figures that describe a period both releases cover, so a change means the
-# source restated history rather than simply adding a new month.
-RESTATABLE = ["ytd_prior", "prior_12m"]
+# A restatement is the SAME month carrying a different value in a later release.
+#
+# An earlier version of this compared ytd_prior and prior_12m instead, and
+# reported a "restatement" for almost every sector on a rehearsal where both
+# releases came from an identical vintage. Those are window-dependent figures:
+# year to date for May covers Jan-May, for June it covers Jan-Jun. They are
+# supposed to differ. Only the raw monthly values are comparable like for like.
 
 
 def load(period: str) -> dict:
@@ -61,12 +65,14 @@ def compare(a: dict, b: dict, threshold: float) -> dict:
         if not sa:
             continue
 
-        for f in RESTATABLE:
-            va, vb = sa.get(f), sb.get(f)
-            if isinstance(va, int) and isinstance(vb, int) and va != vb:
-                pct = 100.0 * (vb - va) / va if va else 0
+        # Same month, different value = the source restated history.
+        ma, mb = sa.get("monthly") or {}, sb.get("monthly") or {}
+        for month in sorted(set(ma) & set(mb)):
+            va, vb = ma[month], mb[month]
+            if va != vb:
+                pct = 100.0 * (vb - va) / va if va else 100.0
                 if abs(pct) >= threshold:
-                    restated.append((slug, f, va, vb, round(pct, 2)))
+                    restated.append((slug, month, va, vb, round(pct, 2)))
 
         da, db = direction(sa.get("rolling_change_pct")), direction(sb.get("rolling_change_pct"))
         if da != db:
@@ -95,15 +101,19 @@ def main() -> int:
     args = ap.parse_args()
 
     a, b = load(args.frm), load(args.to)
+    same_vintage = a["meta"]["vintage_hash"] == b["meta"]["vintage_hash"]
     print("comparing %s (vintage %s) with %s (vintage %s)"
           % (args.frm, a["meta"]["vintage_hash"], args.to, b["meta"]["vintage_hash"]))
+    if same_vintage:
+        print("NOTE: identical vintage, so both were built from the same source data.")
+        print("      No restatement is possible. Any month-value difference here is a bug.")
     print()
 
     r = compare(a, b, args.threshold)
 
-    print("=== figures the source restated (>= %.1f%%) ===" % args.threshold)
-    for slug, f, va, vb, pct in r["restated"] or []:
-        print("  %-48s %-12s %s -> %s (%+.2f%%)" % (slug[:48], f, va, vb, pct))
+    print("=== months the source restated (>= %.1f%%) ===" % args.threshold)
+    for slug, month, va, vb, pct in r["restated"] or []:
+        print("  %-48s %-8s %s -> %s (%+.2f%%)" % (slug[:48], month, va, vb, pct))
     if not r["restated"]:
         print("  none")
 

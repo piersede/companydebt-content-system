@@ -160,7 +160,16 @@ def sector_metrics(ser: dict, sector: dict, latest: str) -> dict:
     y, yp = ytd(ser, entity, latest)
     r, rp = rolling(ser, entity, latest)
     months = ser["monthly_months"]
-    latest_month_value = int(num((entity.get("monthly") or [])[months.index(latest)]))
+    j = months.index(latest)
+    latest_month_value = int(num((entity.get("monthly") or [])[j]))
+
+    # The raw monthly values up to this period, keyed by month. Revision
+    # detection needs like-for-like: a restatement is the SAME month carrying a
+    # different value in a later release. Comparing derived windows instead
+    # (ytd_prior, prior_12m) reports a false restatement for every sector every
+    # month, because those windows legitimately move when the period advances.
+    mon = entity.get("monthly") or []
+    monthly = {months[k]: int(num(mon[k])) for k in range(min(j + 1, len(mon)))}
 
     ytd_chg, roll_chg = pct_change(y, yp), pct_change(r, rp)
     return {
@@ -176,6 +185,7 @@ def sector_metrics(ser: dict, sector: dict, latest: str) -> dict:
         "rolling_change_pct": roll_chg,
         "momentum_delta_pp": (round(roll_chg - ytd_chg, 1)
                               if roll_chg is not None and ytd_chg is not None else None),
+        "monthly": monthly,
         "annual": annual(ser, entity),
         "vs_2019": vs_baseline(ser, entity),
         "parent": parent_position(ser, sector, latest),

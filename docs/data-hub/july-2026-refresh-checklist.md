@@ -1,16 +1,17 @@
 # July 2026 insolvency data refresh - operator checklist
 
-Prepared 13 August 2026. Nothing in this file has been run. No data file was
-changed. The July 2026 figures were not published when this was written.
+Prepared 13 August 2026. Revised 17 August 2026 to fix four defects its own
+review found, and to add the Phase 0 parallel run.
 
-**Release date: 18 August 2026 - CONFIRMED.** The Insolvency Service states
-"Next release: 18 August 2026" on the June 2026 commentary page
+**Release date: 18 August 2026, 09:30 - CONFIRMED.** The Insolvency Service
+states "Next release: 18 August 2026" on the June 2026 commentary page
 (https://www.gov.uk/government/statistics/company-insolvencies-june-2026/commentary-company-insolvency-statistics-june-2026).
+Checked again on 17 August: the July release was not yet published.
 
-`data/insolvency-statistics/release_metadata.json` currently carries
-`"next_release_date": "21 August 2026 (estimated ... not yet confirmed)"`.
-That is wrong. It was hand-edited after the last parser run. The parser's own
-hard-coded value (18 August 2026) is the correct one.
+**Already done, do not repeat.** The wrong `next_release_date` string
+("21 August 2026 (estimated ... not yet confirmed)") was corrected on
+14 August. All 25 pages were rebuilt, pushed and verified live carrying
+18 August. If you see the old string anywhere, something has regressed.
 
 Each step is marked:
 
@@ -90,13 +91,29 @@ python scripts/datahub/sources/companies_house.py --month 2026-07
 Needs `COMPANIES_HOUSE_API_KEY` in `.env`. Writes
 `data/companies-house/monthly_flows_series.json`.
 
-### 1.5 AUTO - rebuild the chart SVGs
+### 1.4b AUTO - fetch The Gazette notices
+
+```
+python scripts/datahub/sources/the_gazette.py --month 2026-07
+```
+
+Writes `data/the-gazette/monthly_notice_series.json`. **Required** if the
+winding-up petition tracker is being rebuilt in Part 3. The original version of
+this checklist omitted it while still telling you to update that page's schema,
+which would have written fresh figures into the schema of a page still showing
+May.
+
+### 1.5 OPTIONAL - standalone chart SVGs
 
 ```
 python scripts/build_insolvency_charts.py
 ```
 
-Writes `data/insolvency-statistics/charts/*.svg`.
+**Not required.** This is a library, not a build step. The page builders import
+its chart functions and regenerate every chart in-process during Part 3.
+Nothing in `scripts/`, `mu-plugins/` or `theme/` reads the SVG files it writes.
+Skipping it leaves no page with a stale chart. Run it only if you want the
+standalone files for a preview.
 
 ### 1.6 HUMAN - update the release ledger
 
@@ -326,7 +343,20 @@ python scripts/datahub/pages/sector_pages.py
 python scripts/datahub/pages/sic_group_stats.py
 python scripts/datahub/pages/company_dissolutions_vs_insolvencies.py
 python scripts/datahub/pages/company_insolvency_hub.py
+python scripts/datahub/pages/winding_up_petition_tracker.py
 ```
+
+`sic_group_stats.py` takes a slug and rebuilds one page. To do all twenty, loop
+over the keys of its `SECTORS` dict.
+
+**The petition tracker was missing from the original list** while Part 2 still
+told you to update its schema. Only run it if step 1.4b fetched fresh Gazette
+data; otherwise leave the page alone.
+
+**Payment practices is NOT on the monthly cycle.** Its source is biannual. Do
+not rebuild it, and do not touch its schema block (mu-plugin line ~650) unless
+the payment-practices source has actually been refreshed. Updating that schema
+on a monthly cadence writes figures the page does not show.
 
 ### 3.2 AUTO - rebuild the downloadable CSVs
 
@@ -359,6 +389,42 @@ Diff the six flagship FAQ answers in `build_insolvency_dashboard.py`
 `faq_block()` against lines 454-471 of the mu-plugin. They are maintained by
 hand in two places.
 
+### 4.4 AUTO - derived-value consistency
+
+```
+python scripts/datahub/check_derived_values.py
+```
+
+Recomputes every parent-share percentage and every largest/second-largest claim
+from the series and compares them with what the pages say. Exits non-zero on a
+mismatch. On its first run it caught two stale shares that a careful human
+reviewer had missed.
+
+---
+
+## Part 4b - Phase 0 parallel run (18 August only)
+
+Runs alongside the normal refresh. **Publishes nothing.** Full rationale in
+`docs/data-hub/phase-0-core.md`.
+
+```
+python scripts/intelligence/taxonomy.py --validate
+python scripts/intelligence/build_release.py --month 2026-07
+python scripts/intelligence/revisions.py --from 2026-06 --to 2026-07
+python scripts/intelligence/verify_against_pages.py --month 2026-07 --verbose
+```
+
+Record four things: figures the automated path produced that the manual path
+missed and the reverse; every stale value the checks caught; **anything a human
+spotted that no check caught**; and how long each path took. The third is the
+one that decides whether Phase 0 proper is worth funding.
+
+Promote the pointer only when the normal refresh is verified and published:
+
+```
+python scripts/intelligence/build_release.py --month 2026-07 --promote
+```
+
 ---
 
 ## Part 5 - deployment (operator only)
@@ -368,6 +434,9 @@ Not covered by this checklist and not to be run by an assistant.
 - These are `data_reference` pages using `<!-- wp:html -->`. **`wp_push.py`
   truncates them and still returns 200.** Use:
   `python scripts/build_page.py --page <slug> --publish --id <wp_id>`
+- **`--publish` targets STAGING.** Its own help text says so. Live is a separate
+  step via `scripts/push_data_pages_live.py --confirm` or
+  `scripts/publish_to_live.py --id --file --confirm`.
 - Live pushes need Piers's explicit per-push instruction.
 - After any push, re-render the page and check the length and structure.
 - The theme template also carried a stale chart caption at the June refresh

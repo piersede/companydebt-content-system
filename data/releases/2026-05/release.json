@@ -1,7 +1,7 @@
 {
   "_about": "Immutable release object. Every published figure must come from here.",
   "meta": {
-    "period": "2026-06",
+    "period": "2026-05",
     "release_label": "June 2026",
     "geography": "England and Wales",
     "publication_date": "17 July 2026",
@@ -69,14 +69,14 @@
       ]
     },
     "by_procedure": {
-      "cvls": 1364,
-      "compulsory": 276,
-      "administrations": 191,
-      "cvas": 14,
+      "cvls": 1411,
+      "compulsory": 281,
+      "administrations": 132,
+      "cvas": 25,
       "receiverships": 0,
-      "total": 1845
+      "total": 1849
     },
-    "rate_per_10k": 50.5
+    "rate_per_10k": 50.9
   },
   "sectors": {
     "furniture-insolvency-statistics": {
@@ -87,15 +87,15 @@
       "peer_group": null,
       "sic_code": "310",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 11,
-      "ytd": 75,
-      "ytd_prior": 73,
-      "ytd_change_pct": 2.7,
-      "rolling_12m": 145,
+      "latest_month": "2026-05",
+      "latest_month_value": 16,
+      "ytd": 64,
+      "ytd_prior": 63,
+      "ytd_change_pct": 1.6,
+      "rolling_12m": 144,
       "prior_12m": 144,
-      "rolling_change_pct": 0.7,
-      "momentum_delta_pp": -2.0,
+      "rolling_change_pct": 0.0,
+      "momentum_delta_pp": -1.6,
       "monthly": {
         "2016-01": 8,
         "2016-02": 7,
@@ -221,8 +221,7 @@
         "2026-02": 10,
         "2026-03": 15,
         "2026-04": 11,
-        "2026-05": 16,
-        "2026-06": 11
+        "2026-05": 16
       },
       "annual": {
         "2016": 94,
@@ -246,15 +245,15 @@
       "parent": {
         "parent_code": "C",
         "parent_level": "section",
-        "parent_ytd": 927,
-        "share_pct": 8.1,
-        "rank": 3,
+        "parent_ytd": 771,
+        "share_pct": 8.3,
+        "rank": 2,
         "of": 95,
         "largest_sibling": "329",
         "is_largest": false,
-        "is_second": false
+        "is_second": true
       },
-      "percentile_of_own_history": 80.9,
+      "percentile_of_own_history": 75.4,
       "volume_confidence": "moderate"
     },
     "restaurant-insolvency-statistics": {
@@ -265,15 +264,15 @@
       "peer_group": "hospitality",
       "sic_code": "561",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 150,
-      "ytd": 1011,
-      "ytd_prior": 1078,
-      "ytd_change_pct": -6.2,
-      "rolling_12m": 2070,
-      "prior_12m": 2171,
-      "rolling_change_pct": -4.7,
-      "momentum_delta_pp": 1.5,
+      "latest_month": "2026-05",
+      "latest_month_value": 186,
+      "ytd": 861,
+      "ytd_prior": 887,
+      "ytd_change_pct": -2.9,
+      "rolling_12m": 2111,
+      "prior_12m": 2187,
+      "rolling_change_pct": -3.5,
+      "momentum_delta_pp": -0.6,
       "monthly": {
         "2016-01": 74,
         "2016-02": 73,
@@ -399,8 +398,7 @@
         "2026-02": 172,
         "2026-03": 172,
         "2026-04": 200,
-        "2026-05": 186,
-        "2026-06": 150
+        "2026-05": 186
       },
       "annual": {
         "2016": 878,
@@ -424,15 +422,15 @@
       "parent": {
         "parent_code": "I",
         "parent_level": "section",
-        "parent_ytd": 1581,
-        "share_pct": 63.9,
+        "parent_ytd": 1344,
+        "share_pct": 64.1,
         "rank": 1,
         "of": 7,
         "largest_sibling": "561",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 67.8,
+      "percentile_of_own_history": 71.9,
       "volume_confidence": "higher"
     },
     "road-haulage-insolvency-statistics": {
@@ -443,15 +441,15 @@
       "peer_group": "logistics",
       "sic_code": "494",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 35,
-      "ytd": 184,
-      "ytd_prior": 220,
-      "ytd_change_pct": -16.4,
-      "rolling_12m": 371,
-      "prior_12m": 427,
-      "rolling_change_pct": -13.1,
-      "momentum_delta_pp": 3.3,
+      "latest_month": "2026-05",
+      "latest_month_value": 37,
+      "ytd": 149,
+      "ytd_prior": 184,
+      "ytd_change_pct": -19.0,
+      "rolling_12m": 372,
+      "prior_12m": 452,
+      "rolling_change_pct": -17.7,
+      "momentum_delta_pp": 1.3,
       "monthly": {
         "2016-01": 9,
         "2016-02": 10,
@@ -577,8 +575,7 @@
         "2026-02": 15,
         "2026-03": 27,
         "2026-04": 45,
-        "2026-05": 37,
-        "2026-06": 35
+        "2026-05": 37
       },
       "annual": {
         "2016": 138,
@@ -602,15 +599,15 @@
       "parent": {
         "parent_code": "H",
         "parent_level": "section",
-        "parent_ytd": 335,
-        "share_pct": 54.9,
+        "parent_ytd": 275,
+        "share_pct": 54.2,
         "rank": 1,
         "of": 15,
         "largest_sibling": "494",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 60.9,
+      "percentile_of_own_history": 61.4,
       "volume_confidence": "higher"
     },
     "recruitment-agency-insolvency-statistics": {
@@ -621,15 +618,15 @@
       "peer_group": "employment",
       "sic_code": "781",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 30,
-      "ytd": 136,
-      "ytd_prior": 181,
-      "ytd_change_pct": -24.9,
-      "rolling_12m": 300,
-      "prior_12m": 332,
-      "rolling_change_pct": -9.6,
-      "momentum_delta_pp": 15.3,
+      "latest_month": "2026-05",
+      "latest_month_value": 22,
+      "ytd": 106,
+      "ytd_prior": 149,
+      "ytd_change_pct": -28.9,
+      "rolling_12m": 302,
+      "prior_12m": 327,
+      "rolling_change_pct": -7.6,
+      "momentum_delta_pp": 21.3,
       "monthly": {
         "2016-01": 14,
         "2016-02": 11,
@@ -755,8 +752,7 @@
         "2026-02": 24,
         "2026-03": 24,
         "2026-04": 19,
-        "2026-05": 22,
-        "2026-06": 30
+        "2026-05": 22
       },
       "annual": {
         "2016": 139,
@@ -780,15 +776,15 @@
       "parent": {
         "parent_code": "78",
         "parent_level": "division",
-        "parent_ytd": 264,
-        "share_pct": 51.5,
+        "parent_ytd": 211,
+        "share_pct": 50.2,
         "rank": 1,
         "of": 3,
         "largest_sibling": "781",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 84.3,
+      "percentile_of_own_history": 85.1,
       "volume_confidence": "higher"
     },
     "temporary-staffing-agency-insolvency-statistics": {
@@ -799,15 +795,15 @@
       "peer_group": "employment",
       "sic_code": "782",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 16,
-      "ytd": 88,
-      "ytd_prior": 82,
-      "ytd_change_pct": 7.3,
-      "rolling_12m": 182,
-      "prior_12m": 163,
+      "latest_month": "2026-05",
+      "latest_month_value": 12,
+      "ytd": 72,
+      "ytd_prior": 67,
+      "ytd_change_pct": 7.5,
+      "rolling_12m": 181,
+      "prior_12m": 162,
       "rolling_change_pct": 11.7,
-      "momentum_delta_pp": 4.4,
+      "momentum_delta_pp": 4.2,
       "monthly": {
         "2016-01": 12,
         "2016-02": 7,
@@ -933,8 +929,7 @@
         "2026-02": 7,
         "2026-03": 24,
         "2026-04": 16,
-        "2026-05": 12,
-        "2026-06": 16
+        "2026-05": 12
       },
       "annual": {
         "2016": 132,
@@ -958,15 +953,15 @@
       "parent": {
         "parent_code": "78",
         "parent_level": "division",
-        "parent_ytd": 264,
-        "share_pct": 33.3,
+        "parent_ytd": 211,
+        "share_pct": 34.1,
         "rank": 2,
         "of": 3,
         "largest_sibling": "781",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 98.3,
+      "percentile_of_own_history": 98.2,
       "volume_confidence": "moderate"
     },
     "motor-vehicle-repair-insolvency-statistics": {
@@ -977,15 +972,15 @@
       "peer_group": null,
       "sic_code": "452",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 27,
-      "ytd": 140,
-      "ytd_prior": 150,
-      "ytd_change_pct": -6.7,
-      "rolling_12m": 283,
-      "prior_12m": 282,
-      "rolling_change_pct": 0.4,
-      "momentum_delta_pp": 7.1,
+      "latest_month": "2026-05",
+      "latest_month_value": 19,
+      "ytd": 113,
+      "ytd_prior": 121,
+      "ytd_change_pct": -6.6,
+      "rolling_12m": 285,
+      "prior_12m": 276,
+      "rolling_change_pct": 3.3,
+      "momentum_delta_pp": 9.9,
       "monthly": {
         "2016-01": 15,
         "2016-02": 15,
@@ -1111,8 +1106,7 @@
         "2026-02": 23,
         "2026-03": 24,
         "2026-04": 32,
-        "2026-05": 19,
-        "2026-06": 27
+        "2026-05": 19
       },
       "annual": {
         "2016": 174,
@@ -1136,15 +1130,15 @@
       "parent": {
         "parent_code": "45",
         "parent_level": "division",
-        "parent_ytd": 308,
-        "share_pct": 45.5,
+        "parent_ytd": 257,
+        "share_pct": 44.0,
         "rank": 1,
         "of": 4,
         "largest_sibling": "452",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 90.4,
+      "percentile_of_own_history": 91.2,
       "volume_confidence": "higher"
     },
     "cleaning-company-insolvency-statistics": {
@@ -1155,15 +1149,15 @@
       "peer_group": null,
       "sic_code": "812",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 9,
-      "ytd": 69,
-      "ytd_prior": 74,
-      "ytd_change_pct": -6.8,
-      "rolling_12m": 167,
-      "prior_12m": 155,
-      "rolling_change_pct": 7.7,
-      "momentum_delta_pp": 14.5,
+      "latest_month": "2026-05",
+      "latest_month_value": 15,
+      "ytd": 60,
+      "ytd_prior": 59,
+      "ytd_change_pct": 1.7,
+      "rolling_12m": 173,
+      "prior_12m": 161,
+      "rolling_change_pct": 7.5,
+      "momentum_delta_pp": 5.8,
       "monthly": {
         "2016-01": 6,
         "2016-02": 3,
@@ -1289,8 +1283,7 @@
         "2026-02": 8,
         "2026-03": 15,
         "2026-04": 11,
-        "2026-05": 15,
-        "2026-06": 9
+        "2026-05": 15
       },
       "annual": {
         "2016": 81,
@@ -1314,15 +1307,15 @@
       "parent": {
         "parent_code": "81",
         "parent_level": "division",
-        "parent_ytd": 124,
-        "share_pct": 55.6,
+        "parent_ytd": 110,
+        "share_pct": 54.5,
         "rank": 1,
         "of": 3,
         "largest_sibling": "812",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 81.7,
+      "percentile_of_own_history": 93.9,
       "volume_confidence": "moderate"
     },
     "hotel-insolvency-statistics": {
@@ -1333,15 +1326,15 @@
       "peer_group": "hospitality",
       "sic_code": "551",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 13,
-      "ytd": 80,
-      "ytd_prior": 89,
-      "ytd_change_pct": -10.1,
+      "latest_month": "2026-05",
+      "latest_month_value": 12,
+      "ytd": 67,
+      "ytd_prior": 76,
+      "ytd_change_pct": -11.8,
       "rolling_12m": 145,
-      "prior_12m": 152,
-      "rolling_change_pct": -4.6,
-      "momentum_delta_pp": 5.5,
+      "prior_12m": 154,
+      "rolling_change_pct": -5.8,
+      "momentum_delta_pp": 6.0,
       "monthly": {
         "2016-01": 6,
         "2016-02": 10,
@@ -1467,8 +1460,7 @@
         "2026-02": 11,
         "2026-03": 11,
         "2026-04": 19,
-        "2026-05": 12,
-        "2026-06": 13
+        "2026-05": 12
       },
       "annual": {
         "2016": 80,
@@ -1492,15 +1484,15 @@
       "parent": {
         "parent_code": "55",
         "parent_level": "division",
-        "parent_ytd": 109,
-        "share_pct": 73.4,
+        "parent_ytd": 90,
+        "share_pct": 74.4,
         "rank": 1,
         "of": 4,
         "largest_sibling": "551",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 73.9,
+      "percentile_of_own_history": 74.6,
       "volume_confidence": "moderate"
     },
     "estate-agency-insolvency-statistics": {
@@ -1511,15 +1503,15 @@
       "peer_group": "property",
       "sic_code": "683",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 15,
-      "ytd": 101,
-      "ytd_prior": 131,
-      "ytd_change_pct": -22.9,
-      "rolling_12m": 203,
-      "prior_12m": 261,
-      "rolling_change_pct": -22.2,
-      "momentum_delta_pp": 0.7,
+      "latest_month": "2026-05",
+      "latest_month_value": 12,
+      "ytd": 86,
+      "ytd_prior": 110,
+      "ytd_change_pct": -21.8,
+      "rolling_12m": 209,
+      "prior_12m": 269,
+      "rolling_change_pct": -22.3,
+      "momentum_delta_pp": -0.5,
       "monthly": {
         "2016-01": 10,
         "2016-02": 13,
@@ -1645,8 +1637,7 @@
         "2026-02": 19,
         "2026-03": 16,
         "2026-04": 19,
-        "2026-05": 12,
-        "2026-06": 15
+        "2026-05": 12
       },
       "annual": {
         "2016": 145,
@@ -1670,15 +1661,15 @@
       "parent": {
         "parent_code": "L",
         "parent_level": "section",
-        "parent_ytd": 600,
-        "share_pct": 16.8,
+        "parent_ytd": 472,
+        "share_pct": 18.2,
         "rank": 3,
         "of": 3,
         "largest_sibling": "681",
         "is_largest": false,
         "is_second": false
       },
-      "percentile_of_own_history": 60.0,
+      "percentile_of_own_history": 62.3,
       "volume_confidence": "higher"
     },
     "it-consultancy-insolvency-statistics": {
@@ -1689,15 +1680,15 @@
       "peer_group": "professional",
       "sic_code": "620",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 60,
-      "ytd": 401,
-      "ytd_prior": 443,
-      "ytd_change_pct": -9.5,
-      "rolling_12m": 858,
-      "prior_12m": 880,
-      "rolling_change_pct": -2.5,
-      "momentum_delta_pp": 7.0,
+      "latest_month": "2026-05",
+      "latest_month_value": 75,
+      "ytd": 341,
+      "ytd_prior": 374,
+      "ytd_change_pct": -8.8,
+      "rolling_12m": 867,
+      "prior_12m": 905,
+      "rolling_change_pct": -4.2,
+      "momentum_delta_pp": 4.6,
       "monthly": {
         "2016-01": 36,
         "2016-02": 42,
@@ -1823,8 +1814,7 @@
         "2026-02": 66,
         "2026-03": 75,
         "2026-04": 71,
-        "2026-05": 75,
-        "2026-06": 60
+        "2026-05": 75
       },
       "annual": {
         "2016": 488,
@@ -1848,15 +1838,15 @@
       "parent": {
         "parent_code": "J",
         "parent_level": "section",
-        "parent_ytd": 653,
-        "share_pct": 61.4,
+        "parent_ytd": 558,
+        "share_pct": 61.1,
         "rank": 1,
         "of": 13,
         "largest_sibling": "620",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 72.2,
+      "percentile_of_own_history": 72.8,
       "volume_confidence": "higher"
     },
     "management-consultancy-insolvency-statistics": {
@@ -1867,15 +1857,15 @@
       "peer_group": "professional",
       "sic_code": "702",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 45,
-      "ytd": 317,
-      "ytd_prior": 332,
-      "ytd_change_pct": -4.5,
-      "rolling_12m": 655,
-      "prior_12m": 647,
-      "rolling_change_pct": 1.2,
-      "momentum_delta_pp": 5.7,
+      "latest_month": "2026-05",
+      "latest_month_value": 47,
+      "ytd": 272,
+      "ytd_prior": 283,
+      "ytd_change_pct": -3.9,
+      "rolling_12m": 659,
+      "prior_12m": 646,
+      "rolling_change_pct": 2.0,
+      "momentum_delta_pp": 5.9,
       "monthly": {
         "2016-01": 29,
         "2016-02": 29,
@@ -2001,8 +1991,7 @@
         "2026-02": 54,
         "2026-03": 52,
         "2026-04": 66,
-        "2026-05": 47,
-        "2026-06": 45
+        "2026-05": 47
       },
       "annual": {
         "2016": 386,
@@ -2026,15 +2015,15 @@
       "parent": {
         "parent_code": "M",
         "parent_level": "section",
-        "parent_ytd": 909,
-        "share_pct": 34.9,
+        "parent_ytd": 783,
+        "share_pct": 34.7,
         "rank": 1,
         "of": 15,
         "largest_sibling": "702",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 69.6,
+      "percentile_of_own_history": 71.9,
       "volume_confidence": "higher"
     },
     "architectural-engineering-insolvency-statistics": {
@@ -2045,15 +2034,15 @@
       "peer_group": "professional",
       "sic_code": "711",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 26,
-      "ytd": 141,
-      "ytd_prior": 147,
-      "ytd_change_pct": -4.1,
-      "rolling_12m": 329,
-      "prior_12m": 311,
-      "rolling_change_pct": 5.8,
-      "momentum_delta_pp": 9.9,
+      "latest_month": "2026-05",
+      "latest_month_value": 27,
+      "ytd": 115,
+      "ytd_prior": 116,
+      "ytd_change_pct": -0.9,
+      "rolling_12m": 334,
+      "prior_12m": 310,
+      "rolling_change_pct": 7.7,
+      "momentum_delta_pp": 8.6,
       "monthly": {
         "2016-01": 9,
         "2016-02": 13,
@@ -2179,8 +2168,7 @@
         "2026-02": 19,
         "2026-03": 29,
         "2026-04": 22,
-        "2026-05": 27,
-        "2026-06": 26
+        "2026-05": 27
       },
       "annual": {
         "2016": 143,
@@ -2204,15 +2192,15 @@
       "parent": {
         "parent_code": "M",
         "parent_level": "section",
-        "parent_ytd": 909,
-        "share_pct": 15.5,
+        "parent_ytd": 783,
+        "share_pct": 14.7,
         "rank": 2,
         "of": 15,
         "largest_sibling": "702",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 91.3,
+      "percentile_of_own_history": 96.5,
       "volume_confidence": "higher"
     },
     "personal-care-services-insolvency-statistics": {
@@ -2223,15 +2211,15 @@
       "peer_group": null,
       "sic_code": "960",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 81,
-      "ytd": 439,
-      "ytd_prior": 521,
-      "ytd_change_pct": -15.7,
-      "rolling_12m": 911,
-      "prior_12m": 1031,
-      "rolling_change_pct": -11.6,
-      "momentum_delta_pp": 4.1,
+      "latest_month": "2026-05",
+      "latest_month_value": 69,
+      "ytd": 358,
+      "ytd_prior": 428,
+      "ytd_change_pct": -16.4,
+      "rolling_12m": 923,
+      "prior_12m": 1048,
+      "rolling_change_pct": -11.9,
+      "momentum_delta_pp": 4.5,
       "monthly": {
         "2016-01": 61,
         "2016-02": 40,
@@ -2357,8 +2345,7 @@
         "2026-02": 59,
         "2026-03": 85,
         "2026-04": 89,
-        "2026-05": 69,
-        "2026-06": 81
+        "2026-05": 69
       },
       "annual": {
         "2016": 517,
@@ -2382,15 +2369,15 @@
       "parent": {
         "parent_code": "S",
         "parent_level": "section",
-        "parent_ytd": 461,
-        "share_pct": 95.2,
+        "parent_ytd": 377,
+        "share_pct": 95.0,
         "rank": 1,
         "of": 6,
         "largest_sibling": "960",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 56.5,
+      "percentile_of_own_history": 57.0,
       "volume_confidence": "higher"
     },
     "sports-facility-insolvency-statistics": {
@@ -2401,15 +2388,15 @@
       "peer_group": "leisure",
       "sic_code": "931",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 13,
-      "ytd": 96,
-      "ytd_prior": 90,
-      "ytd_change_pct": 6.7,
+      "latest_month": "2026-05",
+      "latest_month_value": 11,
+      "ytd": 83,
+      "ytd_prior": 77,
+      "ytd_change_pct": 7.8,
       "rolling_12m": 201,
-      "prior_12m": 190,
-      "rolling_change_pct": 5.8,
-      "momentum_delta_pp": -0.9,
+      "prior_12m": 193,
+      "rolling_change_pct": 4.1,
+      "momentum_delta_pp": -3.7,
       "monthly": {
         "2016-01": 4,
         "2016-02": 6,
@@ -2535,8 +2522,7 @@
         "2026-02": 15,
         "2026-03": 23,
         "2026-04": 22,
-        "2026-05": 11,
-        "2026-06": 13
+        "2026-05": 11
       },
       "annual": {
         "2016": 94,
@@ -2560,15 +2546,15 @@
       "parent": {
         "parent_code": "R",
         "parent_level": "section",
-        "parent_ytd": 218,
-        "share_pct": 44.0,
+        "parent_ytd": 189,
+        "share_pct": 43.9,
         "rank": 1,
         "of": 5,
         "largest_sibling": "931",
         "is_largest": true,
         "is_second": false
       },
-      "percentile_of_own_history": 70.4,
+      "percentile_of_own_history": 71.1,
       "volume_confidence": "higher"
     },
     "medical-dental-practice-insolvency-statistics": {
@@ -2579,15 +2565,15 @@
       "peer_group": null,
       "sic_code": "862",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 7,
-      "ytd": 50,
-      "ytd_prior": 42,
-      "ytd_change_pct": 19.0,
-      "rolling_12m": 101,
-      "prior_12m": 91,
-      "rolling_change_pct": 11.0,
-      "momentum_delta_pp": -8.0,
+      "latest_month": "2026-05",
+      "latest_month_value": 10,
+      "ytd": 43,
+      "ytd_prior": 28,
+      "ytd_change_pct": 53.6,
+      "rolling_12m": 108,
+      "prior_12m": 85,
+      "rolling_change_pct": 27.1,
+      "momentum_delta_pp": -26.5,
       "monthly": {
         "2016-01": 4,
         "2016-02": 0,
@@ -2713,8 +2699,7 @@
         "2026-02": 12,
         "2026-03": 6,
         "2026-04": 6,
-        "2026-05": 10,
-        "2026-06": 7
+        "2026-05": 10
       },
       "annual": {
         "2016": 51,
@@ -2738,15 +2723,15 @@
       "parent": {
         "parent_code": "Q",
         "parent_level": "section",
-        "parent_ytd": 320,
-        "share_pct": 15.6,
+        "parent_ytd": 264,
+        "share_pct": 16.3,
         "rank": 2,
         "of": 9,
         "largest_sibling": "869",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 85.2,
+      "percentile_of_own_history": 98.2,
       "volume_confidence": "moderate"
     },
     "creative-arts-entertainment-insolvency-statistics": {
@@ -2757,15 +2742,15 @@
       "peer_group": "leisure",
       "sic_code": "900",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 11,
-      "ytd": 68,
-      "ytd_prior": 58,
-      "ytd_change_pct": 17.2,
+      "latest_month": "2026-05",
+      "latest_month_value": 10,
+      "ytd": 57,
+      "ytd_prior": 47,
+      "ytd_change_pct": 21.3,
       "rolling_12m": 139,
-      "prior_12m": 121,
-      "rolling_change_pct": 14.9,
-      "momentum_delta_pp": -2.3,
+      "prior_12m": 122,
+      "rolling_change_pct": 13.9,
+      "momentum_delta_pp": -7.4,
       "monthly": {
         "2016-01": 8,
         "2016-02": 2,
@@ -2891,8 +2876,7 @@
         "2026-02": 13,
         "2026-03": 13,
         "2026-04": 13,
-        "2026-05": 10,
-        "2026-06": 11
+        "2026-05": 10
       },
       "annual": {
         "2016": 56,
@@ -2916,15 +2900,15 @@
       "parent": {
         "parent_code": "R",
         "parent_level": "section",
-        "parent_ytd": 218,
-        "share_pct": 31.2,
+        "parent_ytd": 189,
+        "share_pct": 30.2,
         "rank": 2,
         "of": 5,
         "largest_sibling": "931",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 93.0,
+      "percentile_of_own_history": 93.9,
       "volume_confidence": "moderate"
     },
     "amusement-recreation-insolvency-statistics": {
@@ -2935,15 +2919,15 @@
       "peer_group": "leisure",
       "sic_code": "932",
       "sic_level": "group",
-      "latest_month": "2026-06",
+      "latest_month": "2026-05",
       "latest_month_value": 5,
-      "ytd": 50,
-      "ytd_prior": 60,
+      "ytd": 45,
+      "ytd_prior": 54,
       "ytd_change_pct": -16.7,
-      "rolling_12m": 113,
-      "prior_12m": 117,
-      "rolling_change_pct": -3.4,
-      "momentum_delta_pp": 13.3,
+      "rolling_12m": 114,
+      "prior_12m": 119,
+      "rolling_change_pct": -4.2,
+      "momentum_delta_pp": 12.5,
       "monthly": {
         "2016-01": 9,
         "2016-02": 3,
@@ -3069,8 +3053,7 @@
         "2026-02": 14,
         "2026-03": 8,
         "2026-04": 8,
-        "2026-05": 5,
-        "2026-06": 5
+        "2026-05": 5
       },
       "annual": {
         "2016": 53,
@@ -3094,15 +3077,15 @@
       "parent": {
         "parent_code": "R",
         "parent_level": "section",
-        "parent_ytd": 218,
-        "share_pct": 22.9,
+        "parent_ytd": 189,
+        "share_pct": 23.8,
         "rank": 3,
         "of": 5,
         "largest_sibling": "931",
         "is_largest": false,
         "is_second": false
       },
-      "percentile_of_own_history": 84.3,
+      "percentile_of_own_history": 86.0,
       "volume_confidence": "moderate"
     },
     "real-estate-letting-investment-insolvency-statistics": {
@@ -3113,15 +3096,15 @@
       "peer_group": "property",
       "sic_code": "682",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 28,
-      "ytd": 136,
-      "ytd_prior": 151,
-      "ytd_change_pct": -9.9,
-      "rolling_12m": 274,
-      "prior_12m": 280,
-      "rolling_change_pct": -2.1,
-      "momentum_delta_pp": 7.8,
+      "latest_month": "2026-05",
+      "latest_month_value": 18,
+      "ytd": 108,
+      "ytd_prior": 117,
+      "ytd_change_pct": -7.7,
+      "rolling_12m": 280,
+      "prior_12m": 268,
+      "rolling_change_pct": 4.5,
+      "momentum_delta_pp": 12.2,
       "monthly": {
         "2016-01": 17,
         "2016-02": 10,
@@ -3247,8 +3230,7 @@
         "2026-02": 25,
         "2026-03": 28,
         "2026-04": 26,
-        "2026-05": 18,
-        "2026-06": 28
+        "2026-05": 18
       },
       "annual": {
         "2016": 149,
@@ -3272,15 +3254,15 @@
       "parent": {
         "parent_code": "L",
         "parent_level": "section",
-        "parent_ytd": 600,
-        "share_pct": 22.7,
+        "parent_ytd": 472,
+        "share_pct": 22.9,
         "rank": 2,
         "of": 3,
         "largest_sibling": "681",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 84.3,
+      "percentile_of_own_history": 91.2,
       "volume_confidence": "higher"
     },
     "freight-forwarding-logistics-insolvency-statistics": {
@@ -3291,15 +3273,15 @@
       "peer_group": "logistics",
       "sic_code": "522",
       "sic_level": "group",
-      "latest_month": "2026-06",
-      "latest_month_value": 7,
-      "ytd": 45,
-      "ytd_prior": 47,
-      "ytd_change_pct": -4.3,
-      "rolling_12m": 103,
-      "prior_12m": 94,
-      "rolling_change_pct": 9.6,
-      "momentum_delta_pp": 13.9,
+      "latest_month": "2026-05",
+      "latest_month_value": 4,
+      "ytd": 38,
+      "ytd_prior": 38,
+      "ytd_change_pct": 0.0,
+      "rolling_12m": 105,
+      "prior_12m": 97,
+      "rolling_change_pct": 8.2,
+      "momentum_delta_pp": 8.2,
       "monthly": {
         "2016-01": 4,
         "2016-02": 1,
@@ -3425,8 +3407,7 @@
         "2026-02": 8,
         "2026-03": 6,
         "2026-04": 12,
-        "2026-05": 4,
-        "2026-06": 7
+        "2026-05": 4
       },
       "annual": {
         "2016": 40,
@@ -3450,15 +3431,15 @@
       "parent": {
         "parent_code": "H",
         "parent_level": "section",
-        "parent_ytd": 335,
-        "share_pct": 13.4,
+        "parent_ytd": 275,
+        "share_pct": 13.8,
         "rank": 2,
         "of": 15,
         "largest_sibling": "494",
         "is_largest": false,
         "is_second": true
       },
-      "percentile_of_own_history": 78.3,
+      "percentile_of_own_history": 79.8,
       "volume_confidence": "moderate"
     },
     "retail-insolvency-statistics": {
@@ -3469,15 +3450,15 @@
       "peer_group": "retail",
       "sic_code": "47",
       "sic_level": "division",
-      "latest_month": "2026-06",
-      "latest_month_value": 120,
-      "ytd": 852,
-      "ytd_prior": 1006,
-      "ytd_change_pct": -15.3,
-      "rolling_12m": 1808,
-      "prior_12m": 1893,
-      "rolling_change_pct": -4.5,
-      "momentum_delta_pp": 10.8,
+      "latest_month": "2026-05",
+      "latest_month_value": 131,
+      "ytd": 732,
+      "ytd_prior": 835,
+      "ytd_change_pct": -12.3,
+      "rolling_12m": 1859,
+      "prior_12m": 1925,
+      "rolling_change_pct": -3.4,
+      "momentum_delta_pp": 8.9,
       "monthly": {
         "2016-01": 73,
         "2016-02": 97,
@@ -3603,8 +3584,7 @@
         "2026-02": 150,
         "2026-03": 156,
         "2026-04": 159,
-        "2026-05": 131,
-        "2026-06": 120
+        "2026-05": 131
       },
       "annual": {
         "2016": 957,
@@ -3628,7 +3608,7 @@
       "parent": {
         "parent_code": "47",
         "parent_level": "division",
-        "parent_ytd": 852,
+        "parent_ytd": 732,
         "share_pct": 100.0,
         "rank": null,
         "of": 9,
@@ -3636,7 +3616,7 @@
         "is_largest": false,
         "is_second": false
       },
-      "percentile_of_own_history": 63.5,
+      "percentile_of_own_history": 64.9,
       "volume_confidence": "higher"
     },
     "construction-insolvency-statistics": {
@@ -3647,15 +3627,15 @@
       "peer_group": "construction",
       "sic_code": "F",
       "sic_level": "section",
-      "latest_month": "2026-06",
-      "latest_month_value": 309,
-      "ytd": 1945,
-      "ytd_prior": 2088,
-      "ytd_change_pct": -6.8,
-      "rolling_12m": 3805,
-      "prior_12m": 3988,
-      "rolling_change_pct": -4.6,
-      "momentum_delta_pp": 2.2,
+      "latest_month": "2026-05",
+      "latest_month_value": 296,
+      "ytd": 1636,
+      "ytd_prior": 1763,
+      "ytd_change_pct": -7.2,
+      "rolling_12m": 3821,
+      "prior_12m": 4063,
+      "rolling_change_pct": -6.0,
+      "momentum_delta_pp": 1.2,
       "monthly": {
         "2016-01": 216,
         "2016-02": 204,
@@ -3781,8 +3761,7 @@
         "2026-02": 305,
         "2026-03": 347,
         "2026-04": 408,
-        "2026-05": 296,
-        "2026-06": 309
+        "2026-05": 296
       },
       "annual": {
         "2016": 2557,
@@ -3804,7 +3783,7 @@
         "change_pct": 22.6
       },
       "parent": {},
-      "percentile_of_own_history": 58.3,
+      "percentile_of_own_history": 58.8,
       "volume_confidence": "higher"
     }
   }
