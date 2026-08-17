@@ -92,8 +92,8 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-fs-lg:   24px;
     --cdi-fs-xl:   32px;
 
-    /* Type stack */
-    --cdi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Type stack — Arial to match the site's default body text (attached spec) */
+    --cdi-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* ================================================================== */
@@ -107,9 +107,9 @@ body.page-template-insolvency-test .cd-itest-main {
     padding: var(--cdi-sp-5) var(--cdi-sp-2) var(--cdi-sp-6) !important;
     background: transparent !important;
     font-family: var(--cdi-font) !important;
-    font-size: var(--cdi-fs-base) !important;
-    line-height: 1.55 !important;
-    color: var(--cdi-text) !important;
+    font-size: 18px !important;
+    line-height: 31px !important;
+    color: var(--cdi-grey) !important;
 }
 
 body.page-template-insolvency-test .cd-itest-main *,
@@ -238,7 +238,7 @@ body.page-template-insolvency-test .cd-itest-q {
 body.page-template-insolvency-test .cd-itest-lede {
     display: block !important;
     font-size: var(--cdi-fs-md) !important;
-    line-height: 1.55 !important;
+    line-height: 31px !important;
     color: var(--cdi-grey) !important;
     /* 20px = the uniform section-to-section gap on the capture step */
     margin: 0 0 20px !important;
