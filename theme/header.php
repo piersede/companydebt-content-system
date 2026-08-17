@@ -92,7 +92,7 @@
 	   so it isn't the light v1 logo (invisible on white) before the delayed JS swap. */
 	html header.site-header.site-header a.custom-logo-link img.custom-logo,
 	html header.site-header.site-header img.custom-logo {
-	  content: url('https://comdebstage.wpenginepowered.com/wp-content/themes/company-debt-webpigment/assets/images/cd-logo-topnav-v3.png') !important;
+	  content: url('/wp-content/themes/company-debt-webpigment/assets/images/cd-logo-topnav-v3.png') !important;
 	}
 	</style>
 

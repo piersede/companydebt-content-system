@@ -34,3 +34,6 @@ outreach/state/
 outreach/outbox/
 outreach/node_modules/
 outreach/.graphcache.json
+
+# 24MB extract; the 4.5MB source zip is committed instead
+data/insolvency-statistics/record-level/record-level-data.csv
