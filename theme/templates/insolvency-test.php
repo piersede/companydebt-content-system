@@ -63,12 +63,13 @@ get_header();
               // (below reg-line, above the disclaimer). ?>
         <div class="cd-itest-cta-row">
             <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position <span class="cd-itest-btn-arrow" aria-hidden="true">&rarr;</span></button>
-            <p class="cd-itest-value-reassure">Takes around two minutes &middot; Personalised result &middot; No obligation</p>
-            <p class="cd-itest-phone-alt">Prefer to speak to someone now? Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
+            <p class="cd-itest-value-reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Takes around two minutes &middot; Personalised result &middot; No obligation</p>
+            <p class="cd-itest-phone-alt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Prefer to speak to someone now?<br>Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
         </div>
         <p class="cd-itest-reg-line cd-itest-reg-line--centered">Helping UK company directors since 2007. Formal insolvency work is handled by licensed insolvency practitioners regulated by the Insolvency Practitioners Association.</p>
-        <a class="cd-itest-reviews-line" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener">
-            <span class="cd-itest-reviews-line__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated Excellent on Reviews.io
+        <a class="cd-itest-reviews-line" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener" aria-label="Rated Excellent on Reviews.io">
+            <img class="cd-itest-reviews-logo" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/reviewsio-logo.svg' ); ?>" alt="Reviews.io" width="150" height="24" />
+            <span class="cd-itest-reviews-line__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </a>
         <p class="cd-itest-disclaimer">This check identifies common warning signs and provides initial guidance. It is not a formal insolvency opinion.</p>
     </section>

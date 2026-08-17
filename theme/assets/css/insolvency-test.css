@@ -281,17 +281,25 @@ body.page-template-insolvency-test .cd-itest-disclaimer {
     color: var(--cdi-grey) !important;
     text-align: center !important;
     margin: var(--cdi-sp-3) 0 0 !important;
-    padding: var(--cdi-sp-3) 0 0 !important;
-    border-top: 1px solid var(--cdi-border) !important;
+    padding: 0 !important;
+    border-top: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-value-reassure,
 body.page-template-insolvency-test .cd-itest-phone-alt {
     display: block !important;
-    font-size: var(--cdi-fs-sm) !important;
-    line-height: 1.5 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
     color: var(--cdi-grey) !important;
     margin: 0 !important;
     text-align: center !important;
+}
+body.page-template-insolvency-test .cd-itest-value-reassure svg,
+body.page-template-insolvency-test .cd-itest-phone-alt svg {
+    width: 15px !important;
+    height: 15px !important;
+    vertical-align: -2px !important;
+    margin-right: 6px !important;
+    color: var(--cdi-navy) !important;
 }
 body.page-template-insolvency-test .cd-itest-phone-alt a {
     font-weight: 700 !important;
@@ -342,23 +350,35 @@ body.page-template-insolvency-test .cd-itest-trust-list li svg {
    the disclaimer), replacing the earlier boxed proof-strip which acted as
    a visual roadblock between the checklist and the CTA. */
 body.page-template-insolvency-test .cd-itest-reviews-line {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 7px !important;
+    width: fit-content !important;
     text-align: center !important;
-    font-size: var(--cdi-fs-sm) !important;
-    line-height: 1.5 !important;
-    color: var(--cdi-grey) !important;
-    margin: var(--cdi-sp-2) 0 0 !important;
+    margin: var(--cdi-sp-2) auto 0 !important;
     padding: 0 !important;
     text-decoration: none !important;
     border: 0 !important;
     background: transparent !important;
 }
-body.page-template-insolvency-test .cd-itest-reviews-line:hover { color: var(--cdi-navy) !important; }
+body.page-template-insolvency-test .cd-itest-main a.cd-itest-reviews-line,
+body.page-template-insolvency-test .cd-itest-main a.cd-itest-reviews-line:hover { text-decoration: none !important; }
+body.page-template-insolvency-test .cd-itest-reviews-line:hover { opacity: .85 !important; }
+body.page-template-insolvency-test .cd-itest-reviews-logo {
+    display: block !important;
+    height: 24px !important;
+    width: auto !important;
+    margin: 0 !important;
+}
 body.page-template-insolvency-test .cd-itest-reviews-line__stars {
+    display: block !important;
     color: var(--cdi-orange) !important;
-    letter-spacing: 1px !important;
-    font-size: var(--cdi-fs-sm) !important;
-    margin-right: 4px !important;
+    letter-spacing: 5px !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding-left: 5px !important;
 }
 
 body.page-template-insolvency-test .cd-itest-cta-row {
