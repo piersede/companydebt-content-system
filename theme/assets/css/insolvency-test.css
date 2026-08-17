@@ -140,14 +140,15 @@ body.page-template-insolvency-test .cd-itest-progress-wrap.cd-itest-show {
 body.page-template-insolvency-test .cd-itest-progress-track {
     display: block !important;
     height: 8px !important;
-    background: #e2e7ec !important;
+    background: #ffffff !important;
+    border: 1px solid var(--cdi-border) !important;
     border-radius: 999px !important;
     overflow: hidden !important;
 }
 body.page-template-insolvency-test .cd-itest-progress-fill {
     display: block !important;
     height: 100% !important;
-    background: var(--cdi-orange) !important;
+    background: var(--cdi-navy) !important;
     border-radius: 999px !important;
     transition: width .35s ease !important;
     width: 0%;
@@ -449,8 +450,8 @@ body.page-template-insolvency-test .cd-itest-opt label {
     margin: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-opt input:checked + label {
-    border-color: var(--cdi-orange) !important;
-    background: var(--cdi-warm-bg) !important;
+    border-color: var(--cdi-navy) !important;
+    background: #eaf1fb !important;
 }
 body.page-template-insolvency-test .cd-itest-opt input:focus-visible + label {
     outline: 2px solid var(--cdi-navy) !important;
