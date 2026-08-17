@@ -82,12 +82,13 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-sp-5: 52px;
     --cdi-sp-6: 64px;
 
-    /* Type scale — bumped +1px on the three lower steps per Piers's
-       readability spec (2026-08-05): body/inputs 17px, supporting text 16px,
-       fine print no smaller than 14px. Headings + button unchanged. */
+    /* Type scale. Default body/reading text is 18px per the site spec
+       (Theo, 2026-08-17) — this supersedes the earlier 16/17px supporting-text
+       tiers. 14px remains for genuine fine print only (form field labels, the
+       legal disclaimer, "(optional)"). Headings + button unchanged. */
     --cdi-fs-xs:   14px;
-    --cdi-fs-sm:   16px;
-    --cdi-fs-base: 17px;
+    --cdi-fs-sm:   18px;
+    --cdi-fs-base: 18px;
     --cdi-fs-md:   18px;
     --cdi-fs-lg:   24px;
     --cdi-fs-xl:   32px;
