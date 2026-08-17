@@ -1,40 +1,47 @@
 {
   "slug": "liquidation-deadlines-and-time-limits",
-  "audited_at": "2026-08-08",
+  "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "bafbc0e977e3bc0983f6c8a94c796d865e47cdcd5befe7c7206bafdd65a364a1",
+  "prose_sha": "bbd40e69a898a53cd32a0d1e91dcdfc819a69d375d83e1a5a916392e9699147e",
   "passes_since_baseline": {
-    "count": 2,
+    "count": 6,
     "baseline_ref": "file-creation",
-    "override_reason": null,
+    "override_reason": "Counter is at 6 commits, but 4 of those are single-issue legal corrections by earlier passes (the s131 21-day fix, the petition service-period fix, the invented-reader-context fix), not voice patches. This pass rewrote every body paragraph in one sitting rather than patching lines, which addresses the accumulated-signature failure the ceiling guards against. A from-spec redraft would discard verified legal corrections that took three passes to get right. Flagging to the operator: a true from-spec redraft remains open as his call.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 1947,
-      "you": 48,
-      "you_per_1k": 24.7,
-      "we": 13,
-      "we_per_1k": 6.7,
+      "words": 2067,
+      "you": 54,
+      "you_per_1k": 26.1,
+      "we": 10,
+      "we_per_1k": 4.8,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 48,
-      "cv": 0.281,
-      "uniform": true
+      "paras": 57,
+      "cv": 0.359,
+      "uniform": false
     },
-    "scene_proxy": 1
+    "scene_proxy": 3
   },
   "attested": {
     "concrete_scenes": 5,
-    "evaluative_bite_lines": 3,
+    "evaluative_bite_lines": 4,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Second correction pass. Removed the incorrect 21-day petition service claim; the minimum gap is set by the rule 7.10 advertising window, which the next paragraph already states correctly. No voice changes. Scenes and practitioner voice unchanged from the previous audit.",
-    "stranger_read_report": null
+    "notes": "Rhythm and voice pass. Fixed check 29 by varying paragraph weight (cv 0.275 to 0.359): short single-point paragraphs now sit against longer explanatory ones, no padding added. Whole-page scan found repeated rhetorical shapes invisible sentence-by-sentence: the 'this is the [noun] that [verb]' aphorism label used 3 times, and a negation-correction contrast used 4 times; both cut back. Broke the 'We see/find/speak to directors who...' construction that ran 5 times. Stranger read (pass 3) flagged two performance lines I had introduced this pass ('Passing the resolution feels like the hard part' told the reader what they feel; 'Fourteen days sounds generous until you are also fielding staff questions' imagined their week back at them). Both cut. It flagged three unevidenced most/often claims: two removed, the rest framed explicitly as our own casework. Its strongest finding was structural, that the page reads as a timetable for someone already in liquidation and never says what to do first; added a first-move paragraph in the Quick Answer, with the wrongful-trading exception stated so it does not contradict the section above. Glossed 'decision procedure' inline and gave the wrongful trading claim its consequence, both stranger-read look-up items. Fixed a real contradiction in Next Steps: the page said Company Debt does not run formal procedures and refers directors on, contradicting the methodology block and the fact that we are a licensed practice taking appointments. Concrete detail counted (5) is practitioner knowledge, not invented scene: the three-business-day minimum gap, the bank learning via the Gazette, the freeze landing within hours with payroll stopping first, the 21 days counted from the wrong document, and the statutory-demand confusion. Bite lines counted (4). Body-level we/our/us is 4.8/1k, just under the 5.0 floor; gate check 04 passes. Taken as the documented exception because Part C is genuinely satisfied, not padded to chase the number. Protected sentence 'The honest question is whether that date has already passed' left intact. No new facts, headings or links.",
+    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-17T115430Z.md"
+  },
+  "stranger_read": {
+    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-17T115430Z.md",
+    "requested": "2026-08-17T115430Z",
+    "prose_sha_at_request": "e99197533f6aa1087f69ee9d3eb4075581beff9d685103caf31995e041ba3e61",
+    "numbered_answers": 5,
+    "override_reason": null
   },
   "verdict": "pass"
 }
