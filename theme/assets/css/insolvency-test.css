@@ -312,10 +312,11 @@ body.page-template-insolvency-test .cd-itest-main a:hover { color: var(--cdi-ora
 
 body.page-template-insolvency-test .cd-itest-trust-list {
     list-style: none !important;
-    margin: 0 0 var(--cdi-sp-3) !important;
+    margin: 0 auto var(--cdi-sp-3) !important;
     padding: 0 !important;
     display: grid !important;
     gap: var(--cdi-sp-1) !important;
+    width: fit-content !important;
 }
 body.page-template-insolvency-test .cd-itest-trust-list li {
     display: flex !important;
