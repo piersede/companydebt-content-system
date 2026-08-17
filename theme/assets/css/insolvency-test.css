@@ -245,6 +245,7 @@ body.page-template-insolvency-test .cd-itest-lede {
     /* 20px = the uniform section-to-section gap on the capture step */
     margin: 0 0 20px !important;
     font-weight: 400 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-lede-sub {
     display: block !important;
@@ -253,6 +254,7 @@ body.page-template-insolvency-test .cd-itest-lede-sub {
     color: var(--cdi-grey) !important;
     margin: 0 0 var(--cdi-sp-3) !important;
     font-weight: 400 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-note-sm {
     display: block !important;
