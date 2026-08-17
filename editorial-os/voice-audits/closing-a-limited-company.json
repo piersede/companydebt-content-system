@@ -2,38 +2,38 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "f78a00760a1af90f3adf08a24da1a9991c762bf9dffb72ca0332d58e3df66af3",
+  "prose_sha": "78e1ff81b9547cb246c743fcf1481546c4f658539c9fe2df1daeb050f50e770e",
   "passes_since_baseline": {
-    "count": 3,
+    "count": 4,
     "baseline_ref": "250e54be6ea0",
-    "override_reason": null,
+    "override_reason": "Same continuous voice pass, extended after reading editorial-os/docs/human-authorship-voice-engine.md in full, which the first round of this pass had not loaded. Not a fresh fifth patch on settled prose: roughly forty paragraphs were rewritten in this session. Recording so the deeper pass is not lost. The NEXT pass on this page does need a genuine redraft of the weak sections from spec.",
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 4481,
-      "you": 93,
-      "you_per_1k": 20.8,
-      "we": 33,
-      "we_per_1k": 7.4,
+      "words": 4846,
+      "you": 103,
+      "you_per_1k": 21.3,
+      "we": 37,
+      "we_per_1k": 7.6,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 129,
-      "cv": 0.417,
+      "paras": 137,
+      "cv": 0.408,
       "uniform": false
     },
     "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 11,
-    "evaluative_bite_lines": 6,
+    "concrete_scenes": 13,
+    "evaluative_bite_lines": 8,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Full humanise re-read against Parts C, D and E. Part E classification cut the performance-class lines: the invented Friday call before a CVL, the 2019 shop lease and its three-year lag, 'they almost never do', 'stricter than most guides admit', 'that is where you start', 'that changes the sums', 'the awkward version of this'. Unsupported typical-outcome quantifiers replaced with defensible caseload observation or with the mechanism ('most of our compulsory-stage calls', 'directors most often mis-read', 'anything quoted to us'). Repeated-device scan: the contrastive 'X, not Y' shape ran 13 times in running prose and is now 5, three of those in list or disclosure text; two verbatim echoes removed ('the same first question we ask when a director calls', 'five minutes, no obligation, no follow-up'). Derived insight strengthened where a line only summarised: dissolution removes the debtor rather than the debt, a liquidator takes control either way so a CVL buys timing and choice, the Gazette notice is the only warning and nobody sends a copy, rescue turns on whether the trade funds the arrangement, the MVL fee compares against the tax difference and not the filing fee, three separate clocks run on closure. Two stranger reads run with a fresh agent that had no drafting context. The first found the real fault: the page pivoted on 'solvent' and never defined it, and the six option notes duplicated the table below them, which was the reader's stated tab-close point. Solvency is now defined in the first sentence and the six notes carry the deciding factor instead of restating the grid. The second read found no fabricated reader context, no tab-close point, and the reader could restate the page's advice unprompted; its three remaining points were fixed (members glossed as shareholders, capital-versus-income given its consequence, 'standard route' and the either-way control claim grounded). One point from the second read is NOT fixed and is left open honestly: the reader wants a practitioner fee figure to decide on and the page gives none. Fee figures are governed centrally and are case-specific, so inventing a range here would be worse than the gap. Check 04 we-density dipped under the floor after the P-class cuts; it was restored with genuine practitioner voice in the sections that lacked it (what directors ask us once HMRC objects, what we ask about at the first conversation on a redundancy claim, the assets we see left behind in a dissolved company) rather than by padding hollow 'we'. Paragraph splitting brought every body paragraph under 400 chars, over-long count 9 to 0. Facts, figures, headings, callouts and links unchanged apart from adding the gov.uk BADR link inline to the 18% figure, a source already cited on the page. Note for the next session: committing this work puts the draft at 4 commits since the redraft baseline, so the next voice record will require a genuine fresh redraft of the weak sections rather than another patch.",
+    "notes": "Second round of the same pass, run against the canonical voice engine doc rather than the stage pack alone. Three of its rules were under-delivered first time round. Rule C (a lived-reality anchor in every major section) failed in four sections: Compare Your Closure Options, The Pre-Closure Checklist, When Can You Become Personally Liable, and the cost section. Each now carries one drawn from practice, not invention: which of the six positions the director is actually in being the unsettled question, the two checklist steps nobody chases you for, guarantees and loan accounts being what actually costs directors money while conduct claims are what they fear, and the funding column deciding options as much as the route does. The doc's enforcement rule 'zero you in any section longer than 200 words means that section is not serving the reader' failed in the cost and timescale sections, which had literally no you or your across 275 and 266 words; article_audit check 27 passed both, so this is a gap the mechanical gate does not see. Both now translate to reader consequence: who the fee falls to when the company cannot fund a CVL, and the appointment being the date that matters because that is when creditor letters stop arriving at your address. Rule J (the ending compresses the real decision and states what is left unsolved) failed: the page ended on a four-step action list. It now closes by naming what closing does and does not achieve, including that no practitioner, ourselves included, can make a guarantee or a loan account balance disappear. Variation moves added per the rhythm section: one rhetorical question that mirrors the reader's real question ('So will anyone actually chase it?') and one earned attitude transition. Rule H institutional we strengthened by surfacing verification labour that was previously confined to the disclosure box: we went to the Insolvency Service's own MVL review rather than trade averages. HONEST SHORTFALL, recorded rather than papered over: the doc's pronoun table targets we/our at 10-15 per 1,000 words. The page is at 7.6, up from 6.1. The floor of 5 is comfortably met and every instance shows method, caseload or judgement, but the target is not met. Padding to reach it would breach Rule H and the stage pack's explicit ban on hollow we, so it is left short and reported. Rule B checked for floating evaluative labels: none (the only hit was 'bond premium', a technical term). Stranger-read report is the same one, and remains valid: this round did not change the opening it reviewed. Its one open point also stands, that the page gives no practitioner fee figure to decide on.",
     "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T120019Z.md"
   },
   "stranger_read": {
