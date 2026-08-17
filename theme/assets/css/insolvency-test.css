@@ -317,6 +317,7 @@ body.page-template-insolvency-test .cd-itest-trust-list {
     display: grid !important;
     gap: var(--cdi-sp-1) !important;
     width: fit-content !important;
+    justify-items: center !important;
 }
 body.page-template-insolvency-test .cd-itest-trust-list li {
     display: flex !important;
