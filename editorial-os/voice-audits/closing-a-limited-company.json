@@ -2,44 +2,44 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "dff574bdec0334fcf93154bf44cddb1908d03b83974e576aab724dd628203483",
+  "prose_sha": "cd147dcc9eafcb7405fc3c650fe80c780305675e8fa483b9d4e871387b79d697",
   "passes_since_baseline": {
-    "count": 6,
-    "baseline_ref": "250e54be6ea0",
+    "count": 0,
+    "baseline_ref": "fd0496631863",
     "override_reason": null,
-    "redraft_now": true
+    "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 5171,
-      "you": 131,
-      "you_per_1k": 25.3,
-      "we": 30,
-      "we_per_1k": 5.8,
+      "words": 5248,
+      "you": 138,
+      "you_per_1k": 26.3,
+      "we": 31,
+      "we_per_1k": 5.9,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 143,
-      "cv": 0.372,
+      "paras": 146,
+      "cv": 0.371,
       "uniform": false
     },
     "scene_proxy": 0
   },
   "attested": {
     "concrete_scenes": 10,
-    "evaluative_bite_lines": 6,
+    "evaluative_bite_lines": 5,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "FULL REDRAFT, not a patch. The page had five patch passes and had earned this. Written fresh against editorial-os/27-article-type-structure.md, 28-htag-semantic-framework.md and docs/human-authorship-voice-engine.md, then cold-read whole and fixed. Git shows 321 insertions against 380 deletions: the prose is new, the evidence is not. STRUCTURE. File 28's options pattern says a page like this gets a comparison table plus links to the guides that own each route, and explicitly not mini-guides to CVL, MVL and strike-off. The old page had six such mini-guides under two H2s, which is also why check 25 failed all session. Rule 27.6 says a structure fails if it delays personal risk or the next action, and the old one delayed both behind two sections of shareholder tax detail for gains up to a million pounds, which is exactly where the previous cold reader put the phone down. New order: which route fits, is it solvent, ARE YOU PERSONALLY LIABLE (moved from two scattered sections near the bottom into one section, third from the top), insolvent routes, solvent routes, cost, time, tax, employees, checklist, assets, dormancy, next steps. Maximum two H3s under any H2, so check 25 is gone rather than waived. THE MISSING NUMBER. I had reported that no CVL cost could be published. That was wrong: data/statutory_fees.json carries owner-set canonical prices from 14 July 2026 and no page had brought them here. The page now states the fixed fee of 3,500 plus VAT with 500 to 1,500 of disbursements, about 4,000 to 5,000 all in, the MVL fee, and the 352 court fee and 2,600 deposit a petitioning creditor pays. check_statutory_fees.py passes. The first-party figures disclosure was rewritten because the old wording claimed broad observed ranges and that is no longer what the page does. EVIDENCE PRESERVED MECHANICALLY. All 13 furniture blocks (five tables, two callouts, two CTAs, FAQ, related guides, methodology, sources) were extracted and reinserted rather than retyped. I then diffed every URL, money figure, percentage, statute reference and date against the committed version: nothing lost except the historic 14% and 10% relief rates, which I restored. TWO DEAD LINKS FIXED. /business-loans/bounce-back-loans/ and /dormant-companies/ both returned genuine 404s on staging, confirmed against the bot-block false-positive trap by checking for the real Page not found title. Neither was introduced by me and no gate check resolves internal links; a corpus-wide sweep is flagged separately. COLD READ ON THE REDRAFT. Both questions the reader arrived with are now answered and they quoted the sentences back, including the house question that the previous version never addressed at all. The money is a number they can plan around. Order judged broadly right. Fixes made in response: headline cost added to the opening because they still had to scroll too far for it; an orientation line before the eleven-row liability table, which is where they checked out; CVL defined on first use; Personal Liability and Joint and Several Liability Notices named and glossed, which no version of this page has ever done; the Section 455 charge explained as a cost rather than a code; the HMRC manual references framed as HMRC guidance rather than bare codes; a paragraph added on how to tell whether the conduct claims could apply to you, which they said they could not work out; three performance lines cut that they quoted back to me; the payroll claim given its mechanism instead of just our word; the third statement of the 25,000 rule cut to a cross-reference. Also fixed on my own read of the second half, before theirs came in: five jargon regressions introduced by reusing the old furniture, including bona vacantia unglossed at first mention and Statement of Affairs and DLA unglossed inside tables. KNOWN AND NOT FIXED, reported rather than buried. Their drop-off is now the two big tables, one because it restates the prose above it and one because eleven rows is a lot when you only want your own; both are required by the governance and the blank-line complaint is an artifact of how the page was fed to them as plain text. we/our density is 5.8 per 1,000, above the floor of 5 and well below the voice engine's 10 to 15 target. I am deliberately not chasing that target: the previous cold reader counted eight or nine sections opening with a version of directors call us and said it reads as advertising, and this reader flagged three of the remaining ones as asserted. The reader beats the number. The second half still flattens into table and bullet, which is partly inherent to cost, time and tax content.",
-    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T140300Z.md"
+    "notes": "Follow-up to the redraft, fixing one fault class the reviewer identified: prose that refers to something it has not named, so the reader must hold an earlier sentence in their head to follow it. Their example was 'A company that cannot pay also has two, but only one is a choice' - two of what, and the noun is never repeated. It is a genuine AI tell and it was systemic, not a one-off. Fifteen instances found and fixed. The worst were in the opening, which is the worst place for it: a forward pointer to 'the routes below' before any route had been named; 'the two-minute insolvency test settles the first', where first of what needs working out; 'Solvency is the first question because it settles the other two', where nothing had ever been enumerated as three; 'a court petition removes the first option'; 'This is the point at which the family home usually comes up', with This carrying a whole paragraph; 'Our table sets out each one'; and a sentence fragment with no main verb ('A strike-off, which is one short form filed at Companies House'). Also removed two meta lead-ins that dangled ('Now the part most directors want answered before any of it', 'so you are not hunting for it') and replaced four vague above/below pointers with the named section or the named figure. The fix in every case is to repeat the noun rather than point at it. I scanned list items, table cells, FAQ answers, callouts and the disclosure blocks for the same pattern as well as body paragraphs, since the reviewer's point was that one instance implies a family; the remaining hits there resolve within their own sentence and were left. Then re-read the rewritten opening cold, because I had just rewritten the eight most-read paragraphs on the page. That read found two more of exactly this fault in text written an hour earlier: 'no practitioner can make those go away', where a practitioner appears with nobody having said one is involved (the same phrase works at the foot of the page, where the term has been defined, and the previous full-page reader singled it out as the truth they wanted, so it stays there and is gone from the top); and the insolvency test appearing without being named as ours. Both fixed. It also caught a flourish I had written into the routing section and I cut it. Two things it asked for that I acted on: the personal-liability paragraph moved ahead of the dormant-and-rescue aside, and a new passage in the insolvent section telling a reader how to identify the letter in their hand, because chasing letters and a statutory demand are demands for payment while a winding-up petition is the court step. That gap had been raised by the previous full-page reader too and I had left it; it is now closed. Still open and reported rather than buried: this reader wanted the personal-liability point at the second paragraph rather than the fourth, and the page cannot tell them whether they personally signed a guarantee, only how to find out. Gate 33/33 before this record.",
+    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T144924Z.md"
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T140300Z.md",
-    "requested": "2026-08-17T140300Z",
-    "prose_sha_at_request": "09160e1e9bf3b6737a366f44baa3c0c32aa95e4db585f237ce4c3cdffff3d2c1",
+    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T144924Z.md",
+    "requested": "2026-08-17T144924Z",
+    "prose_sha_at_request": "2edab3af3d8e61f9616d45c8dfc4b4143824fa8e1429bdda0efd1e05f4c9c8c1",
     "numbered_answers": 5,
     "override_reason": null
   },
