@@ -2,27 +2,27 @@
   "slug": "liquidation-deadlines-and-time-limits",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "49c47f0bffa0e66c5579e1319199821fdf22f01f15e319de55004f3812176f9c",
+  "prose_sha": "94c4fc7f4e8ba95c4e15b1e932749e155addef25e1d026ca970259e154cfaa0b",
   "passes_since_baseline": {
-    "count": 7,
+    "count": 8,
     "baseline_ref": "file-creation",
-    "override_reason": "Counter counts commits, not voice passes; most are single-issue legal corrections from earlier sessions. This session rewrote the body prose wholesale twice rather than patching lines. A from-spec redraft would discard verified legal corrections and remains flagged to the operator as his call.",
-    "redraft_now": false
+    "override_reason": null,
+    "redraft_now": true
   },
   "measured": {
     "metrics": {
-      "words": 2172,
-      "you": 63,
-      "you_per_1k": 29.0,
-      "we": 11,
-      "we_per_1k": 5.1,
+      "words": 2046,
+      "you": 54,
+      "you_per_1k": 26.4,
+      "we": 10,
+      "we_per_1k": 4.9,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 62,
-      "cv": 0.38,
+      "paras": 66,
+      "cv": 0.431,
       "uniform": false
     },
     "scene_proxy": 2
@@ -33,12 +33,12 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Second pass this session, run against editorial-os/docs/human-authorship-voice-engine.md after the first pass was judged not to have gone far enough. Measured against that file's own self-audit checklist, the page had failed six of its requirements: we/our below the stated 5/1k minimum, no rhetorical question mirroring the reader's real question, no attitude-bearing transitions, no British texture at all, no tone shift where the subject turns punitive, and an ending that drifted instead of compressing the decision. All six addressed. we/our now 5.1/1k reached through 'we' that shows labour per Rule H, not polish. Added: the reader's own question ('So which one should you act on first?'), 'On paper... In practice' on the statement-of-affairs timing, moral framing on the automatic bank freeze ('Nobody is obliged to warn you first. The advertisement is the warning, and it is aimed at your creditors'), a protective steer on the 21-day criminal-offence deadline, bite on late creditor claims ('A good debt and a late claim are worth exactly the same, which is nothing'), one earned UK register word ('grim') where the operational pain is real, and a compressed ending replacing neutral drift. Second stranger read then caught the over-correction: it named 'The deadlines that cost the most are the ones nobody writes to you about' as a line built to land rather than inform, and I cut it. It also found a genuine confusion between the three-business-day and fourteen-day figures in the opening, now reconciled in one sentence, and a whiplash pair on which clocks are running, now one sentence. Glossed 'statement of affairs' and 'Official Receiver' inline as it asked. It flagged the same unevidenced usually/often claims for the second time, so both were cut and replaced with the rule itself rather than a frequency assertion. Re-scanned the whole page for repeated shapes after adding material: the 'not X, but Y' contrast had reached five instances, trimmed back to two. 'you' hit 30.3/1k over the ceiling after the additions; cut the three that did no work, now 29.0/1k, still above this file's 15-20 target and worth watching. Rhythm cv 0.380. Scenes counted (5) are practitioner knowledge, not invented scene. Bite lines counted (4). Protected sentence intact. No new facts, headings or links.",
-    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-17T122035Z.md"
+    "notes": "FROM-SCRATCH REDRAFT, replacing the patched draft that had reached seven passes. Written against writer-core, the legal-compliance overlay and the process_guide spec from editorial_task_entry, none of which the earlier patching passes had loaded. Prose is new throughout; the verified legal content was carried across deliberately and not re-derived: s131 21 days running from the notice and not the winding-up order, the Official Receiver's discretion to require a statement of affairs at all, no fixed 21-day petition service period with the 21 days belonging to a statutory demand, rule 6.14's three-business-day floor and 14-day ceiling, s85, s201, s214, s239 with the six-month and two-year connected-party lookbacks, Form 600, and the 2016 Rules replacing the final meeting. Three things the previous version never had: a Quick Answer that branches by where the reader actually stands (nothing started / resolution passed / petition served), which both earlier stranger reads had asked for; the two callout components this page class expects (Timeline Reality on the three-day floor inside the 14-day window, What Most Directors Miss on the s131 clock starting at the notice); and bold on decision-critical chunks at 6.2% density with every H2 covered, against a spec of 2-6% and a ceiling of 8% that the old page had never met. Writer-core's rule priority, that payoff-intent-first beats voice cleverness, drove the biggest correction: the third stranger read found roughly 120 words of consequences before the first instruction, so the lead was reordered to give the instruction second and the consequences after it. It also caught a withheld-mystery construction about the undated deadline, now named as wrongful trading in the same sentence, and two unglossed terms, 'decision procedure' and 'statement of truth', both now explained at first use. The claim that the decision date can fall anywhere in the 14 days now shows its basis (the three-business-day minimum) rather than asserting it. Unevidenced 'directors tend to' framing cut. First draft of this redraft swung too far into third person and dropped 'you' to 1.5/1k against a floor of 8; direct address restored where the obligation is genuinely the reader's and kept impersonal for the liquidator's own duties, landing at 26.4/1k. Body-level we/our/us is 4.9/1k against the voice-engine minimum of 5.0; gate check 04 passes, and the practitioner voice is carried by method rather than padding (what we would want to see before advising on timing, what we most often see counted from the wrong document, what we ask about first when taking a case on). Rhythm cv 0.431, the strongest of any version. Protected sentence 'The honest question is whether that date has already passed' carried across intact. FAQ panel titles restored to single-backslash escaped form after I wrote them raw in the first cut of this redraft.",
+    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-17T132032Z.md"
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-17T122035Z.md",
-    "requested": "2026-08-17T122035Z",
+    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-17T132032Z.md",
+    "requested": "2026-08-17T132032Z",
     "prose_sha_at_request": null,
     "numbered_answers": 5,
     "override_reason": null
