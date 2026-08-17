@@ -2,44 +2,44 @@
   "slug": "closing-a-limited-company",
   "audited_at": "2026-08-17",
   "audited_by": "claude-opus-5",
-  "prose_sha": "459364e71657fa995342589e0d5280d9b9c0b9ad8010c5143add8fc8626e0ce2",
+  "prose_sha": "dff574bdec0334fcf93154bf44cddb1908d03b83974e576aab724dd628203483",
   "passes_since_baseline": {
-    "count": 5,
+    "count": 6,
     "baseline_ref": "250e54be6ea0",
-    "override_reason": "Same session, third round of one continuous pass, driven by the first genuine full-page cold read this page has ever had. stranger_read.py only ever feeds a reader the opening 500 words, so the two earlier reads covered 7 percent of the page and neither saw the second half. Recording so the full-page findings are not lost. A fresh redraft from spec is still owed on this page and the shape problem below cannot be fixed by any further voice pass.",
-    "redraft_now": false
+    "override_reason": null,
+    "redraft_now": true
   },
   "measured": {
     "metrics": {
-      "words": 5124,
-      "you": 120,
-      "you_per_1k": 23.4,
-      "we": 34,
-      "we_per_1k": 6.6,
+      "words": 5171,
+      "you": 131,
+      "you_per_1k": 25.3,
+      "we": 30,
+      "we_per_1k": 5.8,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 142,
-      "cv": 0.416,
+      "paras": 143,
+      "cv": 0.372,
       "uniform": false
     },
     "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 12,
+    "concrete_scenes": 10,
     "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "FIRST FULL-PAGE COLD READ. The two earlier reads this session used stranger_read.py, which only ever extracts the opening 500 words; they covered 500 of 7,692 and neither read the second half. This one gave a fresh reader the whole rendered page and asked specifically about the middle and the end. It found more than both earlier reads combined, and most of what it caught was written by me earlier today. Fixed: the answer the reader arrived with (closing does not touch a guarantee you signed or a director loan balance) sat at the very bottom after four thousand words aimed at wealthier readers, and is now stated in the opening with a link to the guarantees guide; the reader said put it near the top and I would have trusted the rest. The instruction to hunt for your signature on a guarantee did not say what a guarantee looks like, so it now describes the document and the tell (signed in your own name rather than for the company) and links to the enforcement guides. The reader came worried about their house and the words house and home appeared nowhere: the section now states that a guarantee makes the debt yours personally and that some guarantees additionally carry a charge over property, without asserting anything about enforcement that the page cannot support. The employees section never answered the reader's actual question, whether staff get paid and whether the shortfall becomes the director's debt; it now does. Six load-bearing terms were used unexplained and the gate's jargon check passed all of them: the Gazette (which I had built a key insight on top of), the Official Receiver, statutory demand, dilapidations, bond premium, and the payroll return acronyms. IP was used for insolvency practitioner in a table before any definition AND for intellectual property twice in the same page; the abbreviation is now defined on first full mention and the intellectual-property uses are spelled out. The 13 pound claim contradicted the cost table, which adds accountant fees and VAT, so it now says the 13 pounds is the filing and not the closure. A signpost now tells an insolvent reader that the two solvent sections do not apply, because that is where the reader put the phone down. Performance lines cut, nearly all of them mine from earlier today: the reason is mechanical rather than moral, nobody chooses it, the invisible ones, you paid the accountant to file the return that generated it, nothing chases you for either, the useful call is todays, and conduct claims are the ones directors worry about, which asserted a fear the reader said was simply wrong. Repetition thinned where the reader counted it. IMPORTANT REVERSAL: the reader counted eight or nine sections opening with a variant of directors call us and said it stops reading as experience and starts reading as advertising. Several of those were added by me in the previous round to lift we-density toward the voice engine's 10-15 target. Two removed. The reader's verdict beats the number, and the density target should not be chased on this page. TWO THINGS A VOICE PASS CANNOT FIX, both escalated to the owner rather than papered over: first, the page still gives no cost figure for a CVL, which is the route this reader was obviously heading for, so every number on the page is for the solvent case; second, the page's shape puts two sections of tax relief detail for shareholders with up to a million pounds of gains between a distressed reader and what they need, and a signpost is a patch on a structural problem.",
-    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T131108Z.md"
+    "notes": "FULL REDRAFT, not a patch. The page had five patch passes and had earned this. Written fresh against editorial-os/27-article-type-structure.md, 28-htag-semantic-framework.md and docs/human-authorship-voice-engine.md, then cold-read whole and fixed. Git shows 321 insertions against 380 deletions: the prose is new, the evidence is not. STRUCTURE. File 28's options pattern says a page like this gets a comparison table plus links to the guides that own each route, and explicitly not mini-guides to CVL, MVL and strike-off. The old page had six such mini-guides under two H2s, which is also why check 25 failed all session. Rule 27.6 says a structure fails if it delays personal risk or the next action, and the old one delayed both behind two sections of shareholder tax detail for gains up to a million pounds, which is exactly where the previous cold reader put the phone down. New order: which route fits, is it solvent, ARE YOU PERSONALLY LIABLE (moved from two scattered sections near the bottom into one section, third from the top), insolvent routes, solvent routes, cost, time, tax, employees, checklist, assets, dormancy, next steps. Maximum two H3s under any H2, so check 25 is gone rather than waived. THE MISSING NUMBER. I had reported that no CVL cost could be published. That was wrong: data/statutory_fees.json carries owner-set canonical prices from 14 July 2026 and no page had brought them here. The page now states the fixed fee of 3,500 plus VAT with 500 to 1,500 of disbursements, about 4,000 to 5,000 all in, the MVL fee, and the 352 court fee and 2,600 deposit a petitioning creditor pays. check_statutory_fees.py passes. The first-party figures disclosure was rewritten because the old wording claimed broad observed ranges and that is no longer what the page does. EVIDENCE PRESERVED MECHANICALLY. All 13 furniture blocks (five tables, two callouts, two CTAs, FAQ, related guides, methodology, sources) were extracted and reinserted rather than retyped. I then diffed every URL, money figure, percentage, statute reference and date against the committed version: nothing lost except the historic 14% and 10% relief rates, which I restored. TWO DEAD LINKS FIXED. /business-loans/bounce-back-loans/ and /dormant-companies/ both returned genuine 404s on staging, confirmed against the bot-block false-positive trap by checking for the real Page not found title. Neither was introduced by me and no gate check resolves internal links; a corpus-wide sweep is flagged separately. COLD READ ON THE REDRAFT. Both questions the reader arrived with are now answered and they quoted the sentences back, including the house question that the previous version never addressed at all. The money is a number they can plan around. Order judged broadly right. Fixes made in response: headline cost added to the opening because they still had to scroll too far for it; an orientation line before the eleven-row liability table, which is where they checked out; CVL defined on first use; Personal Liability and Joint and Several Liability Notices named and glossed, which no version of this page has ever done; the Section 455 charge explained as a cost rather than a code; the HMRC manual references framed as HMRC guidance rather than bare codes; a paragraph added on how to tell whether the conduct claims could apply to you, which they said they could not work out; three performance lines cut that they quoted back to me; the payroll claim given its mechanism instead of just our word; the third statement of the 25,000 rule cut to a cross-reference. Also fixed on my own read of the second half, before theirs came in: five jargon regressions introduced by reusing the old furniture, including bona vacantia unglossed at first mention and Statement of Affairs and DLA unglossed inside tables. KNOWN AND NOT FIXED, reported rather than buried. Their drop-off is now the two big tables, one because it restates the prose above it and one because eleven rows is a lot when you only want your own; both are required by the governance and the blank-line complaint is an artifact of how the page was fed to them as plain text. we/our density is 5.8 per 1,000, above the floor of 5 and well below the voice engine's 10 to 15 target. I am deliberately not chasing that target: the previous cold reader counted eight or nine sections opening with a version of directors call us and said it reads as advertising, and this reader flagged three of the remaining ones as asserted. The reader beats the number. The second half still flattens into table and bullet, which is partly inherent to cost, time and tax content.",
+    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T140300Z.md"
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T131108Z.md",
-    "requested": "2026-08-17T131108Z",
-    "prose_sha_at_request": "6a6d22c8d185df91543b3257be2372f6a1e68f845ceb23c3135f2de464dd90e1",
+    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T140300Z.md",
+    "requested": "2026-08-17T140300Z",
+    "prose_sha_at_request": "09160e1e9bf3b6737a366f44baa3c0c32aa95e4db585f237ce4c3cdffff3d2c1",
     "numbered_answers": 5,
     "override_reason": null
   },
