@@ -315,10 +315,9 @@ body.page-template-insolvency-test .cd-itest-trust-list {
     margin: 0 auto var(--cdi-sp-3) !important;
     padding: 0 !important;
     display: grid !important;
-    grid-template-columns: auto auto !important;
-    gap: var(--cdi-sp-2) var(--cdi-sp-4) !important;
+    gap: var(--cdi-sp-1) !important;
     width: fit-content !important;
-    justify-items: start !important;
+    justify-items: center !important;
 }
 body.page-template-insolvency-test .cd-itest-trust-list li {
     display: flex !important;
@@ -330,7 +329,6 @@ body.page-template-insolvency-test .cd-itest-trust-list li {
     font-weight: 500 !important;
     margin: 0 !important;
     padding: 0 !important;
-    white-space: nowrap !important;
 }
 body.page-template-insolvency-test .cd-itest-trust-list li svg {
     flex-shrink: 0 !important;
@@ -874,13 +872,6 @@ body.page-template-insolvency-test .cd-itest-confirm-quiet span {
     body.page-template-insolvency-test .cd-itest-panel.cd-itest-panel--intro { min-height: 0 !important; }
     body.page-template-insolvency-test .cd-itest-h1 { font-size: 27px !important; }
     body.page-template-insolvency-test .cd-itest-q  { font-size: 21px !important; }
-    body.page-template-insolvency-test .cd-itest-trust-list {
-        grid-template-columns: 1fr !important;
-        justify-items: center !important;
-    }
-    body.page-template-insolvency-test .cd-itest-trust-list li {
-        white-space: normal !important;
-    }
     body.page-template-insolvency-test .cd-itest-result-title { font-size: 21px !important; }
     body.page-template-insolvency-test .cd-itest-btn-primary--intro { width: 100% !important; }
 }
