@@ -19,6 +19,28 @@ What it records is an attestation, not proof. It cannot verify that the stage
 work was done well. It can make skipping it visible, which is the part that
 failed.
 
+Two kinds of record
+-------------------
+A page can satisfy the check in one of two ways, and the record says which.
+
+  pipeline-run   The stages were actually run, and the page was written or
+                 rewritten through them. This is what a new page or a real
+                 redraft produces.
+
+  verification   Somebody read an existing page against the stage criteria and
+                 either confirmed it holds up, or fixed the specific things that
+                 did not. No redraft.
+
+The second exists because most pages that lose their exemption lose it for a
+five-word fact correction, not a rewrite. A full pipeline run on those is a lot
+of work to reach the conclusion "it was fine". The point of going back to a page
+is to CHECK it, and to fix only what fails.
+
+A verification is a weaker claim than a pipeline run, and it is stored as such,
+so nobody later reads one as the other. Both are hashed against the prose in the
+same way, so a later edit invalidates either. The freshness discipline does not
+soften.
+
 Grandfathering
 --------------
 Roughly 300 drafts predate this check and have no pipeline trail. Failing all
@@ -35,6 +57,9 @@ Usage
     python scripts/bernstein_attest.py --slug <slug> --record \
         --by claude-opus-5 --stages research,draft,review,revise,humanise,gate \
         --notes "..."
+    python scripts/bernstein_attest.py --slug <slug> --verify \
+        --by claude-opus-5 --checked review,humanise,gate \
+        --outcome pass --notes "read against the stage criteria, nothing to fix"
     python scripts/bernstein_attest.py --build-baseline         # one-off seed
 """
 
@@ -43,7 +68,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -105,6 +130,38 @@ def local_stage_history(slug: str) -> list[str]:
     return done
 
 
+def last_prose_change(slug: str, path: Path) -> str | None:
+    """Date the CURRENT prose of this draft first appeared, from git history.
+
+    Walks the commits that touched the file, newest first, recomputing the prose
+    hash at each until it stops matching what is on disk. Table, comment and
+    attribute edits do not move the hash, so they do not count as prose changes.
+    Returns None when git cannot say.
+    """
+    import subprocess
+    rel = path.relative_to(REPO).as_posix()
+    try:
+        log = subprocess.run(["git", "-C", str(REPO), "log", "--format=%H %cI", "--", rel],
+                             capture_output=True, text=True, timeout=60).stdout.splitlines()
+    except Exception:  # noqa: BLE001
+        return None
+    current = vm.prose_sha(path.read_text(encoding="utf-8", errors="replace"))
+    found = None
+    for line in log:
+        if not line.strip():
+            continue
+        commit, _, when = line.partition(" ")
+        try:
+            blob = subprocess.run(["git", "-C", str(REPO), "show", f"{commit}:{rel}"],
+                                  capture_output=True, text=True, timeout=60).stdout
+        except Exception:  # noqa: BLE001
+            break
+        if not blob or vm.prose_sha(blob) != current:
+            break
+        found = when[:10]
+    return found
+
+
 def status(slug: str, raw: str) -> tuple[bool, str]:
     """Return (ok, human-readable reason). Mirrors article_audit check 34."""
     sha = vm.prose_sha(raw)
@@ -115,12 +172,15 @@ def status(slug: str, raw: str) -> tuple[bool, str]:
         except Exception as e:  # noqa: BLE001
             return False, f"attestation unreadable: {e}"
         if data.get("prose_sha") != sha:
-            return False, ("attestation STALE: the prose changed after the pipeline ran, "
-                           "so the page owes another pass through it")
-        missing = [s for s in REQUIRED_STAGES if s not in (data.get("stages_completed") or [])]
+            return False, ("attestation STALE: the prose changed after it was written, "
+                           "so the page owes another look")
+        kind = data.get("kind") or "pipeline-run"
+        covered = (data.get("stages_completed") or []) + (data.get("stages_checked") or [])
+        missing = [s for s in REQUIRED_STAGES if s not in covered]
         if missing:
             return False, f"attested but missing required stage(s): {', '.join(missing)}"
-        return True, f"pipeline attested {data.get('attested_at')} by {data.get('attested_by')}"
+        word = "verified" if kind == "verification" else "pipeline attested"
+        return True, f"{word} {data.get('attested_at')} by {data.get('attested_by')}"
     base = read_baseline()
     if slug in base:
         if base[slug] == sha:
@@ -133,22 +193,46 @@ def status(slug: str, raw: str) -> tuple[bool, str]:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Tracked Bernstein pipeline attestation.")
     ap.add_argument("--slug")
-    ap.add_argument("--record", action="store_true")
+    ap.add_argument("--record", action="store_true",
+                    help="Record that the pipeline stages were actually run.")
+    ap.add_argument("--verify", action="store_true",
+                    help=("Record that an existing page was CHECKED against the stage "
+                          "criteria, and fixed only where it failed. A weaker claim than "
+                          "--record, stored as such."))
+    ap.add_argument("--checked", default="",
+                    help="--verify only: comma-separated stage criteria checked")
+    ap.add_argument("--outcome", choices=["pass", "fixed"], default=None,
+                    help=("--verify only: 'pass' if the page held up as written, "
+                          "'fixed' if specific things were corrected"))
     ap.add_argument("--by", default="", help="Who/what ran the stages, e.g. claude-opus-5")
     ap.add_argument("--stages", default="", help="Comma-separated stages completed")
     ap.add_argument("--task", default="", help="draft | rewrite | review | trust-pass")
     ap.add_argument("--notes", default="")
     ap.add_argument("--build-baseline", action="store_true",
                     help="One-off: grandfather every page that has no attestation yet.")
+    ap.add_argument("--baseline-recent-days", type=int, default=30,
+                    help=("--build-baseline only: refuse to grandfather a page whose prose "
+                          "changed within this many days. Default 30."))
     args = ap.parse_args()
 
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
     if args.build_baseline:
-        pages = {}
+        # A baseline is meant to excuse pages that PREDATE the requirement. Built
+        # naively it does the opposite: it records whatever the prose looks like
+        # today, so an edit made outside the pipeline this morning gets a
+        # permanent pass. That is exactly what happened on 2026-08-17, hours
+        # after a 26-page sweep. So anything edited recently is held back, and
+        # listed, rather than blessed.
+        cutoff = (date.today() - timedelta(days=args.baseline_recent_days)).isoformat()
+        pages, held = {}, []
         for f in sorted(DRAFTS.glob("*.html")):
             slug = f.stem.split("_", 1)[1] if "_" in f.stem else f.stem
             if (RUNS_DIR / f"{slug}.json").exists():
+                continue
+            changed = last_prose_change(slug, f)
+            if changed and changed >= cutoff:
+                held.append((slug, changed))
                 continue
             pages[slug] = vm.prose_sha(f.read_text(encoding="utf-8", errors="replace"))
         BASELINE.write_text(json.dumps({
@@ -161,6 +245,11 @@ def main() -> int:
             "pages": pages,
         }, indent=2) + "\n", encoding="utf-8")
         print(f"Baseline written: {len(pages)} page(s) grandfathered -> {BASELINE}")
+        if held:
+            print(f"\nHELD BACK: {len(held)} page(s) had prose edited since {cutoff}.")
+            print("These are NOT grandfathered. Check each one and record the result:")
+            for slug, when in sorted(held, key=lambda x: x[1], reverse=True):
+                print(f"  {when}  {slug}")
         return 0
 
     if not args.slug:
@@ -171,6 +260,47 @@ def main() -> int:
         print(f"ERROR: no draft found for slug '{args.slug}'")
         return 2
     raw = draft.read_text(encoding="utf-8", errors="replace")
+
+    if args.verify:
+        checked = [c.strip() for c in args.checked.split(",") if c.strip()]
+        missing = [st for st in REQUIRED_STAGES if st not in checked]
+        if missing:
+            print(f"ERROR: refusing to record. Not checked: {', '.join(missing)}")
+            print(f"       A verification must at least cover: {', '.join(REQUIRED_STAGES)}")
+            return 2
+        if not args.by:
+            print("ERROR: --by is required, so the record says who checked it")
+            return 2
+        if not args.outcome:
+            print("ERROR: --outcome is required: 'pass' if the page held up, "
+                  "'fixed' if things were corrected")
+            return 2
+        if args.outcome == "fixed" and not args.notes:
+            print("ERROR: --notes is required when --outcome is 'fixed'. "
+                  "Say what was wrong, or the record is worthless to the next reader.")
+            return 2
+        rec = {
+            "slug": args.slug,
+            "kind": "verification",
+            "attested_at": date.today().isoformat(),
+            "attested_by": args.by,
+            "task": args.task or "verify",
+            "prose_sha": vm.prose_sha(raw),
+            "stages_checked": checked,
+            "outcome": args.outcome,
+            "unknown_stages": [st for st in checked if st not in PIPELINE_STAGES],
+            "local_state_present": bool(local_stage_history(args.slug)),
+            "notes": args.notes,
+        }
+        out = RUNS_DIR / f"{args.slug}.json"
+        out.write_text(json.dumps(rec, indent=2) + "\n", encoding="utf-8")
+        print(f"Recorded Bernstein verification: {out}")
+        print(f"  checked   : {', '.join(checked)}")
+        print(f"  outcome   : {args.outcome}")
+        print(f"  prose_sha : {rec['prose_sha'][:16]}...")
+        if rec["unknown_stages"]:
+            print(f"  WARNING: not pipeline stage names: {', '.join(rec['unknown_stages'])}")
+        return 0
 
     if not args.record:
         ok, reason = status(args.slug, raw)
@@ -196,6 +326,7 @@ def main() -> int:
 
     rec = {
         "slug": args.slug,
+        "kind": "pipeline-run",
         "attested_at": date.today().isoformat(),
         "attested_by": args.by,
         "task": args.task or None,

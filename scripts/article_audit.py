@@ -1493,12 +1493,25 @@ def check_voice_audit(raw: str, slug: str) -> CheckResult:
 # the prose, so any later edit invalidates it. Pages predating the check are
 # grandfathered by prose hash (editorial-os/bernstein-runs/_baseline.json) and
 # lose that exemption the moment their prose changes.
+#
+# Two records satisfy this check, because two different things can be true.
+# A 'pipeline-run' record means the stages were run and the page was written
+# through them. A 'verification' record means somebody read an existing page
+# against the stage criteria and fixed only what failed. Most pages that lose
+# the exemption lose it for a small fact correction, and demanding a full
+# redraft to conclude "it was fine" would make the check something to route
+# around. Both records are hashed against the prose, so neither survives a
+# later edit.
 # ---------------------------------------------------------------------------
 
 def check_bernstein_pipeline(raw: str, slug: str) -> CheckResult:
     name = "Bernstein pipeline attested and current"
-    fix = (f"run the pipeline stages, then: python scripts/bernstein_attest.py "
-           f"--slug {slug} --record --by <model> --stages review,humanise,gate --notes \"...\"")
+    fix = (f"run the stages then record the run: python scripts/bernstein_attest.py "
+           f"--slug {slug} --record --by <model> --stages review,humanise,gate --notes \"...\""
+           f" | or, if the page only needs checking rather than rewriting, check it against "
+           f"the stage criteria, fix what fails, then: python scripts/bernstein_attest.py "
+           f"--slug {slug} --verify --by <model> --checked review,humanise,gate "
+           f"--outcome pass|fixed --notes \"...\"")
     required = ["review", "humanise", "gate"]
     rec = BERNSTEIN_RUNS_DIR / f"{slug}.json"
     if rec.exists():
@@ -1509,14 +1522,19 @@ def check_bernstein_pipeline(raw: str, slug: str) -> CheckResult:
                                detail=f"attestation unreadable: {e}")
         if data.get("prose_sha") != vm.prose_sha(raw):
             return CheckResult(id="34", tier="T1", name=name, passed=False,
-                               detail=("attestation STALE (prose changed after the pipeline ran) "
-                                       f"— re-{fix}"))
-        missing = [st for st in required if st not in (data.get("stages_completed") or [])]
+                               detail=("attestation STALE (prose changed after it was written) "
+                                       f"— {fix}"))
+        kind = data.get("kind") or "pipeline-run"
+        covered = (data.get("stages_completed") or []) + (data.get("stages_checked") or [])
+        missing = [st for st in required if st not in covered]
         if missing:
             return CheckResult(id="34", tier="T1", name=name, passed=False,
                                detail=f"missing required stage(s): {', '.join(missing)}")
+        word = "verified" if kind == "verification" else "pipeline run attested"
+        extra = f" (outcome: {data.get('outcome')})" if kind == "verification" else ""
         return CheckResult(id="34", tier="T1", name=name, passed=True,
-                           detail=f"attested {data.get('attested_at')} by {data.get('attested_by')}")
+                           detail=(f"{word} {data.get('attested_at')} by "
+                                   f"{data.get('attested_by')}{extra}"))
     baseline_file = BERNSTEIN_RUNS_DIR / "_baseline.json"
     if baseline_file.exists():
         try:
@@ -1529,7 +1547,7 @@ def check_bernstein_pipeline(raw: str, slug: str) -> CheckResult:
                                    detail="grandfathered (predates the check, prose unchanged)")
             return CheckResult(id="34", tier="T1", name=name, passed=False,
                                detail=("prose edited since the grandfather baseline, so this page "
-                                       f"now needs a real pipeline run — {fix}"))
+                                       f"now needs checking — {fix}"))
     return CheckResult(id="34", tier="T1", name=name, passed=False,
                        detail=f"no Bernstein attestation for '{slug}' — {fix}")
 
