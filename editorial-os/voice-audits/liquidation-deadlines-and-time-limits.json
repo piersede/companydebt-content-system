@@ -2,30 +2,30 @@
   "slug": "liquidation-deadlines-and-time-limits",
   "audited_at": "2026-08-18",
   "audited_by": "claude-opus-5",
-  "prose_sha": "31ed247da53a0cfaf77c3cda70c2926ed37587e4f1694a4d415fcffa67f08e52",
+  "prose_sha": "54956d0b9dd2e98e671a63bd9a4c048e01a37526d5051b817caaacc62131001a",
   "passes_since_baseline": {
-    "count": 1,
+    "count": 2,
     "baseline_ref": "fd0ce1a0333b",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2319,
-      "you": 45,
-      "you_per_1k": 19.4,
-      "we": 11,
-      "we_per_1k": 4.7,
+      "words": 2493,
+      "you": 40,
+      "you_per_1k": 16.0,
+      "we": 12,
+      "we_per_1k": 4.8,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 72,
-      "cv": 0.403,
+      "paras": 80,
+      "cv": 0.376,
       "uniform": false
     },
-    "scene_proxy": 2
+    "scene_proxy": 0
   },
   "attested": {
     "concrete_scenes": 4,
@@ -33,15 +33,15 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Tone pass against 17-audience-and-persona.md, after the operator flagged the register as too intense ('That clock starts on its own. It may already be running.' read like a film trailer). The persona doc is explicit and I had been breaking it: sound calm, be non-judgmental, never imply the director did something wrong before the facts are known, and avoid fear-led language for anything beyond crisis-stage content. This page serves readers comparing options, not only readers mid-crisis, so action-led is correct and fear-led is not. Roughly fifteen passages rewritten. Removed the dramatic isolated fragments ('That clock starts on its own. It may already be running.'), the ominous verbs ('which deadlines bite', 'it gets grim within days', 'Nobody is obliged to warn you first'), the lecturing constructions ('Directors who plan against the ceiling are the ones who end up signing...'), and the portentous closer ('Everything above follows from that.'). Softened 'demand' to 'require' on the Official Receiver's statement of affairs, and split the three-consequence s131 sentence. A tone-focused stranger read (a seventh question added, asking whether it reads as a calm practitioner or as pressuring) then gave the sharpest diagnosis of the session: a calm practitioner states the SIZE of a risk, not just its existence, and the page named three routes to personal liability while quantifying none, leaving the gap where the reader's imagination works at midnight. Acted on all of it. The conduct-matter line now says what it actually leads to, including that most conduct reports lead to nothing further and that it is a pattern of failures or clear misconduct that draws action rather than one late form. Wrongful trading now says the liquidator must show the point was passed and that the directors did nothing, so claims of this kind are not routine. The lead now states that a few deadlines can be extended if you ask before they expire, instead of raising the exception and abandoning it. 'Resolution date' is glossed where first used rather than 400 words later. '75% majority' is now '75% of the votes cast', which the reader correctly said was ambiguous and mattered to them. Cut 'honestly' from 'nobody can tell you honestly how much time you have', which implied other advisers would lie. Cut the 'in the cases we handle it is the notice that slips' caseload claim: three independent readers have now objected to that shape, and I had defended it twice. The fear-then-service construction ('which is why it is usually the first thing we establish') is replaced by the useful answer, namely how the date is actually reconstructed afterwards from the management accounts, the cash position, and what the board knew. you density now 19.4/1k, inside the voice engine's 15-20 target band for the first time in this page's history, having been 29/1k two passes ago. Body-level we/our/us 4.7/1k with gate check 04 passing; not padded. Rhythm cv 0.403. Scenes and bite counted down honestly to 4 and 3 after cutting the performance lines. Protected sentence intact. No facts, headings or links changed.",
-    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-18T071139Z.md"
+    "notes": "Rebuilt against a specialist insolvency practitioner's review, which scored the previous version 7/10 as copy but 5/10 for publication readiness. Ten legal and factual corrections. (1) Jurisdiction now stated in the first line: these deadlines are England and Wales, and Scotland and Northern Ireland run to different rules. Previously the reader had to infer it from the legislation cited. (2) 'That date drives every deadline on this page' was disproved by the article itself, which lists deadlines running from petition service, advertisement, the winding-up order, a section 131 notice, appointment and the final account; now qualified to most of the early CVL deadlines. (3) A statement of affairs is not a sworn document. The 'sworn list' and 'sworn document rather than an estimate' phrasing implied an oath or a commissioner, which has not been the position for years. It is now a formal statement verified by a statement of truth, with a note that no oath or solicitor is involved. (4) The Companies House deadline was wrong: section 109 requires notice within 14 days of appointment, not 15, and the same section requires the liquidator to advertise the appointment in the Gazette. The form was also wrong: 600CH for England and Wales appointments from 9 December 2017, with the old form 600 applying only before that date. (5) The section 127 point had the wrong trigger. Dispositions are at risk from presentation of the petition, because section 129 deems a compulsory winding up to commence then, not from the making of the order. This also explains why banks react to a petition rather than to an order, so the correction improves the page as well as fixing it. (6) The bank-freeze claim ('will usually freeze, often within hours') was an empirical assertion dressed as a rule. Now separated into the legal reason (risk attached to post-petition payments) and the practice observation, which is attributed to our casework and disclosed in the methodology block. (7) Wrongful trading now follows the statutory test: no reasonable prospect of avoiding insolvent liquidation or insolvent administration, then whether every step was taken with a view to minimising potential loss to creditors. The 'a short gap is easier to explain' line was replaced, because it implied advice creates a defensive paper trail; the page now says options may still be open and that taking advice is not itself a defence. (8) The conduct report no longer reads as punishment. Every insolvent liquidation produces one, and the page now says its existence does not mean wrongdoing or an investigation. (9) The absolute late-proof claim is gone with the creditor material. (10) 'Dissolved permanently' corrected: dissolution ends normal legal existence, restoration remains possible in limited circumstances. Structural changes: the operator chose the reviewer's preferred route, so the page is now director-only and retitled 'Liquidation Deadlines and Time Limits for Company Directors', with creditor material reduced to a signpost to the creditor meetings and payment-order guides. The page config title was updated too, since it is pushed to WordPress on publish. Deadlines are now split into 'CVL Deadlines for Directors' and 'Deadlines the Liquidator Handles', which is the change most likely to reduce a distressed reader's load: it tells them which dates are theirs to act on. A new section answers 'what if I have already missed one', which the reviewer noted was conspicuously absent on a page whose readers often arrive because they think they are late; it says the consequence depends which deadline, and not to conceal a miss or reconstruct documents. A jurisdiction FAQ replaced the creditor-claims FAQ. Metrics: you 16.0/1k, inside the 15-20 target; we/our 4.8/1k with gate check 04 passing; rhythm cv 0.376. Stranger-read gate overridden with reason recorded: this pass is legal and structural rather than voice, and three stranger reads are already on file, but a fresh one is worth running before publication sign-off.",
+    "stranger_read_report": null
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-18T071139Z.md",
-    "requested": "2026-08-18T071139Z",
+    "path": null,
+    "requested": null,
     "prose_sha_at_request": null,
-    "numbered_answers": 5,
-    "override_reason": null
+    "numbered_answers": 0,
+    "override_reason": "Structural and legal rebuild following a specialist practitioner review, not a voice pass. The three stranger reads already recorded against this page cover the reader-comprehension question; the changes here are legal corrections, a jurisdiction statement, an audience narrowing agreed with the operator, and a director/liquidator split. A fresh stranger read is worth running before publication sign-off."
   },
   "verdict": "pass"
 }

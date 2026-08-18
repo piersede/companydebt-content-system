@@ -1,4 +1,4 @@
-"""Page config for: Liquidation Deadlines and Time Limits: Key Dates Every Director and Creditor Should Know
+"""Page config for: Liquidation Deadlines and Time Limits for Company Directors
 
 Live at /liquidation/liquidation-deadlines-and-time-limits/ (WP pages 78690).
 
@@ -18,6 +18,6 @@ PAGE_CONFIG = {
     'slug': "liquidation-deadlines-and-time-limits",
     'page_type': "process_guide",
     'wp_page_id': 78690,
-    'title': "Liquidation Deadlines and Time Limits: Key Dates Every Director and Creditor Should Know",
+    'title': "Liquidation Deadlines and Time Limits for Company Directors",
     'verification_date': "12 May 2026",
 }
