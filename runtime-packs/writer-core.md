@@ -28,6 +28,10 @@ Payoff-intent-first (`editorial-os/24-payoff-intent-first.md`) beats voice cleve
 Two hard consequences of this priority, checked mechanically by `article_audit.py`:
 
 - **Never reference jargon before its first introduction.** Every acronym, form number, statutory section, or invented shorthand (`DS01`, `MVL`, `CVL`, `BADR`, `£13 route`, `s216`, `bona vacantia`, etc.) must be introduced with a plain-English gloss or a link in the same paragraph, or a sentence adjacent to its first appearance. Later mentions are free.
+
+  **The gate only checks a curated list, so it will not catch most of this.** `article_audit.py` check 31 tests roughly twenty named terms. A page can score full marks while a director who does not know insolvency cannot follow it. Before handing to the gate, sweep the body for the FIRST mention of every trade term and confirm each is explained where it appears, not later. Terms caught this way on live pages, all of which passed check 31: `wrongful trading`, `conduct matter`, `deemed consent`, `contributory`, `secured charge`, `proof of debt`, `the Gazette`, `statement of truth`. Where a plain word does the job, use it instead of glossing: `dividend`, `distribution`, `last date for proving` and `realised` were all simply removed.
+
+  Naming a frightening term earlier without explaining it is worse than leaving it later. Move the term and its explanation together or not at all.
 - **Never open a body paragraph with a meta-reference to the article itself.** Openings like "This page covers…", "In this section…", "Both readers get served below", "The routes below are divided by…", "Options are ordered by…" are banned across the whole body, not just P1–P3. Lead with the decision, the constraint, the recommendation, or the reader consequence.
 
 ## Reader service
@@ -52,6 +56,28 @@ Two hard consequences of this priority, checked mechanically by `article_audit.p
 - Use it only if removing it changes meaning and the claim is verifiable or human-confirmed.
 - Do not use `I think`, `I believe`, `in my view`, or similar scaffolding as filler.
 - Do not open with first-person scaffolding.
+
+## Precision, not confidence
+
+Authority comes from precision. It does not come from sounding certain.
+
+Before any categorical sentence, decide which of three things it is:
+
+1. exactly what the source or the law says
+2. what usually happens in the cases we handle
+3. simply the clearest way you have found to phrase it
+
+Keep 1 and 2, and signal which is which. Rewrite 3 until it is 1 or 2, or cut it.
+
+The failure this exists to stop: a true sentence becoming false because the
+writer wanted it to land harder. It is the single most common way good copy
+turns into inaccurate copy, and it is invisible on a read-through because the
+sentence reads well. Stop on `every`, `always`, `never`, `all`, `permanently`,
+`automatically`, `immediately`, `only` and `the same`.
+
+On YMYL pages, also give the SIZE of any risk you name, not just its existence.
+Naming a consequence and withholding its scale reads as fear-mongering even
+when every word is true, and it is the gap a worried reader fills themselves.
 
 ## Evidence
 

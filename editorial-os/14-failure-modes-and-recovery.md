@@ -715,3 +715,64 @@ The paragraph delays the useful point. The first sentence describes the article,
 4. Apply the Caveat Promotion Rule (§6): if a caveat changes the director's decision, move it to paragraphs 1–2
 5. Apply the Segment-First Heading Support rule (§7): when a heading asks a segmentation question, the first paragraph must answer it immediately
 6. Run the `paragraph_opening_must_payoff_intent` test (see `24-payoff-intent-first.md`)
+
+---
+
+## §18. Reaching for certainty to make copy land harder
+
+**Added 2026-08-18** after a specialist insolvency practitioner reviewed
+`liquidation-deadlines-and-time-limits`. The page scored 7/10 as copy and
+5/10 for publication readiness. Every legal error in it had the same shape.
+
+**What it looks like:**
+
+The writer has found a good sentence. To make it land, they remove a
+qualifier, widen a scope, or borrow a word with more force than the facts
+support. The sentence now reads better and is no longer true.
+
+Live examples, all of which passed the mechanical gate at 33/33:
+
+| Written | Why it was wrong |
+|---|---|
+| "that date drives every deadline on this page" | The same page listed six deadlines running from other events. |
+| "the sworn list of the company's assets and liabilities" | A statement of affairs is verified by a statement of truth. "Sworn" invents an oath. |
+| "any disposition of company property after it is void" (of the winding-up order) | s127 runs from presentation of the petition, per s129. Wrong trigger, and it removed the explanation for why banks react to petitions. |
+| "dissolution removes the company from the register permanently" | Restoration is possible in limited circumstances. |
+| "a late claim and no claim produce the same result" | An office-holder has discretion over a late proof in some circumstances. |
+| "banks will usually freeze the accounts, often within hours" | A strong empirical claim presented with the force of a statutory rule. |
+
+**Why it is a problem:**
+
+It is invisible on a read-through, because the sentence reads well. It
+survives voice passes, stranger reads and the mechanical gate, all of which
+are looking for something else. Only a subject-matter reviewer catches it,
+and by then the page may be live.
+
+It is also the specific way AI-assisted copy fails on YMYL topics: fluency
+outruns the evidence, and confidence substitutes for precision.
+
+**Symptoms to search for:**
+
+1. Categorical words: `every`, `always`, `never`, `all`, `permanently`,
+   `automatically`, `immediately`, `only`, `the same`, `cannot`
+2. A rule stated at the wrong trigger event (from the order rather than the
+   petition; from the winding-up order rather than the notice)
+3. Practice described with the grammar of law ("will", "must") where the
+   honest verb is "may" or "can"
+4. A legal term borrowed for its force rather than its meaning ("sworn")
+5. A consequence named with no indication of scale or likelihood
+6. A claim the same page contradicts elsewhere
+
+**Correction protocol:**
+
+1. Classify every categorical sentence as (a) what the law says, (b) what
+   happens in our cases, or (c) the clearest phrasing found so far. Keep a
+   and b, label which. Rewrite or cut c.
+2. Check each rule's trigger event against the statute, not against memory.
+3. Where the claim is practice rather than law, separate the two in the
+   prose: give the legal reason, then the operational observation, and own
+   the observation as ours.
+4. Give the size of every risk named, not just its existence.
+5. Confirm no claim is contradicted elsewhere on the same page.
+6. Route to a licensed practitioner for the statutory points. The gate
+   cannot check any of this.
