@@ -69,6 +69,8 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 
 ## Where to go
 
+- `docs/open-items.md`: work finished except for a human decision, a confirmation, or a push. Check it at the start of a session and add to it rather than leaving an open question in a commit message.
+
 - `editorial-os/CLAUDE.md`: local routing for governance work
 - `scripts/CLAUDE.md`: script and automation work
 - `research/CLAUDE.md`: research outputs and evidence handling
