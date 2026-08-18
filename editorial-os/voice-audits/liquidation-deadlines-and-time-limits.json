@@ -2,16 +2,16 @@
   "slug": "liquidation-deadlines-and-time-limits",
   "audited_at": "2026-08-18",
   "audited_by": "claude-opus-5",
-  "prose_sha": "54956d0b9dd2e98e671a63bd9a4c048e01a37526d5051b817caaacc62131001a",
+  "prose_sha": "c04c4fb28cd4a18d1d6b0b9900e027073674c70ecde282023ecfb3e8255e4004",
   "passes_since_baseline": {
-    "count": 2,
+    "count": 3,
     "baseline_ref": "fd0ce1a0333b",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2493,
+      "words": 2505,
       "you": 40,
       "you_per_1k": 16.0,
       "we": 12,
@@ -22,7 +22,7 @@
     "sections_over_200w_without_you": [],
     "rhythm": {
       "paras": 80,
-      "cv": 0.376,
+      "cv": 0.374,
       "uniform": false
     },
     "scene_proxy": 0
@@ -33,7 +33,7 @@
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Rebuilt against a specialist insolvency practitioner's review, which scored the previous version 7/10 as copy but 5/10 for publication readiness. Ten legal and factual corrections. (1) Jurisdiction now stated in the first line: these deadlines are England and Wales, and Scotland and Northern Ireland run to different rules. Previously the reader had to infer it from the legislation cited. (2) 'That date drives every deadline on this page' was disproved by the article itself, which lists deadlines running from petition service, advertisement, the winding-up order, a section 131 notice, appointment and the final account; now qualified to most of the early CVL deadlines. (3) A statement of affairs is not a sworn document. The 'sworn list' and 'sworn document rather than an estimate' phrasing implied an oath or a commissioner, which has not been the position for years. It is now a formal statement verified by a statement of truth, with a note that no oath or solicitor is involved. (4) The Companies House deadline was wrong: section 109 requires notice within 14 days of appointment, not 15, and the same section requires the liquidator to advertise the appointment in the Gazette. The form was also wrong: 600CH for England and Wales appointments from 9 December 2017, with the old form 600 applying only before that date. (5) The section 127 point had the wrong trigger. Dispositions are at risk from presentation of the petition, because section 129 deems a compulsory winding up to commence then, not from the making of the order. This also explains why banks react to a petition rather than to an order, so the correction improves the page as well as fixing it. (6) The bank-freeze claim ('will usually freeze, often within hours') was an empirical assertion dressed as a rule. Now separated into the legal reason (risk attached to post-petition payments) and the practice observation, which is attributed to our casework and disclosed in the methodology block. (7) Wrongful trading now follows the statutory test: no reasonable prospect of avoiding insolvent liquidation or insolvent administration, then whether every step was taken with a view to minimising potential loss to creditors. The 'a short gap is easier to explain' line was replaced, because it implied advice creates a defensive paper trail; the page now says options may still be open and that taking advice is not itself a defence. (8) The conduct report no longer reads as punishment. Every insolvent liquidation produces one, and the page now says its existence does not mean wrongdoing or an investigation. (9) The absolute late-proof claim is gone with the creditor material. (10) 'Dissolved permanently' corrected: dissolution ends normal legal existence, restoration remains possible in limited circumstances. Structural changes: the operator chose the reviewer's preferred route, so the page is now director-only and retitled 'Liquidation Deadlines and Time Limits for Company Directors', with creditor material reduced to a signpost to the creditor meetings and payment-order guides. The page config title was updated too, since it is pushed to WordPress on publish. Deadlines are now split into 'CVL Deadlines for Directors' and 'Deadlines the Liquidator Handles', which is the change most likely to reduce a distressed reader's load: it tells them which dates are theirs to act on. A new section answers 'what if I have already missed one', which the reviewer noted was conspicuously absent on a page whose readers often arrive because they think they are late; it says the consequence depends which deadline, and not to conceal a miss or reconstruct documents. A jurisdiction FAQ replaced the creditor-claims FAQ. Metrics: you 16.0/1k, inside the 15-20 target; we/our 4.8/1k with gate check 04 passing; rhythm cv 0.376. Stranger-read gate overridden with reason recorded: this pass is legal and structural rather than voice, and three stranger reads are already on file, but a fresh one is worth running before publication sign-off.",
+    "notes": "Post-publication correction. Live verification caught that 'wrongful trading' was named in the at-a-glance section with only a forward reference ('covered further down') and no explanation, which is the same fault the operator flagged on 2026-08-18: naming a frightening term earlier without moving its explanation with it. The full treatment lower down did not fix the first mention. Now glossed in place as the duty to act once insolvent liquidation can no longer be avoided, depending on the company's position rather than any filing. Also removed the draft's metadata comments from what goes to live: build_page strips them for staging, but publish_to_live pushes the file raw, so a comdebstage LINK comment reached live source on the first push. No other changes.",
     "stranger_read_report": null
   },
   "stranger_read": {
@@ -41,7 +41,7 @@
     "requested": null,
     "prose_sha_at_request": null,
     "numbered_answers": 0,
-    "override_reason": "Structural and legal rebuild following a specialist practitioner review, not a voice pass. The three stranger reads already recorded against this page cover the reader-comprehension question; the changes here are legal corrections, a jurisdiction statement, an audience narrowing agreed with the operator, and a director/liquidator split. A fresh stranger read is worth running before publication sign-off."
+    "override_reason": "One-sentence gloss added to an already-reviewed page; three stranger reads on file and no change of structure or argument."
   },
   "verdict": "pass"
 }
