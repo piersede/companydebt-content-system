@@ -283,6 +283,99 @@ def mythcard(c, kicker, lines, sub, cta=None):
             y -= 12
 
 
+def title(c, kicker, head, sub=None):
+    """Carousel cover: kicker, large headline, optional sub."""
+    head_size = 76
+    head_lead = head_size * 1.16
+    head_lines = wrap(c, head, "Lato-Black", head_size, COL)
+    sub_lines = wrap(c, sub, "Lato", SUB_SIZE, COL) if sub else []
+    block = (KICKER_SIZE + GAP_KICKER + len(head_lines) * head_lead
+             + (GAP_SUB + len(sub_lines) * SUB_LEAD if sub_lines else 0))
+    y = centre_start(block)
+
+    c.setFont("Lato-Bold", KICKER_SIZE)
+    c.setFillColor(ORANGE)
+    c.drawString(MARGIN, y - KICKER_SIZE, kicker.upper())
+    y -= KICKER_SIZE + GAP_KICKER
+
+    c.setFont("Lato-Black", head_size)
+    c.setFillColor(WHITE)
+    for line in head_lines:
+        y -= head_size
+        c.drawString(MARGIN, y, line)
+        y -= head_lead - head_size
+    if sub_lines:
+        y -= GAP_SUB
+        c.setFont("Lato", SUB_SIZE)
+        c.setFillColor(MIDBLUE)
+        for line in sub_lines:
+            y -= SUB_SIZE
+            c.drawString(MARGIN, y, line)
+            y -= SUB_LEAD - SUB_SIZE
+
+
+def sign(c, n, text, of=7):
+    """Numbered list slide: one big orange numeral, one white statement."""
+    num_size, stmt_size = 200, 60
+    stmt_lead = stmt_size * 1.2
+    stmt_lines = wrap(c, text, "Lato-Black", stmt_size, COL)
+    block = KICKER_SIZE + 30 + num_size * 0.72 + GAP_SUB + len(stmt_lines) * stmt_lead
+    y = centre_start(block)
+
+    c.setFont("Lato-Bold", KICKER_SIZE)
+    c.setFillColor(MIDBLUE)
+    c.drawString(MARGIN, y - KICKER_SIZE, f"SIGN {n} OF {of}")
+    y -= KICKER_SIZE + 30
+
+    c.setFont("Lato-Black", num_size)
+    c.setFillColor(ORANGE)
+    c.drawString(MARGIN, y - num_size * 0.72, str(n))
+    y -= num_size * 0.72 + GAP_SUB
+
+    c.setFont("Lato-Black", stmt_size)
+    c.setFillColor(WHITE)
+    for line in stmt_lines:
+        y -= stmt_size
+        c.drawString(MARGIN, y, line)
+        y -= stmt_lead - stmt_size
+
+
+def cta(c, head, url, sub=None):
+    """Closing slide: white headline, orange rule, orange url."""
+    head_size = 66
+    head_lead = head_size * 1.18
+    head_lines = wrap(c, head, "Lato-Black", head_size, COL)
+    sub_lines = wrap(c, sub, "Lato", SUB_SIZE, COL) if sub else []
+    block = (len(head_lines) * head_lead + GAP_SUB + RULE_H + GAP_SUB + 54
+             + (GAP_SUB + len(sub_lines) * SUB_LEAD if sub_lines else 0))
+    y = centre_start(block)
+
+    c.setFont("Lato-Black", head_size)
+    c.setFillColor(WHITE)
+    for line in head_lines:
+        y -= head_size
+        c.drawString(MARGIN, y, line)
+        y -= head_lead - head_size
+    y -= GAP_SUB
+
+    c.setFillColor(ORANGE)
+    c.rect(MARGIN, y, 120, RULE_H, stroke=0, fill=1)
+    y -= GAP_SUB
+
+    c.setFont("Lato-Bold", 54)
+    c.setFillColor(ORANGE)
+    y -= 54
+    c.drawString(MARGIN, y, url)
+    if sub_lines:
+        y -= GAP_SUB
+        c.setFont("Lato", SUB_SIZE)
+        c.setFillColor(MIDBLUE)
+        for line in sub_lines:
+            y -= SUB_SIZE
+            c.drawString(MARGIN, y, line)
+            y -= SUB_LEAD - SUB_SIZE
+
+
 def mythfact(c, kicker, myth, fact, tag=None):
     """Signature debunk card for the myths pillar: a struck-through MYTH panel
     over an orange FACT panel. `myth` should be short (fits 1-2 lines struck).
@@ -507,6 +600,23 @@ SLIDES = {
             myth="Limited liability protects everything I own.",
             fact="Not a penny of it, on any debt you have personally guaranteed.")),
     ],
+    # Post 25: warning-signs self-check carousel. Signs grounded in drafts/68123
+    # (IP-reviewed). No statutory figure; CTA to the diagnostic calculator.
+    25: [
+        ("title", dict(kicker="A two-minute director's check",
+                       head="7 signs your business is under more strain than the numbers show.")),
+        ("sign", dict(n=1, of=7, text="Money out has beaten money in for months, not weeks.")),
+        ("sign", dict(n=2, of=7, text="You have started dipping into the VAT or PAYE money to get through the month.")),
+        ("sign", dict(n=3, of=7, text="Creditor letters stop saying reminder and start setting deadlines.")),
+        ("sign", dict(n=4, of=7, text="The management accounts arrive late, because you would rather not look.")),
+        ("sign", dict(n=5, of=7, text="Your invoice finance advance is quietly cut. A supplier moves you to pro-forma.")),
+        ("sign", dict(n=6, of=7, text="A CCJ lands, and it is on the public record within days.")),
+        ("sign", dict(n=7, of=7, text="Past a certain point, the law expects you to put creditors first.")),
+        ("statement", dict(text="One of these is a wobble.\nThree is a pattern.\nThe pattern is easier\nto fix early.")),
+        ("cta", dict(head="A two-minute check. No accounts needed. See where you stand.",
+                     url="companydebt.com/insolvency-calculator",
+                     sub="A screening tool from licensed insolvency practitioners. Not a formal opinion.")),
+    ],
     # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
     # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
     12: [
@@ -565,6 +675,7 @@ SOURCES = {
     22: "",
     23: "",
     24: "",
+    25: "",
 }
 
 # Footer URL per post (defaults to the data hub).
@@ -574,6 +685,7 @@ URLS = {
     22: "companydebt.com/advice",
     23: "companydebt.com/liquidation",
     24: "companydebt.com/bounce-back-loan-support-hub",
+    25: "companydebt.com/insolvency-calculator",
 }
 
 
@@ -583,6 +695,12 @@ def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE, url=FOOTER_URL)
 
     if kind == "hbar":
         hbar(c, **spec)
+    elif kind == "title":
+        title(c, **spec)
+    elif kind == "sign":
+        sign(c, **spec)
+    elif kind == "cta":
+        cta(c, **spec)
     elif kind == "mythcard":
         mythcard(c, **spec)
     elif kind == "mythfact":

@@ -52,23 +52,25 @@ get_header();
         <p class="cd-itest-lede">Answer a few short questions to receive a personalised initial result showing the warning signs that apply, how serious the position may be and what your company may need to do next.</p>
         <p class="cd-itest-lede-sub">Financial pressure does not always mean that a company is insolvent. This check helps you understand the position more clearly.</p>
         <ul class="cd-itest-trust-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Takes around two minutes</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Estimates are fine &mdash; no accounts required</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Your answers are treated confidentially</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No credit check or Companies House search</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>Takes around two minutes</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>Estimates are fine, no accounts required</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Your answers are treated confidentially</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>No credit check or Companies House search</li>
         </ul>
         <?php // Checklist leads directly into the CTA — no boxed panel between
               // the reassurance points and the button. The Reviews.io line
               // moved to the bottom of the screen as a small unboxed line
               // (below reg-line, above the disclaimer). ?>
         <div class="cd-itest-cta-row">
-            <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position</button>
-            <p class="cd-itest-value-reassure">Takes around two minutes &middot; Personalised result &middot; No obligation</p>
-            <p class="cd-itest-phone-alt">Prefer to speak to someone now? Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
+            <button class="cd-itest-btn-primary cd-itest-btn-primary--intro" type="button" data-cd-goto="cashflow">Check My Company&rsquo;s Position <span class="cd-itest-btn-arrow" aria-hidden="true">&rarr;</span></button>
+            <p class="cd-itest-value-reassure"><span class="cd-itest-vr-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>Personalised result</span><span class="cd-itest-vr-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>No obligation</span></p>
+            <hr class="cd-itest-cta-divider" aria-hidden="true">
+            <p class="cd-itest-phone-alt">Prefer to speak to someone now?<br>Call <a href="tel:08000746757">0800 074 6757</a> for a confidential conversation.</p>
         </div>
         <p class="cd-itest-reg-line cd-itest-reg-line--centered">Helping UK company directors since 2007. Formal insolvency work is handled by licensed insolvency practitioners regulated by the Insolvency Practitioners Association.</p>
-        <a class="cd-itest-reviews-line" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener">
-            <span class="cd-itest-reviews-line__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated Excellent on Reviews.io
+        <a class="cd-itest-reviews-line" href="https://www.reviews.io/company-reviews/store/companydebt-com" target="_blank" rel="noopener" aria-label="Rated Excellent on Reviews.io">
+            <img class="cd-itest-reviews-logo" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/reviewsio-logo.svg' ); ?>" alt="Reviews.io" width="150" height="24" />
+            <span class="cd-itest-reviews-line__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </a>
         <p class="cd-itest-disclaimer">This check identifies common warning signs and provides initial guidance. It is not a formal insolvency opinion.</p>
     </section>
@@ -169,9 +171,10 @@ get_header();
 
         <div class="cd-itest-field cd-itest-callpref">
             <label class="cd-itest-callpref__q">Would You Like Someone to Talk Through Your Result?</label>
-            <?php // Radio circles dropped 2026-08-05 (Piers) — looked out of
-                  // place. Selection state now conveyed solely through the
-                  // orange border + warm background on the chosen card. ?>
+            <?php // Rendered as radio buttons (Theo 2026-08-17) — reverses the
+                  // 2026-08-05 (Piers) "drop the circles" change. The circle is
+                  // drawn on the label via CSS; the input stays a full-card
+                  // click target. ?>
             <ul class="cd-itest-options cd-itest-callpref-options">
                 <li class="cd-itest-opt cd-itest-opt--rich">
                     <input type="radio" name="cd_callpref" id="cd-cp-yes" value="yes">

@@ -57,7 +57,6 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-orange-dk: #e65c00;
     --cdi-text:      #2a2a2e;
     --cdi-grey:      #52606d;
-    --cdi-bg:        #f4f6f8;
     --cdi-border:    rgba(0, 40, 86, .14);
     --cdi-white:     #ffffff;
 
@@ -83,18 +82,19 @@ body.page-template-insolvency-test .cd-itest-main {
     --cdi-sp-5: 52px;
     --cdi-sp-6: 64px;
 
-    /* Type scale — bumped +1px on the three lower steps per Piers's
-       readability spec (2026-08-05): body/inputs 17px, supporting text 16px,
-       fine print no smaller than 14px. Headings + button unchanged. */
+    /* Type scale. Default body/reading text is 18px per the site spec
+       (Theo, 2026-08-17) — this supersedes the earlier 16/17px supporting-text
+       tiers. 14px remains for genuine fine print only (form field labels, the
+       legal disclaimer, "(optional)"). Headings + button unchanged. */
     --cdi-fs-xs:   14px;
-    --cdi-fs-sm:   16px;
-    --cdi-fs-base: 17px;
+    --cdi-fs-sm:   18px;
+    --cdi-fs-base: 18px;
     --cdi-fs-md:   18px;
     --cdi-fs-lg:   24px;
     --cdi-fs-xl:   32px;
 
-    /* Type stack */
-    --cdi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Type stack — Arial to match the site's default body text (attached spec) */
+    --cdi-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* ================================================================== */
@@ -108,9 +108,9 @@ body.page-template-insolvency-test .cd-itest-main {
     padding: var(--cdi-sp-5) var(--cdi-sp-2) var(--cdi-sp-6) !important;
     background: transparent !important;
     font-family: var(--cdi-font) !important;
-    font-size: var(--cdi-fs-base) !important;
-    line-height: 1.55 !important;
-    color: var(--cdi-text) !important;
+    font-size: 18px !important;
+    line-height: 31px !important;
+    color: var(--cdi-grey) !important;
 }
 
 body.page-template-insolvency-test .cd-itest-main *,
@@ -121,7 +121,10 @@ body.page-template-insolvency-test .cd-itest-main *::after {
 }
 
 /* Page background — the site's page-wrapper otherwise shows through white */
-body.page-template-insolvency-test { background: var(--cdi-bg) !important; }
+/* --cdi-bg is defined here on the body itself (not only on the descendant
+   .cd-itest-main) so this rule can resolve it — a child's custom property does
+   not cascade up to its parent. Descendants still inherit this value. */
+body.page-template-insolvency-test { --cdi-bg: #e8eef7; background: var(--cdi-bg) !important; }
 
 /* Progress bar (above the panel). Hidden by default — only shown between
    the cashflow and risk steps, toggled by JS via .cd-itest-show. */
@@ -137,14 +140,15 @@ body.page-template-insolvency-test .cd-itest-progress-wrap.cd-itest-show {
 body.page-template-insolvency-test .cd-itest-progress-track {
     display: block !important;
     height: 8px !important;
-    background: #e2e7ec !important;
+    background: #ffffff !important;
+    border: 1px solid var(--cdi-border) !important;
     border-radius: 999px !important;
     overflow: hidden !important;
 }
 body.page-template-insolvency-test .cd-itest-progress-fill {
     display: block !important;
     height: 100% !important;
-    background: var(--cdi-orange) !important;
+    background: var(--cdi-navy) !important;
     border-radius: 999px !important;
     transition: width .35s ease !important;
     width: 0%;
@@ -216,31 +220,33 @@ body.page-template-insolvency-test .cd-itest-h1 {
     font-size: var(--cdi-fs-xl) !important;
     line-height: 1.25 !important;
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     margin: 0 0 var(--cdi-sp-2) !important;
     padding: 0 !important;
     letter-spacing: -0.01em !important;
     max-width: 100% !important;
     width: 100% !important;
-    text-align: left !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-q {
     display: block !important;
     font-size: var(--cdi-fs-lg) !important;
     line-height: 1.35 !important;
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     margin: 0 0 var(--cdi-sp-3) !important;
     padding: 0 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-lede {
     display: block !important;
     font-size: var(--cdi-fs-md) !important;
-    line-height: 1.55 !important;
+    line-height: 31px !important;
     color: var(--cdi-grey) !important;
     /* 20px = the uniform section-to-section gap on the capture step */
     margin: 0 0 20px !important;
     font-weight: 400 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-lede-sub {
     display: block !important;
@@ -249,6 +255,7 @@ body.page-template-insolvency-test .cd-itest-lede-sub {
     color: var(--cdi-grey) !important;
     margin: 0 0 var(--cdi-sp-3) !important;
     font-weight: 400 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-note-sm {
     display: block !important;
@@ -277,17 +284,47 @@ body.page-template-insolvency-test .cd-itest-disclaimer {
     color: var(--cdi-grey) !important;
     text-align: center !important;
     margin: var(--cdi-sp-3) 0 0 !important;
-    padding: var(--cdi-sp-3) 0 0 !important;
-    border-top: 1px solid var(--cdi-border) !important;
+    padding: 0 !important;
+    border-top: 0 !important;
 }
-body.page-template-insolvency-test .cd-itest-value-reassure,
-body.page-template-insolvency-test .cd-itest-phone-alt {
-    display: block !important;
-    font-size: var(--cdi-fs-sm) !important;
+body.page-template-insolvency-test .cd-itest-value-reassure {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px 18px !important;
+    font-size: 15px !important;
     line-height: 1.5 !important;
     color: var(--cdi-grey) !important;
     margin: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-vr-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+}
+body.page-template-insolvency-test .cd-itest-vr-item svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex-shrink: 0 !important;
+    color: var(--cdi-navy) !important;
+}
+body.page-template-insolvency-test .cd-itest-phone-alt {
+    display: block !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: var(--cdi-grey) !important;
+    margin: 0 !important;
     text-align: center !important;
+}
+body.page-template-insolvency-test .cd-itest-cta-divider {
+    width: 280px !important;
+    max-width: 80% !important;
+    height: 0 !important;
+    border: 0 !important;
+    border-top: 1px solid var(--cdi-border) !important;
+    margin: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-phone-alt a {
     font-weight: 700 !important;
@@ -308,10 +345,12 @@ body.page-template-insolvency-test .cd-itest-main a:hover { color: var(--cdi-ora
 
 body.page-template-insolvency-test .cd-itest-trust-list {
     list-style: none !important;
-    margin: 0 0 var(--cdi-sp-3) !important;
+    margin: 0 auto var(--cdi-sp-3) !important;
     padding: 0 !important;
     display: grid !important;
     gap: var(--cdi-sp-1) !important;
+    width: fit-content !important;
+    justify-items: center !important;
 }
 body.page-template-insolvency-test .cd-itest-trust-list li {
     display: flex !important;
@@ -326,31 +365,45 @@ body.page-template-insolvency-test .cd-itest-trust-list li {
 }
 body.page-template-insolvency-test .cd-itest-trust-list li svg {
     flex-shrink: 0 !important;
+    width: 18px !important;
+    height: 18px !important;
     color: var(--cdi-navy) !important;
-    opacity: .55 !important;
+    opacity: 1 !important;
 }
 
 /* Small unboxed Reviews.io line — sits at the bottom of the intro (above
    the disclaimer), replacing the earlier boxed proof-strip which acted as
    a visual roadblock between the checklist and the CTA. */
 body.page-template-insolvency-test .cd-itest-reviews-line {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 7px !important;
+    width: fit-content !important;
     text-align: center !important;
-    font-size: var(--cdi-fs-sm) !important;
-    line-height: 1.5 !important;
-    color: var(--cdi-grey) !important;
-    margin: var(--cdi-sp-2) 0 0 !important;
+    margin: var(--cdi-sp-2) auto 0 !important;
     padding: 0 !important;
     text-decoration: none !important;
     border: 0 !important;
     background: transparent !important;
 }
-body.page-template-insolvency-test .cd-itest-reviews-line:hover { color: var(--cdi-navy) !important; }
+body.page-template-insolvency-test .cd-itest-main a.cd-itest-reviews-line,
+body.page-template-insolvency-test .cd-itest-main a.cd-itest-reviews-line:hover { text-decoration: none !important; }
+body.page-template-insolvency-test .cd-itest-reviews-line:hover { opacity: .85 !important; }
+body.page-template-insolvency-test .cd-itest-reviews-logo {
+    display: block !important;
+    height: 24px !important;
+    width: auto !important;
+    margin: 0 !important;
+}
 body.page-template-insolvency-test .cd-itest-reviews-line__stars {
+    display: block !important;
     color: var(--cdi-orange) !important;
-    letter-spacing: 1px !important;
-    font-size: var(--cdi-fs-sm) !important;
-    margin-right: 4px !important;
+    letter-spacing: 5px !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding-left: 5px !important;
 }
 
 body.page-template-insolvency-test .cd-itest-cta-row {
@@ -405,8 +458,8 @@ body.page-template-insolvency-test .cd-itest-opt label {
     margin: 0 !important;
 }
 body.page-template-insolvency-test .cd-itest-opt input:checked + label {
-    border-color: var(--cdi-orange) !important;
-    background: var(--cdi-warm-bg) !important;
+    border-color: var(--cdi-navy) !important;
+    background: #eaf1fb !important;
 }
 body.page-template-insolvency-test .cd-itest-opt input:focus-visible + label {
     outline: 2px solid var(--cdi-navy) !important;
@@ -458,6 +511,40 @@ body.page-template-insolvency-test .cd-itest-callpref-options {
     margin: 0 !important;
 }
 
+/* Call-preference rendered as radio BUTTONS, not boxed cards (Theo 2026-08-17,
+   reverses the 2026-08-05 "drop the circles" decision). The input stays a
+   full-card invisible click target; a custom circle is drawn on the label. */
+body.page-template-insolvency-test .cd-itest-callpref-options .cd-itest-opt--rich label {
+    border: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 1px 2px 1px 34px !important;
+    position: relative !important;
+    min-height: 0 !important;
+}
+body.page-template-insolvency-test .cd-itest-callpref-options .cd-itest-opt--rich input:checked + label {
+    border: 0 !important;
+    background: transparent !important;
+}
+body.page-template-insolvency-test .cd-itest-callpref-options .cd-itest-opt--rich label::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 2px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #b8c2cf !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    transition: border-color .15s, box-shadow .15s !important;
+}
+body.page-template-insolvency-test .cd-itest-callpref-options .cd-itest-opt--rich input:checked + label::before {
+    border-color: var(--cdi-navy) !important;
+    background: var(--cdi-navy) !important;
+    box-shadow: inset 0 0 0 3px #ffffff !important;
+}
+
 /* ================================================================== */
 /* 7. BUTTONS                                                          */
 /* ================================================================== */
@@ -471,7 +558,7 @@ body.page-template-insolvency-test .cd-itest-btn-primary {
     padding: var(--cdi-sp-2) var(--cdi-sp-4) !important;
     font-size: var(--cdi-fs-md) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     font-family: var(--cdi-font) !important;
     text-align: center !important;
     text-decoration: none !important;
@@ -490,8 +577,14 @@ body.page-template-insolvency-test .cd-itest-btn-primary:disabled {
     cursor: not-allowed !important;
 }
 body.page-template-insolvency-test .cd-itest-btn-primary--intro {
-    width: 78% !important;
+    width: auto !important;
     align-self: center !important;
+    padding: 13px 30px !important;
+    font-size: var(--cdi-fs-base) !important;
+}
+body.page-template-insolvency-test .cd-itest-btn-arrow {
+    display: inline-block !important;
+    margin-left: 7px !important;
 }
 body.page-template-insolvency-test .cd-itest-btn-primary--cta {
     width: auto !important;
@@ -673,7 +766,7 @@ body.page-template-insolvency-test .cd-itest-result-badge {
     display: inline-block !important;
     padding: var(--cdi-sp-1) var(--cdi-sp-2) !important;
     border-radius: 999px !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     font-size: var(--cdi-fs-sm) !important;
     line-height: 1.4 !important;
     letter-spacing: .02em !important;
@@ -688,10 +781,11 @@ body.page-template-insolvency-test .cd-itest-result-title {
     display: block !important;
     font-size: var(--cdi-fs-lg) !important;
     line-height: 1.35 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
+    text-align: center !important;
 }
 body.page-template-insolvency-test .cd-itest-result-urgency {
     display: block !important;
@@ -752,7 +846,7 @@ body.page-template-insolvency-test .cd-itest-result-section__note {
 body.page-template-insolvency-test .cd-itest-steps-ol { list-style: decimal !important; }
 body.page-template-insolvency-test .cd-itest-steps-ol li::marker {
     color: var(--cdi-navy) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
 }
 
 /* Callout panels — personal guarantee (warm) + creditor duty (warn).
@@ -773,7 +867,7 @@ body.page-template-insolvency-test .cd-itest-callout__title {
     display: block !important;
     font-size: var(--cdi-fs-sm) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-1) !important;
     padding: 0 !important;
@@ -802,7 +896,7 @@ body.page-template-insolvency-test .cd-itest-cta-block h3 {
     display: block !important;
     font-size: var(--cdi-fs-md) !important;
     line-height: 1.4 !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--cdi-navy) !important;
     margin: 0 0 var(--cdi-sp-2) !important;
     padding: 0 !important;
