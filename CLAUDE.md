@@ -47,9 +47,9 @@ If the article sounds generic, bloodless, over-balanced, or like AI simulating j
 The recurring failure on editorial pages is tone: they pass the mechanical gate but do not sound like an experienced Company Debt insolvency practitioner speaking to a specific, stressed reader in their trade. Fix this in the humanise pass BY DEFAULT, every page, before the gate. It is not a later review step.
 
 Every draft, before the gate, must carry all four (per `runtime-packs/stages/humanise.md` Part C, which is mandatory):
-- concrete scenes drawn from the reader's real world (>= 3 per 1,000 words, one per major section), not category labels;
+- concrete detail drawn from practitioner knowledge, not category labels. There is deliberately **no quota**: `runtime-packs/stages/humanise.md` Part C item 1 removed the old ">= 3 per 1,000 words, one per major section" rule on 2026-08-13 as actively harmful, because no page holds that many genuine scenes and the pass invents the shortfall. The test is where the detail comes from, never how much of it there is. Do not reinstate a count here;
 - earned practitioner "we" (the lived-caseload voice: "in the cases we handle", "by the time a director calls us") — this is legitimate company-authored operational voice, and it is how the page reaches a natural we/our density honestly;
-- warmth from recognition of reader stress (the persona in `editorial-os/17-audience-and-persona.md`: shame, the personal guarantee, the brown HMRC envelope) near the top and at the decision point;
+- warmth shown by removing the problem, never by describing the reader's feelings. The persona in `editorial-os/17-audience-and-persona.md` (shame, the personal guarantee, the HMRC envelope) is context for the writer, not material to write back at the reader. Asserting their mood, their evening or what is on their desk is fabrication wearing empathy's clothes, and `article_audit.py` check 33 fails the page for it. Demonstrate understanding by naming what they are trying to find out and answering it early;
 - 1-3 asymmetrical editorial lines and tone modulated by section.
 
 The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 with these absent is a FAIL. In particular, the check-04 we/our-density miss is an acceptable exception ONLY when the practitioner voice is genuinely present and the page still lands just under 5/1k; it is never a licence to ship a thin, practitioner-light page. Do a dedicated persona read after the mechanical gate passes.
@@ -61,7 +61,7 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 - Treat `editorial-os/` as canonical governance, not default runtime payload.
 - Use `runtime-packs/` as the compact execution layer.
 - Consult canonical governance only when the runtime layer is insufficient or a rule conflict appears.
-- For page-specific drafting, review, or rewrite work, run `python scripts/editorial_task_entry.py --page <slug> --task <task>` first and treat that packet as the default working context.
+- For page-specific drafting, review, or rewrite work, run `python scripts/editorial_task_entry.py --page <slug> --task <task>` first and treat that packet as the default working context. This is mandatory, not a shortcut worth skipping when the task looks small: see the Bernstein hard stop below.
 - For research-heavy work, distill large research files first with `python scripts/distill_research.py --slug <slug> <source-files...>`.
 - For rewrite work, prepare a compact packet with `python scripts/prepare_revision_packet.py --page <slug> --task rewrite --notes <note-files...>`.
 - Use `EDITORIAL-OPERATOR-PLAYBOOK.md` as the default human workflow guide inside Claude.
@@ -77,6 +77,11 @@ The `article_audit.py` gate does NOT measure any of this, so a 23/25 or 24/25 wi
 
 ## Hard stops
 
+- **All content writing goes through the Bernstein pipeline. This is not routing advice, it is a condition of the work.** No page may be drafted, rewritten, or have its prose edited outside the pipeline stages. Start with `python scripts/editorial_task_entry.py --page <slug> --task <task>`, run the stages, and load the stage pack for each one you run. `review` and `humanise` are not optional, and `adversarial-review`, `trust-pass` and `final-polish` exist because the mechanical gate cannot see what they catch.
+  - Passing `article_audit.py` is **not** evidence that the pipeline ran. The mechanical gate and the pipeline are different things. A page can score full marks and still never have been reviewed.
+  - Record the run with `python scripts/bernstein_attest.py --slug <slug> --record --by <model> --stages ... --notes "..."`. That record is tracked in git; `editorial-os/bernstein-state/` is gitignored and proves nothing to anyone else.
+  - `article_audit.py` check 34 enforces this. It fails when the attestation is absent, or when the prose changed after it was written. Pages predating the check are grandfathered by prose hash in `editorial-os/bernstein-runs/_baseline.json` and lose that exemption the moment their prose is edited.
+  - Why this is a hard stop: on 2026-08-17 a full redraft of `closing-a-limited-company` was written, scored 33/33 and pushed to staging without a single stage being opened. Fifteen unresolved back-references survived to the operator. The rule already existed as routing guidance and was skipped anyway, so it now has a checker behind it.
 - Do not bypass evidence rules, disclosure rules, or pre-publish gates.
 - Do not flatten unfairness, cost, or risk into neutral filler.
 - Do not treat token savings as success if output quality drops.
