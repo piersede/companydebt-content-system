@@ -139,10 +139,14 @@ def last_prose_change(slug: str, path: Path) -> str | None:
     Returns None when git cannot say.
     """
     import subprocess
-    rel = path.relative_to(REPO).as_posix()
+    try:
+        rel = path.resolve().relative_to(REPO).as_posix()
+    except ValueError:
+        return None
     try:
         log = subprocess.run(["git", "-C", str(REPO), "log", "--format=%H %cI", "--", rel],
-                             capture_output=True, text=True, timeout=60).stdout.splitlines()
+                             capture_output=True, text=True, encoding="utf-8",
+                             errors="replace", timeout=60).stdout.splitlines()
     except Exception:  # noqa: BLE001
         return None
     current = vm.prose_sha(path.read_text(encoding="utf-8", errors="replace"))
@@ -153,7 +157,8 @@ def last_prose_change(slug: str, path: Path) -> str | None:
         commit, _, when = line.partition(" ")
         try:
             blob = subprocess.run(["git", "-C", str(REPO), "show", f"{commit}:{rel}"],
-                                  capture_output=True, text=True, timeout=60).stdout
+                                  capture_output=True, text=True, encoding="utf-8",
+                                  errors="replace", timeout=60).stdout
         except Exception:  # noqa: BLE001
             break
         if not blob or vm.prose_sha(blob) != current:
