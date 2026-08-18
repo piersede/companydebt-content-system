@@ -1,44 +1,44 @@
 {
   "slug": "liquidation-deadlines-and-time-limits",
-  "audited_at": "2026-08-17",
+  "audited_at": "2026-08-18",
   "audited_by": "claude-opus-5",
-  "prose_sha": "725b83660082fc2b9e7b76bdb41abffd4724cf690922a2aec0583dffb1e0f28f",
+  "prose_sha": "31ed247da53a0cfaf77c3cda70c2926ed37587e4f1694a4d415fcffa67f08e52",
   "passes_since_baseline": {
-    "count": 0,
+    "count": 1,
     "baseline_ref": "fd0ce1a0333b",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 2190,
-      "you": 61,
-      "you_per_1k": 27.9,
-      "we": 10,
-      "we_per_1k": 4.6,
+      "words": 2319,
+      "you": 45,
+      "you_per_1k": 19.4,
+      "we": 11,
+      "we_per_1k": 4.7,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 70,
-      "cv": 0.448,
+      "paras": 72,
+      "cv": 0.403,
       "uniform": false
     },
     "scene_proxy": 2
   },
   "attested": {
-    "concrete_scenes": 5,
-    "evaluative_bite_lines": 4,
+    "concrete_scenes": 4,
+    "evaluative_bite_lines": 3,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Plain-English pass on the redraft, after the operator caught 'wrongful trading' being named in the lead with no explanation. That was the worse version of the fault: the previous pass had moved the term earlier to stop the reader scrolling for it, but moved it without a gloss. A full first-mention sweep of the page found the same failure on six more terms the gate does not check, because check 31 only tests a fixed curated list. All now explained in plain English at first use: wrongful trading (carrying on past the point insolvent liquidation could not be avoided, and a court can order you to pay company debts from your own money); conduct matter (a formal note on your behaviour as a director, counting against you if anyone later asks whether you should be banned from running a company); deemed consent (the proposal goes through automatically unless enough creditors object in time); contributory (a shareholder who could still be asked to pay up on their shares); secured charge (a debt carrying a legal claim over a particular company asset); the Gazette (the government's official journal of public notices); proof of debt (the form setting out what a creditor is owed and why). Four further trade words removed rather than glossed, because plain words do the job: dividend, distribution, last date for proving, and realised. Paragraph splits kept every paragraph under 400 characters and rhythm improved to cv 0.449. Bold density 4.7%, inside the 2-6% aim. you 27.9/1k, under the ceiling but still above the 15-20 target and worth watching. Body-level we/our/us 4.6/1k with gate check 04 passing; not padded, and the practitioner voice remains carried by method. Protected sentence intact. No facts, headings or links changed by this pass.",
-    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-17T132032Z.md"
+    "notes": "Tone pass against 17-audience-and-persona.md, after the operator flagged the register as too intense ('That clock starts on its own. It may already be running.' read like a film trailer). The persona doc is explicit and I had been breaking it: sound calm, be non-judgmental, never imply the director did something wrong before the facts are known, and avoid fear-led language for anything beyond crisis-stage content. This page serves readers comparing options, not only readers mid-crisis, so action-led is correct and fear-led is not. Roughly fifteen passages rewritten. Removed the dramatic isolated fragments ('That clock starts on its own. It may already be running.'), the ominous verbs ('which deadlines bite', 'it gets grim within days', 'Nobody is obliged to warn you first'), the lecturing constructions ('Directors who plan against the ceiling are the ones who end up signing...'), and the portentous closer ('Everything above follows from that.'). Softened 'demand' to 'require' on the Official Receiver's statement of affairs, and split the three-consequence s131 sentence. A tone-focused stranger read (a seventh question added, asking whether it reads as a calm practitioner or as pressuring) then gave the sharpest diagnosis of the session: a calm practitioner states the SIZE of a risk, not just its existence, and the page named three routes to personal liability while quantifying none, leaving the gap where the reader's imagination works at midnight. Acted on all of it. The conduct-matter line now says what it actually leads to, including that most conduct reports lead to nothing further and that it is a pattern of failures or clear misconduct that draws action rather than one late form. Wrongful trading now says the liquidator must show the point was passed and that the directors did nothing, so claims of this kind are not routine. The lead now states that a few deadlines can be extended if you ask before they expire, instead of raising the exception and abandoning it. 'Resolution date' is glossed where first used rather than 400 words later. '75% majority' is now '75% of the votes cast', which the reader correctly said was ambiguous and mattered to them. Cut 'honestly' from 'nobody can tell you honestly how much time you have', which implied other advisers would lie. Cut the 'in the cases we handle it is the notice that slips' caseload claim: three independent readers have now objected to that shape, and I had defended it twice. The fear-then-service construction ('which is why it is usually the first thing we establish') is replaced by the useful answer, namely how the date is actually reconstructed afterwards from the management accounts, the cash position, and what the board knew. you density now 19.4/1k, inside the voice engine's 15-20 target band for the first time in this page's history, having been 29/1k two passes ago. Body-level we/our/us 4.7/1k with gate check 04 passing; not padded. Rhythm cv 0.403. Scenes and bite counted down honestly to 4 and 3 after cutting the performance lines. Protected sentence intact. No facts, headings or links changed.",
+    "stranger_read_report": "editorial-os/stranger-reads/liquidation-deadlines-and-time-limits_2026-08-18T071139Z.md"
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-17T132032Z.md",
-    "requested": "2026-08-17T132032Z",
+    "path": "editorial-os\\stranger-reads\\liquidation-deadlines-and-time-limits_2026-08-18T071139Z.md",
+    "requested": "2026-08-18T071139Z",
     "prose_sha_at_request": null,
     "numbered_answers": 5,
     "override_reason": null
