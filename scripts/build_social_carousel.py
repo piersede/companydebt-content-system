@@ -159,7 +159,8 @@ def big_number(c, value, sub, kicker=None):
 
 def statement(c, text):
     lines = text.split("\n")
-    size = 88
+    # Largest size (capped at 88) at which every line fits the column.
+    size = min([88] + [fit_size(line, "Lato-Black", COL, 88) for line in lines])
     lead = size * 1.22
     y = centre_start(len(lines) * lead)
     c.setFillColor(WHITE)
@@ -314,8 +315,11 @@ def title(c, kicker, head, sub=None):
             y -= SUB_LEAD - SUB_SIZE
 
 
-def sign(c, n, text, of=7):
-    """Numbered list slide: one big orange numeral, one white statement."""
+def sign(c, n, text, of=7, label="SIGN"):
+    """Numbered list slide: one big orange numeral, one white statement.
+
+    `label` sets the index word (SIGN, MISTAKE, STEP, ...).
+    """
     num_size, stmt_size = 200, 60
     stmt_lead = stmt_size * 1.2
     stmt_lines = wrap(c, text, "Lato-Black", stmt_size, COL)
@@ -324,7 +328,7 @@ def sign(c, n, text, of=7):
 
     c.setFont("Lato-Bold", KICKER_SIZE)
     c.setFillColor(MIDBLUE)
-    c.drawString(MARGIN, y - KICKER_SIZE, f"SIGN {n} OF {of}")
+    c.drawString(MARGIN, y - KICKER_SIZE, f"{label} {n} OF {of}")
     y -= KICKER_SIZE + 30
 
     c.setFont("Lato-Black", num_size)
@@ -617,6 +621,24 @@ SLIDES = {
                      url="companydebt.com/insolvency-calculator",
                      sub="A screening tool from licensed insolvency practitioners. Not a formal opinion.")),
     ],
+    # Post 26: "mistakes" companion to post 25. Each grounded: wrongful trading
+    # (s.214), preferences (s.239), undervalue (s.238) all confirmed in corpus.
+    # No number on slides; CTA to the personal-liability page.
+    26: [
+        ("title", dict(kicker="When a company can't pay",
+                       head="7 moves that turn the company's debt into your debt.")),
+        ("sign", dict(n=1, of=7, label="MISTAKE", text="Keep trading and running up new debts after you know it can't recover.")),
+        ("sign", dict(n=2, of=7, label="MISTAKE", text="Repay your own director's loan before the other creditors.")),
+        ("sign", dict(n=3, of=7, label="MISTAKE", text="Clear one creditor you care about, or a family member, ahead of the rest.")),
+        ("sign", dict(n=4, of=7, label="MISTAKE", text="Sell the assets or the client book cheaply to a company you also own.")),
+        ("sign", dict(n=5, of=7, label="MISTAKE", text="Spend the VAT and PAYE money to keep trading.")),
+        ("sign", dict(n=6, of=7, label="MISTAKE", text="Stop opening the HMRC post and hope it goes quiet.")),
+        ("sign", dict(n=7, of=7, label="MISTAKE", text="Strike the company off to make the debt disappear.")),
+        ("statement", dict(text="None of these starts\nas a plan.\nEach is where panic leads.\nAdvice early avoids all seven.")),
+        ("cta", dict(head="If the company can't pay, get the options before you act.",
+                     url="companydebt.com/advice",
+                     sub="When a director becomes personally liable. Free initial call, confidential.")),
+    ],
     # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
     # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
     12: [
@@ -676,6 +698,7 @@ SOURCES = {
     23: "",
     24: "",
     25: "",
+    26: "",
 }
 
 # Footer URL per post (defaults to the data hub).
@@ -686,6 +709,7 @@ URLS = {
     23: "companydebt.com/liquidation",
     24: "companydebt.com/bounce-back-loan-support-hub",
     25: "companydebt.com/insolvency-calculator",
+    26: "companydebt.com/advice",
 }
 
 
