@@ -328,10 +328,10 @@ function selftest() {
   U.log('gates:');
   assert('dash gate rejects em dash', !G.dashGate('we have data — fresher').pass);
   assert('dash gate passes clean text', G.dashGate('we have fresher data').pass);
-  assert('claim ledger accepts approved 1,868', G.claimLedgerGate('there were 1,868 insolvencies', asset).pass);
+  assert('claim ledger accepts approved 1,845', G.claimLedgerGate('there were 1,845 insolvencies', asset).pass);
   assert('claim ledger rejects invented 70%', !G.claimLedgerGate('CVLs were 70% of cases', asset).pass);
-  assert('claim ledger accepts approved 76%', G.claimLedgerGate('CVLs were 76% of the total', asset).pass);
-  assert('claim ledger allows a year (2026)', G.claimLedgerGate('the May 2026 figures', asset).pass);
+  assert('claim ledger accepts approved 74%', G.claimLedgerGate('CVLs were 74% of the total', asset).pass);
+  assert('claim ledger allows a year (2026)', G.claimLedgerGate('the June 2026 figures', asset).pass);
   assert('regulated gate rejects guarantee', !G.regulatedClaimGate('we can guarantee a better outcome').pass);
   assert('regulated gate rejects false exclusivity', !G.regulatedClaimGate('our exclusive data shows').pass);
   assert('regulated gate passes clean pitch', G.regulatedClaimGate('our page has the latest monthly figures').pass);

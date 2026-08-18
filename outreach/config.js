@@ -151,6 +151,13 @@ config.assetById = Object.fromEntries((catalogue.assets || []).map((a) => [a.id,
 config.topicAssets = {
   'insolvency': 'uk-insolvency-statistics',
   'pub closures': 'pub-closures',
+  'construction': 'construction-insolvency',
+  'road haulage': 'road-haulage-insolvency',
+  'recruitment': 'recruitment-insolvency',
+  'motor vehicle repair': 'motor-vehicle-repair-insolvency',
+  'furniture': 'furniture-insolvency',
+  'estate agency': 'estate-agency-insolvency',
+  'restaurants': 'restaurant-insolvency',
 };
 config.assetForTopic = (topic) => {
   const id = config.topicAssets[(topic || '').trim().toLowerCase()];
