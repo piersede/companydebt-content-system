@@ -1,0 +1,22 @@
+{
+  "slug": "closing-a-limited-company",
+  "attested_at": "2026-08-18",
+  "attested_by": "claude-opus-5",
+  "task": "rewrite",
+  "prose_sha": "1c2817632fc4bebb53b14faadfc1fc08d238745cb76cfcf266b382e590cdeb15",
+  "stages_completed": [
+    "review",
+    "adversarial-review",
+    "trust-pass",
+    "humanise",
+    "final-polish",
+    "gate"
+  ],
+  "unknown_stages": [
+    "adversarial-review",
+    "trust-pass",
+    "final-polish"
+  ],
+  "local_state_present": false,
+  "notes": "First genuine pipeline run on this page. Entered through editorial_task_entry.py, which surfaced runtime-packs/review-core.md and the process-guide overlay that the earlier redraft never loaded. adversarial-review, trust-pass, humanise and final-polish each ran as a separate clean Opus pass with no drafting history, because a humanise pass performed inline in the drafting conversation is not a humanise pass. Both reviews returned FAIL. Fixed: a pricing error where '\u00a34,000 to \u00a35,000 all in' summed components quoted plus VAT, understating the bill by roughly \u00a3800; four legal imprecisions including the claim that nobody posts you a copy of a petition, when a petition is served on the registered office; three self-serving passages, including refusing to compute the MVL break-even on the one calculation that tells some readers not to buy, now stated at about \u00a370,000 of qualifying gain; an unverifiable claim about our own lead handling; an unverifiable first-hand caseload anecdote about Bounce Back Loan repayments; a broken DS01 source URL; an undated IP sign-off on prose rewritten the same day; a verification date the central fee record does not support; the canonical cost page neither linked nor deferred to, while this page reproduced four of its sections; three load-bearing claims with no Sources entry; and a call-out that repeated the section it pointed at. Two reviewer demands refused, both on the grounds that they conflicted with hard rules: invented reader context banned by check 33, and a concrete-scene quota the humanise pack had already removed as harmful. NOT RESOLVED, and both need a human: the commercial disclosure says Company Debt may receive a fee where a director engages another practitioner through our network, which contradicts the standing rule that Company Debt is the licensed practice and does not refer directors out; and the Bounce Back Loan anecdote can be restored with attribution if someone confirms it is real casework. Gate 34/34 after this record."
+}

@@ -59,7 +59,11 @@ DRAFTS = REPO / "drafts"
 # The stages bernstein.js itself requires before the gate stage will accept a
 # page (STAGE_REQUIREMENTS.gate), plus the gate stage. Kept in this order so a
 # reader can see what a complete run looks like.
-PIPELINE_STAGES = ["research", "draft", "review", "revise", "humanise", "gate"]
+# bernstein.js STAGE_SEQUENCE, plus the review-class stage packs that exist in
+# runtime-packs/stages/ and are run as their own passes.
+PIPELINE_STAGES = ["research", "outline", "brief", "source-grounding", "draft", "review",
+                   "adversarial-review", "trust-pass", "revise", "humanise",
+                   "final-polish", "gate", "publish"]
 
 # A rewrite of a published page does not always need 'research'. These are the
 # stages that must always appear, whatever the task.

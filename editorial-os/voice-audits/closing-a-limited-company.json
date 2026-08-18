@@ -1,46 +1,46 @@
 {
   "slug": "closing-a-limited-company",
-  "audited_at": "2026-08-17",
+  "audited_at": "2026-08-18",
   "audited_by": "claude-opus-5",
-  "prose_sha": "cd147dcc9eafcb7405fc3c650fe80c780305675e8fa483b9d4e871387b79d697",
+  "prose_sha": "1c2817632fc4bebb53b14faadfc1fc08d238745cb76cfcf266b382e590cdeb15",
   "passes_since_baseline": {
-    "count": 0,
+    "count": 1,
     "baseline_ref": "fd0496631863",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 5248,
-      "you": 138,
-      "you_per_1k": 26.3,
+      "words": 5633,
+      "you": 152,
+      "you_per_1k": 27.0,
       "we": 31,
-      "we_per_1k": 5.9,
+      "we_per_1k": 5.5,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 146,
-      "cv": 0.371,
+      "paras": 167,
+      "cv": 0.407,
       "uniform": false
     },
-    "scene_proxy": 0
+    "scene_proxy": 1
   },
   "attested": {
-    "concrete_scenes": 10,
-    "evaluative_bite_lines": 5,
+    "concrete_scenes": 9,
+    "evaluative_bite_lines": 6,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Follow-up to the redraft, fixing one fault class the reviewer identified: prose that refers to something it has not named, so the reader must hold an earlier sentence in their head to follow it. Their example was 'A company that cannot pay also has two, but only one is a choice' - two of what, and the noun is never repeated. It is a genuine AI tell and it was systemic, not a one-off. Fifteen instances found and fixed. The worst were in the opening, which is the worst place for it: a forward pointer to 'the routes below' before any route had been named; 'the two-minute insolvency test settles the first', where first of what needs working out; 'Solvency is the first question because it settles the other two', where nothing had ever been enumerated as three; 'a court petition removes the first option'; 'This is the point at which the family home usually comes up', with This carrying a whole paragraph; 'Our table sets out each one'; and a sentence fragment with no main verb ('A strike-off, which is one short form filed at Companies House'). Also removed two meta lead-ins that dangled ('Now the part most directors want answered before any of it', 'so you are not hunting for it') and replaced four vague above/below pointers with the named section or the named figure. The fix in every case is to repeat the noun rather than point at it. I scanned list items, table cells, FAQ answers, callouts and the disclosure blocks for the same pattern as well as body paragraphs, since the reviewer's point was that one instance implies a family; the remaining hits there resolve within their own sentence and were left. Then re-read the rewritten opening cold, because I had just rewritten the eight most-read paragraphs on the page. That read found two more of exactly this fault in text written an hour earlier: 'no practitioner can make those go away', where a practitioner appears with nobody having said one is involved (the same phrase works at the foot of the page, where the term has been defined, and the previous full-page reader singled it out as the truth they wanted, so it stays there and is gone from the top); and the insolvency test appearing without being named as ours. Both fixed. It also caught a flourish I had written into the routing section and I cut it. Two things it asked for that I acted on: the personal-liability paragraph moved ahead of the dormant-and-rescue aside, and a new passage in the insolvent section telling a reader how to identify the letter in their hand, because chasing letters and a statutory demand are demands for payment while a winding-up petition is the court step. That gap had been raised by the previous full-page reader too and I had left it; it is now closed. Still open and reported rather than buried: this reader wanted the personal-liability point at the second paragraph rather than the fourth, and the page cannot tell them whether they personally signed a guarantee, only how to find out. Gate 33/33 before this record.",
-    "stranger_read_report": "editorial-os/stranger-reads/closing-a-limited-company_2026-08-17T144924Z.md"
+    "notes": "Recorded after the page went through the pipeline properly for the first time: task entry, adversarial review, trust pass, humanise and final polish, the last three as separate clean Opus passes with no drafting history, per the standing rule that a humanise pass done inline in the drafting conversation is not a humanise pass. Both reviews returned FAIL and between them found 36 items. Voice-relevant outcomes: tone now modulates by subject, with the conduct-claim and false-declaration passages hardened and the employees passage warmed, against a page that previously read at one temperature throughout; category language replaced with mechanism ('banks tend to tighten up' and 'the Official Receiver is queued behind it' are gone); a repeated construction the earlier passes had not seen ('the attraction is the tax rate', 'the trade-off is time', 'time is the real constraint', 'the awkward line is the CVL one', 'that accountancy work is the real cost') broken from five instances to two; ten paragraphs re-opened on their payoff rather than on setup; six more unnamed back-references found and fixed, some reintroduced by the passes themselves. we/our is 5.5 per 1,000, honestly above the floor and not padded. Two reviewer demands were REFUSED and the refusals matter more than the fixes: one asked for reader-stress recognition built from an invented letter, an invented Gazette notice and the reader reading at night, which check 33 bans and which was stripped from this page once already; the other demanded twelve more concrete scenes citing a 3-per-1,000-words quota that the humanise pack removed on 2026-08-13 as actively harmful. The quota was still live in the root CLAUDE.md, which is why the reviewer asked for it, and that contradiction has now been fixed at source along with the warmth bullet that produced the invented evenings. Warmth was added instead in the only forms that survive check 33: a statement about what directors ask us first, and a statement that closing a company is a legal process with a defined end rather than a judgement on the director. No cold read was run on this final state; the page has instead had four review stages, and the last full-page cold read was against the redraft before these changes.",
+    "stranger_read_report": null
   },
   "stranger_read": {
-    "path": "editorial-os\\stranger-reads\\closing-a-limited-company_2026-08-17T144924Z.md",
-    "requested": "2026-08-17T144924Z",
-    "prose_sha_at_request": "2edab3af3d8e61f9616d45c8dfc4b4143824fa8e1429bdda0efd1e05f4c9c8c1",
-    "numbered_answers": 5,
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
     "override_reason": null
   },
   "verdict": "pass"
