@@ -46,6 +46,31 @@ page.
 
 ---
 
+## Needs a human decision
+
+**7. Live push of the insolvency data hub (10 pages).** Staging only, gating clean,
+verified in-browser. Nine sector detail pages built and content-rewritten this
+pass (furniture, recruitment agency, motor vehicle repair, cleaning company,
+hotel, plus the four already live: restaurant, road haulage, temporary staffing
+agency, estate agency) and five hub-family pages unified to the site's visual
+language (flagship `uk-insolvency-statistics`, winding-up petition tracker,
+dissolutions vs insolvencies, payment practices & late payment, and the `/data/`
+hub landing page). None pushed live; will not be without an instruction naming
+the page(s).
+
+**8. Payment practices trend chart uses a Company Debt calculation, not a
+published DBT figure.** `scripts/datahub/sources/payment_practices_trend.py`
+buckets the raw report-level export into six-monthly periods (most recently
+filed report per company per period, ≥30 companies to publish a period,
+excludes any period inside its own 45-day filing window). The design handoff's
+sample trend was fabricated (it included a period that had not happened yet),
+so this replaces it with something real rather than something plausible-looking.
+It is still our own aggregation of raw data, not a DBT-published series. Worth a
+second pair of eyes on the method before this page is pushed live, given it is
+a citation target.
+
+---
+
 ## Deferred, small
 
 **5. `cvl_all_in` is a misleading key name.** `data/statutory_fees.json` records
@@ -55,6 +80,16 @@ disbursements. It excludes VAT. The page took that key at its word and published
 trust pass caught it. The page is fixed. The key name is not, and it will invite
 the same error on the next page that reads it. Worth renaming to
 `cvl_fee_plus_disbursements_ex_vat`, or adding an explicit `_excludes_vat: true`.
+
+**9. The nine sector detail pages have not been through the site-alignment pass.**
+Item 7's flagship/petition-tracker/dissolutions/payment-practices/hub group now
+shares one visual system (Arial, the site's full-bleed hero band, one spacing
+rhythm) via `cd_datahub_alignment_css()` in the mu-plugin. The sector pages
+(furniture, hotel, etc., generated from `sic_group_stats.py`) run their own,
+separate `DASHBOARD_CSS` with different token values and were not part of this
+pass since they are a different generator entirely. Not urgent, since they were
+never held up as unaligned, but worth knowing before assuming "the hub is
+unified" covers all 18 `/data/` pages rather than the 5-page hub family.
 
 **6. MVL link placement on page 65614.** The link to the canonical
 `/liquidation/members-voluntary-liquidation/` guide sits in the last line of the
