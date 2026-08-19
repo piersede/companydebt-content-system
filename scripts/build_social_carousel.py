@@ -639,6 +639,13 @@ SLIDES = {
                      url="companydebt.com/advice",
                      sub="When a director becomes personally liable. Free initial call, confidential.")),
     ],
+    # Post 27: single impactful stat. CVLs = 1,364 of 1,845 = 74% (gov.uk June
+    # 2026 commentary: "CVLs comprised 74% of the total"). Verified this session.
+    27: [
+        ("number", dict(value="74%",
+                        sub="of company insolvencies were creditors' voluntary liquidations: the route a company starts itself, not one the court forces.",
+                        kicker="UK company insolvencies, June 2026")),
+    ],
     # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
     # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
     12: [
