@@ -646,6 +646,14 @@ SLIDES = {
                         sub="of company insolvencies were creditors' voluntary liquidations: the route a company starts itself, not one the court forces.",
                         kicker="UK company insolvencies, June 2026")),
     ],
+    # Post 28: topical BBL guarantee. gov.uk COVID loan repayment data, March
+    # 2026: £11.82bn guarantee settled, £1.58bn against suspected fraud. All
+    # figures primary-source verified this session.
+    28: [
+        ("number", dict(value="£11.82bn",
+                        sub="has been paid out on the government's Bounce Back Loan guarantee for loans that were not repaid. £1.58bn of it on suspected fraud.",
+                        kicker="Bounce Back Loans, as at March 2026")),
+    ],
     # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
     # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
     12: [
@@ -699,6 +707,7 @@ SLIDES = {
 SOURCES = {
     5: "Source: UK payment practices reporting, 6,882 companies",
     11: "Source: gov.uk payment practices export, recomputed 22 Jul 2026",
+    28: "Source: gov.uk COVID loan guarantee schemes data, March 2026",
     20: "",
     21: "",
     22: "",
@@ -717,6 +726,7 @@ URLS = {
     24: "companydebt.com/bounce-back-loan-support-hub",
     25: "companydebt.com/insolvency-calculator",
     26: "companydebt.com/advice",
+    28: "companydebt.com/bounce-back-loan-support-hub",
 }
 
 
