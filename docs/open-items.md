@@ -110,3 +110,68 @@ a failure.
   narrowed. Includes the 26 pages in commit 1429dc5, whose prose was edited with no
   recorded pipeline run and which are currently grandfathered on the basis that it
   is not established either way. Spawned 2026-08-18.
+
+---
+
+## Awaiting a human decision or action — Google Ads / lead pipeline review, 20 Aug 2026
+
+Full report: `google-ads-auditor/runs/2026-08-20-weekly-audit/report.md` (gitignored;
+holds real account data). Everything below was verified read-only. Nothing was changed
+in Google Ads, in the CRM, or on the site.
+
+**1. Quick Quote form has produced nothing since 31 July 15:22, while paid ads keep
+sending traffic to it.** 88 paid clicks and £738.72 between 1 and 19 Aug; 182 clicks and
+£1,584.05 since 15 Jul, making `/quick-quote/` the most expensive landing page on the
+account. Ruled out: spam folder (1 entry, from 2023), bin (newest 2022), form disabled
+(active, notification active), broken form scripts (they load and bind correctly once a
+visitor interacts). Not ruled out, because it needs a real submission and this pass was
+read-only: whether a completed submission actually saves. Last entry lands on the same
+day as the 31 Jul conversion-forms work. Needs a live test submission, and paid traffic
+paused off that page until it passes.
+
+**2. Website form leads stopped reaching Zoho on 7 Aug 16:36.** Confirmed against
+converted leads as well, so a converted record is not hiding them. The CRM kept taking
+Facebook, live chat and email leads throughout. 12 real entries created 8–19 Aug are not
+in the CRM and are named in `forms-to-zoho-reconciliation.csv`. Worth chasing by hand:
+entry 8343 (Phil Cooper, 6 Aug), entry 8358 (Spencer Evans, 18 Aug), entry 8355
+(17 Aug). The Zoho credentials in `.env` can read Leads but not Contacts or Deals, so
+one gap remains open: a record created directly as a Contact would be invisible. Widen
+the CRM access, or have someone check one of those names in the CRM.
+
+**3. Ad lead quality is measurably poor, and the evidence is click-level, not
+conversion-level.** Of 18 Contact Us entries in August: 4 are sales pitches aimed at
+Company Debt, 10 share near-identical templated wording with no company/amount/deadline
+named, 2 have no message, 2 are genuine specific director enquiries. Nine entries carry
+a Google Ads click tag, and all nine are templated or no-message. Neither genuine
+enquiry came from a paid click.
+
+**4. Proposed Search exclusions, awaiting sign-off — not added.** £104.53 of Search's
+£208.88 traceable spend in 11–17 Aug went on other firms' names, named individuals and a
+postal address. One broad keyword, "licensed insolvency practitioner near me", took
+£143.45 of £296.89 — 48% of Search — and £96.94 of that went to competitor-brand
+searches. Candidate exclusions and the full term list are in the report. Also consider
+narrowing that keyword from broad matching.
+
+**5. Prepaid balance is £873.05,** about 16 days at the current £53.26/day. August spend
+to the 19th is £2,646 against £5,425–£6,976 in each of the previous 12 months. No budget
+increase recommended until items 1 and 2 are fixed.
+
+**6. Policy restrictions, real but minor for Search, possibly structural for
+Performance Max.** Three Search ads are limited under "government documents and official
+services" — they took 19 showings and 1 click all week, so the cost is negligible. All
+four live Performance Max asset groups are limited, under the same topic plus
+"restricted personalised advertising, financial hardship". Performance Max lost 71% of
+its available showings to rank rather than budget, and three of its four asset groups
+are built around audience targeting that this rule blocks. Worth rewording headlines in
+the same sweep; not ahead of items 1 and 2.
+
+**7. The insolvency calculator is not broken — it is unvisited.** The served script is
+current and complete; the stale-cache theory was tested and does not hold. Zero paid
+clicks to `/insolvency-calculator/` in five weeks, and the Performance Max asset group
+built around it is paused. All three real entries it has ever taken reached the CRM
+correctly. If it should produce leads, something has to send traffic to it.
+
+**8. Unreconciled, flagged rather than guessed.** Six website form entries carrying an ad
+click tag arrived 11–17 Aug, but Google recorded only two conversions across both
+campaigns. Either conversion tracking is under-counting form fills, or those tags did not
+come from clicks Google billed. Not enough evidence to say which.
