@@ -116,7 +116,7 @@ a failure.
 ## Awaiting a human decision or action — Google Ads / lead pipeline review, 20 Aug 2026
 
 Full report: `google-ads-auditor/runs/2026-08-20-weekly-audit/report.md` (gitignored;
-holds real account data). Everything below was verified read-only. Nothing was changed
+holds real account data). Updated the same day with the Moneypenny call log. Everything below was verified read-only. Nothing was changed
 in Google Ads, in the CRM, or on the site.
 
 **1. Quick Quote form has produced nothing since 31 July 15:22, while paid ads keep
@@ -138,12 +138,45 @@ entry 8343 (Phil Cooper, 6 Aug), entry 8358 (Spencer Evans, 18 Aug), entry 8355
 one gap remains open: a record created directly as a Contact would be invisible. Widen
 the CRM access, or have someone check one of those names in the CRM.
 
-**3. Ad lead quality is measurably poor, and the evidence is click-level, not
-conversion-level.** Of 18 Contact Us entries in August: 4 are sales pitches aimed at
-Company Debt, 10 share near-identical templated wording with no company/amount/deadline
-named, 2 have no message, 2 are genuine specific director enquiries. Nine entries carry
-a Google Ads click tag, and all nine are templated or no-message. Neither genuine
-enquiry came from a paid click.
+**3. Ad lead quality is measurably poor on the WEBSITE FORMS ONLY. The phone is fine.**
+Of 18 Contact Us entries in August: 4 are sales pitches aimed at Company Debt, 10 share
+near-identical templated wording with no company/amount/deadline named, 2 have no
+message, 2 are genuine specific director enquiries. Nine entries carry a Google Ads click
+tag, and all nine are templated or no-message. Neither genuine enquiry came from a paid
+click. Against that, the Moneypenny call log (22 May - 19 Aug, 35 calls) shows August at
+4 of 6 calls graded A or B - 67%, the best of the four months, better than June. So the
+quality complaint is real and is specific to the forms, not to demand.
+
+**3b. Company Debt phone calls stopped reaching the CRM on 13 July** - three weeks before
+the website forms did. The "Phone - CD" lead source holds 8 records between 22 May and
+20 Aug (1, 5, 11, 23, 24 Jun; 13 Jul x2; then a test record on 28 Jul). Four match a
+Moneypenny call by name exactly, so the process did work. Since 13 Jul, Moneypenny has
+logged 8 calls including two graded A, and only one reached the CRM - Anoma Radkevitch,
+6 Aug, filed as a live chat rather than a call and with her email missing. Over the same
+window "Phone - AABRS" recorded 18 leads, newest 17 Aug. Call logging is alive on the
+sister firm and dead on Company Debt, which points at a process or setting on the CD side.
+Even in the working period the gap was wide: 19 Moneypenny calls in June against 5 CRM
+phone leads.
+
+**3c. Six callers are waiting for a call back and are not in any system.** Oldest is
+6 Jul. Three are grade A. Full detail in the report; the short list is Dean Morris
+(18 Aug, A, hot), Anthony Wallox / Metro Real Estate (17 Aug, B), Johnny Chicaiza /
+El Escorial (14 Aug, B - ask for the owner Juan), Anoma Radkevitch / Flowerdot Limited
+(6 Aug, A - EMAIL anomarad@hotmail.com, she will not answer an unknown number), Shaily
+Shah (22 Jul, B, call 07721 648556), Simon Dubock / Dubock Ltd (6 Jul, A, hot). This
+costs nothing and should go first.
+
+**3d. Call volume fell in JULY, a month before the budget cut, so the cut cannot be its
+cause.** June 19 calls (0.63/day), July 6 (0.19/day), August 6 in 19 days (0.32/day).
+Treat this as suggestive only: Moneypenny answers overflow, not every call, so a fall can
+mean fewer calls or better in-house answering, and 35 calls over 90 days is a small
+sample. Settling it needs the total call count from the phone system, not the overflow
+log.
+
+**3e. Six of the ten out-of-scope calls were sole traders or individuals with personal
+debt** - exactly what the agreed exclusion list is meant to keep out, and they still
+reached the phone. A second, independent reason to tighten the Search exclusions in
+item 4.
 
 **4. Proposed Search exclusions, awaiting sign-off — not added.** £104.53 of Search's
 £208.88 traceable spend in 11–17 Aug went on other firms' names, named individuals and a
