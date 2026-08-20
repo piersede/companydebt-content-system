@@ -42,7 +42,7 @@ FONTS = {
 
 FOOTER_SOURCE = "Source: Insolvency Service, June 2026"
 FOOTER_URL = "companydebt.com/data"
-WORDMARK = "COMPANY DEBT"
+WORDMARK = "CompanyDebt"
 
 
 def register_fonts(root):
