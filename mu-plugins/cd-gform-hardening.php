@@ -610,8 +610,25 @@ add_filter('gform_save_field_value', function ($value, $lead, $field, $form) {
 
 // Keep the original alongside the stored value, and mark numbers that cost
 // money to ring so nobody dials an 084 or 087 without knowing.
-add_action('gform_entry_post_save', function ($entry, $form) {
-    if (empty($GLOBALS['cd_gf_raw_phones']) || !function_exists('gform_update_meta')) return;
+//
+// MUST be add_filter, and MUST return $entry on every path. Despite the name,
+// gform_entry_post_save is a FILTER, not an action: form_display.php:1654 does
+//     $lead = gf_apply_filters(array('gform_entry_post_save', $id), $lead, $form);
+// and handle_submission() takes $lead by reference (form_display.php:1615), so
+// whatever this callback returns becomes the entry for the whole rest of the
+// submission. Registered with add_action, the closure returned null and blanked
+// the entry for everything downstream:
+//   - line 1662 sent the notification against a null entry -> every merge tag
+//     empty. That was seen on 6 Aug 2026 and treated as a Gravity Forms quirk;
+//     cd-gform-notification-fix.php works around it from gform_entry_created,
+//     which runs at line 1653, before this filter, so it never saw the null.
+//   - line 185 fired gform_after_submission with a null entry, so the CRM sync
+//     in cd-livechat-zoho.php read no email and no name and returned silently.
+//     Website form leads stopped reaching Zoho after 3 Aug 2026 for this reason
+//     and this reason alone.
+// Anything hooked to gform_entry_created is immune; anything later is not.
+add_filter('gform_entry_post_save', function ($entry, $form) {
+    if (empty($GLOBALS['cd_gf_raw_phones']) || !function_exists('gform_update_meta')) return $entry;
     foreach ($GLOBALS['cd_gf_raw_phones'] as $field_id => $info) {
         if ($info['raw'] !== rgar($entry, (string) $field_id)) {
             gform_update_meta($entry['id'], 'cd_phone_raw_' . $field_id, $info['raw'], $form['id']);
@@ -621,4 +638,5 @@ add_action('gform_entry_post_save', function ($entry, $form) {
         }
     }
     $GLOBALS['cd_gf_raw_phones'] = array();
+    return $entry;
 }, 10, 2);
