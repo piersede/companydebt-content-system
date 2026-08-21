@@ -23,7 +23,10 @@
  *     data/statutory_fees.json -> cvl_practitioner_fee) and
  *     scripts/check_statutory_fees.py fails on it. Canonical figures used
  *     here: practitioner fee £3,500 plus VAT (standard fixed fee, straightforward
- *     case), disbursements £500 to £1,500, all-in roughly £4,000 to £5,000.
+ *     case), disbursements £500 to £1,500. NOTE: £4,000-£5,000 is the
+ *     EX-VAT total. data/statutory_fees.json calls that key cvl_all_in, which
+ *     is a misleading name (docs/open-items.md item 5). The published figure
+ *     must be £4,800 to £6,000 once VAT is added, matching page 65614.
  *     Both the Fees section and the "How Much Does a CVL Cost?" FAQ use them.
  *
  *  2. REGULATOR WORDING. In the UK, individual insolvency practitioners hold
@@ -157,7 +160,7 @@ $cd_ppc_faqs = array(
 	),
 	2 => array(
 		'q' => 'How Much Does a CVL Cost?',
-		'a' => 'The initial consultation is free. If the company enters formal liquidation, our practitioner fee is £3,500 plus VAT. That is a standard fixed fee for a straightforward case. On top of that there are disbursements, which are necessary third-party costs such as the bond, Gazette notices and Companies House filings, and these typically add £500 to £1,500. All in, most straightforward cases come to roughly £4,000 to £5,000. The expected total is explained clearly before you formally instruct us.',
+		'a' => 'The initial consultation is free. If the company enters formal liquidation, our practitioner fee is £3,500 plus VAT. That is a standard fixed fee for a straightforward case. On top of that there are disbursements, which are necessary third-party costs such as the bond, Gazette notices and Companies House filings, and these typically add £500 to £1,500. Once VAT is added, most straightforward cases come to roughly £4,800 to £6,000. The expected total is explained clearly before you formally instruct us.',
 	),
 	3 => array(
 		'q' => 'Can I Be a Company Director Again After Liquidation?',
@@ -776,7 +779,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 					<div class="feecard">
 						<span class="lbl">CVL practitioner fee</span>
 						<b class="amt">&pound;3,500 + VAT</b>
-						<span class="fine">Our standard fixed fee for a straightforward case. Disbursements of &pound;500 to &pound;1,500 apply on top, so a straightforward CVL usually comes to roughly &pound;4,000 to &pound;5,000 all in.</span>
+						<span class="fine">Our standard fixed fee for a straightforward case. Disbursements of &pound;500 to &pound;1,500 apply on top, so a straightforward CVL usually comes to roughly &pound;4,800 to &pound;6,000 once VAT is added.</span>
 					</div>
 				</div>
 				<p class="feenote">Disbursements are necessary third-party costs, such as the bond, Gazette notices, the Companies House filing and statutory mailings. The exact cost depends on the circumstances of the company. <b>We'll explain the expected total cost clearly before you decide whether to proceed.</b></p>
