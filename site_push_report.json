@@ -1,7 +1,48 @@
 {
-  "pushed": [],
-  "identical": 1,
-  "skipped": [],
+  "pushed": [
+    {
+      "path": "/liquidation/liquidation-deadlines-and-time-limits/",
+      "id": 78690,
+      "similarity": 0.901,
+      "url_fixes": 12,
+      "kind": "staging-differs"
+    },
+    {
+      "path": "/uk-insolvency-statistics/",
+      "id": 77399,
+      "similarity": 1.0,
+      "url_fixes": 1,
+      "kind": "staging-differs"
+    },
+    {
+      "path": "/",
+      "id": 55052,
+      "similarity": 0.992,
+      "url_fixes": 4,
+      "kind": "staging-differs"
+    },
+    {
+      "path": "/liquidation/creditors-voluntary-liquidation/",
+      "id": 7674,
+      "similarity": 0.965,
+      "url_fixes": 0,
+      "kind": "staging-differs"
+    },
+    {
+      "path": "/liquidation/timeline/",
+      "id": 17568,
+      "similarity": 0.986,
+      "url_fixes": 12,
+      "kind": "staging-differs"
+    }
+  ],
+  "identical": 313,
+  "skipped": [
+    [
+      "/county-court-judgements/",
+      "staging 21,923b is under 60% of live 40,415b - looks truncated"
+    ]
+  ],
   "failed": [],
   "confirmed": false
 }
