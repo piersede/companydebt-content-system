@@ -65,3 +65,66 @@ Replace `<id>` with the real form id everywhere below.
   late March to late October the two are an hour apart. A lead submitted at
   00:30 London time appears in Gravity Forms on the previous day. Daily counts
   will not match, and the gap is largest at the start and end of a month.
+
+---
+
+## GTM conversion trigger — exact config (verified 2026-08-21)
+
+Read directly out of the live container, from the existing
+`gform_confirmation_message_40` trigger, so this copies a known-good pattern
+rather than guessing.
+
+**Container:** CompanyDebt Account > Company Debt Web > `GTM-5GTD9ZP`
+Direct link (note `authuser=1` — the container is NOT on the
+`info@brighton-digital.com` login, which shows no accounts at all):
+
+    https://tagmanager.google.com/?authuser=1#/container/accounts/4702659864/containers/12748962/workspaces/1000086/triggers
+
+**Create one trigger:**
+
+| Setting | Value |
+| --- | --- |
+| Name | `gform_confirmation_message_47` |
+| Trigger type | Element Visibility |
+| Selection Method | CSS Selector |
+| Element Selector | `.gform_confirmation_message_47` |
+| When to fire this trigger | Once per page |
+| Observe DOM changes | TICKED |
+| This trigger fires on | All Visibility Events |
+
+The **leading dot matters**. The stored value on trigger 40 is
+`.gform_confirmation_message_40`, even though the trigger NAME has no dot.
+
+**Then attach it to the two existing tags**, exactly as trigger 40 is
+attached (open each tag, add the new trigger under Triggering):
+
+  - `GA4 Form Submission`
+  - `Google Ads - Form Submissions`
+
+Do NOT create new tags. The Ads conversion ID (`AW-977276330`) and the
+conversion label (`knohCMOu9KUDEKqbgNID`) already live on the existing tag;
+duplicating it would double-count.
+
+**Then Submit / publish the container version.**
+
+### Why this was not done by automation
+
+Attempted on 2026-08-21 through the browser. The container was reached and
+the config above was read out of it, but the Tag Manager interface would not
+drive reliably from here: screenshot capture repeatedly timed out and the
+coordinate frame shifted between calls, which is not safe odds when a
+mis-click lands on a live conversion tag. Nothing was changed —
+Workspace Changes stayed at 0 throughout. There is no GTM API credential in
+this repo, so the UI is the only route.
+
+### Sanity check after publishing
+
+The marker the trigger keys on is already present on the staging pages.
+Confirm with:
+
+    curl -s -u "$WP_BASIC_AUTH_USER:$WP_BASIC_AUTH_PASS" \
+      https://comdebstage.wpengine.com/ppc-hmrc-debt/ | grep -c gform_confirmation_message_47
+
+That returns 0 until a form is actually submitted (the class only appears on
+the confirmation), so the real check is GTM Preview mode against a live
+submission.
