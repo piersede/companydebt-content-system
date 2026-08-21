@@ -11,10 +11,35 @@ In WP Engine: **Staging → Actions → Push to → Production → Custom**
 1. **Files** - include only if themes, plugins, mu-plugins, CSS or JS changed.
 2. **Database** - choose *Select database tables*.
 3. Select the tables you want pushed.
-4. **Deselect every `*_gf_*` table.** Gravity Forms keeps forms, entries,
-   notifications, confirmations and feeds in its own tables - `gf_entry`,
-   `gf_entry_meta`, `gf_entry_notes`, `gf_form`, `gf_form_meta`, `gf_addon_feed`.
-   The actual leads live in the first three.
+4. **Deselect the Gravity Forms ENTRY tables. Do NOT deselect them all by
+   pattern.** (Corrected 2026-08-21. This step used to read "deselect every
+   `*_gf_*` table", which protects the leads and at the same time makes it
+   impossible for any new or edited form to reach production.)
+
+   Gravity Forms splits its data across two groups that need opposite treatment:
+
+   **DESELECT - the leads. Irreplaceable.**
+   - `gf_entry` - the enquiries
+   - `gf_entry_meta` - their field values
+   - `gf_entry_notes` - notes on them
+   - `gf_draft_submissions` - part-completed forms
+   - `gf_rest_api_keys` - deselecting this also protects the **production**
+     Gravity Forms API key. A previous full push invalidated it and everything
+     reading live forms broke until it was regenerated.
+
+   **KEEP SELECTED - the form definitions.**
+   - `gf_form` - the form records
+   - `gf_form_meta` - fields, notifications and confirmations
+
+   A form built on staging lives in `gf_form_meta`. Deselect it and the form
+   does not exist on production, so the page that embeds it renders with no
+   form on it at all. On a paid landing page that means paying for clicks that
+   cannot convert.
+
+   `gf_form_view` (view counters) and `gf_addon_feed` are cosmetic either way.
+
+   Before pushing a new form, check its id is free on production. A staging
+   form only keeps its number if nothing on production already uses it.
 5. Also protect `wp_options` unless a site or plugin setting was deliberately
    changed on staging. Some Gravity Forms global settings, including licence
    information, live there rather than in the `gf_` tables.
@@ -129,8 +154,9 @@ afterwards. (Hit on 2026-08-07 with the furniture data page.)
 
 **Never perform a full database overwrite of production.** The all-tables copy
 is what destroyed ~160 enquiries between 23 Mar and 28 Jul 2026. A *custom*
-push with the `gf_` tables excluded is a different, supported operation - the
-blanket copy is not.
+push with the Gravity Forms **entry** tables excluded is a different,
+supported operation - the blanket copy is not. Note "entry tables", not all
+`gf_` tables: see step 4.
 
 ## After every push
 

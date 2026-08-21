@@ -19,7 +19,17 @@ Forms tables excluded - not per-page pushing, and not the blanket copy. Full
 procedure: `docs/wpe-custom-push-deployment.md`.
 
 Staging → Actions → Push to → Production → Custom; select database tables;
-deselect every `*_gf_*` table; protect `wp_options` too.
+protect `wp_options` too.
+
+**Deselect the Gravity Forms ENTRY tables only, not all `gf_` tables**
+(corrected 2026-08-21):
+
+- **Deselect:** `gf_entry`, `gf_entry_meta`, `gf_entry_notes`,
+  `gf_draft_submissions`, `gf_rest_api_keys`. Those are the leads, plus the
+  production API key a previous push invalidated.
+- **Keep selected:** `gf_form`, `gf_form_meta`. A form built on staging lives
+  in `gf_form_meta`; deselect it and the form does not exist on production, so
+  the page embedding it renders with no form at all.
 
 **Its precondition is absolute.** A selective push replaces whole tables - it
 does not merge. Anything edited on production since the last clone is destroyed

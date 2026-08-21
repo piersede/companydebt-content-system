@@ -88,13 +88,28 @@ free space and keeps its number.
 
 ## Pre-flight
 
-**1. Direction check. RUN 2026-08-21. It did NOT come back clean.**
+**1. Direction check. FIRST RUN WAS INVALID. Rebuild the cache before trusting it.**
 
+`push_site_content_live.py` does NOT read staging. It reads `content_cache.json`,
+and that file only changes when `build_content_cache.py` is run. On 2026-08-21 it
+was **twelve days stale** (last built 2026-08-09), so the first run's answer was
+meaningless. This is the exact trap recorded in
+`docs/wpe-custom-push-deployment.md`: on 2026-08-09 a stale cache reported all
+319 pages identical while live was 202 pages behind.
+
+    python scripts/build_content_cache.py                      # ALWAYS first
     python scripts/push_site_content_live.py --changed-only --pause 0.15
 
 (The 1.5s default pause makes it time out over 319 pages.)
 
-Result: 319 pages, **313 already identical**, 5 differing, 1 skipped. Good, but
+Second trap from the same doc: `skipped: 0` does NOT mean live is safe.
+`classify()` only reports "live is newer" when the two sides match once the CTA
+arrow is normalised away. Any page where live carries other work staging lacks is
+classed "staging-differs" and queued for push. Read the byte counts: staging
+thousands of bytes smaller than live, at 86-95% similarity, means live holds work
+staging never received.
+
+Result of the stale first run, kept only to show what it looked like: 319 pages, **313 already identical**, 5 differing, 1 skipped. Good, but
 not clean. Comparing `post_modified` directly on the differing pages shows
 **live is newer than staging on at least three**:
 
