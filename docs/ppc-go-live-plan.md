@@ -109,33 +109,49 @@ classed "staging-differs" and queued for push. Read the byte counts: staging
 thousands of bytes smaller than live, at 86-95% similarity, means live holds work
 staging never received.
 
-Result of the stale first run, kept only to show what it looked like: 319 pages, **313 already identical**, 5 differing, 1 skipped. Good, but
-not clean. Comparing `post_modified` directly on the differing pages shows
-**live is newer than staging on at least three**:
+### Result, run properly 2026-08-21 after rebuilding the cache
 
-| Page | live modified | staging modified | live ahead by |
+**319 pages: 290 identical, 29 would push, skipped 0.**
+
+`skipped: 0` is the false reassurance the deployment doc warns about. Reading the
+byte counts instead, **live is meaningfully LARGER than staging on ten pages**,
+which means live holds work staging never received:
+
+| Page | live | staging | live ahead by |
 | --- | --- | --- | --- |
-| `/county-court-judgements/` | 13 Aug 08:46:44 | 13 Aug 08:43:11 | 3.5 min |
-| `/liquidation/liquidation-deadlines-and-time-limits/` | 18 Aug 12:26:11 | 18 Aug 08:55:25 | 3.5 hours |
-| `/liquidation/creditors-voluntary-liquidation/` | 12 Aug 14:31:15 | 12 Aug 14:21:07 | 10 min |
-| `/liquidation/timeline/` | 10 Aug 05:14:07 | 10 Aug 05:14:07 | same |
+| `/sector-specific-insolvency/` | 40,254 | 34,995 | 5,259 |
+| `/director-protection-hub/` | 58,278 | 53,686 | 4,592 |
+| `/liquidation/company-strike-off.../can-i-be-sued-after-my-company-is-dissolved/` | 27,942 | 23,949 | 3,993 |
+| `/insolvency/how-to-reduce-insolvency-risk/` | 36,593 | 32,982 | 3,611 |
+| `/liquidation/company-strike-off.../directors-responsibilities-after...struck-off/` | 28,013 | 24,578 | 3,435 |
+| `/advice/what-is-limited-liability/` | 33,092 | 30,674 | 2,418 |
+| `/debt-creditor-pressure-hub/` | 34,238 | 32,280 | 1,958 |
+| `/insolvency/insolvent-company-owes-me-money/` | 25,491 | 23,536 | 1,955 |
+| `/liquidation/can-a-director-be-sued-personally-by-creditors/` | 32,447 | 31,334 | 1,113 |
+| `/insolvency/check-if-a-company-is-insolvent/` | 18,473 | 17,798 | 675 |
 
-Byte counts are close in every case (for example CCJ 40,415 live vs 40,419
-staging), so these read as small edits made directly on live shortly after the
-staging version, which matches the "CTA arrows and heading anchors added on
-live" pattern recorded for 2026-08-07. Small, but real.
+**Verified, not inferred.** Block-diffed `/sector-specific-insolvency/`: live has
+68 content blocks, staging 66, and **22 blocks exist on live that staging does
+not match**. Among them a whole "Sector-Specific Insolvency at a Glance" section
+and a "Key Sector-Specific Insolvency Guides" section with substantive paragraphs
+on care home insolvency (CQC and local authority placement teams) and energy
+provider insolvency (Ofgem Supplier of Last Resort, the Energy Act 2011 Special
+Administration Regime). That is real editorial work that exists only on live.
 
-**A `wp_posts` push REPLACES the table and would silently revert every one of
-them.** Before pushing the database:
+**A `wp_posts` push today deletes all of it, silently, across those ten pages.**
 
-    python scripts/sync_staging_from_live.py --confirm
+One page runs the other way and is expected: `/closing-a-limited-company/` is
+64,107 live against 74,354 staging. That is page 65614, the full rewrite recorded
+in `docs/open-items.md` as gating 34/34 and awaiting a live push.
 
-then re-run the direction check and confirm it reports nothing live-newer.
+### Required before the database push
 
-Note the report also skipped `/county-court-judgements/` with "staging is under
-60% of live". That is the script comparing its own regenerated candidate against
-live, not the stored staging content: the two stored copies are within 4 bytes
-of each other. Not a truncation, but worth not misreading.
+    python scripts/sync_staging_from_live.py --confirm    # pull live into staging
+    python scripts/build_content_cache.py                 # refresh the snapshot
+    python scripts/push_site_content_live.py --changed-only --pause 0.15
+
+Then read the byte counts again. Only push when no page shows live materially
+larger than staging.
 
 **2. Stray script audit. Immediately before, not hours before.**
 
