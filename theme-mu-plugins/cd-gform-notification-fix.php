@@ -66,6 +66,7 @@ function cd_gfn_owned_form_ids() {
         41,  // Contact Us
         44,  // Home Page - Contact Block
         46,  // Insolvency Test
+        47,  // PPC - Request a Confidential Call
     );
     return apply_filters('cd_gfn_owned_form_ids', $ids);
 }

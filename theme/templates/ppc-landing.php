@@ -414,7 +414,6 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .tbar__mark { min-height: 44px; display: flex; align-items: center; width: auto; }
 .cd-ppc .tbar__mark img { height: 30px; width: auto; object-fit: contain; display: block; }
 /* Names the licence holders. Firms do not hold IP licences; individuals do. */
-.cd-ppc .tbar__licences { margin-top: 16px; font-size: 14px; line-height: 1.6; color: var(--muted); max-width: var(--w-text); }
 .cd-ppc .tstrip { margin: 40px 0 0; }
 .cd-ppc .ticon { width: 26px; height: 26px; color: #6B7280; margin-bottom: 12px; }
 .cd-ppc .titem b { display: block; font-size: 20px; font-weight: 750; color: var(--navy); }
@@ -620,7 +619,11 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 						<img src="<?php echo esc_url( $cd_ppc_assets . '/icaew.png' ); ?>" width="60" height="30" loading="lazy" decoding="async" alt="Institute of Chartered Accountants in England and Wales">
 					</a>
 				</div>
-				<p class="tbar__licences">Christopher Andersen, IP No. 16070, licensed by the Insolvency Practitioners Association. Nicola Meadows, IP No. 9184, licensed by the ICAEW.</p>
+				<!-- No named-licence line here. The label above already scopes the marks to
+				     our practitioners rather than to the brand, which was the regulatory
+				     overstatement being fixed. The full statement is stated once in the
+				     footer, and per practitioner on the practitioner cards. Repeating it
+				     here was redundant. -->
 			</div>
 			<div class="tstrip grid4">
 				<div class="titem"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="6"></circle><path d="M8.2 14.5 6.5 22l5.5-3 5.5 3-1.7-7.5"></path></svg><b>Licensed Insolvency Practitioners</b><p>Specialist advice for UK limited companies.</p></div>
