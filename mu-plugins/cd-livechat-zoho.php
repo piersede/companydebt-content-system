@@ -233,10 +233,40 @@ add_action('gform_after_submission', function($entry, $form){
   } else {
     $gclid=''; $gbraid=''; $url=cd_lc_strip_click_ids($url);
   }
-  $parts=array(); if($ftitle) $parts[]='['.$ftitle.']'; if($message!=='') $parts[]=$message; if($extras) $parts[]=implode(' | ',$extras);
+  /* PPC landing pages. Without this every paid lead arrives as "Website Form - CD"
+   * and is indistinguishable from an organic enquiry, which makes the ad spend
+   * impossible to judge in the CRM. Detected two ways so a renamed form or a new
+   * PPC URL still gets caught: the form id, or a /ppc- landing page in source_url.
+   * The intent and the director's own description of their situation are the two
+   * most useful qualifying details on the form, so they go into Description too. */
+  $cd_ppc_form_ids = apply_filters('cd_zoho_ppc_form_ids', array(47));
+  $cd_is_ppc = in_array((int)rgar($form,'id'), $cd_ppc_form_ids, true)
+               || ($url && strpos($url,'/ppc-') !== false);
+
+  $cd_intent=''; $cd_situation='';
+  if ($cd_is_ppc && !empty($form['fields'])) foreach ($form['fields'] as $f){
+    $lbl=strtolower(trim((string)$f->label));
+    $val=trim((string)rgar($entry,(string)$f->id));
+    if ($val==='') continue;
+    if ($lbl==='intent') { $cd_intent=$val; continue; }
+    if (strpos($lbl,'situation')!==false) {
+      /* Store the choice TEXT, not the stored value ("cantpay"), so the CRM reads
+       * as English. GF keeps both on the field. */
+      $cd_situation=$val;
+      if (!empty($f->choices)) foreach ($f->choices as $ch){
+        if (isset($ch['value']) && (string)$ch['value']===$val && isset($ch['text'])) { $cd_situation=$ch['text']; break; }
+      }
+    }
+  }
+
+  $parts=array(); if($ftitle) $parts[]='['.$ftitle.']';
+  if($cd_intent!=='') $parts[]='Ad intent: '.$cd_intent.'.';
+  if($cd_situation!=='') $parts[]='Situation: '.$cd_situation.'.';
+  if($message!=='') $parts[]=$message; if($extras) $parts[]=implode(' | ',$extras);
   $desc=trim(implode(' ',$parts));
   list($cd_fn,$cd_ln)=cd_lc_names($name,$first,$last,'Website enquiry');
-  $fields=array('Lead_Source'=>'Website Form - CD','Last_Name'=>$cd_ln,'Email'=>$email,'Mobile'=>$phone,'Website_URL'=>$url,'Description'=>$desc);
+  $cd_source = $cd_is_ppc ? 'PPC - CD' : 'Website Form - CD';
+  $fields=array('Lead_Source'=>$cd_source,'Last_Name'=>$cd_ln,'Email'=>$email,'Mobile'=>$phone,'Website_URL'=>$url,'Description'=>$desc);
   if($cd_fn!=='') $fields['First_Name']=$cd_fn;
   if($company) $fields['Company']=$company;
   if($gclid) $fields['Google_Click_ID']=$gclid;
