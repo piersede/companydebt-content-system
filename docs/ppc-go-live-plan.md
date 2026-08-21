@@ -189,17 +189,21 @@ London time.
 
 ---
 
-## Separate, worth doing before this
+## Separate finding: the August Zoho gap. DECIDED, no action.
 
 Website form leads stopped reaching Zoho between **4 and 19 August**, resuming on
 the 20th when the `gform_entry_post_save` filter fix landed. The fix is confirmed
-working: `Website Form - CD` leads run 2-3 Aug, then nothing, then resume 20-21
-Aug.
+working from the data: `Website Form - CD` leads run 2-3 Aug, then nothing, then
+resume 20-21 Aug.
 
-The fix stops future losses. It does not recover the window. Measured on live:
-**35 lead-form entries were taken between 4 and 19 August** — 14 Contact-Advisors,
-18 Insolvency Test, 2 Guide, 1 Home Page — and no `Website Form - CD` lead exists
-in Zoho for any of those dates.
+Reconciled the window on 2026-08-21 (`scripts/reconcile_forms_to_zoho.py`,
+report-only, nothing written). 35 entries taken, 32 absent from Zoho, of which
+roughly 17 were real enquiries and the rest were `@example.com` test submissions
+from 5-6 Aug.
 
-They are not lost, they are sitting in Gravity Forms. Nobody worked them as CRM
-leads. `scripts/reconcile_forms_to_zoho.py` exists for exactly this comparison.
+**Piers decided on 2026-08-21 not to load these into Zoho.** They received their
+email notifications at the time. Do not re-raise this, and do not write the
+recovered leads to the CRM.
+
+The reconciliation CSV holds customer names and email addresses and was
+deliberately kept out of this repo.
