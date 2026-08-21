@@ -1,29 +1,392 @@
 {
   "pushed": [
     {
-      "path": "/uk-insolvency-statistics/",
-      "id": 77399,
-      "similarity": 1.0,
-      "url_fixes": 1,
-      "kind": "staging-differs"
+      "path": "/sectors/insolvency-rescue-fish-chip-sector/",
+      "id": 55751,
+      "bytes": 20700,
+      "url_fixes": 0
     },
     {
-      "path": "/closing-a-limited-company/",
-      "id": 65614,
-      "similarity": 0.923,
-      "url_fixes": 0,
-      "kind": "staging-differs"
+      "path": "/sectors/insolvency-rescue-solutions-for-garden-centers/",
+      "id": 52222,
+      "bytes": 19528,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/property/",
+      "id": 49810,
+      "bytes": 22252,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/manufacturing/",
+      "id": 49831,
+      "bytes": 21647,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/professional-services/",
+      "id": 49820,
+      "bytes": 20272,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/leisure/",
+      "id": 49839,
+      "bytes": 20450,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/dry-cleaning-laundry/",
+      "id": 49849,
+      "bytes": 21788,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/hotels/",
+      "id": 49856,
+      "bytes": 19613,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/haulage/",
+      "id": 49866,
+      "bytes": 20798,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/gyms/",
+      "id": 49873,
+      "bytes": 18661,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/events/",
+      "id": 49880,
+      "bytes": 20547,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/entertainment/",
+      "id": 49890,
+      "bytes": 21276,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/energy/",
+      "id": 49898,
+      "bytes": 21875,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/schools/",
+      "id": 49906,
+      "bytes": 21788,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/travel/",
+      "id": 49699,
+      "bytes": 21805,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/taxi-companies/",
+      "id": 49706,
+      "bytes": 20739,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/retail/",
+      "id": 49717,
+      "bytes": 18827,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/restaurants/",
+      "id": 49727,
+      "bytes": 18719,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/recruitment/",
+      "id": 49739,
+      "bytes": 18928,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/construction/",
+      "id": 49778,
+      "bytes": 26749,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/cleaning-contractors/",
+      "id": 49767,
+      "bytes": 21184,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/childcare/",
+      "id": 49694,
+      "bytes": 21039,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/charity/",
+      "id": 49550,
+      "bytes": 20826,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/automotive/",
+      "id": 48758,
+      "bytes": 19248,
+      "url_fixes": 0
+    },
+    {
+      "path": "/sectors/carehomes/",
+      "id": 49488,
+      "bytes": 18801,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/company-strike-off-and-dissolution/directors-responsibilities-after-a-company-is-struck-off/",
+      "id": 79436,
+      "bytes": 27823,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/company-strike-off-and-dissolution/can-i-be-sued-after-my-company-is-dissolved/",
+      "id": 78781,
+      "bytes": 27752,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/company-vehicles-and-equipment-in-liquidation/",
+      "id": 78596,
+      "bytes": 29736,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/which-creditors-get-paid-first/",
+      "id": 77739,
+      "bytes": 25068,
+      "url_fixes": 0
+    },
+    {
+      "path": "/uk-insolvency-statistics/",
+      "id": 77399,
+      "bytes": 537945,
+      "url_fixes": 1
+    },
+    {
+      "path": "/liquidation/company-strike-off-and-dissolution/",
+      "id": 77278,
+      "bytes": 32570,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/overdrawn-directors-loan-accounts/",
+      "id": 75111,
+      "bytes": 21340,
+      "url_fixes": 0
+    },
+    {
+      "path": "/company-administration/notice-of-intention-to-appoint-administrators/",
+      "id": 74439,
+      "bytes": 15382,
+      "url_fixes": 0
+    },
+    {
+      "path": "/company-cash-flow-problems/challenge-a-statutory-demand/",
+      "id": 74264,
+      "bytes": 25545,
+      "url_fixes": 8
+    },
+    {
+      "path": "/advice/get-free-business-debt-advice/",
+      "id": 68221,
+      "bytes": 14729,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/are-directors-personally-liable-for-company-debts/",
+      "id": 68207,
+      "bytes": 44401,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/directors-personal-guarantees/",
+      "id": 68180,
+      "bytes": 17005,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/",
+      "id": 67809,
+      "bytes": 23480,
+      "url_fixes": 33
+    },
+    {
+      "path": "/advice/can-a-director-be-made-bankrupt-if-a-business-fails/",
+      "id": 67505,
+      "bytes": 16760,
+      "url_fixes": 1
     },
     {
       "path": "/liquidation/creditors-voluntary-liquidation/",
       "id": 7674,
-      "similarity": 1.0,
-      "url_fixes": 1,
-      "kind": "staging-differs"
+      "bytes": 51572,
+      "url_fixes": 1
+    },
+    {
+      "path": "/liquidation/what-happens-to-directors-in-liquidation/",
+      "id": 46222,
+      "bytes": 50314,
+      "url_fixes": 1
+    },
+    {
+      "path": "/bounce-back-loan-support-hub/dissolving-a-company-with-bounce-back-loan/",
+      "id": 43745,
+      "bytes": 21928,
+      "url_fixes": 9
+    },
+    {
+      "path": "/insolvency/personal-liability-spouses-business-debts/",
+      "id": 28526,
+      "bytes": 23602,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/time-to-pay-hmrc/",
+      "id": 8414,
+      "bytes": 21569,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/what-are-fixed-and-floating-charges/",
+      "id": 24760,
+      "bytes": 20367,
+      "url_fixes": 0
+    },
+    {
+      "path": "/winding-up-petitions/",
+      "id": 7687,
+      "bytes": 50336,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/cant-pay-vat/",
+      "id": 9443,
+      "bytes": 30226,
+      "url_fixes": 0
+    },
+    {
+      "path": "/insolvency/limited-company-bankruptcy/",
+      "id": 22554,
+      "bytes": 17497,
+      "url_fixes": 4
+    },
+    {
+      "path": "/insolvency/shareholders-liable-company-debts/",
+      "id": 21122,
+      "bytes": 41180,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/can-director-criminal-record/",
+      "id": 20681,
+      "bytes": 18120,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/hmrc-offices-contact-guide/",
+      "id": 16565,
+      "bytes": 15185,
+      "url_fixes": 0
+    },
+    {
+      "path": "/insolvency/check-if-a-company-is-insolvent/",
+      "id": 15203,
+      "bytes": 18388,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/problems-paying-corporation-tax-hmrc/",
+      "id": 8408,
+      "bytes": 28189,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/what-happens-to-employees/",
+      "id": 15010,
+      "bytes": 25997,
+      "url_fixes": 0
+    },
+    {
+      "path": "/director-redundancy/",
+      "id": 14914,
+      "bytes": 21516,
+      "url_fixes": 2
+    },
+    {
+      "path": "/hmrc/vat-penalties/",
+      "id": 14912,
+      "bytes": 22440,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/hmrc-fraud-investigations/",
+      "id": 14158,
+      "bytes": 25334,
+      "url_fixes": 0
+    },
+    {
+      "path": "/advice/frozen-bank-account/",
+      "id": 11788,
+      "bytes": 16776,
+      "url_fixes": 1
+    },
+    {
+      "path": "/insolvency/what-is-an-insolvency-practitioner/",
+      "id": 8358,
+      "bytes": 25714,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/hmrc-tax-investigations/",
+      "id": 11384,
+      "bytes": 21629,
+      "url_fixes": 7
+    },
+    {
+      "path": "/receivership-mean-business/",
+      "id": 9702,
+      "bytes": 23248,
+      "url_fixes": 0
+    },
+    {
+      "path": "/hmrc/cant-pay-paye/",
+      "id": 8324,
+      "bytes": 20034,
+      "url_fixes": 0
+    },
+    {
+      "path": "/company-rescue-solutions/company-voluntary-arrangement/",
+      "id": 7685,
+      "bytes": 19347,
+      "url_fixes": 0
+    },
+    {
+      "path": "/liquidation/compulsory-liquidation/",
+      "id": 7680,
+      "bytes": 37204,
+      "url_fixes": 0
     }
   ],
-  "identical": 316,
+  "identical": 34,
   "skipped": [],
   "failed": [],
-  "confirmed": false
+  "confirmed": true
 }
