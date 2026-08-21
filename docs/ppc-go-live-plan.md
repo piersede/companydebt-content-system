@@ -144,14 +144,45 @@ One page runs the other way and is expected: `/closing-a-limited-company/` is
 64,107 live against 74,354 staging. That is page 65614, the full rewrite recorded
 in `docs/open-items.md` as gating 34/34 and awaiting a live push.
 
-### Required before the database push
+### RESOLVED 2026-08-21. The sync was run.
 
-    python scripts/sync_staging_from_live.py --confirm    # pull live into staging
-    python scripts/build_content_cache.py                 # refresh the snapshot
+    python scripts/sync_staging_from_live.py --confirm    # 186 synced, 1 held, 0 failed
+    python scripts/build_content_cache.py
     python scripts/push_site_content_live.py --changed-only --pause 0.15
 
-Then read the byte counts again. Only push when no page shows live materially
-larger than staging.
+Held back, correctly: `/closing-a-limited-company/`, because staging has 1,417
+more words there. That is the 65614 rewrite, and the guard protected it.
+
+**Direction check after the sync: 319 pages, 316 identical, 3 differing, and
+no page has live materially larger any more.**
+
+| Page | live | staging | note |
+| --- | --- | --- | --- |
+| `/uk-insolvency-statistics/` | 537,951 | 537,945 | 6 bytes, a staging URL fix |
+| `/liquidation/creditors-voluntary-liquidation/` | 51,577 | 51,572 | 5 bytes, a staging URL fix |
+| `/closing-a-limited-company/` | 64,107 | 74,354 | staging AHEAD by 10,247, intended |
+
+The ten pages where live held content staging lacked are resolved. From a
+content-destruction standpoint the database push is now safe.
+
+The four PPC pages were re-verified after the sync and still pass all five
+checks.
+
+### BUT: a blanket `wp_posts` push also puts page 65614 live
+
+`/closing-a-limited-company/` is now the only page where staging is genuinely
+ahead, so a `wp_posts` push publishes that rewrite too. `docs/open-items.md`
+says it is not cleared to go:
+
+- **item 1**, the referral-fee sentence in the commercial disclosure, is an
+  unresolved compliance question
+- **item 3**, named-IP sign-off from Chris Andersen, has not happened
+- **item 4**, it "will not be pushed to live without an explicit instruction
+  naming the page"
+
+So either clear those first, or accept that this push publishes it. This is an
+editorial and compliance gate, not a technical one, and nothing in the push
+tooling will stop it.
 
 **2. Stray script audit. Immediately before, not hours before.**
 
