@@ -667,7 +667,13 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 				<blockquote>"Most of the directors I speak to have been putting off the call for months. Almost all of them say afterwards that they wish they had made it sooner."</blockquote>
 				<p class="reassure__byline">Christopher Andersen, Licensed Insolvency Practitioner, IP No. 16070</p>
 			</div>
-			<p class="reassure__note">You will speak to a licensed insolvency practitioner, not a call centre.</p>
+			<!-- Accuracy: the FIRST call is answered by an answering service, so the
+			     practitioners are not pulled off casework. Confirmed by the owner on
+			     2026-08-21. The advice stage is with a licensed IP, and that is what
+			     this line may claim. Do not restore "You will speak to a licensed
+			     insolvency practitioner" here: this sits beside the hero form, so a
+			     reader takes it as a promise about the call they are about to request. -->
+			<p class="reassure__note">Your first call takes a few details. The advice itself comes from a licensed insolvency practitioner, not a call centre.</p>
 			<a class="btn btn--solid cd-ppc-cta-26" href="#formCard">Request a Confidential Call</a>
 		</div>
 	</section>
@@ -679,7 +685,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 			<h2 class="h2 h2--gap">What Happens When You Contact Us?</h2>
 			<div class="psteps grid3">
 				<div class="pstep"><span class="pstep__num" aria-hidden="true">01</span><h3>Tell Us What's Going On</h3><p><b class="take">You don't need to know which insolvency procedure you need.</b> <span class="detail">Explain the debts, creditor pressure and what has happened so far.</span></p></div>
-				<div class="pstep"><span class="pstep__num" aria-hidden="true">02</span><h3>We'll Explain Where You Stand</h3><p><b class="take">We'll explain whether CVL appears appropriate and what it could mean for the company and for you.</b> <span class="detail">You will speak to a licensed insolvency practitioner, not a call centre.</span></p></div>
+				<div class="pstep"><span class="pstep__num" aria-hidden="true">02</span><h3>We'll Explain Where You Stand</h3><p><b class="take">We'll explain whether CVL appears appropriate and what it could mean for the company and for you.</b> <span class="detail">That conversation is with a licensed insolvency practitioner, not a call centre.</span></p></div>
 				<div class="pstep"><span class="pstep__num" aria-hidden="true">03</span><h3>You Decide What to Do</h3><p><b class="take">Taking advice does not commit you to liquidation.</b> <span class="detail">We won't start anything unless you decide to proceed.</span></p></div>
 			</div>
 			<a class="btn btn--solid cd-ppc-cta-32" href="#formCard">Request a Confidential Call</a>

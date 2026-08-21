@@ -133,7 +133,11 @@ add_action('init', function() {{
         'name'      => 'Default confirmation',
         'isDefault' => true,
         'type'      => 'message',
-        'message'   => '<p>Thank you. One of our licensed insolvency practitioners will call you back on the number you gave us. Everything you tell us is confidential and there is no charge for the first conversation.</p>',
+        # Deliberately does NOT name who makes the callback. The first inbound call
+        # is handled by an answering service so the practitioners are not pulled off
+        # casework (owner, 2026-08-21). Whether a form callback is placed by a
+        # practitioner or by the team is unconfirmed, so this claims neither.
+        'message'   => '<p>Thank you. We will call you back on the number you gave us to talk through your position. Everything you tell us is confidential and there is no charge for the first conversation.</p>',
         'disableAutoformat' => true,
     );
 
