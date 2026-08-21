@@ -208,7 +208,23 @@ $cd_ppc_telraw = '08000746757';
  * live without touching this file. Set it with:
  *   wp option update cd_ppc_form_id <id>
  */
+/*
+ * The option is the preferred source, but it lives in wp_options, and a
+ * staging-to-live database push may legitimately leave wp_options behind (it
+ * carries far more than this one value). Without a fallback the live page
+ * would render its "form not configured" placeholder, which on a paid landing
+ * page means a page with no lead capture at all.
+ *
+ * 47 is the id the form was created with on staging. Live's highest form id
+ * was 46 at the time of writing, so the form travels to live keeping id 47 and
+ * this default stays correct. Override per environment with the option, or
+ * with the filter if the ids ever diverge.
+ */
 $cd_ppc_form_id = get_option( 'cd_ppc_form_id' );
+if ( ! $cd_ppc_form_id ) {
+	$cd_ppc_form_id = 47;
+}
+$cd_ppc_form_id = (int) apply_filters( 'cd_ppc_form_id', $cd_ppc_form_id );
 ?>
 
 <style id="cd-ppc-styles">
