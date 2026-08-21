@@ -88,14 +88,39 @@ free space and keeps its number.
 
 ## Pre-flight
 
-**1. Direction check. Non-negotiable.**
+**1. Direction check. RUN 2026-08-21. It did NOT come back clean.**
 
-    python scripts/push_site_content_live.py --changed-only
+    python scripts/push_site_content_live.py --changed-only --pause 0.15
 
-Read-only. If it reports pages held back because "live is newer", run
-`python scripts/sync_staging_from_live.py --confirm` first. A `wp_posts` push
-REPLACES the table: anything edited on live since the last clone is destroyed.
-On 2026-08-07 that would have been 232 pages.
+(The 1.5s default pause makes it time out over 319 pages.)
+
+Result: 319 pages, **313 already identical**, 5 differing, 1 skipped. Good, but
+not clean. Comparing `post_modified` directly on the differing pages shows
+**live is newer than staging on at least three**:
+
+| Page | live modified | staging modified | live ahead by |
+| --- | --- | --- | --- |
+| `/county-court-judgements/` | 13 Aug 08:46:44 | 13 Aug 08:43:11 | 3.5 min |
+| `/liquidation/liquidation-deadlines-and-time-limits/` | 18 Aug 12:26:11 | 18 Aug 08:55:25 | 3.5 hours |
+| `/liquidation/creditors-voluntary-liquidation/` | 12 Aug 14:31:15 | 12 Aug 14:21:07 | 10 min |
+| `/liquidation/timeline/` | 10 Aug 05:14:07 | 10 Aug 05:14:07 | same |
+
+Byte counts are close in every case (for example CCJ 40,415 live vs 40,419
+staging), so these read as small edits made directly on live shortly after the
+staging version, which matches the "CTA arrows and heading anchors added on
+live" pattern recorded for 2026-08-07. Small, but real.
+
+**A `wp_posts` push REPLACES the table and would silently revert every one of
+them.** Before pushing the database:
+
+    python scripts/sync_staging_from_live.py --confirm
+
+then re-run the direction check and confirm it reports nothing live-newer.
+
+Note the report also skipped `/county-court-judgements/` with "staging is under
+60% of live". That is the script comparing its own regenerated candidate against
+live, not the stored staging content: the two stored copies are within 4 bytes
+of each other. Not a truncation, but worth not misreading.
 
 **2. Stray script audit. Immediately before, not hours before.**
 
