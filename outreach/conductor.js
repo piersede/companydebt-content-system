@@ -124,10 +124,13 @@ async function scan() {
       else { await route(item, 'research', `no verified contact (${enr.reason || 'low confidence'})`, 'wrong_contact', { write, tally }); continue; }
     }
 
-    // contact gates (fail-closed, BEFORE drafting)
+    // contact gates (fail-closed, BEFORE drafting). OUTREACH_ALLOW_DESK=1 drops the
+    // contact-confidence gate so published news@/editor@ desk inboxes DRAFT (for human review)
+    // instead of being parked as "generic/role inbox". Suppression + free-email gates still apply.
     const cg = [G.suppressionGate(contact.email, config.suppression),
       G.corporateEmailGate(contact.email, config.freeEmailDomains),
-      G.contactConfidenceGate(contact, config.genericInboxLocalparts)].find((c) => !c.pass);
+      ...(process.env.OUTREACH_ALLOW_DESK ? [] : [G.contactConfidenceGate(contact, config.genericInboxLocalparts)]),
+    ].find((c) => !c.pass);
     if (cg) { await route(item, 'research', cg.reason, cg.category, { write, tally }); continue; }
 
     // per-contact dedup: never draft the same person twice — this run OR any prior run
