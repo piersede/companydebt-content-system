@@ -12,17 +12,22 @@ being listed here; those are noted at the bottom so nothing looks lost.
 
 ## Needs a human decision
 
-**1. The referral-fee sentence in the commercial disclosure.** Page 65614,
-`drafts/65614_closing-a-limited-company.html`, methodology block.
+**1. "practical experience from cases handled by licensed practitioners in our
+network."** Roughly ten pages carry this in their sources-of-fact block, for
+example `drafts/26298_misfeasance.html` and
+`drafts/31199_business-restructuring.html`.
 
-> "We may also receive a fee where you engage another practitioner through our network."
+Same positioning problem as the referral-fee sentence removed on 2026-08-21: it
+implies Company Debt draws on practitioners outside itself, when the standing
+rule is that Company Debt IS the practice. It makes no fee claim, so it is
+milder, and it may simply be accurate if associates are involved. Left
+deliberately unchanged pending a decision rather than swept up with the fee
+sentence. If it should go, the fix is "our practitioners" or "the cases we
+handle".
 
-This contradicts the standing rule that Company Debt **is** a licensed insolvency
-practice and does not introduce directors out to other practitioners. It sits on
-the page that most directly sells the service. Either it is true, and the
-positioning rule needs revisiting, or it is boilerplate that drifted in and should
-be cut. Flagged by the trust-pass stage on 2026-08-18. Not resolved editorially,
-because it is a compliance statement rather than prose.
+Separately and NOT a problem: "They provide free, impartial guidance and can
+refer you to an IP if needed" describes what debt charities do, not what
+Company Debt does. Leave it.
 
 **2. The Bounce Back Loan anecdote.** Same page. The original sentence was:
 
