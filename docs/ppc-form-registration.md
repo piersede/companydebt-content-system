@@ -68,15 +68,18 @@ Replace `<id>` with the real form id everywhere below.
 
 ---
 
-## GTM conversion trigger — BUILT 2026-08-21, NOT YET PUBLISHED
+## GTM conversion trigger — DONE AND LIVE (version 88, 2026-08-21)
 
 Read directly out of the live container, from the existing
 `gform_confirmation_message_40` trigger, so this copies a known-good pattern
 rather than guessing.
 
 **Container:** CompanyDebt Account > Company Debt Web > `GTM-5GTD9ZP`
-Direct link (note `authuser=1` — the container is NOT on the
-`info@brighton-digital.com` login, which shows no accounts at all):
+**Google account: `jamesonsmithandco@gmail.com`** — this is the Company Debt
+Google login. The `info@brighton-digital.com` account, which is the default
+in Chrome, has NO Tag Manager access and shows an empty account list, which
+reads as "the container is missing". It is not. Switch account.
+Direct link (the `authuser=1` matters for the same reason):
 
     https://tagmanager.google.com/?authuser=1#/container/accounts/4702659864/containers/12748962/workspaces/1000086/triggers
 
@@ -121,11 +124,17 @@ Verified afterwards by reopening the trigger: it shows CSS Selector,
 All Visibility Events, and both tags listed under "References to this
 Trigger". Structurally identical to trigger 40.
 
-**REMAINING: someone must hit Submit to publish the container version.**
-Until then the trigger exists only in the workspace and fires for nobody.
-Publishing now is harmless: the selector matches nothing on the live site
-until the PPC pages themselves go live. But it MUST be published before the
-pages go live, or the paid traffic runs with no conversion tracking at all.
+**PUBLISHED.** Piers submitted container version 88, "new CD PPC forms
+build", on 2026-08-21. Confirmed Live/Latest. Its change list reads exactly:
+
+    GA4 Form Submission            Tag       Modified
+    gform_confirmation_message_47  Trigger   Added
+    Google Ads - Form Submissions  Tag       Modified
+
+Container is now 17 Tags / 13 Triggers / 5 Variables.
+
+Nothing fires yet, because the selector matches nothing until the PPC pages
+are live. The tracking is ready and waiting for them.
 
 No new tags were created. The Ads conversion ID (`AW-977276330`) and label
 (`knohCMOu9KUDEKqbgNID`) already sit on the existing tag, so there is no
