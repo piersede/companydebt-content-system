@@ -68,7 +68,7 @@ Replace `<id>` with the real form id everywhere below.
 
 ---
 
-## GTM conversion trigger — exact config (verified 2026-08-21)
+## GTM conversion trigger — BUILT 2026-08-21, NOT YET PUBLISHED
 
 Read directly out of the live container, from the existing
 `gform_confirmation_message_40` trigger, so this copies a known-good pattern
@@ -107,15 +107,29 @@ duplicating it would double-count.
 
 **Then Submit / publish the container version.**
 
-### Why this was not done by automation
+### STATUS: built in the workspace, awaiting Submit
 
-Attempted on 2026-08-21 through the browser. The container was reached and
-the config above was read out of it, but the Tag Manager interface would not
-drive reliably from here: screenshot capture repeatedly timed out and the
-coordinate frame shifted between calls, which is not safe odds when a
-mis-click lands on a live conversion tag. Nothing was changed —
-Workspace Changes stayed at 0 throughout. There is no GTM API credential in
-this repo, so the UI is the only route.
+Done on 2026-08-21, all three changes saved in the workspace
+(Workspace Changes: 3):
+
+  1. Trigger `gform_confirmation_message_47` created, exactly as tabled above.
+  2. Added to the `GA4 Form Submission` tag.
+  3. Added to the `Google Ads - Form Submissions` tag.
+
+Verified afterwards by reopening the trigger: it shows CSS Selector,
+`.gform_confirmation_message_47`, Once per page, Observe DOM changes ticked,
+All Visibility Events, and both tags listed under "References to this
+Trigger". Structurally identical to trigger 40.
+
+**REMAINING: someone must hit Submit to publish the container version.**
+Until then the trigger exists only in the workspace and fires for nobody.
+Publishing now is harmless: the selector matches nothing on the live site
+until the PPC pages themselves go live. But it MUST be published before the
+pages go live, or the paid traffic runs with no conversion tracking at all.
+
+No new tags were created. The Ads conversion ID (`AW-977276330`) and label
+(`knohCMOu9KUDEKqbgNID`) already sit on the existing tag, so there is no
+double counting.
 
 ### Sanity check after publishing
 
