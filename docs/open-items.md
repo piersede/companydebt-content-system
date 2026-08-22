@@ -12,6 +12,44 @@ being listed here; those are noted at the bottom so nothing looks lost.
 
 ## Needs a human decision
 
+**0. The live WordPress application password stopped authenticating after the
+2026-08-22 Custom push.** Scripted admin access to production is gone. The site,
+the forms, the leads and the Gravity Forms API key are all unaffected.
+
+Diagnosed, not guessed. Three requests to `/wp-json/wp/v2/users/me`:
+
+| credential | response |
+| --- | --- |
+| the real one | `rest_not_logged_in` |
+| deliberately wrong password | `rest_not_logged_in` |
+| a username that does not exist | `rest_not_logged_in` |
+
+All identical. WordPress is not checking the password at all, so the stored
+password is almost certainly still valid. The header does reach WordPress: the
+Gravity Forms key uses the same `Authorization` header and returns 200. The
+site still advertises application-password support at
+`/wp-json/` → `authentication`.
+
+So application-password auth specifically has been turned off on production.
+Most likely `wp_options` carried a security-plugin setting over from staging in
+the push; the `wp_itsec_*` tables show a security plugin is installed. It broke
+at exactly the moment of the push and nothing else changed.
+
+Not damage, a setting. To resolve: in wp-admin check the security plugin for
+anything covering the REST API, XML-RPC or application passwords, and compare
+with what production had before. Regenerating the application password is the
+fallback.
+
+**Check at the same time:** whether the user list on production still looks
+right. `wp_users` and `wp_usermeta` were deselected in the push and verified at
+the time, but not re-verified at the end after the search filter was changed
+several times. If they travelled anyway, any account created on production since
+the last clone is gone. Clearing the cache did not help, which is already ruled
+out.
+
+Blocks: future scripted pushes to live via `publish_to_live.py` and
+`push_site_content_live.py`. Does not block anything currently running.
+
 **1. "practical experience from cases handled by licensed practitioners in our
 network."** Roughly ten pages carry this in their sources-of-fact block, for
 example `drafts/26298_misfeasance.html` and
