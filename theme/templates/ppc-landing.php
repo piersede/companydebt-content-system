@@ -361,7 +361,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .cd-ppc .hero { background: var(--band); padding: 56px 0 64px; border-bottom: 1px solid var(--line); }
 .cd-ppc .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
-.cd-ppc .hero h1 { margin: 18px 0 0; font-size: clamp(38px, 5.2vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
+.cd-ppc .hero h1 { margin: 18px 0 0; font-size: clamp(32px, 5.2vw, 56px); line-height: 1.06; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
 .cd-ppc .hero__p { margin-top: 18px; font-size: 18.5px; line-height: 1.7; color: var(--soft); }
 .cd-ppc .hero__p + .hero__p { margin-top: 12px; }
 .cd-ppc .trustline { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; font-size: 15px; font-weight: 700; color: var(--navy); }
@@ -379,6 +379,8 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* ── Form card ──────────────────────────────────────────────────────────── */
 .cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; }
+/* header.ppc is sticky, so anchor targets need to clear it. */
+.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual { scroll-margin-top: 92px; }
 .cd-ppc .card h2 { font-size: 23px; font-weight: 800; color: var(--navy); }
 .cd-ppc .card .sub { margin-top: 8px; font-size: 15px; color: var(--muted); }
 .cd-ppc .opts { display: grid; gap: 10px; margin-top: 20px; }
@@ -455,7 +457,10 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .reassure { text-align: left; }
 .cd-ppc .reassure .lead { margin: 14px 0 0; color: #c8d6e8; }
 .cd-ppc .reassure .btn { margin-top: 26px; }
-.cd-ppc .reassure__quote { margin-top: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.cd-ppc .reassure__quote { margin-top: 32px; display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 18px; row-gap: 8px; align-items: start; max-width: 640px; }
+.cd-ppc .reassure__quote img { grid-row: 1 / span 2; }
+.cd-ppc .reassure__quote blockquote { grid-column: 2; }
+.cd-ppc .reassure__quote .reassure__byline { grid-column: 2; margin-top: 0; }
 .cd-ppc .reassure__quote img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; display: block; }
 .cd-ppc .reassure__quote blockquote { margin: 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #fff; font-weight: 500; font-style: normal; }
 .cd-ppc .reassure__byline { margin-top: 2px; font-size: 14px; color: #9fb3cc; }
@@ -466,7 +471,10 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* ── Process ────────────────────────────────────────────────────────────── */
 .cd-ppc .psteps { margin-top: 48px; position: relative; }
-.cd-ppc .psteps::before { content: ""; position: absolute; top: 27px; left: 0; right: 0; height: 1px; background: var(--line); }
+.cd-ppc .psteps::before { display: none; }
+@media (min-width: 1024px) {
+	.cd-ppc .psteps::before { content: ""; display: block; position: absolute; top: 27px; left: 27px; right: 27px; height: 1px; background: var(--line); }
+}
 .cd-ppc .pstep { position: relative; }
 .cd-ppc .pstep__num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border: 1.5px solid var(--accent); border-radius: 50%; font-size: 19px; font-weight: 700; color: var(--accent); background: #fff; position: relative; z-index: 1; }
 .cd-ppc .pstep h3 { margin-top: 16px; font-size: 20px; font-weight: 750; color: var(--navy); }
@@ -477,7 +485,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .c6 .c { background: var(--band); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 18px 20px; }
 .cd-ppc .c6 h3 { font-size: 20px; font-weight: 750; color: var(--navy); }
 .cd-ppc .c6 p { margin-top: 10px; }
-.cd-ppc .take { display: block; font-size: 20px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+.cd-ppc .take { display: block; font-size: 17.5px; font-weight: 650; color: var(--navy); line-height: 1.5; }
 .cd-ppc .detail { display: block; margin-top: 6px; font-size: 15px; color: var(--soft); line-height: 1.6; font-weight: 400; }
 .cd-ppc .closing { margin-top: 28px; font-size: 16.5px; color: var(--soft); font-weight: 600; }
 
@@ -500,7 +508,9 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .pcard p.bio { margin-top: 10px; font-size: 15px; color: var(--soft); line-height: 1.6; }
 
 /* ── Fees ───────────────────────────────────────────────────────────────── */
-.cd-ppc .feegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+.cd-ppc .feegrid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 24px; margin-top: 28px; max-width: 900px; align-items: start; }
+/* The two cards hold very different amounts of text. Stretching them to a shared
+   height left the free-consultation card about 75px empty at the bottom. */
 .cd-ppc .feecard { border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; background: #fff; }
 .cd-ppc .feecard b.amt { display: block; font-size: 30px; font-weight: 800; color: var(--navy); margin-top: 8px; }
 .cd-ppc .feecard .lbl { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
@@ -509,20 +519,25 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .section--navy .feecard .fine { color: var(--soft); }
 /* Colour comes from the token path: on a navy band `.section--navy p` resolves
    to the body-on-navy tint, exactly as every other paragraph there does. */
-.cd-ppc .feenote { margin-top: 20px; font-size: 17px; color: var(--text); line-height: 1.7; max-width: var(--w-text); }
+.cd-ppc .feenote { margin-top: 28px; font-size: 17px; color: var(--text); line-height: 1.7; max-width: var(--w-text); }
 
 /* ── FAQ ────────────────────────────────────────────────────────────────── */
 .cd-ppc .faq { margin-top: 36px; }
-.cd-ppc .faq__item { border-bottom: 1px solid var(--line); }
+.cd-ppc .faq__item { border-bottom: 1px solid var(--line); max-width: 820px; scroll-margin-top: 92px; }
 .cd-ppc .faq__h { margin: 0; font: inherit; letter-spacing: normal; }
-.cd-ppc .faq__q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 18px 0; background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; font-size: 20px; font-weight: 700; color: var(--navy); }
-.cd-ppc .faq__sign { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-size: 16px; font-weight: 700; transition: transform .14s ease; }
+.cd-ppc .faq__q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 18px 0; background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; font-size: 18.5px; font-weight: 700; color: var(--navy); }
+.cd-ppc .faq__sign { flex: none; width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 1px solid #c3d3e6; color: var(--accent); display: grid; place-items: center; font-size: 16px; font-weight: 700; line-height: 1; transition: transform .14s ease, background .14s ease, border-color .14s ease; }
+.cd-ppc .faq__q:hover .faq__sign { background: var(--accent-soft); border-color: var(--accent); }
+.cd-ppc .faq__item.open .faq__sign { background: var(--accent); border-color: var(--accent); color: #fff; }
 .cd-ppc .faq__a { display: none; padding: 0 0 22px; max-width: var(--w-text); font-size: 15.5px; line-height: 1.7; color: var(--soft); }
 .cd-ppc .faq__item.open .faq__a { display: block; }
 .cd-ppc .faq__item.open .faq__sign { transform: rotate(45deg); }
 
 /* ── Final CTA ──────────────────────────────────────────────────────────── */
 .cd-ppc .finalcta { text-align: left; background: var(--band); }
+/* The FAQ above is also a band section, so the default --line-2 rule is invisible
+   and the two 64px/112px paddings stack into 176px of empty tint. */
+.cd-ppc .section--band + .finalcta { padding-top: 76px; border-top: 1px solid #d2dcee; }
 .cd-ppc .finalcta .lead { margin: 16px 0 0; }
 .cd-ppc .finalcta__row { display: flex; gap: 14px; justify-content: flex-start; margin-top: 28px; flex-wrap: wrap; }
 .cd-ppc .finalcta small { display: block; margin-top: 18px; color: var(--muted); font-size: 14px; }
@@ -535,7 +550,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .foot strong { color: #fff; }
 
 /* ── Mobile sticky CTA ──────────────────────────────────────────────────── */
-.cd-ppc .sticky { position: fixed; left: 0; right: 0; bottom: 0; display: none; gap: 10px; padding: 10px 14px; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgba(10, 31, 68, .12); z-index: 70; }
+.cd-ppc .sticky { position: fixed; left: 0; right: 0; bottom: 0; display: none; gap: 10px; padding: 10px 14px; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgba(10, 31, 68, .12); z-index: 1200; }
 .cd-ppc .sticky.show { display: flex; }
 .cd-ppc .sticky a, .cd-ppc .sticky button { flex: 1; min-height: 50px; border-radius: 10px; font-size: 15px; font-weight: 750; display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid transparent; font-family: inherit; cursor: pointer; }
 .cd-ppc .sticky .call { background: var(--navy); color: #fff; }
@@ -545,10 +560,65 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 @media (max-width: 900px) {
 	.cd-ppc .hero__grid { grid-template-columns: 1fr; }
 	.cd-ppc .ppc__right { margin-left: 0; width: 100%; justify-content: space-between; }
-	.cd-ppc .feegrid { grid-template-columns: 1fr; }
+	.cd-ppc .feegrid { grid-template-columns: 1fr; max-width: none; }
 	.cd-ppc .section { padding: 48px 0; }
 	.cd-ppc .reassure, .cd-ppc .finalcta { padding: 72px 0; }
+	.cd-ppc .section--band + .finalcta { padding-top: 56px; }
+	/* Inline phone and policy links are 20-25px tall inside running text. Padding
+	   grows the hit area to 44px; the negative margin keeps the line flow. */
+	.cd-ppc .hero__tel a,
+	.cd-ppc .microcopy a,
+	.cd-ppc .rate a,
+	.cd-ppc .foot a { display: inline-block; padding: 11px 2px; margin: -11px 0; }
 }
+
+/* ── Mobile tightening ──────────────────────────────────────────────────── */
+@media (max-width: 639px) {
+	/* The header is sticky, so every pixel here is charged to the viewport for the
+	   whole visit. Two rows at 115px was 14% of a 844px screen, and it printed the
+	   phone number twice: once as text, once inside the Call Now button. */
+	.cd-ppc .ppc__prefer { display: none; }
+	.cd-ppc .ppc__in { min-height: 64px; gap: 12px; flex-wrap: nowrap; }
+	.cd-ppc .ppc__right { margin-left: auto; width: auto; justify-content: flex-end; }
+	.cd-ppc .ppc__brand b { font-size: 19px; }
+	.cd-ppc .ppc__call { min-height: 48px; padding: 0 20px; font-size: 16px; }
+	.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc .faq__item { scroll-margin-top: 80px; }
+
+	.cd-ppc .eyebrow { font-size: 11.5px; letter-spacing: .06em; }
+	.cd-ppc .hero { padding: 36px 0 48px; }
+	.cd-ppc .hero h1 { margin-top: 14px; }
+	.cd-ppc .hero__p { margin-top: 14px; font-size: 17px; line-height: 1.6; }
+	.cd-ppc .lead { font-size: 18px; }
+	.cd-ppc .trustline { gap: 8px 14px; font-size: 14.5px; margin-top: 20px; }
+	.cd-ppc .hero__proof { margin-top: 22px; gap: 12px; }
+	.cd-ppc .card { padding: 22px; }
+
+	/* Four stacked icon-over-title-over-text blocks ran to 808px. As a row each
+	   item reads as a list item instead of a section. */
+	.cd-ppc .tbar { padding: 32px 0 36px; }
+	.cd-ppc .tstrip { margin-top: 28px; }
+	.cd-ppc .tstrip.grid4 { gap: 18px; }
+	.cd-ppc .titem { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 14px; align-items: start; }
+	.cd-ppc .ticon { width: 24px; height: 24px; margin-bottom: 0; margin-top: 2px; grid-row: 1 / span 2; }
+	.cd-ppc .titem b { grid-column: 2; font-size: 17px; }
+	.cd-ppc .titem p { grid-column: 2; margin-top: 3px; font-size: 14.5px; }
+
+	.cd-ppc .faq__q { font-size: 17px; gap: 14px; min-height: 56px; padding: 15px 0; }
+	.cd-ppc .pstep__num { width: 46px; height: 46px; font-size: 17px; }
+	.cd-ppc .psteps { margin-top: 32px; }
+	.cd-ppc .feecard { padding: 22px; }
+	.cd-ppc .feecard b.amt { font-size: 27px; }
+	.cd-ppc .reassure__quote { grid-template-columns: 1fr; max-width: none; }
+	.cd-ppc .reassure__quote img { grid-row: auto; }
+	.cd-ppc .reassure__quote blockquote { grid-column: 1; font-size: 17.5px; }
+	.cd-ppc .reassure__quote .reassure__byline { grid-column: 1; }
+}
+
+/* The sticky bar overlaps the back-to-top button and the chat launcher, and it
+   covers the last lines of the footer. Only while the bar is actually shown. */
+body.page-template-ppc-landing.cd-ppc-sticky-on { padding-bottom: 74px; }
+body.page-template-ppc-landing.cd-ppc-sticky-on #back-to-top { bottom: 88px; }
+body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom: 74px; }
 </style>
 
 <div class="cd-ppc" data-intent="<?php echo esc_attr( $cd_ppc_key ); ?>">
@@ -786,7 +856,9 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 			<div class="text-cap">
 				<p class="eyebrow">Fees</p>
 				<h2 class="h2 h2--gap">How Much Does a CVL Cost?</h2>
-				<div class="feegrid">
+			</div>
+			<!-- The fee pair sits outside .text-cap so it uses the full content width. -->
+			<div class="feegrid">
 					<div class="feecard">
 						<span class="lbl">Initial consultation</span>
 						<b class="amt">&pound;0</b>
@@ -797,7 +869,8 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 						<b class="amt">&pound;3,500 + VAT</b>
 						<span class="fine">Our standard fixed fee for a straightforward case. Disbursements of &pound;500 to &pound;1,500 apply on top, so a straightforward CVL usually comes to roughly &pound;4,800 to &pound;6,000 once VAT is added.</span>
 					</div>
-				</div>
+			</div>
+			<div class="text-cap">
 				<p class="feenote">Disbursements are necessary third-party costs, such as the bond, Gazette notices, the Companies House filing and statutory mailings. The exact cost depends on the circumstances of the company. <b>We'll explain the expected total cost clearly before you decide whether to proceed.</b></p>
 			</div>
 		</div>
@@ -881,17 +954,29 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 </div><!-- .cd-ppc -->
 
-<script id="cd-ppc-behaviour">
+<!-- data-cd-ppc-behaviour is the marker WP Rocket matches on to keep this block
+     out of "delay JavaScript execution". Same house pattern as the consent and
+     LiveChat embeds, which carry data-cd-consent-default and data-cd-lc-embed.
+     Without the matching entry in WP Rocket's exclusion list, Rocket rewrites
+     this tag to type="text/rocketlazyloadscript" and nothing here runs until the
+     visitor's first scroll or tap. -->
+<script id="cd-ppc-behaviour" data-cd-ppc-behaviour>
 /* Ported from the prototype: FAQ accordion, the question-list deep link and
  * the mobile sticky CTA. The intent switcher, the form-variant switcher and
  * the assessment/localStorage code are deliberately absent. */
-document.addEventListener('DOMContentLoaded', function () {
+function cdPpcInit() {
 	var root = document.querySelector('.cd-ppc');
-	if (!root) { return; }
+	if (!root || root.dataset.cdPpcBound) { return; }
+	root.dataset.cdPpcBound = '1';
 
-	/* The theme header is hidden on this template, so there is nothing sticky
-	 * to scroll clear of. The prototype's 96px offset cleared its dev bar. */
-	var SCROLL_OFFSET = 0;
+	/* header.ppc resolves to position:sticky through a theme rule, so in-page jumps
+	 * DO need to clear it: 77px at desktop, ~64px once the mobile rules apply. It is
+	 * measured rather than hard-coded because the header wraps at narrow widths. */
+	function headerOffset() {
+		var h = root.querySelector('header.ppc');
+		if (!h || window.getComputedStyle(h).position !== 'sticky') { return 0; }
+		return Math.round(h.getBoundingClientRect().height) + 14;
+	}
 
 	function setOpen(item, open) {
 		if (!item) { return; }
@@ -927,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (!item) { return; }
 		closeOthers(item);
 		setOpen(item, true);
-		var y = item.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+		var y = item.getBoundingClientRect().top + window.pageYOffset - headerOffset();
 		window.scrollTo({ top: y, behavior: 'smooth' });
 	}
 
@@ -938,13 +1023,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
-	/* Mobile sticky CTA bar */
+	/* Mobile sticky CTA bar. Shown once the hero has scrolled past, and suppressed
+	 * whenever the form card is on screen: a 'Request a Call' bar pinned over the
+	 * submit button of the form it points at is worse than no bar. */
 	var hero = root.querySelector('.hero');
 	var sticky = document.getElementById('cdPpcSticky');
+	var card = document.getElementById('formCard');
 	if (hero && sticky) {
 		var onScroll = function () {
 			var past = window.scrollY > hero.offsetTop + hero.offsetHeight;
-			sticky.classList.toggle('show', past && window.innerWidth <= 900);
+			var formOnScreen = false;
+			if (card) {
+				var r = card.getBoundingClientRect();
+				formOnScreen = r.bottom > 120 && r.top < window.innerHeight - 80;
+			}
+			var show = past && !formOnScreen && window.innerWidth <= 900;
+			sticky.classList.toggle('show', show);
+			document.body.classList.toggle('cd-ppc-sticky-on', show);
 		};
 		window.addEventListener('scroll', onScroll, { passive: true });
 		window.addEventListener('resize', onScroll);
@@ -955,13 +1050,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	var formCard = document.getElementById('formCard');
 	if (stickyReq && formCard) {
 		stickyReq.addEventListener('click', function () {
-			var y = formCard.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+			var y = formCard.getBoundingClientRect().top + window.pageYOffset - headerOffset();
 			window.scrollTo({ top: y, behavior: 'smooth' });
 			formCard.style.outline = '2px solid #c25200';
 			setTimeout(function () { formCard.style.outline = ''; }, 900);
 		});
 	}
-});
+}
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', cdPpcInit);
+} else {
+	cdPpcInit();
+}
 </script>
 
 <?php
