@@ -190,7 +190,9 @@ foreach ( array_keys( $cd_ppc_faqs ) as $cd_ppc_i ) {
  * the accordion. Index = original FAQ index, not display position. */
 $cd_ppc_qlist = array(
 	array( 'label' => "What happens to the company's debts?", 'idx' => 0 ),
-	array( 'label' => 'How much will liquidation cost?', 'idx' => 2 ),
+	/* This one points at the Fees section, not the FAQ. The FAQ answer is a summary;
+	 * the Fees section carries the actual breakdown, and the old target jumped past it. */
+	array( 'label' => 'How much will liquidation cost?', 'idx' => 2, 'href' => '#fees' ),
 	array( 'label' => 'Will I become personally responsible for anything?', 'idx' => 1 ),
 	array( 'label' => 'What happens to personal guarantees?', 'idx' => 1 ),
 	array( 'label' => "What happens if I have an overdrawn director's loan account?", 'idx' => 1 ),
@@ -360,18 +362,22 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .cd-ppc .hero { background: var(--band); padding: 56px 0 64px; border-bottom: 1px solid var(--line); }
-.cd-ppc .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
-.cd-ppc .hero h1 { margin: 18px 0 0; font-size: clamp(32px, 5.2vw, 56px); line-height: 1.06; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
-.cd-ppc .hero__p { margin-top: 18px; font-size: 18.5px; line-height: 1.7; color: var(--soft); }
+.cd-ppc .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 0 56px; align-items: start;
+	grid-template-areas: "lead card" "support card"; }
+.cd-ppc .hero__lead { grid-area: lead; }
+.cd-ppc .hero__support { grid-area: support; }
+.cd-ppc .hero .card { grid-area: card; }
+.cd-ppc .hero h1 { margin: 16px 0 0; font-size: clamp(32px, 5.2vw, 56px); line-height: 1.12; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
+.cd-ppc .hero__p { margin-top: 24px; font-size: 18.5px; line-height: 1.7; color: var(--soft); max-width: 52ch; }
 .cd-ppc .hero__p + .hero__p { margin-top: 12px; }
 .cd-ppc .trustline { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; font-size: 15px; font-weight: 700; color: var(--navy); }
 .cd-ppc .trustline span { display: inline-flex; align-items: center; gap: 7px; }
 .cd-ppc .trustline span::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-.cd-ppc .hero__reassure { margin-top: 14px; font-size: 15.5px; font-weight: 700; color: var(--navy); }
-.cd-ppc .hero__tel { margin-top: 22px; font-size: 16.5px; color: var(--soft); }
+.cd-ppc .hero__reassure { margin-top: 16px; font-size: 15.5px; font-weight: 700; color: var(--navy); }
+.cd-ppc .hero__tel { margin-top: 24px; font-size: 16.5px; color: var(--soft); }
 .cd-ppc .hero__tel a { font-weight: 800; color: var(--navy); }
 .cd-ppc .hero__tel--tight { margin-top: 14px; }
-.cd-ppc .hero__proof { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+.cd-ppc .hero__proof { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
 .cd-ppc .hero__practitioner-row { display: flex; align-items: center; gap: 10px; }
 .cd-ppc .hero__practitioner-row img { flex: none; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block; }
 .cd-ppc .hero__practitioner { font-size: 14px; color: var(--muted); }
@@ -380,8 +386,11 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 /* ── Form card ──────────────────────────────────────────────────────────── */
 .cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; }
 /* header.ppc is sticky, so anchor targets need to clear it. */
-.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual { scroll-margin-top: 92px; }
+.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc #fees { scroll-margin-top: 92px; }
 .cd-ppc .card h2 { font-size: 23px; font-weight: 800; color: var(--navy); }
+/* Programmatic focus targets: keep the ring for keyboard users, drop it for mouse. */
+.cd-ppc [tabindex="-1"]:focus { outline: none; }
+.cd-ppc [tabindex="-1"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .cd-ppc .card .sub { margin-top: 8px; font-size: 15px; color: var(--muted); }
 .cd-ppc .opts { display: grid; gap: 10px; margin-top: 20px; }
 .cd-ppc .opt { display: block; position: relative; }
@@ -444,7 +453,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 }
 
 /* ── Reviews ────────────────────────────────────────────────────────────── */
-.cd-ppc .rate { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-weight: 700; color: var(--navy); flex-wrap: wrap; }
+.cd-ppc .rate { display: flex; align-items: center; gap: 10px; margin-top: 8px; font-weight: 700; color: var(--navy); flex-wrap: wrap; }
 .cd-ppc .rate img { height: 20px; width: 36px; object-fit: contain; display: inline-block; vertical-align: middle; }
 .cd-ppc .stars { color: #f5b301; letter-spacing: 2px; font-size: 18px; }
 .cd-ppc .rcards { margin-top: 36px; }
@@ -558,7 +567,10 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .sticky a:hover { text-decoration: none; color: #fff; }
 
 @media (max-width: 900px) {
-	.cd-ppc .hero__grid { grid-template-columns: 1fr; }
+	/* Phone order: headline and opening paragraph, then the form, then the trust
+	   content. The form was starting 825px down; this brings it to about 450px. */
+	.cd-ppc .hero__grid { grid-template-columns: 1fr; grid-template-areas: "lead" "card" "support"; gap: 32px; }
+	.cd-ppc .hero__support .trustline { margin-top: 0; }
 	.cd-ppc .ppc__right { margin-left: 0; width: 100%; justify-content: space-between; }
 	.cd-ppc .feegrid { grid-template-columns: 1fr; max-width: none; }
 	.cd-ppc .section { padding: 48px 0; }
@@ -582,7 +594,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 	.cd-ppc .ppc__right { margin-left: auto; width: auto; justify-content: flex-end; }
 	.cd-ppc .ppc__brand b { font-size: 19px; }
 	.cd-ppc .ppc__call { min-height: 48px; padding: 0 20px; font-size: 16px; }
-	.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc .faq__item { scroll-margin-top: 80px; }
+	.cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc #fees, .cd-ppc .faq__item { scroll-margin-top: 80px; }
 
 	.cd-ppc .eyebrow { font-size: 11.5px; letter-spacing: .06em; }
 	.cd-ppc .hero { padding: 36px 0 48px; }
@@ -636,10 +648,13 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 	<!-- HERO -->
 	<section class="hero">
 		<div class="wrap hero__grid">
-			<div>
+			<div class="hero__lead">
 				<p class="eyebrow"><?php echo esc_html( $cd_ppc['eyebrow'] ); ?></p>
 				<h1><?php echo esc_html( $cd_ppc['h1'] ); ?></h1>
 				<p class="hero__p"><?php echo esc_html( $cd_ppc['p1'] ); ?></p>
+			</div>
+
+			<div class="hero__support">
 				<div class="trustline"><span>Free initial consultation</span><span>Confidential</span><span>No obligation</span></div>
 				<p class="hero__reassure">You don't need to make any decisions on the first call.</p>
 				<p class="hero__tel">Prefer to talk? Call <a href="tel:<?php echo esc_attr( $cd_ppc_telraw ); ?>"><?php echo esc_html( $cd_ppc_tel ); ?></a></p>
@@ -810,7 +825,11 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 			</div>
 			<div class="qlist">
 				<?php foreach ( $cd_ppc_qlist as $cd_ppc_q ) : ?>
+				<?php if ( ! empty( $cd_ppc_q['href'] ) ) : ?>
+				<a class="qrow" href="<?php echo esc_attr( $cd_ppc_q['href'] ); ?>"><?php echo esc_html( $cd_ppc_q['label'] ); ?><span class="chev" aria-hidden="true">&#8250;</span></a>
+				<?php else : ?>
 				<a class="qrow" href="#faqList" data-openfaq="<?php echo esc_attr( $cd_ppc_q['idx'] ); ?>"><?php echo esc_html( $cd_ppc_q['label'] ); ?><span class="chev" aria-hidden="true">&#8250;</span></a>
+				<?php endif; ?>
 				<?php endforeach; ?>
 			</div>
 			<div class="text-cap">
@@ -851,7 +870,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 
 	<!-- FEES. Figures are canonical: data/statutory_fees.json (cvl_practitioner_fee,
 	     cvl_disbursements, cvl_all_in). Do not restore the old range. -->
-	<section class="section section--navy">
+	<section class="section section--navy" id="fees">
 		<div class="wrap">
 			<div class="text-cap">
 				<p class="eyebrow">Fees</p>
@@ -978,6 +997,23 @@ function cdPpcInit() {
 		return Math.round(h.getBoundingClientRect().height) + 14;
 	}
 
+	/* Move focus to where the page just scrolled to. */
+	function focusTarget(el) {
+		if (!el) { return; }
+		if (!el.hasAttribute('tabindex')) { el.setAttribute('tabindex', '-1'); }
+		try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
+	}
+
+	/* A smooth scroll of 2,000px or more reads as disorienting rather than elegant,
+	 * so long jumps land instantly. */
+	function jumpTo(el, focusEl) {
+		if (!el) { return; }
+		var y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+		var far = Math.abs(y - window.pageYOffset) > 1000;
+		window.scrollTo({ top: y, behavior: far ? 'auto' : 'smooth' });
+		focusTarget(focusEl || el);
+	}
+
 	function setOpen(item, open) {
 		if (!item) { return; }
 		item.classList.toggle('open', open);
@@ -1012,14 +1048,25 @@ function cdPpcInit() {
 		if (!item) { return; }
 		closeOthers(item);
 		setOpen(item, true);
-		var y = item.getBoundingClientRect().top + window.pageYOffset - headerOffset();
-		window.scrollTo({ top: y, behavior: 'smooth' });
+		jumpTo(item, item.querySelector('.faq__a'));
 	}
 
 	root.querySelectorAll('.qrow[data-openfaq]').forEach(function (row) {
 		row.addEventListener('click', function (e) {
 			e.preventDefault();
 			openFaq(row.getAttribute('data-openfaq'));
+		});
+	});
+
+	/* In-page CTAs. Native anchor scrolling already clears the sticky header via
+	 * scroll-margin-top; this adds the focus move so keyboard and screen reader
+	 * users arrive at the form rather than carrying on from the top of the page. */
+	root.querySelectorAll('a[href="#formCard"], a[href="#fees"]').forEach(function (link) {
+		link.addEventListener('click', function (e) {
+			var target = document.getElementById(link.getAttribute('href').slice(1));
+			if (!target) { return; }
+			e.preventDefault();
+			jumpTo(target, target.querySelector('h2') || target);
 		});
 	});
 
@@ -1050,8 +1097,7 @@ function cdPpcInit() {
 	var formCard = document.getElementById('formCard');
 	if (stickyReq && formCard) {
 		stickyReq.addEventListener('click', function () {
-			var y = formCard.getBoundingClientRect().top + window.pageYOffset - headerOffset();
-			window.scrollTo({ top: y, behavior: 'smooth' });
+			jumpTo(formCard, formCard.querySelector('h2') || formCard);
 			formCard.style.outline = '2px solid #c25200';
 			setTimeout(function () { formCard.style.outline = ''; }, 900);
 		});
