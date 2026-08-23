@@ -362,11 +362,13 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .cd-ppc .hero { background: var(--band); padding: 56px 0 64px; border-bottom: 1px solid var(--line); }
-.cd-ppc .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 0 56px; align-items: start;
-	grid-template-areas: "lead card" "support card"; }
-.cd-ppc .hero__lead { grid-area: lead; }
-.cd-ppc .hero__support { grid-area: support; }
-.cd-ppc .hero .card { grid-area: card; }
+/* The form card is ~1,055px and the left column ~590px. Nothing in the layout
+   removes that difference, it only decides where the spare space sits. With
+   `start` it all falls below the column, which is how the page has always
+   looked. Switch this one word to `center` to split it evenly above and
+   below instead: worth doing once the card is shortened, but on today's card
+   it pushes the headline 235px down the page. */
+.cd-ppc .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
 .cd-ppc .hero h1 { margin: 16px 0 0; font-size: clamp(32px, 5.2vw, 56px); line-height: 1.12; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
 .cd-ppc .hero__p { margin-top: 24px; font-size: 18.5px; line-height: 1.7; color: var(--soft); max-width: 52ch; }
 .cd-ppc .hero__p + .hero__p { margin-top: 12px; }
@@ -376,7 +378,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .hero__reassure { margin-top: 16px; font-size: 15.5px; font-weight: 700; color: var(--navy); }
 .cd-ppc .hero__tel { margin-top: 24px; font-size: 16.5px; color: var(--soft); }
 .cd-ppc .hero__tel a { font-weight: 800; color: var(--navy); }
-.cd-ppc .hero__tel--tight { margin-top: 14px; }
+.cd-ppc .hero__tel--tight { margin-top: 12px; font-size: 15px; }
 .cd-ppc .hero__proof { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
 .cd-ppc .hero__practitioner-row { display: flex; align-items: center; gap: 10px; }
 .cd-ppc .hero__practitioner-row img { flex: none; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block; }
@@ -384,7 +386,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .rate--flush { margin-top: 0; }
 
 /* ── Form card ──────────────────────────────────────────────────────────── */
-.cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; }
+.cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px 26px 22px; }
 /* header.ppc is sticky, so anchor targets need to clear it. */
 .cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc #fees { scroll-margin-top: 92px; }
 .cd-ppc .card h2 { font-size: 23px; font-weight: 800; color: var(--navy); }
@@ -402,25 +404,28 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .field label { font-size: 13px; font-weight: 650; color: var(--soft); }
 .cd-ppc .field input { width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid #cfd6e0; border-radius: 9px; font-family: inherit; font-size: 16px; color: var(--text); }
 .cd-ppc .field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
-.cd-ppc .microcopy { font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
-.cd-ppc .microcopy--callback { margin-top: 10px; color: var(--accent); font-weight: 650; }
+.cd-ppc .microcopy { font-size: 13.5px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.cd-ppc .microcopy--callback { margin-top: 14px; color: var(--accent); font-weight: 650; }
 .cd-ppc .step { display: none; }
 .cd-ppc .step.is-active { display: block; }
 .cd-ppc .back { background: none; border: 0; font-size: 14px; font-weight: 700; color: var(--accent); cursor: pointer; padding: 0; margin-bottom: 14px; }
 
 /* Gravity Forms sits inside the card. Match the prototype's field styling so
    the GF markup inherits the design rather than the theme's form styles. */
-.cd-ppc .cd-ppc-form { margin-top: 20px; }
+.cd-ppc .cd-ppc-form { margin-top: 16px; }
 .cd-ppc .cd-ppc-form .gform_wrapper { margin: 0; }
-.cd-ppc .cd-ppc-form .gform_fields { display: grid; gap: 6px; }
-.cd-ppc .cd-ppc-form .gfield { margin-bottom: 14px; }
-.cd-ppc .cd-ppc-form .gfield_label { font-size: 13px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 6px; }
+.cd-ppc .cd-ppc-form .gform_fields { display: grid; gap: 2px; }
+.cd-ppc .cd-ppc-form .gfield { margin-bottom: 10px; }
+.cd-ppc .cd-ppc-form .gfield_label { font-size: 13px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 4px; }
+/* The situation radios carried default theme line spacing and ran to ~200px. */
+.cd-ppc .cd-ppc-form .gfield_radio { display: grid; gap: 2px; }
+.cd-ppc .cd-ppc-form .gfield_radio .gchoice { margin: 0; line-height: 1.45; }
 .cd-ppc .cd-ppc-form input[type="text"],
 .cd-ppc .cd-ppc-form input[type="tel"],
 .cd-ppc .cd-ppc-form input[type="email"],
 .cd-ppc .cd-ppc-form textarea,
 .cd-ppc .cd-ppc-form select {
-	width: 100%; min-height: 50px; padding: 12px 14px;
+	width: 100%; min-height: 48px; padding: 10px 14px;
 	border: 1px solid #cfd6e0; border-radius: 9px;
 	font-family: inherit; font-size: 16px; color: var(--text); background: #fff;
 }
@@ -428,7 +433,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .cd-ppc-form textarea:focus,
 .cd-ppc .cd-ppc-form select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .cd-ppc .cd-ppc-form .gform_button {
-	width: 100%; margin-top: 20px; min-height: 56px; padding: 0 28px;
+	width: 100%; margin-top: 16px; min-height: 56px; padding: 0 28px;
 	border-radius: 12px; border: 1px solid transparent;
 	background: var(--orange); color: #fff;
 	font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer;
@@ -569,7 +574,11 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 @media (max-width: 900px) {
 	/* Phone order: headline and opening paragraph, then the form, then the trust
 	   content. The form was starting 825px down; this brings it to about 450px. */
-	.cd-ppc .hero__grid { grid-template-columns: 1fr; grid-template-areas: "lead" "card" "support"; gap: 32px; }
+	.cd-ppc .hero__col { display: contents; }
+	.cd-ppc .hero__grid { grid-template-columns: 1fr; grid-template-areas: "lead" "card" "support"; gap: 32px; align-items: start; }
+	.cd-ppc .hero__lead { grid-area: lead; }
+	.cd-ppc .hero__support { grid-area: support; }
+	.cd-ppc .hero .card { grid-area: card; }
 	.cd-ppc .hero__support .trustline { margin-top: 0; }
 	.cd-ppc .ppc__right { margin-left: 0; width: 100%; justify-content: space-between; }
 	.cd-ppc .feegrid { grid-template-columns: 1fr; max-width: none; }
@@ -648,6 +657,9 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 	<!-- HERO -->
 	<section class="hero">
 		<div class="wrap hero__grid">
+			<!-- One column on desktop. On a phone .hero__col becomes display:contents
+			     so these two blocks can sit either side of the form card. -->
+			<div class="hero__col">
 			<div class="hero__lead">
 				<p class="eyebrow"><?php echo esc_html( $cd_ppc['eyebrow'] ); ?></p>
 				<h1><?php echo esc_html( $cd_ppc['h1'] ); ?></h1>
@@ -666,6 +678,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 					</div>
 				</div>
 			</div>
+			</div><!-- .hero__col -->
 
 			<!-- Lead capture. Fields are NOT hand-rolled: the Gravity Form owns
 			     them, exactly as templates/quick-quote.php does with GF40. -->
