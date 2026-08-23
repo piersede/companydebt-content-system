@@ -186,19 +186,6 @@ foreach ( array_keys( $cd_ppc_faqs ) as $cd_ppc_i ) {
 	}
 }
 
-/* Deep links from the "Questions Directors Usually Want Answered" list into
- * the accordion. Index = original FAQ index, not display position. */
-$cd_ppc_qlist = array(
-	array( 'label' => "What happens to the company's debts?", 'idx' => 0 ),
-	/* This one points at the Fees section, not the FAQ. The FAQ answer is a summary;
-	 * the Fees section carries the actual breakdown, and the old target jumped past it. */
-	array( 'label' => 'How much will liquidation cost?', 'idx' => 2, 'href' => '#fees' ),
-	array( 'label' => 'Will I become personally responsible for anything?', 'idx' => 1 ),
-	array( 'label' => 'What happens to personal guarantees?', 'idx' => 1 ),
-	array( 'label' => "What happens if I have an overdrawn director's loan account?", 'idx' => 1 ),
-	array( 'label' => 'Can I start or run another company afterwards?', 'idx' => 3 ),
-);
-
 /* -------------------------------------------------------------------------
  * Assets and constants.
  * ---------------------------------------------------------------------- */
@@ -389,11 +376,11 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px 26px 22px; }
 /* header.ppc is sticky, so anchor targets need to clear it. */
 .cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc #fees { scroll-margin-top: 92px; }
-.cd-ppc .card h2 { font-size: 23px; font-weight: 800; color: var(--navy); }
+.cd-ppc .card h2 { font-size: 21px; font-weight: 800; color: var(--navy); line-height: 1.2; }
 /* Programmatic focus targets: keep the ring for keyboard users, drop it for mouse. */
 .cd-ppc [tabindex="-1"]:focus { outline: none; }
 .cd-ppc [tabindex="-1"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.cd-ppc .card .sub { margin-top: 8px; font-size: 15px; color: var(--muted); }
+.cd-ppc .card .sub { margin-top: 6px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
 .cd-ppc .opts { display: grid; gap: 10px; margin-top: 20px; }
 .cd-ppc .opt { display: block; position: relative; }
 .cd-ppc .opt input { position: absolute; opacity: 0; }
@@ -412,20 +399,21 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* Gravity Forms sits inside the card. Match the prototype's field styling so
    the GF markup inherits the design rather than the theme's form styles. */
-.cd-ppc .cd-ppc-form { margin-top: 16px; }
+.cd-ppc .cd-ppc-form { margin-top: 14px; }
 .cd-ppc .cd-ppc-form .gform_wrapper { margin: 0; }
-.cd-ppc .cd-ppc-form .gform_fields { display: grid; gap: 2px; }
-.cd-ppc .cd-ppc-form .gfield { margin-bottom: 10px; }
-.cd-ppc .cd-ppc-form .gfield_label { font-size: 13px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 4px; }
+.cd-ppc .cd-ppc-form .gform_fields { display: grid; gap: 0; }
+.cd-ppc .cd-ppc-form .gfield { margin-bottom: 6px; }
+.cd-ppc .cd-ppc-form .gfield_label { font-size: 12.5px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 2px; line-height: 1.3; }
 /* The situation radios carried default theme line spacing and ran to ~200px. */
-.cd-ppc .cd-ppc-form .gfield_radio { display: grid; gap: 2px; }
-.cd-ppc .cd-ppc-form .gfield_radio .gchoice { margin: 0; line-height: 1.45; }
+.cd-ppc .cd-ppc-form .gfield_radio { display: grid; gap: 0; }
+.cd-ppc .cd-ppc-form .gfield_radio .gchoice { margin: 0; line-height: 1.35; }
+.cd-ppc .cd-ppc-form .gfield_radio label { font-size: 15px; line-height: 1.35; }
 .cd-ppc .cd-ppc-form input[type="text"],
 .cd-ppc .cd-ppc-form input[type="tel"],
 .cd-ppc .cd-ppc-form input[type="email"],
 .cd-ppc .cd-ppc-form textarea,
 .cd-ppc .cd-ppc-form select {
-	width: 100%; min-height: 48px; padding: 10px 14px;
+	width: 100%; min-height: 44px; padding: 8px 12px;
 	border: 1px solid #cfd6e0; border-radius: 9px;
 	font-family: inherit; font-size: 16px; color: var(--text); background: #fff;
 }
@@ -433,7 +421,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .cd-ppc-form textarea:focus,
 .cd-ppc .cd-ppc-form select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .cd-ppc .cd-ppc-form .gform_button {
-	width: 100%; margin-top: 16px; min-height: 56px; padding: 0 28px;
+	width: 100%; margin-top: 14px; min-height: 52px; padding: 0 28px;
 	border-radius: 12px; border: 1px solid transparent;
 	background: var(--orange); color: #fff;
 	font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer;
@@ -504,13 +492,6 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .closing { margin-top: 28px; font-size: 16.5px; color: var(--soft); font-weight: 600; }
 
 .cd-ppc .qlist__head { margin-top: 32px; font-size: 20px; font-weight: 750; color: var(--navy); }
-
-/* ── Question list ──────────────────────────────────────────────────────── */
-.cd-ppc .qlist { margin-top: 20px; border-top: 1px solid var(--line); }
-@media (min-width: 640px) { .cd-ppc .qlist { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; } }
-.cd-ppc .qrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 4px; border-bottom: 1px solid var(--line); font-size: 17px; font-weight: 600; color: var(--navy); text-decoration: none; }
-.cd-ppc .qrow:hover { background: var(--band); text-decoration: none; color: var(--navy); }
-.cd-ppc .qrow .chev { flex: none; color: var(--accent); font-size: 15px; }
 
 /* ── Practitioners ──────────────────────────────────────────────────────── */
 .cd-ppc .pcards { margin-top: 36px; }
@@ -716,9 +697,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 				</div>
 
 				<p class="microcopy microcopy--callback">Call before 5pm and we will call you back the same day.</p>
-				<p class="microcopy">The initial consultation is free and there is no obligation to proceed.</p>
-				<p class="microcopy">We'll use these details to contact you about your enquiry. See our <a href="/privacy-policy/">Privacy Policy</a> for more information.</p>
-				<p class="hero__tel hero__tel--tight">Rather speak now? Call <a href="tel:<?php echo esc_attr( $cd_ppc_telraw ); ?>"><?php echo esc_html( $cd_ppc_tel ); ?></a></p>
+				<p class="microcopy">Free, confidential and no obligation. We'll use your details only to contact you about this enquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
 			</div>
 		</div>
 	</section>
@@ -834,18 +813,10 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 				<h2 class="h2 h2--gap">What Is a CVL?</h2>
 				<p class="lead">A Creditors' Voluntary Liquidation (CVL) is a way of formally closing a company that can no longer pay its debts.</p>
 				<p class="bodytext">A licensed insolvency practitioner deals with the company's assets, creditors and closure.</p>
-				<h3 class="qlist__head">Questions Directors Usually Want Answered</h3>
-			</div>
-			<div class="qlist">
-				<?php foreach ( $cd_ppc_qlist as $cd_ppc_q ) : ?>
-				<?php if ( ! empty( $cd_ppc_q['href'] ) ) : ?>
-				<a class="qrow" href="<?php echo esc_attr( $cd_ppc_q['href'] ); ?>"><?php echo esc_html( $cd_ppc_q['label'] ); ?><span class="chev" aria-hidden="true">&#8250;</span></a>
-				<?php else : ?>
-				<a class="qrow" href="#faqList" data-openfaq="<?php echo esc_attr( $cd_ppc_q['idx'] ); ?>"><?php echo esc_html( $cd_ppc_q['label'] ); ?><span class="chev" aria-hidden="true">&#8250;</span></a>
-				<?php endif; ?>
-				<?php endforeach; ?>
-			</div>
-			<div class="text-cap">
+				<h3 class="qlist__head">What This Usually Means for You</h3>
+				<p class="bodytext">Before they call, most directors want the same few questions answered. In a CVL the company's debts are dealt with by the liquidator. They do not automatically become yours personally, because a limited company is a separate legal entity.</p>
+				<p class="bodytext">The main exceptions are a personal guarantee you have given, an overdrawn director's loan account, and certain transactions made shortly before liquidation. We go through all three with you on the call.</p>
+				<p class="bodytext">The initial consultation is free. For a straightforward case the total cost, including the practitioner fee, disbursements and VAT, usually comes to roughly &pound;4,800 to &pound;6,000. Afterwards, being the director of a company that has been liquidated does not by itself stop you running or joining another one.</p>
 				<p class="closing">These are exactly the issues we can discuss during the initial consultation.</p>
 				<a class="btn btn--solid cd-ppc-cta-18" href="#formCard">Request a Confidential Call</a>
 			</div>
@@ -1052,22 +1023,6 @@ function cdPpcInit() {
 			var willOpen = !item.classList.contains('open');
 			if (willOpen) { closeOthers(item); }
 			setOpen(item, willOpen);
-		});
-	});
-
-	/* "Questions Directors Usually Want Answered" deep link */
-	function openFaq(idx) {
-		var item = root.querySelector('.faq__item[data-idx="' + idx + '"]');
-		if (!item) { return; }
-		closeOthers(item);
-		setOpen(item, true);
-		jumpTo(item, item.querySelector('.faq__a'));
-	}
-
-	root.querySelectorAll('.qrow[data-openfaq]').forEach(function (row) {
-		row.addEventListener('click', function (e) {
-			e.preventDefault();
-			openFaq(row.getAttribute('data-openfaq'));
 		});
 	});
 
