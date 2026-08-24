@@ -190,6 +190,18 @@ foreach ( array_keys( $cd_ppc_faqs ) as $cd_ppc_i ) {
  * Assets and constants.
  * ---------------------------------------------------------------------- */
 $cd_ppc_assets = '/wp-content/themes/company-debt-webpigment/assets/ppc';
+
+/* Practitioner portraits live in the media library, not in the theme, so they can
+ * be replaced without a code change. Both are 288px square, which is 3x the 96px
+ * the practitioner cards display them at, so they stay sharp on any screen; the
+ * same file serves the 56px quote portrait and the 40px hero avatar.
+ *
+ * Root-relative on purpose. An absolute staging URL here would leave live loading
+ * its portraits from comdebstage, which is the drift this repo has been bitten by
+ * before. These paths resolve on whichever environment renders the page.
+ */
+$cd_ppc_photo_chris  = '/wp-content/uploads/2026/08/chris-andersen-288.webp';
+$cd_ppc_photo_nicola = '/wp-content/uploads/2026/08/nicola-meadows-288.webp';
 $cd_ppc_tel    = '0800 074 6757';
 $cd_ppc_telraw = '08000746757';
 
@@ -736,7 +748,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 				<div class="hero__proof">
 					<div class="rate rate--flush"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 out of 5 on Reviews.io</div>
 					<div class="hero__practitioner-row">
-						<img src="<?php echo esc_url( $cd_ppc_assets . '/chris-andersen.webp' ); ?>" width="40" height="40" loading="eager" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
+						<img src="<?php echo esc_url( $cd_ppc_photo_chris ); ?>" width="40" height="40" loading="eager" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
 						<p class="hero__practitioner">Christopher Andersen, Licensed Insolvency Practitioner, IP No. 16070</p>
 					</div>
 				</div>
@@ -841,7 +853,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 			<p class="bodytext">We'll ask what has happened, help you understand whether the company is insolvent and explain whether voluntary liquidation looks appropriate.</p>
 			<p class="reassure__note">You don't have to decide anything on the call.</p>
 			<div class="reassure__quote">
-				<img src="<?php echo esc_url( $cd_ppc_assets . '/chris-andersen.webp' ); ?>" width="56" height="56" loading="lazy" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
+				<img src="<?php echo esc_url( $cd_ppc_photo_chris ); ?>" width="56" height="56" loading="lazy" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
 				<blockquote>"Most of the directors I speak to have been putting off the call for months. Almost all of them say afterwards that they wish they had made it sooner."</blockquote>
 				<p class="reassure__byline">Christopher Andersen, Licensed Insolvency Practitioner, IP No. 16070</p>
 			</div>
@@ -913,7 +925,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 			<p class="lead">CompanyDebt is operated by insolvency professionals specialising in limited companies and their directors.</p>
 			<div class="pcards grid3">
 				<div class="pcard">
-					<img src="<?php echo esc_url( $cd_ppc_assets . '/chris-andersen.webp' ); ?>" width="96" height="96" loading="lazy" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
+					<img src="<?php echo esc_url( $cd_ppc_photo_chris ); ?>" width="96" height="96" loading="lazy" decoding="async" alt="Christopher Andersen, Licensed Insolvency Practitioner at Company Debt">
 					<div>
 						<h3>Christopher Andersen</h3>
 						<p class="role">Licensed Insolvency Practitioner</p>
@@ -922,7 +934,7 @@ body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom:
 					</div>
 				</div>
 				<div class="pcard">
-					<img src="<?php echo esc_url( $cd_ppc_assets . '/nicki-meadows.jpg' ); ?>" width="96" height="96" loading="lazy" decoding="async" alt="Nicola Meadows, Licensed Insolvency Practitioner at Company Debt">
+					<img src="<?php echo esc_url( $cd_ppc_photo_nicola ); ?>" width="96" height="96" loading="lazy" decoding="async" alt="Nicola Meadows, Licensed Insolvency Practitioner at Company Debt">
 					<div>
 						<h3>Nicola Meadows</h3>
 						<p class="role">Licensed Insolvency Practitioner</p>
