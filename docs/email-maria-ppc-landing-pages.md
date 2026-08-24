@@ -20,25 +20,30 @@ landing on the same general guides, so there was no way to see which intent was
 actually converting. We simply hadn't built the pages, so you were sending
 traffic to the only thing there was.
 
-**Where I'd start: liquidation. Which means turning it back on first.**
+**Where I'd start: liquidation. Which means switching it back on.**
 
-Tony wants us focused tightly around liquidation. When we last went through the
-account, though, almost all the liquidation keywords were paused, so there's
-very little running on the intent he cares most about.
+Tony wants the focus tight on liquidation. The Company Liquidation ad group
+holds 413 keywords and 412 of them are paused. The only live one is "closure of
+a business". They aren't disapproved, just switched off, and several were
+working earlier this year.
 
-I assume they were paused for a fair reason, which is that they weren't paying
-their way. What I'd add is that until last week they were pointing at a general
-guide with no dedicated form on it. A good part of that result was ours, not the
-keywords'. That's the bit we've now fixed.
+I think that was a fair call at the time. It looked expensive: 42 clicks, one
+conversion, about £360 a conversion. But 42 clicks is too thin to judge anything
+on, it was measured against a conversion signal we now know was broken, and the
+page those clicks landed on had no dedicated form on it. All three of those are
+fixed now.
 
-So the ask is: reopen the liquidation keywords, point them at the new page, and
-let that cluster run properly for a few weeks before we judge it again. If
-there's a cost-per-lead history there that I'm not seeing, say so and we'll
-leave them where they are.
+There's also no keyword anywhere in the account for "creditors voluntary
+liquidation". That's about 1,600 searches a month and the highest-intent phrase
+in our sector.
+
+So the ask is: reopen the liquidation keywords, point them at the new page, add
+"creditors voluntary liquidation", and let it run a few weeks before we judge it
+again. If there's a reason for the pause we don't know about, that's the thing
+that would change our thinking.
 
 I'd rather do that than move all four ad groups across at once and spread the
-clicks thin. The other three pages are built and waiting, so we can bring them
-in as soon as there's a reason to.
+clicks thin. The other three pages are built and waiting.
 
 **On dynamic keyword variants: not yet, and I'd hold off on keyword insertion in
 the ad copy too.**
@@ -98,10 +103,17 @@ Piers
 **Her name.** The previous draft of this said "Maria Waters". She is Maria
 Hilton, Director of Online PPC by Maria Ltd. Corrected.
 
-**The paused keywords are stated but not sourced either.** I could not find the
-analysis in the repo, so the email says "almost all the liquidation keywords were
-paused" without numbers or a date. If you have the figures to hand, they'd
-sharpen it: how many, and how long they've been off. Don't let me guess at them.
+**Check this against the 20 August email before sending.**
+`google-ads-auditor/runs/2026-08-20-weekly-audit/email-to-maria.md` already makes
+this exact ask as its section 2, with the same figures. If that one went out,
+this paragraph should reference it rather than repeat it cold, or be cut to a
+line. If it never went, consider sending that one instead and folding the
+landing pages into it, since it also covers the ad copy mismatch and the £200 a
+month going on competitor searches.
+
+Figures used here come from that audit: 413 keywords, 412 paused, sole live one
+"closure of a business", 42 clicks / 1 conversion / ~£360, and no "creditors
+voluntary liquidation" keyword at ~1,600 searches a month.
 
 **Tony's steer is stated but not sourced.** I could not find the correspondence
 where he asked for the liquidation focus — I searched both mailboxes for Tony
