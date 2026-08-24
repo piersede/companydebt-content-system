@@ -584,6 +584,11 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* ── Practitioners ──────────────────────────────────────────────────────── */
 .cd-ppc .pcards { margin-top: 36px; }
+/* There are only two practitioners, so the three-column grid left a third of the
+   row empty and squeezed both cards narrow enough to break "Christopher Andersen"
+   and "Licensed Insolvency Practitioner" onto two lines each. */
+.cd-ppc .pcards.grid3 { grid-template-columns: repeat(2, 1fr); max-width: 940px; }
+@media (max-width: 639px) { .cd-ppc .pcards.grid3 { grid-template-columns: 1fr; } }
 .cd-ppc .pcard { display: flex; gap: 18px; align-items: flex-start; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
 .cd-ppc .pcard img { width: 96px; height: 96px; border-radius: 16px; flex: none; display: block; object-fit: cover; }
 .cd-ppc .pcard h3 { font-size: 20px; font-weight: 750; color: var(--navy); }
