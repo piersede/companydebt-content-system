@@ -20,13 +20,25 @@ landing on the same general guides, so there was no way to see which intent was
 actually converting. We simply hadn't built the pages, so you were sending
 traffic to the only thing there was.
 
-**Where I'd start: liquidation.**
+**Where I'd start: liquidation. Which means turning it back on first.**
 
-Tony wants us focused tightly around liquidation, and I think that lines up with
-what the numbers can actually support. Rather than move all four across at once
-and spread the clicks thin, I'd point the liquidation cluster at its page first
-and let it run properly. The other three pages are built and waiting, so we can
-bring them in as soon as there's a reason to.
+Tony wants us focused tightly around liquidation. When we last went through the
+account, though, almost all the liquidation keywords were paused, so there's
+very little running on the intent he cares most about.
+
+I assume they were paused for a fair reason, which is that they weren't paying
+their way. What I'd add is that until last week they were pointing at a general
+guide with no dedicated form on it. A good part of that result was ours, not the
+keywords'. That's the bit we've now fixed.
+
+So the ask is: reopen the liquidation keywords, point them at the new page, and
+let that cluster run properly for a few weeks before we judge it again. If
+there's a cost-per-lead history there that I'm not seeing, say so and we'll
+leave them where they are.
+
+I'd rather do that than move all four ad groups across at once and spread the
+clicks thin. The other three pages are built and waiting, so we can bring them
+in as soon as there's a reason to.
 
 **On dynamic keyword variants: not yet, and I'd hold off on keyword insertion in
 the ad copy too.**
@@ -85,6 +97,11 @@ Piers
 
 **Her name.** The previous draft of this said "Maria Waters". She is Maria
 Hilton, Director of Online PPC by Maria Ltd. Corrected.
+
+**The paused keywords are stated but not sourced either.** I could not find the
+analysis in the repo, so the email says "almost all the liquidation keywords were
+paused" without numbers or a date. If you have the figures to hand, they'd
+sharpen it: how many, and how long they've been off. Don't let me guess at them.
 
 **Tony's steer is stated but not sourced.** I could not find the correspondence
 where he asked for the liquidation focus — I searched both mailboxes for Tony
