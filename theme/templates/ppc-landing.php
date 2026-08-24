@@ -373,14 +373,14 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .rate--flush { margin-top: 0; }
 
 /* ── Form card ──────────────────────────────────────────────────────────── */
-.cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+.cd-ppc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 28px 24px; }
 /* header.ppc is sticky, so anchor targets need to clear it. */
 .cd-ppc #formCard, .cd-ppc #faqList, .cd-ppc #contextual, .cd-ppc #fees { scroll-margin-top: 92px; }
 .cd-ppc .card h2 { font-size: 21px; font-weight: 800; color: var(--navy); line-height: 1.2; }
 /* Programmatic focus targets: keep the ring for keyboard users, drop it for mouse. */
 .cd-ppc [tabindex="-1"]:focus { outline: none; }
 .cd-ppc [tabindex="-1"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.cd-ppc .card .sub { margin-top: 6px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
+.cd-ppc .card .sub { margin-top: 8px; font-size: 14.5px; line-height: 1.5; color: var(--muted); }
 .cd-ppc .opts { display: grid; gap: 10px; margin-top: 20px; }
 .cd-ppc .opt { display: block; position: relative; }
 .cd-ppc .opt input { position: absolute; opacity: 0; }
@@ -399,15 +399,27 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* Gravity Forms sits inside the card. Match the prototype's field styling so
    the GF markup inherits the design rather than the theme's form styles. */
-.cd-ppc .cd-ppc-form { margin-top: 14px; }
+.cd-ppc .cd-ppc-form { margin-top: 20px; }
 .cd-ppc .cd-ppc-form .gform_wrapper { margin: 0; }
 .cd-ppc .cd-ppc-form .gform_fields { display: grid; gap: 0; }
-.cd-ppc .cd-ppc-form .gfield { margin-bottom: 6px; }
-.cd-ppc .cd-ppc-form .gfield_label { font-size: 12.5px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 2px; line-height: 1.3; }
+/* The radio set is one answer, so its options sit closer together than the
+   gap that separates it from the next question. This Gravity Forms build does
+   not emit a gfield--type-radio class, so the extra space goes on the choice
+   list itself rather than on the field wrapper. */
+.cd-ppc .cd-ppc-form .gfield_radio { margin-bottom: 8px; }
+/* The hidden intent field and the spam honeypot render at zero height but still
+   carried a 16px margin each, so 32px of nothing sat above the submit button. */
+.cd-ppc .cd-ppc-form .gfield.gform_hidden,
+.cd-ppc .cd-ppc-form .gfield.gform_validation_container { margin-bottom: 0; }
+.cd-ppc .cd-ppc-form .gfield { margin-bottom: 16px; }
+.cd-ppc .cd-ppc-form .gfield_label { font-size: 13px; font-weight: 650; color: var(--soft); display: block; margin-bottom: 6px; line-height: 1.35; }
+/* Gravity Forms butts the required marker straight onto the label text, so it
+   reads and is announced as "Your name(Required)". */
+.cd-ppc .cd-ppc-form .gfield_required { margin-left: 4px; }
 /* The situation radios carried default theme line spacing and ran to ~200px. */
-.cd-ppc .cd-ppc-form .gfield_radio { display: grid; gap: 0; }
-.cd-ppc .cd-ppc-form .gfield_radio .gchoice { margin: 0; line-height: 1.35; }
-.cd-ppc .cd-ppc-form .gfield_radio label { font-size: 15px; line-height: 1.35; }
+.cd-ppc .cd-ppc-form .gfield_radio { display: grid; gap: 7px; }
+.cd-ppc .cd-ppc-form .gfield_radio .gchoice { margin: 0; line-height: 1.45; }
+.cd-ppc .cd-ppc-form .gfield_radio label { font-size: 15px; line-height: 1.45; }
 .cd-ppc .cd-ppc-form input[type="text"],
 .cd-ppc .cd-ppc-form input[type="tel"],
 .cd-ppc .cd-ppc-form input[type="email"],
@@ -421,7 +433,7 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 .cd-ppc .cd-ppc-form textarea:focus,
 .cd-ppc .cd-ppc-form select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .cd-ppc .cd-ppc-form .gform_button {
-	width: 100%; margin-top: 14px; min-height: 52px; padding: 0 28px;
+	width: 100%; margin-top: 10px; min-height: 52px; padding: 0 28px;
 	border-radius: 12px; border: 1px solid transparent;
 	background: var(--orange); color: #fff;
 	font-family: inherit; font-size: 17px; font-weight: 700; cursor: pointer;
@@ -618,9 +630,14 @@ body.page-template-ppc-landing #page.site { max-width: none; padding: 0; }
 
 /* The sticky bar overlaps the back-to-top button and the chat launcher, and it
    covers the last lines of the footer. Only while the bar is actually shown. */
-body.page-template-ppc-landing.cd-ppc-sticky-on { padding-bottom: 74px; }
+/* Needs !important for the same reason as the chat rule below: the theme sets
+   body padding with a heavier selector, so without it the bar covers the
+   footer's company details and policy links at the foot of the page. */
+body.page-template-ppc-landing.cd-ppc-sticky-on { padding-bottom: 74px !important; }
 body.page-template-ppc-landing.cd-ppc-sticky-on #back-to-top { bottom: 88px; }
-body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom: 74px; }
+/* LiveChat writes bottom:0 as an inline style, so this needs !important to win.
+   The theme already does the same for the widget's min-height and z-index. */
+body.page-template-ppc-landing.cd-ppc-sticky-on #chat-widget-container { bottom: 74px !important; }
 </style>
 
 <div class="cd-ppc" data-intent="<?php echo esc_attr( $cd_ppc_key ); ?>">
