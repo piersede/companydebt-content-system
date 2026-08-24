@@ -12,17 +12,60 @@ being listed here; those are noted at the bottom so nothing looks lost.
 
 ## Needs a human decision
 
-**1. The referral-fee sentence in the commercial disclosure.** Page 65614,
-`drafts/65614_closing-a-limited-company.html`, methodology block.
+**0. The live WordPress application password stopped authenticating after the
+2026-08-22 Custom push.** Scripted admin access to production is gone. The site,
+the forms, the leads and the Gravity Forms API key are all unaffected.
 
-> "We may also receive a fee where you engage another practitioner through our network."
+Diagnosed, not guessed. Three requests to `/wp-json/wp/v2/users/me`:
 
-This contradicts the standing rule that Company Debt **is** a licensed insolvency
-practice and does not introduce directors out to other practitioners. It sits on
-the page that most directly sells the service. Either it is true, and the
-positioning rule needs revisiting, or it is boilerplate that drifted in and should
-be cut. Flagged by the trust-pass stage on 2026-08-18. Not resolved editorially,
-because it is a compliance statement rather than prose.
+| credential | response |
+| --- | --- |
+| the real one | `rest_not_logged_in` |
+| deliberately wrong password | `rest_not_logged_in` |
+| a username that does not exist | `rest_not_logged_in` |
+
+All identical. WordPress is not checking the password at all, so the stored
+password is almost certainly still valid. The header does reach WordPress: the
+Gravity Forms key uses the same `Authorization` header and returns 200. The
+site still advertises application-password support at
+`/wp-json/` → `authentication`.
+
+So application-password auth specifically has been turned off on production.
+Most likely `wp_options` carried a security-plugin setting over from staging in
+the push; the `wp_itsec_*` tables show a security plugin is installed. It broke
+at exactly the moment of the push and nothing else changed.
+
+Not damage, a setting. To resolve: in wp-admin check the security plugin for
+anything covering the REST API, XML-RPC or application passwords, and compare
+with what production had before. Regenerating the application password is the
+fallback.
+
+**Check at the same time:** whether the user list on production still looks
+right. `wp_users` and `wp_usermeta` were deselected in the push and verified at
+the time, but not re-verified at the end after the search filter was changed
+several times. If they travelled anyway, any account created on production since
+the last clone is gone. Clearing the cache did not help, which is already ruled
+out.
+
+Blocks: future scripted pushes to live via `publish_to_live.py` and
+`push_site_content_live.py`. Does not block anything currently running.
+
+**1. "practical experience from cases handled by licensed practitioners in our
+network."** Roughly ten pages carry this in their sources-of-fact block, for
+example `drafts/26298_misfeasance.html` and
+`drafts/31199_business-restructuring.html`.
+
+Same positioning problem as the referral-fee sentence removed on 2026-08-21: it
+implies Company Debt draws on practitioners outside itself, when the standing
+rule is that Company Debt IS the practice. It makes no fee claim, so it is
+milder, and it may simply be accurate if associates are involved. Left
+deliberately unchanged pending a decision rather than swept up with the fee
+sentence. If it should go, the fix is "our practitioners" or "the cases we
+handle".
+
+Separately and NOT a problem: "They provide free, impartial guidance and can
+refer you to an IP if needed" describes what debt charities do, not what
+Company Debt does. Leave it.
 
 **2. The Bounce Back Loan anecdote.** Same page. The original sentence was:
 
@@ -110,3 +153,101 @@ a failure.
   narrowed. Includes the 26 pages in commit 1429dc5, whose prose was edited with no
   recorded pipeline run and which are currently grandfathered on the basis that it
   is not established either way. Spawned 2026-08-18.
+
+---
+
+## Awaiting a human decision or action — Google Ads / lead pipeline review, 20 Aug 2026
+
+Full report: `google-ads-auditor/runs/2026-08-20-weekly-audit/report.md` (gitignored;
+holds real account data). Updated the same day with the Moneypenny call log. Everything below was verified read-only. Nothing was changed
+in Google Ads, in the CRM, or on the site.
+
+**1. Quick Quote form has produced nothing since 31 July 15:22, while paid ads keep
+sending traffic to it.** 88 paid clicks and £738.72 between 1 and 19 Aug; 182 clicks and
+£1,584.05 since 15 Jul, making `/quick-quote/` the most expensive landing page on the
+account. Ruled out: spam folder (1 entry, from 2023), bin (newest 2022), form disabled
+(active, notification active), broken form scripts (they load and bind correctly once a
+visitor interacts). Not ruled out, because it needs a real submission and this pass was
+read-only: whether a completed submission actually saves. Last entry lands on the same
+day as the 31 Jul conversion-forms work. Needs a live test submission, and paid traffic
+paused off that page until it passes.
+
+**2. Website form leads stopped reaching Zoho on 7 Aug 16:36.** Confirmed against
+converted leads as well, so a converted record is not hiding them. The CRM kept taking
+Facebook, live chat and email leads throughout. 12 real entries created 8–19 Aug are not
+in the CRM and are named in `forms-to-zoho-reconciliation.csv`. Worth chasing by hand:
+entry 8343 (Phil Cooper, 6 Aug), entry 8358 (Spencer Evans, 18 Aug), entry 8355
+(17 Aug). The Zoho credentials in `.env` can read Leads but not Contacts or Deals, so
+one gap remains open: a record created directly as a Contact would be invisible. Widen
+the CRM access, or have someone check one of those names in the CRM.
+
+**3. Ad lead quality is measurably poor on the WEBSITE FORMS ONLY. The phone is fine.**
+Of 18 Contact Us entries in August: 4 are sales pitches aimed at Company Debt, 10 share
+near-identical templated wording with no company/amount/deadline named, 2 have no
+message, 2 are genuine specific director enquiries. Nine entries carry a Google Ads click
+tag, and all nine are templated or no-message. Neither genuine enquiry came from a paid
+click. Against that, the Moneypenny call log (22 May - 19 Aug, 35 calls) shows August at
+4 of 6 calls graded A or B - 67%, the best of the four months, better than June. So the
+quality complaint is real and is specific to the forms, not to demand.
+
+**3b. Company Debt phone calls stopped reaching the CRM on 13 July** - three weeks before
+the website forms did. The "Phone - CD" lead source holds 8 records between 22 May and
+20 Aug (1, 5, 11, 23, 24 Jun; 13 Jul x2; then a test record on 28 Jul). Four match a
+Moneypenny call by name exactly, so the process did work. Since 13 Jul, Moneypenny has
+logged 8 calls including two graded A, and only one reached the CRM - Anoma Radkevitch,
+6 Aug, filed as a live chat rather than a call and with her email missing. Over the same
+window "Phone - AABRS" recorded 18 leads, newest 17 Aug. Call logging is alive on the
+sister firm and dead on Company Debt, which points at a process or setting on the CD side.
+Even in the working period the gap was wide: 19 Moneypenny calls in June against 5 CRM
+phone leads.
+
+**3c. Six callers are waiting for a call back and are not in any system.** Oldest is
+6 Jul. Three are grade A. Full detail in the report; the short list is Dean Morris
+(18 Aug, A, hot), Anthony Wallox / Metro Real Estate (17 Aug, B), Johnny Chicaiza /
+El Escorial (14 Aug, B - ask for the owner Juan), Anoma Radkevitch / Flowerdot Limited
+(6 Aug, A - EMAIL anomarad@hotmail.com, she will not answer an unknown number), Shaily
+Shah (22 Jul, B, call 07721 648556), Simon Dubock / Dubock Ltd (6 Jul, A, hot). This
+costs nothing and should go first.
+
+**3d. Call volume fell in JULY, a month before the budget cut, so the cut cannot be its
+cause.** June 19 calls (0.63/day), July 6 (0.19/day), August 6 in 19 days (0.32/day).
+Treat this as suggestive only: Moneypenny answers overflow, not every call, so a fall can
+mean fewer calls or better in-house answering, and 35 calls over 90 days is a small
+sample. Settling it needs the total call count from the phone system, not the overflow
+log.
+
+**3e. Six of the ten out-of-scope calls were sole traders or individuals with personal
+debt** - exactly what the agreed exclusion list is meant to keep out, and they still
+reached the phone. A second, independent reason to tighten the Search exclusions in
+item 4.
+
+**4. Proposed Search exclusions, awaiting sign-off — not added.** £104.53 of Search's
+£208.88 traceable spend in 11–17 Aug went on other firms' names, named individuals and a
+postal address. One broad keyword, "licensed insolvency practitioner near me", took
+£143.45 of £296.89 — 48% of Search — and £96.94 of that went to competitor-brand
+searches. Candidate exclusions and the full term list are in the report. Also consider
+narrowing that keyword from broad matching.
+
+**5. Prepaid balance is £873.05,** about 16 days at the current £53.26/day. August spend
+to the 19th is £2,646 against £5,425–£6,976 in each of the previous 12 months. No budget
+increase recommended until items 1 and 2 are fixed.
+
+**6. Policy restrictions, real but minor for Search, possibly structural for
+Performance Max.** Three Search ads are limited under "government documents and official
+services" — they took 19 showings and 1 click all week, so the cost is negligible. All
+four live Performance Max asset groups are limited, under the same topic plus
+"restricted personalised advertising, financial hardship". Performance Max lost 71% of
+its available showings to rank rather than budget, and three of its four asset groups
+are built around audience targeting that this rule blocks. Worth rewording headlines in
+the same sweep; not ahead of items 1 and 2.
+
+**7. The insolvency calculator is not broken — it is unvisited.** The served script is
+current and complete; the stale-cache theory was tested and does not hold. Zero paid
+clicks to `/insolvency-calculator/` in five weeks, and the Performance Max asset group
+built around it is paused. All three real entries it has ever taken reached the CRM
+correctly. If it should produce leads, something has to send traffic to it.
+
+**8. Unreconciled, flagged rather than guessed.** Six website form entries carrying an ad
+click tag arrived 11–17 Aug, but Google recorded only two conversions across both
+campaigns. Either conversion tracking is under-counting form fills, or those tags did not
+come from clicks Google billed. Not enough evidence to say which.

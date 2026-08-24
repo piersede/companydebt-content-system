@@ -111,6 +111,8 @@ class MCPSession:
             stderr=subprocess.DEVNULL,
             env=env,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             bufsize=1,
         )
         self._send({"jsonrpc": "2.0", "id": 0, "method": "initialize",
