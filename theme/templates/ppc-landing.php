@@ -214,6 +214,71 @@ if ( ! $cd_ppc_form_id ) {
 	$cd_ppc_form_id = 47;
 }
 $cd_ppc_form_id = (int) apply_filters( 'cd_ppc_form_id', $cd_ppc_form_id );
+
+/* -------------------------------------------------------------------------
+ * Keep the behaviour script out of WP Rocket's "delay JavaScript execution".
+ *
+ * Rocket rewrites the inline block at the foot of this file into a delayed
+ * script, so on a cold load nothing in it runs until the visitor's first scroll
+ * or tap: no FAQ accordion, no mobile sticky bar. The exclusion list is matched
+ * against the script tag, and that tag carries data-cd-ppc-behaviour for exactly
+ * this purpose. Registered here rather than in the WP Rocket settings screen so
+ * it travels with the template and cannot be lost in a settings change.
+ * ---------------------------------------------------------------------- */
+add_filter(
+	'rocket_delay_js_exclusions',
+	function ( $cd_ppc_excluded ) {
+		$cd_ppc_excluded[] = 'data-cd-ppc-behaviour';
+		return $cd_ppc_excluded;
+	}
+);
+
+/* -------------------------------------------------------------------------
+ * Mobile keyboards and autofill on the enquiry form.
+ *
+ * The Gravity Forms field types are already correct: field 3 is a phone field
+ * and field 4 an email field, so validation is type-aware. What the rendered
+ * inputs lack is the browser hint. They come out as type="text" with no
+ * inputmode and no autocomplete, so a phone shows a full keyboard for a
+ * telephone number, there is no @ key for the email address, and autofill is
+ * never offered on any field.
+ *
+ * Done here, on the rendered markup, rather than by editing form 47. That form
+ * is wired to live conversion tracking and its phone field is registered in the
+ * spam hardening, so changing the field's own format setting risks both. This
+ * only adds attributes; no stored form setting changes.
+ * ---------------------------------------------------------------------- */
+add_filter(
+	'gform_get_form_filter_' . $cd_ppc_form_id,
+	function ( $cd_ppc_html, $cd_ppc_form ) {
+		$cd_ppc_hints = array(
+			2 => ' autocomplete="name"',
+			3 => ' type="tel" inputmode="tel" autocomplete="tel"',
+			4 => ' type="email" inputmode="email" autocomplete="email"',
+			5 => ' autocomplete="organization"',
+		);
+		foreach ( $cd_ppc_hints as $cd_ppc_fid => $cd_ppc_attrs ) {
+			$cd_ppc_id = 'input_' . (int) $cd_ppc_form['id'] . '_' . (int) $cd_ppc_fid;
+			$cd_ppc_re = '/<input([^>]*\bid=["\']' . preg_quote( $cd_ppc_id, '/' ) . '["\'][^>]*)>/';
+			$cd_ppc_html = preg_replace_callback(
+				$cd_ppc_re,
+				function ( $m ) use ( $cd_ppc_attrs ) {
+					$tag = $m[1];
+					// A replacement type must remove the rendered type="text".
+					if ( false !== strpos( $cd_ppc_attrs, 'type=' ) ) {
+						$tag = preg_replace( '/\stype=["\'][^"\']*["\']/', '', $tag );
+					}
+					return '<input' . $tag . $cd_ppc_attrs . '>';
+				},
+				$cd_ppc_html,
+				1
+			);
+		}
+		return $cd_ppc_html;
+	},
+	10,
+	2
+);
 ?>
 
 <style id="cd-ppc-styles">
