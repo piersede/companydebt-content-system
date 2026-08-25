@@ -61,6 +61,8 @@ function buildUserMsg(config, { asset, article, match, contact, articleAuthor })
   lines.push('');
   lines.push(`THE CITATION WE ARE ADDRESSING (this is what to anchor the email on):`);
   lines.push(match.citedContext ? `"${match.citedContext}"` : '(none captured — DO NOT invent one)');
+  lines.push('');
+  lines.push(`FIGURE FIDELITY (hard rule). If you reference any number from that cited sentence, reproduce it EXACTLY as written — same digits, same commas, same "%" or wording. Never round (315,605 stays 315,605, never 315,000; 4,034 stays 4,034, never "over 4,000"). Never convert words to a figure ("one in four" stays "one in four", never 25%) or a figure to words. If you cannot reproduce a figure exactly, describe the point in words with no number at all.`);
   if (match.competitorUrl) lines.push(`They currently point to: ${match.competitorUrl}`);
   lines.push('');
   lines.push(`OUR PAGE: ${asset.title}\nURL: ${asset.url}\nCoverage: ${asset.coverage}. Sources: ${asset.sources.join(' and ')}. Latest data: ${asset.updated}. Next release: ${asset.nextRelease}.`);
