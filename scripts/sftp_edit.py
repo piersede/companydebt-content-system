@@ -72,12 +72,49 @@ def get(remotes: list[str]) -> list[pathlib.Path]:
     return out
 
 
+# WP Engine serves everything under the SFTP home to the public EXCEPT
+# ``_wpeprivate``, which nginx answers with 403 on both staging and live.
+# Backups must live there. See _backup_path() for why this is not optional.
+BACKUP_ROOT = "_wpeprivate/file-backups"
+
+
+def _mkdirs(s, remote_dir: str) -> None:
+    """mkdir -p over SFTP. There is no recursive mkdir primitive."""
+    cur = ""
+    for part in remote_dir.strip("/").split("/"):
+        cur = part if not cur else f"{cur}/{part}"
+        try:
+            s.stat(cur)
+        except IOError:
+            s.mkdir(cur)
+
+
+def _backup_path(remote: str, tag: str) -> str:
+    """Where a backup of ``remote`` goes.
+
+    NEVER next to the original. WordPress only executes files ending in
+    ``.php``; a file ending ``.bak-<tag>`` is not executed, so the web server
+    hands it over as readable source text to anyone who requests the URL.
+
+    On 25 Aug 2026 that meant 345 server files - 45 MB of theme and mu-plugin
+    source - were publicly readable under wp-content, four of them holding
+    working Zoho CRM and LiveChat credentials. They had been reachable since
+    at least June. An .htaccess deny rule was tried first and does nothing:
+    WP Engine's nginx serves static files without consulting Apache.
+
+    So the fix is placement, not permissions. Backups go under
+    ``_wpeprivate/``, which is the one directory WP Engine refuses to serve.
+    """
+    return f"{BACKUP_ROOT}/{remote.lstrip('/')}.bak-a11y-{tag}"
+
+
 def put(local: str, remote: str, tag: str = "edit") -> None:
     t, s = client()
     try:
         if _exists(s, remote):
-            bak = f"{remote}.bak-a11y-{tag}"
+            bak = _backup_path(remote, tag)
             if not _exists(s, bak):
+                _mkdirs(s, posixpath.dirname(bak))
                 # server-side copy via read+write (no SFTP copy primitive)
                 with s.open(remote, "rb") as fh:
                     data = fh.read()

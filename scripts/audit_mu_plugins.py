@@ -90,7 +90,11 @@ def classify(sftp):
     for a in sorted(sftp.listdir_attr(MU), key=lambda x: x.filename):
         fn = a.filename
         if stat.S_ISDIR(a.st_mode) or not fn.endswith(".php"):
-            continue  # .bak-* files do not execute; they are the rollback path
+            # .bak-* files do not EXECUTE, so they are out of scope here. That is
+            # not the same as harmless: the web server hands them over as readable
+            # source instead. audit_exposed_files.py covers that, and main() below
+            # refuses to declare the copy safe until it passes.
+            continue
         if fn in KEEP or fn.startswith(KEEP_PREFIXES):
             kept.append(fn)
             continue
@@ -109,6 +113,26 @@ def classify(sftp):
         else:
             kept.append(fn)
     return throwaway, kept
+
+
+def _exposure_scan_passes() -> bool:
+    """Run audit_exposed_files.py and return whether staging is clean.
+
+    Kept as a subprocess rather than an import so that this audit still reports
+    the throwaway-script half if the scanner is missing or broken.
+    """
+    import subprocess
+    print("--- checking for publicly readable server source ---")
+    try:
+        r = subprocess.run([sys.executable, str(ROOT / "scripts" / "audit_exposed_files.py")],
+                           capture_output=True, text=True, timeout=600)
+    except Exception as exc:
+        print(f"  could not run audit_exposed_files.py: {exc}", file=sys.stderr)
+        return False
+    print(r.stdout.strip())
+    if r.stderr.strip():
+        print(r.stderr.strip(), file=sys.stderr)
+    return r.returncode == 0
 
 
 def main() -> int:
@@ -130,8 +154,17 @@ def main() -> int:
                 payloads.append(fn)
 
         if not throwaway:
-            print("Clean. Safe to run the file-system copy.")
-            return 0
+            print("No throwaway scripts.\n")
+            # Executable junk is only half the pre-flight. In Aug 2026 this audit
+            # passed clean while 345 readable copies of theme and mu-plugin source
+            # sat in the web root, four holding live credentials. Never declare the
+            # copy safe on one half of the check.
+            if _exposure_scan_passes():
+                print("\nClean. Safe to run the file-system copy.")
+                return 0
+            print("\nNOT safe to copy: readable server source found. See above.",
+                  file=sys.stderr)
+            return 1
 
         if not args.delete:
             print("\nReport only - nothing written. Re-run with --delete to remove.")
