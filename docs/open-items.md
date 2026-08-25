@@ -314,7 +314,24 @@ homepage in a browser:
 first (`python scripts/audit_mu_plugins.py`), then a WP Engine file-system-only copy, then
 a Cloudflare purge.
 
-**Also worth doing while the account is new.** The banner text is CookieYes stock American
-English - "personalized", "analyze". It reads as imported. Rewriting it in British English,
-and moving Reject out of the overflow on mobile, was already recommended in the July audit
-and never done.
+**One fix from the old account did NOT carry over, and it is a regression.** Everything we
+ever fixed on the old setup falls into two groups:
+
+| Fix | Where it lives | Carried over? |
+|---|---|---|
+| Banner appears on load, not after first scroll | `cd-cookieyes-banner-fix.php` | Yes - key updated |
+| "Customise" panel centred on wide screens | same file, CSS | Yes - re-verified 25 Aug at 2560px on the new banner: 845px wide, dead centre. Without it the panel still goes full-width, so the fix is still needed |
+| Delay exclusion narrowed so it stops matching our click-id script | same file | Yes |
+| Google tags denied until the visitor answers | `header.php` | Yes - never depended on the account |
+| **Shorter British banner wording** | **CookieYes dashboard** | **No. Lost with the old account** |
+
+The new account is back to CookieYes stock American text: "We use cookies to enhance your
+browsing experience, serve personalized ads or content, and analyze our traffic." The buttons
+read "Customize", not "Customise". The old account's published wording ended
+"...improve your experience, measure our traffic and show relevant ads. Choose Accept, Reject
+or Customise below."
+
+Only a person signed in to the CookieYes dashboard can put that back. It cannot be done from
+the repo or the server. The July audit's other banner recommendation - move Reject out of the
+overflow on mobile - was never done on the old account either, and is worth doing at the same
+time.
