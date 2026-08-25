@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * (1) Keep the CookieYes loader out of WP Rocket's delay. Matched as substrings
  * against the script URL. The enqueued loader is
- * .../client_data/387f1b54d36b6afe444ba7b09ed20e83/script.js and it fetches
+ * .../client_data/fd66253e39627c5f6bcc131c/script.js and it fetches
  * cdn-cookieyes.com/client_data/<id>/banner.js; all three patterns below match
  * one or both, so the banner initialises on page load.
  */
@@ -44,10 +44,14 @@ add_filter( 'rocket_delay_js_exclusions', function ( $excluded ) {
 	// capture inline script (it references the 'cookieyes-consent' cookie), which
 	// would un-delay that script as an unintended side effect. These three match
 	// the CookieYes loader/banner only.
+	// Key updated 25 Aug 2026: the previous CookieYes account (387f1b54...)
+	// was suspended for non-payment, which took the banner off the site. The
+	// loader now lives directly in header.php, not in the cookie-law-info
+	// plugin, so this exclusion must track the key in header.php.
 	$add = array(
 		'client_data',
 		'cdn-cookieyes\.com',
-		'387f1b54d36b6afe444ba7b09ed20e83',
+		'fd66253e39627c5f6bcc131c',
 	);
 	return array_values( array_unique( array_merge( (array) $excluded, $add ) ) );
 } );

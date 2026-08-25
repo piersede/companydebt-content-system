@@ -84,6 +84,14 @@ New file on staging: `wp-content/mu-plugins/cd-cookieyes-banner-fix.php`. Two fi
 1. **Banner shows on load.** Excludes the CookieYes loader (`client_data/<id>/script.js`) from WP Rocket's delay, so the banner paints without waiting for interaction. Verified on live that this script IS currently delayed (`type=text/rocketlazyloadscript`, data-rocket-src `.../cache/min/1/client_data/387f1b54.../script.js`) and that the exclusion patterns match it. Consent stays safe: the denied-by-default snippet is already un-delayed and runs first.
 2. **Preferences panel centred.** CSS override forcing `.cky-modal` to a full-viewport flex-centre overlay and constraining `#ckyPreferenceCenter` to 845px. Verified against the real live banner markup (injected in-session): panel moves from x:-1272 (half off-screen) to dead-centre, within 1px, fully on-screen at 2560px wide.
 
+**UPDATE 25 Aug 2026 — the key in this file changed.** The CookieYes account behind
+`387f1b54d36b6afe444ba7b09ed20e83` was suspended for non-payment, which took the banner off the site
+completely. The replacement key is `fd66253e39627c5f6bcc131c`, and the loader now sits directly in
+`header.php` rather than being injected by the `cookie-law-info` plugin. `cd-cookieyes-banner-fix.php`
+hard-codes the key in its delay exclusion, so **live is currently carrying the dead key** and both
+files must go live together. Changing one without the other leaves the banner delayed until the
+visitor's first scroll, which is the exact fault this file was written to fix.
+
 **IMPORTANT — cannot be tested on staging.** CookieYes runs only on live; its activation lives in the WP database, which is never copied. Staging shows no banner at all. So this fix was verified against live's markup in a browser session, and must be re-verified on live after the push:
 - Load live in a fresh browser (incognito), do NOT interact: banner should appear on load.
 - Click "Customise" on a wide screen: panel should be centred and fully visible.
