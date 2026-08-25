@@ -95,6 +95,21 @@ def enclosing_script_tag(html: str, needle: str) -> str | None:
     return tag
 
 
+# HTML comments are stripped before any position is measured. A comment that
+# merely MENTIONS the container id was found first by html.find(), so this guard
+# reported the GTM loader as missing and delayed while the real loader sat
+# further down, plainly un-delayed. The header comment added on 25 Aug 2026
+# documenting the CookieYes wiring did exactly that. A guard a code comment can
+# break is worse than no guard: it fails loudly and wrongly, and the next person
+# spends an hour chasing a fault that is not there.
+COMMENT = re.compile(r"<!--.*?-->", re.S)
+
+
+def strip_comments(html: str) -> str:
+    """Blank out HTML comments, keeping length so offsets stay comparable."""
+    return COMMENT.sub(lambda m: " " * len(m.group(0)), html)
+
+
 def fetch(base: str, path: str, auth) -> str:
     url = base.rstrip("/") + path
     requests.get(url, auth=auth, headers=UA, timeout=60)  # warm any page cache
@@ -116,7 +131,8 @@ def main() -> int:
         base = os.environ["WP_STAGING_URL"]
         auth = (os.environ["WP_BASIC_AUTH_USER"], os.environ["WP_BASIC_AUTH_PASS"])
 
-    html = fetch(base, args.path, auth)
+    raw = fetch(base, args.path, auth)
+    html = strip_comments(raw)
 
     pos_consent = html.find(CONSENT_ATTR)
     pos_gtm = html.find(GTM_ID)
@@ -125,7 +141,7 @@ def main() -> int:
     capture_tag = enclosing_script_tag(html, CAPTURE_ATTR)
 
     print(f"target : {base.rstrip('/')}{args.path}")
-    print(f"length : {len(html)}")
+    print(f"length : {len(raw)}")
     print()
     print(f"consent default @ {pos_consent}  tag: {consent_tag}")
     print(f"GTM loader      @ {pos_gtm}  tag: {gtm_tag}")

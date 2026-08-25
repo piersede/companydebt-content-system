@@ -309,10 +309,14 @@ homepage in a browser:
 - Accept: all seven Google signals flip to granted, `_ga`, `_ga_P39KJ34V6G` and `_gcl_au`
   appear, and our own click-id capture re-runs on the consent event.
 
-**The decision needed.** The change is on staging only. Live still has no banner. Pushing
-`header.php` and the mu-plugin to live is a code push, so it needs the mu-plugin audit
-first (`python scripts/audit_mu_plugins.py`), then a WP Engine file-system-only copy, then
-a Cloudflare purge.
+**DONE - live, 25 Aug 2026.** Pushed by files-only copy, database untouched. Verified on
+live afterwards: banner appears on load with no interaction (440x234, on screen); the
+Customise panel is 845px wide and centred to 0px at 2560px; Accept flips all seven Google
+signals to granted and writes `_ga`, `_ga_P39KJ34V6G`, `_gcl_au`; the click-id capture
+re-fires on the consent event. Mobile at 375px: banner fits, no sideways scroll, all three
+buttons 325x44 and on screen, order Accept / Customise / Reject as before. Consent order
+guard reads 4/4 PASS on live and staging. Form entries untouched - newest entry identical
+before and after the copy.
 
 **One fix from the old account did NOT carry over, and it is a regression.** Everything we
 ever fixed on the old setup falls into two groups:
@@ -354,7 +358,16 @@ Staging: all 345 moved into `_wpeprivate/`, the one folder WP Engine refuses to 
 Tooling changed so it cannot recur, and the mandatory pre-push audit now fails if it does.
 Full write-up: `docs/exposed-source-files.md`.
 
-**The two decisions needed.**
+**LIVE IS NOW CLEAN.** The files-only copy on 25 Aug mirrored rather than merely added, so
+live lost the exposed files along with staging. `python scripts/audit_exposed_files.py
+--target live` reads PASS. That settles the open question about copy behaviour: the file
+copy DOES remove destination files that no longer exist on the source. Treat that as a
+hazard as much as a convenience - anything living only on live is destroyed by a copy.
+
+**Credential rotation: decided, closed.** Piers reviewed it on 25 Aug and chose to leave the
+keys as they are. Do not raise it again.
+
+**Resolved - kept for the lesson:**
 
 1. **Live file access.** Create an SFTP user on the production environment in the WP Engine
    portal and add it to `.env`. The same move then takes minutes and is verifiable with
