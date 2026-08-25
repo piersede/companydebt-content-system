@@ -251,3 +251,27 @@ correctly. If it should produce leads, something has to send traffic to it.
 click tag arrived 11–17 Aug, but Google recorded only two conversions across both
 campaigns. Either conversion tracking is under-counting form fills, or those tags did not
 come from clicks Google billed. Not enough evidence to say which.
+
+---
+
+## WebP Express can hide the header logo again (25 Aug 2026)
+
+The site logo disappeared from every page on 25 Aug. The image file was fine. WebP
+Express answered the logo's URL with a redirect that pointed back at itself, and the
+edge cache stored that answer for a year. A cache purge on the live install brought the
+logo straight back, and the logo now loads on desktop and mobile.
+
+Nothing in the repo changed, because nothing in the repo was wrong.
+
+**The decision needed.** WebP Express can do the same thing to any theme image that a
+script or a stylesheet calls by its plain URL. Two ways to stop it:
+
+1. Exclude `wp-content/themes/` from WebP Express.
+2. Turn off its redirect-to-itself mode.
+
+Both are settings in the live WordPress admin, so a human has to make the change. Until
+one of them is done, the outage can repeat without warning.
+
+**If it repeats**, purge the live caches through the WP Engine interface, or run the
+three purges recorded in the session notes. Full write-up:
+`~/.claude/projects/*/memory/reference_webp_express_logo_redirect_loop.md`.
