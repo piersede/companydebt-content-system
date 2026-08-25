@@ -1,0 +1,18 @@
+<!-- Extracted from wp-content/themes/company-debt-webpigment/header.php.
+     Sits BELOW the Consent Mode defaults and ABOVE the GTM container snippet.
+     Deployed to staging 2026-08-25. Backup on server:
+     header.php.bak-a11y-ckykey-20260825 -->
+
+<!-- CookieYes consent banner - wired 25 Aug 2026.
+     Loaded directly here rather than by the cookie-law-info plugin. The
+     previous CookieYes account (key 387f1b54...) was suspended for non-payment
+     on/before 25 Aug 2026, which removed the banner from the site entirely.
+     This is the replacement account, key fd66253e39627c5f6bcc131c.
+     ONE delivery route only. Do NOT also reconnect the cookie-law-info plugin
+     and do NOT re-enable the CookieYes tag in GTM-5GTD9ZP: two routes use two
+     keys, they overwrite each other's cookieyes-consent cookie and the banner
+     then never renders at all (this happened on 29 Jul 2026).
+     Placed BELOW the consent defaults above and ABOVE GTM, so a returning
+     visitor's stored decision reaches Google before its tags initialise.
+     Kept out of WP Rocket's JS delay by cd-cookieyes-banner-fix.php. -->
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fd66253e39627c5f6bcc131c/script.js"></script>

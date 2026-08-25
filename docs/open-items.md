@@ -275,3 +275,46 @@ one of them is done, the outage can repeat without warning.
 **If it repeats**, purge the live caches through the WP Engine interface, or run the
 three purges recorded in the session notes. Full write-up:
 `~/.claude/projects/*/memory/reference_webp_express_logo_redirect_loop.md`.
+
+---
+
+## Cookie banner rewired to a new CookieYes account - live push still needed (25 Aug 2026)
+
+**What happened.** The old CookieYes account was suspended for non-payment. That took the
+consent banner off companydebt.com completely. Visitors saw no banner at all, on live and
+on staging.
+
+Nothing leaked. The denied-by-default snippet in `header.php` kept running, so Google's
+tags stayed switched off and no `_ga` or `_gcl_*` cookie was written. The cost was
+measurement, not privacy: with no banner, nobody could ever accept, so every visit was
+estimated rather than counted.
+
+**What changed on staging.** Two files, both backed up on the server as
+`.bak-a11y-ckykey-20260825`:
+
+1. `wp-content/themes/company-debt-webpigment/header.php` - the CookieYes loader now sits
+   directly in the theme, below the consent defaults and above the GTM snippet, pointed at
+   the new account key `fd66253e39627c5f6bcc131c`. Repo mirror:
+   `theme-snippets/cookieyes-loader.header.html`.
+2. `wp-content/mu-plugins/cd-cookieyes-banner-fix.php` - the page-speed exclusion carried
+   the old key by hand. It now carries the new one, so the banner still paints on load
+   rather than waiting for the visitor's first scroll.
+
+The `cookie-law-info` plugin is no longer the delivery route. Leave it disconnected.
+
+**Verified before the change was made**, by loading the new account's script on the live
+homepage in a browser:
+
+- Refuse: consent cookie written as `consent:no`, no `_ga` or `_gcl_*` cookie appears.
+- Accept: all seven Google signals flip to granted, `_ga`, `_ga_P39KJ34V6G` and `_gcl_au`
+  appear, and our own click-id capture re-runs on the consent event.
+
+**The decision needed.** The change is on staging only. Live still has no banner. Pushing
+`header.php` and the mu-plugin to live is a code push, so it needs the mu-plugin audit
+first (`python scripts/audit_mu_plugins.py`), then a WP Engine file-system-only copy, then
+a Cloudflare purge.
+
+**Also worth doing while the account is new.** The banner text is CookieYes stock American
+English - "personalized", "analyze". It reads as imported. Rewriting it in British English,
+and moving Reject out of the overflow on mobile, was already recommended in the July audit
+and never done.
