@@ -380,6 +380,47 @@ def cta(c, head, url, sub=None):
             y -= SUB_LEAD - SUB_SIZE
 
 
+def advice(c, head, punch, kicker=None):
+    """Single advice card: white headline + one orange punch line. House style,
+    fully consistent with every other card. `head`/`punch` wrap to the column.
+    """
+    head_size, punch_size = 78, 60
+    head_lead, punch_lead = head_size * 1.16, punch_size * 1.16
+    head_lines = wrap(c, head, "Lato-Black", head_size, COL)
+    punch_lines = wrap(c, punch, "Lato-Black", punch_size, COL)
+
+    block = (len(head_lines) * head_lead + GAP_SUB + RULE_H + GAP_SUB
+             + len(punch_lines) * punch_lead)
+    if kicker:
+        block += KICKER_SIZE + GAP_KICKER
+    y = centre_start(block)
+
+    if kicker:
+        c.setFont("Lato-Bold", KICKER_SIZE)
+        c.setFillColor(MIDBLUE)
+        c.drawString(MARGIN, y - KICKER_SIZE, kicker.upper())
+        y -= KICKER_SIZE + GAP_KICKER
+
+    c.setFont("Lato-Black", head_size)
+    c.setFillColor(WHITE)
+    for line in head_lines:
+        y -= head_size
+        c.drawString(MARGIN, y, line)
+        y -= head_lead - head_size
+    y -= GAP_SUB
+
+    c.setFillColor(ORANGE)
+    c.rect(MARGIN, y, 120, RULE_H, stroke=0, fill=1)
+    y -= GAP_SUB
+
+    c.setFont("Lato-Black", punch_size)
+    c.setFillColor(ORANGE)
+    for line in punch_lines:
+        y -= punch_size
+        c.drawString(MARGIN, y, line)
+        y -= punch_lead - punch_size
+
+
 def mythfact(c, kicker, myth, fact, tag=None):
     """Signature debunk card for the myths pillar: a struck-through MYTH panel
     over an orange FACT panel. `myth` should be short (fits 1-2 lines struck).
@@ -654,6 +695,12 @@ SLIDES = {
                         sub="has been paid out on the government's Bounce Back Loan guarantee for loans that were not repaid. £1.58bn of it on suspected fraud.",
                         kicker="Bounce Back Loans, as at March 2026")),
     ],
+    # Post 29: advice card. Principle-level, no figure. House template.
+    29: [
+        ("advice", dict(kicker="A habit worth keeping",
+                        head="Keep the VAT in a separate account.",
+                        punch="It was never your money.")),
+    ],
     # Post 12: simple stats-hub promo. 1 in 198 = 10,000 / 50.5 rate, verified
     # from gov.uk June 2026 commentary (rate 50.5 per 10k, prior year 52.4).
     12: [
@@ -715,6 +762,7 @@ SOURCES = {
     24: "",
     25: "",
     26: "",
+    29: "",
 }
 
 # Footer URL per post (defaults to the data hub).
@@ -727,6 +775,7 @@ URLS = {
     25: "companydebt.com/insolvency-calculator",
     26: "companydebt.com/advice",
     28: "companydebt.com/bounce-back-loan-support-hub",
+    29: "companydebt.com/hmrc",
 }
 
 
@@ -746,6 +795,8 @@ def render(c, kind, spec, slide_no, total, source=FOOTER_SOURCE, url=FOOTER_URL)
         mythcard(c, **spec)
     elif kind == "mythfact":
         mythfact(c, **spec)
+    elif kind == "advice":
+        advice(c, **spec)
     elif kind == "distribution":
         distribution(c, **spec)
     elif kind == "cover":
