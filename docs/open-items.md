@@ -335,3 +335,37 @@ Only a person signed in to the CookieYes dashboard can put that back. It cannot 
 the repo or the server. The July audit's other banner recommendation - move Reject out of the
 overflow on mobile - was never done on the old account either, and is worth doing at the same
 time.
+
+---
+
+## Live is publicly serving readable copies of its own source code (25 Aug 2026)
+
+**Staging is fixed. Live is not, and cannot be fixed with the access we hold.**
+
+The site's own edit helper saved a backup of every server file it changed, next to
+the original, named like `cd-livechat-secrets.php.bak-a11y-cdlc6`. WordPress only runs
+files ending `.php`, so those copies were never run - the web server handed them over
+as readable text to anyone with the address. 345 files on staging, about 45 MB of theme
+and mu-plugin source. Four held the Zoho CRM client id, client secret and refresh token,
+plus a LiveChat secret, and the exposed values matched the ones in use that day.
+`robots.txt` does not disallow that folder.
+
+Staging: all 345 moved into `_wpeprivate/`, the one folder WP Engine refuses to serve.
+Tooling changed so it cannot recur, and the mandatory pre-push audit now fails if it does.
+Full write-up: `docs/exposed-source-files.md`.
+
+**The two decisions needed.**
+
+1. **Live file access.** Create an SFTP user on the production environment in the WP Engine
+   portal and add it to `.env`. The same move then takes minutes and is verifiable with
+   `python scripts/audit_exposed_files.py --target live`. Without it, live keeps serving the
+   files. Do NOT assume a staging-to-live file copy clears them: it is not established
+   whether that copy deletes destination files that no longer exist on the source, and if it
+   only adds and overwrites then live stays exposed while every check here reads clean.
+2. **Whether to rotate the Zoho and LiveChat credentials.** Deleting the files does not
+   un-publish values that have been readable for months. That call belongs to whoever owns
+   those accounts. A Zoho refresh token does not expire on its own and is not tied to the
+   website; it cannot move money, but it does reach the CRM records.
+
+**Blocked behind this:** the CookieYes banner push (above). Both are ready. Pushing now
+would carry two new backup files onto live, so the cleanup should land first.
