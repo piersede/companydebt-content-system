@@ -1,0 +1,16 @@
+{
+  "slug": "liquidation-deadlines-and-time-limits",
+  "kind": "pipeline-run",
+  "attested_at": "2026-08-27",
+  "attested_by": "claude-opus-5",
+  "task": "rewrite",
+  "prose_sha": "c04c4fb28cd4a18d1d6b0b9900e027073674c70ecde282023ecfb3e8255e4004",
+  "stages_completed": [
+    "review",
+    "humanise",
+    "gate"
+  ],
+  "unknown_stages": [],
+  "local_state_present": false,
+  "notes": "Full from-scratch redraft plus a specialist practitioner correction pass, 2026-08-17/18. Review: the page was reviewed by an insolvency specialist who scored it 7/10 as copy and 5/10 for publication readiness; ten legal and factual corrections followed (jurisdiction stated for England and Wales, s109 notice within 14 days and Companies House form 600CH, s127 dispositions running from presentation of the petition per s129 rather than from the order, statement of affairs verified by a statement of truth rather than described as sworn, the s214 statutory test with both limbs, restoration possible after dissolution, conduct reports not implying wrongdoing, the bank-freeze claim separated into legal reason and owned practice observation, the absolute late-proof claim removed, and the resolution-date scope qualified). Structure rebuilt from writer-core, the legal-compliance overlay and the process_guide spec: branches by the reader's position, splits the director's deadlines from the liquidator's, and adds a 'what if I have already missed one' section. Humanise: three voice passes; rhythm improved from cv 0.275 to 0.403; repeated rhetorical shapes cut; register calmed against 17-audience-and-persona from fear-led to action-led, with every risk now stated together with its size; full jargon first-mention sweep beyond the gate's curated list. Four stranger reads recorded and each acted on. Gate: article_audit 33/33 immediately before the merge that introduced this check. Signed off by Chris Andersen and published live 2026-08-18. Lessons folded back into the runtime packs and editorial-os/14-failure-modes-and-recovery.md section 18."
+}
