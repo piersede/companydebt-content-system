@@ -1,40 +1,47 @@
 {
   "slug": "liquidation-deadlines-and-time-limits",
-  "audited_at": "2026-08-08",
+  "audited_at": "2026-08-18",
   "audited_by": "claude-opus-5",
-  "prose_sha": "bafbc0e977e3bc0983f6c8a94c796d865e47cdcd5befe7c7206bafdd65a364a1",
+  "prose_sha": "c04c4fb28cd4a18d1d6b0b9900e027073674c70ecde282023ecfb3e8255e4004",
   "passes_since_baseline": {
-    "count": 2,
-    "baseline_ref": "file-creation",
+    "count": 3,
+    "baseline_ref": "fd0ce1a0333b",
     "override_reason": null,
     "redraft_now": false
   },
   "measured": {
     "metrics": {
-      "words": 1947,
-      "you": 48,
-      "you_per_1k": 24.7,
-      "we": 13,
-      "we_per_1k": 6.7,
+      "words": 2505,
+      "you": 40,
+      "you_per_1k": 16.0,
+      "we": 12,
+      "we_per_1k": 4.8,
       "i": 0,
       "i_per_1k": 0.0
     },
     "sections_over_200w_without_you": [],
     "rhythm": {
-      "paras": 48,
-      "cv": 0.281,
-      "uniform": true
+      "paras": 80,
+      "cv": 0.374,
+      "uniform": false
     },
-    "scene_proxy": 1
+    "scene_proxy": 0
   },
   "attested": {
-    "concrete_scenes": 5,
+    "concrete_scenes": 4,
     "evaluative_bite_lines": 3,
     "tone_modulation": "pass",
     "rhythm_varied": "pass",
     "read_aloud_ok": "pass",
-    "notes": "Second correction pass. Removed the incorrect 21-day petition service claim; the minimum gap is set by the rule 7.10 advertising window, which the next paragraph already states correctly. No voice changes. Scenes and practitioner voice unchanged from the previous audit.",
+    "notes": "Post-publication correction. Live verification caught that 'wrongful trading' was named in the at-a-glance section with only a forward reference ('covered further down') and no explanation, which is the same fault the operator flagged on 2026-08-18: naming a frightening term earlier without moving its explanation with it. The full treatment lower down did not fix the first mention. Now glossed in place as the duty to act once insolvent liquidation can no longer be avoided, depending on the company's position rather than any filing. Also removed the draft's metadata comments from what goes to live: build_page strips them for staging, but publish_to_live pushes the file raw, so a comdebstage LINK comment reached live source on the first push. No other changes.",
     "stranger_read_report": null
+  },
+  "stranger_read": {
+    "path": null,
+    "requested": null,
+    "prose_sha_at_request": null,
+    "numbered_answers": 0,
+    "override_reason": "One-sentence gloss added to an already-reviewed page; three stranger reads on file and no change of structure or argument."
   },
   "verdict": "pass"
 }

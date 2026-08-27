@@ -197,3 +197,10 @@ The following checks are not yet covered by scripts. Prefer extending existing c
 ---
 
 *Last updated: v2.3 patch integration, March 2026*
+
+## Gate gaps confirmed 2026-08-18 (liquidation-deadlines practitioner review)
+
+- Jargon first-mention gloss: `article_audit.py` check 31 tests only ~20 curated terms, so a page can score full marks while remaining unreadable to a director who does not know insolvency. Terms that passed the check un-glossed: `wrongful trading`, `conduct matter`, `deemed consent`, `contributory`, `secured charge`, `proof of debt`, `the Gazette`, `statement of truth`. Extend by flagging any first-mention term from a broader insolvency lexicon that lacks a gloss within ~240 chars.
+- Jurisdiction declaration: nothing checks that a page naming England-and-Wales legislation tells the reader the jurisdiction. Extend `scripts/article_audit.py` to WARN where `Insolvency (England and Wales) Rules` / `London Gazette` appear but no jurisdiction sentence does.
+- Categorical-claim detector: no check flags `every`, `permanently`, `automatically`, `always`, `the same` in a legal-compliance page for the three-way precision test (`14-failure-modes-and-recovery.md` §18). Would be a WARN, not a hard fail.
+- Audience-title match: nothing checks that a title naming two audiences ("Every Director and Creditor") is backed by real sections for both.

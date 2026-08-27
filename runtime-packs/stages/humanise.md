@@ -120,6 +120,19 @@ Four things must be present, verifiable by re-reading before the gate:
    Test: could this sentence appear unchanged on a page about a different
    crisis entirely? If yes, it is filler. Cut it.
 
+   **The strongest single warmth mechanism is proportion, added 2026-08-18.**
+   Give the SIZE of a risk, never just its existence. A page that names three
+   routes to personal liability and quantifies none of them reads as
+   frightening even when every word is true, because the gap is where a
+   worried reader's imagination goes to work. State the exposure, then its
+   limits, in the same passage: most conduct reports lead to nothing further;
+   the liquidator has to prove both limbs, so wrongful trading claims are not
+   routine; a few deadlines can be extended if you ask before they expire.
+   This is more reassuring than any softer adjective, and unlike sympathy it
+   is information. A stranger read of the liquidation-deadlines page named
+   this as the reason the page still felt like it was ratcheting up threat
+   after the dramatic sentences had already been removed.
+
 4. **Asymmetrical editorial lines (1-3 per page) and tonal modulation.** Include
    at least one line that could only be written by someone who has thought hard
    about this trade and this failure mode -- it compresses the real truth of how
