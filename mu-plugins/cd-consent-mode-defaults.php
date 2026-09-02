@@ -24,7 +24,16 @@
  *      type="text/javascript" - never type="text/rocketlazyloadscript".
  *   2. In the browser console on a clean profile, before touching the banner:
  *        window.cdConsentDefaultApplied            -> true
- *        google_tag_data.ics.entries.ad_storage    -> default:false (not implicit)
+ *        google_tag_data.ics.usedDefault           -> true
+ *        google_tag_data.ics.wasSetLate            -> false
+ *        google_tag_data.ics.entries.ad_storage    -> default:false
+ *
+ *      Do NOT check `implicit` on those entries. It reads true on a correctly
+ *      working page (verified on live 2026-09-02, with the default sitting as
+ *      dataLayer entry 0 and every Google ping carrying gcs=G100). The flags
+ *      that actually catch a missing or late default are usedDefault and
+ *      wasSetLate. The July 2026 audit read `implicit` as proof the default was
+ *      absent; that was true then only because usedDefault was false too.
  *        document.cookie                           -> no _ga, no _gcl_*
  */
 if (!defined('ABSPATH')) exit;
