@@ -15,6 +15,17 @@ interaction. Three things must all be true for the site to measure correctly
 3. The GTM loader must itself be UN-DELAYED, otherwise a visitor who never
    scrolls or clicks sends no signal at all -- not even the anonymous cookieless
    ping that feeds Google's conversion modelling.
+4. The consent tool must not BLOCK the Google tag either. CookieYes carries its
+   own script blocker, driven by a per-account list of provider URLs. While
+   ``googletagmanager.com`` sits in that list, CookieYes hooks
+   ``document.createElement`` and refuses to insert the container until the
+   visitor grants the matching category -- so on a page view with no decision
+   yet there is no container, no dataLayer consumer and no cookieless ping.
+   Consent Mode never gets the chance to do the gating it exists to do.
+
+Conditions 1 to 3 were all PASSING on live on 2 Sep 2026 while condition 4 was
+failing, which is why it is now checked here: the first three describe the HTML,
+and the HTML was correct. The fault was one setting in the CookieYes account.
 
 Condition 3 without conditions 1 and 2 is the dangerous combination. Run this
 before and after any WP Rocket, header.php or consent change, and always before
@@ -76,6 +87,32 @@ GTM_ID = "GTM-5GTD9ZP"
 CAPTURE_ATTR = 'data-cd-lc="1"'
 DELAYED = "rocketlazyloadscript"
 
+# The consent tool's own loader, which carries the account's script-blocker list.
+# The host is deliberately NOT pinned to cdn-cookieyes.com: WP Rocket minifies
+# this script and serves a first-party copy from
+# /wp-content/cache/min/1/client_data/<key>/script.js, so a pattern tied to the
+# vendor host finds nothing on a cached page and reports the loader as missing.
+CKY_LOADER = re.compile(r"https://[^\s\"']*?client_data/([0-9a-zA-Z]+)/script\.js")
+
+# Every Google measurement script is served from one of these hosts. If the
+# consent tool blocks any of them by URL, the tag never loads for a visitor who
+# has not accepted, and the whole Consent Mode arrangement above is bypassed.
+GOOGLE_MEASUREMENT_HOSTS = (
+    "googletagmanager.com",
+    "google-analytics.com",
+    "doubleclick.net",
+)
+
+# Where a human fixes this: CookieYes dashboard -> Advanced Settings -> Google
+# consent mode -> "Support GCM" on, "Allow Google tags to fire before consent"
+# on. That second toggle is what takes the Google hosts out of the blocker list.
+CKY_FIX_HINT = (
+    "CookieYes is blocking the Google tag by URL. Turn ON "
+    '"Allow Google tags to fire before consent" in the CookieYes account '
+    "(Advanced Settings -> Google consent mode). Consent Mode already denies "
+    "storage by default, so the cookies stay off without the blocker."
+)
+
 
 def enclosing_script_tag(html: str, needle: str) -> str | None:
     """Return the opening <script ...> tag that contains `needle`, or None."""
@@ -110,6 +147,80 @@ def strip_comments(html: str) -> str:
     return COMMENT.sub(lambda m: " " * len(m.group(0)), html)
 
 
+def blocked_provider_urls(script_js: str) -> list[str]:
+    """Pull the provider URLs out of a CookieYes account script.
+
+    The account script carries its blocker list as ``_providersToBlock:[...]``,
+    an array of ``{url:"...",categories:[...],fullPath:!0|!1}`` objects. Scan to
+    the bracket that closes the array, counting depth and ignoring brackets that
+    sit inside a string literal, then read the ``url`` of each entry.
+    """
+    marker = "_providersToBlock:["
+    start = script_js.find(marker)
+    if start < 0:
+        return []
+    i = start + len(marker) - 1  # sit on the opening bracket
+    depth = 0
+    in_string: str | None = None
+    end = -1
+    while i < len(script_js):
+        ch = script_js[i]
+        if in_string:
+            if ch == "\\":
+                i += 2
+                continue
+            if ch == in_string:
+                in_string = None
+        elif ch in "\"'":
+            in_string = ch
+        elif ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                end = i
+                break
+        i += 1
+    if end < 0:
+        return []
+    body = script_js[start:end]
+    return re.findall(r"url:\s*\"([^\"]*)\"", body)
+
+
+def consent_tool_blocklist(html: str, auth) -> tuple[str, list[str], str]:
+    """Return (account key, blocked provider URLs, error) for the page's CMP.
+
+    Read the copy the visitor actually gets first, because a stale WP Rocket
+    minified copy can keep serving old blocker rules after the account itself is
+    corrected. Fall back to the vendor copy when the cached one cannot be read -
+    on staging it sits behind the basic-auth wall, and a 401 there says nothing
+    about the account.
+
+    An empty key means the page carries no CookieYes loader at all. A non-empty
+    error means neither copy could be read, which is reported as its own failure
+    rather than being mistaken for a clean blocker list.
+    """
+    m = CKY_LOADER.search(html)
+    if not m:
+        return "", [], ""
+    key = m.group(1)
+    vendor = f"https://cdn-cookieyes.com/client_data/{key}/script.js"
+    attempts = [(m.group(0), auth)]
+    if m.group(0) != vendor:
+        attempts.append((vendor, None))
+
+    first_error = ""
+    for url, url_auth in attempts:
+        try:
+            r = requests.get(url, auth=url_auth, headers=UA, timeout=60)
+            r.raise_for_status()
+        except Exception as exc:  # network, DNS, 4xx, 5xx
+            first_error = first_error or f"{url} -> {exc}"
+            continue
+        return key, blocked_provider_urls(r.text), ""
+    return key, [], f"could not read the consent-tool script: {first_error}"
+
+
 def fetch(base: str, path: str, auth) -> str:
     url = base.rstrip("/") + path
     requests.get(url, auth=auth, headers=UA, timeout=60)  # warm any page cache
@@ -139,6 +250,10 @@ def main() -> int:
     consent_tag = enclosing_script_tag(html, CONSENT_ATTR)
     gtm_tag = enclosing_script_tag(html, GTM_ID)
     capture_tag = enclosing_script_tag(html, CAPTURE_ATTR)
+    cky_key, blocked, cky_err = consent_tool_blocklist(html, auth)
+    blocks_google = sorted(
+        u for u in blocked if any(h in u for h in GOOGLE_MEASUREMENT_HOSTS)
+    )
 
     print(f"target : {base.rstrip('/')}{args.path}")
     print(f"length : {len(raw)}")
@@ -146,6 +261,8 @@ def main() -> int:
     print(f"consent default @ {pos_consent}  tag: {consent_tag}")
     print(f"GTM loader      @ {pos_gtm}  tag: {gtm_tag}")
     print(f"capture script     tag: {capture_tag}")
+    print(f"consent tool       account: {cky_key or '(none on page)'}")
+    print(f"consent tool       blocks: {', '.join(blocked) or '(nothing)'}")
     print()
 
     checks: list[tuple[str, bool, str]] = [
@@ -169,6 +286,18 @@ def main() -> int:
             bool(gtm_tag) and DELAYED not in gtm_tag.lower(),
             "cd-measurement-no-delay.php is missing or its patterns no longer match",
         ),
+        (
+            "consent tool does NOT block the Google tag",
+            bool(cky_key) and not cky_err and not blocks_google,
+            (
+                "header.php is missing the CookieYes loader"
+                if not cky_key
+                else cky_err
+                if cky_err
+                else f"blocked by URL pattern: {'; '.join(blocks_google)}. "
+                + CKY_FIX_HINT
+            ),
+        ),
     ]
 
     failed = 0
@@ -186,7 +315,7 @@ def main() -> int:
     print()
     if failed:
         print(f"OVERALL: FAIL ({failed} of {len(checks)})")
-        if any(not c[1] for c in checks[:3]) and checks[3][1]:
+        if any(not c[1] for c in checks[:3]) and checks[3][1] and not blocks_google:
             print(
                 "DANGER: the GTM loader is un-delayed while the consent default is "
                 "not in place. Google tags will initialise with no consent state. "
