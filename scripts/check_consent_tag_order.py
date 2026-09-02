@@ -94,14 +94,23 @@ DELAYED = "rocketlazyloadscript"
 # vendor host finds nothing on a cached page and reports the loader as missing.
 CKY_LOADER = re.compile(r"https://[^\s\"']*?client_data/([0-9a-zA-Z]+)/script\.js")
 
-# Every Google measurement script is served from one of these hosts. If the
-# consent tool blocks any of them by URL, the tag never loads for a visitor who
-# has not accepted, and the whole Consent Mode arrangement above is bypassed.
+# The hosts that actually serve the tag itself. If the consent tool blocks either
+# of these by URL, the container never loads for a visitor who has not accepted,
+# and the whole Consent Mode arrangement above is bypassed.
 GOOGLE_MEASUREMENT_HOSTS = (
     "googletagmanager.com",
     "google-analytics.com",
-    "doubleclick.net",
 )
+
+# doubleclick.net is deliberately NOT in the list above, and this is a judgement
+# rather than an oversight. It serves remarketing, not the tag, so blocking it
+# does not stop the container or the Google tags loading. It only bites for a
+# visitor who has not granted the advertising category, and for that visitor the
+# advertising cookies must stay off anyway. The blocker also only intercepts
+# <script> and <iframe> insertions, so it does not touch the cookieless
+# conversion ping, which travels as an image/fetch request. Reported as a note so
+# a human can see it, and re-check it if the ping ever stops arriving.
+ADVERTISING_HOSTS_OK_TO_BLOCK = ("doubleclick.net",)
 
 # Where a human fixes this: CookieYes dashboard -> Advanced Settings -> Google
 # consent mode -> "Support GCM" on, "Allow Google tags to fire before consent"
@@ -263,6 +272,9 @@ def main() -> int:
     print(f"capture script     tag: {capture_tag}")
     print(f"consent tool       account: {cky_key or '(none on page)'}")
     print(f"consent tool       blocks: {', '.join(blocked) or '(nothing)'}")
+    ad_blocked = sorted(
+        u for u in blocked if any(h in u for h in ADVERTISING_HOSTS_OK_TO_BLOCK)
+    )
     print()
 
     checks: list[tuple[str, bool, str]] = [
@@ -306,6 +318,11 @@ def main() -> int:
         if not passed:
             print(f"       -> {hint}")
             failed += 1
+
+    # Informational only: blocking these does not stop the tag loading.
+    if ad_blocked:
+        print(f"[note] consent tool also blocks {', '.join(ad_blocked)} - remarketing")
+        print("       only, and only before the visitor grants advertising. Expected.")
 
     # Informational only: the capture script is intentionally left delayed.
     if capture_tag:
