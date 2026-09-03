@@ -382,3 +382,26 @@ keys as they are. Do not raise it again.
 
 **Blocked behind this:** the CookieYes banner push (above). Both are ready. Pushing now
 would carry two new backup files onto live, so the cleanup should land first.
+
+---
+
+## Two loose ends from the consent fix (2 Sep 2026)
+
+The consent fault itself is fixed and verified on live. Full record:
+`docs/consent-blocking-the-tag-manager-2026-09-02.md`. Two things were left on
+purpose.
+
+**1. Nobody has read the accept share.** This is the percentage of visitors who
+click Accept on the cookie banner. It tells us what share of visitors we were
+seeing before the fix, so it puts a size on the hole. Piers deferred it on 2 Sep -
+no rush, and the figure does not change because of the fix. It is in the CookieYes
+consent report at `app.cookieyes.com`, and the July 2026 audit confirmed that
+report is on the free plan. It cannot be read from this project: there is no
+CookieYes login in `.env`, and the analytics access here covers
+businessexpert.co.uk only.
+
+**2. One real live chat would close the last check.** The chat widget loads and
+reports itself online, and its recording sits inside the tag manager, which now
+loads for every visitor - so the path that was broken is open. It was not tested
+end to end because starting a chat would put a fake enquiry in front of the team.
+A person starting one real chat, and confirming it appears, finishes the job.
