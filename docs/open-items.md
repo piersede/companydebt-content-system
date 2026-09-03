@@ -405,3 +405,24 @@ reports itself online, and its recording sits inside the tag manager, which now
 loads for every visitor - so the path that was broken is open. It was not tested
 end to end because starting a chat would put a fake enquiry in front of the team.
 A person starting one real chat, and confirming it appears, finishes the job.
+
+**3. The phone-number swap is firing twice, with two different numbers.** Seen on
+the live paid landing page on 2 Sep while checking the consent fix. Both of these
+went out on one page view:
+
+```
+.../pagead/conversion/977276330/wcm?...&dn=08000746757&cl=xrGGCKvV68gDEKqbgNID
+.../pagead/conversion/977276330/wcm?...&dn=080000746757&cl=svdpCKP2ms8DEKqbgNID
+```
+
+The second number has an extra digit and is not a valid UK number. The July 2026
+audit already flagged a duplicate number-swap tag as something to remove
+(`docs/audits/conversion-measurement-audit-2026-07-29.md`, Addendum 1 section 5ii)
+and it is still there. Separately, phone enquiries recorded fell 47 in June, 27 in
+July, 12 in August, none so far in September, and rebuilding call tracking in late
+July did not help.
+
+**Not chased on purpose** - it was explicitly out of scope for the consent work,
+and it is a different fault with a different owner. But the malformed number is a
+concrete lead, and it is the first hard evidence found for the phone drop. Worth
+its own session.
